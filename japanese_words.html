@@ -8,14 +8,20 @@
     <script src="bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <script src="https://unpkg.com/bootstrap-table@1.21.0/dist/bootstrap-table.min.js"></script>
+    <!-- Bootstrap Table 多语言支持 -->
+    <script src="https://unpkg.com/bootstrap-table@1.21.0/dist/locale/bootstrap-table-zh-CN.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.21.0/dist/locale/bootstrap-table-ja-JP.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.21.0/dist/locale/bootstrap-table-en-US.min.js"></script>
+
+    <script src="lang.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.0/dist/bootstrap-table.min.css">
     <link href="index.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
 </head>
-<body>
+<body class="theme-green">
 
-    <header>
-        <h1>日语打字练习</h1>
-    </header>
+    <!-- 导航栏 -->
+    <div id="navbar"></div>
 
     <section id="practice-section">
         <div id="target" contenteditable="true">現像</div>
@@ -33,17 +39,18 @@
     <section id="sentence-section">
         <table id="sentenceTable" class="table table-bordered table-striped"
                data-toggle="table" data-pagination="true" data-search="true"
-               data-page-size="5" data-locale="zh-CN">
+               data-page-size="5">
             <thead>
                 <tr>
-                    <th data-field="Word">单词</th>
-                    <th data-field="Reading">读音</th>
-                    <th data-field="Meaning">意思</th>
-                    <th data-field="ExampleSentence">例句</th>
-                    <th data-field="Translation">翻译</th>
+                    <th data-field="Word" id="wordColumn">单词</th>
+                    <th data-field="Reading" id="readingColumn">读音</th>
+                    <th data-field="Meaning" id="meaningColumn">意思</th>
+                    <th data-field="ExampleSentence" id="exampleSentenceColumn">例句</th>
+                    <th data-field="Translation" id="translationColumn">翻译</th>
                 </tr>
             </thead>
         </table>
+
     </section>
 
     <script>
@@ -174,6 +181,22 @@
 
             window.speechSynthesis.speak(speech);
         });
+    </script>
+
+    <!-- 主题切换 & 导航栏加载 -->
+    <script src="theme.js"></script> 
+    <script>
+        // 动态加载导航栏
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+
+                // 确保 `lang.js` 在 `navbar.html` 加载后执行
+                const scriptLang = document.createElement("script");
+                scriptLang.src = "lang.js";
+                document.body.appendChild(scriptLang);
+            });
     </script>
 </body>
 </html>

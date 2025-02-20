@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Typing Tutor 说明书</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-green">
+
+    <!-- 导航栏 -->
+    <div id="navbar"></div>
+    <div class="container">
+        <h1>Japanese Typing Tutor 说明书</h1>
+        <h2>1. 项目概述</h2>
+        <p>JapaneseTypingTutor 是一款专为日语学习者设计的打字练习工具，旨在提高用户的打字速度和准确率，同时巩固日语词汇。</p>
+        <h2>2. 项目目标</h2>
+        <ul>
+            <li>通过打字练习强化日语词汇记忆</li>
+            <li>提供多种练习模式，提高学习兴趣</li>
+            <li>统计用户的输入速度和准确率</li>
+            <li>支持自定义单词列表</li>
+        </ul>
+        <h2>3. 核心功能</h2>
+        <h3>3.1 基础打字练习</h3>
+        <p>系统会显示日语单词，用户正确输入后进入下一个单词，同时统计 WPM（每分钟输入词数）和准确率。</p>
+        <h3>3.2 JLPT 词汇练习</h3>
+        <p>内置 N5 至 N1 词汇列表，自动筛选用户易错单词进行重点练习。</p>
+        <h3>3.3 计时模式 & 挑战模式</h3>
+        <p>设定时间限制（如 1 分钟）进行打字挑战，并统计用户输入的正确单词数量。</p>
+        <h3>3.4 输入错误分析</h3>
+        <p>记录用户的输入错误，统计易错单词，提供针对性的练习建议。</p>
+        <h3>3.5 自定义单词列表</h3>
+        <p>支持用户导入 Excel 文件，自定义单词列表，灵活调整学习内容。</p>
+        <h2>4. 技术架构</h2>
+        <ul>
+            <li>编程语言: Python</li>
+            <li>前端技术: HTML + JavaScript</li>
+            <li>数据管理: Excel 文件</li>
+            <li>支持环境: Windows / macOS / Linux</li>
+        </ul>
+        <h2>5. 使用方法</h2>
+        <h3>5.1 运行方式</h3>
+        <ul>
+            <li>下载项目文件</li>
+            <li>打开 index.html</li>
+            <li>开始进行日语打字练习</li>
+        </ul>
+        <h3>5.2 数据导入</h3>
+        <ul>
+            <li>使用 Excel 进行单词管理</li>
+            <li>通过 AppSheet 进行数据同步</li>
+        </ul>
+        <h2>6. 未来发展</h2>
+        <ul>
+            <li>增加语音朗读功能</li>
+            <li>加入排行榜 & 挑战模式</li>
+            <li>支持多用户数据存储，记录个人学习进度</li>
+        </ul>
+        <h2>7. 贡献与反馈</h2>
+        <p>欢迎提交 GitHub Issue 反馈问题或建议，期待更多日语学习者参与贡献，共同完善项目！</p>
+        <p><strong>开发者:</strong> 深圳有成软件开发有限公司</p>
+        <p><strong>项目主页:</strong> <a href="https://github.com/yaojunxiong/TypingJapaneseWords">GitHub Repository</a></p>
+    </div>
+    <!-- 引入 Bootstrap 5 JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- 主题切换 & 导航栏加载 -->
+    <script src="theme.js"></script>
+    <script>
+        // 动态加载导航栏
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar').innerHTML = data);
+    </script>
+</body>
+</html>

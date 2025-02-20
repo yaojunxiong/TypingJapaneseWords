@@ -10,8 +10,12 @@
     <script src="https://unpkg.com/bootstrap-table@1.21.0/dist/bootstrap-table.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.0/dist/bootstrap-table.min.css">
     <link href="index.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
 </head>
-<body>
+<body class="theme-green">
+
+    <!-- 导航栏 -->
+    <div id="navbar"></div>
 
     <header>
         <h1>学习点餐、结账等常用日语</h1>
@@ -33,7 +37,7 @@
     <section id="sentence-section">
         <table id="sentenceTable" class="table table-bordered table-striped"
                data-toggle="table" data-pagination="true" data-search="false"
-               data-page-list="[5, 10, 20, 50, All]" 
+               data-page-list="[5, 10, 20, 50, All]"
                data-page-size="All" data-locale="zh-CN">
             <thead>
                 <tr>
@@ -58,8 +62,8 @@
         // 异步加载单词数据和例句数据
         async function loadData() {
             try {
-                 
-                
+
+
 
                 const examplesResponse = await fetch('japanese_restaurant_phrases.json');
                 const examplesData = await examplesResponse.json();
@@ -123,7 +127,7 @@
         // 造句按钮事件
         document.getElementById("sentenceBtn").addEventListener('click', function () {
             const word = targetText.textContent.trim();
-            
+
             const exampleSentences = vocabularyExamples.filter(item =>
                 Object.values(item).some(value =>
                     typeof value === "string" && value.includes(word)
@@ -182,5 +186,17 @@
             window.speechSynthesis.speak(speech);
         });
     </script>
+
+    <!-- 主题切换 & 导航栏加载 -->
+    <script src="theme.js"></script>
+    <script>
+        // 动态加载导航栏
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar').innerHTML = data);
+    </script>
+
 </body>
+
+
 </html>

@@ -3,139 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>日语打字练习 - 风格切换</title>
-    <!-- 引入 Bootstrap 5 -->
+    <title id="title">日语打字练习 - 风格切换</title>
+    <!-- 引入 Bootstrap 5 和全局 CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <style>
-        /* 使用 CSS 变量定义不同风格的配色 */
-        :root {
-            --primary-color: #4CAF50; /* 清新绿 */
-            --background-color: #F9F9F9;
-            --card-hover-color: #E8F5E9;
-            --text-color: #333333;
-        }
-
-        /* 深海蓝风格 */
-        .theme-blue {
-            --primary-color: #2196F3;
-            --background-color: #E3F2FD;
-            --card-hover-color: #BBDEFB;
-            --text-color: #222222;
-        }
-
-        /* 秋日橙风格 */
-        .theme-orange {
-            --primary-color: #FF9800;
-            --background-color: #FFF3E0;
-            --card-hover-color: #FFE0B2;
-            --text-color: #333333;
-        }
-
-        /* 应用全局样式 */
-        body {
-            background-color: var(--background-color);
-            color: var(--text-color);
-            font-family: Arial, sans-serif;
-        }
-
-        .navbar, .btn-primary {
-            background-color: var(--primary-color) !important;
-            border: none;
-        }
-
-        .navbar-brand, .nav-link {
-            color: #FFFFFF !important;
-        }
-
-            .nav-link:hover {
-                color: var(--card-hover-color) !important;
-            }
-
-        header {
-            background: var(--primary-color);
-            color: white;
-        }
-
-            header h1 {
-                padding: 15px;
-            }
-
-        /* 卡片样式 */
-        .card {
-            background: #FFFFFF;
-            border: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s, background 0.2s;
-            cursor: pointer;
-        }
-
-            .card:hover {
-                transform: scale(1.05);
-                background: var(--card-hover-color);
-            }
-
-        .card-title {
-            color: var(--primary-color);
-        }
-
-        /* 底部样式 */
-        .footer {
-            background: #333333;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-    </style>
+    <script src="lang.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="theme-green">
 
-    <!-- 顶部导航栏 -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">日语打字练习</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">首页</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="japanese_words.html">日语单词</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">热门关键字</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">关于</a>
-                    </li>
-                    <li class="nav-item">
-                        <select id="themeSelector" class="form-select form-select-sm ms-3">
-                            <option value="theme-green" selected>🌿 清新绿</option>
-                            <option value="theme-blue">🌊 深海蓝</option>
-                            <option value="theme-orange">🍁 秋日橙</option>
-                        </select>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!-- 导航栏 -->
+    <div id="navbar"></div>
 
     <!-- 内容区域 -->
     <header class="text-center">
-        <h1>日语打字练习 - 选择你的风格</h1>
-        <p>通过打字练习提升日语输入速度，随时切换你喜欢的主题风格！</p>
+        <h1 id="heading">日语打字练习 - 选择你的风格</h1>
+        <p id="description">通过打字练习提升日语输入速度，随时切换你喜欢的主题风格！</p>
     </header>
 
     <section class="container my-4">
-        <h2 class="text-center mb-4">选择场景开始打字练习</h2>
+        <h2 id="chooseScene" class="text-center mb-4">选择场景开始打字练习</h2>
         <div class="row">
             <div class="col-md-4 mb-4">
                 <div class="card shadow-sm h-100" onclick="location.href='japanese_restaurant_phrases.html'">
                     <div class="card-body text-center">
-                        <h5 class="card-title">餐厅用语</h5>
-                        <p class="card-text">学习点餐、结账等常用日语</p>
+                        <h5 id="restaurant" class="card-title">餐厅用语</h5>
+                        <p id="restaurantDesc" class="card-text">学习点餐、结账等常用日语</p>
                     </div>
                 </div>
             </div>
@@ -143,8 +35,8 @@
             <div class="col-md-4 mb-4">
                 <div class="card shadow-sm h-100" onclick="location.href='japanese_shopping_phrases.html'">
                     <div class="card-body text-center">
-                        <h5 class="card-title">购物用语</h5>
-                        <p class="card-text">掌握询价、付款、退换货用语</p>
+                        <h5 id="shopping" class="card-title">购物用语</h5>
+                        <p id="shoppingDesc" class="card-text">掌握询价、付款、退换货用语</p>
                     </div>
                 </div>
             </div>
@@ -152,34 +44,30 @@
             <div class="col-md-4 mb-4">
                 <div class="card shadow-sm h-100" onclick="location.href='japanese_travel_phrases.html'">
                     <div class="card-body text-center">
-                        <h5 class="card-title">旅游交通</h5>
-                        <p class="card-text">轻松应对问路、乘车、订票等情景</p>
+                        <h5 id="travel" class="card-title">旅游交通</h5>
+                        <p id="travelDesc" class="card-text">轻松应对问路、乘车、订票等情景</p>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
-     
-
+    <!-- 底部 -->
     <footer class="footer">
-        <div class="container">
-            <p>© 2025 日语打字练习 | 深圳有成软件开发有限公司</p>
-            <p>联系我们：<a href="mailto:yaojunxiong@outlook.com" class="text-light">yaojunxiong@outlook.com</a></p>
-        </div>
+        <p id="footerText">© 2025 日语打字练习 | 深圳有成软件开发有限公司</p>
+        <p><span id="contact">联系我们：</span> <a href="mailto:yaojunxiong@outlook.com">yaojunxiong@outlook.com</a></p>
     </footer>
 
     <!-- 引入 Bootstrap 5 JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- 主题切换逻辑 -->
+    <!-- 主题切换 & 导航栏加载 -->
+    <script src="theme.js"></script>
     <script>
-        const themeSelector = document.getElementById('themeSelector');
-        themeSelector.addEventListener('change', (event) => {
-            document.body.className = event.target.value;
-        });
+        // 动态加载导航栏
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar').innerHTML = data);
     </script>
-
 </body>
 </html>

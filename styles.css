@@ -1,0 +1,139 @@
+:root {
+    --primary-color: #4CAF50;
+    --background-color: #F9F9F9;
+    --card-hover-color: #E8F5E9;
+    --text-color: #333333;
+}
+
+/* 深海蓝风格 */
+.theme-blue {
+    --primary-color: #2196F3;
+    --background-color: #E3F2FD;
+    --card-hover-color: #BBDEFB;
+    --text-color: #222222;
+}
+
+/* 秋日橙风格 */
+.theme-orange {
+    --primary-color: #FF9800;
+    --background-color: #FFF3E0;
+    --card-hover-color: #FFE0B2;
+    --text-color: #333333;
+}
+
+/* 全局样式 */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* 导航栏样式 */
+.navbar, .btn-primary {
+    background-color: var(--primary-color) !important;
+    border: none;
+}
+
+.navbar-brand, .nav-link {
+    color: #FFFFFF !important;
+}
+
+.nav-link:hover {
+    color: var(--card-hover-color) !important;
+}
+
+/* 主要内容样式 */
+.container {
+    max-width: auto;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 标题样式 */
+h1, h2, h3 {
+    color: var(--primary-color);
+}
+
+/* 选择主题下拉菜单 */
+.form-select {
+    max-width: 150px;
+    margin-left: 15px;
+}
+
+/* 卡片样式 */
+.card {
+    background: #FFFFFF;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, background 0.2s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: var(--card-hover-color);
+}
+
+.card-title {
+    color: var(--primary-color);
+}
+
+/* 底部样式 */
+.footer {
+    background-color: var(--footer-bg, #222) !important; /* 确保背景色生效 */
+    color: var(--footer-text, white) !important; /* 确保文字颜色生效 */
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
+    /* 确保 footer 里的所有文字可见 */
+    .footer p {
+        color: var(--footer-text, white) !important;
+        margin-bottom: 0.5rem;
+    }
+
+    /* 确保 footer 内的链接颜色清晰 */
+    .footer a {
+        color: var(--footer-link, #FFD700) !important; /* 默认金色 */
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        .footer a:hover {
+            color: var(--footer-link-hover, #FFA500) !important; /* 悬停变亮 */
+        }
+
+/* 各主题适配 */
+.theme-green {
+    --footer-bg: #2E7D32; /* 绿色主题，深绿色背景 */
+    --footer-text: white;
+    --footer-link: #FFD700;
+    --footer-link-hover: #FFA500;
+}
+
+.theme-blue {
+    --footer-bg: #1565C0; /* 蓝色主题，深蓝色背景 */
+    --footer-text: white;
+    --footer-link: #FFD700;
+    --footer-link-hover: #FFA500;
+}
+
+.theme-orange {
+    --footer-bg: #E65100; /* 橙色主题，深橙色背景 */
+    --footer-text: white;
+    --footer-link: #FFD700;
+    --footer-link-hover: #FFA500;
+}
+
+/* 适配不同屏幕，防止 footer 文字超出 */
+@media (max-width: 768px) {
+    .footer {
+        padding: 15px;
+        font-size: 14px;
+    }
+}
