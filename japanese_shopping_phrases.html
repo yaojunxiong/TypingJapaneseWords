@@ -8,6 +8,7 @@
     <script src="bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <script src="https://unpkg.com/bootstrap-table@1.21.0/dist/bootstrap-table.min.js"></script>
+    <script src="lang.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.0/dist/bootstrap-table.min.css">
     <link href="index.css" rel="stylesheet" />
     <link href="styles.css" rel="stylesheet" />
@@ -193,8 +194,14 @@
         // 动态加载导航栏
         fetch('navbar.html')
             .then(response => response.text())
-            .then(data => document.getElementById('navbar').innerHTML = data);
-    </script>
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
 
+                // 确保 `lang.js` 在 `navbar.html` 加载后执行
+                const scriptLang = document.createElement("script");
+                scriptLang.src = "lang.js";
+                document.body.appendChild(scriptLang);
+            });
+    </script>
 </body>
 </html>
