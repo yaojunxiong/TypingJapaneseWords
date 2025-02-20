@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f7f7f7;
+}
+
+#target, #input {
+    font-size: 36px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: left;
+    white-space: pre-wrap;
+}
+
+#input {
+    min-height: 40px;
+    resize: none;
+    outline: none;
+}
+
+.button-group {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+.button {
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+    .button:hover {
+        opacity: 0.9;
+    }
+
+#changeWordBtn {
+    background-color: #4CAF50;
+}
+
+#speakBtn {
+    background-color: #FF9800;
+}
+
+#sentenceBtn {
+    background-color: #FFC107;
+}
+
+.stats, #feedback, #translation {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.error {
+    color: #FF0000;
+    font-weight: bold;
+    background-color: #FFD1D1;
+    text-decoration: underline;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+@media (max-width: 768px) {
+    .button-group {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
