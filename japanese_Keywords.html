@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日常会话场景</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="lang.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-green">
+
+    <!-- 导航栏 -->
+    <div id="navbar"></div>
+    <div class="container">
+        
+        <h2>日常会话场景</h2>
+        <ul>
+            <li> 
+                <a  href="japanese_words_welcome.html"  >いらっしゃいませ！</a>
+            </li> 
+            <li><a   href="japanese_words_welcome.html"  >すみません、ちょっと見ているだけです。</a></li>
+            <li><a  href="japanese_words_welcome.html"  >はい、ごゆっくりどうぞ！</a></li>
+        </ul>
+        
+    </div>
+    <!-- 引入 Bootstrap 5 JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- 主题切换 & 导航栏加载 -->
+    <script src="theme.js"></script>
+    <script>
+        // 动态加载导航栏
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+
+                // 确保 `lang.js` 在 `navbar.html` 加载后执行
+                const scriptLang = document.createElement("script");
+                scriptLang.src = "lang.js";
+                document.body.appendChild(scriptLang);
+            });
+    </script>
+</body>
+</html>
