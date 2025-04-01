@@ -9,6 +9,10 @@ function shuffle(array) {
 }
 
 // ✅ 创建拖拽区域
+function isMobileDevice() {
+    return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+}
+
 function createList(id, words) {
     const list = document.getElementById(id);
     list.innerHTML = '';
@@ -24,7 +28,8 @@ function createList(id, words) {
         animation: 150,
         touchStartThreshold: 5, // 🧠 手机拖拽延迟启动
         fallbackOnBody: true,   // ✅ iOS/安卓兼容
-        swapThreshold: 0.65
+        swapThreshold: 0.65,
+        forceFallback: isMobileDevice()  // ✅ 仅在手机端开启 fallback 模式
     });
 }
 
