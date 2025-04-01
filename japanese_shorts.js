@@ -1,4 +1,4 @@
-// ✅ 更稳定的打乱算法 
+// ✅ 更稳定的洗牌算法（Fisher-Yates）
 function shuffle(array) {
     const a = [...array];
     for (let i = a.length - 1; i > 0; i--) {
@@ -8,12 +8,12 @@ function shuffle(array) {
     return a;
 }
 
-// ✅ 判断是否为 iOS 设备（包含 iPhone/iPad）
+// ✅ 检测是否为 iOS 设备（强制 fallback 拖拽模式）
 function isIOS() {
     return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 }
 
-// ✅ 创建拖拽区域（已适配移动端和 iOS）
+// ✅ 创建拖拽区域（支持手机端 & iOS）
 function createList(id, words) {
     const list = document.getElementById(id);
     list.innerHTML = '';
@@ -22,7 +22,7 @@ function createList(id, words) {
     shuffled.forEach(word => {
         const li = document.createElement('li');
         li.textContent = word;
-        li.classList.add("sortable-item"); // ✅ 添加提示样式
+        li.classList.add("sortable-item"); // 可用于样式美化
         list.appendChild(li);
     });
 
@@ -31,11 +31,11 @@ function createList(id, words) {
         touchStartThreshold: 5,
         fallbackOnBody: true,
         swapThreshold: 0.65,
-        forceFallback: isIOS() // ✅ iOS 强制 fallback 拖拽模式
+        forceFallback: isIOS() // ✅ iOS 特别处理
     });
 }
 
-// ✅ 检查答案是否正确
+// ✅ 检查答案
 function checkAnswer(listId, answer, resultId) {
     const userList = Array.from(document.querySelectorAll(`#${listId} li`)).map(li => li.textContent);
     const result = document.getElementById(resultId);
@@ -45,9 +45,10 @@ function checkAnswer(listId, answer, resultId) {
     result.style.color = isCorrect ? "green" : "red";
 }
 
-// ✅ 显示提示框
+// ✅ 显示底部提示消息（带动画效果）
 function showTip(message) {
     const tip = document.getElementById("page-tip");
+    if (!tip) return;
     tip.textContent = message;
     tip.style.display = "block";
     setTimeout(() => {
@@ -55,7 +56,7 @@ function showTip(message) {
     }, 2000);
 }
 
-// ✅ 跳转上一页 / 下一页
+// ✅ 上下页跳转（带页码自动补零）
 function goToPage(offset) {
     const current = window.location.pathname.split("/").pop();
     const match = current.match(/(.*_)(\d+)(\.html)/);
@@ -88,6 +89,6 @@ function goToPage(offset) {
         });
 }
 
-// ✅ 自动生成拖拽列表（由 auto.js 调用）
+// ✅ 初始化拖拽区域（外部传入 answer1 / answer2）
 createList("list1", answer1);
 createList("list2", answer2);
