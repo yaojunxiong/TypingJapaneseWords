@@ -117,4 +117,5 @@ ul.word-list {
     z-index: 9999;
     max-width: 80%;
     text-align: center;
+    transition: all 0.3s ease;
 }
