@@ -69,25 +69,5 @@ function goToPage(offset) {
         showTip("⚠️ ページ名の形式が正しくありません！");
     }
 }
-
-// 手机滑动手势支持
-let touchStartX = 0;
-let touchEndX = 0;
-
-function handleGesture() {
-    const dx = touchEndX - touchStartX;
-    if (Math.abs(dx) > 50) {
-        if (dx > 0) goToPage(-1); // 右滑
-        else goToPage(1);        // 左滑
-    }
-}
-
-document.addEventListener('touchstart', e => {
-    touchStartX = e.changedTouches[0].screenX;
-});
-
-document.addEventListener('touchend', e => {
-    touchEndX = e.changedTouches[0].screenX;
-    handleGesture();
-});
+ 
  
