@@ -1,4 +1,4 @@
-// ✅ 更稳定的打乱算法
+// ✅ 更稳定的打乱算法 
 function shuffle(array) {
     const a = [...array];
     for (let i = a.length - 1; i > 0; i--) {
@@ -13,7 +13,7 @@ function isIOS() {
     return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 }
 
-// ✅ 创建拖拽区域
+// ✅ 创建拖拽区域（已适配移动端和 iOS）
 function createList(id, words) {
     const list = document.getElementById(id);
     list.innerHTML = '';
@@ -22,16 +22,16 @@ function createList(id, words) {
     shuffled.forEach(word => {
         const li = document.createElement('li');
         li.textContent = word;
+        li.classList.add("sortable-item"); // ✅ 添加提示样式
         list.appendChild(li);
     });
 
-    // 📱 针对 iOS 兼容性配置
     Sortable.create(list, {
         animation: 150,
         touchStartThreshold: 5,
         fallbackOnBody: true,
         swapThreshold: 0.65,
-        forceFallback: isIOS() // ✅ 仅 iOS 强制 fallback 模式，其它设备正常
+        forceFallback: isIOS() // ✅ iOS 强制 fallback 拖拽模式
     });
 }
 

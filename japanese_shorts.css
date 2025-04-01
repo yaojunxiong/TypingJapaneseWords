@@ -63,6 +63,12 @@ ul.word-list {
         user-select: none;
         box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
     }
+.sortable-item {
+    cursor: grab;
+    touch-action: manipulation;
+    user-select: none;
+}
+
 
  
 
