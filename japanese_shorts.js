@@ -8,11 +8,12 @@ function shuffle(array) {
     return a;
 }
 
-// ✅ 创建拖拽区域
-function isMobileDevice() {
-    return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+// ✅ 判断是否为 iOS 设备（包含 iPhone/iPad）
+function isIOS() {
+    return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 }
 
+// ✅ 创建拖拽区域
 function createList(id, words) {
     const list = document.getElementById(id);
     list.innerHTML = '';
@@ -24,16 +25,17 @@ function createList(id, words) {
         list.appendChild(li);
     });
 
+    // 📱 针对 iOS 兼容性配置
     Sortable.create(list, {
         animation: 150,
-        touchStartThreshold: 5, // 🧠 手机拖拽延迟启动
-        fallbackOnBody: true,   // ✅ iOS/安卓兼容
+        touchStartThreshold: 5,
+        fallbackOnBody: true,
         swapThreshold: 0.65,
-        forceFallback: isMobileDevice()  // ✅ 仅在手机端开启 fallback 模式
+        forceFallback: isIOS() // ✅ 仅 iOS 强制 fallback 模式，其它设备正常
     });
 }
 
-// ✅ 检查答案是否匹配
+// ✅ 检查答案是否正确
 function checkAnswer(listId, answer, resultId) {
     const userList = Array.from(document.querySelectorAll(`#${listId} li`)).map(li => li.textContent);
     const result = document.getElementById(resultId);
@@ -43,7 +45,7 @@ function checkAnswer(listId, answer, resultId) {
     result.style.color = isCorrect ? "green" : "red";
 }
 
-// ✅ 页面底部提示框
+// ✅ 显示提示框
 function showTip(message) {
     const tip = document.getElementById("page-tip");
     tip.textContent = message;
@@ -53,7 +55,7 @@ function showTip(message) {
     }, 2000);
 }
 
-// ✅ 页面跳转（带检查文件是否存在）
+// ✅ 跳转上一页 / 下一页
 function goToPage(offset) {
     const current = window.location.pathname.split("/").pop();
     const match = current.match(/(.*_)(\d+)(\.html)/);
@@ -86,6 +88,6 @@ function goToPage(offset) {
         });
 }
 
-// ✅ 页面加载时由 auto.js 调用这两句
+// ✅ 自动生成拖拽列表（由 auto.js 调用）
 createList("list1", answer1);
 createList("list2", answer2);
