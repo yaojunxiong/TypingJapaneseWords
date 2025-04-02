@@ -1,94 +1,191 @@
-// ✅ 更稳定的洗牌算法（Fisher-Yates）
-function shuffle(array) {
-    const a = [...array];
-    for (let i = a.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [a[i], a[j]] = [a[j], a[i]];
+< !DOCTYPE html >
+    <html lang="ja">
+        <head>
+            <meta charset="UTF-8">
+                <title>短视频分页加载 Demo</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+                    <style>
+                        * {margin: 0; padding: 0; box-sizing: border-box; }
+                        html, body {
+                            width: 100%;
+                        height: 100%;
+                        background: black;
+                        overflow: hidden;
+                        touch-action: pan-y;
     }
-    return a;
-}
+                        #app {
+                            position: relative;
+                        width: 100%;
+                        height: 100%;
+                        overflow: hidden;
+    }
+                        .video-slide {
+                            position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        transition: transform 0.4s ease;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+    }
+                        video {
+                            width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        background: black;
+    }
+                        .toast {
+                            position: absolute;
+                        bottom: 10%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background: rgba(0, 0, 0, 0.7);
+                        color: white;
+                        padding: 10px 16px;
+                        border-radius: 12px;
+                        font-size: 16px;
+                        z-index: 99;
+                        opacity: 0;
+                        transition: opacity 0.3s ease;
+    }
+                        ::cue {
+                            font - size: 18px;
+                        color: white;
+                        background: rgba(0, 0, 0, 0.6);
+    }
+                    </style>
+                </head>
+                <body>
+                    <div id="app">Loading...</div>
+                    <div id="toast" class="toast"></div>
 
-// ✅ 检测是否为 iOS 设备（强制 fallback 拖拽模式）
-function isIOS() {
-    return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-}
+                    <script>
+                        const app = document.getElementById('app');
+                        const toast = document.getElementById('toast');
+                        let fullList = [];
+                        let loadedVideos = [];
+                        let videoElements = [];
+                        let currentIndex = 0;
+                        const pageSize = 3;
 
-// ✅ 创建拖拽区域（支持手机端 & iOS）
-function createList(id, words) {
-    const list = document.getElementById(id);
-    list.innerHTML = '';
+                        function showToast(message) {
+                            toast.textContent = message;
+                        toast.style.opacity = '1';
+      setTimeout(() => {
+                            toast.style.opacity = '0';
+      }, 1500);
+    }
 
-    const shuffled = shuffle(words);
-    shuffled.forEach(word => {
-        const li = document.createElement('li');
-        li.textContent = word;
-        li.classList.add("sortable-item"); // 可用于样式美化
-        list.appendChild(li);
+                        async function loadVideoList() {
+      const res = await fetch('videos.json');
+                        fullList = await res.json();
+                        loadNextPage();
+    }
+
+                        function loadNextPage() {
+      const nextBatch = fullList.slice(loadedVideos.length, loadedVideos.length + pageSize);
+      nextBatch.forEach(videoData => {
+        const index = loadedVideos.length;
+                        loadedVideos.push(videoData);
+                        createVideoElement(index, videoData);
+      });
+                        showVideo(currentIndex);
+    }
+
+                        function createVideoElement(index, videoData) {
+      const wrapper = document.createElement('div');
+                        wrapper.className = 'video-slide';
+                        wrapper.style.transform = `translateY(${(index - currentIndex) * 100}%)`;
+
+                        const video = document.createElement('video');
+                        video.src = `video/${videoData.src}.mp4`;
+                        video.autoplay = false;
+                        video.playsInline = true;
+                        video.loop = true;
+                        video.controls = false;
+                        video.muted = true; // ✅ 静音，确保自动播放有效
+
+                        const track = document.createElement('track');
+                        track.kind = 'subtitles';
+                        track.label = '字幕';
+                        track.srclang = 'ja';
+                        track.src = `video/${videoData.src}.vtt`;
+                        track.default = true;
+                        video.appendChild(track);
+
+                        wrapper.appendChild(video);
+                        app.appendChild(wrapper);
+                        videoElements[index] = video;
+    }
+
+                        async function showVideo(index) {
+      for (let i = 0; i < videoElements.length; i++) {
+        const video = videoElements[i];
+                        const wrapper = video.parentElement;
+                        wrapper.style.transform = `translateY(${(i - index) * 100}%)`;
+
+                        if (i === index) {
+          try {
+                            await video.play(); // ✅ 强制播放当前视频
+          } catch (err) {
+                            console.warn('自动播放失败：', err);
+          }
+        } else {
+                            video.pause();
+        }
+      }
+
+      // 加载下一页（懒加载）
+      if (index >= loadedVideos.length - 2 && loadedVideos.length < fullList.length) {
+                            loadNextPage();
+      }
+    }
+
+                        // 手势上下滑切换视频
+                        let startY = 0;
+                        let isSwiping = false;
+
+    app.addEventListener('touchstart', e => {
+                            startY = e.touches[0].clientY;
+                        isSwiping = true;
     });
 
-    Sortable.create(list, {
-        animation: 150,
-        touchStartThreshold: 5,
-        fallbackOnBody: true,
-        swapThreshold: 0.65,
-        forceFallback: isIOS() // ✅ iOS 特别处理
+    app.addEventListener('touchmove', e => {
+      if (!isSwiping) return;
+                        const diff = e.touches[0].clientY - startY;
+
+      if (Math.abs(diff) > 50) {
+        if (diff < 0) {
+          if (currentIndex < loadedVideos.length - 1) {
+                            currentIndex++;
+                        showVideo(currentIndex);
+          } else if (loadedVideos.length < fullList.length) {
+                            showToast('加载中…');
+          } else {
+                            showToast('已经是最后一个视频啦');
+          }
+        } else if (diff > 0) {
+          if (currentIndex > 0) {
+                            currentIndex--;
+                        showVideo(currentIndex);
+          } else {
+                            showToast('已经是第一个视频啦');
+          }
+        }
+                        isSwiping = false;
+      }
     });
-}
 
-// ✅ 检查答案
-function checkAnswer(listId, answer, resultId) {
-    const userList = Array.from(document.querySelectorAll(`#${listId} li`)).map(li => li.textContent);
-    const result = document.getElementById(resultId);
-    const isCorrect = JSON.stringify(userList) === JSON.stringify(answer);
+    // ✅ 激活播放权限（仅执行一次）
+    document.addEventListener('click', () => {
+                            document.querySelectorAll('video').forEach(video => {
+                                video.play().then(() => video.pause()).catch(() => { });
+                            });
+    }, {once: true });
 
-    result.textContent = isCorrect ? "✅ 正解です！" : "❌ もう一度やってみよう！";
-    result.style.color = isCorrect ? "green" : "red";
-}
-
-// ✅ 显示底部提示消息（带动画效果）
-function showTip(message) {
-    const tip = document.getElementById("page-tip");
-    if (!tip) return;
-    tip.textContent = message;
-    tip.style.display = "block";
-    setTimeout(() => {
-        tip.style.display = "none";
-    }, 2000);
-}
-
-// ✅ 上下页跳转（带页码自动补零）
-function goToPage(offset) {
-    const current = window.location.pathname.split("/").pop();
-    const match = current.match(/(.*_)(\d+)(\.html)/);
-
-    if (!match) {
-        showTip("⚠️ ページ名の形式が正しくありません！");
-        return;
-    }
-
-    const [_, prefix, numStr, suffix] = match;
-    const nextNumber = parseInt(numStr, 10) + offset;
-
-    if (nextNumber < 0) {
-        showTip("⚠️ これ以上前のページはありません");
-        return;
-    }
-
-    const nextPage = `${prefix}${nextNumber.toString().padStart(3, '0')}${suffix}`;
-
-    fetch(nextPage, { method: 'HEAD' })
-        .then(response => {
-            if (response.ok) {
-                window.location.href = nextPage;
-            } else {
-                showTip(offset > 0 ? "⚠️ 次のページが見つかりません" : "⚠️ 前のページが見つかりません");
-            }
-        })
-        .catch(() => {
-            showTip("⚠️ ページの読み込み中にエラーが発生しました");
-        });
-}
-
-// ✅ 初始化拖拽区域（外部传入 answer1 / answer2）
-createList("list1", answer1);
-createList("list2", answer2);
+                        loadVideoList();
+                    </script>
+                </body>
+            </html>
