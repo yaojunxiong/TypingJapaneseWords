@@ -110,7 +110,7 @@
             wrapper.style.transform = `translateY(${(index - currentIndex) * 100}%)`;
 
             const video = document.createElement('video');
-            video.src = `video/${videoData.src}.mp4`;
+            video.src = `video/${videoData.rawText}.mp4`;
             video.autoplay = false;
             video.playsInline = true;
             video.loop = true;
@@ -120,7 +120,7 @@
             track.kind = 'subtitles';
             track.label = '字幕';
             track.srclang = 'ja';
-            track.src = `video/${videoData.src}.vtt`;
+            track.src = `video/${videoData.rawText}.vtt`;
             track.default = true;
             video.appendChild(track);
 
