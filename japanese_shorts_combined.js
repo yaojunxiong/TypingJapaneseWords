@@ -129,8 +129,8 @@ kuromoji.builder({ dicPath: "kuromoji/dict" }).build(function (err, tokenizer) {
     document.querySelector("video").load();
 
     // 设置对话文本
-    document.getElementById("text1").textContent = `女：「${sentence1}」`;
-    document.getElementById("text2").textContent = `男：「${sentence2}」`;
+    document.getElementById("text1").textContent = `「${sentence1}」`;
+    document.getElementById("text2").textContent = `「${sentence2}」`;
 
     // 分词
     answer1 = tokenizer.tokenize(sentence1).map(token => token.surface_form);
