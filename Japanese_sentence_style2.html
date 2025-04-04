@@ -74,58 +74,59 @@
 </head>
 <body>
     <div id="target" contenteditable="false"></div>
-
+  
     <div id="wrapper">
         <div id="highlight"></div>
-        <div id="input" contenteditable="true" spellcheck="false" data-placeholder="请输入日语句子进行练习..."></div>
+        <div id="input" contenteditable="true" spellcheck="false" data-placeholder="请输入日语句子进行练习1.."></div>
+         
     </div>
 
-    <div id="type-feedback"></div>
+        <div id="type-feedback"></div>
 
-    <script>
-        const params = new URLSearchParams(window.location.search);
-        const sentence = params.get("sentencePara") || "（未指定）";
+        <script>
+            const params = new URLSearchParams(window.location.search);
+            const sentence = params.get("sentencePara") || "（未指定）";
 
-        const target = document.getElementById("target");
-        const inputField = document.getElementById("input");
-        const highlightField = document.getElementById("highlight");
-        const typeFeedback = document.getElementById("type-feedback");
+            const target = document.getElementById("target");
+            const inputField = document.getElementById("input");
+            const highlightField = document.getElementById("highlight");
+            const typeFeedback = document.getElementById("type-feedback");
 
-        target.textContent = sentence;
+            target.textContent = sentence;
 
-        inputField.addEventListener("input", () => {
-            const inputText = inputField.textContent;
-            updateHighlight(inputText, sentence);
-            updateFeedback(inputText, sentence);
-        });
+            inputField.addEventListener("input", () => {
+                const inputText = inputField.textContent;
+                updateHighlight(inputText, sentence);
+                updateFeedback(inputText, sentence);
+            });
 
-        function updateHighlight(inputText, targetText) {
-            let result = "";
-            const maxLen = Math.max(inputText.length, targetText.length);
-            for (let i = 0; i < maxLen; i++) {
-                const inputChar = inputText[i] || "";
-                const targetChar = targetText[i] || "";
+            function updateHighlight(inputText, targetText) {
+                let result = "";
+                const maxLen = Math.max(inputText.length, targetText.length);
+                for (let i = 0; i < maxLen; i++) {
+                    const inputChar = inputText[i] || "";
+                    const targetChar = targetText[i] || "";
 
-                if (inputChar === targetChar) {
-                    result += inputChar;
+                    if (inputChar === targetChar) {
+                        result += inputChar;
+                    } else {
+                        result += `<span class="highlight-char">${inputChar || " "}</span>`;
+                    }
+                }
+                highlightField.innerHTML = result;
+            }
+
+            function updateFeedback(inputText, targetText) {
+                if (inputText === targetText) {
+                    typeFeedback.textContent = "输入正确！";
+                    typeFeedback.style.color = "green";
+                    document.getElementById("wrapper").style.borderColor = "green";
                 } else {
-                    result += `<span class="highlight-char">${inputChar || " "}</span>`;
+                    typeFeedback.textContent = "输入错误，请继续尝试！";
+                    typeFeedback.style.color = "red";
+                    document.getElementById("wrapper").style.borderColor = "red";
                 }
             }
-            highlightField.innerHTML = result;
-        }
-
-        function updateFeedback(inputText, targetText) {
-            if (inputText === targetText) {
-                typeFeedback.textContent = "输入正确！";
-                typeFeedback.style.color = "green";
-                document.getElementById("wrapper").style.borderColor = "green";
-            } else {
-                typeFeedback.textContent = "输入错误，请继续尝试！";
-                typeFeedback.style.color = "red";
-                document.getElementById("wrapper").style.borderColor = "red";
-            }
-        }
-    </script>
+        </script>
 </body>
 </html>
