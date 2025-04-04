@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>打字练习</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        #target {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #eee;
+            border: 2px solid #ccc;
+            min-height: 40px;
+            color: #333;
+        }
+
+        #input {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #fff;
+            border: 2px solid #ccc;
+            min-height: 40px;
+            white-space: pre-wrap;
+        }
+
+            #input:empty:before {
+                content: attr(data-placeholder);
+                color: #aaa;
+            }
+
+        .highlight {
+            background-color: #ffcccc;
+            color: red;
+        }
+
+        #type-feedback {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="target" contenteditable="false"></div>
+    <div id="input" contenteditable="true" data-placeholder="请输入日语句子进行练习..."></div>
+    <div id="type-feedback"></div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const sentence = params.get("sentencePara") || "（未指定）";
+
+        const target = document.getElementById("target");
+        const inputField = document.getElementById("input");
+        const typeFeedback = document.getElementById("type-feedback");
+
+        target.textContent = sentence;
+
+        inputField.addEventListener("input", () => {
+            const inputText = inputField.textContent.trim();
+            compareText(inputText, sentence);
+        });
+
+        function compareText(inputText, targetSentence) {
+            let highlighted = '';
+            const maxLength = Math.max(inputText.length, targetSentence.length);
+
+            for (let i = 0; i < maxLength; i++) {
+                const targetChar = targetSentence[i] || '';
+                const inputChar = inputText[i] || '';
+
+                if (targetChar !== inputChar) {
+                    highlighted += `<span class="highlight">${inputChar}</span>`;
+                } else {
+                    highlighted += inputChar;
+                }
+            }
+
+            // 设置带有高亮的内容
+            inputField.innerHTML = highlighted;
+
+            // 保持光标在末尾
+            placeCaretAtEnd(inputField);
+
+            if (inputText === targetSentence) {
+                typeFeedback.textContent = "输入正确！";
+                typeFeedback.style.color = "green";
+                inputField.style.borderColor = "green";
+            } else {
+                typeFeedback.textContent = "输入错误，请继续尝试！";
+                typeFeedback.style.color = "red";
+                inputField.style.borderColor = "red";
+            }
+        }
+
+        // 保持输入光标在末尾
+        function placeCaretAtEnd(el) {
+            el.focus();
+            const range = document.createRange();
+            const sel = window.getSelection();
+            range.selectNodeContents(el);
+            range.collapse(false);
+            sel.removeAllRanges();
+            sel.addRange(range);
+        }
+    </script>
+</body>
+</html>

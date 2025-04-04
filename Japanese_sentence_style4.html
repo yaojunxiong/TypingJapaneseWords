@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>日语台词查找</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .result {
+            margin-top: 20px;
+        }
+
+        .video-block {
+            margin-bottom: 30px;
+        }
+
+        video {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .raw-text {
+            font-size: 1.1em;
+            color: #333;
+            padding: 4px 0;
+        }
+
+            .raw-text a {
+                text-decoration: none;
+                color: #007bff;
+            }
+
+                .raw-text a:hover {
+                    text-decoration: underline;
+                }
+    </style>
+</head>
+<body>
+
+    <h1>🎬 日语台词查找结果</h1>
+    <div id="result" class="result">読み込み中...</div>
+
+    <script>
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        const sentence = getQueryParam('sentencePara');
+        const resultDiv = document.getElementById('result');
+
+        if (!sentence) {
+            resultDiv.innerHTML = '❌ 未提供台词参数。请使用 ?sentencePara=你的日语句子。';
+        } else {
+            fetch('videos.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('无法加载 JSON 文件');
+                    }
+                    return response.json();
+                })
+                .then(videoData => {
+                    const matches = videoData.filter(item =>
+                        item.rawText && item.rawText.includes(sentence)
+                    );
+
+                    if (matches.length === 0) {
+                        resultDiv.innerHTML = `😢 没有找到包含「${sentence}」的视频。`;
+                    } else {
+                        resultDiv.innerHTML = `<p>✅ 找到 <strong>${matches.length}</strong> 个匹配项：</p>`;
+                        matches.forEach(match => {
+                            const encodedFileName = encodeURIComponent(match.rawText) + '.mp4';
+                            const mp4File = 'video/' + encodedFileName;
+
+                            const videoBlock = document.createElement('div');
+                            videoBlock.className = 'video-block';
+                            videoBlock.innerHTML = `
+                    <video controls src="${mp4File}"></video>
+                    <div class="raw-text">
+                      ${match.rawText}
+                      <a href="${match.file}" target="_blank">▶ ページを見る</a>
+                    </div>
+                  `;
+                            resultDiv.appendChild(videoBlock);
+                        });
+                    }
+                })
+                .catch(error => {
+                    resultDiv.innerHTML = `❌ 加载视频数据失败：${error.message}`;
+                    console.error(error);
+                });
+        }
+    </script>
+
+</body>
+</html>
