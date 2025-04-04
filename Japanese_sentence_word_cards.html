@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日语词卡练习</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .card-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 120px;
+            user-select: none;
+            transition: all 0.3s ease;
+        }
+
+            .card.selected {
+                background: #cce5ff;
+                border-color: #3399ff;
+            }
+
+        .game-area {
+            display: none;
+            flex-direction: row;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: nowrap;
+            margin-top: 20px;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .card.matched {
+            display: none;
+        }
+
+        #feedback {
+            margin-top: 10px;
+            font-weight: bold;
+            color: red;
+        }
+
+        #success {
+            margin-top: 15px;
+            font-size: 20px;
+            color: green;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .game-area {
+                flex-direction: row;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+            }
+
+            .column {
+                min-width: 140px;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>📘 句子词卡学习</h2>
+    <p><strong>句子：</strong> <span id="sentenceText"></span></p>
+
+    <div class="card-grid" id="wordCards"></div>
+
+    <button onclick="generateMatchingGame()">🎮 开始连连看游戏</button>
+
+    <div class="game-area" id="gameArea">
+        <div class="column" id="jpColumn"></div>
+        <div class="column" id="cnColumn"></div>
+    </div>
+    <div id="feedback"></div>
+    <div id="success"></div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const sentence = params.get("sentencePara");
+
+        document.getElementById("sentenceText").textContent = sentence || "（未指定）";
+
+        // 用全局变量接住词卡数据
+        let globalWordData = [];
+
+        fetch("Japanese_sentence_word_cards.json")
+            .then(response => response.json())
+            .then(data => {
+                const wordData = data[sentence];
+                if (!wordData) {
+                    document.getElementById("wordCards").innerHTML = "<p>❌ 找不到该句子的词卡数据。</p>";
+                    return;
+                }
+
+                globalWordData = wordData; // 存为全局变量
+
+                const cardContainer = document.getElementById('wordCards');
+                wordData.forEach(w => {
+                    const div = document.createElement('div');
+                    div.className = 'card';
+                    div.innerHTML = `<strong>${w.jp}</strong><br><small>${w.reading}</small><br><em>${w.meaning}</em>`;
+                    cardContainer.appendChild(div);
+                });
+            })
+            .catch(err => {
+                document.getElementById("wordCards").innerHTML = "<p>❌ 加载词卡数据失败。</p>";
+                console.error(err);
+            });
+
+        // 把函数放到外部，供按钮调用
+        function generateMatchingGame() {
+            const wordData = globalWordData;
+            if (!wordData || wordData.length === 0) return;
+
+            const jpCol = document.getElementById('jpColumn');
+            const cnCol = document.getElementById('cnColumn');
+            const feedback = document.getElementById('feedback');
+            const success = document.getElementById('success');
+
+            jpCol.innerHTML = '';
+            cnCol.innerHTML = '';
+            feedback.textContent = '';
+            success.textContent = '';
+            document.getElementById('gameArea').style.display = 'flex';
+
+            let selectedJP = null;
+            let selectedCN = null;
+            let matchedCount = 0;
+
+            const jpCards = [...wordData].map((w, i) => ({ text: w.jp, matchId: i }));
+            const cnCards = [...wordData].map((w, i) => ({ text: w.meaning, matchId: i }));
+
+            jpCards.sort(() => Math.random() - 0.5);
+            cnCards.sort(() => Math.random() - 0.5);
+
+            function createButton(text, matchId, type) {
+                const div = document.createElement('div');
+                div.className = 'card';
+                div.textContent = text;
+                div.dataset.match = matchId;
+                div.dataset.type = type;
+
+                div.addEventListener('click', () => {
+                    if (div.classList.contains('matched')) return;
+
+                    if (type === 'jp') {
+                        if (selectedJP) selectedJP.classList.remove('selected');
+                        selectedJP = div;
+                        div.classList.add('selected');
+                    } else {
+                        if (selectedCN) selectedCN.classList.remove('selected');
+                        selectedCN = div;
+                        div.classList.add('selected');
+                    }
+
+                    if (selectedJP && selectedCN) {
+                        if (selectedJP.dataset.match === selectedCN.dataset.match) {
+                            selectedJP.classList.add('matched');
+                            selectedCN.classList.add('matched');
+                            selectedJP = null;
+                            selectedCN = null;
+                            matchedCount++;
+                            feedback.textContent = '';
+                            if (matchedCount === wordData.length) {
+                                success.textContent = '🎉 よくできました！つぎもがんばってね！';
+                            }
+                        } else {
+                            feedback.textContent = '❌ 配对错误，请再试一次！';
+                            setTimeout(() => {
+                                selectedJP.classList.remove('selected');
+                                selectedCN.classList.remove('selected');
+                                selectedJP = null;
+                                selectedCN = null;
+                            }, 500);
+                        }
+                    }
+                });
+
+                return div;
+            }
+
+            jpCards.forEach(c => jpCol.appendChild(createButton(c.text, c.matchId, 'jp')));
+            cnCards.forEach(c => cnCol.appendChild(createButton(c.text, c.matchId, 'cn')));
+        }
+    </script>
+
+</body>
+</html>

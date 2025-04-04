@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日语句子列表</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            padding: 20px;
+            background-color: #f9f9f9;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        li {
+            margin: 15px 0;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 15px;
+        }
+
+            li:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            }
+
+        a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #007bff;
+            display: block;
+            transition: color 0.3s ease;
+        }
+
+            a:hover {
+                color: #0056b3;
+            }
+
+            a:active {
+                color: #004085;
+            }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            li {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>日语句子列表</h1>
+
+    <ul id="sentenceList"></ul>
+
+    <script>
+        // 使用fetch从Japanese_sentence_word_cards.json加载数据
+        fetch('Japanese_sentence_word_cards.json')
+            .then(response => response.json())
+            .then(data => {
+                // 获取ul元素
+                const listElement = document.getElementById('sentenceList');
+
+                // 遍历JSON数据并生成HTML列表项
+                for (const sentence in data) {
+                    if (data.hasOwnProperty(sentence)) {
+                        const listItem = document.createElement('li');
+                        const link = document.createElement('a');
+
+                        // URL编码
+                        const encodedSentence = encodeURIComponent(sentence);
+                        link.href = `Japanese_sentence_word_cards.html?sentencePara=${encodedSentence}`;
+                        link.textContent = sentence;
+
+                        listItem.appendChild(link);
+                        listElement.appendChild(listItem);
+                    }
+                }
+            })
+            .catch(error => {
+                console.error('Error loading JSON:', error);
+            });
+    </script>
+
+</body>
+</html>
