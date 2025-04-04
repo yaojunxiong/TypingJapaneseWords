@@ -20,24 +20,52 @@
             color: #333;
         }
 
-        #input {
-            margin-bottom: 10px;
-            padding: 10px;
-            background-color: #fff;
+        #wrapper {
+            position: relative;
             border: 2px solid #ccc;
+            background: #fff;
+            padding: 10px;
             min-height: 40px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-family: sans-serif;
+        }
+
+        #highlight,
+        #input {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
             white-space: pre-wrap;
+            word-break: break-word;
+            font-size: 16px;
+            font-family: inherit;
+            line-height: 1.5;
+        }
+
+        #highlight {
+            color: transparent;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .highlight-char {
+            background-color: #ffcccc;
+            color: red;
+        }
+
+        #input {
+            background: transparent;
+            z-index: 1;
+            outline: none;
         }
 
             #input:empty:before {
                 content: attr(data-placeholder);
                 color: #aaa;
             }
-
-        .highlight {
-            background-color: #ffcccc;
-            color: red;
-        }
 
         #type-feedback {
             font-weight: bold;
@@ -46,7 +74,12 @@
 </head>
 <body>
     <div id="target" contenteditable="false"></div>
-    <div id="input" contenteditable="true" data-placeholder="请输入日语句子进行练习..."></div>
+
+    <div id="wrapper">
+        <div id="highlight"></div>
+        <div id="input" contenteditable="true" spellcheck="false" data-placeholder="请输入日语句子进行练习..."></div>
+    </div>
+
     <div id="type-feedback"></div>
 
     <script>
@@ -55,56 +88,43 @@
 
         const target = document.getElementById("target");
         const inputField = document.getElementById("input");
+        const highlightField = document.getElementById("highlight");
         const typeFeedback = document.getElementById("type-feedback");
 
         target.textContent = sentence;
 
         inputField.addEventListener("input", () => {
-            const inputText = inputField.textContent.trim();
-            compareText(inputText, sentence);
+            const inputText = inputField.textContent;
+            updateHighlight(inputText, sentence);
+            updateFeedback(inputText, sentence);
         });
 
-        function compareText(inputText, targetSentence) {
-            let highlighted = '';
-            const maxLength = Math.max(inputText.length, targetSentence.length);
+        function updateHighlight(inputText, targetText) {
+            let result = "";
+            const maxLen = Math.max(inputText.length, targetText.length);
+            for (let i = 0; i < maxLen; i++) {
+                const inputChar = inputText[i] || "";
+                const targetChar = targetText[i] || "";
 
-            for (let i = 0; i < maxLength; i++) {
-                const targetChar = targetSentence[i] || '';
-                const inputChar = inputText[i] || '';
-
-                if (targetChar !== inputChar) {
-                    highlighted += `<span class="highlight">${inputChar}</span>`;
+                if (inputChar === targetChar) {
+                    result += inputChar;
                 } else {
-                    highlighted += inputChar;
+                    result += `<span class="highlight-char">${inputChar || " "}</span>`;
                 }
             }
+            highlightField.innerHTML = result;
+        }
 
-            // 设置带有高亮的内容
-            inputField.innerHTML = highlighted;
-
-            // 保持光标在末尾
-            placeCaretAtEnd(inputField);
-
-            if (inputText === targetSentence) {
+        function updateFeedback(inputText, targetText) {
+            if (inputText === targetText) {
                 typeFeedback.textContent = "输入正确！";
                 typeFeedback.style.color = "green";
-                inputField.style.borderColor = "green";
+                document.getElementById("wrapper").style.borderColor = "green";
             } else {
                 typeFeedback.textContent = "输入错误，请继续尝试！";
                 typeFeedback.style.color = "red";
-                inputField.style.borderColor = "red";
+                document.getElementById("wrapper").style.borderColor = "red";
             }
-        }
-
-        // 保持输入光标在末尾
-        function placeCaretAtEnd(el) {
-            el.focus();
-            const range = document.createRange();
-            const sel = window.getSelection();
-            range.selectNodeContents(el);
-            range.collapse(false);
-            sel.removeAllRanges();
-            sel.addRange(range);
         }
     </script>
 </body>
