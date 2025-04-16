@@ -31,7 +31,11 @@
     </style>
 </head>
 <body>
-
+    <!-- 背景音乐 -->
+    <audio id="bgm" autoplay loop>
+        <source src="BGM/bgm_piano_gentle.mp3" type="audio/mpeg">
+        您的浏览器不支持音频播放。
+    </audio> 
     <div class="container my-4">
         <h2>📘 日语句子学习</h2>
         <p><strong>句子：</strong> <span id="sentenceText">（未指定）</span></p>
@@ -43,10 +47,13 @@
                 <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab">词卡</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab">打字练习</button>
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab">打字</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab">拖拽练习</button>
+                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab">拖拽</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="grammar-tab" data-bs-toggle="tab" data-bs-target="#grammar" type="button" role="tab">文法</button>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="short-tab" data-bs-toggle="tab" data-bs-target="#short" type="button" role="tab">视频</button>
@@ -73,6 +80,12 @@
                     <iframe id="styleFrame3"></iframe>
                 </div>
             </div>
+            <div class="tab-pane fade" id="grammar" role="tabpanel">
+                <div class="iframe-container">
+                    <div class="loading-text">加载中...</div>
+                    <iframe id="styleFrame5"></iframe>
+                </div>
+            </div>
             <div class="tab-pane fade" id="short" role="tabpanel">
                 <div class="iframe-container">
                     <div class="loading-text">加载中...</div>
@@ -84,6 +97,8 @@
 
     <!-- 参数解析与 iframe 赋值 -->
     <script>
+        document.getElementById("bgm").volume = 0.2;  // 20% 音量
+
         const params = new URLSearchParams(window.location.search);
         const sentence = params.get("sentencePara");
         document.getElementById("sentenceText").textContent = sentence || "（未指定）";
@@ -103,6 +118,7 @@
             setIframeSrc("styleFrame1", "Japanese_sentence_style1.html");
             setIframeSrc("styleFrame2", "Japanese_sentence_style2.html");
             setIframeSrc("styleFrame3", "Japanese_sentence_style3.html");
+            setIframeSrc("styleFrame5", "Japanese_sentence_style5.html");
             setIframeSrc("styleFrame4", "Japanese_sentence_style4.html");
         }
     </script>
