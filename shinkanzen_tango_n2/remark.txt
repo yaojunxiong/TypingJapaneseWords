@@ -1,0 +1,6 @@
+bat
+run：把JSON中的句子汇总到examples.txt
+run2:把examples.txt生成JSON词卡vocab_cards.json （注意：当dictionary.json越完善vocab_cards.json中 meaning: "" 的词越少，当有meaning: "" 可先完善dictionary.json数据再重新执行run2）
+run3：自动合并 dictionary.json 和 dictionary_updated.json，去重后保存回 dictionary.json。
+run4：自动从 vocab_cards.json 中找出所有 meaning: "" 的词，去重后生成 unmatched_words.json
+run5：把unmatched_words_filled.json中meaning有处理好导出一份matched_words.json，其它未处理的,待处理和未知等也导出一份unmatched_remaining.json

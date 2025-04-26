@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>日语台词查找</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 引入 Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .video-block {
+            margin-bottom: 2rem;
+        }
+
+            .video-block video {
+                width: 100%;
+                border-radius: 0.5rem;
+            }
+
+        .raw-text {
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <div class="container py-4">
+        <h1 class="text-center text-primary mb-4">🎬 日语台词视频</h1>
+        <div id="result" class="result">読み込み中...</div>
+    </div>
+
+    <script>
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        const sentence = getQueryParam('sentencePara') || '（句子未提供）';
+        const number = getQueryParam('number');
+        const resultDiv = document.getElementById('result');
+
+        if (!number) {
+            resultDiv.innerHTML = '<div class="alert alert-warning">❌ 未提供 <code>number</code> 参数。</div>';
+        } else {
+            const mp4File = `video/${number}.mp4`;
+
+            // 尝试加载视频文件
+            fetch(mp4File, { method: 'HEAD' }).then(res => {
+                if (res.ok) {
+                    resultDiv.innerHTML = `
+                            <div class="card video-block shadow-sm">
+                                <div class="card-body">
+                                    <video controls src="${mp4File}"></video>
+                                    <div class="raw-text">
+                                        <strong>台词：</strong> ${sentence}
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                } else {
+                    resultDiv.innerHTML = `<div class="alert alert-info">😢 没有找到编号为「${number}」的视频文件。</div>`;
+                }
+            }).catch(err => {
+                resultDiv.innerHTML = `<div class="alert alert-danger">❌ 加载视频失败：${err.message}</div>`;
+            });
+        }
+    </script>
+
+</body>
+</html>
