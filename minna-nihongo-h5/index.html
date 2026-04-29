@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Japanese Study Helper</title>
+  <meta name="theme-color" content="#d92d20" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <h1>Japanese Study Helper</h1>
+      <p>HTML5 PWA with Japanese sentence audio playback</p>
+    </div>
+    <button id="installBtn" class="ghost hidden">Install</button>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <div class="panel">
+        <h2>Lessons</h2>
+        <div id="lessonList" class="lesson-list"></div>
+      </div>
+      <div class="panel">
+        <h2>Voice</h2>
+        <label class="field">Speed
+          <input id="rate" type="range" min="0.45" max="1.2" step="0.05" value="0.75" />
+          <span id="rateText">0.75x</span>
+        </label>
+        <label class="field">Japanese voice
+          <select id="voiceSelect"></select>
+        </label>
+        <button id="stopBtn" class="secondary">Stop</button>
+      </div>
+      <div class="panel small">
+        <p>Add your own study notes in data/lessons.json.</p>
+      </div>
+    </aside>
+
+    <section class="content">
+      <div class="toolbar">
+        <input id="searchInput" placeholder="Search Japanese / Chinese / kana..." />
+        <button id="resetBtn" class="secondary">Clear</button>
+      </div>
+      <article id="lessonView" class="lesson-view"></article>
+    </section>
+  </main>
+
+  <footer>Personal study helper template.</footer>
+  <script src="app.js"></script>
+</body>
+</html>
