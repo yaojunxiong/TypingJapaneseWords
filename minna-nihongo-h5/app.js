@@ -1,4 +1,4 @@
-const DATA_URL = './data/lessons.json';
+const DATA_URL = './data/lessons_full.json?v=3';
 const state = { lessons: [], currentLessonId: 1, voices: [], deferredPrompt: null };
 const $ = id => document.getElementById(id);
 
