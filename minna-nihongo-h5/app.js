@@ -1,5 +1,6 @@
-const DATA_URL = './data/lessons_full.json?v=3';
-const state = { lessons: [], currentLessonId: 1, voices: [], deferredPrompt: null };
+const DATA_URL = './data/lessons_full.json?v=4';
+const ADDON_URL = './data/lesson_addons.json?v=4';
+const state = { lessons: [], addons: [], currentLessonId: 1, voices: [], deferredPrompt: null };
 const $ = id => document.getElementById(id);
 
 function progressKey(id){ return `jp-helper-progress-lesson-${id}`; }
@@ -26,6 +27,12 @@ function speak(text, rateOverride=null){
   const voice = state.voices.find(v => v.name === selectedVoice);
   if(voice) u.voice = voice;
   window.speechSynthesis.speak(u);
+}
+function speakConversation(lessonId){
+  const addon = state.addons.find(a => a.id === lessonId);
+  if(!addon || !addon.conversation) return;
+  const text = addon.conversation.lines.map(line => line.jp).join('。');
+  speak(text, 0.65);
 }
 function loadVoices(){
   state.voices = window.speechSynthesis ? window.speechSynthesis.getVoices().filter(v => v.lang.toLowerCase().startsWith('ja')) : [];
@@ -75,6 +82,19 @@ function card({lessonId,key,jp,kana,zh,note,type}){
     </div>
   </div>`;
 }
+function renderConversation(lesson, q){
+  const addon = state.addons.find(a => a.id === lesson.id);
+  if(!addon || !addon.conversation) return '<p>No conversation yet.</p>';
+  const lines = addon.conversation.lines.filter(x => matchSearch(x,q));
+  return `<div class="lesson-title"><div><h3>${addon.conversation.title}</h3><p>Dialogue practice. Tap each line to play.</p></div><button onclick='speakConversation(${lesson.id})'>Play all</button></div>
+    <div class="card-grid">${lines.map((line,i)=>`<div class="sentence-card"><div class="kana"><strong>${line.speaker}</strong></div><div class="jp">${line.jp}</div><div class="kana">${line.kana}</div><div class="zh">${line.zh}</div><div class="actions"><button onclick='speak(${JSON.stringify(line.jp)},0.6)'>Slow</button><button onclick='speak(${JSON.stringify(line.jp)},0.9)'>Normal</button></div></div>`).join('')}</div>`;
+}
+function renderExercises(lesson, q){
+  const addon = state.addons.find(a => a.id === lesson.id);
+  if(!addon || !addon.exercises) return '<p>No exercises yet.</p>';
+  const exercises = addon.exercises.filter(x => matchSearch(x,q));
+  return `<div class="card-grid">${exercises.map((ex,i)=>`<div class="grammar-card"><div class="kana">${ex.type}</div><div class="jp">${ex.question}</div>${ex.choices ? `<div class="zh">${ex.choices.map(c => `・${c}`).join('<br>')}</div>` : ''}<details class="zh"><summary>Show answer</summary><strong>${ex.answer}</strong></details></div>`).join('')}</div>`;
+}
 function renderLessonView(){
   const lesson = state.lessons.find(l => l.id === state.currentLessonId);
   const q = $('searchInput').value.trim();
@@ -84,13 +104,16 @@ function renderLessonView(){
   const grammar = lesson.grammar.filter(x => matchSearch(x,q));
   $('lessonView').innerHTML = `<div class="lesson-title"><div><h2>Lesson ${lesson.id}: ${lesson.title}</h2><p>${lesson.description || ''}</p></div><button onclick='speak(${JSON.stringify(lesson.title)},0.75)'>Play title</button></div>
     <h3 class="section-title">Sentences</h3><div class="card-grid">${sentences.length ? sentences.map((s,i)=>card({lessonId:lesson.id,key:`sentence-${i}`,type:'sentence',jp:s.jp,kana:s.kana,zh:s.zh,note:s.note})).join('') : '<p>No matching sentences.</p>'}</div>
+    <h3 class="section-title">Conversation</h3>${renderConversation(lesson,q)}
+    <h3 class="section-title">Exercises</h3>${renderExercises(lesson,q)}
     <h3 class="section-title">Words</h3><div class="card-grid">${words.length ? words.map((w,i)=>card({lessonId:lesson.id,key:`word-${i}`,type:'word',jp:w.jp,kana:w.kana,zh:w.zh,note:w.note})).join('') : '<p>No matching words.</p>'}</div>
     <h3 class="section-title">Grammar</h3><div class="card-grid">${grammar.length ? grammar.map((g,i)=>`<div class="grammar-card"><div class="jp">${g.pattern}</div><div class="zh">${g.explain}</div><div class="actions"><button onclick='speak(${JSON.stringify(g.example)},0.65)'>Play example</button><span>${g.example}</span></div></div>`).join('') : '<p>No matching grammar.</p>'}</div>`;
 }
 function render(){ renderLessonList(); renderLessonView(); }
 async function init(){
-  const res = await fetch(DATA_URL);
-  state.lessons = await res.json();
+  const [lessonRes, addonRes] = await Promise.all([fetch(DATA_URL), fetch(ADDON_URL)]);
+  state.lessons = await lessonRes.json();
+  state.addons = await addonRes.json();
   $('rate').addEventListener('input', e => $('rateText').textContent = `${e.target.value}x`);
   $('stopBtn').addEventListener('click', () => window.speechSynthesis?.cancel());
   $('searchInput').addEventListener('input', renderLessonView);
