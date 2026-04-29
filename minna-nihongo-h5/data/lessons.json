@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Self introduction basics",
+    "description": "Sample content. Replace it with your own study notes.",
+    "sentences": [
+      {"jp": "わたしは学生です。", "kana": "わたしは がくせいです。", "zh": "我是学生。"},
+      {"jp": "これは本です。", "kana": "これは ほんです。", "zh": "这是书。"},
+      {"jp": "あの人は先生です。", "kana": "あのひとは せんせいです。", "zh": "那个人是老师。"}
+    ],
+    "words": [
+      {"jp": "わたし", "kana": "わたし", "zh": "我"},
+      {"jp": "学生", "kana": "がくせい", "zh": "学生"},
+      {"jp": "先生", "kana": "せんせい", "zh": "老师"}
+    ],
+    "grammar": [
+      {"pattern": "A は B です", "explain": "A is B. は is read as wa in this pattern.", "example": "わたしは学生です。"},
+      {"pattern": "〜ですか", "explain": "Add か at the end to make a question.", "example": "あなたは学生ですか。"}
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Objects and demonstratives",
+    "description": "Sample lesson for testing audio playback.",
+    "sentences": [
+      {"jp": "これは何ですか。", "kana": "これは なんですか。", "zh": "这是什么？"},
+      {"jp": "それはかばんです。", "kana": "それは かばんです。", "zh": "那是包。"}
+    ],
+    "words": [
+      {"jp": "これ", "kana": "これ", "zh": "这个"},
+      {"jp": "それ", "kana": "それ", "zh": "那个"},
+      {"jp": "かばん", "kana": "かばん", "zh": "包"}
+    ],
+    "grammar": [
+      {"pattern": "これ / それ / あれ", "explain": "Demonstratives for this, that, and that over there.", "example": "これは何ですか。"}
+    ]
+  }
+]
