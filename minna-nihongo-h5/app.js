@@ -1,6 +1,7 @@
-const DATA_URL = './data/lessons_full.json?v=7';
-const DATA_URL_26_50 = './data/lessons_26_50.json?v=7';
-const ADDON_URL = './data/lesson_addons.json?v=7';
+const DATA_URL = './data/lessons_full.json?v=8';
+const DATA_URL_26_50 = './data/lessons_26_50.json?v=8';
+const ADDON_URL = './data/lesson_addons.json?v=8';
+const ADDON_URL_26_50 = './data/lesson_addons_26_50.json?v=8';
 const state = { lessons: [], addons: [], currentLessonId: 1, voices: [], deferredPrompt: null };
 const $ = id => document.getElementById(id);
 
@@ -114,11 +115,13 @@ function renderLessonView(){
 }
 function render(){ renderLessonList(); renderLessonView(); }
 async function init(){
-  const [lessonRes, lessonRes2, addonRes] = await Promise.all([fetch(DATA_URL), fetch(DATA_URL_26_50), fetch(ADDON_URL)]);
+  const [lessonRes, lessonRes2, addonRes, addonRes2] = await Promise.all([fetch(DATA_URL), fetch(DATA_URL_26_50), fetch(ADDON_URL), fetch(ADDON_URL_26_50)]);
   const lessons1 = await lessonRes.json();
   const lessons2 = await lessonRes2.json();
+  const addons1 = await addonRes.json();
+  const addons2 = await addonRes2.json();
   state.lessons = [...lessons1, ...lessons2].sort((a,b) => a.id - b.id);
-  state.addons = await addonRes.json();
+  state.addons = [...addons1, ...addons2].sort((a,b) => a.id - b.id);
   $('rate').addEventListener('input', e => $('rateText').textContent = `${e.target.value}x`);
   $('stopBtn').addEventListener('click', () => window.speechSynthesis?.cancel());
   $('searchInput').addEventListener('input', renderLessonView);
