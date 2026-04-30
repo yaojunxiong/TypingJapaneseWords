@@ -1,5 +1,5 @@
-const DATA_URL = './data/lessons_full.json?v=4';
-const ADDON_URL = './data/lesson_addons.json?v=4';
+const DATA_URL = './data/lessons_full.json?v=5';
+const ADDON_URL = './data/lesson_addons.json?v=5';
 const state = { lessons: [], addons: [], currentLessonId: 1, voices: [], deferredPrompt: null };
 const $ = id => document.getElementById(id);
 
@@ -53,17 +53,19 @@ function loadVoices(){
   });
 }
 function renderLessonList(){
-  const root = $('lessonList');
-  root.innerHTML = '';
+  const select = $('lessonSelect');
+  if(!select) return;
+  const currentValue = String(state.currentLessonId);
+  select.innerHTML = '';
   state.lessons.forEach(lesson => {
     const p = getProgress(lesson.id);
     const count = Object.values(p).filter(Boolean).length;
-    const btn = document.createElement('button');
-    btn.className = `lesson-btn ${lesson.id === state.currentLessonId ? 'active' : ''}`;
-    btn.innerHTML = `<span>Lesson ${lesson.id}<br><small>${lesson.title}</small></span><span class="badge">${count} done</span>`;
-    btn.onclick = () => { state.currentLessonId = lesson.id; render(); };
-    root.appendChild(btn);
+    const option = document.createElement('option');
+    option.value = lesson.id;
+    option.textContent = `Lesson ${lesson.id} - ${lesson.title} (${count} done)`;
+    select.appendChild(option);
   });
+  select.value = currentValue;
 }
 function matchSearch(item,q){ return !q || JSON.stringify(item).toLowerCase().includes(q.toLowerCase()); }
 function card({lessonId,key,jp,kana,zh,note,type}){
@@ -118,6 +120,11 @@ async function init(){
   $('stopBtn').addEventListener('click', () => window.speechSynthesis?.cancel());
   $('searchInput').addEventListener('input', renderLessonView);
   $('resetBtn').addEventListener('click', () => { $('searchInput').value = ''; renderLessonView(); });
+  $('lessonSelect').addEventListener('change', e => {
+    state.currentLessonId = Number(e.target.value);
+    renderLessonView();
+    renderLessonList();
+  });
   if('speechSynthesis' in window){ loadVoices(); window.speechSynthesis.onvoiceschanged = loadVoices; }
   if('serviceWorker' in navigator){ navigator.serviceWorker.register('./sw.js').catch(console.warn); }
   window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); state.deferredPrompt = e; $('installBtn').classList.remove('hidden'); });
