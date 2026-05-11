@@ -1,1 +1,96 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>みんなの日本語 点读 V1</title><style>*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Yu Gothic",sans-serif;background:#f3f4f6;color:#111827}header{position:sticky;top:0;background:#fffffff2;border-bottom:1px solid #e5e7eb;padding:14px 16px;z-index:10}h1{margin:0;font-size:22px}.sub{font-size:13px;color:#6b7280;margin-top:4px}main{max-width:960px;margin:auto;padding:16px}.notice{background:#fff7ed;border:1px solid #fed7aa;border-radius:14px;padding:12px;color:#7c2d12;line-height:1.6}.controls{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}.select{border:1px solid #d1d5db;border-radius:999px;padding:10px 15px;background:#fff;font-size:15px}button{border:0;border-radius:999px;background:#2563eb;color:#fff;padding:10px 15px;cursor:pointer}.secondary{background:#e5e7eb;color:#111827}.tabs{display:flex;gap:10px;overflow:auto;padding-bottom:8px;margin:18px 0}.tab{white-space:nowrap;background:#e5e7eb;color:#111827}.tab.active{background:#111827;color:#fff}.section-title{font-size:24px;margin-top:10px;border-left:6px solid #111827;padding-left:10px}.card{background:#fff;border:1px solid #e5e7eb;border-radius:18px;padding:15px;margin:10px 0}.row{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center}.jp{font-size:22px;line-height:1.7}.cn{color:#6b7280;margin-top:6px}.speaker{font-weight:700;color:#374151}.play-btn{min-width:88px}.empty{background:#fff;border:1px dashed #cbd5e1;border-radius:18px;padding:22px;color:#64748b;line-height:1.7}@media(max-width:640px){.row{grid-template-columns:1fr}.jp{font-size:20px}button,.select{width:100%}.tabs{padding-bottom:10px}}</style></head><body><header><h1>みんなの日本語 初級Ⅰ 点读 V1</h1><div class="sub">课次切换 + Tab 标签页 · 内容只显示已按 PDF 校对录入的部分</div></header><main><div class="notice">为了和 PDF 保持一致，本版不再使用示例/占位内容。未校对录入的课次或栏目会显示“尚未录入”。</div><div class="controls"><select id="lessonSelect" class="select" onchange="switchLesson(Number(this.value))"></select><button onclick="playCurrentTab()">▶ 播放当前页</button><button class="secondary" onclick="stopAudio()">■ 停止</button></div><div class="tabs" id="tabs"></div><div id="content"></div></main><script>const lessonNames=Array.from({length:25},(_,i)=>`第${i+1}課`);const lessons={1:{title:'第1課',sections:[{title:'文型',items:[['','わたしは マイク・ミラーです。','我是迈克·米勒。'],['','サントスさんは 学生じゃ ありません。','桑托斯先生不是学生。'],['','ミラーさんは 会社員ですか。','米勒先生是公司职员吗？'],['','サントスさんも 会社員です。','桑托斯先生也是公司职员。']]},{title:'例文',items:[['','［あなたは］マイク・ミラーさんですか。','您是迈克·米勒先生吗？'],['','はい、［わたしは］マイク・ミラーです。','是的，我是迈克·米勒。'],['','ミラーさんは 学生ですか。','米勒先生是学生吗？'],['','いいえ、［わたしは］学生じゃ ありません。','不，我不是学生。'],['','ワンさんは 銀行員ですか。','王先生是银行职员吗？'],['','いいえ、［ワンさんは］銀行員じゃ ありません。医者です。','不，王先生不是银行职员。是医生。'],['','あの 方は どなたですか。','那位是谁？'],['','ワットさんです。さくら大学の 先生です。','是瓦特先生。是樱花大学的老师。'],['','グプタさんは 会社員ですか。','古普塔先生是公司职员吗？'],['','はい、会社員です。','是的，是公司职员。'],['','カリナさんも 会社員ですか。','卡莉娜也是公司职员吗？'],['','いいえ、［カリナさんは］学生です。','不，卡莉娜是学生。'],['','テレーザちゃんは 何歳ですか。','特蕾莎几岁？'],['','9歳です。','9岁。']]},{title:'会話',items:[['佐藤','おはよう ございます。','早上好。'],['山田','おはよう ございます。','早上好。'],['山田','佐藤さん、こちらは マイク・ミラーさんです。','佐藤女士，这位是迈克·米勒先生。'],['ミラー','初めまして。','初次见面。'],['ミラー','マイク・ミラーです。','我是迈克·米勒。'],['ミラー','アメリカから 来ました。','我来自美国。'],['ミラー','どうぞ よろしく。','请多关照。'],['佐藤','佐藤けい子です。','我是佐藤惠子。'],['佐藤','どうぞ よろしく。','请多关照。']]}]}};let currentLesson=1;let currentTab=0;function getSections(){return lessons[currentLesson]?.sections||[]}function cleanText(t){return t.replace(/[\[\]［］]/g,'')}function stopAudio(){speechSynthesis.cancel()}function speak(t){stopAudio();setTimeout(()=>{const u=new SpeechSynthesisUtterance(cleanText(t));u.lang='ja-JP';u.rate=.86;const v=speechSynthesis.getVoices().find(x=>x.lang&&x.lang.toLowerCase().startsWith('ja'));if(v)u.voice=v;speechSynthesis.speak(u)},60)}function renderLessonSelect(){document.getElementById('lessonSelect').innerHTML=lessonNames.map((name,i)=>`<option value="${i+1}" ${i+1===currentLesson?'selected':''}>${name}</option>`).join('')}function renderTabs(){const secs=getSections();document.getElementById('tabs').innerHTML=secs.length?secs.map((s,i)=>`<button class="tab ${i===currentTab?'active':''}" onclick="switchTab(${i})">${s.title}</button>`).join(''):''}function renderContent(){const secs=getSections();if(!secs.length){document.getElementById('content').innerHTML=`<div class="empty"><b>${lessonNames[currentLesson-1]}</b><br>この課はまだ PDF に合わせて校正入力していません。<br>本课还没有按 PDF 校对录入。</div>`;return}const sec=secs[currentTab];if(!sec||!sec.items.length){document.getElementById('content').innerHTML=`<div class="empty">${sec?.title||''} 尚未按 PDF 校对录入。</div>`;return}document.getElementById('content').innerHTML=`<div class="section-title">${lessonNames[currentLesson-1]} · ${sec.title}</div>${sec.items.map((it,i)=>`<div class="card"><div class="row"><div class="jp-area" data-text="${encodeURIComponent(it[1])}"><div class="jp"><b>${i+1}.</b> ${it[0]?`<span class="speaker">${it[0]}：</span>`:''}${it[1]}</div><div class="cn">${it[2]||''}</div></div><button class="play-btn" data-play="${encodeURIComponent(it[1])}">🔊 播放</button></div></div>`).join('')}`;document.querySelectorAll('.play-btn').forEach(btn=>btn.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();speak(decodeURIComponent(btn.dataset.play))}));document.querySelectorAll('.jp-area').forEach(area=>area.addEventListener('click',()=>speak(decodeURIComponent(area.dataset.text))))}function switchLesson(n){stopAudio();currentLesson=n;currentTab=0;renderLessonSelect();renderTabs();renderContent()}function switchTab(i){stopAudio();currentTab=i;renderTabs();renderContent()}function playCurrentTab(){stopAudio();const sec=getSections()[currentTab];if(!sec||!sec.items.length)return;const arr=sec.items.map(i=>i[1]);let n=0;function next(){if(n>=arr.length)return;const u=new SpeechSynthesisUtterance(cleanText(arr[n]));u.lang='ja-JP';u.rate=.86;u.onend=()=>{n++;setTimeout(next,400)};speechSynthesis.speak(u)}next()}renderLessonSelect();renderTabs();renderContent();</script></body></html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>みんなの日本語 点读 V1</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Yu Gothic",sans-serif;background:#f3f4f6;color:#111827}
+header{position:sticky;top:0;background:#fffffff2;border-bottom:1px solid #e5e7eb;padding:14px 16px;z-index:10}
+h1{margin:0;font-size:22px}.sub{font-size:13px;color:#6b7280;margin-top:4px}
+main{max-width:960px;margin:auto;padding:16px}.notice{background:#fff7ed;border:1px solid #fed7aa;border-radius:14px;padding:12px;color:#7c2d12;line-height:1.6}
+.controls{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}.select{border:1px solid #d1d5db;border-radius:999px;padding:10px 15px;background:#fff;font-size:15px}
+button{border:0;border-radius:999px;background:#2563eb;color:#fff;padding:10px 15px;cursor:pointer}.secondary{background:#e5e7eb;color:#111827}
+.tabs{display:flex;gap:10px;overflow:auto;padding-bottom:8px;margin:18px 0}.tab{white-space:nowrap;background:#e5e7eb;color:#111827}.tab.active{background:#111827;color:#fff}
+.section-title{font-size:24px;margin-top:10px;border-left:6px solid #111827;padding-left:10px}.meta{color:#6b7280;font-size:13px;margin:6px 0 12px 16px}
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:18px;padding:15px;margin:10px 0}.row{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center}
+.jp{font-size:22px;line-height:1.7}.cn{display:none;color:#6b7280;margin-top:6px}.show-cn .cn{display:block}.speaker{font-weight:700;color:#374151}.play-btn{min-width:88px}
+.choice{color:#4b5563;font-size:16px;line-height:1.8;margin-top:8px}.empty{background:#fff;border:1px dashed #cbd5e1;border-radius:18px;padding:22px;color:#64748b;line-height:1.7}
+@media(max-width:640px){.row{grid-template-columns:1fr}.jp{font-size:20px}button,.select{width:100%}.tabs{padding-bottom:10px}}
+</style>
+</head>
+<body>
+<header>
+<h1>みんなの日本語 初級Ⅰ 点读 V1</h1>
+<div class="sub">每课独立 JSON · 默认隐藏中文 · Tab 按 PDF 栏目切换</div>
+</header>
+<main>
+<div class="notice">当前先校对录入第1课。每一课数据独立存放在 <b>data/lesson-xx.json</b>。</div>
+<div class="controls">
+<select id="lessonSelect" class="select" onchange="switchLesson(Number(this.value))"></select>
+<button onclick="playCurrentTab()">▶ 播放当前页</button>
+<button class="secondary" onclick="stopAudio()">■ 停止</button>
+<button class="secondary" onclick="toggleChinese()">中文显示/隐藏</button>
+</div>
+<div class="tabs" id="tabs"></div>
+<div id="content"></div>
+</main>
+<script>
+const lessonNames=Array.from({length:25},(_,i)=>`第${i+1}課`);
+let currentLesson=1;
+let currentTab=0;
+let currentData=null;
+let showChinese=false;
+const cache={};
+
+function pad(n){return String(n).padStart(2,'0')}
+function cleanText(t){return String(t||'').replace(/[\[\]［］]/g,'')}
+function stopAudio(){speechSynthesis.cancel()}
+function speak(t){stopAudio();setTimeout(()=>{const u=new SpeechSynthesisUtterance(cleanText(t));u.lang='ja-JP';u.rate=.86;const v=speechSynthesis.getVoices().find(x=>x.lang&&x.lang.toLowerCase().startsWith('ja'));if(v)u.voice=v;speechSynthesis.speak(u)},60)}
+function getSections(){return currentData?.sections||[]}
+function getSpeakText(item){if(item.text)return item.text;if(item.lines)return item.lines.map(l=>l.text).join('。');return ''}
+
+async function loadLesson(n){
+ currentLesson=n;currentTab=0;currentData=null;renderLessonSelect();renderTabs();renderLoading();
+ if(cache[n]){currentData=cache[n];renderTabs();renderContent();return}
+ try{
+   const res=await fetch(`data/lesson-${pad(n)}.json?ts=${Date.now()}`);
+   if(!res.ok)throw new Error('not found');
+   currentData=await res.json();cache[n]=currentData;
+ }catch(e){currentData=null}
+ renderTabs();renderContent();
+}
+
+function renderLessonSelect(){document.getElementById('lessonSelect').innerHTML=lessonNames.map((name,i)=>`<option value="${i+1}" ${i+1===currentLesson?'selected':''}>${name}</option>`).join('')}
+function renderTabs(){const secs=getSections();document.getElementById('tabs').innerHTML=secs.length?secs.map((s,i)=>`<button class="tab ${i===currentTab?'active':''}" onclick="switchTab(${i})">${s.title}</button>`).join(''):''}
+function renderLoading(){document.getElementById('content').innerHTML='<div class="empty">読み込み中...</div>'}
+
+function renderItem(item,i){
+ if(item.lines){
+   const text=getSpeakText(item);
+   return `<div class="card"><div class="row"><div class="jp-area" data-text="${encodeURIComponent(text)}"><div class="jp"><b>${item.no||i+1}.</b></div>${item.lines.map(l=>`<div class="jp">${l.speaker?`<span class="speaker">${l.speaker}：</span>`:''}${l.text}</div>`).join('')}<div class="cn">${item.cn||''}</div></div><button class="play-btn" data-play="${encodeURIComponent(text)}">🔊 播放</button></div></div>`;
+ }
+ const text=item.text||'';
+ const choices=item.choices?`<div class="choice">${item.choices.map(c=>`・${c}`).join('<br>')}</div>`:'';
+ const prompt=item.prompt?`<div class="choice">${item.prompt}</div>`:'';
+ return `<div class="card"><div class="row"><div class="jp-area" data-text="${encodeURIComponent(text)}"><div class="jp"><b>${item.no||i+1}.</b> ${item.speaker?`<span class="speaker">${item.speaker}：</span>`:''}${text}</div>${item.note?`<div class="choice">${item.note}</div>`:''}${choices}${prompt}<div class="cn">${item.cn||''}</div></div><button class="play-btn" data-play="${encodeURIComponent(text)}">🔊 播放</button></div></div>`;
+}
+
+function renderContent(){
+ const secs=getSections();
+ if(!secs.length){document.getElementById('content').innerHTML=`<div class="empty"><b>${lessonNames[currentLesson-1]}</b><br>この課はまだ PDF に合わせて校正入力していません。<br>本课还没有按 PDF 校对录入。</div>`;return}
+ const sec=secs[currentTab];
+ const body=document.body;body.classList.toggle('show-cn',showChinese);
+ document.getElementById('content').innerHTML=`<div class="section-title">${currentData.title} · ${sec.title}${sec.subtitle?`：${sec.subtitle}`:''}</div><div class="meta">PDF 页码：${sec.page||'-'}　${currentData.source||''}</div>${sec.items.map(renderItem).join('')}`;
+ document.querySelectorAll('.play-btn').forEach(btn=>btn.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();speak(decodeURIComponent(btn.dataset.play))}));
+ document.querySelectorAll('.jp-area').forEach(area=>area.addEventListener('click',()=>speak(decodeURIComponent(area.dataset.text))));
+}
+function switchLesson(n){stopAudio();loadLesson(n)}
+function switchTab(i){stopAudio();currentTab=i;renderTabs();renderContent()}
+function toggleChinese(){showChinese=!showChinese;renderContent()}
+function playCurrentTab(){stopAudio();const sec=getSections()[currentTab];if(!sec)return;const arr=sec.items.map(getSpeakText).filter(Boolean);let n=0;function next(){if(n>=arr.length)return;const u=new SpeechSynthesisUtterance(cleanText(arr[n]));u.lang='ja-JP';u.rate=.86;u.onend=()=>{n++;setTimeout(next,400)};speechSynthesis.speak(u)}next()}
+renderLessonSelect();loadLesson(1);
+</script>
+</body>
+</html>
