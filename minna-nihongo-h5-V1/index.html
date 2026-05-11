@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Minna Nihongo H5 V1</title>
+<style>
+body{font-family:sans-serif;background:#f5f5f5;padding:20px}
+.card{background:#fff;padding:16px;border-radius:12px;margin-bottom:12px}
+.jp{font-size:24px;cursor:pointer}
+.cn{color:#666;margin-top:8px}
+button{padding:8px 14px;border:0;border-radius:999px;background:#2563eb;color:#fff;margin-top:10px}
+</style>
+</head>
+<body>
+<h1>みんなの日本語 点读 V1</h1>
+<div class="card">
+<div class="jp" onclick="speak('わたしは マイク ミラーです')">1. わたしは マイク・ミラーです。</div>
+<div class="cn">我是迈克·米勒。</div>
+<button onclick="speak('わたしは マイク ミラーです')">播放</button>
+</div>
+<div class="card">
+<div class="jp" onclick="speak('これは じしょです')">2. これは 辞書です。</div>
+<div class="cn">这是字典。</div>
+<button onclick="speak('これは じしょです')">播放</button>
+</div>
+<script>
+function speak(t){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='ja-JP';speechSynthesis.speak(u)}
+</script>
+</body>
+</html>
