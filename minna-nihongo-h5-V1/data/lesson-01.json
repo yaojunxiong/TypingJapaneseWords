@@ -81,41 +81,32 @@
       "checked": true,
       "displayMode": "promptList",
       "referenceTables": [
-        {
-          "title": "1〜4",
-          "rows": [
-            { "label": "例", "name": "ミラー", "country": "アメリカ", "job": "会社員" },
-            { "label": "1", "name": "山田", "country": "日本", "job": "銀行員" },
-            { "label": "2", "name": "ワット", "country": "イギリス", "job": "先生" },
-            { "label": "3", "name": "タワポン", "country": "タイ", "job": "学生" },
-            { "label": "4", "name": "シュミット", "country": "ドイツ", "job": "会社員" }
-          ]
-        },
-        {
-          "title": "5",
-          "rows": [
-            { "label": "例", "name": "グプタ", "organization": "IMC", "job": "社員" },
-            { "label": "1", "name": "イー", "organization": "AKC", "job": "研究者" },
-            { "label": "2", "name": "ワン", "organization": "神戸病院", "job": "医者" },
-            { "label": "3", "name": "カリナ", "organization": "富士大学", "job": "学生" },
-            { "label": "4", "name": "サントス", "organization": "ブラジルエアー", "job": "社員" }
-          ]
-        },
-        {
-          "title": "7",
-          "rows": [
-            { "label": "例", "name": "ミラー", "age": "28", "country": "アメリカ", "job": "会社員" },
-            { "label": "1", "name": "山田", "age": "38", "country": "日本", "job": "銀行員" },
-            { "label": "2", "name": "ワット", "age": "45", "country": "イギリス", "job": "先生" },
-            { "label": "3", "name": "タワポン", "age": "19", "country": "タイ", "job": "学生" },
-            { "label": "4", "name": "シュミット", "age": "52", "country": "ドイツ", "job": "会社員" },
-            { "name": "グプタ", "age": "42", "country": "インド", "job": "会社員" },
-            { "name": "イー", "age": "35", "country": "韓国", "job": "研究者" },
-            { "name": "ワン", "age": "29", "country": "中国", "job": "医者" },
-            { "name": "カリナ", "age": "24", "country": "インドネシア", "job": "学生" },
-            { "name": "サントス", "age": "39", "country": "ブラジル", "job": "会社員" }
-          ]
-        }
+        { "title": "1〜4", "rows": [
+          { "label": "例", "name": "ミラー", "country": "アメリカ", "job": "会社員" },
+          { "label": "1", "name": "山田", "country": "日本", "job": "銀行員" },
+          { "label": "2", "name": "ワット", "country": "イギリス", "job": "先生" },
+          { "label": "3", "name": "タワポン", "country": "タイ", "job": "学生" },
+          { "label": "4", "name": "シュミット", "country": "ドイツ", "job": "会社員" }
+        ]},
+        { "title": "5", "rows": [
+          { "label": "例", "name": "グプタ", "organization": "IMC", "job": "社員" },
+          { "label": "1", "name": "イー", "organization": "AKC", "job": "研究者" },
+          { "label": "2", "name": "ワン", "organization": "神戸病院", "job": "医者" },
+          { "label": "3", "name": "カリナ", "organization": "富士大学", "job": "学生" },
+          { "label": "4", "name": "サントス", "organization": "ブラジルエアー", "job": "社員" }
+        ]},
+        { "title": "7", "rows": [
+          { "label": "例", "name": "ミラー", "age": "28", "country": "アメリカ", "job": "会社員" },
+          { "label": "1", "name": "山田", "age": "38", "country": "日本", "job": "銀行員" },
+          { "label": "2", "name": "ワット", "age": "45", "country": "イギリス", "job": "先生" },
+          { "label": "3", "name": "タワポン", "age": "19", "country": "タイ", "job": "学生" },
+          { "label": "4", "name": "シュミット", "age": "52", "country": "ドイツ", "job": "会社員" },
+          { "name": "グプタ", "age": "42", "country": "インド", "job": "会社員" },
+          { "name": "イー", "age": "35", "country": "韓国", "job": "研究者" },
+          { "name": "ワン", "age": "29", "country": "中国", "job": "医者" },
+          { "name": "カリナ", "age": "24", "country": "インドネシア", "job": "学生" },
+          { "name": "サントス", "age": "39", "country": "ブラジル", "job": "会社員" }
+        ]}
       ],
       "items": [
         { "no": "1", "example": "例：ミラー → ミラーさんは アメリカ人です。", "prompts": ["1）山田 →", "2）ワット →", "3）タワポン →", "4）シュミット →"] },
@@ -127,7 +118,45 @@
         { "no": "7", "example": "例：ミラーさん → ミラーさんは 何歳ですか。……28歳です。", "prompts": ["1）山田さん →", "2）ワットさん →", "3）タワポンさん →", "4）シュミットさん →"] }
       ]
     },
-    { "type": "renshu-c", "title": "練習C", "page": 11, "checked": false, "note": "待逐字校对 PDF。当前不作为最终一致内容。", "items": [] },
+    {
+      "type": "renshu-c",
+      "title": "練習C",
+      "page": 11,
+      "checked": true,
+      "displayMode": "dialoguePractice",
+      "items": [
+        {
+          "no": "1",
+          "lines": [
+            { "speaker": "A", "text": "初めまして。マイク・ミラーです。" },
+            { "speaker": "A", "text": "アメリカから 来ました。どうぞ よろしく。" },
+            { "speaker": "B", "text": "佐藤です。どうぞ よろしく。" }
+          ],
+          "prompts": ["1）マリア・ブラジル", "2）カリナ・インドネシア"]
+        },
+        {
+          "no": "2",
+          "lines": [
+            { "speaker": "A", "text": "失礼ですが、お名前は？" },
+            { "speaker": "B", "text": "イーです。" },
+            { "speaker": "A", "text": "リーさんですか。" },
+            { "speaker": "B", "text": "いいえ、イーです。" }
+          ],
+          "prompts": ["1）サントス", "2）タワポン"]
+        },
+        {
+          "no": "3",
+          "lines": [
+            { "speaker": "A", "text": "田中さん、おはよう ございます。" },
+            { "speaker": "B", "text": "おはよう ございます。" },
+            { "speaker": "A", "text": "こちらは ミラーさんです。" },
+            { "speaker": "C", "text": "初めまして。ミラーです。IMCの 社員です。どうぞ よろしく お願いします。" },
+            { "speaker": "B", "text": "田中です。よろしく お願いします。" }
+          ],
+          "prompts": ["1）サントス・ブラジルエアー", "2）シュミット・パワーでんき"]
+        }
+      ]
+    },
     { "type": "mondai", "title": "問題", "page": "12〜13", "checked": false, "note": "待逐字校对 PDF。当前不作为最终一致内容。", "items": [] }
   ]
 }
