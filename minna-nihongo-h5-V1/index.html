@@ -14,8 +14,8 @@ main{max-width:1040px;margin:auto;padding:16px}.notice{background:#eef2ff;border
 button{border:0;border-radius:999px;background:#2563eb;color:#fff;padding:10px 15px;cursor:pointer}.secondary{background:#e5e7eb;color:#111827}
 .tabs{display:flex;gap:10px;overflow:auto;padding-bottom:8px;margin:18px 0}.tab{white-space:nowrap;background:#e5e7eb;color:#111827}.tab.active{background:#111827;color:#fff}
 .section-title{font-size:24px;margin-top:10px;border-left:6px solid #111827;padding-left:10px}.meta{color:#6b7280;font-size:13px;margin:6px 0 12px 16px}
-.card{background:#fff;border:1px solid #e5e7eb;border-radius:18px;padding:15px;margin:10px 0}.row{display:grid;grid-template-columns:96px 1fr auto;gap:14px;align-items:center}
-.visual{width:88px;height:76px;border-radius:16px;background:linear-gradient(135deg,#eef2ff,#fef3c7);display:flex;align-items:center;justify-content:center;border:1px solid #e5e7eb;cursor:pointer}.visual-emoji{font-size:36px}
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:18px;padding:15px;margin:10px 0}.row{display:grid;grid-template-columns:112px 1fr auto;gap:14px;align-items:center}
+.visual{width:104px;height:78px;border-radius:16px;background:linear-gradient(135deg,#eef2ff,#fef3c7);display:flex;align-items:center;justify-content:center;border:1px solid #e5e7eb;cursor:pointer}.visual-emoji{font-size:28px;letter-spacing:2px;text-align:center;line-height:1.2}
 .jp{font-size:22px;line-height:1.7}.cn{display:none;color:#6b7280;margin-top:6px}.show-cn .cn{display:block}.speaker{font-weight:700;color:#374151}.play-btn{min-width:88px}
 .choice{color:#4b5563;font-size:16px;line-height:1.8;margin-top:8px}.empty{background:#fff;border:1px dashed #cbd5e1;border-radius:18px;padding:22px;color:#64748b;line-height:1.7}
 @media(max-width:720px){.row{grid-template-columns:1fr}.visual{width:100%;height:86px}.jp{font-size:20px}button,.select{width:100%}.tabs{padding-bottom:10px}}
@@ -24,10 +24,10 @@ button{border:0;border-radius:999px;background:#2563eb;color:#fff;padding:10px 1
 <body>
 <header>
 <h1>みんなの日本語 初級Ⅰ 点读 V1</h1>
-<div class="sub">正文以 PDF/JSON 为准 · 图片只做辅助理解 · 默认隐藏中文</div>
+<div class="sub">正文以 PDF/JSON 为准 · 图示按句子语意匹配 · 默认隐藏中文</div>
 </header>
 <main>
-<div class="notice">日语正文不会由图片功能自动生成或改写；页面只显示 JSON 中已校对录入的 PDF 内容。图片为辅助图示，不显示额外文字标签。</div>
+<div class="notice">日语正文只显示 JSON 中已校对录入的 PDF 内容；左侧图示只辅助理解句意，不替换正文。</div>
 <div class="controls">
 <select id="lessonSelect" class="select" onchange="switchLesson(Number(this.value))"></select>
 <button onclick="playCurrentTab()">▶ 播放当前页</button>
@@ -50,15 +50,40 @@ function getSections(){return currentData?.sections||[]}
 function getSpeakText(item){if(item.text)return item.text;if(item.lines)return item.lines.map(l=>l.text).join('。');return ''}
 function visualFor(text){
  const t=cleanText(text);
- if(/初めまして|よろしく|おはよう/.test(t))return '🙇';
- if(/何歳|歳|さい/.test(t))return '🎂';
- if(/医者|病院/.test(t))return '🧑‍⚕️';
- if(/銀行員|銀行/.test(t))return '🏦';
- if(/会社員|社員|IMC|会社/.test(t))return '🏢';
- if(/学生|先生|大学/.test(t))return '🎓';
- if(/アメリカ|ブラジル|イギリス|中国|日本|から 来ました/.test(t))return '🌏';
- if(/はい|いいえ|じゃ ありません|ありません/.test(t))return '✅';
- if(/ミラー|サントス|グプタ|カリナ|佐藤|山田|ワット|ワン|テレーザ|人|方|どなた|だれ/.test(t))return '👤';
+ if(/おはよう/.test(t))return '🌅🙇';
+ if(/初めまして/.test(t))return '🤝🙇';
+ if(/どうぞ よろしく|よろしく お願いします/.test(t))return '🙇🤝';
+ if(/こちらは/.test(t))return '👉👨‍💼';
+ if(/アメリカから 来ました/.test(t))return '🇺🇸✈️';
+ if(/ブラジル/.test(t))return '🇧🇷👤';
+ if(/イギリス/.test(t))return '🇬🇧👤';
+ if(/中国|ちゅうごく/.test(t))return '🇨🇳👤';
+ if(/日本人|日本/.test(t))return '🇯🇵👤';
+ if(/何歳|なんさい|おいくつ/.test(t))return '🎂❓';
+ if(/9歳|9さい/.test(t))return '🎂9️⃣';
+ if(/8さい|8歳/.test(t))return '🎂8️⃣';
+ if(/28歳|28さい/.test(t))return '🎂28';
+ if(/学生じゃ ありません|がくせいじゃ ありません/.test(t))return '🚫🎓';
+ if(/学生ですか/.test(t))return '🎓❓';
+ if(/学生です|がくせいです/.test(t))return '🎓👤';
+ if(/先生じゃ ありません|きょうしじゃ ありません/.test(t))return '🚫🧑‍🏫';
+ if(/先生ですか/.test(t))return '🧑‍🏫❓';
+ if(/先生|せんせい/.test(t))return '🧑‍🏫🏫';
+ if(/銀行員じゃ ありません/.test(t))return '🚫🏦';
+ if(/銀行員ですか|銀行員/.test(t))return '🏦❓';
+ if(/医者ですか/.test(t))return '🧑‍⚕️❓';
+ if(/医者|いしゃ/.test(t))return '🧑‍⚕️🏥';
+ if(/会社員ですか/.test(t))return '🏢❓';
+ if(/会社員です|社員です|しゃいんです/.test(t))return '🏢👨‍💼';
+ if(/会社員じゃ ありません/.test(t))return '🚫🏢';
+ if(/どなた|だれ/.test(t))return '👀❓👤';
+ if(/マイク・ミラーです|ミラーです/.test(t))return '🙋‍♂️🪪';
+ if(/佐藤けい子です|佐藤です/.test(t))return '🙋‍♀️🪪';
+ if(/はい/.test(t))return '✅👤';
+ if(/いいえ/.test(t))return '❌👤';
+ if(/も/.test(t))return '👥➕';
+ if(/から 来ました/.test(t))return '🌏✈️';
+ if(/ワン|サントス|グプタ|カリナ|山田|ワット|テレーザ|人|方/.test(t))return '👤';
  return '💬';
 }
 async function loadLesson(n){currentLesson=n;currentTab=0;currentData=null;renderLessonSelect();renderTabs();renderLoading();if(cache[n]){currentData=cache[n];renderTabs();renderContent();return}try{const res=await fetch(`data/lesson-${pad(n)}.json?ts=${Date.now()}`);if(!res.ok)throw new Error('not found');currentData=await res.json();cache[n]=currentData}catch(e){currentData=null}renderTabs();renderContent()}
