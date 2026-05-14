@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>みんなの日本語 初級Ⅱ 语法总结｜详细单课版入口</title>
+  <style>
+    :root{--bg:#f7f7fb;--card:#fff;--text:#1f2937;--muted:#6b7280;--line:#e5e7eb;--accent:#2563eb;--accent2:#7c3aed;--ok:#ecfdf5;--okText:#065f46;--warn:#fff7ed}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","Hiragino Sans","Microsoft YaHei",sans-serif;line-height:1.75;background:var(--bg);color:var(--text)}
+    header{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:28px 18px 24px}
+    header .wrap,main{max-width:980px;margin:0 auto}
+    h1{margin:0;font-size:25px;line-height:1.35}
+    header p{margin:10px 0 0;opacity:.92;font-size:15px}
+    main{padding:16px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin:16px 0;box-shadow:0 8px 24px rgba(15,23,42,.05)}
+    h2{font-size:20px;margin:0 0 12px;border-left:5px solid var(--accent);padding-left:10px}
+    .muted{color:var(--muted)}
+    .select-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    select,button,a.btn{font-size:16px;border-radius:12px;border:1px solid var(--line);padding:10px 12px;background:#fff;text-decoration:none;display:inline-block}
+    button,a.btn.primary{background:var(--accent);color:white;border-color:var(--accent);font-weight:700;cursor:pointer}
+    a.btn.secondary,button.secondary{background:#fff;color:var(--accent)}
+    .status{border-radius:14px;padding:12px 14px;margin-top:12px;background:#f9fafb;border:1px solid var(--line)}
+    .status.ok{background:var(--ok);color:var(--okText);border-color:#a7f3d0}
+    .status.warn{background:var(--warn);border-color:#fed7aa}
+    .viewer{padding:0;overflow:hidden}
+    .viewer-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:14px 16px;border-bottom:1px solid var(--line);background:#fff}
+    .viewer-head h2{margin:0}
+    iframe{width:100%;border:0;display:block;background:#fff;min-height:82vh}
+    .empty{padding:26px 18px;text-align:center;color:var(--muted)}
+    footer{text-align:center;color:var(--muted);font-size:13px;padding:20px 10px 34px}
+    @media(max-width:700px){h1{font-size:21px}main{padding:12px}.card{padding:14px;border-radius:14px}.select-row{display:grid;grid-template-columns:1fr 1fr}.select-row label,.select-row select{grid-column:1/-1}.select-row button,.select-row a{width:100%;text-align:center}.viewer-head{padding:12px}.viewer-head h2{font-size:18px}iframe{min-height:84vh}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>《みんなの日本語 初級Ⅱ》语法总结</h1>
+    <p>固定使用 /docs/ 单课详细版；内容不压缩、不改成简略总表</p>
+  </div>
+</header>
+<main>
+  <div class="card">
+    <h2>选择课程</h2>
+    <div class="select-row">
+      <label for="lessonSelect"><b>课程：</b></label>
+      <select id="lessonSelect" aria-label="选择课程"></select>
+      <button id="openLesson">查看</button>
+      <a class="btn secondary" id="directLink" href="#">打开单课页</a>
+      <button class="secondary" id="copyLink">复制本课链接</button>
+    </div>
+    <div id="status" class="status">默认显示第26课详细版。</div>
+  </div>
+
+  <div class="card viewer">
+    <div class="viewer-head">
+      <h2 id="viewerTitle">课程内容</h2>
+      <span class="muted" id="viewerPath"></span>
+    </div>
+    <iframe id="lessonFrame" title="课程语法总结详细版" src="about:blank" hidden></iframe>
+    <div id="emptyBox" class="empty">选择课程后，这里会显示对应的 /docs/ 单课详细页。</div>
+  </div>
+</main>
+<footer>Minna no Nihongo Grammar Review - Detailed Lesson Pages</footer>
+<script>
+const select=document.getElementById('lessonSelect');
+const statusBox=document.getElementById('status');
+const frame=document.getElementById('lessonFrame');
+const emptyBox=document.getElementById('emptyBox');
+const viewerTitle=document.getElementById('viewerTitle');
+const viewerPath=document.getElementById('viewerPath');
+const directLink=document.getElementById('directLink');
+function lessonPath(n){return `minna-no-nihongo-lesson-${n}-grammar-summary.html`;}
+function setSelected(n){select.value=String(n);history.replaceState(null,'',`#lesson-${n}`);}
+function showEmpty(msg){frame.hidden=true;frame.removeAttribute('src');emptyBox.hidden=false;emptyBox.innerHTML=msg;}
+async function loadLesson(n){
+  n=Number(n);setSelected(n);const path=lessonPath(n);
+  viewerTitle.textContent=`第${n}课：详细语法总结`;
+  viewerPath.textContent=`/docs/${path}`;
+  directLink.href=path;
+  statusBox.className='status';statusBox.textContent=`正在检查第${n}课 /docs/ 单课详细页……`;
+  showEmpty('正在加载详细版内容……');
+  try{
+    const res=await fetch(path,{method:'HEAD',cache:'no-store'});
+    if(res.ok){
+      statusBox.className='status ok';statusBox.innerHTML=`第${n}课详细版已找到，正在下方显示。`;
+      emptyBox.hidden=true;frame.hidden=false;frame.src=path;
+    }else{
+      statusBox.className='status warn';statusBox.innerHTML=`第${n}课还没有 /docs/ 单课详细页。`;
+      showEmpty(`第${n}课还没有这个格式的详细页面。<br>需要新增：<b>docs/${path}</b><br><br>现在固定标准为第26课这种单课详细版。`);
+    }
+  }catch(e){
+    statusBox.className='status warn';statusBox.innerHTML=`暂时无法检查第${n}课详细页。`;
+    showEmpty(`暂时无法检查：<b>docs/${path}</b>`);
+  }
+}
+for(let i=26;i<=50;i++){const opt=document.createElement('option');opt.value=i;opt.textContent=`第${i}课`;select.appendChild(opt)}
+document.getElementById('openLesson').onclick=()=>loadLesson(select.value);
+select.onchange=()=>loadLesson(select.value);
+document.getElementById('copyLink').onclick=async()=>{const url=location.origin+location.pathname+`#lesson-${select.value}`;try{await navigator.clipboard.writeText(url);alert('已复制：'+url)}catch(e){prompt('复制这个链接：',url)}};
+const m=location.hash.match(/lesson-(\d+)/);loadLesson(m?Number(m[1]):26);
+</script>
+</body>
+</html>
