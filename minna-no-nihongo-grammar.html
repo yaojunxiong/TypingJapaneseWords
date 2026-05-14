@@ -5,19 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>みんなの日本語 初級Ⅱ 语法总结</title>
   <style>
-    :root{--bg:#f7f7fb;--card:#fff;--text:#1f2937;--muted:#6b7280;--line:#e5e7eb;--accent:#2563eb;--accent2:#7c3aed;--soft:#eff6ff;--warn:#fff7ed}
-    *{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","Hiragino Sans","Microsoft YaHei",sans-serif;line-height:1.75;background:var(--bg);color:var(--text)}
-    header{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:28px 18px 24px}header .wrap,main{max-width:960px;margin:0 auto}h1{margin:0;font-size:25px;line-height:1.35}header p{margin:10px 0 0;opacity:.92;font-size:15px}
-    main{padding:16px}.card,section{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin:16px 0;box-shadow:0 8px 24px rgba(15,23,42,.05)}
-    h2{font-size:20px;margin:0 0 12px;border-left:5px solid var(--accent);padding-left:10px}h3{font-size:17px;margin:18px 0 8px}.muted{color:var(--muted)}
-    .toolbar{display:grid;grid-template-columns:1fr;gap:10px}.select-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}select,button{font-size:16px;border-radius:12px;border:1px solid var(--line);padding:10px 12px;background:#fff}button{background:var(--accent);color:white;border-color:var(--accent);font-weight:700}button.secondary{background:#fff;color:var(--accent)}
-    .lesson-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:12px}.lesson-btn{padding:10px 6px;border-radius:12px;border:1px solid var(--line);background:#fff;text-align:center;color:var(--text);cursor:pointer;font-weight:700}.lesson-btn.active{background:var(--soft);border-color:#93c5fd;color:#1e40af}.lesson-btn.empty{color:#9ca3af;background:#f9fafb}
-    table{width:100%;border-collapse:collapse;margin:10px 0}th,td{border:1px solid var(--line);padding:10px;vertical-align:top;text-align:left}th{background:var(--soft);color:#1e3a8a}.jp{font-weight:700;font-size:18px;color:#111827}.cn{color:var(--muted);margin-top:4px}.ex{background:#f9fafb;border-left:4px solid #93c5fd;padding:12px 14px;margin:10px 0;border-radius:10px}.note{background:var(--warn);border:1px solid #fed7aa;border-radius:12px;padding:12px 14px;margin:10px 0}.f{display:inline-block;background:#eef2ff;color:#3730a3;padding:3px 8px;border-radius:8px;font-weight:700}.hidden{display:none}.pill{display:inline-block;background:#ecfeff;color:#155e75;border:1px solid #a5f3fc;border-radius:999px;padding:3px 9px;font-size:13px;margin-right:6px}
-    footer{text-align:center;color:var(--muted);font-size:13px;padding:20px 10px 34px}@media(max-width:700px){h1{font-size:21px}main{padding:12px}.card,section{padding:14px;border-radius:14px}.lesson-grid{grid-template-columns:repeat(3,1fr)}th,td{padding:8px;font-size:14px}.jp{font-size:17px}}
+    :root{--bg:#f7f7fb;--card:#fff;--text:#1f2937;--muted:#6b7280;--line:#e5e7eb;--accent:#2563eb;--accent2:#7c3aed;--soft:#eff6ff;--warn:#fff7ed;--ok:#ecfdf5;--okText:#065f46}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","Hiragino Sans","Microsoft YaHei",sans-serif;line-height:1.75;background:var(--bg);color:var(--text)}
+    header{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:28px 18px 24px}
+    header .wrap,main{max-width:960px;margin:0 auto}
+    h1{margin:0;font-size:25px;line-height:1.35}
+    header p{margin:10px 0 0;opacity:.92;font-size:15px}
+    main{padding:16px}
+    .card,section{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin:16px 0;box-shadow:0 8px 24px rgba(15,23,42,.05)}
+    h2{font-size:20px;margin:0 0 12px;border-left:5px solid var(--accent);padding-left:10px}
+    .muted{color:var(--muted)}
+    .toolbar{display:grid;grid-template-columns:1fr;gap:10px}
+    .select-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    select,button{font-size:16px;border-radius:12px;border:1px solid var(--line);padding:10px 12px;background:#fff}
+    button{background:var(--accent);color:white;border-color:var(--accent);font-weight:700;cursor:pointer}
+    button.secondary{background:#fff;color:var(--accent)}
+    .lesson-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:12px}
+    .lesson-btn{padding:10px 6px;border-radius:12px;border:1px solid var(--line);background:#fff;text-align:center;color:var(--text);cursor:pointer;font-weight:700}
+    .lesson-btn.active{background:var(--soft);border-color:#93c5fd;color:#1e40af}
+    .status{border-radius:14px;padding:14px;margin-top:12px;background:#f9fafb;border:1px solid var(--line)}
+    .status.ok{background:var(--ok);color:var(--okText);border-color:#a7f3d0}
+    .status.warn{background:var(--warn);border-color:#fed7aa}
+    .links{display:grid;gap:10px;margin-top:12px}
+    .link-card{display:block;text-decoration:none;color:var(--text);background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px}
+    .link-card strong{color:#1e40af}
+    footer{text-align:center;color:var(--muted);font-size:13px;padding:20px 10px 34px}
+    @media(max-width:700px){h1{font-size:21px}main{padding:12px}.card,section{padding:14px;border-radius:14px}.lesson-grid{grid-template-columns:repeat(3,1fr)}}
   </style>
 </head>
 <body>
-<header><div class="wrap"><h1>《みんなの日本語 初級Ⅱ》语法总结</h1><p>手机网页阅读版｜选择第几课查看语法总结</p></div></header>
+<header>
+  <div class="wrap">
+    <h1>《みんなの日本語 初級Ⅱ》语法总结</h1>
+    <p>手机网页阅读版｜选择第几课，自动检查是否已有网页</p>
+  </div>
+</header>
 <main>
   <div class="card">
     <h2>选择课程</h2>
@@ -26,52 +49,88 @@
         <label for="lessonSelect"><b>第几课：</b></label>
         <select id="lessonSelect" aria-label="选择课程"></select>
         <button id="openLesson">查看</button>
-        <button class="secondary" id="copyLink">复制本课链接</button>
+        <button class="secondary" id="copyLink">复制本页链接</button>
       </div>
-      <div class="muted">目前已整理：第26课。其他课程先放在目录里，后续可以逐课补充。</div>
+      <div class="muted">第26课～第50课都可以选择。点击“查看”后，页面会自动判断对应课程网页是否存在：有就打开，没有才显示待补充。</div>
     </div>
     <div class="lesson-grid" id="lessonGrid"></div>
+    <div id="status" class="status">请选择课程后点击查看。</div>
   </div>
 
-  <section id="lesson26" class="lesson-content">
-    <h2>第26课：语法总结</h2>
-    <p><span class="pill">说明原因</span><span class="pill">委婉请求</span><span class="pill">询问建议</span></p>
-    <table><thead><tr><th>语法</th><th>中文意思</th><th>使用场景</th></tr></thead><tbody><tr><td>普通形 + んです</td><td>是因为……；其实是……；情况是这样的</td><td>说明原因、解释情况、确认状态</td></tr><tr><td>～んですが、～</td><td>我是……，所以想……；有点……想请问……</td><td>委婉引出请求、问题或建议</td></tr><tr><td>疑问词 + たらいいですか</td><td>……的话好呢？/该怎么……？</td><td>询问建议、方法、做法</td></tr><tr><td>～ていただけませんか</td><td>能不能请您帮我……？</td><td>非常礼貌地请求别人帮忙</td></tr></tbody></table>
-    <h3>1. 普通形 + んです</h3><p><span class="f">普通形 + んです</span></p><table><thead><tr><th>词类</th><th>接法</th><th>例子</th></tr></thead><tbody><tr><td>动词</td><td>动词普通形 + んです</td><td>行くんです / 行かないんです / 行ったんです</td></tr><tr><td>い形容词</td><td>い形容词普通形 + んです</td><td>忙しいんです / 忙しかったんです</td></tr><tr><td>な形容词</td><td>な形容词词干 + なんです</td><td>静かなんです</td></tr><tr><td>名词</td><td>名词 + なんです</td><td>学生なんです</td></tr></tbody></table><div class="note">名词、な形容词现在肯定时，要用 <b>なんです</b>。</div><p>中文可以理解成：“其实是……”“是因为……”“情况是这样的……”。</p><div class="ex"><div class="jp">どうして遅れたんですか。</div><div class="cn">你为什么迟到了？</div><div class="jp">電車が遅れたんです。</div><div class="cn">是因为电车晚点了。</div></div><div class="ex"><div class="jp">あしたから旅行なんです。</div><div class="cn">我明天开始要去旅行。常带有“所以我需要准备 / 所以我不能来”等背景说明。</div></div>
-    <h3>2. ～んですが、～</h3><p><span class="f">普通形 + んですが、后面接请求 / 询问 / 建议</span></p><p>中文可以理解成：“我是……，所以……”“有点……，想请问……”。它可以让说话更委婉、更自然。</p><div class="ex"><div class="jp">生け花を習いたいんですが、いい先生を紹介していただけませんか。</div><div class="cn">我想学插花，能不能请您介绍一位好老师？</div></div><div class="ex"><div class="jp">日本語でレポートを書いたんですが、ちょっと見ていただけませんか。</div><div class="cn">我用日语写了报告，能不能请您帮我看一下？</div></div>
-    <h3>3. 疑问词 + たらいいですか</h3><p><span class="f">どう / どこ / だれ / 何 + たらいいですか</span></p><table><thead><tr><th>日语</th><th>中文</th></tr></thead><tbody><tr><td>どうしたらいいですか</td><td>我该怎么办？</td></tr><tr><td>どこで買ったらいいですか</td><td>在哪里买好？</td></tr><tr><td>だれに聞いたらいいですか</td><td>问谁好？</td></tr><tr><td>何を持って行ったらいいですか</td><td>带什么去好？</td></tr></tbody></table><div class="ex"><div class="jp">ごみはどこに出したらいいですか。</div><div class="cn">垃圾应该倒在哪里？</div></div><div class="ex"><div class="jp">駅へ行きたいんですが、どう行ったらいいですか。</div><div class="cn">我想去车站，怎么走好？</div></div>
-    <h3>4. ～ていただけませんか</h3><p><span class="f">动词て形 + いただけませんか</span></p><p>中文意思是：“能不能请您帮我……？”这是非常礼貌的请求表达。</p><table><thead><tr><th>日语</th><th>语气</th><th>中文</th></tr></thead><tbody><tr><td>教えてください</td><td>普通请求</td><td>请告诉我</td></tr><tr><td>教えてくれませんか</td><td>比较客气</td><td>能告诉我吗？</td></tr><tr><td>教えていただけませんか</td><td>很礼貌</td><td>能不能请您告诉我？</td></tr></tbody></table><div class="ex"><div class="jp">電話番号を教えていただけませんか。</div><div class="cn">能不能请您告诉我电话号码？</div></div><div class="ex"><div class="jp">ちょっと見ていただけませんか。</div><div class="cn">能不能请您帮我看一下？</div></div>
-    <h3>最重要的两个组合句型</h3><p><span class="f">～んですが、～ていただけませんか。</span></p><div class="ex"><div class="jp">日本語の手紙を書いたんですが、ちょっと見ていただけませんか。</div><div class="cn">我写了一封日语信，能不能请您帮我看一下？</div></div><p><span class="f">～んですが、疑问词 + たらいいですか。</span></p><div class="ex"><div class="jp">新宿へ行きたいんですが、どう行ったらいいですか。</div><div class="cn">我想去新宿，怎么走好？</div></div>
+  <section>
+    <h2>已知可直接访问的课程</h2>
+    <div class="links">
+      <a class="link-card" href="minna-no-nihongo-lesson-26-grammar-summary.html"><strong>第26课</strong><br><span class="muted">んです / んですが / たらいいですか / ていただけませんか</span></a>
+      <a class="link-card" href="minna-no-nihongo-lesson-27-grammar-summary.html"><strong>第27课</strong><br><span class="muted">可能形 / 見えます / 聞こえます / できます / しか～ません</span></a>
+    </div>
   </section>
-
-  <section id="emptyLesson" class="hidden"><h2 id="emptyTitle">本课语法总结</h2><p class="muted">这一课还没有整理内容。可以先把第27课、第28课……逐步补进这个页面。</p></section>
 </main>
 <footer>Minna no Nihongo Grammar Review</footer>
 <script>
-  const completed = {26:true};
   const select = document.getElementById('lessonSelect');
   const grid = document.getElementById('lessonGrid');
-  const lesson26 = document.getElementById('lesson26');
-  const emptyLesson = document.getElementById('emptyLesson');
-  const emptyTitle = document.getElementById('emptyTitle');
+  const statusBox = document.getElementById('status');
+
+  function lessonPath(n){
+    return `minna-no-nihongo-lesson-${n}-grammar-summary.html`;
+  }
+
+  function setActive(n){
+    select.value = String(n);
+    document.querySelectorAll('.lesson-btn').forEach(b => {
+      b.classList.toggle('active', Number(b.dataset.lesson) === Number(n));
+    });
+    history.replaceState(null, '', `#lesson-${n}`);
+  }
+
+  async function checkAndOpenLesson(n){
+    n = Number(n);
+    setActive(n);
+    const path = lessonPath(n);
+    statusBox.className = 'status';
+    statusBox.textContent = `正在检查第${n}课网页是否存在……`;
+
+    try{
+      const res = await fetch(path, {method:'HEAD', cache:'no-store'});
+      if(res.ok){
+        statusBox.className = 'status ok';
+        statusBox.innerHTML = `第${n}课已经有网页，正在打开：<br><b>${path}</b>`;
+        window.location.href = path;
+      }else{
+        statusBox.className = 'status warn';
+        statusBox.innerHTML = `第${n}课目前还没有补充网页。<br>需要新建的文件名：<b>${path}</b>`;
+      }
+    }catch(e){
+      statusBox.className = 'status warn';
+      statusBox.innerHTML = `暂时无法检查第${n}课网页。<br>可以稍后刷新重试，或直接检查文件名：<b>${path}</b>`;
+    }
+  }
+
   for(let i=26;i<=50;i++){
-    const opt=document.createElement('option'); opt.value=i; opt.textContent=`第${i}课${completed[i]?'':'（待补充）'}`; select.appendChild(opt);
-    const b=document.createElement('button'); b.type='button'; b.className='lesson-btn '+(completed[i]?'':'empty'); b.textContent=`第${i}课`; b.dataset.lesson=i; b.onclick=()=>showLesson(i); grid.appendChild(b);
+    const opt=document.createElement('option');
+    opt.value=i;
+    opt.textContent=`第${i}课`;
+    select.appendChild(opt);
+
+    const b=document.createElement('button');
+    b.type='button';
+    b.className='lesson-btn';
+    b.textContent=`第${i}课`;
+    b.dataset.lesson=i;
+    b.onclick=()=>checkAndOpenLesson(i);
+    grid.appendChild(b);
   }
-  function showLesson(n){
-    select.value=n; location.hash=`lesson-${n}`;
-    document.querySelectorAll('.lesson-btn').forEach(b=>b.classList.toggle('active', Number(b.dataset.lesson)===Number(n)));
-    if(Number(n)===26){lesson26.classList.remove('hidden'); emptyLesson.classList.add('hidden');}
-    else{lesson26.classList.add('hidden'); emptyLesson.classList.remove('hidden'); emptyTitle.textContent=`第${n}课：语法总结（待补充）`;}
-    window.scrollTo({top:0,behavior:'smooth'});
-  }
-  document.getElementById('openLesson').onclick=()=>showLesson(select.value);
-  select.onchange=()=>showLesson(select.value);
+
+  document.getElementById('openLesson').onclick=()=>checkAndOpenLesson(select.value);
+  select.onchange=()=>setActive(select.value);
+
   document.getElementById('copyLink').onclick=async()=>{
     const url=location.origin+location.pathname+`#lesson-${select.value}`;
     try{await navigator.clipboard.writeText(url); alert('已复制：'+url);}catch(e){prompt('复制这个链接：',url);}
   };
-  const m=location.hash.match(/lesson-(\d+)/); showLesson(m?Number(m[1]):26);
+
+  const m=location.hash.match(/lesson-(\d+)/);
+  setActive(m?Number(m[1]):26);
 </script>
 </body>
 </html>
