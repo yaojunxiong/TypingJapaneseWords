@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>みんなの日本語 初級Ⅱ 语法总结｜详细单课版入口</title>
+  <title>みんなの日本語 初級 语法总结｜第1课～第50课</title>
   <style>
     :root{--bg:#f7f7fb;--card:#fff;--text:#1f2937;--muted:#6b7280;--line:#e5e7eb;--accent:#2563eb;--accent2:#7c3aed;--ok:#ecfdf5;--okText:#065f46;--warn:#fff7ed}
     *{box-sizing:border-box}
@@ -17,26 +17,28 @@
     h2{font-size:20px;margin:0 0 12px;border-left:5px solid var(--accent);padding-left:10px}
     .muted{color:var(--muted)}
     .select-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-    select,button,a.btn{font-size:16px;border-radius:12px;border:1px solid var(--line);padding:10px 12px;background:#fff;text-decoration:none;display:inline-block}
+    select,button,a.btn{font-size:16px;border-radius:12px;border:1px solid var(--line);padding:10px 12px;background:#fff;text-decoration:none;display:inline-block;color:var(--text)}
     button,a.btn.primary{background:var(--accent);color:white;border-color:var(--accent);font-weight:700;cursor:pointer}
-    a.btn.secondary,button.secondary{background:#fff;color:var(--accent)}
+    a.btn.secondary,button.secondary{background:#fff;color:var(--accent);cursor:pointer}
     .status{border-radius:14px;padding:12px 14px;margin-top:12px;background:#f9fafb;border:1px solid var(--line)}
     .status.ok{background:var(--ok);color:var(--okText);border-color:#a7f3d0}
     .status.warn{background:var(--warn);border-color:#fed7aa}
+    .quick{display:grid;grid-template-columns:repeat(10,1fr);gap:8px;margin-top:12px}
+    .quick button{padding:8px 0;font-size:14px;border-radius:10px}
     .viewer{padding:0;overflow:hidden}
     .viewer-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:14px 16px;border-bottom:1px solid var(--line);background:#fff}
     .viewer-head h2{margin:0}
     iframe{width:100%;border:0;display:block;background:#fff;min-height:82vh}
     .empty{padding:26px 18px;text-align:center;color:var(--muted)}
     footer{text-align:center;color:var(--muted);font-size:13px;padding:20px 10px 34px}
-    @media(max-width:700px){h1{font-size:21px}main{padding:12px}.card{padding:14px;border-radius:14px}.select-row{display:grid;grid-template-columns:1fr 1fr}.select-row label,.select-row select{grid-column:1/-1}.select-row button,.select-row a{width:100%;text-align:center}.viewer-head{padding:12px}.viewer-head h2{font-size:18px}iframe{min-height:84vh}}
+    @media(max-width:700px){h1{font-size:21px}main{padding:12px}.card{padding:14px;border-radius:14px}.select-row{display:grid;grid-template-columns:1fr 1fr}.select-row label,.select-row select{grid-column:1/-1}.select-row button,.select-row a{width:100%;text-align:center}.quick{grid-template-columns:repeat(5,1fr)}.viewer-head{padding:12px}.viewer-head h2{font-size:18px}iframe{min-height:84vh}}
   </style>
 </head>
 <body>
 <header>
   <div class="wrap">
-    <h1>《みんなの日本語 初級Ⅱ》语法总结</h1>
-    <p>固定使用 /docs/ 单课详细版；内容不压缩、不改成简略总表</p>
+    <h1>《みんなの日本語 初級》语法总结</h1>
+    <p>支持第1课～第50课｜固定使用 /docs/ 单课详细版｜初级Ⅰ + 初级Ⅱ</p>
   </div>
 </header>
 <main>
@@ -49,7 +51,8 @@
       <a class="btn secondary" id="directLink" href="#">打开单课页</a>
       <button class="secondary" id="copyLink">复制本课链接</button>
     </div>
-    <div id="status" class="status">默认显示第26课详细版。</div>
+    <div class="quick" id="quickBtns" aria-label="快速选择第1课到第50课"></div>
+    <div id="status" class="status">默认显示第1课详细版。</div>
   </div>
 
   <div class="card viewer">
@@ -61,7 +64,7 @@
     <div id="emptyBox" class="empty">选择课程后，这里会显示对应的 /docs/ 单课详细页。</div>
   </div>
 </main>
-<footer>Minna no Nihongo Grammar Review - Detailed Lesson Pages</footer>
+<footer>Minna no Nihongo Grammar Review - Lessons 1-50</footer>
 <script>
 const select=document.getElementById('lessonSelect');
 const statusBox=document.getElementById('status');
@@ -70,7 +73,8 @@ const emptyBox=document.getElementById('emptyBox');
 const viewerTitle=document.getElementById('viewerTitle');
 const viewerPath=document.getElementById('viewerPath');
 const directLink=document.getElementById('directLink');
-function lessonPath(n){return `minna-no-nihongo-lesson-${n}-grammar-summary.html`;}
+const quickBtns=document.getElementById('quickBtns');
+function lessonPath(n){return `minna-no-nihongo-lesson-${String(n).padStart(2,'0')}-grammar-summary.html`;}
 function setSelected(n){select.value=String(n);history.replaceState(null,'',`#lesson-${n}`);}
 function showEmpty(msg){frame.hidden=true;frame.removeAttribute('src');emptyBox.hidden=false;emptyBox.innerHTML=msg;}
 async function loadLesson(n){
@@ -87,18 +91,21 @@ async function loadLesson(n){
       emptyBox.hidden=true;frame.hidden=false;frame.src=path;
     }else{
       statusBox.className='status warn';statusBox.innerHTML=`第${n}课还没有 /docs/ 单课详细页。`;
-      showEmpty(`第${n}课还没有这个格式的详细页面。<br>需要新增：<b>docs/${path}</b><br><br>现在固定标准为第26课这种单课详细版。`);
+      showEmpty(`第${n}课还没有这个格式的详细页面。<br>需要新增：<b>docs/${path}</b>`);
     }
   }catch(e){
     statusBox.className='status warn';statusBox.innerHTML=`暂时无法检查第${n}课详细页。`;
     showEmpty(`暂时无法检查：<b>docs/${path}</b>`);
   }
 }
-for(let i=26;i<=50;i++){const opt=document.createElement('option');opt.value=i;opt.textContent=`第${i}课`;select.appendChild(opt)}
+for(let i=1;i<=50;i++){
+  const opt=document.createElement('option');opt.value=i;opt.textContent=`第${i}课${i<=25?'｜初级Ⅰ':'｜初级Ⅱ'}`;select.appendChild(opt);
+  const b=document.createElement('button');b.textContent=i;b.type='button';b.title=`第${i}课`;b.onclick=()=>loadLesson(i);quickBtns.appendChild(b);
+}
 document.getElementById('openLesson').onclick=()=>loadLesson(select.value);
 select.onchange=()=>loadLesson(select.value);
 document.getElementById('copyLink').onclick=async()=>{const url=location.origin+location.pathname+`#lesson-${select.value}`;try{await navigator.clipboard.writeText(url);alert('已复制：'+url)}catch(e){prompt('复制这个链接：',url)}};
-const m=location.hash.match(/lesson-(\d+)/);loadLesson(m?Number(m[1]):26);
+const m=location.hash.match(/lesson-(\d+)/);loadLesson(m?Number(m[1]):1);
 </script>
 </body>
 </html>
