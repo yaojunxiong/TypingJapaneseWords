@@ -5,104 +5,113 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>みんなの日本語 初級Ⅱ 语法总结</title>
   <style>
-    :root{--bg:#f7f7fb;--card:#fff;--text:#1f2937;--muted:#6b7280;--line:#e5e7eb;--accent:#2563eb;--accent2:#7c3aed;--soft:#eff6ff;--warn:#fff7ed;--ok:#ecfdf5;--okText:#065f46}
+    :root{--bg:#f7f7fb;--card:#fff;--text:#1f2937;--muted:#6b7280;--line:#e5e7eb;--accent:#2563eb;--accent2:#7c3aed;--ok:#ecfdf5;--okText:#065f46;--warn:#fff7ed}
     *{box-sizing:border-box}
     body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","Hiragino Sans","Microsoft YaHei",sans-serif;line-height:1.75;background:var(--bg);color:var(--text)}
     header{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;padding:28px 18px 24px}
-    header .wrap,main{max-width:960px;margin:0 auto}
+    header .wrap,main{max-width:980px;margin:0 auto}
     h1{margin:0;font-size:25px;line-height:1.35}
     header p{margin:10px 0 0;opacity:.92;font-size:15px}
     main{padding:16px}
-    .card,section{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin:16px 0;box-shadow:0 8px 24px rgba(15,23,42,.05)}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin:16px 0;box-shadow:0 8px 24px rgba(15,23,42,.05)}
     h2{font-size:20px;margin:0 0 12px;border-left:5px solid var(--accent);padding-left:10px}
     .muted{color:var(--muted)}
-    .toolbar{display:grid;grid-template-columns:1fr;gap:10px}
     .select-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
     select,button{font-size:16px;border-radius:12px;border:1px solid var(--line);padding:10px 12px;background:#fff}
     button{background:var(--accent);color:white;border-color:var(--accent);font-weight:700;cursor:pointer}
     button.secondary{background:#fff;color:var(--accent)}
-    .lesson-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:12px}
-    .lesson-btn{padding:10px 6px;border-radius:12px;border:1px solid var(--line);background:#fff;text-align:center;color:var(--text);cursor:pointer;font-weight:700}
-    .lesson-btn.active{background:var(--soft);border-color:#93c5fd;color:#1e40af}
-    .status{border-radius:14px;padding:14px;margin-top:12px;background:#f9fafb;border:1px solid var(--line)}
+    .status{border-radius:14px;padding:12px 14px;margin-top:12px;background:#f9fafb;border:1px solid var(--line)}
     .status.ok{background:var(--ok);color:var(--okText);border-color:#a7f3d0}
     .status.warn{background:var(--warn);border-color:#fed7aa}
-    .links{display:grid;gap:10px;margin-top:12px}
-    .link-card{display:block;text-decoration:none;color:var(--text);background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px}
-    .link-card strong{color:#1e40af}
+    .viewer-wrap{padding:0;overflow:hidden}
+    .viewer-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:14px 16px;border-bottom:1px solid var(--line);background:#fff}
+    .viewer-head h2{margin:0}
+    iframe{width:100%;border:0;display:block;background:#fff;min-height:78vh}
+    .empty{padding:26px 18px;text-align:center;color:var(--muted)}
     footer{text-align:center;color:var(--muted);font-size:13px;padding:20px 10px 34px}
-    @media(max-width:700px){h1{font-size:21px}main{padding:12px}.card,section{padding:14px;border-radius:14px}.lesson-grid{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:700px){h1{font-size:21px}main{padding:12px}.card{padding:14px;border-radius:14px}.select-row{display:grid;grid-template-columns:1fr 1fr}.select-row label{grid-column:1/-1}.select-row select{grid-column:1/-1}.select-row button{width:100%}.viewer-head{padding:12px}.viewer-head h2{font-size:18px}iframe{min-height:82vh}}
   </style>
 </head>
 <body>
 <header>
   <div class="wrap">
     <h1>《みんなの日本語 初級Ⅱ》语法总结</h1>
-    <p>手机网页阅读版｜选择第几课，自动检查是否已有网页</p>
+    <p>选择课程后，在本页直接显示对应语法总结内容</p>
   </div>
 </header>
 <main>
   <div class="card">
     <h2>选择课程</h2>
-    <div class="toolbar">
-      <div class="select-row">
-        <label for="lessonSelect"><b>第几课：</b></label>
-        <select id="lessonSelect" aria-label="选择课程"></select>
-        <button id="openLesson">查看</button>
-        <button class="secondary" id="copyLink">复制本页链接</button>
-      </div>
-      <div class="muted">第26课～第50课都可以选择。点击“查看”后，页面会自动判断对应课程网页是否存在：有就打开，没有才显示待补充。</div>
+    <div class="select-row">
+      <label for="lessonSelect"><b>课程：</b></label>
+      <select id="lessonSelect" aria-label="选择课程"></select>
+      <button id="openLesson">查看</button>
+      <button class="secondary" id="copyLink">复制本课链接</button>
     </div>
-    <div class="lesson-grid" id="lessonGrid"></div>
-    <div id="status" class="status">请选择课程后点击查看。</div>
+    <div id="status" class="status">请选择第26～50课，然后点击“查看”。</div>
   </div>
 
-  <section>
-    <h2>已知可直接访问的课程</h2>
-    <div class="links">
-      <a class="link-card" href="minna-no-nihongo-lesson-26-grammar-summary.html"><strong>第26课</strong><br><span class="muted">んです / んですが / たらいいですか / ていただけませんか</span></a>
-      <a class="link-card" href="minna-no-nihongo-lesson-27-grammar-summary.html"><strong>第27课</strong><br><span class="muted">可能形 / 見えます / 聞こえます / できます / しか～ません</span></a>
+  <div class="card viewer-wrap">
+    <div class="viewer-head">
+      <h2 id="viewerTitle">课程内容</h2>
+      <span class="muted" id="viewerPath"></span>
     </div>
-  </section>
+    <iframe id="lessonFrame" title="课程语法总结" src="about:blank" hidden></iframe>
+    <div id="emptyBox" class="empty">选择课程后，这里会直接显示对应页面内容。</div>
+  </div>
 </main>
 <footer>Minna no Nihongo Grammar Review</footer>
 <script>
   const select = document.getElementById('lessonSelect');
-  const grid = document.getElementById('lessonGrid');
   const statusBox = document.getElementById('status');
+  const frame = document.getElementById('lessonFrame');
+  const emptyBox = document.getElementById('emptyBox');
+  const viewerTitle = document.getElementById('viewerTitle');
+  const viewerPath = document.getElementById('viewerPath');
 
   function lessonPath(n){
     return `minna-no-nihongo-lesson-${n}-grammar-summary.html`;
   }
 
-  function setActive(n){
+  function setSelected(n){
     select.value = String(n);
-    document.querySelectorAll('.lesson-btn').forEach(b => {
-      b.classList.toggle('active', Number(b.dataset.lesson) === Number(n));
-    });
     history.replaceState(null, '', `#lesson-${n}`);
   }
 
-  async function checkAndOpenLesson(n){
+  function showEmpty(message){
+    frame.hidden = true;
+    frame.removeAttribute('src');
+    emptyBox.hidden = false;
+    emptyBox.innerHTML = message;
+  }
+
+  async function loadLesson(n){
     n = Number(n);
-    setActive(n);
+    setSelected(n);
     const path = lessonPath(n);
+    viewerTitle.textContent = `第${n}课：语法总结`;
+    viewerPath.textContent = path;
     statusBox.className = 'status';
     statusBox.textContent = `正在检查第${n}课网页是否存在……`;
+    showEmpty('正在加载课程内容……');
 
     try{
       const res = await fetch(path, {method:'HEAD', cache:'no-store'});
       if(res.ok){
         statusBox.className = 'status ok';
-        statusBox.innerHTML = `第${n}课已经有网页，正在打开：<br><b>${path}</b>`;
-        window.location.href = path;
+        statusBox.innerHTML = `第${n}课网页已找到，已在下方显示。`;
+        emptyBox.hidden = true;
+        frame.hidden = false;
+        frame.src = path;
       }else{
         statusBox.className = 'status warn';
-        statusBox.innerHTML = `第${n}课目前还没有补充网页。<br>需要新建的文件名：<b>${path}</b>`;
+        statusBox.innerHTML = `第${n}课目前还没有补充网页。`;
+        showEmpty(`第${n}课目前还没有补充网页。<br>需要新增文件：<b>${path}</b>`);
       }
     }catch(e){
       statusBox.className = 'status warn';
-      statusBox.innerHTML = `暂时无法检查第${n}课网页。<br>可以稍后刷新重试，或直接检查文件名：<b>${path}</b>`;
+      statusBox.innerHTML = `暂时无法检查第${n}课网页。`;
+      showEmpty(`暂时无法检查第${n}课网页。<br>可以稍后刷新重试，或检查文件名：<b>${path}</b>`);
     }
   }
 
@@ -111,18 +120,10 @@
     opt.value=i;
     opt.textContent=`第${i}课`;
     select.appendChild(opt);
-
-    const b=document.createElement('button');
-    b.type='button';
-    b.className='lesson-btn';
-    b.textContent=`第${i}课`;
-    b.dataset.lesson=i;
-    b.onclick=()=>checkAndOpenLesson(i);
-    grid.appendChild(b);
   }
 
-  document.getElementById('openLesson').onclick=()=>checkAndOpenLesson(select.value);
-  select.onchange=()=>setActive(select.value);
+  document.getElementById('openLesson').onclick=()=>loadLesson(select.value);
+  select.onchange=()=>loadLesson(select.value);
 
   document.getElementById('copyLink').onclick=async()=>{
     const url=location.origin+location.pathname+`#lesson-${select.value}`;
@@ -130,7 +131,9 @@
   };
 
   const m=location.hash.match(/lesson-(\d+)/);
-  setActive(m?Number(m[1]):26);
+  const initial = m ? Number(m[1]) : 26;
+  setSelected(initial);
+  loadLesson(initial);
 </script>
 </body>
 </html>
