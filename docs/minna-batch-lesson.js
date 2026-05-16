@@ -54,8 +54,26 @@ const DATA={
 };
 function esc(s){return String(s||'').replace(/[&<>]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[m]))}
 function pad(n){return String(n).padStart(2,'0')}
-function buildSlides(d,n){const arr=[];d.examples.forEach((ex,i)=>{arr.push({t:`${d.title} 例句${i+1}`,jp:ex,kana:ex,romaji:'点击日语朗读，跟读练习。',target:ex.replace(/[\s。、，,.!?！？・ー\-]/g,''),cn:`本句练习：${d.points[i%d.points.length]}。主题：${d.theme}。`,q:`本页重点是哪一个？`,opts:[d.points[i%d.points.length],d.points[(i+1)%d.points.length],d.points[(i+2)%d.points.length]],a:0,tip:d.points[i%d.points.length]})});
-while(arr.length<12){let i=arr.length,pt=d.points[i%d.points.length],ex=d.examples[i%d.examples.length];arr.push({t:`${d.title} 练习${i+1}`,jp:ex,kana:ex,romaji:'repeat after the audio',target:ex.replace(/[\s。、，,.!?！？・ー\-]/g,''),cn:`复习重点：${pt}。请先听日语，再自己造一个类似句子。`,q:`${d.title} 的主题是？`,opts:[d.theme,'第1课自我介绍','第5课交通'],a:0,tip:pt})}
-return arr}
+function buildSlides(d,n){
+  if(Array.isArray(d.slides) && d.slides.length){
+    return d.slides.map((s,i)=>({
+      t:s.t||`${d.title} 精讲${i+1}`,
+      jp:s.jp||'',
+      kana:s.kana||s.jp||'',
+      romaji:s.romaji||'点击日语朗读，跟读练习。',
+      target:s.target||(s.jp||'').replace(/[\s。、，,.!?！？・ー\-]/g,''),
+      cn:s.cn||`主题：${d.theme}`,
+      q:s.q||'本页重点是哪一个？',
+      opts:s.opts||[d.points[0],d.points[1]||d.theme,d.points[2]||d.title],
+      a:Number.isInteger(s.a)?s.a:0,
+      tip:s.tip||d.points[i%d.points.length]||d.theme,
+      vocab:s.vocab||[],
+      grammar:s.grammar||[]
+    }));
+  }
+  const arr=[];d.examples.forEach((ex,i)=>{arr.push({t:`${d.title} 例句${i+1}`,jp:ex,kana:ex,romaji:'点击日语朗读，跟读练习。',target:ex.replace(/[\s。、，,.!?！？・ー\-]/g,''),cn:`本句练习：${d.points[i%d.points.length]}。主题：${d.theme}。`,q:`本页重点是哪一个？`,opts:[d.points[i%d.points.length],d.points[(i+1)%d.points.length],d.points[(i+2)%d.points.length]],a:0,tip:d.points[i%d.points.length],vocab:[],grammar:[]})});
+  while(arr.length<12){let i=arr.length,pt=d.points[i%d.points.length],ex=d.examples[i%d.examples.length];arr.push({t:`${d.title} 练习${i+1}`,jp:ex,kana:ex,romaji:'repeat after the audio',target:ex.replace(/[\s。、，,.!?！？・ー\-]/g,''),cn:`复习重点：${pt}。请先听日语，再自己造一个类似句子。`,q:`${d.title} 的主题是？`,opts:[d.theme,'第1课自我介绍','第5课交通'],a:0,tip:pt,vocab:[],grammar:[]})}
+  return arr
+}
 window.MinnaBatchLesson={DATA,buildSlides,esc,pad};
 })();
