@@ -3,66 +3,84 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>《みんなの日本語 初級Ⅰ》第1课｜动画AI配音课件</title>
+<title>《みんなの日本語 初級Ⅰ》第1课｜AI动画老师课件</title>
 <style>
-:root{--bg:#f8fafc;--ink:#0f172a;--muted:#64748b;--brand:#2563eb;--brand2:#7c3aed;--good:#0f766e;--card:#fff;--line:#e2e8f0;--warn:#fff7ed}
-*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","Noto Sans JP","Microsoft YaHei",sans-serif;background:radial-gradient(circle at top left,#dbeafe 0,#f8fafc 36%,#f8fafc 100%);color:var(--ink)}
-header{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;padding:26px 18px}header .wrap,main{max-width:980px;margin:0 auto}h1{margin:0;font-size:26px;line-height:1.35}header p{margin:8px 0 0;opacity:.92}.badge{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:4px 10px;font-weight:700;margin-bottom:10px}
-main{padding:18px}.player{background:var(--card);border:1px solid var(--line);border-radius:24px;box-shadow:0 18px 48px rgba(15,23,42,.12);overflow:hidden}.stage{position:relative;min-height:520px;padding:28px;background:linear-gradient(180deg,#fff,#f8fafc)}
-.lessonNo{color:var(--muted);font-weight:800;letter-spacing:.08em}.slideTitle{font-size:30px;margin:10px 0 18px;line-height:1.25}.jpBox,.cnBox,.pointBox{border-radius:20px;padding:18px;margin:14px 0;animation:pop .45s ease both}.jpBox{background:#fff;border:2px solid #bfdbfe}.jpLabel,.cnLabel{font-weight:800;margin-bottom:8px}.jp{font-size:28px;font-weight:800;line-height:1.65;white-space:pre-wrap}.cnBox{background:#ecfdf5;border:2px solid #99f6e4}.cn{font-size:19px;line-height:1.75;color:#14532d}.pointBox{background:#f8fafc;border:1px solid var(--line)}ul{margin:8px 0 0;padding-left:22px}li{margin:7px 0;line-height:1.6}.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:14px;background:#0f172a}.controls button{appearance:none;border:0;border-radius:14px;padding:11px 16px;font-weight:800;cursor:pointer}.primary{background:#22c55e;color:#052e16}.secondary{background:#e2e8f0;color:#0f172a}.ghost{background:#334155;color:#fff}.bar{flex:1;min-width:160px;height:10px;background:#334155;border-radius:999px;overflow:hidden}.bar span{display:block;height:100%;width:0;background:linear-gradient(90deg,#22c55e,#38bdf8);transition:width .25s}.meta{color:#cbd5e1;font-size:13px;font-weight:700}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:16px}.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px}.card h3{margin:0 0 8px}.note{background:var(--warn);border:1px solid #fed7aa;border-radius:16px;padding:14px;margin-top:16px;color:#7c2d12}.footer{text-align:center;color:var(--muted);font-size:13px;padding:22px}.pill{display:inline-block;background:#eef2ff;color:#3730a3;border-radius:999px;padding:3px 9px;margin:2px;font-weight:700}.fade{animation:fade .5s ease both}@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}@keyframes pop{from{opacity:0;transform:scale(.98)}to{opacity:1;transform:scale(1)}}@media(max-width:640px){h1{font-size:22px}.stage{min-height:560px;padding:18px}.slideTitle{font-size:24px}.jp{font-size:23px}.cn{font-size:17px}.controls{align-items:stretch}.controls button{flex:1}.bar{flex-basis:100%}}
+:root{--bg:#f8fafc;--ink:#0f172a;--muted:#64748b;--brand:#2563eb;--brand2:#7c3aed;--good:#0f766e;--card:#fff;--line:#e2e8f0;--pink:#f9a8d4;--skin:#ffd7bd;--hair:#312e81;--mouth:#be123c}
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","Noto Sans JP","Microsoft YaHei",sans-serif;background:radial-gradient(circle at top left,#dbeafe 0,#f8fafc 40%,#f8fafc 100%);color:var(--ink)}
+header{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;padding:24px 18px}header .wrap,main{max-width:1120px;margin:0 auto}h1{margin:0;font-size:26px;line-height:1.35}header p{margin:8px 0 0;opacity:.92}.badge{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:4px 10px;font-weight:800;margin-bottom:10px}
+main{padding:18px}.player{background:var(--card);border:1px solid var(--line);border-radius:26px;box-shadow:0 18px 48px rgba(15,23,42,.13);overflow:hidden}.stage{display:grid;grid-template-columns:310px 1fr;gap:18px;min-height:560px;padding:24px;background:linear-gradient(180deg,#fff,#f8fafc)}
+.teacherPanel{position:relative;background:linear-gradient(180deg,#eef2ff,#ecfeff);border:1px solid #c7d2fe;border-radius:24px;padding:16px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end}.teacherName{position:absolute;top:14px;left:14px;background:#fff;color:#3730a3;border:1px solid #c7d2fe;border-radius:999px;padding:6px 12px;font-weight:900}.speech{position:absolute;top:58px;left:18px;right:18px;background:#fff;border:1px solid #bae6fd;border-radius:18px;padding:12px;font-weight:800;color:#0f172a;line-height:1.55;box-shadow:0 10px 24px rgba(15,23,42,.08)}.speech:after{content:"";position:absolute;bottom:-10px;left:40px;border-width:10px 10px 0 10px;border-style:solid;border-color:#fff transparent transparent transparent}
+.avatar{position:relative;width:240px;height:360px;margin:150px auto 0;animation:float 3s ease-in-out infinite}.hairBack{position:absolute;left:45px;top:18px;width:150px;height:180px;background:var(--hair);border-radius:80px 80px 70px 70px}.neck{position:absolute;left:104px;top:162px;width:42px;height:52px;background:var(--skin);border-radius:16px}.face{position:absolute;left:50px;top:36px;width:140px;height:150px;background:var(--skin);border-radius:52% 52% 48% 48%;box-shadow:inset 0 -8px 0 rgba(0,0,0,.04)}.bang{position:absolute;background:var(--hair);top:22px;height:54px;border-radius:80px 80px 16px 16px}.b1{left:50px;width:70px;transform:rotate(-16deg)}.b2{left:92px;width:72px;transform:rotate(8deg)}.b3{left:134px;width:55px;transform:rotate(18deg)}.eye{position:absolute;top:92px;width:22px;height:14px;background:#111827;border-radius:999px;animation:blink 4.8s infinite}.eye.left{left:82px}.eye.right{left:141px}.cheek{position:absolute;top:123px;width:26px;height:12px;background:#fb7185;border-radius:999px;opacity:.45}.cheek.left{left:70px}.cheek.right{left:150px}.mouth{position:absolute;left:112px;top:130px;width:24px;height:10px;background:var(--mouth);border-radius:0 0 999px 999px;transition:.15s}.speaking .mouth{animation:talk .32s infinite}.body{position:absolute;left:44px;top:206px;width:154px;height:142px;background:linear-gradient(135deg,#2563eb,#7c3aed);border-radius:42px 42px 20px 20px}.collar{position:absolute;left:94px;top:206px;width:56px;height:38px;background:#fff;clip-path:polygon(0 0,50% 100%,100% 0)}.arm{position:absolute;top:226px;width:42px;height:110px;background:#ffd7bd;border-radius:24px}.arm.left{left:28px;transform:rotate(18deg)}.arm.right{left:170px;transform:rotate(-22deg);transform-origin:top;animation:wave 2.2s ease-in-out infinite}.hand{position:absolute;top:324px;width:34px;height:34px;background:#ffd7bd;border-radius:50%}.hand.left{left:28px}.hand.right{left:184px;animation:waveHand 2.2s ease-in-out infinite}.lessonNo{color:var(--muted);font-weight:900;letter-spacing:.08em}.slideTitle{font-size:30px;margin:10px 0 16px;line-height:1.25}.content{min-width:0}.jpBox,.cnBox,.pointBox,.quizBox{border-radius:20px;padding:17px;margin:13px 0;animation:pop .45s ease both}.jpBox{background:#fff;border:2px solid #bfdbfe}.jpLabel,.cnLabel{font-weight:900;margin-bottom:7px}.jp{font-size:28px;font-weight:900;line-height:1.65;white-space:pre-wrap}.cnBox{background:#ecfdf5;border:2px solid #99f6e4}.cn{font-size:19px;line-height:1.75;color:#14532d}.pointBox{background:#f8fafc;border:1px solid var(--line)}.quizBox{background:#fffbeb;border:1px solid #fde68a}.quizInput{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.quizInput button{border:0;border-radius:999px;padding:9px 12px;font-weight:900;background:#fef3c7;color:#78350f;cursor:pointer}ul{margin:8px 0 0;padding-left:22px}li{margin:7px 0;line-height:1.6}.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:14px;background:#0f172a}.controls button{appearance:none;border:0;border-radius:14px;padding:11px 16px;font-weight:900;cursor:pointer}.primary{background:#22c55e;color:#052e16}.secondary{background:#e2e8f0;color:#0f172a}.ghost{background:#334155;color:#fff}.bar{flex:1;min-width:160px;height:10px;background:#334155;border-radius:999px;overflow:hidden}.bar span{display:block;height:100%;width:0;background:linear-gradient(90deg,#22c55e,#38bdf8);transition:width .25s}.meta{color:#cbd5e1;font-size:13px;font-weight:900}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:16px}.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px}.card h3{margin:0 0 8px}.note{background:#fff7ed;border:1px solid #fed7aa;border-radius:16px;padding:14px;margin-top:16px;color:#7c2d12}.footer{text-align:center;color:var(--muted);font-size:13px;padding:22px}.pill{display:inline-block;background:#eef2ff;color:#3730a3;border-radius:999px;padding:3px 9px;margin:2px;font-weight:800}.fade{animation:fade .5s ease both}@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}@keyframes pop{from{opacity:0;transform:scale(.98)}to{opacity:1;transform:scale(1)}}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}@keyframes blink{0%,92%,100%{transform:scaleY(1)}94%,96%{transform:scaleY(.08)}}@keyframes talk{0%,100%{height:8px;transform:translateY(0)}50%{height:24px;transform:translateY(-4px)}}@keyframes wave{0%,100%{transform:rotate(-22deg)}50%{transform:rotate(-52deg)}}@keyframes waveHand{0%,100%{transform:translate(0,0)}50%{transform:translate(14px,-24px)}}@media(max-width:820px){.stage{grid-template-columns:1fr}.teacherPanel{min-height:260px}.avatar{transform:scale(.72);margin:72px auto -46px;animation:floatSmall 3s ease-in-out infinite}.speech{font-size:14px}.slideTitle{font-size:24px}.jp{font-size:23px}.cn{font-size:17px}.controls{align-items:stretch}.controls button{flex:1}.bar{flex-basis:100%}}@keyframes floatSmall{0%,100%{transform:scale(.72) translateY(0)}50%{transform:scale(.72) translateY(-8px)}}
 </style>
 </head>
 <body>
-<header><div class="wrap"><div class="badge">动画HTML + 浏览器AI配音</div><h1>《みんなの日本語 初級Ⅰ》第1课语法总结</h1><p>点击“开始播放”，页面会像视频一样逐段显示，并自动朗读中文讲解。无需 MP4 文件。</p></div></header>
+<header><div class="wrap"><div class="badge">AI动画老师版</div><h1>《みんなの日本語 初級Ⅰ》第1课语法总结</h1><p>动画老师 + 中文AI配音 + 日语例句高亮 + 小测验。无需 MP4，直接 GitHub Pages 播放。</p></div></header>
 <main>
 <section class="player">
-  <div class="stage" id="stage"></div>
+  <div class="stage">
+    <aside class="teacherPanel">
+      <div class="teacherName">AI 先生</div>
+      <div class="speech" id="speech">点击开始，我来带你学第1课。</div>
+      <div class="avatar" id="avatar">
+        <div class="hairBack"></div><div class="neck"></div><div class="body"></div><div class="collar"></div>
+        <div class="arm left"></div><div class="arm right"></div><div class="hand left"></div><div class="hand right"></div>
+        <div class="face"></div><div class="bang b1"></div><div class="bang b2"></div><div class="bang b3"></div>
+        <div class="eye left"></div><div class="eye right"></div><div class="cheek left"></div><div class="cheek right"></div><div class="mouth"></div>
+      </div>
+    </aside>
+    <div class="content" id="stage"></div>
+  </div>
   <div class="controls">
     <button class="primary" id="playBtn">▶ 开始播放</button>
     <button class="secondary" id="prevBtn">上一页</button>
     <button class="secondary" id="nextBtn">下一页</button>
     <button class="ghost" id="voiceBtn">🔊 朗读本页</button>
+    <button class="ghost" id="jpBtn">🇯🇵 读日语</button>
     <div class="bar"><span id="progress"></span></div>
     <div class="meta" id="meta">1 / 16</div>
   </div>
 </section>
 <section class="cards">
   <div class="card"><h3>核心句型</h3><p><span class="pill">N1 は N2 です</span><span class="pill">N1 は N2 じゃありません</span><span class="pill">N1 は N2 ですか</span><span class="pill">N1 も N2 です</span></p></div>
-  <div class="card"><h3>重点提醒</h3><p>助词「は」作助词时读 <b>wa</b>；「も」表示“也”；「さん」只能称呼别人，不能用于自己。</p></div>
+  <div class="card"><h3>升级点</h3><p>老师角色会眨眼、挥手；朗读时嘴巴会动；支持中文讲解和日语例句朗读。</p></div>
   <div class="card"><h3>练习目标</h3><p>能说：わたしは＿＿です。／＿＿さんは＿＿ですか。／わたしも＿＿です。</p></div>
 </section>
-<div class="note">提示：浏览器语音质量取决于你的系统语音。Chrome / Edge / Safari 通常都可以朗读中文；手机上也能播放。</div>
+<div class="note">说明：这是纯 HTML/CSS/JS 的轻量动画老师，不依赖外部模型文件。下一步可接入真正 Live2D Cubism 模型。</div>
 </main>
 <div class="footer">Generated for Japanese learning review.</div>
 <script>
 const slides=[
-{t:'第1课学习目标',jp:'名詞句｜は｜です｜じゃありません｜ですか｜も',cn:'这节课学习最基础的日语判断句：我是谁、你是谁、他是不是、我也是什么。',pts:['N1 は N2 です','N1 は N2 じゃありません','N1 は N2 ですか','N1 も N2 です','初めまして'],sec:8},
-{t:'1. N1 は N2 です：……是……',jp:'わたしは マイク・ミラーです。',cn:'意思是：我是迈克・米勒。这个句型用于介绍姓名、国籍、职业、身份等。',pts:['は：提示主题，读 wa','です：礼貌判断，意思接近“是”','结构：名词1 + は + 名词2 + です'],sec:10},
-{t:'例句练习：A は B です',jp:'サントスさんは 学生です。\nワンさんは 会社員です。',cn:'桑托斯先生是学生。王先生是公司职员。先说主题，再说明身份。',pts:['学生（がくせい）= 学生','会社員（かいしゃいん）= 公司职员','说别人时可以加 さん'],sec:10},
-{t:'2. 否定句：じゃありません',jp:'サントスさんは 学生じゃありません。',cn:'意思是：桑托斯先生不是学生。「じゃありません」是「です」的否定形式。',pts:['学生です = 是学生','学生じゃありません = 不是学生','更正式的说法是：ではありません'],sec:10},
-{t:'否定句例句',jp:'わたしは 先生じゃありません。\nワンさんは 日本人じゃありません。',cn:'我不是老师。王先生不是日本人。把后面的身份换掉，就能造很多句子。',pts:['先生（せんせい）= 老师','日本人（にほんじん）= 日本人','初级会话中常用 じゃありません'],sec:10},
-{t:'3. 疑问句：〜ですか',jp:'ミラーさんは 会社員ですか。',cn:'意思是：米勒先生是公司职员吗？日语疑问句常在句末加「か」。',pts:['か：疑问助词，类似“吗”','读的时候语调通常上扬','礼貌会话建议用完整句'],sec:10},
-{t:'回答方式',jp:'はい、そうです。\nいいえ、違います。\nいいえ、学生じゃありません。',cn:'回答“是吗？”可以说：是，是的；不，不是；也可以直接说：不，不是学生。',pts:['そうです = 是那样','違います（ちがいます）= 不是 / 不对','也可以说：いいえ、N2じゃありません'],sec:12},
-{t:'4. N1 も N2 です：……也是……',jp:'ミラーさんは 会社員です。\nグプタさんも 会社員です。',cn:'意思是：米勒先生是公司职员。古普塔先生也是公司职员。「も」表示“也”。',pts:['も：也','有「も」时通常不用「は」','不要说：わたしはも学生です'],sec:11},
-{t:'も 的更多例句',jp:'カリナさんは 学生です。\nわたしも 学生です。',cn:'卡莉娜小姐是学生。我也是学生。当前面说过一个人，后面另一个也相同时，用「も」。',pts:['わたしも学生です = 我也是学生','佐藤さんは日本人です。山田さんも日本人です。','も 可以替换 は'],sec:10},
-{t:'5. ～さん：称呼别人',jp:'ミラーさん\n佐藤さん\nワンさん',cn:'「さん」接在人名后，表示礼貌称呼。可以理解为先生、女士、同学等。',pts:['姓名 + さん','不能用于自己','不要说：わたしさんはミラーです'],sec:9},
-{t:'6. 初次见面的固定表达',jp:'初めまして。\nわたしは～です。\nどうぞよろしくお願いします。',cn:'第一次见面可以整句背下来：初次见面。我是……。请多多关照。',pts:['初めまして = 初次见面','～から来ました = 我来自……','どうぞよろしく = 请多关照'],sec:11},
-{t:'完整自我介绍',jp:'初めまして。\nわたしは マイク・ミラーです。\nアメリカから来ました。\nどうぞよろしく。',cn:'初次见面。我是迈克・米勒。我来自美国。请多关照。你可以把名字和国家换成自己的。',pts:['可以把名字换成自己的名字','可以把国家换成自己的国家','适合直接背诵'],sec:12},
-{t:'第1课常用词汇',jp:'私・あなた・先生・教師・学生・会社員・社員',cn:'这些词都适合放进「A は B です」里练习。先读词，再套句型。',pts:['私（わたし）= 我','先生（せんせい）= 老师','教師（きょうし）= 教师，用于自己的职业','会社員（かいしゃいん）= 公司职员'],sec:10},
-{t:'更多职业词汇',jp:'銀行員・医者・研究者・大学・病院',cn:'银行职员、医生、研究员、大学、医院。掌握这些词，就能做更多身份介绍。',pts:['銀行員（ぎんこういん）= 银行职员','医者（いしゃ）= 医生','研究者（けんきゅうしゃ）= 研究员','大学（だいがく）= 大学'],sec:10},
-{t:'中国学习者容易错的地方',jp:'× わたしさんはミラーです。\n○ わたしはミラーです。',cn:'「さん」只能称呼别人，不能用于自己。介绍自己时直接说「わたしは～です」。',pts:['错误：わたしさん','正确：わたし','中文里“我叫某某先生”也不自然'],sec:10},
-{t:'本课一句话总结',jp:'わたしはミラーです。\n学生じゃありません。\n会社員ですか。\nわたしも学生です。',cn:'第1课就是学：我是谁、我不是谁、你是不是、我也是什么。每天开口读三遍。',pts:['は：提示主题，读 wa','です：是','じゃありません：不是','か：吗','も：也'],sec:10}
+{t:'第1课学习目标',jp:'名詞句｜は｜です｜じゃありません｜ですか｜も',cn:'这节课学习最基础的日语判断句：我是谁、你是谁、他是不是、我也是什么。',pts:['N1 は N2 です','N1 は N2 じゃありません','N1 は N2 ですか','N1 も N2 です','初めまして'],q:'今天的目标：会说“我是……”“我不是……”“你是……吗？”',sec:8},
+{t:'1. N1 は N2 です：……是……',jp:'わたしは マイク・ミラーです。',cn:'意思是：我是迈克・米勒。这个句型用于介绍姓名、国籍、职业、身份等。',pts:['は：提示主题，读 wa','です：礼貌判断，意思接近“是”','结构：名词1 + は + 名词2 + です'],q:'请跟读：わたしは マイク・ミラーです。',sec:10},
+{t:'例句练习：A は B です',jp:'サントスさんは 学生です。\nワンさんは 会社員です。',cn:'桑托斯先生是学生。王先生是公司职员。先说主题，再说明身份。',pts:['学生（がくせい）= 学生','会社員（かいしゃいん）= 公司职员','说别人时可以加 さん'],q:'小练习：把“学生”换成“会社員”再说一遍。',sec:10},
+{t:'2. 否定句：じゃありません',jp:'サントスさんは 学生じゃありません。',cn:'意思是：桑托斯先生不是学生。「じゃありません」是「です」的否定形式。',pts:['学生です = 是学生','学生じゃありません = 不是学生','更正式的说法是：ではありません'],q:'记住：不是学生，就是 学生じゃありません。',sec:10},
+{t:'否定句例句',jp:'わたしは 先生じゃありません。\nワンさんは 日本人じゃありません。',cn:'我不是老师。王先生不是日本人。把后面的身份换掉，就能造很多句子。',pts:['先生（せんせい）= 老师','日本人（にほんじん）= 日本人','初级会话中常用 じゃありません'],q:'你可以说：わたしは 先生じゃありません。',sec:10},
+{t:'3. 疑问句：〜ですか',jp:'ミラーさんは 会社員ですか。',cn:'意思是：米勒先生是公司职员吗？日语疑问句常在句末加「か」。',pts:['か：疑问助词，类似“吗”','读的时候语调通常上扬','礼貌会话建议用完整句'],q:'句尾加 か，就变成问题。',sec:10},
+{t:'回答方式',jp:'はい、そうです。\nいいえ、違います。\nいいえ、学生じゃありません。',cn:'回答“是吗？”可以说：是，是的；不，不是；也可以直接说：不，不是学生。',pts:['そうです = 是那样','違います（ちがいます）= 不是 / 不对','也可以说：いいえ、N2じゃありません'],q:'请记住两个回答：はい、そうです。いいえ、違います。',sec:12},
+{t:'4. N1 も N2 です：……也是……',jp:'ミラーさんは 会社員です。\nグプタさんも 会社員です。',cn:'意思是：米勒先生是公司职员。古普塔先生也是公司职员。「も」表示“也”。',pts:['も：也','有「も」时通常不用「は」','不要说：わたしはも学生です'],q:'重点：も 替换 は，不要说 はも。',sec:11},
+{t:'も 的更多例句',jp:'カリナさんは 学生です。\nわたしも 学生です。',cn:'卡莉娜小姐是学生。我也是学生。当前面说过一个人，后面另一个也相同时，用「も」。',pts:['わたしも学生です = 我也是学生','佐藤さんは日本人です。山田さんも日本人です。','も 可以替换 は'],q:'跟读：わたしも 学生です。',sec:10},
+{t:'5. ～さん：称呼别人',jp:'ミラーさん\n佐藤さん\nワンさん',cn:'「さん」接在人名后，表示礼貌称呼。可以理解为先生、女士、同学等。',pts:['姓名 + さん','不能用于自己','不要说：わたしさんはミラーです'],q:'提醒：さん 不能用于自己。',sec:9},
+{t:'6. 初次见面的固定表达',jp:'初めまして。\nわたしは～です。\nどうぞよろしくお願いします。',cn:'第一次见面可以整句背下来：初次见面。我是……。请多多关照。',pts:['初めまして = 初次见面','～から来ました = 我来自……','どうぞよろしく = 请多关照'],q:'这三句适合直接背下来。',sec:11},
+{t:'完整自我介绍',jp:'初めまして。\nわたしは マイク・ミラーです。\nアメリカから来ました。\nどうぞよろしく。',cn:'初次见面。我是迈克・米勒。我来自美国。请多关照。你可以把名字和国家换成自己的。',pts:['可以把名字换成自己的名字','可以把国家换成自己的国家','适合直接背诵'],q:'现在试着把マイク・ミラー换成自己的名字。',sec:12},
+{t:'第1课常用词汇',jp:'私・あなた・先生・教師・学生・会社員・社員',cn:'这些词都适合放进「A は B です」里练习。先读词，再套句型。',pts:['私（わたし）= 我','先生（せんせい）= 老师','教師（きょうし）= 教师，用于自己的职业','会社員（かいしゃいん）= 公司职员'],q:'词汇要放进句子里记。',sec:10},
+{t:'更多职业词汇',jp:'銀行員・医者・研究者・大学・病院',cn:'银行职员、医生、研究员、大学、医院。掌握这些词，就能做更多身份介绍。',pts:['銀行員（ぎんこういん）= 银行职员','医者（いしゃ）= 医生','研究者（けんきゅうしゃ）= 研究员','大学（だいがく）= 大学'],q:'把职业词换进句型：わたしは＿＿です。',sec:10},
+{t:'中国学习者容易错的地方',jp:'× わたしさんはミラーです。\n○ わたしはミラーです。',cn:'「さん」只能称呼别人，不能用于自己。介绍自己时直接说「わたしは～です」。',pts:['错误：わたしさん','正确：わたし','中文里“我叫某某先生”也不自然'],q:'看到 わたしさん，就要知道是错的。',sec:10},
+{t:'本课一句话总结',jp:'わたしはミラーです。\n学生じゃありません。\n会社員ですか。\nわたしも学生です。',cn:'第1课就是学：我是谁、我不是谁、你是不是、我也是什么。每天开口读三遍。',pts:['は：提示主题，读 wa','です：是','じゃありません：不是','か：吗','も：也'],q:'第1课完成！请每天读三遍。',sec:10}
 ];
 let i=0,timer=null,playing=false;
-const stage=document.getElementById('stage'),meta=document.getElementById('meta'),progress=document.getElementById('progress');
-function render(){const s=slides[i];stage.innerHTML=`<div class="fade"><div class="lessonNo">MINNA NO NIHONGO ｜ LESSON 01</div><h2 class="slideTitle">${s.t}</h2><div class="jpBox"><div class="jpLabel">日语例句</div><div class="jp">${s.jp}</div></div><div class="cnBox"><div class="cnLabel">中文讲解</div><div class="cn">${s.cn}</div></div><div class="pointBox"><b>重点</b><ul>${s.pts.map(p=>`<li>${p}</li>`).join('')}</ul></div></div>`;meta.textContent=(i+1)+' / '+slides.length;progress.style.width=((i+1)/slides.length*100)+'%'}
-function speak(){speechSynthesis.cancel();const s=slides[i];const u=new SpeechSynthesisUtterance(s.t+'。'+s.cn);u.lang='zh-CN';u.rate=.92;u.pitch=1;speechSynthesis.speak(u)}
-function next(auto=false){if(i<slides.length-1){i++;render();if(auto) speak();}else{stop();}}
-function prev(){if(i>0){i--;render();speak();}}
-function play(){if(playing){stop();return}playing=true;document.getElementById('playBtn').textContent='⏸ 暂停';speak();schedule();}
-function schedule(){clearInterval(timer);timer=setInterval(()=>{next(true);if(playing&&i<slides.length-1){}},slides[i].sec*1000)}
-function stop(){playing=false;clearInterval(timer);speechSynthesis.cancel();document.getElementById('playBtn').textContent='▶ 开始播放'}
-document.getElementById('playBtn').onclick=play;document.getElementById('nextBtn').onclick=()=>{stop();next(false);speak()};document.getElementById('prevBtn').onclick=()=>{stop();prev()};document.getElementById('voiceBtn').onclick=speak;render();
+const stage=document.getElementById('stage'),meta=document.getElementById('meta'),progress=document.getElementById('progress'),avatar=document.getElementById('avatar'),speech=document.getElementById('speech');
+function render(){const s=slides[i];stage.innerHTML=`<div class="fade"><div class="lessonNo">MINNA NO NIHONGO ｜ LESSON 01</div><h2 class="slideTitle">${s.t}</h2><div class="jpBox"><div class="jpLabel">日语例句</div><div class="jp">${s.jp}</div></div><div class="cnBox"><div class="cnLabel">中文讲解</div><div class="cn">${s.cn}</div></div><div class="pointBox"><b>重点</b><ul>${s.pts.map(p=>`<li>${p}</li>`).join('')}</ul></div><div class="quizBox"><b>AI先生提醒</b><div>${s.q}</div><div class="quizInput"><button onclick="speakCN()">再讲一遍</button><button onclick="speakJP()">日语跟读</button></div></div></div>`;speech.textContent=s.q;meta.textContent=(i+1)+' / '+slides.length;progress.style.width=((i+1)/slides.length*100)+'%'}
+function setTalking(on){avatar.classList.toggle('speaking',on)}
+function pickVoice(lang){const voices=speechSynthesis.getVoices();return voices.find(v=>v.lang&&v.lang.toLowerCase().startsWith(lang.toLowerCase()))||null}
+function speak(text,lang='zh-CN',rate=.92){speechSynthesis.cancel();setTalking(true);const u=new SpeechSynthesisUtterance(text);u.lang=lang;u.rate=rate;const v=pickVoice(lang);if(v)u.voice=v;u.onend=()=>setTalking(false);u.onerror=()=>setTalking(false);speechSynthesis.speak(u)}
+function speakCN(){const s=slides[i];speak(s.t+'。'+s.cn+'。'+s.q,'zh-CN',.92)}
+function speakJP(){const s=slides[i];speak(s.jp.replace(/×|○/g,''),'ja-JP',.82)}
+function next(auto=false){if(i<slides.length-1){i++;render();if(auto)speakCN();}else{stop();}}
+function prev(){if(i>0){i--;render();speakCN();}}
+function play(){if(playing){stop();return}playing=true;document.getElementById('playBtn').textContent='⏸ 暂停';speakCN();schedule();}
+function schedule(){clearInterval(timer);timer=setInterval(()=>{next(true);schedule();},slides[i].sec*1000)}
+function stop(){playing=false;clearInterval(timer);speechSynthesis.cancel();setTalking(false);document.getElementById('playBtn').textContent='▶ 开始播放'}
+document.getElementById('playBtn').onclick=play;document.getElementById('nextBtn').onclick=()=>{stop();next(false);speakCN()};document.getElementById('prevBtn').onclick=()=>{stop();prev()};document.getElementById('voiceBtn').onclick=speakCN;document.getElementById('jpBtn').onclick=speakJP;speechSynthesis.onvoiceschanged=()=>{};render();
 </script>
 </body>
 </html>
