@@ -111,4 +111,7 @@
   if(!window.MinnaMasteryLessons[17]){
     document.write('<script src="./minna-mastery-lesson-17.js?v=lesson17-mastery"><\/script>');
   }
+  if(!window.MinnaMasteryLessons[18]){
+    document.write('<script src="./minna-mastery-lesson-18.js?v=lesson18-mastery"><\/script>');
+  }
 })();
