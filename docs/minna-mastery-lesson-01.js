@@ -61,9 +61,12 @@
     ]
   };
 
-  // Synchronous loader for additional mastery lesson files.
-  // The shared player currently imports this file, so document.write keeps Lesson 02 available before the player starts.
+  // Synchronous bridge loader for additional mastery lesson files.
+  // The shared player currently imports this file, so document.write keeps later lessons available before the player starts.
   if(!window.MinnaMasteryLessons[2]){
     document.write('<script src="./minna-mastery-lesson-02.js?v=lesson02-mastery"><\/script>');
+  }
+  if(!window.MinnaMasteryLessons[3]){
+    document.write('<script src="./minna-mastery-lesson-03.js?v=lesson03-mastery"><\/script>');
   }
 })();
