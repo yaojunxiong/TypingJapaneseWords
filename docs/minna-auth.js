@@ -342,6 +342,14 @@ window.MinnaAuth = (() => {
       nextUrl: './minna-index.html?v=14.0-lesson17-complete',
       reviewLabel: '继续复习第17课',
       chips: ['ない形','〜ないでください','〜なければなりません','〜なくてもいいです','对象助词「は」','请不要做某事','必须做某事','不做也可以','看病 / 禁止提醒 / 必须做 / 不做也可以 场景','错题清零']
+    },
+    'minna_lesson_18': {
+      no: '18',
+      title: '第18课掌握完成！',
+      next: '第19课 た形 / 〜たことがあります / 〜たり〜たりします',
+      nextUrl: './minna-index.html?v=14.1-lesson18-complete',
+      reviewLabel: '继续复习第18课',
+      chips: ['辞書形','〜ことができます','趣味は〜ことです','〜前に','能力表达','兴趣表达','做某事之前','能力 / 兴趣 / 前置动作场景','错题清零']
     }
   };
   function readState(no){
