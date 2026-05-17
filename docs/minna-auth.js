@@ -135,3 +135,72 @@ window.MinnaAuth = (() => {
     config: { SUPABASE_URL }
   };
 })();
+
+// Mobile vocabulary matching enhancer
+// On small screens, converts the two-column vocabulary matching UI into a Duolingo-style one-word multiple-choice card.
+(function(){
+  function isMobile(){ return window.matchMedia && window.matchMedia('(max-width: 700px)').matches; }
+  function shuffle(arr){ return arr.slice().sort(function(){ return Math.random() - 0.5; }); }
+  function enhanceVocabMatch(){
+    if(!isMobile()) return;
+    var stage = document.getElementById('stage');
+    if(!stage || !/核心词汇/.test(stage.textContent || '')) return;
+    var match = stage.querySelector('.match');
+    if(!match || stage.querySelector('#mobileVocabCard')) return;
+    var leftButtons = Array.prototype.slice.call(match.querySelectorAll('[data-l]'));
+    var rightButtons = Array.prototype.slice.call(match.querySelectorAll('[data-r]'));
+    if(!leftButtons.length || !rightButtons.length) return;
+    match.style.display = 'none';
+    var pairs = leftButtons.map(function(btn){
+      var idx = btn.getAttribute('data-l');
+      var r = rightButtons.find(function(x){ return x.getAttribute('data-r') === idx; });
+      return { idx: idx, jp: btn.textContent.trim(), cn: r ? r.textContent.trim() : '' };
+    }).filter(function(x){ return x.cn; });
+    var current = 0;
+    var card = document.createElement('div');
+    card.id = 'mobileVocabCard';
+    card.innerHTML = '<div class="box jpbox" style="text-align:center"><div class="small">手机词汇选择模式</div><div id="mvWord" class="jp"></div></div><div id="mvOptions" class="sentenceBank"></div><p id="mvFeedback" class="small"></p>';
+    match.parentNode.insertBefore(card, match);
+    function render(){
+      var item = pairs[current];
+      if(!item){
+        document.getElementById('mvWord').textContent = '完成！';
+        document.getElementById('mvOptions').innerHTML = '';
+        document.getElementById('mvFeedback').textContent = '词汇练习完成，可以继续语法。';
+        return;
+      }
+      document.getElementById('mvWord').textContent = item.jp;
+      var wrongs = shuffle(pairs.filter(function(x){ return x.idx !== item.idx; })).slice(0,3);
+      var opts = shuffle([item].concat(wrongs));
+      document.getElementById('mvOptions').innerHTML = opts.map(function(o){
+        return '<button class="choice" data-mv="'+o.idx+'">'+o.cn+'</button>';
+      }).join('');
+      document.getElementById('mvFeedback').textContent = '请选择中文意思：' + (current + 1) + '/' + pairs.length;
+      Array.prototype.slice.call(document.querySelectorAll('[data-mv]')).forEach(function(btn){
+        btn.onclick = function(){
+          var chosen = btn.getAttribute('data-mv');
+          var hiddenLeft = stage.querySelector('[data-l="'+item.idx+'"]');
+          var hiddenRight = stage.querySelector('[data-r="'+chosen+'"]');
+          if(hiddenLeft) hiddenLeft.click();
+          if(hiddenRight) hiddenRight.click();
+          if(chosen === item.idx){
+            btn.classList.add('correct');
+            document.getElementById('mvFeedback').textContent = '答对了！';
+            current += 1;
+            setTimeout(render, 500);
+          }else{
+            btn.classList.add('wrong');
+            document.getElementById('mvFeedback').textContent = '不对，已加入错题本。正确答案是：' + item.cn;
+          }
+        };
+      });
+    }
+    render();
+  }
+  var observer = new MutationObserver(function(){ enhanceVocabMatch(); });
+  function start(){
+    observer.observe(document.body, { childList:true, subtree:true });
+    enhanceVocabMatch();
+  }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
+})();
