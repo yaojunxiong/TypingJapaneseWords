@@ -350,6 +350,14 @@ window.MinnaAuth = (() => {
       nextUrl: './minna-index.html?v=14.1-lesson18-complete',
       reviewLabel: '继续复习第18课',
       chips: ['辞書形','〜ことができます','趣味は〜ことです','〜前に','能力表达','兴趣表达','做某事之前','能力 / 兴趣 / 前置动作场景','错题清零']
+    },
+    'minna_lesson_19': {
+      no: '19',
+      title: '第19课掌握完成！',
+      next: '第20课 普通形 / と思います / と言いました',
+      nextUrl: './minna-index.html?v=14.2-lesson19-complete',
+      reviewLabel: '继续复习第19课',
+      chips: ['た形','〜たことがあります','〜たり、〜たりします','〜くなります / 〜になります','经验表达','活动列举','状态变化','经验 / 周末活动 / 状态变化场景','错题清零']
     }
   };
   function readState(no){
