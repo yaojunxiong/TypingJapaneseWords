@@ -136,13 +136,11 @@ window.MinnaAuth = (() => {
   };
 })();
 
-// Mobile vocabulary matching enhancer
-// On small screens, converts the two-column vocabulary matching UI into a Duolingo-style one-word multiple-choice card.
+// Vocabulary choice-mode enhancer
+// Converts the two-column vocabulary matching UI into a Duolingo-style one-word multiple-choice card on all devices.
 (function(){
-  function isMobile(){ return window.matchMedia && window.matchMedia('(max-width: 700px)').matches; }
   function shuffle(arr){ return arr.slice().sort(function(){ return Math.random() - 0.5; }); }
   function enhanceVocabMatch(){
-    if(!isMobile()) return;
     var stage = document.getElementById('stage');
     if(!stage || !/核心词汇/.test(stage.textContent || '')) return;
     var match = stage.querySelector('.match');
@@ -159,7 +157,7 @@ window.MinnaAuth = (() => {
     var current = 0;
     var card = document.createElement('div');
     card.id = 'mobileVocabCard';
-    card.innerHTML = '<div class="box jpbox" style="text-align:center"><div class="small">手机词汇选择模式</div><div id="mvWord" class="jp"></div></div><div id="mvOptions" class="sentenceBank"></div><p id="mvFeedback" class="small"></p>';
+    card.innerHTML = '<div class="box jpbox" style="text-align:center"><div class="small">词汇选择模式</div><div id="mvWord" class="jp"></div></div><div id="mvOptions" class="sentenceBank"></div><p id="mvFeedback" class="small"></p>';
     match.parentNode.insertBefore(card, match);
     function render(){
       var item = pairs[current];
