@@ -318,6 +318,14 @@ window.MinnaAuth = (() => {
       nextUrl: './minna-index.html?v=13.7-lesson14-complete',
       reviewLabel: '继续复习第14课',
       chips: ['て形','〜てください','〜ています','〜ましょうか','动词分组与て形变化','请求别人做某事','表达正在进行','主动提出帮忙','请求/正在做/帮忙场景','错题清零']
+    },
+    'minna_lesson_15': {
+      no: '15',
+      title: '第15课掌握完成！',
+      next: '第16课 て形连接 / 〜てから / 形容词连接',
+      nextUrl: './minna-index.html?v=13.8-lesson15-complete',
+      reviewLabel: '继续复习第15课',
+      chips: ['〜てもいいです','〜てはいけません','〜ています：状态/职业/居住','知っています / 知りません','许可表达','禁止表达','居住/职业/婚姻状态','认识某人场景','许可/禁止/状态场景','错题清零']
     }
   };
   function readState(no){
