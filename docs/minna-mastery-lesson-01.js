@@ -84,4 +84,7 @@
   if(!window.MinnaMasteryLessons[8]){
     document.write('<script src="./minna-mastery-lesson-08.js?v=lesson08-mastery"><\/script>');
   }
+  if(!window.MinnaMasteryLessons[9]){
+    document.write('<script src="./minna-mastery-lesson-09.js?v=lesson09-mastery"><\/script>');
+  }
 })();
