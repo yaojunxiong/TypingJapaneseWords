@@ -222,6 +222,14 @@ window.MinnaAuth = (() => {
       nextUrl: './minna-index.html?v=12.5-lesson02-complete',
       reviewLabel: '继续复习第2课',
       chips: ['これ・それ・あれ','この・その・あの','だれの〜ですか','物品词汇','送礼会话','错题清零']
+    },
+    'minna_lesson_03': {
+      no: '03',
+      title: '第3课掌握完成！',
+      next: '第4课 時間・曜日',
+      nextUrl: './minna-index.html?v=12.6-lesson03-complete',
+      reviewLabel: '继续复习第3课',
+      chips: ['ここ・そこ・あそこ','こちら・そちら・あちら','〜はどこですか','〜はこちらです','〜はいくらですか','问路/商场场景','错题清零']
     }
   };
   function readState(no){
