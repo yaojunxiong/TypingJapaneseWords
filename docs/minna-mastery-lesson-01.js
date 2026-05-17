@@ -75,4 +75,7 @@
   if(!window.MinnaMasteryLessons[5]){
     document.write('<script src="./minna-mastery-lesson-05.js?v=lesson05-mastery"><\/script>');
   }
+  if(!window.MinnaMasteryLessons[6]){
+    document.write('<script src="./minna-mastery-lesson-06.js?v=lesson06-mastery"><\/script>');
+  }
 })();
