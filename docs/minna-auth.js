@@ -203,11 +203,29 @@ window.MinnaAuth = (() => {
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
 })();
 
-// Lesson 01 completion page enhancer
-// Shows a completion card when Lesson 01 Mastery is achieved.
+// Lesson completion page enhancer
+// Shows completion cards for Mastery lessons when the mastery rule is achieved.
 (function(){
-  function readLesson01State(){
-    var candidates = ['lesson01v8','lesson01v7','lesson01v6','lesson01v5'];
+  var CONFIG = {
+    'minna_lesson_01': {
+      no: '01',
+      title: '第1课掌握完成！',
+      next: '第2课 これ・それ・あれ',
+      nextUrl: './minna-index.html?v=12.4-complete',
+      reviewLabel: '继续复习第1课',
+      chips: ['17个核心词汇','语法/句型','核心例句','自我介绍会话','错题清零']
+    },
+    'minna_lesson_02': {
+      no: '02',
+      title: '第2课掌握完成！',
+      next: '第3课 ここ・そこ・あそこ',
+      nextUrl: './minna-index.html?v=12.5-lesson02-complete',
+      reviewLabel: '继续复习第2课',
+      chips: ['これ・それ・あれ','この・その・あの','だれの〜ですか','物品词汇','送礼会话','错题清零']
+    }
+  };
+  function readState(no){
+    var candidates = ['lesson'+no+'v8','lesson'+no+'v7','lesson'+no+'v6','lesson'+no+'v5'];
     for(var i=0;i<candidates.length;i++){
       try{
         var raw = localStorage.getItem(candidates[i]);
@@ -224,27 +242,31 @@ window.MinnaAuth = (() => {
   }
   function showCompletion(){
     var lessonId = window.MinnaAuth && window.MinnaAuth.getLessonId ? window.MinnaAuth.getLessonId() : '';
-    if(lessonId !== 'minna_lesson_01') return;
+    var cfg = CONFIG[lessonId];
+    if(!cfg) return;
     var stage = document.getElementById('stage');
-    if(!stage || document.getElementById('lesson01CompletionCard')) return;
-    var s = readLesson01State();
+    var cardId = 'lesson' + cfg.no + 'CompletionCard';
+    if(!stage || document.getElementById(cardId)) return;
+    var s = readState(cfg.no);
     if(!isPassed(s)) return;
     var m = s.mastery || {};
+    var chips = cfg.chips.map(function(x){ return '<span class="pill">✅ ' + x + '</span>'; }).join('');
     var card = document.createElement('div');
-    card.id = 'lesson01CompletionCard';
+    card.id = cardId;
     card.className = 'successBox';
-    card.innerHTML = '<h2>🎉 第1课掌握完成！</h2>'+
-      '<p>你已经完成第1课 Mastery，可以回首页刷新进度并解锁第2课。</p>'+
+    card.innerHTML = '<h2>🎉 '+cfg.title+'</h2>'+
+      '<p>你已经完成本课 Mastery，可以回首页刷新进度并继续下一课。</p>'+
       '<div class="meter">'+
       '<div><b>'+Math.round(m.vocab||100)+'%</b><span>核心词汇</span></div>'+
       '<div><b>'+Math.round(m.grammar||80)+'%</b><span>语法/句型</span></div>'+
       '<div><b>'+Math.round(m.examples||80)+'%</b><span>核心例句</span></div>'+
       '<div><b>'+Math.round(m.final||80)+'%</b><span>综合测试</span></div>'+
       '</div>'+
-      '<p><span class="pill">✅ 17个核心词汇</span><span class="pill">✅ 语法/句型</span><span class="pill">✅ 核心例句</span><span class="pill">✅ 自我介绍会话</span><span class="pill">✅ 错题清零</span></p>'+
-      '<p><a class="btn primary" href="./minna-index.html?v=12.4-complete" target="_top">回首页解锁第2课</a><button class="light" id="continueL1Review">继续复习第1课</button></p>';
+      '<p>'+chips+'</p>'+
+      '<p><b>下一课：</b>'+cfg.next+'</p>'+
+      '<p><a class="btn primary" href="'+cfg.nextUrl+'" target="_top">回首页解锁下一课</a><button class="light" id="continueReview'+cfg.no+'">'+cfg.reviewLabel+'</button></p>';
     stage.insertBefore(card, stage.firstChild);
-    var btn = document.getElementById('continueL1Review');
+    var btn = document.getElementById('continueReview'+cfg.no);
     if(btn) btn.onclick = function(){ card.remove(); };
   }
   var observer = new MutationObserver(function(){ showCompletion(); });
