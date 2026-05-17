@@ -246,6 +246,14 @@ window.MinnaAuth = (() => {
       nextUrl: './minna-index.html?v=12.8-lesson05-complete',
       reviewLabel: '继续复习第5课',
       chips: ['行きます・来ます・帰ります','地点へ行きます','交通工具で行きます','友達と行きます','日曜日に行きます','どこへ / 何で / 誰と / いつ','出行问答场景','错题清零']
+    },
+    'minna_lesson_06': {
+      no: '06',
+      title: '第6课掌握完成！',
+      next: '第7课 手段で / 人にあげます・もらいます',
+      nextUrl: './minna-index.html?v=12.9-lesson06-complete',
+      reviewLabel: '继续复习第6课',
+      chips: ['名词を动词','食べます・飲みます','見ます・聞きます・読みます・書きます','買います・撮ります・します','何をしますか','いっしょに〜ませんか','〜ましょう','活动邀请场景','错题清零']
     }
   };
   function readState(no){
