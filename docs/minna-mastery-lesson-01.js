@@ -120,4 +120,7 @@
   if(!window.MinnaMasteryLessons[20]){
     document.write('<script src="./minna-mastery-lesson-20.js?v=lesson20-mastery"><\/script>');
   }
+  if(!window.MinnaMasteryLessons[21]){
+    document.write('<script src="./minna-mastery-lesson-21.js?v=lesson21-mastery"><\/script>');
+  }
 })();
