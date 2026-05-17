@@ -238,6 +238,14 @@ window.MinnaAuth = (() => {
       nextUrl: './minna-index.html?v=12.7-lesson04-complete',
       reviewLabel: '继续复习第4课',
       chips: ['今何時ですか','〜時〜分','午前 / 午後','〜曜日','〜から〜まで','ます形过去/否定','作息和营业时间场景','错题清零']
+    },
+    'minna_lesson_05': {
+      no: '05',
+      title: '第5课掌握完成！',
+      next: '第6课 食べます・飲みます・見ます・します',
+      nextUrl: './minna-index.html?v=12.8-lesson05-complete',
+      reviewLabel: '继续复习第5课',
+      chips: ['行きます・来ます・帰ります','地点へ行きます','交通工具で行きます','友達と行きます','日曜日に行きます','どこへ / 何で / 誰と / いつ','出行问答场景','错题清零']
     }
   };
   function readState(no){
