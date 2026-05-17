@@ -202,3 +202,56 @@ window.MinnaAuth = (() => {
   }
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
 })();
+
+// Lesson 01 completion page enhancer
+// Shows a completion card when Lesson 01 Mastery is achieved.
+(function(){
+  function readLesson01State(){
+    var candidates = ['lesson01v8','lesson01v7','lesson01v6','lesson01v5'];
+    for(var i=0;i<candidates.length;i++){
+      try{
+        var raw = localStorage.getItem(candidates[i]);
+        if(raw) return JSON.parse(raw);
+      }catch(e){}
+    }
+    return null;
+  }
+  function isPassed(s){
+    if(!s) return false;
+    var m = s.mastery || {};
+    var wrongCount = s.wrong_count != null ? Number(s.wrong_count) : Object.keys(s.wrong || {}).filter(function(k){ return s.wrong[k]; }).length;
+    return !!s.mastery_passed || ((m.vocab||0) >= 100 && (m.grammar||0) >= 80 && (m.examples||0) >= 80 && (m.final||0) >= 80 && wrongCount === 0);
+  }
+  function showCompletion(){
+    var lessonId = window.MinnaAuth && window.MinnaAuth.getLessonId ? window.MinnaAuth.getLessonId() : '';
+    if(lessonId !== 'minna_lesson_01') return;
+    var stage = document.getElementById('stage');
+    if(!stage || document.getElementById('lesson01CompletionCard')) return;
+    var s = readLesson01State();
+    if(!isPassed(s)) return;
+    var m = s.mastery || {};
+    var card = document.createElement('div');
+    card.id = 'lesson01CompletionCard';
+    card.className = 'successBox';
+    card.innerHTML = '<h2>🎉 第1课掌握完成！</h2>'+
+      '<p>你已经完成第1课 Mastery，可以回首页刷新进度并解锁第2课。</p>'+
+      '<div class="meter">'+
+      '<div><b>'+Math.round(m.vocab||100)+'%</b><span>核心词汇</span></div>'+
+      '<div><b>'+Math.round(m.grammar||80)+'%</b><span>语法/句型</span></div>'+
+      '<div><b>'+Math.round(m.examples||80)+'%</b><span>核心例句</span></div>'+
+      '<div><b>'+Math.round(m.final||80)+'%</b><span>综合测试</span></div>'+
+      '</div>'+
+      '<p><span class="pill">✅ 17个核心词汇</span><span class="pill">✅ 语法/句型</span><span class="pill">✅ 核心例句</span><span class="pill">✅ 自我介绍会话</span><span class="pill">✅ 错题清零</span></p>'+
+      '<p><a class="btn primary" href="./minna-index.html?v=12.4-complete" target="_top">回首页解锁第2课</a><button class="light" id="continueL1Review">继续复习第1课</button></p>';
+    stage.insertBefore(card, stage.firstChild);
+    var btn = document.getElementById('continueL1Review');
+    if(btn) btn.onclick = function(){ card.remove(); };
+  }
+  var observer = new MutationObserver(function(){ showCompletion(); });
+  function start(){
+    observer.observe(document.body, { childList:true, subtree:true });
+    setInterval(showCompletion, 1500);
+    showCompletion();
+  }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
+})();
