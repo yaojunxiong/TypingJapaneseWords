@@ -60,4 +60,10 @@
       { q:'正确句子是哪一个？', opts:['わたしも学生です。','わたしはも学生です。','わたしを学生です。'], a:0 }
     ]
   };
+
+  // Synchronous loader for additional mastery lesson files.
+  // The shared player currently imports this file, so document.write keeps Lesson 02 available before the player starts.
+  if(!window.MinnaMasteryLessons[2]){
+    document.write('<script src="./minna-mastery-lesson-02.js?v=lesson02-mastery"><\/script>');
+  }
 })();
