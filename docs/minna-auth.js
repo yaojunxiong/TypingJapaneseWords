@@ -262,6 +262,14 @@ window.MinnaAuth = (() => {
       nextUrl: './minna-index.html?v=13.0-lesson07-complete',
       reviewLabel: '继续复习第7课',
       chips: ['工具/手段 で','人にあげます','人にもらいます','貸します・借ります','教えます・習います','電話をかけます','もう〜ましたか','いいえ、まだです','送礼/收礼场景','错题清零']
+    },
+    'minna_lesson_08': {
+      no: '08',
+      title: '第8课掌握完成！',
+      next: '第9课 好き・嫌い・上手・下手',
+      nextUrl: './minna-index.html?v=13.1-lesson08-complete',
+      reviewLabel: '继续复习第8课',
+      chips: ['い形容词','な形容词','い形容词否定：〜くないです','な形容词否定：〜じゃありません','とても / あまり','どんな〜ですか','どうですか','形容词连接和转折','错题清零']
     }
   };
   function readState(no){
