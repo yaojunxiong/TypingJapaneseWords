@@ -286,6 +286,14 @@ window.MinnaAuth = (() => {
       nextUrl: './minna-index.html?v=13.3-lesson10-complete',
       reviewLabel: '继续复习第10课',
       chips: ['あります・います','物/植物：あります','人/动物：います','上・下・前・後ろ','右・左・中・外','隣・近く・間','どこにありますか','どこにいますか','位置/找东西场景','错题清零']
+    },
+    'minna_lesson_11': {
+      no: '11',
+      title: '第11课掌握完成！',
+      next: '第12课 过去形 / 比较表达',
+      nextUrl: './minna-index.html?v=13.4-lesson11-complete',
+      reviewLabel: '继续复习第11课',
+      chips: ['一つ・二つ・三つ……','一人・二人・三人……','〜枚 / 〜台 / 〜回','何人 / 何枚 / 何台 / 何回','全部で / 〜だけ','期間：〜時間 / 〜日 / 〜週間 / 〜か月 / 〜年','どのくらい','数量/邮局/学习时间场景','错题清零']
     }
   };
   function readState(no){
