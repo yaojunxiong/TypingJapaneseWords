@@ -278,6 +278,14 @@ window.MinnaAuth = (() => {
       nextUrl: './minna-index.html?v=13.2-lesson09-complete',
       reviewLabel: '继续复习第9课',
       chips: ['好きです・嫌いです','上手です・下手です','〜がわかります','〜があります','全然 / 少し / たくさん','どうしてですか','〜から','兴趣/能力/原因说明场景','错题清零']
+    },
+    'minna_lesson_10': {
+      no: '10',
+      title: '第10课掌握完成！',
+      next: '第11课 数量词 / 何人・何枚・何台・何回',
+      nextUrl: './minna-index.html?v=13.3-lesson10-complete',
+      reviewLabel: '继续复习第10课',
+      chips: ['あります・います','物/植物：あります','人/动物：います','上・下・前・後ろ','右・左・中・外','隣・近く・間','どこにありますか','どこにいますか','位置/找东西场景','错题清零']
     }
   };
   function readState(no){
