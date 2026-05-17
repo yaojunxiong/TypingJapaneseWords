@@ -254,6 +254,14 @@ window.MinnaAuth = (() => {
       nextUrl: './minna-index.html?v=12.9-lesson06-complete',
       reviewLabel: '继续复习第6课',
       chips: ['名词を动词','食べます・飲みます','見ます・聞きます・読みます・書きます','買います・撮ります・します','何をしますか','いっしょに〜ませんか','〜ましょう','活动邀请场景','错题清零']
+    },
+    'minna_lesson_07': {
+      no: '07',
+      title: '第7课掌握完成！',
+      next: '第8课 い形容词・な形容词',
+      nextUrl: './minna-index.html?v=13.0-lesson07-complete',
+      reviewLabel: '继续复习第7课',
+      chips: ['工具/手段 で','人にあげます','人にもらいます','貸します・借ります','教えます・習います','電話をかけます','もう〜ましたか','いいえ、まだです','送礼/收礼场景','错题清零']
     }
   };
   function readState(no){
