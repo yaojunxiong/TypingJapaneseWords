@@ -270,6 +270,14 @@ window.MinnaAuth = (() => {
       nextUrl: './minna-index.html?v=13.1-lesson08-complete',
       reviewLabel: '继续复习第8课',
       chips: ['い形容词','な形容词','い形容词否定：〜くないです','な形容词否定：〜じゃありません','とても / あまり','どんな〜ですか','どうですか','形容词连接和转折','错题清零']
+    },
+    'minna_lesson_09': {
+      no: '09',
+      title: '第9课掌握完成！',
+      next: '第10课 あります・います / 位置词',
+      nextUrl: './minna-index.html?v=13.2-lesson09-complete',
+      reviewLabel: '继续复习第9课',
+      chips: ['好きです・嫌いです','上手です・下手です','〜がわかります','〜があります','全然 / 少し / たくさん','どうしてですか','〜から','兴趣/能力/原因说明场景','错题清零']
     }
   };
   function readState(no){
