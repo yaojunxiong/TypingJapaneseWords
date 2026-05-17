@@ -334,6 +334,14 @@ window.MinnaAuth = (() => {
       nextUrl: './minna-index.html?v=13.9-lesson16-complete',
       reviewLabel: '继续复习第16课',
       chips: ['て形连接动作','〜て、〜て、それから〜','〜てから','い形容词连接：〜くて','な形容词连接：〜で','名词连接：名词で','どうやって','まず / 次に / それから','动作顺序 / ATM / 形容词连接场景','错题清零']
+    },
+    'minna_lesson_17': {
+      no: '17',
+      title: '第17课掌握完成！',
+      next: '第18课 辞書形 / ことができます / 趣味',
+      nextUrl: './minna-index.html?v=14.0-lesson17-complete',
+      reviewLabel: '继续复习第17课',
+      chips: ['ない形','〜ないでください','〜なければなりません','〜なくてもいいです','对象助词「は」','请不要做某事','必须做某事','不做也可以','看病 / 禁止提醒 / 必须做 / 不做也可以 场景','错题清零']
     }
   };
   function readState(no){
