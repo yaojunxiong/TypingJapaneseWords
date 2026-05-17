@@ -111,3 +111,70 @@
     ]
   };
 })();
+
+// Lesson 23 completion page enhancer
+// Kept in the lesson file so later lessons can be maintained independently from the global auth module.
+(function(){
+  var cfg = {
+    no: '23',
+    lessonId: 'minna_lesson_23',
+    title: '第23课掌握完成！',
+    next: '第24课 くれます / あげます / もらいます',
+    nextUrl: './minna-index.html?v=14.6-lesson23-complete',
+    reviewLabel: '继续复习第23课',
+    chips: ['〜とき','辞書形 / ない形 / た形 + とき','い形容词 / な形容词 / 名词 + とき','〜と','机器操作','问路表达','自然变化','时间条件场景','错题清零']
+  };
+  function readState(){
+    var candidates = ['lesson23v8','lesson23v7','lesson23v6','lesson23v5'];
+    for(var i=0;i<candidates.length;i++){
+      try{
+        var raw = localStorage.getItem(candidates[i]);
+        if(raw) return JSON.parse(raw);
+      }catch(e){}
+    }
+    return null;
+  }
+  function isPassed(s){
+    if(!s) return false;
+    var m = s.mastery || {};
+    var wrongCount = s.wrong_count != null ? Number(s.wrong_count) : Object.keys(s.wrong || {}).filter(function(k){ return s.wrong[k]; }).length;
+    return !!s.mastery_passed || ((m.vocab||0) >= 100 && (m.grammar||0) >= 80 && (m.examples||0) >= 80 && (m.final||0) >= 80 && wrongCount === 0);
+  }
+  function showCompletion(){
+    var lessonId = window.MinnaAuth && window.MinnaAuth.getLessonId ? window.MinnaAuth.getLessonId() : '';
+    if(lessonId && lessonId !== cfg.lessonId) return;
+    var stage = document.getElementById('stage');
+    var cardId = 'lesson23CompletionCard';
+    if(!stage || document.getElementById(cardId)) return;
+    var s = readState();
+    if(!isPassed(s)) return;
+    var m = s.mastery || {};
+    var chips = cfg.chips.map(function(x){ return '<span class="pill">✅ ' + x + '</span>'; }).join('');
+    var card = document.createElement('div');
+    card.id = cardId;
+    card.className = 'successBox';
+    card.innerHTML = '<h2>🎉 '+cfg.title+'</h2>'+
+      '<p>你已经完成本课 Mastery，可以回首页刷新进度并继续下一课。</p>'+
+      '<div class="meter">'+
+      '<div><b>'+Math.round(m.vocab||100)+'%</b><span>核心词汇</span></div>'+
+      '<div><b>'+Math.round(m.grammar||80)+'%</b><span>语法/句型</span></div>'+
+      '<div><b>'+Math.round(m.examples||80)+'%</b><span>核心例句</span></div>'+
+      '<div><b>'+Math.round(m.final||80)+'%</b><span>综合测试</span></div>'+
+      '</div>'+
+      '<p>'+chips+'</p>'+
+      '<p><b>下一课：</b>'+cfg.next+'</p>'+
+      '<p><a class="btn primary" href="'+cfg.nextUrl+'" target="_top">回首页解锁下一课</a><button class="light" id="continueReview23">'+cfg.reviewLabel+'</button></p>';
+    stage.insertBefore(card, stage.firstChild);
+    var btn = document.getElementById('continueReview23');
+    if(btn) btn.onclick = function(){ card.remove(); };
+  }
+  function start(){
+    if(document.body){
+      var observer = new MutationObserver(function(){ showCompletion(); });
+      observer.observe(document.body, { childList:true, subtree:true });
+      setInterval(showCompletion, 1500);
+      showCompletion();
+    }
+  }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
+})();
