@@ -1,6 +1,7 @@
 -- Minna public leaderboard view for Option B
 -- Goal: ordinary Google users can see the whole leaderboard without exposing email, user_id, user_key, or raw progress JSON.
 -- Run this in Supabase SQL Editor as project owner/admin.
+-- Fixed for Supabase/PostgreSQL: use jsonb_object_keys count instead of non-existing jsonb_object_length().
 
 create or replace view public.minna_public_leaderboard as
 with per_lesson as (
@@ -11,23 +12,34 @@ with per_lesson as (
     lesson_id,
     progress,
     updated_at,
-    coalesce((progress->>'score')::int, 0) as score,
+    coalesce(nullif(progress->>'score', '')::int, 0) as score,
     case
-      when progress ? 'completed_count' then coalesce((progress->>'completed_count')::int, 0)
-      when progress ? 'done' then jsonb_object_length(coalesce(progress->'done', '{}'::jsonb))
+      when progress ? 'completed_count' then coalesce(nullif(progress->>'completed_count', '')::int, 0)
+      when progress ? 'done' then (
+        select count(*)::int
+        from jsonb_object_keys(coalesce(progress->'done', '{}'::jsonb)) as k
+      )
       else 0
     end as completed_slides,
-    greatest(coalesce((progress->>'total_slides')::int, 12), 1) as total_slides,
+    greatest(coalesce(nullif(progress->>'total_slides', '')::int, 12), 1) as total_slides,
     case
-      when coalesce((progress->>'wrong_count')::int, 0) = 0 then 0
-      when progress ? 'wrong' then jsonb_object_length(coalesce(progress->'wrong', '{}'::jsonb))
-      else coalesce((progress->>'wrong_count')::int, 0)
+      when progress ? 'wrong_count' then coalesce(nullif(progress->>'wrong_count', '')::int, 0)
+      when progress ? 'wrong' then (
+        select count(*)::int
+        from jsonb_object_keys(coalesce(progress->'wrong', '{}'::jsonb)) as k
+      )
+      else 0
     end as wrong_count,
-    coalesce((progress->'mastery'->>'vocab')::int, 0) as mastery_vocab,
-    coalesce((progress->'mastery'->>'grammar')::int, 0) as mastery_grammar,
-    coalesce((progress->'mastery'->>'examples')::int, 0) as mastery_examples,
-    coalesce((progress->'mastery'->>'final')::int, 0) as mastery_final,
-    coalesce((progress->>'last_cloud_saved_at')::timestamptz, (progress->>'updated_client_at')::timestamptz, (progress->>'completed_at')::timestamptz, updated_at) as last_checkin_at
+    coalesce(nullif(progress->'mastery'->>'vocab', '')::int, 0) as mastery_vocab,
+    coalesce(nullif(progress->'mastery'->>'grammar', '')::int, 0) as mastery_grammar,
+    coalesce(nullif(progress->'mastery'->>'examples', '')::int, 0) as mastery_examples,
+    coalesce(nullif(progress->'mastery'->>'final', '')::int, 0) as mastery_final,
+    coalesce(
+      nullif(progress->>'last_cloud_saved_at', '')::timestamptz,
+      nullif(progress->>'updated_client_at', '')::timestamptz,
+      nullif(progress->>'completed_at', '')::timestamptz,
+      updated_at
+    ) as last_checkin_at
   from public.lesson_progress
   where user_id is not null
      or user_email is not null
@@ -41,11 +53,11 @@ with per_lesson as (
     score,
     last_checkin_at,
     case
-      when coalesce((progress->>'mastery_passed')::boolean, false) then 1
+      when lower(coalesce(progress->>'mastery_passed', 'false')) = 'true' then 1
       when mastery_vocab >= 100 and mastery_grammar >= 80 and mastery_examples >= 80 and mastery_final >= 80 and wrong_count = 0 then 1
       when completed_slides >= total_slides then 1
-      when coalesce((progress->>'completed')::boolean, false) then 1
-      when coalesce((progress->>'passed')::boolean, false) then 1
+      when lower(coalesce(progress->>'completed', 'false')) = 'true' then 1
+      when lower(coalesce(progress->>'passed', 'false')) = 'true' then 1
       else 0
     end as completed_lesson
   from per_lesson
