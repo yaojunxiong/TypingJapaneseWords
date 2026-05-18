@@ -41,8 +41,12 @@
     const week=[];
     for(let i=0;i<7;i++){const x=new Date(d);x.setDate(d.getDate()-i);week.push(x.toISOString().slice(0,10))}
     const weekCount=week.filter(k=>set.has(k)).length;
-    return {streak:streak||1,weekCount,days};
+    const goal=Number(localStorage.getItem('minna_week_goal')||5)||5;
+    const goalPct=Math.min(100,Math.round(weekCount/goal*100));
+    return {streak:streak||1,weekCount,goal,goalPct,days};
   }
+  function isFocusMode(){return localStorage.getItem('minna_focus_mode')==='1'}
+  function setFocusMode(on){localStorage.setItem('minna_focus_mode',on?'1':'0');document.body.classList.toggle('minnaFocusMode',!!on);var b=document.getElementById('focusModeBtn');if(b)b.textContent=on?'退出专注模式':'进入专注模式'}
   function installAdminLinks(){
     if(document.querySelector('[data-minna-admin-link="1"]')) return;
     var href='./minna-admin.html';var footer=document.querySelector('.footer')||document.body;
@@ -56,9 +60,11 @@
       .dashGrid{display:grid;grid-template-columns:1.12fr repeat(4,.62fr);gap:10px;align-items:stretch}
       .dashMain,.dashItem,.taskCard{background:white;border:1px solid #e2e8f0;border-radius:18px;padding:12px}
       .dashMain b{font-size:22px}.dashItem b{font-size:24px;display:block}.dashActions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+      .weekGoalBar{height:9px;background:#e2e8f0;border-radius:999px;overflow:hidden;margin:8px 0}.weekGoalBar span{display:block;height:100%;background:linear-gradient(90deg,#22c55e,#f59e0b)}.focusModeBtn{background:#0f172a;color:white;border:0;border-radius:12px;padding:8px 10px;font-weight:1000;cursor:pointer;margin-top:8px}
       .taskGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}.taskList{margin:8px 0 0 18px;padding:0}.taskList li{margin:4px 0}.wrongPriority{background:linear-gradient(135deg,#fff7ed,#fef2f2);border-color:#fed7aa}.wrongZero{background:linear-gradient(135deg,#f0fdf4,#ecfeff);border-color:#bbf7d0}.taskTitle{font-weight:1000;font-size:17px}.taskNum{font-size:28px;font-weight:1000}.streakHot{background:linear-gradient(135deg,#fff7ed,#fef3c7);border-color:#f59e0b}
       .leaderCollapsed .tableWrap,.leaderCollapsed #leaderboardHint{display:none}.leaderToggle{margin-top:10px}.leaderTop3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:12px 0}.leaderMini{background:#f8fafc;border:1px solid #e2e8f0;border-radius:16px;padding:10px}.leaderMini b{display:block;font-size:16px}.leaderMini .medal{font-size:24px}.leaderEmpty{background:#f8fafc;border:1px dashed #cbd5e1;border-radius:16px;padding:12px;margin-top:10px}
       .stage.collapsed .stageNodes{display:none}.stageCollapseBtn{margin-top:8px;padding:7px 10px;border-radius:12px;background:#e2e8f0;color:#0f172a;font-weight:900;border:0;cursor:pointer}.node.farDone{opacity:.42;transform:scale(.985)}.node.focusRing{outline:3px solid #facc15;outline-offset:2px}.nodeHint{display:block;margin-top:4px;font-size:12px;color:#92400e;font-weight:900}
+      body.minnaFocusMode .minnaOptionalPanel{display:none!important}body.minnaFocusMode header{padding:18px}body.minnaFocusMode .studyDashboard{border:2px solid #22c55e}body.minnaFocusMode .studyDashboard h2:after{content:' ｜ 专注模式';color:#166534;font-size:15px}
       .stickyStudyBar{display:none;position:fixed;left:10px;right:10px;bottom:10px;z-index:9999;background:rgba(15,23,42,.94);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.18);border-radius:22px;padding:8px;box-shadow:0 12px 30px rgba(15,23,42,.25);gap:8px}.stickyStudyBar a{flex:1;text-align:center;text-decoration:none;border-radius:16px;padding:10px 8px;font-weight:1000;color:white;background:rgba(255,255,255,.12)}.stickyStudyBar a.primaryMini{background:#22c55e;color:#052e16}.stickyStudyBar a.warnMini{background:#f59e0b;color:#451a03}
       header .badge{font-size:0}header .badge:after{content:'《みんなの日本語》AI学习系统';font-size:14px}
       @media(max-width:980px){.dashGrid{grid-template-columns:1fr 1fr}.dashMain{grid-column:1/-1}}
@@ -69,15 +75,15 @@
   function readNum(id){var el=document.getElementById(id);return el?Number(el.textContent||0)||0:0}
   function currentLessonFromContinue(){var a=document.getElementById('continueBtn');var m=a&&a.getAttribute('href')&&a.getAttribute('href').match(/lesson-(\d+)/);return m?Number(m[1]):1}
   function lessonNumberFromNode(node){var m=(node&&node.textContent||'').match(/第\s*(\d+)\s*课/);return m?Number(m[1]):0}
-  function lessonUrl(n,suffix){return './minna-no-nihongo-lesson-'+String(n).padStart(2,'0')+'.html?v=13.6'+(suffix||'')}
+  function lessonUrl(n,suffix){return './minna-no-nihongo-lesson-'+String(n).padStart(2,'0')+'.html?v=13.7'+(suffix||'')}
   function sumWrongCount(){var nodes=Array.prototype.slice.call(document.querySelectorAll('.node')).filter(n=>!/总复习/.test(n.textContent||''));var sum=0;nodes.forEach(function(node){var m=(node.textContent||'').match(/错题\s*(\d+)/);if(m)sum+=Number(m[1])||0});return sum}
   function currentWrongCount(){var node=document.querySelector('.node.current');var m=node&&(node.textContent||'').match(/错题\s*(\d+)/);return m?Number(m[1])||0:0}
   function currentDonePages(){var node=document.querySelector('.node.current');var m=node&&(node.textContent||'').match(/完成页\s*(\d+)\/(\d+)/);return m?{done:Number(m[1])||0,total:Number(m[2])||0}:{done:0,total:0}}
-  function buildTasks(n,totalWrong,currentWrong,donePages,achText,streak){
+  function buildTasks(n,totalWrong,currentWrong,donePages,achText,streak,weekCount,goal){
     var tasks=[];
     if(totalWrong>0){tasks.push('先复习错题 '+Math.min(totalWrong,8)+' 个，避免错误积累')}else{tasks.push('快速复习上一课 3 分钟，保持语感')}
     if(donePages.done<donePages.total){tasks.push('完成第 '+n+' 课至少 1 个学习小节')}else{tasks.push('做第 '+n+' 课 Mastery 小测试，争取解锁下一课')}
-    if(streak>=3){tasks.push('保持连续学习，第 '+streak+' 天不要断')}else if(currentWrong>0){tasks.push('重点处理当前课错题 '+currentWrong+' 个')}else if(achText==='未完成'&&n>25){tasks.push('抽空挑战 1–25课总复习，拿前半册成就')}else{tasks.push('朗读例句 5 句，提高听说反应速度')}
+    if(weekCount<goal){tasks.push('本周目标还差 '+(goal-weekCount)+' 天，今天完成 10 分钟即可打卡')}else if(streak>=3){tasks.push('保持连续学习，第 '+streak+' 天不要断')}else if(currentWrong>0){tasks.push('重点处理当前课错题 '+currentWrong+' 个')}else if(achText==='未完成'&&n>25){tasks.push('抽空挑战 1–25课总复习，拿前半册成就')}else{tasks.push('朗读例句 5 句，提高听说反应速度')}
     return tasks;
   }
   function installDashboard(){
@@ -85,10 +91,22 @@
     var dash=document.getElementById('studyDashboard');if(!dash){dash=document.createElement('section');dash.id='studyDashboard';dash.className='panel studyDashboard';top.parentNode.insertBefore(dash,top)}
     var n=currentLessonFromContinue(),done=readNum('totalDone'),score=readNum('totalScore'),records=readNum('totalLessons'),ss=studyStats();
     var ach=document.getElementById('achievementTitle');var achText=ach&&/已通过/.test(ach.textContent||'')?'已完成':'未完成';
-    var totalWrong=sumWrongCount(),currentWrong=currentWrongCount(),pages=currentDonePages(),tasks=buildTasks(n,totalWrong,currentWrong,pages,achText,ss.streak);
+    var totalWrong=sumWrongCount(),currentWrong=currentWrongCount(),pages=currentDonePages(),tasks=buildTasks(n,totalWrong,currentWrong,pages,achText,ss.streak,ss.weekCount,ss.goal);
     var wrongClass=totalWrong>0?'wrongPriority':'wrongZero';var wrongMsg=totalWrong>0?'建议先复习错题，再继续当前课。':'目前错题很少，可以继续推进当前课。';
-    var html='<h2>📌 今日学习仪表盘</h2><div class="dashGrid"><div class="dashMain"><div class="small">今天建议学习</div><b>第'+n+'课</b><p class="small">优先完成当前课，再继续解锁下一课。</p><div class="dashActions"><a class="btn primary" href="'+lessonUrl(n)+'">继续学习</a><a class="btn light" href="./minna-review-01-25.html">1–25课总复习</a></div></div><div class="dashItem"><span class="small">已掌握</span><b>'+done+'/50</b></div><div class="dashItem"><span class="small">总分</span><b>'+score+'</b></div><div class="dashItem"><span class="small">前半册成就</span><b style="font-size:20px">'+achText+'</b><span class="small">有记录课程 '+records+'</span></div><div class="dashItem streakHot"><span class="small">连续学习</span><b>🔥 '+ss.streak+'天</b><span class="small">本周 '+ss.weekCount+'/7 天</span></div></div><div class="taskGrid"><div class="taskCard '+wrongClass+'"><div class="taskTitle">🎯 错题优先</div><div class="taskNum">'+totalWrong+'</div><p class="small">'+wrongMsg+' 当前课错题：'+currentWrong+' 个。</p><div class="dashActions"><a class="btn '+(totalWrong>0?'primary':'light')+'" href="'+lessonUrl(n,'#wrong')+'">复习错题</a><a class="btn light" href="'+lessonUrl(n)+'">继续当前课</a></div></div><div class="taskCard"><div class="taskTitle">✅ 今日任务</div><ol class="taskList"><li>'+esc(tasks[0])+'</li><li>'+esc(tasks[1])+'</li><li>'+esc(tasks[2])+'</li></ol><p class="small">建议 10–15 分钟完成，不求多，但要连续。</p></div></div>';
+    var html='<h2>📌 今日学习仪表盘</h2><div class="dashGrid"><div class="dashMain"><div class="small">今天建议学习</div><b>第'+n+'课</b><p class="small">优先完成当前课，再继续解锁下一课。</p><div class="dashActions"><a class="btn primary" href="'+lessonUrl(n)+'">继续学习</a><a class="btn light" href="./minna-review-01-25.html">1–25课总复习</a><button class="focusModeBtn" id="focusModeBtn">'+(isFocusMode()?'退出专注模式':'进入专注模式')+'</button></div></div><div class="dashItem"><span class="small">已掌握</span><b>'+done+'/50</b></div><div class="dashItem"><span class="small">总分</span><b>'+score+'</b></div><div class="dashItem"><span class="small">前半册成就</span><b style="font-size:20px">'+achText+'</b><span class="small">有记录课程 '+records+'</span></div><div class="dashItem streakHot"><span class="small">连续学习</span><b>🔥 '+ss.streak+'天</b><span class="small">本周 '+ss.weekCount+'/'+ss.goal+' 天目标</span><div class="weekGoalBar"><span style="width:'+ss.goalPct+'%"></span></div></div></div><div class="taskGrid"><div class="taskCard '+wrongClass+'"><div class="taskTitle">🎯 错题优先</div><div class="taskNum">'+totalWrong+'</div><p class="small">'+wrongMsg+' 当前课错题：'+currentWrong+' 个。</p><div class="dashActions"><a class="btn '+(totalWrong>0?'primary':'light')+'" href="'+lessonUrl(n,'#wrong')+'">复习错题</a><a class="btn light" href="'+lessonUrl(n)+'">继续当前课</a></div></div><div class="taskCard"><div class="taskTitle">✅ 今日任务</div><ol class="taskList"><li>'+esc(tasks[0])+'</li><li>'+esc(tasks[1])+'</li><li>'+esc(tasks[2])+'</li></ol><p class="small">建议 10–15 分钟完成，不求多，但要连续。</p></div></div>';
     if(dash.innerHTML!==html) dash.innerHTML=html;
+  }
+  function markOptionalPanels(){
+    Array.prototype.slice.call(document.querySelectorAll('.panel')).forEach(function(p){
+      var t=p.textContent||'';
+      if(/Google 用户打卡排行榜|前半册总复习|前半册 1–25课总复习|课程状态/.test(t)) p.classList.add('minnaOptionalPanel');
+    });
+  }
+  function installFocusControls(){
+    markOptionalPanels();
+    setFocusMode(isFocusMode());
+    var b=document.getElementById('focusModeBtn');
+    if(b&&!b.dataset.ready){b.dataset.ready='1';b.onclick=function(){setFocusMode(!isFocusMode())}}
   }
   function parseLeaderboardRows(panel){
     var trs=Array.prototype.slice.call(panel.querySelectorAll('tbody tr')).slice(0,3);
@@ -130,7 +148,7 @@
     var html='<a class="primaryMini" href="'+lessonUrl(n)+'">▶ 继续</a><a class="'+(wrong>0?'warnMini':'')+'" href="'+lessonUrl(n,'#wrong')+'">🎯 错题 '+wrong+'</a><a href="#lessonPathPanel">🗺 路径</a><a href="#top" onclick="window.scrollTo({top:0,behavior:\'smooth\'});return false;">↑ 顶部</a>';
     if(bar.innerHTML!==html) bar.innerHTML=html;
   }
-  function enhanceHome(){injectHomeStyle();installAdminLinks();removeOldVisitorCard();installDashboard();enhanceLeaderboard();enhanceStages();installStickyBar()}
+  function enhanceHome(){injectHomeStyle();installAdminLinks();removeOldVisitorCard();installDashboard();installFocusControls();enhanceLeaderboard();enhanceStages();installStickyBar()}
   async function track(){
     enhanceHome();
     try{let user=null;if(window.MinnaAuth&&MinnaAuth.refreshUser){user=await MinnaAuth.refreshUser()}else{const{data}=await supa().auth.getUser();user=data&&data.user?data.user:null}await supa().from('minna_visitor_logs').insert(collect(user))}catch(e){console.warn('Minna visitor tracking failed:',e&&e.message?e.message:e)}
