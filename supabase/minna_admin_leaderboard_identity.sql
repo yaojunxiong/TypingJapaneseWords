@@ -2,6 +2,7 @@
 -- Run this in Supabase SQL Editor as project owner/admin.
 -- Purpose: admins can map public anonymous leaderboard names to Google accounts.
 -- Do NOT grant this view to anon. It includes user_email and user_id.
+-- Fixed: PostgreSQL cannot max(uuid), so user_id is converted to text before max().
 
 create or replace view public.minna_admin_leaderboard_identity as
 with records as (
@@ -9,7 +10,7 @@ with records as (
     coalesce(lp.user_id::text, lp.user_email, lp.user_key) as user_ref,
     '学习者 ' || right(md5(coalesce(lp.user_id::text, lp.user_email, lp.user_key)), 6) as display_name,
     coalesce(lp.user_email, au.email) as google_email,
-    lp.user_id,
+    lp.user_id::text as user_id_text,
     lp.user_key,
     lp.lesson_id,
     lp.progress,
@@ -53,7 +54,7 @@ with records as (
     user_ref,
     display_name,
     google_email,
-    user_id,
+    user_id_text,
     user_key,
     lesson_id,
     completed_slides,
@@ -82,7 +83,7 @@ with records as (
 select
   display_name,
   max(google_email) as google_email,
-  max(user_id)::text as user_id,
+  max(user_id_text) as user_id,
   max(user_key) as user_key,
   sum(completed_lesson)::int as completed_lessons,
   sum(case when lesson_id ~ '^minna_lesson_[0-9]{2}$' then completed_slides else 0 end)::int as completed_slides,
@@ -94,10 +95,6 @@ from scored
 group by user_ref, display_name
 order by completed_lessons desc, has_review_01_25 desc, total_score desc, last_checkin_at desc;
 
--- Admin-only read policy through a secure wrapper function is not needed for a view grant by itself.
--- Grant to authenticated users, but the view is protected because it checks minna_admins below via RLS-safe security barrier pattern.
--- Simpler option: do not use this view from public clients unless you add admin RLS/policy below.
-
 revoke all on public.minna_admin_leaderboard_identity from anon;
 revoke all on public.minna_admin_leaderboard_identity from authenticated;
 
@@ -105,9 +102,8 @@ grant select on public.minna_admin_leaderboard_identity to authenticated;
 
 -- IMPORTANT:
 -- Because views run with owner privileges by default in Postgres, this view can expose emails to any authenticated user if granted broadly.
--- To keep it admin-only in Supabase, enable security_invoker if your Postgres supports it, and add lesson_progress select policy for admins if needed.
--- Safer alternative used by the admin page: it first checks public.minna_admins, then queries this view.
--- For stronger database enforcement, run this if supported:
+-- The admin page first checks public.minna_admins before querying this view.
+-- For stronger database enforcement, run this if your Supabase/Postgres version supports it:
 -- alter view public.minna_admin_leaderboard_identity set (security_invoker = true);
 
 notify pgrst, 'reload schema';
