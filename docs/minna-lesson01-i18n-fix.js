@@ -1,4 +1,5 @@
-// Minna Lesson 01 i18n cleanup 14.4.5
+// Minna Lesson 01 i18n cleanup 14.4.6
+// Stable mode: no high-frequency full-page rewrite; avoids page jumping.
 (function(){
   const KEY='minna_ui_lang';
   const pairs={
@@ -11,6 +12,7 @@
     '我是迈克・米勒。':'I am Mike Miller.','桑托斯先生不是学生。':'Mr. Santos is not a student.','米勒先生是公司职员吗？':'Is Mr. Miller a company employee?','古普塔先生也是公司职员。':'Mr. Gupta is also a company employee.','初次见面。我是迈克・米勒。我来自美国。请多关照。':'Nice to meet you. I am Mike Miller. I am from the United States. Nice to meet you.'
   };
   const reverse={};Object.keys(pairs).forEach(k=>reverse[pairs[k]]=k);
+  let applying=false, scheduled=false;
   function lang(){return localStorage.getItem(KEY)||'zh'}
   function baseZh(s){let out=String(s||'');Object.keys(reverse).sort((a,b)=>b.length-a.length).forEach(k=>{out=out.split(k).join(reverse[k])});out=out.replace(/Lesson\s*(\d+)/g,'第$1课').replace(/Done/g,'完成').replace(/Load/g,'读取').replace(/Mistakes/g,'错题').replace(/Grammar/g,'语法').replace(/Examples/g,'例句').replace(/Vocabulary/g,'词汇').replace(/Home/g,'课程首页');return out;}
   function en(s){
@@ -26,12 +28,16 @@
     out=out.replace(/回首页解锁Next lesson/g,'Back Home to Unlock Next Lesson');
     return out;
   }
-  function applyNode(n){if(!n||!n.nodeValue||!n.nodeValue.trim())return;if(!n.__l01zh)n.__l01zh=baseZh(n.nodeValue);n.nodeValue=lang()==='en'?en(n.__l01zh):n.__l01zh;}
+  function setText(target,next){if(target.nodeValue!==undefined){if(target.nodeValue!==next)target.nodeValue=next}else if(target.textContent!==next)target.textContent=next}
+  function applyNode(n){if(!n||!n.nodeValue||!n.nodeValue.trim())return;if(!n.__l01zh)n.__l01zh=baseZh(n.nodeValue);setText(n,lang()==='en'?en(n.__l01zh):n.__l01zh)}
   function walk(el){if(!el||['SCRIPT','STYLE','TEXTAREA','INPUT','SELECT','OPTION'].includes(el.tagName))return;Array.from(el.childNodes).forEach(n=>{if(n.nodeType===3)applyNode(n);else if(n.nodeType===1)walk(n)});}
-  function applyEl(el){if(!el||!el.textContent||!el.textContent.trim())return;if(!el.__l01zh)el.__l01zh=baseZh(el.textContent);el.textContent=lang()==='en'?en(el.__l01zh):el.__l01zh;}
-  function applyDoc(doc){if(!doc||!doc.body)return;walk(doc.body);Array.from(doc.querySelectorAll('button,a,span,b,h1,h2,h3,p,div')).forEach(el=>{if(el.childElementCount===0)applyEl(el)});}
+  function applyEl(el){if(!el||!el.textContent||!el.textContent.trim()||el.childElementCount>0)return;if(!el.__l01zh)el.__l01zh=baseZh(el.textContent);setText(el,lang()==='en'?en(el.__l01zh):el.__l01zh)}
+  function applyDoc(doc){if(!doc||!doc.body)return;walk(doc.body);Array.from(doc.querySelectorAll('button,a,span,b,h1,h2,h3,p,div')).forEach(applyEl)}
   function fdoc(){try{let f=document.querySelector('iframe');return f&&f.contentDocument?f.contentDocument:null}catch(e){return null}}
-  function apply(){applyDoc(document);let d=fdoc();if(d)applyDoc(d)}
-  function start(){apply();setInterval(apply,200);let f=document.querySelector('iframe');if(f)f.addEventListener('load',()=>setTimeout(apply,200));}
+  function apply(){if(applying)return;applying=true;try{applyDoc(document);let d=fdoc();if(d)applyDoc(d)}finally{applying=false}}
+  function schedule(){if(scheduled)return;scheduled=true;setTimeout(()=>{scheduled=false;apply()},180)}
+  function observe(doc){if(!doc||!doc.body||doc.__l01StableI18n)return;doc.__l01StableI18n=true;new MutationObserver(schedule).observe(doc.body,{childList:true,subtree:true,characterData:true})}
+  function hookLangButtons(){Array.from(document.querySelectorAll('[data-lang]')).forEach(b=>{if(b.__l01Hooked)return;b.__l01Hooked=true;b.addEventListener('click',()=>setTimeout(apply,60))})}
+  function start(){apply();observe(document);let f=document.querySelector('iframe');if(f){f.addEventListener('load',()=>setTimeout(()=>{let d=fdoc();observe(d);apply()},250));setTimeout(()=>{let d=fdoc();observe(d);apply()},600)}hookLangButtons();setTimeout(apply,1200)}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
 })();
