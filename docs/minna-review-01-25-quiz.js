@@ -29,16 +29,27 @@
     {l:25,t:'grammar',q:'「雨が降ったら、行きません」是什么意思？',o:['如果下雨就不去','即使下雨也去','下雨后已经去'],a:0,tip:'た形 + ら=如果/……之后。'},
     {l:25,t:'sentence',q:'“即使贵也买。”的日语是？',o:['高くても、買います。','高かったら、買います。','高いので買います。'],a:0,tip:'い形容词：〜くても。'}
   ];
-  let queue=[], idx=0, correct=0, wrong=0, wrongItems=[];
+  let queue=[], idx=0, correct=0, wrong=0, wrongItems=[], lastResult=null;
   function shuffle(a){ return a.slice().sort(()=>Math.random()-.5); }
   function esc(s){ return String(s||'').replace(/[&<>]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[m])); }
+  function currentResult(done){
+    const totalDone = correct + wrong;
+    const total = queue.length || totalDone || 1;
+    const rate = totalDone ? Math.round(correct / totalDone * 100) : 0;
+    return {score:correct*4,correct,wrong,total_questions:totalDone,planned_questions:total,rate,completed:!!done&&rate>=80,range:'01-25',wrong_items:wrongItems.map(x=>({lesson:x.l,type:x.t,question:x.q,answer:x.o[x.a],tip:x.tip})),updated_client_at:new Date().toISOString()};
+  }
+  function publish(done){
+    lastResult = currentResult(done);
+    window.MinnaReviewResult = lastResult;
+    window.dispatchEvent(new CustomEvent('minna-review-result',{detail:lastResult}));
+  }
   function updateStats(){
-    const total = correct + wrong;
-    const rate = total ? Math.round(correct / total * 100) : 0;
-    if($('reviewScore')) $('reviewScore').textContent = correct * 4;
-    if($('reviewCorrect')) $('reviewCorrect').textContent = correct;
-    if($('reviewWrong')) $('reviewWrong').textContent = wrong;
-    if($('reviewRate')) $('reviewRate').textContent = rate + '%';
+    const r=currentResult(false);
+    if($('reviewScore')) $('reviewScore').textContent = r.score;
+    if($('reviewCorrect')) $('reviewCorrect').textContent = r.correct;
+    if($('reviewWrong')) $('reviewWrong').textContent = r.wrong;
+    if($('reviewRate')) $('reviewRate').textContent = r.rate + '%';
+    publish(false);
   }
   function renderQuestion(){
     const box = $('interactiveQuiz');
@@ -63,10 +74,11 @@
     idx++; updateStats(); setTimeout(renderQuestion, 900);
   }
   function finish(){
-    const rate = queue.length ? Math.round(correct / queue.length * 100) : 0;
-    $('interactiveQuiz').innerHTML = '<h3>本轮测试完成</h3><p>答对 '+correct+' / '+queue.length+'，正确率 '+rate+'%。</p>'+
-      (rate>=80?'<p><span class="pill ok">✅ 达到总复习建议标准</span></p>':'<p><span class="pill warn">建议继续复习错题</span></p>')+
-      '<div class="btns"><button class="primary" onclick="MinnaReview.start(\'mixed\')">再来一轮</button><button class="light" onclick="MinnaReview.showWrong()">查看错题</button></div>';
+    publish(true);
+    const r = window.MinnaReviewResult;
+    $('interactiveQuiz').innerHTML = '<h3>本轮测试完成</h3><p>答对 '+correct+' / '+queue.length+'，正确率 '+r.rate+'%。</p>'+
+      (r.rate>=80?'<p><span class="pill ok">✅ 达到总复习建议标准，可以保存成绩并生成证书</span></p>':'<p><span class="pill warn">建议继续复习错题</span></p>')+
+      '<div class="btns"><button class="primary" onclick="MinnaReview.start(\'mixed\')">再来一轮</button><button class="light" onclick="MinnaReview.showWrong()">查看错题</button><button class="light" onclick="saveReviewProgress()">保存成绩</button><button class="light" onclick="showCertificate()">生成证书</button></div>';
     showWrong();
   }
   function start(mode){
@@ -80,5 +92,5 @@
     if(!wrongItems.length){ list.innerHTML='<p class="small">本轮暂无错题。</p>'; return; }
     list.innerHTML = wrongItems.map((x,i)=>'<div class="wrongBox"><b>'+(i+1)+'. 第'+x.l+'课｜'+x.t+'</b><p>'+esc(x.q)+'</p><p>正确答案：<span class="pill ok">'+esc(x.o[x.a])+'</span></p><p class="small">'+esc(x.tip)+'</p></div>').join('');
   }
-  window.MinnaReview = { start, showWrong };
+  window.MinnaReview = { start, showWrong, getResult:()=>lastResult||currentResult(false) };
 })();
