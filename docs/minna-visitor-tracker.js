@@ -1,5 +1,6 @@
 // Minna AI Learning System visitor tracker
 // Privacy-friendly visitor info card + Supabase insert-only visit log.
+// Also injects a lightweight admin entrance button into the home page.
 (function(){
   const SUPABASE_URL = 'https://ycjuceortcduakxscfes.supabase.co';
   const SUPABASE_KEY = 'sb_publishable_sK-XWyiFwSoKCorddBULCw_0yiS9e5t';
@@ -73,6 +74,30 @@
       visited_at: new Date().toISOString()
     };
   }
+  function installAdminLinks(){
+    if(document.querySelector('[data-minna-admin-link="1"]')) return;
+    var href = './minna-admin.html';
+    var labels = ['🔐 管理员后台'];
+    var headerBtns = document.querySelector('header .btns');
+    if(headerBtns){
+      var a = document.createElement('a');
+      a.className = 'btn light';
+      a.href = href;
+      a.dataset.minnaAdminLink = '1';
+      a.textContent = labels[0];
+      headerBtns.appendChild(a);
+    }
+    var accountPanel = Array.prototype.slice.call(document.querySelectorAll('.panel')).find(function(p){ return /账号中心/.test(p.textContent || ''); });
+    var accountBtns = accountPanel && accountPanel.querySelector('.btns');
+    if(accountBtns){
+      var b = document.createElement('a');
+      b.className = 'btn light';
+      b.href = href;
+      b.dataset.minnaAdminLink = '1';
+      b.textContent = labels[0];
+      accountBtns.appendChild(b);
+    }
+  }
   function renderInfo(data, saved, err){
     const box = $('visitorInfoBox');
     if(!box) return;
@@ -86,6 +111,7 @@
       + '<p class="small">本次访问：'+esc(new Date(data.visited_at).toLocaleString())+' ｜ 页面：'+esc(data.page_path)+' ｜ 统计状态：'+(saved?'<span class="pill ok">已记录</span>':'<span class="pill warn">未记录</span>')+(err?' '+esc(err):'')+'</p>';
   }
   function installCard(){
+    installAdminLinks();
     if($('visitorInfoBox')) return;
     const main = document.querySelector('main');
     if(!main) return;
