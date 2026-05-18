@@ -1,18 +1,18 @@
 -- Minna public leaderboard view for Option B
 -- Goal: ordinary Google users can see the whole leaderboard without exposing email, user_id, user_key, or raw progress JSON.
 -- Run this in Supabase SQL Editor as project owner/admin.
--- Fixed for Supabase/PostgreSQL: use jsonb_object_keys count instead of non-existing jsonb_object_length().
+-- Version: leaderboard + 1-25 review achievement.
 
 create or replace view public.minna_public_leaderboard as
-with per_lesson as (
+with records as (
   select
     coalesce(user_id::text, user_email, user_key) as user_ref,
-    -- Anonymous display name. Does not reveal full Google email or auth user id.
     '学习者 ' || right(md5(coalesce(user_id::text, user_email, user_key)), 6) as display_name,
     lesson_id,
     progress,
     updated_at,
     coalesce(nullif(progress->>'score', '')::int, 0) as score,
+    coalesce(nullif(progress->>'rate', '')::int, 0) as review_rate,
     case
       when progress ? 'completed_count' then coalesce(nullif(progress->>'completed_count', '')::int, 0)
       when progress ? 'done' then (
@@ -51,26 +51,38 @@ with per_lesson as (
     lesson_id,
     completed_slides,
     score,
+    review_rate,
     last_checkin_at,
     case
-      when lower(coalesce(progress->>'mastery_passed', 'false')) = 'true' then 1
-      when mastery_vocab >= 100 and mastery_grammar >= 80 and mastery_examples >= 80 and mastery_final >= 80 and wrong_count = 0 then 1
-      when completed_slides >= total_slides then 1
-      when lower(coalesce(progress->>'completed', 'false')) = 'true' then 1
-      when lower(coalesce(progress->>'passed', 'false')) = 'true' then 1
+      when lesson_id ~ '^minna_lesson_[0-9]{2}$' and lower(coalesce(progress->>'mastery_passed', 'false')) = 'true' then 1
+      when lesson_id ~ '^minna_lesson_[0-9]{2}$' and mastery_vocab >= 100 and mastery_grammar >= 80 and mastery_examples >= 80 and mastery_final >= 80 and wrong_count = 0 then 1
+      when lesson_id ~ '^minna_lesson_[0-9]{2}$' and completed_slides >= total_slides then 1
+      when lesson_id ~ '^minna_lesson_[0-9]{2}$' and lower(coalesce(progress->>'completed', 'false')) = 'true' then 1
+      when lesson_id ~ '^minna_lesson_[0-9]{2}$' and lower(coalesce(progress->>'passed', 'false')) = 'true' then 1
       else 0
-    end as completed_lesson
-  from per_lesson
+    end as completed_lesson,
+    case
+      when lesson_id = 'minna_review_01_25' and (
+        lower(coalesce(progress->>'review_passed', 'false')) = 'true'
+        or lower(coalesce(progress->>'mastery_passed', 'false')) = 'true'
+        or lower(coalesce(progress->>'completed', 'false')) = 'true'
+        or coalesce(nullif(progress->>'rate', '')::int, 0) >= 80
+      ) then 1
+      else 0
+    end as has_review_01_25
+  from records
 )
 select
   display_name,
   sum(completed_lesson)::int as completed_lessons,
-  sum(completed_slides)::int as completed_slides,
+  sum(case when lesson_id ~ '^minna_lesson_[0-9]{2}$' then completed_slides else 0 end)::int as completed_slides,
   sum(score)::int as total_score,
+  max(has_review_01_25)::int as has_review_01_25,
+  max(case when lesson_id = 'minna_review_01_25' then review_rate else 0 end)::int as review_01_25_rate,
   max(last_checkin_at) as last_checkin_at
 from scored
 group by user_ref, display_name
-order by completed_lessons desc, total_score desc, last_checkin_at desc;
+order by completed_lessons desc, has_review_01_25 desc, total_score desc, last_checkin_at desc;
 
 -- Allow ordinary users and anonymous visitors to read only the sanitized leaderboard view.
 -- This does not grant access to raw lesson_progress rows.
