@@ -2,8 +2,11 @@
 -- Goal: ordinary Google users can see the whole leaderboard without exposing email, user_id, user_key, or raw progress JSON.
 -- Run this in Supabase SQL Editor as project owner/admin.
 -- Version: leaderboard + 1-25 review achievement.
+-- Important: drop the old view first because PostgreSQL cannot change existing view column order/names with CREATE OR REPLACE VIEW.
 
-create or replace view public.minna_public_leaderboard as
+drop view if exists public.minna_public_leaderboard;
+
+create view public.minna_public_leaderboard as
 with records as (
   select
     coalesce(user_id::text, user_email, user_key) as user_ref,
@@ -88,5 +91,8 @@ order by completed_lessons desc, has_review_01_25 desc, total_score desc, last_c
 -- This does not grant access to raw lesson_progress rows.
 grant select on public.minna_public_leaderboard to anon;
 grant select on public.minna_public_leaderboard to authenticated;
+
+-- Force PostgREST/Supabase API schema cache reload.
+notify pgrst, 'reload schema';
 
 -- Keep RLS on lesson_progress as-is. Do NOT expose user_email/user_id/raw progress in public policies.
