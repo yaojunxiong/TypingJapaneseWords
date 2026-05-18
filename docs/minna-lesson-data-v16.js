@@ -1,5 +1,5 @@
-// Minna lesson data v16.1
-// Structured lesson data. No DOM translation. Each item carries jp / zh / en where needed.
+// Minna lesson data v16.5
+// Structured lesson data registry. No DOM translation. Lessons can be registered by separate lesson data files.
 (function(){
   const lessons={
     1:{
@@ -46,5 +46,7 @@
       ]
     }
   };
-  window.MinnaLessonDataV16={lessons,get(no){return lessons[Number(no)]||lessons[1]}};
+  function register(no,data){lessons[Number(no)]=data;}
+  function get(no){return lessons[Number(no)]||lessons[1];}
+  window.MinnaLessonDataV16={lessons,register,get};
 })();
