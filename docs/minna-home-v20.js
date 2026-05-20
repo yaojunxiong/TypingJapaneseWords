@@ -4,7 +4,7 @@
   const VERSION='20.0';
   const $=id=>document.getElementById(id);
   const pad=n=>String(n).padStart(2,'0');
-  const lessonUrl=n=>`./minna-lesson-v20.html?n=${n}&v=${VERSION}`;
+  const lessonUrl=n=>`./minna-lesson-v16.html?n=${n}&v=${VERSION}`;
   const topics={
     1:['名词句・自我介绍','JSON/Supabase'],2:['これ・それ・あれ','Mastery migrated'],3:['ここ・そこ・あそこ','Mastery migrated'],4:['时间・星期','Mastery migrated'],5:['移动・交通','Mastery migrated'],6:['动词ます形','Mastery migrated'],7:['工具・授受基础','Mastery migrated'],8:['形容词','Mastery migrated'],9:['好き・上手','Mastery migrated'],10:['存在句','Mastery migrated'],11:['数量表达','Mastery migrated'],12:['过去式・比较','Mastery migrated'],13:['想要・目的','Mastery migrated'],14:['て形','Mastery migrated'],15:['て形许可','Mastery migrated'],16:['连接动作','Mastery migrated'],17:['ない形','Mastery migrated'],18:['辞书形','Mastery migrated'],19:['た形','Mastery migrated'],20:['普通形','Mastery migrated'],21:['と思います','Mastery migrated'],22:['名词修饰','Mastery migrated'],23:['とき・と','Mastery migrated'],24:['くれます','Mastery migrated'],25:['たら・ても','Mastery migrated'],26:['んです','Practice seed'],27:['可能形','Practice seed'],28:['ながら','Practice seed'],29:['自动词','Practice seed'],30:['他动词','Practice seed'],31:['意向形','Practice seed'],32:['建议・推量','Practice seed'],33:['命令・禁止','Practice seed'],34:['〜とおりに','Practice seed'],35:['条件形','Practice seed'],36:['ように','Practice seed'],37:['受身形','Practice seed'],38:['のは','Practice seed'],39:['原因理由','Practice seed'],40:['疑问词嵌入','Practice seed'],41:['授受高级','Practice seed'],42:['ために','Practice seed'],43:['そうです','Practice seed'],44:['すぎます','Practice seed'],45:['場合は','Practice seed'],46:['ところです','Practice seed'],47:['そうです','Practice seed'],48:['使役形','Practice seed'],49:['尊敬语','Practice seed'],50:['谦让语','Practice seed']
   };
