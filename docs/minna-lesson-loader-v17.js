@@ -1,11 +1,11 @@
-// Minna Lesson Loader v17.7
+// Minna Lesson Loader v20.0
 // Prefer Supabase published lesson content. Fallback to static JSON file. If both are missing, generate a minimal editable template.
 // Debug query params:
 //   ?source=file      force static JSON file
 //   ?source=supabase  force Supabase published content
 //   ?source=template  force generated minimal template
 (function(){
-  const VERSION='17.7';
+  const VERSION='20.0';
   const SUPABASE_URL='https://ycjuceortcduakxscfes.supabase.co';
   const SUPABASE_KEY='sb_publishable_sK-XWyiFwSoKCorddBULCw_0yiS9e5t';
   const topicMap={
@@ -22,7 +22,7 @@
   function script(src){return new Promise((resolve,reject)=>{const s=document.createElement('script');s.src=src;s.onload=resolve;s.onerror=()=>reject(new Error('Failed to load '+src));document.body.appendChild(s)})}
   function showError(err){
     const app=document.getElementById('app');
-    if(app)app.innerHTML='<main class="wrap"><section class="panel"><h1>Lesson Content Loader Error</h1><p class="small">'+String(err.message||err)+'</p><p><a href="./minna-index.html?v=17.7">Back to Home</a></p></section></main>';
+    if(app)app.innerHTML='<main class="wrap"><section class="panel"><h1>Lesson Content Loader Error</h1><p class="small">'+String(err.message||err)+'</p><p><a href="./minna-index.html?v='+VERSION+'">Back to Home</a></p></section></main>';
   }
   function makeClient(){
     if(window.MinnaAuth&&MinnaAuth.client){try{const c=MinnaAuth.client();if(c)return c}catch(e){}}
@@ -70,19 +70,29 @@
     if(source==='file')return await loadFileJson(n);
     if(source==='supabase')return await loadSupabase(n);
     try{return await loadSupabase(n)}catch(e1){
-      console.warn('[Minna v17] Supabase content fallback:',e1.message);
+      console.warn('[Minna v19] Supabase content fallback:',e1.message);
       try{return await loadFileJson(n)}catch(e2){
-        console.warn('[Minna v17] File JSON fallback to generated template:',e2.message);
+        console.warn('[Minna v19] File JSON fallback to generated template:',e2.message);
         return template(n,e1.message+'; '+e2.message);
       }
     }
+  }
+  async function upgradeContent(n,obj){
+    if(n<=1)return obj;
+    try{
+      if(!window.MinnaLegacyJsonAdapterV20)await script('./minna-legacy-json-adapter-v20.js?v='+VERSION);
+      if(window.MinnaLegacyJsonAdapterV20&&MinnaLegacyJsonAdapterV20.upgrade)return await MinnaLegacyJsonAdapterV20.upgrade(n,obj);
+    }catch(e){
+      console.warn('[Minna v20] Legacy JSON adapter skipped:',e.message);
+    }
+    return obj;
   }
   async function start(){
     const n=lessonNo();
     document.body.dataset.lessonNo=String(n);
     document.body.dataset.lessonId=document.body.dataset.lessonId||('minna_lesson_'+pad(n));
     try{
-      window.MinnaCurrentLessonJson=await loadContent(n);
+      window.MinnaCurrentLessonJson=await upgradeContent(n,await loadContent(n));
       await script('./minna-player-v17.js?v='+VERSION);
     }catch(e){showError(e)}
   }
