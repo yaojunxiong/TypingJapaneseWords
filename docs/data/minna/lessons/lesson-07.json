@@ -1,0 +1,15 @@
+{
+  "schema": "minna.lesson.v1",
+  "course": "minna",
+  "lessonNo": 7,
+  "lessonId": "minna_lesson_07",
+  "title": { "zh": "第7课", "en": "Lesson 7", "ja": "第7課" },
+  "subtitle": { "zh": "工具・授受基础", "en": "Tools and giving/receiving basics", "ja": "道具・授受の基本" },
+  "focus": { "zh": "本课内容待维护。请在后台课程 JSON 维护器中补充词汇、语法、例句和测试题。", "en": "This lesson is being edited. Add vocabulary, grammar, examples, and quiz items in the admin course JSON editor.", "ja": "この課の内容は編集中です。" },
+  "sections": [
+    { "type": "vocab", "id": "l07_vocab", "title": { "zh": "核心词汇", "en": "Core Vocabulary", "ja": "基本語彙" }, "items": [] },
+    { "type": "grammar", "id": "l07_grammar", "title": { "zh": "核心语法", "en": "Core Grammar", "ja": "基本文法" }, "items": [] },
+    { "type": "examples", "id": "l07_examples", "title": { "zh": "核心例句", "en": "Core Examples", "ja": "基本例文" }, "items": [] },
+    { "type": "quiz", "id": "l07_quiz", "title": { "zh": "综合测试", "en": "Final Test", "ja": "まとめテスト" }, "items": [] }
+  ]
+}
