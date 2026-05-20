@@ -10,51 +10,12 @@
 </style>
 </head>
 <body data-lesson-id="minna_admin">
-<header><div class="wrap"><span class="badge">Admin Dashboard 1.5 Visual Editor</span><h1>《みんなの日本語 初級》管理员后台</h1><p>查询访客信息、访问统计、匿名用户对应 Google 账户、全站打卡排名，并维护 / 对比 / 可视化编辑 v17 JSON 课程内容。</p><div class="btns"><a class="btn light" href="./minna-index.html?v=17.8">返回主页</a><button class="primary" onclick="login()">G 用 Google 登录</button><button class="light" onclick="logout()">退出</button><button class="dark" onclick="loadAdminData()">刷新后台数据</button></div></div></header>
+<header><div class="wrap"><span class="badge">Admin Dashboard 1.6 Diff Preview</span><h1>《みんなの日本語 初級》管理员后台</h1><p>查询访客信息、访问统计、匿名用户对应 Google 账户、全站打卡排名，并维护 / 对比 / 可视化编辑 v17 JSON 课程内容。</p><div class="btns"><a class="btn light" href="./minna-index.html?v=17.8">返回主页</a><button class="primary" onclick="login()">G 用 Google 登录</button><button class="light" onclick="logout()">退出</button><button class="dark" onclick="loadAdminData()">刷新后台数据</button></div></div></header>
 <main>
 <section class="panel"><h2>管理员状态</h2><p><b>登录账号：</b><span id="authStatus">检查中</span></p><p><b>管理员权限：</b><span id="adminStatus">检查中</span></p><p class="small">课程内容支持 Supabase draft / published 维护、三路对比，以及词汇区可视化编辑。</p></section>
-<section class="panel"><h2>访问统计总览</h2><div class="stats"><div><b id="visitCount">0</b><span>当前载入访问</span></div><div><b id="uniqueVisitors">0</b><span>独立访客</span></div><div><b id="loginVisitors">0</b><span>登录访问</span></div><div><b id="todayVisits">0</b><span>今日访问</span></div></div><p class="small" id="visitorStatsHint">默认最多载入最近 1000 条访客记录用于分页和筛选。</p></section>
-<section class="panel"><h2>最近访客记录</h2><p class="small">仅管理员可见。支持分页、关键词查询和筛选。关键词会匹配邮箱、访客ID、页面、来源、语言、时区。</p>
-  <div class="filters">
-    <input id="visitorSearch" placeholder="搜索：邮箱 / 访客ID / 页面 / 来源 / 语言" oninput="visitorPage=1;renderVisitors()">
-    <select id="deviceFilter" onchange="visitorPage=1;renderVisitors()"><option value="all">全部设备</option><option value="desktop">desktop</option><option value="mobile">mobile</option><option value="tablet">tablet</option></select>
-    <select id="loginFilter" onchange="visitorPage=1;renderVisitors()"><option value="all">全部访客</option><option value="login">只看登录用户</option><option value="anonymous">只看匿名访客</option></select>
-    <select id="pageSize" onchange="visitorPage=1;renderVisitors()"><option value="20">每页20条</option><option value="50">每页50条</option><option value="100">每页100条</option></select>
-    <button class="light" onclick="resetVisitorFilters()">重置筛选</button>
-  </div>
-  <div class="pager"><button class="light" id="prevVisitorPage" onclick="visitorPage--;renderVisitors()">上一页</button><span class="pill auto" id="visitorPageInfo">第 1 页</span><button class="light" id="nextVisitorPage" onclick="visitorPage++;renderVisitors()">下一页</button><span class="small" id="visitorFilteredInfo"></span></div>
-  <div class="tableWrap"><table class="tbl"><thead><tr><th>访问时间</th><th>邮箱</th><th>访客ID</th><th>页面</th><th>设备</th><th>语言/时区</th><th>来源</th></tr></thead><tbody id="visitorBody"><tr><td colspan="7" class="small">等待读取。</td></tr></tbody></table></div>
-</section>
-<section class="panel"><h2>全站管理员打卡排名</h2><p class="small">管理员后台会显示“匿名用户”对应的 Google 邮箱 / user_id；普通主页仍只显示匿名名。</p><div class="tableWrap"><table class="tbl"><thead><tr><th>排名</th><th>匿名用户</th><th>Google 邮箱</th><th>user_id</th><th>完成关卡</th><th>完成页</th><th>总分</th><th>前半册成就</th><th>最近打卡</th></tr></thead><tbody id="leaderBody"><tr><td colspan="9" class="small">等待读取。</td></tr></tbody></table></div></section>
-<section class="panel"><h2>管理员 SQL 查询参考</h2><p>匿名用户对应 Google 账户：</p><pre><code>select display_name, google_email, user_id, completed_lessons, total_score, last_checkin_at
-from public.minna_admin_leaderboard_identity
-order by completed_lessons desc, total_score desc;</code></pre></section>
 </main>
-<div class="footer">管理员后台｜访客明细和邮箱映射仅管理员查看</div>
-<script>
-const SUPABASE_URL='https://ycjuceortcduakxscfes.supabase.co';
-const SUPABASE_KEY='sb_publishable_sK-XWyiFwSoKCorddBULCw_0yiS9e5t';
-let adminClient=null;const $=id=>document.getElementById(id);
-let visitorRows=[],visitorPage=1;
-function supa(){if(!adminClient){adminClient=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}})}return adminClient}
-function esc(s){return String(s||'').replace(/[&<>]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[m]))}
-function fmtDate(raw){if(!raw)return '暂无';const d=new Date(raw);return isNaN(d.getTime())?'暂无':d.toLocaleString()}
-function asNum(v){const n=Number(v);return Number.isFinite(n)?n:0}
-async function init(){try{await MinnaAuth.init({lessonId:'minna_admin'});updateAuth();window.addEventListener('minna-auth-changed',()=>{updateAuth();loadAdminData()});await loadAdminData()}catch(e){$('authStatus').textContent='Auth加载失败：'+e.message;$('adminStatus').innerHTML='<span class="pill bad">检查失败</span>'}}
-function updateAuth(){const u=MinnaAuth.getUser();$('authStatus').textContent=u?(u.email||u.id):'未登录'}
-async function login(){try{await MinnaAuth.loginWithGoogle()}catch(e){alert('登录失败：'+e.message)}}
-async function logout(){try{await MinnaAuth.logout();updateAuth()}catch(e){alert('退出失败：'+e.message)}}
-async function checkAdmin(){const u=MinnaAuth.getUser();if(!u){$('adminStatus').innerHTML='<span class="pill warn">请先登录</span>';return false}const {data,error}=await supa().from('minna_admins').select('email,role').eq('email',u.email).maybeSingle();if(error){$('adminStatus').innerHTML='<span class="pill bad">无权限或SQL未执行：'+esc(error.message)+'</span>';return false}if(data){$('adminStatus').innerHTML='<span class="pill ok">管理员：'+esc(data.role||'admin')+'</span>';return true}$('adminStatus').innerHTML='<span class="pill bad">当前邮箱不是管理员</span>';return false}
-function filteredVisitors(){const q=($('visitorSearch').value||'').trim().toLowerCase();const device=$('deviceFilter').value;const login=$('loginFilter').value;return visitorRows.filter(r=>{const hay=[r.user_email,r.visitor_id,r.page_path,r.device_type,r.language,r.timezone,r.referrer].join(' ').toLowerCase();if(q && !hay.includes(q))return false;if(device!=='all' && String(r.device_type||'')!==device)return false;if(login==='login' && !r.user_email)return false;if(login==='anonymous' && r.user_email)return false;return true})}
-function renderVisitors(){const rows=filteredVisitors();const pageSize=Number($('pageSize').value||20);const totalPages=Math.max(1,Math.ceil(rows.length/pageSize));if(visitorPage<1)visitorPage=1;if(visitorPage>totalPages)visitorPage=totalPages;const start=(visitorPage-1)*pageSize;const pageRows=rows.slice(start,start+pageSize);$('visitorBody').innerHTML=pageRows.length?pageRows.map(r=>`<tr><td>${esc(fmtDate(r.visited_at))}</td><td>${esc(r.user_email||'匿名')}</td><td class="mono">${esc(r.visitor_id||'')}</td><td>${esc(r.page_path||'')}</td><td>${esc(r.device_type||'')}</td><td>${esc((r.language||'')+' / '+(r.timezone||''))}</td><td>${esc(r.referrer||'direct')}</td></tr>`).join(''):'<tr><td colspan="7" class="small">没有符合条件的访客记录。</td></tr>';$('visitorPageInfo').textContent='第 '+visitorPage+' / '+totalPages+' 页';$('visitorFilteredInfo').textContent='筛选后 '+rows.length+' 条；当前显示 '+(pageRows.length?start+1:0)+'-'+(start+pageRows.length)+' 条';$('prevVisitorPage').disabled=visitorPage<=1;$('nextVisitorPage').disabled=visitorPage>=totalPages}
-function resetVisitorFilters(){$('visitorSearch').value='';$('deviceFilter').value='all';$('loginFilter').value='all';$('pageSize').value='20';visitorPage=1;renderVisitors()}
-async function loadVisitors(){const {data,error}=await supa().from('minna_visitor_logs').select('visited_at,user_email,visitor_id,page_path,device_type,language,timezone,referrer').order('visited_at',{ascending:false}).limit(1000);if(error)throw error;visitorRows=data||[];const today=new Date().toISOString().slice(0,10);$('visitCount').textContent=visitorRows.length;$('uniqueVisitors').textContent=new Set(visitorRows.map(r=>r.visitor_id)).size;$('loginVisitors').textContent=visitorRows.filter(r=>r.user_email).length;$('todayVisits').textContent=visitorRows.filter(r=>String(r.visited_at||'').slice(0,10)===today).length;$('visitorStatsHint').textContent='已载入最近 '+visitorRows.length+' 条访客记录，可分页和筛选。';visitorPage=1;renderVisitors()}
-async function loadLeaderboard(){let data,error;let usedAdminView=true;({data,error}=await supa().from('minna_admin_leaderboard_identity').select('display_name,google_email,user_id,user_key,completed_lessons,completed_slides,total_score,has_review_01_25,review_01_25_rate,last_checkin_at').order('completed_lessons',{ascending:false}).order('has_review_01_25',{ascending:false}).order('total_score',{ascending:false}).limit(100));if(error){usedAdminView=false;({data,error}=await supa().from('minna_public_leaderboard').select('display_name,completed_lessons,completed_slides,total_score,has_review_01_25,review_01_25_rate,last_checkin_at').order('completed_lessons',{ascending:false}).order('has_review_01_25',{ascending:false}).order('total_score',{ascending:false}).limit(100));if(error)throw error}$('adminStatus').innerHTML += usedAdminView?' <span class="pill ok">身份映射已启用</span>':' <span class="pill warn">身份映射 view 未启用，暂只显示匿名榜</span>';const rows=data||[];$('leaderBody').innerHTML=rows.length?rows.map((u,i)=>`<tr><td>${i+1}</td><td><b>${esc(u.display_name)}</b></td><td>${esc(u.google_email||'未记录/未授权')}</td><td class="mono">${esc(u.user_id||'')}</td><td>${asNum(u.completed_lessons)}</td><td>${asNum(u.completed_slides)}</td><td>${asNum(u.total_score)}</td><td>${asNum(u.has_review_01_25)?'🏅 '+asNum(u.review_01_25_rate)+'%':'未通过'}</td><td>${esc(fmtDate(u.last_checkin_at))}</td></tr>`).join(''):'<tr><td colspan="9" class="small">暂无排行榜记录。</td></tr>'}
-async function loadAdminData(){try{updateAuth();const ok=await checkAdmin();if(!ok)return;await Promise.all([loadVisitors(),loadLeaderboard()])}catch(e){$('adminStatus').innerHTML='<span class="pill bad">读取失败：'+esc(e.message)+'</span>'}}
-init();
-</script>
-<script src="./minna-course-admin-v17.js?v=17.7"></script>
-<script src="./minna-course-admin-visual-v17.js?v=17.8"></script>
+<div class="footer">管理员后台 v17.8｜课程内容维护 / 差异对比 / 发布管理</div>
+<script src="./minna-course-admin-v17.js?v=17.8"></script>
 <script src="./minna-course-admin-diff-v17.js?v=17.6"></script>
 </body>
 </html>
