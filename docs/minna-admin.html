@@ -4,24 +4,25 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>《みんなの日本語 初級》AI互动学习系统｜管理员后台</title>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="./minna-auth.js?v=19.3"></script>
+<script src="./minna-auth.js?v=19.5"></script>
 <style>
 :root{--bg:#f8fafc;--card:#fff;--ink:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--purple:#7c3aed}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top left,#dbeafe,var(--bg) 45%);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","Noto Sans JP","Microsoft YaHei",sans-serif;line-height:1.65}header{background:linear-gradient(135deg,var(--blue),var(--purple));color:#fff;padding:30px 18px}.wrap,main{max-width:1220px;margin:auto}main{padding:18px}.badge{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:5px 12px;font-weight:900;margin-bottom:10px}h1{margin:0;font-size:30px}.panel{background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:0 10px 30px rgba(15,23,42,.08);padding:16px;margin-bottom:14px}.btns,.filters,.pager{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;align-items:center}button,a.btn{border:0;border-radius:14px;padding:10px 14px;font-weight:900;cursor:pointer;text-decoration:none;display:inline-block}.primary{background:#22c55e;color:#052e16}.light{background:#e2e8f0;color:#0f172a}.dark{background:#334155;color:#fff}.pill{display:inline-block;background:#eef2ff;color:#3730a3;border-radius:999px;padding:3px 9px;margin:2px;font-weight:800}.ok{background:#dcfce7;color:#166534}.warn{background:#fef3c7;color:#92400e}.bad{background:#fee2e2;color:#991b1b}.auto{background:#dbeafe;color:#1d4ed8}.small{color:var(--muted);font-size:13px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;text-align:center}.stats b{font-size:28px;display:block}.tableWrap{overflow:auto;border:1px solid var(--line);border-radius:18px;background:white}.tbl{width:100%;border-collapse:collapse;min-width:1080px}.tbl th,.tbl td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.tbl th{background:#f1f5f9;color:#334155;font-size:13px}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;font-size:12px}.filters input,.filters select{border:1px solid var(--line);border-radius:14px;padding:10px 12px;background:white;min-height:40px}.filters input{min-width:260px;flex:1}.pager button:disabled{opacity:.45;cursor:not-allowed}.footer{text-align:center;color:var(--muted);font-size:13px;padding:22px}@media(max-width:760px){h1{font-size:25px}.stats{grid-template-columns:1fr 1fr}.filters input{min-width:100%}}
 </style>
 </head>
 <body data-lesson-id="minna_admin">
-<header><div class="wrap"><span class="badge">Admin Dashboard 19.3 AI Draft + Quality Check</span><h1>《みんなの日本語 初級》管理员后台</h1><p>访客统计、Google 账户映射、AI 草稿、质量检查，以及可视化课程内容维护。</p><div class="btns"><a class="btn light" href="./minna-index.html?v=19.3">返回主页</a><button class="primary" onclick="login()">G 用 Google 登录</button><button class="light" onclick="logout()">退出</button><button class="dark" onclick="loadAdminData()">刷新后台数据</button></div></div></header>
+<header><div class="wrap"><span class="badge">Admin Dashboard 19.5 Version History</span><h1>《みんなの日本語 初級》管理员后台</h1><p>AI 草稿、质量检查、版本历史 / 回滚，以及可视化课程内容维护。</p><div class="btns"><a class="btn light" href="./minna-index.html?v=19.5">返回主页</a><button class="primary" onclick="login()">G 用 Google 登录</button><button class="light" onclick="logout()">退出</button><button class="dark" onclick="loadAdminData()">刷新后台数据</button></div></div></header>
 <main>
-<section class="panel"><h2>管理员状态</h2><p><b>登录账号：</b><span id="authStatus">检查中</span></p><p><b>管理员权限：</b><span id="adminStatus">检查中</span></p><p class="small">后台已模块化：AI 草稿、质量检查、统计、课程 JSON 维护、diff 对比、词汇、语法、例句、Quiz 编辑互相独立。</p></section>
+<section class="panel"><h2>管理员状态</h2><p><b>登录账号：</b><span id="authStatus">检查中</span></p><p><b>管理员权限：</b><span id="adminStatus">检查中</span></p><p class="small">后台已模块化：AI 草稿、质量检查、版本历史、统计、课程 JSON 维护、diff 对比、词汇、语法、例句、Quiz 编辑互相独立。</p></section>
 </main>
-<div class="footer">管理员后台 v19.3｜AI 草稿 / 质量检查 / 模块化 CMS / 可视化编辑</div>
-<script src="./minna-course-admin-ai-draft-v19.js?v=19.3"></script>
-<script src="./minna-course-admin-quality-v19.js?v=19.3"></script>
-<script src="./minna-course-admin-v17.js?v=19.3"></script>
-<script src="./minna-course-admin-diff-v17.js?v=19.3"></script>
-<script src="./minna-course-admin-visual-v18.js?v=19.3"></script>
-<script src="./minna-course-admin-grammar-examples-v19.js?v=19.3"></script>
-<script src="./minna-course-admin-quiz-v18.js?v=19.3"></script>
-<script src="./minna-admin-stats-v18.js?v=19.3"></script>
+<div class="footer">管理员后台 v19.5｜AI 草稿 / 质量检查 / 版本历史 / 可视化 CMS</div>
+<script src="./minna-course-admin-ai-draft-v19.js?v=19.5"></script>
+<script src="./minna-course-admin-quality-v19.js?v=19.5"></script>
+<script src="./minna-course-admin-v17.js?v=19.5"></script>
+<script src="./minna-course-admin-history-v19.js?v=19.5"></script>
+<script src="./minna-course-admin-diff-v17.js?v=19.5"></script>
+<script src="./minna-course-admin-visual-v18.js?v=19.5"></script>
+<script src="./minna-course-admin-grammar-examples-v19.js?v=19.5"></script>
+<script src="./minna-course-admin-quiz-v18.js?v=19.5"></script>
+<script src="./minna-admin-stats-v18.js?v=19.5"></script>
 </body>
 </html>
