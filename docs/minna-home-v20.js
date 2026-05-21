@@ -62,6 +62,18 @@
     progress:{zh:'进度 {percent}%',en:'Progress {percent}%'},
     wrong:{zh:'错题 {wrong}',en:'Mistakes {wrong}'},
     lockedHint:{zh:'请先完成第{n}课，或进入预览模式。',en:'Finish Lesson {n} first, or open preview mode.'}
+    ,loop:{zh:'学习闭环状态',en:'Learning Loop Status'}
+    ,loopStart:{zh:'未开始本课',en:'Not started'}
+    ,loopDoing:{zh:'进行中',en:'In progress'}
+    ,loopScore:{zh:'测试未达通过线（80%）',en:'Test below pass line (80%)'}
+    ,loopWrong:{zh:'有错题待订正',en:'Wrong answers pending correction'}
+    ,loopFix:{zh:'分数达标，等待清空错题',en:'Score passed, clear wrong answers'}
+    ,loopPass:{zh:'已通过，可进入下一课',en:'Passed, ready for next lesson'}
+    ,lockGap:{zh:'解锁差距',en:'Unlock Gap'}
+    ,needPrevRecord:{zh:'前置课（第{n}课）暂无学习记录',en:'No study record for prerequisite Lesson {n}'}
+    ,needPrevPass:{zh:'前置课（第{n}课）未通过',en:'Prerequisite Lesson {n} not passed'}
+    ,needPrevScore:{zh:'前置课正确率还需达到 80%',en:'Prerequisite accuracy needs to reach 80%'}
+    ,needPrevWrong:{zh:'前置课错题需清零',en:'Prerequisite wrong answers must be cleared'}
   };
   let query=localStorage.getItem('minna_home_v20_query')||'',filter='all';
   let roleState={effectiveRole:'normal',role:'normal',bypassLessonLock:false,loading:true};
@@ -142,12 +154,32 @@
     const current=enriched.find(l=>!l.progress.passed)||enriched[enriched.length-1];
     const recent=Number(localStorage.getItem('minna_home_last_lesson')||0);
     const resume=enriched.find(l=>l.n===recent)||enriched.find(l=>l.progress.hasRecord&&!l.progress.passed)||current;
-    return {enriched,mastered,records,current,resume};
+    return {enriched,mastered,records,current,resume,loop:loopStatus(current.progress)};
+  }
+  function loopStatus(p){
+    if(!p||!p.hasRecord)return text('loopStart');
+    if(p.passed)return text('loopPass');
+    if(p.percent>=80&&p.wrong>0)return text('loopFix');
+    if(p.wrong>0)return text('loopWrong');
+    if(p.percent>0&&p.percent<80)return text('loopScore');
+    return text('loopDoing');
+  }
+  function lockGapText(n){
+    if(n<=1||roleState.bypassLessonLock)return '';
+    const prev=progressOf(n-1);
+    const tips=[];
+    if(!prev.hasRecord)tips.push(text('needPrevRecord',{n:n-1}));
+    if(!prev.passed){
+      tips.push(text('needPrevPass',{n:n-1}));
+      if(prev.percent<80)tips.push(text('needPrevScore'));
+      if(prev.wrong>0)tips.push(text('needPrevWrong'));
+    }
+    return tips.join('；');
   }
   function render(){
     const data=dashboard();
     document.title=`${text('title')} v${VERSION}`;
-    $('app').innerHTML=`<header class="hero"><div class="wrap heroGrid"><div class="heroCopy"><div class="heroMeta"><span class="badge">Minna AI Learning System v${VERSION}</span><span class="roleBadge">${esc(roleLabel())} · ${esc(roleModeLabel())}</span><span id="langMount"></span></div><h1>${esc(text('title'))}</h1><p>${esc(text('subtitle'))}</p><div class="heroActions"><a class="primary" href="${data.resume.url}" data-track="${data.resume.n}">${esc(text('continueLesson',{n:data.resume.n}))}</a><a class="ghostHero" href="${lessonUrl(data.current.n)}" data-track="${data.current.n}">${esc(text('currentLesson',{n:data.current.n}))}</a><a class="lightHero" href="./minna-wrongbook-v2.html?v=20.3">${esc(text('wrongbook'))}</a></div></div><div class="heroStats"><div><b>${data.mastered}</b><span>${esc(text('mastered'))}</span></div><div><b>${data.records}</b><span>${esc(text('records'))}</span></div><div><b>50</b><span>${esc(text('total'))}</span></div></div></div></header><main class="wrap"><section class="panel overviewPanel"><div><h2>${esc(text('today'))}</h2><p>${esc(text('todayDesc'))}</p></div><div class="actionStrip"><a class="primary" href="${data.resume.url}" data-track="${data.resume.n}">${esc(text('continue'))}</a><a class="ghost" href="./minna-content-audit.html?v=${VERSION}">${esc(text('audit'))}</a><a class="light" href="./minna-admin.html?v=${VERSION}">${esc(text('admin'))}</a><a class="light" href="./minna-user-manual.html?v=${VERSION}">${esc(text('manual'))}</a><a class="light" href="./minna-ai-coach.html?v=${VERSION}">${esc(text('aiCoach'))}</a><a class="light" href="./minna-learning-path.html?v=${VERSION}">${esc(text('learningPath'))}</a><a class="light" href="./minna-weakness-profile.html?v=${VERSION}">${esc(text('weaknessProfile'))}</a><a class="light" href="./minna-grammar-hub.html?v=${VERSION}">${esc(text('grammarHub'))}</a><a class="light" href="./minna-ai-drill.html?v=${VERSION}">${esc(text('aiDrill'))}</a><a class="light" href="./minna-report.html?v=${VERSION}">${esc(text('learningReport'))}</a></div></section><section class="panel"><div class="sectionHead"><div><h2>${esc(text('path'))}</h2><p class="small">${esc(text('pathDesc'))}</p></div><div class="segmented" role="tablist" aria-label="${esc(text('path'))}"><button data-filter="all">${esc(text('all'))}</button><button data-filter="migrated">${esc(text('migrated'))}</button><button data-filter="seed">${esc(text('seed'))}</button></div></div><div class="filters"><input id="searchBox" value="${esc(query)}" placeholder="${esc(text('search'))}"><select id="filterBox"><option value="all">${esc(text('allCourses'))}</option><option value="migrated">Mastery migrated</option><option value="seed">Practice seed</option></select></div><div id="lessonGrid"></div></section><section class="panel statusPanel"><h2>${esc(text('status'))}</h2><div class="statusGrid"><div><b>${esc(text('player'))}</b><span>${esc(text('playerDesc'))}</span></div><div><b>${esc(text('practice'))}</b><span>${esc(text('practiceDesc'))}</span></div><div><b>${esc(text('fallback'))}</b><span>${esc(text('fallbackDesc'))}</span></div></div></section></main><footer class="wrap footer">docs/minna-index.html · v${VERSION}</footer>`;
+    $('app').innerHTML=`<header class="hero"><div class="wrap heroGrid"><div class="heroCopy"><div class="heroMeta"><span class="badge">Minna AI Learning System v${VERSION}</span><span class="roleBadge">${esc(roleLabel())} · ${esc(roleModeLabel())}</span><span id="langMount"></span></div><h1>${esc(text('title'))}</h1><p>${esc(text('subtitle'))}</p><div class="heroActions"><a class="primary" href="${data.resume.url}" data-track="${data.resume.n}">${esc(text('continueLesson',{n:data.resume.n}))}</a><a class="ghostHero" href="${lessonUrl(data.current.n)}" data-track="${data.current.n}">${esc(text('currentLesson',{n:data.current.n}))}</a><a class="lightHero" href="./minna-wrongbook-v2.html?v=20.3">${esc(text('wrongbook'))}</a></div></div><div class="heroStats"><div><b>${data.mastered}</b><span>${esc(text('mastered'))}</span></div><div><b>${data.records}</b><span>${esc(text('records'))}</span></div><div><b>50</b><span>${esc(text('total'))}</span></div></div></div></header><main class="wrap"><section class="panel overviewPanel"><div><h2>${esc(text('today'))}</h2><p>${esc(text('todayDesc'))}</p><p class="buttons"><span class="badge2">${esc(text('loop'))}</span><span class="badge2">${esc(data.loop)}</span></p></div><div class="actionStrip"><a class="primary" href="${data.resume.url}" data-track="${data.resume.n}">${esc(text('continue'))}</a><a class="ghost" href="./minna-content-audit.html?v=${VERSION}">${esc(text('audit'))}</a><a class="light" href="./minna-admin.html?v=${VERSION}">${esc(text('admin'))}</a><a class="light" href="./minna-user-manual.html?v=${VERSION}">${esc(text('manual'))}</a><a class="light" href="./minna-ai-coach.html?v=${VERSION}">${esc(text('aiCoach'))}</a><a class="light" href="./minna-learning-path.html?v=${VERSION}">${esc(text('learningPath'))}</a><a class="light" href="./minna-weakness-profile.html?v=${VERSION}">${esc(text('weaknessProfile'))}</a><a class="light" href="./minna-grammar-hub.html?v=${VERSION}">${esc(text('grammarHub'))}</a><a class="light" href="./minna-ai-drill.html?v=${VERSION}">${esc(text('aiDrill'))}</a><a class="light" href="./minna-report.html?v=${VERSION}">${esc(text('learningReport'))}</a></div></section><section class="panel"><div class="sectionHead"><div><h2>${esc(text('path'))}</h2><p class="small">${esc(text('pathDesc'))}</p></div><div class="segmented" role="tablist" aria-label="${esc(text('path'))}"><button data-filter="all">${esc(text('all'))}</button><button data-filter="migrated">${esc(text('migrated'))}</button><button data-filter="seed">${esc(text('seed'))}</button></div></div><div class="filters"><input id="searchBox" value="${esc(query)}" placeholder="${esc(text('search'))}"><select id="filterBox"><option value="all">${esc(text('allCourses'))}</option><option value="migrated">Mastery migrated</option><option value="seed">Practice seed</option></select></div><div id="lessonGrid"></div></section><section class="panel statusPanel"><h2>${esc(text('status'))}</h2><div class="statusGrid"><div><b>${esc(text('player'))}</b><span>${esc(text('playerDesc'))}</span></div><div><b>${esc(text('practice'))}</b><span>${esc(text('practiceDesc'))}</span></div><div><b>${esc(text('fallback'))}</b><span>${esc(text('fallbackDesc'))}</span></div></div></section></main><footer class="wrap footer">docs/minna-index.html · v${VERSION}</footer>`;
     if(i18n())i18n().installToggle($('langMount'));
     bind();
     renderGrid();
@@ -182,7 +214,8 @@
     const lessonName=i18n()&&i18n().lang()==='en'?`Lesson ${l.n}`:`第${l.n}课`;
     const label=roleState.bypassLessonLock&&!p.passed?`${text('privileged')} · ${roleLabel()}`:p.passed?text('mastered'):current?text('current'):access?text('unlocked'):text('locked');
     const wrong=p.wrong?` · ${text('wrong',{wrong:p.wrong})}`:'';
-    const hint=!access&&!roleState.bypassLessonLock?`<small>${esc(text('lockedHint',{n:l.n-1}))}</small>`:'';
+    const lockGap=lockGapText(l.n);
+    const hint=!access&&!roleState.bypassLessonLock?`<small>${esc(text('lockedHint',{n:l.n-1}))}</small><small>${esc(text('lockGap'))}：${esc(lockGap||text('needPrevPass',{n:l.n-1}))}</small>`:'';
     return `<a class="lesson ${status}" href="${lessonHref(l,access)}" data-track="${l.n}"><b>${esc(lessonName)}</b><span>${esc(pick(l.topic))}</span><small>${esc(label)} · ${esc(l.tag)}</small><div class="progressLine"><i style="width:${p.percent}%"></i></div><small>${esc(text('progress',{percent:p.percent}))}${esc(wrong)}</small>${hint}</a>`;
   }
   if(i18n())i18n().onChange(render);
