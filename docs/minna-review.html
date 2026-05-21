@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>《みんなの日本語 初級》总复习中心</title>
+<script src="./minna-i18n-core.js?v=20.3"></script>
+<link rel="stylesheet" href="./minna-site.css?v=20.3">
+<style>
+.reviewGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}.reviewCard{display:block;background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px;box-shadow:0 8px 22px rgba(15,23,42,.06);color:var(--ink)}.reviewCard:hover{text-decoration:none;transform:translateY(-2px);box-shadow:0 14px 32px rgba(15,23,42,.12)}.pill{display:inline-block;background:#eef2ff;color:#3730a3;border-radius:999px;padding:3px 10px;margin:3px;font-weight:900;font-size:13px}.pill.ok{background:#dcfce7;color:#166534}.pill.blue{background:#dbeafe;color:#1d4ed8}.pill.warn{background:#fef3c7;color:#92400e}.reviewFooter{text-align:center;color:var(--muted);font-size:13px;padding:22px}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap heroGrid"><div class="heroCopy"><div class="heroMeta"><span class="badge" data-i18n="badge">Review Hub｜总复习中心</span><span id="langMount"></span></div><h1 data-i18n="title">《みんなの日本語 初級》总复习中心</h1><p data-i18n="subtitle">把已学课程、错题、语法主题和阶段复习集中到一个入口，适合考试前和长期复盘。</p><div class="heroActions"><a class="primary" href="./minna-index.html?v=20.3" data-i18n="home">返回首页</a><a class="ghostHero" href="./minna-wrongbook.html?v=20.3" data-i18n="wrongbook">错题本</a><a class="lightHero" href="./minna-user-manual.html?v=20.3" data-i18n="manual">使用说明</a></div></div><div class="heroStats"><div><b>1–25</b><span data-i18n="phase1">重点复习</span></div><div><b>26–50</b><span data-i18n="phase2">持续补全</span></div><div><b>5</b><span data-i18n="skills">复习方向</span></div></div></div></header>
+<main class="wrap">
+<section class="panel"><h2 data-i18n="howTitle">复习方式</h2><p data-i18n="howBody">建议先清空错题，再按阶段复习词汇、语法、例句和综合测试。当前页面先作为复习导航中心，后续可继续升级成自动出题的总复习播放器。</p><p><span class="pill ok" data-i18n="tag1">错题优先</span><span class="pill ok" data-i18n="tag2">阶段复盘</span><span class="pill blue" data-i18n="tag3">语法主题</span><span class="pill blue" data-i18n="tag4">考前冲刺</span></p></section>
+<section class="reviewGrid">
+<a class="reviewCard" href="./minna-wrongbook.html?v=20.3"><h2 data-i18n="cardWrongTitle">错题专项复习</h2><p data-i18n="cardWrongBody">优先处理答错过的题目，直到错题清零。</p></a>
+<a class="reviewCard" href="./minna-index.html?v=20.3"><h2 data-i18n="cardStage1Title">第 1–25 课总复习</h2><p data-i18n="cardStage1Body">回首页筛选“已迁移 / 有错题 / 未完成”，集中复盘初级 I。</p></a>
+<a class="reviewCard" href="./minna-index.html?v=20.3"><h2 data-i18n="cardStage2Title">第 26–50 课预习与复习</h2><p data-i18n="cardStage2Body">目前为基础骨架阶段，可先作为语法主题地图和预习入口。</p></a>
+<a class="reviewCard" href="./minna-system-design.html?v=20.3"><h2 data-i18n="cardPlanTitle">学习系统路线图</h2><p data-i18n="cardPlanBody">查看 Mastery、排行榜、云端进度和后续扩展方向。</p></a>
+</section>
+<section class="panel"><h2 data-i18n="nextTitle">后续可升级</h2><p><span class="pill warn" data-i18n="next1">自动生成 25 题总复习</span><span class="pill warn" data-i18n="next2">按语法点抽题</span><span class="pill warn" data-i18n="next3">N5/N4 模拟测试</span><span class="pill warn" data-i18n="next4">AI 口语复述</span><span class="pill warn" data-i18n="next5">学习报告导出</span></p></section>
+</main>
+<footer class="wrap reviewFooter" data-i18n="footer">《みんなの日本語 初級》AI互动学习系统｜总复习中心</footer>
+<script>
+(function(){
+const dict={badge:{zh:'Review Hub｜总复习中心',en:'Review Hub'},title:{zh:'《みんなの日本語 初級》总复习中心',en:'Minna no Nihongo Beginner Review Hub'},pageTitle:{zh:'《みんなの日本語 初級》总复习中心',en:'Minna no Nihongo Beginner Review Hub'},subtitle:{zh:'把已学课程、错题、语法主题和阶段复习集中到一个入口，适合考试前和长期复盘。',en:'A central hub for reviewed lessons, mistakes, grammar topics, and staged review before tests or long-term revision.'},home:{zh:'返回首页',en:'Back Home'},wrongbook:{zh:'错题本',en:'Mistakes'},manual:{zh:'使用说明',en:'User Guide'},phase1:{zh:'重点复习',en:'Core Review'},phase2:{zh:'持续补全',en:'In Progress'},skills:{zh:'复习方向',en:'Review Paths'},howTitle:{zh:'复习方式',en:'How to Review'},howBody:{zh:'建议先清空错题，再按阶段复习词汇、语法、例句和综合测试。当前页面先作为复习导航中心，后续可继续升级成自动出题的总复习播放器。',en:'Start by clearing mistakes, then review vocabulary, grammar, examples, and tests by stage. This page is a review navigation hub now and can later become an auto-generated review player.'},tag1:{zh:'错题优先',en:'Mistakes First'},tag2:{zh:'阶段复盘',en:'Stage Review'},tag3:{zh:'语法主题',en:'Grammar Topics'},tag4:{zh:'考前冲刺',en:'Test Prep'},cardWrongTitle:{zh:'错题专项复习',en:'Mistake-focused Review'},cardWrongBody:{zh:'优先处理答错过的题目，直到错题清零。',en:'Review previously wrong questions first until all mistakes are cleared.'},cardStage1Title:{zh:'第 1–25 课总复习',en:'Lessons 1–25 Review'},cardStage1Body:{zh:'回首页筛选“已迁移 / 有错题 / 未完成”，集中复盘初级 I。',en:'Use Home filters such as Migrated, With Mistakes, and Unfinished to review Beginner I.'},cardStage2Title:{zh:'第 26–50 课预习与复习',en:'Lessons 26–50 Preview and Review'},cardStage2Body:{zh:'目前为基础骨架阶段，可先作为语法主题地图和预习入口。',en:'Currently in seed stage; use it as a grammar topic map and preview entry.'},cardPlanTitle:{zh:'学习系统路线图',en:'System Roadmap'},cardPlanBody:{zh:'查看 Mastery、排行榜、云端进度和后续扩展方向。',en:'View Mastery, leaderboard, cloud progress, and future expansion plans.'},nextTitle:{zh:'后续可升级',en:'Future Upgrades'},next1:{zh:'自动生成 25 题总复习',en:'Auto 25-question review'},next2:{zh:'按语法点抽题',en:'Grammar-based questions'},next3:{zh:'N5/N4 模拟测试',en:'N5/N4 mock tests'},next4:{zh:'AI 口语复述',en:'AI speaking retell'},next5:{zh:'学习报告导出',en:'Report export'},footer:{zh:'《みんなの日本語 初級》AI互动学习系统｜总复习中心',en:'Minna no Nihongo Beginner AI Learning System | Review Hub'}};
+function lang(){return window.MinnaI18n?window.MinnaI18n.lang():(localStorage.getItem('minna_ui_lang')||'zh')}
+function apply(){const l=lang()==='en'?'en':'zh';document.documentElement.lang=l==='en'?'en':'zh-CN';document.querySelectorAll('[data-i18n]').forEach(el=>{const v=dict[el.dataset.i18n];if(v)el.innerHTML=v[l]||v.zh||v.en||''});document.title=dict.pageTitle[l];if(window.MinnaI18n)window.MinnaI18n.installToggle(document.getElementById('langMount'))}
+if(window.MinnaI18n)window.MinnaI18n.onChange(apply);apply();
+})();
+</script>
+</body>
+</html>
