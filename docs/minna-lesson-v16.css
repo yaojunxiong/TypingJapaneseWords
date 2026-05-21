@@ -29,6 +29,26 @@ body {
   margin-top: 14px;
 }
 
+.lessonNav {
+  margin-top: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.quicklinksPrimary {
+  margin-top: 0;
+}
+
+.quicklinksSections {
+  margin-top: 0;
+}
+
+.quicklinksSections a {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.28);
+  font-size: 14px;
+}
+
 .quicklinks a,
 .buttons a,
 .buttons button,
@@ -210,6 +230,29 @@ body {
 
 .authBar {
   margin-top: 10px;
+}
+
+.authMain {
+  margin-top: 12px;
+}
+
+.sourceBar {
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: rgba(15, 23, 42, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sourceBar .small {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.sourceBtn {
+  min-height: 34px;
+  padding: 6px 10px;
+  font-size: 13px;
 }
 
 .cloudOk {
