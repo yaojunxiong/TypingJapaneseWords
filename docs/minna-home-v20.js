@@ -1,7 +1,7 @@
-// Minna Home v20.2
+// Minna Home v20.3
 // Learner-first entry for the unified JSON player, content audit, and direct lesson access.
 (function(){
-  const VERSION='20.2';
+  const VERSION='20.3';
   const $=id=>document.getElementById(id);
   const pad=n=>String(n).padStart(2,'0');
   const lessonUrl=n=>`./minna-lesson-v16.html?n=${n}&v=${VERSION}`;
