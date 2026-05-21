@@ -129,9 +129,13 @@
             <h1>${esc(text("学习路线", "Learning Path"))}</h1>
             <p>${esc(text("基于本地学习记录自动推荐下一步。", "Auto recommendations based on local learning records."))}</p>
             <div class="heroActions">
-              <a class="primary" href="./minna-index.html?v=20.3">${esc(text("首页", "Home"))}</a>
-              <a class="ghostHero" href="./minna-review.html?v=20.3">${esc(text("总复习", "Review"))}</a>
-              <a class="lightHero" href="./minna-wrongbook-v2.html?v=20.3">${esc(text("错题专项训练中心", "Wrongbook Center"))}</a>
+              <a class="primary" href="./minna-index.html?v=${VERSION}">${esc(text("首页", "Home"))}</a>
+              <a class="ghostHero" href="./minna-review.html?v=${VERSION}">${esc(text("总复习", "Review"))}</a>
+              <a class="ghostHero" href="./minna-ai-coach.html?v=${VERSION}">${esc(text("AI教练", "AI Coach"))}</a>
+              <a class="ghostHero" href="./minna-learning-path.html?v=${VERSION}">${esc(text("学习路线", "Path"))}</a>
+              <a class="ghostHero" href="./minna-grammar-hub.html?v=${VERSION}">${esc(text("语法中心", "Grammar"))}</a>
+              <a class="lightHero" href="./minna-ai-drill.html?v=${VERSION}">${esc(text("AI练习", "Drill"))}</a>
+              <a class="lightHero" href="./minna-report.html?v=${VERSION}">${esc(text("学习报告", "Report"))}</a>
             </div>
           </div>
           <div class="heroStats">
