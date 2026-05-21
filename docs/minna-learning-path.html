@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Minna Learning Path</title>
+<script src="./minna-i18n-core.js?v=20.3"></script>
+<link rel="stylesheet" href="./minna-site.css?v=20.3">
+<style>
+.pathGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}.pathCard{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px;box-shadow:0 8px 24px rgba(15,23,42,.06)}.pathCard b{display:block;font-size:28px}.pill{display:inline-block;border-radius:999px;padding:4px 10px;margin:4px;font-weight:900;font-size:12px}.blue{background:#dbeafe;color:#1d4ed8}.green{background:#dcfce7;color:#166534}.yellow{background:#fef3c7;color:#92400e}.graph{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.node{background:#eef2ff;color:#3730a3;border-radius:999px;padding:8px 12px;font-weight:1000}.arrow{font-weight:1000;color:#64748b}.footer{text-align:center;color:var(--muted);font-size:13px;padding:22px}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap heroGrid"><div class="heroCopy"><div class="heroMeta"><span class="badge" data-i18n="badge">Dynamic Path｜动态学习路线</span><span id="langMount"></span></div><h1 data-i18n="title">AI 动态学习路线 v1</h1><p data-i18n="sub">根据掌握度、错题和语法依赖，规划下一步学习路线。</p><div class="heroActions"><a class="primary" href="./minna-index.html?v=20.3" data-i18n="home">返回首页</a><a class="ghostHero" href="./minna-ai-coach.html?v=20.3" data-i18n="coach">每日教练</a><a class="ghostHero" href="./minna-weakness-profile.html?v=20.3" data-i18n="weak">弱点画像</a><a class="lightHero" href="./minna-review.html?v=20.3" data-i18n="review">总复习</a></div></div><div class="heroStats"><div><b>50</b><span data-i18n="lessons">课程</span></div><div><b>10</b><span data-i18n="core">核心语法</span></div><div><b>AI</b><span data-i18n="path">路线</span></div></div></div></header>
+<main class="wrap">
+<section class="panel"><h2 data-i18n="stageTitle">当前路线</h2><div class="pathGrid"><div class="pathCard"><b>Beginner I</b><span data-i18n="stage">当前阶段</span></div><div class="pathCard"><b>Lesson 14–25</b><span data-i18n="next">建议巩固区间</span></div><div class="pathCard"><b>7 Days</b><span data-i18n="estimate">建议周期</span></div></div></section>
+<section class="panel"><h2 data-i18n="reasonTitle">路线逻辑</h2><p data-i18n="reasonBody">先巩固动词变化，再进入更复杂的可能形、受身形、使役形和敬语体系。</p><p><span class="pill blue">Grammar Graph</span><span class="pill green">Weakness Profile</span><span class="pill yellow">AI Coach</span></p></section>
+<section class="panel"><h2 data-i18n="graphTitle">语法依赖路线</h2><div class="graph"><span class="node">て形</span><span class="arrow">→</span><span class="node">ない形</span><span class="arrow">→</span><span class="node">た形</span><span class="arrow">→</span><span class="node">普通形</span><span class="arrow">→</span><span class="node">可能形</span><span class="arrow">→</span><span class="node">敬语</span></div></section>
+<section class="panel"><h2 data-i18n="actionsTitle">推荐操作</h2><p><a class="primary" href="./minna-ai-coach.html?v=20.3" data-i18n="openCoach">打开每日教练</a> <a class="ghost" href="./minna-weakness-profile.html?v=20.3" data-i18n="openWeak">查看弱点画像</a> <a class="light" href="./minna-grammar-card.html?v=20.3" data-i18n="openCard">查看语法卡片</a></p></section>
+</main>
+<footer class="wrap footer" data-i18n="footer">Minna AI Learning System｜Dynamic Learning Path</footer>
+<script>
+(function(){
+const dict={badge:{zh:'Dynamic Path｜动态学习路线',en:'Dynamic Path'},title:{zh:'AI 动态学习路线 v1',en:'AI Dynamic Learning Path v1'},sub:{zh:'根据掌握度、错题和语法依赖，规划下一步学习路线。',en:'Plan the next learning path from mastery, mistakes, and grammar dependencies.'},home:{zh:'返回首页',en:'Back Home'},coach:{zh:'每日教练',en:'AI Coach'},weak:{zh:'弱点画像',en:'Weakness Profile'},review:{zh:'总复习',en:'Review Hub'},lessons:{zh:'课程',en:'Lessons'},core:{zh:'核心语法',en:'Core Grammar'},path:{zh:'路线',en:'Path'},stageTitle:{zh:'当前路线',en:'Current Path'},stage:{zh:'当前阶段',en:'Current Stage'},next:{zh:'建议巩固区间',en:'Recommended Range'},estimate:{zh:'建议周期',en:'Suggested Cycle'},reasonTitle:{zh:'路线逻辑',en:'Path Logic'},reasonBody:{zh:'先巩固动词变化，再进入更复杂的可能形、受身形、使役形和敬语体系。',en:'Strengthen verb forms first, then move into potential, passive, causative, and keigo.'},graphTitle:{zh:'语法依赖路线',en:'Grammar Dependency Path'},actionsTitle:{zh:'推荐操作',en:'Recommended Actions'},openCoach:{zh:'打开每日教练',en:'Open AI Coach'},openWeak:{zh:'查看弱点画像',en:'View Weakness Profile'},openCard:{zh:'查看语法卡片',en:'View Grammar Cards'},footer:{zh:'Minna AI Learning System｜Dynamic Learning Path',en:'Minna AI Learning System | Dynamic Learning Path'}};
+function lang(){return window.MinnaI18n?window.MinnaI18n.lang():(localStorage.getItem('minna_ui_lang')||'zh')}
+function apply(){const l=lang()==='en'?'en':'zh';document.documentElement.lang=l==='en'?'en':'zh-CN';document.querySelectorAll('[data-i18n]').forEach(el=>{const v=dict[el.dataset.i18n];if(v)el.innerHTML=v[l]||v.zh});if(window.MinnaI18n)window.MinnaI18n.installToggle(document.getElementById('langMount'))}
+if(window.MinnaI18n)window.MinnaI18n.onChange(apply);apply();
+})();
+</script>
+</body>
+</html>
