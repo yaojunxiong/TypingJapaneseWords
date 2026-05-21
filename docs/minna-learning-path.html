@@ -1,31 +1,182 @@
 <!doctype html>
 <html lang="zh-CN">
-<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Minna Learning Path</title>
+<title>学习路线 / Learning Path</title>
 <script src="./minna-i18n-core.js?v=20.3"></script>
+<script src="./minna-i18n-ui.js?v=20.3"></script>
 <link rel="stylesheet" href="./minna-site.css?v=20.3">
-<style>
-.pathGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}.pathCard{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px;box-shadow:0 8px 24px rgba(15,23,42,.06)}.pathCard b{display:block;font-size:28px}.pill{display:inline-block;border-radius:999px;padding:4px 10px;margin:4px;font-weight:900;font-size:12px}.blue{background:#dbeafe;color:#1d4ed8}.green{background:#dcfce7;color:#166534}.yellow{background:#fef3c7;color:#92400e}.graph{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.node{background:#eef2ff;color:#3730a3;border-radius:999px;padding:8px 12px;font-weight:1000}.arrow{font-weight:1000;color:#64748b}.footer{text-align:center;color:var(--muted);font-size:13px;padding:22px}
-</style>
-</head>
-<body>
-<header class="hero"><div class="wrap heroGrid"><div class="heroCopy"><div class="heroMeta"><span class="badge" data-i18n="badge">Dynamic Path｜动态学习路线</span><span id="langMount"></span></div><h1 data-i18n="title">AI 动态学习路线 v1</h1><p data-i18n="sub">根据掌握度、错题和语法依赖，规划下一步学习路线。</p><div class="heroActions"><a class="primary" href="./minna-index.html?v=20.3" data-i18n="home">返回首页</a><a class="ghostHero" href="./minna-ai-coach.html?v=20.3" data-i18n="coach">每日教练</a><a class="ghostHero" href="./minna-weakness-profile.html?v=20.3" data-i18n="weak">弱点画像</a><a class="lightHero" href="./minna-review.html?v=20.3" data-i18n="review">总复习</a></div></div><div class="heroStats"><div><b>50</b><span data-i18n="lessons">课程</span></div><div><b>10</b><span data-i18n="core">核心语法</span></div><div><b>AI</b><span data-i18n="path">路线</span></div></div></div></header>
-<main class="wrap">
-<section class="panel"><h2 data-i18n="stageTitle">当前路线</h2><div class="pathGrid"><div class="pathCard"><b>Beginner I</b><span data-i18n="stage">当前阶段</span></div><div class="pathCard"><b>Lesson 14–25</b><span data-i18n="next">建议巩固区间</span></div><div class="pathCard"><b>7 Days</b><span data-i18n="estimate">建议周期</span></div></div></section>
-<section class="panel"><h2 data-i18n="reasonTitle">路线逻辑</h2><p data-i18n="reasonBody">先巩固动词变化，再进入更复杂的可能形、受身形、使役形和敬语体系。</p><p><span class="pill blue">Grammar Graph</span><span class="pill green">Weakness Profile</span><span class="pill yellow">AI Coach</span></p></section>
-<section class="panel"><h2 data-i18n="graphTitle">语法依赖路线</h2><div class="graph"><span class="node">て形</span><span class="arrow">→</span><span class="node">ない形</span><span class="arrow">→</span><span class="node">た形</span><span class="arrow">→</span><span class="node">普通形</span><span class="arrow">→</span><span class="node">可能形</span><span class="arrow">→</span><span class="node">敬语</span></div></section>
-<section class="panel"><h2 data-i18n="actionsTitle">推荐操作</h2><p><a class="primary" href="./minna-ai-coach.html?v=20.3" data-i18n="openCoach">打开每日教练</a> <a class="ghost" href="./minna-weakness-profile.html?v=20.3" data-i18n="openWeak">查看弱点画像</a> <a class="light" href="./minna-grammar-card.html?v=20.3" data-i18n="openCard">查看语法卡片</a></p></section>
-</main>
-<footer class="wrap footer" data-i18n="footer">Minna AI Learning System｜Dynamic Learning Path</footer>
+<div id="app"></div>
 <script>
 (function(){
-const dict={badge:{zh:'Dynamic Path｜动态学习路线',en:'Dynamic Path'},title:{zh:'AI 动态学习路线 v1',en:'AI Dynamic Learning Path v1'},sub:{zh:'根据掌握度、错题和语法依赖，规划下一步学习路线。',en:'Plan the next learning path from mastery, mistakes, and grammar dependencies.'},home:{zh:'返回首页',en:'Back Home'},coach:{zh:'每日教练',en:'AI Coach'},weak:{zh:'弱点画像',en:'Weakness Profile'},review:{zh:'总复习',en:'Review Hub'},lessons:{zh:'课程',en:'Lessons'},core:{zh:'核心语法',en:'Core Grammar'},path:{zh:'路线',en:'Path'},stageTitle:{zh:'当前路线',en:'Current Path'},stage:{zh:'当前阶段',en:'Current Stage'},next:{zh:'建议巩固区间',en:'Recommended Range'},estimate:{zh:'建议周期',en:'Suggested Cycle'},reasonTitle:{zh:'路线逻辑',en:'Path Logic'},reasonBody:{zh:'先巩固动词变化，再进入更复杂的可能形、受身形、使役形和敬语体系。',en:'Strengthen verb forms first, then move into potential, passive, causative, and keigo.'},graphTitle:{zh:'语法依赖路线',en:'Grammar Dependency Path'},actionsTitle:{zh:'推荐操作',en:'Recommended Actions'},openCoach:{zh:'打开每日教练',en:'Open AI Coach'},openWeak:{zh:'查看弱点画像',en:'View Weakness Profile'},openCard:{zh:'查看语法卡片',en:'View Grammar Cards'},footer:{zh:'Minna AI Learning System｜Dynamic Learning Path',en:'Minna AI Learning System | Dynamic Learning Path'}};
-function lang(){return window.MinnaI18n?window.MinnaI18n.lang():(localStorage.getItem('minna_ui_lang')||'zh')}
-function apply(){const l=lang()==='en'?'en':'zh';document.documentElement.lang=l==='en'?'en':'zh-CN';document.querySelectorAll('[data-i18n]').forEach(el=>{const v=dict[el.dataset.i18n];if(v)el.innerHTML=v[l]||v.zh});if(window.MinnaI18n)window.MinnaI18n.installToggle(document.getElementById('langMount'))}
-if(window.MinnaI18n)window.MinnaI18n.onChange(apply);apply();
+  const VERSION = "20.3";
+  const $ = id => document.getElementById(id);
+  const i18n = () => window.MinnaI18n || null;
+  const lang = () => i18n() ? i18n().lang() : "zh";
+  const text = (zh, en) => lang() === "en" ? en : zh;
+  const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
+  const lessonUrl = n => "./minna-lesson-v16.html?n=" + n + "&v=" + VERSION;
+
+  function pad2(n){ return String(n).padStart(2, "0"); }
+  function readJson(key){
+    try { return JSON.parse(localStorage.getItem(key) || "null"); }
+    catch (_) { return null; }
+  }
+  function readLessonState(n){
+    const no = pad2(n);
+    const keys = [
+      "minna_lesson_" + no,
+      "lesson" + no + "v8",
+      "lesson" + n + "v8",
+      "lesson" + no + "v7",
+      "lesson" + n + "v7",
+      "lesson" + no + "v6",
+      "lesson" + n + "v6",
+      "lesson" + no + "v5",
+      "lesson" + n + "v5"
+    ];
+    for (const key of keys){
+      const val = readJson(key);
+      if (val && typeof val === "object") return val;
+    }
+    return null;
+  }
+  function progressOf(state){
+    const mastery = state && state.mastery ? state.mastery : {};
+    const wrong = state && state.wrong_count != null
+      ? Number(state.wrong_count)
+      : (state && state.wrong && typeof state.wrong === "object"
+        ? Object.keys(state.wrong).filter(k => state.wrong[k]).length
+        : 0);
+    const passed = !!(state && state.mastery_passed) ||
+      ((Number(mastery.vocab || 0) >= 100) &&
+       (Number(mastery.grammar || 0) >= 80) &&
+       (Number(mastery.examples || 0) >= 80) &&
+       (Number(mastery.final || 0) >= 80) &&
+       wrong === 0);
+    return {
+      exists: !!state,
+      passed,
+      wrong,
+      grammar: Number(mastery.grammar || 0),
+      final: Number(mastery.final || 0)
+    };
+  }
+  function stageName(n){
+    if (n <= 13) return text("初级 I 前半", "Beginner I First Half");
+    if (n <= 25) return text("初级 I 后半", "Beginner I Second Half");
+    if (n <= 38) return text("初级 II 前半", "Beginner II First Half");
+    return text("初级 II 后半", "Beginner II Second Half");
+  }
+
+  function summarize(){
+    const rows = [];
+    for (let n = 1; n <= 50; n++){
+      rows.push({ n, state: readLessonState(n), p: progressOf(readLessonState(n)) });
+    }
+    const hasAnyRecord = rows.some(r => r.p.exists);
+    const masteredCount = rows.filter(r => r.p.passed).length;
+
+    let nextLesson = 1;
+    for (let n = 1; n <= 50; n++){
+      if (!rows[n - 1].p.passed){ nextLesson = n; break; }
+      if (n === 50) nextLesson = 50;
+    }
+    const reviewQueue = rows
+      .filter(r => r.p.exists && !r.p.passed)
+      .sort((a,b) => (b.p.wrong - a.p.wrong) || (a.n - b.n))
+      .slice(0, 5);
+    const weakness = rows
+      .filter(r => r.p.exists)
+      .map(r => ({n:r.n, score:r.p.grammar}))
+      .sort((a,b) => a.score - b.score)[0] || null;
+
+    return { hasAnyRecord, masteredCount, nextLesson, reviewQueue, weakness };
+  }
+
+  function fallbackView(){
+    return `
+      <section class="panel">
+        <h2>${esc(text("默认学习路径", "Default Learning Path"))}</h2>
+        <p>${esc(text("尚未检测到学习记录。建议从第1课开始，按顺序推进；每完成一课后进入错题中心与AI练习巩固。", "No learning records found. Start from Lesson 1, proceed in order, then use Wrongbook and AI Drill for reinforcement."))}</p>
+        <p class="buttons">
+          <a class="primary" href="${lessonUrl(1)}">${esc(text("开始第1课", "Start Lesson 1"))}</a>
+          <a class="ghost" href="./minna-wrongbook-v2.html?v=20.3">${esc(text("错题专项训练中心", "Wrongbook Center"))}</a>
+          <a class="light" href="./minna-ai-drill.html?v=20.3">${esc(text("AI练习", "AI Drill"))}</a>
+        </p>
+      </section>
+    `;
+  }
+
+  function render(){
+    const s = summarize();
+    const stage = stageName(s.nextLesson);
+    const reviewHtml = s.reviewQueue.length
+      ? s.reviewQueue.map(x => `<a class="light" href="${lessonUrl(x.n)}">${esc(text("第" + x.n + "课", "Lesson " + x.n))} · ${esc(text("错题", "Wrong"))} ${x.p.wrong}</a>`).join("")
+      : `<span class="small">${esc(text("当前没有高优先级复习项。", "No high-priority review items now."))}</span>`;
+    const cardLink = s.weakness ? `./minna-grammar-card.html?n=${s.weakness.n}&v=20.3` : `./minna-grammar-card.html?v=20.3`;
+    const drillLink = `./minna-ai-drill.html?lesson=${s.nextLesson}&v=20.3`;
+
+    document.title = text("学习路线", "Learning Path") + " v" + VERSION;
+    $("app").innerHTML = `
+      <header class="hero">
+        <div class="wrap heroGrid">
+          <div class="heroCopy">
+            <div class="heroMeta">
+              <span class="badge">Minna Learning Path v${VERSION}</span>
+              <span id="langMount"></span>
+            </div>
+            <h1>${esc(text("学习路线", "Learning Path"))}</h1>
+            <p>${esc(text("基于本地学习记录自动推荐下一步。", "Auto recommendations based on local learning records."))}</p>
+            <div class="heroActions">
+              <a class="primary" href="./minna-index.html?v=20.3">${esc(text("首页", "Home"))}</a>
+              <a class="ghostHero" href="./minna-review.html?v=20.3">${esc(text("总复习", "Review"))}</a>
+              <a class="lightHero" href="./minna-wrongbook-v2.html?v=20.3">${esc(text("错题专项训练中心", "Wrongbook Center"))}</a>
+            </div>
+          </div>
+          <div class="heroStats">
+            <div><b>${s.masteredCount}</b><span>${esc(text("已掌握课程", "Mastered"))}</span></div>
+            <div><b>${s.nextLesson}</b><span>${esc(text("推荐下一课", "Next Lesson"))}</span></div>
+            <div><b>${esc(stage)}</b><span>${esc(text("当前阶段", "Current Stage"))}</span></div>
+          </div>
+        </div>
+      </header>
+      <main class="wrap">
+        ${s.hasAnyRecord ? "" : fallbackView()}
+        <section class="panel">
+          <h2>${esc(text("当前阶段", "Current Stage"))}</h2>
+          <p>${esc(stage)}</p>
+        </section>
+        <section class="panel">
+          <h2>${esc(text("推荐下一课", "Recommended Next Lesson"))}</h2>
+          <p class="buttons">
+            <a class="primary" href="${lessonUrl(s.nextLesson)}">${esc(text("进入第" + s.nextLesson + "课", "Open Lesson " + s.nextLesson))}</a>
+          </p>
+        </section>
+        <section class="panel">
+          <h2>${esc(text("高优先级复习队列", "High-Priority Review Queue"))}</h2>
+          <p class="buttons">${reviewHtml}</p>
+        </section>
+        <section class="panel">
+          <h2>${esc(text("推荐知识卡片", "Recommended Knowledge Card"))}</h2>
+          <p>${esc(s.weakness
+            ? text("语法薄弱点：第" + s.weakness.n + "课（语法得分 " + s.weakness.score + "）", "Weak grammar point: Lesson " + s.weakness.n + " (Grammar " + s.weakness.score + ")")
+            : text("暂无薄弱项记录，建议先浏览基础语法卡片。", "No weak points yet. Start with the core grammar card."))}</p>
+          <p class="buttons"><a class="ghost" href="${cardLink}">${esc(text("打开语法卡片", "Open Grammar Card"))}</a></p>
+        </section>
+        <section class="panel">
+          <h2>${esc(text("推荐 AI Drill", "Recommended AI Drill"))}</h2>
+          <p>${esc(text("基于下一课和薄弱点自动推荐训练入口。", "Training entry based on your next lesson and weak points."))}</p>
+          <p class="buttons"><a class="primary" href="${drillLink}">${esc(text("开始 AI Drill", "Start AI Drill"))}</a></p>
+        </section>
+      </main>
+      <footer class="wrap footer">docs/minna-learning-path.html · v${VERSION}</footer>
+    `;
+    if (i18n()) i18n().installToggle($("langMount"));
+  }
+
+  render();
+  if (i18n()) i18n().onChange(render);
 })();
 </script>
-</body>
 </html>

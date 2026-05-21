@@ -141,7 +141,7 @@
     try{
       if(!await canEnterLesson(n))return;
       window.MinnaCurrentLessonJson=await upgradeContent(n,await loadContent(n));
-      await script('./minna-player-v17.js?v='+VERSION);
+      await script('./minna-player-v20-3.js?v='+VERSION);
     }catch(e){showError(e)}
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();

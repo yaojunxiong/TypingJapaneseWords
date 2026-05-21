@@ -1,0 +1,611 @@
+{
+  "id": "minna-40",
+  "version": "20.3",
+  "status": "Mastery migrated",
+  "lesson": 40,
+  "title": {
+    "zh": "第40课：疑问词嵌入",
+    "en": "Lesson 40: Embedded Questions"
+  },
+  "topic": {
+    "zh": "疑问词嵌入",
+    "en": "Embedded Questions"
+  },
+  "summary": {
+    "zh": "学习把「何、どこ、いつ、だれ」等疑问句嵌入句子，并掌握 てみます 的试做表达。",
+    "en": "Embed questions with words like what, where, when, and who, and use てみます to try doing something."
+  },
+  "sections": [
+    {
+      "id": "l40-vocab",
+      "type": "vocab",
+      "title": {
+        "zh": "词汇 Vocabulary",
+        "en": "Vocabulary"
+      },
+      "items": [
+        {
+          "id": "l40-vocab-01",
+          "jp": "数えます",
+          "kana": "かぞえます",
+          "zh": "数",
+          "en": "count",
+          "example": "人数を数えます。"
+        },
+        {
+          "id": "l40-vocab-02",
+          "jp": "測ります",
+          "kana": "はかります",
+          "zh": "测量",
+          "en": "measure",
+          "example": "温度を測ります。"
+        },
+        {
+          "id": "l40-vocab-03",
+          "jp": "確かめます",
+          "kana": "たしかめます",
+          "zh": "确认",
+          "en": "check, confirm",
+          "example": "時間を確かめます。"
+        },
+        {
+          "id": "l40-vocab-04",
+          "jp": "合います",
+          "kana": "あいます",
+          "zh": "合适、正确",
+          "en": "fit, match",
+          "example": "この答えは合っています。"
+        },
+        {
+          "id": "l40-vocab-05",
+          "jp": "出発します",
+          "kana": "しゅっぱつします",
+          "zh": "出发",
+          "en": "depart",
+          "example": "8時に出発します。"
+        },
+        {
+          "id": "l40-vocab-06",
+          "jp": "到着します",
+          "kana": "とうちゃくします",
+          "zh": "到达",
+          "en": "arrive",
+          "example": "駅に到着しました。"
+        },
+        {
+          "id": "l40-vocab-07",
+          "jp": "酔います",
+          "kana": "よいます",
+          "zh": "醉、晕",
+          "en": "get drunk, feel sick",
+          "example": "船に酔いました。"
+        },
+        {
+          "id": "l40-vocab-08",
+          "jp": "危険",
+          "kana": "きけん",
+          "zh": "危险",
+          "en": "dangerous",
+          "example": "ここは危険です。"
+        },
+        {
+          "id": "l40-vocab-09",
+          "jp": "必要",
+          "kana": "ひつよう",
+          "zh": "必要",
+          "en": "necessary",
+          "example": "パスポートが必要です。"
+        },
+        {
+          "id": "l40-vocab-10",
+          "jp": "宇宙",
+          "kana": "うちゅう",
+          "zh": "宇宙",
+          "en": "space",
+          "example": "宇宙について調べます。"
+        }
+      ]
+    },
+    {
+      "id": "l40-grammar",
+      "type": "grammar",
+      "title": {
+        "zh": "语法 Grammar",
+        "en": "Grammar"
+      },
+      "items": [
+        {
+          "id": "l40-grammar-01",
+          "pattern": "疑問詞 + 普通形 + か、〜",
+          "zh": "把疑问句嵌入另一个句子，表示「是否知道/确认/告诉」。",
+          "en": "Embed a question inside another sentence to say know, check, or tell.",
+          "example": "会議が何時に始まるか、知っていますか。",
+          "practice": [
+            {
+              "id": "l40-practice-01",
+              "prompt": {
+                "zh": "嵌入问题：会议几点开始？你知道吗？",
+                "en": "Embed the question: What time does the meeting start? Do you know?"
+              },
+              "answer": "会議が何時に始まるか、知っていますか。"
+            }
+          ]
+        },
+        {
+          "id": "l40-grammar-02",
+          "pattern": "何を + V普通形 + か",
+          "zh": "询问或说明「做什么」时，用 何を...か。",
+          "en": "Use 何を...か to embed what someone does.",
+          "example": "週末何をするか、まだ決めていません。",
+          "practice": [
+            {
+              "id": "l40-practice-02",
+              "prompt": {
+                "zh": "表达：我还没决定周末做什么。",
+                "en": "Say: I have not decided what I will do this weekend."
+              },
+              "answer": "週末何をするか、まだ決めていません。"
+            }
+          ]
+        },
+        {
+          "id": "l40-grammar-03",
+          "pattern": "どこへ / どこで + V普通形 + か",
+          "zh": "嵌入地点疑问：去哪里、在哪里做。",
+          "en": "Embed place questions: where to go or where to do something.",
+          "example": "どこで切符を買うか、駅員に聞きました。",
+          "practice": [
+            {
+              "id": "l40-practice-03",
+              "prompt": {
+                "zh": "表达：我问了在哪里买彩票。",
+                "en": "Say: I asked where to buy a ticket."
+              },
+              "answer": "どこで切符を買うか、聞きました。"
+            }
+          ]
+        },
+        {
+          "id": "l40-grammar-04",
+          "pattern": "いつ + V普通形 + か",
+          "zh": "嵌入时间疑问：什么时候做、什么时候发生。",
+          "en": "Embed time questions: when something happens or will happen.",
+          "example": "荷物がいつ届くか、確かめます。",
+          "practice": [
+            {
+              "id": "l40-practice-04",
+              "prompt": {
+                "zh": "表达：请确认包裹什么时候到。",
+                "en": "Say: Please check when the package will arrive."
+              },
+              "answer": "荷物がいつ届くか、確かめてください。"
+            }
+          ]
+        },
+        {
+          "id": "l40-grammar-05",
+          "pattern": "だれが / だれに + V普通形 + か",
+          "zh": "嵌入人物疑问：谁做、给谁、向谁。",
+          "en": "Embed person questions: who does it, to whom, or from whom.",
+          "example": "だれがこのメールを書いたか、わかりません。",
+          "practice": [
+            {
+              "id": "l40-practice-05",
+              "prompt": {
+                "zh": "表达：我不知道是谁写了这封邮件。",
+                "en": "Say: I do not know who wrote this email."
+              },
+              "answer": "だれがこのメールを書いたか、わかりません。"
+            }
+          ]
+        },
+        {
+          "id": "l40-grammar-06",
+          "pattern": "い形容詞普通形 + か",
+          "zh": "嵌入形容词疑问时，い形容词保持普通形。",
+          "en": "For embedded adjective questions, keep the i-adjective plain form.",
+          "example": "この料理が辛いか、食べてみます。",
+          "practice": [
+            {
+              "id": "l40-practice-06",
+              "prompt": {
+                "zh": "表达：我想确认这件衣服贵不贵。",
+                "en": "Say: I want to check whether these clothes are expensive."
+              },
+              "answer": "この服が高いか、確かめたいです。"
+            }
+          ]
+        },
+        {
+          "id": "l40-grammar-07",
+          "pattern": "名詞 / な形容詞 + か",
+          "zh": "名词和な形容词嵌入疑问时，通常不用 だ。",
+          "en": "When embedding noun or na-adjective questions, usually omit だ.",
+          "example": "あの人がだれか、知っていますか。",
+          "practice": [
+            {
+              "id": "l40-practice-07",
+              "prompt": {
+                "zh": "表达：你知道那个人是谁吗？",
+                "en": "Say: Do you know who that person is?"
+              },
+              "answer": "あの人がだれか、知っていますか。"
+            }
+          ]
+        },
+        {
+          "id": "l40-grammar-08",
+          "pattern": "Vてみます",
+          "zh": "表示试着做某事，用于确认结果或体验。",
+          "en": "Use Vてみます to try doing something and see the result.",
+          "example": "この靴をはいてみてもいいですか。",
+          "practice": [
+            {
+              "id": "l40-practice-08",
+              "prompt": {
+                "zh": "表达：我想试着读这本书。",
+                "en": "Say: I want to try reading this book."
+              },
+              "answer": "この本を読んでみたいです。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l40-examples",
+      "type": "examples",
+      "title": {
+        "zh": "例句 Examples",
+        "en": "Examples"
+      },
+      "items": [
+        {
+          "id": "l40-example-01",
+          "jp": "駅までどうやって行くか、教えてください。",
+          "zh": "请告诉我怎么去车站。",
+          "en": "Please tell me how to get to the station."
+        },
+        {
+          "id": "l40-example-02",
+          "jp": "明日何時に出発するか、決めましたか。",
+          "zh": "决定明天几点出发了吗？",
+          "en": "Have you decided what time to depart tomorrow?"
+        },
+        {
+          "id": "l40-example-03",
+          "jp": "この答えが合っているか、確かめます。",
+          "zh": "我确认这个答案是否正确。",
+          "en": "I will check whether this answer is correct."
+        },
+        {
+          "id": "l40-example-04",
+          "jp": "どこで昼ご飯を食べるか、相談しましょう。",
+          "zh": "我们商量一下在哪里吃午饭吧。",
+          "en": "Let's discuss where to eat lunch."
+        },
+        {
+          "id": "l40-example-05",
+          "jp": "だれに電話したらいいか、わかりません。",
+          "zh": "我不知道该给谁打电话。",
+          "en": "I do not know whom I should call."
+        },
+        {
+          "id": "l40-example-06",
+          "jp": "この道が危険か、地図で調べました。",
+          "zh": "我用地图查了这条路是否危险。",
+          "en": "I checked on the map whether this road is dangerous."
+        },
+        {
+          "id": "l40-example-07",
+          "jp": "新しいアプリを使ってみました。",
+          "zh": "我试着用了新的应用。",
+          "en": "I tried using the new app."
+        },
+        {
+          "id": "l40-example-08",
+          "jp": "宇宙について何を知っているか、話してください。",
+          "zh": "请说说你对宇宙了解些什么。",
+          "en": "Please talk about what you know about space."
+        }
+      ]
+    },
+    {
+      "id": "l40-mistakes",
+      "type": "mistakes",
+      "title": {
+        "zh": "常见错误 Common Mistakes",
+        "en": "Common Mistakes"
+      },
+      "items": [
+        {
+          "id": "l40-mistake-01",
+          "wrong": "会議は何時に始まりますか知っていますか。",
+          "correct": "会議が何時に始まるか、知っていますか。",
+          "reason": {
+            "zh": "嵌入疑问用普通形 + か，不保留礼貌疑问句结构。",
+            "en": "Embedded questions use plain form + か, not the full polite question form."
+          }
+        },
+        {
+          "id": "l40-mistake-02",
+          "wrong": "あの人がだれだか、知っていますか。",
+          "correct": "あの人がだれか、知っていますか。",
+          "reason": {
+            "zh": "名词疑问嵌入时通常不用 だ。",
+            "en": "Usually omit だ in embedded noun questions."
+          }
+        },
+        {
+          "id": "l40-mistake-03",
+          "wrong": "この本を読みてみます。",
+          "correct": "この本を読んでみます。",
+          "reason": {
+            "zh": "てみます 前必须接正确的て形。",
+            "en": "Use the correct te-form before みます."
+          }
+        }
+      ]
+    },
+    {
+      "id": "l40-quiz",
+      "type": "quiz",
+      "title": {
+        "zh": "最终测试 Final Test",
+        "en": "Final Test"
+      },
+      "items": [
+        {
+          "id": "l40-quiz-01",
+          "question": {
+            "zh": "「你知道会议几点开始吗？」正确的是？",
+            "en": "Which means: Do you know what time the meeting starts?"
+          },
+          "options": [
+            {
+              "text": "会議が何時に始まるか、知っていますか。",
+              "correct": true
+            },
+            {
+              "text": "会議が何時に始まりますか、知っていますか。",
+              "correct": false
+            },
+            {
+              "text": "会議が何時に始まるを、知っていますか。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "嵌入疑问用普通形 + か。",
+            "en": "Embedded questions use plain form + か."
+          }
+        },
+        {
+          "id": "l40-quiz-02",
+          "question": {
+            "zh": "「我还没决定周末做什么。」正确的是？",
+            "en": "Which means: I have not decided what to do this weekend?"
+          },
+          "options": [
+            {
+              "text": "週末何をするか、まだ決めていません。",
+              "correct": true
+            },
+            {
+              "text": "週末何をしますか、まだ決めていません。",
+              "correct": false
+            },
+            {
+              "text": "週末何をするので、まだ決めていません。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "何をするか 是嵌入的「做什么」。",
+            "en": "何をするか embeds the question 'what to do'."
+          }
+        },
+        {
+          "id": "l40-quiz-03",
+          "question": {
+            "zh": "「请确认包裹什么时候到。」正确的是？",
+            "en": "Which means: Please check when the package will arrive?"
+          },
+          "options": [
+            {
+              "text": "荷物がいつ届くか、確かめてください。",
+              "correct": true
+            },
+            {
+              "text": "荷物がいつ届きますか、確かめてください。",
+              "correct": false
+            },
+            {
+              "text": "荷物がいつ届くので、確かめてください。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "いつ届くか 是嵌入时间疑问。",
+            "en": "いつ届くか is an embedded time question."
+          }
+        },
+        {
+          "id": "l40-quiz-04",
+          "question": {
+            "zh": "「我不知道是谁写了这封邮件。」正确的是？",
+            "en": "Which means: I don't know who wrote this email?"
+          },
+          "options": [
+            {
+              "text": "だれがこのメールを書いたか、わかりません。",
+              "correct": true
+            },
+            {
+              "text": "だれがこのメールを書きましたか、わかりません。",
+              "correct": false
+            },
+            {
+              "text": "だれにこのメールを書いたか、わかりません。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "主语「谁」用 だれが，嵌入时动词用普通形。",
+            "en": "Use だれが for the subject and plain form in embedded questions."
+          }
+        },
+        {
+          "id": "l40-quiz-05",
+          "question": {
+            "zh": "「你知道那个人是谁吗？」正确的是？",
+            "en": "Which means: Do you know who that person is?"
+          },
+          "options": [
+            {
+              "text": "あの人がだれか、知っていますか。",
+              "correct": true
+            },
+            {
+              "text": "あの人がだれだか、知っていますか。",
+              "correct": false
+            },
+            {
+              "text": "あの人がだれですか、知っていますか。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "名词疑问嵌入通常不用 だ。",
+            "en": "Usually omit だ in embedded noun questions."
+          }
+        },
+        {
+          "id": "l40-quiz-06",
+          "question": {
+            "zh": "「我想确认这件衣服贵不贵。」正确的是？",
+            "en": "Which means: I want to check whether these clothes are expensive?"
+          },
+          "options": [
+            {
+              "text": "この服が高いか、確かめたいです。",
+              "correct": true
+            },
+            {
+              "text": "この服が高いですか、確かめたいです。",
+              "correct": false
+            },
+            {
+              "text": "この服が高くてか、確かめたいです。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "い形容词普通形 + か。",
+            "en": "Use i-adjective plain form + か."
+          }
+        },
+        {
+          "id": "l40-quiz-07",
+          "question": {
+            "zh": "「试着用新的应用。」正确的是？",
+            "en": "Which means: I will try using the new app?"
+          },
+          "options": [
+            {
+              "text": "新しいアプリを使ってみます。",
+              "correct": true
+            },
+            {
+              "text": "新しいアプリを使いてみます。",
+              "correct": false
+            },
+            {
+              "text": "新しいアプリを使うみます。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "使います 的て形是 使って。",
+            "en": "The te-form of 使います is 使って."
+          }
+        },
+        {
+          "id": "l40-quiz-08",
+          "question": {
+            "zh": "「我问了在哪里买票。」正确的是？",
+            "en": "Which means: I asked where to buy a ticket?"
+          },
+          "options": [
+            {
+              "text": "どこで切符を買うか、聞きました。",
+              "correct": true
+            },
+            {
+              "text": "どこで切符を買いますか、聞きました。",
+              "correct": false
+            },
+            {
+              "text": "どこへ切符を買うか、聞きました。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "买票发生的地点用 どこで。",
+            "en": "Use どこで for the place where buying happens."
+          }
+        },
+        {
+          "id": "l40-quiz-09",
+          "question": {
+            "zh": "「不知道该给谁打电话。」正确的是？",
+            "en": "Which means: I don't know whom I should call?"
+          },
+          "options": [
+            {
+              "text": "だれに電話したらいいか、わかりません。",
+              "correct": true
+            },
+            {
+              "text": "だれが電話したらいいか、わかりません。",
+              "correct": false
+            },
+            {
+              "text": "だれに電話しますか、わかりません。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "给谁打电话用 だれに。",
+            "en": "Use だれに for whom to call."
+          }
+        },
+        {
+          "id": "l40-quiz-10",
+          "question": {
+            "zh": "「请告诉我怎么去车站。」正确的是？",
+            "en": "Which means: Please tell me how to get to the station?"
+          },
+          "options": [
+            {
+              "text": "駅までどうやって行くか、教えてください。",
+              "correct": true
+            },
+            {
+              "text": "駅までどうやって行きますか、教えてください。",
+              "correct": false
+            },
+            {
+              "text": "駅までどうやって行くので、教えてください。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "どうやって行くか 是嵌入的「怎么去」。",
+            "en": "どうやって行くか embeds the question 'how to go'."
+          }
+        }
+      ]
+    }
+  ]
+}

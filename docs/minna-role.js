@@ -1,4 +1,4 @@
-// Minna role extension v20.2
+// Minna role extension v20.3
 // Adds VIP/admin role lookup and preview-save guard without rewriting the auth module.
 (function(){
   if(!window.MinnaAuth)return;

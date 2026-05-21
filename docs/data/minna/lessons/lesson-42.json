@@ -1,0 +1,611 @@
+{
+  "id": "minna-42",
+  "version": "20.3",
+  "status": "Mastery migrated",
+  "lesson": 42,
+  "title": {
+    "zh": "第42课：ために",
+    "en": "Lesson 42: Tame ni"
+  },
+  "topic": {
+    "zh": "ために",
+    "en": "Tame ni"
+  },
+  "summary": {
+    "zh": "掌握目的表达 ために，以及表示用途、花费、所需时间的 のに。",
+    "en": "Use ために for purpose and のに for use, cost, or required time."
+  },
+  "sections": [
+    {
+      "id": "l42-vocab",
+      "type": "vocab",
+      "title": {
+        "zh": "词汇 Vocabulary",
+        "en": "Vocabulary"
+      },
+      "items": [
+        {
+          "id": "l42-vocab-01",
+          "jp": "貯金します",
+          "kana": "ちょきんします",
+          "zh": "存钱",
+          "en": "save money",
+          "example": "旅行のために貯金します。"
+        },
+        {
+          "id": "l42-vocab-02",
+          "jp": "準備します",
+          "kana": "じゅんびします",
+          "zh": "准备",
+          "en": "prepare",
+          "example": "試験のために準備します。"
+        },
+        {
+          "id": "l42-vocab-03",
+          "jp": "調べます",
+          "kana": "しらべます",
+          "zh": "调查、查询",
+          "en": "look up, investigate",
+          "example": "資料を調べます。"
+        },
+        {
+          "id": "l42-vocab-04",
+          "jp": "予約します",
+          "kana": "よやくします",
+          "zh": "预约",
+          "en": "reserve",
+          "example": "ホテルを予約します。"
+        },
+        {
+          "id": "l42-vocab-05",
+          "jp": "留学",
+          "kana": "りゅうがく",
+          "zh": "留学",
+          "en": "study abroad",
+          "example": "留学のために日本語を勉強します。"
+        },
+        {
+          "id": "l42-vocab-06",
+          "jp": "健康",
+          "kana": "けんこう",
+          "zh": "健康",
+          "en": "health",
+          "example": "健康のために歩きます。"
+        },
+        {
+          "id": "l42-vocab-07",
+          "jp": "将来",
+          "kana": "しょうらい",
+          "zh": "将来",
+          "en": "future",
+          "example": "将来のために勉強します。"
+        },
+        {
+          "id": "l42-vocab-08",
+          "jp": "必要",
+          "kana": "ひつよう",
+          "zh": "必要",
+          "en": "necessary",
+          "example": "ビザを取るのに写真が必要です。"
+        },
+        {
+          "id": "l42-vocab-09",
+          "jp": "費用",
+          "kana": "ひよう",
+          "zh": "费用",
+          "en": "cost",
+          "example": "旅行の費用を計算します。"
+        },
+        {
+          "id": "l42-vocab-10",
+          "jp": "時間",
+          "kana": "じかん",
+          "zh": "时间",
+          "en": "time",
+          "example": "ここまで来るのに時間がかかります。"
+        }
+      ]
+    },
+    {
+      "id": "l42-grammar",
+      "type": "grammar",
+      "title": {
+        "zh": "语法 Grammar",
+        "en": "Grammar"
+      },
+      "items": [
+        {
+          "id": "l42-grammar-01",
+          "pattern": "V辞書形 + ために、〜",
+          "zh": "表示有意志动作的目的：为了做某事而做后项。",
+          "en": "Shows the purpose of a volitional action: do the second action in order to do the first.",
+          "example": "日本語を上手に話すために、毎日練習しています。",
+          "practice": [
+            {
+              "id": "l42-practice-01",
+              "prompt": {
+                "zh": "表达：为了去日本，我在存钱。",
+                "en": "Say: I am saving money in order to go to Japan."
+              },
+              "answer": "日本へ行くために、貯金しています。"
+            }
+          ]
+        },
+        {
+          "id": "l42-grammar-02",
+          "pattern": "Nのために、〜",
+          "zh": "为了某个名词目标、对象或利益。",
+          "en": "For the sake of a noun goal, person, or benefit.",
+          "example": "家族のために働いています。",
+          "practice": [
+            {
+              "id": "l42-practice-02",
+              "prompt": {
+                "zh": "表达：为了健康，每天走路。",
+                "en": "Say: I walk every day for my health."
+              },
+              "answer": "健康のために、毎日歩いています。"
+            }
+          ]
+        },
+        {
+          "id": "l42-grammar-03",
+          "pattern": "V辞書形 + のに + 使います",
+          "zh": "表示用途：用来做某事。",
+          "en": "Shows use: something is used for doing something.",
+          "example": "このはさみは紙を切るのに使います。",
+          "practice": [
+            {
+              "id": "l42-practice-03",
+              "prompt": {
+                "zh": "表达：这台电脑用来做设计。",
+                "en": "Say: This computer is used for doing design."
+              },
+              "answer": "このパソコンはデザインをするのに使います。"
+            }
+          ]
+        },
+        {
+          "id": "l42-grammar-04",
+          "pattern": "V辞書形 + のに + 便利です",
+          "zh": "评价某物对某用途是否方便、有用。",
+          "en": "Evaluates whether something is convenient or useful for a purpose.",
+          "example": "このアプリは単語を覚えるのに便利です。",
+          "practice": [
+            {
+              "id": "l42-practice-04",
+              "prompt": {
+                "zh": "表达：这本书对学习语法很有用。",
+                "en": "Say: This book is useful for studying grammar."
+              },
+              "answer": "この本は文法を勉強するのに役に立ちます。"
+            }
+          ]
+        },
+        {
+          "id": "l42-grammar-05",
+          "pattern": "V辞書形 + のに + 時間がかかります",
+          "zh": "表示做某事需要花时间。",
+          "en": "Shows the time required to do something.",
+          "example": "この作文を書くのに2時間かかりました。",
+          "practice": [
+            {
+              "id": "l42-practice-05",
+              "prompt": {
+                "zh": "表达：到学校需要30分钟。",
+                "en": "Say: It takes 30 minutes to go to school."
+              },
+              "answer": "学校へ行くのに30分かかります。"
+            }
+          ]
+        },
+        {
+          "id": "l42-grammar-06",
+          "pattern": "V辞書形 + のに + お金がかかります",
+          "zh": "表示做某事需要花钱。",
+          "en": "Shows the money required to do something.",
+          "example": "車を買うのにたくさんお金がかかります。",
+          "practice": [
+            {
+              "id": "l42-practice-06",
+              "prompt": {
+                "zh": "表达：留学需要很多钱。",
+                "en": "Say: Studying abroad costs a lot of money."
+              },
+              "answer": "留学するのにたくさんお金がかかります。"
+            }
+          ]
+        },
+        {
+          "id": "l42-grammar-07",
+          "pattern": "V辞書形 + のに + Nが必要です",
+          "zh": "表示做某事需要某物。",
+          "en": "Shows something required for doing an action.",
+          "example": "ビザを取るのに写真が必要です。",
+          "practice": [
+            {
+              "id": "l42-practice-07",
+              "prompt": {
+                "zh": "表达：预约需要电话号码。",
+                "en": "Say: A phone number is needed to make a reservation."
+              },
+              "answer": "予約するのに電話番号が必要です。"
+            }
+          ]
+        },
+        {
+          "id": "l42-grammar-08",
+          "pattern": "ために vs ように",
+          "zh": "ために多用于意志动词目的；可能、状态变化等常用 ように。",
+          "en": "Use ために with volitional goals; use ように with potential forms or state changes.",
+          "example": "合格するために勉強します。合格できるように勉強します。",
+          "practice": [
+            {
+              "id": "l42-practice-08",
+              "prompt": {
+                "zh": "选择自然表达：为了能听懂新闻，每天练习。",
+                "en": "Choose a natural expression: I practice every day so that I can understand the news."
+              },
+              "answer": "ニュースがわかるように、毎日練習しています。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l42-examples",
+      "type": "examples",
+      "title": {
+        "zh": "例句 Examples",
+        "en": "Examples"
+      },
+      "items": [
+        {
+          "id": "l42-example-01",
+          "jp": "大学院に入るために、研究計画を書いています。",
+          "zh": "为了进研究生院，我正在写研究计划。",
+          "en": "I am writing a research plan in order to enter graduate school."
+        },
+        {
+          "id": "l42-example-02",
+          "jp": "家族のために、毎日一生懸命働いています。",
+          "zh": "为了家人，我每天努力工作。",
+          "en": "I work hard every day for my family."
+        },
+        {
+          "id": "l42-example-03",
+          "jp": "この辞書は漢字を調べるのに便利です。",
+          "zh": "这本词典查汉字很方便。",
+          "en": "This dictionary is convenient for looking up kanji."
+        },
+        {
+          "id": "l42-example-04",
+          "jp": "引っ越すのに20万円ぐらいかかりました。",
+          "zh": "搬家花了大约20万日元。",
+          "en": "It cost about 200,000 yen to move."
+        },
+        {
+          "id": "l42-example-05",
+          "jp": "空港まで行くのに1時間半かかります。",
+          "zh": "去机场需要一个半小时。",
+          "en": "It takes an hour and a half to get to the airport."
+        },
+        {
+          "id": "l42-example-06",
+          "jp": "試験を受けるのに身分証明書が必要です。",
+          "zh": "参加考试需要身份证件。",
+          "en": "An ID is required to take the exam."
+        },
+        {
+          "id": "l42-example-07",
+          "jp": "将来のために、英語も勉強しています。",
+          "zh": "为了将来，我也在学英语。",
+          "en": "I am also studying English for my future."
+        },
+        {
+          "id": "l42-example-08",
+          "jp": "写真を整理するのにこのアプリを使っています。",
+          "zh": "我用这个应用整理照片。",
+          "en": "I use this app for organizing photos."
+        }
+      ]
+    },
+    {
+      "id": "l42-mistakes",
+      "type": "mistakes",
+      "title": {
+        "zh": "常见错误 Common Mistakes",
+        "en": "Common Mistakes"
+      },
+      "items": [
+        {
+          "id": "l42-mistake-01",
+          "wrong": "日本へ行くのに、貯金しています。",
+          "correct": "日本へ行くために、貯金しています。",
+          "reason": {
+            "zh": "后项是为了达成目的而做的意志动作，用 ために。",
+            "en": "Use ために when the second action is done to achieve a volitional purpose."
+          }
+        },
+        {
+          "id": "l42-mistake-02",
+          "wrong": "このアプリは単語を覚えるために便利です。",
+          "correct": "このアプリは単語を覚えるのに便利です。",
+          "reason": {
+            "zh": "表示用途、评价是否方便时用 のに。",
+            "en": "Use のに when describing usefulness or convenience for a purpose."
+          }
+        },
+        {
+          "id": "l42-mistake-03",
+          "wrong": "駅へ行くために30分かかります。",
+          "correct": "駅へ行くのに30分かかります。",
+          "reason": {
+            "zh": "表示做某事所需时间，用 V辞書形 + のに。",
+            "en": "Use V-dictionary + のに for time required to do something."
+          }
+        }
+      ]
+    },
+    {
+      "id": "l42-quiz",
+      "type": "quiz",
+      "title": {
+        "zh": "最终测试 Final Test",
+        "en": "Final Test"
+      },
+      "items": [
+        {
+          "id": "l42-quiz-01",
+          "question": {
+            "zh": "「为了去日本，我在存钱。」正确的是？",
+            "en": "Which means: I am saving money in order to go to Japan?"
+          },
+          "options": [
+            {
+              "text": "日本へ行くために、貯金しています。",
+              "correct": true
+            },
+            {
+              "text": "日本へ行くのに、貯金しています。",
+              "correct": false
+            },
+            {
+              "text": "日本へ行ってために、貯金しています。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "为达成目的而存钱，用 V辞書形 + ために。",
+            "en": "Use V-dictionary + ために for a purpose."
+          }
+        },
+        {
+          "id": "l42-quiz-02",
+          "question": {
+            "zh": "「为了健康，每天走路。」正确的是？",
+            "en": "Which means: I walk every day for my health?"
+          },
+          "options": [
+            {
+              "text": "健康のために、毎日歩いています。",
+              "correct": true
+            },
+            {
+              "text": "健康にために、毎日歩いています。",
+              "correct": false
+            },
+            {
+              "text": "健康ののに、毎日歩いています。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "名词目的用 Nのために。",
+            "en": "Use Nのために for a noun purpose."
+          }
+        },
+        {
+          "id": "l42-quiz-03",
+          "question": {
+            "zh": "「这把剪刀用来剪纸。」正确的是？",
+            "en": "Which means: These scissors are used for cutting paper?"
+          },
+          "options": [
+            {
+              "text": "このはさみは紙を切るのに使います。",
+              "correct": true
+            },
+            {
+              "text": "このはさみは紙を切るために便利です。",
+              "correct": false
+            },
+            {
+              "text": "このはさみは紙を切ってのに使います。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "表示用途，用 V辞書形 + のに使います。",
+            "en": "Use V-dictionary + のに使います for use."
+          }
+        },
+        {
+          "id": "l42-quiz-04",
+          "question": {
+            "zh": "「这本词典查汉字很方便。」正确的是？",
+            "en": "Which means: This dictionary is convenient for looking up kanji?"
+          },
+          "options": [
+            {
+              "text": "この辞書は漢字を調べるのに便利です。",
+              "correct": true
+            },
+            {
+              "text": "この辞書は漢字を調べるために便利です。",
+              "correct": false
+            },
+            {
+              "text": "この辞書は漢字を調べて便利です。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "评价用途是否方便时用 のに便利です。",
+            "en": "Use のに便利です to describe convenience for a purpose."
+          }
+        },
+        {
+          "id": "l42-quiz-05",
+          "question": {
+            "zh": "「去学校需要30分钟。」正确的是？",
+            "en": "Which means: It takes 30 minutes to go to school?"
+          },
+          "options": [
+            {
+              "text": "学校へ行くのに30分かかります。",
+              "correct": true
+            },
+            {
+              "text": "学校へ行くために30分かかります。",
+              "correct": false
+            },
+            {
+              "text": "学校へ行って30分かかります。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "表示所需时间，用 のに。",
+            "en": "Use のに for required time."
+          }
+        },
+        {
+          "id": "l42-quiz-06",
+          "question": {
+            "zh": "「留学需要很多钱。」正确的是？",
+            "en": "Which means: Studying abroad costs a lot of money?"
+          },
+          "options": [
+            {
+              "text": "留学するのにたくさんお金がかかります。",
+              "correct": true
+            },
+            {
+              "text": "留学するためにたくさんお金がかかります。",
+              "correct": false
+            },
+            {
+              "text": "留学してのにたくさんお金がかかります。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "表示做某事需要花钱，用 のにお金がかかります。",
+            "en": "Use のにお金がかかります for cost required."
+          }
+        },
+        {
+          "id": "l42-quiz-07",
+          "question": {
+            "zh": "「预约需要电话号码。」正确的是？",
+            "en": "Which means: A phone number is needed to make a reservation?"
+          },
+          "options": [
+            {
+              "text": "予約するのに電話番号が必要です。",
+              "correct": true
+            },
+            {
+              "text": "予約するために電話番号が必要です。",
+              "correct": false
+            },
+            {
+              "text": "予約して電話番号が必要です。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "表示做某事需要某物，用 のにNが必要です。",
+            "en": "Use のにNが必要です for something required to do an action."
+          }
+        },
+        {
+          "id": "l42-quiz-08",
+          "question": {
+            "zh": "「为了家人工作。」正确的是？",
+            "en": "Which means: I work for my family?"
+          },
+          "options": [
+            {
+              "text": "家族のために働いています。",
+              "correct": true
+            },
+            {
+              "text": "家族のに働いています。",
+              "correct": false
+            },
+            {
+              "text": "家族をために働いています。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "为了某人用 Nのために。",
+            "en": "Use Nのために for someone’s sake."
+          }
+        },
+        {
+          "id": "l42-quiz-09",
+          "question": {
+            "zh": "「为了能听懂新闻」自然的是？",
+            "en": "Which naturally means: so that I can understand the news?"
+          },
+          "options": [
+            {
+              "text": "ニュースがわかるように",
+              "correct": true
+            },
+            {
+              "text": "ニュースがわかるために",
+              "correct": false
+            },
+            {
+              "text": "ニュースがわかってのに",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "表示能力、状态达成时更自然用 ように。",
+            "en": "Use ように naturally for ability or state goals."
+          }
+        },
+        {
+          "id": "l42-quiz-10",
+          "question": {
+            "zh": "「为了考试准备。」正确的是？",
+            "en": "Which means: I prepare for the exam?"
+          },
+          "options": [
+            {
+              "text": "試験のために準備します。",
+              "correct": true
+            },
+            {
+              "text": "試験をために準備します。",
+              "correct": false
+            },
+            {
+              "text": "試験のに準備します。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "名词目的用 Nのために。",
+            "en": "Use Nのために with noun purposes."
+          }
+        }
+      ]
+    }
+  ]
+}

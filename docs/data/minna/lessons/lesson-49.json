@@ -1,0 +1,611 @@
+{
+  "id": "minna-49",
+  "version": "20.3",
+  "status": "Mastery migrated",
+  "lesson": 49,
+  "title": {
+    "zh": "第49课：尊敬语",
+    "en": "Lesson 49: Honorific Language"
+  },
+  "topic": {
+    "zh": "尊敬语",
+    "en": "Honorific Language"
+  },
+  "summary": {
+    "zh": "学习尊敬语的基本形式：尊敬被动、おVになります、おVください，以及常用特殊尊敬动词。",
+    "en": "Learn honorific passive, おVになります, おVください, and common special honorific verbs."
+  },
+  "sections": [
+    {
+      "id": "l49-vocab",
+      "type": "vocab",
+      "title": {
+        "zh": "词汇 Vocabulary",
+        "en": "Vocabulary"
+      },
+      "items": [
+        {
+          "id": "l49-vocab-01",
+          "jp": "利用します",
+          "kana": "りようします",
+          "zh": "利用",
+          "en": "use",
+          "example": "こちらの席をご利用ください。"
+        },
+        {
+          "id": "l49-vocab-02",
+          "jp": "勤めます",
+          "kana": "つとめます",
+          "zh": "任职",
+          "en": "work for",
+          "example": "先生は大学にお勤めです。"
+        },
+        {
+          "id": "l49-vocab-03",
+          "jp": "過ごします",
+          "kana": "すごします",
+          "zh": "度过",
+          "en": "spend time",
+          "example": "休みをどう過ごされましたか。"
+        },
+        {
+          "id": "l49-vocab-04",
+          "jp": "いらっしゃいます",
+          "kana": "いらっしゃいます",
+          "zh": "去、来、在",
+          "en": "go, come, be honorifically",
+          "example": "先生は研究室にいらっしゃいます。"
+        },
+        {
+          "id": "l49-vocab-05",
+          "jp": "召し上がります",
+          "kana": "めしあがります",
+          "zh": "吃、喝",
+          "en": "eat, drink honorifically",
+          "example": "何を召し上がりますか。"
+        },
+        {
+          "id": "l49-vocab-06",
+          "jp": "ご覧になります",
+          "kana": "ごらんになります",
+          "zh": "看",
+          "en": "look, watch honorifically",
+          "example": "この資料をご覧になりますか。"
+        },
+        {
+          "id": "l49-vocab-07",
+          "jp": "おっしゃいます",
+          "kana": "おっしゃいます",
+          "zh": "说",
+          "en": "say honorifically",
+          "example": "先生は何とおっしゃいましたか。"
+        },
+        {
+          "id": "l49-vocab-08",
+          "jp": "なさいます",
+          "kana": "なさいます",
+          "zh": "做",
+          "en": "do honorifically",
+          "example": "週末は何をなさいますか。"
+        },
+        {
+          "id": "l49-vocab-09",
+          "jp": "お宅",
+          "kana": "おたく",
+          "zh": "府上、您家",
+          "en": "your home",
+          "example": "先生のお宅へ伺います。"
+        },
+        {
+          "id": "l49-vocab-10",
+          "jp": "係員",
+          "kana": "かかりいん",
+          "zh": "工作人员",
+          "en": "staff member",
+          "example": "係員にお聞きください。"
+        }
+      ]
+    },
+    {
+      "id": "l49-grammar",
+      "type": "grammar",
+      "title": {
+        "zh": "语法 Grammar",
+        "en": "Grammar"
+      },
+      "items": [
+        {
+          "id": "l49-grammar-01",
+          "pattern": "尊敬受身：Vられます",
+          "zh": "用被动形表示尊敬，形式较简单，但尊敬程度中等。",
+          "en": "Use the passive form as an honorific form; it is simple and moderately respectful.",
+          "example": "先生はもう帰られました。",
+          "practice": [
+            {
+              "id": "l49-practice-01",
+              "prompt": {
+                "zh": "表达：老师已经回去了。",
+                "en": "Say honorifically: The teacher has already gone home."
+              },
+              "answer": "先生はもう帰られました。"
+            }
+          ]
+        },
+        {
+          "id": "l49-grammar-02",
+          "pattern": "お + Vます形語幹 + になります",
+          "zh": "尊敬语常用结构，用于对方或上级的动作。",
+          "en": "Common honorific structure for actions of the other person or a superior.",
+          "example": "社長は新聞をお読みになります。",
+          "practice": [
+            {
+              "id": "l49-practice-02",
+              "prompt": {
+                "zh": "表达：老师要读这份资料。",
+                "en": "Say honorifically: The teacher will read this document."
+              },
+              "answer": "先生はこの資料をお読みになります。"
+            }
+          ]
+        },
+        {
+          "id": "l49-grammar-03",
+          "pattern": "ご + 漢語名詞 + になります",
+          "zh": "部分汉语词可用 ご + 名词 + になります。",
+          "en": "Some Sino-Japanese nouns use ご + noun + になります.",
+          "example": "こちらをご利用になりますか。",
+          "practice": [
+            {
+              "id": "l49-practice-03",
+              "prompt": {
+                "zh": "表达：您使用这张卡吗？",
+                "en": "Say honorifically: Will you use this card?"
+              },
+              "answer": "このカードをご利用になりますか。"
+            }
+          ]
+        },
+        {
+          "id": "l49-grammar-04",
+          "pattern": "お / ご + Vください",
+          "zh": "礼貌地请对方做某事，常见于服务和通知。",
+          "en": "Politely asks the other person to do something, often in service contexts or notices.",
+          "example": "少々お待ちください。こちらをご覧ください。",
+          "practice": [
+            {
+              "id": "l49-practice-04",
+              "prompt": {
+                "zh": "表达：请稍等。",
+                "en": "Say politely: Please wait a moment."
+              },
+              "answer": "少々お待ちください。"
+            }
+          ]
+        },
+        {
+          "id": "l49-grammar-05",
+          "pattern": "いらっしゃいます",
+          "zh": "行きます、来ます、います 的特殊尊敬语。",
+          "en": "Special honorific form for 行きます, 来ます, and います.",
+          "example": "先生は会議室にいらっしゃいます。",
+          "practice": [
+            {
+              "id": "l49-practice-05",
+              "prompt": {
+                "zh": "表达：老师在会议室。",
+                "en": "Say honorifically: The teacher is in the meeting room."
+              },
+              "answer": "先生は会議室にいらっしゃいます。"
+            }
+          ]
+        },
+        {
+          "id": "l49-grammar-06",
+          "pattern": "召し上がります / ご覧になります",
+          "zh": "食べます/飲みます 用 召し上がります；見ます 用 ご覧になります。",
+          "en": "Use 召し上がります for eat/drink and ご覧になります for see/watch.",
+          "example": "先生はコーヒーを召し上がりました。資料をご覧になりました。",
+          "practice": [
+            {
+              "id": "l49-practice-06",
+              "prompt": {
+                "zh": "表达：社长看了资料。",
+                "en": "Say honorifically: The president looked at the document."
+              },
+              "answer": "社長は資料をご覧になりました。"
+            }
+          ]
+        },
+        {
+          "id": "l49-grammar-07",
+          "pattern": "おっしゃいます / なさいます",
+          "zh": "言います 用 おっしゃいます；します 用 なさいます。",
+          "en": "Use おっしゃいます for say and なさいます for do.",
+          "example": "先生は何とおっしゃいましたか。週末は何をなさいますか。",
+          "practice": [
+            {
+              "id": "l49-practice-07",
+              "prompt": {
+                "zh": "表达：老师说了什么？",
+                "en": "Say honorifically: What did the teacher say?"
+              },
+              "answer": "先生は何とおっしゃいましたか。"
+            }
+          ]
+        },
+        {
+          "id": "l49-grammar-08",
+          "pattern": "尊敬語は相手側の動作",
+          "zh": "尊敬语用于提高对方或第三者，不用于抬高自己。",
+          "en": "Honorific language elevates the other person or a third party, not yourself.",
+          "example": "先生がいらっしゃいます。私は参ります。",
+          "practice": [
+            {
+              "id": "l49-practice-08",
+              "prompt": {
+                "zh": "选择正确：老师来。",
+                "en": "Choose the correct honorific: The teacher comes."
+              },
+              "answer": "先生がいらっしゃいます。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l49-examples",
+      "type": "examples",
+      "title": {
+        "zh": "例句 Examples",
+        "en": "Examples"
+      },
+      "items": [
+        {
+          "id": "l49-example-01",
+          "jp": "先生はもう帰られました。",
+          "zh": "老师已经回去了。",
+          "en": "The teacher has already gone home."
+        },
+        {
+          "id": "l49-example-02",
+          "jp": "社長は毎朝新聞をお読みになります。",
+          "zh": "社长每天早上读报纸。",
+          "en": "The company president reads the newspaper every morning."
+        },
+        {
+          "id": "l49-example-03",
+          "jp": "こちらのエレベーターをご利用ください。",
+          "zh": "请使用这边的电梯。",
+          "en": "Please use this elevator."
+        },
+        {
+          "id": "l49-example-04",
+          "jp": "先生は今研究室にいらっしゃいます。",
+          "zh": "老师现在在研究室。",
+          "en": "The teacher is in the lab now."
+        },
+        {
+          "id": "l49-example-05",
+          "jp": "何を召し上がりますか。",
+          "zh": "您吃点什么？",
+          "en": "What would you like to eat?"
+        },
+        {
+          "id": "l49-example-06",
+          "jp": "この写真をご覧になりましたか。",
+          "zh": "您看过这张照片了吗？",
+          "en": "Have you seen this photo?"
+        },
+        {
+          "id": "l49-example-07",
+          "jp": "先生は明日の予定についておっしゃいました。",
+          "zh": "老师说了明天的安排。",
+          "en": "The teacher spoke about tomorrow's schedule."
+        },
+        {
+          "id": "l49-example-08",
+          "jp": "週末は何をなさいますか。",
+          "zh": "您周末做什么？",
+          "en": "What will you do on the weekend?"
+        }
+      ]
+    },
+    {
+      "id": "l49-mistakes",
+      "type": "mistakes",
+      "title": {
+        "zh": "常见错误 Common Mistakes",
+        "en": "Common Mistakes"
+      },
+      "items": [
+        {
+          "id": "l49-mistake-01",
+          "wrong": "私は明日いらっしゃいます。",
+          "correct": "私は明日参ります。",
+          "reason": {
+            "zh": "尊敬语不能用来抬高自己；自己去/来用谦让语 参ります。",
+            "en": "Do not use honorifics to elevate yourself; use humble 参ります for your own go/come."
+          }
+        },
+        {
+          "id": "l49-mistake-02",
+          "wrong": "先生はコーヒーを飲まれになります。",
+          "correct": "先生はコーヒーを召し上がります。",
+          "reason": {
+            "zh": "飲む 的特殊尊敬语是 召し上がります，不混用被动和 おVになります。",
+            "en": "The special honorific for drink is 召し上がります; do not mix passive and おVになります."
+          }
+        },
+        {
+          "id": "l49-mistake-03",
+          "wrong": "先生は資料をお見になります。",
+          "correct": "先生は資料をご覧になります。",
+          "reason": {
+            "zh": "見る 的特殊尊敬语是 ご覧になります。",
+            "en": "The special honorific for 見る is ご覧になります."
+          }
+        }
+      ]
+    },
+    {
+      "id": "l49-quiz",
+      "type": "quiz",
+      "title": {
+        "zh": "最终测试 Final Test",
+        "en": "Final Test"
+      },
+      "items": [
+        {
+          "id": "l49-quiz-01",
+          "question": {
+            "zh": "「老师已经回去了。」尊敬表达是？",
+            "en": "Which is honorific: The teacher has already gone home?"
+          },
+          "options": [
+            {
+              "text": "先生はもう帰られました。",
+              "correct": true
+            },
+            {
+              "text": "先生はもう帰らせました。",
+              "correct": false
+            },
+            {
+              "text": "先生はもう参りました。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "尊敬被动用 帰られました；参りました 是自己动作的谦让语。",
+            "en": "Use honorific passive 帰られました; 参りました is humble for your own action."
+          }
+        },
+        {
+          "id": "l49-quiz-02",
+          "question": {
+            "zh": "「老师读这份资料。」尊敬表达是？",
+            "en": "Which is honorific: The teacher reads this document?"
+          },
+          "options": [
+            {
+              "text": "先生はこの資料をお読みになります。",
+              "correct": true
+            },
+            {
+              "text": "先生はこの資料をお読みします。",
+              "correct": false
+            },
+            {
+              "text": "先生はこの資料を読みいたします。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "尊敬语用 おVになります；おVします 是谦让语。",
+            "en": "Honorific uses おVになります; おVします is humble."
+          }
+        },
+        {
+          "id": "l49-quiz-03",
+          "question": {
+            "zh": "「请稍等。」正确的是？",
+            "en": "Which means: Please wait a moment?"
+          },
+          "options": [
+            {
+              "text": "少々お待ちください。",
+              "correct": true
+            },
+            {
+              "text": "少々お待ちになります。",
+              "correct": false
+            },
+            {
+              "text": "少々待ちいたします。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "请求对方做事用 おVください。",
+            "en": "Use おVください to ask the other person to do something."
+          }
+        },
+        {
+          "id": "l49-quiz-04",
+          "question": {
+            "zh": "いらっしゃいます 是哪些动词的尊敬语？",
+            "en": "いらっしゃいます is the honorific form of which verbs?"
+          },
+          "options": [
+            {
+              "text": "行きます・来ます・います",
+              "correct": true
+            },
+            {
+              "text": "食べます・飲みます",
+              "correct": false
+            },
+            {
+              "text": "見ます・読みます",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "行く、来る、いる 的特殊尊敬语是 いらっしゃいます。",
+            "en": "いらっしゃいます is the special honorific for go, come, and be."
+          }
+        },
+        {
+          "id": "l49-quiz-05",
+          "question": {
+            "zh": "「您吃点什么？」尊敬表达是？",
+            "en": "Which is honorific: What would you like to eat?"
+          },
+          "options": [
+            {
+              "text": "何を召し上がりますか。",
+              "correct": true
+            },
+            {
+              "text": "何をいただきますか。",
+              "correct": false
+            },
+            {
+              "text": "何を食べいたしますか。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "对方吃喝用尊敬语 召し上がります。",
+            "en": "Use honorific 召し上がります for the other person's eating/drinking."
+          }
+        },
+        {
+          "id": "l49-quiz-06",
+          "question": {
+            "zh": "「您看过这张照片了吗？」尊敬表达是？",
+            "en": "Which is honorific: Have you seen this photo?"
+          },
+          "options": [
+            {
+              "text": "この写真をご覧になりましたか。",
+              "correct": true
+            },
+            {
+              "text": "この写真を拝見しましたか。",
+              "correct": false
+            },
+            {
+              "text": "この写真をお見しましたか。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "对方看用 ご覧になります；拝見します 是自己看的谦让语。",
+            "en": "Use ご覧になります for the other person's seeing; 拝見します is humble."
+          }
+        },
+        {
+          "id": "l49-quiz-07",
+          "question": {
+            "zh": "「老师说了什么？」尊敬表达是？",
+            "en": "Which is honorific: What did the teacher say?"
+          },
+          "options": [
+            {
+              "text": "先生は何とおっしゃいましたか。",
+              "correct": true
+            },
+            {
+              "text": "先生は何と申しましたか。",
+              "correct": false
+            },
+            {
+              "text": "先生は何と言いいたしましたか。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "对方说用 おっしゃいます；申します 是自己说的谦让语。",
+            "en": "Use おっしゃいます for the other person's saying; 申します is humble."
+          }
+        },
+        {
+          "id": "l49-quiz-08",
+          "question": {
+            "zh": "「您周末做什么？」尊敬表达是？",
+            "en": "Which is honorific: What will you do on the weekend?"
+          },
+          "options": [
+            {
+              "text": "週末は何をなさいますか。",
+              "correct": true
+            },
+            {
+              "text": "週末は何をいたしますか。",
+              "correct": false
+            },
+            {
+              "text": "週末は何をされていただきますか。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "对方做用 なさいます；いたします 是自己做的谦让语。",
+            "en": "Use なさいます for the other person's doing; いたします is humble."
+          }
+        },
+        {
+          "id": "l49-quiz-09",
+          "question": {
+            "zh": "「老师在会议室。」尊敬表达是？",
+            "en": "Which is honorific: The teacher is in the meeting room?"
+          },
+          "options": [
+            {
+              "text": "先生は会議室にいらっしゃいます。",
+              "correct": true
+            },
+            {
+              "text": "先生は会議室におります。",
+              "correct": false
+            },
+            {
+              "text": "先生は会議室に参ります。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "对方或老师在某处用 いらっしゃいます。",
+            "en": "Use いらっしゃいます for a respected person's being somewhere."
+          }
+        },
+        {
+          "id": "l49-quiz-10",
+          "question": {
+            "zh": "「请使用这边的电梯。」正确的是？",
+            "en": "Which means: Please use this elevator?"
+          },
+          "options": [
+            {
+              "text": "こちらのエレベーターをご利用ください。",
+              "correct": true
+            },
+            {
+              "text": "こちらのエレベーターを利用いたします。",
+              "correct": false
+            },
+            {
+              "text": "こちらのエレベーターを利用なさいます。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "服务场景请求对方使用，用 ご利用ください。",
+            "en": "Use ご利用ください to ask the other person to use something."
+          }
+        }
+      ]
+    }
+  ]
+}

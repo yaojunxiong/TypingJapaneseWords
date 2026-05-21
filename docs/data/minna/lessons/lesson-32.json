@@ -1,0 +1,134 @@
+{
+  "schema": "minna.lesson.v1",
+  "course": "minna",
+  "status": "Mastery migrated",
+  "lessonNo": 32,
+  "lessonId": "minna_lesson_32",
+  "title": { "zh": "第32课", "en": "Lesson 32", "ja": "第32課" },
+  "subtitle": { "zh": "建议・推量", "en": "Advice and conjecture", "ja": "助言・推量" },
+  "focus": { "zh": "学习用「ほうがいいです」给建议，用「でしょう」「かもしれません」表达推测。", "en": "Learn hou ga ii desu for advice, and deshou / kamoshiremasen for conjecture.", "ja": "ほうがいいですで助言し、でしょう・かもしれませんで推量を表します。" },
+  "sections": [
+    {
+      "type": "vocab",
+      "id": "l32_vocab",
+      "title": { "zh": "核心词汇", "en": "Core Vocabulary", "ja": "基本語彙" },
+      "items": [
+        { "id": "l32_v01", "jp": "運動します", "kana": "うんどうします", "zh": "运动", "en": "to exercise", "tags": ["lesson32"] },
+        { "id": "l32_v02", "jp": "成功します", "kana": "せいこうします", "zh": "成功", "en": "to succeed", "tags": ["lesson32"] },
+        { "id": "l32_v03", "jp": "失敗します", "kana": "しっぱいします", "zh": "失败", "en": "to fail", "tags": ["lesson32"] },
+        { "id": "l32_v04", "jp": "合格します", "kana": "ごうかくします", "zh": "合格", "en": "to pass", "tags": ["lesson32"] },
+        { "id": "l32_v05", "jp": "戻ります", "kana": "もどります", "zh": "回来；返回", "en": "to return", "tags": ["lesson32"] },
+        { "id": "l32_v06", "jp": "やみます", "kana": "やみます", "zh": "停（雨、雪）", "en": "to stop", "tags": ["lesson32"] },
+        { "id": "l32_v07", "jp": "晴れます", "kana": "はれます", "zh": "天晴", "en": "to clear up", "tags": ["lesson32"] },
+        { "id": "l32_v08", "jp": "熱", "kana": "ねつ", "zh": "发烧；热度", "en": "fever", "tags": ["lesson32"] },
+        { "id": "l32_v09", "jp": "咳", "kana": "せき", "zh": "咳嗽", "en": "cough", "tags": ["lesson32"] },
+        { "id": "l32_v10", "jp": "無理", "kana": "むり", "zh": "勉强；不合理", "en": "impossible; overdoing", "tags": ["lesson32"] }
+      ]
+    },
+    {
+      "type": "grammar",
+      "id": "l32_grammar",
+      "title": { "zh": "核心语法", "en": "Core Grammar", "ja": "基本文法" },
+      "items": [
+        {
+          "id": "l32_g01",
+          "pattern": "た形 + ほうがいいです",
+          "explanation": { "zh": "建议对方做某事：“最好……”。", "en": "Gives advice to do something: you had better..." },
+          "examples": [{ "jp": "病院へ行ったほうがいいです。", "zh": "最好去医院。", "en": "You should go to the hospital." }],
+          "practice": [{ "id": "l32_g01_p01", "skill": "grammar", "question": { "zh": "“最好早点睡”是？", "en": "How do you say 'You should sleep early'?" }, "options": [{ "text": { "jp": "早く寝たほうがいいです" }, "correct": true }, { "text": { "jp": "早く寝るほうがいいです" } }, { "text": { "jp": "早く寝てほうがいいです" } }, { "text": { "jp": "早く寝ますほうがいいです" } }], "explanation": { "zh": "建议做某事用た形+ほうがいいです。", "en": "Use past plain form + hou ga ii desu for advice to do." } }]
+        },
+        {
+          "id": "l32_g02",
+          "pattern": "ない形 + ほうがいいです",
+          "explanation": { "zh": "建议不要做某事：“最好不要……”。", "en": "Gives advice not to do something: you had better not..." },
+          "examples": [{ "jp": "無理をしないほうがいいです。", "zh": "最好不要勉强。", "en": "You should not overdo it." }],
+          "practice": [{ "id": "l32_g02_p01", "skill": "grammar", "question": { "zh": "“最好不要喝酒”是？", "en": "How do you say 'You should not drink alcohol'?" }, "options": [{ "text": { "jp": "お酒を飲まないほうがいいです" }, "correct": true }, { "text": { "jp": "お酒を飲まなかったほうがいいです" } }, { "text": { "jp": "お酒を飲みないほうがいいです" } }, { "text": { "jp": "お酒を飲みませんほうがいいです" } }], "explanation": { "zh": "建议不做用ない形。", "en": "Use the nai-form for advice not to do." } }]
+        },
+        {
+          "id": "l32_g03",
+          "pattern": "普通形 + でしょう",
+          "explanation": { "zh": "表示较有把握的推测，“大概……吧”。", "en": "Expresses a fairly confident guess: probably..." },
+          "examples": [{ "jp": "明日は晴れるでしょう。", "zh": "明天大概会晴吧。", "en": "It will probably be sunny tomorrow." }],
+          "practice": [{ "id": "l32_g03_p01", "skill": "grammar", "question": { "zh": "“明天会下雨吧”是？", "en": "How do you say 'It will probably rain tomorrow'?" }, "options": [{ "text": { "jp": "明日は雨が降るでしょう" }, "correct": true }, { "text": { "jp": "明日は雨が降りますでしょう" } }, { "text": { "jp": "明日は雨が降ってでしょう" } }, { "text": { "jp": "明日は雨が降ったでしょうです" } }], "explanation": { "zh": "でしょう前接普通形。", "en": "Deshou follows the plain form." } }]
+        },
+        {
+          "id": "l32_g04",
+          "pattern": "普通形 + かもしれません",
+          "explanation": { "zh": "表示可能性不高也不确定：“也许……”。", "en": "Expresses uncertainty: might; maybe." },
+          "examples": [{ "jp": "午後、雨が降るかもしれません。", "zh": "下午也许会下雨。", "en": "It may rain in the afternoon." }],
+          "practice": [{ "id": "l32_g04_p01", "skill": "grammar", "question": { "zh": "“也许会迟到”是？", "en": "How do you say 'I may be late'?" }, "options": [{ "text": { "jp": "遅れるかもしれません" }, "correct": true }, { "text": { "jp": "遅れますかもしれません" } }, { "text": { "jp": "遅れてかもしれません" } }, { "text": { "jp": "遅れたかもしれませんです" } }], "explanation": { "zh": "かもしれません前接普通形。", "en": "Kamoshiremasen follows the plain form." } }]
+        },
+        {
+          "id": "l32_g05",
+          "pattern": "名词 / な形容词 + でしょう",
+          "explanation": { "zh": "名词和な形容词现在肯定直接接でしょう，不加だ。", "en": "Nouns and na-adjectives in present affirmative attach directly to deshou, without da." },
+          "examples": [{ "jp": "あしたは休みでしょう。", "zh": "明天大概休息吧。", "en": "Tomorrow is probably a day off." }],
+          "practice": [{ "id": "l32_g05_p01", "skill": "grammar", "question": { "zh": "“明天大概很安静吧”是？", "en": "How do you say 'It will probably be quiet tomorrow'?" }, "options": [{ "text": { "jp": "明日は静かでしょう" }, "correct": true }, { "text": { "jp": "明日は静かだでしょう" } }, { "text": { "jp": "明日は静かなでしょう" } }, { "text": { "jp": "明日は静かですでしょう" } }], "explanation": { "zh": "な形容词接でしょう时不用だ。", "en": "Do not use da before deshou here." } }]
+        },
+        {
+          "id": "l32_g06",
+          "pattern": "名词 / な形容词 + かもしれません",
+          "explanation": { "zh": "名词和な形容词接かもしれません时，也通常不加だ。", "en": "Nouns and na-adjectives usually attach to kamoshiremasen without da." },
+          "examples": [{ "jp": "田中さんは病気かもしれません。", "zh": "田中可能生病了。", "en": "Mr. Tanaka may be sick." }],
+          "practice": [{ "id": "l32_g06_p01", "skill": "grammar", "question": { "zh": "“也许是星期天”是？", "en": "How do you say 'It might be Sunday'?" }, "options": [{ "text": { "jp": "日曜日かもしれません" }, "correct": true }, { "text": { "jp": "日曜日だかもしれません" } }, { "text": { "jp": "日曜日ですかもしれません" } }, { "text": { "jp": "日曜日なかもしれません" } }], "explanation": { "zh": "名词直接接かもしれません。", "en": "A noun attaches directly to kamoshiremasen." } }]
+        },
+        {
+          "id": "l32_g07",
+          "pattern": "きっと / たぶん + でしょう",
+          "explanation": { "zh": "「きっと」把握较强；「たぶん」较普通，常和でしょう一起用。", "en": "Kitto is stronger confidence; tabun is moderate. Both pair with deshou." },
+          "examples": [{ "jp": "きっと合格するでしょう。", "zh": "一定会合格吧。", "en": "You will surely pass." }],
+          "practice": [{ "id": "l32_g07_p01", "skill": "grammar", "question": { "zh": "较有把握地说“一定会成功吧”是？", "en": "How do you say 'It will surely succeed'?" }, "options": [{ "text": { "jp": "きっと成功するでしょう" }, "correct": true }, { "text": { "jp": "きっと成功かもしれませんでしょう" } }, { "text": { "jp": "きっと成功しますかもしれません" } }, { "text": { "jp": "きっと成功だでしょうです" } }], "explanation": { "zh": "きっと常配でしょう。", "en": "Kitto often pairs with deshou." } }]
+        },
+        {
+          "id": "l32_g08",
+          "pattern": "Advice tone: ほうがいいです",
+          "explanation": { "zh": "给建议时语气比命令柔和，但仍要注意对长辈可加「よ」。", "en": "Hou ga ii desu is advice, softer than an order, but still should be used thoughtfully." },
+          "examples": [{ "jp": "熱がありますから、今日は早く帰ったほうがいいですよ。", "zh": "你发烧了，今天最好早点回去。", "en": "You have a fever, so you should go home early today." }],
+          "practice": [{ "id": "l32_g08_p01", "skill": "grammar", "question": { "zh": "发烧时给建议，最自然的是？", "en": "Which is natural advice for someone with a fever?" }, "options": [{ "text": { "jp": "早く帰ったほうがいいですよ" }, "correct": true }, { "text": { "jp": "早く帰るほうがいいですよ" } }, { "text": { "jp": "早く帰りないほうがいいですよ" } }, { "text": { "jp": "早く帰ってでしょう" } }], "explanation": { "zh": "建议做用た形。", "en": "Use past plain form for advice to do." } }]
+        }
+      ]
+    },
+    {
+      "type": "examples",
+      "id": "l32_examples",
+      "title": { "zh": "核心例句", "en": "Core Examples", "ja": "基本例文" },
+      "items": [
+        { "id": "l32_e01", "jp": "熱がありますから、病院へ行ったほうがいいです。", "zh": "因为发烧，最好去医院。", "en": "You have a fever, so you should go to the hospital.", "tags": ["advice"] },
+        { "id": "l32_e02", "jp": "今日は無理をしないほうがいいです。", "zh": "今天最好不要勉强。", "en": "You should not overdo it today.", "tags": ["advice"] },
+        { "id": "l32_e03", "jp": "明日は晴れるでしょう。", "zh": "明天大概会晴吧。", "en": "It will probably be sunny tomorrow.", "tags": ["deshou"] },
+        { "id": "l32_e04", "jp": "午後から雨が降るかもしれません。", "zh": "下午也许会下雨。", "en": "It may rain from the afternoon.", "tags": ["kamoshiremasen"] },
+        { "id": "l32_e05", "jp": "田中さんはもう家に戻ったでしょう。", "zh": "田中大概已经回家了吧。", "en": "Mr. Tanaka has probably returned home.", "tags": ["deshou"] },
+        { "id": "l32_e06", "jp": "この薬を飲めば、咳が止まるかもしれません。", "zh": "吃这个药，咳嗽也许会停。", "en": "If you take this medicine, your cough may stop.", "tags": ["guess"] },
+        { "id": "l32_e07", "jp": "たぶん試験に合格するでしょう。", "zh": "大概会通过考试吧。", "en": "You will probably pass the exam.", "tags": ["probably"] },
+        { "id": "l32_e08", "jp": "今晩は寒いかもしれませんから、コートを持って行ったほうがいいです。", "zh": "今晚可能冷，最好带外套去。", "en": "It may be cold tonight, so you should take a coat.", "tags": ["mixed"] }
+      ]
+    },
+    {
+      "type": "mistakes",
+      "id": "l32_mistakes",
+      "title": { "zh": "常见错误", "en": "Common Mistakes", "ja": "よくある間違い" },
+      "items": [
+        { "id": "l32_m01", "wrong": "早く寝るほうがいいです。", "correct": "早く寝たほうがいいです。", "zh": "建议做某事用た形+ほうがいいです。", "en": "Advice to do uses past plain form + hou ga ii desu." },
+        { "id": "l32_m02", "wrong": "飲まなかったほうがいいです。", "correct": "飲まないほうがいいです。", "zh": "建议不要做用ない形。", "en": "Advice not to do uses nai-form." },
+        { "id": "l32_m03", "wrong": "静かだでしょう。", "correct": "静かでしょう。", "zh": "な形容词接でしょう时不加だ。", "en": "Do not use da before deshou after na-adjectives." }
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "l32_quiz",
+      "title": { "zh": "综合测试", "en": "Final Test", "ja": "まとめテスト" },
+      "items": [
+        { "id": "l32_q01", "question": { "zh": "“最好去医院”是？", "en": "How do you say 'You should go to the hospital'?" }, "options": [{ "text": { "jp": "病院へ行ったほうがいいです" }, "correct": true }, { "text": { "jp": "病院へ行くほうがいいです" } }, { "text": { "jp": "病院へ行ってほうがいいです" } }, { "text": { "jp": "病院へ行きますほうがいいです" } }], "explanation": { "zh": "做的建议用た形。", "en": "Use past plain form for advice to do." } },
+        { "id": "l32_q02", "question": { "zh": "“最好不要勉强”是？", "en": "How do you say 'You should not overdo it'?" }, "options": [{ "text": { "jp": "無理をしないほうがいいです" }, "correct": true }, { "text": { "jp": "無理をしなかったほうがいいです" } }, { "text": { "jp": "無理をしませんほうがいいです" } }, { "text": { "jp": "無理をしないでしょう" } }], "explanation": { "zh": "不做的建议用ない形。", "en": "Use nai-form for advice not to do." } },
+        { "id": "l32_q03", "question": { "zh": "“明天大概会晴”是？", "en": "How do you say 'It will probably be sunny tomorrow'?" }, "options": [{ "text": { "jp": "明日は晴れるでしょう" }, "correct": true }, { "text": { "jp": "明日は晴れますでしょう" } }, { "text": { "jp": "明日は晴れてでしょう" } }, { "text": { "jp": "明日は晴れるかもしれませんでしょう" } }], "explanation": { "zh": "でしょう前接普通形。", "en": "Deshou follows plain form." } },
+        { "id": "l32_q04", "question": { "zh": "“也许会下雨”是？", "en": "How do you say 'It may rain'?" }, "options": [{ "text": { "jp": "雨が降るかもしれません" }, "correct": true }, { "text": { "jp": "雨が降りますかもしれません" } }, { "text": { "jp": "雨が降ってかもしれません" } }, { "text": { "jp": "雨が降るでしょうかもしれません" } }], "explanation": { "zh": "かもしれません前接普通形。", "en": "Kamoshiremasen follows plain form." } },
+        { "id": "l32_q05", "question": { "zh": "な形容词接でしょう，正确的是？", "en": "Correct with a na-adjective before deshou?" }, "options": [{ "text": { "jp": "静かでしょう" }, "correct": true }, { "text": { "jp": "静かだでしょう" } }, { "text": { "jp": "静かなでしょう" } }, { "text": { "jp": "静かですでしょう" } }], "explanation": { "zh": "现在肯定不用だ。", "en": "Do not use da here." } },
+        { "id": "l32_q06", "question": { "zh": "“可能是病気”是？", "en": "How do you say 'may be sick'?" }, "options": [{ "text": { "jp": "病気かもしれません" }, "correct": true }, { "text": { "jp": "病気だかもしれません" } }, { "text": { "jp": "病気ですかもしれません" } }, { "text": { "jp": "病気なかもしれません" } }], "explanation": { "zh": "名词直接接かもしれません。", "en": "Noun + kamoshiremasen." } },
+        { "id": "l32_q07", "question": { "zh": "把握较强的“肯定会通过吧”用？", "en": "Which says 'surely will pass'?" }, "options": [{ "text": { "jp": "きっと合格するでしょう" }, "correct": true }, { "text": { "jp": "きっと合格かもしれません" } }, { "text": { "jp": "きっと合格しますかもしれません" } }, { "text": { "jp": "きっと合格だでしょうです" } }], "explanation": { "zh": "きっと常配でしょう。", "en": "Kitto pairs with deshou." } },
+        { "id": "l32_q08", "question": { "zh": "“不要吃太多比较好”是？", "en": "How do you say 'You should not eat too much'?" }, "options": [{ "text": { "jp": "食べすぎないほうがいいです" }, "correct": true }, { "text": { "jp": "食べすぎなかったほうがいいです" } }, { "text": { "jp": "食べすぎるほうがいいです" } }, { "text": { "jp": "食べすぎませんでしょう" } }], "explanation": { "zh": "建议不要做用ない形。", "en": "Use nai-form for advice not to do." } },
+        { "id": "l32_q09", "question": { "zh": "「でしょう」和「かもしれません」哪一个更不确定？", "en": "Which is less certain?" }, "options": [{ "text": { "jp": "かもしれません" }, "correct": true }, { "text": { "jp": "でしょう" } }, { "text": { "jp": "ほうがいいです" } }, { "text": { "jp": "た形" } }], "explanation": { "zh": "かもしれません=也许。", "en": "Kamoshiremasen means might/maybe." } },
+        { "id": "l32_q10", "question": { "zh": "“今天最好早点回去”是？", "en": "How do you say 'You should go home early today'?" }, "options": [{ "text": { "jp": "今日は早く帰ったほうがいいです" }, "correct": true }, { "text": { "jp": "今日は早く帰るほうがいいです" } }, { "text": { "jp": "今日は早く帰ってほうがいいです" } }, { "text": { "jp": "今日は早く帰りないほうがいいです" } }], "explanation": { "zh": "帰ります→帰った。", "en": "Kaerimasu becomes kaetta." } }
+      ]
+    }
+  ]
+}

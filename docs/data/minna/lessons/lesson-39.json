@@ -1,0 +1,611 @@
+{
+  "id": "minna-39",
+  "version": "20.3",
+  "status": "Mastery migrated",
+  "lesson": 39,
+  "title": {
+    "zh": "第39课：原因理由",
+    "en": "Lesson 39: Causes and Reasons"
+  },
+  "topic": {
+    "zh": "原因理由",
+    "en": "Causes and Reasons"
+  },
+  "summary": {
+    "zh": "掌握 ので、て形原因、名词で原因等表达，让说明理由更自然、更礼貌。",
+    "en": "Use ので, te-form causes, and noun + で to explain reasons naturally and politely."
+  },
+  "sections": [
+    {
+      "id": "l39-vocab",
+      "type": "vocab",
+      "title": {
+        "zh": "词汇 Vocabulary",
+        "en": "Vocabulary"
+      },
+      "items": [
+        {
+          "id": "l39-vocab-01",
+          "jp": "答えます",
+          "kana": "こたえます",
+          "zh": "回答",
+          "en": "answer",
+          "example": "質問に答えます。"
+        },
+        {
+          "id": "l39-vocab-02",
+          "jp": "倒れます",
+          "kana": "たおれます",
+          "zh": "倒下",
+          "en": "fall down",
+          "example": "木が倒れました。"
+        },
+        {
+          "id": "l39-vocab-03",
+          "jp": "焼けます",
+          "kana": "やけます",
+          "zh": "着火、烧毁",
+          "en": "burn",
+          "example": "家が火事で焼けました。"
+        },
+        {
+          "id": "l39-vocab-04",
+          "jp": "通ります",
+          "kana": "とおります",
+          "zh": "通过",
+          "en": "pass through",
+          "example": "この道を通ります。"
+        },
+        {
+          "id": "l39-vocab-05",
+          "jp": "びっくりします",
+          "kana": "びっくりします",
+          "zh": "吃惊",
+          "en": "be surprised",
+          "example": "大きい音でびっくりしました。"
+        },
+        {
+          "id": "l39-vocab-06",
+          "jp": "がっかりします",
+          "kana": "がっかりします",
+          "zh": "失望",
+          "en": "be disappointed",
+          "example": "試験の結果を見て、がっかりしました。"
+        },
+        {
+          "id": "l39-vocab-07",
+          "jp": "安心します",
+          "kana": "あんしんします",
+          "zh": "安心",
+          "en": "feel relieved",
+          "example": "友達の声を聞いて、安心しました。"
+        },
+        {
+          "id": "l39-vocab-08",
+          "jp": "遅刻",
+          "kana": "ちこく",
+          "zh": "迟到",
+          "en": "lateness",
+          "example": "電車が止まって、遅刻しました。"
+        },
+        {
+          "id": "l39-vocab-09",
+          "jp": "事故",
+          "kana": "じこ",
+          "zh": "事故",
+          "en": "accident",
+          "example": "事故で道が込んでいます。"
+        },
+        {
+          "id": "l39-vocab-10",
+          "jp": "地震",
+          "kana": "じしん",
+          "zh": "地震",
+          "en": "earthquake",
+          "example": "地震で電車が止まりました。"
+        }
+      ]
+    },
+    {
+      "id": "l39-grammar",
+      "type": "grammar",
+      "title": {
+        "zh": "语法 Grammar",
+        "en": "Grammar"
+      },
+      "items": [
+        {
+          "id": "l39-grammar-01",
+          "pattern": "普通形 + ので、〜",
+          "zh": "表示原因理由，比「から」更柔和、客观。",
+          "en": "Gives a reason in a softer, more objective tone than から.",
+          "example": "明日試験があるので、今日は早く帰ります。",
+          "practice": [
+            {
+              "id": "l39-practice-01",
+              "prompt": {
+                "zh": "用 ので 连接：明天有考试，所以早点睡。",
+                "en": "Connect with ので: I have an exam tomorrow, so I will sleep early."
+              },
+              "answer": "明日試験があるので、早く寝ます。"
+            }
+          ]
+        },
+        {
+          "id": "l39-grammar-02",
+          "pattern": "い形容詞 + ので、〜",
+          "zh": "い形容词直接接 ので。",
+          "en": "Attach ので directly to an i-adjective.",
+          "example": "この部屋は寒いので、窓を閉めてもいいですか。",
+          "practice": [
+            {
+              "id": "l39-practice-02",
+              "prompt": {
+                "zh": "用 ので 表达：很忙，所以不能去。",
+                "en": "Use ので: I am busy, so I cannot go."
+              },
+              "answer": "忙しいので、行けません。"
+            }
+          ]
+        },
+        {
+          "id": "l39-grammar-03",
+          "pattern": "な形容詞 / 名詞 + なので、〜",
+          "zh": "な形容词和名词接 ので 时用 なので。",
+          "en": "Use なので after na-adjectives and nouns.",
+          "example": "この仕事は大切なので、よく確認してください。",
+          "practice": [
+            {
+              "id": "l39-practice-03",
+              "prompt": {
+                "zh": "用 なので 表达：今天是休息日，所以银行不开门。",
+                "en": "Use なので: Today is a holiday, so the bank is closed."
+              },
+              "answer": "今日は休みなので、銀行は開いていません。"
+            }
+          ]
+        },
+        {
+          "id": "l39-grammar-04",
+          "pattern": "から vs ので",
+          "zh": "から较直接，ので较礼貌、自然，常用于请求、说明。",
+          "en": "から is direct; ので is softer and common in requests or explanations.",
+          "example": "熱があるので、休ませていただけませんか。",
+          "practice": [
+            {
+              "id": "l39-practice-04",
+              "prompt": {
+                "zh": "选择更礼貌自然的表达：身体不舒服，所以可以早点回去吗？",
+                "en": "Choose a softer expression: I do not feel well, so may I leave early?"
+              },
+              "answer": "気分が悪いので、早く帰ってもいいですか。"
+            }
+          ]
+        },
+        {
+          "id": "l39-grammar-05",
+          "pattern": "Vて、〜",
+          "zh": "て形可表示自然发生的原因，多用于情绪或结果。",
+          "en": "Te-form can show the cause of a natural result or feeling.",
+          "example": "ニュースを聞いて、びっくりしました。",
+          "practice": [
+            {
+              "id": "l39-practice-05",
+              "prompt": {
+                "zh": "用 て形 表达：见到朋友很安心。",
+                "en": "Use te-form: I felt relieved after seeing my friend."
+              },
+              "answer": "友達に会って、安心しました。"
+            }
+          ]
+        },
+        {
+          "id": "l39-grammar-06",
+          "pattern": "い形容詞くて / な形容詞で、〜",
+          "zh": "形容词原因用 くて / で 连接后面的结果。",
+          "en": "Use くて or で to connect an adjective cause to a result.",
+          "example": "説明が難しくて、よくわかりませんでした。",
+          "practice": [
+            {
+              "id": "l39-practice-06",
+              "prompt": {
+                "zh": "用 くて 表达：房间很热，所以睡不着。",
+                "en": "Use くて: The room was hot, so I could not sleep."
+              },
+              "answer": "部屋が暑くて、寝られませんでした。"
+            }
+          ]
+        },
+        {
+          "id": "l39-grammar-07",
+          "pattern": "名詞 + で、〜",
+          "zh": "名词表示原因、事件、手段时，可用 で 连接结果。",
+          "en": "Noun + で can mark a cause, event, or means that leads to a result.",
+          "example": "事故で電車が遅れました。",
+          "practice": [
+            {
+              "id": "l39-practice-07",
+              "prompt": {
+                "zh": "用 名词で 表达：因为地震，学校停课了。",
+                "en": "Use noun + で: Because of the earthquake, school was closed."
+              },
+              "answer": "地震で学校が休みになりました。"
+            }
+          ]
+        },
+        {
+          "id": "l39-grammar-08",
+          "pattern": "理由説明 + んです",
+          "zh": "说明个人情况或补充理由时，可与第26课的 んです 连用。",
+          "en": "Use んです to add personal background or explanation.",
+          "example": "すみません、電車が止まったんです。",
+          "practice": [
+            {
+              "id": "l39-practice-08",
+              "prompt": {
+                "zh": "用 んです 解释：对不起，我迟到了，因为路上很堵。",
+                "en": "Use んです to explain: Sorry, I am late because the road was crowded."
+              },
+              "answer": "すみません、道が込んでいたんです。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l39-examples",
+      "type": "examples",
+      "title": {
+        "zh": "例句 Examples",
+        "en": "Examples"
+      },
+      "items": [
+        {
+          "id": "l39-example-01",
+          "jp": "明日は早いので、もう寝ます。",
+          "zh": "明天要早起，所以我现在睡了。",
+          "en": "I have an early start tomorrow, so I will sleep now."
+        },
+        {
+          "id": "l39-example-02",
+          "jp": "雨が降って、試合は中止になりました。",
+          "zh": "因为下雨，比赛取消了。",
+          "en": "It rained, so the match was canceled."
+        },
+        {
+          "id": "l39-example-03",
+          "jp": "漢字が難しくて、全部読めませんでした。",
+          "zh": "汉字很难，所以没能全部读懂。",
+          "en": "The kanji were difficult, so I could not read everything."
+        },
+        {
+          "id": "l39-example-04",
+          "jp": "事故でバスが遅れました。",
+          "zh": "因为事故，公交晚点了。",
+          "en": "The bus was delayed because of an accident."
+        },
+        {
+          "id": "l39-example-05",
+          "jp": "家族の写真を見て、安心しました。",
+          "zh": "看到家人的照片，我安心了。",
+          "en": "I felt relieved when I saw my family's photo."
+        },
+        {
+          "id": "l39-example-06",
+          "jp": "今日は会議なので、昼ご飯が遅くなります。",
+          "zh": "今天有会议，所以午饭会晚。",
+          "en": "I have a meeting today, so lunch will be late."
+        },
+        {
+          "id": "l39-example-07",
+          "jp": "宿題を忘れたので、先生に謝りました。",
+          "zh": "因为忘了作业，所以向老师道歉了。",
+          "en": "I apologized to the teacher because I forgot my homework."
+        },
+        {
+          "id": "l39-example-08",
+          "jp": "メールが来なくて、心配しました。",
+          "zh": "因为邮件没来，我担心了。",
+          "en": "I was worried because the email did not arrive."
+        }
+      ]
+    },
+    {
+      "id": "l39-mistakes",
+      "type": "mistakes",
+      "title": {
+        "zh": "常见错误 Common Mistakes",
+        "en": "Common Mistakes"
+      },
+      "items": [
+        {
+          "id": "l39-mistake-01",
+          "wrong": "静かので、勉強しやすいです。",
+          "correct": "静かなので、勉強しやすいです。",
+          "reason": {
+            "zh": "な形容词接 ので 要用 なので。",
+            "en": "Use なので after a na-adjective."
+          }
+        },
+        {
+          "id": "l39-mistake-02",
+          "wrong": "寒いで、窓を閉めました。",
+          "correct": "寒くて、窓を閉めました。",
+          "reason": {
+            "zh": "い形容词作原因时变成 くて。",
+            "en": "I-adjectives become くて when giving a cause."
+          }
+        },
+        {
+          "id": "l39-mistake-03",
+          "wrong": "事故ので、電車が遅れました。",
+          "correct": "事故で、電車が遅れました。",
+          "reason": {
+            "zh": "名词表示事故、地震等原因时常用 名词で。",
+            "en": "Use noun + で for causes like accidents or earthquakes."
+          }
+        }
+      ]
+    },
+    {
+      "id": "l39-quiz",
+      "type": "quiz",
+      "title": {
+        "zh": "最终测试 Final Test",
+        "en": "Final Test"
+      },
+      "items": [
+        {
+          "id": "l39-quiz-01",
+          "question": {
+            "zh": "「因为明天有考试，所以今天学习。」最自然的是？",
+            "en": "Which is natural: Because I have an exam tomorrow, I study today?"
+          },
+          "options": [
+            {
+              "text": "明日試験があるので、今日は勉強します。",
+              "correct": true
+            },
+            {
+              "text": "明日試験なのである、今日は勉強します。",
+              "correct": false
+            },
+            {
+              "text": "明日試験があるで、今日は勉強します。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "动词普通形「ある」后直接接 ので。",
+            "en": "Attach ので directly after the plain verb ある."
+          }
+        },
+        {
+          "id": "l39-quiz-02",
+          "question": {
+            "zh": "な形容词「便利」接 ので 的正确形式是？",
+            "en": "What is the correct form of the na-adjective 便利 before ので?"
+          },
+          "options": [
+            {
+              "text": "便利なので",
+              "correct": true
+            },
+            {
+              "text": "便利ので",
+              "correct": false
+            },
+            {
+              "text": "便利くて",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "な形容词后用 なので。",
+            "en": "Use なので after na-adjectives."
+          }
+        },
+        {
+          "id": "l39-quiz-03",
+          "question": {
+            "zh": "「太热了，睡不着。」正确的是？",
+            "en": "Which means: It was too hot, so I couldn't sleep?"
+          },
+          "options": [
+            {
+              "text": "暑くて、寝られませんでした。",
+              "correct": true
+            },
+            {
+              "text": "暑いで、寝られませんでした。",
+              "correct": false
+            },
+            {
+              "text": "暑なので、寝られませんでした。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "い形容词原因使用 くて。",
+            "en": "Use くて for i-adjective causes."
+          }
+        },
+        {
+          "id": "l39-quiz-04",
+          "question": {
+            "zh": "「因为地震，电车停了。」最自然的是？",
+            "en": "Which is natural: The train stopped because of the earthquake?"
+          },
+          "options": [
+            {
+              "text": "地震で電車が止まりました。",
+              "correct": true
+            },
+            {
+              "text": "地震なので電車が止まりました。",
+              "correct": false
+            },
+            {
+              "text": "地震くて電車が止まりました。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "事件、灾害等名词原因常用 で。",
+            "en": "Use で for noun causes such as events or disasters."
+          }
+        },
+        {
+          "id": "l39-quiz-05",
+          "question": {
+            "zh": "「听到那个消息，很吃惊。」正确的是？",
+            "en": "Which means: I was surprised when I heard the news?"
+          },
+          "options": [
+            {
+              "text": "そのニュースを聞いて、びっくりしました。",
+              "correct": true
+            },
+            {
+              "text": "そのニュースを聞くて、びっくりしました。",
+              "correct": false
+            },
+            {
+              "text": "そのニュースを聞いたで、びっくりしました。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "动词て形可以表示引发情绪的原因。",
+            "en": "Te-form can show the cause of an emotional reaction."
+          }
+        },
+        {
+          "id": "l39-quiz-06",
+          "question": {
+            "zh": "请求中更柔和的是？",
+            "en": "Which sounds softer in a request?"
+          },
+          "options": [
+            {
+              "text": "気分が悪いので、帰ってもいいですか。",
+              "correct": true
+            },
+            {
+              "text": "気分が悪いから、帰って。",
+              "correct": false
+            },
+            {
+              "text": "気分が悪いで、帰ってもいいですか。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "请求、说明中 ので 更礼貌柔和。",
+            "en": "ので is softer and more polite in requests."
+          }
+        },
+        {
+          "id": "l39-quiz-07",
+          "question": {
+            "zh": "「工作很重要，所以请确认。」正确的是？",
+            "en": "Which means: This work is important, so please check it?"
+          },
+          "options": [
+            {
+              "text": "この仕事は大切なので、確認してください。",
+              "correct": true
+            },
+            {
+              "text": "この仕事は大切ので、確認してください。",
+              "correct": false
+            },
+            {
+              "text": "この仕事は大切くて、確認してください。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "大切 是な形容词，接 なので。",
+            "en": "大切 is a na-adjective, so use なので."
+          }
+        },
+        {
+          "id": "l39-quiz-08",
+          "question": {
+            "zh": "「邮件没来，所以担心了。」正确的是？",
+            "en": "Which means: The email did not arrive, so I was worried?"
+          },
+          "options": [
+            {
+              "text": "メールが来なくて、心配しました。",
+              "correct": true
+            },
+            {
+              "text": "メールが来ないで、心配しました。",
+              "correct": false
+            },
+            {
+              "text": "メールが来ないのでで、心配しました。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "ない形容词化后作原因常用 なくて。",
+            "en": "Negative forms often use なくて for a cause."
+          }
+        },
+        {
+          "id": "l39-quiz-09",
+          "question": {
+            "zh": "「因为下雨，比赛取消了。」自然表达是？",
+            "en": "Which naturally means: It rained, so the match was canceled?"
+          },
+          "options": [
+            {
+              "text": "雨が降って、試合は中止になりました。",
+              "correct": true
+            },
+            {
+              "text": "雨が降りて、試合は中止になりました。",
+              "correct": false
+            },
+            {
+              "text": "雨が降ったで、試合は中止になりました。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "降ります 的て形是 降って。",
+            "en": "The te-form of 降ります is 降って."
+          }
+        },
+        {
+          "id": "l39-quiz-10",
+          "question": {
+            "zh": "「不好意思，我迟到了。电车停了。」用 んです 解释最自然的是？",
+            "en": "Which naturally explains: Sorry I'm late. The train stopped?"
+          },
+          "options": [
+            {
+              "text": "すみません、電車が止まったんです。",
+              "correct": true
+            },
+            {
+              "text": "すみません、電車が止まるんでした。",
+              "correct": false
+            },
+            {
+              "text": "すみません、電車が止まったのでです。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "说明个人迟到理由时「普通形 + んです」自然。",
+            "en": "Plain form + んです naturally explains a personal reason."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "schema": "minna.lesson.v1",
+  "course": "minna",
+  "status": "Mastery migrated",
+  "lessonNo": 30,
+  "lessonId": "minna_lesson_30",
+  "title": { "zh": "第30课", "en": "Lesson 30", "ja": "第30課" },
+  "subtitle": { "zh": "他动词", "en": "Transitive verbs", "ja": "他動詞" },
+  "focus": {
+    "zh": "用「他动词てあります」说明人为准备好的结果，用「ておきます」表达事先准备。",
+    "en": "Use transitive te arimasu for prepared results, and te okimasu for advance preparation.",
+    "ja": "他動詞てありますで準備された状態、ておきますで事前準備を表します。"
+  },
+  "sections": [
+    {
+      "type": "vocab",
+      "id": "l30_vocab",
+      "title": { "zh": "核心词汇", "en": "Core Vocabulary", "ja": "基本語彙" },
+      "items": [
+        { "id": "l30_v01", "jp": "開けます", "kana": "あけます", "zh": "打开（他动）", "en": "to open", "tags": ["lesson30", "transitive"] },
+        { "id": "l30_v02", "jp": "閉めます", "kana": "しめます", "zh": "关闭（他动）", "en": "to close", "tags": ["lesson30", "transitive"] },
+        { "id": "l30_v03", "jp": "つけます", "kana": "つけます", "zh": "打开（电器）", "en": "to turn on", "tags": ["lesson30", "transitive"] },
+        { "id": "l30_v04", "jp": "消します", "kana": "けします", "zh": "关掉；擦掉", "en": "to turn off; erase", "tags": ["lesson30", "transitive"] },
+        { "id": "l30_v05", "jp": "壊します", "kana": "こわします", "zh": "弄坏", "en": "to break", "tags": ["lesson30", "transitive"] },
+        { "id": "l30_v06", "jp": "汚します", "kana": "よごします", "zh": "弄脏", "en": "to make dirty", "tags": ["lesson30", "transitive"] },
+        { "id": "l30_v07", "jp": "並べます", "kana": "ならべます", "zh": "排列；摆放", "en": "to arrange", "tags": ["lesson30", "transitive"] },
+        { "id": "l30_v08", "jp": "貼ります", "kana": "はります", "zh": "贴", "en": "to put up; paste", "tags": ["lesson30", "transitive"] },
+        { "id": "l30_v09", "jp": "戻します", "kana": "もどします", "zh": "放回；恢复", "en": "to return; put back", "tags": ["lesson30", "transitive"] },
+        { "id": "l30_v10", "jp": "片づけます", "kana": "かたづけます", "zh": "整理；收拾", "en": "to tidy up", "tags": ["lesson30", "transitive"] }
+      ]
+    },
+    {
+      "type": "grammar",
+      "id": "l30_grammar",
+      "title": { "zh": "核心语法", "en": "Core Grammar", "ja": "基本文法" },
+      "items": [
+        {
+          "id": "l30_g01",
+          "pattern": "他動詞て形 + あります",
+          "explanation": { "zh": "表示有人为了某个目的已经做好，结果还保留着。", "en": "Shows someone has done something for a purpose and the result remains." },
+          "examples": [{ "jp": "窓が開けてあります。", "zh": "窗户已经开好了。", "en": "The window has been opened." }],
+          "practice": [{ "id": "l30_g01_p01", "skill": "grammar", "question": { "zh": "“窗户已经开好了”正确的是？", "en": "How do you say 'The window has been opened'?" }, "options": [{ "text": { "jp": "窓が開けてあります" }, "correct": true }, { "text": { "jp": "窓を開いてあります" } }, { "text": { "jp": "窓が開いてあります" } }, { "text": { "jp": "窓を開けています" } }], "explanation": { "zh": "人为结果用他动词て形 + あります。", "en": "Prepared result: transitive te-form + arimasu." } }]
+        },
+        {
+          "id": "l30_g02",
+          "pattern": "N に N が Vてあります",
+          "explanation": { "zh": "说明某处已经放好、写好、贴好某物。", "en": "Shows that something has been placed, written, or posted somewhere." },
+          "examples": [{ "jp": "黒板に予定が書いてあります。", "zh": "黑板上写着日程。", "en": "The schedule is written on the blackboard." }],
+          "practice": [{ "id": "l30_g02_p01", "skill": "grammar", "question": { "zh": "“墙上贴着地图”正确的是？", "en": "How do you say 'A map is posted on the wall'?" }, "options": [{ "text": { "jp": "壁に地図が貼ってあります" }, "correct": true }, { "text": { "jp": "壁を地図が貼ってあります" } }, { "text": { "jp": "壁に地図を貼っています" } }, { "text": { "jp": "壁が地図に貼ってあります" } }], "explanation": { "zh": "地点に + 物が + 他动词てあります。", "en": "Place ni + thing ga + transitive te arimasu." } }]
+        },
+        {
+          "id": "l30_g03",
+          "pattern": "目的がある結果状態",
+          "explanation": { "zh": "「てあります」通常暗示有人有目的地做了准备。", "en": "Te arimasu usually implies someone prepared it intentionally." },
+          "examples": [{ "jp": "会議の資料がコピーしてあります。", "zh": "会议资料已经复印好了。", "en": "The meeting materials have been copied." }],
+          "practice": [{ "id": "l30_g03_p01", "skill": "grammar", "question": { "zh": "“资料已经复印好了”是？", "en": "How do you say 'The materials have been copied'?" }, "options": [{ "text": { "jp": "資料がコピーしてあります" }, "correct": true }, { "text": { "jp": "資料をコピーしてあります" } }, { "text": { "jp": "資料がコピーしています" } }, { "text": { "jp": "資料をコピーになっています" } }], "explanation": { "zh": "准备好的物用「が」。", "en": "The prepared item is marked with ga." } }]
+        },
+        {
+          "id": "l30_g04",
+          "pattern": "自動詞ています vs 他動詞てあります",
+          "explanation": { "zh": "「開いています」只描述状态；「開けてあります」暗示有人事先开好。", "en": "Aite imasu only describes a state; akete arimasu implies someone opened it in advance." },
+          "examples": [{ "jp": "ドアが開いています。 / ドアが開けてあります。", "zh": "门开着。/ 门已经开好了。", "en": "The door is open. / The door has been opened." }],
+          "practice": [{ "id": "l30_g04_p01", "skill": "grammar", "question": { "zh": "强调“有人把门开好了”应选？", "en": "Which emphasizes someone opened the door in advance?" }, "options": [{ "text": { "jp": "ドアが開けてあります" }, "correct": true }, { "text": { "jp": "ドアが開いています" } }, { "text": { "jp": "ドアを開いています" } }, { "text": { "jp": "ドアが開きます" } }], "explanation": { "zh": "人为准备结果用「開けてあります」。", "en": "Use akete arimasu for a prepared result." } }]
+        },
+        {
+          "id": "l30_g05",
+          "pattern": "て形 + おきます",
+          "explanation": { "zh": "为了将来方便，事先做某事。", "en": "Do something in advance for future convenience." },
+          "examples": [{ "jp": "旅行の前にホテルを予約しておきます。", "zh": "旅行前先订好酒店。", "en": "I will reserve a hotel before the trip." }],
+          "practice": [{ "id": "l30_g05_p01", "skill": "grammar", "question": { "zh": "“开会前先复印资料”是？", "en": "How do you say 'copy the materials before the meeting'?" }, "options": [{ "text": { "jp": "会議の前に資料をコピーしておきます" }, "correct": true }, { "text": { "jp": "会議の前に資料がコピーしておきます" } }, { "text": { "jp": "会議の前に資料をコピーしてありますします" } }, { "text": { "jp": "会議の前に資料をコピーながらです" } }], "explanation": { "zh": "事先准备：て形 + おきます。", "en": "Preparation: te-form + okimasu." } }]
+        },
+        {
+          "id": "l30_g06",
+          "pattern": "〜ておいてください",
+          "explanation": { "zh": "请求对方事先做好某事。", "en": "Ask someone to do something in advance." },
+          "examples": [{ "jp": "資料を読んでおいてください。", "zh": "请事先读好资料。", "en": "Please read the materials in advance." }],
+          "practice": [{ "id": "l30_g06_p01", "skill": "grammar", "question": { "zh": "“请先准备好”是？", "en": "How do you say 'Please prepare it in advance'?" }, "options": [{ "text": { "jp": "準備しておいてください" }, "correct": true }, { "text": { "jp": "準備してありますください" } }, { "text": { "jp": "準備していますください" } }, { "text": { "jp": "準備しながらください" } }], "explanation": { "zh": "请求预先动作：ておいてください。", "en": "Request prior preparation with te oite kudasai." } }]
+        },
+        {
+          "id": "l30_g07",
+          "pattern": "そのままにしておきます",
+          "explanation": { "zh": "表示保持原样、先不改变。", "en": "Means to leave something as it is." },
+          "examples": [{ "jp": "この机はそのままにしておいてください。", "zh": "这张桌子请保持原样。", "en": "Please leave this desk as it is." }],
+          "practice": [{ "id": "l30_g07_p01", "skill": "grammar", "question": { "zh": "“请保持原样”是？", "en": "How do you say 'Please leave it as it is'?" }, "options": [{ "text": { "jp": "そのままにしておいてください" }, "correct": true }, { "text": { "jp": "そのままにしてありますください" } }, { "text": { "jp": "そのままになっていますください" } }, { "text": { "jp": "そのままでしてあります" } }], "explanation": { "zh": "固定常用表达。", "en": "This is a common fixed expression." } }]
+        },
+        {
+          "id": "l30_g08",
+          "pattern": "使ったあとで戻しておきます",
+          "explanation": { "zh": "表示用完后先放回、整理好，方便之后使用。", "en": "Return or tidy something after use so it is ready later." },
+          "examples": [{ "jp": "使ったあとで、元の場所に戻しておきます。", "zh": "用完后先放回原处。", "en": "After using it, put it back in its original place." }],
+          "practice": [{ "id": "l30_g08_p01", "skill": "grammar", "question": { "zh": "“用完后请放回原处”是？", "en": "How do you say 'Please put it back after use'?" }, "options": [{ "text": { "jp": "使ったあとで、元の場所に戻しておいてください" }, "correct": true }, { "text": { "jp": "使ったあとで、元の場所が戻しておいてください" } }, { "text": { "jp": "使ったあとで、元の場所に戻っています" } }, { "text": { "jp": "使ったあとで、元の場所に戻ってあります" } }], "explanation": { "zh": "他动词「戻します」用ておいてください。", "en": "Use the transitive modoshimasu with te oite kudasai." } }]
+        }
+      ]
+    },
+    {
+      "type": "examples",
+      "id": "l30_examples",
+      "title": { "zh": "核心例句", "en": "Core Examples", "ja": "基本例文" },
+      "items": [
+        { "id": "l30_e01", "jp": "机の上に資料が置いてあります。", "zh": "桌子上放好了资料。", "en": "The materials have been placed on the desk.", "tags": ["te-arimasu"] },
+        { "id": "l30_e02", "jp": "黒板に予定が書いてあります。", "zh": "黑板上写着日程。", "en": "The schedule is written on the blackboard.", "tags": ["te-arimasu"] },
+        { "id": "l30_e03", "jp": "会議室の窓が開けてあります。", "zh": "会议室的窗户已经开好了。", "en": "The conference room windows have been opened.", "tags": ["te-arimasu"] },
+        { "id": "l30_e04", "jp": "壁にポスターが貼ってあります。", "zh": "墙上贴着海报。", "en": "A poster has been put up on the wall.", "tags": ["te-arimasu"] },
+        { "id": "l30_e05", "jp": "旅行の前に切符を買っておきます。", "zh": "旅行前先买好票。", "en": "I will buy tickets before the trip.", "tags": ["te-okimasu"] },
+        { "id": "l30_e06", "jp": "授業の前に漢字を調べておきます。", "zh": "上课前先查好汉字。", "en": "I will look up the kanji before class.", "tags": ["te-okimasu"] },
+        { "id": "l30_e07", "jp": "使ったあとで、道具を元の場所に戻しておいてください。", "zh": "用完后请把工具放回原处。", "en": "After using the tools, please put them back.", "tags": ["request"] },
+        { "id": "l30_e08", "jp": "これはそのままにしておいてください。", "zh": "这个请保持原样。", "en": "Please leave this as it is.", "tags": ["leave"] }
+      ]
+    },
+    {
+      "type": "mistakes",
+      "id": "l30_mistakes",
+      "title": { "zh": "常见错误", "en": "Common Mistakes", "ja": "よくある間違い" },
+      "items": [
+        { "id": "l30_m01", "wrong": "窓が開いてあります。", "correct": "窓が開けてあります。", "zh": "てあります前用他动词て形。", "en": "Te arimasu uses a transitive te-form." },
+        { "id": "l30_m02", "wrong": "壁を地図が貼ってあります。", "correct": "壁に地図が貼ってあります。", "zh": "地点用「に」，准备好的物用「が」。", "en": "Use ni for the place and ga for the prepared item." },
+        { "id": "l30_m03", "wrong": "資料がコピーしておきます。", "correct": "資料をコピーしておきます。", "zh": "ておきます是说话人事先做动作，宾语用「を」。", "en": "With te okimasu, the action object takes o." }
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "l30_quiz",
+      "title": { "zh": "综合测试", "en": "Final Test", "ja": "まとめテスト" },
+      "items": [
+        { "id": "l30_q01", "question": { "zh": "“门已经开好了”是？", "en": "How do you say 'The door has been opened'?" }, "options": [{ "text": { "jp": "ドアが開けてあります" }, "correct": true }, { "text": { "jp": "ドアが開いてあります" } }, { "text": { "jp": "ドアを開いています" } }, { "text": { "jp": "ドアが開けています" } }], "explanation": { "zh": "人为准备结果用他动词てあります。", "en": "Prepared result uses transitive te arimasu." } },
+        { "id": "l30_q02", "question": { "zh": "“黑板上写着日程”是？", "en": "How do you say 'The schedule is written on the blackboard'?" }, "options": [{ "text": { "jp": "黒板に予定が書いてあります" }, "correct": true }, { "text": { "jp": "黒板を予定が書いてあります" } }, { "text": { "jp": "黒板に予定を書いています" } }, { "text": { "jp": "黒板が予定に書いてあります" } }], "explanation": { "zh": "地点に + 物が + Vてあります。", "en": "Place ni + item ga + V te arimasu." } },
+        { "id": "l30_q03", "question": { "zh": "“旅行前先订酒店”是？", "en": "How do you say 'Reserve a hotel before the trip'?" }, "options": [{ "text": { "jp": "旅行の前にホテルを予約しておきます" }, "correct": true }, { "text": { "jp": "旅行の前にホテルが予約しておきます" } }, { "text": { "jp": "旅行の前にホテルを予約してありますします" } }, { "text": { "jp": "旅行の前にホテルが予約になります" } }], "explanation": { "zh": "事先准备用「ておきます」。", "en": "Use te okimasu for preparation." } },
+        { "id": "l30_q04", "question": { "zh": "“请事先读好资料”是？", "en": "How do you say 'Please read the materials in advance'?" }, "options": [{ "text": { "jp": "資料を読んでおいてください" }, "correct": true }, { "text": { "jp": "資料が読んでおいてください" } }, { "text": { "jp": "資料を読んでありますください" } }, { "text": { "jp": "資料を読んていますください" } }], "explanation": { "zh": "请求对方预先做：ておいてください。", "en": "Request advance action: te oite kudasai." } },
+        { "id": "l30_q05", "question": { "zh": "“墙上贴着海报”是？", "en": "How do you say 'A poster has been put up on the wall'?" }, "options": [{ "text": { "jp": "壁にポスターが貼ってあります" }, "correct": true }, { "text": { "jp": "壁をポスターが貼ってあります" } }, { "text": { "jp": "壁にポスターを貼っています" } }, { "text": { "jp": "壁がポスターに貼ってあります" } }], "explanation": { "zh": "地点に、物が、貼ってあります。", "en": "Place ni, item ga, hatte arimasu." } },
+        { "id": "l30_q06", "question": { "zh": "“请保持原样”是？", "en": "How do you say 'Please leave it as it is'?" }, "options": [{ "text": { "jp": "そのままにしておいてください" }, "correct": true }, { "text": { "jp": "そのままにしてありますください" } }, { "text": { "jp": "そのままにしていますください" } }, { "text": { "jp": "そのままをしておいてください" } }], "explanation": { "zh": "常用固定表达。", "en": "This is a common fixed phrase." } },
+        { "id": "l30_q07", "question": { "zh": "强调自然状态“门开着”是？", "en": "Which simply describes the state 'The door is open'?" }, "options": [{ "text": { "jp": "ドアが開いています" }, "correct": true }, { "text": { "jp": "ドアが開けてあります" } }, { "text": { "jp": "ドアを開けてあります" } }, { "text": { "jp": "ドアが開けます" } }], "explanation": { "zh": "自然状态用自动词「開いています」。", "en": "Use intransitive aite imasu for the simple state." } },
+        { "id": "l30_q08", "question": { "zh": "强调人为准备“窗户开好了”是？", "en": "Which emphasizes the window was opened in preparation?" }, "options": [{ "text": { "jp": "窓が開けてあります" }, "correct": true }, { "text": { "jp": "窓が開いています" } }, { "text": { "jp": "窓を開いています" } }, { "text": { "jp": "窓が開けています" } }], "explanation": { "zh": "他动词「開けます」+ てあります。", "en": "Use transitive akemasu + te arimasu." } },
+        { "id": "l30_q09", "question": { "zh": "“用完后放回原处”是？", "en": "How do you say 'Put it back after use'?" }, "options": [{ "text": { "jp": "使ったあとで、元の場所に戻しておきます" }, "correct": true }, { "text": { "jp": "使ったあとで、元の場所が戻しておきます" } }, { "text": { "jp": "使ったあとで、元の場所に戻っています" } }, { "text": { "jp": "使ったあとで、元の場所を戻っています" } }], "explanation": { "zh": "他动词「戻します」+ ておきます。", "en": "Use transitive modoshimasu + te okimasu." } },
+        { "id": "l30_q10", "question": { "zh": "「てあります」通常暗示什么？", "en": "What does te arimasu usually imply?" }, "options": [{ "text": { "zh": "有人有目的地事先做了", "en": "Someone did it intentionally in advance" }, "correct": true }, { "text": { "zh": "动作正在进行" } }, { "text": { "zh": "自然发生，没有人参与" } }, { "text": { "zh": "只能表示遗憾" } }], "explanation": { "zh": "てあります表示人为准备后的结果状态。", "en": "Te arimasu expresses a prepared resulting state." } }
+      ]
+    }
+  ]
+}
