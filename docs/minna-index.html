@@ -14,5 +14,24 @@
 <body data-lesson-id="minna_home_v20">
 <div id="app"><main class="wrap"><section class="panel">Loading...</section></main></div>
 <script src="./minna-home-v20.js?v=20.3"></script>
+<script>
+window.SITE_VISIT_LOG_CONFIG = {
+  siteCode: 'minna',
+  siteName: 'Minna no Nihongo AI Learning',
+  getUser: function(){
+    try {
+      var profile = JSON.parse(localStorage.getItem('minna_profile') || 'null') || {};
+      return {
+        guestUserId: profile.id || localStorage.getItem('minna_guest_user_id') || null,
+        guestUserName: profile.name || localStorage.getItem('minna_guest_user_name') || null,
+        locale: localStorage.getItem('minna_locale') || document.documentElement.lang || 'zh'
+      };
+    } catch(e) {
+      return { locale: document.documentElement.lang || 'zh' };
+    }
+  }
+};
+</script>
+<script src="https://yaojunxiong.github.io/math/visit-logger.js?v=shared-visit-v1"></script>
 </body>
 </html>
