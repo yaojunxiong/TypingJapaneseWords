@@ -6,6 +6,7 @@
   const PASS_RATE=80;
   const WRONGBOOK_URL='./minna-wrongbook-v2.html?v=20.3';
   const HOME_URL='./minna-index.html?v='+VERSION;
+  const QUESTION_LOG_KEY='minna_question_log_v1';
   const params=()=>new URLSearchParams(location.search);
   const wrongMode=()=>params().get('mode')==='wrong';
   const I=()=>window.MinnaI18n;
@@ -68,10 +69,31 @@
   function bind(){document.querySelectorAll('.opt').forEach(b=>b.onclick=()=>answerChoice(b));document.querySelectorAll('.orderPart').forEach(b=>b.onclick=()=>addOrderPart(b));document.querySelectorAll('.checkOrder').forEach(b=>b.onclick=()=>answerOrder(b.dataset.q));document.querySelectorAll('.clearOrder').forEach(b=>b.onclick=()=>clearOrder(b.dataset.q));$('saveBtn')&&($('saveBtn').onclick=saveAll);$('resetQuizBtn')&&($('resetQuizBtn').onclick=resetQuiz);$('loginBtn')&&($('loginBtn').onclick=()=>window.MinnaAuth&&MinnaAuth.loginWithGoogle());$('logoutBtn')&&($('logoutBtn').onclick=async()=>{if(window.MinnaAuth){await MinnaAuth.logout();user=null;render()}})}
   function findQ(id){return quizItems().find(q=>q.id===id)}
   function canRetry(qid){return wrongMode()&&answered[qid]===false}
-  function answerChoice(btn){const qid=btn.dataset.q,ok=btn.dataset.ok==='1',prev=answered[qid];if(prev!==undefined&&!canRetry(qid))return;answered[qid]=ok;if(ok&&prev!==true)score++;markChoice(btn,qid,ok);saveAll();setTimeout(()=>render(),ok&&wrongMode()?700:220)}
+  function lessonNoFromId(lessonId){const m=String(lessonId||'').match(/(\d{1,2})$/);return m?Number(m[1]):Number(lesson&&lesson.lessonNo||0)||0}
+  function upsertQuestionLog(qid,ok){
+    try{
+      const q=findQ(qid)||{};
+      const all=JSON.parse(localStorage.getItem(QUESTION_LOG_KEY)||'{}');
+      const prev=all[qid]||{id:qid,wrongCount:0,rightCount:0};
+      all[qid]={
+        ...prev,
+        id:qid,
+        lessonId:lesson&&lesson.lessonId||'',
+        lessonNo:lessonNoFromId(lesson&&lesson.lessonId),
+        skill:q.skill||q.sectionType||'quiz',
+        question:(q.question&&q.question.zh)||q.question||'',
+        wrongCount:Number(prev.wrongCount||0)+(ok?0:1),
+        rightCount:Number(prev.rightCount||0)+(ok?1:0),
+        lastResult:ok?'right':'wrong',
+        lastAt:new Date().toISOString()
+      };
+      localStorage.setItem(QUESTION_LOG_KEY,JSON.stringify(all));
+    }catch(e){}
+  }
+  function answerChoice(btn){const qid=btn.dataset.q,ok=btn.dataset.ok==='1',prev=answered[qid];if(prev!==undefined&&!canRetry(qid))return;answered[qid]=ok;if(ok&&prev!==true)score++;upsertQuestionLog(qid,ok);markChoice(btn,qid,ok);saveAll();setTimeout(()=>render(),ok&&wrongMode()?700:220)}
   function addOrderPart(btn){const qid=btn.dataset.q;if(answered[qid]!==undefined&&!canRetry(qid))return;orderWork[qid]=orderWork[qid]||[];orderWork[qid].push(btn.dataset.part);btn.disabled=true;btn.classList.add('right');const box=document.querySelector(`[data-order-box="${CSS.escape(qid)}"]`);if(box)box.innerHTML=orderWork[qid].map(x=>`<span class="pill">${esc(x)}</span>`).join('')}
   function clearOrder(qid){if(answered[qid]!==undefined&&!canRetry(qid))return;orderWork[qid]=[];const box=document.querySelector(`[data-order-box="${CSS.escape(qid)}"]`);if(box)box.innerHTML='';const card=document.getElementById(qid);if(card)card.querySelectorAll('.orderPart').forEach(b=>{b.disabled=false;b.classList.remove('right','wrong')})}
-  function answerOrder(qid){const prev=answered[qid];if(prev!==undefined&&!canRetry(qid))return;const q=findQ(qid), current=orderWork[qid]||[], answer=q&&(q.answer||q.parts)||[];const ok=current.join('\u0001')===answer.join('\u0001');answered[qid]=ok;if(ok&&prev!==true)score++;markOrder(qid,ok);saveAll();setTimeout(()=>render(),ok&&wrongMode()?700:350)}
+  function answerOrder(qid){const prev=answered[qid];if(prev!==undefined&&!canRetry(qid))return;const q=findQ(qid), current=orderWork[qid]||[], answer=q&&(q.answer||q.parts)||[];const ok=current.join('\u0001')===answer.join('\u0001');answered[qid]=ok;if(ok&&prev!==true)score++;upsertQuestionLog(qid,ok);markOrder(qid,ok);saveAll();setTimeout(()=>render(),ok&&wrongMode()?700:350)}
   function markChoice(btn,qid,ok){const card=document.getElementById(qid);if(!card)return;card.querySelectorAll('.opt').forEach(b=>{b.disabled=true;if(b.dataset.ok==='1')b.classList.add('right');else if(b===btn)b.classList.add('wrong')});const q=findQ(qid), fb=card.querySelector('.feedback');if(fb)fb.textContent=(ok?(wrongMode()?text('订正成功，已从错题本移除。','Corrected. Removed from wrongbook.'):text('答对了！','Correct!')):text('再看一次解释：','Review the explanation: '))+pick(q&&q.explanation);updateScore()}
   function markOrder(qid,ok){const card=document.getElementById(qid);if(!card)return;card.querySelectorAll('.orderPart,.checkOrder,.clearOrder').forEach(b=>b.disabled=true);card.querySelectorAll('.orderPart').forEach(b=>b.classList.add(ok?'right':'wrong'));const q=findQ(qid), fb=card.querySelector('.feedback');if(fb)fb.textContent=(ok?text('排序正确！','Correct order!'):text('顺序不对。正确答案：','Wrong order. Correct answer: ')+correctText(q)+'。')+pick(q&&q.explanation);updateScore()}
   function updateScore(){const st=$('scoreText');if(st)st.textContent=`${score}/${quizItems().length}`}

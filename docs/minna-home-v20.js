@@ -198,13 +198,21 @@
     const p=current.progress||{};
     const n=current.n;
     const next=Math.min(50,n+1);
-    if(!p.hasRecord)return `<a class="primary" href="${lessonUrl(n)}">${esc(text('actStart'))}</a>`;
+    if(!p.hasRecord)return `<a class="primary" data-act="start_lesson" href="${lessonUrl(n)}">${esc(text('actStart'))}</a>`;
     if(p.passed){
-      const nextBtn=n<50?`<a class="primary" href="${lessonUrl(next)}">${esc(text('actNext'))}</a>`:'';
-      return `${nextBtn}<a class="ghost" href="./minna-review.html?v=${VERSION}">${esc(text('actReview'))}</a>`;
+      const nextBtn=n<50?`<a class="primary" data-act="next_lesson" href="${lessonUrl(next)}">${esc(text('actNext'))}</a>`:'';
+      return `${nextBtn}<a class="ghost" data-act="go_review" href="./minna-review.html?v=${VERSION}">${esc(text('actReview'))}</a>`;
     }
-    if(p.wrong>0)return `<a class="primary" href="${lessonUrl(n)}&mode=wrong">${esc(text('actFix'))}</a><a class="ghost" href="./minna-wrongbook-v2.html?v=${VERSION}">${esc(text('wrongbook'))}</a>`;
-    return `<a class="primary" href="${lessonUrl(n)}">${esc(text('actTest'))}</a><a class="ghost" href="./minna-review.html?v=${VERSION}">${esc(text('actReview'))}</a>`;
+    if(p.wrong>0)return `<a class="primary" data-act="clear_wrongs" href="${lessonUrl(n)}&mode=wrong">${esc(text('actFix'))}</a><a class="ghost" data-act="open_wrongbook" href="./minna-wrongbook-v2.html?v=${VERSION}">${esc(text('wrongbook'))}</a>`;
+    return `<a class="primary" data-act="retake_test" href="${lessonUrl(n)}">${esc(text('actTest'))}</a><a class="ghost" data-act="go_review" href="./minna-review.html?v=${VERSION}">${esc(text('actReview'))}</a>`;
+  }
+  function logFunnel(act,lesson){
+    try{
+      const key='minna_funnel_events_v1';
+      const rows=JSON.parse(localStorage.getItem(key)||'[]');
+      rows.push({act,lesson:Number(lesson)||0,at:new Date().toISOString()});
+      localStorage.setItem(key,JSON.stringify(rows.slice(-400)));
+    }catch(e){}
   }
   function loopReason(current){
     const p=current.progress||{};
@@ -233,6 +241,7 @@
     $('filterBox').onchange=e=>{filter=e.target.value;renderGrid()};
     document.querySelectorAll('[data-filter]').forEach(btn=>{btn.onclick=()=>{filter=btn.dataset.filter;$('filterBox').value=filter;renderGrid()}});
     document.querySelectorAll('[data-track]').forEach(a=>{a.addEventListener('click',()=>localStorage.setItem('minna_home_last_lesson',a.dataset.track))});
+    document.querySelectorAll('[data-act]').forEach(a=>{a.addEventListener('click',()=>logFunnel(a.dataset.act,(dashboard().current||{}).n||0))});
   }
   function renderGrid(){
     const q=query.trim().toLowerCase();
