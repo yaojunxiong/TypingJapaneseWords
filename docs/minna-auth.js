@@ -14,6 +14,7 @@ window.MinnaAuth = (() => {
   let client = null;
   let user = null;
   let lessonId = DEFAULT_LESSON_ID;
+  let roleInfo = null;
 
   function ensureClient() {
     if (!window.supabase) {
@@ -34,6 +35,7 @@ window.MinnaAuth = (() => {
     user = data && data.user ? data.user : null;
     supa.auth.onAuthStateChange((_event, session) => {
       user = session && session.user ? session.user : null;
+      roleInfo = null;
       window.dispatchEvent(new CustomEvent('minna-auth-changed', { detail: { user } }));
     });
     window.dispatchEvent(new CustomEvent('minna-auth-ready', { detail: { user, lessonId } }));
@@ -45,6 +47,45 @@ window.MinnaAuth = (() => {
     const { data } = await supa.auth.getUser();
     user = data && data.user ? data.user : null;
     return user;
+  }
+
+  function roleFromRow(row) {
+    const now = Date.now();
+    const rawRole = row && row.role ? String(row.role) : 'normal';
+    const vipUntil = row && row.vip_until ? String(row.vip_until) : '';
+    const vipActive = rawRole === 'vip' && (!vipUntil || Date.parse(vipUntil) > now);
+    const effectiveRole = rawRole === 'admin' ? 'admin' : vipActive ? 'vip' : 'normal';
+    return {
+      role: rawRole,
+      effectiveRole,
+      vip_until: vipUntil,
+      email: row && row.email ? row.email : userEmail(),
+      isAdmin: effectiveRole === 'admin',
+      isVip: effectiveRole === 'vip',
+      bypassLessonLock: effectiveRole === 'admin' || effectiveRole === 'vip'
+    };
+  }
+
+  async function loadRole(force) {
+    if (!force && roleInfo) return roleInfo;
+    const supa = ensureClient();
+    await refreshUser();
+    if (!user) {
+      roleInfo = roleFromRow(null);
+      return roleInfo;
+    }
+    const { data, error } = await supa
+      .from('user_roles')
+      .select('role,vip_until,email')
+      .eq('user_id', user.id)
+      .maybeSingle();
+    if (error) {
+      console.warn('[MinnaAuth] user role fallback:', error.message || error);
+      roleInfo = roleFromRow(null);
+      return roleInfo;
+    }
+    roleInfo = roleFromRow(data);
+    return roleInfo;
   }
 
   async function loginWithGoogle() {
@@ -74,6 +115,9 @@ window.MinnaAuth = (() => {
   }
 
   async function saveProgress(progress, overrideLessonId) {
+    if (new URLSearchParams(window.location.search).get('mode') === 'preview') {
+      return { skipped: true, reason: 'preview mode' };
+    }
     const supa = ensureClient();
     await refreshUser();
     const activeLessonId = overrideLessonId || lessonId;
@@ -128,10 +172,13 @@ window.MinnaAuth = (() => {
     saveProgress,
     loadProgress,
     listProgress,
+    loadRole,
     userKey,
     userEmail,
     getUser: () => user,
+    getRole: () => roleInfo || roleFromRow(null),
     getLessonId: () => lessonId,
+    client: () => client || ensureClient(),
     config: { SUPABASE_URL }
   };
 })();
