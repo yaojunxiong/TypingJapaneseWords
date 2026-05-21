@@ -1,7 +1,7 @@
-// Minna Home v20.1
+// Minna Home v20.2
 // Learner-first entry for the unified JSON player, content audit, and direct lesson access.
 (function(){
-  const VERSION='20.1';
+  const VERSION='20.2';
   const $=id=>document.getElementById(id);
   const pad=n=>String(n).padStart(2,'0');
   const lessonUrl=n=>`./minna-lesson-v16.html?n=${n}&v=${VERSION}`;
@@ -19,6 +19,12 @@
     mastered:{zh:'已掌握',en:'Mastered'},
     records:{zh:'有记录',en:'With Records'},
     total:{zh:'课程总数',en:'Total Lessons'},
+    roleNormal:{zh:'普通用户',en:'Standard'},
+    roleVip:{zh:'VIP 会员',en:'VIP'},
+    roleAdmin:{zh:'管理员',en:'Admin'},
+    roleLoading:{zh:'身份读取中',en:'Checking Role'},
+    roleOpen:{zh:'全课开放',en:'All Lessons Open'},
+    rolePath:{zh:'顺序解锁',en:'Sequential Unlock'},
     today:{zh:'今日入口',en:"Today's Entry"},
     todayDesc:{zh:'优先继续未完成课程；需要维护内容时再进入体检和后台。',en:'Continue unfinished lessons first; use audit and admin tools when maintaining content.'},
     continue:{zh:'继续学习',en:'Continue Learning'},
@@ -43,10 +49,17 @@
     noMatch:{zh:'没有匹配课程。',en:'No matching lessons.'},
     studying:{zh:'学习中',en:'In Progress'},
     available:{zh:'可学习',en:'Available'},
+    unlocked:{zh:'已解锁',en:'Unlocked'},
+    locked:{zh:'未解锁 · 可预览',en:'Locked · Preview'},
+    current:{zh:'当前课',en:'Current'},
+    privileged:{zh:'已开放',en:'Open'},
     progress:{zh:'进度 {percent}%',en:'Progress {percent}%'},
-    wrong:{zh:'错题 {wrong}',en:'Mistakes {wrong}'}
+    wrong:{zh:'错题 {wrong}',en:'Mistakes {wrong}'},
+    lockedHint:{zh:'请先完成第{n}课，或进入预览模式。',en:'Finish Lesson {n} first, or open preview mode.'}
   };
   let query=localStorage.getItem('minna_home_v20_query')||'',filter='all';
+  let roleState={effectiveRole:'normal',role:'normal',bypassLessonLock:false,loading:true};
+  let cloudProgress={};
   const i18n=()=>window.MinnaI18n||null;
   const pick=v=>i18n()?i18n().pick(v):(v&&typeof v==='object'?v.zh||v.en||'':String(v==null?'':v));
   function text(key,vars){
@@ -62,8 +75,13 @@
     for(const key of keys){const value=readJson(key);if(value)return value}
     return null;
   }
+  function lessonId(n){return 'minna_lesson_'+pad(n)}
+  function cloudState(n){
+    const row=cloudProgress[lessonId(n)];
+    return row&&row.progress?row.progress:null;
+  }
   function progressOf(n){
-    const state=legacyState(n)||{};
+    const state=cloudState(n)||legacyState(n)||{};
     const mastery=state.mastery||{};
     const done=Number(state.doneLevels||state.completedLevels||state.done_pages||0);
     const score=Number(state.score||state.totalScore||mastery.final||0);
@@ -71,6 +89,45 @@
     const passed=!!state.mastery_passed||((mastery.vocab||0)>=100&&(mastery.grammar||0)>=80&&(mastery.examples||0)>=80&&(mastery.final||0)>=80&&wrong===0);
     const percent=passed?100:Math.max(0,Math.min(99,Math.round((Number(mastery.vocab||0)+Number(mastery.grammar||0)+Number(mastery.examples||0)+Number(mastery.final||0))/4)||Math.min(90,done*12)||Math.min(90,score)));
     return {state,done,score,wrong,passed,percent,hasRecord:!!Object.keys(state).length};
+  }
+  function canAccess(n){
+    if(roleState.bypassLessonLock)return true;
+    if(n===1)return true;
+    return progressOf(n-1).passed;
+  }
+  function isCurrentLesson(n){
+    if(progressOf(n).passed)return false;
+    for(let i=1;i<n;i++){if(!progressOf(i).passed)return false}
+    return true;
+  }
+  function lessonHref(l,access){
+    return access ? l.url : `${l.url}&mode=preview`;
+  }
+  function roleLabel(){
+    if(roleState.loading)return text('roleLoading');
+    if(roleState.effectiveRole==='admin')return text('roleAdmin');
+    if(roleState.effectiveRole==='vip')return text('roleVip');
+    return text('roleNormal');
+  }
+  function roleModeLabel(){
+    if(roleState.bypassLessonLock)return text('roleOpen');
+    return text('rolePath');
+  }
+  async function hydrateAccount(){
+    if(!window.MinnaAuth)return;
+    try{
+      await MinnaAuth.init({lessonId:'minna_home_v20'});
+      roleState=await MinnaAuth.loadRole(true);
+      try{
+        const rows=await MinnaAuth.listProgress();
+        cloudProgress={};
+        rows.forEach(row=>{if(row&&row.lesson_id)cloudProgress[row.lesson_id]=row});
+      }catch(e){console.warn('[Minna Home] cloud progress skipped:',e.message||e)}
+    }catch(e){
+      console.warn('[Minna Home] account hydrate skipped:',e.message||e);
+      roleState={effectiveRole:'normal',role:'normal',bypassLessonLock:false,loading:false};
+    }
+    render();
   }
   function dashboard(){
     const enriched=lessons.map(l=>Object.assign({},l,{progress:progressOf(l.n)}));
@@ -84,7 +141,7 @@
   function render(){
     const data=dashboard();
     document.title=`${text('title')} v${VERSION}`;
-    $('app').innerHTML=`<header class="hero"><div class="wrap heroGrid"><div class="heroCopy"><div class="heroMeta"><span class="badge">Minna AI Learning System v${VERSION}</span><span id="langMount"></span></div><h1>${esc(text('title'))}</h1><p>${esc(text('subtitle'))}</p><div class="heroActions"><a class="primary" href="${data.resume.url}" data-track="${data.resume.n}">${esc(text('continueLesson',{n:data.resume.n}))}</a><a class="ghostHero" href="${lessonUrl(data.current.n)}" data-track="${data.current.n}">${esc(text('currentLesson',{n:data.current.n}))}</a><a class="lightHero" href="./minna-wrongbook.html?v=${VERSION}">${esc(text('wrongbook'))}</a></div></div><div class="heroStats"><div><b>${data.mastered}</b><span>${esc(text('mastered'))}</span></div><div><b>${data.records}</b><span>${esc(text('records'))}</span></div><div><b>50</b><span>${esc(text('total'))}</span></div></div></div></header><main class="wrap"><section class="panel overviewPanel"><div><h2>${esc(text('today'))}</h2><p>${esc(text('todayDesc'))}</p></div><div class="actionStrip"><a class="primary" href="${data.resume.url}" data-track="${data.resume.n}">${esc(text('continue'))}</a><a class="ghost" href="./minna-content-audit.html?v=${VERSION}">${esc(text('audit'))}</a><a class="light" href="./minna-admin.html?v=${VERSION}">${esc(text('admin'))}</a><a class="light" href="./minna-user-manual.html?v=${VERSION}">${esc(text('manual'))}</a></div></section><section class="panel"><div class="sectionHead"><div><h2>${esc(text('path'))}</h2><p class="small">${esc(text('pathDesc'))}</p></div><div class="segmented" role="tablist" aria-label="${esc(text('path'))}"><button data-filter="all">${esc(text('all'))}</button><button data-filter="migrated">${esc(text('migrated'))}</button><button data-filter="seed">${esc(text('seed'))}</button></div></div><div class="filters"><input id="searchBox" value="${esc(query)}" placeholder="${esc(text('search'))}"><select id="filterBox"><option value="all">${esc(text('allCourses'))}</option><option value="migrated">Mastery migrated</option><option value="seed">Practice seed</option></select></div><div id="lessonGrid"></div></section><section class="panel statusPanel"><h2>${esc(text('status'))}</h2><div class="statusGrid"><div><b>${esc(text('player'))}</b><span>${esc(text('playerDesc'))}</span></div><div><b>${esc(text('practice'))}</b><span>${esc(text('practiceDesc'))}</span></div><div><b>${esc(text('fallback'))}</b><span>${esc(text('fallbackDesc'))}</span></div></div></section></main><footer class="wrap footer">docs/minna-index.html · v${VERSION}</footer>`;
+    $('app').innerHTML=`<header class="hero"><div class="wrap heroGrid"><div class="heroCopy"><div class="heroMeta"><span class="badge">Minna AI Learning System v${VERSION}</span><span class="roleBadge">${esc(roleLabel())} · ${esc(roleModeLabel())}</span><span id="langMount"></span></div><h1>${esc(text('title'))}</h1><p>${esc(text('subtitle'))}</p><div class="heroActions"><a class="primary" href="${data.resume.url}" data-track="${data.resume.n}">${esc(text('continueLesson',{n:data.resume.n}))}</a><a class="ghostHero" href="${lessonUrl(data.current.n)}" data-track="${data.current.n}">${esc(text('currentLesson',{n:data.current.n}))}</a><a class="lightHero" href="./minna-wrongbook.html?v=${VERSION}">${esc(text('wrongbook'))}</a></div></div><div class="heroStats"><div><b>${data.mastered}</b><span>${esc(text('mastered'))}</span></div><div><b>${data.records}</b><span>${esc(text('records'))}</span></div><div><b>50</b><span>${esc(text('total'))}</span></div></div></div></header><main class="wrap"><section class="panel overviewPanel"><div><h2>${esc(text('today'))}</h2><p>${esc(text('todayDesc'))}</p></div><div class="actionStrip"><a class="primary" href="${data.resume.url}" data-track="${data.resume.n}">${esc(text('continue'))}</a><a class="ghost" href="./minna-content-audit.html?v=${VERSION}">${esc(text('audit'))}</a><a class="light" href="./minna-admin.html?v=${VERSION}">${esc(text('admin'))}</a><a class="light" href="./minna-user-manual.html?v=${VERSION}">${esc(text('manual'))}</a></div></section><section class="panel"><div class="sectionHead"><div><h2>${esc(text('path'))}</h2><p class="small">${esc(text('pathDesc'))}</p></div><div class="segmented" role="tablist" aria-label="${esc(text('path'))}"><button data-filter="all">${esc(text('all'))}</button><button data-filter="migrated">${esc(text('migrated'))}</button><button data-filter="seed">${esc(text('seed'))}</button></div></div><div class="filters"><input id="searchBox" value="${esc(query)}" placeholder="${esc(text('search'))}"><select id="filterBox"><option value="all">${esc(text('allCourses'))}</option><option value="migrated">Mastery migrated</option><option value="seed">Practice seed</option></select></div><div id="lessonGrid"></div></section><section class="panel statusPanel"><h2>${esc(text('status'))}</h2><div class="statusGrid"><div><b>${esc(text('player'))}</b><span>${esc(text('playerDesc'))}</span></div><div><b>${esc(text('practice'))}</b><span>${esc(text('practiceDesc'))}</span></div><div><b>${esc(text('fallback'))}</b><span>${esc(text('fallbackDesc'))}</span></div></div></section></main><footer class="wrap footer">docs/minna-index.html · v${VERSION}</footer>`;
     if(i18n())i18n().installToggle($('langMount'));
     bind();
     renderGrid();
@@ -113,12 +170,16 @@
   }
   function card(l){
     const p=l.progress;
-    const status=p.passed?'mastered':p.hasRecord?'current':'unlocked';
+    const access=canAccess(l.n);
+    const current=isCurrentLesson(l.n);
+    const status=p.passed?'mastered':current?'current':access?'unlocked':'locked';
     const lessonName=i18n()&&i18n().lang()==='en'?`Lesson ${l.n}`:`第${l.n}课`;
-    const label=p.passed?text('mastered'):p.hasRecord?text('studying'):text('available');
+    const label=roleState.bypassLessonLock&&!p.passed?`${text('privileged')} · ${roleLabel()}`:p.passed?text('mastered'):current?text('current'):access?text('unlocked'):text('locked');
     const wrong=p.wrong?` · ${text('wrong',{wrong:p.wrong})}`:'';
-    return `<a class="lesson ${status}" href="${l.url}" data-track="${l.n}"><b>${esc(lessonName)}</b><span>${esc(pick(l.topic))}</span><small>${esc(label)} · ${esc(l.tag)}</small><div class="progressLine"><i style="width:${p.percent}%"></i></div><small>${esc(text('progress',{percent:p.percent}))}${esc(wrong)}</small></a>`;
+    const hint=!access&&!roleState.bypassLessonLock?`<small>${esc(text('lockedHint',{n:l.n-1}))}</small>`:'';
+    return `<a class="lesson ${status}" href="${lessonHref(l,access)}" data-track="${l.n}"><b>${esc(lessonName)}</b><span>${esc(pick(l.topic))}</span><small>${esc(label)} · ${esc(l.tag)}</small><div class="progressLine"><i style="width:${p.percent}%"></i></div><small>${esc(text('progress',{percent:p.percent}))}${esc(wrong)}</small>${hint}</a>`;
   }
   if(i18n())i18n().onChange(render);
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',render);else render();
+  function start(){render();hydrateAccount()}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
 })();
