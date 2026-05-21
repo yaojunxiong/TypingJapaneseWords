@@ -1,11 +1,11 @@
-// Minna Lesson Loader v20.0
+// Minna Lesson Loader v20.2
 // Prefer Supabase published lesson content. Fallback to static JSON file. If both are missing, generate a minimal editable template.
 // Debug query params:
 //   ?source=file      force static JSON file
 //   ?source=supabase  force Supabase published content
 //   ?source=template  force generated minimal template
 (function(){
-  const VERSION='20.0';
+  const VERSION='20.2';
   const SUPABASE_URL='https://ycjuceortcduakxscfes.supabase.co';
   const SUPABASE_KEY='sb_publishable_sK-XWyiFwSoKCorddBULCw_0yiS9e5t';
   const topicMap={
@@ -23,6 +23,53 @@
   function showError(err){
     const app=document.getElementById('app');
     if(app)app.innerHTML='<main class="wrap"><section class="panel"><h1>Lesson Content Loader Error</h1><p class="small">'+String(err.message||err)+'</p><p><a href="./minna-index.html?v='+VERSION+'">Back to Home</a></p></section></main>';
+  }
+  function readJson(key){try{return JSON.parse(localStorage.getItem(key)||'null')}catch(e){return null}}
+  function isPassedState(s){
+    if(!s)return false;
+    const m=s.mastery||{};
+    const wrong=s.wrong_count!=null?Number(s.wrong_count):s.wrong?Object.keys(s.wrong).filter(k=>s.wrong[k]).length:0;
+    return !!s.mastery_passed||((m.vocab||0)>=100&&(m.grammar||0)>=80&&(m.examples||0)>=80&&(m.final||0)>=80&&wrong===0);
+  }
+  function localProgress(n){
+    const no=pad(n);
+    const keys=[`minna_lesson_${no}`,`lesson${no}v8`,`lesson${no}v7`,`lesson${no}v6`,`lesson${no}v5`,`lesson${n}v8`,`lesson${n}v7`,`lesson${n}v6`,`lesson${n}v5`];
+    for(const key of keys){const value=readJson(key);if(value)return value}
+    return null;
+  }
+  async function previousPassed(n){
+    if(isPassedState(localProgress(n)))return true;
+    if(window.MinnaAuth&&MinnaAuth.loadProgress){
+      try{
+        const row=await MinnaAuth.loadProgress('minna_lesson_'+pad(n));
+        if(row&&isPassedState(row.progress))return true;
+      }catch(e){console.warn('[Minna Lock] previous cloud progress skipped:',e.message||e)}
+    }
+    return false;
+  }
+  function showLocked(n,role){
+    const app=document.getElementById('app');
+    const prev=Math.max(1,n-1);
+    const previewUrl='./minna-lesson-v16.html?n='+n+'&v='+VERSION+'&mode=preview';
+    const prevUrl='./minna-lesson-v16.html?n='+prev+'&v='+VERSION;
+    const roleText=role&&role.effectiveRole?role.effectiveRole:'normal';
+    if(app)app.innerHTML='<main class="wrap"><section class="panel lockedPanel"><span class="badge2">Sequential Unlock</span><h1>第 '+n+' 课暂未解锁</h1><p>请先完成第 '+prev+' 课。VIP 会员和管理员不受锁课限制。</p><p class="small">Current role: '+roleText+'</p><p class="buttons"><a class="primary" href="'+prevUrl+'">去第 '+prev+' 课</a><a class="light" href="'+previewUrl+'">预览第 '+n+' 课</a><a class="ghost" href="./minna-index.html?v='+VERSION+'">回首页</a></p></section></main>';
+  }
+  async function canEnterLesson(n){
+    const mode=params().get('mode');
+    if(mode==='preview'){window.MinnaPreviewMode=true;return true}
+    if(n===1)return true;
+    let role={effectiveRole:'normal',bypassLessonLock:false};
+    if(window.MinnaAuth&&MinnaAuth.init&&MinnaAuth.loadRole){
+      try{
+        await MinnaAuth.init({lessonId:'minna_lesson_'+pad(n)});
+        role=await MinnaAuth.loadRole(true);
+      }catch(e){console.warn('[Minna Lock] role fallback:',e.message||e)}
+    }
+    if(role&&role.bypassLessonLock)return true;
+    if(await previousPassed(n-1))return true;
+    showLocked(n,role);
+    return false;
   }
   function makeClient(){
     if(window.MinnaAuth&&MinnaAuth.client){try{const c=MinnaAuth.client();if(c)return c}catch(e){}}
@@ -92,6 +139,7 @@
     document.body.dataset.lessonNo=String(n);
     document.body.dataset.lessonId=document.body.dataset.lessonId||('minna_lesson_'+pad(n));
     try{
+      if(!await canEnterLesson(n))return;
       window.MinnaCurrentLessonJson=await upgradeContent(n,await loadContent(n));
       await script('./minna-player-v17.js?v='+VERSION);
     }catch(e){showError(e)}
