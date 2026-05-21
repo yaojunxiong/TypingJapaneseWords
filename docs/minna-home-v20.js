@@ -217,7 +217,8 @@
   function loopBasis(current){
     const p=current.progress||{};
     const yes=text('yes'),no=text('no');
-    return `<details><summary>${esc(text('showBasis'))}</summary><div class="small"><p>${esc(text('basisTitle'))}</p><p>${esc(text('basisLesson',{n:current.n}))}</p><p>${esc(text('basisPercent',{p:p.percent||0}))}</p><p>${esc(text('basisWrong',{n:p.wrong||0}))}</p><p>${esc(text('basisPassed',{v:p.passed?yes:no}))}</p><p>${esc(text('basisRecord',{v:p.hasRecord?yes:no}))}</p></div></details>`;
+    const wrongClass=(p.wrong||0)>0?'style="background:#fee2e2;color:#991b1b"':'';
+    return `<details><summary>${esc(text('showBasis'))}</summary><div class="small"><p>${esc(text('basisTitle'))}</p><p class="buttons"><span class="badge2">${esc(text('basisLesson',{n:current.n}))}</span><span class="badge2">${esc(text('basisPercent',{p:p.percent||0}))}</span><span class="badge2" ${wrongClass}>${esc(text('basisWrong',{n:p.wrong||0}))}</span><span class="badge2">${esc(text('basisPassed',{v:p.passed?yes:no}))}</span><span class="badge2">${esc(text('basisRecord',{v:p.hasRecord?yes:no}))}</span></p></div></details>`;
   }
   function render(){
     const data=dashboard();
