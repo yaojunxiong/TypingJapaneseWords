@@ -1,8 +1,10 @@
-// Minna App Home v21.3
+// Minna App Home v21.4
 (function(){
-  var VERSION='21.3';
+  var VERSION='21.4';
   var STATE_KEY='minna.mobile.learning.state.v1';
   var LANG_KEY='minna_app_lang';
+  var PROGRESS_KEY='minna.stage.progress.v1';
+  var STAGES=['vocab','grammar','examples','review'];
 
   var copy={
     brand:{zh:'みんなの日本語',en:'Minna no Nihongo'},
@@ -12,19 +14,11 @@
     continueBtn:{zh:'继续学习',en:'Continue'},
     path:{zh:'学习路径',en:'Learning Path'},
     status:{zh:'学习状态',en:'Learning Status'},
-    tabLearn:{zh:'学习',en:'Learn'},
-    tabFav:{zh:'收藏',en:'Saved'},
-    tabLessons:{zh:'课程',en:'Lessons'},
-    tabMe:{zh:'我的',en:'Me'},
-    streakLabel:{zh:'连续学习天数',en:'Streak'},
-    currentLesson:{zh:'当前课程',en:'Current Lesson'},
-    meTitle:{zh:'我的',en:'Me'},
-    settings:{zh:'系统设置',en:'Settings'},
-    language:{zh:'系统语言',en:'System Language'},
-    languageDesc:{zh:'默认使用中文；需要英文界面时可在这里切换。',en:'Chinese is the default. Switch to English here when needed.'},
-    backLearn:{zh:'返回学习',en:'Back to Learn'}
+    tabLearn:{zh:'学习',en:'Learn'},tabFav:{zh:'收藏',en:'Saved'},tabLessons:{zh:'课程',en:'Lessons'},tabMe:{zh:'我的',en:'Me'},
+    streakLabel:{zh:'连续学习天数',en:'Streak'},currentLesson:{zh:'当前课程',en:'Current Lesson'},meTitle:{zh:'我的',en:'Me'},settings:{zh:'系统设置',en:'Settings'},
+    language:{zh:'系统语言',en:'System Language'},languageDesc:{zh:'默认使用中文；需要英文界面时可在这里切换。',en:'Chinese is the default. Switch to English here when needed.'},backLearn:{zh:'返回学习',en:'Back to Learn'},
+    done:{zh:'已完成',en:'Done'},learning:{zh:'学习中',en:'Learning'},new:{zh:'未开始',en:'New'},locked:{zh:'未解锁',en:'Locked'}
   };
-
   var lessons={
     1:{zh:['自我介绍','名词句 · 初次见面'],en:['Self-introduction','Noun sentences · Greetings']},
     2:{zh:['这个是什么','指示代词 · 基础问答'],en:['What is this?','Demonstratives · Basic Q&A']},
@@ -39,18 +33,18 @@
   function t(key,vars){var v=(copy[key]&&copy[key][lang()])||'';Object.keys(vars||{}).forEach(function(k){v=v.replace('{'+k+'}',vars[k])});return v;}
   function lessonText(n,i){return (lessons[n]&&lessons[n][lang()]&&lessons[n][lang()][i])||''}
   function readState(){try{return JSON.parse(localStorage.getItem(STATE_KEY)||'{}')||{}}catch(e){return {}}}
+  function readProgress(){try{return JSON.parse(localStorage.getItem(PROGRESS_KEY)||'{}')||{}}catch(e){return {}}}
+  function doneCount(n){var p=readProgress();return STAGES.filter(function(s){var x=p['lesson'+n+'.'+s];return x&&x.ok}).length}
+  function lessonStatus(n,current){var c=doneCount(n);if(c>=4)return'done';if(c>0||n===current)return'learning';if(n>current)return'locked';return'new'}
   function lessonUrl(n){return './minna-path.html?lesson='+n+'&v='+VERSION}
 
   function langSetting(){return '<div class="settingCard"><div><h3>'+t('language')+'</h3><p>'+t('languageDesc')+'</p></div><div class="langSwitch inSettings"><button class="'+(lang()==='zh'?'active':'')+'" data-lang="zh">中文</button><button class="'+(lang()==='en'?'active':'')+'" data-lang="en">EN</button></div></div>';}
-  function node(n,locked){return '<div class="pathNode"><a class="pathCircle '+(locked?'locked':'')+'" href="'+(locked?'#':lessonUrl(n))+'"><small>LESSON</small><strong>'+n+'</strong></a><div class="pathInfo"><h3>'+lessonText(n,0)+'</h3><p>'+lessonText(n,1)+'</p></div></div>';}
+  function node(n,current){var st=lessonStatus(n,current),locked=st==='locked',c=doneCount(n);return '<div class="pathNode '+st+'"><a class="pathCircle '+st+'" href="'+(locked?'#':lessonUrl(n))+'"><small>'+(st==='done'?'✓':'LESSON')+'</small><strong>'+n+'</strong></a><div class="pathInfo"><h3>'+lessonText(n,0)+'</h3><p>'+lessonText(n,1)+'</p><span class="lessonBadge '+st+'">'+t(st)+'</span>'+(c>0&&c<4?'<span class="lessonMini">'+c+'/4</span>':'')+'</div></div>';}
   function top(current){return '<header class="appTop"><div class="appBrand">'+t('brand')+'</div><div class="appStatus"><div class="appAvatar">日</div><div class="appProgress"><i style="width:'+(current*2)+'%"></i></div></div></header>';}
-  function learnView(state,current){return '<main class="appWrap"><section class="continueCard"><div>🔥 '+t('streak',{n:Number(state.streak||1)})+'</div><h1>'+t('continueTitle',{n:current})+'</h1><p>'+t('continueDesc')+'</p><a class="continueBtn" href="'+lessonUrl(current)+'">'+t('continueBtn')+'</a></section><section><h2 class="sectionTitle">'+t('path')+'</h2><div class="path">'+node(1,false)+'<div class="pathLine"></div>'+node(2,false)+'<div class="pathLine"></div>'+node(3,false)+'<div class="pathLine"></div>'+node(4,current<4)+'<div class="pathLine"></div>'+node(5,current<5)+'</div></section><section><h2 class="sectionTitle">'+t('status')+'</h2><div class="statsGrid"><div class="statCard"><b>'+Number(state.streak||1)+'</b><span>'+t('streakLabel')+'</span></div><div class="statCard"><b>'+current+'</b><span>'+t('currentLesson')+'</span></div></div></section></main>';}
+  function learnView(state,current){return '<main class="appWrap"><section class="continueCard"><div>🔥 '+t('streak',{n:Number(state.streak||1)})+'</div><h1>'+t('continueTitle',{n:current})+'</h1><p>'+t('continueDesc')+'</p><a class="continueBtn" href="'+lessonUrl(current)+'">'+t('continueBtn')+'</a></section><section><h2 class="sectionTitle">'+t('path')+'</h2><div class="path">'+node(1,current)+'<div class="pathLine"></div>'+node(2,current)+'<div class="pathLine"></div>'+node(3,current)+'<div class="pathLine"></div>'+node(4,current)+'<div class="pathLine"></div>'+node(5,current)+'</div></section><section><h2 class="sectionTitle">'+t('status')+'</h2><div class="statsGrid"><div class="statCard"><b>'+Number(state.streak||1)+'</b><span>'+t('streakLabel')+'</span></div><div class="statCard"><b>'+current+'</b><span>'+t('currentLesson')+'</span></div></div></section></main>';}
   function meView(){return '<main class="appWrap"><section class="meHero"><div class="appAvatar big">日</div><h1>'+t('meTitle')+'</h1><p>'+t('settings')+'</p></section><section><h2 class="sectionTitle">'+t('settings')+'</h2>'+langSetting()+'<p class="settingsActions"><a class="continueBtn small" href="#">'+t('backLearn')+'</a></p></section></main>';}
   function tabs(){var isMe=view()==='me';return '<nav class="bottomTabs"><a class="'+(!isMe?'active':'')+'" href="./minna-app.html"><span>🏠</span><b>'+t('tabLearn')+'</b></a><a href="./minna-favorites.html"><span>⭐</span><b>'+t('tabFav')+'</b></a><a href="./minna-index.html"><span>📚</span><b>'+t('tabLessons')+'</b></a><a class="'+(isMe?'active':'')+'" href="#me"><span>👤</span><b>'+t('tabMe')+'</b></a></nav>';}
 
   function render(){var state=readState();var current=Math.max(1,Number(state.lastLesson||1));document.documentElement.lang=lang()==='en'?'en':'zh-CN';document.title=(lang()==='en'?'Minna App | Minna no Nihongo':'Minna App | みんなの日本語');document.getElementById('app').innerHTML=top(current)+(view()==='me'?meView():learnView(state,current))+tabs();document.querySelectorAll('[data-lang]').forEach(function(btn){btn.onclick=function(){setLang(btn.dataset.lang)}});}
-
-  window.addEventListener('hashchange',render);
-  if(!localStorage.getItem(LANG_KEY)&&!localStorage.getItem('minna_ui_lang'))setLang('zh');
-  else if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',render);else render();
+  window.addEventListener('hashchange',render);if(!localStorage.getItem(LANG_KEY)&&!localStorage.getItem('minna_ui_lang'))setLang('zh');else if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',render);else render();
 })();
