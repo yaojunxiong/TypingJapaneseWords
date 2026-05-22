@@ -1,8 +1,10 @@
-// Minna Path v1.1
+// Minna Path v1.2
 (function(){
   var params=new URLSearchParams(location.search);
   var lesson=Number(params.get('lesson')||1);
   var lang=localStorage.getItem('minna_ui_lang')||'zh';
+  var PROGRESS_KEY='minna.stage.progress.v1';
+  var XP_KEY='minna.xp.v1';
 
   var DATA={
     1:{zh:{unit:'第 1 阶段，第 1 部分',title:'名词句・自我介绍'},en:{unit:'Stage 1 · Part 1',title:'Noun sentences / self-introduction'}},
@@ -17,26 +19,42 @@
   ];
 
   function t(v){return (v&&v[lang])||v.zh||''}
-  function stageUrl(id){return './minna-stage.html?lesson='+lesson+'&stage='+id+'&v=1.1'}
+  function readProgress(){try{return JSON.parse(localStorage.getItem(PROGRESS_KEY)||'{}')}catch(e){return {}}}
+  function readXp(){try{return Number(localStorage.getItem(XP_KEY)||0)}catch(e){return 0}}
+  function key(id){return 'lesson'+lesson+'.'+id}
+  function isDone(id){var p=readProgress();return !!(p[key(id)]&&p[key(id)].ok)}
+  function isUnlocked(i){if(i===0)return true;return isDone(STAGES[i-1].id)}
+  function stageUrl(id){return './minna-stage.html?lesson='+lesson+'&stage='+id+'&v=1.2'}
 
-  function node(stage){
-    return '<a class="pathNode '+(stage.review?'review':'')+'" href="'+stageUrl(stage.id)+'"><div class="nodeInner">'+stage.icon+'</div><div class="nodeLabel">'+t(stage.label)+'</div></a>';
+  function node(stage,i){
+    var done=isDone(stage.id);
+    var unlocked=isUnlocked(i);
+    var cls=['pathNode'];
+    if(stage.review)cls.push('review');
+    if(done)cls.push('done');
+    if(!unlocked)cls.push('locked');
+    if(unlocked&&!done)cls.push('current');
+    var href=unlocked?stageUrl(stage.id):'#';
+    var icon=done?'✓':stage.icon;
+    var lockText=!unlocked?(lang==='en'?'Locked':'未解锁'):'';
+    return '<a class="'+cls.join(' ')+'" href="'+href+'"><div class="nodeInner">'+icon+'</div><div class="nodeLabel">'+t(stage.label)+(lockText?' · '+lockText:'')+'</div></a>';
   }
 
   function render(){
     var info=DATA[lesson]||DATA[1];
     document.title=t(info).title||'Minna Path';
+    var doneCount=STAGES.filter(function(s){return isDone(s.id)}).length;
     document.getElementById('app').innerHTML=''
       +'<header class="pathTop">'
-      +'<div class="topStats"><div>🔥 1</div><div>💎 0</div><div>⚡ 25</div></div>'
+      +'<div class="topStats"><div>🔥 1</div><div>💎 '+readXp()+'</div><div>✅ '+doneCount+'/4</div></div>'
       +'<div class="unitCard"><h1>'+t(info).unit+'<br>'+t(info).title+'</h1></div>'
       +'</header>'
       +'<main class="pathWrap"><div class="pathColumn">'
-      +node(STAGES[0])
+      +node(STAGES[0],0)
       +'<div class="pathMascot">🦉</div>'
-      +node(STAGES[1])
-      +node(STAGES[2])
-      +node(STAGES[3])
+      +node(STAGES[1],1)
+      +node(STAGES[2],2)
+      +node(STAGES[3],3)
       +'</div></main>'
       +'<nav class="bottomTabs">'
       +'<a class="active" href="./minna-app.html"><span>🏠</span><b>'+(lang==='en'?'Learn':'学习')+'</b></a>'
