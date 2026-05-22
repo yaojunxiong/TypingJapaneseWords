@@ -22,3 +22,8 @@ body{padding-bottom:110px}
 .xpToast.show{opacity:1;transform:translate(-50%,0) scale(1)}
 .xpToast.ok{background:#58cc02;color:#fff}
 .xpToast.bad{background:#ff4b4b;color:#fff}
+.smallCounter{margin-top:12px;color:#58cc02;font-size:18px;font-weight:1000}
+.completeScreen{display:flex;flex-direction:column;justify-content:center;text-align:center}
+.completeScreen .stageTitle{margin-top:0}
+.stageAction:active{transform:translateY(4px)}
+.choiceBtn:active{transform:translateY(3px)}
