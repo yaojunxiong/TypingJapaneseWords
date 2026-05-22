@@ -18,3 +18,7 @@ body{padding-bottom:110px}
 .choiceBtn{min-height:66px;border:3px solid #e5e7eb;border-radius:18px;background:#fff;color:#3f3f46;font-size:20px;font-weight:900;box-shadow:0 4px 0 #e5e7eb}
 .choiceBtn.right{background:#d7ffb8;border-color:#58cc02;box-shadow:0 4px 0 #58cc02}
 .choiceBtn.wrong{background:#ffdfe0;border-color:#ff4b4b;box-shadow:0 4px 0 #ff4b4b}
+.xpToast{position:fixed;left:50%;top:90px;z-index:50;transform:translate(-50%,-16px) scale(.96);opacity:0;border-radius:999px;padding:12px 20px;font-size:22px;font-weight:1000;box-shadow:0 10px 30px rgba(0,0,0,.14);transition:all .28s ease}
+.xpToast.show{opacity:1;transform:translate(-50%,0) scale(1)}
+.xpToast.ok{background:#58cc02;color:#fff}
+.xpToast.bad{background:#ff4b4b;color:#fff}
