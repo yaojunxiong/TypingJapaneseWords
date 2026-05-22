@@ -1,10 +1,14 @@
 @import url("./minna-site.css?v=20.3");
 
-/* Lesson page should share the same visual language as home */
 body {
   background:
     radial-gradient(circle at 10% 0%, #dbeafe 0, transparent 36%),
     var(--bg);
+  overflow-x:hidden;
+}
+
+*{
+  box-sizing:border-box;
 }
 
 .hero {
@@ -16,6 +20,27 @@ body {
   width: 100%;
 }
 
+.loadingPanel,
+.errorPanel{
+  width:100%;
+  max-width:100%;
+}
+
+.errorBox{
+  margin-top:14px;
+  padding:14px;
+  border-radius:12px;
+  background:#fff7ed;
+  border:1px solid #fdba74;
+  overflow:auto;
+}
+
+.errorBox pre{
+  white-space:pre-wrap;
+  word-break:break-word;
+  font-size:12px;
+}
+
 .quicklinks,
 .buttons,
 .authBar {
@@ -25,30 +50,6 @@ body {
   align-items: center;
 }
 
-.quicklinks {
-  margin-top: 14px;
-}
-
-.lessonNav {
-  margin-top: 12px;
-  display: grid;
-  gap: 10px;
-}
-
-.quicklinksPrimary {
-  margin-top: 0;
-}
-
-.quicklinksSections {
-  margin-top: 0;
-}
-
-.quicklinksSections a {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.28);
-  font-size: 14px;
-}
-
 .quicklinks a,
 .buttons a,
 .buttons button,
@@ -56,67 +57,20 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 40px;
-  border-radius: 8px;
-  padding: 9px 14px;
+  min-height: 44px;
+  border-radius: 10px;
+  padding: 10px 14px;
   border: 0;
   font-weight: 1000;
   cursor: pointer;
   text-decoration: none;
-}
-
-.quicklinks a {
-  background: rgba(255, 255, 255, 0.18);
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  color: #fff !important;
-}
-
-.quicklinks a.primary {
-  background: #22c55e;
-  border-color: #22c55e;
-  color: #052e16 !important;
-}
-
-.buttons a,
-.buttons button,
-.authBar button {
-  background: #eef2ff;
-  color: #3730a3;
-  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
-}
-
-.buttons .primary {
-  background: #22c55e;
-  color: #052e16;
-}
-
-.buttons .light {
-  background: #e2e8f0;
-  color: #0f172a;
+  max-width:100%;
 }
 
 .cards4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
-}
-
-.cards4 div {
-  background: #f8fafc;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 12px;
-  text-align: center;
-}
-
-.cards4 b,
-.cards4 span {
-  display: block;
-}
-
-.cards4 span {
-  font-size: 26px;
-  font-weight: 1000;
 }
 
 .vocabGrid {
@@ -130,192 +84,27 @@ body {
 .example,
 .qcard {
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 12px;
   background: #f8fafc;
   padding: 12px;
   margin: 10px 0;
   box-shadow: 0 8px 22px rgba(15, 23, 42, 0.05);
-}
-
-.vcard b {
-  font-size: 22px;
-}
-
-.vcard small,
-.vcard span {
-  display: block;
-  margin-top: 5px;
+  width:100%;
+  overflow:hidden;
 }
 
 .jp {
   font-size: 22px;
   font-weight: 1000;
-}
-
-.practiceBox {
-  margin-top: 12px;
-  border-top: 1px dashed #cbd5e1;
-  padding-top: 10px;
-}
-
-.practiceBox h4 {
-  margin: 0 0 6px;
-  font-size: 15px;
-}
-
-.opts {
-  display: grid;
-  gap: 8px;
-}
-
-.opt,
-.orderPart {
-  border: 1px solid var(--line);
-  background: #fff;
-  border-radius: 8px;
-  padding: 10px;
-  text-align: left;
-  font-weight: 900;
-  cursor: pointer;
-}
-
-.orderPart {
-  display: inline-block;
-  margin: 4px;
-}
-
-.opt.right,
-.orderPart.right {
-  background: #dcfce7;
-  border-color: #22c55e;
-  color: #166534;
-}
-
-.opt.wrong,
-.orderPart.wrong {
-  background: #fee2e2;
-  border-color: #ef4444;
-  color: #991b1b;
-}
-
-.sentenceBox {
-  min-height: 52px;
-  border: 2px dashed #cbd5e1;
-  border-radius: 8px;
-  background: #fff;
-  padding: 10px;
-  margin: 10px 0;
-}
-
-.pill {
-  display: inline-block;
-  background: #eef2ff;
-  color: #3730a3;
-  border-radius: 999px;
-  padding: 4px 10px;
-  margin: 3px;
-  font-weight: 900;
+  line-height:1.5;
+  word-break:break-word;
 }
 
 .small {
   color: var(--muted);
   font-size: 13px;
-  line-height: 1.55;
-}
-
-.scoreBox {
-  font-size: 22px;
-  margin-top: 14px;
-}
-
-.authBar {
-  margin-top: 10px;
-}
-
-.authMain {
-  margin-top: 12px;
-}
-
-.sourceBar {
-  padding: 8px 10px;
-  border-radius: 8px;
-  background: rgba(15, 23, 42, 0.18);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.sourceBar .small {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.sourceBtn {
-  min-height: 34px;
-  padding: 6px 10px;
-  font-size: 13px;
-}
-
-.cloudOk {
-  color: #166534;
-  font-weight: 900;
-}
-
-.cloudBad {
-  color: #991b1b;
-  font-weight: 900;
-}
-
-.resultBox {
-  margin-top: 14px;
-  border: 1px solid #bfdbfe;
-  border-radius: 8px;
-  background: #eff6ff;
-  padding: 14px;
-}
-
-.resultBox h3 {
-  margin: 0 0 6px;
-  font-size: 20px;
-}
-
-.resultBox p {
-  margin: 8px 0;
-}
-
-.resultBox.pass {
-  background: #ecfdf5;
-  border-color: #86efac;
-}
-
-.resultBox.fail {
-  background: #fef2f2;
-  border-color: #fecaca;
-}
-
-.resultBox.fix {
-  background: #fff7ed;
-  border-color: #fed7aa;
-}
-
-.resultBox.todo {
-  background: #f8fafc;
-  border-color: #cbd5e1;
-}
-
-.resultMeta {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-top: 10px;
-}
-
-.resultMeta span {
-  background: #fff;
-  border: 1px solid rgba(15, 23, 42, 0.1);
-  border-radius: 999px;
-  padding: 6px 10px;
-  font-size: 13px;
-  font-weight: 900;
+  line-height: 1.6;
+  word-break:break-word;
 }
 
 @media (max-width: 700px) {
@@ -337,12 +126,30 @@ body {
 }
 
 @media (max-width: 520px) {
+  html,
+  body{
+    width:100%;
+    overflow-x:hidden;
+  }
+
   main {
-    padding: 12px;
+    padding: 10px;
   }
 
   .cards4,
   .vocabGrid {
     grid-template-columns: 1fr;
+  }
+
+  .jp{
+    font-size:20px;
+  }
+
+  .panel,
+  .vcard,
+  .gcard,
+  .example,
+  .qcard{
+    border-radius:10px;
   }
 }
