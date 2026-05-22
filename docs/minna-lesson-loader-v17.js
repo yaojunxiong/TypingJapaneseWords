@@ -13,6 +13,12 @@
   };
   function pad(n){return String(n).padStart(2,'0')}
   function params(){return new URLSearchParams(location.search)}
+  function withTimeout(promise,ms,label){
+    return Promise.race([
+      promise,
+      new Promise((_,reject)=>setTimeout(()=>reject(new Error((label||'request')+' timeout after '+ms+'ms')),ms))
+    ]);
+  }
   function lessonNo(){
     const b=document.body;
     if(b&&b.dataset.lessonNo)return Number(b.dataset.lessonNo)||1;
@@ -41,7 +47,7 @@
     if(isPassedState(localProgress(n)))return true;
     if(window.MinnaAuth&&MinnaAuth.loadProgress){
       try{
-        const row=await MinnaAuth.loadProgress('minna_lesson_'+pad(n));
+        const row=await withTimeout(MinnaAuth.loadProgress('minna_lesson_'+pad(n)),3500,'previous progress');
         if(row&&isPassedState(row.progress))return true;
       }catch(e){console.warn('[Minna Lock] previous cloud progress skipped:',e.message||e)}
     }
@@ -62,8 +68,8 @@
     let role={effectiveRole:'normal',bypassLessonLock:false};
     if(window.MinnaAuth&&MinnaAuth.init&&MinnaAuth.loadRole){
       try{
-        await MinnaAuth.init({lessonId:'minna_lesson_'+pad(n)});
-        role=await MinnaAuth.loadRole(true);
+        await withTimeout(MinnaAuth.init({lessonId:'minna_lesson_'+pad(n)}),3500,'auth init');
+        role=await withTimeout(MinnaAuth.loadRole(true),3500,'role lookup');
       }catch(e){console.warn('[Minna Lock] role fallback:',e.message||e)}
     }
     if(role&&role.bypassLessonLock)return true;
@@ -98,7 +104,7 @@
   async function loadSupabase(n){
     const supa=makeClient();
     if(!supa)throw new Error('Supabase client not available');
-    const {data,error}=await supa.from('minna_course_lessons').select('content,version,updated_at,updated_email').eq('course','minna').eq('lesson_no',n).eq('status','published').maybeSingle();
+    const {data,error}=await withTimeout(supa.from('minna_course_lessons').select('content,version,updated_at,updated_email').eq('course','minna').eq('lesson_no',n).eq('status','published').maybeSingle(),4500,'Supabase lesson content');
     if(error)throw error;
     if(!data||!data.content)throw new Error('No published Supabase content for lesson '+n);
     window.MinnaLessonContentSource={type:'supabase',forced:params().get('source')==='supabase',version:data.version,updated_at:data.updated_at,updated_email:data.updated_email||''};
@@ -137,7 +143,7 @@
   async function start(){
     const n=lessonNo();
     document.body.dataset.lessonNo=String(n);
-    document.body.dataset.lessonId=document.body.dataset.lessonId||('minna_lesson_'+pad(n));
+    document.body.dataset.lessonId='minna_lesson_'+pad(n);
     try{
       if(!await canEnterLesson(n))return;
       window.MinnaCurrentLessonJson=await upgradeContent(n,await loadContent(n));

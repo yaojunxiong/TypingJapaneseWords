@@ -2,7 +2,7 @@
 // JSON-driven lesson player with practice blocks for vocab/grammar/examples, bilingual questions, stable quiz order, wrong-only mode, and progress sync.
 (function(){
   const $=id=>document.getElementById(id);
-  const VERSION='20.3';
+  const VERSION='20.3.1';
   const PASS_RATE=80;
   const WRONGBOOK_URL='./minna-wrongbook-v2.html?v=20.3';
   const HOME_URL='./minna-index.html?v='+VERSION;
@@ -15,6 +15,21 @@
   const text=(zh,en)=>lang()==='en'?en:zh;
   const esc=s=>String(s||'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
   let lesson=null, score=0, answered={}, quizOrder={}, user=null, cloud='init', saving=false, orderWork={};
+  function ensureI18n(){
+    if(window.MinnaI18n)return;
+    window.MinnaI18n={
+      lang:()=>localStorage.getItem('minna_ui_lang')||'zh',
+      pick:v=>{if(!v)return'';const l=localStorage.getItem('minna_ui_lang')||'zh';return typeof v==='object'?(v[l]||v.zh||v.en||v.ja||v.jp||''):String(v)},
+      installToggle:()=>{},
+      onChange:()=>{}
+    };
+  }
+  function withTimeout(promise,ms,label){
+    return Promise.race([
+      promise,
+      new Promise((_,reject)=>setTimeout(()=>reject(new Error((label||'request')+' timeout after '+ms+'ms')),ms))
+    ]);
+  }
 
   function shuffleIndex(n){return Array.from({length:n},(_,i)=>i).map(i=>[Math.random(),i]).sort((a,b)=>a[0]-b[0]).map(x=>x[1])}
   function sections(type){return (lesson.sections||[]).filter(s=>s.type===type)}
@@ -37,7 +52,7 @@
   function normalizeQ(q,skill,sectionId,parent,idx){const copy=Object.assign({},q);copy.id=copy.id||((parent&&parent.id?parent.id:sectionId)+'_practice_'+idx);copy.skill=copy.skill||skill||'quiz';copy.sectionId=sectionId||'';copy.parentId=parent&&parent.id||'';return copy}
   function getOrder(q){const arr=q.type==='order'?(q.parts||[]):(q.options||[]);const len=arr.length;if(!quizOrder[q.id]||quizOrder[q.id].length!==len){quizOrder[q.id]=shuffleIndex(len)}return quizOrder[q.id]}
   function payload(){const qs=quizItems(), answeredCount=Object.keys(answered).length, wrong=wrongIds();const rate=qs.length?Math.round(score/qs.length*100):0;return{v:20.3,schema:lesson.schema,lesson_no:lesson.lessonNo,score,completed_count:answeredCount,total_slides:Math.max(1,qs.length),wrong_count:wrong.length,wrong_ids:wrong,mastery_passed:qs.length>0&&answeredCount===qs.length&&rate>=PASS_RATE&&wrong.length===0,quiz_answered:answered,quiz_order:quizOrder,updated_client_at:new Date().toISOString()}}
-  async function initAuth(){if(!window.MinnaAuth){cloud='local';loadLocal();return}try{await MinnaAuth.init({lessonId:lesson.lessonId});user=MinnaAuth.getUser&&MinnaAuth.getUser();const row=await MinnaAuth.loadProgress(lesson.lessonId);if(row&&row.progress){score=Number(row.progress.score)||0;answered=row.progress.quiz_answered||{};quizOrder=row.progress.quiz_order||{}}else loadLocal();cloud='ready'}catch(e){cloud='error:'+e.message;loadLocal()}}
+  async function initAuth(){if(!window.MinnaAuth){cloud='local';loadLocal();return}try{await withTimeout(MinnaAuth.init({lessonId:lesson.lessonId}),3500,'auth init');user=MinnaAuth.getUser&&MinnaAuth.getUser();const row=await withTimeout(MinnaAuth.loadProgress(lesson.lessonId),3500,'progress load');if(row&&row.progress){score=Number(row.progress.score)||0;answered=row.progress.quiz_answered||{};quizOrder=row.progress.quiz_order||{}}else loadLocal();cloud='ready'}catch(e){cloud='error:'+e.message;loadLocal()}}
   function loadLocal(){try{const p=JSON.parse(localStorage.getItem('minna_v18_'+lesson.lessonId)||localStorage.getItem('minna_v17_'+lesson.lessonId)||'{}');score=Number(p.score)||score;answered=p.quiz_answered||answered;quizOrder=p.quiz_order||quizOrder}catch(e){}}
   function cloudHtml(){if(saving)return text('保存中…','Saving…');if(cloud==='ready')return `<span class="cloudOk">${text('云端已连接','Cloud connected')}${user&&user.email?' · '+esc(user.email):''}</span>`;if(cloud==='local')return `<span class="cloudBad">${text('本地模式','Local mode')}</span>`;if(String(cloud).startsWith('error:'))return `<span class="cloudBad">${text('云端异常','Cloud issue')}：${esc(cloud.slice(6))}</span>`;return text('初始化中…','Initializing…')}
   function sourceHtml(){const s=window.MinnaLessonContentSource||{};if(s.type==='supabase')return `<span class="cloudOk">${text('课程数据源','Content source')}：Supabase published</span><span class="small"> v${esc(s.version||'')} ${esc(s.updated_at||'')} ${s.updated_email?(' · '+esc(s.updated_email)):''}${s.forced?' · forced':''}</span>`;if(s.type==='file')return `<span class="cloudBad">${text('课程数据源','Content source')}：JSON file</span><span class="small"> ${esc(s.path||'')}${s.forced?' · forced':''}</span>`;if(s.type==='template')return `<span class="cloudBad">${text('课程数据源','Content source')}：Template</span><span class="small"> ${esc(s.reason||'')}</span>`;return `<span class="small">${text('课程数据源：未知','Content source: unknown')}</span>`}
@@ -102,6 +117,6 @@
   function updateCloud(){const el=$('cloudStatus');if(el)el.innerHTML=cloudHtml()}
   async function saveAll(){saveLocal();if(!window.MinnaAuth){cloud='local';updateCloud();return}saving=true;updateCloud();try{await MinnaAuth.saveProgress(payload(),lesson.lessonId);cloud='ready'}catch(e){cloud='error:'+e.message}saving=false;updateCloud()}
   function saveLocal(){try{localStorage.setItem('minna_v18_'+lesson.lessonId,JSON.stringify(payload()));const recent=JSON.parse(localStorage.getItem('minna_recent_lessons')||'[]').filter(x=>Number(x.n)!==lesson.lessonNo);recent.unshift({n:lesson.lessonNo,at:Date.now()});localStorage.setItem('minna_recent_lessons',JSON.stringify(recent.slice(0,5)));const days=JSON.parse(localStorage.getItem('minna_study_days')||'{}');days[new Date().toISOString().slice(0,10)]=true;localStorage.setItem('minna_study_days',JSON.stringify(days))}catch(e){}}
-  async function start(){lesson=window.MinnaCurrentLessonJson;if(!lesson){$('app').innerHTML='<main class="wrap"><section class="panel">No JSON lesson data loaded.</section></main>';return}if(!window.MinnaI18n)return;I().onChange(()=>render());await initAuth();render()}
+  async function start(){ensureI18n();lesson=window.MinnaCurrentLessonJson;if(!lesson){$('app').innerHTML='<main class="wrap"><section class="panel">No JSON lesson data loaded.</section></main>';return}I().onChange(()=>render());await initAuth();render()}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
 })();
