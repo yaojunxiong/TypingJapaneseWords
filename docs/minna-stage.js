@@ -1,112 +1,217 @@
-// Minna Stage v1.1
+// Minna Stage Multi-Question v1.3
 (function(){
-  var params=new URLSearchParams(location.search);
-  var lessonNo=Number(params.get('lesson')||1);
-  var stage=params.get('stage')||'vocab';
-  var lang=localStorage.getItem('minna_ui_lang')||'zh';
-  var lesson=null;
-  var current=null;
+  var params = new URLSearchParams(location.search);
+  var lessonNo = Number(params.get('lesson') || 1);
+  var stage = params.get('stage') || 'vocab';
+  var lang = localStorage.getItem('minna_ui_lang') || localStorage.getItem('minna_app_lang') || 'zh';
 
-  var META={
-    vocab:{icon:'あ',title:{zh:'词汇训练',en:'Vocabulary'},label:{zh:'选择正确意思',en:'Choose the correct meaning'}},
-    grammar:{icon:'⭐',title:{zh:'语法训练',en:'Grammar'},label:{zh:'选择正确答案',en:'Choose the correct answer'}},
-    examples:{icon:'🎧',title:{zh:'例句训练',en:'Examples'},label:{zh:'理解例句',en:'Understand the example'}},
-    review:{icon:'🏆',title:{zh:'综合测试',en:'Review'},label:{zh:'综合测试',en:'Review test'}}
+  var lesson = null;
+  var items = [];
+  var currentIndex = 0;
+  var score = 0;
+  var answered = false;
+
+  var STAGES = ['vocab','grammar','examples','review'];
+
+  var META = {
+    vocab:{icon:'あ', title:{zh:'词汇训练',en:'Vocabulary'}, label:{zh:'选择正确意思',en:'Choose the correct meaning'}},
+    grammar:{icon:'⭐', title:{zh:'语法训练',en:'Grammar'}, label:{zh:'选择正确答案',en:'Choose the correct answer'}},
+    examples:{icon:'🎧', title:{zh:'例句训练',en:'Examples'}, label:{zh:'理解例句',en:'Understand the example'}},
+    review:{icon:'🏆', title:{zh:'综合测试',en:'Review'}, label:{zh:'综合测试',en:'Review test'}}
   };
 
-  function pad(n){return String(n).padStart(2,'0')}
-  function t(v){return (v&&v[lang])||v.zh||v.en||v.jp||''}
-  function esc(s){return String(s||'').replace(/[&<>\"]/g,function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]})}
-  function shuffle(a){return a.slice().sort(function(){return Math.random()-0.5})}
-  function pick(arr){return arr[Math.floor(Math.random()*arr.length)]}
-  function sections(type){return (lesson.sections||[]).filter(function(s){return s.type===type})}
-
-  function optionText(o){
-    if(o.jp)return o.jp;
-    if(o.text)return typeof o.text==='string'?o.text:t(o.text);
-    return t(o);
-  }
+  function pad(n){ return String(n).padStart(2,'0'); }
+  function t(v){ return (v && (v[lang] || v.zh || v.en || v.jp)) || ''; }
+  function esc(s){ return String(s == null ? '' : s).replace(/[&<>\"]/g,function(m){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]; }); }
+  function shuffle(a){ return a.slice().sort(function(){ return Math.random() - 0.5; }); }
+  function sections(type){ return (lesson.sections || []).filter(function(s){ return s.type === type; }); }
+  function optionText(o){ if(o.jp) return o.jp; if(o.text) return typeof o.text === 'string' ? o.text : t(o.text); return t(o); }
+  function meaning(v){ return lang === 'en' ? (v.en || v.zh || '') : (v.zh || v.en || ''); }
 
   async function loadLesson(){
-    var url='./data/minna/lessons/lesson-'+pad(lessonNo)+'.json?v=1.1';
-    var res=await fetch(url,{cache:'no-store'});
-    if(!res.ok)throw new Error('Lesson JSON not found: '+url);
-    lesson=await res.json();
+    var url = './data/minna/lessons/lesson-' + pad(lessonNo) + '.json?v=1.3';
+    var res = await fetch(url, {cache:'no-store'});
+    if(!res.ok) throw new Error('Lesson JSON not found: ' + url);
+    lesson = await res.json();
   }
 
-  function buildVocab(){
-    var vocab=sections('vocab').flatMap(function(s){return s.items||[]});
-    var item=pick(vocab);
-    var options=shuffle([item].concat(shuffle(vocab.filter(function(v){return v.id!==item.id})).slice(0,3))).map(function(v){return {label:lang==='en'?(v.en||v.zh):(v.zh||v.en),ok:v.id===item.id}});
-    return {title:META.vocab.title,icon:META.vocab.icon,desc:{zh:'「'+item.jp+'」是什么意思？',en:'What does '+item.jp+' mean?'},subtitle:item.kana||'',options:options};
+  function makeVocabItems(){
+    var vocab = sections('vocab').flatMap(function(s){ return s.items || []; });
+    return shuffle(vocab).map(function(item){
+      var choices = shuffle([item].concat(shuffle(vocab.filter(function(v){ return v.id !== item.id; })).slice(0,3)));
+      return {
+        icon: META.vocab.icon,
+        title: META.vocab.title,
+        prompt: {zh:'「' + item.jp + '」是什么意思？', en:'What does ' + item.jp + ' mean?'},
+        sub: item.kana || '',
+        choices: choices.map(function(v){ return {label: meaning(v), ok: v.id === item.id}; })
+      };
+    });
   }
 
-  function firstPracticeFrom(type){
-    var all=[];
+  function makePracticeItems(type, meta){
+    var all = [];
     sections(type).forEach(function(s){
-      (s.items||[]).forEach(function(item){
-        (item.practice||[]).forEach(function(p){all.push(p)});
+      (s.items || []).forEach(function(item){
+        (item.practice || []).forEach(function(p){ all.push(p); });
       });
     });
-    return pick(all);
+    return all.map(function(p){
+      return {
+        icon: meta.icon,
+        title: meta.title,
+        prompt: p.question || meta.label,
+        sub: '',
+        choices: shuffle((p.options || []).map(function(o){ return {label: optionText(o), ok: !!o.correct}; }))
+      };
+    });
   }
 
-  function buildChoiceFromPractice(type,meta){
-    var p=firstPracticeFrom(type);
-    var options=(p.options||[]).map(function(o){return {label:optionText(o),ok:!!o.correct}});
-    return {title:meta.title,icon:meta.icon,desc:p.question||meta.label,subtitle:'',options:shuffle(options)};
+  function makeExampleItems(){
+    var examples = sections('examples').flatMap(function(s){ return s.items || []; });
+    return shuffle(examples).map(function(item){
+      var others = shuffle(examples.filter(function(x){ return x.id !== item.id; })).slice(0,3);
+      var choices = shuffle([item].concat(others));
+      return {
+        icon: META.examples.icon,
+        title: META.examples.title,
+        prompt: lang === 'en' ? (item.en || item.zh) : (item.zh || item.en),
+        sub: '',
+        choices: choices.map(function(e){ return {label: e.jp, ok: e.id === item.id}; })
+      };
+    });
   }
 
-  function buildExample(){
-    var items=sections('examples').flatMap(function(s){return s.items||[]});
-    var item=pick(items);
-    var others=shuffle(items.filter(function(x){return x.id!==item.id})).slice(0,2);
-    var options=shuffle([item].concat(others)).map(function(e){return {label:e.jp,ok:e.id===item.id}});
-    return {title:META.examples.title,icon:META.examples.icon,desc:lang==='en'?(item.en||item.zh):(item.zh||item.en),subtitle:'',options:options};
+  function makeReviewItems(){
+    var quiz = sections('quiz').flatMap(function(s){ return s.items || []; });
+    return quiz.map(function(q){
+      return {
+        icon: META.review.icon,
+        title: META.review.title,
+        prompt: q.question || META.review.label,
+        sub: '',
+        choices: shuffle((q.options || []).map(function(o){ return {label: optionText(o), ok: !!o.correct}; }))
+      };
+    });
   }
 
-  function buildReview(){
-    var qs=sections('quiz').flatMap(function(s){return s.items||[]});
-    var q=pick(qs);
-    var options=(q.options||[]).map(function(o){return {label:optionText(o),ok:!!o.correct}});
-    return {title:META.review.title,icon:META.review.icon,desc:q.question||META.review.label,subtitle:'',options:shuffle(options)};
+  function buildItems(){
+    if(stage === 'vocab') return makeVocabItems();
+    if(stage === 'grammar') return makePracticeItems('grammar', META.grammar);
+    if(stage === 'examples') return makeExampleItems();
+    return makeReviewItems();
   }
 
-  function buildStage(){
-    if(stage==='vocab')return buildVocab();
-    if(stage==='grammar')return buildChoiceFromPractice('grammar',META.grammar);
-    if(stage==='examples')return buildExample();
-    return buildReview();
+  function progressWidth(){
+    if(!items.length) return 0;
+    return Math.round((currentIndex / items.length) * 100);
+  }
+
+  function addXp(n){
+    try{
+      var key = 'minna.xp.v1';
+      var v = Number(localStorage.getItem(key) || 0);
+      localStorage.setItem(key, String(v + n));
+    }catch(e){}
   }
 
   function markDone(ok){
     try{
-      var key='minna.stage.progress.v1';
-      var p=JSON.parse(localStorage.getItem(key)||'{}');
-      var id='lesson'+lessonNo+'.'+stage;
-      p[id]={ok:ok,at:Date.now()};
-      localStorage.setItem(key,JSON.stringify(p));
+      var key = 'minna.stage.progress.v1';
+      var p = JSON.parse(localStorage.getItem(key) || '{}');
+      var id = 'lesson' + lessonNo + '.' + stage;
+      p[id] = {ok: ok, score: score, total: items.length, at: Date.now()};
+      localStorage.setItem(key, JSON.stringify(p));
     }catch(e){}
   }
 
-  function render(){
-    var d=current;
-    document.title=t(d.title)+' | Lesson '+lessonNo;
-    document.getElementById('app').innerHTML=''
-      +'<main class="stageScreen">'
-      +'<div class="stageTop"><a href="./minna-path.html?lesson='+lessonNo+'&v=1.1">×</a><div class="progress"><i style="width:25%"></i></div></div>'
-      +'<section class="stageTitle"><div style="font-size:80px">'+d.icon+'</div><h1>'+esc(t(d.title))+'</h1><p>'+esc(t(d.desc))+'</p><p>'+esc(d.subtitle||'')+'</p></section>'
-      +'<section class="stageCard"><div class="badge">Lesson '+lessonNo+'</div><h2>'+(lang==='en'?'Choose an answer':'选择答案')+'</h2><div class="choiceGrid">'
-      +d.options.map(function(o){return '<button class="choiceBtn" data-ok="'+(o.ok?'1':'0')+'">'+esc(o.label)+'</button>';}).join('')
-      +'</div></section><button class="stageAction" id="nextBtn" style="display:none">'+(lang==='en'?'Back to path':'返回路径')+'</button></main>';
-    document.querySelectorAll('.choiceBtn').forEach(function(btn){btn.onclick=function(){var ok=btn.dataset.ok==='1';btn.classList.add(ok?'right':'wrong');markDone(ok);document.querySelectorAll('.choiceBtn').forEach(function(b){b.disabled=true;if(b.dataset.ok==='1')b.classList.add('right')});document.getElementById('nextBtn').style.display='block';};});
-    document.getElementById('nextBtn').onclick=function(){location.href='./minna-path.html?lesson='+lessonNo+'&v=1.1'};
+  function nextStageUrl(){
+    var i = STAGES.indexOf(stage);
+    if(i >= 0 && i < STAGES.length - 1){
+      return './minna-stage.html?lesson=' + lessonNo + '&stage=' + STAGES[i+1] + '&v=1.3';
+    }
+    return './minna-complete.html?lesson=' + lessonNo + '&v=1.3';
+  }
+
+  function showToast(text, ok){
+    var el = document.createElement('div');
+    el.className = 'xpToast ' + (ok ? 'ok' : 'bad');
+    el.textContent = text;
+    document.body.appendChild(el);
+    setTimeout(function(){ el.classList.add('show'); }, 30);
+    setTimeout(function(){ if(el.parentNode) el.parentNode.removeChild(el); }, 1200);
+  }
+
+  function renderQuestion(){
+    answered = false;
+    var q = items[currentIndex];
+    var percent = progressWidth();
+    document.title = t(q.title) + ' ' + (currentIndex + 1) + '/' + items.length;
+
+    document.getElementById('app').innerHTML = ''
+      + '<main class="stageScreen">'
+      + '<div class="stageTop"><a href="./minna-path.html?lesson=' + lessonNo + '&v=1.3">×</a><div class="progress"><i style="width:' + percent + '%"></i></div></div>'
+      + '<section class="stageTitle"><div style="font-size:80px">' + q.icon + '</div><h1>' + esc(t(q.title)) + '</h1><p>' + esc(t(q.prompt)) + '</p><p>' + esc(q.sub || '') + '</p><p class="smallCounter">' + (currentIndex + 1) + ' / ' + items.length + '</p></section>'
+      + '<section class="stageCard"><div class="badge">Lesson ' + lessonNo + '</div><h2>' + (lang === 'en' ? 'Choose an answer' : '选择答案') + '</h2><div class="choiceGrid">'
+      + q.choices.map(function(o){ return '<button class="choiceBtn" data-ok="' + (o.ok ? '1' : '0') + '">' + esc(o.label) + '</button>'; }).join('')
+      + '</div></section>'
+      + '<button class="stageAction" id="nextBtn" style="display:none">' + (lang === 'en' ? 'Continue' : '继续') + '</button></main>';
+
+    document.querySelectorAll('.choiceBtn').forEach(function(btn){
+      btn.onclick = function(){
+        if(answered) return;
+        answered = true;
+        var ok = btn.dataset.ok === '1';
+        if(ok){ score++; addXp(10); showToast('+10 XP', true); }
+        else { showToast(lang === 'en' ? 'Try again' : '再试一次', false); }
+
+        btn.classList.add(ok ? 'right' : 'wrong');
+        document.querySelectorAll('.choiceBtn').forEach(function(b){
+          b.disabled = true;
+          if(b.dataset.ok === '1') b.classList.add('right');
+        });
+
+        var next = document.getElementById('nextBtn');
+        next.style.display = 'block';
+        next.textContent = (currentIndex >= items.length - 1)
+          ? (lang === 'en' ? 'Finish stage' : '完成本阶段')
+          : (lang === 'en' ? 'Continue' : '继续');
+      };
+    });
+
+    document.getElementById('nextBtn').onclick = function(){
+      currentIndex++;
+      if(currentIndex < items.length) renderQuestion();
+      else completeStage();
+    };
+  }
+
+  function completeStage(){
+    var ok = score > 0;
+    markDone(ok);
+    var url = nextStageUrl();
+    document.getElementById('app').innerHTML = ''
+      + '<main class="stageScreen completeScreen">'
+      + '<section class="stageTitle"><div style="font-size:86px">🎉</div><h1>' + (lang === 'en' ? 'Stage Complete!' : '阶段完成！') + '</h1>'
+      + '<p>' + score + ' / ' + items.length + '</p></section>'
+      + '<button class="stageAction" id="goNext">' + (stage === 'review' ? (lang === 'en' ? 'View result' : '查看结果') : (lang === 'en' ? 'Next stage' : '下一阶段')) + '</button>'
+      + '</main>';
+    document.getElementById('goNext').onclick = function(){ location.href = url; };
   }
 
   async function start(){
-    try{await loadLesson();current=buildStage();render();}
-    catch(e){document.getElementById('app').innerHTML='<main class="stageScreen"><p>'+esc(e.message)+'</p></main>';}
+    try{
+      await loadLesson();
+      items = buildItems().filter(function(q){ return q && q.choices && q.choices.length; });
+      if(!items.length) throw new Error('No items for stage: ' + stage);
+      currentIndex = 0;
+      score = 0;
+      renderQuestion();
+    }catch(e){
+      document.getElementById('app').innerHTML = '<main class="stageScreen"><p>' + esc(e.message) + '</p></main>';
+    }
   }
 
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
+  else start();
 })();
