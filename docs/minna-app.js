@@ -1,6 +1,6 @@
-// Minna App Home v21.2
+// Minna App Home v21.3
 (function(){
-  var VERSION='21.2';
+  var VERSION='21.3';
   var STATE_KEY='minna.mobile.learning.state.v1';
   var LANG_KEY='minna_app_lang';
 
@@ -39,41 +39,16 @@
   function t(key,vars){var v=(copy[key]&&copy[key][lang()])||'';Object.keys(vars||{}).forEach(function(k){v=v.replace('{'+k+'}',vars[k])});return v;}
   function lessonText(n,i){return (lessons[n]&&lessons[n][lang()]&&lessons[n][lang()][i])||''}
   function readState(){try{return JSON.parse(localStorage.getItem(STATE_KEY)||'{}')||{}}catch(e){return {}}}
-  function lessonUrl(n){return './minna-lesson-v16.html?n='+n+'&v='+VERSION+'&mode=preview'}
+  function lessonUrl(n){return './minna-path.html?lesson='+n+'&v='+VERSION}
 
-  function langSetting(){
-    return '<div class="settingCard"><div><h3>'+t('language')+'</h3><p>'+t('languageDesc')+'</p></div><div class="langSwitch inSettings"><button class="'+(lang()==='zh'?'active':'')+'" data-lang="zh">中文</button><button class="'+(lang()==='en'?'active':'')+'" data-lang="en">EN</button></div></div>';
-  }
+  function langSetting(){return '<div class="settingCard"><div><h3>'+t('language')+'</h3><p>'+t('languageDesc')+'</p></div><div class="langSwitch inSettings"><button class="'+(lang()==='zh'?'active':'')+'" data-lang="zh">中文</button><button class="'+(lang()==='en'?'active':'')+'" data-lang="en">EN</button></div></div>';}
+  function node(n,locked){return '<div class="pathNode"><a class="pathCircle '+(locked?'locked':'')+'" href="'+(locked?'#':lessonUrl(n))+'"><small>LESSON</small><strong>'+n+'</strong></a><div class="pathInfo"><h3>'+lessonText(n,0)+'</h3><p>'+lessonText(n,1)+'</p></div></div>';}
+  function top(current){return '<header class="appTop"><div class="appBrand">'+t('brand')+'</div><div class="appStatus"><div class="appAvatar">日</div><div class="appProgress"><i style="width:'+(current*2)+'%"></i></div></div></header>';}
+  function learnView(state,current){return '<main class="appWrap"><section class="continueCard"><div>🔥 '+t('streak',{n:Number(state.streak||1)})+'</div><h1>'+t('continueTitle',{n:current})+'</h1><p>'+t('continueDesc')+'</p><a class="continueBtn" href="'+lessonUrl(current)+'">'+t('continueBtn')+'</a></section><section><h2 class="sectionTitle">'+t('path')+'</h2><div class="path">'+node(1,false)+'<div class="pathLine"></div>'+node(2,false)+'<div class="pathLine"></div>'+node(3,false)+'<div class="pathLine"></div>'+node(4,current<4)+'<div class="pathLine"></div>'+node(5,current<5)+'</div></section><section><h2 class="sectionTitle">'+t('status')+'</h2><div class="statsGrid"><div class="statCard"><b>'+Number(state.streak||1)+'</b><span>'+t('streakLabel')+'</span></div><div class="statCard"><b>'+current+'</b><span>'+t('currentLesson')+'</span></div></div></section></main>';}
+  function meView(){return '<main class="appWrap"><section class="meHero"><div class="appAvatar big">日</div><h1>'+t('meTitle')+'</h1><p>'+t('settings')+'</p></section><section><h2 class="sectionTitle">'+t('settings')+'</h2>'+langSetting()+'<p class="settingsActions"><a class="continueBtn small" href="#">'+t('backLearn')+'</a></p></section></main>';}
+  function tabs(){var isMe=view()==='me';return '<nav class="bottomTabs"><a class="'+(!isMe?'active':'')+'" href="./minna-app.html"><span>🏠</span><b>'+t('tabLearn')+'</b></a><a href="./minna-favorites.html"><span>⭐</span><b>'+t('tabFav')+'</b></a><a href="./minna-index.html"><span>📚</span><b>'+t('tabLessons')+'</b></a><a class="'+(isMe?'active':'')+'" href="#me"><span>👤</span><b>'+t('tabMe')+'</b></a></nav>';}
 
-  function node(n,locked){
-    return '<div class="pathNode"><a class="pathCircle '+(locked?'locked':'')+'" href="'+(locked?'#':lessonUrl(n))+'"><small>LESSON</small><strong>'+n+'</strong></a><div class="pathInfo"><h3>'+lessonText(n,0)+'</h3><p>'+lessonText(n,1)+'</p></div></div>';
-  }
-
-  function top(current){
-    return '<header class="appTop"><div class="appBrand">'+t('brand')+'</div><div class="appStatus"><div class="appAvatar">日</div><div class="appProgress"><i style="width:'+(current*2)+'%"></i></div></div></header>';
-  }
-
-  function learnView(state,current){
-    return '<main class="appWrap"><section class="continueCard"><div>🔥 '+t('streak',{n:Number(state.streak||1)})+'</div><h1>'+t('continueTitle',{n:current})+'</h1><p>'+t('continueDesc')+'</p><a class="continueBtn" href="'+lessonUrl(current)+'">'+t('continueBtn')+'</a></section><section><h2 class="sectionTitle">'+t('path')+'</h2><div class="path">'+node(1,false)+'<div class="pathLine"></div>'+node(2,false)+'<div class="pathLine"></div>'+node(3,false)+'<div class="pathLine"></div>'+node(4,current<4)+'<div class="pathLine"></div>'+node(5,current<5)+'</div></section><section><h2 class="sectionTitle">'+t('status')+'</h2><div class="statsGrid"><div class="statCard"><b>'+Number(state.streak||1)+'</b><span>'+t('streakLabel')+'</span></div><div class="statCard"><b>'+current+'</b><span>'+t('currentLesson')+'</span></div></div></section></main>';
-  }
-
-  function meView(){
-    return '<main class="appWrap"><section class="meHero"><div class="appAvatar big">日</div><h1>'+t('meTitle')+'</h1><p>'+t('settings')+'</p></section><section><h2 class="sectionTitle">'+t('settings')+'</h2>'+langSetting()+'<p class="settingsActions"><a class="continueBtn small" href="#">'+t('backLearn')+'</a></p></section></main>';
-  }
-
-  function tabs(){
-    var isMe=view()==='me';
-    return '<nav class="bottomTabs"><a class="'+(!isMe?'active':'')+'" href="./minna-app.html"><span>🏠</span><b>'+t('tabLearn')+'</b></a><a href="./minna-favorites.html"><span>⭐</span><b>'+t('tabFav')+'</b></a><a href="./minna-index.html"><span>📚</span><b>'+t('tabLessons')+'</b></a><a class="'+(isMe?'active':'')+'" href="#me"><span>👤</span><b>'+t('tabMe')+'</b></a></nav>';
-  }
-
-  function render(){
-    var state=readState();
-    var current=Math.max(1,Number(state.lastLesson||2));
-    document.documentElement.lang=lang()==='en'?'en':'zh-CN';
-    document.title=(lang()==='en'?'Minna App | Minna no Nihongo':'Minna App | みんなの日本語');
-    document.getElementById('app').innerHTML=top(current)+(view()==='me'?meView():learnView(state,current))+tabs();
-    document.querySelectorAll('[data-lang]').forEach(function(btn){btn.onclick=function(){setLang(btn.dataset.lang)}});
-  }
+  function render(){var state=readState();var current=Math.max(1,Number(state.lastLesson||1));document.documentElement.lang=lang()==='en'?'en':'zh-CN';document.title=(lang()==='en'?'Minna App | Minna no Nihongo':'Minna App | みんなの日本語');document.getElementById('app').innerHTML=top(current)+(view()==='me'?meView():learnView(state,current))+tabs();document.querySelectorAll('[data-lang]').forEach(function(btn){btn.onclick=function(){setLang(btn.dataset.lang)}});}
 
   window.addEventListener('hashchange',render);
   if(!localStorage.getItem(LANG_KEY)&&!localStorage.getItem('minna_ui_lang'))setLang('zh');
