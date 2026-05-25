@@ -1,4 +1,4 @@
-// Minna social module v1 (cloud-first, local fallback)
+// Minna social module v2 (cloud-first, local fallback)
 window.MinnaSocial = (function(){
   var PKEY='minna.profile.v1';
   var FKEY='minna.friends.v1';
@@ -52,7 +52,7 @@ window.MinnaSocial = (function(){
     logEvent('friend','添加了好友','你添加了 '+label);
     try{
       var u=authUser(),s=await db(); if(!u||!s) return {ok:true,local:true};
-      var payload={owner_user_id:u.id,owner_email:u.email||'',friend_label:label,created_at:nowIso()};
+      var payload={owner_user_id:u.id,owner_email:u.email||'',friend_label:label,friend_email:'',friend_user_id:null,created_at:nowIso()};
       var r=await s.from('minna_social_friends').upsert(payload,{onConflict:'owner_user_id,friend_label'});
       if(r.error) throw r.error;
       return {ok:true,cloud:true};
@@ -70,7 +70,72 @@ window.MinnaSocial = (function(){
     }catch(e){return {ok:true,local:true,error:e.message||String(e)}}
   }
 
+  async function sendFriendRequest(toEmail){
+    toEmail=String(toEmail||'').trim().toLowerCase();
+    if(!toEmail||toEmail.indexOf('@')<1) return {ok:false,msg:'invalid_email'};
+    try{
+      var u=authUser(),s=await db();
+      if(!u||!s) return {ok:false,msg:'need_login'};
+      var payload={from_user_id:u.id,from_email:(u.email||'').toLowerCase(),to_email:toEmail,status:'pending',created_at:nowIso(),updated_at:nowIso()};
+      var r=await s.from('minna_social_friend_requests').insert(payload);
+      if(r.error) throw r.error;
+      logEvent('friend','发送了好友申请','已向 '+toEmail+' 发送申请');
+      return {ok:true,cloud:true};
+    }catch(e){return {ok:false,msg:e.message||String(e)}}
+  }
+
+  async function listIncomingRequests(){
+    try{
+      var u=authUser(),s=await db();
+      if(!u||!s||!u.email) return [];
+      var r=await s.from('minna_social_friend_requests').select('id,from_user_id,from_email,to_email,status,created_at').eq('to_email',String(u.email).toLowerCase()).eq('status','pending').order('created_at',{ascending:false}).limit(200);
+      if(r.error) throw r.error;
+      return r.data||[];
+    }catch(e){return []}
+  }
+
+  async function respondFriendRequest(id,approve){
+    try{
+      var u=authUser(),s=await db(); if(!u||!s||!u.email) return {ok:false,msg:'need_login'};
+      var req=await s.from('minna_social_friend_requests').select('id,from_user_id,from_email,to_email,status').eq('id',id).maybeSingle();
+      if(req.error) throw req.error;
+      if(!req.data||req.data.status!=='pending') return {ok:false,msg:'not_pending'};
+      if(String(req.data.to_email||'').toLowerCase()!==String(u.email||'').toLowerCase()) return {ok:false,msg:'forbidden'};
+      var newStatus=approve?'accepted':'rejected';
+      var up=await s.from('minna_social_friend_requests').update({status:newStatus,updated_at:nowIso()}).eq('id',id);
+      if(up.error) throw up.error;
+      if(approve){
+        var a1={owner_user_id:u.id,owner_email:u.email||'',friend_user_id:req.data.from_user_id,friend_email:req.data.from_email,friend_label:String(req.data.from_email||'').split('@')[0],created_at:nowIso()};
+        var a2={owner_user_id:req.data.from_user_id,owner_email:req.data.from_email||'',friend_user_id:u.id,friend_email:u.email||'',friend_label:String(u.email||'').split('@')[0],created_at:nowIso()};
+        var f1=await s.from('minna_social_friends').upsert(a1,{onConflict:'owner_user_id,friend_label'});
+        if(f1.error) throw f1.error;
+        var f2=await s.from('minna_social_friends').upsert(a2,{onConflict:'owner_user_id,friend_label'});
+        if(f2.error) throw f2.error;
+        logEvent('friend','通过了好友申请','你与 '+String(req.data.from_email||'好友')+' 成为好友');
+      }else{
+        logEvent('friend','拒绝了好友申请','已拒绝 '+String(req.data.from_email||'')+' 的申请');
+      }
+      return {ok:true};
+    }catch(e){return {ok:false,msg:e.message||String(e)}}
+  }
+
+  async function socialStats(){
+    var out={following:jread(FKEY,[]).length,followers:0,pending:0};
+    try{
+      var u=authUser(),s=await db(); if(!u||!s||!u.email) return out;
+      var f1=await s.from('minna_social_friends').select('owner_user_id',{count:'exact',head:true}).eq('owner_user_id',u.id);
+      var f2=await s.from('minna_social_friends').select('owner_user_id',{count:'exact',head:true}).eq('friend_user_id',u.id);
+      var p=await s.from('minna_social_friend_requests').select('id',{count:'exact',head:true}).eq('to_email',String(u.email).toLowerCase()).eq('status','pending');
+      out.following=f1.count||0; out.followers=f2.count||0; out.pending=p.count||0;
+    }catch(e){}
+    return out;
+  }
+
   function listEvents(){return jread(EKEY,[])}
 
-  return {getProfile:getProfile,saveProfile:saveProfile,listFriends:listFriends,addFriend:addFriend,removeFriend:removeFriend,listEvents:listEvents,logEvent:logEvent,displayName:displayName};
+  return {
+    getProfile:getProfile,saveProfile:saveProfile,listFriends:listFriends,addFriend:addFriend,removeFriend:removeFriend,
+    sendFriendRequest:sendFriendRequest,listIncomingRequests:listIncomingRequests,respondFriendRequest:respondFriendRequest,
+    socialStats:socialStats,listEvents:listEvents,logEvent:logEvent,displayName:displayName
+  };
 })();
