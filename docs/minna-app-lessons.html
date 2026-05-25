@@ -1,1 +1,44 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>课程 | Minna App</title><script src="./minna-version.js?v=22.1"></script><link rel="stylesheet" href="./minna-app.css?v=22.1"><style>.page{padding:24px 24px 120px}.hero{text-align:center;margin:28px 0}.hero div{font-size:86px}.hero h1{font-size:38px;margin:10px 0}.hero p{color:#71717a;font-weight:800}.list{display:grid;gap:16px}.card{display:flex;gap:18px;align-items:center;background:#fff;border:3px solid #ececec;border-radius:24px;padding:20px;text-decoration:none;color:#3f3f46;box-shadow:0 4px 0 #ececec}.num{width:70px;height:70px;border-radius:999px;background:#58cc02;color:#fff;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:1000;box-shadow:0 6px 0 #46a302}.locked .num{background:#d4d4d8;box-shadow:0 6px 0 #a1a1aa}.info{flex:1}.info h2{font-size:22px;margin:0 0 6px}.info p{margin:0;color:#71717a;font-weight:800}.meta{margin-top:10px}.pill{display:inline-flex;border-radius:999px;background:#e0f2fe;color:#0284c7;padding:5px 12px;font-size:13px;font-weight:1000;margin-right:6px}.done{background:#dcfce7;color:#166534}@media(max-width:520px){.page{padding:18px 20px 112px}.hero h1{font-size:34px}.num{width:62px;height:62px;font-size:24px}.info h2{font-size:20px}}</style></head><body><div id="app"></div><script src="./minna-app-shell.js?v=22.1"></script><script>(function(){var VERSION=window.MINNA_VERSION||'22.1';var S=['vocab','grammar','examples','review'];var L={1:['自我介绍','名词句 · 初次见面'],2:['这个是什么','指示代词 · 基础问答'],3:['这里是哪里','场所 · 存在句'],4:['时间表达','几点 · 星期 · 日期'],5:['移动与交通','去哪里 · 来哪里']};function j(k,f){try{return JSON.parse(localStorage.getItem(k)||JSON.stringify(f))||f}catch(e){return f}}function crowns(n){var c=j('minna.crowns.v1',{});return S.filter(function(s){return c['lesson'+n+'.'+s]}).length}function cur(){var st=j('minna.mobile.learning.state.v1',{});return Math.max(1,Number(st.lastLesson||1))}function card(n){var c=crowns(n),locked=n>cur()&&c===0,done=c>=4,t=L[n]||['第 '+n+' 课','继续学习'];return '<a class="card '+(locked?'locked':'')+'" href="'+(locked?'#':'./minna-path.html?lesson='+n+'&v='+VERSION)+'"><div class="num">'+(done?'✓':n)+'</div><div class="info"><h2>第 '+n+' 课 · '+t[0]+'</h2><p>'+t[1]+'</p><div class="meta"><span class="pill '+(done?'done':'')+'">👑 '+c+'/4</span><span class="pill">'+(locked?'未解锁':done?'已完成':'可学习')+'</span></div></div></a>'}window.MinnaAppShell&&window.MinnaAppShell.injectTop();document.getElementById('app').innerHTML='<main class="page"><section class="hero"><div>🌳</div><h1>课程</h1><p>查看课程进度与 Crown</p></section><section class="list">'+[1,2,3,4,5].map(card).join('')+'</section></main>';window.MinnaAppShell&&window.MinnaAppShell.injectTabs('lessons')})();</script><script src="./minna-sw-register.js?v=22.1"></script></body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>课程 | Minna App</title>
+<script src="./minna-version.js?v=22.1"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="./minna-auth.js?v=20.3"></script>
+<script src="./minna-role.js?v=20.3"></script>
+<link rel="stylesheet" href="./minna-app.css?v=22.1">
+<style>
+.page{padding:24px 24px 120px}.hero{text-align:center;margin:28px 0}.hero div{font-size:86px}.hero h1{font-size:38px;margin:10px 0}.hero p{color:#71717a;font-weight:800}.list{display:grid;gap:16px}.card{display:flex;gap:18px;align-items:center;background:#fff;border:3px solid #ececec;border-radius:24px;padding:20px;text-decoration:none;color:#3f3f46;box-shadow:0 4px 0 #ececec}.num{width:70px;height:70px;border-radius:999px;background:#58cc02;color:#fff;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:1000;box-shadow:0 6px 0 #46a302}.locked .num{background:#d4d4d8;box-shadow:0 6px 0 #a1a1aa}.info{flex:1}.info h2{font-size:22px;margin:0 0 6px}.info p{margin:0;color:#71717a;font-weight:800}.meta{margin-top:10px}.pill{display:inline-flex;border-radius:999px;background:#e0f2fe;color:#0284c7;padding:5px 12px;font-size:13px;font-weight:1000;margin-right:6px}.done{background:#dcfce7;color:#166534}@media(max-width:520px){.page{padding:18px 20px 112px}.hero h1{font-size:34px}.num{width:62px;height:62px;font-size:24px}.info h2{font-size:20px}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script src="./minna-store.js?v=22.1"></script>
+<script src="./minna-app-shell.js?v=22.1"></script>
+<script>
+(function(){
+  var VERSION=window.MINNA_VERSION||'22.1';
+  var roleState={bypassLessonLock:false};
+  var S=['vocab','grammar','examples','review'];
+  var L={1:['自我介绍','名词句 · 初次见面'],2:['这个是什么','指示代词 · 基础问答'],3:['这里是哪里','场所 · 存在句'],4:['时间表达','几点 · 星期 · 日期'],5:['移动与交通','去哪里 · 来哪里']};
+  function j(k,f){try{return JSON.parse(localStorage.getItem(k)||JSON.stringify(f))||f}catch(e){return f}}
+  function crowns(n){var c=j('minna.crowns.v1',{});return S.filter(function(s){return c['lesson'+n+'.'+s]}).length}
+  function cur(){var st=j('minna.mobile.learning.state.v1',{});return Math.max(1,Number(st.lastLesson||1))}
+  function card(n){
+    var c=crowns(n),locked=!roleState.bypassLessonLock&&n>cur()&&c===0,done=c>=4,t=L[n]||['第 '+n+' 课','继续学习'];
+    return '<a class="card '+(locked?'locked':'')+'" href="'+(locked?'#':'./minna-path.html?lesson='+n+'&v='+VERSION)+'"><div class="num">'+(done?'✓':n)+'</div><div class="info"><h2>第 '+n+' 课 · '+t[0]+'</h2><p>'+t[1]+'</p><div class="meta"><span class="pill '+(done?'done':'')+'">👑 '+c+'/4</span><span class="pill">'+(locked?'未解锁':done?'已完成':'可学习')+'</span></div></div></a>'
+  }
+  function render(){
+    window.MinnaAppShell&&window.MinnaAppShell.injectTop();
+    document.getElementById('app').innerHTML='<main class="page"><section class="hero"><div>🌳</div><h1>课程</h1><p>查看课程进度与 Crown</p></section><section class="list">'+[1,2,3,4,5].map(card).join('')+'</section></main>';
+    window.MinnaAppShell&&window.MinnaAppShell.injectTabs('lessons');
+  }
+  async function hydrateRole(){if(!window.MinnaAuth||!window.MinnaAuth.loadRole)return;try{roleState=await window.MinnaAuth.loadRole(true)||roleState}catch(e){}render()}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){render();hydrateRole()});else{render();hydrateRole()}
+})();
+</script>
+<script src="./minna-sw-register.js?v=22.1"></script>
+</body>
+</html>

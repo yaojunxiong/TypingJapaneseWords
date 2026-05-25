@@ -1,6 +1,7 @@
 // Minna Path v1.10 crowns
 (function(){
   var store = window.MinnaStore;
+  var roleState={bypassLessonLock:false};
   var params = new URLSearchParams(location.search);
   var lesson = Number(params.get('lesson') || 1);
   var lang = store.readLang();
@@ -25,7 +26,7 @@
   function isDone(id){var p=readProgress(), c=readCrowns();return !!((p[key(id)] && p[key(id)].ok) || c[key(id)])}
   function hasCrown(id){var c=readCrowns();return !!c[key(id)]}
   function crownCount(){return STAGES.filter(function(s){return hasCrown(s.id)}).length}
-  function isUnlocked(i){if(i===0)return true;return isDone(STAGES[i-1].id)}
+  function isUnlocked(i){if(roleState.bypassLessonLock)return true;if(i===0)return true;return isDone(STAGES[i-1].id)}
   function stageUrl(id){return './minna-stage.html?lesson='+lesson+'&stage='+id+'&v=1.17'}
   function node(stage,i){
     var done = isDone(stage.id), crown = hasCrown(stage.id), unlocked = isUnlocked(i), cls = ['pathNode'];
@@ -46,5 +47,6 @@
       + '<main class="pathWrap"><div class="pathColumn">'+node(STAGES[0],0)+'<div class="pathMascot">🦉</div>'+node(STAGES[1],1)+node(STAGES[2],2)+node(STAGES[3],3)+'</div></main>'
       + tabs();
   }
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',render); else render();
+  async function hydrateRole(){if(!window.MinnaAuth||!window.MinnaAuth.loadRole)return;try{roleState=await window.MinnaAuth.loadRole(true)||roleState}catch(e){}render()}
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',function(){render();hydrateRole()}); else {render();hydrateRole()}
 })();

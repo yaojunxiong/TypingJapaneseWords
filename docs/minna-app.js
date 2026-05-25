@@ -3,6 +3,7 @@
   var VERSION = window.MINNA_VERSION || '22.1';
   var store = window.MinnaStore;
   var LANG_KEY='minna_app_lang';
+  var roleState={bypassLessonLock:false};
   var STAGES=['vocab','grammar','examples','review'];
   var copy={brand:{zh:'みんなの日本語',en:'Minna no Nihongo'},streak:{zh:'连续学习 {n} 天',en:'{n}-day streak'},continueTitle:{zh:'继续学习 第 {n} 课',en:'Continue Lesson {n}'},continueDesc:{zh:'像 Duolingo 一样，用互动方式学习《みんなの日本語》。',en:'Learn Minna no Nihongo with clean, interactive practice.'},continueBtn:{zh:'继续学习',en:'Continue'},path:{zh:'学习路径',en:'Learning Path'},status:{zh:'学习状态',en:'Learning Status'},streakLabel:{zh:'连续学习天数',en:'Streak'},currentLesson:{zh:'当前课程',en:'Current Lesson'},meTitle:{zh:'我的',en:'Me'},settings:{zh:'系统设置',en:'Settings'},language:{zh:'系统语言',en:'System Language'},languageDesc:{zh:'默认使用中文；需要英文界面时可在这里切换。',en:'Chinese is the default. Switch to English here when needed.'},backLearn:{zh:'返回学习',en:'Back to Learn'},done:{zh:'已完成',en:'Done'},learning:{zh:'学习中',en:'Learning'},new:{zh:'未开始',en:'New'},locked:{zh:'未解锁',en:'Locked'}};
   var lessons={1:{zh:['自我介绍','名词句 · 初次见面'],en:['Self-introduction','Noun sentences · Greetings']},2:{zh:['这个是什么','指示代词 · 基础问答'],en:['What is this?','Demonstratives · Basic Q&A']},3:{zh:['这里是哪里','场所 · 存在句'],en:['Where is here?','Places · Existence']},4:{zh:['时间表达','几点 · 星期 · 日期'],en:['Time expressions','Time · Weekdays · Dates']},5:{zh:['移动与交通','去哪里 · 来哪里'],en:['Movement and transport','Go · Come · Transport']}};
@@ -22,7 +23,7 @@
   function crownCount(n){var c=readCrowns();return STAGES.filter(function(s){return c['lesson'+n+'.'+s]}).length}
   function totalCrowns(){var c=readCrowns();return Object.keys(c).filter(function(k){return k.indexOf('lesson')===0&&k.indexOf('.')>0}).length}
   function completedLessons(){var c=readCrowns(), n=0;for(var i=1;i<=50;i++){if(STAGES.filter(function(s){return c['lesson'+i+'.'+s]}).length>=4)n++}return n}
-  function lessonStatus(n,current){var c=Math.max(doneCount(n),crownCount(n));if(c>=4)return'done';if(c>0||n===current)return'learning';if(n>current)return'locked';return'new'}
+  function lessonStatus(n,current){var c=Math.max(doneCount(n),crownCount(n));if(c>=4)return'done';if(c>0||n===current)return'learning';if(n>current&&!roleState.bypassLessonLock)return'locked';return'new'}
   function lessonUrl(n){return './minna-path.html?lesson='+n+'&v='+VERSION}
   function langSetting(){return '<div class="settingCard"><div><h3>'+t('language')+'</h3><p>'+t('languageDesc')+'</p></div><div class="langSwitch inSettings"><button class="'+(lang()==='zh'?'active':'')+'" data-lang="zh">中文</button><button class="'+(lang()==='en'?'active':'')+'" data-lang="en">EN</button></div></div>'}
   function crownBadge(n){var c=crownCount(n);return '<span class="lessonCrown">👑 '+c+'/4</span>'}
@@ -36,5 +37,6 @@
   function tabs(){var isMe=view()==='me';return '<nav class="bottomTabs"><a class="'+(!isMe?'active':'')+'" href="./minna-app.html?v='+VERSION+'"><span>🏠</span><b>学习</b></a><a href="./minna-toolbox.html?v='+VERSION+'"><span>🧰</span><b>宝箱</b></a><a href="./minna-app-lessons.html?v='+VERSION+'"><span>🌳</span><b>课程</b></a><a href="./minna-app-favorites.html?v='+VERSION+'"><span>💗</span><b>收藏</b></a><a class="'+(isMe?'active':'')+'" href="./minna-app.html?v='+VERSION+'#me"><span>⋯</span><b>我的</b></a></nav>'}
   function bindActions(){document.querySelectorAll('[data-lang]').forEach(function(btn){btn.onclick=function(){setLang(btn.dataset.lang)}});document.querySelectorAll('[data-action]').forEach(function(btn){btn.onclick=function(){var a=btn.dataset.action;if(a==='toggleSfx'){store.setSfxEnabled(!sfxEnabled())}if(a==='clearMistakes'){store.writeMistakes([])}if(a==='resetHearts'){store.resetHearts()}if(a==='resetXp'){store.setXp(0)}if(a==='resetAll'){store.writeProgress({});store.writeCrowns({});store.writeMistakes([]);store.writeState({});store.setXp(0);store.resetHearts()}render()}})}
   function render(){var state=readState(),current=Math.max(1,Number(state.lastLesson||1));document.documentElement.lang=lang()==='en'?'en':'zh-CN';document.title=(lang()==='en'?'Minna App | Minna no Nihongo':'Minna App | みんなの日本語');document.getElementById('app').innerHTML=top(state)+(view()==='me'?meView():learnView(state,current))+tabs();bindActions()}
-  window.addEventListener('hashchange',render);if(!localStorage.getItem(LANG_KEY)&&!localStorage.getItem('minna_ui_lang'))setLang('zh');else if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',render);else render();
+  async function hydrateRole(){if(!window.MinnaAuth||!window.MinnaAuth.loadRole)return;try{roleState=await window.MinnaAuth.loadRole(true)||roleState}catch(e){}render()}
+  window.addEventListener('hashchange',render);if(!localStorage.getItem(LANG_KEY)&&!localStorage.getItem('minna_ui_lang'))setLang('zh');else if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){render();hydrateRole()});else{render();hydrateRole()}
 })();
