@@ -11,6 +11,7 @@ window.MinnaAuth = (() => {
   const SUPABASE_KEY = 'sb_publishable_sK-XWyiFwSoKCorddBULCw_0yiS9e5t';
   const DEFAULT_LESSON_ID = 'minna_lesson_01';
   const LEGACY_USER_KEY = 'yoyo';
+  const ADMIN_EMAIL_FALLBACK = 'yaojunxiong@gmail.com';
   let client = null;
   let user = null;
   let lessonId = DEFAULT_LESSON_ID;
@@ -51,7 +52,9 @@ window.MinnaAuth = (() => {
 
   function roleFromRow(row) {
     const now = Date.now();
-    const rawRole = row && row.role ? String(row.role) : 'normal';
+    const accountEmail = String((row && row.email) || userEmail() || '').toLowerCase();
+    const forcedAdmin = accountEmail === ADMIN_EMAIL_FALLBACK;
+    const rawRole = forcedAdmin ? 'admin' : (row && row.role ? String(row.role) : 'normal');
     const vipUntil = row && row.vip_until ? String(row.vip_until) : '';
     const vipActive = rawRole === 'vip' && (!vipUntil || Date.parse(vipUntil) > now);
     const memberActive = rawRole === 'member';

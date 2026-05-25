@@ -3,6 +3,7 @@
 (function(){
   if(!window.MinnaAuth)return;
   var roleInfo=null;
+  var ADMIN_EMAIL_FALLBACK='yaojunxiong@gmail.com';
   var originalClient=window.MinnaAuth.client;
   function ensureClient(){
     if(originalClient)return originalClient();
@@ -14,7 +15,9 @@
   }
   function roleFromRow(row,user){
     var now=Date.now();
-    var raw=row&&row.role?String(row.role):'normal';
+    var accountEmail=String((row&&row.email)||(user&&user.email)||'').toLowerCase();
+    var forcedAdmin=accountEmail===ADMIN_EMAIL_FALLBACK;
+    var raw=forcedAdmin?'admin':(row&&row.role?String(row.role):'normal');
     var vipUntil=row&&row.vip_until?String(row.vip_until):'';
     var vipActive=raw==='vip'&&(!vipUntil||Date.parse(vipUntil)>now);
     var memberActive=raw==='member';
