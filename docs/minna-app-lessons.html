@@ -33,7 +33,7 @@
   function cards(max){var out='';for(var i=1;i<=max;i++){out+=card(i)}return out}
   function render(){
     window.MinnaAppShell&&window.MinnaAppShell.injectTop();
-    document.getElementById('app').innerHTML='<main class="page"><section class="hero"><div>🌳</div><h1>课程</h1><p>查看课程进度与 Crown（1-25）</p></section><section class="list">'+cards(25)+'</section></main>';
+    document.getElementById('app').innerHTML='<main class="page"><section class="hero"><div>🌳</div><h1>课程</h1><p>查看课程进度与 Crown（1-50）</p></section><section class="list">'+cards(50)+'</section></main>';
     window.MinnaAppShell&&window.MinnaAppShell.injectTabs('lessons');
   }
   async function hydrateRole(){if(!window.MinnaAuth||!window.MinnaAuth.loadRole)return;try{roleState=await window.MinnaAuth.loadRole(true)||roleState}catch(e){}render()}
