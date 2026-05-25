@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>消息中心 | Minna App</title>
+<script src="./minna-version.js?v=22.1"></script>
+<link rel="stylesheet" href="./minna-app.css?v=22.1">
+<style>
+.page{padding:24px 24px 120px}.head{display:flex;justify-content:space-between;align-items:center;margin:14px 0 22px}.head h1{margin:0;font-size:44px}.bell{font-size:32px}.list{display:grid;gap:18px}.msgCard{background:#fff;border:3px solid #ececec;border-radius:24px;padding:14px;box-shadow:0 4px 0 #ececec}.thumb{height:168px;border-radius:18px;background:linear-gradient(135deg,#d7efff,#b7e5ff);display:flex;align-items:center;justify-content:center;font-size:56px}.meta{color:#71717a;font-size:24px;font-weight:900;margin:12px 2px 8px}.msgCard h2{font-size:42px;margin:0 0 8px;line-height:1.35}.msgCard p{font-size:28px;color:#52525b;line-height:1.45;margin:0 0 12px}.cta{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 20px;border-radius:14px;background:#fff;border:2px solid #d4d4d8;font-size:24px;font-weight:1000}
+@media(max-width:520px){.page{padding:18px 20px 112px}.head h1{font-size:26px}.bell{font-size:24px}.meta{font-size:18px}.msgCard h2{font-size:20px}.msgCard p{font-size:16px}.cta{font-size:18px}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script src="./minna-store.js?v=22.1"></script>
+<script src="./minna-app-shell.js?v=22.1"></script>
+<script>
+(function(){
+  function row(day,title,desc,btn,icon,action){
+    return '<article class="msgCard"><div class="thumb">'+icon+'</div><div class="meta">'+day+'</div><h2>'+title+'</h2><p>'+desc+'</p><button class="cta" data-action="'+action+'">'+btn+'</button></article>';
+  }
+  function render(){
+    if(window.MinnaAppShell) window.MinnaAppShell.injectTop();
+    document.getElementById('app').innerHTML='<main class="page"><section class="head"><h1>消息中心</h1><span class="bell">🔔</span></section><section class="list">'
+      +row('1 天','来点小 PK，学习更带劲！','关注好友，随时追踪学习进度。','添加好友','🏃','addFriend')
+      +row('3 天','今天太忙没空练？','连胜激冻可以护住你的连胜哦。','前往宝石小店','🧊','openShop')
+      +'</section></main>';
+    if(window.MinnaAppShell) window.MinnaAppShell.injectTabs('messages');
+    document.querySelectorAll('[data-action]').forEach(function(btn){
+      btn.onclick=function(){
+        if(btn.dataset.action==='addFriend'){ alert('好友入口已创建，后续可接入搜索/邀请。'); }
+        if(btn.dataset.action==='openShop'){ location.href='./minna-toolbox.html?v='+(window.MINNA_VERSION||'22.1'); }
+      };
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',render); else render();
+})();
+</script>
+<script src="./minna-sw-register.js?v=22.1"></script>
+</body>
+</html>
