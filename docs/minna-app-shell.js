@@ -25,7 +25,7 @@
         ['learn','🏠','学习','./minna-app.html?v='+VERSION],
         ['toolbox','🧰','宝箱','./minna-toolbox.html?v='+VERSION],
         ['lessons','🌳','课程','./minna-app-lessons.html?v='+VERSION],
-        ['favorites','💗','收藏','./minna-app-favorites.html?v='+VERSION],
+        ['favorites','💗','收藏','./minna-favorites.html?v='+VERSION],
         ['me','⋯','我的','./minna-app.html?v='+VERSION+'#me']
       ];
       return '<nav class="bottomTabs">'+tabs.map(function(t){return '<a class="'+(active===t[0]?'active':'')+'" href="'+t[3]+'"><span>'+t[1]+'</span><b>'+t[2]+'</b></a>';}).join('')+'</nav>';

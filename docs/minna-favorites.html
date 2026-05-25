@@ -7,6 +7,7 @@
 <link rel="manifest" href="./minna-pwa-manifest.json">
 <title>我的收藏词汇 | Minna AI</title>
 <script src="./minna-version.js?v=22.1"></script>
+<link rel="stylesheet" href="./minna-app.css?v=22.1">
 <link rel="stylesheet" href="./minna-site.css?v=22.1">
 <link rel="stylesheet" href="./minna-lesson-v16.css?v=22.1">
 </head>
@@ -46,6 +47,18 @@
   </main>
 </div>
 <script src="./minna-favorites-page.js?v=22.1"></script>
+<script src="./minna-app-shell.js?v=22.1"></script>
+<script>
+(function(){
+  function applyShell(){
+    if(!window.MinnaAppShell) return;
+    window.MinnaAppShell.injectTop();
+    window.MinnaAppShell.injectTabs('favorites');
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',applyShell);
+  else applyShell();
+})();
+</script>
 <script src="./minna-sw-register.js?v=22.1"></script>
 </body>
 </html>
