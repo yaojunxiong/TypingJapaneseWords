@@ -1,12 +1,9 @@
 // Minna Path v1.10 crowns
 (function(){
+  var store = window.MinnaStore;
   var params = new URLSearchParams(location.search);
   var lesson = Number(params.get('lesson') || 1);
-  var lang = localStorage.getItem('minna_ui_lang') || localStorage.getItem('minna_app_lang') || 'zh';
-  var PROGRESS_KEY = 'minna.stage.progress.v1';
-  var CROWN_KEY = 'minna.crowns.v1';
-  var XP_KEY = 'minna.xp.v1';
-  var STATE_KEY='minna.mobile.learning.state.v1';
+  var lang = store.readLang();
   var VERSION = window.MINNA_VERSION || '22.1';
 
   var DATA = {
@@ -20,10 +17,10 @@
     {id:'review',icon:'🏆',label:{zh:'综合测试',en:'Review'},review:true}
   ];
   function t(v){return (v && (v[lang] || v.zh || v.en)) || '';}
-  function readProgress(){try{return JSON.parse(localStorage.getItem(PROGRESS_KEY)||'{}')}catch(e){return {}}}
-  function readCrowns(){try{return JSON.parse(localStorage.getItem(CROWN_KEY)||'{}')}catch(e){return {}}}
-  function readXp(){try{return Number(localStorage.getItem(XP_KEY)||0)}catch(e){return 0}}
-  function readStreak(){try{return Number((JSON.parse(localStorage.getItem(STATE_KEY)||'{}')||{}).streak||1)}catch(e){return 1}}
+  function readProgress(){return store.readProgress()}
+  function readCrowns(){return store.readCrowns()}
+  function readXp(){return store.readXp()}
+  function readStreak(){return Number((store.readState()||{}).streak||1)}
   function key(id){return 'lesson'+lesson+'.'+id}
   function isDone(id){var p=readProgress(), c=readCrowns();return !!((p[key(id)] && p[key(id)].ok) || c[key(id)])}
   function hasCrown(id){var c=readCrowns();return !!c[key(id)]}

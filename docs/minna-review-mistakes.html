@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>错题复习</title>
 <script src="./minna-version.js?v=22.1"></script>
+<script src="./minna-store.js?v=22.1"></script>
 <link rel="stylesheet" href="./minna-stage.css?v=1.18">
 <style>
 .reviewWrap{padding:24px 24px 120px}
@@ -35,11 +36,11 @@
 <div id="app"></div>
 <script>
 (function(){
-var KEY='minna.mistakes.v1';
 var VERSION=window.MINNA_VERSION||'22.1';
+var store=window.MinnaStore;
 
-function read(){try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){return []}}
-function save(v){localStorage.setItem(KEY,JSON.stringify(v))}
+function read(){return store.readMistakes()}
+function save(v){store.writeMistakes(v)}
 function top(){return '<header class="stageStatus"><a class="stageClose" href="./minna-app.html?v='+VERSION+'">×</a><div>🇯🇵 115</div><div class="fire">🔥 Review</div><div class="gem">💎 Mistakes</div><div class="energy">📝</div></header>'}
 
 function stageOptions(arr){

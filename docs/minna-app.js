@@ -1,29 +1,23 @@
 // Minna App Home v22.0 nav fix
 (function(){
   var VERSION = window.MINNA_VERSION || '22.1';
-  var STATE_KEY='minna.mobile.learning.state.v1';
+  var store = window.MinnaStore;
   var LANG_KEY='minna_app_lang';
-  var PROGRESS_KEY='minna.stage.progress.v1';
-  var CROWN_KEY='minna.crowns.v1';
-  var MISTAKE_KEY='minna.mistakes.v1';
-  var HEARTS_KEY='minna.hearts.v1';
-  var SFX_KEY='minna.sfx.enabled.v1';
   var STAGES=['vocab','grammar','examples','review'];
   var copy={brand:{zh:'みんなの日本語',en:'Minna no Nihongo'},streak:{zh:'连续学习 {n} 天',en:'{n}-day streak'},continueTitle:{zh:'继续学习 第 {n} 课',en:'Continue Lesson {n}'},continueDesc:{zh:'像 Duolingo 一样，用互动方式学习《みんなの日本語》。',en:'Learn Minna no Nihongo with clean, interactive practice.'},continueBtn:{zh:'继续学习',en:'Continue'},path:{zh:'学习路径',en:'Learning Path'},status:{zh:'学习状态',en:'Learning Status'},streakLabel:{zh:'连续学习天数',en:'Streak'},currentLesson:{zh:'当前课程',en:'Current Lesson'},meTitle:{zh:'我的',en:'Me'},settings:{zh:'系统设置',en:'Settings'},language:{zh:'系统语言',en:'System Language'},languageDesc:{zh:'默认使用中文；需要英文界面时可在这里切换。',en:'Chinese is the default. Switch to English here when needed.'},backLearn:{zh:'返回学习',en:'Back to Learn'},done:{zh:'已完成',en:'Done'},learning:{zh:'学习中',en:'Learning'},new:{zh:'未开始',en:'New'},locked:{zh:'未解锁',en:'Locked'}};
   var lessons={1:{zh:['自我介绍','名词句 · 初次见面'],en:['Self-introduction','Noun sentences · Greetings']},2:{zh:['这个是什么','指示代词 · 基础问答'],en:['What is this?','Demonstratives · Basic Q&A']},3:{zh:['这里是哪里','场所 · 存在句'],en:['Where is here?','Places · Existence']},4:{zh:['时间表达','几点 · 星期 · 日期'],en:['Time expressions','Time · Weekdays · Dates']},5:{zh:['移动与交通','去哪里 · 来哪里'],en:['Movement and transport','Go · Come · Transport']}};
-  function lang(){return localStorage.getItem(LANG_KEY)||localStorage.getItem('minna_ui_lang')||'zh'}
-  function setLang(v){localStorage.setItem(LANG_KEY,v);localStorage.setItem('minna_ui_lang',v);render()}
+  function lang(){return store.readLang()}
+  function setLang(v){store.setLang(v);render()}
   function view(){return location.hash==='#me'?'me':'learn'}
   function t(key,vars){var v=(copy[key]&&copy[key][lang()])||'';Object.keys(vars||{}).forEach(function(k){v=v.replace('{'+k+'}',vars[k])});return v}
   function lessonText(n,i){return(lessons[n]&&lessons[n][lang()]&&lessons[n][lang()][i])||''}
-  function readJson(k,fb){try{return JSON.parse(localStorage.getItem(k)||JSON.stringify(fb))||fb}catch(e){return fb}}
-  function readState(){return readJson(STATE_KEY,{})}
-  function readProgress(){return readJson(PROGRESS_KEY,{})}
-  function readCrowns(){return readJson(CROWN_KEY,{})}
-  function readMistakes(){return readJson(MISTAKE_KEY,[])}
-  function readXp(){try{return Number(localStorage.getItem('minna.xp.v1')||0)}catch(e){return 0}}
-  function readHearts(){try{return Number(localStorage.getItem(HEARTS_KEY)||5)}catch(e){return 5}}
-  function sfxEnabled(){return localStorage.getItem(SFX_KEY)!=='0'}
+  function readState(){return store.readState()}
+  function readProgress(){return store.readProgress()}
+  function readCrowns(){return store.readCrowns()}
+  function readMistakes(){return store.readMistakes()}
+  function readXp(){return store.readXp()}
+  function readHearts(){return store.readHearts()}
+  function sfxEnabled(){return store.sfxEnabled()}
   function doneCount(n){var p=readProgress();return STAGES.filter(function(s){var x=p['lesson'+n+'.'+s];return x&&x.ok}).length}
   function crownCount(n){var c=readCrowns();return STAGES.filter(function(s){return c['lesson'+n+'.'+s]}).length}
   function totalCrowns(){var c=readCrowns();return Object.keys(c).filter(function(k){return k.indexOf('lesson')===0&&k.indexOf('.')>0}).length}
@@ -40,7 +34,7 @@
   function settingButton(icon,title,desc,action,danger){return '<button class="settingRow '+(danger?'danger':'')+'" data-action="'+action+'"><span>'+icon+'</span><div><b>'+title+'</b><p>'+desc+'</p></div><em>›</em></button>'}
   function meView(){var state=readState(), m=readMistakes().length;return '<main class="appWrap"><section class="meHero profileHero"><div class="appAvatar big">日</div><h1>'+t('meTitle')+'</h1><p>'+(lang()==='en'?'Learning profile and settings':'学习数据与系统设置')+'</p></section><section><h2 class="sectionTitle">学习数据</h2><div class="statsGrid profileStats"><div class="statCard"><b>💎 '+readXp()+'</b><span>XP</span></div><div class="statCard"><b>👑 '+totalCrowns()+'</b><span>Crown</span></div><div class="statCard"><b>🔥 '+Number(state.streak||1)+'</b><span>Streak</span></div><div class="statCard"><b>📚 '+completedLessons()+'</b><span>Lessons</span></div><div class="statCard"><b>❤️ '+readHearts()+'</b><span>Hearts</span></div><div class="statCard"><b>📝 '+m+'</b><span>Mistakes</span></div></div></section><section><h2 class="sectionTitle">'+t('settings')+'</h2>'+langSetting()+settingLink('📘','App 系统设计与功能说明书','查看新版 App 架构与功能记录','./minna-app-system-design.html')+settingButton('🔊','音效开关',sfxEnabled()?'当前：开启':'当前：关闭','toggleSfx',false)+settingLink('🧰','Learning Center','错题、XP、Crown 与成就入口','./minna-toolbox.html')+'</section><section><h2 class="sectionTitle">数据管理</h2>'+settingButton('🔥','清空错题','仅清空错题本，不影响 Crown / XP','clearMistakes',true)+settingButton('❤️','重置 Hearts','恢复为 5 个生命值','resetHearts',false)+settingButton('💎','重置 XP','将 XP 清零','resetXp',true)+settingButton('♻️','恢复初始学习状态','清空 XP、Crown、进度、错题与 Hearts','resetAll',true)+'</section></main>'}
   function tabs(){var isMe=view()==='me';return '<nav class="bottomTabs"><a class="'+(!isMe?'active':'')+'" href="./minna-app.html?v='+VERSION+'"><span>🏠</span><b>学习</b></a><a href="./minna-toolbox.html?v='+VERSION+'"><span>🧰</span><b>宝箱</b></a><a href="./minna-app-lessons.html?v='+VERSION+'"><span>🌳</span><b>课程</b></a><a href="./minna-app-favorites.html?v='+VERSION+'"><span>💗</span><b>收藏</b></a><a class="'+(isMe?'active':'')+'" href="./minna-app.html?v='+VERSION+'#me"><span>⋯</span><b>我的</b></a></nav>'}
-  function bindActions(){document.querySelectorAll('[data-lang]').forEach(function(btn){btn.onclick=function(){setLang(btn.dataset.lang)}});document.querySelectorAll('[data-action]').forEach(function(btn){btn.onclick=function(){var a=btn.dataset.action;if(a==='toggleSfx'){localStorage.setItem(SFX_KEY,sfxEnabled()?'0':'1')}if(a==='clearMistakes'){localStorage.setItem(MISTAKE_KEY,'[]')}if(a==='resetHearts'){localStorage.setItem(HEARTS_KEY,'5')}if(a==='resetXp'){localStorage.setItem('minna.xp.v1','0')}if(a==='resetAll'){[PROGRESS_KEY,CROWN_KEY,MISTAKE_KEY,STATE_KEY].forEach(function(k){localStorage.removeItem(k)});localStorage.setItem('minna.xp.v1','0');localStorage.setItem(HEARTS_KEY,'5')}render()}})}
+  function bindActions(){document.querySelectorAll('[data-lang]').forEach(function(btn){btn.onclick=function(){setLang(btn.dataset.lang)}});document.querySelectorAll('[data-action]').forEach(function(btn){btn.onclick=function(){var a=btn.dataset.action;if(a==='toggleSfx'){store.setSfxEnabled(!sfxEnabled())}if(a==='clearMistakes'){store.writeMistakes([])}if(a==='resetHearts'){store.resetHearts()}if(a==='resetXp'){store.setXp(0)}if(a==='resetAll'){store.writeProgress({});store.writeCrowns({});store.writeMistakes([]);store.writeState({});store.setXp(0);store.resetHearts()}render()}})}
   function render(){var state=readState(),current=Math.max(1,Number(state.lastLesson||1));document.documentElement.lang=lang()==='en'?'en':'zh-CN';document.title=(lang()==='en'?'Minna App | Minna no Nihongo':'Minna App | みんなの日本語');document.getElementById('app').innerHTML=top(state)+(view()==='me'?meView():learnView(state,current))+tabs();bindActions()}
   window.addEventListener('hashchange',render);if(!localStorage.getItem(LANG_KEY)&&!localStorage.getItem('minna_ui_lang'))setLang('zh');else if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',render);else render();
 })();
