@@ -49,7 +49,20 @@
           document.getElementById('avatarUrl').value=avatarValue;
           avatarPrev.src=avatarValue;
         }catch(e){
-          alert('云端头像上传失败，已保留本地预览：'+(e.message||e));
+          // Fallback: keep local Base64 so avatar still persists in profile.
+          if(!avatarValue||avatarValue.indexOf('data:image')!==0){
+            try{
+              avatarValue=await new Promise(function(resolve,reject){
+                var r=new FileReader();
+                r.onload=function(){resolve(String(r.result||''));};
+                r.onerror=function(){reject(new Error('base64 读取失败'));};
+                r.readAsDataURL(avatarFileObj);
+              });
+              document.getElementById('avatarUrl').value=avatarValue;
+              avatarPrev.src=avatarValue;
+            }catch(_e){}
+          }
+          alert('云端头像上传失败，已自动切换为本地保存：'+(e.message||e));
         }
       }
       var out={nick:document.getElementById('nick').value.trim(),bio:document.getElementById('bio').value.trim(),goal:document.getElementById('goal').value.trim(),avatar_url:avatarValue};
