@@ -1,56 +1,1614 @@
 {
-  "schema":"minna.lesson.v1",
-  "course":"minna",
-  "lessonNo":1,
-  "lessonId":"minna_lesson_01",
-  "title":{"zh":"第1课","en":"Lesson 1","ja":"第1課"},
-  "subtitle":{"zh":"名词句・自我介绍","en":"Noun sentences / self-introduction","ja":"名詞文・自己紹介"},
-  "focus":{"zh":"学习「AはBです」「AはBではありません」「AはBですか」和基本寒暄。每个核心词汇、语法、例句后都有即时练习。","en":"Learn “A は B です”, “A は B ではありません”, “A は B ですか”, and basic greetings. Each vocabulary, grammar, and example point includes immediate practice.","ja":"AはBです、AはBではありません、AはBですか、基本的なあいさつを学びます。各ポイントに練習があります。"},
-  "sections":[
-    {"type":"vocab","id":"l01_vocab","title":{"zh":"核心词汇","en":"Core Vocabulary","ja":"基本語彙"},"items":[
-      {"id":"l01_v01","jp":"わたし","kana":"わたし","zh":"我","en":"I / me","tags":["person"],"practice":[{"id":"l01_v01_p01","skill":"vocab","question":{"zh":"「わたし」的意思是？","en":"What does わたし mean?"},"options":[{"text":{"zh":"我","en":"I / me"},"correct":true},{"text":{"zh":"你","en":"you"}},{"text":{"zh":"老师","en":"teacher"}}],"explanation":{"zh":"「わたし」= 我。","en":"わたし means I / me."}}]},
-      {"id":"l01_v02","jp":"あなた","kana":"あなた","zh":"你","en":"you","tags":["person"],"practice":[{"id":"l01_v02_p01","skill":"vocab","question":{"zh":"「あなた」的意思是？","en":"What does あなた mean?"},"options":[{"text":{"zh":"你","en":"you"},"correct":true},{"text":{"zh":"我","en":"I / me"}},{"text":{"zh":"那个人","en":"that person"}}],"explanation":{"zh":"「あなた」= 你。","en":"あなた means you."}}]},
-      {"id":"l01_v03","jp":"あのひと","kana":"あのひと","zh":"那个人","en":"that person","tags":["person"],"practice":[{"id":"l01_v03_p01","skill":"vocab","question":{"zh":"「あのひと」的意思是？","en":"What does あのひと mean?"},"options":[{"text":{"zh":"那个人","en":"that person"},"correct":true},{"text":{"zh":"老师","en":"teacher"}},{"text":{"zh":"学生","en":"student"}}],"explanation":{"zh":"「あのひと」= 那个人。","en":"あのひと means that person."}}]},
-      {"id":"l01_v04","jp":"先生","kana":"せんせい","zh":"老师","en":"teacher","tags":["job"],"practice":[{"id":"l01_v04_p01","skill":"vocab","question":{"zh":"「先生」的意思是？","en":"What does 先生 mean?"},"options":[{"text":{"zh":"老师","en":"teacher"},"correct":true},{"text":{"zh":"学生","en":"student"}},{"text":{"zh":"医生","en":"doctor"}}],"explanation":{"zh":"「先生」= 老师。","en":"先生 means teacher."}}]},
-      {"id":"l01_v05","jp":"学生","kana":"がくせい","zh":"学生","en":"student","tags":["job"],"practice":[{"id":"l01_v05_p01","skill":"vocab","question":{"zh":"「学生」的意思是？","en":"What does 学生 mean?"},"options":[{"text":{"zh":"学生","en":"student"},"correct":true},{"text":{"zh":"老师","en":"teacher"}},{"text":{"zh":"公司职员","en":"company employee"}}],"explanation":{"zh":"「学生」= 学生。","en":"学生 means student."}}]},
-      {"id":"l01_v06","jp":"会社員","kana":"かいしゃいん","zh":"公司职员","en":"company employee","tags":["job"],"practice":[{"id":"l01_v06_p01","skill":"vocab","question":{"zh":"「会社員」的意思是？","en":"What does 会社員 mean?"},"options":[{"text":{"zh":"公司职员","en":"company employee"},"correct":true},{"text":{"zh":"银行职员","en":"bank employee"}},{"text":{"zh":"研究员","en":"researcher"}}],"explanation":{"zh":"「会社員」= 公司职员。","en":"会社員 means company employee."}}]},
-      {"id":"l01_v07","jp":"銀行員","kana":"ぎんこういん","zh":"银行职员","en":"bank employee","tags":["job"],"practice":[{"id":"l01_v07_p01","skill":"vocab","question":{"zh":"「銀行員」的意思是？","en":"What does 銀行員 mean?"},"options":[{"text":{"zh":"银行职员","en":"bank employee"},"correct":true},{"text":{"zh":"公司职员","en":"company employee"}},{"text":{"zh":"医生","en":"doctor"}}],"explanation":{"zh":"「銀行員」= 银行职员。","en":"銀行員 means bank employee."}}]},
-      {"id":"l01_v08","jp":"医者","kana":"いしゃ","zh":"医生","en":"doctor","tags":["job"],"practice":[{"id":"l01_v08_p01","skill":"vocab","question":{"zh":"「医者」的意思是？","en":"What does 医者 mean?"},"options":[{"text":{"zh":"医生","en":"doctor"},"correct":true},{"text":{"zh":"老师","en":"teacher"}},{"text":{"zh":"研究员","en":"researcher"}}],"explanation":{"zh":"「医者」= 医生。","en":"医者 means doctor."}}]},
-      {"id":"l01_v09","jp":"研究者","kana":"けんきゅうしゃ","zh":"研究员","en":"researcher","tags":["job"],"practice":[{"id":"l01_v09_p01","skill":"vocab","question":{"zh":"「研究者」的意思是？","en":"What does 研究者 mean?"},"options":[{"text":{"zh":"研究员","en":"researcher"},"correct":true},{"text":{"zh":"医生","en":"doctor"}},{"text":{"zh":"学生","en":"student"}}],"explanation":{"zh":"「研究者」= 研究员。","en":"研究者 means researcher."}}]},
-      {"id":"l01_v10","jp":"大学","kana":"だいがく","zh":"大学","en":"university","tags":["place"],"practice":[{"id":"l01_v10_p01","skill":"vocab","question":{"zh":"「大学」的意思是？","en":"What does 大学 mean?"},"options":[{"text":{"zh":"大学","en":"university"},"correct":true},{"text":{"zh":"医院","en":"hospital"}},{"text":{"zh":"美国","en":"the United States"}}],"explanation":{"zh":"「大学」= 大学。","en":"大学 means university."}}]},
-      {"id":"l01_v11","jp":"病院","kana":"びょういん","zh":"医院","en":"hospital","tags":["place"],"practice":[{"id":"l01_v11_p01","skill":"vocab","question":{"zh":"「病院」的意思是？","en":"What does 病院 mean?"},"options":[{"text":{"zh":"医院","en":"hospital"},"correct":true},{"text":{"zh":"大学","en":"university"}},{"text":{"zh":"美国","en":"the United States"}}],"explanation":{"zh":"「病院」= 医院。","en":"病院 means hospital."}}]},
-      {"id":"l01_v12","jp":"アメリカ","kana":"アメリカ","zh":"美国","en":"the United States","tags":["country"],"practice":[{"id":"l01_v12_p01","skill":"vocab","question":{"zh":"「アメリカ」的意思是？","en":"What does アメリカ mean?"},"options":[{"text":{"zh":"美国","en":"the United States"},"correct":true},{"text":{"zh":"大学","en":"university"}},{"text":{"zh":"医院","en":"hospital"}}],"explanation":{"zh":"「アメリカ」= 美国。","en":"アメリカ means the United States."}}]},
-      {"id":"l01_v13","jp":"初めまして","kana":"はじめまして","zh":"初次见面","en":"Nice to meet you","tags":["greeting"],"practice":[{"id":"l01_v13_p01","skill":"vocab","question":{"zh":"「初めまして」的意思是？","en":"What does 初めまして mean?"},"options":[{"text":{"zh":"初次见面","en":"Nice to meet you"},"correct":true},{"text":{"zh":"请多关照","en":"Please treat me well"}},{"text":{"zh":"来自","en":"from"}}],"explanation":{"zh":"「初めまして」用于初次见面。","en":"初めまして is used when meeting someone for the first time."}}]},
-      {"id":"l01_v14","jp":"どうぞよろしく","kana":"どうぞよろしく","zh":"请多关照","en":"Nice to meet you / Please treat me well","tags":["greeting"],"practice":[{"id":"l01_v14_p01","skill":"vocab","question":{"zh":"「どうぞよろしく」的意思是？","en":"What does どうぞよろしく mean?"},"options":[{"text":{"zh":"请多关照","en":"Nice to meet you / Please treat me well"},"correct":true},{"text":{"zh":"初次见面","en":"Nice to meet you"}},{"text":{"zh":"学生","en":"student"}}],"explanation":{"zh":"自我介绍结尾常用「どうぞよろしく」。","en":"どうぞよろしく often closes a self-introduction."}}]},
-      {"id":"l01_v15","jp":"教師","kana":"きょうし","zh":"教师","en":"teacher / instructor","tags":["job"],"practice":[{"id":"l01_v15_p01","skill":"vocab","question":{"zh":"「教師」的意思是？","en":"What does 教師 mean?"},"options":[{"text":{"zh":"教师","en":"teacher / instructor"},"correct":true},{"text":{"zh":"学生","en":"student"}},{"text":{"zh":"医生","en":"doctor"}}],"explanation":{"zh":"「教師」= 教师。","en":"教師 means teacher / instructor."}}]},
-      {"id":"l01_v16","jp":"から","kana":"から","zh":"从/来自","en":"from","tags":["particle"],"practice":[{"id":"l01_v16_p01","skill":"vocab","question":{"zh":"「から」的意思是？","en":"What does から mean?"},"options":[{"text":{"zh":"从/来自","en":"from"},"correct":true},{"text":{"zh":"也","en":"also"}},{"text":{"zh":"不是","en":"not"}}],"explanation":{"zh":"「から」表示来源或起点。","en":"から marks origin or starting point."}}]},
-      {"id":"l01_v17","jp":"来ました","kana":"きました","zh":"来了/来过","en":"came","tags":["verb"],"practice":[{"id":"l01_v17_p01","skill":"vocab","question":{"zh":"「来ました」的意思是？","en":"What does 来ました mean?"},"options":[{"text":{"zh":"来了/来过","en":"came"},"correct":true},{"text":{"zh":"不是","en":"not"}},{"text":{"zh":"请多关照","en":"please treat me well"}}],"explanation":{"zh":"「来ました」是「来ます」的过去式。","en":"来ました is the past form of 来ます."}}]}
-    ]},
-    {"type":"grammar","id":"l01_grammar","title":{"zh":"核心语法","en":"Core Grammar","ja":"基本文法"},"items":[
-      {"id":"l01_g01","pattern":"A は B です","title":{"zh":"A 是 B","en":"A is B"},"explanation":{"zh":"「は」提示主题，「です」表示礼貌判断：A 是 B。","en":"は marks the topic, and です makes a polite statement: A is B."},"examples":[{"jp":"わたしは 学生です。","zh":"我是学生。","en":"I am a student."}],"practice":[{"id":"l01_g01_p01","skill":"grammar","question":{"zh":"「N1 は N2 です」表示什么？","en":"What does N1 は N2 です express?"},"options":[{"text":{"zh":"N1 是 N2","en":"N1 is N2"},"correct":true},{"text":{"zh":"N1 不是 N2","en":"N1 is not N2"}},{"text":{"zh":"N1 去 N2","en":"N1 goes to N2"}}],"explanation":{"zh":"AはBです = A 是 B。","en":"A は B です means A is B."}},{"id":"l01_g01_p02","skill":"grammar","question":{"zh":"「は」作主题助词时读作？","en":"How is topic particle は pronounced?"},"options":[{"text":{"zh":"wa","en":"wa"},"correct":true},{"text":{"zh":"ha","en":"ha"}},{"text":{"zh":"ga","en":"ga"}}],"explanation":{"zh":"主题助词「は」写作 ha，读作 wa。","en":"The topic particle is written は but pronounced wa."}}]},
-      {"id":"l01_g02","pattern":"A は B ではありません","title":{"zh":"A 不是 B","en":"A is not B"},"explanation":{"zh":"否定句用「ではありません」。口语中也常听到「じゃありません」。","en":"Use ではありません for the negative form. じゃありません is also common in speech."},"examples":[{"jp":"サントスさんは 学生ではありません。","zh":"桑托斯先生不是学生。","en":"Mr. Santos is not a student."}],"practice":[{"id":"l01_g02_p01","skill":"grammar","question":{"zh":"「学生じゃありません」是什么意思？","en":"What does 学生じゃありません mean?"},"options":[{"text":{"zh":"不是学生","en":"not a student"},"correct":true},{"text":{"zh":"是学生","en":"is a student"}},{"text":{"zh":"学生吗","en":"is it a student?"}}],"explanation":{"zh":"「じゃありません」是「ではありません」的口语形式。","en":"じゃありません is the spoken form of ではありません."}}]},
-      {"id":"l01_g03","pattern":"A は B ですか","title":{"zh":"A 是 B 吗？","en":"Is A B?"},"explanation":{"zh":"疑问句在句尾加「か」。","en":"Add か at the end to make a question."},"examples":[{"jp":"ミラーさんは 会社員ですか。","zh":"米勒先生是公司职员吗？","en":"Is Mr. Miller a company employee?"}],"practice":[{"id":"l01_g03_p01","skill":"grammar","question":{"zh":"疑问句句尾通常加什么？","en":"What is usually added to the end of a question?"},"options":[{"text":{"jp":"か"},"correct":true},{"text":{"jp":"を"}},{"text":{"jp":"で"}}],"explanation":{"zh":"陈述句后加「か」变疑问句。","en":"Add か to turn a statement into a question."}}]},
-      {"id":"l01_g04","pattern":"A も B です","title":{"zh":"A 也是 B","en":"A is also B"},"explanation":{"zh":"「も」表示“也”。","en":"も means also / too."},"examples":[{"jp":"グプタさんも 会社員です。","zh":"古普塔先生也是公司职员。","en":"Mr. Gupta is also a company employee."}],"practice":[{"id":"l01_g04_p01","skill":"grammar","question":{"zh":"「も」在第1课里表示什么？","en":"What does も mean in Lesson 1?"},"options":[{"text":{"zh":"也","en":"also / too"},"correct":true},{"text":{"zh":"从","en":"from"}},{"text":{"zh":"和","en":"and / with"}}],"explanation":{"zh":"「も」表示“也”，常替代「は」。","en":"も means also/too and often replaces は."}}]},
-      {"id":"l01_g05","pattern":"N から 来ました","title":{"zh":"从 N 来 / 来自 N","en":"came from N"},"explanation":{"zh":"「から」表示起点、来源或出身。自我介绍时常说「国/地方 から 来ました」。","en":"から marks the origin or starting point. In self-introductions, use country/place から 来ました."},"examples":[{"jp":"アメリカから 来ました。","zh":"我来自美国。","en":"I came from the United States."}],"practice":[{"id":"l01_g05_p01","skill":"grammar","question":{"zh":"「アメリカから来ました」里的「から」表示什么？","en":"What does から mean in アメリカから来ました?"},"options":[{"text":{"zh":"从/来自","en":"from"},"correct":true},{"text":{"zh":"也","en":"also"}},{"text":{"zh":"不是","en":"not"}}],"explanation":{"zh":"「から」表示来源或起点。","en":"から marks the origin or starting point."}}]}
-    ]},
-    {"type":"examples","id":"l01_examples","title":{"zh":"核心例句","en":"Core Examples","ja":"基本例文"},"items":[
-      {"id":"l01_e01","jp":"わたしは マイク・ミラーです。","zh":"我是迈克・米勒。","en":"I am Mike Miller.","practice":[{"id":"l01_e01_p01","type":"order","skill":"examples","question":{"zh":"把词块排成句子：我是迈克・米勒。","en":"Put the chunks in order: I am Mike Miller."},"parts":["わたしは","マイク・ミラー","です。"],"answer":["わたしは","マイク・ミラー","です。"],"explanation":{"zh":"正确句子：わたしは マイク・ミラーです。","en":"Correct sentence: わたしは マイク・ミラーです。"}}]},
-      {"id":"l01_e02","jp":"サントスさんは 学生ではありません。","zh":"桑托斯先生不是学生。","en":"Mr. Santos is not a student.","practice":[{"id":"l01_e02_p01","type":"order","skill":"examples","question":{"zh":"把词块排成句子：桑托斯先生不是学生。","en":"Put the chunks in order: Mr. Santos is not a student."},"parts":["サントスさんは","学生では","ありません。"],"answer":["サントスさんは","学生では","ありません。"],"explanation":{"zh":"正确句子：サントスさんは 学生ではありません。","en":"Correct sentence: サントスさんは 学生ではありません。"}}]},
-      {"id":"l01_e03","jp":"ミラーさんは 会社員ですか。","zh":"米勒先生是公司职员吗？","en":"Is Mr. Miller a company employee?","practice":[{"id":"l01_e03_p01","type":"order","skill":"examples","question":{"zh":"把词块排成句子：米勒先生是公司职员吗？","en":"Put the chunks in order: Is Mr. Miller a company employee?"},"parts":["ミラーさんは","会社員","ですか。"],"answer":["ミラーさんは","会社員","ですか。"],"explanation":{"zh":"正确句子：ミラーさんは 会社員ですか。","en":"Correct sentence: ミラーさんは 会社員ですか。"}}]},
-      {"id":"l01_e04","jp":"グプタさんも 会社員です。","zh":"古普塔先生也是公司职员。","en":"Mr. Gupta is also a company employee.","practice":[{"id":"l01_e04_p01","type":"order","skill":"examples","question":{"zh":"把词块排成句子：古普塔先生也是公司职员。","en":"Put the chunks in order: Mr. Gupta is also a company employee."},"parts":["グプタさんも","会社員","です。"],"answer":["グプタさんも","会社員","です。"],"explanation":{"zh":"正确句子：グプタさんも 会社員です。","en":"Correct sentence: グプタさんも 会社員です。"}}]},
-      {"id":"l01_e05","jp":"初めまして。わたしは ミラーです。アメリカから来ました。どうぞよろしく。","zh":"初次见面。我是米勒。我来自美国。请多关照。","en":"Nice to meet you. I am Miller. I came from the United States. Nice to meet you.","practice":[{"id":"l01_e05_p01","type":"order","skill":"examples","question":{"zh":"把词块排成句子：初次见面的完整自我介绍。","en":"Put the chunks in order: a complete first self-introduction."},"parts":["初めまして。","わたしは","ミラーです。","アメリカから","来ました。","どうぞよろしく。"],"answer":["初めまして。","わたしは","ミラーです。","アメリカから","来ました。","どうぞよろしく。"],"explanation":{"zh":"自我介绍常见顺序：初次见面、姓名、出身、请多关照。","en":"A natural self-introduction order is greeting, name, origin, closing greeting."}}]},
-      {"id":"l01_e06","jp":"アメリカから 来ました。","zh":"我来自美国。","en":"I came from the United States.","practice":[{"id":"l01_e06_p01","type":"order","skill":"examples","question":{"zh":"把词块排成句子：我来自美国。","en":"Put the chunks in order: I came from the United States."},"parts":["アメリカから","来ました。"],"answer":["アメリカから","来ました。"],"explanation":{"zh":"正确句子：アメリカから 来ました。","en":"Correct sentence: アメリカから 来ました。"}}]}
-    ]},
-    {"type":"quiz","id":"l01_quiz","title":{"zh":"综合测试","en":"Final Test","ja":"まとめテスト"},"items":[
-      {"id":"l01_q01","question":{"zh":"「学生」的意思是？","en":"What does 学生 mean?"},"options":[{"text":{"zh":"学生","en":"student"},"correct":true},{"text":{"zh":"老师","en":"teacher"}},{"text":{"zh":"医生","en":"doctor"}},{"text":{"zh":"公司职员","en":"company employee"}}],"explanation":{"zh":"「学生」= 学生。","en":"学生 means student."}},
-      {"id":"l01_q02","question":{"zh":"选择正确句子：我是学生。","en":"Choose the correct sentence: I am a student."},"options":[{"text":{"jp":"わたしは 学生です。"},"correct":true},{"text":{"jp":"わたしを 学生です。"}},{"text":{"jp":"わたしへ 学生です。"}},{"text":{"jp":"わたしが 学生ですか。"}}],"explanation":{"zh":"自我介绍用「は」提示主题，句尾用「です」。","en":"Use は to mark the topic and です at the end."}},
-      {"id":"l01_q03","question":{"zh":"哪一句表示“桑托斯先生不是学生”？","en":"Which sentence means Mr. Santos is not a student?"},"options":[{"text":{"jp":"サントスさんは 学生ではありません。"},"correct":true},{"text":{"jp":"サントスさんは 学生です。"}},{"text":{"jp":"サントスさんも 学生です。"}},{"text":{"jp":"サントスさんは 学生ですか。"}}],"explanation":{"zh":"否定句用「ではありません」。","en":"Use ではありません for the negative form."}},
-      {"id":"l01_q04","question":{"zh":"「いいえ、違います」是什么意思？","en":"What does いいえ、違います mean?"},"options":[{"text":{"zh":"不，不是","en":"No, that is not right"},"correct":true},{"text":{"zh":"是，是的","en":"Yes, that is right"}},{"text":{"zh":"请多关照","en":"Nice to meet you"}}],"explanation":{"zh":"回答否定判断时可以说「いいえ、違います」。","en":"Use いいえ、違います to reject an identification."}},
-      {"id":"l01_q05","question":{"zh":"不能用于自己的称呼是？","en":"Which suffix should you not use for yourself?"},"options":[{"text":{"jp":"さん"},"correct":true},{"text":{"jp":"わたし"}},{"text":{"jp":"教師"}}],"explanation":{"zh":"「さん」用于别人，不能加在自己的名字后。","en":"さん is used for others, not after your own name."}},
-      {"id":"l01_q06","question":{"zh":"「初めまして」用于什么场合？","en":"When do you use 初めまして?"},"options":[{"text":{"zh":"初次见面","en":"meeting someone for the first time"},"correct":true},{"text":{"zh":"买东西","en":"shopping"}},{"text":{"zh":"问时间","en":"asking the time"}}],"explanation":{"zh":"「初めまして」用于初次见面。","en":"初めまして is used when meeting someone for the first time."}},
-      {"id":"l01_q07","question":{"zh":"「どうぞよろしく」是什么意思？","en":"What does どうぞよろしく mean?"},"options":[{"text":{"zh":"请多关照","en":"Nice to meet you / Please treat me well"},"correct":true},{"text":{"zh":"几点了","en":"What time is it?"}},{"text":{"zh":"多少钱","en":"How much is it?"}}],"explanation":{"zh":"自我介绍结尾常用「どうぞよろしく」。","en":"どうぞよろしく often closes a self-introduction."}},
-      {"id":"l01_q08","question":{"zh":"完整自我介绍的正确顺序是？","en":"What is the natural order of a self-introduction?"},"options":[{"text":{"zh":"初めまして→名字→出身→どうぞよろしく","en":"Nice to meet you → name → origin → closing greeting"},"correct":true},{"text":{"zh":"どうぞよろしく→名字→初めまして","en":"closing greeting → name → nice to meet you"}},{"text":{"zh":"出身→どうぞよろしく→初めまして","en":"origin → closing greeting → nice to meet you"}}],"explanation":{"zh":"常见顺序是：初次见面、姓名、出身、请多关照。","en":"A natural order is greeting, name, origin, closing greeting."}},
-      {"id":"l01_q09","question":{"zh":"正确句子是哪一个？","en":"Which sentence is correct?"},"options":[{"text":{"jp":"わたしも 学生です。"},"correct":true},{"text":{"jp":"わたしはも 学生です。"}},{"text":{"jp":"わたしを 学生です。"}}],"explanation":{"zh":"「も」直接替代「は」。","en":"も directly replaces は."}}
-    ]}
+  "schema": "minna.lesson.v1",
+  "course": "minna",
+  "lessonNo": 1,
+  "lessonId": "minna_lesson_01",
+  "title": {
+    "zh": "第1课",
+    "en": "Lesson 1",
+    "ja": "第1課"
+  },
+  "subtitle": {
+    "zh": "名词句・自我介绍",
+    "en": "Noun sentences / self-introduction",
+    "ja": "名詞文・自己紹介"
+  },
+  "focus": {
+    "zh": "学习「AはBです」「AはBではありません」「AはBですか」和基本寒暄。每个核心词汇、语法、例句后都有即时练习。",
+    "en": "Learn “A は B です”, “A は B ではありません”, “A は B ですか”, and basic greetings. Each vocabulary, grammar, and example point includes immediate practice.",
+    "ja": "AはBです、AはBではありません、AはBですか、基本的なあいさつを学びます。各ポイントに練習があります。"
+  },
+  "sections": [
+    {
+      "type": "vocab",
+      "id": "l01_vocab",
+      "title": {
+        "zh": "核心词汇",
+        "en": "Core Vocabulary",
+        "ja": "基本語彙"
+      },
+      "items": [
+        {
+          "id": "l01_v01",
+          "jp": "わたし",
+          "kana": "わたし",
+          "zh": "我",
+          "en": "I / me",
+          "tags": [
+            "person"
+          ],
+          "practice": [
+            {
+              "id": "l01_v01_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「わたし」的意思是？",
+                "en": "What does わたし mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "我",
+                    "en": "I / me"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "你",
+                    "en": "you"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "老师",
+                    "en": "teacher"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「わたし」= 我。",
+                "en": "わたし means I / me."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l01_v02",
+          "jp": "あなた",
+          "kana": "あなた",
+          "zh": "你",
+          "en": "you",
+          "tags": [
+            "person"
+          ],
+          "practice": [
+            {
+              "id": "l01_v02_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「あなた」的意思是？",
+                "en": "What does あなた mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "你",
+                    "en": "you"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我",
+                    "en": "I / me"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "那个人",
+                    "en": "that person"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「あなた」= 你。",
+                "en": "あなた means you."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l01_v03",
+          "jp": "あのひと",
+          "kana": "あのひと",
+          "zh": "那个人",
+          "en": "that person",
+          "tags": [
+            "person"
+          ],
+          "practice": [
+            {
+              "id": "l01_v03_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「あのひと」的意思是？",
+                "en": "What does あのひと mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "那个人",
+                    "en": "that person"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "老师",
+                    "en": "teacher"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "学生",
+                    "en": "student"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「あのひと」= 那个人。",
+                "en": "あのひと means that person."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l01_v04",
+          "jp": "先生",
+          "kana": "せんせい",
+          "zh": "老师",
+          "en": "teacher",
+          "tags": [
+            "job"
+          ],
+          "practice": [
+            {
+              "id": "l01_v04_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「先生」的意思是？",
+                "en": "What does 先生 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "老师",
+                    "en": "teacher"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "学生",
+                    "en": "student"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "医生",
+                    "en": "doctor"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「先生」= 老师。",
+                "en": "先生 means teacher."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l01_v05",
+          "jp": "学生",
+          "kana": "がくせい",
+          "zh": "学生",
+          "en": "student",
+          "tags": [
+            "job"
+          ],
+          "practice": [
+            {
+              "id": "l01_v05_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「学生」的意思是？",
+                "en": "What does 学生 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "学生",
+                    "en": "student"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "老师",
+                    "en": "teacher"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "公司职员",
+                    "en": "company employee"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「学生」= 学生。",
+                "en": "学生 means student."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l01_v06",
+          "jp": "会社員",
+          "kana": "かいしゃいん",
+          "zh": "公司职员",
+          "en": "company employee",
+          "tags": [
+            "job"
+          ],
+          "practice": [
+            {
+              "id": "l01_v06_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「会社員」的意思是？",
+                "en": "What does 会社員 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "公司职员",
+                    "en": "company employee"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "银行职员",
+                    "en": "bank employee"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "研究员",
+                    "en": "researcher"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「会社員」= 公司职员。",
+                "en": "会社員 means company employee."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l01_v07",
+          "jp": "銀行員",
+          "kana": "ぎんこういん",
+          "zh": "银行职员",
+          "en": "bank employee",
+          "tags": [
+            "job"
+          ],
+          "practice": [
+            {
+              "id": "l01_v07_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「銀行員」的意思是？",
+                "en": "What does 銀行員 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "银行职员",
+                    "en": "bank employee"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "公司职员",
+                    "en": "company employee"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "医生",
+                    "en": "doctor"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「銀行員」= 银行职员。",
+                "en": "銀行員 means bank employee."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l01_v08",
+          "jp": "医者",
+          "kana": "いしゃ",
+          "zh": "医生",
+          "en": "doctor",
+          "tags": [
+            "job"
+          ],
+          "practice": [
+            {
+              "id": "l01_v08_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「医者」的意思是？",
+                "en": "What does 医者 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "医生",
+                    "en": "doctor"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "老师",
+                    "en": "teacher"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "研究员",
+                    "en": "researcher"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「医者」= 医生。",
+                "en": "医者 means doctor."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l01_v09",
+          "jp": "研究者",
+          "kana": "けんきゅうしゃ",
+          "zh": "研究员",
+          "en": "researcher",
+          "tags": [
+            "job"
+          ],
+          "practice": [
+            {
+              "id": "l01_v09_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「研究者」的意思是？",
+                "en": "What does 研究者 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "研究员",
+                    "en": "researcher"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "医生",
+                    "en": "doctor"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "学生",
+                    "en": "student"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「研究者」= 研究员。",
+                "en": "研究者 means researcher."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l01_v10",
+          "jp": "大学",
+          "kana": "だいがく",
+          "zh": "大学",
+          "en": "university",
+          "tags": [
+            "place"
+          ],
+          "practice": [
+            {
+              "id": "l01_v10_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「大学」的意思是？",
+                "en": "What does 大学 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "大学",
+                    "en": "university"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "医院",
+                    "en": "hospital"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "美国",
+                    "en": "the United States"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「大学」= 大学。",
+                "en": "大学 means university."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l01_v11",
+          "jp": "病院",
+          "kana": "びょういん",
+          "zh": "医院",
+          "en": "hospital",
+          "tags": [
+            "place"
+          ],
+          "practice": [
+            {
+              "id": "l01_v11_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「病院」的意思是？",
+                "en": "What does 病院 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "医院",
+                    "en": "hospital"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "大学",
+                    "en": "university"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "美国",
+                    "en": "the United States"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「病院」= 医院。",
+                "en": "病院 means hospital."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l01_v12",
+          "jp": "アメリカ",
+          "kana": "アメリカ",
+          "zh": "美国",
+          "en": "the United States",
+          "tags": [
+            "country"
+          ],
+          "practice": [
+            {
+              "id": "l01_v12_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「アメリカ」的意思是？",
+                "en": "What does アメリカ mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "美国",
+                    "en": "the United States"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "大学",
+                    "en": "university"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "医院",
+                    "en": "hospital"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「アメリカ」= 美国。",
+                "en": "アメリカ means the United States."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l01_v13",
+          "jp": "初めまして",
+          "kana": "はじめまして",
+          "zh": "初次见面",
+          "en": "Nice to meet you",
+          "tags": [
+            "greeting"
+          ],
+          "practice": [
+            {
+              "id": "l01_v13_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「初めまして」的意思是？",
+                "en": "What does 初めまして mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "初次见面",
+                    "en": "Nice to meet you"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "请多关照",
+                    "en": "Please treat me well"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "来自",
+                    "en": "from"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「初めまして」用于初次见面。",
+                "en": "初めまして is used when meeting someone for the first time."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l01_v14",
+          "jp": "どうぞよろしく",
+          "kana": "どうぞよろしく",
+          "zh": "请多关照",
+          "en": "Nice to meet you / Please treat me well",
+          "tags": [
+            "greeting"
+          ],
+          "practice": [
+            {
+              "id": "l01_v14_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「どうぞよろしく」的意思是？",
+                "en": "What does どうぞよろしく mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "请多关照",
+                    "en": "Nice to meet you / Please treat me well"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "初次见面",
+                    "en": "Nice to meet you"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "学生",
+                    "en": "student"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "自我介绍结尾常用「どうぞよろしく」。",
+                "en": "どうぞよろしく often closes a self-introduction."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l01_v15",
+          "jp": "教師",
+          "kana": "きょうし",
+          "zh": "教师",
+          "en": "teacher / instructor",
+          "tags": [
+            "job"
+          ],
+          "practice": [
+            {
+              "id": "l01_v15_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「教師」的意思是？",
+                "en": "What does 教師 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "教师",
+                    "en": "teacher / instructor"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "学生",
+                    "en": "student"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "医生",
+                    "en": "doctor"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「教師」= 教师。",
+                "en": "教師 means teacher / instructor."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l01_v16",
+          "jp": "から",
+          "kana": "から",
+          "zh": "从/来自",
+          "en": "from",
+          "tags": [
+            "particle"
+          ],
+          "practice": [
+            {
+              "id": "l01_v16_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「から」的意思是？",
+                "en": "What does から mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "从/来自",
+                    "en": "from"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "也",
+                    "en": "also"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "不是",
+                    "en": "not"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「から」表示来源或起点。",
+                "en": "から marks origin or starting point."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l01_v17",
+          "jp": "来ました",
+          "kana": "きました",
+          "zh": "来了/来过",
+          "en": "came",
+          "tags": [
+            "verb"
+          ],
+          "practice": [
+            {
+              "id": "l01_v17_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「来ました」的意思是？",
+                "en": "What does 来ました mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "来了/来过",
+                    "en": "came"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "不是",
+                    "en": "not"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "请多关照",
+                    "en": "please treat me well"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「来ました」是「来ます」的过去式。",
+                "en": "来ました is the past form of 来ます."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "grammar",
+      "id": "l01_grammar",
+      "title": {
+        "zh": "核心语法",
+        "en": "Core Grammar",
+        "ja": "基本文法"
+      },
+      "items": [
+        {
+          "id": "l01_g01",
+          "pattern": "A は B です",
+          "title": {
+            "zh": "A 是 B",
+            "en": "A is B"
+          },
+          "explanation": {
+            "zh": "「は」提示主题，「です」表示礼貌判断：A 是 B。",
+            "en": "は marks the topic, and です makes a polite statement: A is B."
+          },
+          "examples": [
+            {
+              "jp": "わたしは 学生です。",
+              "zh": "我是学生。",
+              "en": "I am a student."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l01_g01_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "「N1 は N2 です」表示什么？",
+                "en": "What does N1 は N2 です express?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "N1 是 N2",
+                    "en": "N1 is N2"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "N1 不是 N2",
+                    "en": "N1 is not N2"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "N1 去 N2",
+                    "en": "N1 goes to N2"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "AはBです = A 是 B。",
+                "en": "A は B です means A is B."
+              }
+            },
+            {
+              "id": "l01_g01_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "「は」作主题助词时读作？",
+                "en": "How is topic particle は pronounced?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "wa",
+                    "en": "wa"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "ha",
+                    "en": "ha"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "ga",
+                    "en": "ga"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "主题助词「は」写作 ha，读作 wa。",
+                "en": "The topic particle is written は but pronounced wa."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l01_g02",
+          "pattern": "A は B ではありません",
+          "title": {
+            "zh": "A 不是 B",
+            "en": "A is not B"
+          },
+          "explanation": {
+            "zh": "否定句用「ではありません」。口语中也常听到「じゃありません」。",
+            "en": "Use ではありません for the negative form. じゃありません is also common in speech."
+          },
+          "examples": [
+            {
+              "jp": "サントスさんは 学生ではありません。",
+              "zh": "桑托斯先生不是学生。",
+              "en": "Mr. Santos is not a student."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l01_g02_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "「学生じゃありません」是什么意思？",
+                "en": "What does 学生じゃありません mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "不是学生",
+                    "en": "not a student"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "是学生",
+                    "en": "is a student"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "学生吗",
+                    "en": "is it a student?"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「じゃありません」是「ではありません」的口语形式。",
+                "en": "じゃありません is the spoken form of ではありません."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l01_g03",
+          "pattern": "A は B ですか",
+          "title": {
+            "zh": "A 是 B 吗？",
+            "en": "Is A B?"
+          },
+          "explanation": {
+            "zh": "疑问句在句尾加「か」。",
+            "en": "Add か at the end to make a question."
+          },
+          "examples": [
+            {
+              "jp": "ミラーさんは 会社員ですか。",
+              "zh": "米勒先生是公司职员吗？",
+              "en": "Is Mr. Miller a company employee?"
+            }
+          ],
+          "practice": [
+            {
+              "id": "l01_g03_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "疑问句句尾通常加什么？",
+                "en": "What is usually added to the end of a question?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "か"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "を"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "で"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "陈述句后加「か」变疑问句。",
+                "en": "Add か to turn a statement into a question."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l01_g04",
+          "pattern": "A も B です",
+          "title": {
+            "zh": "A 也是 B",
+            "en": "A is also B"
+          },
+          "explanation": {
+            "zh": "「も」表示“也”。",
+            "en": "も means also / too."
+          },
+          "examples": [
+            {
+              "jp": "グプタさんも 会社員です。",
+              "zh": "古普塔先生也是公司职员。",
+              "en": "Mr. Gupta is also a company employee."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l01_g04_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "「も」在第1课里表示什么？",
+                "en": "What does も mean in Lesson 1?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "也",
+                    "en": "also / too"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "从",
+                    "en": "from"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "和",
+                    "en": "and / with"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「も」表示“也”，常替代「は」。",
+                "en": "も means also/too and often replaces は."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l01_g05",
+          "pattern": "N から 来ました",
+          "title": {
+            "zh": "从 N 来 / 来自 N",
+            "en": "came from N"
+          },
+          "explanation": {
+            "zh": "「から」表示起点、来源或出身。自我介绍时常说「国/地方 から 来ました」。",
+            "en": "から marks the origin or starting point. In self-introductions, use country/place から 来ました."
+          },
+          "examples": [
+            {
+              "jp": "アメリカから 来ました。",
+              "zh": "我来自美国。",
+              "en": "I came from the United States."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l01_g05_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "「アメリカから来ました」里的「から」表示什么？",
+                "en": "What does から mean in アメリカから来ました?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "从/来自",
+                    "en": "from"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "也",
+                    "en": "also"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "不是",
+                    "en": "not"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「から」表示来源或起点。",
+                "en": "から marks the origin or starting point."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examples",
+      "id": "l01_examples",
+      "title": {
+        "zh": "核心例句",
+        "en": "Core Examples",
+        "ja": "基本例文"
+      },
+      "items": [
+        {
+          "id": "l01_e01",
+          "jp": "わたしは マイク・ミラーです。",
+          "zh": "我是迈克・米勒。",
+          "en": "I am Mike Miller.",
+          "practice": [
+            {
+              "id": "l01_e01_p01",
+              "type": "order",
+              "skill": "examples",
+              "question": {
+                "zh": "把词块排成句子：我是迈克・米勒？",
+                "en": "Put the chunks in order: I am Mike Miller?"
+              },
+              "parts": [
+                "わたしは",
+                "マイク・ミラー",
+                "です。"
+              ],
+              "answer": [
+                "わたしは",
+                "マイク・ミラー",
+                "です。"
+              ],
+              "explanation": {
+                "zh": "正确句子：わたしは マイク・ミラーです。",
+                "en": "Correct sentence: わたしは マイク・ミラーです。"
+              }
+            }
+          ]
+        },
+        {
+          "id": "l01_e02",
+          "jp": "サントスさんは 学生ではありません。",
+          "zh": "桑托斯先生不是学生。",
+          "en": "Mr. Santos is not a student.",
+          "practice": [
+            {
+              "id": "l01_e02_p01",
+              "type": "order",
+              "skill": "examples",
+              "question": {
+                "zh": "把词块排成句子：桑托斯先生不是学生？",
+                "en": "Put the chunks in order: Mr. Santos is not a student?"
+              },
+              "parts": [
+                "サントスさんは",
+                "学生では",
+                "ありません。"
+              ],
+              "answer": [
+                "サントスさんは",
+                "学生では",
+                "ありません。"
+              ],
+              "explanation": {
+                "zh": "正确句子：サントスさんは 学生ではありません。",
+                "en": "Correct sentence: サントスさんは 学生ではありません。"
+              }
+            }
+          ]
+        },
+        {
+          "id": "l01_e03",
+          "jp": "ミラーさんは 会社員ですか。",
+          "zh": "米勒先生是公司职员吗？",
+          "en": "Is Mr. Miller a company employee?",
+          "practice": [
+            {
+              "id": "l01_e03_p01",
+              "type": "order",
+              "skill": "examples",
+              "question": {
+                "zh": "把词块排成句子：米勒先生是公司职员吗？",
+                "en": "Put the chunks in order: Is Mr. Miller a company employee?"
+              },
+              "parts": [
+                "ミラーさんは",
+                "会社員",
+                "ですか。"
+              ],
+              "answer": [
+                "ミラーさんは",
+                "会社員",
+                "ですか。"
+              ],
+              "explanation": {
+                "zh": "正确句子：ミラーさんは 会社員ですか。",
+                "en": "Correct sentence: ミラーさんは 会社員ですか。"
+              }
+            }
+          ]
+        },
+        {
+          "id": "l01_e04",
+          "jp": "グプタさんも 会社員です。",
+          "zh": "古普塔先生也是公司职员。",
+          "en": "Mr. Gupta is also a company employee.",
+          "practice": [
+            {
+              "id": "l01_e04_p01",
+              "type": "order",
+              "skill": "examples",
+              "question": {
+                "zh": "把词块排成句子：古普塔先生也是公司职员？",
+                "en": "Put the chunks in order: Mr. Gupta is also a company employee?"
+              },
+              "parts": [
+                "グプタさんも",
+                "会社員",
+                "です。"
+              ],
+              "answer": [
+                "グプタさんも",
+                "会社員",
+                "です。"
+              ],
+              "explanation": {
+                "zh": "正确句子：グプタさんも 会社員です。",
+                "en": "Correct sentence: グプタさんも 会社員です。"
+              }
+            }
+          ]
+        },
+        {
+          "id": "l01_e05",
+          "jp": "初めまして。わたしは ミラーです。アメリカから来ました。どうぞよろしく。",
+          "zh": "初次见面。我是米勒。我来自美国。请多关照。",
+          "en": "Nice to meet you. I am Miller. I came from the United States. Nice to meet you.",
+          "practice": [
+            {
+              "id": "l01_e05_p01",
+              "type": "order",
+              "skill": "examples",
+              "question": {
+                "zh": "把词块排成句子：初次见面的完整自我介绍？",
+                "en": "Put the chunks in order: a complete first self-introduction?"
+              },
+              "parts": [
+                "初めまして。",
+                "わたしは",
+                "ミラーです。",
+                "アメリカから",
+                "来ました。",
+                "どうぞよろしく。"
+              ],
+              "answer": [
+                "初めまして。",
+                "わたしは",
+                "ミラーです。",
+                "アメリカから",
+                "来ました。",
+                "どうぞよろしく。"
+              ],
+              "explanation": {
+                "zh": "自我介绍常见顺序：初次见面、姓名、出身、请多关照。",
+                "en": "A natural self-introduction order is greeting, name, origin, closing greeting."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l01_e06",
+          "jp": "アメリカから 来ました。",
+          "zh": "我来自美国。",
+          "en": "I came from the United States.",
+          "practice": [
+            {
+              "id": "l01_e06_p01",
+              "type": "order",
+              "skill": "examples",
+              "question": {
+                "zh": "把词块排成句子：我来自美国？",
+                "en": "Put the chunks in order: I came from the United States?"
+              },
+              "parts": [
+                "アメリカから",
+                "来ました。"
+              ],
+              "answer": [
+                "アメリカから",
+                "来ました。"
+              ],
+              "explanation": {
+                "zh": "正确句子：アメリカから 来ました。",
+                "en": "Correct sentence: アメリカから 来ました。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "l01_quiz",
+      "title": {
+        "zh": "综合测试",
+        "en": "Final Test",
+        "ja": "まとめテスト"
+      },
+      "items": [
+        {
+          "id": "l01_q01",
+          "question": {
+            "zh": "「学生」的意思是？",
+            "en": "What does 学生 mean?"
+          },
+          "options": [
+            {
+              "text": {
+                "zh": "学生",
+                "en": "student"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "老师",
+                "en": "teacher"
+              }
+            },
+            {
+              "text": {
+                "zh": "医生",
+                "en": "doctor"
+              }
+            },
+            {
+              "text": {
+                "zh": "公司职员",
+                "en": "company employee"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "「学生」= 学生。",
+            "en": "学生 means student."
+          }
+        },
+        {
+          "id": "l01_q02",
+          "question": {
+            "zh": "选择正确句子：我是学生？",
+            "en": "Choose the correct sentence: I am a student?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "わたしは 学生です。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "わたしを 学生です。"
+              }
+            },
+            {
+              "text": {
+                "jp": "わたしへ 学生です。"
+              }
+            },
+            {
+              "text": {
+                "jp": "わたしが 学生ですか。"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "自我介绍用「は」提示主题，句尾用「です」。",
+            "en": "Use は to mark the topic and です at the end."
+          }
+        },
+        {
+          "id": "l01_q03",
+          "question": {
+            "zh": "哪一句表示“桑托斯先生不是学生”？",
+            "en": "Which sentence means Mr. Santos is not a student?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "サントスさんは 学生ではありません。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "サントスさんは 学生です。"
+              }
+            },
+            {
+              "text": {
+                "jp": "サントスさんも 学生です。"
+              }
+            },
+            {
+              "text": {
+                "jp": "サントスさんは 学生ですか。"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "否定句用「ではありません」。",
+            "en": "Use ではありません for the negative form."
+          }
+        },
+        {
+          "id": "l01_q04",
+          "question": {
+            "zh": "「いいえ、違います」是什么意思？",
+            "en": "What does いいえ、違います mean?"
+          },
+          "options": [
+            {
+              "text": {
+                "zh": "不，不是",
+                "en": "No, that is not right"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "是，是的",
+                "en": "Yes, that is right"
+              }
+            },
+            {
+              "text": {
+                "zh": "请多关照",
+                "en": "Nice to meet you"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "回答否定判断时可以说「いいえ、違います」。",
+            "en": "Use いいえ、違います to reject an identification."
+          }
+        },
+        {
+          "id": "l01_q05",
+          "question": {
+            "zh": "不能用于自己的称呼是？",
+            "en": "Which suffix should you not use for yourself?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "さん"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "わたし"
+              }
+            },
+            {
+              "text": {
+                "jp": "教師"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "「さん」用于别人，不能加在自己的名字后。",
+            "en": "さん is used for others, not after your own name."
+          }
+        },
+        {
+          "id": "l01_q06",
+          "question": {
+            "zh": "「初めまして」用于什么场合？",
+            "en": "When do you use 初めまして?"
+          },
+          "options": [
+            {
+              "text": {
+                "zh": "初次见面",
+                "en": "meeting someone for the first time"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "买东西",
+                "en": "shopping"
+              }
+            },
+            {
+              "text": {
+                "zh": "问时间",
+                "en": "asking the time"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "「初めまして」用于初次见面。",
+            "en": "初めまして is used when meeting someone for the first time."
+          }
+        },
+        {
+          "id": "l01_q07",
+          "question": {
+            "zh": "「どうぞよろしく」是什么意思？",
+            "en": "What does どうぞよろしく mean?"
+          },
+          "options": [
+            {
+              "text": {
+                "zh": "请多关照",
+                "en": "Nice to meet you / Please treat me well"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "几点了",
+                "en": "What time is it?"
+              }
+            },
+            {
+              "text": {
+                "zh": "多少钱",
+                "en": "How much is it?"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "自我介绍结尾常用「どうぞよろしく」。",
+            "en": "どうぞよろしく often closes a self-introduction."
+          }
+        },
+        {
+          "id": "l01_q08",
+          "question": {
+            "zh": "完整自我介绍的正确顺序是？",
+            "en": "What is the natural order of a self-introduction?"
+          },
+          "options": [
+            {
+              "text": {
+                "zh": "初めまして→名字→出身→どうぞよろしく",
+                "en": "Nice to meet you → name → origin → closing greeting"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "どうぞよろしく→名字→初めまして",
+                "en": "closing greeting → name → nice to meet you"
+              }
+            },
+            {
+              "text": {
+                "zh": "出身→どうぞよろしく→初めまして",
+                "en": "origin → closing greeting → nice to meet you"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "常见顺序是：初次见面、姓名、出身、请多关照。",
+            "en": "A natural order is greeting, name, origin, closing greeting."
+          }
+        },
+        {
+          "id": "l01_q09",
+          "question": {
+            "zh": "正确句子是哪一个？",
+            "en": "Which sentence is correct?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "わたしも 学生です。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "わたしはも 学生です。"
+              }
+            },
+            {
+              "text": {
+                "jp": "わたしを 学生です。"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "「も」直接替代「は」。",
+            "en": "も directly replaces は."
+          }
+        }
+      ]
+    }
   ]
 }
