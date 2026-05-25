@@ -10,7 +10,15 @@
     if(!window.supabase)throw new Error('Supabase SDK is not loaded.');
     return window.supabase.createClient(
       'https://ycjuceortcduakxscfes.supabase.co',
-      'sb_publishable_sK-XWyiFwSoKCorddBULCw_0yiS9e5t'
+      'sb_publishable_sK-XWyiFwSoKCorddBULCw_0yiS9e5t',
+      {
+        auth:{
+          persistSession:true,
+          autoRefreshToken:true,
+          detectSessionInUrl:true,
+          storageKey:'minna-auth-session'
+        }
+      }
     );
   }
   function roleFromRow(row,user){

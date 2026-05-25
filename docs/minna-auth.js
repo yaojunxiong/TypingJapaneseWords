@@ -21,7 +21,16 @@ window.MinnaAuth = (() => {
     if (!window.supabase) {
       throw new Error('Supabase SDK is not loaded. Add @supabase/supabase-js before minna-auth.js.');
     }
-    if (!client) client = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+    if (!client) {
+      client = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY, {
+        auth: {
+          persistSession: true,
+          autoRefreshToken: true,
+          detectSessionInUrl: true,
+          storageKey: 'minna-auth-session'
+        }
+      });
+    }
     return client;
   }
 
