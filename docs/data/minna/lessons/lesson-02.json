@@ -43,10 +43,114 @@
       "id": "l02_grammar",
       "title": { "zh": "核心语法", "en": "Core Grammar", "ja": "基本文法" },
       "items": [
-        { "id": "l02_g01", "pattern": "これ / それ / あれ", "title": { "zh": "这个 / 那个 / 那个", "en": "this / that / that over there" }, "explanation": { "zh": "「これ」指靠近说话人的东西，「それ」指靠近听话人的东西，「あれ」指离双方都远的东西。", "en": "「これ」 is near the speaker, 「それ」 is near the listener, and 「あれ」 is far from both." }, "examples": [{ "jp": "これは 本です。", "zh": "这是书。", "en": "This is a book." }] },
-        { "id": "l02_g02", "pattern": "この / その / あの + 名词", "title": { "zh": "这个～ / 那个～", "en": "this ~ / that ~" }, "explanation": { "zh": "「この・その・あの」后面必须接名词，不能单独使用。", "en": "「この・その・あの」 must be followed by a noun and cannot stand alone." }, "examples": [{ "jp": "この 本は わたしのです。", "zh": "这本书是我的。", "en": "This book is mine." }] },
-        { "id": "l02_g03", "pattern": "これは 何ですか", "title": { "zh": "这是什么？", "en": "What is this?" }, "explanation": { "zh": "询问物品是什么时，用「何ですか」。", "en": "Use 「何ですか」 to ask what an object is." }, "examples": [{ "jp": "これは 何ですか。", "zh": "这是什么？", "en": "What is this?" }] },
-        { "id": "l02_g04", "pattern": "だれの + 名词", "title": { "zh": "谁的～", "en": "whose ~" }, "explanation": { "zh": "询问所有者时用「だれの」。回答可以用「わたしのです」。", "en": "Use 「だれの」 to ask who owns something. You can answer with 「わたしのです」." }, "examples": [{ "jp": "これは だれの かぎですか。", "zh": "这是谁的钥匙？", "en": "Whose key is this?" }] }
+        {
+          "id": "l02_g01",
+          "pattern": "これ / それ / あれ",
+          "title": { "zh": "这个 / 那个 / 那个", "en": "this / that / that over there" },
+          "explanation": { "zh": "「これ」指靠近说话人的东西，「それ」指靠近听话人的东西，「あれ」指离双方都远的东西。", "en": "「これ」 is near the speaker, 「それ」 is near the listener, and 「あれ」 is far from both." },
+          "examples": [{ "jp": "これは 本です。", "zh": "这是书。", "en": "This is a book." }],
+          "practice": [
+            {
+              "question": { "zh": "离说话人近，用哪一个？", "en": "Which is near the speaker?" },
+              "options": [
+                { "text": { "jp": "これ" }, "correct": true },
+                { "text": { "jp": "それ" } },
+                { "text": { "jp": "あれ" } },
+                { "text": { "jp": "どれ" } }
+              ]
+            },
+            {
+              "question": { "zh": "离双方都远，用哪一个？", "en": "Which is far from both speaker and listener?" },
+              "options": [
+                { "text": { "jp": "これ" } },
+                { "text": { "jp": "それ" } },
+                { "text": { "jp": "あれ" }, "correct": true },
+                { "text": { "jp": "この" } }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l02_g02",
+          "pattern": "この / その / あの + 名词",
+          "title": { "zh": "这个～ / 那个～", "en": "this ~ / that ~" },
+          "explanation": { "zh": "「この・その・あの」后面必须接名词，不能单独使用。", "en": "「この・その・あの」 must be followed by a noun and cannot stand alone." },
+          "examples": [{ "jp": "この 本は わたしのです。", "zh": "这本书是我的。", "en": "This book is mine." }],
+          "practice": [
+            {
+              "question": { "zh": "“这个书”正确说法是？", "en": "How do you say “this book”?" },
+              "options": [
+                { "text": { "jp": "この 本" }, "correct": true },
+                { "text": { "jp": "これ 本" } },
+                { "text": { "jp": "このは 本" } },
+                { "text": { "jp": "これの 本" } }
+              ]
+            },
+            {
+              "question": { "zh": "哪一个后面必须接名词？", "en": "Which must be followed by a noun?" },
+              "options": [
+                { "text": { "jp": "これ" } },
+                { "text": { "jp": "その" }, "correct": true },
+                { "text": { "jp": "あれ" } },
+                { "text": { "jp": "だれ" } }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l02_g03",
+          "pattern": "これは 何ですか",
+          "title": { "zh": "这是什么？", "en": "What is this?" },
+          "explanation": { "zh": "询问物品是什么时，用「何ですか」。", "en": "Use 「何ですか」 to ask what an object is." },
+          "examples": [{ "jp": "これは 何ですか。", "zh": "这是什么？", "en": "What is this?" }],
+          "practice": [
+            {
+              "question": { "zh": "问“这是什么？”应说？", "en": "How do you ask “What is this?”" },
+              "options": [
+                { "text": { "jp": "これは 何ですか。" }, "correct": true },
+                { "text": { "jp": "これは だれですか。" } },
+                { "text": { "jp": "これは 何のですか。" } },
+                { "text": { "jp": "これ 何ですか。" } }
+              ]
+            },
+            {
+              "question": { "zh": "「何」在这里读作？", "en": "How is 「何」 read here?" },
+              "options": [
+                { "text": { "jp": "なに" } },
+                { "text": { "jp": "なん" }, "correct": true },
+                { "text": { "jp": "なんに" } },
+                { "text": { "jp": "だれ" } }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l02_g04",
+          "pattern": "だれの + 名词",
+          "title": { "zh": "谁的～", "en": "whose ~" },
+          "explanation": { "zh": "询问所有者时用「だれの」。回答可以用「わたしのです」。", "en": "Use 「だれの」 to ask who owns something. You can answer with 「わたしのです」." },
+          "examples": [{ "jp": "これは だれの かぎですか。", "zh": "这是谁的钥匙？", "en": "Whose key is this?" }],
+          "practice": [
+            {
+              "question": { "zh": "“这是谁的钥匙？”正确说法是？", "en": "Which means “Whose key is this?”" },
+              "options": [
+                { "text": { "jp": "これは だれの かぎですか。" }, "correct": true },
+                { "text": { "jp": "これは だれ かぎですか。" } },
+                { "text": { "jp": "これは 何の かぎですか。" } },
+                { "text": { "jp": "これ だれの かぎですか。" } }
+              ]
+            },
+            {
+              "question": { "zh": "问所有者应使用？", "en": "Which asks ownership?" },
+              "options": [
+                { "text": { "jp": "だれの" }, "correct": true },
+                { "text": { "jp": "どこの" } },
+                { "text": { "jp": "なんの" } },
+                { "text": { "jp": "どれ" } }
+              ]
+            }
+          ]
+        }
       ]
     },
     {
