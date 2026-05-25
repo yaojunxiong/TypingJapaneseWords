@@ -123,11 +123,38 @@
           "practice": [
             {
               "id": "l39-practice-01",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "用 ので 连接：明天有考试，所以早点睡。",
                 "en": "Connect with ので: I have an exam tomorrow, so I will sleep early."
               },
-              "answer": "明日試験があるので、早く寝ます。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "気分が悪いので、早く帰ってもいいですか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "今日は休みなので、銀行は開いていません。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "忙しいので、行けません。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "明日試験があるので、早く寝ます。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "表示原因理由，比「から」更柔和、客观。",
+                "en": "Gives a reason in a softer, more objective tone than から."
+              }
             }
           ]
         },
@@ -140,11 +167,38 @@
           "practice": [
             {
               "id": "l39-practice-02",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "用 ので 表达：很忙，所以不能去。",
                 "en": "Use ので: I am busy, so I cannot go."
               },
-              "answer": "忙しいので、行けません。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "気分が悪いので、早く帰ってもいいですか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "忙しいので、行けません。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "明日試験があるので、早く寝ます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "今日は休みなので、銀行は開いていません。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "い形容词直接接 ので。",
+                "en": "Attach ので directly to an i-adjective."
+              }
             }
           ]
         },
@@ -157,11 +211,38 @@
           "practice": [
             {
               "id": "l39-practice-03",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "用 なので 表达：今天是休息日，所以银行不开门。",
                 "en": "Use なので: Today is a holiday, so the bank is closed."
               },
-              "answer": "今日は休みなので、銀行は開いていません。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "忙しいので、行けません。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "明日試験があるので、早く寝ます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "今日は休みなので、銀行は開いていません。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "気分が悪いので、早く帰ってもいいですか。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "な形容词和名词接 ので 时用 なので。",
+                "en": "Use なので after na-adjectives and nouns."
+              }
             }
           ]
         },
@@ -174,11 +255,38 @@
           "practice": [
             {
               "id": "l39-practice-04",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "选择更礼貌自然的表达：身体不舒服，所以可以早点回去吗？",
                 "en": "Choose a softer expression: I do not feel well, so may I leave early?"
               },
-              "answer": "気分が悪いので、早く帰ってもいいですか。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "気分が悪いので、早く帰ってもいいですか。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "明日試験があるので、早く寝ます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "忙しいので、行けません。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "今日は休みなので、銀行は開いていません。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "から较直接，ので较礼貌、自然，常用于请求、说明。",
+                "en": "から is direct; ので is softer and common in requests or explanations."
+              }
             }
           ]
         },
@@ -191,11 +299,38 @@
           "practice": [
             {
               "id": "l39-practice-05",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "用 て形 表达：见到朋友很安心。",
                 "en": "Use te-form: I felt relieved after seeing my friend."
               },
-              "answer": "友達に会って、安心しました。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "今日は休みなので、銀行は開いていません。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "友達に会って、安心しました。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "明日試験があるので、早く寝ます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "忙しいので、行けません。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "て形可表示自然发生的原因，多用于情绪或结果。",
+                "en": "Te-form can show the cause of a natural result or feeling."
+              }
             }
           ]
         },
@@ -208,11 +343,38 @@
           "practice": [
             {
               "id": "l39-practice-06",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "用 くて 表达：房间很热，所以睡不着。",
                 "en": "Use くて: The room was hot, so I could not sleep."
               },
-              "answer": "部屋が暑くて、寝られませんでした。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "部屋が暑くて、寝られませんでした。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "明日試験があるので、早く寝ます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "今日は休みなので、銀行は開いていません。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "忙しいので、行けません。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "形容词原因用 くて / で 连接后面的结果。",
+                "en": "Use くて or で to connect an adjective cause to a result."
+              }
             }
           ]
         },
@@ -225,11 +387,38 @@
           "practice": [
             {
               "id": "l39-practice-07",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "用 名词で 表达：因为地震，学校停课了。",
                 "en": "Use noun + で: Because of the earthquake, school was closed."
               },
-              "answer": "地震で学校が休みになりました。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "地震で学校が休みになりました。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "忙しいので、行けません。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "明日試験があるので、早く寝ます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "今日は休みなので、銀行は開いていません。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "名词表示原因、事件、手段时，可用 で 连接结果。",
+                "en": "Noun + で can mark a cause, event, or means that leads to a result."
+              }
             }
           ]
         },
@@ -242,11 +431,38 @@
           "practice": [
             {
               "id": "l39-practice-08",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "用 んです 解释：对不起，我迟到了，因为路上很堵。",
                 "en": "Use んです to explain: Sorry, I am late because the road was crowded."
               },
-              "answer": "すみません、道が込んでいたんです。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "今日は休みなので、銀行は開いていません。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "すみません、道が込んでいたんです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "明日試験があるので、早く寝ます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "忙しいので、行けません。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "说明个人情况或补充理由时，可与第26课的 んです 连用。",
+                "en": "Use んです to add personal background or explanation."
+              }
             }
           ]
         }

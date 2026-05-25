@@ -123,11 +123,38 @@
           "practice": [
             {
               "id": "l46-practice-01",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：我正要出门。",
                 "en": "Say: I am just about to go out."
               },
-              "answer": "今出かけるところです。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "今出かけるところです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "今会議の準備をしているところです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "今家に帰って来たところです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "入学したばかりです。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示正要做某事，动作即将开始。",
+                "en": "Shows that an action is just about to start."
+              }
             }
           ]
         },
@@ -140,11 +167,38 @@
           "practice": [
             {
               "id": "l46-practice-02",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：我正在准备会议。",
                 "en": "Say: I am preparing for the meeting right now."
               },
-              "answer": "今会議の準備をしているところです。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "今出かけるところです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "今会議の準備をしているところです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "今家に帰って来たところです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "入学したばかりです。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示某动作正在进行中。",
+                "en": "Shows that an action is currently in progress."
+              }
             }
           ]
         },
@@ -157,11 +211,38 @@
           "practice": [
             {
               "id": "l46-practice-03",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：我刚回到家。",
                 "en": "Say: I just got home."
               },
-              "answer": "今家に帰って来たところです。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "今会議の準備をしているところです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "今出かけるところです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "今家に帰って来たところです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "入学したばかりです。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示动作刚刚完成，强调完成的瞬间。",
+                "en": "Shows that an action has just been completed, emphasizing the immediate moment."
+              }
             }
           ]
         },
@@ -174,11 +255,38 @@
           "practice": [
             {
               "id": "l46-practice-04",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：我刚入学不久。",
                 "en": "Say: I just entered school recently."
               },
-              "answer": "入学したばかりです。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "今家に帰って来たところです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "入学したばかりです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "今出かけるところです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "今会議の準備をしているところです。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示刚做完某事，时间感觉上很近，可比 ところです 范围更宽。",
+                "en": "Shows that something was done recently; the sense of recentness can be broader than ところです."
+              }
             }
           ]
         },
@@ -191,11 +299,38 @@
           "practice": [
             {
               "id": "l46-practice-05",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "选择自然表达：上个月刚搬家。",
                 "en": "Choose a natural expression: I moved just last month."
               },
-              "answer": "先月引っ越したばかりです。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "今会議の準備をしているところです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "今家に帰って来たところです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "今出かけるところです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先月引っ越したばかりです。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "ところです更强调刚刚那一刻；ばかりです强调说话人觉得时间不久。",
+                "en": "ところです emphasizes the immediate moment; ばかりです emphasizes the speaker's feeling that it was recent."
+              }
             }
           ]
         },
@@ -208,11 +343,38 @@
           "practice": [
             {
               "id": "l46-practice-06",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：包裹应该已经到了。",
                 "en": "Say: The package should have arrived already."
               },
-              "answer": "荷物はもう届いたはずです。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "今会議の準備をしているところです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "荷物はもう届いたはずです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "今出かけるところです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "今家に帰って来たところです。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "根据事实或推断，表示理应如此。",
+                "en": "Shows expectation based on facts or reasoning."
+              }
             }
           ]
         },
@@ -225,11 +387,38 @@
           "practice": [
             {
               "id": "l46-practice-07",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：今天应该是休息日。",
                 "en": "Say: Today should be a day off."
               },
-              "answer": "今日は休みのはずです。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "今会議の準備をしているところです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "今出かけるところです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "今日は休みのはずです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "今家に帰って来たところです。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "形容词和名词也可接 はずです，な形容词用 な，名词用 の。",
+                "en": "Adjectives and nouns can attach to はずです; use な for na-adjectives and の for nouns."
+              }
             }
           ]
         },
@@ -242,11 +431,38 @@
           "practice": [
             {
               "id": "l46-practice-08",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：他每天练习，不可能不会。",
                 "en": "Say: He practices every day, so it cannot be that he cannot do it."
               },
-              "answer": "毎日練習していますから、できないはずがありません。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "今出かけるところです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "毎日練習していますから、できないはずがありません。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "今会議の準備をしているところです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "今家に帰って来たところです。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示强烈否定：不可能、没有道理会那样。",
+                "en": "Strongly denies an expectation: it cannot be the case."
+              }
             }
           ]
         }

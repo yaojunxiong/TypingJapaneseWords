@@ -123,11 +123,38 @@
           "practice": [
             {
               "id": "l40-practice-01",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "嵌入问题：会议几点开始？你知道吗？",
                 "en": "Embed the question: What time does the meeting start? Do you know?"
               },
-              "answer": "会議が何時に始まるか、知っていますか。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "会議が何時に始まるか、知っていますか。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "週末何をするか、まだ決めていません。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "どこで切符を買うか、聞きました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "荷物がいつ届くか、確かめてください。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "把疑问句嵌入另一个句子，表示「是否知道/确认/告诉」。",
+                "en": "Embed a question inside another sentence to say know, check, or tell."
+              }
             }
           ]
         },
@@ -140,11 +167,38 @@
           "practice": [
             {
               "id": "l40-practice-02",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：我还没决定周末做什么。",
                 "en": "Say: I have not decided what I will do this weekend."
               },
-              "answer": "週末何をするか、まだ決めていません。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "どこで切符を買うか、聞きました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "荷物がいつ届くか、確かめてください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "会議が何時に始まるか、知っていますか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "週末何をするか、まだ決めていません。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "询问或说明「做什么」时，用 何を...か。",
+                "en": "Use 何を...か to embed what someone does."
+              }
             }
           ]
         },
@@ -157,11 +211,38 @@
           "practice": [
             {
               "id": "l40-practice-03",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：我问了在哪里买彩票。",
                 "en": "Say: I asked where to buy a ticket."
               },
-              "answer": "どこで切符を買うか、聞きました。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "会議が何時に始まるか、知っていますか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "荷物がいつ届くか、確かめてください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "週末何をするか、まだ決めていません。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "どこで切符を買うか、聞きました。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "嵌入地点疑问：去哪里、在哪里做。",
+                "en": "Embed place questions: where to go or where to do something."
+              }
             }
           ]
         },
@@ -174,11 +255,38 @@
           "practice": [
             {
               "id": "l40-practice-04",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：请确认包裹什么时候到。",
                 "en": "Say: Please check when the package will arrive."
               },
-              "answer": "荷物がいつ届くか、確かめてください。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "週末何をするか、まだ決めていません。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "どこで切符を買うか、聞きました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "会議が何時に始まるか、知っていますか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "荷物がいつ届くか、確かめてください。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "嵌入时间疑问：什么时候做、什么时候发生。",
+                "en": "Embed time questions: when something happens or will happen."
+              }
             }
           ]
         },
@@ -191,11 +299,38 @@
           "practice": [
             {
               "id": "l40-practice-05",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：我不知道是谁写了这封邮件。",
                 "en": "Say: I do not know who wrote this email."
               },
-              "answer": "だれがこのメールを書いたか、わかりません。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "会議が何時に始まるか、知っていますか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "だれがこのメールを書いたか、わかりません。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "週末何をするか、まだ決めていません。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "どこで切符を買うか、聞きました。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "嵌入人物疑问：谁做、给谁、向谁。",
+                "en": "Embed person questions: who does it, to whom, or from whom."
+              }
             }
           ]
         },
@@ -208,11 +343,38 @@
           "practice": [
             {
               "id": "l40-practice-06",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：我想确认这件衣服贵不贵。",
                 "en": "Say: I want to check whether these clothes are expensive."
               },
-              "answer": "この服が高いか、確かめたいです。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "この服が高いか、確かめたいです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "週末何をするか、まだ決めていません。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "どこで切符を買うか、聞きました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "会議が何時に始まるか、知っていますか。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "嵌入形容词疑问时，い形容词保持普通形。",
+                "en": "For embedded adjective questions, keep the i-adjective plain form."
+              }
             }
           ]
         },
@@ -225,11 +387,38 @@
           "practice": [
             {
               "id": "l40-practice-07",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：你知道那个人是谁吗？",
                 "en": "Say: Do you know who that person is?"
               },
-              "answer": "あの人がだれか、知っていますか。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "あの人がだれか、知っていますか。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "会議が何時に始まるか、知っていますか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "週末何をするか、まだ決めていません。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "どこで切符を買うか、聞きました。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "名词和な形容词嵌入疑问时，通常不用 だ。",
+                "en": "When embedding noun or na-adjective questions, usually omit だ."
+              }
             }
           ]
         },
@@ -242,11 +431,38 @@
           "practice": [
             {
               "id": "l40-practice-08",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：我想试着读这本书。",
                 "en": "Say: I want to try reading this book."
               },
-              "answer": "この本を読んでみたいです。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "週末何をするか、まだ決めていません。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "会議が何時に始まるか、知っていますか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "どこで切符を買うか、聞きました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この本を読んでみたいです。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "表示试着做某事，用于确认结果或体验。",
+                "en": "Use Vてみます to try doing something and see the result."
+              }
             }
           ]
         }

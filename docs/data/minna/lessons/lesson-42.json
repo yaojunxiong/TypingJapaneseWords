@@ -123,11 +123,38 @@
           "practice": [
             {
               "id": "l42-practice-01",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：为了去日本，我在存钱。",
                 "en": "Say: I am saving money in order to go to Japan."
               },
-              "answer": "日本へ行くために、貯金しています。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "この本は文法を勉強するのに役に立ちます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "このパソコンはデザインをするのに使います。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "健康のために、毎日歩いています。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "日本へ行くために、貯金しています。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "表示有意志动作的目的：为了做某事而做后项。",
+                "en": "Shows the purpose of a volitional action: do the second action in order to do the first."
+              }
             }
           ]
         },
@@ -140,11 +167,38 @@
           "practice": [
             {
               "id": "l42-practice-02",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：为了健康，每天走路。",
                 "en": "Say: I walk every day for my health."
               },
-              "answer": "健康のために、毎日歩いています。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "この本は文法を勉強するのに役に立ちます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "このパソコンはデザインをするのに使います。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "日本へ行くために、貯金しています。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "健康のために、毎日歩いています。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "为了某个名词目标、对象或利益。",
+                "en": "For the sake of a noun goal, person, or benefit."
+              }
             }
           ]
         },
@@ -157,11 +211,38 @@
           "practice": [
             {
               "id": "l42-practice-03",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：这台电脑用来做设计。",
                 "en": "Say: This computer is used for doing design."
               },
-              "answer": "このパソコンはデザインをするのに使います。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "この本は文法を勉強するのに役に立ちます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "日本へ行くために、貯金しています。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "このパソコンはデザインをするのに使います。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "健康のために、毎日歩いています。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示用途：用来做某事。",
+                "en": "Shows use: something is used for doing something."
+              }
             }
           ]
         },
@@ -174,11 +255,38 @@
           "practice": [
             {
               "id": "l42-practice-04",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：这本书对学习语法很有用。",
                 "en": "Say: This book is useful for studying grammar."
               },
-              "answer": "この本は文法を勉強するのに役に立ちます。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "この本は文法を勉強するのに役に立ちます。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "日本へ行くために、貯金しています。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "健康のために、毎日歩いています。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "このパソコンはデザインをするのに使います。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "评价某物对某用途是否方便、有用。",
+                "en": "Evaluates whether something is convenient or useful for a purpose."
+              }
             }
           ]
         },
@@ -191,11 +299,38 @@
           "practice": [
             {
               "id": "l42-practice-05",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：到学校需要30分钟。",
                 "en": "Say: It takes 30 minutes to go to school."
               },
-              "answer": "学校へ行くのに30分かかります。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "健康のために、毎日歩いています。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "日本へ行くために、貯金しています。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "このパソコンはデザインをするのに使います。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "学校へ行くのに30分かかります。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "表示做某事需要花时间。",
+                "en": "Shows the time required to do something."
+              }
             }
           ]
         },
@@ -208,11 +343,38 @@
           "practice": [
             {
               "id": "l42-practice-06",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：留学需要很多钱。",
                 "en": "Say: Studying abroad costs a lot of money."
               },
-              "answer": "留学するのにたくさんお金がかかります。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "日本へ行くために、貯金しています。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "このパソコンはデザインをするのに使います。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "留学するのにたくさんお金がかかります。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "健康のために、毎日歩いています。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示做某事需要花钱。",
+                "en": "Shows the money required to do something."
+              }
             }
           ]
         },
@@ -225,11 +387,38 @@
           "practice": [
             {
               "id": "l42-practice-07",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：预约需要电话号码。",
                 "en": "Say: A phone number is needed to make a reservation."
               },
-              "answer": "予約するのに電話番号が必要です。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "予約するのに電話番号が必要です。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "日本へ行くために、貯金しています。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "健康のために、毎日歩いています。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "このパソコンはデザインをするのに使います。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示做某事需要某物。",
+                "en": "Shows something required for doing an action."
+              }
             }
           ]
         },
@@ -242,11 +431,38 @@
           "practice": [
             {
               "id": "l42-practice-08",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "选择自然表达：为了能听懂新闻，每天练习。",
                 "en": "Choose a natural expression: I practice every day so that I can understand the news."
               },
-              "answer": "ニュースがわかるように、毎日練習しています。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "ニュースがわかるように、毎日練習しています。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "日本へ行くために、貯金しています。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "健康のために、毎日歩いています。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "このパソコンはデザインをするのに使います。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "ために多用于意志动词目的；可能、状态变化等常用 ように。",
+                "en": "Use ために with volitional goals; use ように with potential forms or state changes."
+              }
             }
           ]
         }

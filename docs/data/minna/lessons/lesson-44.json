@@ -123,11 +123,38 @@
           "practice": [
             {
               "id": "l44-practice-01",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：昨天吃太多了。",
                 "en": "Say: I ate too much yesterday."
               },
-              "answer": "昨日食べすぎました。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "この部屋は寒すぎます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この本は読みやすいです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この問題は簡単すぎます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "昨日食べすぎました。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "表示动作做得过度。",
+                "en": "Shows that an action is done too much."
+              }
             }
           ]
         },
@@ -140,11 +167,38 @@
           "practice": [
             {
               "id": "l44-practice-02",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：这个房间太冷了。",
                 "en": "Say: This room is too cold."
               },
-              "answer": "この部屋は寒すぎます。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "この部屋は寒すぎます。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "この問題は簡単すぎます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この本は読みやすいです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "昨日食べすぎました。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示性质过度，去掉 い 后接 すぎます。",
+                "en": "Remove い from an i-adjective and add すぎます to show excess."
+              }
             }
           ]
         },
@@ -157,11 +211,38 @@
           "practice": [
             {
               "id": "l44-practice-03",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：这个问题太简单了。",
                 "en": "Say: This question is too easy."
               },
-              "answer": "この問題は簡単すぎます。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "この本は読みやすいです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この部屋は寒すぎます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "昨日食べすぎました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この問題は簡単すぎます。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "な形容词直接接 すぎます。",
+                "en": "Attach すぎます directly to a na-adjective."
+              }
             }
           ]
         },
@@ -174,11 +255,38 @@
           "practice": [
             {
               "id": "l44-practice-04",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：这本书容易读。",
                 "en": "Say: This book is easy to read."
               },
-              "answer": "この本は読みやすいです。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "この問題は簡単すぎます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "昨日食べすぎました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この部屋は寒すぎます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この本は読みやすいです。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "表示某动作容易做或容易发生。",
+                "en": "Shows that an action is easy to do or likely to happen."
+              }
             }
           ]
         },
@@ -191,11 +299,38 @@
           "practice": [
             {
               "id": "l44-practice-05",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：这个字很难写。",
                 "en": "Say: This character is hard to write."
               },
-              "answer": "この字は書きにくいです。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "この部屋は寒すぎます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この問題は簡単すぎます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "昨日食べすぎました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この字は書きにくいです。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "表示某动作难做或不容易发生。",
+                "en": "Shows that an action is hard to do or unlikely to happen."
+              }
             }
           ]
         },
@@ -208,11 +343,38 @@
           "practice": [
             {
               "id": "l44-practice-06",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：请把房间弄暖和。",
                 "en": "Say: Please make the room warm."
               },
-              "answer": "部屋を暖かくしてください。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "この部屋は寒すぎます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "昨日食べすぎました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この問題は簡単すぎます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "部屋を暖かくしてください。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "表示人为地把某物变成某种い形容词状态。",
+                "en": "Shows making something into an i-adjective state."
+              }
             }
           ]
         },
@@ -225,11 +387,38 @@
           "practice": [
             {
               "id": "l44-practice-07",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：请把规则变简单。",
                 "en": "Say: Please make the rules simple."
               },
-              "answer": "ルールを簡単にしてください。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "この部屋は寒すぎます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この問題は簡単すぎます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "昨日食べすぎました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "ルールを簡単にしてください。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "表示人为地把某物变成某个状态或选定某物。",
+                "en": "Shows making something into a na-adjective/noun state or choosing something."
+              }
             }
           ]
         },
@@ -242,11 +431,38 @@
           "practice": [
             {
               "id": "l44-practice-08",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：这个网站变得更容易看了。",
                 "en": "Say: This website became easier to view."
               },
-              "answer": "このサイトは見やすくなりました。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "このサイトは見やすくなりました。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "昨日食べすぎました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この部屋は寒すぎます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この問題は簡単すぎます。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示动作变得容易或困难。",
+                "en": "Shows that an action becomes easier or harder."
+              }
             }
           ]
         }

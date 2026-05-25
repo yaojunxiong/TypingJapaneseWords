@@ -123,11 +123,38 @@
           "practice": [
             {
               "id": "l48-practice-01",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "把 行きます 变成使役形。",
                 "en": "Change 行きます to the causative form."
               },
-              "answer": "行かせます"
+              "options": [
+                {
+                  "text": {
+                    "jp": "親は子どもを塾へ行かせました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "行かせます"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "食べさせます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "来させます"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "一类动词使役形：行く→行かせます，読む→読ませます。",
+                "en": "Group 1 causative: 行く becomes 行かせます, 読む becomes 読ませます."
+              }
             }
           ]
         },
@@ -140,11 +167,38 @@
           "practice": [
             {
               "id": "l48-practice-02",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "把 食べます 变成使役形。",
                 "en": "Change 食べます to the causative form."
               },
-              "answer": "食べさせます"
+              "options": [
+                {
+                  "text": {
+                    "jp": "来させます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "親は子どもを塾へ行かせました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "行かせます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "食べさせます"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "二类动词使役形：食べる→食べさせます，見る→見させます。",
+                "en": "Group 2 causative: 食べる becomes 食べさせます, 見る becomes 見させます."
+              }
             }
           ]
         },
@@ -157,11 +211,38 @@
           "practice": [
             {
               "id": "l48-practice-03",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "把 来ます 变成使役形。",
                 "en": "Change 来ます to the causative form."
               },
-              "answer": "来させます"
+              "options": [
+                {
+                  "text": {
+                    "jp": "食べさせます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "行かせます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "親は子どもを塾へ行かせました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "来させます"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "三类动词使役形是不规则变化。",
+                "en": "Group 3 causative forms are irregular."
+              }
             }
           ]
         },
@@ -174,11 +255,38 @@
           "practice": [
             {
               "id": "l48-practice-04",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：父母让孩子去补习班。",
                 "en": "Say: The parents made the child go to cram school."
               },
-              "answer": "親は子どもを塾へ行かせました。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "来させます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "食べさせます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "行かせます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "親は子どもを塾へ行かせました。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "让某人做不带宾语的动作时，多用 人を。",
+                "en": "Use 人を when making or letting someone do an intransitive action."
+              }
             }
           ]
         },
@@ -191,11 +299,38 @@
           "practice": [
             {
               "id": "l48-practice-05",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：老师让学生读课文。",
                 "en": "Say: The teacher made the students read the text."
               },
-              "answer": "先生は学生に本文を読ませました。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "来させます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生は学生に本文を読ませました。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "行かせます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "食べさせます"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "让某人做带宾语的动作时，做动作的人常用 に。",
+                "en": "Use 人に when making someone do a transitive action with an object."
+              }
             }
           ]
         },
@@ -208,11 +343,38 @@
           "practice": [
             {
               "id": "l48-practice-06",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：请让我休息一下。",
                 "en": "Say: Please let me rest a little."
               },
-              "answer": "少し休ませてください。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "行かせます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "食べさせます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "少し休ませてください。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "来させます"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "请求别人允许自己做某事，可用 させてください。",
+                "en": "Use させてください to ask someone to let you do something."
+              }
             }
           ]
         },
@@ -225,11 +387,38 @@
           "practice": [
             {
               "id": "l48-practice-07",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "礼貌表达：明天可以让我请假吗？",
                 "en": "Politely say: Could you let me take tomorrow off?"
               },
-              "answer": "明日休ませていただけませんか。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "食べさせます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "来させます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "行かせます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "明日休ませていただけませんか。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "更礼貌地请求许可，常用于对上级或正式场合。",
+                "en": "A more polite permission request, often used with superiors or formal situations."
+              }
             }
           ]
         },
@@ -242,11 +431,38 @@
           "practice": [
             {
               "id": "l48-practice-08",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：妈妈让孩子自由地玩。",
                 "en": "Say: The mother let the child play freely."
               },
-              "answer": "母は子どもを自由に遊ばせました。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "行かせます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "母は子どもを自由に遊ばせました。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "来させます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "食べさせます"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "使役可表示强制让做，也可表示允许做，需看上下文。",
+                "en": "Causative can mean make someone do something or let someone do something, depending on context."
+              }
             }
           ]
         }

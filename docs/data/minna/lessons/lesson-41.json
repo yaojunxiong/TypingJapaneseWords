@@ -123,11 +123,38 @@
           "practice": [
             {
               "id": "l41-practice-01",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：我从老师那里得到了书。",
                 "en": "Say: I received a book from my teacher."
               },
-              "answer": "先生に本をいただきました。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "先生に本をいただきました。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "部長が切符をくださいました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "花に水をやります。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生にレポートを見ていただきました。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "从上级或需要尊敬的人那里领受物品。",
+                "en": "Humbly receive an item from a superior or respected person."
+              }
             }
           ]
         },
@@ -140,11 +167,38 @@
           "practice": [
             {
               "id": "l41-practice-02",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：部长给了我票。",
                 "en": "Say: The department manager gave me a ticket."
               },
-              "answer": "部長が切符をくださいました。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "部長が切符をくださいました。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "先生に本をいただきました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "花に水をやります。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生にレポートを見ていただきました。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "上级或尊敬的人给我方某物。",
+                "en": "A superior or respected person gives something to me/us."
+              }
             }
           ]
         },
@@ -157,11 +211,38 @@
           "practice": [
             {
               "id": "l41-practice-03",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：给花浇水。",
                 "en": "Say: I give water to the flowers."
               },
-              "answer": "花に水をやります。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "花に水をやります。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "先生にレポートを見ていただきました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "部長が切符をくださいました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生に本をいただきました。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "给植物、动物、小孩等下位对象某物。",
+                "en": "Give something to plants, animals, children, or lower-status recipients."
+              }
             }
           ]
         },
@@ -174,11 +255,38 @@
           "practice": [
             {
               "id": "l41-practice-04",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：请老师检查了我的报告。",
                 "en": "Say: I had my teacher check my report."
               },
-              "answer": "先生にレポートを見ていただきました。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "先生にレポートを見ていただきました。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "先生に本をいただきました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "部長が切符をくださいました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "花に水をやります。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "请上级或他人为我方做某事，表达领受帮助。",
+                "en": "Receive the favor of someone, often a superior, doing something for me/us."
+              }
             }
           ]
         },
@@ -191,11 +299,38 @@
           "practice": [
             {
               "id": "l41-practice-05",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：老师亲切地教了我。",
                 "en": "Say: The teacher kindly taught me."
               },
-              "answer": "先生が親切に教えてくださいました。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "先生が親切に教えてくださいました。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "部長が切符をくださいました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生に本をいただきました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "花に水をやります。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "上级或尊敬的人为我方做某事。",
+                "en": "A superior or respected person does something for me/us."
+              }
             }
           ]
         },
@@ -208,11 +343,38 @@
           "practice": [
             {
               "id": "l41-practice-06",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：我给狗洗了澡。",
                 "en": "Say: I washed the dog."
               },
-              "answer": "犬を洗ってやりました。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "犬を洗ってやりました。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "先生に本をいただきました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "部長が切符をくださいました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "花に水をやります。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "为下位对象做某事，语气较直接，使用对象要谨慎。",
+                "en": "Do something for a lower-status recipient; use carefully because it sounds direct."
+              }
             }
           ]
         },
@@ -225,11 +387,38 @@
           "practice": [
             {
               "id": "l41-practice-07",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "礼貌请求：请您说明一下这个意思好吗？",
                 "en": "Politely request: Could you explain this meaning?"
               },
-              "answer": "この意味を説明してくださいませんか。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "花に水をやります。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "部長が切符をくださいました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生に本をいただきました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この意味を説明してくださいませんか。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "礼貌地请求上级或不熟的人帮忙。",
+                "en": "Politely ask a respected or less familiar person to do something."
+              }
             }
           ]
         },
@@ -242,11 +431,38 @@
           "practice": [
             {
               "id": "l41-practice-08",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "把「老师给了我词典」改为以我为主语。",
                 "en": "Rewrite 'The teacher gave me a dictionary' with I as the subject."
               },
-              "answer": "私は先生に辞書をいただきました。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "先生に本をいただきました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "私は先生に辞書をいただきました。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "花に水をやります。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "部長が切符をくださいました。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "授受表达重点看方向：谁给我方、我方从谁那里领受。",
+                "en": "Track direction carefully: who gives to me/us, and from whom I/we receive."
+              }
             }
           ]
         }

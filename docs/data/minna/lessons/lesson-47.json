@@ -123,11 +123,38 @@
           "practice": [
             {
               "id": "l47-practice-01",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：听天气预报说明天会下雨。",
                 "en": "Say: According to the weather forecast, it will rain tomorrow."
               },
-              "answer": "天気予報によると、明日は雨が降るそうです。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "天気予報によると、明日は雨が降るそうです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "ニュースによると、電車が止まったそうです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "明日は休みだそうです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "北海道は寒いそうです。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示听说、据说，传达从别人或新闻获得的信息。",
+                "en": "Hearsay: reports information heard from someone or the news."
+              }
             }
           ]
         },
@@ -140,11 +167,38 @@
           "practice": [
             {
               "id": "l47-practice-02",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：听说北海道很冷。",
                 "en": "Say: I hear Hokkaido is cold."
               },
-              "answer": "北海道は寒いそうです。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "北海道は寒いそうです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "天気予報によると、明日は雨が降るそうです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "ニュースによると、電車が止まったそうです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "明日は休みだそうです。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "传闻里的い形容词不去掉 い。",
+                "en": "For hearsay, keep the full i-adjective form."
+              }
             }
           ]
         },
@@ -157,11 +211,38 @@
           "practice": [
             {
               "id": "l47-practice-03",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：听说明天是休息日。",
                 "en": "Say: I hear tomorrow is a day off."
               },
-              "answer": "明日は休みだそうです。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "明日は休みだそうです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "天気予報によると、明日は雨が降るそうです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "ニュースによると、電車が止まったそうです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "北海道は寒いそうです。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "传闻里的な形容词和名词保留 だ。",
+                "en": "For hearsay, keep だ after na-adjectives and nouns."
+              }
             }
           ]
         },
@@ -174,11 +255,38 @@
           "practice": [
             {
               "id": "l47-practice-04",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：据新闻说，电车停了。",
                 "en": "Say: According to the news, the train stopped."
               },
-              "answer": "ニュースによると、電車が止まったそうです。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "天気予報によると、明日は雨が降るそうです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "明日は休みだそうです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "ニュースによると、電車が止まったそうです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "北海道は寒いそうです。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "说明消息来源时常用 によると。",
+                "en": "Use によると to state the information source."
+              }
             }
           ]
         },
@@ -191,11 +299,38 @@
           "practice": [
             {
               "id": "l47-practice-05",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：外面有声音，好像有人来了。",
                 "en": "Say: There is a sound outside; it seems someone came."
               },
-              "answer": "外で音がします。だれか来たようです。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "北海道は寒いそうです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "明日は休みだそうです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "外で音がします。だれか来たようです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "天気予報によると、明日は雨が降るそうです。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "根据看到、听到、感觉到的迹象作推断。",
+                "en": "Makes an inference based on signs, sounds, or impressions."
+              }
             }
           ]
         },
@@ -208,11 +343,38 @@
           "practice": [
             {
               "id": "l47-practice-06",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：那个人好像是医生。",
                 "en": "Say: That person seems to be a doctor."
               },
-              "answer": "あの人は医者のようです。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "あの人は医者のようです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "天気予報によると、明日は雨が降るそうです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "北海道は寒いそうです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "明日は休みだそうです。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "ようです 接续：い形容词直接接，な形容词用 な，名词用 の。",
+                "en": "With ようです: attach directly to i-adjectives, use な for na-adjectives, and の for nouns."
+              }
             }
           ]
         },
@@ -225,11 +387,38 @@
           "practice": [
             {
               "id": "l47-practice-07",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：像梦一样的故事。",
                 "en": "Say: a story like a dream."
               },
-              "answer": "夢のような話です。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "明日は休みだそうです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "夢のような話です。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "天気予報によると、明日は雨が降るそうです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "北海道は寒いそうです。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "ようです 可修饰名词或动词，表示像某样。",
+                "en": "よう can modify nouns or verbs to mean 'like' or 'as if'."
+              }
             }
           ]
         },
@@ -242,11 +431,38 @@
           "practice": [
             {
               "id": "l47-practice-08",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "区分：听说明天下雨。",
                 "en": "Distinguish: I hear it will rain tomorrow."
               },
-              "answer": "明日は雨が降るそうです。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "明日は雨が降るそうです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "天気予報によると、明日は雨が降るそうです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "明日は休みだそうです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "北海道は寒いそうです。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "传闻そうです接普通形；外观そうです接ます形语干或形容词语干。",
+                "en": "Hearsay そうです takes plain forms; appearance そうです takes masu-stems or adjective stems."
+              }
             }
           ]
         }

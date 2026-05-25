@@ -123,11 +123,38 @@
           "practice": [
             {
               "id": "l49-practice-01",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：老师已经回去了。",
                 "en": "Say honorifically: The teacher has already gone home."
               },
-              "answer": "先生はもう帰られました。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "先生はもう帰られました。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "先生はこの資料をお読みになります。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "このカードをご利用になりますか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "少々お待ちください。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "用被动形表示尊敬，形式较简单，但尊敬程度中等。",
+                "en": "Use the passive form as an honorific form; it is simple and moderately respectful."
+              }
             }
           ]
         },
@@ -140,11 +167,38 @@
           "practice": [
             {
               "id": "l49-practice-02",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：老师要读这份资料。",
                 "en": "Say honorifically: The teacher will read this document."
               },
-              "answer": "先生はこの資料をお読みになります。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "先生はこの資料をお読みになります。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "少々お待ちください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生はもう帰られました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "このカードをご利用になりますか。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "尊敬语常用结构，用于对方或上级的动作。",
+                "en": "Common honorific structure for actions of the other person or a superior."
+              }
             }
           ]
         },
@@ -157,11 +211,38 @@
           "practice": [
             {
               "id": "l49-practice-03",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：您使用这张卡吗？",
                 "en": "Say honorifically: Will you use this card?"
               },
-              "answer": "このカードをご利用になりますか。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "先生はもう帰られました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "このカードをご利用になりますか。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "先生はこの資料をお読みになります。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "少々お待ちください。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "部分汉语词可用 ご + 名词 + になります。",
+                "en": "Some Sino-Japanese nouns use ご + noun + になります."
+              }
             }
           ]
         },
@@ -174,11 +255,38 @@
           "practice": [
             {
               "id": "l49-practice-04",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：请稍等。",
                 "en": "Say politely: Please wait a moment."
               },
-              "answer": "少々お待ちください。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "このカードをご利用になりますか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生はもう帰られました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生はこの資料をお読みになります。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "少々お待ちください。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "礼貌地请对方做某事，常见于服务和通知。",
+                "en": "Politely asks the other person to do something, often in service contexts or notices."
+              }
             }
           ]
         },
@@ -191,11 +299,38 @@
           "practice": [
             {
               "id": "l49-practice-05",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：老师在会议室。",
                 "en": "Say honorifically: The teacher is in the meeting room."
               },
-              "answer": "先生は会議室にいらっしゃいます。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "このカードをご利用になりますか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生は会議室にいらっしゃいます。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "先生はこの資料をお読みになります。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生はもう帰られました。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "行きます、来ます、います 的特殊尊敬语。",
+                "en": "Special honorific form for 行きます, 来ます, and います."
+              }
             }
           ]
         },
@@ -208,11 +343,38 @@
           "practice": [
             {
               "id": "l49-practice-06",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：社长看了资料。",
                 "en": "Say honorifically: The president looked at the document."
               },
-              "answer": "社長は資料をご覧になりました。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "先生はこの資料をお読みになります。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生はもう帰られました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "社長は資料をご覧になりました。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "このカードをご利用になりますか。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "食べます/飲みます 用 召し上がります；見ます 用 ご覧になります。",
+                "en": "Use 召し上がります for eat/drink and ご覧になります for see/watch."
+              }
             }
           ]
         },
@@ -225,11 +387,38 @@
           "practice": [
             {
               "id": "l49-practice-07",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "表达：老师说了什么？",
                 "en": "Say honorifically: What did the teacher say?"
               },
-              "answer": "先生は何とおっしゃいましたか。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "先生はこの資料をお読みになります。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生はもう帰られました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "このカードをご利用になりますか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生は何とおっしゃいましたか。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "言います 用 おっしゃいます；します 用 なさいます。",
+                "en": "Use おっしゃいます for say and なさいます for do."
+              }
             }
           ]
         },
@@ -242,11 +431,38 @@
           "practice": [
             {
               "id": "l49-practice-08",
-              "prompt": {
+              "skill": "grammar",
+              "question": {
                 "zh": "选择正确：老师来。",
                 "en": "Choose the correct honorific: The teacher comes."
               },
-              "answer": "先生がいらっしゃいます。"
+              "options": [
+                {
+                  "text": {
+                    "jp": "このカードをご利用になりますか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生はこの資料をお読みになります。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生はもう帰られました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生がいらっしゃいます。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "尊敬语用于提高对方或第三者，不用于抬高自己。",
+                "en": "Honorific language elevates the other person or a third party, not yourself."
+              }
             }
           ]
         }
