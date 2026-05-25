@@ -3,13 +3,759 @@
   "course": "minna",
   "lessonNo": 18,
   "lessonId": "minna_lesson_18",
-  "title": { "zh": "第18课", "en": "Lesson 18", "ja": "第18課" },
-  "subtitle": { "zh": "辞书形", "en": "Dictionary form", "ja": "辞書形" },
-  "focus": { "zh": "本课内容待维护。请在后台课程 JSON 维护器中补充词汇、语法、例句和测试题。", "en": "This lesson is being edited. Add vocabulary, grammar, examples, and quiz items in the admin course JSON editor.", "ja": "この課の内容は編集中です。" },
+  "title": {
+    "zh": "第18课",
+    "en": "Lesson 18",
+    "ja": "第18課"
+  },
+  "subtitle": {
+    "zh": "能力与经历前后",
+    "en": "Ability and before/after context",
+    "ja": "可能・前後関係"
+  },
+  "focus": {
+    "zh": "学习「ことができます」「趣味は〜ことです」「〜まえに」。",
+    "en": "Learn ability expressions, hobby statements, and \"before\" clauses.",
+    "ja": "「ことができます」「趣味は〜ことです」「〜まえに」を学びます。"
+  },
   "sections": [
-    { "type": "vocab", "id": "l18_vocab", "title": { "zh": "核心词汇", "en": "Core Vocabulary", "ja": "基本語彙" }, "items": [] },
-    { "type": "grammar", "id": "l18_grammar", "title": { "zh": "核心语法", "en": "Core Grammar", "ja": "基本文法" }, "items": [] },
-    { "type": "examples", "id": "l18_examples", "title": { "zh": "核心例句", "en": "Core Examples", "ja": "基本例文" }, "items": [] },
-    { "type": "quiz", "id": "l18_quiz", "title": { "zh": "综合测试", "en": "Final Test", "ja": "まとめテスト" }, "items": [] }
+    {
+      "type": "vocab",
+      "id": "l18_vocab",
+      "title": {
+        "zh": "核心词汇",
+        "en": "Core Vocabulary",
+        "ja": "基本語彙"
+      },
+      "items": [
+        {
+          "id": "l18_v01",
+          "jp": "できます",
+          "kana": "できます",
+          "zh": "会；能",
+          "en": "can / be able to",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l18_v02",
+          "jp": "弾きます",
+          "kana": "ひきます",
+          "zh": "弹奏",
+          "en": "play (instrument)",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l18_v03",
+          "jp": "運転します",
+          "kana": "うんてんします",
+          "zh": "驾驶",
+          "en": "drive",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l18_v04",
+          "jp": "料理します",
+          "kana": "りょうりします",
+          "zh": "做饭",
+          "en": "cook",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l18_v05",
+          "jp": "集めます",
+          "kana": "あつめます",
+          "zh": "收集",
+          "en": "collect",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l18_v06",
+          "jp": "趣味",
+          "kana": "しゅみ",
+          "zh": "爱好",
+          "en": "hobby",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l18_v07",
+          "jp": "絵",
+          "kana": "え",
+          "zh": "画",
+          "en": "picture",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l18_v08",
+          "jp": "歌",
+          "kana": "うた",
+          "zh": "歌曲",
+          "en": "song",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l18_v09",
+          "jp": "ギター",
+          "kana": "ギター",
+          "zh": "吉他",
+          "en": "guitar",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l18_v10",
+          "jp": "ピアノ",
+          "kana": "ピアノ",
+          "zh": "钢琴",
+          "en": "piano",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l18_v11",
+          "jp": "運転免許",
+          "kana": "うんてんめんきょ",
+          "zh": "驾照",
+          "en": "driver's license",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l18_v12",
+          "jp": "旅行する",
+          "kana": "りょこうする",
+          "zh": "旅行",
+          "en": "travel",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l18_v13",
+          "jp": "寝る",
+          "kana": "ねる",
+          "zh": "睡觉",
+          "en": "sleep",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l18_v14",
+          "jp": "食事",
+          "kana": "しょくじ",
+          "zh": "用餐",
+          "en": "meal",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l18_v15",
+          "jp": "仕事",
+          "kana": "しごと",
+          "zh": "工作",
+          "en": "work",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l18_v16",
+          "jp": "まえに",
+          "kana": "まえに",
+          "zh": "在……之前",
+          "en": "before",
+          "tags": [
+            "grammar"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "grammar",
+      "id": "l18_grammar",
+      "title": {
+        "zh": "核心语法",
+        "en": "Core Grammar",
+        "ja": "基本文法"
+      },
+      "items": [
+        {
+          "id": "l18_g01",
+          "pattern": "V辞書形 ことができます",
+          "title": {
+            "zh": "能力表达",
+            "en": "Can do~"
+          },
+          "explanation": {
+            "zh": "表示会做某事。",
+            "en": "Expresses one's ability."
+          },
+          "examples": [
+            {
+              "jp": "私はギターを弾くことができます。",
+              "zh": "我会弹吉他。",
+              "en": "I can play the guitar."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l18_g01_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“我会开车”是？",
+                "en": "How to say: I can drive?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "私は車を運転することができます。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "私は車を運転してことができます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "私は車を運転しますことができます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "私は車が運転ことができます。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示会做某事。",
+                "en": "Expresses one's ability."
+              }
+            },
+            {
+              "id": "l18_g01_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "“你会做日本菜吗”是？",
+                "en": "How to ask: Can you cook Japanese food?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "日本料理を作ることができますか。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "日本料理を作ってことができますか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "日本料理を作りますことができますか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "日本料理が作ることですか。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示会做某事。",
+                "en": "Expresses one's ability."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l18_g02",
+          "pattern": "趣味は V辞書形 ことです",
+          "title": {
+            "zh": "爱好表达",
+            "en": "Stating a hobby"
+          },
+          "explanation": {
+            "zh": "用「ことです」把动词名词化。",
+            "en": "Nominalize verbs with koto for hobbies."
+          },
+          "examples": [
+            {
+              "jp": "私の趣味は写真を撮ることです。",
+              "zh": "我的爱好是拍照。",
+              "en": "My hobby is taking photos."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l18_g02_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“我的爱好是听音乐”是？",
+                "en": "How to say: My hobby is listening to music?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "私の趣味は音楽を聞くことです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "私の趣味は音楽を聞いてことです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "私の趣味は音楽を聞きますことです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "私の趣味は音楽が聞くことです。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "用「ことです」把动词名词化。",
+                "en": "Nominalize verbs with koto for hobbies."
+              }
+            },
+            {
+              "id": "l18_g02_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "“她的爱好是做饭”是？",
+                "en": "How to say: Her hobby is cooking?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "彼女の趣味は料理することです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "彼女の趣味は料理してことです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "彼女の趣味は料理しますことです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "彼女の趣味は料理がことです。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "用「ことです」把动词名词化。",
+                "en": "Nominalize verbs with koto for hobbies."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l18_g03",
+          "pattern": "V辞書形 まえに",
+          "title": {
+            "zh": "动作前",
+            "en": "Before doing~"
+          },
+          "explanation": {
+            "zh": "表示在某动作之前。",
+            "en": "Indicates an action done before another one."
+          },
+          "examples": [
+            {
+              "jp": "寝るまえに本を読みます。",
+              "zh": "睡觉前看书。",
+              "en": "I read a book before sleeping."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l18_g03_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“吃饭前洗手”是？",
+                "en": "How to say: wash hands before eating?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "食事するまえに手を洗います。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "食事してまえに手を洗います。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "食事しますまえに手を洗います。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "食事のまえに手を洗いです。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示在某动作之前。",
+                "en": "Indicates an action done before another one."
+              }
+            },
+            {
+              "id": "l18_g03_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "“上班前喝咖啡”是？",
+                "en": "How to say: drink coffee before work?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "仕事のまえにコーヒーを飲みます。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "仕事でまえにコーヒーを飲みます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "仕事をまえにコーヒーを飲みます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "仕事まえにコーヒーを飲みます。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示在某动作之前。",
+                "en": "Indicates an action done before another one."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l18_g04",
+          "pattern": "N の まえに",
+          "title": {
+            "zh": "名词前",
+            "en": "Before a noun event"
+          },
+          "explanation": {
+            "zh": "名词后接「のまえに」。",
+            "en": "Use no mae ni after nouns."
+          },
+          "examples": [
+            {
+              "jp": "会議のまえに資料を見ます。",
+              "zh": "开会前看资料。",
+              "en": "I check materials before the meeting."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l18_g04_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“考试前复习”是？",
+                "en": "How to say: review before exam?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "試験のまえに復習します。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "試験まえに復習します。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "試験をまえに復習します。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "試験でまえに復習します。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "名词后接「のまえに」。",
+                "en": "Use no mae ni after nouns."
+              }
+            },
+            {
+              "id": "l18_g04_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "“旅行前准备行李”是？",
+                "en": "How to say: prepare luggage before the trip?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "旅行のまえに荷物を準備します。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "旅行まえに荷物を準備します。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "旅行をまえに荷物を準備します。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "旅行でまえに荷物を準備します。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "名词后接「のまえに」。",
+                "en": "Use no mae ni after nouns."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examples",
+      "id": "l18_examples",
+      "title": {
+        "zh": "核心例句",
+        "en": "Core Examples",
+        "ja": "基本例文"
+      },
+      "items": [
+        {
+          "id": "l18_e01",
+          "jp": "私は漢字を読むことができます。",
+          "zh": "我会读汉字。",
+          "en": "I can read kanji."
+        },
+        {
+          "id": "l18_e02",
+          "jp": "趣味はピアノを弾くことです。",
+          "zh": "我的爱好是弹钢琴。",
+          "en": "My hobby is playing the piano."
+        },
+        {
+          "id": "l18_e03",
+          "jp": "寝るまえにストレッチします。",
+          "zh": "睡前做拉伸。",
+          "en": "I stretch before going to bed."
+        },
+        {
+          "id": "l18_e04",
+          "jp": "会議のまえにメールを確認します。",
+          "zh": "开会前确认邮件。",
+          "en": "I check email before the meeting."
+        },
+        {
+          "id": "l18_e05",
+          "jp": "兄は車を運転することができます。",
+          "zh": "我哥哥会开车。",
+          "en": "My older brother can drive."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "l18_quiz",
+      "title": {
+        "zh": "综合测试",
+        "en": "Final Test",
+        "ja": "まとめテスト"
+      },
+      "items": [
+        {
+          "id": "l18_q01",
+          "question": {
+            "zh": "「できます」的意思是？",
+            "en": "What does できます mean?"
+          },
+          "options": [
+            {
+              "text": {
+                "zh": "会；能",
+                "en": "can / be able to"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "弹奏",
+                "en": "play (instrument)"
+              }
+            },
+            {
+              "text": {
+                "zh": "驾驶",
+                "en": "drive"
+              }
+            },
+            {
+              "text": {
+                "zh": "做饭",
+                "en": "cook"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "「できます」表示「会；能」。",
+            "en": "できます means can / be able to."
+          }
+        },
+        {
+          "id": "l18_q02",
+          "question": {
+            "zh": "哪一句最符合语法「V辞書形 ことができます」？",
+            "en": "Which sentence best matches pattern \"V辞書形 ことができます\"?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "私はギターを弾くことができます。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "私の趣味は写真を撮ることです。"
+              }
+            },
+            {
+              "text": {
+                "jp": "寝るまえに本を読みます。"
+              }
+            },
+            {
+              "text": {
+                "jp": "会議のまえに資料を見ます。"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "正确句型是「V辞書形 ことができます」。",
+            "en": "The correct pattern is \"V辞書形 ことができます\"."
+          }
+        },
+        {
+          "id": "l18_q03",
+          "question": {
+            "zh": "关于「趣味は V辞書形 ことです」最恰当的是？",
+            "en": "Which usage best fits \"趣味は V辞書形 ことです\"?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "私の趣味は音楽を聞くことです。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "私の趣味は音楽を聞いてことです。"
+              }
+            },
+            {
+              "text": {
+                "jp": "私の趣味は音楽を聞きますことです。"
+              }
+            },
+            {
+              "text": {
+                "jp": "私の趣味は音楽が聞くことです。"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "用「ことです」把动词名词化。",
+            "en": "Nominalize verbs with koto for hobbies."
+          }
+        },
+        {
+          "id": "l18_q04",
+          "question": {
+            "zh": "与「我会读汉字。」对应的日语句子是？",
+            "en": "Which Japanese sentence matches \"I can read kanji.\"?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "私は漢字を読むことができます。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "趣味はピアノを弾くことです。"
+              }
+            },
+            {
+              "text": {
+                "jp": "寝るまえにストレッチします。"
+              }
+            },
+            {
+              "text": {
+                "jp": "会議のまえにメールを確認します。"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "对应句子是「私は漢字を読むことができます。」。",
+            "en": "The matching sentence is \"私は漢字を読むことができます。\"."
+          }
+        }
+      ]
+    }
   ]
 }

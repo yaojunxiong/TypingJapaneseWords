@@ -3,13 +3,759 @@
   "course": "minna",
   "lessonNo": 17,
   "lessonId": "minna_lesson_17",
-  "title": { "zh": "第17课", "en": "Lesson 17", "ja": "第17課" },
-  "subtitle": { "zh": "ない形", "en": "ない-form", "ja": "ない形" },
-  "focus": { "zh": "本课内容待维护。请在后台课程 JSON 维护器中补充词汇、语法、例句和测试题。", "en": "This lesson is being edited. Add vocabulary, grammar, examples, and quiz items in the admin course JSON editor.", "ja": "この課の内容は編集中です。" },
+  "title": {
+    "zh": "第17课",
+    "en": "Lesson 17",
+    "ja": "第17課"
+  },
+  "subtitle": {
+    "zh": "ない形与义务",
+    "en": "Nai-form and obligation",
+    "ja": "ない形・義務"
+  },
+  "focus": {
+    "zh": "学习「ないでください」「なければなりません」「なくてもいいです」。",
+    "en": "Learn negative requests, obligation, and optional actions.",
+    "ja": "「ないでください」「なければなりません」「なくてもいいです」を学びます。"
+  },
   "sections": [
-    { "type": "vocab", "id": "l17_vocab", "title": { "zh": "核心词汇", "en": "Core Vocabulary", "ja": "基本語彙" }, "items": [] },
-    { "type": "grammar", "id": "l17_grammar", "title": { "zh": "核心语法", "en": "Core Grammar", "ja": "基本文法" }, "items": [] },
-    { "type": "examples", "id": "l17_examples", "title": { "zh": "核心例句", "en": "Core Examples", "ja": "基本例文" }, "items": [] },
-    { "type": "quiz", "id": "l17_quiz", "title": { "zh": "综合测试", "en": "Final Test", "ja": "まとめテスト" }, "items": [] }
+    {
+      "type": "vocab",
+      "id": "l17_vocab",
+      "title": {
+        "zh": "核心词汇",
+        "en": "Core Vocabulary",
+        "ja": "基本語彙"
+      },
+      "items": [
+        {
+          "id": "l17_v01",
+          "jp": "ないでください",
+          "kana": "ないでください",
+          "zh": "请不要〜",
+          "en": "please don't~",
+          "tags": [
+            "grammar"
+          ]
+        },
+        {
+          "id": "l17_v02",
+          "jp": "なければなりません",
+          "kana": "なければなりません",
+          "zh": "必须〜",
+          "en": "must~",
+          "tags": [
+            "grammar"
+          ]
+        },
+        {
+          "id": "l17_v03",
+          "jp": "なくてもいいです",
+          "kana": "なくてもいいです",
+          "zh": "不做也可以",
+          "en": "do not have to~",
+          "tags": [
+            "grammar"
+          ]
+        },
+        {
+          "id": "l17_v04",
+          "jp": "払います",
+          "kana": "はらいます",
+          "zh": "支付",
+          "en": "pay",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l17_v05",
+          "jp": "返します",
+          "kana": "かえします",
+          "zh": "归还",
+          "en": "return",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l17_v06",
+          "jp": "出します",
+          "kana": "だします",
+          "zh": "提交；寄出",
+          "en": "submit/send",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l17_v07",
+          "jp": "入れます",
+          "kana": "いれます",
+          "zh": "放入",
+          "en": "put in",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l17_v08",
+          "jp": "捨てます",
+          "kana": "すてます",
+          "zh": "丢弃",
+          "en": "throw away",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l17_v09",
+          "jp": "予約します",
+          "kana": "よやくします",
+          "zh": "预约",
+          "en": "reserve",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l17_v10",
+          "jp": "薬局",
+          "kana": "やっきょく",
+          "zh": "药店",
+          "en": "pharmacy",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l17_v11",
+          "jp": "規則",
+          "kana": "きそく",
+          "zh": "规则",
+          "en": "rule",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l17_v12",
+          "jp": "約束",
+          "kana": "やくそく",
+          "zh": "约定",
+          "en": "promise",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l17_v13",
+          "jp": "期限",
+          "kana": "きげん",
+          "zh": "截止日期",
+          "en": "deadline",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l17_v14",
+          "jp": "宿題",
+          "kana": "しゅくだい",
+          "zh": "作业",
+          "en": "homework",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l17_v15",
+          "jp": "書類",
+          "kana": "しょるい",
+          "zh": "文件",
+          "en": "document",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l17_v16",
+          "jp": "ごみ箱",
+          "kana": "ごみばこ",
+          "zh": "垃圾桶",
+          "en": "trash bin",
+          "tags": [
+            "noun"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "grammar",
+      "id": "l17_grammar",
+      "title": {
+        "zh": "核心语法",
+        "en": "Core Grammar",
+        "ja": "基本文法"
+      },
+      "items": [
+        {
+          "id": "l17_g01",
+          "pattern": "Vないで ください",
+          "title": {
+            "zh": "否定请求",
+            "en": "Negative request"
+          },
+          "explanation": {
+            "zh": "礼貌要求对方不要做某事。",
+            "en": "Politely ask someone not to do something."
+          },
+          "examples": [
+            {
+              "jp": "ここにごみを捨てないでください。",
+              "zh": "请不要在这里扔垃圾。",
+              "en": "Please do not throw trash here."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l17_g01_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“请不要忘记作业”是？",
+                "en": "How to say: Please do not forget homework?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "宿題を忘れないでください。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "宿題を忘れてください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "宿題を忘れなくてください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "宿題が忘れないでください。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "礼貌要求对方不要做某事。",
+                "en": "Politely ask someone not to do something."
+              }
+            },
+            {
+              "id": "l17_g01_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "“请不要在这里停车”是？",
+                "en": "How to say: Please do not park here?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "ここに車を止めないでください。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "ここに車を止めてください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "ここで車を止めないです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "ここに車が止めないでください。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "礼貌要求对方不要做某事。",
+                "en": "Politely ask someone not to do something."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l17_g02",
+          "pattern": "Vなければ なりません",
+          "title": {
+            "zh": "必须表达",
+            "en": "Obligation"
+          },
+          "explanation": {
+            "zh": "表示必须做某事。",
+            "en": "Indicates necessity/obligation."
+          },
+          "examples": [
+            {
+              "jp": "明日早く起きなければなりません。",
+              "zh": "明天必须早起。",
+              "en": "I must wake up early tomorrow."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l17_g02_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“今天必须交文件”是？",
+                "en": "How to say: Must submit documents today?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "今日書類を出さなければなりません。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "今日書類を出してはいけません。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "今日書類を出さないでください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "今日書類を出さなくてもいいです。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示必须做某事。",
+                "en": "Indicates necessity/obligation."
+              }
+            },
+            {
+              "id": "l17_g02_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "“必须还书”是？",
+                "en": "How to say: Must return the book?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "本を返さなければなりません。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "本を返してもいいです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "本を返さないでください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "本を返すないといけません。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示必须做某事。",
+                "en": "Indicates necessity/obligation."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l17_g03",
+          "pattern": "Vなくても いいです",
+          "title": {
+            "zh": "不必表达",
+            "en": "Not necessary"
+          },
+          "explanation": {
+            "zh": "表示不做也没关系。",
+            "en": "Says something is optional."
+          },
+          "examples": [
+            {
+              "jp": "明日は来なくてもいいです。",
+              "zh": "明天不来也可以。",
+              "en": "You do not have to come tomorrow."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l17_g03_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“今天不用加班”是？",
+                "en": "How to say: You do not have to work overtime today?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "今日は残業しなくてもいいです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "今日は残業しなければなりません。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "今日は残業しないでください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "今日は残業してはいけません。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示不做也没关系。",
+                "en": "Says something is optional."
+              }
+            },
+            {
+              "id": "l17_g03_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "“作业可以不交吗？”是？",
+                "en": "How to ask: May I not submit homework?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "宿題を出さなくてもいいですか。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "宿題を出さないでくださいか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "宿題を出してもいいですか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "宿題を出さなくてくださいか。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示不做也没关系。",
+                "en": "Says something is optional."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l17_g04",
+          "pattern": "〜ないと いけません",
+          "title": {
+            "zh": "口语必须",
+            "en": "Spoken obligation"
+          },
+          "explanation": {
+            "zh": "与「なければなりません」意义相近，更口语。",
+            "en": "Casual spoken equivalent of obligation."
+          },
+          "examples": [
+            {
+              "jp": "もう帰らないといけません。",
+              "zh": "我得回去了。",
+              "en": "I have to go home now."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l17_g04_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“我得付款了”是？",
+                "en": "How to say: I have to pay now?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "もう払わないといけません。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "もう払ってはいけません。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "もう払わなくてもいいです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "もう払いないといけません。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "与「なければなりません」意义相近，更口语。",
+                "en": "Casual spoken equivalent of obligation."
+              }
+            },
+            {
+              "id": "l17_g04_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "“今天得早睡”是？",
+                "en": "How to say: I have to sleep early today?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "今日は早く寝ないといけません。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "今日は早く寝てはいけません。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "今日は早く寝なくてもいいです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "今日は早く寝ないでください。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "与「なければなりません」意义相近，更口语。",
+                "en": "Casual spoken equivalent of obligation."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examples",
+      "id": "l17_examples",
+      "title": {
+        "zh": "核心例句",
+        "en": "Core Examples",
+        "ja": "基本例文"
+      },
+      "items": [
+        {
+          "id": "l17_e01",
+          "jp": "図書館では大きい声で話さないでください。",
+          "zh": "图书馆请不要大声说话。",
+          "en": "Please do not speak loudly in the library."
+        },
+        {
+          "id": "l17_e02",
+          "jp": "この書類は今日中に出さなければなりません。",
+          "zh": "这份文件今天之内必须提交。",
+          "en": "This document must be submitted today."
+        },
+        {
+          "id": "l17_e03",
+          "jp": "明日の会議は出なくてもいいです。",
+          "zh": "明天的会议不参加也可以。",
+          "en": "You do not have to attend tomorrow's meeting."
+        },
+        {
+          "id": "l17_e04",
+          "jp": "薬を飲まないといけません。",
+          "zh": "我得吃药。",
+          "en": "I have to take medicine."
+        },
+        {
+          "id": "l17_e05",
+          "jp": "約束を忘れないでください。",
+          "zh": "请不要忘记约定。",
+          "en": "Please do not forget the promise."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "l17_quiz",
+      "title": {
+        "zh": "综合测试",
+        "en": "Final Test",
+        "ja": "まとめテスト"
+      },
+      "items": [
+        {
+          "id": "l17_q01",
+          "question": {
+            "zh": "「ないでください」的意思是？",
+            "en": "What does ないでください mean?"
+          },
+          "options": [
+            {
+              "text": {
+                "zh": "请不要〜",
+                "en": "please don't~"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "必须〜",
+                "en": "must~"
+              }
+            },
+            {
+              "text": {
+                "zh": "不做也可以",
+                "en": "do not have to~"
+              }
+            },
+            {
+              "text": {
+                "zh": "支付",
+                "en": "pay"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "「ないでください」表示「请不要〜」。",
+            "en": "ないでください means please don't~."
+          }
+        },
+        {
+          "id": "l17_q02",
+          "question": {
+            "zh": "哪一句最符合语法「Vないで ください」？",
+            "en": "Which sentence best matches pattern \"Vないで ください\"?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "ここにごみを捨てないでください。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "明日早く起きなければなりません。"
+              }
+            },
+            {
+              "text": {
+                "jp": "明日は来なくてもいいです。"
+              }
+            },
+            {
+              "text": {
+                "jp": "もう帰らないといけません。"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "正确句型是「Vないで ください」。",
+            "en": "The correct pattern is \"Vないで ください\"."
+          }
+        },
+        {
+          "id": "l17_q03",
+          "question": {
+            "zh": "关于「Vなければ なりません」最恰当的是？",
+            "en": "Which usage best fits \"Vなければ なりません\"?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "今日書類を出さなければなりません。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "今日書類を出してはいけません。"
+              }
+            },
+            {
+              "text": {
+                "jp": "今日書類を出さないでください。"
+              }
+            },
+            {
+              "text": {
+                "jp": "今日書類を出さなくてもいいです。"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "表示必须做某事。",
+            "en": "Indicates necessity/obligation."
+          }
+        },
+        {
+          "id": "l17_q04",
+          "question": {
+            "zh": "与「图书馆请不要大声说话。」对应的日语句子是？",
+            "en": "Which Japanese sentence matches \"Please do not speak loudly in the library.\"?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "図書館では大きい声で話さないでください。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "この書類は今日中に出さなければなりません。"
+              }
+            },
+            {
+              "text": {
+                "jp": "明日の会議は出なくてもいいです。"
+              }
+            },
+            {
+              "text": {
+                "jp": "薬を飲まないといけません。"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "对应句子是「図書館では大きい声で話さないでください。」。",
+            "en": "The matching sentence is \"図書館では大きい声で話さないでください。\"."
+          }
+        }
+      ]
+    }
   ]
 }

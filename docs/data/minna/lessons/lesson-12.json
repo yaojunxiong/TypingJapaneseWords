@@ -3,13 +3,759 @@
   "course": "minna",
   "lessonNo": 12,
   "lessonId": "minna_lesson_12",
-  "title": { "zh": "第12课", "en": "Lesson 12", "ja": "第12課" },
-  "subtitle": { "zh": "过去式・比较", "en": "Past tense and comparison", "ja": "過去形・比較" },
-  "focus": { "zh": "本课内容待维护。请在后台课程 JSON 维护器中补充词汇、语法、例句和测试题。", "en": "This lesson is being edited. Add vocabulary, grammar, examples, and quiz items in the admin course JSON editor.", "ja": "この課の内容は編集中です。" },
+  "title": {
+    "zh": "第12课",
+    "en": "Lesson 12",
+    "ja": "第12課"
+  },
+  "subtitle": {
+    "zh": "形容词过去式与比较",
+    "en": "Adjective past and comparison",
+    "ja": "形容詞の過去・比較"
+  },
+  "focus": {
+    "zh": "学习形容词和名词句过去式、比较句、最高级表达。",
+    "en": "Learn past forms for adjectives/nouns, comparisons, and superlatives.",
+    "ja": "形容詞・名詞文の過去形、比較、最上級を学びます。"
+  },
   "sections": [
-    { "type": "vocab", "id": "l12_vocab", "title": { "zh": "核心词汇", "en": "Core Vocabulary", "ja": "基本語彙" }, "items": [] },
-    { "type": "grammar", "id": "l12_grammar", "title": { "zh": "核心语法", "en": "Core Grammar", "ja": "基本文法" }, "items": [] },
-    { "type": "examples", "id": "l12_examples", "title": { "zh": "核心例句", "en": "Core Examples", "ja": "基本例文" }, "items": [] },
-    { "type": "quiz", "id": "l12_quiz", "title": { "zh": "综合测试", "en": "Final Test", "ja": "まとめテスト" }, "items": [] }
+    {
+      "type": "vocab",
+      "id": "l12_vocab",
+      "title": {
+        "zh": "核心词汇",
+        "en": "Core Vocabulary",
+        "ja": "基本語彙"
+      },
+      "items": [
+        {
+          "id": "l12_v01",
+          "jp": "多い",
+          "kana": "おおい",
+          "zh": "多",
+          "en": "many",
+          "tags": [
+            "adj-i"
+          ]
+        },
+        {
+          "id": "l12_v02",
+          "jp": "少ない",
+          "kana": "すくない",
+          "zh": "少",
+          "en": "few",
+          "tags": [
+            "adj-i"
+          ]
+        },
+        {
+          "id": "l12_v03",
+          "jp": "暖かい",
+          "kana": "あたたかい",
+          "zh": "暖和",
+          "en": "warm",
+          "tags": [
+            "adj-i"
+          ]
+        },
+        {
+          "id": "l12_v04",
+          "jp": "涼しい",
+          "kana": "すずしい",
+          "zh": "凉快",
+          "en": "cool",
+          "tags": [
+            "adj-i"
+          ]
+        },
+        {
+          "id": "l12_v05",
+          "jp": "速い",
+          "kana": "はやい",
+          "zh": "快（速度）",
+          "en": "fast",
+          "tags": [
+            "adj-i"
+          ]
+        },
+        {
+          "id": "l12_v06",
+          "jp": "遅い",
+          "kana": "おそい",
+          "zh": "慢",
+          "en": "slow",
+          "tags": [
+            "adj-i"
+          ]
+        },
+        {
+          "id": "l12_v07",
+          "jp": "近い",
+          "kana": "ちかい",
+          "zh": "近",
+          "en": "near",
+          "tags": [
+            "adj-i"
+          ]
+        },
+        {
+          "id": "l12_v08",
+          "jp": "遠い",
+          "kana": "とおい",
+          "zh": "远",
+          "en": "far",
+          "tags": [
+            "adj-i"
+          ]
+        },
+        {
+          "id": "l12_v09",
+          "jp": "有名",
+          "kana": "ゆうめい",
+          "zh": "有名",
+          "en": "famous",
+          "tags": [
+            "adj-na"
+          ]
+        },
+        {
+          "id": "l12_v10",
+          "jp": "便利",
+          "kana": "べんり",
+          "zh": "方便",
+          "en": "convenient",
+          "tags": [
+            "adj-na"
+          ]
+        },
+        {
+          "id": "l12_v11",
+          "jp": "にぎやか",
+          "kana": "にぎやか",
+          "zh": "热闹",
+          "en": "lively",
+          "tags": [
+            "adj-na"
+          ]
+        },
+        {
+          "id": "l12_v12",
+          "jp": "静か",
+          "kana": "しずか",
+          "zh": "安静",
+          "en": "quiet",
+          "tags": [
+            "adj-na"
+          ]
+        },
+        {
+          "id": "l12_v13",
+          "jp": "季節",
+          "kana": "きせつ",
+          "zh": "季节",
+          "en": "season",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l12_v14",
+          "jp": "春",
+          "kana": "はる",
+          "zh": "春天",
+          "en": "spring",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l12_v15",
+          "jp": "夏",
+          "kana": "なつ",
+          "zh": "夏天",
+          "en": "summer",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l12_v16",
+          "jp": "一番",
+          "kana": "いちばん",
+          "zh": "最",
+          "en": "the most",
+          "tags": [
+            "adv"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "grammar",
+      "id": "l12_grammar",
+      "title": {
+        "zh": "核心语法",
+        "en": "Core Grammar",
+        "ja": "基本文法"
+      },
+      "items": [
+        {
+          "id": "l12_g01",
+          "pattern": "い形容词 かったです／くなかったです",
+          "title": {
+            "zh": "い形容词过去式",
+            "en": "Past of i-adjectives"
+          },
+          "explanation": {
+            "zh": "描述过去状态：高かった、安くなかった。",
+            "en": "Describe past states with i-adjective past forms."
+          },
+          "examples": [
+            {
+              "jp": "昨日は暑かったです。",
+              "zh": "昨天很热。",
+              "en": "It was hot yesterday."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l12_g01_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“昨天不冷”是？",
+                "en": "How to say: It was not cold yesterday?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "昨日は寒くなかったです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "昨日は寒かったないです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "昨日は寒いじゃありません。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "昨日は寒いなかったです。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "描述过去状态：高かった、安くなかった。",
+                "en": "Describe past states with i-adjective past forms."
+              }
+            },
+            {
+              "id": "l12_g01_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "“考试很难”过去式是？",
+                "en": "Past form of \"The exam is difficult\"?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "試験は難しかったです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "試験は難しいでした。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "試験は難しくでした。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "試験は難しかったないです。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "描述过去状态：高かった、安くなかった。",
+                "en": "Describe past states with i-adjective past forms."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l12_g02",
+          "pattern": "な形容词／名词 でした／じゃありませんでした",
+          "title": {
+            "zh": "な形容词与名词过去式",
+            "en": "Past of na-adjectives/nouns"
+          },
+          "explanation": {
+            "zh": "过去肯定用でした，否定用じゃありませんでした。",
+            "en": "Use deshita / ja arimasen deshita for past forms."
+          },
+          "examples": [
+            {
+              "jp": "去年ここは静かでした。",
+              "zh": "去年这里很安静。",
+              "en": "It was quiet here last year."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l12_g02_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“以前不方便”是？",
+                "en": "How to say: It was not convenient before?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "前は便利じゃありませんでした。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "前は便利くなかったです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "前は便利ではないです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "前は便利かったです。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "过去肯定用でした，否定用じゃありませんでした。",
+                "en": "Use deshita / ja arimasen deshita for past forms."
+              }
+            },
+            {
+              "id": "l12_g02_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "“上周是休息日”是？",
+                "en": "How to say: It was a day off last week?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "先週は休みでした。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "先週は休みかったです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先週は休みじゃないです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先週は休みくなかったです。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "过去肯定用でした，否定用じゃありませんでした。",
+                "en": "Use deshita / ja arimasen deshita for past forms."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l12_g03",
+          "pattern": "A と B と どちらが 〜ですか",
+          "title": {
+            "zh": "两者比较",
+            "en": "Comparing two items"
+          },
+          "explanation": {
+            "zh": "询问两者中哪一个更……。",
+            "en": "Ask which of two is more ..."
+          },
+          "examples": [
+            {
+              "jp": "電車とバスとどちらが速いですか。",
+              "zh": "电车和公交哪个更快？",
+              "en": "Which is faster, train or bus?"
+            }
+          ],
+          "practice": [
+            {
+              "id": "l12_g03_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "回答“电车更快”是？",
+                "en": "How to answer: The train is faster?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "電車のほうが速いです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "電車がほう速いです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "電車のほうは速いか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "電車よりバスは速いです。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "询问两者中哪一个更……。",
+                "en": "Ask which of two is more ..."
+              }
+            },
+            {
+              "id": "l12_g03_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "比较两国天气，问句应是？",
+                "en": "Which sentence asks comparison between two countries?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "日本と中国とどちらが寒いですか。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "日本は中国は寒いですか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "日本が中国よりどちらですか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "日本と中国が寒いですか。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "询问两者中哪一个更……。",
+                "en": "Ask which of two is more ..."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l12_g04",
+          "pattern": "〜の中で N が 一番 〜です",
+          "title": {
+            "zh": "最高级表达",
+            "en": "Superlative expression"
+          },
+          "explanation": {
+            "zh": "在一个范围里说明最……。",
+            "en": "State the most ... within a group."
+          },
+          "examples": [
+            {
+              "jp": "日本料理の中で寿司が一番好きです。",
+              "zh": "在日本料理中我最喜欢寿司。",
+              "en": "I like sushi the most among Japanese dishes."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l12_g04_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“班里谁最高？”是？",
+                "en": "How to ask: Who is tallest in class?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "クラスでだれが一番背が高いですか。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "クラスにだれが一番高いですか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "クラスはだれが高い一番ですか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "クラスでだれを一番高いですか。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "在一个范围里说明最……。",
+                "en": "State the most ... within a group."
+              }
+            },
+            {
+              "id": "l12_g04_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "“四季中春天最舒服”是？",
+                "en": "How to say: Spring is most pleasant among four seasons?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "四季の中で春が一番気持ちいいです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "四季で春は一番に気持ちです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "四季の中で春を一番気持ちいいです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "四季と春が一番です。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "在一个范围里说明最……。",
+                "en": "State the most ... within a group."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examples",
+      "id": "l12_examples",
+      "title": {
+        "zh": "核心例句",
+        "en": "Core Examples",
+        "ja": "基本例文"
+      },
+      "items": [
+        {
+          "id": "l12_e01",
+          "jp": "きのうの映画は面白かったです。",
+          "zh": "昨天的电影很有趣。",
+          "en": "Yesterday's movie was interesting."
+        },
+        {
+          "id": "l12_e02",
+          "jp": "去年の冬はあまり寒くなかったです。",
+          "zh": "去年的冬天不太冷。",
+          "en": "Last winter was not very cold."
+        },
+        {
+          "id": "l12_e03",
+          "jp": "A店とB店とどちらが安いですか。",
+          "zh": "A店和B店哪家更便宜？",
+          "en": "Which is cheaper, store A or B?"
+        },
+        {
+          "id": "l12_e04",
+          "jp": "この町でどこが一番にぎやかですか。",
+          "zh": "这个城市哪里最热闹？",
+          "en": "Where is the liveliest in this town?"
+        },
+        {
+          "id": "l12_e05",
+          "jp": "日本の季節の中で春が一番好きです。",
+          "zh": "在日本的季节里我最喜欢春天。",
+          "en": "I like spring the most among Japanese seasons."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "l12_quiz",
+      "title": {
+        "zh": "综合测试",
+        "en": "Final Test",
+        "ja": "まとめテスト"
+      },
+      "items": [
+        {
+          "id": "l12_q01",
+          "question": {
+            "zh": "「多い」的意思是？",
+            "en": "What does 多い mean?"
+          },
+          "options": [
+            {
+              "text": {
+                "zh": "多",
+                "en": "many"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "少",
+                "en": "few"
+              }
+            },
+            {
+              "text": {
+                "zh": "暖和",
+                "en": "warm"
+              }
+            },
+            {
+              "text": {
+                "zh": "凉快",
+                "en": "cool"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "「多い」表示「多」。",
+            "en": "多い means many."
+          }
+        },
+        {
+          "id": "l12_q02",
+          "question": {
+            "zh": "哪一句最符合语法「い形容词 かったです／くなかったです」？",
+            "en": "Which sentence best matches pattern \"い形容词 かったです／くなかったです\"?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "昨日は暑かったです。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "去年ここは静かでした。"
+              }
+            },
+            {
+              "text": {
+                "jp": "電車とバスとどちらが速いですか。"
+              }
+            },
+            {
+              "text": {
+                "jp": "日本料理の中で寿司が一番好きです。"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "正确句型是「い形容词 かったです／くなかったです」。",
+            "en": "The correct pattern is \"い形容词 かったです／くなかったです\"."
+          }
+        },
+        {
+          "id": "l12_q03",
+          "question": {
+            "zh": "关于「な形容词／名词 でした／じゃありませんでした」最恰当的是？",
+            "en": "Which usage best fits \"な形容词／名词 でした／じゃありませんでした\"?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "前は便利じゃありませんでした。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "前は便利くなかったです。"
+              }
+            },
+            {
+              "text": {
+                "jp": "前は便利ではないです。"
+              }
+            },
+            {
+              "text": {
+                "jp": "前は便利かったです。"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "过去肯定用でした，否定用じゃありませんでした。",
+            "en": "Use deshita / ja arimasen deshita for past forms."
+          }
+        },
+        {
+          "id": "l12_q04",
+          "question": {
+            "zh": "与「昨天的电影很有趣。」对应的日语句子是？",
+            "en": "Which Japanese sentence matches \"Yesterday's movie was interesting.\"?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "きのうの映画は面白かったです。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "去年の冬はあまり寒くなかったです。"
+              }
+            },
+            {
+              "text": {
+                "jp": "A店とB店とどちらが安いですか。"
+              }
+            },
+            {
+              "text": {
+                "jp": "この町でどこが一番にぎやかですか。"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "对应句子是「きのうの映画は面白かったです。」。",
+            "en": "The matching sentence is \"きのうの映画は面白かったです。\"."
+          }
+        }
+      ]
+    }
   ]
 }

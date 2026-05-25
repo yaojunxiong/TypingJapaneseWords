@@ -3,13 +3,759 @@
   "course": "minna",
   "lessonNo": 13,
   "lessonId": "minna_lesson_13",
-  "title": { "zh": "第13课", "en": "Lesson 13", "ja": "第13課" },
-  "subtitle": { "zh": "想要・目的", "en": "Wanting and purpose", "ja": "希望・目的" },
-  "focus": { "zh": "本课内容待维护。请在后台课程 JSON 维护器中补充词汇、语法、例句和测试题。", "en": "This lesson is being edited. Add vocabulary, grammar, examples, and quiz items in the admin course JSON editor.", "ja": "この課の内容は編集中です。" },
+  "title": {
+    "zh": "第13课",
+    "en": "Lesson 13",
+    "ja": "第13課"
+  },
+  "subtitle": {
+    "zh": "想要与愿望",
+    "en": "Wants and desires",
+    "ja": "欲しい・たい形"
+  },
+  "focus": {
+    "zh": "学习「ほしい」「たいです」表达愿望，并用「〜から」说明原因。",
+    "en": "Learn to express desires with hoshii/tai and give reasons with kara.",
+    "ja": "「ほしい」「たいです」と「〜から」で希望と理由を言います。"
+  },
   "sections": [
-    { "type": "vocab", "id": "l13_vocab", "title": { "zh": "核心词汇", "en": "Core Vocabulary", "ja": "基本語彙" }, "items": [] },
-    { "type": "grammar", "id": "l13_grammar", "title": { "zh": "核心语法", "en": "Core Grammar", "ja": "基本文法" }, "items": [] },
-    { "type": "examples", "id": "l13_examples", "title": { "zh": "核心例句", "en": "Core Examples", "ja": "基本例文" }, "items": [] },
-    { "type": "quiz", "id": "l13_quiz", "title": { "zh": "综合测试", "en": "Final Test", "ja": "まとめテスト" }, "items": [] }
+    {
+      "type": "vocab",
+      "id": "l13_vocab",
+      "title": {
+        "zh": "核心词汇",
+        "en": "Core Vocabulary",
+        "ja": "基本語彙"
+      },
+      "items": [
+        {
+          "id": "l13_v01",
+          "jp": "欲しい",
+          "kana": "ほしい",
+          "zh": "想要",
+          "en": "want (thing)",
+          "tags": [
+            "adj-i"
+          ]
+        },
+        {
+          "id": "l13_v02",
+          "jp": "借りたい",
+          "kana": "かりたい",
+          "zh": "想借",
+          "en": "want to borrow",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l13_v03",
+          "jp": "買いたい",
+          "kana": "かいたい",
+          "zh": "想买",
+          "en": "want to buy",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l13_v04",
+          "jp": "飲みたい",
+          "kana": "のみたい",
+          "zh": "想喝",
+          "en": "want to drink",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l13_v05",
+          "jp": "旅行",
+          "kana": "りょこう",
+          "zh": "旅行",
+          "en": "travel",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l13_v06",
+          "jp": "写真",
+          "kana": "しゃしん",
+          "zh": "照片",
+          "en": "photo",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l13_v07",
+          "jp": "カメラ",
+          "kana": "カメラ",
+          "zh": "相机",
+          "en": "camera",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l13_v08",
+          "jp": "プレゼント",
+          "kana": "プレゼント",
+          "zh": "礼物",
+          "en": "present",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l13_v09",
+          "jp": "時間",
+          "kana": "じかん",
+          "zh": "时间",
+          "en": "time",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l13_v10",
+          "jp": "お金",
+          "kana": "おかね",
+          "zh": "钱",
+          "en": "money",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l13_v11",
+          "jp": "週末",
+          "kana": "しゅうまつ",
+          "zh": "周末",
+          "en": "weekend",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l13_v12",
+          "jp": "海",
+          "kana": "うみ",
+          "zh": "海",
+          "en": "sea",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l13_v13",
+          "jp": "山",
+          "kana": "やま",
+          "zh": "山",
+          "en": "mountain",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l13_v14",
+          "jp": "温泉",
+          "kana": "おんせん",
+          "zh": "温泉",
+          "en": "hot spring",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l13_v15",
+          "jp": "だから",
+          "kana": "だから",
+          "zh": "所以",
+          "en": "therefore",
+          "tags": [
+            "conj"
+          ]
+        },
+        {
+          "id": "l13_v16",
+          "jp": "〜たいです",
+          "kana": "〜たいです",
+          "zh": "想做〜",
+          "en": "want to do~",
+          "tags": [
+            "grammar"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "grammar",
+      "id": "l13_grammar",
+      "title": {
+        "zh": "核心语法",
+        "en": "Core Grammar",
+        "ja": "基本文法"
+      },
+      "items": [
+        {
+          "id": "l13_g01",
+          "pattern": "N が ほしいです",
+          "title": {
+            "zh": "想要某物",
+            "en": "Want a thing"
+          },
+          "explanation": {
+            "zh": "用「が」表示想要的对象。",
+            "en": "Use ga to mark the desired object."
+          },
+          "examples": [
+            {
+              "jp": "新しいカメラがほしいです。",
+              "zh": "我想要一台新相机。",
+              "en": "I want a new camera."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l13_g01_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“我想要时间”是？",
+                "en": "How to say: I want time?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "時間がほしいです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "時間をほしいです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "時間にほしいです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "時間はほしいか。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "用「が」表示想要的对象。",
+                "en": "Use ga to mark the desired object."
+              }
+            },
+            {
+              "id": "l13_g01_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "“她想要礼物”最自然是？",
+                "en": "Most natural: She wants a present?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "彼女はプレゼントがほしいです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "彼女はプレゼントをほしいです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "彼女にプレゼントがほしいです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "彼女はプレゼントほしいですか。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "用「が」表示想要的对象。",
+                "en": "Use ga to mark the desired object."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l13_g02",
+          "pattern": "V ます形 + たいです",
+          "title": {
+            "zh": "想做某事",
+            "en": "Want to do"
+          },
+          "explanation": {
+            "zh": "动词ます形去ます后接たい。",
+            "en": "Attach tai to the verb stem (masu-stem)."
+          },
+          "examples": [
+            {
+              "jp": "日本へ旅行したいです。",
+              "zh": "我想去日本旅行。",
+              "en": "I want to travel to Japan."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l13_g02_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“我想喝咖啡”是？",
+                "en": "How to say: I want to drink coffee?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "コーヒーを飲みたいです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "コーヒーを飲むたいです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "コーヒーが飲みますたいです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "コーヒーに飲みたいです。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "动词ます形去ます后接たい。",
+                "en": "Attach tai to the verb stem (masu-stem)."
+              }
+            },
+            {
+              "id": "l13_g02_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "“想买手机”是？",
+                "en": "How to say: want to buy a phone?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "スマホを買いたいです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "スマホを買いますたいです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "スマホが買いたいですか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "スマホに買いたいです。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "动词ます形去ます后接たい。",
+                "en": "Attach tai to the verb stem (masu-stem)."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l13_g03",
+          "pattern": "どこへ行きたいですか",
+          "title": {
+            "zh": "愿望问句",
+            "en": "Asking desire"
+          },
+          "explanation": {
+            "zh": "询问对方想去哪里、想做什么。",
+            "en": "Ask where/what someone wants to do."
+          },
+          "examples": [
+            {
+              "jp": "週末どこへ行きたいですか。",
+              "zh": "周末你想去哪里？",
+              "en": "Where do you want to go this weekend?"
+            }
+          ],
+          "practice": [
+            {
+              "id": "l13_g03_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“你想吃什么？”是？",
+                "en": "How to ask: What do you want to eat?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "何を食べたいですか。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "何が食べますか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "何を食べるですか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "何で食べたいですか。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "询问对方想去哪里、想做什么。",
+                "en": "Ask where/what someone wants to do."
+              }
+            },
+            {
+              "id": "l13_g03_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "“你想什么时候出发？”是？",
+                "en": "How to ask: When do you want to leave?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "いつ出かけたいですか。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "いつ出かけますたいですか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "いつを出かけたいですか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "いつに出かけですか。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "询问对方想去哪里、想做什么。",
+                "en": "Ask where/what someone wants to do."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l13_g04",
+          "pattern": "〜から、〜",
+          "title": {
+            "zh": "说明理由",
+            "en": "Giving a reason"
+          },
+          "explanation": {
+            "zh": "用「から」说明原因。",
+            "en": "Use kara to state the reason."
+          },
+          "examples": [
+            {
+              "jp": "時間がないですから、行きません。",
+              "zh": "因为没时间，所以不去。",
+              "en": "I won't go because I don't have time."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l13_g04_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“因为很忙，所以不休息”是？",
+                "en": "How to say: Because I am busy, I do not rest?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "忙しいですから、休みません。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "忙しいからです、休みません。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "忙しいをから、休みません。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "忙しいですので、休みませんか。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "用「から」说明原因。",
+                "en": "Use kara to state the reason."
+              }
+            },
+            {
+              "id": "l13_g04_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "哪句是“因为下雨，所以在家”？",
+                "en": "Which means: Because it rains, I stay home?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "雨ですから、うちにいます。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "雨が、うちにいますから。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "雨から、うちでいます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "雨をから、うちにいます。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "用「から」说明原因。",
+                "en": "Use kara to state the reason."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examples",
+      "id": "l13_examples",
+      "title": {
+        "zh": "核心例句",
+        "en": "Core Examples",
+        "ja": "基本例文"
+      },
+      "items": [
+        {
+          "id": "l13_e01",
+          "jp": "私は新しい辞書がほしいです。",
+          "zh": "我想要一本新词典。",
+          "en": "I want a new dictionary."
+        },
+        {
+          "id": "l13_e02",
+          "jp": "週末に海へ行きたいです。",
+          "zh": "周末我想去海边。",
+          "en": "I want to go to the sea this weekend."
+        },
+        {
+          "id": "l13_e03",
+          "jp": "何を食べたいですか。",
+          "zh": "你想吃什么？",
+          "en": "What do you want to eat?"
+        },
+        {
+          "id": "l13_e04",
+          "jp": "お金がありませんから、買いません。",
+          "zh": "因为没有钱，所以不买。",
+          "en": "I will not buy it because I have no money."
+        },
+        {
+          "id": "l13_e05",
+          "jp": "夏休みに温泉へ行きたいです。",
+          "zh": "暑假我想去温泉。",
+          "en": "I want to go to a hot spring during summer vacation."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "l13_quiz",
+      "title": {
+        "zh": "综合测试",
+        "en": "Final Test",
+        "ja": "まとめテスト"
+      },
+      "items": [
+        {
+          "id": "l13_q01",
+          "question": {
+            "zh": "「欲しい」的意思是？",
+            "en": "What does 欲しい mean?"
+          },
+          "options": [
+            {
+              "text": {
+                "zh": "想要",
+                "en": "want (thing)"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "想借",
+                "en": "want to borrow"
+              }
+            },
+            {
+              "text": {
+                "zh": "想买",
+                "en": "want to buy"
+              }
+            },
+            {
+              "text": {
+                "zh": "想喝",
+                "en": "want to drink"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "「欲しい」表示「想要」。",
+            "en": "欲しい means want (thing)."
+          }
+        },
+        {
+          "id": "l13_q02",
+          "question": {
+            "zh": "哪一句最符合语法「N が ほしいです」？",
+            "en": "Which sentence best matches pattern \"N が ほしいです\"?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "新しいカメラがほしいです。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "日本へ旅行したいです。"
+              }
+            },
+            {
+              "text": {
+                "jp": "週末どこへ行きたいですか。"
+              }
+            },
+            {
+              "text": {
+                "jp": "時間がないですから、行きません。"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "正确句型是「N が ほしいです」。",
+            "en": "The correct pattern is \"N が ほしいです\"."
+          }
+        },
+        {
+          "id": "l13_q03",
+          "question": {
+            "zh": "关于「V ます形 + たいです」最恰当的是？",
+            "en": "Which usage best fits \"V ます形 + たいです\"?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "コーヒーを飲みたいです。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "コーヒーを飲むたいです。"
+              }
+            },
+            {
+              "text": {
+                "jp": "コーヒーが飲みますたいです。"
+              }
+            },
+            {
+              "text": {
+                "jp": "コーヒーに飲みたいです。"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "动词ます形去ます后接たい。",
+            "en": "Attach tai to the verb stem (masu-stem)."
+          }
+        },
+        {
+          "id": "l13_q04",
+          "question": {
+            "zh": "与「我想要一本新词典。」对应的日语句子是？",
+            "en": "Which Japanese sentence matches \"I want a new dictionary.\"?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "私は新しい辞書がほしいです。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "週末に海へ行きたいです。"
+              }
+            },
+            {
+              "text": {
+                "jp": "何を食べたいですか。"
+              }
+            },
+            {
+              "text": {
+                "jp": "お金がありませんから、買いません。"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "对应句子是「私は新しい辞書がほしいです。」。",
+            "en": "The matching sentence is \"私は新しい辞書がほしいです。\"."
+          }
+        }
+      ]
+    }
   ]
 }

@@ -3,13 +3,759 @@
   "course": "minna",
   "lessonNo": 14,
   "lessonId": "minna_lesson_14",
-  "title": { "zh": "第14课", "en": "Lesson 14", "ja": "第14課" },
-  "subtitle": { "zh": "て形", "en": "て-form", "ja": "て形" },
-  "focus": { "zh": "本课内容待维护。请在后台课程 JSON 维护器中补充词汇、语法、例句和测试题。", "en": "This lesson is being edited. Add vocabulary, grammar, examples, and quiz items in the admin course JSON editor.", "ja": "この課の内容は編集中です。" },
+  "title": {
+    "zh": "第14课",
+    "en": "Lesson 14",
+    "ja": "第14課"
+  },
+  "subtitle": {
+    "zh": "て形基础",
+    "en": "Te-form basics",
+    "ja": "て形の基本"
+  },
+  "focus": {
+    "zh": "学习动词て形，表达请求、顺序动作与状态连接。",
+    "en": "Learn te-form for requests, action sequence, and sentence connection.",
+    "ja": "動詞て形で依頼、順序、接続を学びます。"
+  },
   "sections": [
-    { "type": "vocab", "id": "l14_vocab", "title": { "zh": "核心词汇", "en": "Core Vocabulary", "ja": "基本語彙" }, "items": [] },
-    { "type": "grammar", "id": "l14_grammar", "title": { "zh": "核心语法", "en": "Core Grammar", "ja": "基本文法" }, "items": [] },
-    { "type": "examples", "id": "l14_examples", "title": { "zh": "核心例句", "en": "Core Examples", "ja": "基本例文" }, "items": [] },
-    { "type": "quiz", "id": "l14_quiz", "title": { "zh": "综合测试", "en": "Final Test", "ja": "まとめテスト" }, "items": [] }
+    {
+      "type": "vocab",
+      "id": "l14_vocab",
+      "title": {
+        "zh": "核心词汇",
+        "en": "Core Vocabulary",
+        "ja": "基本語彙"
+      },
+      "items": [
+        {
+          "id": "l14_v01",
+          "jp": "てください",
+          "kana": "てください",
+          "zh": "请做〜",
+          "en": "please do~",
+          "tags": [
+            "grammar"
+          ]
+        },
+        {
+          "id": "l14_v02",
+          "jp": "待ちます",
+          "kana": "まちます",
+          "zh": "等待",
+          "en": "wait",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l14_v03",
+          "jp": "急ぎます",
+          "kana": "いそぎます",
+          "zh": "着急；赶快",
+          "en": "hurry",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l14_v04",
+          "jp": "持ちます",
+          "kana": "もちます",
+          "zh": "拿",
+          "en": "carry",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l14_v05",
+          "jp": "取ります",
+          "kana": "とります",
+          "zh": "拿取",
+          "en": "take",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l14_v06",
+          "jp": "手伝います",
+          "kana": "てつだいます",
+          "zh": "帮忙",
+          "en": "help",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l14_v07",
+          "jp": "呼びます",
+          "kana": "よびます",
+          "zh": "叫；呼叫",
+          "en": "call",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l14_v08",
+          "jp": "使います",
+          "kana": "つかいます",
+          "zh": "使用",
+          "en": "use",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l14_v09",
+          "jp": "止めます",
+          "kana": "とめます",
+          "zh": "停止",
+          "en": "stop",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l14_v10",
+          "jp": "座ります",
+          "kana": "すわります",
+          "zh": "坐",
+          "en": "sit",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l14_v11",
+          "jp": "立ちます",
+          "kana": "たちます",
+          "zh": "站",
+          "en": "stand",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l14_v12",
+          "jp": "開けます",
+          "kana": "あけます",
+          "zh": "打开",
+          "en": "open",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l14_v13",
+          "jp": "閉めます",
+          "kana": "しめます",
+          "zh": "关上",
+          "en": "close",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l14_v14",
+          "jp": "電気",
+          "kana": "でんき",
+          "zh": "电灯；电",
+          "en": "electricity/light",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l14_v15",
+          "jp": "窓",
+          "kana": "まど",
+          "zh": "窗户",
+          "en": "window",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l14_v16",
+          "jp": "ドア",
+          "kana": "ドア",
+          "zh": "门",
+          "en": "door",
+          "tags": [
+            "noun"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "grammar",
+      "id": "l14_grammar",
+      "title": {
+        "zh": "核心语法",
+        "en": "Core Grammar",
+        "ja": "基本文法"
+      },
+      "items": [
+        {
+          "id": "l14_g01",
+          "pattern": "Vて ください",
+          "title": {
+            "zh": "礼貌请求",
+            "en": "Polite request"
+          },
+          "explanation": {
+            "zh": "请对方做某事。",
+            "en": "Politely request someone to do something."
+          },
+          "examples": [
+            {
+              "jp": "ここに名前を書いてください。",
+              "zh": "请在这里写名字。",
+              "en": "Please write your name here."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l14_g01_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“请等一下”是？",
+                "en": "How to say: Please wait a moment?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "ちょっと待ってください。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "ちょっと待ちください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "ちょっと待つください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "ちょっと待ってくれます。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "请对方做某事。",
+                "en": "Politely request someone to do something."
+              }
+            },
+            {
+              "id": "l14_g01_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "“请开窗”是？",
+                "en": "How to say: Please open the window?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "窓を開けてください。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "窓が開けてください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "窓を開けますください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "窓を開いてください。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "请对方做某事。",
+                "en": "Politely request someone to do something."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l14_g02",
+          "pattern": "Vて、Vます",
+          "title": {
+            "zh": "动作顺序",
+            "en": "Action sequence"
+          },
+          "explanation": {
+            "zh": "表示先后发生的动作。",
+            "en": "Shows actions in sequence."
+          },
+          "examples": [
+            {
+              "jp": "朝ごはんを食べて、学校へ行きます。",
+              "zh": "吃完早饭去学校。",
+              "en": "I eat breakfast and go to school."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l14_g02_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“看书后睡觉”是？",
+                "en": "How to say: read a book and then sleep?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "本を読んで、寝ます。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "本を読んで寝て。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "本を読むて、寝ます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "本を読みに、寝ます。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示先后发生的动作。",
+                "en": "Shows actions in sequence."
+              }
+            },
+            {
+              "id": "l14_g02_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "“洗手后吃饭”是？",
+                "en": "How to say: wash hands and eat?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "手を洗って、ごはんを食べます。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "手を洗いで、ごはんを食べます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "手を洗って、ごはんを食べて。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "手が洗って、ごはんを食べます。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示先后发生的动作。",
+                "en": "Shows actions in sequence."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l14_g03",
+          "pattern": "〜てから、〜",
+          "title": {
+            "zh": "先后关系（之后）",
+            "en": "After doing~"
+          },
+          "explanation": {
+            "zh": "表示做完前项后再做后项。",
+            "en": "Do the second action after finishing the first."
+          },
+          "examples": [
+            {
+              "jp": "仕事が終わってから、買い物します。",
+              "zh": "下班后去买东西。",
+              "en": "I shop after work."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l14_g03_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“回家后学习”是？",
+                "en": "How to say: study after returning home?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "うちへ帰ってから、勉強します。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "うちへ帰るてから、勉強します。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "うちへ帰って、から勉強します。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "うちへ帰ったから、勉強します。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示做完前项后再做后项。",
+                "en": "Do the second action after finishing the first."
+              }
+            },
+            {
+              "id": "l14_g03_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "“吃饭后看电视”是？",
+                "en": "How to say: watch TV after eating?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "ごはんを食べてから、テレビを見ます。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "ごはんを食べから、テレビを見ます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "ごはんを食べて、からテレビを見ます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "ごはんを食べるから、テレビを見ます。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示做完前项后再做后项。",
+                "en": "Do the second action after finishing the first."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l14_g04",
+          "pattern": "Vないで ください",
+          "title": {
+            "zh": "请不要做",
+            "en": "Please do not~"
+          },
+          "explanation": {
+            "zh": "礼貌地禁止对方行为。",
+            "en": "Politely ask someone not to do something."
+          },
+          "examples": [
+            {
+              "jp": "ここで写真を撮らないでください。",
+              "zh": "请不要在这里拍照。",
+              "en": "Please do not take photos here."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l14_g04_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“请不要吸烟”是？",
+                "en": "How to say: Please do not smoke?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "たばこを吸わないでください。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "たばこを吸ってください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "たばこを吸いないでください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "たばこが吸わないでください。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "礼貌地禁止对方行为。",
+                "en": "Politely ask someone not to do something."
+              }
+            },
+            {
+              "id": "l14_g04_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "“请不要迟到”是？",
+                "en": "How to say: Please do not be late?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "遅れないでください。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "遅れてください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "遅れるないでください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "遅いでください。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "礼貌地禁止对方行为。",
+                "en": "Politely ask someone not to do something."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examples",
+      "id": "l14_examples",
+      "title": {
+        "zh": "核心例句",
+        "en": "Core Examples",
+        "ja": "基本例文"
+      },
+      "items": [
+        {
+          "id": "l14_e01",
+          "jp": "ここに座ってください。",
+          "zh": "请坐这里。",
+          "en": "Please sit here."
+        },
+        {
+          "id": "l14_e02",
+          "jp": "窓を開けて、部屋を明るくします。",
+          "zh": "打开窗户让房间变亮。",
+          "en": "Open the window and make the room bright."
+        },
+        {
+          "id": "l14_e03",
+          "jp": "授業が終わってから、先生に質問します。",
+          "zh": "下课后我问老师问题。",
+          "en": "I ask the teacher after class ends."
+        },
+        {
+          "id": "l14_e04",
+          "jp": "ここで食べないでください。",
+          "zh": "请不要在这里吃东西。",
+          "en": "Please do not eat here."
+        },
+        {
+          "id": "l14_e05",
+          "jp": "荷物を持って、駅まで行きます。",
+          "zh": "我拿着行李去车站。",
+          "en": "I carry my luggage and go to the station."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "l14_quiz",
+      "title": {
+        "zh": "综合测试",
+        "en": "Final Test",
+        "ja": "まとめテスト"
+      },
+      "items": [
+        {
+          "id": "l14_q01",
+          "question": {
+            "zh": "「てください」的意思是？",
+            "en": "What does てください mean?"
+          },
+          "options": [
+            {
+              "text": {
+                "zh": "请做〜",
+                "en": "please do~"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "等待",
+                "en": "wait"
+              }
+            },
+            {
+              "text": {
+                "zh": "着急；赶快",
+                "en": "hurry"
+              }
+            },
+            {
+              "text": {
+                "zh": "拿",
+                "en": "carry"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "「てください」表示「请做〜」。",
+            "en": "てください means please do~."
+          }
+        },
+        {
+          "id": "l14_q02",
+          "question": {
+            "zh": "哪一句最符合语法「Vて ください」？",
+            "en": "Which sentence best matches pattern \"Vて ください\"?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "ここに名前を書いてください。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "朝ごはんを食べて、学校へ行きます。"
+              }
+            },
+            {
+              "text": {
+                "jp": "仕事が終わってから、買い物します。"
+              }
+            },
+            {
+              "text": {
+                "jp": "ここで写真を撮らないでください。"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "正确句型是「Vて ください」。",
+            "en": "The correct pattern is \"Vて ください\"."
+          }
+        },
+        {
+          "id": "l14_q03",
+          "question": {
+            "zh": "关于「Vて、Vます」最恰当的是？",
+            "en": "Which usage best fits \"Vて、Vます\"?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "本を読んで、寝ます。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "本を読んで寝て。"
+              }
+            },
+            {
+              "text": {
+                "jp": "本を読むて、寝ます。"
+              }
+            },
+            {
+              "text": {
+                "jp": "本を読みに、寝ます。"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "表示先后发生的动作。",
+            "en": "Shows actions in sequence."
+          }
+        },
+        {
+          "id": "l14_q04",
+          "question": {
+            "zh": "与「请坐这里。」对应的日语句子是？",
+            "en": "Which Japanese sentence matches \"Please sit here.\"?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "ここに座ってください。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "窓を開けて、部屋を明るくします。"
+              }
+            },
+            {
+              "text": {
+                "jp": "授業が終わってから、先生に質問します。"
+              }
+            },
+            {
+              "text": {
+                "jp": "ここで食べないでください。"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "对应句子是「ここに座ってください。」。",
+            "en": "The matching sentence is \"ここに座ってください。\"."
+          }
+        }
+      ]
+    }
   ]
 }
