@@ -14,7 +14,21 @@
 <script src="./minna-app-shell.js?v=22.1"></script>
 <script>
 (function(){
+  var AVATAR_BUCKET='minna-avatars';
   async function initAuth(){try{if(window.MinnaAuth&&MinnaAuth.init)await MinnaAuth.init({lessonId:'minna_profile'})}catch(e){}}
+  async function uploadAvatar(file){
+    if(!file) return '';
+    var c=window.MinnaAuth&&MinnaAuth.client?MinnaAuth.client():null;
+    var u=window.MinnaAuth&&MinnaAuth.getUser?MinnaAuth.getUser():null;
+    if(!c||!u) throw new Error('请先登录再上传头像');
+    var ext=(file.name&&file.name.split('.').pop()?file.name.split('.').pop():'png').toLowerCase();
+    var path='users/'+u.id+'/'+Date.now()+'.'+ext;
+    var up=await c.storage.from(AVATAR_BUCKET).upload(path,file,{upsert:true,contentType:file.type||'image/png'});
+    if(up.error) throw up.error;
+    var pub=c.storage.from(AVATAR_BUCKET).getPublicUrl(path);
+    if(pub&&pub.data&&pub.data.publicUrl) return pub.data.publicUrl;
+    throw new Error('头像上传成功但未返回公开地址');
+  }
   async function render(){
     var p=await MinnaSocial.getProfile();
     if(window.MinnaAppShell)window.MinnaAppShell.injectTop();
@@ -27,7 +41,18 @@
     +'</div></section></main>';
     if(window.MinnaAppShell)window.MinnaAppShell.injectTabs('me');
     document.getElementById('saveBtn').onclick=async function(){
-      var out={nick:document.getElementById('nick').value.trim(),bio:document.getElementById('bio').value.trim(),goal:document.getElementById('goal').value.trim(),avatar_url:document.getElementById('avatarUrl').value.trim()};
+      var avatarFileObj=avatarFile.files&&avatarFile.files[0];
+      var avatarValue=document.getElementById('avatarUrl').value.trim();
+      if(avatarFileObj){
+        try{
+          avatarValue=await uploadAvatar(avatarFileObj);
+          document.getElementById('avatarUrl').value=avatarValue;
+          avatarPrev.src=avatarValue;
+        }catch(e){
+          alert('云端头像上传失败，已保留本地预览：'+(e.message||e));
+        }
+      }
+      var out={nick:document.getElementById('nick').value.trim(),bio:document.getElementById('bio').value.trim(),goal:document.getElementById('goal').value.trim(),avatar_url:avatarValue};
       var r=await MinnaSocial.saveProfile(out); alert(r.cloud?'已保存并同步到云端':'已本地保存（云端暂不可用）');
     };
     var avatarUrl=document.getElementById('avatarUrl'),avatarPrev=document.getElementById('avatarPrev'),avatarFile=document.getElementById('avatarFile');
