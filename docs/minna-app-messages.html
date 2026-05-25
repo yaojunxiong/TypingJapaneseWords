@@ -15,7 +15,7 @@
 <div id="app"></div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="./minna-auth.js?v=20.3"></script>
-<script src="./minna-social.js?v=22.2"></script>
+<script src="./minna-social.js?v=22.3"></script>
 <script src="./minna-app-shell.js?v=22.1"></script>
 <script>
 (function(){
@@ -31,6 +31,7 @@
     if(events.length){events.slice(0,12).forEach(function(e){html+=row(ago(e.created_at),e.title||'动态更新',e.desc||'',null,'✨','');});}
     html+='</section></main>';
     document.getElementById('app').innerHTML=html;
+    if(MinnaSocial.markEventsRead)MinnaSocial.markEventsRead();
     if(window.MinnaAppShell) window.MinnaAppShell.injectTabs('messages');
     document.querySelectorAll('[data-action]').forEach(function(btn){btn.onclick=function(){if(btn.dataset.action==='addFriend')location.href='./minna-app-friends.html?v='+(window.MINNA_VERSION||'22.1');if(btn.dataset.action==='openShop')location.href='./minna-toolbox.html?v='+(window.MINNA_VERSION||'22.1');};});
   }

@@ -3,12 +3,16 @@ window.MinnaSocial = (function(){
   var PKEY='minna.profile.v1';
   var FKEY='minna.friends.v1';
   var EKEY='minna.events.v1';
+  var READKEY='minna.events.read.v1';
   function jread(k,def){try{return JSON.parse(localStorage.getItem(k)||JSON.stringify(def))||def}catch(e){return def}}
   function jwrite(k,v){localStorage.setItem(k,JSON.stringify(v))}
   function authUser(){return window.MinnaAuth&&MinnaAuth.getUser?MinnaAuth.getUser():null}
   function displayName(){var u=authUser();return u&&u.email?u.email.split('@')[0]:'minna learner'}
   function nowIso(){return new Date().toISOString()}
   function logEvent(type,title,desc){var rows=jread(EKEY,[]);rows.unshift({type:type,title:title,desc:desc,created_at:nowIso()});jwrite(EKEY,rows.slice(0,80));}
+  function eventReadAt(){return String(localStorage.getItem(READKEY)||'')}
+  function markEventsRead(){localStorage.setItem(READKEY,nowIso())}
+  function unreadCount(){var t=eventReadAt();if(!t)return jread(EKEY,[]).length;var ts=new Date(t).getTime();return jread(EKEY,[]).filter(function(e){return new Date(e.created_at).getTime()>ts}).length}
   async function db(){return window.MinnaAuth&&MinnaAuth.client?MinnaAuth.client():null}
 
   async function getProfile(){
@@ -131,11 +135,44 @@ window.MinnaSocial = (function(){
     return out;
   }
 
+  function monthlyBadges(){
+    var st=jread('minna.mobile.learning.state.v1',{}), crowns=jread('minna.crowns.v1',{}), mistakes=jread('minna.mistakes.v1',[]);
+    var c=Object.keys(crowns).length, s=Number(st.streak||1), m=(mistakes||[]).length;
+    return [
+      {name:'稳定学习',icon:'🪙',unlocked:s>=3},
+      {name:'连胜达人',icon:'🕊️',unlocked:s>=7},
+      {name:'皇冠收藏',icon:'🌼',unlocked:c>=40},
+      {name:'错题清理',icon:'🦭',unlocked:m===0}
+    ];
+  }
+
+  function achievements(){
+    var st=jread('minna.mobile.learning.state.v1',{}), xp=Number(localStorage.getItem('minna.xp.v1')||0), crowns=jread('minna.crowns.v1',{}), mistakes=jread('minna.mistakes.v1',[]);
+    var c=Object.keys(crowns).length, s=Number(st.streak||1), m=(mistakes||[]).length;
+    return [
+      {title:'连续 3 天',score:300,unlocked:s>=3},
+      {title:'XP 破万',score:100,unlocked:xp>=10000},
+      {title:'皇冠 100+',score:200,unlocked:c>=100},
+      {title:'零错题',score:150,unlocked:m===0}
+    ];
+  }
+
+  async function friendStreakData(){
+    var list=await listFriends();
+    var events=listEvents();
+    var actives={};
+    events.forEach(function(e){
+      if(e.type==='friend'&&/成为好友|添加了好友|通过了好友申请/.test(e.title||'')){actives[String(e.desc||'').slice(0,32)]=true;}
+    });
+    return list.slice(0,5).map(function(n,i){return {name:n,active:i===0||!!actives[n]};});
+  }
+
   function listEvents(){return jread(EKEY,[])}
 
   return {
     getProfile:getProfile,saveProfile:saveProfile,listFriends:listFriends,addFriend:addFriend,removeFriend:removeFriend,
     sendFriendRequest:sendFriendRequest,listIncomingRequests:listIncomingRequests,respondFriendRequest:respondFriendRequest,
-    socialStats:socialStats,listEvents:listEvents,logEvent:logEvent,displayName:displayName
+    socialStats:socialStats,monthlyBadges:monthlyBadges,achievements:achievements,friendStreakData:friendStreakData,
+    listEvents:listEvents,markEventsRead:markEventsRead,unreadCount:unreadCount,logEvent:logEvent,displayName:displayName
   };
 })();

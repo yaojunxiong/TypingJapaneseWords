@@ -5,6 +5,7 @@
   function hearts(){try{return Number(localStorage.getItem('minna.hearts.v1')||5)}catch(e){return 5}}
   function streak(){try{return Number((JSON.parse(localStorage.getItem('minna.mobile.learning.state.v1')||'{}')||{}).streak||1)}catch(e){return 1}}
   function heartText(){var h=Math.max(0,Math.min(5,hearts())),s='';for(var i=0;i<5;i++)s+=i<h?'❤️':'🤍';return s}
+  function unread(){try{return window.MinnaSocial&&window.MinnaSocial.unreadCount?Number(window.MinnaSocial.unreadCount()||0):0}catch(e){return 0}}
   window.MinnaAppShell = {
     version: '1.1',
     top: function(opts){
@@ -29,7 +30,7 @@
         ['messages','💬','消息','./minna-app-messages.html?v='+VERSION],
         ['me','⋯','我的','./minna-app.html?v='+VERSION+'#me']
       ];
-      return '<nav class="bottomTabs">'+tabs.map(function(t){return '<a class="'+(active===t[0]?'active':'')+'" href="'+t[3]+'"><span>'+t[1]+'</span><b>'+t[2]+'</b></a>';}).join('')+'</nav>';
+      return '<nav class="bottomTabs">'+tabs.map(function(t){var n=(t[0]==='messages'?unread():0);var badge=n>0?'<em class="tabBadge">'+(n>99?'99+':n)+'</em>':'';return '<a class="'+(active===t[0]?'active':'')+'" href="'+t[3]+'"><span>'+t[1]+badge+'</span><b>'+t[2]+'</b></a>';}).join('')+'</nav>';
     },
     injectTabs: function(active){
       var old = document.querySelector('.bottomTabs');
