@@ -7,7 +7,29 @@
 <script src="./minna-version.js?v=22.1"></script>
 <link rel="stylesheet" href="./minna-stage.css?v=1.18">
 <style>
-.reviewWrap{padding:24px 24px 120px}.reviewHeader{text-align:center;margin:32px auto 24px}.reviewHeader h1{font-size:38px;margin:10px 0}.reviewHeader p{color:#71717a;font-weight:700}.mistakeCard{background:#fff;border:3px solid #ececec;border-radius:24px;padding:24px;box-shadow:0 4px 0 #ececec;max-width:760px;margin:0 auto 18px}.mistakePrompt{font-size:24px;font-weight:1000;line-height:1.5;margin-bottom:14px}.mistakeMeta{color:#71717a;font-weight:800;margin-bottom:18px}.mistakeAnswer{padding:14px 16px;border-radius:16px;margin-bottom:12px;font-weight:900}.mistakeAnswer.bad{background:#ffe4e6;color:#be123c}.mistakeAnswer.ok{background:#dcfce7;color:#166534}.reviewBtn{width:100%;min-height:62px;border:0;border-radius:18px;background:#58cc02;color:#fff;font-size:22px;font-weight:1000;box-shadow:0 6px 0 #46a302}.reviewBtn:active{transform:translateY(4px);box-shadow:0 2px 0 #46a302}.emptyReview{text-align:center;padding:80px 20px}.emptyReview div{font-size:88px}.emptyReview h1{font-size:36px;margin:12px 0}.emptyReview p{color:#71717a;font-size:18px;font-weight:700}@media(max-width:520px){.reviewWrap{padding:18px 20px 112px}.reviewHeader h1{font-size:34px}.mistakePrompt{font-size:22px}}</style>
+.reviewWrap{padding:24px 24px 120px}
+.reviewHeader{text-align:center;margin:32px auto 20px}
+.reviewHeader h1{font-size:38px;margin:10px 0}
+.reviewHeader p{color:#71717a;font-weight:700}
+.filterBar{max-width:760px;margin:0 auto 16px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.filterBar select{width:100%;min-height:46px;border:2px solid #e5e7eb;border-radius:12px;padding:0 12px;background:#fff;color:#3f3f46;font-weight:700}
+.mistakeCard{background:#fff;border:3px solid #ececec;border-radius:24px;padding:24px;box-shadow:0 4px 0 #ececec;max-width:760px;margin:0 auto 18px}
+.mistakePrompt{font-size:24px;font-weight:1000;line-height:1.5;margin-bottom:14px}
+.mistakeMeta{color:#71717a;font-weight:800;margin-bottom:10px}
+.mistakeAnswer{padding:14px 16px;border-radius:16px;margin-bottom:12px;font-weight:900}
+.mistakeAnswer.bad{background:#ffe4e6;color:#be123c}
+.mistakeAnswer.ok{background:#dcfce7;color:#166534}
+.cardActions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}
+.reviewBtn{min-height:56px;border:0;border-radius:16px;color:#fff;font-size:18px;font-weight:1000;box-shadow:0 6px 0 rgba(0,0,0,.12)}
+.reviewBtn:active{transform:translateY(4px);box-shadow:0 2px 0 rgba(0,0,0,.15)}
+.reviewBtn.primary{background:#58cc02;box-shadow:0 6px 0 #46a302}
+.reviewBtn.retry{background:#1daeea;box-shadow:0 6px 0 #0d8fc5}
+.emptyReview{text-align:center;padding:80px 20px}
+.emptyReview div{font-size:88px}
+.emptyReview h1{font-size:36px;margin:12px 0}
+.emptyReview p{color:#71717a;font-size:18px;font-weight:700}
+@media(max-width:520px){.reviewWrap{padding:18px 20px 112px}.reviewHeader h1{font-size:34px}.mistakePrompt{font-size:22px}.cardActions{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 <div id="app"></div>
@@ -15,12 +37,127 @@
 (function(){
 var KEY='minna.mistakes.v1';
 var VERSION=window.MINNA_VERSION||'22.1';
+
 function read(){try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){return []}}
 function save(v){localStorage.setItem(KEY,JSON.stringify(v))}
-function removeOne(idx){var arr=read();arr.splice(idx,1);save(arr);render()}
 function top(){return '<header class="stageStatus"><a class="stageClose" href="./minna-app.html?v='+VERSION+'">×</a><div>🇯🇵 115</div><div class="fire">🔥 Review</div><div class="gem">💎 Mistakes</div><div class="energy">📝</div></header>'}
-function card(item,idx){return '<section class="mistakeCard"><div class="badge">Lesson '+item.lesson+' · '+item.stage+'</div><div class="mistakePrompt">'+(item.prompt||'')+'</div><div class="mistakeMeta">'+(item.sub||'')+'</div><div class="mistakeAnswer bad">❌ '+(item.picked||'')}</div><div class="mistakeAnswer ok">✅ '+(item.correct||'')+'</div><button class="reviewBtn" data-remove="'+idx+'">已掌握 / Remove</button></section>'}
-function render(){var arr=read();document.getElementById('app').innerHTML=top()+(arr.length?'<main class="reviewWrap"><section class="reviewHeader"><div style="font-size:88px">🔥</div><h1>错题复习</h1><p>共 '+arr.length+' 道需要复习</p></section>'+arr.map(card).join('')+'</main>':'<main class="reviewWrap emptyReview"><div>🎉</div><h1>暂无错题</h1><p>继续保持！</p></main>');document.querySelectorAll('[data-remove]').forEach(function(btn){btn.onclick=function(){removeOne(Number(btn.dataset.remove))}})}
+
+function stageOptions(arr){
+  var set={};
+  arr.forEach(function(x){ if(x.stage) set[x.stage]=1; });
+  return Object.keys(set).sort();
+}
+
+function normalize(arr){
+  return arr.map(function(x,i){
+    return {
+      sourceIndex:i,
+      lesson:Number(x.lesson||1),
+      stage:String(x.stage||'vocab'),
+      prompt:x.prompt||'',
+      sub:x.sub||'',
+      picked:x.picked||'',
+      correct:x.correct||'',
+      at:Number(x.at||0),
+      wrongCount:Number(x.wrongCount||1)
+    };
+  });
+}
+
+function sortSmart(list){
+  return list.slice().sort(function(a,b){
+    if(b.wrongCount!==a.wrongCount) return b.wrongCount-a.wrongCount;
+    return b.at-a.at;
+  });
+}
+
+function retryUrl(item){
+  return './minna-stage.html?lesson='+item.lesson+'&stage='+encodeURIComponent(item.stage)+'&v='+VERSION;
+}
+
+function card(item){
+  return ''
+    +'<section class="mistakeCard">'
+    +'<div class="badge">Lesson '+item.lesson+' · '+item.stage+'</div>'
+    +'<div class="mistakePrompt">'+(item.prompt||'')+'</div>'
+    +'<div class="mistakeMeta">'+(item.sub||'')+'</div>'
+    +'<div class="mistakeAnswer bad">❌ '+(item.picked||'')+'</div>'
+    +'<div class="mistakeAnswer ok">✅ '+(item.correct||'')+'</div>'
+    +'<div class="cardActions">'
+    +'<a class="reviewBtn retry" href="'+retryUrl(item)+'">去重练</a>'
+    +'<button class="reviewBtn primary" data-remove="'+item.sourceIndex+'">已掌握</button>'
+    +'</div>'
+    +'</section>';
+}
+
+function removeBySourceIndex(sourceIndex){
+  var arr=read();
+  if(sourceIndex<0||sourceIndex>=arr.length) return;
+  arr.splice(sourceIndex,1);
+  save(arr);
+  render();
+}
+
+function getFilters(arr){
+  var params=new URLSearchParams(location.hash.replace(/^#/,''));
+  var lesson=params.get('lesson')||'all';
+  var stage=params.get('stage')||'all';
+  if(lesson!=='all'&&!arr.some(function(x){return String(x.lesson)===lesson})) lesson='all';
+  if(stage!=='all'&&!arr.some(function(x){return String(x.stage)===stage})) stage='all';
+  return {lesson:lesson,stage:stage};
+}
+
+function setFilters(lesson,stage){
+  location.hash='lesson='+encodeURIComponent(lesson)+'&stage='+encodeURIComponent(stage);
+}
+
+function filterAndRender(arr){
+  var f=getFilters(arr);
+  var list=arr.filter(function(x){
+    var okLesson=f.lesson==='all'||String(x.lesson)===f.lesson;
+    var okStage=f.stage==='all'||String(x.stage)===f.stage;
+    return okLesson&&okStage;
+  });
+  var sorted=sortSmart(list);
+
+  var lessons=Array.from(new Set(arr.map(function(x){return x.lesson;}))).sort(function(a,b){return a-b;});
+  var stages=stageOptions(arr);
+  var filterUI=''
+    +'<section class="filterBar">'
+    +'<select id="lessonFilter"><option value="all">全部课程</option>'
+    +lessons.map(function(n){return '<option value="'+n+'">Lesson '+n+'</option>';}).join('')
+    +'</select>'
+    +'<select id="stageFilter"><option value="all">全部阶段</option>'
+    +stages.map(function(s){return '<option value="'+s+'">'+s+'</option>';}).join('')
+    +'</select>'
+    +'</section>';
+
+  var html=top()+'<main class="reviewWrap"><section class="reviewHeader"><div style="font-size:88px">🔥</div><h1>错题复习</h1><p>共 '+arr.length+' 道，当前显示 '+sorted.length+' 道</p></section>'+filterUI+(sorted.length?sorted.map(card).join(''):'<section class="emptyReview"><div>🧭</div><h1>当前筛选下暂无错题</h1><p>试试切换课程或阶段。</p></section>')+'</main>';
+
+  document.getElementById('app').innerHTML=html;
+
+  var lessonSel=document.getElementById('lessonFilter');
+  var stageSel=document.getElementById('stageFilter');
+  if(lessonSel) lessonSel.value=f.lesson;
+  if(stageSel) stageSel.value=f.stage;
+  if(lessonSel) lessonSel.onchange=function(){setFilters(lessonSel.value,stageSel?stageSel.value:'all');};
+  if(stageSel) stageSel.onchange=function(){setFilters(lessonSel?lessonSel.value:'all',stageSel.value);};
+
+  document.querySelectorAll('[data-remove]').forEach(function(btn){
+    btn.onclick=function(){removeBySourceIndex(Number(btn.dataset.remove));};
+  });
+}
+
+function render(){
+  var arr=normalize(read());
+  if(!arr.length){
+    document.getElementById('app').innerHTML=top()+'<main class="reviewWrap emptyReview"><div>🎉</div><h1>暂无错题</h1><p>继续保持！</p></main>';
+    return;
+  }
+  filterAndRender(arr);
+}
+
+window.addEventListener('hashchange',render);
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',render);else render();
 })();
 </script>
