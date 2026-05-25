@@ -7,7 +7,7 @@
   var CROWN_KEY = 'minna.crowns.v1';
   var XP_KEY = 'minna.xp.v1';
   var STATE_KEY='minna.mobile.learning.state.v1';
-  var VERSION='1.10';
+  var VERSION = window.MINNA_VERSION || '22.1';
 
   var DATA = {
     1:{zh:{unit:'第 1 阶段，第 1 部分',title:'名词句・自我介绍'},en:{unit:'Stage 1 · Part 1',title:'Noun sentences / self-introduction'}},
@@ -39,7 +39,7 @@
     var crownText = crown ? ' · 👑' : '';
     return '<a class="'+cls.join(' ')+'" href="'+href+'"><div class="nodeInner">'+icon+'</div><div class="nodeLabel">'+t(stage.label)+crownText+(lockText?' · '+lockText:'')+'</div></a>';
   }
-  function tabs(){return '<nav class="bottomTabs"><a href="./minna-app.html?v=21.7"><span>🏠</span><b>学习</b></a><a href="#"><span>🧰</span><b>宝箱</b></a><a class="active" href="./minna-path.html?lesson='+lesson+'&v='+VERSION+'"><span>🌳</span><b>课程</b></a><a href="./minna-favorites.html"><span>💗</span><b>收藏</b></a><a href="./minna-app.html#me"><span>⋯</span><b>我的</b></a></nav>'}
+  function tabs(){return '<nav class="bottomTabs"><a href="./minna-app.html?v='+VERSION+'"><span>🏠</span><b>学习</b></a><a href="./minna-toolbox.html?v='+VERSION+'"><span>🧰</span><b>宝箱</b></a><a class="active" href="./minna-path.html?lesson='+lesson+'&v='+VERSION+'"><span>🌳</span><b>课程</b></a><a href="./minna-favorites.html?v='+VERSION+'"><span>💗</span><b>收藏</b></a><a href="./minna-app.html?v='+VERSION+'#me"><span>⋯</span><b>我的</b></a></nav>'}
   function render(){
     var info = DATA[lesson] || DATA[1];
     var crowns = crownCount();
