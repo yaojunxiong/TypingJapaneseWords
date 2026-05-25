@@ -1,6 +1,7 @@
 // Minna favorites page v20.3.10
 (function(){
   var KEY='minna.vocab.favorites.v1';
+  var VERSION = window.MINNA_VERSION || '22.1';
 
   function read(){
     try{return JSON.parse(localStorage.getItem(KEY)||'[]')||[]}
@@ -37,7 +38,7 @@
         +'<small>'+esc(v.kana||'')+'</small>'
         +'<p>'+esc(v.meaning||'')+'</p>'
         +'<div class="buttons">'
-        +'<a class="primary" href="./minna-lesson-v16.html?n='+Number(v.lessonNo||1)+'&v=20.3.10&mode=preview">打开课程</a>'
+        +'<a class="primary" href="./minna-path.html?lesson='+Number(v.lessonNo||1)+'&v='+VERSION+'">打开课程</a>'
         +'<button class="light removeFavBtn" data-id="'+esc(v.id||'')+'">移除</button>'
         +'</div>'
         +'</article>';

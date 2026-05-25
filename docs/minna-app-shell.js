@@ -1,5 +1,6 @@
 // Shared Minna App Shell v1.1
 (function(){
+  var VERSION = window.MINNA_VERSION || '22.1';
   function xp(){try{return Number(localStorage.getItem('minna.xp.v1')||0)}catch(e){return 0}}
   function hearts(){try{return Number(localStorage.getItem('minna.hearts.v1')||5)}catch(e){return 5}}
   function streak(){try{return Number((JSON.parse(localStorage.getItem('minna.mobile.learning.state.v1')||'{}')||{}).streak||1)}catch(e){return 1}}
@@ -21,11 +22,11 @@
     },
     tabs: function(active){
       var tabs = [
-        ['learn','🏠','学习','./minna-app.html?v=22.0'],
-        ['toolbox','🧰','宝箱','./minna-toolbox.html'],
-        ['lessons','🌳','课程','./minna-app-lessons.html'],
-        ['favorites','💗','收藏','./minna-app-favorites.html'],
-        ['me','⋯','我的','./minna-app.html#me']
+        ['learn','🏠','学习','./minna-app.html?v='+VERSION],
+        ['toolbox','🧰','宝箱','./minna-toolbox.html?v='+VERSION],
+        ['lessons','🌳','课程','./minna-app-lessons.html?v='+VERSION],
+        ['favorites','💗','收藏','./minna-app-favorites.html?v='+VERSION],
+        ['me','⋯','我的','./minna-app.html?v='+VERSION+'#me']
       ];
       return '<nav class="bottomTabs">'+tabs.map(function(t){return '<a class="'+(active===t[0]?'active':'')+'" href="'+t[3]+'"><span>'+t[1]+'</span><b>'+t[2]+'</b></a>';}).join('')+'</nav>';
     },
