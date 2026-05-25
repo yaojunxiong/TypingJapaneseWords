@@ -16,6 +16,8 @@ window.MinnaAuth = (() => {
   let user = null;
   let lessonId = DEFAULT_LESSON_ID;
   let roleInfo = null;
+  let roleUserId = '';
+  let authSubscribed = false;
 
   function ensureClient() {
     if (!window.supabase) {
@@ -41,13 +43,21 @@ window.MinnaAuth = (() => {
   async function init(options = {}) {
     lessonId = options.lessonId || document.body.dataset.lessonId || DEFAULT_LESSON_ID;
     const supa = ensureClient();
-    const { data } = await supa.auth.getUser();
-    user = data && data.user ? data.user : null;
-    supa.auth.onAuthStateChange((_event, session) => {
-      user = session && session.user ? session.user : null;
-      roleInfo = null;
-      window.dispatchEvent(new CustomEvent('minna-auth-changed', { detail: { user } }));
-    });
+    const { data: sessionData } = await supa.auth.getSession();
+    user = sessionData && sessionData.session && sessionData.session.user ? sessionData.session.user : null;
+    if (!user) {
+      const { data } = await supa.auth.getUser();
+      user = data && data.user ? data.user : null;
+    }
+    if (!authSubscribed) {
+      authSubscribed = true;
+      supa.auth.onAuthStateChange((_event, session) => {
+        user = session && session.user ? session.user : null;
+        roleInfo = null;
+        roleUserId = '';
+        window.dispatchEvent(new CustomEvent('minna-auth-changed', { detail: { user } }));
+      });
+    }
     window.dispatchEvent(new CustomEvent('minna-auth-ready', { detail: { user, lessonId } }));
     return { user, lessonId };
   }
@@ -80,11 +90,12 @@ window.MinnaAuth = (() => {
   }
 
   async function loadRole(force) {
-    if (!force && roleInfo) return roleInfo;
+    if (!force && roleInfo && roleUserId === (user && user.id ? user.id : '')) return roleInfo;
     const supa = ensureClient();
     await refreshUser();
     if (!user) {
       roleInfo = roleFromRow(null);
+      roleUserId = '';
       return roleInfo;
     }
     const { data, error } = await supa
@@ -95,9 +106,11 @@ window.MinnaAuth = (() => {
     if (error) {
       console.warn('[MinnaAuth] user role fallback:', error.message || error);
       roleInfo = roleFromRow(null);
+      roleUserId = user.id || '';
       return roleInfo;
     }
     roleInfo = roleFromRow(data);
+    roleUserId = user.id || '';
     return roleInfo;
   }
 
@@ -115,6 +128,8 @@ window.MinnaAuth = (() => {
     const { error } = await supa.auth.signOut();
     if (error) throw error;
     user = null;
+    roleInfo = null;
+    roleUserId = '';
     window.dispatchEvent(new CustomEvent('minna-auth-changed', { detail: { user } }));
   }
 

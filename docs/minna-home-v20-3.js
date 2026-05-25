@@ -63,6 +63,14 @@
   let cloudProgress={};
   const i18n=()=>window.MinnaI18n||null;
   const pick=v=>i18n()?i18n().pick(v):(v&&typeof v==='object'?v.zh||v.en||'':String(v==null?'':v));
+  function debounce(fn,wait){
+    let t=0;
+    return function(){
+      const args=arguments;
+      clearTimeout(t);
+      t=setTimeout(()=>fn.apply(null,args),wait);
+    };
+  }
   function text(key,vars){
     let value=pick(copy[key]);
     if(vars)Object.keys(vars).forEach(k=>{value=String(value).split('{'+k+'}').join(vars[k])});
@@ -149,7 +157,8 @@
     renderGrid();
   }
   function bind(){
-    $('searchBox').oninput=e=>{query=e.target.value;localStorage.setItem('minna_home_v20_query',query);renderGrid()};
+    const onSearch=debounce(v=>{query=v;localStorage.setItem('minna_home_v20_query',query);renderGrid()},120);
+    $('searchBox').oninput=e=>onSearch(e.target.value);
     $('filterBox').onchange=e=>{filter=e.target.value;renderGrid()};
     document.querySelectorAll('[data-filter]').forEach(btn=>{btn.onclick=()=>{filter=btn.dataset.filter;$('filterBox').value=filter;renderGrid()}});
     document.querySelectorAll('[data-track]').forEach(a=>{a.addEventListener('click',()=>localStorage.setItem('minna_home_last_lesson',a.dataset.track))});
