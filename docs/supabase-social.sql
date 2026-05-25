@@ -29,9 +29,18 @@ create table if not exists public.minna_social_friend_requests (
   updated_at timestamptz default now()
 );
 
+create table if not exists public.minna_social_public_profiles (
+  user_id text primary key,
+  nick text,
+  bio text,
+  avatar_url text,
+  updated_at timestamptz default now()
+);
+
 alter table public.minna_social_profiles enable row level security;
 alter table public.minna_social_friends enable row level security;
 alter table public.minna_social_friend_requests enable row level security;
+alter table public.minna_social_public_profiles enable row level security;
 
 do $$ begin
   alter table public.minna_social_friends add column if not exists friend_user_id text;
@@ -70,4 +79,11 @@ do $$ begin
   ) with check (
     auth.uid()::text = from_user_id or lower(coalesce(auth.jwt()->>'email','')) = lower(to_email)
   );
+exception when duplicate_object then null; end $$;
+
+do $$ begin
+  create policy "public_profiles_select_all" on public.minna_social_public_profiles for select using (true);
+exception when duplicate_object then null; end $$;
+do $$ begin
+  create policy "public_profiles_write_own" on public.minna_social_public_profiles for all using (auth.uid()::text = user_id) with check (auth.uid()::text = user_id);
 exception when duplicate_object then null; end $$;

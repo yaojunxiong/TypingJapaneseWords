@@ -34,6 +34,14 @@ window.MinnaSocial = (function(){
       var payload={user_id:u.id,user_email:u.email||'',nick:p.nick||displayName(),bio:p.bio||'',goal:p.goal||'',avatar_url:p.avatar_url||'',updated_at:p.updated_at};
       var r=await s.from('minna_social_profiles').upsert(payload,{onConflict:'user_id'});
       if(r.error) throw r.error;
+      // Safe public card for QR sharing (no private email/role data).
+      await s.from('minna_social_public_profiles').upsert({
+        user_id:u.id,
+        nick:payload.nick||'',
+        bio:payload.bio||'',
+        avatar_url:payload.avatar_url||'',
+        updated_at:payload.updated_at
+      },{onConflict:'user_id'});
       return {cloud:true};
     }catch(e){return {local:true,error:e.message||String(e)}}
   }
