@@ -3,13 +3,691 @@
   "course": "minna",
   "lessonNo": 8,
   "lessonId": "minna_lesson_08",
-  "title": { "zh": "第8课", "en": "Lesson 8", "ja": "第8課" },
-  "subtitle": { "zh": "形容词", "en": "Adjectives", "ja": "形容詞" },
-  "focus": { "zh": "本课内容待维护。请在后台课程 JSON 维护器中补充词汇、语法、例句和测试题。", "en": "This lesson is being edited. Add vocabulary, grammar, examples, and quiz items in the admin course JSON editor.", "ja": "この課の内容は編集中です。" },
+  "title": {
+    "zh": "第8课",
+    "en": "Lesson 8",
+    "ja": "第8課"
+  },
+  "subtitle": {
+    "zh": "形容词",
+    "en": "Adjectives",
+    "ja": "形容詞"
+  },
+  "focus": {
+    "zh": "学习い形容词与な形容词、否定形式，以及「どんな〜」和「どうですか」。",
+    "en": "Learn i-adjectives, na-adjectives, negative forms, and 「どんな〜」「どうですか」.",
+    "ja": "い形容詞・な形容詞、否定、そして「どんな〜」「どうですか」を学びます。"
+  },
   "sections": [
-    { "type": "vocab", "id": "l08_vocab", "title": { "zh": "核心词汇", "en": "Core Vocabulary", "ja": "基本語彙" }, "items": [] },
-    { "type": "grammar", "id": "l08_grammar", "title": { "zh": "核心语法", "en": "Core Grammar", "ja": "基本文法" }, "items": [] },
-    { "type": "examples", "id": "l08_examples", "title": { "zh": "核心例句", "en": "Core Examples", "ja": "基本例文" }, "items": [] },
-    { "type": "quiz", "id": "l08_quiz", "title": { "zh": "综合测试", "en": "Final Test", "ja": "まとめテスト" }, "items": [] }
+    {
+      "type": "vocab",
+      "id": "l08_vocab",
+      "title": {
+        "zh": "核心词汇",
+        "en": "Core Vocabulary",
+        "ja": "基本語彙"
+      },
+      "items": [
+        {
+          "id": "l08_v01",
+          "jp": "おおきい",
+          "kana": "おおきい",
+          "zh": "大的",
+          "en": "big",
+          "tags": [
+            "i-adj"
+          ]
+        },
+        {
+          "id": "l08_v02",
+          "jp": "ちいさい",
+          "kana": "ちいさい",
+          "zh": "小的",
+          "en": "small",
+          "tags": [
+            "i-adj"
+          ]
+        },
+        {
+          "id": "l08_v03",
+          "jp": "あたらしい",
+          "kana": "あたらしい",
+          "zh": "新的",
+          "en": "new",
+          "tags": [
+            "i-adj"
+          ]
+        },
+        {
+          "id": "l08_v04",
+          "jp": "ふるい",
+          "kana": "ふるい",
+          "zh": "旧的",
+          "en": "old",
+          "tags": [
+            "i-adj"
+          ]
+        },
+        {
+          "id": "l08_v05",
+          "jp": "あつい",
+          "kana": "あつい",
+          "zh": "热的",
+          "en": "hot",
+          "tags": [
+            "i-adj"
+          ]
+        },
+        {
+          "id": "l08_v06",
+          "jp": "さむい",
+          "kana": "さむい",
+          "zh": "冷的",
+          "en": "cold",
+          "tags": [
+            "i-adj"
+          ]
+        },
+        {
+          "id": "l08_v07",
+          "jp": "おもしろい",
+          "kana": "おもしろい",
+          "zh": "有趣的",
+          "en": "interesting",
+          "tags": [
+            "i-adj"
+          ]
+        },
+        {
+          "id": "l08_v08",
+          "jp": "いそがしい",
+          "kana": "いそがしい",
+          "zh": "忙的",
+          "en": "busy",
+          "tags": [
+            "i-adj"
+          ]
+        },
+        {
+          "id": "l08_v09",
+          "jp": "きれい",
+          "kana": "きれい",
+          "zh": "漂亮/干净",
+          "en": "beautiful/clean",
+          "tags": [
+            "na-adj"
+          ]
+        },
+        {
+          "id": "l08_v10",
+          "jp": "しずか",
+          "kana": "しずか",
+          "zh": "安静",
+          "en": "quiet",
+          "tags": [
+            "na-adj"
+          ]
+        },
+        {
+          "id": "l08_v11",
+          "jp": "にぎやか",
+          "kana": "にぎやか",
+          "zh": "热闹",
+          "en": "lively",
+          "tags": [
+            "na-adj"
+          ]
+        },
+        {
+          "id": "l08_v12",
+          "jp": "ゆうめい",
+          "kana": "ゆうめい",
+          "zh": "有名",
+          "en": "famous",
+          "tags": [
+            "na-adj"
+          ]
+        },
+        {
+          "id": "l08_v13",
+          "jp": "親切",
+          "kana": "しんせつ",
+          "zh": "热心",
+          "en": "kind",
+          "tags": [
+            "na-adj"
+          ]
+        },
+        {
+          "id": "l08_v14",
+          "jp": "元気",
+          "kana": "げんき",
+          "zh": "有精神",
+          "en": "fine/energetic",
+          "tags": [
+            "na-adj"
+          ]
+        },
+        {
+          "id": "l08_v15",
+          "jp": "どんな",
+          "kana": "どんな",
+          "zh": "什么样的",
+          "en": "what kind of",
+          "tags": [
+            "question"
+          ]
+        },
+        {
+          "id": "l08_v16",
+          "jp": "どう",
+          "kana": "どう",
+          "zh": "怎么样",
+          "en": "how",
+          "tags": [
+            "question"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "grammar",
+      "id": "l08_grammar",
+      "title": {
+        "zh": "核心语法",
+        "en": "Core Grammar",
+        "ja": "基本文法"
+      },
+      "items": [
+        {
+          "id": "l08_g01",
+          "pattern": "い形容词 / な形容词 + です",
+          "title": {
+            "zh": "形容词肯定句",
+            "en": "Adjective affirmative"
+          },
+          "explanation": {
+            "zh": "い形容词直接接です；な形容词词干后接です。",
+            "en": "i-adjectives take 「です」 directly; na-adjectives use stem + 「です」."
+          },
+          "examples": [
+            {
+              "jp": "この 町は にぎやかです。",
+              "zh": "这个城市很热闹。",
+              "en": "This town is lively."
+            }
+          ],
+          "practice": [
+            {
+              "question": {
+                "zh": "哪一个是な形容词句？",
+                "en": "Which is a na-adjective sentence?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "この へやは しずかです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "この へやは しずかいです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この へやは しずかくです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この へやは しずかなです。"
+                  }
+                }
+              ]
+            },
+            {
+              "question": {
+                "zh": "哪一个是い形容词句？",
+                "en": "Which is an i-adjective sentence?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "この 本は おもしろいです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "この 本は おもしろです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この 本は おもしろなです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この 本は おもしろくなです。"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l08_g02",
+          "pattern": "否定：〜くないです / 〜じゃありません",
+          "title": {
+            "zh": "形容词否定",
+            "en": "Adjective negative"
+          },
+          "explanation": {
+            "zh": "い形容词去い+くないです；な形容词用「じゃありません」。",
+            "en": "i-adj: drop 「い」 + 「くないです」; na-adj: 「じゃありません」."
+          },
+          "examples": [
+            {
+              "jp": "この 映画は おもしろくないです。",
+              "zh": "这部电影不好看。",
+              "en": "This movie is not interesting."
+            }
+          ],
+          "practice": [
+            {
+              "question": {
+                "zh": "“不忙”是？",
+                "en": "How to say “not busy”?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "いそがしくないです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "いそがしいじゃありません。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "いそがしじゃありません。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "いそがないです。"
+                  }
+                }
+              ]
+            },
+            {
+              "question": {
+                "zh": "“不安静”是？",
+                "en": "How to say “not quiet”?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "しずかじゃありません。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "しずかくないです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "しずかいです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "しずかありません。"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l08_g03",
+          "pattern": "どんな + 名词",
+          "title": {
+            "zh": "什么样的〜",
+            "en": "What kind of ~"
+          },
+          "explanation": {
+            "zh": "询问名词性质时用「どんな + 名词」。",
+            "en": "Use 「どんな + noun」 to ask characteristics."
+          },
+          "examples": [
+            {
+              "jp": "どんな 町ですか。",
+              "zh": "是怎样的城市？",
+              "en": "What kind of town is it?"
+            }
+          ],
+          "practice": [
+            {
+              "question": {
+                "zh": "“什么样的电影？”是？",
+                "en": "How to say “What kind of movie?”"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "どんな 映画ですか。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "どう 映画ですか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "どこ 映画ですか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "だれ 映画ですか。"
+                  }
+                }
+              ]
+            },
+            {
+              "question": {
+                "zh": "回答“很有趣”是？",
+                "en": "How to answer “very interesting”?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "とても おもしろいです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "とても おもしろです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "とても おもしろなです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "おもしろくないです。"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l08_g04",
+          "pattern": "〜は どうですか",
+          "title": {
+            "zh": "〜怎么样",
+            "en": "How is ~?"
+          },
+          "explanation": {
+            "zh": "询问对事物的印象、评价时用「どうですか」。",
+            "en": "Use 「どうですか」 to ask impressions/opinions."
+          },
+          "examples": [
+            {
+              "jp": "日本の 生活は どうですか。",
+              "zh": "日本生活怎么样？",
+              "en": "How is life in Japan?"
+            }
+          ],
+          "practice": [
+            {
+              "question": {
+                "zh": "问“天气怎么样？”是？",
+                "en": "How to ask “How is the weather?”"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "天気は どうですか。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "天気は どんなですか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "どう 天気ですか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "天気は どこですか。"
+                  }
+                }
+              ]
+            },
+            {
+              "question": {
+                "zh": "回答“很冷”是？",
+                "en": "How to answer “very cold”?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "とても さむいです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "とても さむです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "さむくないです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "さむいじゃありません。"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examples",
+      "id": "l08_examples",
+      "title": {
+        "zh": "核心例句",
+        "en": "Core Examples",
+        "ja": "基本例文"
+      },
+      "items": [
+        {
+          "id": "l08_e01",
+          "jp": "この かばんは おおきいです。",
+          "zh": "这个包很大。",
+          "en": "This bag is big."
+        },
+        {
+          "id": "l08_e02",
+          "jp": "この へやは しずかです。",
+          "zh": "这个房间很安静。",
+          "en": "This room is quiet."
+        },
+        {
+          "id": "l08_e03",
+          "jp": "その レストランは あまり ゆうめいじゃありません。",
+          "zh": "那家餐厅不太有名。",
+          "en": "That restaurant is not very famous."
+        },
+        {
+          "id": "l08_e04",
+          "jp": "どんな 本ですか。おもしろい 本です。",
+          "zh": "是什么样的书？是很有趣的书。",
+          "en": "What kind of book is it? It is an interesting book."
+        },
+        {
+          "id": "l08_e05",
+          "jp": "日本の 生活は どうですか。たのしいです。",
+          "zh": "日本生活怎么样？很开心。",
+          "en": "How is life in Japan? It is enjoyable."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "l08_quiz",
+      "title": {
+        "zh": "综合测试",
+        "en": "Final Test",
+        "ja": "まとめテスト"
+      },
+      "items": [
+        {
+          "id": "l08_q01",
+          "question": {
+            "zh": "“这个城市很安静”是？",
+            "en": "Which means “This city is quiet”?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "この 町は しずかです。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "この 町は しずかいです。"
+              }
+            },
+            {
+              "text": {
+                "jp": "この 町は しずかくです。"
+              }
+            },
+            {
+              "text": {
+                "jp": "この 町は しずかじゃです。"
+              }
+            }
+          ]
+        },
+        {
+          "id": "l08_q02",
+          "question": {
+            "zh": "“不有趣”是？",
+            "en": "Which means “not interesting”?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "おもしろくないです。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "おもしろじゃありません。"
+              }
+            },
+            {
+              "text": {
+                "jp": "おもしろいじゃありません。"
+              }
+            },
+            {
+              "text": {
+                "jp": "おもしろないです。"
+              }
+            }
+          ]
+        },
+        {
+          "id": "l08_q03",
+          "question": {
+            "zh": "问“什么样的学校？”是？",
+            "en": "How to ask “what kind of school”?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "どんな 学校ですか。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "どう 学校ですか。"
+              }
+            },
+            {
+              "text": {
+                "jp": "どこ 学校ですか。"
+              }
+            },
+            {
+              "text": {
+                "jp": "だれ 学校ですか。"
+              }
+            }
+          ]
+        },
+        {
+          "id": "l08_q04",
+          "question": {
+            "zh": "问“日本怎么样？”是？",
+            "en": "How to ask “How is Japan?”"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "日本は どうですか。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "日本は どんなですか。"
+              }
+            },
+            {
+              "text": {
+                "jp": "日本は どこですか。"
+              }
+            },
+            {
+              "text": {
+                "jp": "日本は だれですか。"
+              }
+            }
+          ]
+        }
+      ]
+    }
   ]
 }

@@ -3,13 +3,691 @@
   "course": "minna",
   "lessonNo": 9,
   "lessonId": "minna_lesson_09",
-  "title": { "zh": "第9课", "en": "Lesson 9", "ja": "第9課" },
-  "subtitle": { "zh": "好き・上手", "en": "Likes and skills", "ja": "好き・上手" },
-  "focus": { "zh": "本课内容待维护。请在后台课程 JSON 维护器中补充词汇、语法、例句和测试题。", "en": "This lesson is being edited. Add vocabulary, grammar, examples, and quiz items in the admin course JSON editor.", "ja": "この課の内容は編集中です。" },
+  "title": {
+    "zh": "第9课",
+    "en": "Lesson 9",
+    "ja": "第9課"
+  },
+  "subtitle": {
+    "zh": "好き・上手",
+    "en": "Likes and skills",
+    "ja": "好き・上手"
+  },
+  "focus": {
+    "zh": "学习「好き・嫌い・上手・下手」、能力与理解表达，以及原因「〜から」。",
+    "en": "Learn 「好き・嫌い・上手・下手」, ability/understanding expressions, and reason 「〜から」.",
+    "ja": "「好き・嫌い・上手・下手」、理解表現、理由の「〜から」を学びます。"
+  },
   "sections": [
-    { "type": "vocab", "id": "l09_vocab", "title": { "zh": "核心词汇", "en": "Core Vocabulary", "ja": "基本語彙" }, "items": [] },
-    { "type": "grammar", "id": "l09_grammar", "title": { "zh": "核心语法", "en": "Core Grammar", "ja": "基本文法" }, "items": [] },
-    { "type": "examples", "id": "l09_examples", "title": { "zh": "核心例句", "en": "Core Examples", "ja": "基本例文" }, "items": [] },
-    { "type": "quiz", "id": "l09_quiz", "title": { "zh": "综合测试", "en": "Final Test", "ja": "まとめテスト" }, "items": [] }
+    {
+      "type": "vocab",
+      "id": "l09_vocab",
+      "title": {
+        "zh": "核心词汇",
+        "en": "Core Vocabulary",
+        "ja": "基本語彙"
+      },
+      "items": [
+        {
+          "id": "l09_v01",
+          "jp": "好き",
+          "kana": "すき",
+          "zh": "喜欢",
+          "en": "like",
+          "tags": [
+            "na-adj"
+          ]
+        },
+        {
+          "id": "l09_v02",
+          "jp": "嫌い",
+          "kana": "きらい",
+          "zh": "讨厌",
+          "en": "dislike",
+          "tags": [
+            "na-adj"
+          ]
+        },
+        {
+          "id": "l09_v03",
+          "jp": "上手",
+          "kana": "じょうず",
+          "zh": "擅长",
+          "en": "good at",
+          "tags": [
+            "na-adj"
+          ]
+        },
+        {
+          "id": "l09_v04",
+          "jp": "下手",
+          "kana": "へた",
+          "zh": "不擅长",
+          "en": "poor at",
+          "tags": [
+            "na-adj"
+          ]
+        },
+        {
+          "id": "l09_v05",
+          "jp": "わかります",
+          "kana": "わかります",
+          "zh": "明白/懂",
+          "en": "understand",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l09_v06",
+          "jp": "あります",
+          "kana": "あります",
+          "zh": "有",
+          "en": "have/exist",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l09_v07",
+          "jp": "やきゅう",
+          "kana": "やきゅう",
+          "zh": "棒球",
+          "en": "baseball",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l09_v08",
+          "jp": "サッカー",
+          "kana": "サッカー",
+          "zh": "足球",
+          "en": "soccer",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l09_v09",
+          "jp": "りょうり",
+          "kana": "りょうり",
+          "zh": "料理",
+          "en": "cooking",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l09_v10",
+          "jp": "おんがく",
+          "kana": "おんがく",
+          "zh": "音乐",
+          "en": "music",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l09_v11",
+          "jp": "うた",
+          "kana": "うた",
+          "zh": "歌",
+          "en": "song",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l09_v12",
+          "jp": "じかん",
+          "kana": "じかん",
+          "zh": "时间",
+          "en": "time",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l09_v13",
+          "jp": "どうして",
+          "kana": "どうして",
+          "zh": "为什么",
+          "en": "why",
+          "tags": [
+            "question"
+          ]
+        },
+        {
+          "id": "l09_v14",
+          "jp": "から",
+          "kana": "から",
+          "zh": "因为",
+          "en": "because",
+          "tags": [
+            "grammar"
+          ]
+        },
+        {
+          "id": "l09_v15",
+          "jp": "とても",
+          "kana": "とても",
+          "zh": "非常",
+          "en": "very",
+          "tags": [
+            "adverb"
+          ]
+        },
+        {
+          "id": "l09_v16",
+          "jp": "あまり",
+          "kana": "あまり",
+          "zh": "不太（接否定）",
+          "en": "not very",
+          "tags": [
+            "adverb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "grammar",
+      "id": "l09_grammar",
+      "title": {
+        "zh": "核心语法",
+        "en": "Core Grammar",
+        "ja": "基本文法"
+      },
+      "items": [
+        {
+          "id": "l09_g01",
+          "pattern": "名词が 好きです / 嫌いです",
+          "title": {
+            "zh": "喜欢/不喜欢",
+            "en": "Like / dislike"
+          },
+          "explanation": {
+            "zh": "表达喜好时常用「名词が 好き/嫌いです」。",
+            "en": "Use 「N が 好き/嫌いです」 to express likes/dislikes."
+          },
+          "examples": [
+            {
+              "jp": "わたしは 音楽が 好きです。",
+              "zh": "我喜欢音乐。",
+              "en": "I like music."
+            }
+          ],
+          "practice": [
+            {
+              "question": {
+                "zh": "“我喜欢足球”是？",
+                "en": "How to say “I like soccer”?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "わたしは サッカーが 好きです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "わたしは サッカーを 好きです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "わたしは サッカーに 好きです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "わたしは サッカーで 好きです。"
+                  }
+                }
+              ]
+            },
+            {
+              "question": {
+                "zh": "“不喜欢料理”是？",
+                "en": "How to say “dislike cooking”?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "りょうりが 嫌いです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "りょうりが 下手です。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "りょうりが 好きです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "りょうりを 嫌いです。"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l09_g02",
+          "pattern": "名词が 上手です / 下手です",
+          "title": {
+            "zh": "擅长/不擅长",
+            "en": "Good/poor at"
+          },
+          "explanation": {
+            "zh": "表达技能能力常用「名词が 上手/下手です」。",
+            "en": "Use 「N が 上手/下手です」 for skill levels."
+          },
+          "examples": [
+            {
+              "jp": "田中さんは 日本語が 上手です。",
+              "zh": "田中先生日语很棒。",
+              "en": "Mr. Tanaka is good at Japanese."
+            }
+          ],
+          "practice": [
+            {
+              "question": {
+                "zh": "“我不擅长唱歌”是？",
+                "en": "How to say “I am poor at singing”?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "わたしは うたが 下手です。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "わたしは うたが 嫌いです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "わたしは うたを 下手です。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "わたしは うたに 下手です。"
+                  }
+                }
+              ]
+            },
+            {
+              "question": {
+                "zh": "“她擅长料理”是？",
+                "en": "How to say “She is good at cooking”?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "彼女は りょうりが 上手です。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "彼女は りょうりを 上手です。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "彼女は りょうりで 上手です。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "彼女は りょうりに 上手です。"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l09_g03",
+          "pattern": "名词が わかります / あります",
+          "title": {
+            "zh": "懂〜 / 有〜",
+            "en": "Understand ~ / have ~"
+          },
+          "explanation": {
+            "zh": "能力或理解常用「〜が わかります」。拥有时间等可用「〜が あります」。",
+            "en": "Use 「〜が わかります」 for understanding; 「〜が あります」 for having (e.g., time)."
+          },
+          "examples": [
+            {
+              "jp": "日本語が わかります。時間が あります。",
+              "zh": "我懂日语，也有时间。",
+              "en": "I understand Japanese and I have time."
+            }
+          ],
+          "practice": [
+            {
+              "question": {
+                "zh": "“我懂英语”是？",
+                "en": "How to say “I understand English”?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "英語が わかります。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "英語を わかります。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "英語に わかります。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "英語で わかります。"
+                  }
+                }
+              ]
+            },
+            {
+              "question": {
+                "zh": "“今天有时间”是？",
+                "en": "How to say “I have time today”?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "きょう 時間が あります。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "きょう 時間を あります。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "きょう 時間に あります。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "きょう 時間で あります。"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l09_g04",
+          "pattern": "どうして 〜か。〜から。",
+          "title": {
+            "zh": "为什么〜？因为〜。",
+            "en": "Why ~? Because ~."
+          },
+          "explanation": {
+            "zh": "询问原因用「どうして」。回答可用「〜から」。",
+            "en": "Ask reasons with 「どうして」 and answer with 「〜から」."
+          },
+          "examples": [
+            {
+              "jp": "どうして 日本へ 行きますか。仕事ですから。",
+              "zh": "为什么去日本？因为工作。",
+              "en": "Why are you going to Japan? Because of work."
+            }
+          ],
+          "practice": [
+            {
+              "question": {
+                "zh": "问“为什么喜欢音乐？”是？",
+                "en": "How to ask “Why do you like music?”"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "どうして 音楽が 好きですか。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "なにで 音楽が 好きですか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "どこで 音楽が 好きですか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "だれで 音楽が 好きですか。"
+                  }
+                }
+              ]
+            },
+            {
+              "question": {
+                "zh": "“因为有趣”是？",
+                "en": "How to say “because it is interesting”?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "おもしろいですから。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "おもしろいで。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "おもしろいを。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "おもしろですから。"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examples",
+      "id": "l09_examples",
+      "title": {
+        "zh": "核心例句",
+        "en": "Core Examples",
+        "ja": "基本例文"
+      },
+      "items": [
+        {
+          "id": "l09_e01",
+          "jp": "わたしは 野球が 好きです。",
+          "zh": "我喜欢棒球。",
+          "en": "I like baseball."
+        },
+        {
+          "id": "l09_e02",
+          "jp": "兄は サッカーが 上手です。",
+          "zh": "我哥哥擅长足球。",
+          "en": "My older brother is good at soccer."
+        },
+        {
+          "id": "l09_e03",
+          "jp": "母は 料理が とても 上手です。",
+          "zh": "我妈妈做饭非常好。",
+          "en": "My mother is very good at cooking."
+        },
+        {
+          "id": "l09_e04",
+          "jp": "日本語が わかりますが、話すのは まだ 下手です。",
+          "zh": "我懂日语，但说得还不太好。",
+          "en": "I understand Japanese, but I am still poor at speaking it."
+        },
+        {
+          "id": "l09_e05",
+          "jp": "どうして 勉強しますか。日本で 働きたいですから。",
+          "zh": "为什么学习？因为想在日本工作。",
+          "en": "Why do you study? Because I want to work in Japan."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "l09_quiz",
+      "title": {
+        "zh": "综合测试",
+        "en": "Final Test",
+        "ja": "まとめテスト"
+      },
+      "items": [
+        {
+          "id": "l09_q01",
+          "question": {
+            "zh": "“我喜欢音乐”是？",
+            "en": "Which means “I like music”?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "わたしは 音楽が 好きです。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "わたしは 音楽を 好きです。"
+              }
+            },
+            {
+              "text": {
+                "jp": "わたしは 音楽に 好きです。"
+              }
+            },
+            {
+              "text": {
+                "jp": "わたしは 音楽で 好きです。"
+              }
+            }
+          ]
+        },
+        {
+          "id": "l09_q02",
+          "question": {
+            "zh": "“他不擅长料理”是？",
+            "en": "Which means “He is poor at cooking”?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "彼は 料理が 下手です。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "彼は 料理が 嫌いです。"
+              }
+            },
+            {
+              "text": {
+                "jp": "彼は 料理を 下手です。"
+              }
+            },
+            {
+              "text": {
+                "jp": "彼は 料理に 下手です。"
+              }
+            }
+          ]
+        },
+        {
+          "id": "l09_q03",
+          "question": {
+            "zh": "“我懂中文”是？",
+            "en": "Which means “I understand Chinese”?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "中国語が わかります。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "中国語を わかります。"
+              }
+            },
+            {
+              "text": {
+                "jp": "中国語に わかります。"
+              }
+            },
+            {
+              "text": {
+                "jp": "中国語で わかります。"
+              }
+            }
+          ]
+        },
+        {
+          "id": "l09_q04",
+          "question": {
+            "zh": "“因为很有趣”是？",
+            "en": "Which means “because it is very interesting”?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "とても おもしろいですから。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "とても おもしろいを。"
+              }
+            },
+            {
+              "text": {
+                "jp": "とても おもしろで。"
+              }
+            },
+            {
+              "text": {
+                "jp": "とても おもしろですか。"
+              }
+            }
+          ]
+        }
+      ]
+    }
   ]
 }
