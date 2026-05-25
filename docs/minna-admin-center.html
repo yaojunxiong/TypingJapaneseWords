@@ -16,6 +16,9 @@
     .centerCard p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
     .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
     .pill{display:inline-block;background:#f1f5f9;border:1px solid #dbe2ea;border-radius:999px;padding:3px 10px;font-size:12px}
+    .opsRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .opsBtn{display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:0 12px;border:1px solid #dbe2ea;border-radius:10px;background:#fff;color:#0f172a;font-weight:700;cursor:pointer}
+    .opsStatus{margin-top:10px;color:#475569;font-size:13px;line-height:1.6}
   </style>
 </head>
 <body>
@@ -72,13 +75,53 @@
       </a>
     </div>
   </section>
+  <section class="panel">
+    <h2>社交功能初始化（档案/好友）</h2>
+    <p>用于初始化新版“个人档案 + 好友管理”云端表结构。建议管理员首次上线时执行一次。</p>
+    <div class="opsRow">
+      <button class="opsBtn" id="checkSocialSqlBtn">检查表状态</button>
+      <button class="opsBtn" id="copySocialSqlBtn">复制初始化 SQL</button>
+      <button class="opsBtn" id="openSupabaseBtn">打开 Supabase SQL Editor</button>
+    </div>
+    <div id="socialSqlStatus" class="opsStatus">等待操作。</div>
+  </section>
 </main>
 
 <script>
 (function(){
+  var SUPABASE_SQL_EDITOR_URL='https://supabase.com/dashboard/project/ycjuceortcduakxscfes/sql/new';
   function setRole(text){
     var el=document.getElementById('roleTag');
     if(el)el.textContent=text;
+  }
+  function setSocialStatus(text){
+    var el=document.getElementById('socialSqlStatus');
+    if(el)el.innerHTML=text;
+  }
+  async function checkSocialTables(){
+    setSocialStatus('检测中...');
+    try{
+      var c=window.MinnaAuth&&window.MinnaAuth.client?window.MinnaAuth.client():null;
+      if(!c) throw new Error('Supabase 客户端未就绪，请先登录。');
+      var p=await c.from('minna_social_profiles').select('user_id').limit(1);
+      var f=await c.from('minna_social_friends').select('owner_user_id').limit(1);
+      var okP=!p.error, okF=!f.error;
+      if(okP&&okF){setSocialStatus('✅ 表状态正常：`minna_social_profiles` 与 `minna_social_friends` 可访问。');return;}
+      setSocialStatus('⚠️ 检测到缺失或无权限。建议点击“复制初始化 SQL”并在 Supabase SQL Editor 执行。<br>profiles: '+(p.error?(p.error.message||'error'):'ok')+'<br>friends: '+(f.error?(f.error.message||'error'):'ok'));
+    }catch(e){
+      setSocialStatus('❌ 检测失败：'+(e.message||String(e)));
+    }
+  }
+  async function copySocialSql(){
+    try{
+      var res=await fetch('./supabase-social.sql?v=22.2');
+      if(!res.ok) throw new Error('无法读取 supabase-social.sql');
+      var text=await res.text();
+      await navigator.clipboard.writeText(text);
+      setSocialStatus('✅ 初始化 SQL 已复制。下一步：打开 Supabase SQL Editor，粘贴后执行。');
+    }catch(e){
+      setSocialStatus('❌ 复制失败：'+(e.message||String(e))+'。可直接打开 docs/supabase-social.sql 手动复制。');
+    }
   }
   async function boot(){
     if(!window.MinnaAuth||!window.MinnaAuth.loadRole){setRole('未加载 Auth');return;}
@@ -92,6 +135,12 @@
     }catch(e){
       setRole('身份读取失败');
     }
+    var checkBtn=document.getElementById('checkSocialSqlBtn');
+    var copyBtn=document.getElementById('copySocialSqlBtn');
+    var openBtn=document.getElementById('openSupabaseBtn');
+    if(checkBtn)checkBtn.onclick=checkSocialTables;
+    if(copyBtn)copyBtn.onclick=copySocialSql;
+    if(openBtn)openBtn.onclick=function(){window.open(SUPABASE_SQL_EDITOR_URL,'_blank');};
   }
   boot();
 })();
