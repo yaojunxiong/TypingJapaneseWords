@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>错题复习</title>
+<script src="./minna-version.js?v=22.1"></script>
 <link rel="stylesheet" href="./minna-stage.css?v=1.18">
 <style>
 .reviewWrap{padding:24px 24px 120px}.reviewHeader{text-align:center;margin:32px auto 24px}.reviewHeader h1{font-size:38px;margin:10px 0}.reviewHeader p{color:#71717a;font-weight:700}.mistakeCard{background:#fff;border:3px solid #ececec;border-radius:24px;padding:24px;box-shadow:0 4px 0 #ececec;max-width:760px;margin:0 auto 18px}.mistakePrompt{font-size:24px;font-weight:1000;line-height:1.5;margin-bottom:14px}.mistakeMeta{color:#71717a;font-weight:800;margin-bottom:18px}.mistakeAnswer{padding:14px 16px;border-radius:16px;margin-bottom:12px;font-weight:900}.mistakeAnswer.bad{background:#ffe4e6;color:#be123c}.mistakeAnswer.ok{background:#dcfce7;color:#166534}.reviewBtn{width:100%;min-height:62px;border:0;border-radius:18px;background:#58cc02;color:#fff;font-size:22px;font-weight:1000;box-shadow:0 6px 0 #46a302}.reviewBtn:active{transform:translateY(4px);box-shadow:0 2px 0 #46a302}.emptyReview{text-align:center;padding:80px 20px}.emptyReview div{font-size:88px}.emptyReview h1{font-size:36px;margin:12px 0}.emptyReview p{color:#71717a;font-size:18px;font-weight:700}@media(max-width:520px){.reviewWrap{padding:18px 20px 112px}.reviewHeader h1{font-size:34px}.mistakePrompt{font-size:22px}}</style>
@@ -13,10 +14,11 @@
 <script>
 (function(){
 var KEY='minna.mistakes.v1';
+var VERSION=window.MINNA_VERSION||'22.1';
 function read(){try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){return []}}
 function save(v){localStorage.setItem(KEY,JSON.stringify(v))}
 function removeOne(idx){var arr=read();arr.splice(idx,1);save(arr);render()}
-function top(){return '<header class="stageStatus"><a class="stageClose" href="./minna-app.html?v=21.7">×</a><div>🇯🇵 115</div><div class="fire">🔥 Review</div><div class="gem">💎 Mistakes</div><div class="energy">📝</div></header>'}
+function top(){return '<header class="stageStatus"><a class="stageClose" href="./minna-app.html?v='+VERSION+'">×</a><div>🇯🇵 115</div><div class="fire">🔥 Review</div><div class="gem">💎 Mistakes</div><div class="energy">📝</div></header>'}
 function card(item,idx){return '<section class="mistakeCard"><div class="badge">Lesson '+item.lesson+' · '+item.stage+'</div><div class="mistakePrompt">'+(item.prompt||'')+'</div><div class="mistakeMeta">'+(item.sub||'')+'</div><div class="mistakeAnswer bad">❌ '+(item.picked||'')}</div><div class="mistakeAnswer ok">✅ '+(item.correct||'')+'</div><button class="reviewBtn" data-remove="'+idx+'">已掌握 / Remove</button></section>'}
 function render(){var arr=read();document.getElementById('app').innerHTML=top()+(arr.length?'<main class="reviewWrap"><section class="reviewHeader"><div style="font-size:88px">🔥</div><h1>错题复习</h1><p>共 '+arr.length+' 道需要复习</p></section>'+arr.map(card).join('')+'</main>':'<main class="reviewWrap emptyReview"><div>🎉</div><h1>暂无错题</h1><p>继续保持！</p></main>');document.querySelectorAll('[data-remove]').forEach(function(btn){btn.onclick=function(){removeOne(Number(btn.dataset.remove))}})}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',render);else render();
