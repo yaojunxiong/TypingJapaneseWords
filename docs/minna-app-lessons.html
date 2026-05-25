@@ -22,7 +22,7 @@
   var VERSION=window.MINNA_VERSION||'22.1';
   var roleState={bypassLessonLock:false};
   var S=['vocab','grammar','examples','review'];
-  var L={1:['自我介绍','名词句 · 初次见面'],2:['这个是什么','指示代词 · 基础问答'],3:['这里是哪里','场所 · 存在句'],4:['时间表达','几点 · 星期 · 日期'],5:['移动与交通','去哪里 · 来哪里']};
+  var L={1:['自我介绍','名词句 · 初次见面'],2:['这个是什么','指示代词 · 基础问答'],3:['这里是哪里','场所 · 存在句'],4:['时间表达','几点 · 星期 · 日期'],5:['移动与交通','去哪里 · 来哪里'],6:['动词ます形','日常动作表达'],7:['授受基础','给与接受'],8:['形容词','性质与状态'],9:['喜欢与能力','偏好与擅长'],10:['存在句','有/在表达'],11:['数量表达','助数词入门'],12:['过去与比较','对比表达'],13:['想要与目的','愿望表达'],14:['て形基础','连接与请求'],15:['许可与禁止','规则表达'],16:['连接动作','特征描述'],17:['ない形','义务与不必要'],18:['辞书形','能力与习惯'],19:['た形','经验与变化'],20:['普通形','会话表达'],21:['观点引用','と思います'],22:['定语从句','名词修饰'],23:['条件与时间','とき・と'],24:['授受进阶','帮助表达'],25:['条件句','たら・ても']};
   function j(k,f){try{return JSON.parse(localStorage.getItem(k)||JSON.stringify(f))||f}catch(e){return f}}
   function crowns(n){var c=j('minna.crowns.v1',{});return S.filter(function(s){return c['lesson'+n+'.'+s]}).length}
   function cur(){var st=j('minna.mobile.learning.state.v1',{});return Math.max(1,Number(st.lastLesson||1))}
@@ -30,9 +30,10 @@
     var c=crowns(n),locked=!roleState.bypassLessonLock&&n>cur()&&c===0,done=c>=4,t=L[n]||['第 '+n+' 课','继续学习'];
     return '<a class="card '+(locked?'locked':'')+'" href="'+(locked?'#':'./minna-path.html?lesson='+n+'&v='+VERSION)+'"><div class="num">'+(done?'✓':n)+'</div><div class="info"><h2>第 '+n+' 课 · '+t[0]+'</h2><p>'+t[1]+'</p><div class="meta"><span class="pill '+(done?'done':'')+'">👑 '+c+'/4</span><span class="pill">'+(locked?'未解锁':done?'已完成':'可学习')+'</span></div></div></a>'
   }
+  function cards(max){var out='';for(var i=1;i<=max;i++){out+=card(i)}return out}
   function render(){
     window.MinnaAppShell&&window.MinnaAppShell.injectTop();
-    document.getElementById('app').innerHTML='<main class="page"><section class="hero"><div>🌳</div><h1>课程</h1><p>查看课程进度与 Crown</p></section><section class="list">'+[1,2,3,4,5].map(card).join('')+'</section></main>';
+    document.getElementById('app').innerHTML='<main class="page"><section class="hero"><div>🌳</div><h1>课程</h1><p>查看课程进度与 Crown（1-25）</p></section><section class="list">'+cards(25)+'</section></main>';
     window.MinnaAppShell&&window.MinnaAppShell.injectTabs('lessons');
   }
   async function hydrateRole(){if(!window.MinnaAuth||!window.MinnaAuth.loadRole)return;try{roleState=await window.MinnaAuth.loadRole(true)||roleState}catch(e){}render()}
