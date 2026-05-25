@@ -2,6 +2,7 @@
 (function(){
   const VERSION='20.3.3';
   const REQUEST_TIMEOUT=8000;
+  const MAX_RETRIES=2;
   const CACHE_PREFIX='minna.lesson.json.';
   const CACHE_TTL_MS=1000*60*60*24*7;
 
@@ -18,6 +19,21 @@
   function setStatus(text,ok){
     var el=document.getElementById('loaderStatus');
     if(el){el.textContent=text;el.className=ok?'small cloudOk':'small'}
+  }
+  function sleep(ms){return new Promise(resolve=>setTimeout(resolve,ms))}
+  function injectAuthBadge(role,user){
+    var id='lessonAuthBadge';
+    var el=document.getElementById(id);
+    if(!el){
+      el=document.createElement('div');
+      el.id=id;
+      el.style.cssText='position:fixed;right:10px;bottom:10px;z-index:9999;background:#0f172a;color:#fff;padding:8px 10px;border-radius:10px;font-size:12px;box-shadow:0 8px 24px rgba(15,23,42,.35);max-width:90vw';
+      document.body.appendChild(el);
+    }
+    var email=user&&user.email?user.email:'未登录';
+    var roleText=role&&role.effectiveRole?role.effectiveRole:'normal';
+    var lock=role&&role.bypassLessonLock?'全课开放':'顺序解锁';
+    el.textContent='账号:'+email+' | 角色:'+roleText+' | '+lock;
   }
   function cacheKey(n){return CACHE_PREFIX+pad(n)+'.v'+VERSION}
   function readCache(n){
@@ -64,12 +80,25 @@
             <p><b>User Agent：</b><br>'+htmlEscape(navigator.userAgent)+'</p>\
           </div>\
           <div class="buttons">\
-            <button class="primary" onclick="location.reload()">重新加载</button>\
+            <button class="primary" onclick="window.minnaForceReload()">重新加载（强制刷新）</button>\
+            <button class="light" onclick="window.minnaClearCacheAndReload()">清缓存后重试</button>\
             <a class="light" href="./minna-index.html?v='+VERSION+'">返回首页</a>\
+            <a class="ghost" href="./minna-unlock-diagnose.html">解锁诊断</a>\
           </div>\
         </section>\
       </main>';
   }
+  window.minnaForceReload=function(){
+    try{
+      var q=params();
+      q.set('refresh','1');
+      location.href=location.pathname+'?'+q.toString();
+    }catch(e){location.reload()}
+  };
+  window.minnaClearCacheAndReload=function(){
+    try{localStorage.removeItem(cacheKey(lessonNo()))}catch(e){}
+    window.minnaForceReload();
+  };
   function template(n,reason){
     return {schema:'minna.lesson.v1',course:'minna',lessonNo:n,lessonId:'minna_lesson_'+pad(n),title:{zh:'第'+n+'课',en:'Lesson '+n,ja:'第'+n+'課'},subtitle:{zh:'维护中',en:'Editing',ja:'編集中'},focus:{zh:reason||'维护中'},sections:[]};
   }
@@ -87,10 +116,26 @@
     const controller=new AbortController();
     const timer=setTimeout(()=>controller.abort(),REQUEST_TIMEOUT);
     try{
-      const res=await fetch(path,{cache:'no-store',signal:controller.signal});
-      if(!res.ok){
-        const err=new Error('Lesson JSON not found');
-        err.status=res.status; err.path=path; throw err;
+      var res=null;
+      var lastErr=null;
+      for(var attempt=0;attempt<=MAX_RETRIES;attempt++){
+        try{
+          res=await fetch(path,{cache:'no-store',signal:controller.signal});
+          if(!res.ok){
+            var httpErr=new Error('Lesson JSON not found');
+            httpErr.status=res.status; httpErr.path=path;
+            throw httpErr;
+          }
+          break;
+        }catch(fetchErr){
+          lastErr=fetchErr;
+          if(attempt<MAX_RETRIES){
+            setStatus('网络抖动，正在重试 '+(attempt+1)+'/'+MAX_RETRIES+' ...',false);
+            await sleep(350*(attempt+1));
+            continue;
+          }
+          throw lastErr;
+        }
       }
       const text=await res.text();
       const data=safeJsonParse(text,path);
@@ -121,6 +166,14 @@
   async function start(){
     const n=lessonNo();
     try{
+      if(window.MinnaAuth&&window.MinnaAuth.init&&window.MinnaAuth.loadRole){
+        try{
+          await window.MinnaAuth.init({lessonId:'minna_lesson_'+pad(n)});
+          var role=await window.MinnaAuth.loadRole(true);
+          var user=window.MinnaAuth.getUser?window.MinnaAuth.getUser():null;
+          injectAuthBadge(role,user);
+        }catch(e){}
+      }
       window.MinnaCurrentLessonJson=await loadContent(n);
       setStatus('正在启动播放器...',true);
       await script('./minna-player-v20-3.js?v='+VERSION);

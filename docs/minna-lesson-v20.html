@@ -16,10 +16,11 @@
 (function(){
   var n=Number(new URLSearchParams(location.search).get('n'))||1;
   n=Math.max(1,Math.min(50,n));
-  document.body.dataset.lessonNo=String(n);
-  document.body.dataset.lessonId='minna_lesson_'+String(n).padStart(2,'0');
+  var target='./minna-lesson-v16.html?n='+n+'&v=22.1';
+  var mode=new URLSearchParams(location.search).get('mode');
+  if(mode==='preview')target+='&mode=preview';
+  location.replace(target);
 })();
 </script>
-<script src="./minna-lesson-loader-v17.js?v=20.0"></script>
 </body>
 </html>
