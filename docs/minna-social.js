@@ -185,10 +185,66 @@ window.MinnaSocial = (function(){
 
   function listEvents(){return jread(EKEY,[])}
 
+  async function getThreadIdWithUser(targetUserId,targetTitle){
+    var u=authUser(),s=await db(); if(!u||!s) throw new Error('need_login');
+    var mine=await s.from('minna_chat_participants').select('thread_id').eq('user_id',u.id).limit(500);
+    if(mine.error) throw mine.error;
+    var ids=(mine.data||[]).map(function(x){return x.thread_id});
+    if(ids.length){
+      var theirs=await s.from('minna_chat_participants').select('thread_id').eq('user_id',targetUserId).in('thread_id',ids);
+      if(!theirs.error && (theirs.data||[]).length){ return theirs.data[0].thread_id; }
+    }
+    var th=await s.from('minna_chat_threads').insert({thread_type:'direct',title:targetTitle||'私信',owner_user_id:u.id}).select('id').single();
+    if(th.error) throw th.error;
+    var tid=th.data.id;
+    await s.from('minna_chat_participants').insert([{thread_id:tid,user_id:u.id},{thread_id:tid,user_id:targetUserId}]);
+    return tid;
+  }
+
+  async function createGroup(title,memberUserIds){
+    var u=authUser(),s=await db(); if(!u||!s) throw new Error('need_login');
+    var th=await s.from('minna_chat_threads').insert({thread_type:'group',title:title||'学习群',owner_user_id:u.id}).select('id').single();
+    if(th.error) throw th.error;
+    var tid=th.data.id, uniq={}; uniq[u.id]=1;
+    (memberUserIds||[]).forEach(function(x){if(x)uniq[String(x)]=1;});
+    var rows=Object.keys(uniq).map(function(uid){return {thread_id:tid,user_id:uid};});
+    var ins=await s.from('minna_chat_participants').insert(rows);
+    if(ins.error) throw ins.error;
+    return tid;
+  }
+
+  async function listThreads(){
+    var u=authUser(),s=await db(); if(!u||!s) return [];
+    var p=await s.from('minna_chat_participants').select('thread_id').eq('user_id',u.id).order('joined_at',{ascending:false}).limit(200);
+    if(p.error) throw p.error;
+    var ids=(p.data||[]).map(function(x){return x.thread_id});
+    if(!ids.length) return [];
+    var t=await s.from('minna_chat_threads').select('id,thread_type,title,owner_user_id,created_at').in('id',ids).order('created_at',{ascending:false});
+    if(t.error) throw t.error;
+    return t.data||[];
+  }
+
+  async function listMessages(threadId){
+    var s=await db(); if(!s||!threadId) return [];
+    var m=await s.from('minna_chat_messages').select('id,thread_id,from_user_id,from_email,body,created_at').eq('thread_id',threadId).order('created_at',{ascending:true}).limit(500);
+    if(m.error) throw m.error;
+    return m.data||[];
+  }
+
+  async function sendMessage(threadId,body){
+    var u=authUser(),s=await db(); if(!u||!s) throw new Error('need_login');
+    body=String(body||'').trim(); if(!body) return {ok:false,msg:'empty'};
+    var ins=await s.from('minna_chat_messages').insert({thread_id:threadId,from_user_id:u.id,from_email:u.email||'',body:body});
+    if(ins.error) throw ins.error;
+    logEvent('chat','收到了新消息','你有新的聊天消息');
+    return {ok:true};
+  }
+
   return {
     getProfile:getProfile,saveProfile:saveProfile,listFriends:listFriends,addFriend:addFriend,removeFriend:removeFriend,
     sendFriendRequest:sendFriendRequest,listIncomingRequests:listIncomingRequests,respondFriendRequest:respondFriendRequest,
     socialStats:socialStats,monthlyBadges:monthlyBadges,achievements:achievements,friendStreakData:friendStreakData,
-    listEvents:listEvents,markEventsRead:markEventsRead,unreadCount:unreadCount,logEvent:logEvent,displayName:displayName
+    listEvents:listEvents,markEventsRead:markEventsRead,unreadCount:unreadCount,logEvent:logEvent,displayName:displayName,
+    getThreadIdWithUser:getThreadIdWithUser,createGroup:createGroup,listThreads:listThreads,listMessages:listMessages,sendMessage:sendMessage
   };
 })();

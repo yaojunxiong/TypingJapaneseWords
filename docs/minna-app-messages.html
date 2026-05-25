@@ -15,7 +15,7 @@
 <div id="app"></div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="./minna-auth.js?v=20.3"></script>
-<script src="./minna-social.js?v=22.3"></script>
+<script src="./minna-social.js?v=22.5"></script>
 <script src="./minna-app-shell.js?v=22.1"></script>
 <script>
 (function(){
@@ -27,13 +27,14 @@
     if(window.MinnaAppShell) window.MinnaAppShell.injectTop();
     var html='<main class="page"><section class="head"><h1>消息中心</h1><span class="bell">🔔</span></section><section class="list">';
     html+=row('系统消息','来点小 PK，学习更带劲！','关注好友，随时追踪学习进度。','添加好友','🏃','addFriend');
+    html+=row('即时通讯','用户互发消息与组建群聊','支持私信和群聊实时交流。','打开聊天','💬','openChat');
     html+=row('系统消息','今天太忙没空练？','连胜激冻可以护住你的连胜哦。','前往宝箱','🧊','openShop');
     if(events.length){events.slice(0,12).forEach(function(e){html+=row(ago(e.created_at),e.title||'动态更新',e.desc||'',null,'✨','');});}
     html+='</section></main>';
     document.getElementById('app').innerHTML=html;
     if(MinnaSocial.markEventsRead)MinnaSocial.markEventsRead();
     if(window.MinnaAppShell) window.MinnaAppShell.injectTabs('messages');
-    document.querySelectorAll('[data-action]').forEach(function(btn){btn.onclick=function(){if(btn.dataset.action==='addFriend')location.href='./minna-app-friends.html?v='+(window.MINNA_VERSION||'22.1');if(btn.dataset.action==='openShop')location.href='./minna-toolbox.html?v='+(window.MINNA_VERSION||'22.1');};});
+    document.querySelectorAll('[data-action]').forEach(function(btn){btn.onclick=function(){if(btn.dataset.action==='addFriend')location.href='./minna-app-friends.html?v='+(window.MINNA_VERSION||'22.1');if(btn.dataset.action==='openShop')location.href='./minna-toolbox.html?v='+(window.MINNA_VERSION||'22.1');if(btn.dataset.action==='openChat')location.href='./minna-app-chat.html?v='+(window.MINNA_VERSION||'22.1');};});
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',async function(){await initAuth();render();});else initAuth().then(render);
 })();
