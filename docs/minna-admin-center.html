@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Minna 管理中枢</title>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="./minna-auth.js?v=22.1"></script>
+  <script src="./minna-role.js?v=22.1"></script>
+  <link rel="stylesheet" href="./minna-site.css?v=22.1">
+  <style>
+    .centerGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+    .centerCard{display:block;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;color:var(--ink);box-shadow:0 8px 24px rgba(15,23,42,.06)}
+    .centerCard:hover{text-decoration:none;transform:translateY(-2px);box-shadow:0 14px 32px rgba(15,23,42,.12)}
+    .centerCard h2{margin:0 0 8px;font-size:18px}
+    .centerCard p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+    .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .pill{display:inline-block;background:#f1f5f9;border:1px solid #dbe2ea;border-radius:999px;padding:3px 10px;font-size:12px}
+  </style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap heroGrid">
+    <div class="heroCopy">
+      <div class="heroMeta">
+        <span class="badge">Admin Center</span>
+        <span id="roleTag" class="badge">身份读取中...</span>
+      </div>
+      <h1>管理中枢</h1>
+      <p>集中管理统计数据、课程维护、系统功能检查与诊断入口。</p>
+      <div class="heroActions">
+        <a class="primary" href="./minna-app.html?v=22.1#me">返回我的</a>
+        <a class="ghostHero" href="./minna-app.html?v=22.1">返回首页</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="panel">
+    <h2>管理入口</h2>
+    <div class="centerGrid">
+      <a class="centerCard" href="./minna-admin.html">
+        <h2>📊 统计数据</h2>
+        <p>查看访客记录、排行榜、账号权限状态、进度数据等后台统计。</p>
+        <div class="meta"><span class="pill">访客</span><span class="pill">排行榜</span><span class="pill">角色</span></div>
+      </a>
+      <a class="centerCard" href="./minna-content-audit.html?v=20.3">
+        <h2>🧩 课程维护</h2>
+        <p>课程内容体检、JSON 完整性检查、题目覆盖与结构一致性维护。</p>
+        <div class="meta"><span class="pill">课程体检</span><span class="pill">内容维护</span><span class="pill">结构检查</span></div>
+      </a>
+      <a class="centerCard" href="./minna-site-selftest.html">
+        <h2>🧪 系统功能检查</h2>
+        <p>一键检查新版核心页面可访问性，输出通过/失败与耗时报告。</p>
+        <div class="meta"><span class="pill">链接巡检</span><span class="pill">状态报告</span></div>
+      </a>
+      <a class="centerCard" href="./minna-unlock-diagnose.html">
+        <h2>🔐 解锁诊断</h2>
+        <p>检测账号角色、锁课判定、逐课可进入性，定位权限异常问题。</p>
+        <div class="meta"><span class="pill">角色判定</span><span class="pill">锁课原因</span></div>
+      </a>
+      <a class="centerCard" href="./minna-system-design.html?v=20.3">
+        <h2>📘 系统设计文档</h2>
+        <p>查看当前系统架构、功能模块说明和后续迭代方向。</p>
+        <div class="meta"><span class="pill">架构</span><span class="pill">路线图</span></div>
+      </a>
+      <a class="centerCard" href="./minna-user-manual.html?v=20.3">
+        <h2>📖 使用说明</h2>
+        <p>查看管理员与用户侧的使用手册、流程说明和常见问题处理。</p>
+        <div class="meta"><span class="pill">操作手册</span><span class="pill">FAQ</span></div>
+      </a>
+    </div>
+  </section>
+</main>
+
+<script>
+(function(){
+  function setRole(text){
+    var el=document.getElementById('roleTag');
+    if(el)el.textContent=text;
+  }
+  async function boot(){
+    if(!window.MinnaAuth||!window.MinnaAuth.loadRole){setRole('未加载 Auth');return;}
+    try{
+      await MinnaAuth.init({lessonId:'minna_admin_center'});
+      var role=await MinnaAuth.loadRole(true);
+      var user=MinnaAuth.getUser?MinnaAuth.getUser():null;
+      var email=user&&user.email?user.email:'未登录';
+      var r=role&&role.effectiveRole?role.effectiveRole:'normal';
+      setRole(email+' · '+r+(role&&role.bypassLessonLock?' · 全课开放':' · 顺序解锁'));
+    }catch(e){
+      setRole('身份读取失败');
+    }
+  }
+  boot();
+})();
+</script>
+</body>
+</html>
