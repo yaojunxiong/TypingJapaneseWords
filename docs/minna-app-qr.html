@@ -5,16 +5,18 @@
 <title>二维码名片 | Minna App</title>
 <script src="./minna-version.js?v=22.1"></script>
 <link rel="stylesheet" href="./minna-app.css?v=22.1">
-<style>.page{padding:22px 22px 120px}.card{background:#fff;border:3px solid #ececec;border-radius:20px;padding:16px;text-align:center;box-shadow:0 4px 0 #ececec}.qr{max-width:260px;width:100%;border-radius:12px;border:1px solid #e5e7eb}.btn{min-height:44px;padding:0 14px;border-radius:12px;border:2px solid #d4d4d8;background:#fff;font-weight:900;margin:8px}</style>
+<style>.page{padding:22px 22px 120px}.card{background:#fff;border:3px solid #ececec;border-radius:20px;padding:16px;text-align:center;box-shadow:0 4px 0 #ececec}.qr{max-width:260px;width:100%;border-radius:12px;border:1px solid #e5e7eb}.btn{min-height:44px;padding:0 14px;border-radius:12px;border:2px solid #d4d4d8;background:#fff;font-weight:900;margin:8px}.small{color:#71717a;font-size:13px}</style>
 </head>
 <body><div id="app"></div>
-<script src="./minna-app-shell.js?v=22.1"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="./minna-auth.js?v=20.3"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="./minna-auth.js?v=20.3"></script>
+<script src="./minna-social.js?v=22.2"></script>
+<script src="./minna-app-shell.js?v=22.1"></script>
 <script>
 (function(){
   async function initAuth(){try{if(window.MinnaAuth&&MinnaAuth.init)await MinnaAuth.init({lessonId:'minna_qr'})}catch(e){}}
-  function render(){var u=window.MinnaAuth&&MinnaAuth.getUser?MinnaAuth.getUser():null;var name=u&&u.email?u.email.split('@')[0]:'minna learner';var shareUrl=location.origin+location.pathname.replace('minna-app-qr.html','minna-app-friends.html')+'?from='+encodeURIComponent(name);var qr='https://api.qrserver.com/v1/create-qr-code/?size=320x320&data='+encodeURIComponent(shareUrl);if(window.MinnaAppShell)window.MinnaAppShell.injectTop();document.getElementById('app').innerHTML='<main class="page"><section class="card"><h1>我的二维码名片</h1><p>@'+name+'</p><img class="qr" src="'+qr+'" alt="qr"><div><button class="btn" id="copyBtn">复制邀请链接</button><button class="btn" id="shareBtn">分享</button></div></section></main>';if(window.MinnaAppShell)window.MinnaAppShell.injectTabs('me');
-  document.getElementById('copyBtn').onclick=async function(){try{await navigator.clipboard.writeText(shareUrl);alert('已复制');}catch(e){alert('复制失败，请手动复制：'+shareUrl)}};
-  document.getElementById('shareBtn').onclick=async function(){try{if(navigator.share)await navigator.share({title:'Minna 好友邀请',text:'加我一起学习日语',url:shareUrl});else alert('当前浏览器不支持系统分享，请使用复制链接。')}catch(e){}};
+  async function render(){var p=await MinnaSocial.getProfile();var name=(p.nick||MinnaSocial.displayName());var shareUrl=location.origin+location.pathname.replace('minna-app-qr.html','minna-app-profile.html')+'?u='+encodeURIComponent(name);var qr='https://api.qrserver.com/v1/create-qr-code/?size=320x320&data='+encodeURIComponent(shareUrl);if(window.MinnaAppShell)window.MinnaAppShell.injectTop();document.getElementById('app').innerHTML='<main class="page"><section class="card"><h1>我的二维码名片</h1><p>@'+name+'</p><p class="small">扫码可打开我的学习档案页</p><img class="qr" src="'+qr+'" alt="qr"><div><button class="btn" id="copyBtn">复制邀请链接</button><button class="btn" id="shareBtn">分享</button></div></section></main>';if(window.MinnaAppShell)window.MinnaAppShell.injectTabs('me');
+  document.getElementById('copyBtn').onclick=async function(){try{await navigator.clipboard.writeText(shareUrl);MinnaSocial.logEvent('share','复制了二维码邀请链接',shareUrl);alert('已复制');}catch(e){alert('复制失败，请手动复制：'+shareUrl)}};
+  document.getElementById('shareBtn').onclick=async function(){try{if(navigator.share){await navigator.share({title:'Minna 好友邀请',text:'加我一起学习日语',url:shareUrl});MinnaSocial.logEvent('share','分享了二维码邀请链接',shareUrl);}else alert('当前浏览器不支持系统分享，请使用复制链接。')}catch(e){}};
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',async function(){await initAuth();render();});else initAuth().then(render);
 })();

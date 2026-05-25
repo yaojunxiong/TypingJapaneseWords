@@ -5,29 +5,30 @@
 <title>个人档案 | Minna App</title>
 <script src="./minna-version.js?v=22.1"></script>
 <link rel="stylesheet" href="./minna-app.css?v=22.1">
-<style>
-.page{padding:22px 22px 120px}.card{background:#fff;border:3px solid #ececec;border-radius:20px;padding:16px;box-shadow:0 4px 0 #ececec}.title{font-size:28px;font-weight:1000;margin:0 0 14px}.grid{display:grid;gap:14px}.field label{display:block;font-size:14px;color:#71717a;font-weight:900;margin:0 0 6px}.field input,.field textarea{width:100%;border:2px solid #e5e7eb;border-radius:12px;padding:10px 12px;font-size:16px}.field textarea{min-height:84px;resize:vertical}.row{display:flex;gap:10px}.btn{min-height:44px;padding:0 14px;border-radius:12px;border:2px solid #d4d4d8;background:#fff;font-weight:900}.btn.primary{background:#58cc02;border-color:#46a302;color:#fff}
-</style>
+<style>.page{padding:22px 22px 120px}.card{background:#fff;border:3px solid #ececec;border-radius:20px;padding:16px;box-shadow:0 4px 0 #ececec}.title{font-size:28px;font-weight:1000;margin:0 0 14px}.grid{display:grid;gap:14px}.field label{display:block;font-size:14px;color:#71717a;font-weight:900;margin:0 0 6px}.field input,.field textarea{width:100%;border:2px solid #e5e7eb;border-radius:12px;padding:10px 12px;font-size:16px}.field textarea{min-height:84px;resize:vertical}.row{display:flex;gap:10px}.btn{min-height:44px;padding:0 14px;border-radius:12px;border:2px solid #d4d4d8;background:#fff;font-weight:900}.btn.primary{background:#58cc02;border-color:#46a302;color:#fff}.small{color:#71717a;font-size:13px}</style>
 </head>
 <body><div id="app"></div>
-<script src="./minna-store.js?v=22.1"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="./minna-auth.js?v=20.3"></script>
+<script src="./minna-social.js?v=22.2"></script>
 <script src="./minna-app-shell.js?v=22.1"></script>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="./minna-auth.js?v=20.3"></script>
 <script>
 (function(){
-  var KEY='minna.profile.v1';
-  function read(){try{return JSON.parse(localStorage.getItem(KEY)||'{}')||{}}catch(e){return {}}}
-  function save(v){localStorage.setItem(KEY,JSON.stringify(v||{}))}
-  function userName(){var u=window.MinnaAuth&&MinnaAuth.getUser?MinnaAuth.getUser():null;return u&&u.email?u.email.split('@')[0]:'minna learner'}
   async function initAuth(){try{if(window.MinnaAuth&&MinnaAuth.init)await MinnaAuth.init({lessonId:'minna_profile'})}catch(e){}}
-  function render(){var p=read();if(window.MinnaAppShell)window.MinnaAppShell.injectTop();document.getElementById('app').innerHTML='<main class="page"><section class="card"><h1 class="title">个人档案</h1><div class="grid">'
-    +'<div class="field"><label>昵称</label><input id="nick" value="'+(p.nick||userName()).replace(/"/g,'&quot;')+'"></div>'
-    +'<div class="field"><label>个人签名</label><textarea id="bio">'+(p.bio||'').replace(/</g,'&lt;')+'</textarea></div>'
-    +'<div class="field"><label>学习目标</label><input id="goal" value="'+(p.goal||'完成第50课').replace(/"/g,'&quot;')+'"></div>'
+  async function render(){
+    var p=await MinnaSocial.getProfile();
+    if(window.MinnaAppShell)window.MinnaAppShell.injectTop();
+    document.getElementById('app').innerHTML='<main class="page"><section class="card"><h1 class="title">个人档案</h1><p class="small">Google 登录时优先云端同步，离线时自动本地保存。</p><div class="grid">'
+    +'<div class="field"><label>昵称</label><input id="nick" value="'+String(p.nick||MinnaSocial.displayName()).replace(/"/g,'&quot;')+'"></div>'
+    +'<div class="field"><label>个人签名</label><textarea id="bio">'+String(p.bio||'').replace(/</g,'&lt;')+'</textarea></div>'
+    +'<div class="field"><label>学习目标</label><input id="goal" value="'+String(p.goal||'完成第50课').replace(/"/g,'&quot;')+'"></div>'
     +'<div class="row"><button class="btn primary" id="saveBtn">保存</button><button class="btn" id="toFriends">好友管理</button></div>'
     +'</div></section></main>';
     if(window.MinnaAppShell)window.MinnaAppShell.injectTabs('me');
-    document.getElementById('saveBtn').onclick=function(){save({nick:document.getElementById('nick').value.trim(),bio:document.getElementById('bio').value.trim(),goal:document.getElementById('goal').value.trim()});alert('已保存档案');};
+    document.getElementById('saveBtn').onclick=async function(){
+      var out={nick:document.getElementById('nick').value.trim(),bio:document.getElementById('bio').value.trim(),goal:document.getElementById('goal').value.trim()};
+      var r=await MinnaSocial.saveProfile(out); alert(r.cloud?'已保存并同步到云端':'已本地保存（云端暂不可用）');
+    };
     document.getElementById('toFriends').onclick=function(){location.href='./minna-app-friends.html?v='+(window.MINNA_VERSION||'22.1');};
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',async function(){await initAuth();render();});else initAuth().then(render);
