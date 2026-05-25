@@ -54,15 +54,16 @@ window.MinnaAuth = (() => {
     const rawRole = row && row.role ? String(row.role) : 'normal';
     const vipUntil = row && row.vip_until ? String(row.vip_until) : '';
     const vipActive = rawRole === 'vip' && (!vipUntil || Date.parse(vipUntil) > now);
-    const effectiveRole = rawRole === 'admin' ? 'admin' : vipActive ? 'vip' : 'normal';
+    const memberActive = rawRole === 'member';
+    const effectiveRole = rawRole === 'admin' ? 'admin' : memberActive ? 'member' : vipActive ? 'vip' : 'normal';
     return {
       role: rawRole,
       effectiveRole,
       vip_until: vipUntil,
       email: row && row.email ? row.email : userEmail(),
       isAdmin: effectiveRole === 'admin',
-      isVip: effectiveRole === 'vip',
-      bypassLessonLock: effectiveRole === 'admin' || effectiveRole === 'vip'
+      isVip: effectiveRole === 'vip' || effectiveRole === 'member',
+      bypassLessonLock: effectiveRole === 'admin' || effectiveRole === 'vip' || effectiveRole === 'member'
     };
   }
 

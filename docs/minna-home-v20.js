@@ -20,6 +20,7 @@
     records:{zh:'有记录',en:'With Records'},
     total:{zh:'课程总数',en:'Total Lessons'},
     roleNormal:{zh:'普通用户',en:'Standard'},
+    roleMember:{zh:'会员',en:'Member'},
     roleVip:{zh:'VIP 会员',en:'VIP'},
     roleAdmin:{zh:'管理员',en:'Admin'},
     roleLoading:{zh:'身份读取中',en:'Checking Role'},
@@ -149,6 +150,7 @@
   function roleLabel(){
     if(roleState.loading)return text('roleLoading');
     if(roleState.effectiveRole==='admin')return text('roleAdmin');
+    if(roleState.effectiveRole==='member')return text('roleMember');
     if(roleState.effectiveRole==='vip')return text('roleVip');
     return text('roleNormal');
   }

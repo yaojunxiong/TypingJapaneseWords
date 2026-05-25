@@ -17,15 +17,16 @@
     var raw=row&&row.role?String(row.role):'normal';
     var vipUntil=row&&row.vip_until?String(row.vip_until):'';
     var vipActive=raw==='vip'&&(!vipUntil||Date.parse(vipUntil)>now);
-    var effective=raw==='admin'?'admin':vipActive?'vip':'normal';
+    var memberActive=raw==='member';
+    var effective=raw==='admin'?'admin':memberActive?'member':vipActive?'vip':'normal';
     return {
       role:raw,
       effectiveRole:effective,
       vip_until:vipUntil,
       email:row&&row.email?row.email:(user&&user.email)||'',
       isAdmin:effective==='admin',
-      isVip:effective==='vip',
-      bypassLessonLock:effective==='admin'||effective==='vip'
+      isVip:effective==='vip'||effective==='member',
+      bypassLessonLock:effective==='admin'||effective==='vip'||effective==='member'
     };
   }
   async function loadRole(force){
