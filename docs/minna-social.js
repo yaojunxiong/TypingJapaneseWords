@@ -100,19 +100,26 @@ window.MinnaSocial = (function(){
     try{
       var u=authUser(),s=await db();
       if(!u||!s||!u.email) return [];
-      var r=await s.from('minna_social_friend_requests').select('id,from_user_id,from_email,to_email,status,created_at').eq('to_email',String(u.email).toLowerCase()).eq('status','pending').order('created_at',{ascending:false}).limit(200);
-      if(r.error) throw r.error;
-      return r.data||[];
+      var email=String(u.email).toLowerCase();
+      var byEmail=await s.from('minna_social_friend_requests').select('id,from_user_id,from_email,to_email,to_user_id,status,created_at').eq('to_email',email).eq('status','pending').order('created_at',{ascending:false}).limit(200);
+      var byUid=await s.from('minna_social_friend_requests').select('id,from_user_id,from_email,to_email,to_user_id,status,created_at').eq('to_user_id',u.id).eq('status','pending').order('created_at',{ascending:false}).limit(200);
+      if(byEmail.error&&byUid.error) throw (byEmail.error||byUid.error);
+      var map={},rows=[];
+      (byEmail.data||[]).concat(byUid.data||[]).forEach(function(x){if(!map[x.id]){map[x.id]=1;rows.push(x)}});
+      rows.sort(function(a,b){return new Date(b.created_at)-new Date(a.created_at)});
+      return rows;
     }catch(e){return []}
   }
 
   async function respondFriendRequest(id,approve){
     try{
       var u=authUser(),s=await db(); if(!u||!s||!u.email) return {ok:false,msg:'need_login'};
-      var req=await s.from('minna_social_friend_requests').select('id,from_user_id,from_email,to_email,status').eq('id',id).maybeSingle();
+      var req=await s.from('minna_social_friend_requests').select('id,from_user_id,from_email,to_email,to_user_id,status').eq('id',id).maybeSingle();
       if(req.error) throw req.error;
       if(!req.data||req.data.status!=='pending') return {ok:false,msg:'not_pending'};
-      if(String(req.data.to_email||'').toLowerCase()!==String(u.email||'').toLowerCase()) return {ok:false,msg:'forbidden'};
+      var canByEmail=String(req.data.to_email||'').toLowerCase()===String(u.email||'').toLowerCase();
+      var canByUid=String(req.data.to_user_id||'')===String(u.id||'');
+      if(!canByEmail&&!canByUid) return {ok:false,msg:'forbidden'};
       var newStatus=approve?'accepted':'rejected';
       var up=await s.from('minna_social_friend_requests').update({status:newStatus,updated_at:nowIso()}).eq('id',id);
       if(up.error) throw up.error;
@@ -137,8 +144,9 @@ window.MinnaSocial = (function(){
       var u=authUser(),s=await db(); if(!u||!s||!u.email) return out;
       var f1=await s.from('minna_social_friends').select('owner_user_id',{count:'exact',head:true}).eq('owner_user_id',u.id);
       var f2=await s.from('minna_social_friends').select('owner_user_id',{count:'exact',head:true}).eq('friend_user_id',u.id);
-      var p=await s.from('minna_social_friend_requests').select('id',{count:'exact',head:true}).eq('to_email',String(u.email).toLowerCase()).eq('status','pending');
-      out.following=f1.count||0; out.followers=f2.count||0; out.pending=p.count||0;
+      var p1=await s.from('minna_social_friend_requests').select('id',{count:'exact',head:true}).eq('to_email',String(u.email).toLowerCase()).eq('status','pending');
+      var p2=await s.from('minna_social_friend_requests').select('id',{count:'exact',head:true}).eq('to_user_id',u.id).eq('status','pending');
+      out.following=f1.count||0; out.followers=f2.count||0; out.pending=(p1.count||0)+(p2.count||0);
     }catch(e){}
     return out;
   }
