@@ -29,7 +29,7 @@
     if(window.MinnaAppShell) window.MinnaAppShell.injectTabs('messages');
     document.querySelectorAll('[data-action]').forEach(function(btn){
       btn.onclick=function(){
-        if(btn.dataset.action==='addFriend'){ alert('好友入口已创建，后续可接入搜索/邀请。'); }
+        if(btn.dataset.action==='addFriend'){ location.href='./minna-app-friends.html?v='+(window.MINNA_VERSION||'22.1'); }
         if(btn.dataset.action==='openShop'){ location.href='./minna-toolbox.html?v='+(window.MINNA_VERSION||'22.1'); }
       };
     });

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>好友管理 | Minna App</title>
+<script src="./minna-version.js?v=22.1"></script>
+<link rel="stylesheet" href="./minna-app.css?v=22.1">
+<style>.page{padding:22px 22px 120px}.card{background:#fff;border:3px solid #ececec;border-radius:20px;padding:16px;box-shadow:0 4px 0 #ececec}.title{font-size:28px;font-weight:1000;margin:0 0 12px}.row{display:flex;gap:8px}.row input{flex:1;border:2px solid #e5e7eb;border-radius:12px;padding:10px}.btn{min-height:44px;padding:0 14px;border-radius:12px;border:2px solid #d4d4d8;background:#fff;font-weight:900}.item{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #f1f5f9}.small{color:#71717a;font-size:13px}</style>
+</head>
+<body><div id="app"></div>
+<script src="./minna-app-shell.js?v=22.1"></script>
+<script>
+(function(){
+  var KEY='minna.friends.v1';
+  function read(){try{return JSON.parse(localStorage.getItem(KEY)||'[]')||[]}catch(e){return []}}
+  function write(v){localStorage.setItem(KEY,JSON.stringify(v||[]))}
+  function esc(s){return String(s||'').replace(/[&<>"]/g,function(c){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]})}
+  function render(){var list=read();if(window.MinnaAppShell)window.MinnaAppShell.injectTop();document.getElementById('app').innerHTML='<main class="page"><section class="card"><h1 class="title">好友管理</h1><div class="row"><input id="friendInput" placeholder="输入好友昵称或邮箱"><button class="btn" id="addBtn">添加</button></div><p class="small">当前好友：'+list.length+' 人</p><div id="list">'+(list.length?list.map(function(n,i){return '<div class="item"><span>'+esc(n)+'</span><button class="btn" data-del="'+i+'">删除</button></div>'}).join(''):'<p class="small">还没有好友，先添加一个吧。</p>')+'</div><div class="row" style="margin-top:10px"><button class="btn" id="openQr">我的二维码名片</button></div></section></main>';
+  if(window.MinnaAppShell)window.MinnaAppShell.injectTabs('me');
+  document.getElementById('addBtn').onclick=function(){var v=document.getElementById('friendInput').value.trim();if(!v)return;var l=read();if(l.indexOf(v)>=0){alert('已存在该好友');return;}l.push(v);write(l);render();};
+  document.querySelectorAll('[data-del]').forEach(function(btn){btn.onclick=function(){var l=read();l.splice(Number(btn.dataset.del),1);write(l);render();};});
+  document.getElementById('openQr').onclick=function(){location.href='./minna-app-qr.html?v='+(window.MINNA_VERSION||'22.1');};
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',render);else render();
+})();
+</script><script src="./minna-sw-register.js?v=22.1"></script></body></html>
