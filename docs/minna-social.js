@@ -278,6 +278,13 @@ window.MinnaSocial = (function(){
     return {ok:true};
   }
 
+  async function deleteMyMessage(messageId){
+    var u=authUser(),s=await db(); if(!u||!s) throw new Error('need_login');
+    var del=await s.from('minna_chat_messages').delete().eq('id',messageId).eq('from_user_id',u.id);
+    if(del.error) throw del.error;
+    return {ok:true};
+  }
+
   async function recentChatPreviews(limit){
     var u=authUser(),s=await db(); if(!u||!s) return [];
     var p=await s.from('minna_chat_participants').select('thread_id').eq('user_id',u.id).limit(200);
@@ -311,6 +318,7 @@ window.MinnaSocial = (function(){
     listEvents:listEvents,markEventsRead:markEventsRead,unreadCount:unreadCount,logEvent:logEvent,displayName:displayName,
     getThreadIdWithUser:getThreadIdWithUser,createGroup:createGroup,renameThread:renameThread,listThreads:listThreads,listMessages:listMessages,sendMessage:sendMessage,
     listParticipants:listParticipants,addGroupMembers:addGroupMembers,leaveThread:leaveThread,recentChatPreviews:recentChatPreviews,
+    deleteMyMessage:deleteMyMessage,
     markThreadRead:markThreadRead,threadReadAt:threadReadAt,threadUnreadCounts:threadUnreadCounts
   };
 })();

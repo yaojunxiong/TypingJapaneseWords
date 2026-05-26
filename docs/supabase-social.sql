@@ -158,3 +158,8 @@ do $$ begin
     from_user_id=auth.uid()::text and exists(select 1 from public.minna_chat_participants p where p.thread_id=minna_chat_messages.thread_id and p.user_id=auth.uid()::text)
   );
 exception when duplicate_object then null; end $$;
+do $$ begin
+  create policy "chat_messages_delete_sender" on public.minna_chat_messages for delete using (
+    from_user_id=auth.uid()::text
+  );
+exception when duplicate_object then null; end $$;

@@ -56,9 +56,11 @@
       var q=(document.getElementById('searchMsg')&&document.getElementById('searchMsg').value||'').trim().toLowerCase();
       if(q)rows=rows.filter(function(m){return String(m.body||'').toLowerCase().indexOf(q)>=0||String(m.from_email||m.from_user_id||'').toLowerCase().indexOf(q)>=0;});
       document.getElementById('threadMeta').textContent='当前会话 #'+tid+' · 成员 '+people.length+' 人';
-      document.getElementById('msgs').innerHTML=rows.map(function(m){return '<div class="msg"><b>'+esc((m.from_email||m.from_user_id||'用户'))+'</b>：'+esc(m.body)+' <span class="small">'+esc(m.created_at)+'</span></div>';}).join('')||'<p class="small">暂无消息</p>';
+      var me=myUid();
+      document.getElementById('msgs').innerHTML=rows.map(function(m){var mine=String(m.from_user_id||'')===String(me||'');return '<div class="msg"><b>'+esc((m.from_email||m.from_user_id||'用户'))+'</b>：'+esc(m.body)+' <span class="small">'+esc(m.created_at)+'</span>'+(mine?(' <button class="btn" data-delmsg=\"'+m.id+'\">撤回</button>'):'')+'</div>';}).join('')||'<p class="small">暂无消息</p>';
       var box=document.getElementById('msgs'); box.scrollTop=box.scrollHeight;
       if(MinnaSocial.markThreadRead) MinnaSocial.markThreadRead(tid);
+      document.querySelectorAll('[data-delmsg]').forEach(function(btn){btn.onclick=async function(){try{await MinnaSocial.deleteMyMessage(Number(btn.dataset.delmsg));openThread(tid);}catch(e){alert('撤回失败：'+(e.message||e));}};});
     }catch(e){document.getElementById('msgs').innerHTML='<p class="small">读取失败：'+esc(e.message||e)+'</p>'}
   }
   function bindRealtime(tid){
