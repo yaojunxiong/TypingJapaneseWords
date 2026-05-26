@@ -24,17 +24,19 @@
   async function initAuth(){try{if(window.MinnaAuth&&MinnaAuth.init)await MinnaAuth.init({lessonId:'minna_messages'})}catch(e){}}
   async function render(){
     var events=MinnaSocial.listEvents();
+    var chats=[];try{if(MinnaSocial.recentChatPreviews)chats=await MinnaSocial.recentChatPreviews(6);}catch(e){}
     if(window.MinnaAppShell) window.MinnaAppShell.injectTop();
     var html='<main class="page"><section class="head"><h1>消息中心</h1><span class="bell">🔔</span></section><section class="list">';
     html+=row('系统消息','来点小 PK，学习更带劲！','关注好友，随时追踪学习进度。','添加好友','🏃','addFriend');
     html+=row('即时通讯','用户互发消息与组建群聊','支持私信和群聊实时交流。','打开聊天','💬','openChat');
     html+=row('系统消息','今天太忙没空练？','连胜激冻可以护住你的连胜哦。','前往宝箱','🧊','openShop');
+    if(chats.length){chats.forEach(function(c){html+=row('聊天消息',String(c.from_email||'好友')+'：'+String(c.body||'').slice(0,28),'会话 #'+c.thread_id,'进入会话','📨','openChat:'+c.thread_id);});}
     if(events.length){events.slice(0,12).forEach(function(e){html+=row(ago(e.created_at),e.title||'动态更新',e.desc||'',null,'✨','');});}
     html+='</section></main>';
     document.getElementById('app').innerHTML=html;
     if(MinnaSocial.markEventsRead)MinnaSocial.markEventsRead();
     if(window.MinnaAppShell) window.MinnaAppShell.injectTabs('messages');
-    document.querySelectorAll('[data-action]').forEach(function(btn){btn.onclick=function(){if(btn.dataset.action==='addFriend')location.href='./minna-app-friends.html?v='+(window.MINNA_VERSION||'22.1');if(btn.dataset.action==='openShop')location.href='./minna-toolbox.html?v='+(window.MINNA_VERSION||'22.1');if(btn.dataset.action==='openChat')location.href='./minna-app-chat.html?v='+(window.MINNA_VERSION||'22.1');};});
+    document.querySelectorAll('[data-action]').forEach(function(btn){btn.onclick=function(){var a=btn.dataset.action||'';if(a==='addFriend')location.href='./minna-app-friends.html?v='+(window.MINNA_VERSION||'22.1');if(a==='openShop')location.href='./minna-toolbox.html?v='+(window.MINNA_VERSION||'22.1');if(a==='openChat')location.href='./minna-app-chat.html?v='+(window.MINNA_VERSION||'22.1');if(a.indexOf('openChat:')===0){var tid=a.split(':')[1]||'';location.href='./minna-app-chat.html?v='+(window.MINNA_VERSION||'22.1')+'&tid='+encodeURIComponent(tid);}};});
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',async function(){await initAuth();render();});else initAuth().then(render);
 })();

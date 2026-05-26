@@ -264,12 +264,23 @@ window.MinnaSocial = (function(){
     return {ok:true};
   }
 
+  async function recentChatPreviews(limit){
+    var u=authUser(),s=await db(); if(!u||!s) return [];
+    var p=await s.from('minna_chat_participants').select('thread_id').eq('user_id',u.id).limit(200);
+    if(p.error) throw p.error;
+    var ids=(p.data||[]).map(function(x){return x.thread_id});
+    if(!ids.length) return [];
+    var m=await s.from('minna_chat_messages').select('id,thread_id,from_email,body,created_at').in('thread_id',ids).order('created_at',{ascending:false}).limit(Math.max(1,Number(limit||8)));
+    if(m.error) throw m.error;
+    return m.data||[];
+  }
+
   return {
     getProfile:getProfile,saveProfile:saveProfile,listFriends:listFriends,addFriend:addFriend,removeFriend:removeFriend,
     sendFriendRequest:sendFriendRequest,listIncomingRequests:listIncomingRequests,respondFriendRequest:respondFriendRequest,
     socialStats:socialStats,monthlyBadges:monthlyBadges,achievements:achievements,friendStreakData:friendStreakData,
     listEvents:listEvents,markEventsRead:markEventsRead,unreadCount:unreadCount,logEvent:logEvent,displayName:displayName,
     getThreadIdWithUser:getThreadIdWithUser,createGroup:createGroup,listThreads:listThreads,listMessages:listMessages,sendMessage:sendMessage,
-    listParticipants:listParticipants,addGroupMembers:addGroupMembers,leaveThread:leaveThread
+    listParticipants:listParticipants,addGroupMembers:addGroupMembers,leaveThread:leaveThread,recentChatPreviews:recentChatPreviews
   };
 })();

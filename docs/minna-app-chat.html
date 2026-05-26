@@ -15,6 +15,7 @@
 <script>
 (function(){
   var currentThread=0,pollId=0,rtChannel=null;
+  function qp(k){return new URLSearchParams(location.search).get(k)||''}
   async function init(){try{if(window.MinnaAuth&&MinnaAuth.init)await MinnaAuth.init({lessonId:'minna_chat'})}catch(e){}}
   function esc(s){return String(s||'').replace(/[&<>\"]/g,function(c){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]})}
   async function loadThreads(){try{return await MinnaSocial.listThreads()}catch(e){return []}}
@@ -55,7 +56,7 @@
     }catch(e){}
   }
   function startPoll(){if(pollId)clearInterval(pollId);pollId=setInterval(function(){if(currentThread&&!rtChannel)openThread(currentThread);},8000);}
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',async function(){await init();await render();startPoll();});else init().then(async function(){await render();startPoll();});
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',async function(){await init();currentThread=Number(qp('tid')||0)||0;await render();startPoll();});else init().then(async function(){currentThread=Number(qp('tid')||0)||0;await render();startPoll();});
 })();
 </script>
 <script src="./minna-sw-register.js?v=22.1"></script>
