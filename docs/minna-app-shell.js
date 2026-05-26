@@ -5,7 +5,7 @@
   function hearts(){try{return Number(localStorage.getItem('minna.hearts.v1')||5)}catch(e){return 5}}
   function streak(){try{return Number((JSON.parse(localStorage.getItem('minna.mobile.learning.state.v1')||'{}')||{}).streak||1)}catch(e){return 1}}
   function heartText(){var h=Math.max(0,Math.min(5,hearts())),s='';for(var i=0;i<5;i++)s+=i<h?'❤️':'🤍';return s}
-  function unread(){try{return window.MinnaSocial&&window.MinnaSocial.unreadCount?Number(window.MinnaSocial.unreadCount()||0):0}catch(e){return 0}}
+  function unread(){try{var a=window.MinnaSocial&&window.MinnaSocial.unreadCount?Number(window.MinnaSocial.unreadCount()||0):0;var b=Number(localStorage.getItem('minna.chat.unread.total.v1')||0);return a+b}catch(e){return 0}}
   window.MinnaAppShell = {
     version: '1.1',
     top: function(opts){

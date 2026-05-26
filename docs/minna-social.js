@@ -318,6 +318,10 @@ window.MinnaSocial = (function(){
       var k=String(r.thread_id), rt=read[k]?new Date(read[k]).getTime():0, mt=new Date(r.created_at).getTime();
       if(mt>rt) out[k]=(out[k]||0)+1;
     });
+    try{
+      var total=Object.keys(out).reduce(function(n,k){return n+Number(out[k]||0)},0);
+      localStorage.setItem('minna.chat.unread.total.v1',String(total));
+    }catch(e){}
     return out;
   }
 
