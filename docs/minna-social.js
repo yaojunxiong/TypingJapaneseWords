@@ -13,6 +13,16 @@ window.MinnaSocial = (function(){
   function logEvent(type,title,desc){var rows=jread(EKEY,[]);rows.unshift({type:type,title:title,desc:desc,created_at:nowIso()});jwrite(EKEY,rows.slice(0,80));}
   function eventReadAt(){return String(localStorage.getItem(READKEY)||'')}
   function markEventsRead(){localStorage.setItem(READKEY,nowIso())}
+  function markAllRead(){
+    markEventsRead();
+    try{
+      var d=threadReadMap();
+      var t=nowIso();
+      Object.keys(d||{}).forEach(function(k){d[k]=t;});
+      jwrite(THREAD_READ_KEY,d||{});
+      localStorage.setItem('minna.chat.unread.total.v1','0');
+    }catch(e){}
+  }
   function unreadCount(){var t=eventReadAt();if(!t)return jread(EKEY,[]).length;var ts=new Date(t).getTime();return jread(EKEY,[]).filter(function(e){return new Date(e.created_at).getTime()>ts}).length}
   function threadReadMap(){return jread(THREAD_READ_KEY,{})}
   function markThreadRead(threadId){
@@ -329,7 +339,7 @@ window.MinnaSocial = (function(){
     getProfile:getProfile,saveProfile:saveProfile,listFriends:listFriends,addFriend:addFriend,removeFriend:removeFriend,
     sendFriendRequest:sendFriendRequest,listIncomingRequests:listIncomingRequests,respondFriendRequest:respondFriendRequest,
     socialStats:socialStats,monthlyBadges:monthlyBadges,achievements:achievements,friendStreakData:friendStreakData,
-    listEvents:listEvents,markEventsRead:markEventsRead,unreadCount:unreadCount,logEvent:logEvent,displayName:displayName,
+    listEvents:listEvents,markEventsRead:markEventsRead,markAllRead:markAllRead,unreadCount:unreadCount,logEvent:logEvent,displayName:displayName,
     getThreadIdWithUser:getThreadIdWithUser,createGroup:createGroup,renameThread:renameThread,listThreads:listThreads,listMessages:listMessages,sendMessage:sendMessage,
     listParticipants:listParticipants,addGroupMembers:addGroupMembers,leaveThread:leaveThread,removeGroupMember:removeGroupMember,recentChatPreviews:recentChatPreviews,
     deleteMyMessage:deleteMyMessage,
