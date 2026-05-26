@@ -7,6 +7,7 @@ import {
   hasSupabasePublicEnv,
   getSupabaseMissingEnvMessage
 } from '@/utils/supabase/config'
+import { getLang, tr } from '@/lib/i18n'
 
 type FriendRequestRow = {
   id: number
@@ -122,14 +123,15 @@ async function respondFriendRequest(formData: FormData) {
 }
 
 export default async function MessagesPage() {
+  const lang = await getLang()
   if (!hasSupabasePublicEnv()) {
     return (
       <main>
         <MinnaNav active="messages" />
-        <h1>消息中心</h1>
+        <h1>{tr(lang, '消息中心', 'Inbox')}</h1>
         <section className="card">
-          <p className="small">云端消息未配置：{getSupabaseMissingEnvMessage()}</p>
-          <p><Link href="/login">去登录</Link></p>
+          <p className="small">{tr(lang, '云端消息未配置', 'Cloud messaging is not configured')}：{getSupabaseMissingEnvMessage()}</p>
+          <p><Link href="/login">{tr(lang, '去登录', 'Sign in')}</Link></p>
         </section>
       </main>
     )
@@ -144,10 +146,10 @@ export default async function MessagesPage() {
     return (
       <main>
         <MinnaNav active="messages" />
-        <h1>消息中心</h1>
+        <h1>{tr(lang, '消息中心', 'Inbox')}</h1>
         <section className="card">
-          <p className="small">请先登录后查看好友申请与聊天消息。</p>
-          <p><Link href="/login">去登录</Link></p>
+          <p className="small">{tr(lang, '请先登录后查看好友申请与聊天消息。', 'Sign in first to view requests and chat messages.')}</p>
+          <p><Link href="/login">{tr(lang, '去登录', 'Sign in')}</Link></p>
         </section>
       </main>
     )
@@ -228,45 +230,45 @@ export default async function MessagesPage() {
   return (
     <main>
       <MinnaNav active="messages" />
-      <h1>消息中心</h1>
+      <h1>{tr(lang, '消息中心', 'Inbox')}</h1>
 
       <section className="msgGrid">
         <article className="msgCard2">
           <div className="msgIcon">🤝</div>
-          <h2>好友</h2>
-          <p className="small">发送申请、通过好友、查看社交关系。</p>
-          <Link className="btn ghost" href="/friends">打开好友页</Link>
+          <h2>{tr(lang, '好友', 'Friends')}</h2>
+          <p className="small">{tr(lang, '发送申请、通过好友、查看社交关系。', 'Send requests, approve friends, and manage your social graph.')}</p>
+          <Link className="btn ghost" href="/friends">{tr(lang, '打开好友页', 'Open Friends')}</Link>
         </article>
 
         <article className="msgCard2">
           <div className="msgIcon">💬</div>
-          <h2>聊天</h2>
-          <p className="small">支持私信与群聊，已接入 Next 迁移版聊天页。</p>
+          <h2>{tr(lang, '聊天', 'Chat')}</h2>
+          <p className="small">{tr(lang, '支持私信与群聊，已接入 Next 迁移版聊天页。', 'Direct messages and groups are available in the Next chat page.')}</p>
           <Link className="btn ghost" href="/chat">
-            打开聊天页
+            {tr(lang, '打开聊天页', 'Open Chat')}
           </Link>
         </article>
       </section>
 
       <section className="card">
-        <h2>好友申请</h2>
-        {!requests.length ? <p className="small">暂无待处理申请。</p> : null}
+        <h2>{tr(lang, '好友申请', 'Friend Requests')}</h2>
+        {!requests.length ? <p className="small">{tr(lang, '暂无待处理申请。', 'No pending requests.')}</p> : null}
         {requests.map((r) => (
           <div key={r.id} className="requestRow">
             <div>
-              <b>{r.from_email || '学习者'}</b>
-              <p className="small">{ago(r.created_at)} · 想添加你为好友</p>
+              <b>{r.from_email || tr(lang, '学习者', 'Learner')}</b>
+              <p className="small">{ago(r.created_at)} · {tr(lang, '想添加你为好友', 'wants to add you')}</p>
             </div>
             <div className="requestActions">
               <form action={respondFriendRequest}>
                 <input type="hidden" name="id" value={r.id} />
                 <input type="hidden" name="decision" value="accept" />
-                <button type="submit" className="btn">同意</button>
+                <button type="submit" className="btn">{tr(lang, '同意', 'Accept')}</button>
               </form>
               <form action={respondFriendRequest}>
                 <input type="hidden" name="id" value={r.id} />
                 <input type="hidden" name="decision" value="reject" />
-                <button type="submit" className="btn danger">拒绝</button>
+                <button type="submit" className="btn danger">{tr(lang, '拒绝', 'Reject')}</button>
               </form>
             </div>
           </div>
@@ -274,11 +276,11 @@ export default async function MessagesPage() {
       </section>
 
       <section className="card">
-        <h2>最近聊天</h2>
-        {!recentMessages.length ? <p className="small">暂无聊天记录。</p> : null}
+        <h2>{tr(lang, '最近聊天', 'Recent Chats')}</h2>
+        {!recentMessages.length ? <p className="small">{tr(lang, '暂无聊天记录。', 'No recent chats.')}</p> : null}
         {recentMessages.slice(0, 12).map((m) => {
           const t = threadMap.get(m.thread_id)
-          const title = t?.title || (t?.thread_type === 'group' ? `群聊 #${m.thread_id}` : `私信 #${m.thread_id}`)
+          const title = t?.title || (t?.thread_type === 'group' ? tr(lang, `群聊 #${m.thread_id}`, `Group #${m.thread_id}`) : tr(lang, `私信 #${m.thread_id}`, `DM #${m.thread_id}`))
           return (
             <Link
               key={m.id}
@@ -287,7 +289,7 @@ export default async function MessagesPage() {
             >
               <div>
                 <b>{title}</b>
-                <p className="small">{String(m.from_email || '好友')}：{clip(String(m.body || ''))}</p>
+                <p className="small">{String(m.from_email || tr(lang, '好友', 'Friend'))}：{clip(String(m.body || ''))}</p>
               </div>
               <span className="small">{ago(m.created_at)}</span>
             </Link>

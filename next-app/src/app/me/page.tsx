@@ -7,6 +7,7 @@ import {
   hasSupabasePublicEnv,
   getSupabaseMissingEnvMessage
 } from '@/utils/supabase/config'
+import { getLang, tr } from '@/lib/i18n'
 
 type Profile = {
   user_id: string
@@ -45,14 +46,15 @@ async function initProfile() {
 }
 
 export default async function MePage() {
+  const lang = await getLang()
   if (!hasSupabasePublicEnv()) {
     return (
       <main>
         <MinnaNav active="me" />
-        <h1>我的</h1>
+        <h1>{tr(lang, '我的', 'Me')}</h1>
         <section className="card">
-          <p className="small">云端账号未配置：{getSupabaseMissingEnvMessage()}</p>
-          <p><Link href="/login">去登录</Link></p>
+          <p className="small">{tr(lang, '云端账号未配置', 'Cloud account is not configured')}：{getSupabaseMissingEnvMessage()}</p>
+          <p><Link href="/login">{tr(lang, '去登录', 'Sign in')}</Link></p>
         </section>
       </main>
     )
@@ -67,10 +69,10 @@ export default async function MePage() {
     return (
       <main>
         <MinnaNav active="me" />
-        <h1>我的</h1>
+        <h1>{tr(lang, '我的', 'Me')}</h1>
         <section className="card">
-          <p className="small">你还没有登录，请先登录后查看云端资料。</p>
-          <p><Link href="/login">去登录</Link></p>
+          <p className="small">{tr(lang, '你还没有登录，请先登录后查看云端资料。', 'You are not signed in yet. Sign in first to view cloud data.')}</p>
+          <p><Link href="/login">{tr(lang, '去登录', 'Sign in')}</Link></p>
         </section>
       </main>
     )
@@ -86,43 +88,43 @@ export default async function MePage() {
   return (
     <main>
       <MinnaNav active="me" />
-      <h1>我的</h1>
+      <h1>{tr(lang, '我的', 'Me')}</h1>
       <section className="card">
-        <h2>账号信息</h2>
-        <p className="small">邮箱：{user.email || '(无邮箱)'}</p>
+        <h2>{tr(lang, '账号信息', 'Account')}</h2>
+        <p className="small">{tr(lang, '邮箱', 'Email')}：{user.email || tr(lang, '(无邮箱)', '(No email)')}</p>
         <p className="small">UID：{user.id}</p>
       </section>
 
       <section className="card">
-        <h2>云端资料</h2>
-        {profileErr ? <p className="small">读取失败：{profileErr.message}</p> : null}
+        <h2>{tr(lang, '云端资料', 'Cloud Profile')}</h2>
+        {profileErr ? <p className="small">{tr(lang, '读取失败', 'Read failed')}：{profileErr.message}</p> : null}
         {!profileErr && !profile ? (
           <>
-            <p className="small">暂无资料记录（首次登录可在旧站保存后同步到这里）。</p>
+            <p className="small">{tr(lang, '暂无资料记录（首次登录可在旧站保存后同步到这里）。', 'No profile record yet. You can initialize it now.')}</p>
             <form action={initProfile} style={{ marginTop: 10 }}>
-              <button type="submit" className="btn">初始化云端资料</button>
+              <button type="submit" className="btn">{tr(lang, '初始化云端资料', 'Initialize Cloud Profile')}</button>
             </form>
           </>
         ) : null}
         {profile ? (
           <>
-            <p className="small">昵称：{profile.nick || '(未设置)'}</p>
-            <p className="small">目标：{profile.goal || '(未设置)'}</p>
-            <p className="small">简介：{profile.bio || '(未设置)'}</p>
-            <p className="small">更新时间：{profile.updated_at || '-'}</p>
+            <p className="small">{tr(lang, '昵称', 'Nickname')}：{profile.nick || tr(lang, '(未设置)', '(Not set)')}</p>
+            <p className="small">{tr(lang, '目标', 'Goal')}：{profile.goal || tr(lang, '(未设置)', '(Not set)')}</p>
+            <p className="small">{tr(lang, '简介', 'Bio')}：{profile.bio || tr(lang, '(未设置)', '(Not set)')}</p>
+            <p className="small">{tr(lang, '更新时间', 'Updated at')}：{profile.updated_at || '-'}</p>
           </>
         ) : null}
       </section>
 
       <section className="card">
-        <h2>下一步迁移</h2>
-        <p className="small">学习中心和课程目录已迁到 Next，课程内容仍跳旧站。</p>
-        <p><Link href="/toolbox">进入学习中心</Link></p>
-        <p><Link href="/lessons">进入课程入口</Link></p>
-        <p><Link href="/favorites">进入收藏页</Link></p>
-        <p><Link href="/messages">进入消息中心</Link></p>
-        <p><Link href="/chat">进入聊天页</Link></p>
-        <p><Link href="/">返回首页</Link></p>
+        <h2>{tr(lang, '下一步迁移', 'Next Steps')}</h2>
+        <p className="small">{tr(lang, '学习中心和课程目录已迁到 Next，课程内容仍跳旧站。', 'Learning center and lessons are migrated to Next. Content keeps improving.')}</p>
+        <p><Link href="/toolbox">{tr(lang, '进入学习中心', 'Open Learning Center')}</Link></p>
+        <p><Link href="/lessons">{tr(lang, '进入课程入口', 'Open Lessons')}</Link></p>
+        <p><Link href="/favorites">{tr(lang, '进入收藏页', 'Open Saved')}</Link></p>
+        <p><Link href="/messages">{tr(lang, '进入消息中心', 'Open Inbox')}</Link></p>
+        <p><Link href="/chat">{tr(lang, '进入聊天页', 'Open Chat')}</Link></p>
+        <p><Link href="/">{tr(lang, '返回首页', 'Back to Home')}</Link></p>
       </section>
     </main>
   )

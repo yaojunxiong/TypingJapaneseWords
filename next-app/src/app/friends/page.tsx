@@ -4,6 +4,7 @@ import { cookies } from 'next/headers'
 import MinnaNav from '@/components/minna-nav'
 import { createClient } from '@/utils/supabase/server'
 import { hasSupabasePublicEnv, getSupabaseMissingEnvMessage } from '@/utils/supabase/config'
+import { getLang, tr } from '@/lib/i18n'
 
 type FriendRow = {
   id: number
@@ -50,14 +51,15 @@ async function sendFriendRequest(formData: FormData) {
 }
 
 export default async function FriendsPage() {
+  const lang = await getLang()
   if (!hasSupabasePublicEnv()) {
     return (
       <main>
         <MinnaNav active="messages" />
-        <h1>好友</h1>
+        <h1>{tr(lang, '好友', 'Friends')}</h1>
         <section className="card">
-          <p className="small">云端消息未配置：{getSupabaseMissingEnvMessage()}</p>
-          <p><Link href="/login">去登录</Link></p>
+          <p className="small">{tr(lang, '云端消息未配置', 'Cloud messaging is not configured')}：{getSupabaseMissingEnvMessage()}</p>
+          <p><Link href="/login">{tr(lang, '去登录', 'Sign in')}</Link></p>
         </section>
       </main>
     )
@@ -71,10 +73,10 @@ export default async function FriendsPage() {
     return (
       <main>
         <MinnaNav active="messages" />
-        <h1>好友</h1>
+        <h1>{tr(lang, '好友', 'Friends')}</h1>
         <section className="card">
-          <p className="small">请先登录后查看好友数据。</p>
-          <p><Link href="/login">去登录</Link></p>
+          <p className="small">{tr(lang, '请先登录后查看好友数据。', 'Sign in first to view friends data.')}</p>
+          <p><Link href="/login">{tr(lang, '去登录', 'Sign in')}</Link></p>
         </section>
       </main>
     )
@@ -101,25 +103,25 @@ export default async function FriendsPage() {
   return (
     <main>
       <MinnaNav active="messages" />
-      <h1>好友</h1>
+      <h1>{tr(lang, '好友', 'Friends')}</h1>
 
       <section className="card">
-        <h2>添加好友</h2>
+        <h2>{tr(lang, '添加好友', 'Add Friend')}</h2>
         <form action={sendFriendRequest} className="row2">
-          <input name="to_email" type="email" placeholder="输入对方邮箱，例如 abc@gmail.com" required />
-          <button type="submit" className="btn">发送申请</button>
+          <input name="to_email" type="email" placeholder={tr(lang, '输入对方邮箱，例如 abc@gmail.com', 'Enter email, e.g. abc@gmail.com')} required />
+          <button type="submit" className="btn">{tr(lang, '发送申请', 'Send Request')}</button>
         </form>
-        <p className="small">申请发送后，对方可在“消息中心”同意或拒绝。</p>
+        <p className="small">{tr(lang, '申请发送后，对方可在“消息中心”同意或拒绝。', 'After sending, the other side can accept or reject in Inbox.')}</p>
       </section>
 
       <section className="card">
-        <h2>我的好友（{friends.length}）</h2>
-        {!friends.length ? <p className="small">暂无好友，先发送一个好友申请吧。</p> : null}
+        <h2>{tr(lang, '我的好友', 'My Friends')}（{friends.length}）</h2>
+        {!friends.length ? <p className="small">{tr(lang, '暂无好友，先发送一个好友申请吧。', 'No friends yet. Send a friend request first.')}</p> : null}
         {friends.map((f) => (
           <div key={f.id} className="requestRow">
             <div>
-              <b>{f.friend_label || '好友'}</b>
-              <p className="small">{f.friend_email || '(无邮箱)'}</p>
+              <b>{f.friend_label || tr(lang, '好友', 'Friend')}</b>
+              <p className="small">{f.friend_email || tr(lang, '(无邮箱)', '(No email)')}</p>
             </div>
             <span className="small">{f.created_at ? String(f.created_at).slice(0, 10) : '-'}</span>
           </div>
@@ -127,13 +129,13 @@ export default async function FriendsPage() {
       </section>
 
       <section className="card">
-        <h2>我发出的申请</h2>
-        {!requests.length ? <p className="small">暂无发出的申请。</p> : null}
+        <h2>{tr(lang, '我发出的申请', 'My Requests')}</h2>
+        {!requests.length ? <p className="small">{tr(lang, '暂无发出的申请。', 'No sent requests.')}</p> : null}
         {requests.map((r) => (
           <div key={r.id} className="requestRow">
             <div>
-              <b>{r.to_email || '(无邮箱)'}</b>
-              <p className="small">状态：{r.status || 'pending'}</p>
+              <b>{r.to_email || tr(lang, '(无邮箱)', '(No email)')}</b>
+              <p className="small">{tr(lang, '状态', 'Status')}：{r.status || 'pending'}</p>
             </div>
             <span className="small">{r.created_at ? String(r.created_at).slice(0, 10) : '-'}</span>
           </div>
