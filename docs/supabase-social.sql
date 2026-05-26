@@ -133,6 +133,9 @@ exception when duplicate_object then null; end $$;
 do $$ begin
   create policy "chat_threads_insert_owner" on public.minna_chat_threads for insert with check (auth.uid()::text = owner_user_id);
 exception when duplicate_object then null; end $$;
+do $$ begin
+  create policy "chat_threads_update_owner" on public.minna_chat_threads for update using (auth.uid()::text = owner_user_id) with check (auth.uid()::text = owner_user_id);
+exception when duplicate_object then null; end $$;
 
 do $$ begin
   create policy "chat_participants_select_member" on public.minna_chat_participants for select using (

@@ -219,6 +219,14 @@ window.MinnaSocial = (function(){
     return tid;
   }
 
+  async function renameThread(threadId,title){
+    var u=authUser(),s=await db(); if(!u||!s) throw new Error('need_login');
+    title=String(title||'').trim(); if(!title) return {ok:false,msg:'empty'};
+    var up=await s.from('minna_chat_threads').update({title:title}).eq('id',threadId).eq('owner_user_id',u.id);
+    if(up.error) throw up.error;
+    return {ok:true};
+  }
+
   async function listThreads(){
     var u=authUser(),s=await db(); if(!u||!s) return [];
     var p=await s.from('minna_chat_participants').select('thread_id').eq('user_id',u.id).order('joined_at',{ascending:false}).limit(200);
@@ -301,7 +309,7 @@ window.MinnaSocial = (function(){
     sendFriendRequest:sendFriendRequest,listIncomingRequests:listIncomingRequests,respondFriendRequest:respondFriendRequest,
     socialStats:socialStats,monthlyBadges:monthlyBadges,achievements:achievements,friendStreakData:friendStreakData,
     listEvents:listEvents,markEventsRead:markEventsRead,unreadCount:unreadCount,logEvent:logEvent,displayName:displayName,
-    getThreadIdWithUser:getThreadIdWithUser,createGroup:createGroup,listThreads:listThreads,listMessages:listMessages,sendMessage:sendMessage,
+    getThreadIdWithUser:getThreadIdWithUser,createGroup:createGroup,renameThread:renameThread,listThreads:listThreads,listMessages:listMessages,sendMessage:sendMessage,
     listParticipants:listParticipants,addGroupMembers:addGroupMembers,leaveThread:leaveThread,recentChatPreviews:recentChatPreviews,
     markThreadRead:markThreadRead,threadReadAt:threadReadAt,threadUnreadCounts:threadUnreadCounts
   };

@@ -15,20 +15,25 @@
 <script>
 (function(){
   var currentThread=0,pollId=0,rtChannel=null;
+  var PIN_KEY='minna.chat.pins.v1';
   function qp(k){return new URLSearchParams(location.search).get(k)||''}
   async function init(){try{if(window.MinnaAuth&&MinnaAuth.init)await MinnaAuth.init({lessonId:'minna_chat'})}catch(e){}}
   function myUid(){var u=window.MinnaAuth&&MinnaAuth.getUser?MinnaAuth.getUser():null;return u&&u.id?u.id:''}
   function esc(s){return String(s||'').replace(/[&<>\"]/g,function(c){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]})}
+  function pins(){try{return JSON.parse(localStorage.getItem(PIN_KEY)||'{}')||{}}catch(e){return {}}}
+  function setPin(tid,on){var p=pins();if(on)p[String(tid)]=1;else delete p[String(tid)];localStorage.setItem(PIN_KEY,JSON.stringify(p));}
   async function loadThreads(){try{return await MinnaSocial.listThreads()}catch(e){return []}}
   async function render(){
     var threads=await loadThreads();
     var unreadMap={}; try{if(MinnaSocial.threadUnreadCounts)unreadMap=await MinnaSocial.threadUnreadCounts();}catch(e){}
+    var pmap=pins();
+    threads.sort(function(a,b){return Number(!!pmap[String(b.id)])-Number(!!pmap[String(a.id)]);});
     if(window.MinnaAppShell)window.MinnaAppShell.injectTop();
     document.getElementById('app').innerHTML='<main class="page">'
       +'<section class="card"><h2>发起私信</h2><div class="row"><input id="dmUid" placeholder="对方 user_id"><button class="btn" id="dmBtn">打开私信</button></div><div class="row" style="margin-top:8px"><input id="myUid" readonly value="'+esc(myUid())+'" placeholder="我的 user_id"><button class="btn" id="copyUidBtn">复制我的ID</button></div></section>'
       +'<section class="card"><h2>创建群聊</h2><div class="row"><input id="groupTitle" placeholder="群名"><input id="groupUids" placeholder="成员 user_id，逗号分隔"><button class="btn" id="groupBtn">建群</button></div></section>'
-      +'<section class="card list"><h2>会话列表</h2>'+(threads.length?threads.map(function(t){var n=Number(unreadMap[String(t.id)]||0);return '<div class="item" data-tid="'+t.id+'">['+esc(t.thread_type)+'] '+esc(t.title||('会话#'+t.id))+(n>0?(' · 未读 '+n):'')+'</div>'}).join(''):'<p class="small">暂无会话</p>')+'</section>'
-      +'<section class="card"><h2>聊天内容</h2><div id="threadMeta" class="small">未选择会话</div><div class="row" style="margin:8px 0"><input id="searchMsg" placeholder="搜索本会话消息"><button class="btn" id="refreshBtn">刷新</button></div><div id="msgs" class="msgs"></div><div class="row" style="margin-top:8px"><input id="msgInput" placeholder="输入消息"><button class="btn" id="sendBtn">发送</button></div><div class="row" style="margin-top:8px"><input id="inviteUids" placeholder="邀请 user_id，逗号分隔"><button class="btn" id="inviteBtn">邀请进群</button><button class="btn" id="leaveBtn">退出会话</button></div></section>'
+      +'<section class="card list"><h2>会话列表</h2>'+(threads.length?threads.map(function(t){var n=Number(unreadMap[String(t.id)]||0);var pin=!!pmap[String(t.id)];return '<div class="item" data-tid="'+t.id+'">'+(pin?'📌 ':'')+'['+esc(t.thread_type)+'] '+esc(t.title||('会话#'+t.id))+(n>0?(' · 未读 '+n):'')+'</div>'}).join(''):'<p class="small">暂无会话</p>')+'</section>'
+      +'<section class="card"><h2>聊天内容</h2><div id="threadMeta" class="small">未选择会话</div><div class="row" style="margin:8px 0"><input id="searchMsg" placeholder="搜索本会话消息"><button class="btn" id="refreshBtn">刷新</button><button class="btn" id="pinBtn">置顶</button></div><div id="msgs" class="msgs"></div><div class="row" style="margin-top:8px"><input id="msgInput" placeholder="输入消息"><button class="btn" id="sendBtn">发送</button></div><div class="row" style="margin-top:8px"><input id="inviteUids" placeholder="邀请 user_id，逗号分隔"><button class="btn" id="inviteBtn">邀请进群</button><button class="btn" id="renameBtn">改群名</button><button class="btn" id="leaveBtn">退出会话</button></div></section>'
       +'</main>';
     if(window.MinnaAppShell)window.MinnaAppShell.injectTabs('messages');
     document.getElementById('dmBtn').onclick=async function(){var uid=document.getElementById('dmUid').value.trim();if(!uid)return;currentThread=await MinnaSocial.getThreadIdWithUser(uid,'私信');await render();await openThread(currentThread);bindRealtime(currentThread);};
@@ -39,7 +44,9 @@
     document.getElementById('msgInput').onkeydown=function(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();document.getElementById('sendBtn').click();}};
     document.getElementById('refreshBtn').onclick=function(){if(currentThread)openThread(currentThread);};
     document.getElementById('searchMsg').oninput=function(){if(currentThread)openThread(currentThread);};
+    document.getElementById('pinBtn').onclick=function(){if(!currentThread)return;var p=pins();setPin(currentThread,!p[String(currentThread)]);render();};
     document.getElementById('inviteBtn').onclick=async function(){if(!currentThread){alert('先选择会话');return;}var ids=document.getElementById('inviteUids').value.trim().split(',').map(function(x){return x.trim()}).filter(Boolean);if(!ids.length)return;try{await MinnaSocial.addGroupMembers(currentThread,ids);alert('已邀请');openThread(currentThread);}catch(e){alert('邀请失败：'+(e.message||e));}};
+    document.getElementById('renameBtn').onclick=async function(){if(!currentThread){alert('先选择会话');return;}var t=prompt('输入新群名');if(!t)return;try{await MinnaSocial.renameThread(currentThread,t);await render();await openThread(currentThread);}catch(e){alert('改名失败：'+(e.message||e));}};
     document.getElementById('leaveBtn').onclick=async function(){if(!currentThread)return;try{await MinnaSocial.leaveThread(currentThread);currentThread=0;await render();}catch(e){alert('退出失败：'+(e.message||e));}};
     if(currentThread){openThread(currentThread);bindRealtime(currentThread);}
   }
