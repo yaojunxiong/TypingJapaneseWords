@@ -26,11 +26,17 @@
     var events=MinnaSocial.listEvents();
     var chats=[];try{if(MinnaSocial.recentChatPreviews)chats=await MinnaSocial.recentChatPreviews(6);}catch(e){}
     var unreadMap={};try{if(MinnaSocial.threadUnreadCounts)unreadMap=await MinnaSocial.threadUnreadCounts();}catch(e){}
+    var reqs=[];try{if(MinnaSocial.listIncomingRequests)reqs=await MinnaSocial.listIncomingRequests();}catch(e){}
     if(window.MinnaAppShell) window.MinnaAppShell.injectTop();
     var html='<main class="page"><section class="head"><h1>消息中心</h1><span class="bell">🔔</span></section><section class="list">';
     html+=row('系统消息','来点小 PK，学习更带劲！','关注好友，随时追踪学习进度。','添加好友','🏃','addFriend');
     html+=row('即时通讯','用户互发消息与组建群聊','支持私信和群聊实时交流。','打开聊天','💬','openChat');
     html+=row('系统消息','今天太忙没空练？','连胜激冻可以护住你的连胜哦。','前往宝箱','🧊','openShop');
+    if(reqs.length){
+      reqs.slice(0,8).forEach(function(r){
+        html+='<article class="msgCard"><div class="thumb">🤝</div><div class="meta">好友申请</div><h2>'+String(r.from_email||'学习者')+'</h2><p>想添加你为好友。</p><button class="cta" data-action="acceptReq:'+r.id+'">同意</button> <button class="cta" data-action="rejectReq:'+r.id+'">拒绝</button></article>';
+      });
+    }
     if(chats.length){
       chats.sort(function(a,b){return Number(unreadMap[String(b.thread_id)]||0)-Number(unreadMap[String(a.thread_id)]||0);});
       chats.forEach(function(c){var n=Number(unreadMap[String(c.thread_id)]||0);html+=row('聊天消息'+(n>0?(' · 未读'+n):''),String(c.from_email||'好友')+'：'+String(c.body||'').slice(0,28),'会话 #'+c.thread_id,'进入会话','📨','openChat:'+c.thread_id);});
@@ -40,7 +46,7 @@
     document.getElementById('app').innerHTML=html;
     if(MinnaSocial.markEventsRead)MinnaSocial.markEventsRead();
     if(window.MinnaAppShell) window.MinnaAppShell.injectTabs('messages');
-    document.querySelectorAll('[data-action]').forEach(function(btn){btn.onclick=function(){var a=btn.dataset.action||'';if(a==='addFriend')location.href='./minna-app-friends.html?v='+(window.MINNA_VERSION||'22.1');if(a==='openShop')location.href='./minna-toolbox.html?v='+(window.MINNA_VERSION||'22.1');if(a==='openChat')location.href='./minna-app-chat.html?v='+(window.MINNA_VERSION||'22.1');if(a.indexOf('openChat:')===0){var tid=a.split(':')[1]||'';location.href='./minna-app-chat.html?v='+(window.MINNA_VERSION||'22.1')+'&tid='+encodeURIComponent(tid);}};});
+    document.querySelectorAll('[data-action]').forEach(function(btn){btn.onclick=async function(){var a=btn.dataset.action||'';if(a==='addFriend')location.href='./minna-app-friends.html?v='+(window.MINNA_VERSION||'22.1');if(a==='openShop')location.href='./minna-toolbox.html?v='+(window.MINNA_VERSION||'22.1');if(a==='openChat')location.href='./minna-app-chat.html?v='+(window.MINNA_VERSION||'22.1');if(a.indexOf('openChat:')===0){var tid=a.split(':')[1]||'';location.href='./minna-app-chat.html?v='+(window.MINNA_VERSION||'22.1')+'&tid='+encodeURIComponent(tid);}if(a.indexOf('acceptReq:')===0){var id=Number(a.split(':')[1]||0);if(id&&MinnaSocial.respondFriendRequest){await MinnaSocial.respondFriendRequest(id,true);render();}}if(a.indexOf('rejectReq:')===0){var id2=Number(a.split(':')[1]||0);if(id2&&MinnaSocial.respondFriendRequest){await MinnaSocial.respondFriendRequest(id2,false);render();}}};});
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',async function(){await initAuth();render();});else initAuth().then(render);
 })();
