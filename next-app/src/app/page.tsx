@@ -2,8 +2,39 @@ import Link from 'next/link'
 import { cookies } from 'next/headers'
 import { createClient } from '@/utils/supabase/server'
 import MinnaNav from '@/components/minna-nav'
+import {
+  hasSupabasePublicEnv,
+  getSupabaseMissingEnvMessage
+} from '@/utils/supabase/config'
 
 export default async function Page() {
+  const supabaseReady = hasSupabasePublicEnv()
+  const envMessage = getSupabaseMissingEnvMessage()
+
+  if (!supabaseReady) {
+    return (
+      <main>
+        <MinnaNav active="home" />
+        <h1>Minna Next 迁移站</h1>
+        <p className="small">当前阶段：已完成 Supabase SSR + 登录中心 + 我的页。</p>
+        <section className="card">
+          <h2>迁移入口</h2>
+          <p><Link href="/login">登录中心</Link></p>
+          <p><Link href="/me">我的页（云端资料）</Link></p>
+          <p><Link href="/toolbox">学习中心（迁移版）</Link></p>
+          <p><Link href="/lessons">课程入口（迁移版）</Link></p>
+          <p><Link href="/favorites">收藏页（迁移版）</Link></p>
+          <p><Link href="/messages">消息中心（迁移版）</Link></p>
+          <p><Link href="/chat">聊天页（迁移版）</Link></p>
+        </section>
+        <section className="card">
+          <h2>连接结果</h2>
+          <p className="small">暂未配置 Supabase：{envMessage}</p>
+        </section>
+      </main>
+    )
+  }
+
   const cookieStore = await cookies()
   const supabase = createClient(cookieStore)
   const { data, error } = await supabase

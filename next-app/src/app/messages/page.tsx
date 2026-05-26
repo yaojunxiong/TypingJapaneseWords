@@ -3,6 +3,10 @@ import { revalidatePath } from 'next/cache'
 import { cookies } from 'next/headers'
 import MinnaNav from '@/components/minna-nav'
 import { createClient } from '@/utils/supabase/server'
+import {
+  hasSupabasePublicEnv,
+  getSupabaseMissingEnvMessage
+} from '@/utils/supabase/config'
 
 type FriendRequestRow = {
   id: number
@@ -118,6 +122,19 @@ async function respondFriendRequest(formData: FormData) {
 }
 
 export default async function MessagesPage() {
+  if (!hasSupabasePublicEnv()) {
+    return (
+      <main>
+        <MinnaNav active="messages" />
+        <h1>消息中心</h1>
+        <section className="card">
+          <p className="small">云端消息未配置：{getSupabaseMissingEnvMessage()}</p>
+          <p><Link href="/login">去登录</Link></p>
+        </section>
+      </main>
+    )
+  }
+
   const cookieStore = await cookies()
   const supabase = createClient(cookieStore)
   const { data: userData } = await supabase.auth.getUser()

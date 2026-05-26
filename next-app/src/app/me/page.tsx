@@ -2,6 +2,10 @@ import Link from 'next/link'
 import { cookies } from 'next/headers'
 import { createClient } from '@/utils/supabase/server'
 import MinnaNav from '@/components/minna-nav'
+import {
+  hasSupabasePublicEnv,
+  getSupabaseMissingEnvMessage
+} from '@/utils/supabase/config'
 
 type Profile = {
   user_id: string
@@ -12,6 +16,19 @@ type Profile = {
 }
 
 export default async function MePage() {
+  if (!hasSupabasePublicEnv()) {
+    return (
+      <main>
+        <MinnaNav active="me" />
+        <h1>我的</h1>
+        <section className="card">
+          <p className="small">云端账号未配置：{getSupabaseMissingEnvMessage()}</p>
+          <p><Link href="/login">去登录</Link></p>
+        </section>
+      </main>
+    )
+  }
+
   const cookieStore = await cookies()
   const supabase = createClient(cookieStore)
   const { data: userData, error: userErr } = await supabase.auth.getUser()

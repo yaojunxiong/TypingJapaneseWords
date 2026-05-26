@@ -2,6 +2,7 @@ import { cookies } from 'next/headers'
 import MinnaNav from '@/components/minna-nav'
 import LessonsClient from '@/components/lessons-client'
 import { createClient } from '@/utils/supabase/server'
+import { hasSupabasePublicEnv } from '@/utils/supabase/config'
 
 type RoleRow = {
   role: string | null
@@ -25,25 +26,27 @@ function roleInfo(row: RoleRow | null, userEmail: string) {
 }
 
 export default async function LessonsPage() {
-  const cookieStore = await cookies()
-  const supabase = createClient(cookieStore)
-  const { data: userData } = await supabase.auth.getUser()
-  const user = userData.user
-
   let bypassLessonLock = false
   let roleLabel = 'normal'
 
-  if (user) {
-    const { data: roleRaw } = await supabase
-      .from('user_roles')
-      .select('role,vip_until,email')
-      .eq('user_id', user.id)
-      .maybeSingle()
-    const data = (roleRaw as RoleRow | null) || null
+  if (hasSupabasePublicEnv()) {
+    const cookieStore = await cookies()
+    const supabase = createClient(cookieStore)
+    const { data: userData } = await supabase.auth.getUser()
+    const user = userData.user
 
-    const info = roleInfo(data || null, user.email || '')
-    bypassLessonLock = info.bypassLessonLock
-    roleLabel = info.effectiveRole
+    if (user) {
+      const { data: roleRaw } = await supabase
+        .from('user_roles')
+        .select('role,vip_until,email')
+        .eq('user_id', user.id)
+        .maybeSingle()
+      const data = (roleRaw as RoleRow | null) || null
+
+      const info = roleInfo(data || null, user.email || '')
+      bypassLessonLock = info.bypassLessonLock
+      roleLabel = info.effectiveRole
+    }
   }
 
   return (

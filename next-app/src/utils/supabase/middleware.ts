@@ -1,8 +1,9 @@
 import { createServerClient, type CookieOptions } from '@supabase/ssr'
 import { type NextRequest, NextResponse } from 'next/server'
-
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
+import {
+  getSafeSupabasePublicConfig,
+  hasSupabasePublicEnv
+} from '@/utils/supabase/config'
 
 export const createClient = (request: NextRequest) => {
   let supabaseResponse = NextResponse.next({
@@ -11,7 +12,13 @@ export const createClient = (request: NextRequest) => {
     }
   })
 
-  createServerClient(supabaseUrl!, supabaseKey!, {
+  if (!hasSupabasePublicEnv()) {
+    return supabaseResponse
+  }
+
+  const { url, key } = getSafeSupabasePublicConfig()
+
+  createServerClient(url, key, {
     cookies: {
       getAll() {
         return request.cookies.getAll()

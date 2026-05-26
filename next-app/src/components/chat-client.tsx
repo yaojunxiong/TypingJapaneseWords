@@ -3,6 +3,10 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { createClient } from '@/utils/supabase/client'
+import {
+  hasSupabasePublicEnv,
+  getSupabaseMissingEnvMessage
+} from '@/utils/supabase/config'
 
 type UserLite = {
   id: string
@@ -102,6 +106,8 @@ function sortThreadsByPin(rows: Thread[]) {
 }
 
 export default function ChatClient() {
+  const supabaseReady = hasSupabasePublicEnv()
+  const envMessage = getSupabaseMissingEnvMessage()
   const supabase = useMemo(() => createClient(), [])
   const searchParams = useSearchParams()
   const requestedTid = Number(searchParams.get('tid') || 0)
@@ -295,6 +301,13 @@ export default function ChatClient() {
   }, [computeUnread, supabase, user])
 
   useEffect(() => {
+    if (!supabaseReady) {
+      setLoading(false)
+      setUser(null)
+      setStatus(envMessage || '未配置 Supabase 环境变量')
+      return
+    }
+
     let mounted = true
 
     async function boot() {
@@ -321,26 +334,29 @@ export default function ChatClient() {
         void supabase.removeChannel(channelRef.current)
       }
     }
-  }, [supabase])
+  }, [envMessage, supabase, supabaseReady])
 
   useEffect(() => {
+    if (!supabaseReady) return
     if (!user) return
     void refreshThreads()
-  }, [user, refreshThreads])
+  }, [refreshThreads, supabaseReady, user])
 
   useEffect(() => {
+    if (!supabaseReady) return
     if (!threads.length) return
     if (currentThread && threads.some((t) => Number(t.id) === Number(currentThread))) return
     const nextTid = requestedTid && threads.some((t) => Number(t.id) === Number(requestedTid)) ? requestedTid : threads[0].id
     void openThread(nextTid)
-  }, [threads, currentThread, requestedTid, openThread])
+  }, [currentThread, openThread, requestedTid, supabaseReady, threads])
 
   useEffect(() => {
+    if (!supabaseReady) return
     const id = window.setInterval(() => {
       if (currentThread) void loadThreadDetail(currentThread)
     }, 8000)
     return () => window.clearInterval(id)
-  }, [currentThread, loadThreadDetail])
+  }, [currentThread, loadThreadDetail, supabaseReady])
 
   async function onOpenDm() {
     if (!user) return
@@ -557,6 +573,16 @@ export default function ChatClient() {
     return (
       <section className="card">
         <p className="small">正在加载聊天模块...</p>
+      </section>
+    )
+  }
+
+  if (!supabaseReady) {
+    return (
+      <section className="card">
+        <h2>聊天</h2>
+        <p className="small">未配置聊天云端能力：{envMessage}</p>
+        <p className="small">请先在部署平台补齐 Supabase 环境变量后再使用。</p>
       </section>
     )
   }

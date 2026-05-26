@@ -1,7 +1,17 @@
 import { createBrowserClient } from '@supabase/ssr'
+import {
+  getSafeSupabasePublicConfig,
+  hasSupabasePublicEnv,
+  getSupabaseMissingEnvMessage
+} from '@/utils/supabase/config'
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
+let warned = false
 
-export const createClient = () =>
-  createBrowserClient(supabaseUrl!, supabaseKey!)
+export const createClient = () => {
+  const { url, key } = getSafeSupabasePublicConfig()
+  if (typeof window !== 'undefined' && !hasSupabasePublicEnv() && !warned) {
+    warned = true
+    console.warn(`[supabase] ${getSupabaseMissingEnvMessage()}`)
+  }
+  return createBrowserClient(url, key)
+}

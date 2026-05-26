@@ -2,6 +2,10 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import { createClient } from '@/utils/supabase/client'
+import {
+  hasSupabasePublicEnv,
+  getSupabaseMissingEnvMessage
+} from '@/utils/supabase/config'
 
 type UserLite = {
   id: string
@@ -9,12 +13,20 @@ type UserLite = {
 }
 
 export default function AuthActions() {
+  const supabaseReady = hasSupabasePublicEnv()
+  const envMessage = getSupabaseMissingEnvMessage()
   const supabase = useMemo(() => createClient(), [])
   const [loading, setLoading] = useState(true)
   const [user, setUser] = useState<UserLite | null>(null)
   const [error, setError] = useState('')
 
   useEffect(() => {
+    if (!supabaseReady) {
+      setLoading(false)
+      setUser(null)
+      return
+    }
+
     let mounted = true
     supabase.auth.getUser().then(({ data, error }) => {
       if (!mounted) return
@@ -31,9 +43,13 @@ export default function AuthActions() {
       mounted = false
       sub.subscription.unsubscribe()
     }
-  }, [supabase])
+  }, [supabase, supabaseReady])
 
   async function loginWithGoogle() {
+    if (!supabaseReady) {
+      setError(envMessage || 'Supabase 环境变量未配置')
+      return
+    }
     setError('')
     const origin = window.location.origin
     const { error } = await supabase.auth.signInWithOAuth({
@@ -44,6 +60,7 @@ export default function AuthActions() {
   }
 
   async function logout() {
+    if (!supabaseReady) return
     setError('')
     const { error } = await supabase.auth.signOut()
     if (error) setError(error.message)
@@ -53,6 +70,7 @@ export default function AuthActions() {
   return (
     <section className="card">
       <h2>账号状态</h2>
+      {!supabaseReady ? <p className="small">未配置云端登录：{envMessage}</p> : null}
       {loading ? <p className="small">加载中...</p> : null}
       {!loading && user ? (
         <>
