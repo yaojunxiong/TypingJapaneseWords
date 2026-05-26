@@ -1,0 +1,72 @@
+'use client'
+
+import { useEffect, useMemo, useState } from 'react'
+import { createClient } from '@/utils/supabase/client'
+
+type UserLite = {
+  id: string
+  email?: string
+}
+
+export default function AuthActions() {
+  const supabase = useMemo(() => createClient(), [])
+  const [loading, setLoading] = useState(true)
+  const [user, setUser] = useState<UserLite | null>(null)
+  const [error, setError] = useState('')
+
+  useEffect(() => {
+    let mounted = true
+    supabase.auth.getUser().then(({ data, error }) => {
+      if (!mounted) return
+      if (error) setError(error.message)
+      setUser(data.user ? { id: data.user.id, email: data.user.email || '' } : null)
+      setLoading(false)
+    })
+
+    const { data: sub } = supabase.auth.onAuthStateChange((_event, session) => {
+      setUser(session?.user ? { id: session.user.id, email: session.user.email || '' } : null)
+    })
+
+    return () => {
+      mounted = false
+      sub.subscription.unsubscribe()
+    }
+  }, [supabase])
+
+  async function loginWithGoogle() {
+    setError('')
+    const origin = window.location.origin
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: 'google',
+      options: { redirectTo: `${origin}/me` }
+    })
+    if (error) setError(error.message)
+  }
+
+  async function logout() {
+    setError('')
+    const { error } = await supabase.auth.signOut()
+    if (error) setError(error.message)
+    if (!error) window.location.href = '/login'
+  }
+
+  return (
+    <section className="card">
+      <h2>账号状态</h2>
+      {loading ? <p className="small">加载中...</p> : null}
+      {!loading && user ? (
+        <>
+          <p className="small">已登录：{user.email || user.id}</p>
+          <button className="btn" onClick={logout}>退出登录</button>
+        </>
+      ) : null}
+      {!loading && !user ? (
+        <>
+          <p className="small">当前未登录</p>
+          <button className="btn" onClick={loginWithGoogle}>Google 登录</button>
+        </>
+      ) : null}
+      {error ? <p className="small" style={{ color: '#b91c1c' }}>错误：{error}</p> : null}
+    </section>
+  )
+}
