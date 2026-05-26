@@ -2,6 +2,12 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import { LESSONS_1_50 } from '@/lib/minna-lessons'
+import { createClient } from '@/utils/supabase/client'
+import { hasSupabasePublicEnv } from '@/utils/supabase/config'
+import {
+  getLocalLearningSummary,
+  syncLearningCloudNow
+} from '@/lib/learning-cloud-sync'
 
 type Props = {
   bypassLessonLock: boolean
@@ -11,6 +17,8 @@ type Props = {
 type LocalState = {
   currentLesson: number
   crowns: Record<string, boolean>
+  streak: number
+  checkinDays: number
 }
 
 const STAGES = ['vocab', 'grammar', 'examples', 'review']
@@ -31,12 +39,51 @@ function crownCount(crowns: Record<string, boolean>, lessonNo: number) {
 }
 
 export default function LessonsClient({ bypassLessonLock, roleLabel }: Props) {
-  const [local, setLocal] = useState<LocalState>({ currentLesson: 1, crowns: {} })
+  const supabaseReady = hasSupabasePublicEnv()
+  const supabase = useMemo(() => createClient(), [])
+  const [local, setLocal] = useState<LocalState>({
+    currentLesson: 1,
+    crowns: {},
+    streak: 1,
+    checkinDays: 0
+  })
+  const [syncText, setSyncText] = useState('读取本地进度...')
 
-  useEffect(() => {
+  function loadLocalState() {
     const st = readJson<{ lastLesson?: number }>('minna.mobile.learning.state.v1', {})
     const crowns = readJson<Record<string, boolean>>('minna.crowns.v1', {})
-    setLocal({ currentLesson: Math.max(1, Number(st.lastLesson || 1)), crowns })
+    const summary = getLocalLearningSummary()
+    setLocal({
+      currentLesson: Math.max(1, Number(st.lastLesson || summary.lastLesson || 1)),
+      crowns,
+      streak: summary.streak,
+      checkinDays: summary.checkinDays
+    })
+  }
+
+  async function syncAndReload() {
+    loadLocalState()
+    if (!supabaseReady) {
+      setSyncText('云端未配置，当前仅本地进度')
+      return
+    }
+    const { data } = await supabase.auth.getUser()
+    const user = data.user
+    if (!user) {
+      setSyncText('未登录，当前仅本地进度')
+      return
+    }
+    setSyncText('同步云端进度中...')
+    const res = await syncLearningCloudNow({
+      supabase,
+      user: { id: user.id, email: user.email || '' }
+    })
+    loadLocalState()
+    setSyncText(res.ok ? '云端进度已同步' : (res.warning ? `同步提示：${res.warning}` : '同步未完成'))
+  }
+
+  useEffect(() => {
+    void syncAndReload()
   }, [])
 
   const rows = useMemo(() => {
@@ -62,7 +109,8 @@ export default function LessonsClient({ bypassLessonLock, roleLabel }: Props) {
         <div className="heroEmoji">🌳</div>
         <h2>课程</h2>
         <p className="small">第 1-50 课学习入口（迁移版）</p>
-        <p className="small">当前角色：{roleLabel} · 当前课：第 {local.currentLesson} 课</p>
+        <p className="small">当前角色：{roleLabel} · 当前课：第 {local.currentLesson} 课 · 连续 {local.streak} 天</p>
+        <p className="small">{syncText} · 打卡 {local.checkinDays} 天</p>
       </section>
 
       <section className="lessonList2">

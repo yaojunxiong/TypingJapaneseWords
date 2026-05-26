@@ -2,45 +2,106 @@
 
 import Link from 'next/link'
 import { useEffect, useMemo, useState } from 'react'
+import { createClient } from '@/utils/supabase/client'
+import { hasSupabasePublicEnv } from '@/utils/supabase/config'
+import {
+  getLocalLearningSummary,
+  markDailyCheckinLocal,
+  syncLearningCloudNow
+} from '@/lib/learning-cloud-sync'
 
 type Stats = {
   xp: number
   crowns: number
   mistakes: number
   lessons: number
-}
-
-function readJson<T>(key: string, fallback: T): T {
-  try {
-    const raw = localStorage.getItem(key)
-    if (!raw) return fallback
-    const parsed = JSON.parse(raw)
-    return parsed == null ? fallback : (parsed as T)
-  } catch {
-    return fallback
-  }
-}
-
-function countCrowns() {
-  const crowns = readJson<Record<string, boolean>>('minna.crowns.v1', {})
-  return Object.keys(crowns).filter(
-    (k) =>
-      k.includes('.review') ||
-      k.includes('.examples') ||
-      k.includes('.grammar') ||
-      k.includes('.vocab')
-  ).length
+  streak: number
+  checkinDays: number
+  lastLesson: number
+  lastStudyDate: string
 }
 
 export default function ToolboxClient() {
-  const [stats, setStats] = useState<Stats>({ xp: 0, crowns: 0, mistakes: 0, lessons: 1 })
+  const supabaseReady = hasSupabasePublicEnv()
+  const supabase = useMemo(() => createClient(), [])
+  const [stats, setStats] = useState<Stats>({
+    xp: 0,
+    crowns: 0,
+    mistakes: 0,
+    lessons: 1,
+    streak: 1,
+    checkinDays: 0,
+    lastLesson: 1,
+    lastStudyDate: ''
+  })
+  const [syncText, setSyncText] = useState('准备就绪')
+  const [syncing, setSyncing] = useState(false)
+
+  function readLocalStats() {
+    const s = getLocalLearningSummary()
+    setStats({
+      xp: s.xp,
+      crowns: s.crowns,
+      mistakes: s.mistakes,
+      lessons: s.lessons,
+      streak: s.streak,
+      checkinDays: s.checkinDays,
+      lastLesson: s.lastLesson,
+      lastStudyDate: s.lastStudyDate
+    })
+  }
+
+  async function runCloudSync(forceUpload = false) {
+    if (!supabaseReady) {
+      setSyncText('云端未配置，当前使用本地数据')
+      return
+    }
+    setSyncing(true)
+    try {
+      const { data } = await supabase.auth.getUser()
+      const user = data.user
+      if (!user) {
+        setSyncText('未登录：当前仅本地记录')
+        readLocalStats()
+        return
+      }
+      const res = await syncLearningCloudNow({
+        supabase,
+        user: { id: user.id, email: user.email || '' },
+        forceUpload
+      })
+      readLocalStats()
+      if (res.ok) {
+        setSyncText(`云端同步成功 · ${new Date().toLocaleTimeString()}`)
+      } else {
+        setSyncText(res.warning ? `同步提示：${res.warning}` : '同步未完成')
+      }
+    } catch (e) {
+      setSyncText(`同步失败：${String(e)}`)
+    } finally {
+      setSyncing(false)
+    }
+  }
+
+  function onCheckinNow() {
+    const next = markDailyCheckinLocal()
+    setStats({
+      xp: next.xp,
+      crowns: next.crowns,
+      mistakes: next.mistakes,
+      lessons: next.lessons,
+      streak: next.streak,
+      checkinDays: next.checkinDays,
+      lastLesson: next.lastLesson,
+      lastStudyDate: next.lastStudyDate
+    })
+    setSyncText('已完成今日打卡，正在同步云端...')
+    void runCloudSync(true)
+  }
 
   useEffect(() => {
-    const xp = Number(localStorage.getItem('minna.xp.v1') || 0)
-    const mistakes = readJson<Array<unknown>>('minna.mistakes.v1', []).length
-    const crowns = countCrowns()
-    const lessons = Math.max(1, Math.ceil(crowns / 4))
-    setStats({ xp, crowns, mistakes, lessons })
+    readLocalStats()
+    void runCloudSync(false)
   }, [])
 
   const cards = useMemo(
@@ -68,10 +129,10 @@ export default function ToolboxClient() {
       },
       {
         icon: '📅',
-        title: '今日复习',
-        desc: '后续将接入智能复习',
+        title: '打卡天数',
+        desc: '今日完成打卡并同步云端',
         href: '/toolbox',
-        count: 'Soon'
+        count: stats.checkinDays
       }
     ],
     [stats]
@@ -90,6 +151,8 @@ export default function ToolboxClient() {
         <div className="bigStat"><b>👑 {stats.crowns}</b><span>Total Crowns</span></div>
         <div className="bigStat"><b>🔥 {stats.mistakes}</b><span>Mistakes</span></div>
         <div className="bigStat"><b>📚 {stats.lessons}</b><span>Lessons</span></div>
+        <div className="bigStat"><b>✅ {stats.checkinDays}</b><span>Check-in Days</span></div>
+        <div className="bigStat"><b>🔥 {stats.streak}</b><span>Streak</span></div>
       </section>
 
       <section className="toolList">
@@ -118,6 +181,20 @@ export default function ToolboxClient() {
             </Link>
           )
         ))}
+      </section>
+
+      <section className="card">
+        <h3>云端同步</h3>
+        <p className="small">{syncText}</p>
+        <p className="small">最近学习：第 {stats.lastLesson} 课{stats.lastStudyDate ? ` · ${stats.lastStudyDate}` : ''}</p>
+        <div className="favActions">
+          <button className="btn" onClick={() => void runCloudSync(false)} disabled={syncing}>
+            {syncing ? '同步中...' : '立即同步'}
+          </button>
+          <button className="btn ghost" onClick={onCheckinNow} disabled={syncing}>
+            今日打卡
+          </button>
+        </div>
       </section>
 
       <section className="card">
