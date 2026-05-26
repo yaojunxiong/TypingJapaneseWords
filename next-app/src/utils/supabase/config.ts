@@ -1,13 +1,9 @@
 const SUPABASE_FALLBACK_URL = 'https://missing-supabase-config.local'
 const SUPABASE_FALLBACK_KEY = 'sb_publishable_missing_config'
 
-function readEnv(name: 'NEXT_PUBLIC_SUPABASE_URL' | 'NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY') {
-  return String(process.env[name] || '').trim()
-}
-
 export function getSupabasePublicEnv() {
-  const url = readEnv('NEXT_PUBLIC_SUPABASE_URL')
-  const key = readEnv('NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY')
+  const url = String(process.env.NEXT_PUBLIC_SUPABASE_URL || '').trim()
+  const key = String(process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY || '').trim()
   const missing: string[] = []
   if (!url) missing.push('NEXT_PUBLIC_SUPABASE_URL')
   if (!key) missing.push('NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY')
