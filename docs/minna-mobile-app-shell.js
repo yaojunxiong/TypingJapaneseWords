@@ -17,11 +17,18 @@
   }
 
   function readState(){
+    if(window.MinnaStore&&window.MinnaStore.readState){
+      return window.MinnaStore.readState()||{};
+    }
     try{return JSON.parse(localStorage.getItem(STATE_KEY)||'{}')||{}}
     catch(e){return {}}
   }
 
   function writeState(s){
+    if(window.MinnaStore&&window.MinnaStore.writeState){
+      window.MinnaStore.writeState(s||{});
+      return;
+    }
     try{localStorage.setItem(STATE_KEY,JSON.stringify(s))}catch(e){}
   }
 
