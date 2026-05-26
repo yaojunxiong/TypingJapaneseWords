@@ -110,7 +110,7 @@ export default function ToolboxClient() {
         icon: '🔥',
         title: '错题复习',
         desc: '自动记录并强化复习',
-        href: 'https://yaojunxiong.github.io/TypingJapaneseWords/docs/minna-review-mistakes.html',
+        href: '/mistakes',
         count: stats.mistakes
       },
       {
@@ -157,29 +157,16 @@ export default function ToolboxClient() {
 
       <section className="toolList">
         {cards.map((item) => (
-          item.href.startsWith('http') ? (
-            <a key={item.title} href={item.href} className="toolLink2" target="_blank" rel="noreferrer">
-              <div className="toolLeft2">
-                <div className="toolIcon2">{item.icon}</div>
-                <div>
-                  <b>{item.title}</b>
-                  <p className="small">{item.desc}</p>
-                </div>
+          <Link key={item.title} href={item.href} className="toolLink2">
+            <div className="toolLeft2">
+              <div className="toolIcon2">{item.icon}</div>
+              <div>
+                <b>{item.title}</b>
+                <p className="small">{item.desc}</p>
               </div>
-              <span>{item.count}</span>
-            </a>
-          ) : (
-            <Link key={item.title} href={item.href} className="toolLink2">
-              <div className="toolLeft2">
-                <div className="toolIcon2">{item.icon}</div>
-                <div>
-                  <b>{item.title}</b>
-                  <p className="small">{item.desc}</p>
-                </div>
-              </div>
-              <span>{item.count}</span>
-            </Link>
-          )
+            </div>
+            <span>{item.count}</span>
+          </Link>
         ))}
       </section>
 
@@ -198,17 +185,8 @@ export default function ToolboxClient() {
       </section>
 
       <section className="card">
-        <h3>旧站入口</h3>
-        <p className="small">
-          如果你要马上使用完整功能，可先回旧站：
-          <a
-            href="https://yaojunxiong.github.io/TypingJapaneseWords/docs/minna-toolbox.html"
-            target="_blank"
-            rel="noreferrer"
-          >
-            打开旧版 Learning Center
-          </a>
-        </p>
+        <h3>迁移状态</h3>
+        <p className="small">学习中心核心入口已迁移到 Next 站内版本。</p>
       </section>
     </>
   )

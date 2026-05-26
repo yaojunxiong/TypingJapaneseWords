@@ -235,14 +235,7 @@ export default async function MessagesPage() {
           <div className="msgIcon">🤝</div>
           <h2>好友</h2>
           <p className="small">发送申请、通过好友、查看社交关系。</p>
-          <a
-            className="btn ghost"
-            href="https://yaojunxiong.github.io/TypingJapaneseWords/docs/minna-app-friends.html?v=22.1"
-            target="_blank"
-            rel="noreferrer"
-          >
-            打开好友页
-          </a>
+          <Link className="btn ghost" href="/friends">打开好友页</Link>
         </article>
 
         <article className="msgCard2">
