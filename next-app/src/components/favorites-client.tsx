@@ -128,9 +128,7 @@ export default function FavoritesClient() {
                   <div className="favCardActions">
                     <a
                       className="btn ghost"
-                      href={`https://yaojunxiong.github.io/TypingJapaneseWords/docs/minna-path.html?lesson=${lessonNo}&v=22.1`}
-                      target="_blank"
-                      rel="noreferrer"
+                      href={`/lessons/${lessonNo}`}
                     >
                       打开课程
                     </a>

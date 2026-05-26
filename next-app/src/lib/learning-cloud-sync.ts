@@ -439,10 +439,14 @@ export async function syncLearningCloudNow(params: {
       summary
     } satisfies LearningSyncResult
   } catch (error) {
+    const rawMsg = error instanceof Error ? error.message : String(error)
+    const msg = /Could not find the table 'public\.minna_learning_(state|mistakes|checkins)'/i.test(rawMsg)
+      ? '云端学习数据表未初始化，先使用本地进度'
+      : rawMsg
     return {
       ok: false,
       reason: 'sync_failed',
-      warning: error instanceof Error ? error.message : String(error),
+      warning: msg,
       summary: getLocalLearningSummary()
     } satisfies LearningSyncResult
   }

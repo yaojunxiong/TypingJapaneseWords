@@ -96,9 +96,7 @@ export default function LessonsClient({ bypassLessonLock, roleLabel }: Props) {
         crowns,
         done,
         locked,
-        href: locked
-          ? '#'
-          : `https://yaojunxiong.github.io/TypingJapaneseWords/docs/minna-path.html?lesson=${lesson.no}&v=22.1`
+        href: locked ? '#' : `/lessons/${lesson.no}`
       }
     })
   }, [local, bypassLessonLock])
@@ -119,8 +117,6 @@ export default function LessonsClient({ bypassLessonLock, roleLabel }: Props) {
             key={row.no}
             href={row.href}
             className={row.locked ? 'lessonCard2 locked' : 'lessonCard2'}
-            target={row.locked ? undefined : '_blank'}
-            rel={row.locked ? undefined : 'noreferrer'}
           >
             <div className={row.done ? 'lessonNo done' : row.locked ? 'lessonNo muted' : 'lessonNo'}>
               {row.done ? '✓' : row.no}
@@ -141,7 +137,7 @@ export default function LessonsClient({ bypassLessonLock, roleLabel }: Props) {
 
       <section className="card">
         <h3>说明</h3>
-        <p className="small">本页先迁移课程目录和锁课逻辑；课程学习内容暂时仍跳转旧站。</p>
+        <p className="small">本页已切换为站内课程跳转，学习页持续完善中。</p>
       </section>
     </>
   )
