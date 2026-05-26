@@ -68,6 +68,7 @@ export default async function MePage() {
         <p><Link href="/lessons">进入课程入口</Link></p>
         <p><Link href="/favorites">进入收藏页</Link></p>
         <p><Link href="/messages">进入消息中心</Link></p>
+        <p><Link href="/chat">进入聊天页</Link></p>
         <p><Link href="/">返回首页</Link></p>
       </section>
     </main>

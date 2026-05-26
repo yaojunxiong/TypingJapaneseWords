@@ -25,6 +25,7 @@ export default async function Page() {
         <p><Link href="/lessons">课程入口（迁移版）</Link></p>
         <p><Link href="/favorites">收藏页（迁移版）</Link></p>
         <p><Link href="/messages">消息中心（迁移版）</Link></p>
+        <p><Link href="/chat">聊天页（迁移版）</Link></p>
       </section>
 
       {error ? (

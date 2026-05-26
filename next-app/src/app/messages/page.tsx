@@ -231,15 +231,10 @@ export default async function MessagesPage() {
         <article className="msgCard2">
           <div className="msgIcon">💬</div>
           <h2>聊天</h2>
-          <p className="small">支持私信与群聊，当前迁移版先跳转旧站会话页。</p>
-          <a
-            className="btn ghost"
-            href="https://yaojunxiong.github.io/TypingJapaneseWords/docs/minna-app-chat.html?v=22.1"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <p className="small">支持私信与群聊，已接入 Next 迁移版聊天页。</p>
+          <Link className="btn ghost" href="/chat">
             打开聊天页
-          </a>
+          </Link>
         </article>
       </section>
 
@@ -275,19 +270,17 @@ export default async function MessagesPage() {
           const t = threadMap.get(m.thread_id)
           const title = t?.title || (t?.thread_type === 'group' ? `群聊 #${m.thread_id}` : `私信 #${m.thread_id}`)
           return (
-            <a
+            <Link
               key={m.id}
               className="chatRow"
-              href={`https://yaojunxiong.github.io/TypingJapaneseWords/docs/minna-app-chat.html?v=22.1&tid=${encodeURIComponent(String(m.thread_id))}`}
-              target="_blank"
-              rel="noreferrer"
+              href={`/chat?tid=${encodeURIComponent(String(m.thread_id))}`}
             >
               <div>
                 <b>{title}</b>
                 <p className="small">{String(m.from_email || '好友')}：{clip(String(m.body || ''))}</p>
               </div>
               <span className="small">{ago(m.created_at)}</span>
-            </a>
+            </Link>
           )
         })}
       </section>
