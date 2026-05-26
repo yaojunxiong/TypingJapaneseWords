@@ -35,16 +35,24 @@ function writeList(list: MistakeItem[]) {
   } catch {}
 }
 
-export default function MistakesClient() {
+type Props = {
+  lang: 'zh' | 'en'
+}
+
+function t(lang: Props['lang'], zh: string, en: string) {
+  return lang === 'en' ? en : zh
+}
+
+export default function MistakesClient({ lang }: Props) {
   const supabaseReady = hasSupabasePublicEnv()
   const supabase = useMemo(() => createClient(), [])
   const [list, setList] = useState<MistakeItem[]>([])
-  const [syncText, setSyncText] = useState('准备同步')
+  const [syncText, setSyncText] = useState(t(lang, '准备同步', 'Ready to sync'))
   const [syncing, setSyncing] = useState(false)
 
   async function syncCloud(forceUpload = false) {
     if (!supabaseReady) {
-      setSyncText('云端未配置，当前仅本地保存')
+      setSyncText(t(lang, '云端未配置，当前仅本地保存', 'Cloud is not configured. Saved locally only.'))
       return
     }
     setSyncing(true)
@@ -52,7 +60,7 @@ export default function MistakesClient() {
       const { data } = await supabase.auth.getUser()
       const user = data.user
       if (!user) {
-        setSyncText('未登录，当前仅本地保存')
+        setSyncText(t(lang, '未登录，当前仅本地保存', 'Not signed in. Saved locally only.'))
         return
       }
       const res = await syncLearningCloudNow({
@@ -62,9 +70,9 @@ export default function MistakesClient() {
       })
       setList(readList())
       if (res.ok) {
-        setSyncText(`云端同步成功 · ${new Date().toLocaleTimeString()}`)
+        setSyncText(`${t(lang, '云端同步成功', 'Cloud sync complete')} · ${new Date().toLocaleTimeString()}`)
       } else {
-        setSyncText(res.warning ? `同步提示：${res.warning}` : '同步未完成')
+        setSyncText(res.warning ? `${t(lang, '同步提示', 'Sync note')}：${res.warning}` : t(lang, '同步未完成', 'Sync incomplete'))
       }
     } finally {
       setSyncing(false)
@@ -79,7 +87,7 @@ export default function MistakesClient() {
   const shown = useMemo(() => list.slice().reverse(), [list])
 
   function clearAll() {
-    if (!window.confirm('确定清空全部错题记录吗？')) return
+    if (!window.confirm(t(lang, '确定清空全部错题记录吗？', 'Clear all mistake records?'))) return
     setList([])
     writeList([])
     void syncCloud(true)
@@ -89,37 +97,37 @@ export default function MistakesClient() {
     <>
       <section className="heroCard card">
         <div className="heroEmoji">🔥</div>
-        <h2>错题复习</h2>
-        <p className="small">查看并回顾你的错题记录（迁移版）</p>
+        <h2>{t(lang, '错题复习', 'Mistake Review')}</h2>
+        <p className="small">{t(lang, '查看并回顾你的错题记录（迁移版）', 'Review your mistake records')}</p>
       </section>
 
       <section className="card">
         <div className="favTop">
           <div>
-            <h3>错题列表</h3>
-            <p className="small">共 {list.length} 条</p>
+            <h3>{t(lang, '错题列表', 'Mistake List')}</h3>
+            <p className="small">{t(lang, '共', 'Total')} {list.length} {t(lang, '条', 'items')}</p>
             <p className="small">{syncText}</p>
           </div>
           <div className="favActions">
             <button className="btn ghost" onClick={() => void syncCloud(false)} disabled={syncing}>
-              {syncing ? '同步中...' : '立即同步'}
+              {syncing ? t(lang, '同步中...', 'Syncing...') : t(lang, '立即同步', 'Sync now')}
             </button>
-            <button className="btn danger" onClick={clearAll}>清空错题</button>
+            <button className="btn danger" onClick={clearAll}>{t(lang, '清空错题', 'Clear')}</button>
           </div>
         </div>
 
         {!shown.length ? (
-          <p className="small">当前没有错题记录。</p>
+          <p className="small">{t(lang, '当前没有错题记录。', 'No mistake records yet.')}</p>
         ) : (
           <div className="favGrid2">
             {shown.map((m, i) => {
               const lessonNo = Math.max(1, Number(m.lessonNo || 1))
               return (
                 <article key={`${lessonNo}-${m.stage || ''}-${m.jp || ''}-${i}`} className="favCard2">
-                  <span>第 {lessonNo} 课 · {m.stage || 'review'}</span>
-                  <b>{m.jp || m.question || '题目'}</b>
+                  <span>{t(lang, `第 ${lessonNo} 课`, `Lesson ${lessonNo}`)} · {m.stage || 'review'}</span>
+                  <b>{m.jp || m.question || t(lang, '题目', 'Question')}</b>
                   <small>{m.kana || ''}</small>
-                  <p>{m.meaning || m.answer || '待复习'}</p>
+                  <p>{m.meaning || m.answer || t(lang, '待复习', 'Ready to review')}</p>
                 </article>
               )
             })}

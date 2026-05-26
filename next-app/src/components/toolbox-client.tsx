@@ -21,7 +21,15 @@ type Stats = {
   lastStudyDate: string
 }
 
-export default function ToolboxClient() {
+type Props = {
+  lang: 'zh' | 'en'
+}
+
+function t(lang: Props['lang'], zh: string, en: string) {
+  return lang === 'en' ? en : zh
+}
+
+export default function ToolboxClient({ lang }: Props) {
   const supabaseReady = hasSupabasePublicEnv()
   const supabase = useMemo(() => createClient(), [])
   const [stats, setStats] = useState<Stats>({
@@ -34,7 +42,7 @@ export default function ToolboxClient() {
     lastLesson: 1,
     lastStudyDate: ''
   })
-  const [syncText, setSyncText] = useState('准备就绪')
+  const [syncText, setSyncText] = useState(t(lang, '准备就绪', 'Ready'))
   const [syncing, setSyncing] = useState(false)
 
   function readLocalStats() {
@@ -53,7 +61,7 @@ export default function ToolboxClient() {
 
   async function runCloudSync(forceUpload = false) {
     if (!supabaseReady) {
-      setSyncText('云端未配置，当前使用本地数据')
+      setSyncText(t(lang, '云端未配置，当前使用本地数据', 'Cloud is not configured. Using local data.'))
       return
     }
     setSyncing(true)
@@ -61,7 +69,7 @@ export default function ToolboxClient() {
       const { data } = await supabase.auth.getUser()
       const user = data.user
       if (!user) {
-        setSyncText('未登录：当前仅本地记录')
+        setSyncText(t(lang, '未登录：当前仅本地记录', 'Not signed in. Local records only.'))
         readLocalStats()
         return
       }
@@ -72,12 +80,12 @@ export default function ToolboxClient() {
       })
       readLocalStats()
       if (res.ok) {
-        setSyncText(`云端同步成功 · ${new Date().toLocaleTimeString()}`)
+        setSyncText(`${t(lang, '云端同步成功', 'Cloud sync complete')} · ${new Date().toLocaleTimeString()}`)
       } else {
-        setSyncText(res.warning ? `同步提示：${res.warning}` : '同步未完成')
+        setSyncText(res.warning ? `${t(lang, '同步提示', 'Sync note')}：${res.warning}` : t(lang, '同步未完成', 'Sync incomplete'))
       }
     } catch (e) {
-      setSyncText(`同步失败：${String(e)}`)
+      setSyncText(`${t(lang, '同步失败', 'Sync failed')}：${String(e)}`)
     } finally {
       setSyncing(false)
     }
@@ -95,7 +103,7 @@ export default function ToolboxClient() {
       lastLesson: next.lastLesson,
       lastStudyDate: next.lastStudyDate
     })
-    setSyncText('已完成今日打卡，正在同步云端...')
+    setSyncText(t(lang, '已完成今日打卡，正在同步云端...', 'Check-in complete. Syncing cloud data...'))
     void runCloudSync(true)
   }
 
@@ -108,34 +116,34 @@ export default function ToolboxClient() {
     () => [
       {
         icon: '🔥',
-        title: '错题复习',
-        desc: '自动记录并强化复习',
+        title: t(lang, '错题复习', 'Mistake Review'),
+        desc: t(lang, '自动记录并强化复习', 'Review automatically tracked mistakes'),
         href: '/mistakes',
         count: stats.mistakes
       },
       {
         icon: '👑',
-        title: 'Crown 收藏',
-        desc: '查看学习成长进度',
+        title: t(lang, 'Crown 收藏', 'Crown Progress'),
+        desc: t(lang, '查看学习成长进度', 'Track your learning growth'),
         href: '/lessons',
         count: stats.crowns
       },
       {
         icon: '💎',
-        title: 'XP 统计',
-        desc: '累计学习经验',
+        title: t(lang, 'XP 统计', 'XP Stats'),
+        desc: t(lang, '累计学习经验', 'Total learning experience'),
         href: '/me',
         count: stats.xp
       },
       {
         icon: '📅',
-        title: '打卡天数',
-        desc: '今日完成打卡并同步云端',
+        title: t(lang, '打卡天数', 'Check-in Days'),
+        desc: t(lang, '今日完成打卡并同步云端', 'Check in today and sync to cloud'),
         href: '/toolbox',
         count: stats.checkinDays
       }
     ],
-    [stats]
+    [stats, lang]
   )
 
   return (
@@ -143,15 +151,15 @@ export default function ToolboxClient() {
       <section className="heroCard card">
         <div className="heroEmoji">🧰</div>
         <h2>Learning Center</h2>
-        <p className="small">学习数据与复习中心（迁移版）</p>
+        <p className="small">{t(lang, '学习数据与复习中心（迁移版）', 'Learning data and review center')}</p>
       </section>
 
       <section className="statsGrid2">
         <div className="bigStat"><b>💎 {stats.xp}</b><span>Total XP</span></div>
         <div className="bigStat"><b>👑 {stats.crowns}</b><span>Total Crowns</span></div>
-        <div className="bigStat"><b>🔥 {stats.mistakes}</b><span>Mistakes</span></div>
-        <div className="bigStat"><b>📚 {stats.lessons}</b><span>Lessons</span></div>
-        <div className="bigStat"><b>✅ {stats.checkinDays}</b><span>Check-in Days</span></div>
+        <div className="bigStat"><b>🔥 {stats.mistakes}</b><span>{t(lang, '错题', 'Mistakes')}</span></div>
+        <div className="bigStat"><b>📚 {stats.lessons}</b><span>{t(lang, '课程', 'Lessons')}</span></div>
+        <div className="bigStat"><b>✅ {stats.checkinDays}</b><span>{t(lang, '打卡天数', 'Check-in Days')}</span></div>
         <div className="bigStat"><b>🔥 {stats.streak}</b><span>Streak</span></div>
       </section>
 
@@ -171,22 +179,24 @@ export default function ToolboxClient() {
       </section>
 
       <section className="card">
-        <h3>云端同步</h3>
+        <h3>{t(lang, '云端同步', 'Cloud Sync')}</h3>
         <p className="small">{syncText}</p>
-        <p className="small">最近学习：第 {stats.lastLesson} 课{stats.lastStudyDate ? ` · ${stats.lastStudyDate}` : ''}</p>
+        <p className="small">
+          {t(lang, '最近学习', 'Recent lesson')}：{t(lang, `第 ${stats.lastLesson} 课`, `Lesson ${stats.lastLesson}`)}{stats.lastStudyDate ? ` · ${stats.lastStudyDate}` : ''}
+        </p>
         <div className="favActions">
           <button className="btn" onClick={() => void runCloudSync(false)} disabled={syncing}>
-            {syncing ? '同步中...' : '立即同步'}
+            {syncing ? t(lang, '同步中...', 'Syncing...') : t(lang, '立即同步', 'Sync now')}
           </button>
           <button className="btn ghost" onClick={onCheckinNow} disabled={syncing}>
-            今日打卡
+            {t(lang, '今日打卡', 'Check in')}
           </button>
         </div>
       </section>
 
       <section className="card">
-        <h3>迁移状态</h3>
-        <p className="small">学习中心核心入口已迁移到 Next 站内版本。</p>
+        <h3>{t(lang, '迁移状态', 'Migration Status')}</h3>
+        <p className="small">{t(lang, '学习中心核心入口已迁移到 Next 站内版本。', 'Core learning center entries now stay inside the Next app.')}</p>
       </section>
     </>
   )

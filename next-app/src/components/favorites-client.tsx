@@ -39,12 +39,20 @@ function identity(v: FavItem, i: number) {
   return String(v.id || `${v.lessonNo || 1}-${v.jp || ''}-${v.kana || ''}-${v.meaning || ''}-${i}`)
 }
 
-export default function FavoritesClient() {
+type Props = {
+  lang: 'zh' | 'en'
+}
+
+function t(lang: Props['lang'], zh: string, en: string) {
+  return lang === 'en' ? en : zh
+}
+
+export default function FavoritesClient({ lang }: Props) {
   const supabaseReady = hasSupabasePublicEnv()
   const supabase = useMemo(() => createClient(), [])
   const [list, setList] = useState<FavItem[]>([])
   const [q, setQ] = useState('')
-  const [syncText, setSyncText] = useState('准备同步')
+  const [syncText, setSyncText] = useState(t(lang, '准备同步', 'Ready to sync'))
 
   function uniqueById(items: FavItem[]) {
     const map = new Map<string, FavItem>()
@@ -57,13 +65,13 @@ export default function FavoritesClient() {
   async function syncCloud(nextList?: FavItem[]) {
     const localList = Array.isArray(nextList) ? nextList : readList()
     if (!supabaseReady) {
-      setSyncText('云端未配置，当前仅本地保存')
+      setSyncText(t(lang, '云端未配置，当前仅本地保存', 'Cloud is not configured. Saved locally only.'))
       return
     }
     const { data: userData } = await supabase.auth.getUser()
     const user = userData.user
     if (!user) {
-      setSyncText('未登录，当前仅本地保存')
+      setSyncText(t(lang, '未登录，当前仅本地保存', 'Not signed in. Saved locally only.'))
       return
     }
 
@@ -75,8 +83,8 @@ export default function FavoritesClient() {
 
     if (error) {
       const msg = /Could not find the table 'public\.minna_learning_state'/i.test(error.message || '')
-        ? '云端学习表未初始化，当前仅本地保存'
-        : `同步提示：${error.message}`
+        ? t(lang, '云端学习表未初始化，当前仅本地保存', 'Cloud learning table is not initialized. Saved locally only.')
+        : `${t(lang, '同步提示', 'Sync note')}：${error.message}`
       setSyncText(msg)
       return
     }
@@ -108,11 +116,11 @@ export default function FavoritesClient() {
     )
 
     if (upsertRes.error) {
-      setSyncText(`同步提示：${upsertRes.error.message}`)
+      setSyncText(`${t(lang, '同步提示', 'Sync note')}：${upsertRes.error.message}`)
       return
     }
 
-    setSyncText(`云端同步成功 · ${new Date().toLocaleTimeString()}`)
+    setSyncText(`${t(lang, '云端同步成功', 'Cloud sync complete')} · ${new Date().toLocaleTimeString()}`)
   }
 
   useEffect(() => {
@@ -156,7 +164,7 @@ export default function FavoritesClient() {
   }
 
   function clearAll() {
-    if (!window.confirm('确定清空所有收藏词汇吗？')) return
+    if (!window.confirm(t(lang, '确定清空所有收藏词汇吗？', 'Clear all saved vocabulary?'))) return
     setList([])
     writeList([])
     void syncCloud([])
@@ -166,21 +174,21 @@ export default function FavoritesClient() {
     <>
       <section className="heroCard card">
         <div className="heroEmoji">💗</div>
-        <h2>我的收藏词汇</h2>
-        <p className="small">集中复习你在课程中收藏的日语单词（迁移版）</p>
+        <h2>{t(lang, '我的收藏词汇', 'Saved Vocabulary')}</h2>
+        <p className="small">{t(lang, '集中复习你在课程中收藏的日语单词（迁移版）', 'Review the Japanese vocabulary you saved from lessons')}</p>
       </section>
 
       <section className="card">
         <div className="favTop">
           <div>
-            <h3>收藏词汇列表</h3>
-            <p className="small">已收藏 {list.length} 个词汇</p>
+            <h3>{t(lang, '收藏词汇列表', 'Saved Vocabulary List')}</h3>
+            <p className="small">{t(lang, '已收藏', 'Saved')} {list.length} {t(lang, '个词汇', 'items')}</p>
             <p className="small">{syncText}</p>
           </div>
           <div className="favActions">
-            <button className="btn ghost" onClick={shuffleNow}>随机复习</button>
-            <button className="btn ghost" onClick={exportJson}>导出 JSON</button>
-            <button className="btn danger" onClick={clearAll}>清空收藏</button>
+            <button className="btn ghost" onClick={shuffleNow}>{t(lang, '随机复习', 'Shuffle')}</button>
+            <button className="btn ghost" onClick={exportJson}>{t(lang, '导出 JSON', 'Export JSON')}</button>
+            <button className="btn danger" onClick={clearAll}>{t(lang, '清空收藏', 'Clear')}</button>
           </div>
         </div>
 
@@ -188,13 +196,13 @@ export default function FavoritesClient() {
           className="favInput"
           value={q}
           onChange={(e) => setQ(e.target.value)}
-          placeholder="搜索：日本 / にほん / 第2课"
+          placeholder={t(lang, '搜索：日本 / にほん / 第2课', 'Search: 日本 / にほん / Lesson 2')}
         />
 
         {!shown.length ? (
           <div className="emptyBox">
-            <h4>暂无收藏</h4>
-            <p className="small">进入课程后点击 ☆ 收藏 即可加入。</p>
+            <h4>{t(lang, '暂无收藏', 'No saved items')}</h4>
+            <p className="small">{t(lang, '进入课程后点击 ☆ 收藏 即可加入。', 'Open a lesson and tap ☆ to save vocabulary.')}</p>
           </div>
         ) : (
           <div className="favGrid2">
@@ -202,7 +210,7 @@ export default function FavoritesClient() {
               const lessonNo = Math.max(1, Number(v.lessonNo || 1))
               return (
                 <article key={rowKey} className="favCard2">
-                  <span>第 {lessonNo} 课</span>
+                  <span>{t(lang, `第 ${lessonNo} 课`, `Lesson ${lessonNo}`)}</span>
                   <b>{v.jp || ''}</b>
                   <small>{v.kana || ''}</small>
                   <p>{v.meaning || ''}</p>
@@ -211,9 +219,9 @@ export default function FavoritesClient() {
                       className="btn ghost"
                       href={`/lessons/${lessonNo}`}
                     >
-                      打开课程
+                      {t(lang, '打开课程', 'Open Lesson')}
                     </a>
-                    <button className="btn" onClick={() => removeOne(rowKey)}>移除</button>
+                    <button className="btn" onClick={() => removeOne(rowKey)}>{t(lang, '移除', 'Remove')}</button>
                   </div>
                 </article>
               )
