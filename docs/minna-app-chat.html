@@ -16,12 +16,16 @@
 (function(){
   var currentThread=0,pollId=0,rtChannel=null;
   var PIN_KEY='minna.chat.pins.v1';
+  var DRAFT_KEY='minna.chat.drafts.v1';
   function qp(k){return new URLSearchParams(location.search).get(k)||''}
   async function init(){try{if(window.MinnaAuth&&MinnaAuth.init)await MinnaAuth.init({lessonId:'minna_chat'})}catch(e){}}
   function myUid(){var u=window.MinnaAuth&&MinnaAuth.getUser?MinnaAuth.getUser():null;return u&&u.id?u.id:''}
   function esc(s){return String(s||'').replace(/[&<>\"]/g,function(c){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]})}
   function pins(){try{return JSON.parse(localStorage.getItem(PIN_KEY)||'{}')||{}}catch(e){return {}}}
   function setPin(tid,on){var p=pins();if(on)p[String(tid)]=1;else delete p[String(tid)];localStorage.setItem(PIN_KEY,JSON.stringify(p));}
+  function drafts(){try{return JSON.parse(localStorage.getItem(DRAFT_KEY)||'{}')||{}}catch(e){return {}}}
+  function saveDraft(tid,text){if(!tid)return;var d=drafts();d[String(tid)]=String(text||'');localStorage.setItem(DRAFT_KEY,JSON.stringify(d));}
+  function loadDraft(tid){var d=drafts();return String(d[String(tid)]||'')}
   async function loadThreads(){try{return await MinnaSocial.listThreads()}catch(e){return []}}
   async function render(){
     var threads=await loadThreads();
@@ -40,15 +44,16 @@
     document.getElementById('copyUidBtn').onclick=async function(){var v=document.getElementById('myUid').value.trim();if(!v)return;try{await navigator.clipboard.writeText(v);alert('已复制 user_id');}catch(e){alert('复制失败：'+(e.message||e));}};
     document.getElementById('groupBtn').onclick=async function(){var title=document.getElementById('groupTitle').value.trim()||'学习群';var uids=document.getElementById('groupUids').value.trim().split(',').map(function(x){return x.trim()}).filter(Boolean);currentThread=await MinnaSocial.createGroup(title,uids);await render();await openThread(currentThread);bindRealtime(currentThread);};
     document.querySelectorAll('[data-tid]').forEach(function(el){el.onclick=function(){currentThread=Number(el.dataset.tid);openThread(currentThread);bindRealtime(currentThread);};});
-    document.getElementById('sendBtn').onclick=async function(){if(!currentThread){alert('先选择会话');return;}var v=document.getElementById('msgInput').value.trim();if(!v)return;await MinnaSocial.sendMessage(currentThread,v);document.getElementById('msgInput').value='';openThread(currentThread);};
+    document.getElementById('sendBtn').onclick=async function(){if(!currentThread){alert('先选择会话');return;}var v=document.getElementById('msgInput').value.trim();if(!v)return;await MinnaSocial.sendMessage(currentThread,v);document.getElementById('msgInput').value='';saveDraft(currentThread,'');openThread(currentThread);};
     document.getElementById('msgInput').onkeydown=function(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();document.getElementById('sendBtn').click();}};
+    document.getElementById('msgInput').oninput=function(){if(currentThread)saveDraft(currentThread,document.getElementById('msgInput').value);};
     document.getElementById('refreshBtn').onclick=function(){if(currentThread)openThread(currentThread);};
     document.getElementById('searchMsg').oninput=function(){if(currentThread)openThread(currentThread);};
     document.getElementById('pinBtn').onclick=function(){if(!currentThread)return;var p=pins();setPin(currentThread,!p[String(currentThread)]);render();};
     document.getElementById('inviteBtn').onclick=async function(){if(!currentThread){alert('先选择会话');return;}var ids=document.getElementById('inviteUids').value.trim().split(',').map(function(x){return x.trim()}).filter(Boolean);if(!ids.length)return;try{await MinnaSocial.addGroupMembers(currentThread,ids);alert('已邀请');openThread(currentThread);}catch(e){alert('邀请失败：'+(e.message||e));}};
     document.getElementById('renameBtn').onclick=async function(){if(!currentThread){alert('先选择会话');return;}var t=prompt('输入新群名');if(!t)return;try{await MinnaSocial.renameThread(currentThread,t);await render();await openThread(currentThread);}catch(e){alert('改名失败：'+(e.message||e));}};
     document.getElementById('leaveBtn').onclick=async function(){if(!currentThread)return;try{await MinnaSocial.leaveThread(currentThread);currentThread=0;await render();}catch(e){alert('退出失败：'+(e.message||e));}};
-    if(currentThread){openThread(currentThread);bindRealtime(currentThread);}
+    if(currentThread){openThread(currentThread);bindRealtime(currentThread);document.getElementById('msgInput').value=loadDraft(currentThread);}
   }
   async function openThread(tid){
     try{
@@ -64,6 +69,8 @@
       if(MinnaSocial.markThreadRead) MinnaSocial.markThreadRead(tid);
       document.querySelectorAll('[data-delmsg]').forEach(function(btn){btn.onclick=async function(){try{await MinnaSocial.deleteMyMessage(Number(btn.dataset.delmsg));openThread(tid);}catch(e){alert('撤回失败：'+(e.message||e));}};});
       document.querySelectorAll('[data-rmuid]').forEach(function(btn){btn.onclick=async function(){try{await MinnaSocial.removeGroupMember(tid,btn.dataset.rmuid);openThread(tid);}catch(e){alert('移除失败：'+(e.message||e));}};});
+      document.querySelectorAll('.msg b').forEach(function(nameNode){nameNode.style.cursor='pointer';nameNode.title='点击引用';nameNode.onclick=function(){var input=document.getElementById('msgInput');if(!input)return;var name=nameNode.textContent||'用户';var prefix='@'+name+' ';if(input.value.indexOf(prefix)!==0)input.value=prefix+input.value;input.focus();if(currentThread)saveDraft(currentThread,input.value);};});
+      var draftInput=document.getElementById('msgInput'); if(draftInput&&currentThread){draftInput.value=loadDraft(currentThread);}
     }catch(e){document.getElementById('msgs').innerHTML='<p class="small">读取失败：'+esc(e.message||e)+'</p>'}
   }
   function bindRealtime(tid){
