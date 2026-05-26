@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { revalidatePath } from 'next/cache'
 import { cookies } from 'next/headers'
 import { createClient } from '@/utils/supabase/server'
 import MinnaNav from '@/components/minna-nav'
@@ -13,6 +14,34 @@ type Profile = {
   goal: string | null
   bio: string | null
   updated_at: string | null
+}
+
+async function initProfile() {
+  'use server'
+
+  if (!hasSupabasePublicEnv()) return
+  const cookieStore = await cookies()
+  const supabase = createClient(cookieStore)
+  const { data: userData } = await supabase.auth.getUser()
+  const user = userData.user
+  if (!user) return
+
+  const now = new Date().toISOString()
+  const email = String(user.email || '')
+  const fallbackNick = email ? email.split('@')[0] : 'minna-learner'
+
+  await supabase.from('minna_social_profiles').upsert(
+    {
+      user_id: user.id,
+      nick: fallbackNick,
+      goal: '完成《みんなの日本語》课程',
+      bio: '由 Next 迁移版初始化',
+      updated_at: now
+    },
+    { onConflict: 'user_id' }
+  )
+
+  revalidatePath('/me')
 }
 
 export default async function MePage() {
@@ -67,7 +96,14 @@ export default async function MePage() {
       <section className="card">
         <h2>云端资料</h2>
         {profileErr ? <p className="small">读取失败：{profileErr.message}</p> : null}
-        {!profileErr && !profile ? <p className="small">暂无资料记录（首次登录可在旧站保存后同步到这里）。</p> : null}
+        {!profileErr && !profile ? (
+          <>
+            <p className="small">暂无资料记录（首次登录可在旧站保存后同步到这里）。</p>
+            <form action={initProfile} style={{ marginTop: 10 }}>
+              <button type="submit" className="btn">初始化云端资料</button>
+            </form>
+          </>
+        ) : null}
         {profile ? (
           <>
             <p className="small">昵称：{profile.nick || '(未设置)'}</p>
