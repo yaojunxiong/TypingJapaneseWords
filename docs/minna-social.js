@@ -231,6 +231,30 @@ window.MinnaSocial = (function(){
     return m.data||[];
   }
 
+  async function listParticipants(threadId){
+    var s=await db(); if(!s||!threadId) return [];
+    var r=await s.from('minna_chat_participants').select('thread_id,user_id,joined_at').eq('thread_id',threadId).order('joined_at',{ascending:true});
+    if(r.error) throw r.error;
+    return r.data||[];
+  }
+
+  async function addGroupMembers(threadId,userIds){
+    var u=authUser(),s=await db(); if(!u||!s) throw new Error('need_login');
+    var ids=(userIds||[]).map(function(x){return String(x||'').trim()}).filter(Boolean);
+    if(!ids.length) return {ok:false,msg:'empty'};
+    var rows=ids.map(function(uid){return {thread_id:threadId,user_id:uid};});
+    var ins=await s.from('minna_chat_participants').insert(rows);
+    if(ins.error) throw ins.error;
+    return {ok:true};
+  }
+
+  async function leaveThread(threadId){
+    var u=authUser(),s=await db(); if(!u||!s) throw new Error('need_login');
+    var del=await s.from('minna_chat_participants').delete().eq('thread_id',threadId).eq('user_id',u.id);
+    if(del.error) throw del.error;
+    return {ok:true};
+  }
+
   async function sendMessage(threadId,body){
     var u=authUser(),s=await db(); if(!u||!s) throw new Error('need_login');
     body=String(body||'').trim(); if(!body) return {ok:false,msg:'empty'};
@@ -245,6 +269,7 @@ window.MinnaSocial = (function(){
     sendFriendRequest:sendFriendRequest,listIncomingRequests:listIncomingRequests,respondFriendRequest:respondFriendRequest,
     socialStats:socialStats,monthlyBadges:monthlyBadges,achievements:achievements,friendStreakData:friendStreakData,
     listEvents:listEvents,markEventsRead:markEventsRead,unreadCount:unreadCount,logEvent:logEvent,displayName:displayName,
-    getThreadIdWithUser:getThreadIdWithUser,createGroup:createGroup,listThreads:listThreads,listMessages:listMessages,sendMessage:sendMessage
+    getThreadIdWithUser:getThreadIdWithUser,createGroup:createGroup,listThreads:listThreads,listMessages:listMessages,sendMessage:sendMessage,
+    listParticipants:listParticipants,addGroupMembers:addGroupMembers,leaveThread:leaveThread
   };
 })();
