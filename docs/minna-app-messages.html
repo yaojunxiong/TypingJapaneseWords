@@ -25,12 +25,16 @@
   async function render(){
     var events=MinnaSocial.listEvents();
     var chats=[];try{if(MinnaSocial.recentChatPreviews)chats=await MinnaSocial.recentChatPreviews(6);}catch(e){}
+    var unreadMap={};try{if(MinnaSocial.threadUnreadCounts)unreadMap=await MinnaSocial.threadUnreadCounts();}catch(e){}
     if(window.MinnaAppShell) window.MinnaAppShell.injectTop();
     var html='<main class="page"><section class="head"><h1>消息中心</h1><span class="bell">🔔</span></section><section class="list">';
     html+=row('系统消息','来点小 PK，学习更带劲！','关注好友，随时追踪学习进度。','添加好友','🏃','addFriend');
     html+=row('即时通讯','用户互发消息与组建群聊','支持私信和群聊实时交流。','打开聊天','💬','openChat');
     html+=row('系统消息','今天太忙没空练？','连胜激冻可以护住你的连胜哦。','前往宝箱','🧊','openShop');
-    if(chats.length){chats.forEach(function(c){html+=row('聊天消息',String(c.from_email||'好友')+'：'+String(c.body||'').slice(0,28),'会话 #'+c.thread_id,'进入会话','📨','openChat:'+c.thread_id);});}
+    if(chats.length){
+      chats.sort(function(a,b){return Number(unreadMap[String(b.thread_id)]||0)-Number(unreadMap[String(a.thread_id)]||0);});
+      chats.forEach(function(c){var n=Number(unreadMap[String(c.thread_id)]||0);html+=row('聊天消息'+(n>0?(' · 未读'+n):''),String(c.from_email||'好友')+'：'+String(c.body||'').slice(0,28),'会话 #'+c.thread_id,'进入会话','📨','openChat:'+c.thread_id);});
+    }
     if(events.length){events.slice(0,12).forEach(function(e){html+=row(ago(e.created_at),e.title||'动态更新',e.desc||'',null,'✨','');});}
     html+='</section></main>';
     document.getElementById('app').innerHTML=html;

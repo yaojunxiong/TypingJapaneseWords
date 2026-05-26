@@ -4,6 +4,7 @@ window.MinnaSocial = (function(){
   var FKEY='minna.friends.v1';
   var EKEY='minna.events.v1';
   var READKEY='minna.events.read.v1';
+  var THREAD_READ_KEY='minna.chat.read.v1';
   function jread(k,def){try{return JSON.parse(localStorage.getItem(k)||JSON.stringify(def))||def}catch(e){return def}}
   function jwrite(k,v){localStorage.setItem(k,JSON.stringify(v))}
   function authUser(){return window.MinnaAuth&&MinnaAuth.getUser?MinnaAuth.getUser():null}
@@ -13,6 +14,11 @@ window.MinnaSocial = (function(){
   function eventReadAt(){return String(localStorage.getItem(READKEY)||'')}
   function markEventsRead(){localStorage.setItem(READKEY,nowIso())}
   function unreadCount(){var t=eventReadAt();if(!t)return jread(EKEY,[]).length;var ts=new Date(t).getTime();return jread(EKEY,[]).filter(function(e){return new Date(e.created_at).getTime()>ts}).length}
+  function threadReadMap(){return jread(THREAD_READ_KEY,{})}
+  function markThreadRead(threadId){
+    var m=threadReadMap(); m[String(threadId)]=nowIso(); jwrite(THREAD_READ_KEY,m);
+  }
+  function threadReadAt(threadId){var m=threadReadMap(); return String(m[String(threadId)]||'')}
   async function db(){return window.MinnaAuth&&MinnaAuth.client?MinnaAuth.client():null}
 
   async function getProfile(){
@@ -274,6 +280,21 @@ window.MinnaSocial = (function(){
     if(m.error) throw m.error;
     return m.data||[];
   }
+  async function threadUnreadCounts(){
+    var u=authUser(),s=await db(); if(!u||!s) return {};
+    var p=await s.from('minna_chat_participants').select('thread_id').eq('user_id',u.id).limit(500);
+    if(p.error) throw p.error;
+    var ids=(p.data||[]).map(function(x){return x.thread_id});
+    if(!ids.length) return {};
+    var msgs=await s.from('minna_chat_messages').select('thread_id,created_at').in('thread_id',ids).order('created_at',{ascending:false}).limit(2000);
+    if(msgs.error) throw msgs.error;
+    var read=threadReadMap(), out={};
+    (msgs.data||[]).forEach(function(r){
+      var k=String(r.thread_id), rt=read[k]?new Date(read[k]).getTime():0, mt=new Date(r.created_at).getTime();
+      if(mt>rt) out[k]=(out[k]||0)+1;
+    });
+    return out;
+  }
 
   return {
     getProfile:getProfile,saveProfile:saveProfile,listFriends:listFriends,addFriend:addFriend,removeFriend:removeFriend,
@@ -281,6 +302,7 @@ window.MinnaSocial = (function(){
     socialStats:socialStats,monthlyBadges:monthlyBadges,achievements:achievements,friendStreakData:friendStreakData,
     listEvents:listEvents,markEventsRead:markEventsRead,unreadCount:unreadCount,logEvent:logEvent,displayName:displayName,
     getThreadIdWithUser:getThreadIdWithUser,createGroup:createGroup,listThreads:listThreads,listMessages:listMessages,sendMessage:sendMessage,
-    listParticipants:listParticipants,addGroupMembers:addGroupMembers,leaveThread:leaveThread,recentChatPreviews:recentChatPreviews
+    listParticipants:listParticipants,addGroupMembers:addGroupMembers,leaveThread:leaveThread,recentChatPreviews:recentChatPreviews,
+    markThreadRead:markThreadRead,threadReadAt:threadReadAt,threadUnreadCounts:threadUnreadCounts
   };
 })();

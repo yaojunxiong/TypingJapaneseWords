@@ -21,11 +21,12 @@
   async function loadThreads(){try{return await MinnaSocial.listThreads()}catch(e){return []}}
   async function render(){
     var threads=await loadThreads();
+    var unreadMap={}; try{if(MinnaSocial.threadUnreadCounts)unreadMap=await MinnaSocial.threadUnreadCounts();}catch(e){}
     if(window.MinnaAppShell)window.MinnaAppShell.injectTop();
     document.getElementById('app').innerHTML='<main class="page">'
       +'<section class="card"><h2>发起私信</h2><div class="row"><input id="dmUid" placeholder="对方 user_id"><button class="btn" id="dmBtn">打开私信</button></div></section>'
       +'<section class="card"><h2>创建群聊</h2><div class="row"><input id="groupTitle" placeholder="群名"><input id="groupUids" placeholder="成员 user_id，逗号分隔"><button class="btn" id="groupBtn">建群</button></div></section>'
-      +'<section class="card list"><h2>会话列表</h2>'+(threads.length?threads.map(function(t){return '<div class="item" data-tid="'+t.id+'">['+esc(t.thread_type)+'] '+esc(t.title||('会话#'+t.id))+'</div>'}).join(''):'<p class="small">暂无会话</p>')+'</section>'
+      +'<section class="card list"><h2>会话列表</h2>'+(threads.length?threads.map(function(t){var n=Number(unreadMap[String(t.id)]||0);return '<div class="item" data-tid="'+t.id+'">['+esc(t.thread_type)+'] '+esc(t.title||('会话#'+t.id))+(n>0?(' · 未读 '+n):'')+'</div>'}).join(''):'<p class="small">暂无会话</p>')+'</section>'
       +'<section class="card"><h2>聊天内容</h2><div id="threadMeta" class="small">未选择会话</div><div id="msgs" class="msgs"></div><div class="row" style="margin-top:8px"><input id="msgInput" placeholder="输入消息"><button class="btn" id="sendBtn">发送</button></div><div class="row" style="margin-top:8px"><input id="inviteUids" placeholder="邀请 user_id，逗号分隔"><button class="btn" id="inviteBtn">邀请进群</button><button class="btn" id="leaveBtn">退出会话</button></div></section>'
       +'</main>';
     if(window.MinnaAppShell)window.MinnaAppShell.injectTabs('messages');
@@ -43,6 +44,7 @@
       document.getElementById('threadMeta').textContent='当前会话 #'+tid+' · 成员 '+people.length+' 人';
       document.getElementById('msgs').innerHTML=rows.map(function(m){return '<div class="msg"><b>'+esc((m.from_email||m.from_user_id||'用户'))+'</b>：'+esc(m.body)+' <span class="small">'+esc(m.created_at)+'</span></div>';}).join('')||'<p class="small">暂无消息</p>';
       var box=document.getElementById('msgs'); box.scrollTop=box.scrollHeight;
+      if(MinnaSocial.markThreadRead) MinnaSocial.markThreadRead(tid);
     }catch(e){document.getElementById('msgs').innerHTML='<p class="small">读取失败：'+esc(e.message||e)+'</p>'}
   }
   function bindRealtime(tid){
