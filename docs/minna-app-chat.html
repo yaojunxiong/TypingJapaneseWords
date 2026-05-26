@@ -33,7 +33,7 @@
       +'<section class="card"><h2>发起私信</h2><div class="row"><input id="dmUid" placeholder="对方 user_id"><button class="btn" id="dmBtn">打开私信</button></div><div class="row" style="margin-top:8px"><input id="myUid" readonly value="'+esc(myUid())+'" placeholder="我的 user_id"><button class="btn" id="copyUidBtn">复制我的ID</button></div></section>'
       +'<section class="card"><h2>创建群聊</h2><div class="row"><input id="groupTitle" placeholder="群名"><input id="groupUids" placeholder="成员 user_id，逗号分隔"><button class="btn" id="groupBtn">建群</button></div></section>'
       +'<section class="card list"><h2>会话列表</h2>'+(threads.length?threads.map(function(t){var n=Number(unreadMap[String(t.id)]||0);var pin=!!pmap[String(t.id)];return '<div class="item" data-tid="'+t.id+'">'+(pin?'📌 ':'')+'['+esc(t.thread_type)+'] '+esc(t.title||('会话#'+t.id))+(n>0?(' · 未读 '+n):'')+'</div>'}).join(''):'<p class="small">暂无会话</p>')+'</section>'
-      +'<section class="card"><h2>聊天内容</h2><div id="threadMeta" class="small">未选择会话</div><div class="row" style="margin:8px 0"><input id="searchMsg" placeholder="搜索本会话消息"><button class="btn" id="refreshBtn">刷新</button><button class="btn" id="pinBtn">置顶</button></div><div id="msgs" class="msgs"></div><div class="row" style="margin-top:8px"><input id="msgInput" placeholder="输入消息"><button class="btn" id="sendBtn">发送</button></div><div class="row" style="margin-top:8px"><input id="inviteUids" placeholder="邀请 user_id，逗号分隔"><button class="btn" id="inviteBtn">邀请进群</button><button class="btn" id="renameBtn">改群名</button><button class="btn" id="leaveBtn">退出会话</button></div></section>'
+      +'<section class="card"><h2>聊天内容</h2><div id="threadMeta" class="small">未选择会话</div><div id="memberBox" class="small" style="margin:6px 0"></div><div class="row" style="margin:8px 0"><input id="searchMsg" placeholder="搜索本会话消息"><button class="btn" id="refreshBtn">刷新</button><button class="btn" id="pinBtn">置顶</button></div><div id="msgs" class="msgs"></div><div class="row" style="margin-top:8px"><input id="msgInput" placeholder="输入消息"><button class="btn" id="sendBtn">发送</button></div><div class="row" style="margin-top:8px"><input id="inviteUids" placeholder="邀请 user_id，逗号分隔"><button class="btn" id="inviteBtn">邀请进群</button><button class="btn" id="renameBtn">改群名</button><button class="btn" id="leaveBtn">退出会话</button></div></section>'
       +'</main>';
     if(window.MinnaAppShell)window.MinnaAppShell.injectTabs('messages');
     document.getElementById('dmBtn').onclick=async function(){var uid=document.getElementById('dmUid').value.trim();if(!uid)return;currentThread=await MinnaSocial.getThreadIdWithUser(uid,'私信');await render();await openThread(currentThread);bindRealtime(currentThread);};
@@ -53,14 +53,17 @@
   async function openThread(tid){
     try{
       var rows=await MinnaSocial.listMessages(tid), people=await MinnaSocial.listParticipants(tid);
+      var threads=await MinnaSocial.listThreads(); var thread=(threads||[]).find(function(x){return Number(x.id)===Number(tid)})||{};
+      var me=myUid(),isOwner=String(thread.owner_user_id||'')===String(me||'');
       var q=(document.getElementById('searchMsg')&&document.getElementById('searchMsg').value||'').trim().toLowerCase();
       if(q)rows=rows.filter(function(m){return String(m.body||'').toLowerCase().indexOf(q)>=0||String(m.from_email||m.from_user_id||'').toLowerCase().indexOf(q)>=0;});
       document.getElementById('threadMeta').textContent='当前会话 #'+tid+' · 成员 '+people.length+' 人';
-      var me=myUid();
+      document.getElementById('memberBox').innerHTML='成员：'+people.map(function(p){var uid=String(p.user_id||'');var rm=(isOwner&&uid!==me)?(' <button class="btn" data-rmuid="'+uid+'">移除</button>'):'';return '<span>'+esc(uid)+rm+'</span>';}).join(' · ');
       document.getElementById('msgs').innerHTML=rows.map(function(m){var mine=String(m.from_user_id||'')===String(me||'');return '<div class="msg"><b>'+esc((m.from_email||m.from_user_id||'用户'))+'</b>：'+esc(m.body)+' <span class="small">'+esc(m.created_at)+'</span>'+(mine?(' <button class="btn" data-delmsg=\"'+m.id+'\">撤回</button>'):'')+'</div>';}).join('')||'<p class="small">暂无消息</p>';
       var box=document.getElementById('msgs'); box.scrollTop=box.scrollHeight;
       if(MinnaSocial.markThreadRead) MinnaSocial.markThreadRead(tid);
       document.querySelectorAll('[data-delmsg]').forEach(function(btn){btn.onclick=async function(){try{await MinnaSocial.deleteMyMessage(Number(btn.dataset.delmsg));openThread(tid);}catch(e){alert('撤回失败：'+(e.message||e));}};});
+      document.querySelectorAll('[data-rmuid]').forEach(function(btn){btn.onclick=async function(){try{await MinnaSocial.removeGroupMember(tid,btn.dataset.rmuid);openThread(tid);}catch(e){alert('移除失败：'+(e.message||e));}};});
     }catch(e){document.getElementById('msgs').innerHTML='<p class="small">读取失败：'+esc(e.message||e)+'</p>'}
   }
   function bindRealtime(tid){

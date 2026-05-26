@@ -269,6 +269,16 @@ window.MinnaSocial = (function(){
     return {ok:true};
   }
 
+  async function removeGroupMember(threadId,targetUserId){
+    var u=authUser(),s=await db(); if(!u||!s) throw new Error('need_login');
+    var th=await s.from('minna_chat_threads').select('id,owner_user_id').eq('id',threadId).maybeSingle();
+    if(th.error) throw th.error;
+    if(!th.data||String(th.data.owner_user_id)!==String(u.id)) throw new Error('仅群主可移除成员');
+    var del=await s.from('minna_chat_participants').delete().eq('thread_id',threadId).eq('user_id',targetUserId);
+    if(del.error) throw del.error;
+    return {ok:true};
+  }
+
   async function sendMessage(threadId,body){
     var u=authUser(),s=await db(); if(!u||!s) throw new Error('need_login');
     body=String(body||'').trim(); if(!body) return {ok:false,msg:'empty'};
@@ -317,7 +327,7 @@ window.MinnaSocial = (function(){
     socialStats:socialStats,monthlyBadges:monthlyBadges,achievements:achievements,friendStreakData:friendStreakData,
     listEvents:listEvents,markEventsRead:markEventsRead,unreadCount:unreadCount,logEvent:logEvent,displayName:displayName,
     getThreadIdWithUser:getThreadIdWithUser,createGroup:createGroup,renameThread:renameThread,listThreads:listThreads,listMessages:listMessages,sendMessage:sendMessage,
-    listParticipants:listParticipants,addGroupMembers:addGroupMembers,leaveThread:leaveThread,recentChatPreviews:recentChatPreviews,
+    listParticipants:listParticipants,addGroupMembers:addGroupMembers,leaveThread:leaveThread,removeGroupMember:removeGroupMember,recentChatPreviews:recentChatPreviews,
     deleteMyMessage:deleteMyMessage,
     markThreadRead:markThreadRead,threadReadAt:threadReadAt,threadUnreadCounts:threadUnreadCounts
   };

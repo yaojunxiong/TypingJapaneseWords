@@ -147,6 +147,11 @@ do $$ begin
     user_id=auth.uid()::text or exists(select 1 from public.minna_chat_threads t where t.id=thread_id and t.owner_user_id=auth.uid()::text)
   );
 exception when duplicate_object then null; end $$;
+do $$ begin
+  create policy "chat_participants_delete_self_or_owner" on public.minna_chat_participants for delete using (
+    user_id=auth.uid()::text or exists(select 1 from public.minna_chat_threads t where t.id=thread_id and t.owner_user_id=auth.uid()::text)
+  );
+exception when duplicate_object then null; end $$;
 
 do $$ begin
   create policy "chat_messages_select_member" on public.minna_chat_messages for select using (
