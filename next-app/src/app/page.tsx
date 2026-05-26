@@ -6,10 +6,12 @@ import {
   hasSupabasePublicEnv,
   getSupabaseMissingEnvMessage
 } from '@/utils/supabase/config'
+import { getLang, tr } from '@/lib/i18n'
 
 export default async function Page() {
   const supabaseReady = hasSupabasePublicEnv()
   const envMessage = getSupabaseMissingEnvMessage()
+  const lang = await getLang()
 
   if (!supabaseReady) {
     return (
@@ -17,29 +19,29 @@ export default async function Page() {
         <MinnaNav active="home" />
         <section className="homeStageCard">
           <div>
-            <p className="homeStageTop">第 1 阶段，第 10 部分</p>
-            <h2>找旅行物品和地方</h2>
+            <p className="homeStageTop">{tr(lang, '第 1 阶段，第 10 部分', 'Stage 1, Unit 10')}</p>
+            <h2>{tr(lang, '找旅行物品和地方', 'Find Travel Items and Places')}</h2>
           </div>
           <span className="homeStageIcon">📋</span>
         </section>
 
         <section className="homeMap card">
-          <div className="homeNode">🟢</div>
-          <div className="homeNode">📦</div>
-          <div className="homeNode">🪙</div>
-          <div className="homeNode">🏅</div>
+          <Link className="homeNode" href="/lessons/1#vocab">🟢<small>{tr(lang, '词汇', 'Vocab')}</small></Link>
+          <Link className="homeNode" href="/lessons/1#grammar">📦<small>{tr(lang, '语法', 'Grammar')}</small></Link>
+          <Link className="homeNode" href="/lessons/1#examples">🪙<small>{tr(lang, '例句', 'Examples')}</small></Link>
+          <Link className="homeNode" href="/lessons/1#quiz">🏅<small>{tr(lang, '测验', 'Quiz')}</small></Link>
         </section>
 
         <section className="homeLevelCard card">
-          <span className="homeTag">下一级</span>
-          <h2>第 2 阶段</h2>
-          <p>学会日常交流中基础的单词、短语和语法概念</p>
-          <p><Link className="homeContinueBtn" href="/lessons">继续</Link></p>
+          <span className="homeTag">{tr(lang, '下一级', 'Next Level')}</span>
+          <h2>{tr(lang, '第 2 阶段', 'Stage 2')}</h2>
+          <p>{tr(lang, '学会日常交流中基础的单词、短语和语法概念', 'Learn basic words, phrases, and grammar for everyday communication')}</p>
+          <p><Link className="homeContinueBtn" href="/lessons">{tr(lang, '继续', 'Continue')}</Link></p>
         </section>
 
         <section className="card">
-          <p className="small">云端未配置：{envMessage}</p>
-          <p className="small"><Link href="/login">去登录</Link></p>
+          <p className="small">{tr(lang, '云端未配置', 'Cloud not configured')}：{envMessage}</p>
+          <p className="small"><Link href="/login">{tr(lang, '去登录', 'Sign in')}</Link></p>
         </section>
       </main>
     )
@@ -57,34 +59,34 @@ export default async function Page() {
       <MinnaNav active="home" />
       <section className="homeStageCard">
         <div>
-          <p className="homeStageTop">第 1 阶段，第 10 部分</p>
-          <h2>找旅行物品和地方</h2>
+          <p className="homeStageTop">{tr(lang, '第 1 阶段，第 10 部分', 'Stage 1, Unit 10')}</p>
+          <h2>{tr(lang, '找旅行物品和地方', 'Find Travel Items and Places')}</h2>
         </div>
         <span className="homeStageIcon">📋</span>
       </section>
 
       <section className="homeMap card">
-        <div className="homeNode">🟢</div>
-        <div className="homeNode">📦</div>
-        <div className="homeNode">🪙</div>
-        <div className="homeNode">🏅</div>
+        <Link className="homeNode" href="/lessons/1#vocab">🟢<small>{tr(lang, '词汇', 'Vocab')}</small></Link>
+        <Link className="homeNode" href="/lessons/1#grammar">📦<small>{tr(lang, '语法', 'Grammar')}</small></Link>
+        <Link className="homeNode" href="/lessons/1#examples">🪙<small>{tr(lang, '例句', 'Examples')}</small></Link>
+        <Link className="homeNode" href="/lessons/1#quiz">🏅<small>{tr(lang, '测验', 'Quiz')}</small></Link>
       </section>
 
       <section className="homeLevelCard card">
-        <span className="homeTag">下一级</span>
-        <h2>第 2 阶段</h2>
-        <p>学会日常交流中基础的单词、短语和语法概念</p>
-        <p><Link className="homeContinueBtn" href="/lessons">继续</Link></p>
+        <span className="homeTag">{tr(lang, '下一级', 'Next Level')}</span>
+        <h2>{tr(lang, '第 2 阶段', 'Stage 2')}</h2>
+        <p>{tr(lang, '学会日常交流中基础的单词、短语和语法概念', 'Learn basic words, phrases, and grammar for everyday communication')}</p>
+        <p><Link className="homeContinueBtn" href="/lessons">{tr(lang, '继续', 'Continue')}</Link></p>
       </section>
 
       {error ? (
         <section className="card">
-          <p className="small">读取失败：{error.message}</p>
+          <p className="small">{tr(lang, '读取失败', 'Read failed')}：{error.message}</p>
         </section>
       ) : (
         <section className="card">
-          <p className="small">云端就绪，资料记录 {data?.length ?? 0} 条。</p>
-          <p className="small"><Link href="/me">进入我的</Link> · <Link href="/toolbox">学习中心</Link> · <Link href="/chat">聊天</Link></p>
+          <p className="small">{tr(lang, '云端就绪，资料记录', 'Cloud ready, profile records')} {data?.length ?? 0} {tr(lang, '条。', 'found.')}</p>
+          <p className="small"><Link href="/me">{tr(lang, '进入我的', 'Me')}</Link> · <Link href="/toolbox">{tr(lang, '学习中心', 'Learning Center')}</Link> · <Link href="/chat">{tr(lang, '聊天', 'Chat')}</Link></p>
         </section>
       )}
     </main>

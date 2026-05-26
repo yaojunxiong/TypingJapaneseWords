@@ -59,6 +59,16 @@ function sectionName(section: LessonSection) {
   return pick(section.title) || '学习内容'
 }
 
+function sectionAnchor(section: LessonSection) {
+  const t = String(section.type || '')
+  if (t === 'vocab') return 'vocab'
+  if (t === 'grammar') return 'grammar'
+  if (t === 'examples') return 'examples'
+  if (t === 'quiz') return 'quiz'
+  if (t === 'review') return 'review'
+  return section.id || 'section'
+}
+
 async function loadLessonDoc(lessonNo: number): Promise<LessonDoc | null> {
   const fileNo = String(lessonNo).padStart(2, '0')
   const filePath = path.resolve(process.cwd(), '..', 'docs', 'data', 'minna', 'lessons', `lesson-${fileNo}.json`)
@@ -92,6 +102,13 @@ export default async function LessonDetailPage({
         {pick(lesson?.focus) ? <p className="small">{pick(lesson?.focus)}</p> : null}
       </section>
 
+      <section className="homeMap card">
+        <a className="homeNode" href="#vocab">🟢<small>词汇</small></a>
+        <a className="homeNode" href="#grammar">📦<small>语法</small></a>
+        <a className="homeNode" href="#examples">🪙<small>例句</small></a>
+        <a className="homeNode" href="#quiz">🏅<small>测验</small></a>
+      </section>
+
       {!lesson ? (
         <section className="card">
           <h3>课程内容准备中</h3>
@@ -102,7 +119,11 @@ export default async function LessonDetailPage({
       {sections.map((section, idx) => {
         const items = Array.isArray(section.items) ? section.items : []
         return (
-          <section key={`${section.id || section.type || 'sec'}-${idx}`} className="card">
+          <section
+            id={sectionAnchor(section)}
+            key={`${section.id || section.type || 'sec'}-${idx}`}
+            className="card"
+          >
             <h3>{sectionName(section)}</h3>
             {!items.length ? <p className="small">本节暂无内容。</p> : null}
             {items.map((item, itemIdx) => (

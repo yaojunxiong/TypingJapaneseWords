@@ -156,9 +156,23 @@ a:hover { text-decoration: underline; }
   border-radius: 18px;
   border: 1px solid #e2e8f0;
   background: #fff;
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
   font-size: 44px;
+  color: #0f172a;
+}
+.homeNode small {
+  font-size: 12px;
+  font-weight: 800;
+  color: #64748b;
+}
+.homeNode:hover {
+  text-decoration: none;
+  border-color: #38bdf8;
+  background: #f0f9ff;
 }
 .homeLevelCard { text-align: center; }
 .homeLevelCard h2 { margin: 10px 0 8px; font-size: 42px; }
@@ -184,6 +198,36 @@ a:hover { text-decoration: underline; }
   box-shadow: 0 6px 0 #0d8fc5;
 }
 .homeContinueBtn:hover { text-decoration: none; }
+.settingsChoiceRow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 12px;
+}
+.settingsChoice {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 14px;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.settingsChoice:hover { text-decoration: none; border-color: #38bdf8; }
+.settingsChoice.active {
+  border-color: #0284c7;
+  background: #ecfeff;
+  color: #075985;
+}
+.settingsChoice span {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: #e0f2fe;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+}
 
 .heroCard { text-align: center; }
 .heroEmoji { font-size: 64px; }
