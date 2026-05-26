@@ -3,6 +3,7 @@ import MinnaNav from '@/components/minna-nav'
 import LessonsClient from '@/components/lessons-client'
 import { createClient } from '@/utils/supabase/server'
 import { hasSupabasePublicEnv } from '@/utils/supabase/config'
+import { getLang } from '@/lib/i18n'
 
 type RoleRow = {
   role: string | null
@@ -28,6 +29,7 @@ function roleInfo(row: RoleRow | null, userEmail: string) {
 export default async function LessonsPage() {
   let bypassLessonLock = false
   let roleLabel = 'normal'
+  const lang = await getLang()
 
   if (hasSupabasePublicEnv()) {
     const cookieStore = await cookies()
@@ -52,7 +54,7 @@ export default async function LessonsPage() {
   return (
     <main>
       <MinnaNav active="lessons" />
-      <LessonsClient bypassLessonLock={bypassLessonLock} roleLabel={roleLabel} />
+      <LessonsClient bypassLessonLock={bypassLessonLock} roleLabel={roleLabel} lang={lang} />
     </main>
   )
 }

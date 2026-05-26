@@ -3,6 +3,7 @@ import path from 'node:path'
 import Link from 'next/link'
 import MinnaNav from '@/components/minna-nav'
 import { LESSONS_1_50 } from '@/lib/minna-lessons'
+import { getLang, type Lang, tr } from '@/lib/i18n'
 
 type LangText = { zh?: string; en?: string; ja?: string; jp?: string }
 
@@ -44,19 +45,20 @@ export function generateStaticParams() {
   return Array.from({ length: 50 }, (_, i) => ({ lessonNo: String(i + 1) }))
 }
 
-function pick(text?: LangText) {
+function pick(text: LangText | undefined, lang: Lang) {
   if (!text) return ''
+  if (lang === 'en') return text.en || text.zh || text.ja || text.jp || ''
   return text.zh || text.ja || text.en || text.jp || ''
 }
 
-function sectionName(section: LessonSection) {
+function sectionName(section: LessonSection, lang: Lang) {
   const t = String(section.type || '')
-  if (t === 'vocab') return '词汇'
-  if (t === 'grammar') return '语法'
-  if (t === 'examples') return '例句'
-  if (t === 'quiz') return '测验'
-  if (t === 'review') return '复习'
-  return pick(section.title) || '学习内容'
+  if (t === 'vocab') return tr(lang, '词汇', 'Vocabulary')
+  if (t === 'grammar') return tr(lang, '语法', 'Grammar')
+  if (t === 'examples') return tr(lang, '例句', 'Examples')
+  if (t === 'quiz') return tr(lang, '测验', 'Quiz')
+  if (t === 'review') return tr(lang, '复习', 'Review')
+  return pick(section.title, lang) || tr(lang, '学习内容', 'Learning Content')
 }
 
 function sectionAnchor(section: LessonSection) {
@@ -87,6 +89,7 @@ export default async function LessonDetailPage({
 }) {
   const { lessonNo } = await params
   const no = Math.max(1, Math.min(50, Number(lessonNo) || 1))
+  const lang = await getLang()
   const meta = LESSONS_1_50.find((x) => x.no === no) || LESSONS_1_50[0]
   const lesson = await loadLessonDoc(no)
   const sections = Array.isArray(lesson?.sections) ? lesson!.sections! : []
@@ -97,22 +100,22 @@ export default async function LessonDetailPage({
 
       <section className="heroCard card">
         <div className="heroEmoji">📘</div>
-        <h2>第 {no} 课 · {pick(lesson?.title) || meta.title}</h2>
-        <p className="small">{pick(lesson?.subtitle) || meta.subtitle}</p>
-        {pick(lesson?.focus) ? <p className="small">{pick(lesson?.focus)}</p> : null}
+        <h2>{lang === 'en' ? `Lesson ${no}` : `第 ${no} 课 · ${meta.title}`}</h2>
+        <p className="small">{pick(lesson?.subtitle, lang) || meta.subtitle}</p>
+        {pick(lesson?.focus, lang) ? <p className="small">{pick(lesson?.focus, lang)}</p> : null}
       </section>
 
       <section className="homeMap card">
-        <a className="homeNode" href="#vocab">🟢<small>词汇</small></a>
-        <a className="homeNode" href="#grammar">📦<small>语法</small></a>
-        <a className="homeNode" href="#examples">🪙<small>例句</small></a>
-        <a className="homeNode" href="#quiz">🏅<small>测验</small></a>
+        <a className="homeNode" href="#vocab">🟢<small>{tr(lang, '词汇', 'Vocab')}</small></a>
+        <a className="homeNode" href="#grammar">📦<small>{tr(lang, '语法', 'Grammar')}</small></a>
+        <a className="homeNode" href="#examples">🪙<small>{tr(lang, '例句', 'Examples')}</small></a>
+        <a className="homeNode" href="#quiz">🏅<small>{tr(lang, '测验', 'Quiz')}</small></a>
       </section>
 
       {!lesson ? (
         <section className="card">
-          <h3>课程内容准备中</h3>
-          <p className="small">本课数据暂未接入，请先学习其他课程。</p>
+          <h3>{tr(lang, '课程内容准备中', 'Lesson content is being prepared')}</h3>
+          <p className="small">{tr(lang, '本课数据暂未接入，请先学习其他课程。', 'This lesson is not available yet. Please try another lesson first.')}</p>
         </section>
       ) : null}
 
@@ -124,22 +127,24 @@ export default async function LessonDetailPage({
             key={`${section.id || section.type || 'sec'}-${idx}`}
             className="card"
           >
-            <h3>{sectionName(section)}</h3>
-            {!items.length ? <p className="small">本节暂无内容。</p> : null}
+            <h3>{sectionName(section, lang)}</h3>
+            {!items.length ? <p className="small">{tr(lang, '本节暂无内容。', 'No content in this section yet.')}</p> : null}
             {items.map((item, itemIdx) => (
               <article key={`${item.id || 'item'}-${itemIdx}`} className="favCard2" style={{ marginBottom: 10 }}>
                 {item.pattern ? <span>{item.pattern}</span> : null}
-                <b>{item.jp || pick(item.title) || '内容'}</b>
+                <b>{item.jp || pick(item.title, lang) || tr(lang, '内容', 'Content')}</b>
                 {item.kana ? <small>{item.kana}</small> : null}
-                {item.zh || item.en ? <p>{item.zh || item.en}</p> : null}
-                {pick(item.explanation) ? <p className="small">{pick(item.explanation)}</p> : null}
+                {item.zh || item.en ? <p>{lang === 'en' ? (item.en || item.zh) : (item.zh || item.en)}</p> : null}
+                {pick(item.explanation, lang) ? <p className="small">{pick(item.explanation, lang)}</p> : null}
 
                 {Array.isArray(item.examples) && item.examples.length ? (
                   <div className="emptyBox" style={{ marginTop: 8, textAlign: 'left' }}>
-                    <b>例句</b>
+                    <b>{tr(lang, '例句', 'Examples')}</b>
                     {item.examples.slice(0, 3).map((ex, exIdx) => (
                       <p key={`ex-${exIdx}`} className="small">
-                        {ex.jp || ''} {ex.zh ? `· ${ex.zh}` : ex.en ? `· ${ex.en}` : ''}
+                        {ex.jp || ''} {lang === 'en'
+                          ? (ex.en ? `· ${ex.en}` : ex.zh ? `· ${ex.zh}` : '')
+                          : (ex.zh ? `· ${ex.zh}` : ex.en ? `· ${ex.en}` : '')}
                       </p>
                     ))}
                   </div>
@@ -147,15 +152,15 @@ export default async function LessonDetailPage({
 
                 {Array.isArray(item.practice) && item.practice.length ? (
                   <div className="emptyBox" style={{ marginTop: 8, textAlign: 'left' }}>
-                    <b>练习</b>
+                    <b>{tr(lang, '练习', 'Practice')}</b>
                     {item.practice.slice(0, 2).map((p, pIdx) => (
                       <div key={`pr-${pIdx}`} style={{ marginTop: 8 }}>
-                        <p className="small">{pick(p.question)}</p>
+                        <p className="small">{pick(p.question, lang)}</p>
                         {Array.isArray(p.options) ? (
                           <ul style={{ margin: '6px 0 0 18px', padding: 0 }}>
                             {p.options.slice(0, 4).map((op, opIdx) => (
                               <li key={`op-${opIdx}`} className="small">
-                                {pick(op.text)} {op.correct ? '✓' : ''}
+                                {pick(op.text, lang)} {op.correct ? '✓' : ''}
                               </li>
                             ))}
                           </ul>
@@ -171,9 +176,9 @@ export default async function LessonDetailPage({
       })}
 
       <section className="card">
-        <h3>导航</h3>
-        <p><Link href="/lessons">返回课程目录</Link></p>
-        <p><Link href="/toolbox">进入学习中心</Link></p>
+        <h3>{tr(lang, '导航', 'Navigation')}</h3>
+        <p><Link href="/lessons">{tr(lang, '返回课程目录', 'Back to lessons')}</Link></p>
+        <p><Link href="/toolbox">{tr(lang, '进入学习中心', 'Open learning center')}</Link></p>
       </section>
     </main>
   )
