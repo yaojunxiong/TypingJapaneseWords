@@ -66,6 +66,7 @@ export default async function MePage() {
         <p className="small">学习中心和课程目录已迁到 Next，课程内容仍跳旧站。</p>
         <p><Link href="/toolbox">进入学习中心</Link></p>
         <p><Link href="/lessons">进入课程入口</Link></p>
+        <p><Link href="/favorites">进入收藏页</Link></p>
         <p><Link href="/messages">进入消息中心</Link></p>
         <p><Link href="/">返回首页</Link></p>
       </section>
