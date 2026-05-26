@@ -1,6 +1,9 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
+import { createClient } from '@/utils/supabase/client'
+import { hasSupabasePublicEnv } from '@/utils/supabase/config'
+import { syncLearningCloudNow } from '@/lib/learning-cloud-sync'
 
 type MistakeItem = {
   lessonNo?: number
@@ -33,10 +36,44 @@ function writeList(list: MistakeItem[]) {
 }
 
 export default function MistakesClient() {
+  const supabaseReady = hasSupabasePublicEnv()
+  const supabase = useMemo(() => createClient(), [])
   const [list, setList] = useState<MistakeItem[]>([])
+  const [syncText, setSyncText] = useState('准备同步')
+  const [syncing, setSyncing] = useState(false)
+
+  async function syncCloud(forceUpload = false) {
+    if (!supabaseReady) {
+      setSyncText('云端未配置，当前仅本地保存')
+      return
+    }
+    setSyncing(true)
+    try {
+      const { data } = await supabase.auth.getUser()
+      const user = data.user
+      if (!user) {
+        setSyncText('未登录，当前仅本地保存')
+        return
+      }
+      const res = await syncLearningCloudNow({
+        supabase,
+        user: { id: user.id, email: user.email || '' },
+        forceUpload
+      })
+      setList(readList())
+      if (res.ok) {
+        setSyncText(`云端同步成功 · ${new Date().toLocaleTimeString()}`)
+      } else {
+        setSyncText(res.warning ? `同步提示：${res.warning}` : '同步未完成')
+      }
+    } finally {
+      setSyncing(false)
+    }
+  }
 
   useEffect(() => {
     setList(readList())
+    void syncCloud(false)
   }, [])
 
   const shown = useMemo(() => list.slice().reverse(), [list])
@@ -45,6 +82,7 @@ export default function MistakesClient() {
     if (!window.confirm('确定清空全部错题记录吗？')) return
     setList([])
     writeList([])
+    void syncCloud(true)
   }
 
   return (
@@ -60,8 +98,12 @@ export default function MistakesClient() {
           <div>
             <h3>错题列表</h3>
             <p className="small">共 {list.length} 条</p>
+            <p className="small">{syncText}</p>
           </div>
           <div className="favActions">
+            <button className="btn ghost" onClick={() => void syncCloud(false)} disabled={syncing}>
+              {syncing ? '同步中...' : '立即同步'}
+            </button>
             <button className="btn danger" onClick={clearAll}>清空错题</button>
           </div>
         </div>
