@@ -14,7 +14,7 @@
 <script src="./minna-app-shell.js?v=22.1"></script>
 <script>
 (function(){
-  var currentThread=0,pollId=0;
+  var currentThread=0,pollId=0,rtChannel=null;
   async function init(){try{if(window.MinnaAuth&&MinnaAuth.init)await MinnaAuth.init({lessonId:'minna_chat'})}catch(e){}}
   function esc(s){return String(s||'').replace(/[&<>\"]/g,function(c){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]})}
   async function loadThreads(){try{return await MinnaSocial.listThreads()}catch(e){return []}}
@@ -28,13 +28,13 @@
       +'<section class="card"><h2>聊天内容</h2><div id="threadMeta" class="small">未选择会话</div><div id="msgs" class="msgs"></div><div class="row" style="margin-top:8px"><input id="msgInput" placeholder="输入消息"><button class="btn" id="sendBtn">发送</button></div><div class="row" style="margin-top:8px"><input id="inviteUids" placeholder="邀请 user_id，逗号分隔"><button class="btn" id="inviteBtn">邀请进群</button><button class="btn" id="leaveBtn">退出会话</button></div></section>'
       +'</main>';
     if(window.MinnaAppShell)window.MinnaAppShell.injectTabs('messages');
-    document.getElementById('dmBtn').onclick=async function(){var uid=document.getElementById('dmUid').value.trim();if(!uid)return;currentThread=await MinnaSocial.getThreadIdWithUser(uid,'私信');await render();await openThread(currentThread);};
-    document.getElementById('groupBtn').onclick=async function(){var title=document.getElementById('groupTitle').value.trim()||'学习群';var uids=document.getElementById('groupUids').value.trim().split(',').map(function(x){return x.trim()}).filter(Boolean);currentThread=await MinnaSocial.createGroup(title,uids);await render();await openThread(currentThread);};
-    document.querySelectorAll('[data-tid]').forEach(function(el){el.onclick=function(){currentThread=Number(el.dataset.tid);openThread(currentThread);};});
+    document.getElementById('dmBtn').onclick=async function(){var uid=document.getElementById('dmUid').value.trim();if(!uid)return;currentThread=await MinnaSocial.getThreadIdWithUser(uid,'私信');await render();await openThread(currentThread);bindRealtime(currentThread);};
+    document.getElementById('groupBtn').onclick=async function(){var title=document.getElementById('groupTitle').value.trim()||'学习群';var uids=document.getElementById('groupUids').value.trim().split(',').map(function(x){return x.trim()}).filter(Boolean);currentThread=await MinnaSocial.createGroup(title,uids);await render();await openThread(currentThread);bindRealtime(currentThread);};
+    document.querySelectorAll('[data-tid]').forEach(function(el){el.onclick=function(){currentThread=Number(el.dataset.tid);openThread(currentThread);bindRealtime(currentThread);};});
     document.getElementById('sendBtn').onclick=async function(){if(!currentThread){alert('先选择会话');return;}var v=document.getElementById('msgInput').value.trim();if(!v)return;await MinnaSocial.sendMessage(currentThread,v);document.getElementById('msgInput').value='';openThread(currentThread);};
     document.getElementById('inviteBtn').onclick=async function(){if(!currentThread){alert('先选择会话');return;}var ids=document.getElementById('inviteUids').value.trim().split(',').map(function(x){return x.trim()}).filter(Boolean);if(!ids.length)return;try{await MinnaSocial.addGroupMembers(currentThread,ids);alert('已邀请');openThread(currentThread);}catch(e){alert('邀请失败：'+(e.message||e));}};
     document.getElementById('leaveBtn').onclick=async function(){if(!currentThread)return;try{await MinnaSocial.leaveThread(currentThread);currentThread=0;await render();}catch(e){alert('退出失败：'+(e.message||e));}};
-    if(currentThread)openThread(currentThread);
+    if(currentThread){openThread(currentThread);bindRealtime(currentThread);}
   }
   async function openThread(tid){
     try{
@@ -44,7 +44,17 @@
       var box=document.getElementById('msgs'); box.scrollTop=box.scrollHeight;
     }catch(e){document.getElementById('msgs').innerHTML='<p class="small">读取失败：'+esc(e.message||e)+'</p>'}
   }
-  function startPoll(){if(pollId)clearInterval(pollId);pollId=setInterval(function(){if(currentThread)openThread(currentThread);},5000);}
+  function bindRealtime(tid){
+    try{
+      var c=window.MinnaAuth&&MinnaAuth.client?MinnaAuth.client():null;
+      if(!c||!tid) return;
+      if(rtChannel){ try{ c.removeChannel(rtChannel); }catch(_e){} rtChannel=null; }
+      rtChannel=c.channel('minna-chat-'+tid).on('postgres_changes',{
+        event:'INSERT',schema:'public',table:'minna_chat_messages',filter:'thread_id=eq.'+tid
+      },function(){ openThread(tid); }).subscribe();
+    }catch(e){}
+  }
+  function startPoll(){if(pollId)clearInterval(pollId);pollId=setInterval(function(){if(currentThread&&!rtChannel)openThread(currentThread);},8000);}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',async function(){await init();await render();startPoll();});else init().then(async function(){await render();startPoll();});
 })();
 </script>
