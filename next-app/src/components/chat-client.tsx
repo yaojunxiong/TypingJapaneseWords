@@ -36,7 +36,28 @@ type Participant = {
   joined_at: string
 }
 
+type ThreadPref = {
+  pinned: boolean
+  muted: boolean
+}
+
+type ThreadPrefRow = {
+  thread_id: number
+  user_id: string
+  pinned: boolean | null
+  muted: boolean | null
+  updated_at: string
+}
+
+type ThreadReadRow = {
+  thread_id: number
+  user_id: string
+  last_read_at: string
+  updated_at: string
+}
+
 const PIN_KEY = 'minna.chat.pins.v1'
+const PREF_KEY = 'minna.chat.prefs.v2'
 const DRAFT_KEY = 'minna.chat.drafts.v1'
 const THREAD_READ_KEY = 'minna.chat.read.v1'
 
@@ -59,15 +80,42 @@ function writeJson<T>(key: string, value: T) {
   } catch {}
 }
 
-function pins() {
-  return readJson<Record<string, 1>>(PIN_KEY, {})
+function toMs(iso: string) {
+  const t = Date.parse(String(iso || ''))
+  return Number.isFinite(t) ? t : 0
 }
 
-function setPin(threadId: number, on: boolean) {
-  const p = pins()
-  if (on) p[String(threadId)] = 1
-  else delete p[String(threadId)]
-  writeJson(PIN_KEY, p)
+function threadUserKey(threadId: number, userId: string) {
+  return `${threadId}::${userId}`
+}
+
+function readLocalPrefs() {
+  const raw = readJson<Record<string, ThreadPref>>(PREF_KEY, {})
+  if (Object.keys(raw).length) return raw
+
+  const legacyPins = readJson<Record<string, 1>>(PIN_KEY, {})
+  const migrated: Record<string, ThreadPref> = {}
+  Object.keys(legacyPins).forEach((k) => {
+    migrated[k] = { pinned: !!legacyPins[k], muted: false }
+  })
+  return migrated
+}
+
+function writeLocalPrefs(prefMap: Record<string, ThreadPref>) {
+  writeJson(PREF_KEY, prefMap)
+  const legacyPins: Record<string, 1> = {}
+  Object.keys(prefMap).forEach((k) => {
+    if (prefMap[k]?.pinned) legacyPins[k] = 1
+  })
+  writeJson(PIN_KEY, legacyPins)
+}
+
+function readLocalReadMap() {
+  return readJson<Record<string, string>>(THREAD_READ_KEY, {})
+}
+
+function writeLocalReadMap(map: Record<string, string>) {
+  writeJson(THREAD_READ_KEY, map)
 }
 
 function drafts() {
@@ -85,21 +133,16 @@ function saveDraft(threadId: number, text: string) {
   writeJson(DRAFT_KEY, d)
 }
 
-function markThreadRead(threadId: number) {
-  const m = readJson<Record<string, string>>(THREAD_READ_KEY, {})
-  m[String(threadId)] = new Date().toISOString()
-  writeJson(THREAD_READ_KEY, m)
+function isMissingTableError(error: unknown, tableName: string) {
+  const code = String((error as { code?: string } | null)?.code || '')
+  const msg = String((error as { message?: string } | null)?.message || '').toLowerCase()
+  return code === '42P01' || msg.includes(tableName.toLowerCase())
 }
 
-function threadReadMap() {
-  return readJson<Record<string, string>>(THREAD_READ_KEY, {})
-}
-
-function sortThreadsByPin(rows: Thread[]) {
-  const p = pins()
+function sortThreadsByPrefs(rows: Thread[], prefMap: Record<string, ThreadPref>) {
   return rows.slice().sort((a, b) => {
-    const pa = Number(!!p[String(a.id)])
-    const pb = Number(!!p[String(b.id)])
+    const pa = Number(!!prefMap[String(a.id)]?.pinned)
+    const pb = Number(!!prefMap[String(b.id)]?.pinned)
     if (pa !== pb) return pb - pa
     return Date.parse(b.created_at || '') - Date.parse(a.created_at || '')
   })
@@ -122,6 +165,12 @@ export default function ChatClient() {
   const [participants, setParticipants] = useState<Participant[]>([])
   const [unreadMap, setUnreadMap] = useState<Record<string, number>>({})
 
+  const [threadPrefs, setThreadPrefs] = useState<Record<string, ThreadPref>>(() => readLocalPrefs())
+  const [myThreadReads, setMyThreadReads] = useState<Record<string, string>>(() => readLocalReadMap())
+  const [readReceipts, setReadReceipts] = useState<Record<string, string>>({})
+  const [cloudPrefEnabled, setCloudPrefEnabled] = useState(true)
+  const [cloudReadEnabled, setCloudReadEnabled] = useState(true)
+
   const [dmUid, setDmUid] = useState('')
   const [groupTitle, setGroupTitle] = useState('')
   const [groupUids, setGroupUids] = useState('')
@@ -130,6 +179,7 @@ export default function ChatClient() {
   const [msgInput, setMsgInput] = useState('')
 
   const channelRef = useRef<ReturnType<typeof supabase.channel> | null>(null)
+  const listChannelRef = useRef<ReturnType<typeof supabase.channel> | null>(null)
 
   const myUid = user?.id || ''
 
@@ -137,6 +187,10 @@ export default function ChatClient() {
     const t = threads.find((x) => Number(x.id) === Number(currentThread))
     return !!t && String(t.owner_user_id || '') === String(myUid || '')
   }, [threads, currentThread, myUid])
+
+  const currentPref = useMemo(() => {
+    return threadPrefs[String(currentThread)] || { pinned: false, muted: false }
+  }, [threadPrefs, currentThread])
 
   const shownMessages = useMemo(() => {
     const q = searchMsg.trim().toLowerCase()
@@ -147,38 +201,186 @@ export default function ChatClient() {
     })
   }, [messages, searchMsg])
 
-  const computeUnread = useCallback(
+  const setPrefsLocalAndState = useCallback((next: Record<string, ThreadPref>) => {
+    setThreadPrefs(next)
+    writeLocalPrefs(next)
+  }, [])
+
+  const setReadMapLocalAndState = useCallback((next: Record<string, string>) => {
+    setMyThreadReads(next)
+    writeLocalReadMap(next)
+  }, [])
+
+  const refreshThreadPrefs = useCallback(
     async (threadIds: number[]) => {
+      if (!user || !threadIds.length) return
+      if (!cloudPrefEnabled) return
+
+      const { data, error } = await supabase
+        .from('minna_chat_thread_prefs')
+        .select('thread_id,user_id,pinned,muted,updated_at')
+        .eq('user_id', user.id)
+        .in('thread_id', threadIds)
+
+      if (error) {
+        if (isMissingTableError(error, 'minna_chat_thread_prefs')) {
+          setCloudPrefEnabled(false)
+          setStatus('偏好表未启用，已使用本地置顶/免打扰')
+          return
+        }
+        setStatus(error.message || '读取聊天偏好失败')
+        return
+      }
+
+      const base = readLocalPrefs()
+      ;((data as ThreadPrefRow[] | null) || []).forEach((r) => {
+        base[String(r.thread_id)] = {
+          pinned: !!r.pinned,
+          muted: !!r.muted
+        }
+      })
+      setPrefsLocalAndState(base)
+    },
+    [cloudPrefEnabled, setPrefsLocalAndState, supabase, user]
+  )
+
+  const refreshMyReads = useCallback(
+    async (threadIds: number[]) => {
+      if (!user || !threadIds.length) return
+      if (!cloudReadEnabled) return
+
+      const { data, error } = await supabase
+        .from('minna_chat_reads')
+        .select('thread_id,user_id,last_read_at,updated_at')
+        .eq('user_id', user.id)
+        .in('thread_id', threadIds)
+
+      if (error) {
+        if (isMissingTableError(error, 'minna_chat_reads')) {
+          setCloudReadEnabled(false)
+          setStatus('已读回执表未启用，已使用本地未读逻辑')
+          return
+        }
+        setStatus(error.message || '读取已读状态失败')
+        return
+      }
+
+      const next = { ...readLocalReadMap() }
+      ;((data as ThreadReadRow[] | null) || []).forEach((r) => {
+        next[String(r.thread_id)] = String(r.last_read_at || '')
+      })
+      setReadMapLocalAndState(next)
+    },
+    [cloudReadEnabled, setReadMapLocalAndState, supabase, user]
+  )
+
+  const refreshReadReceipts = useCallback(
+    async (tid: number) => {
+      if (!tid || !cloudReadEnabled) return
+      const { data, error } = await supabase
+        .from('minna_chat_reads')
+        .select('thread_id,user_id,last_read_at,updated_at')
+        .eq('thread_id', tid)
+        .limit(500)
+
+      if (error) {
+        if (isMissingTableError(error, 'minna_chat_reads')) {
+          setCloudReadEnabled(false)
+          return
+        }
+        return
+      }
+
+      const nextForThread: Record<string, string> = {}
+      ;((data as ThreadReadRow[] | null) || []).forEach((r) => {
+        nextForThread[threadUserKey(r.thread_id, r.user_id)] = String(r.last_read_at || '')
+      })
+
+      setReadReceipts((prev) => {
+        const next = { ...prev }
+        Object.keys(next).forEach((k) => {
+          if (k.startsWith(`${tid}::`)) delete next[k]
+        })
+        Object.assign(next, nextForThread)
+        return next
+      })
+    },
+    [cloudReadEnabled, supabase]
+  )
+
+  const markThreadReadNow = useCallback(
+    async (threadId: number) => {
+      if (!threadId) return
+      const now = new Date().toISOString()
+      const next = { ...readLocalReadMap(), [String(threadId)]: now }
+      setReadMapLocalAndState(next)
+
+      if (!user || !cloudReadEnabled) return
+      const { error } = await supabase.from('minna_chat_reads').upsert(
+        {
+          thread_id: threadId,
+          user_id: user.id,
+          last_read_at: now,
+          updated_at: now
+        },
+        { onConflict: 'thread_id,user_id' }
+      )
+
+      if (error) {
+        if (isMissingTableError(error, 'minna_chat_reads')) {
+          setCloudReadEnabled(false)
+          return
+        }
+        setStatus(error.message || '更新已读时间失败')
+      }
+    },
+    [cloudReadEnabled, setReadMapLocalAndState, supabase, user]
+  )
+
+  const computeUnread = useCallback(
+    async (
+      threadIds: number[],
+      readOverride?: Record<string, string>,
+      prefOverride?: Record<string, ThreadPref>
+    ) => {
       if (!threadIds.length) {
         setUnreadMap({})
         localStorage.setItem('minna.chat.unread.total.v1', '0')
         return
       }
+
       const { data: rows, error } = await supabase
         .from('minna_chat_messages')
-        .select('thread_id,created_at')
+        .select('thread_id,created_at,from_user_id')
         .in('thread_id', threadIds)
         .order('created_at', { ascending: false })
-        .limit(2000)
+        .limit(2500)
 
       if (error) return
 
-      const read = threadReadMap()
+      const read = readOverride || myThreadReads
+      const prefs = prefOverride || threadPrefs
       const out: Record<string, number> = {}
       let total = 0
-      ;((rows as Array<{ thread_id: number; created_at: string }> | null) || []).forEach((r) => {
-        const k = String(r.thread_id)
-        const rt = read[k] ? Date.parse(read[k]) : 0
-        const mt = Date.parse(r.created_at)
+
+      ;((rows as Array<{ thread_id: number; created_at: string; from_user_id: string }> | null) || []).forEach((r) => {
+        if (String(r.from_user_id || '') === String(myUid || '')) return
+        const key = String(r.thread_id)
+        const rt = read[key] ? toMs(read[key]) : 0
+        const mt = toMs(r.created_at)
         if (mt > rt) {
-          out[k] = (out[k] || 0) + 1
-          total += 1
+          out[key] = (out[key] || 0) + 1
         }
       })
+
+      Object.keys(out).forEach((k) => {
+        if (!prefs[k]?.muted) total += Number(out[k] || 0)
+      })
+
       setUnreadMap(out)
       localStorage.setItem('minna.chat.unread.total.v1', String(total))
     },
-    [supabase]
+    [myThreadReads, myUid, supabase, threadPrefs]
   )
 
   const loadThreadDetail = useCallback(
@@ -210,14 +412,15 @@ export default function ChatClient() {
         setParticipants((peopleRes.data as Participant[] | null) || [])
       }
 
-      markThreadRead(tid)
+      await markThreadReadNow(tid)
+      await refreshReadReceipts(tid)
       const ids = threads.map((t) => t.id)
       if (ids.length) await computeUnread(ids)
     },
-    [computeUnread, supabase, threads]
+    [computeUnread, markThreadReadNow, refreshReadReceipts, supabase, threads]
   )
 
-  const bindRealtime = useCallback(
+  const bindRealtimeCurrentThread = useCallback(
     async (tid: number) => {
       if (channelRef.current) {
         try {
@@ -228,7 +431,7 @@ export default function ChatClient() {
       if (!tid) return
 
       const ch = supabase
-        .channel(`minna-chat-${tid}`)
+        .channel(`minna-chat-thread-${tid}`)
         .on(
           'postgres_changes',
           {
@@ -248,15 +451,118 @@ export default function ChatClient() {
     [loadThreadDetail, supabase]
   )
 
+  const bindRealtimeThreadList = useCallback(
+    async (threadIds: number[]) => {
+      if (listChannelRef.current) {
+        try {
+          await supabase.removeChannel(listChannelRef.current)
+        } catch {}
+        listChannelRef.current = null
+      }
+
+      if (!threadIds.length) return
+      const threadSet = new Set(threadIds.map((id) => Number(id)))
+
+      const ch = supabase
+        .channel('minna-chat-list')
+        .on(
+          'postgres_changes',
+          {
+            event: 'INSERT',
+            schema: 'public',
+            table: 'minna_chat_messages'
+          },
+          (payload) => {
+            const tid = Number((payload.new as { thread_id?: number } | null)?.thread_id || 0)
+            if (!threadSet.has(tid)) return
+
+            if (tid === currentThread) {
+              void loadThreadDetail(tid)
+              return
+            }
+
+            const fromUid = String((payload.new as { from_user_id?: string } | null)?.from_user_id || '')
+            if (fromUid === String(myUid || '')) return
+
+            setUnreadMap((prev) => {
+              const key = String(tid)
+              const next = { ...prev, [key]: Number(prev[key] || 0) + 1 }
+              let total = 0
+              Object.keys(next).forEach((k) => {
+                if (!threadPrefs[k]?.muted) total += Number(next[k] || 0)
+              })
+              localStorage.setItem('minna.chat.unread.total.v1', String(total))
+              return next
+            })
+          }
+        )
+        .on(
+          'postgres_changes',
+          {
+            event: '*',
+            schema: 'public',
+            table: 'minna_chat_reads'
+          },
+          (payload) => {
+            const row = payload.new as { thread_id?: number; user_id?: string; last_read_at?: string } | null
+            const tid = Number(row?.thread_id || 0)
+            if (!threadSet.has(tid)) return
+
+            if (row?.user_id === myUid) {
+              const next = {
+                ...readLocalReadMap(),
+                [String(tid)]: String(row?.last_read_at || new Date().toISOString())
+              }
+              setReadMapLocalAndState(next)
+              void computeUnread(Array.from(threadSet), next)
+            }
+
+            if (tid === currentThread) {
+              void refreshReadReceipts(tid)
+            }
+          }
+        )
+        .on(
+          'postgres_changes',
+          {
+            event: '*',
+            schema: 'public',
+            table: 'minna_chat_thread_prefs'
+          },
+          (payload) => {
+            const row = payload.new as { thread_id?: number; user_id?: string; pinned?: boolean; muted?: boolean } | null
+            if (String(row?.user_id || '') !== String(myUid || '')) return
+            const tid = Number(row?.thread_id || 0)
+            if (!threadSet.has(tid)) return
+
+            setThreadPrefs((prev) => {
+              const next = {
+                ...prev,
+                [String(tid)]: { pinned: !!row?.pinned, muted: !!row?.muted }
+              }
+              writeLocalPrefs(next)
+              setThreads((existing) => sortThreadsByPrefs(existing, next))
+              void computeUnread(Array.from(threadSet), undefined, next)
+              return next
+            })
+          }
+        )
+        .subscribe()
+
+      listChannelRef.current = ch
+    },
+    [computeUnread, currentThread, loadThreadDetail, myUid, refreshReadReceipts, setReadMapLocalAndState, supabase, threadPrefs]
+  )
+
   const openThread = useCallback(
     async (tid: number) => {
       if (!tid) return
       setCurrentThread(tid)
       setMsgInput(loadDraft(tid))
       await loadThreadDetail(tid)
-      await bindRealtime(tid)
+      await bindRealtimeCurrentThread(tid)
     },
-    [bindRealtime, loadThreadDetail]
+    [bindRealtimeCurrentThread, loadThreadDetail]
   )
 
   const refreshThreads = useCallback(async () => {
@@ -295,10 +601,15 @@ export default function ChatClient() {
       return
     }
 
-    const ordered = sortThreadsByPin((threadRows as Thread[] | null) || [])
+    await Promise.all([refreshThreadPrefs(ids), refreshMyReads(ids)])
+
+    const prefNow = readLocalPrefs()
+    const readsNow = readLocalReadMap()
+    const ordered = sortThreadsByPrefs((threadRows as Thread[] | null) || [], prefNow)
     setThreads(ordered)
-    await computeUnread(ordered.map((t) => t.id))
-  }, [computeUnread, supabase, user])
+    await computeUnread(ordered.map((t) => t.id), readsNow, prefNow)
+    await bindRealtimeThreadList(ordered.map((t) => t.id))
+  }, [bindRealtimeThreadList, computeUnread, refreshMyReads, refreshThreadPrefs, supabase, user])
 
   useEffect(() => {
     if (!supabaseReady) {
@@ -333,6 +644,9 @@ export default function ChatClient() {
       if (channelRef.current) {
         void supabase.removeChannel(channelRef.current)
       }
+      if (listChannelRef.current) {
+        void supabase.removeChannel(listChannelRef.current)
+      }
     }
   }, [envMessage, supabase, supabaseReady])
 
@@ -346,7 +660,10 @@ export default function ChatClient() {
     if (!supabaseReady) return
     if (!threads.length) return
     if (currentThread && threads.some((t) => Number(t.id) === Number(currentThread))) return
-    const nextTid = requestedTid && threads.some((t) => Number(t.id) === Number(requestedTid)) ? requestedTid : threads[0].id
+    const nextTid =
+      requestedTid && threads.some((t) => Number(t.id) === Number(requestedTid))
+        ? requestedTid
+        : threads[0].id
     void openThread(nextTid)
   }, [currentThread, openThread, requestedTid, supabaseReady, threads])
 
@@ -357,6 +674,41 @@ export default function ChatClient() {
     }, 8000)
     return () => window.clearInterval(id)
   }, [currentThread, loadThreadDetail, supabaseReady])
+
+  async function upsertMyPref(threadId: number, patch: Partial<ThreadPref>) {
+    const prev = readLocalPrefs()
+    const next = {
+      ...prev,
+      [String(threadId)]: {
+        pinned: patch.pinned ?? prev[String(threadId)]?.pinned ?? false,
+        muted: patch.muted ?? prev[String(threadId)]?.muted ?? false
+      }
+    }
+    setPrefsLocalAndState(next)
+    setThreads((existing) => sortThreadsByPrefs(existing, next))
+
+    if (!user || !cloudPrefEnabled) return
+    const now = new Date().toISOString()
+    const { error } = await supabase.from('minna_chat_thread_prefs').upsert(
+      {
+        thread_id: threadId,
+        user_id: user.id,
+        pinned: !!next[String(threadId)]?.pinned,
+        muted: !!next[String(threadId)]?.muted,
+        updated_at: now
+      },
+      { onConflict: 'thread_id,user_id' }
+    )
+
+    if (error) {
+      if (isMissingTableError(error, 'minna_chat_thread_prefs')) {
+        setCloudPrefEnabled(false)
+        setStatus('偏好表未启用，已仅保存本地设置')
+        return
+      }
+      setStatus(error.message || '写入会话偏好失败')
+    }
+  }
 
   async function onOpenDm() {
     if (!user) return
@@ -562,11 +914,35 @@ export default function ChatClient() {
     }
   }
 
-  function onTogglePin() {
+  async function onTogglePin() {
     if (!currentThread) return
-    const p = pins()
-    setPin(currentThread, !p[String(currentThread)])
-    setThreads((prev) => sortThreadsByPin(prev))
+    await upsertMyPref(currentThread, { pinned: !currentPref.pinned })
+  }
+
+  async function onToggleMute() {
+    if (!currentThread) return
+    await upsertMyPref(currentThread, { muted: !currentPref.muted })
+    const ids = threads.map((t) => t.id)
+    if (ids.length) {
+      const nextPref = readLocalPrefs()
+      await computeUnread(ids, undefined, nextPref)
+    }
+  }
+
+  function messageReadLabel(m: MessageRow) {
+    const mine = String(m.from_user_id || '') === String(myUid || '')
+    if (!mine) return ''
+    const others = participants.filter((p) => String(p.user_id || '') !== String(myUid || ''))
+    if (!others.length) return '已送达'
+    const mt = toMs(m.created_at)
+    let readCount = 0
+    others.forEach((p) => {
+      const rt = toMs(readReceipts[threadUserKey(currentThread, p.user_id)])
+      if (rt >= mt) readCount += 1
+    })
+    if (readCount <= 0) return '未读'
+    if (readCount >= others.length) return '已读'
+    return `已读 ${readCount}/${others.length}`
   }
 
   if (loading) {
@@ -629,14 +1005,18 @@ export default function ChatClient() {
           <div className="threadList">
             {threads.map((t) => {
               const unread = Number(unreadMap[String(t.id)] || 0)
-              const pinned = !!pins()[String(t.id)]
+              const pref = threadPrefs[String(t.id)] || { pinned: false, muted: false }
               return (
                 <button
                   key={t.id}
                   className={Number(currentThread) === Number(t.id) ? 'threadItem active' : 'threadItem'}
                   onClick={() => void openThread(t.id)}
                 >
-                  <span>{pinned ? '📌 ' : ''}[{t.thread_type}] {t.title || `会话#${t.id}`}</span>
+                  <span>
+                    {pref.pinned ? '📌 ' : ''}
+                    {pref.muted ? '🔕 ' : ''}
+                    [{t.thread_type}] {t.title || `会话#${t.id}`}
+                  </span>
                   <small>{unread > 0 ? `未读 ${unread}` : ''}</small>
                 </button>
               )
@@ -647,7 +1027,7 @@ export default function ChatClient() {
         <section className="card">
           <h2>聊天内容</h2>
           <p className="small">
-            当前会话 #{currentThread || '-'} · 成员 {participants.length} 人
+            当前会话 #{currentThread || '-'} · 成员 {participants.length} 人 · {currentPref.muted ? '已免打扰' : '正常提醒'}
           </p>
 
           <div className="memberLine">
@@ -665,7 +1045,8 @@ export default function ChatClient() {
           <div className="row2" style={{ marginTop: 8 }}>
             <input value={searchMsg} onChange={(e) => setSearchMsg(e.target.value)} placeholder="搜索本会话消息" />
             <button className="btn ghost" onClick={() => void loadThreadDetail(currentThread)}>刷新</button>
-            <button className="btn ghost" onClick={onTogglePin}>置顶</button>
+            <button className="btn ghost" onClick={() => void onTogglePin()}>{currentPref.pinned ? '取消置顶' : '置顶'}</button>
+            <button className="btn ghost" onClick={() => void onToggleMute()}>{currentPref.muted ? '取消免打扰' : '免打扰'}</button>
           </div>
 
           <div className="msgs2">
@@ -673,6 +1054,7 @@ export default function ChatClient() {
             {shownMessages.map((m) => {
               const mine = String(m.from_user_id || '') === String(myUid || '')
               const fromName = m.from_email || m.from_user_id || '用户'
+              const readLabel = messageReadLabel(m)
               return (
                 <div key={m.id} className="msgRow2">
                   <p>
@@ -698,6 +1080,7 @@ export default function ChatClient() {
                     </b>
                     ：{m.body}
                     <span className="small"> {m.created_at}</span>
+                    {mine && readLabel ? <span className="small"> · {readLabel}</span> : null}
                   </p>
                   {mine ? (
                     <button className="miniBtn" onClick={() => void onDeleteMyMessage(m.id)}>撤回</button>
