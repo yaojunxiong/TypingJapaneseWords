@@ -6,7 +6,11 @@ body {
   background: #f8fafc;
   color: #0f172a;
 }
-main { max-width: 920px; margin: 0 auto; padding: 32px 20px; }
+main {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 32px 20px calc(32px + env(safe-area-inset-bottom, 0px) + 88px);
+}
 .card {
   background: #fff;
   border: 1px solid #e2e8f0;
@@ -303,4 +307,9 @@ a:hover { text-decoration: underline; }
 
 @media (max-width: 920px) {
   .chatGrid.twoCol { grid-template-columns: 1fr; }
+  main {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: calc(28px + env(safe-area-inset-bottom, 0px) + 92px);
+  }
 }
