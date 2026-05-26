@@ -51,6 +51,28 @@ a:hover { text-decoration: underline; }
 }
 .pillLink:hover { text-decoration: none; border-color: #0369a1; }
 .pillLink.active { background: #e0f2fe; border-color: #0284c7; color: #075985; }
+.minnaTopClassic {
+  position: sticky;
+  top: 0;
+  z-index: 35;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  margin: -32px -20px 10px;
+  padding: 12px 20px 10px;
+}
+.minnaTopStats {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  color: #3f3f46;
+  font-weight: 800;
+  font-size: 14px;
+}
+.minnaNavCard {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
 
 .heroCard { text-align: center; }
 .heroEmoji { font-size: 64px; }
@@ -307,6 +329,10 @@ a:hover { text-decoration: underline; }
 
 @media (max-width: 920px) {
   .chatGrid.twoCol { grid-template-columns: 1fr; }
+  .minnaTopClassic {
+    margin: -32px -16px 10px;
+    padding: 12px 16px 10px;
+  }
   main {
     padding-left: 16px;
     padding-right: 16px;

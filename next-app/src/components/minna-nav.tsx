@@ -17,16 +17,25 @@ const ITEMS: Array<{ key: Props['active']; label: string; href: string }> = [
 
 export default function MinnaNav({ active }: Props) {
   return (
-    <nav className="card" style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-      {ITEMS.map((item) => (
-        <Link
-          key={item.key}
-          href={item.href}
-          className={item.key === active ? 'pillLink active' : 'pillLink'}
-        >
-          {item.label}
-        </Link>
-      ))}
-    </nav>
+    <>
+      <header className="minnaTopClassic">
+        <div className="minnaTopStats">
+          <span>🇯🇵 课程</span>
+          <span>🔥 连续</span>
+          <span>💎 经验</span>
+        </div>
+      </header>
+      <nav className="card minnaNavCard">
+        {ITEMS.map((item) => (
+          <Link
+            key={item.key}
+            href={item.href}
+            className={item.key === active ? 'pillLink active' : 'pillLink'}
+          >
+            {item.label}
+          </Link>
+        ))}
+      </nav>
+    </>
   )
 }
