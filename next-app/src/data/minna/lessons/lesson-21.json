@@ -1,0 +1,761 @@
+{
+  "schema": "minna.lesson.v1",
+  "course": "minna",
+  "lessonNo": 21,
+  "lessonId": "minna_lesson_21",
+  "title": {
+    "zh": "第21课",
+    "en": "Lesson 21",
+    "ja": "第21課"
+  },
+  "subtitle": {
+    "zh": "想法与引用",
+    "en": "Thoughts and quotations",
+    "ja": "思う・言う"
+  },
+  "focus": {
+    "zh": "学习「〜と思います」「〜と言いました」「〜でしょう？」。",
+    "en": "Learn expressing opinions, reporting speech, and confirmation.",
+    "ja": "「〜と思います」「〜と言いました」「〜でしょう？」を学びます。"
+  },
+  "sections": [
+    {
+      "type": "vocab",
+      "id": "l21_vocab",
+      "title": {
+        "zh": "核心词汇",
+        "en": "Core Vocabulary",
+        "ja": "基本語彙"
+      },
+      "items": [
+        {
+          "id": "l21_v01",
+          "jp": "思います",
+          "kana": "おもいます",
+          "zh": "认为；想",
+          "en": "think",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l21_v02",
+          "jp": "言います",
+          "kana": "いいます",
+          "zh": "说",
+          "en": "say",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l21_v03",
+          "jp": "留学します",
+          "kana": "りゅうがくします",
+          "zh": "留学",
+          "en": "study abroad",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l21_v04",
+          "jp": "平和",
+          "kana": "へいわ",
+          "zh": "和平",
+          "en": "peace",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l21_v05",
+          "jp": "問題",
+          "kana": "もんだい",
+          "zh": "问题",
+          "en": "problem",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l21_v06",
+          "jp": "意見",
+          "kana": "いけん",
+          "zh": "意见",
+          "en": "opinion",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l21_v07",
+          "jp": "ニュース",
+          "kana": "ニュース",
+          "zh": "新闻",
+          "en": "news",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l21_v08",
+          "jp": "会話",
+          "kana": "かいわ",
+          "zh": "会话",
+          "en": "conversation",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l21_v09",
+          "jp": "地球",
+          "kana": "ちきゅう",
+          "zh": "地球",
+          "en": "earth",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l21_v10",
+          "jp": "環境",
+          "kana": "かんきょう",
+          "zh": "环境",
+          "en": "environment",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l21_v11",
+          "jp": "危ない",
+          "kana": "あぶない",
+          "zh": "危险",
+          "en": "dangerous",
+          "tags": [
+            "adj-i"
+          ]
+        },
+        {
+          "id": "l21_v12",
+          "jp": "大切",
+          "kana": "たいせつ",
+          "zh": "重要",
+          "en": "important",
+          "tags": [
+            "adj-na"
+          ]
+        },
+        {
+          "id": "l21_v13",
+          "jp": "たぶん",
+          "kana": "たぶん",
+          "zh": "大概",
+          "en": "probably",
+          "tags": [
+            "adv"
+          ]
+        },
+        {
+          "id": "l21_v14",
+          "jp": "〜でしょう",
+          "kana": "〜でしょう",
+          "zh": "……吧（确认）",
+          "en": "right?/probably",
+          "tags": [
+            "grammar"
+          ]
+        },
+        {
+          "id": "l21_v15",
+          "jp": "そう思います",
+          "kana": "そうおもいます",
+          "zh": "我也这么想",
+          "en": "I think so too",
+          "tags": [
+            "phrase"
+          ]
+        },
+        {
+          "id": "l21_v16",
+          "jp": "反対",
+          "kana": "はんたい",
+          "zh": "反对",
+          "en": "opposition",
+          "tags": [
+            "noun"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "grammar",
+      "id": "l21_grammar",
+      "title": {
+        "zh": "核心语法",
+        "en": "Core Grammar",
+        "ja": "基本文法"
+      },
+      "items": [
+        {
+          "id": "l21_g01",
+          "pattern": "普通形 + と思います",
+          "title": {
+            "zh": "表达观点",
+            "en": "Expressing opinion"
+          },
+          "explanation": {
+            "zh": "用普通形内容接「と思います」。",
+            "en": "Attach plain form before to omoimasu."
+          },
+          "examples": [
+            {
+              "jp": "日本語は面白いと思います。",
+              "zh": "我觉得日语很有趣。",
+              "en": "I think Japanese is interesting."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l21_g01_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“我觉得明天会下雨”是？",
+                "en": "How to say: I think it will rain tomorrow?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "明日雨が降ると思います。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "明日雨が降りますと思います。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "明日雨と思います降る。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "明日雨が降ってと思います。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "用普通形内容接「と思います」。",
+                "en": "Attach plain form before to omoimasu."
+              }
+            },
+            {
+              "id": "l21_g01_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "“我觉得这个很重要”是？",
+                "en": "How to say: I think this is important?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "これは大切だと思います。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "これは大切ですと思います。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "これは大切と思いますだ。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "これは大切に思います。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "用普通形内容接「と思います」。",
+                "en": "Attach plain form before to omoimasu."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l21_g02",
+          "pattern": "普通形 + と言いました",
+          "title": {
+            "zh": "转述他说的话",
+            "en": "Reported speech"
+          },
+          "explanation": {
+            "zh": "引用他人说过的话。",
+            "en": "Reports what someone said."
+          },
+          "examples": [
+            {
+              "jp": "先生は「明日テストがある」と言いました。",
+              "zh": "老师说“明天有考试”。",
+              "en": "The teacher said there is a test tomorrow."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l21_g02_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“他说要去大阪”是？",
+                "en": "How to say: He said he will go to Osaka?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "彼は大阪へ行くと言いました。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "彼は大阪へ行きますと言いました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "彼は大阪へ行ってと言いました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "彼は大阪へ行くで言いました。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "引用他人说过的话。",
+                "en": "Reports what someone said."
+              }
+            },
+            {
+              "id": "l21_g02_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "“妈妈说早点睡”是？",
+                "en": "How to say: Mom said sleep early?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "母は早く寝ると言いました。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "母は早く寝てと言いました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "母は早く寝ますと言いました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "母は早く寝るって言いました。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "引用他人说过的话。",
+                "en": "Reports what someone said."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l21_g03",
+          "pattern": "〜でしょう？",
+          "title": {
+            "zh": "确认与征求同意",
+            "en": "Seeking confirmation"
+          },
+          "explanation": {
+            "zh": "用于确认或希望对方同意。",
+            "en": "Used for confirmation or expected agreement."
+          },
+          "examples": [
+            {
+              "jp": "このニュース、びっくりしたでしょう？",
+              "zh": "这条新闻很让人吃惊吧？",
+              "en": "This news was surprising, right?"
+            }
+          ],
+          "practice": [
+            {
+              "id": "l21_g03_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“很冷吧？”是？",
+                "en": "How to say: It is cold, right?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "寒いでしょう？"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "寒いですか？"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "寒いですよ。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "寒いでした。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "用于确认或希望对方同意。",
+                "en": "Used for confirmation or expected agreement."
+              }
+            },
+            {
+              "id": "l21_g03_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "“你也这么想吧？”是？",
+                "en": "How to say: You think so too, right?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "あなたもそう思うでしょう？"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "あなたもそう思いますか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "あなたもそう思いました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "あなたもそうでしょう思う。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "用于确认或希望对方同意。",
+                "en": "Used for confirmation or expected agreement."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l21_g04",
+          "pattern": "私は そう 思います",
+          "title": {
+            "zh": "赞同表达",
+            "en": "Agreeing with opinion"
+          },
+          "explanation": {
+            "zh": "简洁表达“我也这样认为”。",
+            "en": "A concise way to agree with an opinion."
+          },
+          "examples": [
+            {
+              "jp": "A: それはいい考えですね。B: 私もそう思います。",
+              "zh": "A: 那是个好主意。B: 我也这么想。",
+              "en": "A: That's a good idea. B: I think so too."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l21_g04_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“我不这么想”是？",
+                "en": "How to say: I do not think so?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "私はそう思いません。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "私はそうじゃありません。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "私はそうではないです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "私はそう思わないです。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "简洁表达“我也这样认为”。",
+                "en": "A concise way to agree with an opinion."
+              }
+            },
+            {
+              "id": "l21_g04_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "“我也这么觉得”是？",
+                "en": "How to say: I feel the same?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "私もそう思います。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "私もそう言います。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "私もそうでしょう。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "私もそうですと思います。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "简洁表达“我也这样认为”。",
+                "en": "A concise way to agree with an opinion."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examples",
+      "id": "l21_examples",
+      "title": {
+        "zh": "核心例句",
+        "en": "Core Examples",
+        "ja": "基本例文"
+      },
+      "items": [
+        {
+          "id": "l21_e01",
+          "jp": "私はこの問題は難しいと思います。",
+          "zh": "我觉得这个问题很难。",
+          "en": "I think this problem is difficult."
+        },
+        {
+          "id": "l21_e02",
+          "jp": "父は来週出張だと言いました。",
+          "zh": "爸爸说下周要出差。",
+          "en": "My father said he will be on a business trip next week."
+        },
+        {
+          "id": "l21_e03",
+          "jp": "環境はとても大切だと思います。",
+          "zh": "我认为环境非常重要。",
+          "en": "I think the environment is very important."
+        },
+        {
+          "id": "l21_e04",
+          "jp": "この話、面白いでしょう？",
+          "zh": "这个故事很有意思吧？",
+          "en": "This story is interesting, right?"
+        },
+        {
+          "id": "l21_e05",
+          "jp": "A: 日本料理はおいしいですね。B: 私もそう思います。",
+          "zh": "A: 日本料理很好吃呢。B: 我也这么觉得。",
+          "en": "A: Japanese food is tasty. B: I think so too."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "l21_quiz",
+      "title": {
+        "zh": "综合测试",
+        "en": "Final Test",
+        "ja": "まとめテスト"
+      },
+      "items": [
+        {
+          "id": "l21_q01",
+          "question": {
+            "zh": "「思います」的意思是？",
+            "en": "What does 思います mean?"
+          },
+          "options": [
+            {
+              "text": {
+                "zh": "认为；想",
+                "en": "think"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "说",
+                "en": "say"
+              }
+            },
+            {
+              "text": {
+                "zh": "留学",
+                "en": "study abroad"
+              }
+            },
+            {
+              "text": {
+                "zh": "和平",
+                "en": "peace"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "「思います」表示「认为；想」。",
+            "en": "思います means think."
+          }
+        },
+        {
+          "id": "l21_q02",
+          "question": {
+            "zh": "哪一句最符合语法「普通形 + と思います」？",
+            "en": "Which sentence best matches pattern \"普通形 + と思います\"?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "日本語は面白いと思います。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "先生は「明日テストがある」と言いました。"
+              }
+            },
+            {
+              "text": {
+                "jp": "このニュース、びっくりしたでしょう？"
+              }
+            },
+            {
+              "text": {
+                "jp": "A: それはいい考えですね。B: 私もそう思います。"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "正确句型是「普通形 + と思います」。",
+            "en": "The correct pattern is \"普通形 + と思います\"."
+          }
+        },
+        {
+          "id": "l21_q03",
+          "question": {
+            "zh": "关于「普通形 + と言いました」最恰当的是？",
+            "en": "Which usage best fits \"普通形 + と言いました\"?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "彼は大阪へ行くと言いました。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "彼は大阪へ行きますと言いました。"
+              }
+            },
+            {
+              "text": {
+                "jp": "彼は大阪へ行ってと言いました。"
+              }
+            },
+            {
+              "text": {
+                "jp": "彼は大阪へ行くで言いました。"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "引用他人说过的话。",
+            "en": "Reports what someone said."
+          }
+        },
+        {
+          "id": "l21_q04",
+          "question": {
+            "zh": "与「我觉得这个问题很难。」对应的日语句子是？",
+            "en": "Which Japanese sentence matches \"I think this problem is difficult.\"?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "私はこの問題は難しいと思います。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "父は来週出張だと言いました。"
+              }
+            },
+            {
+              "text": {
+                "jp": "環境はとても大切だと思います。"
+              }
+            },
+            {
+              "text": {
+                "jp": "この話、面白いでしょう？"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "对应句子是「私はこの問題は難しいと思います。」。",
+            "en": "The matching sentence is \"私はこの問題は難しいと思います。\"."
+          }
+        }
+      ]
+    }
+  ]
+}

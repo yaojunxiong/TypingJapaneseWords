@@ -1,0 +1,828 @@
+{
+  "id": "minna-43",
+  "version": "20.3",
+  "status": "Mastery migrated",
+  "lesson": 43,
+  "title": {
+    "zh": "第43课",
+    "en": "Lesson 43",
+    "ja": "第43課"
+  },
+  "topic": {
+    "zh": "そうです",
+    "en": "Sou desu"
+  },
+  "summary": {
+    "zh": "学习根据外观判断的 そうです，以及表示去做某事再回来的 てきます。",
+    "en": "Learn appearance-based そうです and てきます for going to do something and returning."
+  },
+  "sections": [
+    {
+      "id": "l43-vocab",
+      "type": "vocab",
+      "title": {
+        "zh": "词汇 Vocabulary",
+        "en": "Vocabulary"
+      },
+      "items": [
+        {
+          "id": "l43-vocab-01",
+          "jp": "増えます",
+          "kana": "ふえます",
+          "zh": "增加",
+          "en": "increase",
+          "example": "人口が増えています。"
+        },
+        {
+          "id": "l43-vocab-02",
+          "jp": "減ります",
+          "kana": "へります",
+          "zh": "减少",
+          "en": "decrease",
+          "example": "水が減りました。"
+        },
+        {
+          "id": "l43-vocab-03",
+          "jp": "上がります",
+          "kana": "あがります",
+          "zh": "上升",
+          "en": "rise",
+          "example": "値段が上がりました。"
+        },
+        {
+          "id": "l43-vocab-04",
+          "jp": "下がります",
+          "kana": "さがります",
+          "zh": "下降",
+          "en": "fall",
+          "example": "熱が下がりました。"
+        },
+        {
+          "id": "l43-vocab-05",
+          "jp": "切れます",
+          "kana": "きれます",
+          "zh": "断、用完",
+          "en": "break, run out",
+          "example": "電池が切れそうです。"
+        },
+        {
+          "id": "l43-vocab-06",
+          "jp": "取れます",
+          "kana": "とれます",
+          "zh": "脱落、取下",
+          "en": "come off",
+          "example": "ボタンが取れそうです。"
+        },
+        {
+          "id": "l43-vocab-07",
+          "jp": "落ちます",
+          "kana": "おちます",
+          "zh": "掉落",
+          "en": "fall",
+          "example": "本が落ちそうです。"
+        },
+        {
+          "id": "l43-vocab-08",
+          "jp": "なくなります",
+          "kana": "なくなります",
+          "zh": "没有了、用完",
+          "en": "run out, disappear",
+          "example": "時間がなくなりそうです。"
+        },
+        {
+          "id": "l43-vocab-09",
+          "jp": "丈夫",
+          "kana": "じょうぶ",
+          "zh": "结实",
+          "en": "sturdy",
+          "example": "このかばんは丈夫そうです。"
+        },
+        {
+          "id": "l43-vocab-10",
+          "jp": "変",
+          "kana": "へん",
+          "zh": "奇怪",
+          "en": "strange",
+          "example": "この音は変そうです。"
+        }
+      ]
+    },
+    {
+      "id": "l43-grammar",
+      "type": "grammar",
+      "title": {
+        "zh": "语法 Grammar",
+        "en": "Grammar"
+      },
+      "items": [
+        {
+          "id": "l43-grammar-01",
+          "pattern": "Vます形語幹 + そうです",
+          "zh": "表示看起来马上要发生某动作。",
+          "en": "Shows that an action looks likely to happen soon.",
+          "example": "雨が降りそうです。",
+          "practice": [
+            {
+              "id": "l43-practice-01",
+              "skill": "grammar",
+              "question": {
+                "zh": "表达：书快要掉下来了。",
+                "en": "Say: The book looks like it is going to fall."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "本が落ちそうです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "このレストランはよさそうです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "このかばんは重そうです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "このかばんは丈夫そうです。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示看起来马上要发生某动作。",
+                "en": "Shows that an action looks likely to happen soon."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l43-grammar-02",
+          "pattern": "い形容詞語幹 + そうです",
+          "zh": "根据外观看起来具有某性质，去掉 い 后接 そうです。",
+          "en": "For i-adjectives, remove い and add そうです to describe appearance.",
+          "example": "このケーキはおいしそうです。",
+          "practice": [
+            {
+              "id": "l43-practice-02",
+              "skill": "grammar",
+              "question": {
+                "zh": "表达：这个包看起来很重。",
+                "en": "Say: This bag looks heavy."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "このかばんは丈夫そうです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "このかばんは重そうです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "このレストランはよさそうです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "本が落ちそうです。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "根据外观看起来具有某性质，去掉 い 后接 そうです。",
+                "en": "For i-adjectives, remove い and add そうです to describe appearance."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l43-grammar-03",
+          "pattern": "な形容詞 + そうです",
+          "zh": "な形容词直接接 そうです，表示看起来如此。",
+          "en": "Attach そうです directly to a na-adjective to describe appearance.",
+          "example": "この道具は便利そうです。",
+          "practice": [
+            {
+              "id": "l43-practice-03",
+              "skill": "grammar",
+              "question": {
+                "zh": "表达：这个包看起来很结实。",
+                "en": "Say: This bag looks sturdy."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "このかばんは重そうです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "このレストランはよさそうです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "このかばんは丈夫そうです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "本が落ちそうです。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "な形容词直接接 そうです，表示看起来如此。",
+                "en": "Attach そうです directly to a na-adjective to describe appearance."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l43-grammar-04",
+          "pattern": "よさそうです / なさそうです",
+          "zh": "いい 和 ない 的外观表达是不规则形式。",
+          "en": "いい and ない have irregular-looking forms with そうです.",
+          "example": "このホテルはよさそうです。時間がなさそうです。",
+          "practice": [
+            {
+              "id": "l43-practice-04",
+              "skill": "grammar",
+              "question": {
+                "zh": "表达：这家餐厅看起来不错。",
+                "en": "Say: This restaurant looks good."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "本が落ちそうです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "このかばんは重そうです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "このレストランはよさそうです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "このかばんは丈夫そうです。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "いい 和 ない 的外观表达是不规则形式。",
+                "en": "いい and ない have irregular-looking forms with そうです."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l43-grammar-05",
+          "pattern": "Vそうにありません",
+          "zh": "表示看起来不会发生某动作。",
+          "en": "Shows that an action does not look likely to happen.",
+          "example": "今日は雨が降りそうにありません。",
+          "practice": [
+            {
+              "id": "l43-practice-05",
+              "skill": "grammar",
+              "question": {
+                "zh": "表达：电车看起来不会来。",
+                "en": "Say: The train does not look likely to come."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "このかばんは重そうです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "本が落ちそうです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "このかばんは丈夫そうです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "電車は来そうにありません。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "表示看起来不会发生某动作。",
+                "en": "Shows that an action does not look likely to happen."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l43-grammar-06",
+          "pattern": "い形容詞くなさそうです",
+          "zh": "い形容词的否定外观用 くなさそうです。",
+          "en": "Use くなさそうです for negative appearance of i-adjectives.",
+          "example": "この問題は難しくなさそうです。",
+          "practice": [
+            {
+              "id": "l43-practice-06",
+              "skill": "grammar",
+              "question": {
+                "zh": "表达：这道菜看起来不辣。",
+                "en": "Say: This dish does not look spicy."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "このかばんは丈夫そうです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "このかばんは重そうです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "本が落ちそうです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この料理は辛くなさそうです。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "い形容词的否定外观用 くなさそうです。",
+                "en": "Use くなさそうです for negative appearance of i-adjectives."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l43-grammar-07",
+          "pattern": "な形容詞ではなさそうです",
+          "zh": "な形容词的否定外观常用 ではなさそうです。",
+          "en": "Use ではなさそうです for negative appearance of na-adjectives.",
+          "example": "この部屋は静かではなさそうです。",
+          "practice": [
+            {
+              "id": "l43-practice-07",
+              "skill": "grammar",
+              "question": {
+                "zh": "表达：这个方法看起来不方便。",
+                "en": "Say: This method does not look convenient."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "このかばんは重そうです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "本が落ちそうです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "このかばんは丈夫そうです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この方法は便利ではなさそうです。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "な形容词的否定外观常用 ではなさそうです。",
+                "en": "Use ではなさそうです for negative appearance of na-adjectives."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l43-grammar-08",
+          "pattern": "Vてきます",
+          "zh": "表示去做某事然后回来，常用于短暂离开。",
+          "en": "Means go do something and come back, often for a brief departure.",
+          "example": "ちょっと飲み物を買ってきます。",
+          "practice": [
+            {
+              "id": "l43-practice-08",
+              "skill": "grammar",
+              "question": {
+                "zh": "表达：我去买点饮料就回来。",
+                "en": "Say: I will go buy drinks and come back."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "飲み物を買ってきます。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "このかばんは丈夫そうです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "このかばんは重そうです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "本が落ちそうです。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示去做某事然后回来，常用于短暂离开。",
+                "en": "Means go do something and come back, often for a brief departure."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l43-examples",
+      "type": "examples",
+      "title": {
+        "zh": "例句 Examples",
+        "en": "Examples"
+      },
+      "items": [
+        {
+          "id": "l43-example-01",
+          "jp": "空が暗くなりました。雨が降りそうです。",
+          "zh": "天空变暗了，看起来要下雨。",
+          "en": "The sky has become dark. It looks like it will rain."
+        },
+        {
+          "id": "l43-example-02",
+          "jp": "このスープは熱そうですから、気をつけてください。",
+          "zh": "这碗汤看起来很烫，请小心。",
+          "en": "This soup looks hot, so please be careful."
+        },
+        {
+          "id": "l43-example-03",
+          "jp": "このかばんは丈夫そうですが、少し高いです。",
+          "zh": "这个包看起来很结实，但是有点贵。",
+          "en": "This bag looks sturdy, but it is a little expensive."
+        },
+        {
+          "id": "l43-example-04",
+          "jp": "ボタンが取れそうです。",
+          "zh": "扣子看起来快掉了。",
+          "en": "The button looks like it is about to come off."
+        },
+        {
+          "id": "l43-example-05",
+          "jp": "この映画はあまり面白くなさそうです。",
+          "zh": "这部电影看起来不太有趣。",
+          "en": "This movie does not look very interesting."
+        },
+        {
+          "id": "l43-example-06",
+          "jp": "この部屋は静かではなさそうです。",
+          "zh": "这个房间看起来不安静。",
+          "en": "This room does not look quiet."
+        },
+        {
+          "id": "l43-example-07",
+          "jp": "ちょっと郵便局へ行ってきます。",
+          "zh": "我去一下邮局就回来。",
+          "en": "I will go to the post office and come back."
+        },
+        {
+          "id": "l43-example-08",
+          "jp": "時間がなくなりそうですから、急ぎましょう。",
+          "zh": "时间快不够了，我们快点吧。",
+          "en": "It looks like we are running out of time, so let's hurry."
+        }
+      ]
+    },
+    {
+      "id": "l43-mistakes",
+      "type": "mistakes",
+      "title": {
+        "zh": "常见错误 Common Mistakes",
+        "en": "Common Mistakes"
+      },
+      "items": [
+        {
+          "id": "l43-mistake-01",
+          "wrong": "このケーキはおいしいそうです。",
+          "correct": "このケーキはおいしそうです。",
+          "reason": {
+            "zh": "い形容词接外观 そうです 时去掉 い。",
+            "en": "Remove い before appearance そうです."
+          }
+        },
+        {
+          "id": "l43-mistake-02",
+          "wrong": "このレストランはいいそうです。",
+          "correct": "このレストランはよさそうです。",
+          "reason": {
+            "zh": "いい 的外观表达是不规则的 よさそうです。",
+            "en": "いい becomes よさそうです in appearance expressions."
+          }
+        },
+        {
+          "id": "l43-mistake-03",
+          "wrong": "飲み物を買っていきます。",
+          "correct": "飲み物を買ってきます。",
+          "reason": {
+            "zh": "去买了再回来，用 てきます。",
+            "en": "Use てきます when going to do something and returning."
+          }
+        }
+      ]
+    },
+    {
+      "id": "l43-quiz",
+      "type": "quiz",
+      "title": {
+        "zh": "最终测试 Final Test",
+        "en": "Final Test"
+      },
+      "items": [
+        {
+          "id": "l43-quiz-01",
+          "question": {
+            "zh": "「看起来要下雨。」正确的是？",
+            "en": "Which means: It looks like it will rain?"
+          },
+          "options": [
+            {
+              "text": "雨が降りそうです。",
+              "correct": true
+            },
+            {
+              "text": "雨が降るそうです。",
+              "correct": false
+            },
+            {
+              "text": "雨が降ってそうです。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "外观看起来要发生，用ます形语干 + そうです。",
+            "en": "For likely appearance, use masu-stem + そうです."
+          }
+        },
+        {
+          "id": "l43-quiz-02",
+          "question": {
+            "zh": "「这个蛋糕看起来好吃。」正确的是？",
+            "en": "Which means: This cake looks delicious?"
+          },
+          "options": [
+            {
+              "text": "このケーキはおいしそうです。",
+              "correct": true
+            },
+            {
+              "text": "このケーキはおいしいそうです。",
+              "correct": false
+            },
+            {
+              "text": "このケーキはおいしくそうです。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "おいしい 去 い 后接 そうです。",
+            "en": "Remove い from おいしい before そうです."
+          }
+        },
+        {
+          "id": "l43-quiz-03",
+          "question": {
+            "zh": "「这个包看起来结实。」正确的是？",
+            "en": "Which means: This bag looks sturdy?"
+          },
+          "options": [
+            {
+              "text": "このかばんは丈夫そうです。",
+              "correct": true
+            },
+            {
+              "text": "このかばんは丈夫なそうです。",
+              "correct": false
+            },
+            {
+              "text": "このかばんは丈夫だそうです。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "な形容词直接接 そうです 表示外观。",
+            "en": "Attach そうです directly to a na-adjective for appearance."
+          }
+        },
+        {
+          "id": "l43-quiz-04",
+          "question": {
+            "zh": "「这家餐厅看起来不错。」正确的是？",
+            "en": "Which means: This restaurant looks good?"
+          },
+          "options": [
+            {
+              "text": "このレストランはよさそうです。",
+              "correct": true
+            },
+            {
+              "text": "このレストランはいいそうです。",
+              "correct": false
+            },
+            {
+              "text": "このレストランはよいそうです。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "いい 的外观形式是 よさそうです。",
+            "en": "The appearance form of いい is よさそうです."
+          }
+        },
+        {
+          "id": "l43-quiz-05",
+          "question": {
+            "zh": "「时间看起来不够。」正确的是？",
+            "en": "Which means: It looks like there is not enough time?"
+          },
+          "options": [
+            {
+              "text": "時間がなさそうです。",
+              "correct": true
+            },
+            {
+              "text": "時間がないそうです。",
+              "correct": false
+            },
+            {
+              "text": "時間がなくそうです。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "ない 的外观形式是 なさそうです。",
+            "en": "The appearance form of ない is なさそうです."
+          }
+        },
+        {
+          "id": "l43-quiz-06",
+          "question": {
+            "zh": "「这道菜看起来不辣。」正确的是？",
+            "en": "Which means: This dish does not look spicy?"
+          },
+          "options": [
+            {
+              "text": "この料理は辛くなさそうです。",
+              "correct": true
+            },
+            {
+              "text": "この料理は辛いなさそうです。",
+              "correct": false
+            },
+            {
+              "text": "この料理は辛くないそうです。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "い形容词否定外观用 くなさそうです。",
+            "en": "Use くなさそうです for negative appearance of i-adjectives."
+          }
+        },
+        {
+          "id": "l43-quiz-07",
+          "question": {
+            "zh": "「这个方法看起来不方便。」正确的是？",
+            "en": "Which means: This method does not look convenient?"
+          },
+          "options": [
+            {
+              "text": "この方法は便利ではなさそうです。",
+              "correct": true
+            },
+            {
+              "text": "この方法は便利くなさそうです。",
+              "correct": false
+            },
+            {
+              "text": "この方法は便利ないそうです。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "な形容词否定外观用 ではなさそうです。",
+            "en": "Use ではなさそうです for negative appearance of na-adjectives."
+          }
+        },
+        {
+          "id": "l43-quiz-08",
+          "question": {
+            "zh": "「扣子快掉了。」正确的是？",
+            "en": "Which means: The button looks like it is about to come off?"
+          },
+          "options": [
+            {
+              "text": "ボタンが取れそうです。",
+              "correct": true
+            },
+            {
+              "text": "ボタンが取れるそうです。",
+              "correct": false
+            },
+            {
+              "text": "ボタンが取れてそうです。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "动词ます形语干 取れ + そうです。",
+            "en": "Use the masu-stem 取れ + そうです."
+          }
+        },
+        {
+          "id": "l43-quiz-09",
+          "question": {
+            "zh": "「我去买饮料就回来。」正确的是？",
+            "en": "Which means: I will go buy drinks and come back?"
+          },
+          "options": [
+            {
+              "text": "飲み物を買ってきます。",
+              "correct": true
+            },
+            {
+              "text": "飲み物を買っていきます。",
+              "correct": false
+            },
+            {
+              "text": "飲み物を買いそうです。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "去做再回来，用 Vてきます。",
+            "en": "Use Vてきます to go do something and return."
+          }
+        },
+        {
+          "id": "l43-quiz-10",
+          "question": {
+            "zh": "「电车看起来不会来。」正确的是？",
+            "en": "Which means: The train does not look likely to come?"
+          },
+          "options": [
+            {
+              "text": "電車は来そうにありません。",
+              "correct": true
+            },
+            {
+              "text": "電車は来なそうです。",
+              "correct": false
+            },
+            {
+              "text": "電車は来るそうにありません。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "动词的否定外观可用 Vそうにありません。",
+            "en": "Use Vそうにありません for a verb that does not look likely."
+          }
+        }
+      ]
+    }
+  ]
+}

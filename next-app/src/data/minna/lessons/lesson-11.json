@@ -1,0 +1,761 @@
+{
+  "schema": "minna.lesson.v1",
+  "course": "minna",
+  "lessonNo": 11,
+  "lessonId": "minna_lesson_11",
+  "title": {
+    "zh": "第11课",
+    "en": "Lesson 11",
+    "ja": "第11課"
+  },
+  "subtitle": {
+    "zh": "数量表达",
+    "en": "Counters and quantities",
+    "ja": "数量表現"
+  },
+  "focus": {
+    "zh": "学习助数词、数量词位置、所需时间与频率表达。",
+    "en": "Learn counters, quantifier placement, duration, and frequency expressions.",
+    "ja": "助数詞、数量詞の位置、所要時間、頻度表現を学びます。"
+  },
+  "sections": [
+    {
+      "type": "vocab",
+      "id": "l11_vocab",
+      "title": {
+        "zh": "核心词汇",
+        "en": "Core Vocabulary",
+        "ja": "基本語彙"
+      },
+      "items": [
+        {
+          "id": "l11_v01",
+          "jp": "一つ",
+          "kana": "ひとつ",
+          "zh": "一个（泛指）",
+          "en": "one (general item)",
+          "tags": [
+            "counter"
+          ]
+        },
+        {
+          "id": "l11_v02",
+          "jp": "二つ",
+          "kana": "ふたつ",
+          "zh": "两个（泛指）",
+          "en": "two (general items)",
+          "tags": [
+            "counter"
+          ]
+        },
+        {
+          "id": "l11_v03",
+          "jp": "三つ",
+          "kana": "みっつ",
+          "zh": "三个（泛指）",
+          "en": "three (general items)",
+          "tags": [
+            "counter"
+          ]
+        },
+        {
+          "id": "l11_v04",
+          "jp": "四つ",
+          "kana": "よっつ",
+          "zh": "四个（泛指）",
+          "en": "four (general items)",
+          "tags": [
+            "counter"
+          ]
+        },
+        {
+          "id": "l11_v05",
+          "jp": "五つ",
+          "kana": "いつつ",
+          "zh": "五个（泛指）",
+          "en": "five (general items)",
+          "tags": [
+            "counter"
+          ]
+        },
+        {
+          "id": "l11_v06",
+          "jp": "六つ",
+          "kana": "むっつ",
+          "zh": "六个（泛指）",
+          "en": "six (general items)",
+          "tags": [
+            "counter"
+          ]
+        },
+        {
+          "id": "l11_v07",
+          "jp": "七つ",
+          "kana": "ななつ",
+          "zh": "七个（泛指）",
+          "en": "seven (general items)",
+          "tags": [
+            "counter"
+          ]
+        },
+        {
+          "id": "l11_v08",
+          "jp": "八つ",
+          "kana": "やっつ",
+          "zh": "八个（泛指）",
+          "en": "eight (general items)",
+          "tags": [
+            "counter"
+          ]
+        },
+        {
+          "id": "l11_v09",
+          "jp": "九つ",
+          "kana": "ここのつ",
+          "zh": "九个（泛指）",
+          "en": "nine (general items)",
+          "tags": [
+            "counter"
+          ]
+        },
+        {
+          "id": "l11_v10",
+          "jp": "十",
+          "kana": "とお",
+          "zh": "十个（泛指）",
+          "en": "ten (general items)",
+          "tags": [
+            "counter"
+          ]
+        },
+        {
+          "id": "l11_v11",
+          "jp": "何人",
+          "kana": "なんにん",
+          "zh": "几个人",
+          "en": "how many people",
+          "tags": [
+            "counter"
+          ]
+        },
+        {
+          "id": "l11_v12",
+          "jp": "何個",
+          "kana": "なんこ",
+          "zh": "几个（个）",
+          "en": "how many pieces",
+          "tags": [
+            "counter"
+          ]
+        },
+        {
+          "id": "l11_v13",
+          "jp": "何本",
+          "kana": "なんぼん",
+          "zh": "几根/几瓶",
+          "en": "how many long objects",
+          "tags": [
+            "counter"
+          ]
+        },
+        {
+          "id": "l11_v14",
+          "jp": "何枚",
+          "kana": "なんまい",
+          "zh": "几张",
+          "en": "how many flat objects",
+          "tags": [
+            "counter"
+          ]
+        },
+        {
+          "id": "l11_v15",
+          "jp": "どのくらい",
+          "kana": "どのくらい",
+          "zh": "多久；多少",
+          "en": "how long / how much",
+          "tags": [
+            "question"
+          ]
+        },
+        {
+          "id": "l11_v16",
+          "jp": "かかります",
+          "kana": "かかります",
+          "zh": "花费（时间）",
+          "en": "to take (time)",
+          "tags": [
+            "verb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "grammar",
+      "id": "l11_grammar",
+      "title": {
+        "zh": "核心语法",
+        "en": "Core Grammar",
+        "ja": "基本文法"
+      },
+      "items": [
+        {
+          "id": "l11_g01",
+          "pattern": "N が 数量 あります／います",
+          "title": {
+            "zh": "数量存在句",
+            "en": "Existence with quantity"
+          },
+          "explanation": {
+            "zh": "表示某处有多少人或物。",
+            "en": "Expresses how many people/things are in a place."
+          },
+          "examples": [
+            {
+              "jp": "教室に学生が五人います。",
+              "zh": "教室里有五个学生。",
+              "en": "There are five students in the classroom."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l11_g01_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“房间里有三把椅子”是？",
+                "en": "How to say: There are three chairs in the room?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "部屋にいすが三つあります。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "部屋にいすを三つあります。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "部屋でいすが三ついます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "部屋に三ついすがいます。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示某处有多少人或物。",
+                "en": "Expresses how many people/things are in a place."
+              }
+            },
+            {
+              "id": "l11_g01_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "问“有几个人？”最自然是？",
+                "en": "How do you ask how many people there are?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "何人いますか。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "何人ですか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "何人がありますか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "何人をいますか。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示某处有多少人或物。",
+                "en": "Expresses how many people/things are in a place."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l11_g02",
+          "pattern": "N を 数量 V",
+          "title": {
+            "zh": "数量词放在动词前",
+            "en": "Quantifier before verb"
+          },
+          "explanation": {
+            "zh": "数量词常放在助词后、动词前。",
+            "en": "Quantifiers often appear before the verb."
+          },
+          "examples": [
+            {
+              "jp": "りんごを二つ買いました。",
+              "zh": "买了两个苹果。",
+              "en": "I bought two apples."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l11_g02_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“我喝了两杯咖啡”是？",
+                "en": "How to say: I drank two cups of coffee?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "コーヒーを二杯飲みました。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "コーヒー二杯を飲みました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "コーヒーを飲みました二杯。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "コーヒーで二杯飲みました。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "数量词常放在助词后、动词前。",
+                "en": "Quantifiers often appear before the verb."
+              }
+            },
+            {
+              "id": "l11_g02_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "下列哪句语序更自然？",
+                "en": "Which word order is most natural?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "本を三冊読みました。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "本三冊を読みました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "三冊本を読みました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "本に三冊読みました。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "数量词常放在助词后、动词前。",
+                "en": "Quantifiers often appear before the verb."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l11_g03",
+          "pattern": "N から N まで 〜かかります",
+          "title": {
+            "zh": "所需时间",
+            "en": "Duration required"
+          },
+          "explanation": {
+            "zh": "表示从A到B需要多少时间。",
+            "en": "Shows how long it takes from A to B."
+          },
+          "examples": [
+            {
+              "jp": "大阪から東京まで三時間かかります。",
+              "zh": "从大阪到东京要三小时。",
+              "en": "It takes three hours from Osaka to Tokyo."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l11_g03_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“从家到学校要20分钟”是？",
+                "en": "How to say: It takes 20 minutes from home to school?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "うちから学校まで二十分かかります。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "うちで学校まで二十分かかります。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "うちから学校を二十分かかります。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "うちから学校まで二十分があります。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示从A到B需要多少时间。",
+                "en": "Shows how long it takes from A to B."
+              }
+            },
+            {
+              "id": "l11_g03_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "问时间长短应使用？",
+                "en": "Which asks duration?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "どのくらいかかりますか。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "何時ですか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "何人いますか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "どこですか。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示从A到B需要多少时间。",
+                "en": "Shows how long it takes from A to B."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l11_g04",
+          "pattern": "一週間に N 回",
+          "title": {
+            "zh": "频率表达",
+            "en": "Frequency expression"
+          },
+          "explanation": {
+            "zh": "用“单位时间+次数”表达频率。",
+            "en": "Use time unit + number of times for frequency."
+          },
+          "examples": [
+            {
+              "jp": "一週間に三回ジムへ行きます。",
+              "zh": "一周去三次健身房。",
+              "en": "I go to the gym three times a week."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l11_g04_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“一个月去一次”是？",
+                "en": "How to say: once a month?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "一か月に一回行きます。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "一か月で一回行きます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "一か月を一回行きます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "一か月に一回あります。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "用“单位时间+次数”表达频率。",
+                "en": "Use time unit + number of times for frequency."
+              }
+            },
+            {
+              "id": "l11_g04_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "“每天学习两小时”最自然是？",
+                "en": "Most natural: study 2 hours every day?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "毎日二時間勉強します。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "毎日を二時間勉強します。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "毎日で二時間勉強します。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "二時間毎日を勉強します。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "用“单位时间+次数”表达频率。",
+                "en": "Use time unit + number of times for frequency."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examples",
+      "id": "l11_examples",
+      "title": {
+        "zh": "核心例句",
+        "en": "Core Examples",
+        "ja": "基本例文"
+      },
+      "items": [
+        {
+          "id": "l11_e01",
+          "jp": "教室に学生が五人います。",
+          "zh": "教室里有五个学生。",
+          "en": "There are five students in the classroom."
+        },
+        {
+          "id": "l11_e02",
+          "jp": "りんごを三つください。",
+          "zh": "请给我三个苹果。",
+          "en": "Please give me three apples."
+        },
+        {
+          "id": "l11_e03",
+          "jp": "東京から京都まで二時間半かかります。",
+          "zh": "从东京到京都要两个半小时。",
+          "en": "It takes two and a half hours from Tokyo to Kyoto."
+        },
+        {
+          "id": "l11_e04",
+          "jp": "一週間に二回日本語を勉強します。",
+          "zh": "我一周学两次日语。",
+          "en": "I study Japanese twice a week."
+        },
+        {
+          "id": "l11_e05",
+          "jp": "この会社に外国人が何人いますか。",
+          "zh": "这家公司有几位外国人？",
+          "en": "How many foreigners are in this company?"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "l11_quiz",
+      "title": {
+        "zh": "综合测试",
+        "en": "Final Test",
+        "ja": "まとめテスト"
+      },
+      "items": [
+        {
+          "id": "l11_q01",
+          "question": {
+            "zh": "「一つ」的意思是？",
+            "en": "What does 一つ mean?"
+          },
+          "options": [
+            {
+              "text": {
+                "zh": "一个（泛指）",
+                "en": "one (general item)"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "两个（泛指）",
+                "en": "two (general items)"
+              }
+            },
+            {
+              "text": {
+                "zh": "三个（泛指）",
+                "en": "three (general items)"
+              }
+            },
+            {
+              "text": {
+                "zh": "四个（泛指）",
+                "en": "four (general items)"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "「一つ」表示「一个（泛指）」。",
+            "en": "一つ means one (general item)."
+          }
+        },
+        {
+          "id": "l11_q02",
+          "question": {
+            "zh": "哪一句最符合语法「N が 数量 あります／います」？",
+            "en": "Which sentence best matches pattern \"N が 数量 あります／います\"?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "教室に学生が五人います。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "りんごを二つ買いました。"
+              }
+            },
+            {
+              "text": {
+                "jp": "大阪から東京まで三時間かかります。"
+              }
+            },
+            {
+              "text": {
+                "jp": "一週間に三回ジムへ行きます。"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "正确句型是「N が 数量 あります／います」。",
+            "en": "The correct pattern is \"N が 数量 あります／います\"."
+          }
+        },
+        {
+          "id": "l11_q03",
+          "question": {
+            "zh": "关于「N を 数量 V」最恰当的是？",
+            "en": "Which usage best fits \"N を 数量 V\"?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "コーヒーを二杯飲みました。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "コーヒー二杯を飲みました。"
+              }
+            },
+            {
+              "text": {
+                "jp": "コーヒーを飲みました二杯。"
+              }
+            },
+            {
+              "text": {
+                "jp": "コーヒーで二杯飲みました。"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "数量词常放在助词后、动词前。",
+            "en": "Quantifiers often appear before the verb."
+          }
+        },
+        {
+          "id": "l11_q04",
+          "question": {
+            "zh": "与「教室里有五个学生。」对应的日语句子是？",
+            "en": "Which Japanese sentence matches \"There are five students in the classroom.\"?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "教室に学生が五人います。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "りんごを三つください。"
+              }
+            },
+            {
+              "text": {
+                "jp": "東京から京都まで二時間半かかります。"
+              }
+            },
+            {
+              "text": {
+                "jp": "一週間に二回日本語を勉強します。"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "对应句子是「教室に学生が五人います。」。",
+            "en": "The matching sentence is \"教室に学生が五人います。\"."
+          }
+        }
+      ]
+    }
+  ]
+}

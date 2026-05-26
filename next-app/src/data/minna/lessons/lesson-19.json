@@ -1,0 +1,761 @@
+{
+  "schema": "minna.lesson.v1",
+  "course": "minna",
+  "lessonNo": 19,
+  "lessonId": "minna_lesson_19",
+  "title": {
+    "zh": "第19课",
+    "en": "Lesson 19",
+    "ja": "第19課"
+  },
+  "subtitle": {
+    "zh": "过去形与经验",
+    "en": "Past form and experiences",
+    "ja": "た形・経験"
+  },
+  "focus": {
+    "zh": "学习动词た形、经验句「〜たことがあります」、变化与选择表达。",
+    "en": "Learn ta-form, experience sentences, and expressions of change/choice.",
+    "ja": "た形、「〜たことがあります」、変化と選択表現を学びます。"
+  },
+  "sections": [
+    {
+      "type": "vocab",
+      "id": "l19_vocab",
+      "title": {
+        "zh": "核心词汇",
+        "en": "Core Vocabulary",
+        "ja": "基本語彙"
+      },
+      "items": [
+        {
+          "id": "l19_v01",
+          "jp": "たことがあります",
+          "kana": "たことがあります",
+          "zh": "有过……经验",
+          "en": "have experienced~",
+          "tags": [
+            "grammar"
+          ]
+        },
+        {
+          "id": "l19_v02",
+          "jp": "登ります",
+          "kana": "のぼります",
+          "zh": "攀登",
+          "en": "climb",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l19_v03",
+          "jp": "泊まります",
+          "kana": "とまります",
+          "zh": "住宿",
+          "en": "stay overnight",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l19_v04",
+          "jp": "掃除します",
+          "kana": "そうじします",
+          "zh": "打扫",
+          "en": "clean",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l19_v05",
+          "jp": "洗濯します",
+          "kana": "せんたくします",
+          "zh": "洗衣服",
+          "en": "do laundry",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l19_v06",
+          "jp": "なります",
+          "kana": "なります",
+          "zh": "变成",
+          "en": "become",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l19_v07",
+          "jp": "します",
+          "kana": "します",
+          "zh": "做；决定",
+          "en": "do/make",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l19_v08",
+          "jp": "富士山",
+          "kana": "ふじさん",
+          "zh": "富士山",
+          "en": "Mt. Fuji",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l19_v09",
+          "jp": "京都",
+          "kana": "きょうと",
+          "zh": "京都",
+          "en": "Kyoto",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l19_v10",
+          "jp": "温かく",
+          "kana": "あたたかく",
+          "zh": "变暖（副）",
+          "en": "warmly / become warm",
+          "tags": [
+            "adj"
+          ]
+        },
+        {
+          "id": "l19_v11",
+          "jp": "元気に",
+          "kana": "げんきに",
+          "zh": "变精神（副）",
+          "en": "energetically",
+          "tags": [
+            "adj"
+          ]
+        },
+        {
+          "id": "l19_v12",
+          "jp": "医者",
+          "kana": "いしゃ",
+          "zh": "医生",
+          "en": "doctor",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l19_v13",
+          "jp": "資料",
+          "kana": "しりょう",
+          "zh": "资料",
+          "en": "material/document",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l19_v14",
+          "jp": "会議",
+          "kana": "かいぎ",
+          "zh": "会议",
+          "en": "meeting",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l19_v15",
+          "jp": "お茶",
+          "kana": "おちゃ",
+          "zh": "茶",
+          "en": "tea",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l19_v16",
+          "jp": "選びます",
+          "kana": "えらびます",
+          "zh": "选择",
+          "en": "choose",
+          "tags": [
+            "verb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "grammar",
+      "id": "l19_grammar",
+      "title": {
+        "zh": "核心语法",
+        "en": "Core Grammar",
+        "ja": "基本文法"
+      },
+      "items": [
+        {
+          "id": "l19_g01",
+          "pattern": "Vた ことが あります",
+          "title": {
+            "zh": "经验表达",
+            "en": "Experience expression"
+          },
+          "explanation": {
+            "zh": "表示曾经有过某种经历。",
+            "en": "Expresses past experience."
+          },
+          "examples": [
+            {
+              "jp": "私は京都へ行ったことがあります。",
+              "zh": "我去过京都。",
+              "en": "I have been to Kyoto."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l19_g01_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“你爬过富士山吗？”是？",
+                "en": "How to ask: Have you climbed Mt. Fuji?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "富士山に登ったことがありますか。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "富士山に登ることがありますか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "富士山に登りましたことがありますか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "富士山を登ったことがありますか。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示曾经有过某种经历。",
+                "en": "Expresses past experience."
+              }
+            },
+            {
+              "id": "l19_g01_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "“我没去过北海道”是？",
+                "en": "How to say: I have not been to Hokkaido?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "北海道へ行ったことがありません。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "北海道へ行きませんでした。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "北海道へ行くことがありません。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "北海道へ行ったことはないです。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示曾经有过某种经历。",
+                "en": "Expresses past experience."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l19_g02",
+          "pattern": "N に なります",
+          "title": {
+            "zh": "变化为…",
+            "en": "Become~"
+          },
+          "explanation": {
+            "zh": "表示状态变化结果。",
+            "en": "Indicates change into a new state."
+          },
+          "examples": [
+            {
+              "jp": "将来、医者になりたいです。",
+              "zh": "将来想当医生。",
+              "en": "I want to become a doctor in the future."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l19_g02_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“天气变暖了”是？",
+                "en": "How to say: It became warm?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "暖かくなりました。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "暖かいになりました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "暖かくしました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "暖かくあります。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示状态变化结果。",
+                "en": "Indicates change into a new state."
+              }
+            },
+            {
+              "id": "l19_g02_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "“我想当老师”是？",
+                "en": "How to say: I want to become a teacher?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "先生になりたいです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "先生をなりたいです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生がなりたいです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生にしますたいです。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示状态变化结果。",
+                "en": "Indicates change into a new state."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l19_g03",
+          "pattern": "N を N に します",
+          "title": {
+            "zh": "决定/选择为",
+            "en": "Decide on~"
+          },
+          "explanation": {
+            "zh": "表示主动选择。",
+            "en": "Expresses active choice/decision."
+          },
+          "examples": [
+            {
+              "jp": "飲み物はお茶にします。",
+              "zh": "饮料我选茶。",
+              "en": "I'll have tea."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l19_g03_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“我决定选这个”是？",
+                "en": "How to say: I decide on this one?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "これにします。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "これをします。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "これがします。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "これでします。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示主动选择。",
+                "en": "Expresses active choice/decision."
+              }
+            },
+            {
+              "id": "l19_g03_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "“午饭选拉面”是？",
+                "en": "How to say: I'll choose ramen for lunch?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "昼ごはんはラーメンにします。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "昼ごはんはラーメンをします。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "昼ごはんでラーメンにします。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "昼ごはんはラーメンがします。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示主动选择。",
+                "en": "Expresses active choice/decision."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l19_g04",
+          "pattern": "もう Vました",
+          "title": {
+            "zh": "动作已完成",
+            "en": "Already done"
+          },
+          "explanation": {
+            "zh": "表示某动作已经完成。",
+            "en": "Indicates completed action."
+          },
+          "examples": [
+            {
+              "jp": "もう宿題をしました。",
+              "zh": "我已经做完作业了。",
+              "en": "I already did my homework."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l19_g04_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“我已经打扫完了”是？",
+                "en": "How to say: I already cleaned?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "もう掃除しました。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "もう掃除します。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "もう掃除して。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "もう掃除しません。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示某动作已经完成。",
+                "en": "Indicates completed action."
+              }
+            },
+            {
+              "id": "l19_g04_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "“你已经吃饭了吗”是？",
+                "en": "How to ask: Have you already eaten?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "もうごはんを食べましたか。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "もうごはんを食べますか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "もうごはんを食べるか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "もうごはんを食べませんか。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示某动作已经完成。",
+                "en": "Indicates completed action."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examples",
+      "id": "l19_examples",
+      "title": {
+        "zh": "核心例句",
+        "en": "Core Examples",
+        "ja": "基本例文"
+      },
+      "items": [
+        {
+          "id": "l19_e01",
+          "jp": "私は富士山に登ったことがあります。",
+          "zh": "我爬过富士山。",
+          "en": "I have climbed Mt. Fuji."
+        },
+        {
+          "id": "l19_e02",
+          "jp": "会議はもう始まりました。",
+          "zh": "会议已经开始了。",
+          "en": "The meeting has already started."
+        },
+        {
+          "id": "l19_e03",
+          "jp": "飲み物はコーヒーにします。",
+          "zh": "饮料我选咖啡。",
+          "en": "I'll have coffee."
+        },
+        {
+          "id": "l19_e04",
+          "jp": "春になって、暖かくなりました。",
+          "zh": "到了春天，天气变暖了。",
+          "en": "It became warm in spring."
+        },
+        {
+          "id": "l19_e05",
+          "jp": "京都で旅館に泊まったことがあります。",
+          "zh": "我在京都住过旅馆。",
+          "en": "I have stayed at an inn in Kyoto."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "l19_quiz",
+      "title": {
+        "zh": "综合测试",
+        "en": "Final Test",
+        "ja": "まとめテスト"
+      },
+      "items": [
+        {
+          "id": "l19_q01",
+          "question": {
+            "zh": "「たことがあります」的意思是？",
+            "en": "What does たことがあります mean?"
+          },
+          "options": [
+            {
+              "text": {
+                "zh": "有过……经验",
+                "en": "have experienced~"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "攀登",
+                "en": "climb"
+              }
+            },
+            {
+              "text": {
+                "zh": "住宿",
+                "en": "stay overnight"
+              }
+            },
+            {
+              "text": {
+                "zh": "打扫",
+                "en": "clean"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "「たことがあります」表示「有过……经验」。",
+            "en": "たことがあります means have experienced~."
+          }
+        },
+        {
+          "id": "l19_q02",
+          "question": {
+            "zh": "哪一句最符合语法「Vた ことが あります」？",
+            "en": "Which sentence best matches pattern \"Vた ことが あります\"?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "私は京都へ行ったことがあります。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "将来、医者になりたいです。"
+              }
+            },
+            {
+              "text": {
+                "jp": "飲み物はお茶にします。"
+              }
+            },
+            {
+              "text": {
+                "jp": "もう宿題をしました。"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "正确句型是「Vた ことが あります」。",
+            "en": "The correct pattern is \"Vた ことが あります\"."
+          }
+        },
+        {
+          "id": "l19_q03",
+          "question": {
+            "zh": "关于「N に なります」最恰当的是？",
+            "en": "Which usage best fits \"N に なります\"?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "暖かくなりました。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "暖かいになりました。"
+              }
+            },
+            {
+              "text": {
+                "jp": "暖かくしました。"
+              }
+            },
+            {
+              "text": {
+                "jp": "暖かくあります。"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "表示状态变化结果。",
+            "en": "Indicates change into a new state."
+          }
+        },
+        {
+          "id": "l19_q04",
+          "question": {
+            "zh": "与「我爬过富士山。」对应的日语句子是？",
+            "en": "Which Japanese sentence matches \"I have climbed Mt. Fuji.\"?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "私は富士山に登ったことがあります。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "会議はもう始まりました。"
+              }
+            },
+            {
+              "text": {
+                "jp": "飲み物はコーヒーにします。"
+              }
+            },
+            {
+              "text": {
+                "jp": "春になって、暖かくなりました。"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "对应句子是「私は富士山に登ったことがあります。」。",
+            "en": "The matching sentence is \"私は富士山に登ったことがあります。\"."
+          }
+        }
+      ]
+    }
+  ]
+}

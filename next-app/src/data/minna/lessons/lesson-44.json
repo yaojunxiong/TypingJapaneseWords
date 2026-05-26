@@ -1,0 +1,828 @@
+{
+  "id": "minna-44",
+  "version": "20.3",
+  "status": "Mastery migrated",
+  "lesson": 44,
+  "title": {
+    "zh": "第44课",
+    "en": "Lesson 44",
+    "ja": "第44課"
+  },
+  "topic": {
+    "zh": "すぎます",
+    "en": "Sugimasu"
+  },
+  "summary": {
+    "zh": "学习过度表达 すぎます、难易表达 やすい/にくい，以及把状态变成某样的 くします/にします。",
+    "en": "Learn excess with すぎます, ease/difficulty with やすい/にくい, and changes with くします/にします."
+  },
+  "sections": [
+    {
+      "id": "l44-vocab",
+      "type": "vocab",
+      "title": {
+        "zh": "词汇 Vocabulary",
+        "en": "Vocabulary"
+      },
+      "items": [
+        {
+          "id": "l44-vocab-01",
+          "jp": "泣きます",
+          "kana": "なきます",
+          "zh": "哭",
+          "en": "cry",
+          "example": "赤ちゃんが泣いています。"
+        },
+        {
+          "id": "l44-vocab-02",
+          "jp": "笑います",
+          "kana": "わらいます",
+          "zh": "笑",
+          "en": "laugh, smile",
+          "example": "みんなが笑いました。"
+        },
+        {
+          "id": "l44-vocab-03",
+          "jp": "眠ります",
+          "kana": "ねむります",
+          "zh": "睡觉",
+          "en": "sleep",
+          "example": "よく眠りました。"
+        },
+        {
+          "id": "l44-vocab-04",
+          "jp": "乾きます",
+          "kana": "かわきます",
+          "zh": "干",
+          "en": "dry",
+          "example": "服が乾きました。"
+        },
+        {
+          "id": "l44-vocab-05",
+          "jp": "ぬれます",
+          "kana": "ぬれます",
+          "zh": "湿",
+          "en": "get wet",
+          "example": "雨で服がぬれました。"
+        },
+        {
+          "id": "l44-vocab-06",
+          "jp": "滑ります",
+          "kana": "すべります",
+          "zh": "滑",
+          "en": "slip",
+          "example": "この道は滑りやすいです。"
+        },
+        {
+          "id": "l44-vocab-07",
+          "jp": "起こします",
+          "kana": "おこします",
+          "zh": "叫醒、引起",
+          "en": "wake someone, cause",
+          "example": "弟を起こします。"
+        },
+        {
+          "id": "l44-vocab-08",
+          "jp": "安全",
+          "kana": "あんぜん",
+          "zh": "安全",
+          "en": "safe",
+          "example": "道を安全にします。"
+        },
+        {
+          "id": "l44-vocab-09",
+          "jp": "複雑",
+          "kana": "ふくざつ",
+          "zh": "复杂",
+          "en": "complicated",
+          "example": "説明が複雑すぎます。"
+        },
+        {
+          "id": "l44-vocab-10",
+          "jp": "簡単",
+          "kana": "かんたん",
+          "zh": "简单",
+          "en": "easy, simple",
+          "example": "使い方を簡単にします。"
+        }
+      ]
+    },
+    {
+      "id": "l44-grammar",
+      "type": "grammar",
+      "title": {
+        "zh": "语法 Grammar",
+        "en": "Grammar"
+      },
+      "items": [
+        {
+          "id": "l44-grammar-01",
+          "pattern": "Vます形語幹 + すぎます",
+          "zh": "表示动作做得过度。",
+          "en": "Shows that an action is done too much.",
+          "example": "昨日飲みすぎました。",
+          "practice": [
+            {
+              "id": "l44-practice-01",
+              "skill": "grammar",
+              "question": {
+                "zh": "表达：昨天吃太多了。",
+                "en": "Say: I ate too much yesterday."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "この部屋は寒すぎます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この本は読みやすいです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この問題は簡単すぎます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "昨日食べすぎました。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "表示动作做得过度。",
+                "en": "Shows that an action is done too much."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l44-grammar-02",
+          "pattern": "い形容詞語幹 + すぎます",
+          "zh": "表示性质过度，去掉 い 后接 すぎます。",
+          "en": "Remove い from an i-adjective and add すぎます to show excess.",
+          "example": "この服は高すぎます。",
+          "practice": [
+            {
+              "id": "l44-practice-02",
+              "skill": "grammar",
+              "question": {
+                "zh": "表达：这个房间太冷了。",
+                "en": "Say: This room is too cold."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "この部屋は寒すぎます。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "この問題は簡単すぎます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この本は読みやすいです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "昨日食べすぎました。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示性质过度，去掉 い 后接 すぎます。",
+                "en": "Remove い from an i-adjective and add すぎます to show excess."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l44-grammar-03",
+          "pattern": "な形容詞 + すぎます",
+          "zh": "な形容词直接接 すぎます。",
+          "en": "Attach すぎます directly to a na-adjective.",
+          "example": "この説明は複雑すぎます。",
+          "practice": [
+            {
+              "id": "l44-practice-03",
+              "skill": "grammar",
+              "question": {
+                "zh": "表达：这个问题太简单了。",
+                "en": "Say: This question is too easy."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "この本は読みやすいです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この部屋は寒すぎます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "昨日食べすぎました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この問題は簡単すぎます。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "な形容词直接接 すぎます。",
+                "en": "Attach すぎます directly to a na-adjective."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l44-grammar-04",
+          "pattern": "Vます形語幹 + やすいです",
+          "zh": "表示某动作容易做或容易发生。",
+          "en": "Shows that an action is easy to do or likely to happen.",
+          "example": "このペンは書きやすいです。",
+          "practice": [
+            {
+              "id": "l44-practice-04",
+              "skill": "grammar",
+              "question": {
+                "zh": "表达：这本书容易读。",
+                "en": "Say: This book is easy to read."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "この問題は簡単すぎます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "昨日食べすぎました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この部屋は寒すぎます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この本は読みやすいです。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "表示某动作容易做或容易发生。",
+                "en": "Shows that an action is easy to do or likely to happen."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l44-grammar-05",
+          "pattern": "Vます形語幹 + にくいです",
+          "zh": "表示某动作难做或不容易发生。",
+          "en": "Shows that an action is hard to do or unlikely to happen.",
+          "example": "この漢字は覚えにくいです。",
+          "practice": [
+            {
+              "id": "l44-practice-05",
+              "skill": "grammar",
+              "question": {
+                "zh": "表达：这个字很难写。",
+                "en": "Say: This character is hard to write."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "この部屋は寒すぎます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この問題は簡単すぎます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "昨日食べすぎました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この字は書きにくいです。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "表示某动作难做或不容易发生。",
+                "en": "Shows that an action is hard to do or unlikely to happen."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l44-grammar-06",
+          "pattern": "い形容詞くします",
+          "zh": "表示人为地把某物变成某种い形容词状态。",
+          "en": "Shows making something into an i-adjective state.",
+          "example": "音を小さくしてください。",
+          "practice": [
+            {
+              "id": "l44-practice-06",
+              "skill": "grammar",
+              "question": {
+                "zh": "表达：请把房间弄暖和。",
+                "en": "Say: Please make the room warm."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "この部屋は寒すぎます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "昨日食べすぎました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この問題は簡単すぎます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "部屋を暖かくしてください。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "表示人为地把某物变成某种い形容词状态。",
+                "en": "Shows making something into an i-adjective state."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l44-grammar-07",
+          "pattern": "な形容詞 / 名詞 + にします",
+          "zh": "表示人为地把某物变成某个状态或选定某物。",
+          "en": "Shows making something into a na-adjective/noun state or choosing something.",
+          "example": "説明を簡単にします。会議は月曜日にします。",
+          "practice": [
+            {
+              "id": "l44-practice-07",
+              "skill": "grammar",
+              "question": {
+                "zh": "表达：请把规则变简单。",
+                "en": "Say: Please make the rules simple."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "この部屋は寒すぎます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この問題は簡単すぎます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "昨日食べすぎました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "ルールを簡単にしてください。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "表示人为地把某物变成某个状态或选定某物。",
+                "en": "Shows making something into a na-adjective/noun state or choosing something."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l44-grammar-08",
+          "pattern": "Vやすく / Vにくくなります",
+          "zh": "表示动作变得容易或困难。",
+          "en": "Shows that an action becomes easier or harder.",
+          "example": "新しい画面は使いやすくなりました。",
+          "practice": [
+            {
+              "id": "l44-practice-08",
+              "skill": "grammar",
+              "question": {
+                "zh": "表达：这个网站变得更容易看了。",
+                "en": "Say: This website became easier to view."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "このサイトは見やすくなりました。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "昨日食べすぎました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この部屋は寒すぎます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この問題は簡単すぎます。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示动作变得容易或困难。",
+                "en": "Shows that an action becomes easier or harder."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l44-examples",
+      "type": "examples",
+      "title": {
+        "zh": "例句 Examples",
+        "en": "Examples"
+      },
+      "items": [
+        {
+          "id": "l44-example-01",
+          "jp": "昨日ゲームをしすぎて、目が疲れました。",
+          "zh": "昨天游戏玩太多，眼睛累了。",
+          "en": "I played games too much yesterday, so my eyes got tired."
+        },
+        {
+          "id": "l44-example-02",
+          "jp": "このコーヒーは苦すぎます。",
+          "zh": "这杯咖啡太苦了。",
+          "en": "This coffee is too bitter."
+        },
+        {
+          "id": "l44-example-03",
+          "jp": "この説明は複雑すぎて、わかりません。",
+          "zh": "这个说明太复杂，我不懂。",
+          "en": "This explanation is too complicated, so I do not understand."
+        },
+        {
+          "id": "l44-example-04",
+          "jp": "この辞書は例文が多くて、使いやすいです。",
+          "zh": "这本词典例句多，很好用。",
+          "en": "This dictionary has many examples and is easy to use."
+        },
+        {
+          "id": "l44-example-05",
+          "jp": "この道は暗くて、歩きにくいです。",
+          "zh": "这条路很暗，不好走。",
+          "en": "This road is dark and hard to walk on."
+        },
+        {
+          "id": "l44-example-06",
+          "jp": "すみません、音を小さくしてください。",
+          "zh": "不好意思，请把声音调小。",
+          "en": "Excuse me, please turn the sound down."
+        },
+        {
+          "id": "l44-example-07",
+          "jp": "この資料をもっと見やすくしましょう。",
+          "zh": "我们把这份资料做得更容易看吧。",
+          "en": "Let's make this document easier to read."
+        },
+        {
+          "id": "l44-example-08",
+          "jp": "新しいアプリは前より使いやすくなりました。",
+          "zh": "新的应用比以前更容易用了。",
+          "en": "The new app became easier to use than before."
+        }
+      ]
+    },
+    {
+      "id": "l44-mistakes",
+      "type": "mistakes",
+      "title": {
+        "zh": "常见错误 Common Mistakes",
+        "en": "Common Mistakes"
+      },
+      "items": [
+        {
+          "id": "l44-mistake-01",
+          "wrong": "この服は高いすぎます。",
+          "correct": "この服は高すぎます。",
+          "reason": {
+            "zh": "い形容词接 すぎます 时去掉 い。",
+            "en": "Remove い before すぎます."
+          }
+        },
+        {
+          "id": "l44-mistake-02",
+          "wrong": "この本は読むやすいです。",
+          "correct": "この本は読みやすいです。",
+          "reason": {
+            "zh": "やすい/にくい 前接动词ます形语干。",
+            "en": "Use the masu-stem before やすい/にくい."
+          }
+        },
+        {
+          "id": "l44-mistake-03",
+          "wrong": "部屋を暖かいにしてください。",
+          "correct": "部屋を暖かくしてください。",
+          "reason": {
+            "zh": "い形容词变状态用 くします。",
+            "en": "Use くします with i-adjectives."
+          }
+        }
+      ]
+    },
+    {
+      "id": "l44-quiz",
+      "type": "quiz",
+      "title": {
+        "zh": "最终测试 Final Test",
+        "en": "Final Test"
+      },
+      "items": [
+        {
+          "id": "l44-quiz-01",
+          "question": {
+            "zh": "「昨天吃太多了。」正确的是？",
+            "en": "Which means: I ate too much yesterday?"
+          },
+          "options": [
+            {
+              "text": "昨日食べすぎました。",
+              "correct": true
+            },
+            {
+              "text": "昨日食べるすぎました。",
+              "correct": false
+            },
+            {
+              "text": "昨日食べてすぎました。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "动词ます形语干 + すぎます。",
+            "en": "Use masu-stem + すぎます."
+          }
+        },
+        {
+          "id": "l44-quiz-02",
+          "question": {
+            "zh": "「这件衣服太贵。」正确的是？",
+            "en": "Which means: These clothes are too expensive?"
+          },
+          "options": [
+            {
+              "text": "この服は高すぎます。",
+              "correct": true
+            },
+            {
+              "text": "この服は高いすぎます。",
+              "correct": false
+            },
+            {
+              "text": "この服は高くすぎます。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "高い 去 い 后接 すぎます。",
+            "en": "Remove い from 高い before すぎます."
+          }
+        },
+        {
+          "id": "l44-quiz-03",
+          "question": {
+            "zh": "「这个问题太简单。」正确的是？",
+            "en": "Which means: This question is too easy?"
+          },
+          "options": [
+            {
+              "text": "この問題は簡単すぎます。",
+              "correct": true
+            },
+            {
+              "text": "この問題は簡単なすぎます。",
+              "correct": false
+            },
+            {
+              "text": "この問題は簡単にすぎます。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "な形容词直接接 すぎます。",
+            "en": "Attach すぎます directly to a na-adjective."
+          }
+        },
+        {
+          "id": "l44-quiz-04",
+          "question": {
+            "zh": "「这本书容易读。」正确的是？",
+            "en": "Which means: This book is easy to read?"
+          },
+          "options": [
+            {
+              "text": "この本は読みやすいです。",
+              "correct": true
+            },
+            {
+              "text": "この本は読むやすいです。",
+              "correct": false
+            },
+            {
+              "text": "この本は読んでやすいです。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "読み 是 読みます 的ます形语干。",
+            "en": "読み is the masu-stem of 読みます."
+          }
+        },
+        {
+          "id": "l44-quiz-05",
+          "question": {
+            "zh": "「这个汉字难记。」正确的是？",
+            "en": "Which means: This kanji is hard to remember?"
+          },
+          "options": [
+            {
+              "text": "この漢字は覚えにくいです。",
+              "correct": true
+            },
+            {
+              "text": "この漢字は覚えるにくいです。",
+              "correct": false
+            },
+            {
+              "text": "この漢字は覚えてにくいです。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "にくい 前接动词ます形语干。",
+            "en": "Use the masu-stem before にくい."
+          }
+        },
+        {
+          "id": "l44-quiz-06",
+          "question": {
+            "zh": "「请把声音调小。」正确的是？",
+            "en": "Which means: Please make the sound quieter?"
+          },
+          "options": [
+            {
+              "text": "音を小さくしてください。",
+              "correct": true
+            },
+            {
+              "text": "音を小さいにしてください。",
+              "correct": false
+            },
+            {
+              "text": "音を小さいくしてください。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "い形容词变状态用 くします。",
+            "en": "Use くします with i-adjectives."
+          }
+        },
+        {
+          "id": "l44-quiz-07",
+          "question": {
+            "zh": "「请把规则变简单。」正确的是？",
+            "en": "Which means: Please make the rules simple?"
+          },
+          "options": [
+            {
+              "text": "ルールを簡単にしてください。",
+              "correct": true
+            },
+            {
+              "text": "ルールを簡単くしてください。",
+              "correct": false
+            },
+            {
+              "text": "ルールを簡単なしてください。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "な形容词变状态用 にします。",
+            "en": "Use にします with na-adjectives."
+          }
+        },
+        {
+          "id": "l44-quiz-08",
+          "question": {
+            "zh": "「网站变得容易看了。」正确的是？",
+            "en": "Which means: The website became easier to view?"
+          },
+          "options": [
+            {
+              "text": "サイトは見やすくなりました。",
+              "correct": true
+            },
+            {
+              "text": "サイトは見るやすくなりました。",
+              "correct": false
+            },
+            {
+              "text": "サイトは見やすいになりました。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "やすい 作变化时变成 やすくなります。",
+            "en": "やすい becomes やすくなります when describing change."
+          }
+        },
+        {
+          "id": "l44-quiz-09",
+          "question": {
+            "zh": "「这个说明太复杂，不懂。」自然的是？",
+            "en": "Which naturally means: This explanation is too complicated, so I don't understand?"
+          },
+          "options": [
+            {
+              "text": "この説明は複雑すぎて、わかりません。",
+              "correct": true
+            },
+            {
+              "text": "この説明は複雑なすぎて、わかりません。",
+              "correct": false
+            },
+            {
+              "text": "この説明は複雑にすぎて、わかりません。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "な形容词直接接 すぎて。",
+            "en": "Attach すぎて directly to a na-adjective."
+          }
+        },
+        {
+          "id": "l44-quiz-10",
+          "question": {
+            "zh": "「这条路容易滑。」正确的是？",
+            "en": "Which means: This road is slippery?"
+          },
+          "options": [
+            {
+              "text": "この道は滑りやすいです。",
+              "correct": true
+            },
+            {
+              "text": "この道は滑るやすいです。",
+              "correct": false
+            },
+            {
+              "text": "この道は滑ってやすいです。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "滑ります 的ます形语干是 滑り。",
+            "en": "The masu-stem of 滑ります is 滑り."
+          }
+        }
+      ]
+    }
+  ]
+}

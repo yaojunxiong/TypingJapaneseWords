@@ -1,8 +1,8 @@
 import fs from 'node:fs'
 import path from 'node:path'
 
-const ROOT = path.resolve(process.cwd(), '..')
-const LESSON_DIR = path.join(ROOT, 'docs', 'data', 'minna', 'lessons')
+const ROOT = path.resolve(process.cwd())
+const LESSON_DIR = path.join(ROOT, 'src', 'data', 'minna', 'lessons')
 const REQUIRED = ['vocab', 'grammar', 'examples', 'quiz']
 
 function readJson(filePath) {

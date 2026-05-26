@@ -73,7 +73,7 @@ function sectionAnchor(section: LessonSection) {
 
 async function loadLessonDoc(lessonNo: number): Promise<LessonDoc | null> {
   const fileNo = String(lessonNo).padStart(2, '0')
-  const filePath = path.resolve(process.cwd(), '..', 'docs', 'data', 'minna', 'lessons', `lesson-${fileNo}.json`)
+  const filePath = path.resolve(process.cwd(), 'src', 'data', 'minna', 'lessons', `lesson-${fileNo}.json`)
   try {
     const raw = await fs.readFile(filePath, 'utf-8')
     return JSON.parse(raw) as LessonDoc
