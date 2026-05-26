@@ -12,6 +12,23 @@ type UserLite = {
   email?: string
 }
 
+const PROD_ORIGIN = 'https://next-app-kohl-one.vercel.app'
+
+function pickOAuthOrigin() {
+  const fromEnv = String(process.env.NEXT_PUBLIC_APP_ORIGIN || '').trim()
+  if (fromEnv) return fromEnv.replace(/\/+$/, '')
+  if (typeof window === 'undefined') return PROD_ORIGIN
+
+  const current = String(window.location.origin || '').trim()
+  try {
+    const h = new URL(current).hostname.toLowerCase()
+    if (!h || h.endsWith('github.io')) return PROD_ORIGIN
+    return current
+  } catch {
+    return PROD_ORIGIN
+  }
+}
+
 export default function AuthActions() {
   const supabaseReady = hasSupabasePublicEnv()
   const envMessage = getSupabaseMissingEnvMessage()
@@ -51,7 +68,7 @@ export default function AuthActions() {
       return
     }
     setError('')
-    const origin = window.location.origin
+    const origin = pickOAuthOrigin()
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: { redirectTo: `${origin}/me` }
