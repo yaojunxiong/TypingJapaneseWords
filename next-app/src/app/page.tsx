@@ -15,21 +15,31 @@ export default async function Page() {
     return (
       <main>
         <MinnaNav active="home" />
-        <h1>Minna Next 迁移站</h1>
-        <p className="small">当前阶段：已完成 Supabase SSR + 登录中心 + 我的页。</p>
-        <section className="card">
-          <h2>迁移入口</h2>
-          <p><Link href="/login">登录中心</Link></p>
-          <p><Link href="/me">我的页（云端资料）</Link></p>
-          <p><Link href="/toolbox">学习中心（迁移版）</Link></p>
-          <p><Link href="/lessons">课程入口（迁移版）</Link></p>
-          <p><Link href="/favorites">收藏页（迁移版）</Link></p>
-          <p><Link href="/messages">消息中心（迁移版）</Link></p>
-          <p><Link href="/chat">聊天页（迁移版）</Link></p>
+        <section className="homeStageCard">
+          <div>
+            <p className="homeStageTop">第 1 阶段，第 10 部分</p>
+            <h2>找旅行物品和地方</h2>
+          </div>
+          <span className="homeStageIcon">📋</span>
         </section>
+
+        <section className="homeMap card">
+          <div className="homeNode">🟢</div>
+          <div className="homeNode">📦</div>
+          <div className="homeNode">🪙</div>
+          <div className="homeNode">🏅</div>
+        </section>
+
+        <section className="homeLevelCard card">
+          <span className="homeTag">下一级</span>
+          <h2>第 2 阶段</h2>
+          <p>学会日常交流中基础的单词、短语和语法概念</p>
+          <p><Link className="homeContinueBtn" href="/lessons">继续</Link></p>
+        </section>
+
         <section className="card">
-          <h2>连接结果</h2>
-          <p className="small">暂未配置 Supabase：{envMessage}</p>
+          <p className="small">云端未配置：{envMessage}</p>
+          <p className="small"><Link href="/login">去登录</Link></p>
         </section>
       </main>
     )
@@ -45,30 +55,36 @@ export default async function Page() {
   return (
     <main>
       <MinnaNav active="home" />
-      <h1>Minna Next 迁移站</h1>
-      <p className="small">当前阶段：已完成 Supabase SSR + 登录中心 + 我的页。</p>
+      <section className="homeStageCard">
+        <div>
+          <p className="homeStageTop">第 1 阶段，第 10 部分</p>
+          <h2>找旅行物品和地方</h2>
+        </div>
+        <span className="homeStageIcon">📋</span>
+      </section>
 
-      <section className="card">
-        <h2>迁移入口</h2>
-        <p><Link href="/login">登录中心</Link></p>
-        <p><Link href="/me">我的页（云端资料）</Link></p>
-        <p><Link href="/toolbox">学习中心（迁移版）</Link></p>
-        <p><Link href="/lessons">课程入口（迁移版）</Link></p>
-        <p><Link href="/favorites">收藏页（迁移版）</Link></p>
-        <p><Link href="/messages">消息中心（迁移版）</Link></p>
-        <p><Link href="/chat">聊天页（迁移版）</Link></p>
+      <section className="homeMap card">
+        <div className="homeNode">🟢</div>
+        <div className="homeNode">📦</div>
+        <div className="homeNode">🪙</div>
+        <div className="homeNode">🏅</div>
+      </section>
+
+      <section className="homeLevelCard card">
+        <span className="homeTag">下一级</span>
+        <h2>第 2 阶段</h2>
+        <p>学会日常交流中基础的单词、短语和语法概念</p>
+        <p><Link className="homeContinueBtn" href="/lessons">继续</Link></p>
       </section>
 
       {error ? (
         <section className="card">
-          <h2>连接结果</h2>
           <p className="small">读取失败：{error.message}</p>
         </section>
       ) : (
         <section className="card">
-          <h2>连接结果</h2>
-          <p className="small">读取成功，返回 {data?.length ?? 0} 条。</p>
-          <pre className="small">{JSON.stringify(data, null, 2)}</pre>
+          <p className="small">云端就绪，资料记录 {data?.length ?? 0} 条。</p>
+          <p className="small"><Link href="/me">进入我的</Link> · <Link href="/toolbox">学习中心</Link> · <Link href="/chat">聊天</Link></p>
         </section>
       )}
     </main>
