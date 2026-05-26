@@ -129,3 +129,51 @@ a:hover { text-decoration: underline; }
   padding: 4px 10px;
 }
 .metaPill.done { background: #dcfce7; color: #14532d; }
+
+.msgGrid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 14px;
+}
+.msgCard2 {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 14px;
+}
+.msgCard2 h2 { margin: 0 0 6px; }
+.msgIcon { font-size: 30px; margin-bottom: 6px; }
+.btn.ghost { background: #fff; color: #075985; border: 1px solid #bae6fd; }
+.btn.danger { background: #dc2626; }
+
+.requestRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 12px;
+  margin-top: 10px;
+}
+.requestActions { display: flex; gap: 8px; align-items: center; }
+.requestActions form { margin: 0; }
+
+.chatRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 12px;
+  margin-top: 10px;
+  color: #0f172a;
+  background: #fff;
+}
+.chatRow:hover { text-decoration: none; border-color: #0284c7; }
+
+@media (max-width: 780px) {
+  .msgGrid { grid-template-columns: 1fr; }
+  .requestRow, .chatRow { flex-direction: column; align-items: flex-start; }
+}

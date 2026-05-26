@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 type Props = {
-  active: 'home' | 'login' | 'me' | 'toolbox' | 'lessons'
+  active: 'home' | 'login' | 'me' | 'toolbox' | 'lessons' | 'messages'
 }
 
 const ITEMS: Array<{ key: Props['active']; label: string; href: string }> = [
@@ -9,7 +9,8 @@ const ITEMS: Array<{ key: Props['active']; label: string; href: string }> = [
   { key: 'login', label: '登录', href: '/login' },
   { key: 'me', label: '我的', href: '/me' },
   { key: 'toolbox', label: '学习中心', href: '/toolbox' },
-  { key: 'lessons', label: '课程', href: '/lessons' }
+  { key: 'lessons', label: '课程', href: '/lessons' },
+  { key: 'messages', label: '消息', href: '/messages' }
 ]
 
 export default function MinnaNav({ active }: Props) {
