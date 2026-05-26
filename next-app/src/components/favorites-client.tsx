@@ -1,6 +1,8 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
+import { createClient } from '@/utils/supabase/client'
+import { hasSupabasePublicEnv } from '@/utils/supabase/config'
 
 type FavItem = {
   id?: string
@@ -11,6 +13,7 @@ type FavItem = {
 }
 
 const KEY = 'minna.vocab.favorites.v1'
+const UPDATED_KEY = 'minna.vocab.favorites.updated_at.v1'
 
 function readList(): FavItem[] {
   if (typeof window === 'undefined') return []
@@ -28,6 +31,7 @@ function writeList(list: FavItem[]) {
   if (typeof window === 'undefined') return
   try {
     localStorage.setItem(KEY, JSON.stringify(list))
+    localStorage.setItem(UPDATED_KEY, new Date().toISOString())
   } catch {}
 }
 
@@ -36,11 +40,85 @@ function identity(v: FavItem, i: number) {
 }
 
 export default function FavoritesClient() {
+  const supabaseReady = hasSupabasePublicEnv()
+  const supabase = useMemo(() => createClient(), [])
   const [list, setList] = useState<FavItem[]>([])
   const [q, setQ] = useState('')
+  const [syncText, setSyncText] = useState('准备同步')
+
+  function uniqueById(items: FavItem[]) {
+    const map = new Map<string, FavItem>()
+    items.forEach((v, i) => {
+      map.set(identity(v, i), v)
+    })
+    return Array.from(map.values())
+  }
+
+  async function syncCloud(nextList?: FavItem[]) {
+    const localList = Array.isArray(nextList) ? nextList : readList()
+    if (!supabaseReady) {
+      setSyncText('云端未配置，当前仅本地保存')
+      return
+    }
+    const { data: userData } = await supabase.auth.getUser()
+    const user = userData.user
+    if (!user) {
+      setSyncText('未登录，当前仅本地保存')
+      return
+    }
+
+    const { data: row, error } = await supabase
+      .from('minna_learning_state')
+      .select('state')
+      .eq('user_id', user.id)
+      .maybeSingle()
+
+    if (error) {
+      const msg = /Could not find the table 'public\.minna_learning_state'/i.test(error.message || '')
+        ? '云端学习表未初始化，当前仅本地保存'
+        : `同步提示：${error.message}`
+      setSyncText(msg)
+      return
+    }
+
+    const state = row && typeof row === 'object' ? (row as { state?: Record<string, unknown> }).state || {} : {}
+    const cloudList = Array.isArray((state as Record<string, unknown>).favoriteVocabList)
+      ? ((state as Record<string, unknown>).favoriteVocabList as FavItem[])
+      : []
+
+    const merged = uniqueById(cloudList.concat(localList))
+    setList(merged)
+    writeList(merged)
+
+    const nextState = {
+      ...(state as Record<string, unknown>),
+      favoriteVocabList: merged,
+      favoriteVocabUpdatedAt: new Date().toISOString()
+    }
+
+    const upsertRes = await supabase.from('minna_learning_state').upsert(
+      {
+        user_id: user.id,
+        user_key: `auth:${user.id}`,
+        user_email: user.email || '',
+        state: nextState,
+        updated_at: new Date().toISOString()
+      },
+      { onConflict: 'user_id' }
+    )
+
+    if (upsertRes.error) {
+      setSyncText(`同步提示：${upsertRes.error.message}`)
+      return
+    }
+
+    setSyncText(`云端同步成功 · ${new Date().toLocaleTimeString()}`)
+  }
 
   useEffect(() => {
-    setList(readList())
+    const local = readList()
+    setList(local)
+    void syncCloud(local)
   }, [])
 
   const shown = useMemo(() => {
@@ -59,6 +137,7 @@ export default function FavoritesClient() {
     const next = list.filter((x, i) => identity(x, i) !== rowKey)
     setList(next)
     writeList(next)
+    void syncCloud(next)
   }
 
   function shuffleNow() {
@@ -80,6 +159,7 @@ export default function FavoritesClient() {
     if (!window.confirm('确定清空所有收藏词汇吗？')) return
     setList([])
     writeList([])
+    void syncCloud([])
   }
 
   return (
@@ -95,6 +175,7 @@ export default function FavoritesClient() {
           <div>
             <h3>收藏词汇列表</h3>
             <p className="small">已收藏 {list.length} 个词汇</p>
+            <p className="small">{syncText}</p>
           </div>
           <div className="favActions">
             <button className="btn ghost" onClick={shuffleNow}>随机复习</button>
