@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { cookies } from 'next/headers'
 import { createClient } from '@/utils/supabase/server'
+import MinnaNav from '@/components/minna-nav'
 
 export default async function Page() {
   const cookieStore = await cookies()
@@ -12,6 +13,7 @@ export default async function Page() {
 
   return (
     <main>
+      <MinnaNav active="home" />
       <h1>Minna Next 迁移站</h1>
       <p className="small">当前阶段：已完成 Supabase SSR + 登录中心 + 我的页。</p>
 
@@ -19,6 +21,8 @@ export default async function Page() {
         <h2>迁移入口</h2>
         <p><Link href="/login">登录中心</Link></p>
         <p><Link href="/me">我的页（云端资料）</Link></p>
+        <p><Link href="/toolbox">学习中心（迁移版）</Link></p>
+        <p><Link href="/lessons">课程入口（迁移版）</Link></p>
       </section>
 
       {error ? (

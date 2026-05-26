@@ -36,3 +36,96 @@ main { max-width: 920px; margin: 0 auto; padding: 32px 20px; }
 .btn:hover { background: #0369a1; }
 a { color: #0369a1; text-decoration: none; }
 a:hover { text-decoration: underline; }
+
+.pillLink {
+  border: 1px solid #cbd5e1;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-weight: 700;
+  color: #0f172a;
+  background: #fff;
+}
+.pillLink:hover { text-decoration: none; border-color: #0369a1; }
+.pillLink.active { background: #e0f2fe; border-color: #0284c7; color: #075985; }
+
+.heroCard { text-align: center; }
+.heroEmoji { font-size: 64px; }
+
+.statsGrid2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.bigStat {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 16px;
+}
+.bigStat b { display: block; font-size: 24px; margin-bottom: 6px; }
+.bigStat span { color: #64748b; font-size: 13px; }
+
+.toolList { display: grid; gap: 12px; margin-bottom: 14px; }
+.toolLink2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 14px;
+  color: #0f172a;
+  background: #fff;
+}
+.toolLeft2 { display: flex; align-items: center; gap: 12px; }
+.toolIcon2 {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: #f8fafc;
+  font-size: 24px;
+}
+.toolLink2:hover { text-decoration: none; border-color: #0284c7; }
+
+.lessonList2 { display: grid; gap: 12px; margin-bottom: 14px; }
+.lessonCard2 {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background: #fff;
+  padding: 12px;
+  color: #0f172a;
+}
+.lessonCard2:hover { text-decoration: none; border-color: #0284c7; }
+.lessonCard2.locked { opacity: .7; cursor: default; }
+
+.lessonNo {
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  background: #22c55e;
+  color: #fff;
+  font-weight: 800;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.lessonNo.done { background: #16a34a; }
+.lessonNo.muted { background: #94a3b8; }
+
+.lessonText2 h3 { margin: 0 0 4px; font-size: 18px; }
+.lessonMeta2 { display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
+.metaPill {
+  border-radius: 999px;
+  background: #e0f2fe;
+  color: #0c4a6e;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+}
+.metaPill.done { background: #dcfce7; color: #14532d; }
