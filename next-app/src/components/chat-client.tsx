@@ -55,6 +55,9 @@ type ThreadReadRow = {
   last_read_at: string
   updated_at: string
 }
+type Props = {
+  lang: 'zh' | 'en'
+}
 
 const PIN_KEY = 'minna.chat.pins.v1'
 const PREF_KEY = 'minna.chat.prefs.v2'
@@ -148,7 +151,11 @@ function sortThreadsByPrefs(rows: Thread[], prefMap: Record<string, ThreadPref>)
   })
 }
 
-export default function ChatClient() {
+function t(lang: Props['lang'], zh: string, en: string) {
+  return lang === 'en' ? en : zh
+}
+
+export default function ChatClient({ lang }: Props) {
   const supabaseReady = hasSupabasePublicEnv()
   const envMessage = getSupabaseMissingEnvMessage()
   const supabase = useMemo(() => createClient(), [])
@@ -615,7 +622,7 @@ export default function ChatClient() {
     if (!supabaseReady) {
       setLoading(false)
       setUser(null)
-      setStatus(envMessage || '未配置 Supabase 环境变量')
+      setStatus(envMessage || t(lang, '未配置 Supabase 环境变量', 'Supabase env vars are not configured'))
       return
     }
 
@@ -703,10 +710,10 @@ export default function ChatClient() {
     if (error) {
       if (isMissingTableError(error, 'minna_chat_thread_prefs')) {
         setCloudPrefEnabled(false)
-        setStatus('偏好表未启用，已仅保存本地设置')
+        setStatus(t(lang, '偏好表未启用，已仅保存本地设置', 'Preference table is not enabled. Using local settings only.'))
         return
       }
-      setStatus(error.message || '写入会话偏好失败')
+      setStatus(error.message || t(lang, '写入会话偏好失败', 'Failed to save thread preference'))
     }
   }
 
@@ -737,11 +744,11 @@ export default function ChatClient() {
     if (!threadId) {
       const { data: thRaw, error: thErr } = await supabase
         .from('minna_chat_threads')
-        .insert({ thread_type: 'direct', title: '私信', owner_user_id: user.id })
+        .insert({ thread_type: 'direct', title: t(lang, '私信', 'Direct Message'), owner_user_id: user.id })
         .select('id')
         .single()
       if (thErr || !thRaw) {
-        setStatus(thErr?.message || '创建私信失败')
+        setStatus(thErr?.message || t(lang, '创建私信失败', 'Failed to create direct message'))
         return
       }
       threadId = Number((thRaw as { id: number }).id)
@@ -762,7 +769,7 @@ export default function ChatClient() {
 
   async function onCreateGroup() {
     if (!user) return
-    const title = groupTitle.trim() || '学习群'
+    const title = groupTitle.trim() || t(lang, '学习群', 'Study Group')
     const rawIds = groupUids
       .split(',')
       .map((x) => x.trim())
@@ -775,7 +782,7 @@ export default function ChatClient() {
       .single()
 
     if (thErr || !thRaw) {
-      setStatus(thErr?.message || '建群失败')
+      setStatus(thErr?.message || t(lang, '建群失败', 'Failed to create group'))
       return
     }
 
@@ -907,10 +914,10 @@ export default function ChatClient() {
     if (!myUid) return
     try {
       await navigator.clipboard.writeText(myUid)
-      setStatus('已复制 user_id')
+      setStatus(t(lang, '已复制 user_id', 'Copied user_id'))
       window.setTimeout(() => setStatus(''), 1200)
     } catch (e) {
-      setStatus(`复制失败：${String(e)}`)
+      setStatus(`${t(lang, '复制失败', 'Copy failed')}：${String(e)}`)
     }
   }
 
@@ -933,22 +940,22 @@ export default function ChatClient() {
     const mine = String(m.from_user_id || '') === String(myUid || '')
     if (!mine) return ''
     const others = participants.filter((p) => String(p.user_id || '') !== String(myUid || ''))
-    if (!others.length) return '已送达'
+    if (!others.length) return t(lang, '已送达', 'Delivered')
     const mt = toMs(m.created_at)
     let readCount = 0
     others.forEach((p) => {
       const rt = toMs(readReceipts[threadUserKey(currentThread, p.user_id)])
       if (rt >= mt) readCount += 1
     })
-    if (readCount <= 0) return '未读'
-    if (readCount >= others.length) return '已读'
-    return `已读 ${readCount}/${others.length}`
+    if (readCount <= 0) return t(lang, '未读', 'Unread')
+    if (readCount >= others.length) return t(lang, '已读', 'Read')
+    return `${t(lang, '已读', 'Read')} ${readCount}/${others.length}`
   }
 
   if (loading) {
     return (
       <section className="card">
-        <p className="small">正在加载聊天模块...</p>
+        <p className="small">{t(lang, '正在加载聊天模块...', 'Loading chat module...')}</p>
       </section>
     )
   }
@@ -956,9 +963,9 @@ export default function ChatClient() {
   if (!supabaseReady) {
     return (
       <section className="card">
-        <h2>聊天</h2>
-        <p className="small">未配置聊天云端能力：{envMessage}</p>
-        <p className="small">请先在部署平台补齐 Supabase 环境变量后再使用。</p>
+        <h2>{t(lang, '聊天', 'Chat')}</h2>
+        <p className="small">{t(lang, '未配置聊天云端能力', 'Cloud chat is not configured')}：{envMessage}</p>
+        <p className="small">{t(lang, '请先在部署平台补齐 Supabase 环境变量后再使用。', 'Please configure Supabase env vars in deployment settings first.')}</p>
       </section>
     )
   }
@@ -966,9 +973,9 @@ export default function ChatClient() {
   if (!user) {
     return (
       <section className="card">
-        <h2>聊天</h2>
-        <p className="small">请先登录后使用私信与群聊。</p>
-        <p><a href="/login">去登录</a></p>
+        <h2>{t(lang, '聊天', 'Chat')}</h2>
+        <p className="small">{t(lang, '请先登录后使用私信与群聊。', 'Sign in first to use direct messages and groups.')}</p>
+        <p><a href="/login">{t(lang, '去登录', 'Sign in')}</a></p>
       </section>
     )
   }
@@ -977,47 +984,47 @@ export default function ChatClient() {
     <>
       <section className="chatGrid">
         <section className="card">
-          <h2>发起私信</h2>
+          <h2>{t(lang, '发起私信', 'Start Direct Message')}</h2>
           <div className="row2">
-            <input value={dmUid} onChange={(e) => setDmUid(e.target.value)} placeholder="对方 user_id" />
-            <button className="btn" onClick={onOpenDm}>打开私信</button>
+            <input value={dmUid} onChange={(e) => setDmUid(e.target.value)} placeholder={t(lang, '对方 user_id', 'Target user_id')} />
+            <button className="btn" onClick={onOpenDm}>{t(lang, '打开私信', 'Open DM')}</button>
           </div>
           <div className="row2" style={{ marginTop: 8 }}>
-            <input readOnly value={myUid} placeholder="我的 user_id" />
-            <button className="btn ghost" onClick={onCopyUid}>复制我的ID</button>
+            <input readOnly value={myUid} placeholder={t(lang, '我的 user_id', 'My user_id')} />
+            <button className="btn ghost" onClick={onCopyUid}>{t(lang, '复制我的ID', 'Copy My ID')}</button>
           </div>
         </section>
 
         <section className="card">
-          <h2>创建群聊</h2>
+          <h2>{t(lang, '创建群聊', 'Create Group')}</h2>
           <div className="row2">
-            <input value={groupTitle} onChange={(e) => setGroupTitle(e.target.value)} placeholder="群名" />
-            <input value={groupUids} onChange={(e) => setGroupUids(e.target.value)} placeholder="成员 user_id，逗号分隔" />
-            <button className="btn" onClick={onCreateGroup}>建群</button>
+            <input value={groupTitle} onChange={(e) => setGroupTitle(e.target.value)} placeholder={t(lang, '群名', 'Group title')} />
+            <input value={groupUids} onChange={(e) => setGroupUids(e.target.value)} placeholder={t(lang, '成员 user_id，逗号分隔', 'Member user_ids, comma-separated')} />
+            <button className="btn" onClick={onCreateGroup}>{t(lang, '建群', 'Create')}</button>
           </div>
         </section>
       </section>
 
       <section className="chatGrid twoCol">
         <section className="card">
-          <h2>会话列表</h2>
-          {!threads.length ? <p className="small">暂无会话</p> : null}
+          <h2>{t(lang, '会话列表', 'Threads')}</h2>
+          {!threads.length ? <p className="small">{t(lang, '暂无会话', 'No threads')}</p> : null}
           <div className="threadList">
-            {threads.map((t) => {
-              const unread = Number(unreadMap[String(t.id)] || 0)
-              const pref = threadPrefs[String(t.id)] || { pinned: false, muted: false }
+            {threads.map((thread) => {
+              const unread = Number(unreadMap[String(thread.id)] || 0)
+              const pref = threadPrefs[String(thread.id)] || { pinned: false, muted: false }
               return (
                 <button
-                  key={t.id}
-                  className={Number(currentThread) === Number(t.id) ? 'threadItem active' : 'threadItem'}
-                  onClick={() => void openThread(t.id)}
+                  key={thread.id}
+                  className={Number(currentThread) === Number(thread.id) ? 'threadItem active' : 'threadItem'}
+                  onClick={() => void openThread(thread.id)}
                 >
                   <span>
                     {pref.pinned ? '📌 ' : ''}
                     {pref.muted ? '🔕 ' : ''}
-                    [{t.thread_type}] {t.title || `会话#${t.id}`}
+                    [{thread.thread_type}] {thread.title || (lang === 'en' ? `Thread#${thread.id}` : `会话#${thread.id}`)}
                   </span>
-                  <small>{unread > 0 ? `未读 ${unread}` : ''}</small>
+                  <small>{unread > 0 ? `${t(lang, '未读', 'Unread')} ${unread}` : ''}</small>
                 </button>
               )
             })}
@@ -1025,35 +1032,35 @@ export default function ChatClient() {
         </section>
 
         <section className="card">
-          <h2>聊天内容</h2>
+          <h2>{t(lang, '聊天内容', 'Messages')}</h2>
           <p className="small">
-            当前会话 #{currentThread || '-'} · 成员 {participants.length} 人 · {currentPref.muted ? '已免打扰' : '正常提醒'}
+            {t(lang, '当前会话', 'Current thread')} #{currentThread || '-'} · {t(lang, '成员', 'Members')} {participants.length} {t(lang, '人', '')} · {currentPref.muted ? t(lang, '已免打扰', 'Muted') : t(lang, '正常提醒', 'Notifications on')}
           </p>
 
           <div className="memberLine">
-            成员：
+            {t(lang, '成员', 'Members')}：
             {participants.map((p) => (
               <span key={`${p.thread_id}-${p.user_id}`}>
                 {p.user_id}
                 {isOwner && p.user_id !== myUid ? (
-                  <button className="miniBtn" onClick={() => void onRemoveMember(p.user_id)}>移除</button>
+                  <button className="miniBtn" onClick={() => void onRemoveMember(p.user_id)}>{t(lang, '移除', 'Remove')}</button>
                 ) : null}
               </span>
             ))}
           </div>
 
           <div className="row2" style={{ marginTop: 8 }}>
-            <input value={searchMsg} onChange={(e) => setSearchMsg(e.target.value)} placeholder="搜索本会话消息" />
-            <button className="btn ghost" onClick={() => void loadThreadDetail(currentThread)}>刷新</button>
-            <button className="btn ghost" onClick={() => void onTogglePin()}>{currentPref.pinned ? '取消置顶' : '置顶'}</button>
-            <button className="btn ghost" onClick={() => void onToggleMute()}>{currentPref.muted ? '取消免打扰' : '免打扰'}</button>
+            <input value={searchMsg} onChange={(e) => setSearchMsg(e.target.value)} placeholder={t(lang, '搜索本会话消息', 'Search messages in this thread')} />
+            <button className="btn ghost" onClick={() => void loadThreadDetail(currentThread)}>{t(lang, '刷新', 'Refresh')}</button>
+            <button className="btn ghost" onClick={() => void onTogglePin()}>{currentPref.pinned ? t(lang, '取消置顶', 'Unpin') : t(lang, '置顶', 'Pin')}</button>
+            <button className="btn ghost" onClick={() => void onToggleMute()}>{currentPref.muted ? t(lang, '取消免打扰', 'Unmute') : t(lang, '免打扰', 'Mute')}</button>
           </div>
 
           <div className="msgs2">
-            {!shownMessages.length ? <p className="small">暂无消息</p> : null}
+            {!shownMessages.length ? <p className="small">{t(lang, '暂无消息', 'No messages')}</p> : null}
             {shownMessages.map((m) => {
               const mine = String(m.from_user_id || '') === String(myUid || '')
-              const fromName = m.from_email || m.from_user_id || '用户'
+              const fromName = m.from_email || m.from_user_id || t(lang, '用户', 'User')
               const readLabel = messageReadLabel(m)
               return (
                 <div key={m.id} className="msgRow2">
@@ -1083,7 +1090,7 @@ export default function ChatClient() {
                     {mine && readLabel ? <span className="small"> · {readLabel}</span> : null}
                   </p>
                   {mine ? (
-                    <button className="miniBtn" onClick={() => void onDeleteMyMessage(m.id)}>撤回</button>
+                    <button className="miniBtn" onClick={() => void onDeleteMyMessage(m.id)}>{t(lang, '撤回', 'Delete')}</button>
                   ) : null}
                 </div>
               )
@@ -1103,9 +1110,9 @@ export default function ChatClient() {
                   void onSend()
                 }
               }}
-              placeholder="输入消息"
+              placeholder={t(lang, '输入消息', 'Type a message')}
             />
-            <button className="btn" onClick={() => void onSend()}>发送</button>
+            <button className="btn" onClick={() => void onSend()}>{t(lang, '发送', 'Send')}</button>
             <button
               className="btn ghost"
               onClick={() => {
@@ -1113,15 +1120,15 @@ export default function ChatClient() {
                 saveDraft(currentThread, '')
               }}
             >
-              清草稿
+              {t(lang, '清草稿', 'Clear draft')}
             </button>
           </div>
 
           <div className="row2" style={{ marginTop: 8 }}>
-            <input value={inviteUids} onChange={(e) => setInviteUids(e.target.value)} placeholder="邀请 user_id，逗号分隔" />
-            <button className="btn ghost" onClick={() => void onInviteMembers()}>邀请进群</button>
-            <button className="btn ghost" onClick={() => void onRenameThread()}>改群名</button>
-            <button className="btn danger" onClick={() => void onLeaveThread()}>退出会话</button>
+            <input value={inviteUids} onChange={(e) => setInviteUids(e.target.value)} placeholder={t(lang, '邀请 user_id，逗号分隔', 'Invite user_ids, comma-separated')} />
+            <button className="btn ghost" onClick={() => void onInviteMembers()}>{t(lang, '邀请进群', 'Invite')}</button>
+            <button className="btn ghost" onClick={() => void onRenameThread()}>{t(lang, '改群名', 'Rename')}</button>
+            <button className="btn danger" onClick={() => void onLeaveThread()}>{t(lang, '退出会话', 'Leave')}</button>
           </div>
 
           <p className="small" style={{ marginTop: 8 }}>{status}</p>

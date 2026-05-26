@@ -11,6 +11,9 @@ type UserLite = {
   id: string
   email?: string
 }
+type Props = {
+  lang: 'zh' | 'en'
+}
 
 const PROD_ORIGIN = 'https://next-app-kohl-one.vercel.app'
 
@@ -29,7 +32,11 @@ function pickOAuthOrigin() {
   }
 }
 
-export default function AuthActions() {
+function t(lang: Props['lang'], zh: string, en: string) {
+  return lang === 'en' ? en : zh
+}
+
+export default function AuthActions({ lang }: Props) {
   const supabaseReady = hasSupabasePublicEnv()
   const envMessage = getSupabaseMissingEnvMessage()
   const supabase = useMemo(() => createClient(), [])
@@ -64,7 +71,7 @@ export default function AuthActions() {
 
   async function loginWithGoogle() {
     if (!supabaseReady) {
-      setError(envMessage || 'Supabase 环境变量未配置')
+      setError(envMessage || t(lang, 'Supabase 环境变量未配置', 'Supabase env vars are not configured'))
       return
     }
     setError('')
@@ -86,22 +93,22 @@ export default function AuthActions() {
 
   return (
     <section className="card">
-      <h2>账号状态</h2>
-      {!supabaseReady ? <p className="small">未配置云端登录：{envMessage}</p> : null}
-      {loading ? <p className="small">加载中...</p> : null}
+      <h2>{t(lang, '账号状态', 'Account Status')}</h2>
+      {!supabaseReady ? <p className="small">{t(lang, '未配置云端登录', 'Cloud login is not configured')}：{envMessage}</p> : null}
+      {loading ? <p className="small">{t(lang, '加载中...', 'Loading...')}</p> : null}
       {!loading && user ? (
         <>
-          <p className="small">已登录：{user.email || user.id}</p>
-          <button className="btn" onClick={logout}>退出登录</button>
+          <p className="small">{t(lang, '已登录', 'Signed in')}：{user.email || user.id}</p>
+          <button className="btn" onClick={logout}>{t(lang, '退出登录', 'Sign out')}</button>
         </>
       ) : null}
       {!loading && !user ? (
         <>
-          <p className="small">当前未登录</p>
-          <button className="btn" onClick={loginWithGoogle}>Google 登录</button>
+          <p className="small">{t(lang, '当前未登录', 'Not signed in')}</p>
+          <button className="btn" onClick={loginWithGoogle}>{t(lang, 'Google 登录', 'Sign in with Google')}</button>
         </>
       ) : null}
-      {error ? <p className="small" style={{ color: '#b91c1c' }}>错误：{error}</p> : null}
+      {error ? <p className="small" style={{ color: '#b91c1c' }}>{t(lang, '错误', 'Error')}：{error}</p> : null}
     </section>
   )
 }

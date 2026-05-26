@@ -10,7 +10,7 @@ export default async function LoginPage() {
       <MinnaNav active="login" />
       <h1>{tr(lang, '登录中心', 'Sign In')}</h1>
       <p className="small">{tr(lang, '第一阶段迁移：使用 Supabase + Google 登录。', 'Phase 1 migration: Supabase + Google sign-in.')}</p>
-      <AuthActions />
+      <AuthActions lang={lang} />
       <section className="card">
         <h2>{tr(lang, '快捷入口', 'Shortcuts')}</h2>
         <p><Link href="/">{tr(lang, '返回首页', 'Home')}</Link></p>
