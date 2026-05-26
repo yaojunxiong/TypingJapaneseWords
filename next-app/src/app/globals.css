@@ -74,14 +74,62 @@ a:hover { text-decoration: underline; }
   right: 12px;
   bottom: calc(env(safe-area-inset-bottom, 0px) + 10px);
   z-index: 55;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 6px;
   background: #fff;
   border: 1px solid #e5e7eb;
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  padding: 10px;
 }
+.miniTab {
+  min-height: 62px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  color: #334155;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  text-decoration: none;
+}
+.miniTab:hover { text-decoration: none; border-color: #7dd3fc; }
+.miniTab.active { border-color: #38bdf8; background: #ecfeff; color: #0284c7; }
+.miniTabIcon { font-size: 20px; line-height: 1; }
+.miniTab b { font-size: 11px; line-height: 1.1; font-weight: 800; }
+.miniTabMore {
+  position: relative;
+}
+.miniTabMore > summary {
+  list-style: none;
+  cursor: pointer;
+}
+.miniTabMore > summary::-webkit-details-marker { display: none; }
+.miniTabMenu {
+  position: absolute;
+  right: 0;
+  bottom: 72px;
+  width: 142px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.15);
+  padding: 6px;
+  display: grid;
+  gap: 6px;
+}
+.miniTabMenuItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 10px;
+  padding: 8px;
+  color: #334155;
+}
+.miniTabMenuItem.active { background: #ecfeff; color: #0284c7; }
+.miniTabMenuItem:hover { text-decoration: none; background: #f8fafc; }
 .homeStageCard {
   margin: 10px 0 14px;
   border-radius: 18px;
@@ -401,8 +449,12 @@ a:hover { text-decoration: underline; }
   .minnaNavCard {
     left: 8px;
     right: 8px;
-    gap: 8px;
+    gap: 4px;
+    padding: 8px 6px;
   }
+  .miniTab { min-height: 58px; }
+  .miniTabIcon { font-size: 18px; }
+  .miniTab b { font-size: 10px; }
   main {
     padding-left: 16px;
     padding-right: 16px;
