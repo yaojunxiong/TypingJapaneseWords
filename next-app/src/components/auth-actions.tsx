@@ -71,7 +71,7 @@ export default function AuthActions() {
     const origin = pickOAuthOrigin()
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
-      options: { redirectTo: `${origin}/me` }
+      options: { redirectTo: `${origin}/auth/callback?next=/me` }
     })
     if (error) setError(error.message)
   }
