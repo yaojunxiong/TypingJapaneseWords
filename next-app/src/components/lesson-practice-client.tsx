@@ -47,6 +47,50 @@ function playTone(freq: number, durationMs: number, type: OscillatorType = 'sine
   } catch {}
 }
 
+function playCorrectCombo(combo: number) {
+  try {
+    const Ctx = window.AudioContext || (window as typeof window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext
+    if (!Ctx) return
+    const ctx = new Ctx()
+    const notes = [659, 784, 988, 1175, 1318, 1568]
+    const count = Math.min(notes.length, 2 + Math.floor(Math.max(1, combo) / 2))
+    const start = ctx.currentTime
+
+    notes.slice(0, count).forEach((freq, i) => {
+      const osc = ctx.createOscillator()
+      const gain = ctx.createGain()
+      const t0 = start + i * 0.055
+      const t1 = t0 + 0.12
+      osc.type = combo >= 5 ? 'triangle' : 'sine'
+      osc.frequency.value = freq
+      gain.gain.setValueAtTime(0.0001, t0)
+      gain.gain.exponentialRampToValueAtTime(Math.min(0.045, 0.018 + combo * 0.004), t0 + 0.018)
+      gain.gain.exponentialRampToValueAtTime(0.0001, t1)
+      osc.connect(gain)
+      gain.connect(ctx.destination)
+      osc.start(t0)
+      osc.stop(t1)
+    })
+
+    if (combo >= 4) {
+      const sparkle = ctx.createOscillator()
+      const sparkleGain = ctx.createGain()
+      const t0 = start + count * 0.055
+      sparkle.type = 'triangle'
+      sparkle.frequency.value = 1976
+      sparkleGain.gain.setValueAtTime(0.0001, t0)
+      sparkleGain.gain.exponentialRampToValueAtTime(0.025, t0 + 0.012)
+      sparkleGain.gain.exponentialRampToValueAtTime(0.0001, t0 + 0.16)
+      sparkle.connect(sparkleGain)
+      sparkleGain.connect(ctx.destination)
+      sparkle.start(t0)
+      sparkle.stop(t0 + 0.16)
+    }
+
+    setTimeout(() => ctx.close(), 650)
+  } catch {}
+}
+
 export default function LessonPracticeClient({ lessonNo, lang, stage, questions }: Props) {
   const [idx, setIdx] = useState(0)
   const [hearts, setHearts] = useState(5)
@@ -55,6 +99,8 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
   const [finished, setFinished] = useState(false)
   const [voiceOn, setVoiceOn] = useState(true)
   const [sfxOn, setSfxOn] = useState(true)
+  const [combo, setCombo] = useState(0)
+  const [burstText, setBurstText] = useState('')
 
   const total = questions.length
   const current = questions[idx]
@@ -74,6 +120,13 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
       ut.rate = 0.9
       window.speechSynthesis.speak(ut)
     } catch {}
+  }
+
+  function comboText(nextCombo: number) {
+    if (nextCombo >= 10) return t(lang, `连对 ${nextCombo} 题 · 状态爆棚`, `${nextCombo} in a row · unstoppable`)
+    if (nextCombo >= 5) return t(lang, `连对 ${nextCombo} 题 · 太稳了`, `${nextCombo} in a row · on fire`)
+    if (nextCombo >= 3) return t(lang, `连对 ${nextCombo} 题`, `${nextCombo} in a row`)
+    return t(lang, '答对了', 'Correct')
   }
 
   useEffect(() => {
@@ -115,7 +168,10 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
     if (picked !== null || finished) return
     setPicked(optionIndex)
     if (current.options[optionIndex]?.correct) {
-      if (sfxOn) playTone(900, 80, 'triangle')
+      const nextCombo = combo + 1
+      setCombo(nextCombo)
+      setBurstText(comboText(nextCombo))
+      if (sfxOn) playCorrectCombo(nextCombo)
       setScore((v) => {
         const next = v + 1
         try {
@@ -126,6 +182,8 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
         return next
       })
     } else {
+      setCombo(0)
+      setBurstText(t(lang, '再来一次', 'Try again'))
       if (sfxOn) playTone(280, 120, 'sawtooth')
       setHearts((v) => {
         const next = Math.max(0, v - 1)
@@ -147,6 +205,7 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
     }
     setIdx((v) => v + 1)
     setPicked(null)
+    setBurstText('')
   }
 
   function onRestart() {
@@ -155,6 +214,8 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
     setScore(0)
     setPicked(null)
     setFinished(false)
+    setCombo(0)
+    setBurstText('')
     try {
       localStorage.setItem('minna.hearts.v1', '5')
       window.dispatchEvent(new Event('minna:stats-update'))
@@ -196,6 +257,9 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
         {current.hint}
         <button className="practiceAudioBtn" onClick={speakHint}>🔊</button>
       </p>
+      {burstText ? (
+        <p className={combo > 1 ? 'practiceCombo hot' : 'practiceCombo'}>{burstText}</p>
+      ) : null}
       <p className="practiceProgress">{idx + 1}/{total}</p>
 
       <div className="practiceCard">
