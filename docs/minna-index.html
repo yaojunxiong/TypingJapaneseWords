@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>《みんなの日本語 初級》AI学习系统 v20.3</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="./minna-auth.js?v=20.3"></script>
+<script src="./minna-role.js?v=20.3"></script>
+<script src="./minna-i18n-core.js?v=20.3"></script>
+<script src="./minna-i18n-ui.js?v=20.3"></script>
+<link rel="stylesheet" href="./minna-site.css?v=20.3">
+</head>
+<body data-lesson-id="minna_home_v20">
+<div style="padding:12px 16px;background:#f0fdf4;border-bottom:1px solid #dcfce7;text-align:center">
+  <a href="./minna-app.html?v=22.1" style="display:inline-block;padding:10px 16px;border-radius:10px;background:#58cc02;color:#fff;font-weight:700;text-decoration:none">正在进入新版 App v22.1（如未自动跳转请点这里）</a>
+</div>
+<div id="app"><main class="wrap"><section class="panel">Loading...</section></main></div>
+<script src="./minna-home-v20-3.js?v=20.3"></script>
+<script>
+(function(){
+  try{
+    var target='./minna-app.html?v=22.1';
+    if(location.pathname.indexOf('minna-index.html')!==-1){
+      setTimeout(function(){ location.replace(target); }, 600);
+    }
+  }catch(e){}
+})();
+</script>
+</body>
+</html>

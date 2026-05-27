@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>App 系统设计与功能说明书 | みんなの日本語 AI互动学习系统</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#fff;color:#3f3f46;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","Noto Sans JP",sans-serif;line-height:1.65}.top{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid #e5e7eb;padding:16px 22px}.top a{text-decoration:none;color:#58cc02;font-weight:1000}.wrap{max-width:920px;margin:0 auto;padding:26px 22px 90px}.hero{background:#58cc02;color:#fff;border-radius:28px;padding:28px;margin-bottom:24px;box-shadow:0 8px 0 #46a302}.hero h1{font-size:34px;line-height:1.2;margin:0 0 12px}.hero p{margin:0;font-size:17px}.section{border:3px solid #ececec;border-radius:24px;padding:22px;margin:20px 0;box-shadow:0 4px 0 #ececec}.section h2{margin:0 0 12px;font-size:26px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.card{background:#f8fafc;border-radius:18px;padding:16px}.card b{display:block;margin-bottom:6px}.tag{display:inline-flex;border-radius:999px;background:#e0f2fe;color:#0284c7;padding:5px 12px;font-size:13px;font-weight:1000;margin:4px 6px 4px 0}.ok{background:#dcfce7;color:#166534}.todo{background:#fef3c7;color:#92400e}.code{background:#f4f4f5;border-radius:14px;padding:14px;font-family:ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;overflow:auto}.muted{color:#71717a;font-size:14px}@media(max-width:640px){.grid{grid-template-columns:1fr}.hero h1{font-size:30px}.section h2{font-size:24px}}
+</style>
+</head>
+<body>
+<header class="top"><a href="./minna-app.html#me">← 返回我的 / 设置</a></header>
+<main class="wrap">
+<section class="hero"><h1>《みんなの日本語 初級》AI互动学习系统<br>App 系统设计与功能说明书</h1><p>这是新版 App 化学习系统的独立说明书，不覆盖旧版 Mastery 网站文档。后续每次完善新 App 功能，都应同步更新本文档。</p></section>
+<section class="section"><h2>1. 新 App 系统定位</h2><p>新版系统目标是把《みんなの日本語 初級》改造成移动端优先、接近 Duolingo 体验的互动学习 App。它保留自有课程内容，默认中文界面，并支持后续中英文切换、错题复习、智能复习和长期成长体系。</p><span class="tag ok">新 App 系统</span><span class="tag ok">移动端优先</span><span class="tag ok">默认中文</span><span class="tag ok">Duolingo 风格</span><span class="tag ok">本地成长系统</span></section>
+<section class="section"><h2>2. 当前学习闭环</h2><div class="code">主页 minna-app.html
+→ 课程页 minna-path.html
+→ Stage 答题页 minna-stage.html
+→ 词汇 Vocabulary
+→ 语法 Grammar
+→ 例句 Examples
+→ 综合测试 Review
+→ Stage Summary
+→ Lesson Complete
+→ 下一课 / 返回路径</div></section>
+<section class="section"><h2>3. 当前底部导航</h2><div class="grid"><div class="card"><b>🏠 学习</b><p>主学习入口。显示 Continue、错题提醒、课程路径、Crown 进度。</p></div><div class="card"><b>🧰 宝箱</b><p>Learning Center。汇总错题、XP、Crown、今日复习和成就入口。</p></div><div class="card"><b>🌳 课程</b><p>课程列表与 Unit 路径。后续需要进一步统一新版 App 风格。</p></div><div class="card"><b>💗 收藏</b><p>未来用于收藏单词、例句、语法点。</p></div><div class="card"><b>⋯ 我的</b><p>设置、语言切换、说明书、数据管理、音效开关。</p></div></div></section>
+<section class="section"><h2>4. 已完成页面</h2><div class="grid"><div class="card"><b>minna-app.html</b><p>新版 App 首页。</p></div><div class="card"><b>minna-path.html</b><p>课程路径页，显示 4 阶段和 Crown 进度。</p></div><div class="card"><b>minna-stage.html</b><p>答题页，支持音频、音效、XP、Combo、Hearts、Crown、错题记录。</p></div><div class="card"><b>minna-complete.html</b><p>课程完成页，跳转下一课。</p></div><div class="card"><b>minna-review-mistakes.html</b><p>错题复习页。</p></div><div class="card"><b>minna-toolbox.html</b><p>Learning Center / 宝箱。</p></div><div class="card"><b>minna-app-system-design.html</b><p>当前新版 App 系统说明书。</p></div></div></section>
+<section class="section"><h2>5. 已上线核心功能</h2><span class="tag ok">顶部状态栏</span><span class="tag ok">底部 5 图标导航</span><span class="tag ok">第一课真实数据</span><span class="tag ok">词汇/语法/例句/综合测试</span><span class="tag ok">日语朗读</span><span class="tag ok">UI 音效</span><span class="tag ok">正确/错误反馈</span><span class="tag ok">XP</span><span class="tag ok">Combo</span><span class="tag ok">Hearts</span><span class="tag ok">Crown</span><span class="tag ok">Stage Summary</span><span class="tag ok">错题记录</span><span class="tag ok">错题复习</span><span class="tag ok">Learning Center</span></section>
+<section class="section"><h2>6. 当前本地数据结构</h2><div class="code">docs/data/minna/lessons/lesson-01.json  // 第一课真实数据
+minna.stage.progress.v1                 // 阶段完成状态
+minna.crowns.v1                         // Crown 进度
+minna.xp.v1                             // XP 总数
+minna.hearts.v1                         // Hearts 生命值
+minna.mistakes.v1                       // 错题本
+minna.mobile.learning.state.v1          // 首页学习状态
+minna_app_lang / minna_ui_lang          // 语言设置</div></section>
+<section class="section"><h2>7. 与旧版系统的关系</h2><p>新版 App 系统与旧版 Mastery 网站并行存在。旧版文档、旧版 Mastery 入口、Supabase/Leaderboard 相关说明不应混入本文档。本文档只记录新版 App 化学习系统。</p><div class="code">旧版文档：minna-system-design.html
+新版文档：minna-app-system-design.html</div></section>
+<section class="section"><h2>8. 待完善重点</h2><span class="tag todo">课程列表页新 App 风格</span><span class="tag todo">收藏系统</span><span class="tag todo">我的页面完善</span><span class="tag todo">今日复习 / SRS</span><span class="tag todo">成就系统</span><span class="tag todo">音效开关</span><span class="tag todo">数据清理</span><span class="tag todo">Lesson 2 真实数据</span><span class="tag todo">PWA 离线缓存</span></section>
+<section class="section"><h2>9. 推荐后续开发顺序</h2><ol><li>在“我的 / 设置”接入本文档入口。</li><li>补全底部导航：课程、收藏、我的。</li><li>完善 Learning Center：今日复习、XP、Crown、成就。</li><li>建立收藏系统：收藏单词、例句、语法。</li><li>做智能复习 SRS：待复习、记忆等级、间隔复习。</li><li>扩展 Lesson 2 真实数据。</li></ol></section>
+<section class="section"><h2>10. 更新记录</h2><p><b>v0.1 · 2026-05-24</b></p><p class="muted">建立新版 App 系统独立说明书，记录首页、课程页、Stage、Crown、错题本、Learning Center 与后续路线。</p></section>
+</main>
+</body>
+</html>
