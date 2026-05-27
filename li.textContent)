@@ -1,1 +1,0 @@
-const list = Array.from(document.querySelectorAll(`#${listId} li`)).map(li =; 
