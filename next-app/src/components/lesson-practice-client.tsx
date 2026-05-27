@@ -27,6 +27,26 @@ function t(lang: Lang, zh: string, en: string) {
   return lang === 'en' ? en : zh
 }
 
+function playTone(freq: number, durationMs: number, type: OscillatorType = 'sine') {
+  try {
+    const Ctx = window.AudioContext || (window as typeof window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext
+    if (!Ctx) return
+    const ctx = new Ctx()
+    const osc = ctx.createOscillator()
+    const gain = ctx.createGain()
+    osc.type = type
+    osc.frequency.value = freq
+    gain.gain.value = 0.02
+    osc.connect(gain)
+    gain.connect(ctx.destination)
+    osc.start()
+    setTimeout(() => {
+      osc.stop()
+      ctx.close()
+    }, durationMs)
+  } catch {}
+}
+
 export default function LessonPracticeClient({ lessonNo, lang, stage, questions }: Props) {
   const [idx, setIdx] = useState(0)
   const [hearts, setHearts] = useState(5)
@@ -43,6 +63,17 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
     return t(lang, '测验模式', 'Quiz Mode')
   }, [lang, stage])
 
+  function speakHint() {
+    try {
+      if (!current?.hint || !('speechSynthesis' in window)) return
+      window.speechSynthesis.cancel()
+      const ut = new SpeechSynthesisUtterance(current.hint)
+      ut.lang = 'ja-JP'
+      ut.rate = 0.9
+      window.speechSynthesis.speak(ut)
+    } catch {}
+  }
+
   useEffect(() => {
     try {
       const stateRaw = localStorage.getItem('minna.mobile.learning.state.v1')
@@ -56,10 +87,16 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
     } catch {}
   }, [lessonNo])
 
+  useEffect(() => {
+    if (finished) return
+    speakHint()
+  }, [idx, finished])
+
   function onPick(optionIndex: number) {
     if (picked !== null || finished) return
     setPicked(optionIndex)
     if (current.options[optionIndex]?.correct) {
+      playTone(900, 80, 'triangle')
       setScore((v) => {
         const next = v + 1
         try {
@@ -70,6 +107,7 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
         return next
       })
     } else {
+      playTone(280, 120, 'sawtooth')
       setHearts((v) => {
         const next = Math.max(0, v - 1)
         try {
@@ -83,6 +121,7 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
 
   function onNext() {
     if (picked === null) return
+    playTone(720, 80, 'square')
     if (idx >= total - 1 || hearts <= 0) {
       setFinished(true)
       return
@@ -115,7 +154,6 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
   if (finished) {
     return (
       <section className="practiceWrap card">
-        <p className="practiceStageTitle">{stageText}</p>
         <h2>{t(lang, '训练完成', 'Training Complete')}</h2>
         <p className="small">{t(lang, '第', 'Lesson ')}{lessonNo}{t(lang, '课', '')}</p>
         <p><b>{t(lang, '得分', 'Score')}：{score}/{total}</b></p>
@@ -134,9 +172,11 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
         <a className="practiceClose" href={`/lessons/${lessonNo}`}>✕</a>
       </div>
 
-      <h2 className="practiceStageTitle">{stageText}</h2>
       <p className="practiceQuestion">{current.question}</p>
-      <p className="practiceHint">{current.hint}</p>
+      <p className="practiceHint">
+        {current.hint}
+        <button className="practiceAudioBtn" onClick={speakHint}>🔊</button>
+      </p>
       <p className="practiceProgress">{idx + 1}/{total}</p>
 
       <div className="practiceCard">
