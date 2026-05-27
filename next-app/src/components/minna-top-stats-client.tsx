@@ -35,7 +35,7 @@ function readNum(key: string, fallback: number) {
   return Number.isFinite(v) ? v : fallback
 }
 
-export default function MinnaTopStatsClient({ lang }: Props) {
+export default function MinnaTopStatsClient({ lang, active = 'home' }: Props) {
   const [stats, setStats] = useState<TopStats>({ lesson: 1, streak: 0, xp: 0, hearts: 5, lessonLabel: '' })
 
   function sync() {
@@ -60,9 +60,20 @@ export default function MinnaTopStatsClient({ lang }: Props) {
     }
   }, [])
 
+  const activeLabel =
+    active === 'home' ? t(lang, '首页', 'Home') :
+    active === 'lessons' ? t(lang, '课程', 'Lessons') :
+    active === 'toolbox' ? t(lang, '学习', 'Learn') :
+    active === 'favorites' ? t(lang, '收藏', 'Saved') :
+    active === 'messages' ? t(lang, '消息', 'Inbox') :
+    active === 'settings' ? t(lang, '设置', 'Settings') :
+    active === 'login' ? t(lang, '登录', 'Sign in') :
+    active === 'me' ? t(lang, '我的', 'Me') :
+    t(lang, '聊天', 'Chat')
+
   return (
     <div className="minnaTopStats">
-      <span>🇯🇵 {stats.lessonLabel || t(lang, '课程', 'Lessons')}</span>
+      <span>🇯🇵 {stats.lessonLabel || activeLabel}</span>
       <span>🔥 {stats.streak}</span>
       <span>💎 {stats.xp}</span>
       <span>❤️ {stats.hearts}</span>

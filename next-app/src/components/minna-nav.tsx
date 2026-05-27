@@ -27,7 +27,7 @@ export default async function MinnaNav({ active }: Props) {
   return (
     <>
       <header className="minnaTopClassic">
-        <MinnaTopStatsClient lang={lang} />
+        <MinnaTopStatsClient lang={lang} active={active} />
       </header>
       <nav className="card minnaNavCard">
         {PRIMARY_ITEMS.map((item) => (
