@@ -1,0 +1,326 @@
+{
+  "schema": "minna.lesson.v1",
+  "course": "minna",
+  "status": "Mastery migrated",
+  "lessonNo": 26,
+  "lessonId": "minna_lesson_26",
+  "title": { "zh": "第26课", "en": "Lesson 26", "ja": "第26課" },
+  "subtitle": { "zh": "んです", "en": "N desu: explaining and requesting", "ja": "んです" },
+  "focus": {
+    "zh": "用「んです」说明背景、解释原因，再用「んですが」委婉地提出请求或询问建议。",
+    "en": "Use n desu to explain background or reasons, then use n desu ga to make polite requests or ask for advice.",
+    "ja": "「んです」で事情を説明し、「んですが」で丁寧に依頼や相談をします。"
+  },
+  "sections": [
+    {
+      "type": "vocab",
+      "id": "l26_vocab",
+      "title": { "zh": "核心词汇", "en": "Core Vocabulary", "ja": "基本語彙" },
+      "items": [
+        { "id": "l26_v01", "jp": "遅れます", "kana": "おくれます", "zh": "迟到；晚点", "en": "to be late", "tags": ["lesson26", "verb"] },
+        { "id": "l26_v02", "jp": "間に合います", "kana": "まにあいます", "zh": "赶得上", "en": "to be in time", "tags": ["lesson26", "verb"] },
+        { "id": "l26_v03", "jp": "探します", "kana": "さがします", "zh": "寻找", "en": "to look for", "tags": ["lesson26", "verb"] },
+        { "id": "l26_v04", "jp": "相談します", "kana": "そうだんします", "zh": "商量；咨询", "en": "to consult", "tags": ["lesson26", "verb"] },
+        { "id": "l26_v05", "jp": "申し込みます", "kana": "もうしこみます", "zh": "申请；报名", "en": "to apply", "tags": ["lesson26", "verb"] },
+        { "id": "l26_v06", "jp": "都合", "kana": "つごう", "zh": "方便；情况", "en": "convenience; circumstances", "tags": ["lesson26", "noun"] },
+        { "id": "l26_v07", "jp": "気分", "kana": "きぶん", "zh": "身体感觉；心情", "en": "condition; mood", "tags": ["lesson26", "noun"] },
+        { "id": "l26_v08", "jp": "使い方", "kana": "つかいかた", "zh": "使用方法", "en": "how to use", "tags": ["lesson26", "noun"] },
+        { "id": "l26_v09", "jp": "ごみ", "kana": "ごみ", "zh": "垃圾", "en": "trash", "tags": ["lesson26", "noun"] },
+        { "id": "l26_v10", "jp": "場所", "kana": "ばしょ", "zh": "地点；场所", "en": "place", "tags": ["lesson26", "noun"] }
+      ]
+    },
+    {
+      "type": "grammar",
+      "id": "l26_grammar",
+      "title": { "zh": "核心语法", "en": "Core Grammar", "ja": "基本文法" },
+      "items": [
+        {
+          "id": "l26_g01",
+          "pattern": "普通形 + んです",
+          "explanation": { "zh": "说明原因、背景或眼前情况。不是单纯陈述，而是在补充“其实是这样”。", "en": "Explains a reason, background, or situation. It adds the feeling of 'the thing is...'." },
+          "examples": [{ "jp": "電車が遅れたんです。", "zh": "是因为电车晚点了。", "en": "The train was delayed." }],
+          "practice": [{
+            "id": "l26_g01_p01",
+            "skill": "grammar",
+            "question": { "zh": "「我头疼，是这种情况」最自然的是？", "en": "Which sentence naturally explains 'I have a headache'?" },
+            "options": [
+              { "text": { "jp": "頭が痛いんです" }, "correct": true },
+              { "text": { "jp": "頭が痛いですか" } },
+              { "text": { "jp": "頭が痛いでした" } },
+              { "text": { "jp": "頭を痛いんです" } }
+            ],
+            "explanation": { "zh": "い形容词普通形直接接「んです」。", "en": "I-adjectives attach directly to n desu." }
+          }]
+        },
+        {
+          "id": "l26_g02",
+          "pattern": "名词 / な形容词 + なんです",
+          "explanation": { "zh": "名词和な形容词现在肯定接「なんです」，不是「んです」。", "en": "Nouns and na-adjectives in present affirmative use nan desu." },
+          "examples": [{ "jp": "あした試験なんです。", "zh": "明天要考试。", "en": "I have an exam tomorrow." }],
+          "practice": [{
+            "id": "l26_g02_p01",
+            "skill": "grammar",
+            "question": { "zh": "选择正确句子。", "en": "Choose the correct sentence." },
+            "options": [
+              { "text": { "jp": "今日は休みなんです" }, "correct": true },
+              { "text": { "jp": "今日は休みんです" } },
+              { "text": { "jp": "今日は休みのです" } },
+              { "text": { "jp": "今日は休みですん" } }
+            ],
+            "explanation": { "zh": "名词「休み」接「なんです」。", "en": "The noun yasumi takes nan desu." }
+          }]
+        },
+        {
+          "id": "l26_g03",
+          "pattern": "どうして + んですか",
+          "explanation": { "zh": "询问对方原因时，用「どうして〜んですか」更自然，表示想了解背景。", "en": "Douして n desu ka asks for the reason or background." },
+          "examples": [{ "jp": "どうして遅れたんですか。", "zh": "你为什么迟到了？", "en": "Why were you late?" }],
+          "practice": [{
+            "id": "l26_g03_p01",
+            "skill": "grammar",
+            "question": { "zh": "想问“为什么没来？”应该说？", "en": "How do you ask 'Why didn't you come?'" },
+            "options": [
+              { "text": { "jp": "どうして来なかったんですか" }, "correct": true },
+              { "text": { "jp": "どうして来ませんでしたんですか" } },
+              { "text": { "jp": "どうして来ないでしたか" } },
+              { "text": { "jp": "どうして来なかったですんか" } }
+            ],
+            "explanation": { "zh": "动词た形否定普通形是「来なかった」。", "en": "The plain past negative of kuru is konakatta." }
+          }]
+        },
+        {
+          "id": "l26_g04",
+          "pattern": "〜んですが、〜",
+          "explanation": { "zh": "先说明自己的情况，再接请求、询问或建议，语气更委婉。", "en": "Use n desu ga to state your situation before a request or question." },
+          "examples": [{ "jp": "日本語で手紙を書いたんですが、ちょっと見ていただけませんか。", "zh": "我用日语写了信，能不能请您帮我看一下？", "en": "I wrote a letter in Japanese. Could you take a look?" }],
+          "practice": [{
+            "id": "l26_g04_p01",
+            "skill": "grammar",
+            "question": { "zh": "委婉引出请求的表达是？", "en": "Which phrase politely leads into a request?" },
+            "options": [
+              { "text": { "jp": "すみません、聞きたいんですが" }, "correct": true },
+              { "text": { "jp": "すみません、聞きたいですがん" } },
+              { "text": { "jp": "すみません、聞きたいでしたが" } },
+              { "text": { "jp": "すみません、聞きたいのが" } }
+            ],
+            "explanation": { "zh": "「〜んですが」是本课请求前置句。", "en": "N desu ga is the request-opening pattern." }
+          }]
+        },
+        {
+          "id": "l26_g05",
+          "pattern": "て形 + いただけませんか",
+          "explanation": { "zh": "非常礼貌地请求别人帮忙。比「てください」更客气。", "en": "A very polite request: 'Could you please...?'" },
+          "examples": [{ "jp": "電話番号を教えていただけませんか。", "zh": "能不能请您告诉我电话号码？", "en": "Could you tell me the phone number?" }],
+          "practice": [{
+            "id": "l26_g05_p01",
+            "skill": "grammar",
+            "question": { "zh": "“请您帮我看一下”最礼貌的是？", "en": "Which is the polite request 'Could you look at it?'" },
+            "options": [
+              { "text": { "jp": "見ていただけませんか" }, "correct": true },
+              { "text": { "jp": "見ますいただけませんか" } },
+              { "text": { "jp": "見るいただけませんか" } },
+              { "text": { "jp": "見ていただきませんか" } }
+            ],
+            "explanation": { "zh": "前接动词て形。", "en": "Use the te-form before itadakemasen ka." }
+          }]
+        },
+        {
+          "id": "l26_g06",
+          "pattern": "疑问词 + たらいいですか",
+          "explanation": { "zh": "询问做法或建议：“怎么做才好？”", "en": "Asks for advice: 'What should I do?'" },
+          "examples": [{ "jp": "どうしたらいいですか。", "zh": "我该怎么办？", "en": "What should I do?" }],
+          "practice": [{
+            "id": "l26_g06_p01",
+            "skill": "grammar",
+            "question": { "zh": "“垃圾应该倒在哪里？”正确表达是？", "en": "How do you ask where to take out trash?" },
+            "options": [
+              { "text": { "jp": "ごみはどこに出したらいいですか" }, "correct": true },
+              { "text": { "jp": "ごみはどこに出すいいですか" } },
+              { "text": { "jp": "ごみはどこに出ていいですか" } },
+              { "text": { "jp": "ごみはどこに出したいいですか" } }
+            ],
+            "explanation": { "zh": "「动词た形 + らいいですか」。", "en": "Use the past plain form + ra ii desu ka." }
+          }]
+        },
+        {
+          "id": "l26_g07",
+          "pattern": "どこ / だれ / 何 + に聞いたらいいですか",
+          "explanation": { "zh": "询问该向哪里、谁、什么部门咨询。", "en": "Ask where, whom, or what office you should ask." },
+          "examples": [{ "jp": "だれに聞いたらいいですか。", "zh": "应该问谁好？", "en": "Whom should I ask?" }],
+          "practice": [{
+            "id": "l26_g07_p01",
+            "skill": "grammar",
+            "question": { "zh": "“我应该问谁？”正确的是？", "en": "Which means 'Whom should I ask?'" },
+            "options": [
+              { "text": { "jp": "だれに聞いたらいいですか" }, "correct": true },
+              { "text": { "jp": "だれを聞いたらいいですか" } },
+              { "text": { "jp": "だれで聞いたらいいですか" } },
+              { "text": { "jp": "だれが聞いたらいいですか" } }
+            ],
+            "explanation": { "zh": "询问对象用「に」。", "en": "The person asked is marked with ni." }
+          }]
+        },
+        {
+          "id": "l26_g08",
+          "pattern": "すみません、〜んですが",
+          "explanation": { "zh": "实际会话里常用「すみません」开头，再说明情况。", "en": "In real conversation, start with sumimasen and then explain your situation." },
+          "examples": [{ "jp": "すみません、駅へ行きたいんですが、どう行ったらいいですか。", "zh": "不好意思，我想去车站，怎么走好呢？", "en": "Excuse me, I want to go to the station. How should I get there?" }],
+          "practice": [{
+            "id": "l26_g08_p01",
+            "skill": "grammar",
+            "question": { "zh": "最自然的问路开头是？", "en": "Which is the most natural opening when asking directions?" },
+            "options": [
+              { "text": { "jp": "すみません、駅へ行きたいんですが" }, "correct": true },
+              { "text": { "jp": "すみません、駅へ行きたいですから" } },
+              { "text": { "jp": "すみません、駅へ行きたいでした" } },
+              { "text": { "jp": "すみません、駅へ行きたいのに" } }
+            ],
+            "explanation": { "zh": "说明情况并引出请求时用「〜んですが」。", "en": "Use n desu ga to lead into a request." }
+          }]
+        }
+      ]
+    },
+    {
+      "type": "examples",
+      "id": "l26_examples",
+      "title": { "zh": "核心例句", "en": "Core Examples", "ja": "基本例文" },
+      "items": [
+        { "id": "l26_e01", "jp": "どうして会社を休んだんですか。", "zh": "你为什么请假没去公司？", "en": "Why did you take the day off work?", "tags": ["n-desu"] },
+        { "id": "l26_e02", "jp": "熱があったんです。", "zh": "是因为发烧了。", "en": "I had a fever.", "tags": ["reason"] },
+        { "id": "l26_e03", "jp": "あした試験なんです。", "zh": "明天要考试。", "en": "I have an exam tomorrow.", "tags": ["nan-desu"] },
+        { "id": "l26_e04", "jp": "コピー機の使い方がわからないんですが、教えていただけませんか。", "zh": "我不知道复印机的用法，能不能请您教我？", "en": "I don't know how to use the copier. Could you show me?", "tags": ["request"] },
+        { "id": "l26_e05", "jp": "駅へ行きたいんですが、どう行ったらいいですか。", "zh": "我想去车站，怎么走好呢？", "en": "I want to go to the station. How should I get there?", "tags": ["advice"] },
+        { "id": "l26_e06", "jp": "ごみはどこに出したらいいですか。", "zh": "垃圾应该倒在哪里？", "en": "Where should I take out the trash?", "tags": ["advice"] },
+        { "id": "l26_e07", "jp": "日本語でレポートを書いたんですが、ちょっと見ていただけませんか。", "zh": "我用日语写了报告，能不能请您看一下？", "en": "I wrote a report in Japanese. Could you take a quick look?", "tags": ["request"] },
+        { "id": "l26_e08", "jp": "気分が悪いんです。少し休んでもいいですか。", "zh": "我有点不舒服。可以休息一下吗？", "en": "I feel sick. May I rest for a bit?", "tags": ["situation"] }
+      ]
+    },
+    {
+      "type": "mistakes",
+      "id": "l26_mistakes",
+      "title": { "zh": "常见错误", "en": "Common Mistakes", "ja": "よくある間違い" },
+      "items": [
+        { "id": "l26_m01", "wrong": "あした試験んです。", "correct": "あした試験なんです。", "zh": "名词现在肯定要用「なんです」。", "en": "Use nan desu after a noun in present affirmative." },
+        { "id": "l26_m02", "wrong": "見ますいただけませんか。", "correct": "見ていただけませんか。", "zh": "请求句前面要接动词て形。", "en": "Use the te-form before itadakemasen ka." },
+        { "id": "l26_m03", "wrong": "どうしたいいですか。", "correct": "どうしたらいいですか。", "zh": "询问建议用「た形 + らいいですか」。", "en": "Advice questions use ta-form + ra ii desu ka." }
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "l26_quiz",
+      "title": { "zh": "综合测试", "en": "Final Test", "ja": "まとめテスト" },
+      "items": [
+        {
+          "id": "l26_q01",
+          "question": { "zh": "名词接「んです」时，正确形式是？", "en": "What form follows a noun before n desu?" },
+          "options": [
+            { "text": { "jp": "なんです" }, "correct": true },
+            { "text": { "jp": "んです" } },
+            { "text": { "jp": "のですか" } },
+            { "text": { "jp": "ですん" } }
+          ],
+          "explanation": { "zh": "名词和な形容词现在肯定接「なんです」。", "en": "Nouns and na-adjectives use nan desu." }
+        },
+        {
+          "id": "l26_q02",
+          "question": { "zh": "选择“电车晚点了，所以迟到了”的解释句。", "en": "Choose the explanatory sentence: the train was delayed." },
+          "options": [
+            { "text": { "jp": "電車が遅れたんです" }, "correct": true },
+            { "text": { "jp": "電車が遅いんですでした" } },
+            { "text": { "jp": "電車を遅れたんです" } },
+            { "text": { "jp": "電車が遅れますんです" } }
+          ],
+          "explanation": { "zh": "动词た形普通形 + んです。", "en": "Use the plain past verb form + n desu." }
+        },
+        {
+          "id": "l26_q03",
+          "question": { "zh": "「能不能请您告诉我？」正确的是？", "en": "Which means 'Could you tell me?'" },
+          "options": [
+            { "text": { "jp": "教えていただけませんか" }, "correct": true },
+            { "text": { "jp": "教えますいただけませんか" } },
+            { "text": { "jp": "教えるいただけませんか" } },
+            { "text": { "jp": "教えていただきませんか" } }
+          ],
+          "explanation": { "zh": "礼貌请求：て形 + いただけませんか。", "en": "Polite request: te-form + itadakemasen ka." }
+        },
+        {
+          "id": "l26_q04",
+          "question": { "zh": "「我该怎么办？」正确表达是？", "en": "How do you say 'What should I do?'" },
+          "options": [
+            { "text": { "jp": "どうしたらいいですか" }, "correct": true },
+            { "text": { "jp": "どうしていいですか" } },
+            { "text": { "jp": "どうするらいいですか" } },
+            { "text": { "jp": "どうしたいいですか" } }
+          ],
+          "explanation": { "zh": "固定问法是「どうしたらいいですか」。", "en": "The fixed phrase is dou shitara ii desu ka." }
+        },
+        {
+          "id": "l26_q05",
+          "question": { "zh": "「想去车站，怎么走好？」最自然的是？", "en": "Which naturally asks how to get to the station?" },
+          "options": [
+            { "text": { "jp": "駅へ行きたいんですが、どう行ったらいいですか" }, "correct": true },
+            { "text": { "jp": "駅へ行きたいですから、どう行きますか" } },
+            { "text": { "jp": "駅へ行きたいですがん、どう行ったらいいですか" } },
+            { "text": { "jp": "駅へ行きたいんですが、どう行くいいですか" } }
+          ],
+          "explanation": { "zh": "说明情况 + 问建议：〜んですが、どう〜たらいいですか。", "en": "Explain the situation, then ask for advice." }
+        },
+        {
+          "id": "l26_q06",
+          "question": { "zh": "「不舒服」用「んです」说明情况，应说？", "en": "Explain that you feel sick using n desu." },
+          "options": [
+            { "text": { "jp": "気分が悪いんです" }, "correct": true },
+            { "text": { "jp": "気分が悪なんです" } },
+            { "text": { "jp": "気分を悪いんです" } },
+            { "text": { "jp": "気分が悪いですん" } }
+          ],
+          "explanation": { "zh": "い形容词「悪い」直接接「んです」。", "en": "The i-adjective warui attaches directly to n desu." }
+        },
+        {
+          "id": "l26_q07",
+          "question": { "zh": "「应该问谁？」正确的是？", "en": "Which means 'Whom should I ask?'" },
+          "options": [
+            { "text": { "jp": "だれに聞いたらいいですか" }, "correct": true },
+            { "text": { "jp": "だれを聞いたらいいですか" } },
+            { "text": { "jp": "だれが聞いたらいいですか" } },
+            { "text": { "jp": "だれで聞いたらいいですか" } }
+          ],
+          "explanation": { "zh": "询问对象用「に」。", "en": "Use ni for the person you ask." }
+        },
+        {
+          "id": "l26_q08",
+          "question": { "zh": "选择正确的「んです」问句。", "en": "Choose the correct n desu question." },
+          "options": [
+            { "text": { "jp": "どうして休んだんですか" }, "correct": true },
+            { "text": { "jp": "どうして休みましたんですか" } },
+            { "text": { "jp": "どうして休んだですか" } },
+            { "text": { "jp": "どうして休むでしたか" } }
+          ],
+          "explanation": { "zh": "动词过去普通形「休んだ」+ んですか。", "en": "Use the plain past yasunda + n desu ka." }
+        },
+        {
+          "id": "l26_q09",
+          "question": { "zh": "「今天不方便」解释情况，应说？", "en": "How do you explain 'Today is not convenient'?" },
+          "options": [
+            { "text": { "jp": "今日は都合が悪いんです" }, "correct": true },
+            { "text": { "jp": "今日は都合が悪なんです" } },
+            { "text": { "jp": "今日は都合を悪いんです" } },
+            { "text": { "jp": "今日は都合が悪いなんです" } }
+          ],
+          "explanation": { "zh": "「都合が悪い」中的「悪い」是い形容词。", "en": "Warui is an i-adjective here." }
+        },
+        {
+          "id": "l26_q10",
+          "question": { "zh": "最适合放在请求前的句子是？", "en": "Which sentence best leads into a request?" },
+          "options": [
+            { "text": { "jp": "パソコンが動かないんですが" }, "correct": true },
+            { "text": { "jp": "パソコンが動かないですので" } },
+            { "text": { "jp": "パソコンが動かないでしたが" } },
+            { "text": { "jp": "パソコンを動かないんですが" } }
+          ],
+          "explanation": { "zh": "「〜んですが」可以自然引出后续请求。", "en": "N desu ga naturally leads into a request." }
+        }
+      ]
+    }
+  ]
+}

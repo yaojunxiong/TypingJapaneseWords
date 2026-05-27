@@ -1,0 +1,828 @@
+{
+  "id": "minna-41",
+  "version": "20.3",
+  "status": "Mastery migrated",
+  "lesson": 41,
+  "title": {
+    "zh": "第41课",
+    "en": "Lesson 41",
+    "ja": "第41課"
+  },
+  "topic": {
+    "zh": "授受高级",
+    "en": "Advanced Giving and Receiving"
+  },
+  "summary": {
+    "zh": "扩展授受表达，掌握 いただきます、くださいます、やります 以及动作授受的礼貌方向。",
+    "en": "Extend giving and receiving expressions with いただきます, くださいます, やります, and polite action-giving patterns."
+  },
+  "sections": [
+    {
+      "id": "l41-vocab",
+      "type": "vocab",
+      "title": {
+        "zh": "词汇 Vocabulary",
+        "en": "Vocabulary"
+      },
+      "items": [
+        {
+          "id": "l41-vocab-01",
+          "jp": "いただきます",
+          "kana": "いただきます",
+          "zh": "领受、得到",
+          "en": "humbly receive",
+          "example": "先生に本をいただきました。"
+        },
+        {
+          "id": "l41-vocab-02",
+          "jp": "くださいます",
+          "kana": "くださいます",
+          "zh": "给我、给我们",
+          "en": "give to me/us honorifically",
+          "example": "先生が説明してくださいました。"
+        },
+        {
+          "id": "l41-vocab-03",
+          "jp": "やります",
+          "kana": "やります",
+          "zh": "给、做给下位对象",
+          "en": "give to younger/lower beings",
+          "example": "花に水をやります。"
+        },
+        {
+          "id": "l41-vocab-04",
+          "jp": "ほめます",
+          "kana": "ほめます",
+          "zh": "表扬",
+          "en": "praise",
+          "example": "先生が学生をほめました。"
+        },
+        {
+          "id": "l41-vocab-05",
+          "jp": "しかります",
+          "kana": "しかります",
+          "zh": "批评、责备",
+          "en": "scold",
+          "example": "母にしかられました。"
+        },
+        {
+          "id": "l41-vocab-06",
+          "jp": "招待します",
+          "kana": "しょうたいします",
+          "zh": "邀请",
+          "en": "invite",
+          "example": "友達をパーティーに招待します。"
+        },
+        {
+          "id": "l41-vocab-07",
+          "jp": "注意します",
+          "kana": "ちゅういします",
+          "zh": "提醒、注意",
+          "en": "warn, advise",
+          "example": "先生が学生に注意しました。"
+        },
+        {
+          "id": "l41-vocab-08",
+          "jp": "親切",
+          "kana": "しんせつ",
+          "zh": "亲切",
+          "en": "kind",
+          "example": "親切に教えてくださいました。"
+        },
+        {
+          "id": "l41-vocab-09",
+          "jp": "お祝い",
+          "kana": "おいわい",
+          "zh": "祝贺、贺礼",
+          "en": "celebration gift",
+          "example": "結婚のお祝いをいただきました。"
+        },
+        {
+          "id": "l41-vocab-10",
+          "jp": "お土産",
+          "kana": "おみやげ",
+          "zh": "伴手礼",
+          "en": "souvenir",
+          "example": "部長にお土産をいただきました。"
+        }
+      ]
+    },
+    {
+      "id": "l41-grammar",
+      "type": "grammar",
+      "title": {
+        "zh": "语法 Grammar",
+        "en": "Grammar"
+      },
+      "items": [
+        {
+          "id": "l41-grammar-01",
+          "pattern": "Nをいただきます",
+          "zh": "从上级或需要尊敬的人那里领受物品。",
+          "en": "Humbly receive an item from a superior or respected person.",
+          "example": "社長にお土産をいただきました。",
+          "practice": [
+            {
+              "id": "l41-practice-01",
+              "skill": "grammar",
+              "question": {
+                "zh": "表达：我从老师那里得到了书。",
+                "en": "Say: I received a book from my teacher."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "先生に本をいただきました。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "部長が切符をくださいました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "花に水をやります。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生にレポートを見ていただきました。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "从上级或需要尊敬的人那里领受物品。",
+                "en": "Humbly receive an item from a superior or respected person."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l41-grammar-02",
+          "pattern": "Nをくださいます",
+          "zh": "上级或尊敬的人给我方某物。",
+          "en": "A superior or respected person gives something to me/us.",
+          "example": "先生が資料をくださいました。",
+          "practice": [
+            {
+              "id": "l41-practice-02",
+              "skill": "grammar",
+              "question": {
+                "zh": "表达：部长给了我票。",
+                "en": "Say: The department manager gave me a ticket."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "部長が切符をくださいました。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "先生に本をいただきました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "花に水をやります。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生にレポートを見ていただきました。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "上级或尊敬的人给我方某物。",
+                "en": "A superior or respected person gives something to me/us."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l41-grammar-03",
+          "pattern": "Nをやります",
+          "zh": "给植物、动物、小孩等下位对象某物。",
+          "en": "Give something to plants, animals, children, or lower-status recipients.",
+          "example": "犬にえさをやります。",
+          "practice": [
+            {
+              "id": "l41-practice-03",
+              "skill": "grammar",
+              "question": {
+                "zh": "表达：给花浇水。",
+                "en": "Say: I give water to the flowers."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "花に水をやります。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "先生にレポートを見ていただきました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "部長が切符をくださいました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生に本をいただきました。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "给植物、动物、小孩等下位对象某物。",
+                "en": "Give something to plants, animals, children, or lower-status recipients."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l41-grammar-04",
+          "pattern": "Vていただきます",
+          "zh": "请上级或他人为我方做某事，表达领受帮助。",
+          "en": "Receive the favor of someone, often a superior, doing something for me/us.",
+          "example": "先生に作文を直していただきました。",
+          "practice": [
+            {
+              "id": "l41-practice-04",
+              "skill": "grammar",
+              "question": {
+                "zh": "表达：请老师检查了我的报告。",
+                "en": "Say: I had my teacher check my report."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "先生にレポートを見ていただきました。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "先生に本をいただきました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "部長が切符をくださいました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "花に水をやります。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "请上级或他人为我方做某事，表达领受帮助。",
+                "en": "Receive the favor of someone, often a superior, doing something for me/us."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l41-grammar-05",
+          "pattern": "Vてくださいます",
+          "zh": "上级或尊敬的人为我方做某事。",
+          "en": "A superior or respected person does something for me/us.",
+          "example": "部長が駅まで送ってくださいました。",
+          "practice": [
+            {
+              "id": "l41-practice-05",
+              "skill": "grammar",
+              "question": {
+                "zh": "表达：老师亲切地教了我。",
+                "en": "Say: The teacher kindly taught me."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "先生が親切に教えてくださいました。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "部長が切符をくださいました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生に本をいただきました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "花に水をやります。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "上级或尊敬的人为我方做某事。",
+                "en": "A superior or respected person does something for me/us."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l41-grammar-06",
+          "pattern": "Vてやります",
+          "zh": "为下位对象做某事，语气较直接，使用对象要谨慎。",
+          "en": "Do something for a lower-status recipient; use carefully because it sounds direct.",
+          "example": "子どもに絵本を読んでやりました。",
+          "practice": [
+            {
+              "id": "l41-practice-06",
+              "skill": "grammar",
+              "question": {
+                "zh": "表达：我给狗洗了澡。",
+                "en": "Say: I washed the dog."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "犬を洗ってやりました。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "先生に本をいただきました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "部長が切符をくださいました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "花に水をやります。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "为下位对象做某事，语气较直接，使用对象要谨慎。",
+                "en": "Do something for a lower-status recipient; use carefully because it sounds direct."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l41-grammar-07",
+          "pattern": "Vてくださいませんか",
+          "zh": "礼貌地请求上级或不熟的人帮忙。",
+          "en": "Politely ask a respected or less familiar person to do something.",
+          "example": "この漢字を読んでくださいませんか。",
+          "practice": [
+            {
+              "id": "l41-practice-07",
+              "skill": "grammar",
+              "question": {
+                "zh": "礼貌请求：请您说明一下这个意思好吗？",
+                "en": "Politely request: Could you explain this meaning?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "花に水をやります。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "部長が切符をくださいました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生に本をいただきました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この意味を説明してくださいませんか。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "礼貌地请求上级或不熟的人帮忙。",
+                "en": "Politely ask a respected or less familiar person to do something."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l41-grammar-08",
+          "pattern": "だれが / だれに",
+          "zh": "授受表达重点看方向：谁给我方、我方从谁那里领受。",
+          "en": "Track direction carefully: who gives to me/us, and from whom I/we receive.",
+          "example": "先生が私に辞書をくださいました。私は先生に辞書をいただきました。",
+          "practice": [
+            {
+              "id": "l41-practice-08",
+              "skill": "grammar",
+              "question": {
+                "zh": "把「老师给了我词典」改为以我为主语。",
+                "en": "Rewrite 'The teacher gave me a dictionary' with I as the subject."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "先生に本をいただきました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "私は先生に辞書をいただきました。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "花に水をやります。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "部長が切符をくださいました。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "授受表达重点看方向：谁给我方、我方从谁那里领受。",
+                "en": "Track direction carefully: who gives to me/us, and from whom I/we receive."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l41-examples",
+      "type": "examples",
+      "title": {
+        "zh": "例句 Examples",
+        "en": "Examples"
+      },
+      "items": [
+        {
+          "id": "l41-example-01",
+          "jp": "先生に推薦状を書いていただきました。",
+          "zh": "我请老师给我写了推荐信。",
+          "en": "I had my teacher write a recommendation letter for me."
+        },
+        {
+          "id": "l41-example-02",
+          "jp": "部長が空港まで迎えに来てくださいました。",
+          "zh": "部长来机场接我了。",
+          "en": "The department manager came to the airport to pick me up."
+        },
+        {
+          "id": "l41-example-03",
+          "jp": "祖母に古い写真を見せていただきました。",
+          "zh": "祖母给我看了旧照片。",
+          "en": "My grandmother showed me old photos."
+        },
+        {
+          "id": "l41-example-04",
+          "jp": "犬に薬を飲ませてやりました。",
+          "zh": "我给狗喂了药。",
+          "en": "I gave the dog medicine."
+        },
+        {
+          "id": "l41-example-05",
+          "jp": "先生が私の間違いを注意してくださいました。",
+          "zh": "老师提醒了我的错误。",
+          "en": "The teacher pointed out my mistake for me."
+        },
+        {
+          "id": "l41-example-06",
+          "jp": "社長に結婚のお祝いをいただきました。",
+          "zh": "我从社长那里收到了结婚贺礼。",
+          "en": "I received a wedding gift from the company president."
+        },
+        {
+          "id": "l41-example-07",
+          "jp": "この資料をコピーしてくださいませんか。",
+          "zh": "可以请您复印这份资料吗？",
+          "en": "Could you copy this document for me?"
+        },
+        {
+          "id": "l41-example-08",
+          "jp": "弟に自転車の乗り方を教えてやりました。",
+          "zh": "我教弟弟骑自行车。",
+          "en": "I taught my younger brother how to ride a bicycle."
+        }
+      ]
+    },
+    {
+      "id": "l41-mistakes",
+      "type": "mistakes",
+      "title": {
+        "zh": "常见错误 Common Mistakes",
+        "en": "Common Mistakes"
+      },
+      "items": [
+        {
+          "id": "l41-mistake-01",
+          "wrong": "先生に本をくださいました。",
+          "correct": "先生が本をくださいました。 / 私は先生に本をいただきました。",
+          "reason": {
+            "zh": "くださいます 的主语是给我方的人；以我为主语时用 いただきます。",
+            "en": "With くださいます, the giver is the subject. Use いただきます when I am the subject."
+          }
+        },
+        {
+          "id": "l41-mistake-02",
+          "wrong": "社長にお土産をやりました。",
+          "correct": "社長にお土産を差し上げました。",
+          "reason": {
+            "zh": "やります 不能用于尊敬对象。这里应使用更礼貌的给与表达。",
+            "en": "Do not use やります for respected people. Use a polite giving expression."
+          }
+        },
+        {
+          "id": "l41-mistake-03",
+          "wrong": "先生が作文を直していただきました。",
+          "correct": "先生が作文を直してくださいました。",
+          "reason": {
+            "zh": "主语是老师时，用 てくださいます；以我为主语领受帮助时用 ていただきます。",
+            "en": "Use てくださいます when the teacher is the subject; use ていただきます when I receive the favor."
+          }
+        }
+      ]
+    },
+    {
+      "id": "l41-quiz",
+      "type": "quiz",
+      "title": {
+        "zh": "最终测试 Final Test",
+        "en": "Final Test"
+      },
+      "items": [
+        {
+          "id": "l41-quiz-01",
+          "question": {
+            "zh": "「我从老师那里得到了书。」正确的是？",
+            "en": "Which means: I received a book from my teacher?"
+          },
+          "options": [
+            {
+              "text": "先生に本をいただきました。",
+              "correct": true
+            },
+            {
+              "text": "先生に本をくださいました。",
+              "correct": false
+            },
+            {
+              "text": "先生を本にいただきました。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "以我为主语，从老师那里领受，用 先生に...いただきました。",
+            "en": "When I receive from the teacher, use 先生に...いただきました."
+          }
+        },
+        {
+          "id": "l41-quiz-02",
+          "question": {
+            "zh": "「老师给了我资料。」正确的是？",
+            "en": "Which means: The teacher gave me materials?"
+          },
+          "options": [
+            {
+              "text": "先生が資料をくださいました。",
+              "correct": true
+            },
+            {
+              "text": "先生に資料をくださいました。",
+              "correct": false
+            },
+            {
+              "text": "先生が資料をいただきました。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "给我方的人作主语时用 が + くださいます。",
+            "en": "The giver is marked with が when using くださいます."
+          }
+        },
+        {
+          "id": "l41-quiz-03",
+          "question": {
+            "zh": "「给花浇水。」正确的是？",
+            "en": "Which means: I give water to the flowers?"
+          },
+          "options": [
+            {
+              "text": "花に水をやります。",
+              "correct": true
+            },
+            {
+              "text": "花に水をいただきます。",
+              "correct": false
+            },
+            {
+              "text": "花が水をくださいます。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "对植物给东西可用 やります。",
+            "en": "Use やります when giving something to plants."
+          }
+        },
+        {
+          "id": "l41-quiz-04",
+          "question": {
+            "zh": "「请老师检查了报告。」正确的是？",
+            "en": "Which means: I had my teacher check my report?"
+          },
+          "options": [
+            {
+              "text": "先生にレポートを見ていただきました。",
+              "correct": true
+            },
+            {
+              "text": "先生がレポートを見ていただきました。",
+              "correct": false
+            },
+            {
+              "text": "先生にレポートを見てくださいました。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "以我为主语领受帮助，用 人にVていただきます。",
+            "en": "Use 人にVていただきます when I receive someone's help."
+          }
+        },
+        {
+          "id": "l41-quiz-05",
+          "question": {
+            "zh": "「部长送我到车站。」正确的是？",
+            "en": "Which means: The manager took me to the station?"
+          },
+          "options": [
+            {
+              "text": "部長が駅まで送ってくださいました。",
+              "correct": true
+            },
+            {
+              "text": "部長に駅まで送ってくださいました。",
+              "correct": false
+            },
+            {
+              "text": "部長が駅まで送っていただきました。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "主语是部长，用 が + てくださいました。",
+            "en": "The manager is the subject, so use が + てくださいました."
+          }
+        },
+        {
+          "id": "l41-quiz-06",
+          "question": {
+            "zh": "「可以请您说明这个意思吗？」最礼貌的是？",
+            "en": "Which is the polite request: Could you explain this meaning?"
+          },
+          "options": [
+            {
+              "text": "この意味を説明してくださいませんか。",
+              "correct": true
+            },
+            {
+              "text": "この意味を説明してやりませんか。",
+              "correct": false
+            },
+            {
+              "text": "この意味を説明していただきましたか。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "请求对方帮忙时可用 てくださいませんか。",
+            "en": "Use てくださいませんか for a polite request."
+          }
+        },
+        {
+          "id": "l41-quiz-07",
+          "question": {
+            "zh": "「给狗洗澡。」自然的是？",
+            "en": "Which naturally means: I washed the dog?"
+          },
+          "options": [
+            {
+              "text": "犬を洗ってやりました。",
+              "correct": true
+            },
+            {
+              "text": "犬を洗っていただきました。",
+              "correct": false
+            },
+            {
+              "text": "犬が洗ってくださいました。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "为动物做事可用 てやります。",
+            "en": "Use てやります when doing something for an animal."
+          }
+        },
+        {
+          "id": "l41-quiz-08",
+          "question": {
+            "zh": "「老师亲切地教了我。」正确的是？",
+            "en": "Which means: The teacher kindly taught me?"
+          },
+          "options": [
+            {
+              "text": "先生が親切に教えてくださいました。",
+              "correct": true
+            },
+            {
+              "text": "先生に親切に教えてくださいました。",
+              "correct": false
+            },
+            {
+              "text": "先生が親切に教えてやりました。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "老师为我方做事，用 てくださいました。",
+            "en": "Use てくださいました when the teacher does something for me/us."
+          }
+        },
+        {
+          "id": "l41-quiz-09",
+          "question": {
+            "zh": "以「我」为主语表达「社长给我贺礼」正确的是？",
+            "en": "With 'I' as the subject, how do you say the president gave me a gift?"
+          },
+          "options": [
+            {
+              "text": "社長にお祝いをいただきました。",
+              "correct": true
+            },
+            {
+              "text": "社長がお祝いをいただきました。",
+              "correct": false
+            },
+            {
+              "text": "社長にお祝いをくださいました。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "以我为主语领受，用 社長に...いただきました。",
+            "en": "Use 社長に...いただきました when I receive from the president."
+          }
+        },
+        {
+          "id": "l41-quiz-10",
+          "question": {
+            "zh": "下列哪句对象方向最自然？",
+            "en": "Which sentence has the most natural direction?"
+          },
+          "options": [
+            {
+              "text": "私は先生に作文を直していただきました。",
+              "correct": true
+            },
+            {
+              "text": "私は先生が作文を直していただきました。",
+              "correct": false
+            },
+            {
+              "text": "私は先生に作文を直してくださいました。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "我从老师那里领受帮助，用 先生に + ていただきました。",
+            "en": "Use 先生に + ていただきました when I receive the teacher's help."
+          }
+        }
+      ]
+    }
+  ]
+}

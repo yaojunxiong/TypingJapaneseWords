@@ -1,0 +1,693 @@
+{
+  "schema": "minna.lesson.v1",
+  "course": "minna",
+  "lessonNo": 7,
+  "lessonId": "minna_lesson_07",
+  "title": {
+    "zh": "第7课",
+    "en": "Lesson 7",
+    "ja": "第7課"
+  },
+  "subtitle": {
+    "zh": "工具・授受基础",
+    "en": "Tools and giving/receiving basics",
+    "ja": "道具・授受の基本"
+  },
+  "focus": {
+    "zh": "学习授受动词「あげます・もらいます」以及「〜に」对象表达和「もう〜ましたか」。",
+    "en": "Learn giving/receiving verbs 「あげます・もらいます」, target marker 「に」, and 「もう〜ましたか」.",
+    "ja": "授受動詞「あげます・もらいます」、対象の「に」、「もう〜ましたか」を学びます。"
+  },
+  "sections": [
+    {
+      "type": "vocab",
+      "id": "l07_vocab",
+      "title": {
+        "zh": "核心词汇",
+        "en": "Core Vocabulary",
+        "ja": "基本語彙"
+      },
+      "items": [
+        {
+          "id": "l07_v01",
+          "jp": "あげます",
+          "kana": "あげます",
+          "zh": "给",
+          "en": "give",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l07_v02",
+          "jp": "もらいます",
+          "kana": "もらいます",
+          "zh": "收到",
+          "en": "receive",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l07_v03",
+          "jp": "かします",
+          "kana": "かします",
+          "zh": "借给",
+          "en": "lend",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l07_v04",
+          "jp": "かります",
+          "kana": "かります",
+          "zh": "借入",
+          "en": "borrow",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l07_v05",
+          "jp": "おしえます",
+          "kana": "おしえます",
+          "zh": "教",
+          "en": "teach",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l07_v06",
+          "jp": "ならいます",
+          "kana": "ならいます",
+          "zh": "学习（向人）",
+          "en": "learn from",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l07_v07",
+          "jp": "でんわを かけます",
+          "kana": "でんわをかけます",
+          "zh": "打电话",
+          "en": "make a phone call",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l07_v08",
+          "jp": "はし",
+          "kana": "はし",
+          "zh": "筷子",
+          "en": "chopsticks",
+          "tags": [
+            "object"
+          ]
+        },
+        {
+          "id": "l07_v09",
+          "jp": "スプーン",
+          "kana": "スプーン",
+          "zh": "勺子",
+          "en": "spoon",
+          "tags": [
+            "object"
+          ]
+        },
+        {
+          "id": "l07_v10",
+          "jp": "ナイフ",
+          "kana": "ナイフ",
+          "zh": "刀",
+          "en": "knife",
+          "tags": [
+            "object"
+          ]
+        },
+        {
+          "id": "l07_v11",
+          "jp": "フォーク",
+          "kana": "フォーク",
+          "zh": "叉子",
+          "en": "fork",
+          "tags": [
+            "object"
+          ]
+        },
+        {
+          "id": "l07_v12",
+          "jp": "ほん",
+          "kana": "ほん",
+          "zh": "书",
+          "en": "book",
+          "tags": [
+            "object"
+          ]
+        },
+        {
+          "id": "l07_v13",
+          "jp": "てがみ",
+          "kana": "てがみ",
+          "zh": "信",
+          "en": "letter",
+          "tags": [
+            "object"
+          ]
+        },
+        {
+          "id": "l07_v14",
+          "jp": "プレゼント",
+          "kana": "プレゼント",
+          "zh": "礼物",
+          "en": "present",
+          "tags": [
+            "object"
+          ]
+        },
+        {
+          "id": "l07_v15",
+          "jp": "せんせい",
+          "kana": "せんせい",
+          "zh": "老师",
+          "en": "teacher",
+          "tags": [
+            "person"
+          ]
+        },
+        {
+          "id": "l07_v16",
+          "jp": "ともだち",
+          "kana": "ともだち",
+          "zh": "朋友",
+          "en": "friend",
+          "tags": [
+            "person"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "grammar",
+      "id": "l07_grammar",
+      "title": {
+        "zh": "核心语法",
+        "en": "Core Grammar",
+        "ja": "基本文法"
+      },
+      "items": [
+        {
+          "id": "l07_g01",
+          "pattern": "人に 物を あげます",
+          "title": {
+            "zh": "给某人某物",
+            "en": "Give something to someone"
+          },
+          "explanation": {
+            "zh": "给出方用「あげます」，对象前用「に」。",
+            "en": "Use 「あげます」 for giving; mark the receiver with 「に」."
+          },
+          "examples": [
+            {
+              "jp": "わたしは 友達に 本を あげました。",
+              "zh": "我给朋友一本书。",
+              "en": "I gave a book to my friend."
+            }
+          ],
+          "practice": [
+            {
+              "question": {
+                "zh": "“给老师礼物”是？",
+                "en": "How to say “give a present to the teacher”?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "先生に プレゼントを あげます。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "先生を プレゼントに あげます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生で プレゼントを あげます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生へ プレゼントが あげます。"
+                  }
+                }
+              ]
+            },
+            {
+              "question": {
+                "zh": "授予对象常用助词？",
+                "en": "Which particle marks receiver?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "に"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "を"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "で"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "と"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l07_g02",
+          "pattern": "人に 物を もらいます",
+          "title": {
+            "zh": "从某人收到某物",
+            "en": "Receive something from someone"
+          },
+          "explanation": {
+            "zh": "接收方用「もらいます」，来源前多用「に」。",
+            "en": "Use 「もらいます」 from receiver perspective; source is marked by 「に」."
+          },
+          "examples": [
+            {
+              "jp": "わたしは 先生に 手紙を もらいました。",
+              "zh": "我收到老师的信。",
+              "en": "I received a letter from my teacher."
+            }
+          ],
+          "practice": [
+            {
+              "question": {
+                "zh": "“我从朋友那儿借到书/收到书”是？",
+                "en": "How to say “I received a book from a friend”?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "友達に 本を もらいました。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "友達を 本に もらいました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "友達で 本を もらいました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "友達と 本を もらいました。"
+                  }
+                }
+              ]
+            },
+            {
+              "question": {
+                "zh": "“收到”动词是？",
+                "en": "Which verb means “receive”?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "もらいます"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "あげます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "かします"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "ならいます"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l07_g03",
+          "pattern": "人に 〜を かします / おしえます",
+          "title": {
+            "zh": "借给/教给某人",
+            "en": "Lend/teach to someone"
+          },
+          "explanation": {
+            "zh": "「かします・おしえます」也使用「人に」结构。",
+            "en": "「かします / おしえます」 also take 「人に」."
+          },
+          "examples": [
+            {
+              "jp": "先生は わたしに 日本語を おしえます。",
+              "zh": "老师教我日语。",
+              "en": "The teacher teaches me Japanese."
+            }
+          ],
+          "practice": [
+            {
+              "question": {
+                "zh": "“借给朋友伞”是？",
+                "en": "How to say “lend an umbrella to a friend”?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "友達に 傘を かします。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "友達で 傘を かします。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "友達を 傘に かします。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "友達と 傘を かします。"
+                  }
+                }
+              ]
+            },
+            {
+              "question": {
+                "zh": "“向老师学日语”可说？",
+                "en": "How to say “learn Japanese from teacher”?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "先生に 日本語を ならいます。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "先生を 日本語に ならいます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生で 日本語を ならいます。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生と 日本語を ならいます。"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l07_g04",
+          "pattern": "もう 〜ましたか",
+          "title": {
+            "zh": "已经〜了吗",
+            "en": "Have you already ~?"
+          },
+          "explanation": {
+            "zh": "询问某动作是否已经完成。否定回答常用「まだです」。",
+            "en": "Ask whether an action has already happened. Negative often uses 「まだです」."
+          },
+          "examples": [
+            {
+              "jp": "もう 昼ご飯を 食べましたか。",
+              "zh": "已经吃午饭了吗？",
+              "en": "Have you already had lunch?"
+            }
+          ],
+          "practice": [
+            {
+              "question": {
+                "zh": "“已经回家了吗？”是？",
+                "en": "How to ask “Have you gone home already?”?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "もう うちへ 帰りましたか。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "もう うちへ 帰りますか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "まだ うちへ 帰りましたか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "うちへ もう 帰りますか。"
+                  }
+                }
+              ]
+            },
+            {
+              "question": {
+                "zh": "“还没有”常用？",
+                "en": "How to say “not yet”?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "まだです。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "もうです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "いいです。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "はいです。"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examples",
+      "id": "l07_examples",
+      "title": {
+        "zh": "核心例句",
+        "en": "Core Examples",
+        "ja": "基本例文"
+      },
+      "items": [
+        {
+          "id": "l07_e01",
+          "jp": "わたしは 妹に はしを あげました。",
+          "zh": "我给妹妹筷子。",
+          "en": "I gave chopsticks to my younger sister."
+        },
+        {
+          "id": "l07_e02",
+          "jp": "先生に 日本語の 本を もらいました。",
+          "zh": "我收到老师给的日语书。",
+          "en": "I received a Japanese book from my teacher."
+        },
+        {
+          "id": "l07_e03",
+          "jp": "友達に 傘を かしました。",
+          "zh": "我把伞借给朋友。",
+          "en": "I lent an umbrella to my friend."
+        },
+        {
+          "id": "l07_e04",
+          "jp": "きのう 先生に 日本語を ならいました。",
+          "zh": "昨天向老师学习了日语。",
+          "en": "I learned Japanese from my teacher yesterday."
+        },
+        {
+          "id": "l07_e05",
+          "jp": "もう 宿題を しましたか。",
+          "zh": "已经做作业了吗？",
+          "en": "Have you already done your homework?"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "l07_quiz",
+      "title": {
+        "zh": "综合测试",
+        "en": "Final Test",
+        "ja": "まとめテスト"
+      },
+      "items": [
+        {
+          "id": "l07_q01",
+          "question": {
+            "zh": "“给朋友书”是？",
+            "en": "Which means “give a book to a friend”?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "友達に 本を あげます。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "友達を 本に あげます。"
+              }
+            },
+            {
+              "text": {
+                "jp": "友達で 本を あげます。"
+              }
+            },
+            {
+              "text": {
+                "jp": "友達と 本を あげます。"
+              }
+            }
+          ]
+        },
+        {
+          "id": "l07_q02",
+          "question": {
+            "zh": "“从老师收到信”是？",
+            "en": "Which means “receive a letter from teacher”?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "先生に 手紙を もらいます。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "先生を 手紙に もらいます。"
+              }
+            },
+            {
+              "text": {
+                "jp": "先生と 手紙を もらいます。"
+              }
+            },
+            {
+              "text": {
+                "jp": "先生で 手紙を もらいます。"
+              }
+            }
+          ]
+        },
+        {
+          "id": "l07_q03",
+          "question": {
+            "zh": "“借给”动词是？",
+            "en": "Which verb means “lend”?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "かします"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "かります"
+              }
+            },
+            {
+              "text": {
+                "jp": "もらいます"
+              }
+            },
+            {
+              "text": {
+                "jp": "あげます"
+              }
+            }
+          ]
+        },
+        {
+          "id": "l07_q04",
+          "question": {
+            "zh": "“已经〜了吗”开头是？",
+            "en": "Which starts “Have you already ~?”?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "もう"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "まだ"
+              }
+            },
+            {
+              "text": {
+                "jp": "どこ"
+              }
+            },
+            {
+              "text": {
+                "jp": "なに"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
