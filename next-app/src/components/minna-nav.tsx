@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { getLang, tr } from '@/lib/i18n'
+import MinnaTopStatsClient from '@/components/minna-top-stats-client'
 
 type Props = {
   active: 'home' | 'login' | 'me' | 'toolbox' | 'lessons' | 'messages' | 'favorites' | 'chat' | 'settings'
@@ -26,11 +27,7 @@ export default async function MinnaNav({ active }: Props) {
   return (
     <>
       <header className="minnaTopClassic">
-        <div className="minnaTopStats">
-          <span>🇯🇵 {tr(lang, '课程', 'Lessons')}</span>
-          <span>🔥 {tr(lang, '连续', 'Streak')}</span>
-          <span>💎 {tr(lang, '经验', 'XP')}</span>
-        </div>
+        <MinnaTopStatsClient lang={lang} />
       </header>
       <nav className="card minnaNavCard">
         {PRIMARY_ITEMS.map((item) => (

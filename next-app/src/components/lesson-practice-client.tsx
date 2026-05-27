@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
 type Lang = 'zh' | 'en'
 
@@ -43,13 +43,41 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
     return t(lang, '测验模式', 'Quiz Mode')
   }, [lang, stage])
 
+  useEffect(() => {
+    try {
+      const stateRaw = localStorage.getItem('minna.mobile.learning.state.v1')
+      const state = stateRaw ? JSON.parse(stateRaw) : {}
+      state.lastLesson = Math.max(1, lessonNo)
+      localStorage.setItem('minna.mobile.learning.state.v1', JSON.stringify(state))
+      const h = Number(localStorage.getItem('minna.hearts.v1') || '')
+      if (Number.isFinite(h)) setHearts(Math.max(0, h))
+      else localStorage.setItem('minna.hearts.v1', '5')
+      window.dispatchEvent(new Event('minna:stats-update'))
+    } catch {}
+  }, [lessonNo])
+
   function onPick(optionIndex: number) {
     if (picked !== null || finished) return
     setPicked(optionIndex)
     if (current.options[optionIndex]?.correct) {
-      setScore((v) => v + 1)
+      setScore((v) => {
+        const next = v + 1
+        try {
+          const xp = Number(localStorage.getItem('minna.xp.v1') || '0')
+          localStorage.setItem('minna.xp.v1', String(Math.max(0, xp) + 1))
+          window.dispatchEvent(new Event('minna:stats-update'))
+        } catch {}
+        return next
+      })
     } else {
-      setHearts((v) => Math.max(0, v - 1))
+      setHearts((v) => {
+        const next = Math.max(0, v - 1)
+        try {
+          localStorage.setItem('minna.hearts.v1', String(next))
+          window.dispatchEvent(new Event('minna:stats-update'))
+        } catch {}
+        return next
+      })
     }
   }
 
@@ -69,6 +97,10 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
     setScore(0)
     setPicked(null)
     setFinished(false)
+    try {
+      localStorage.setItem('minna.hearts.v1', '5')
+      window.dispatchEvent(new Event('minna:stats-update'))
+    } catch {}
   }
 
   if (!total) {
@@ -98,11 +130,8 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
 
   return (
     <section className="practiceWrap card">
-      <div className="practiceTopRow">
+      <div style={{ display: 'flex', justifyContent: 'flex-start', marginBottom: 6 }}>
         <a className="practiceClose" href={`/lessons/${lessonNo}`}>✕</a>
-        <div className="practiceStats">🇯🇵 {lessonNo}</div>
-        <div className="practiceStats">🔥 {score}</div>
-        <div className="practiceStats">❤️ {hearts}</div>
       </div>
 
       <h2>{stageText}</h2>
