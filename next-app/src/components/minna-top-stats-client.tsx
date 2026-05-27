@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { getLocalLearningSummary } from '@/lib/learning-cloud-sync'
 
 type Props = {
   lang: 'zh' | 'en'
@@ -30,20 +31,16 @@ function readJson<T>(key: string, fallback: T): T {
   }
 }
 
-function readNum(key: string, fallback: number) {
-  const v = Number(localStorage.getItem(key) || '')
-  return Number.isFinite(v) ? v : fallback
-}
-
 export default function MinnaTopStatsClient({ lang, active = 'home' }: Props) {
   const [stats, setStats] = useState<TopStats>({ lesson: 1, streak: 0, xp: 0, hearts: 5, lessonLabel: '' })
 
   function sync() {
-    const state = readJson<{ lastLesson?: number }>('minna.mobile.learning.state.v1', {})
-    const lesson = Math.max(1, Number(state.lastLesson || 1))
-    const streak = Math.max(0, readNum('minna_study_days', 0))
-    const xp = Math.max(0, readNum('minna.xp.v1', 0))
-    const hearts = Math.max(0, readNum('minna.hearts.v1', 5))
+    const summary = getLocalLearningSummary()
+    const lesson = Math.max(1, Number(summary.lastLesson || 1))
+    const streak = Math.max(1, Number(summary.streak || 1))
+    const xp = Math.max(0, Number(summary.xp || 0))
+    const heartsRaw = Number(localStorage.getItem('minna.hearts.v1') || '')
+    const hearts = Number.isFinite(heartsRaw) ? Math.max(0, heartsRaw) : 5
     const lessonLabel = String(localStorage.getItem('minna.top.lesson_label.v1') || '').trim()
     setStats({ lesson, streak, xp, hearts, lessonLabel })
   }

@@ -6,11 +6,18 @@ import { getLang, type Lang } from '@/lib/i18n'
 
 type LangText = { zh?: string; en?: string; ja?: string; jp?: string }
 type LessonPractice = {
+  type?: string
   question?: LangText
   options?: Array<{ text?: LangText; correct?: boolean }>
+  parts?: string[]
+  answer?: string[]
   explanation?: LangText
 }
 type LessonItem = {
+  id?: string
+  question?: LangText
+  options?: Array<{ text?: LangText; correct?: boolean }>
+  explanation?: LangText
   jp?: string
   kana?: string
   zh?: string
@@ -54,17 +61,60 @@ export default async function LessonPracticePage({
   const section = sections.find((x) => String(x.type || '') === s)
   const items = Array.isArray(section?.items) ? section!.items! : []
 
-  const questions = items
-    .flatMap((item) => (Array.isArray(item.practice) ? item.practice : []).map((p) => ({
-      question: pick(p.question, lang) || (lang === 'en' ? 'Choose the best answer' : '请选择最合适的答案'),
-      hint: item.kana || item.jp || '',
-      options: (Array.isArray(p.options) ? p.options : []).map((op) => ({
+  const questions = items.flatMap((item, idx) => {
+    const fromPractice = (Array.isArray(item.practice) ? item.practice : [])
+      .map((p, pIdx) => {
+        const opts = (Array.isArray(p.options) ? p.options : []).map((op) => ({
+          text: pick(op.text, lang),
+          correct: !!op.correct
+        })).filter((op) => op.text)
+
+        if (opts.length > 1) {
+          return {
+            id: `${item.id || idx}-p-${pIdx}`,
+            question: pick(p.question, lang) || (lang === 'en' ? 'Choose the best answer' : '请选择最合适的答案'),
+            hint: item.kana || item.jp || '',
+            options: opts,
+            explanation: pick(p.explanation, lang)
+          }
+        }
+
+        if (String(p.type || '') === 'order' && Array.isArray(p.answer) && p.answer.length > 1) {
+          const right = p.answer.join(' ')
+          const swapped = [...p.answer]
+          ;[swapped[0], swapped[1]] = [swapped[1], swapped[0]]
+          const reverse = [...p.answer].reverse()
+          const unique = Array.from(new Set([right, swapped.join(' '), reverse.join(' ')]))
+          const orderOptions = unique.slice(0, 4).map((text) => ({ text, correct: text === right }))
+          return {
+            id: `${item.id || idx}-order-${pIdx}`,
+            question: pick(p.question, lang) || (lang === 'en' ? 'Arrange the sentence in correct order' : '选择正确语序'),
+            hint: item.kana || item.jp || '',
+            options: orderOptions,
+            explanation: pick(p.explanation, lang)
+          }
+        }
+        return null
+      })
+      .filter((q): q is NonNullable<typeof q> => !!q)
+
+    const quizLike = (() => {
+      const opts = (Array.isArray(item.options) ? item.options : []).map((op) => ({
         text: pick(op.text, lang),
         correct: !!op.correct
-      })),
-      explanation: pick(p.explanation, lang)
-    })))
-    .filter((q) => q.options.length > 1)
+      })).filter((op) => op.text)
+      if (opts.length < 2) return null
+      return {
+        id: `${item.id || idx}-quiz`,
+        question: pick(item.question, lang) || (lang === 'en' ? 'Choose the best answer' : '请选择最合适的答案'),
+        hint: item.kana || item.jp || '',
+        options: opts,
+        explanation: pick(item.explanation, lang)
+      }
+    })()
+
+    return quizLike ? [...fromPractice, quizLike] : fromPractice
+  })
 
   return (
     <main>
