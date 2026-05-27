@@ -350,8 +350,14 @@ a:hover { text-decoration: underline; }
   color: #334155;
 }
 .practiceQuestion {
-  font-size: 38px;
-  line-height: 1.25;
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 900;
+  margin: 6px 0;
+}
+.practiceStageTitle {
+  font-size: 48px;
+  line-height: 1.2;
   font-weight: 900;
   margin: 6px 0;
 }
@@ -380,6 +386,12 @@ a:hover { text-decoration: underline; }
   color: #a16207;
   font-weight: 800;
   margin: 0 0 8px;
+}
+@media (max-width: 720px) {
+  .practiceQuestion,
+  .practiceStageTitle {
+    font-size: 28px;
+  }
 }
 .practiceChoices {
   display: grid;

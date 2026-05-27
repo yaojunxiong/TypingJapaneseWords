@@ -115,7 +115,7 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
   if (finished) {
     return (
       <section className="practiceWrap card">
-        <p className="practiceStage">{stageText}</p>
+        <p className="practiceStageTitle">{stageText}</p>
         <h2>{t(lang, '训练完成', 'Training Complete')}</h2>
         <p className="small">{t(lang, '第', 'Lesson ')}{lessonNo}{t(lang, '课', '')}</p>
         <p><b>{t(lang, '得分', 'Score')}：{score}/{total}</b></p>
@@ -134,13 +134,13 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
         <a className="practiceClose" href={`/lessons/${lessonNo}`}>✕</a>
       </div>
 
-      <h2>{stageText}</h2>
+      <h2 className="practiceStageTitle">{stageText}</h2>
       <p className="practiceQuestion">{current.question}</p>
       <p className="practiceHint">{current.hint}</p>
       <p className="practiceProgress">{idx + 1}/{total}</p>
 
       <div className="practiceCard">
-        <p className="practiceBadge">Lesson {lessonNo}</p>
+        <p className="practiceBadge">Lesson {lessonNo}-{stageText}</p>
         <h3>{t(lang, '选择答案', 'Choose an answer')}</h3>
         <div className="practiceChoices">
           {current.options.map((op, opIdx) => {
