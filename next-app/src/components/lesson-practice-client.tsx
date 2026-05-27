@@ -53,6 +53,8 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
   const [score, setScore] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
   const [finished, setFinished] = useState(false)
+  const [voiceOn, setVoiceOn] = useState(true)
+  const [sfxOn, setSfxOn] = useState(true)
 
   const total = questions.length
   const current = questions[idx]
@@ -65,7 +67,7 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
 
   function speakHint() {
     try {
-      if (!current?.hint || !('speechSynthesis' in window)) return
+      if (!voiceOn || !current?.hint || !('speechSynthesis' in window)) return
       window.speechSynthesis.cancel()
       const ut = new SpeechSynthesisUtterance(current.hint)
       ut.lang = 'ja-JP'
@@ -76,6 +78,10 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
 
   useEffect(() => {
     try {
+      const v = localStorage.getItem('minna.practice.voice.v1')
+      const s = localStorage.getItem('minna.practice.sfx.v1')
+      if (v === '0') setVoiceOn(false)
+      if (s === '0') setSfxOn(false)
       const stateRaw = localStorage.getItem('minna.mobile.learning.state.v1')
       const state = stateRaw ? JSON.parse(stateRaw) : {}
       state.lastLesson = Math.max(1, lessonNo)
@@ -96,7 +102,7 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
     if (picked !== null || finished) return
     setPicked(optionIndex)
     if (current.options[optionIndex]?.correct) {
-      playTone(900, 80, 'triangle')
+      if (sfxOn) playTone(900, 80, 'triangle')
       setScore((v) => {
         const next = v + 1
         try {
@@ -107,7 +113,7 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
         return next
       })
     } else {
-      playTone(280, 120, 'sawtooth')
+      if (sfxOn) playTone(280, 120, 'sawtooth')
       setHearts((v) => {
         const next = Math.max(0, v - 1)
         try {
@@ -121,7 +127,7 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
 
   function onNext() {
     if (picked === null) return
-    playTone(720, 80, 'square')
+    if (sfxOn) playTone(720, 80, 'square')
     if (idx >= total - 1 || hearts <= 0) {
       setFinished(true)
       return
@@ -170,6 +176,26 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
     <section className="practiceWrap card">
       <div style={{ display: 'flex', justifyContent: 'flex-start', marginBottom: 6 }}>
         <a className="practiceClose" href={`/lessons/${lessonNo}`}>✕</a>
+        <button
+          className="practiceSwitch"
+          onClick={() => {
+            const next = !voiceOn
+            setVoiceOn(next)
+            try { localStorage.setItem('minna.practice.voice.v1', next ? '1' : '0') } catch {}
+          }}
+        >
+          {voiceOn ? t(lang, '语音开', 'Voice On') : t(lang, '语音关', 'Voice Off')}
+        </button>
+        <button
+          className="practiceSwitch"
+          onClick={() => {
+            const next = !sfxOn
+            setSfxOn(next)
+            try { localStorage.setItem('minna.practice.sfx.v1', next ? '1' : '0') } catch {}
+          }}
+        >
+          {sfxOn ? t(lang, '音效开', 'SFX On') : t(lang, '音效关', 'SFX Off')}
+        </button>
       </div>
 
       <p className="practiceQuestion">{current.question}</p>
