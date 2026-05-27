@@ -1,0 +1,20 @@
+
+.jp-line .word {
+    padding: 2px 5px;
+    margin: 1px;
+    display: inline-block;
+}
+.word.active {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+}
+.zh-line {
+    color: #66ccff;
+    font-size: 90%;
+    padding-left: 10px;
+}
+.word-group {
+    margin-right: 6px;
+    display: inline-block;
+}

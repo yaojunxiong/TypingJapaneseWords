@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#2563eb">
+<link rel="manifest" href="./minna-pwa-manifest.json">
+<title>《みんなの日本語》统一课程入口 v20.3</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="./minna-auth.js?v=20.3"></script>
+<script src="./minna-role.js?v=20.3"></script>
+<script src="./minna-i18n-core.js?v=20.3"></script>
+<script src="./minna-i18n-ui.js?v=20.3"></script>
+<link rel="stylesheet" href="./minna-lesson-v16.css?v=20.3.4">
+</head>
+<body data-lesson-no="1" data-lesson-id="minna_lesson_01">
+<div id="app">
+  <main class="wrap">
+    <section class="panel loadingPanel">
+      <div class="badge2">Mobile Optimized + PWA</div>
+      <h1>Loading JSON...</h1>
+      <p class="small">正在加载课程内容，请稍候。</p>
+      <div class="skeletonCard"></div>
+      <div class="skeletonCard short"></div>
+      <div class="loaderDebug">
+        <div>Network: <span id="loaderStatus" class="small">Initializing...</span></div>
+        <div>PWA: <span id="pwaStatus" class="small">Checking...</span></div>
+      </div>
+    </section>
+  </main>
+</div>
+<script>
+(function(){
+  var n=Number(new URLSearchParams(location.search).get('n'))||1;
+  n=Math.max(1,Math.min(50,n));
+  document.body.dataset.lessonNo=String(n);
+  document.body.dataset.lessonId='minna_lesson_'+String(n).padStart(2,'0');
+
+  if('serviceWorker' in navigator){
+    navigator.serviceWorker.register('./minna-service-worker.js?v=20.3.4')
+      .then(function(){
+        var el=document.getElementById('pwaStatus');
+        if(el){
+          el.textContent='Offline cache ready';
+          el.className='small cloudOk';
+        }
+      })
+      .catch(function(err){
+        var el=document.getElementById('pwaStatus');
+        if(el){
+          el.textContent='SW failed: '+err.message;
+        }
+      });
+  }
+})();
+</script>
+<script src="./minna-lesson-loader-v20-3.js?v=20.3.4"></script>
+</body>
+</html>

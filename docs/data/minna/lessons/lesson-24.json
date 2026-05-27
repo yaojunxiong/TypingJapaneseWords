@@ -1,0 +1,761 @@
+{
+  "schema": "minna.lesson.v1",
+  "course": "minna",
+  "lessonNo": 24,
+  "lessonId": "minna_lesson_24",
+  "title": {
+    "zh": "第24课",
+    "en": "Lesson 24",
+    "ja": "第24課"
+  },
+  "subtitle": {
+    "zh": "授受与帮助",
+    "en": "Giving/receiving and favors",
+    "ja": "授受・恩恵表現"
+  },
+  "focus": {
+    "zh": "学习「くれます」「〜てあげます／くれます／もらいます」。",
+    "en": "Learn kuremasu and giving/receiving favors with te-forms.",
+    "ja": "「くれます」と「〜てあげます／くれます／もらいます」を学びます。"
+  },
+  "sections": [
+    {
+      "type": "vocab",
+      "id": "l24_vocab",
+      "title": {
+        "zh": "核心词汇",
+        "en": "Core Vocabulary",
+        "ja": "基本語彙"
+      },
+      "items": [
+        {
+          "id": "l24_v01",
+          "jp": "くれます",
+          "kana": "くれます",
+          "zh": "给我（方）",
+          "en": "give (to me/us)",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l24_v02",
+          "jp": "連れて行きます",
+          "kana": "つれていきます",
+          "zh": "带去",
+          "en": "take someone along",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l24_v03",
+          "jp": "連れて来ます",
+          "kana": "つれてきます",
+          "zh": "带来",
+          "en": "bring someone along",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l24_v04",
+          "jp": "送ります",
+          "kana": "おくります",
+          "zh": "送（人/物）",
+          "en": "send/escort",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l24_v05",
+          "jp": "案内します",
+          "kana": "あんないします",
+          "zh": "带路；介绍",
+          "en": "guide",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l24_v06",
+          "jp": "説明します",
+          "kana": "せつめいします",
+          "zh": "说明",
+          "en": "explain",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l24_v07",
+          "jp": "貸します",
+          "kana": "かします",
+          "zh": "借出",
+          "en": "lend",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l24_v08",
+          "jp": "教えます",
+          "kana": "おしえます",
+          "zh": "教",
+          "en": "teach",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l24_v09",
+          "jp": "手伝います",
+          "kana": "てつだいます",
+          "zh": "帮忙",
+          "en": "help",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l24_v10",
+          "jp": "準備",
+          "kana": "じゅんび",
+          "zh": "准备",
+          "en": "preparation",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l24_v11",
+          "jp": "引っ越し",
+          "kana": "ひっこし",
+          "zh": "搬家",
+          "en": "moving",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l24_v12",
+          "jp": "おじいさん",
+          "kana": "おじいさん",
+          "zh": "爷爷",
+          "en": "grandfather",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l24_v13",
+          "jp": "おばあさん",
+          "kana": "おばあさん",
+          "zh": "奶奶",
+          "en": "grandmother",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l24_v14",
+          "jp": "お菓子",
+          "kana": "おかし",
+          "zh": "点心",
+          "en": "sweets",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l24_v15",
+          "jp": "プレゼント",
+          "kana": "プレゼント",
+          "zh": "礼物",
+          "en": "present",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l24_v16",
+          "jp": "感謝",
+          "kana": "かんしゃ",
+          "zh": "感谢",
+          "en": "gratitude",
+          "tags": [
+            "noun"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "grammar",
+      "id": "l24_grammar",
+      "title": {
+        "zh": "核心语法",
+        "en": "Core Grammar",
+        "ja": "基本文法"
+      },
+      "items": [
+        {
+          "id": "l24_g01",
+          "pattern": "N1 は 私に N2を くれます",
+          "title": {
+            "zh": "给我（方）",
+            "en": "Giving to me/us"
+          },
+          "explanation": {
+            "zh": "主语给“我方”时用くれます。",
+            "en": "Use kuremasu when someone gives to me/us."
+          },
+          "examples": [
+            {
+              "jp": "友だちは私に本をくれました。",
+              "zh": "朋友给了我一本书。",
+              "en": "My friend gave me a book."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l24_g01_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“老师给了我礼物”是？",
+                "en": "How to say: The teacher gave me a present?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "先生は私にプレゼントをくれました。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "先生は私にプレゼントをあげました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生は私がプレゼントをくれました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生は私をプレゼントをくれました。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "主语给“我方”时用くれます。",
+                "en": "Use kuremasu when someone gives to me/us."
+              }
+            },
+            {
+              "id": "l24_g01_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "“妹妹给妈妈花”不该用？",
+                "en": "Which should not be used for giving to me/us?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "あげました"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "くれました"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "もらいました"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "くださいました"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "主语给“我方”时用くれます。",
+                "en": "Use kuremasu when someone gives to me/us."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l24_g02",
+          "pattern": "Vて あげます",
+          "title": {
+            "zh": "我为别人做",
+            "en": "Do a favor for others"
+          },
+          "explanation": {
+            "zh": "我或我方为别人做某事。",
+            "en": "I/we do something for someone else."
+          },
+          "examples": [
+            {
+              "jp": "私は友だちに日本語を教えてあげます。",
+              "zh": "我教朋友日语。",
+              "en": "I teach Japanese to my friend (as a favor)."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l24_g02_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“我帮奶奶拿行李”是？",
+                "en": "How to say: I carry luggage for grandma?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "私はおばあさんに荷物を持ってあげました。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "私はおばあさんに荷物を持ってくれました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "私はおばあさんが荷物を持ってあげました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "私はおばあさんを荷物を持ってあげました。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "我或我方为别人做某事。",
+                "en": "I/we do something for someone else."
+              }
+            },
+            {
+              "id": "l24_g02_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "“我带朋友去车站”是？",
+                "en": "How to say: I took my friend to the station (as a favor)?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "私は友だちを駅へ連れて行ってあげました。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "私は友だちを駅へ連れて行ってくれました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "私は友だちに駅へ連れて行ってもらいました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "私は友だちが駅へ連れて行ってあげました。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "我或我方为别人做某事。",
+                "en": "I/we do something for someone else."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l24_g03",
+          "pattern": "Vて くれます",
+          "title": {
+            "zh": "别人为我做",
+            "en": "Someone does a favor for me"
+          },
+          "explanation": {
+            "zh": "他人为我方做事。",
+            "en": "Someone does something for me/us."
+          },
+          "examples": [
+            {
+              "jp": "母は駅まで送ってくれました。",
+              "zh": "妈妈送我到车站。",
+              "en": "My mother took me to the station."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l24_g03_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“朋友帮我解释了”是？",
+                "en": "How to say: My friend explained it for me?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "友だちは説明してくれました。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "友だちは説明してあげました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "友だちは説明してもらいました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "友だちは説明をくれました。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "他人为我方做事。",
+                "en": "Someone does something for me/us."
+              }
+            },
+            {
+              "id": "l24_g03_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "“老师教了我”是？",
+                "en": "How to say: The teacher taught me (as favor)?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "先生が教えてくれました。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "先生が教えてあげました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生が教えてもらいました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生が教えるくれました。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "他人为我方做事。",
+                "en": "Someone does something for me/us."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l24_g04",
+          "pattern": "Vて もらいます",
+          "title": {
+            "zh": "我请别人做",
+            "en": "Receive a favor"
+          },
+          "explanation": {
+            "zh": "我方从他人那里获得帮助。",
+            "en": "I receive help/favor from someone."
+          },
+          "examples": [
+            {
+              "jp": "私は友だちに宿題を手伝ってもらいました。",
+              "zh": "我让朋友帮我作业。",
+              "en": "I had my friend help with homework."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l24_g04_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“我请老师看了报告”是？",
+                "en": "How to say: I had my teacher read my report?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "先生にレポートを見てもらいました。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "先生がレポートを見てくれました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生にレポートを見てあげました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生をレポートを見てもらいました。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "我方从他人那里获得帮助。",
+                "en": "I receive help/favor from someone."
+              }
+            },
+            {
+              "id": "l24_g04_p02",
+              "skill": "grammar",
+              "question": {
+                "zh": "“我让哥哥送我去机场”是？",
+                "en": "How to say: I had my brother take me to the airport?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "兄に空港まで送ってもらいました。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "兄が空港まで送ってあげました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "兄に空港まで送ってくれました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "兄を空港まで送ってもらいました。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "我方从他人那里获得帮助。",
+                "en": "I receive help/favor from someone."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examples",
+      "id": "l24_examples",
+      "title": {
+        "zh": "核心例句",
+        "en": "Core Examples",
+        "ja": "基本例文"
+      },
+      "items": [
+        {
+          "id": "l24_e01",
+          "jp": "田中さんは私にお菓子をくれました。",
+          "zh": "田中给了我点心。",
+          "en": "Mr. Tanaka gave me sweets."
+        },
+        {
+          "id": "l24_e02",
+          "jp": "私は弟に宿題を教えてあげました。",
+          "zh": "我教弟弟做作业。",
+          "en": "I helped my younger brother with homework."
+        },
+        {
+          "id": "l24_e03",
+          "jp": "友だちは駅まで迎えに来てくれました。",
+          "zh": "朋友来车站接我了。",
+          "en": "My friend came to pick me up at the station."
+        },
+        {
+          "id": "l24_e04",
+          "jp": "私は先生に作文を直してもらいました。",
+          "zh": "我请老师帮我改了作文。",
+          "en": "I had my teacher correct my essay."
+        },
+        {
+          "id": "l24_e05",
+          "jp": "引っ越しの準備を手伝ってくれて、ありがとう。",
+          "zh": "谢谢你帮我准备搬家。",
+          "en": "Thank you for helping with my moving preparation."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "l24_quiz",
+      "title": {
+        "zh": "综合测试",
+        "en": "Final Test",
+        "ja": "まとめテスト"
+      },
+      "items": [
+        {
+          "id": "l24_q01",
+          "question": {
+            "zh": "「くれます」的意思是？",
+            "en": "What does くれます mean?"
+          },
+          "options": [
+            {
+              "text": {
+                "zh": "给我（方）",
+                "en": "give (to me/us)"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "带去",
+                "en": "take someone along"
+              }
+            },
+            {
+              "text": {
+                "zh": "带来",
+                "en": "bring someone along"
+              }
+            },
+            {
+              "text": {
+                "zh": "送（人/物）",
+                "en": "send/escort"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "「くれます」表示「给我（方）」。",
+            "en": "くれます means give (to me/us)."
+          }
+        },
+        {
+          "id": "l24_q02",
+          "question": {
+            "zh": "哪一句最符合语法「N1 は 私に N2を くれます」？",
+            "en": "Which sentence best matches pattern \"N1 は 私に N2を くれます\"?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "友だちは私に本をくれました。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "私は友だちに日本語を教えてあげます。"
+              }
+            },
+            {
+              "text": {
+                "jp": "母は駅まで送ってくれました。"
+              }
+            },
+            {
+              "text": {
+                "jp": "私は友だちに宿題を手伝ってもらいました。"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "正确句型是「N1 は 私に N2を くれます」。",
+            "en": "The correct pattern is \"N1 は 私に N2を くれます\"."
+          }
+        },
+        {
+          "id": "l24_q03",
+          "question": {
+            "zh": "关于「Vて あげます」最恰当的是？",
+            "en": "Which usage best fits \"Vて あげます\"?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "私はおばあさんに荷物を持ってあげました。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "私はおばあさんに荷物を持ってくれました。"
+              }
+            },
+            {
+              "text": {
+                "jp": "私はおばあさんが荷物を持ってあげました。"
+              }
+            },
+            {
+              "text": {
+                "jp": "私はおばあさんを荷物を持ってあげました。"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "我或我方为别人做某事。",
+            "en": "I/we do something for someone else."
+          }
+        },
+        {
+          "id": "l24_q04",
+          "question": {
+            "zh": "与「田中给了我点心。」对应的日语句子是？",
+            "en": "Which Japanese sentence matches \"Mr. Tanaka gave me sweets.\"?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "田中さんは私にお菓子をくれました。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "私は弟に宿題を教えてあげました。"
+              }
+            },
+            {
+              "text": {
+                "jp": "友だちは駅まで迎えに来てくれました。"
+              }
+            },
+            {
+              "text": {
+                "jp": "私は先生に作文を直してもらいました。"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "对应句子是「田中さんは私にお菓子をくれました。」。",
+            "en": "The matching sentence is \"田中さんは私にお菓子をくれました。\"."
+          }
+        }
+      ]
+    }
+  ]
+}

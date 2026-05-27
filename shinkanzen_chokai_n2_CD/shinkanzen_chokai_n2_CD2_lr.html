@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>字幕同步播放器 LR版</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #111;
+            color: #fff;
+            padding: 20px;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .subtitles-container {
+            border: 1px solid #444;
+            background-color: #222;
+            border-radius: 10px;
+            padding: 10px;
+            overflow-y: auto;
+            max-height: 460px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+        }
+
+        .subtitle {
+            opacity: 0.72;
+            transition: all 0.25s ease;
+            text-align: center;
+            margin-bottom: 8px;
+            cursor: pointer;
+            padding: 6px 8px;
+            border-radius: 8px;
+        }
+
+        .subtitle:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .subtitle span {
+            display: block;
+        }
+
+        .subtitle .japanese {
+            color: #ffcc00;
+            line-height: 1.9;
+            word-break: break-word;
+        }
+
+        .subtitle .chinese {
+            color: #ffffff;
+            margin-top: 4px;
+        }
+
+        .active {
+            opacity: 1;
+            color: #00ffff;
+            background-color: rgba(255, 255, 255, 0.1);
+            font-weight: bold;
+            font-size: 1.14rem;
+            border-radius: 8px;
+            padding: 8px 10px;
+        }
+
+        .table-hover tbody tr:hover {
+            background-color: #333;
+        }
+
+        .table-active-current {
+            background-color: rgba(13, 202, 240, 0.28) !important;
+        }
+
+        .control-card,
+        .dictionary-card {
+            background-color: #1b1b1b;
+            border: 1px solid #333;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .control-card {
+            padding: 14px;
+            margin-bottom: 14px;
+        }
+
+        .control-badge {
+            font-size: 0.85rem;
+            color: #bbb;
+        }
+
+        .jp-token {
+            display: inline;
+            padding: 1px 2px;
+            border-radius: 4px;
+        }
+
+        .word-token {
+            cursor: pointer;
+            border-bottom: 1px dotted rgba(255, 204, 0, 0.55);
+        }
+
+        .word-token:hover,
+        .word-token:focus {
+            background-color: rgba(255, 204, 0, 0.18);
+            outline: none;
+        }
+
+        .dictionary-card {
+            padding: 14px;
+            position: sticky;
+            top: 16px;
+        }
+
+        .dictionary-word {
+            font-size: 1.5rem;
+            color: #ffcc00;
+            font-weight: 700;
+        }
+
+        .dictionary-context {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .small-note {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        .btn-outline-info,
+        .btn-outline-warning,
+        .btn-outline-light {
+            --bs-btn-hover-color: #000;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="text-center text-warning mb-4">📚 新完全听解 N2 字幕播放器 LR 练习版</h1>
+
+    <div class="container">
+        <div class="control-card">
+            <div class="row g-3 align-items-center">
+                <div class="col-lg-3 col-md-6">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="autoPauseToggle" checked>
+                        <label class="form-check-label" for="autoPauseToggle">一句后停断</label>
+                    </div>
+                    <div class="control-badge">播放到当前句结尾时自动暂停</div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <button id="resumeBtn" class="btn btn-info w-100">继续播放下一句</button>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <button id="replayBtn" class="btn btn-outline-light w-100">重播当前句</button>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <button id="toggleZhBtn" class="btn btn-outline-warning w-100">隐藏中文</button>
+                </div>
+                <div class="col-lg-2 col-md-12 text-md-end">
+                    <span id="statusText" class="control-badge">准备就绪</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-3 col-lg-4 mb-3">
+                <table class="table table-dark table-hover table-sm">
+                    <thead>
+                        <tr><th>听力编号</th></tr>
+                    </thead>
+                    <tbody id="playlist-table"></tbody>
+                </table>
+                <nav>
+                    <ul class="pagination justify-content-center" id="pagination"></ul>
+                </nav>
+            </div>
+
+            <div class="col-xl-6 col-lg-8 mb-3">
+                <audio controls id="video" class="w-100 mb-3">
+                    <source id="audioSource" src="" type="audio/mpeg" />
+                </audio>
+                <div id="subtitles" class="subtitles-container">
+                    <p class="text-center text-muted">字幕加载中...</p>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-12 mb-3">
+                <div class="dictionary-card">
+                    <div class="small-note mb-2">词典面板</div>
+                    <div id="dictionaryWord" class="dictionary-word">点击句子中的单词</div>
+                    <div id="dictionaryMeta" class="small-note mt-2">会显示当前点击词，并提供一键查词入口。</div>
+                    <div class="mt-3 d-grid gap-2">
+                        <a id="dictJotoba" class="btn btn-outline-info disabled" target="_blank" rel="noopener noreferrer">在 Jotoba 查词</a>
+                        <a id="dictJisho" class="btn btn-outline-warning disabled" target="_blank" rel="noopener noreferrer">在 Jisho 查词</a>
+                        <a id="dictWeblio" class="btn btn-outline-light disabled" target="_blank" rel="noopener noreferrer">在 Weblio 查词</a>
+                        <button id="copyWordBtn" class="btn btn-secondary" disabled>复制单词</button>
+                    </div>
+                    <div class="dictionary-context">
+                        <div class="small-note">句子上下文</div>
+                        <div id="dictionarySentenceJa" class="mt-2"></div>
+                        <div id="dictionarySentenceZh" class="mt-2 text-light"></div>
+                    </div>
+                    <div class="small-note mt-3">
+                        说明：这是纯静态版，点击单词后会直接把该词送到在线词典搜索页。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const fileList = Array.from({ length: 105 }, (_, i) => {
+            const num = String(i + 1).padStart(3, "0");
+            return `shinkanzen_chokai_n2_CD-A_${num}`;
+        });
+
+        let currentFile = "";
+        let currentSubtitles = [];
+        let lastActive = null;
+        let activeIndex = -1;
+        let currentPage = 1;
+        const pageSize = 10;
+        let autoPauseEnabled = true;
+        let showChinese = true;
+        let pausedSubtitleKey = null;
+        let ignorePauseUntil = -1;
+        let selectedWord = "";
+        const segmenter = typeof Intl !== "undefined" && Intl.Segmenter
+            ? new Intl.Segmenter("ja", { granularity: "word" })
+            : null;
+
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        function timeToSeconds(time) {
+            const [h, m, s] = time.split(",")[0].split(":");
+            const ms = time.split(",")[1];
+            return parseInt(h, 10) * 3600 + parseInt(m, 10) * 60 + parseFloat(s) + parseInt(ms, 10) / 1000;
+        }
+
+        function setStatus(text) {
+            document.getElementById("statusText").textContent = text;
+        }
+
+        function getAudio() {
+            return document.getElementById("video");
+        }
+
+        async function loadSubtitles(filename) {
+            try {
+                const res = await fetch(`${filename}.json`);
+                const data = await res.json();
+                return data.map((sub, index) => ({
+                    id: `${filename}-${index}`,
+                    start: timeToSeconds(sub.start),
+                    end: timeToSeconds(sub.end),
+                    jp: sub.jp,
+                    zh: sub.zh,
+                    element: null
+                }));
+            } catch (e) {
+                document.getElementById("subtitles").innerHTML = `<p class="text-danger">❌ 无法加载字幕：${filename}.json</p>`;
+                setStatus("字幕加载失败");
+                return [];
+            }
+        }
+
+        function escapeHtml(text) {
+            return (text || "")
+                .replaceAll("&", "&amp;")
+                .replaceAll("<", "&lt;")
+                .replaceAll(">", "&gt;")
+                .replaceAll('"', "&quot;")
+                .replaceAll("'", "&#39;");
+        }
+
+        function segmentJapaneseText(text) {
+            if (!segmenter) {
+                return [{ segment: text, isWordLike: true }];
+            }
+            return Array.from(segmenter.segment(text));
+        }
+
+        function createJapaneseTokenElements(line) {
+            const wrapper = document.createElement("span");
+            const segments = segmentJapaneseText(line.jp);
+
+            segments.forEach((part) => {
+                const span = document.createElement("span");
+                span.textContent = part.segment;
+                span.className = "jp-token";
+
+                if (part.isWordLike) {
+                    span.classList.add("word-token");
+                    span.tabIndex = 0;
+                    span.title = "点击查词";
+                    span.addEventListener("click", (event) => {
+                        event.stopPropagation();
+                        openDictionary(part.segment, line);
+                    });
+                    span.addEventListener("keydown", (event) => {
+                        if (event.key === "Enter" || event.key === " ") {
+                            event.preventDefault();
+                            openDictionary(part.segment, line);
+                        }
+                    });
+                }
+
+                wrapper.appendChild(span);
+            });
+
+            return wrapper;
+        }
+
+        function renderSubtitleLine(line, audio) {
+            const div = document.createElement("div");
+            div.className = "subtitle";
+
+            const jpSpan = document.createElement("span");
+            jpSpan.className = "japanese";
+            jpSpan.appendChild(createJapaneseTokenElements(line));
+
+            const zhSpan = document.createElement("span");
+            zhSpan.className = "chinese";
+            zhSpan.textContent = line.zh;
+            zhSpan.style.display = showChinese ? "block" : "none";
+
+            div.appendChild(jpSpan);
+            div.appendChild(zhSpan);
+            div.onclick = () => {
+                pausedSubtitleKey = null;
+                ignorePauseUntil = -1;
+                audio.currentTime = line.start;
+                audio.play();
+                setStatus(`跳到 ${formatSeconds(line.start)}`);
+            };
+            line.element = div;
+            line.zhElement = zhSpan;
+            return div;
+        }
+
+        async function setAudioAndSubtitles(filename) {
+            currentFile = filename;
+            const audio = getAudio();
+            document.getElementById("audioSource").src = `${filename}.mp3`;
+            audio.load();
+
+            renderTablePage(currentPage);
+
+            const subtitlesData = await loadSubtitles(filename);
+            const container = document.getElementById("subtitles");
+            container.innerHTML = "";
+            lastActive = null;
+            activeIndex = -1;
+            pausedSubtitleKey = null;
+            ignorePauseUntil = -1;
+            currentSubtitles = subtitlesData;
+
+            subtitlesData.forEach((line) => {
+                container.appendChild(renderSubtitleLine(line, audio));
+            });
+
+            if (!subtitlesData.length) return;
+
+            setStatus(`已载入 ${filename.replace("shinkanzen_chokai_n2_CD-A_", "听力 ")}`);
+            audio.play().catch(() => {
+                setStatus("已载入，等待播放");
+            });
+        }
+
+        function renderTablePage(page = 1) {
+            currentPage = page;
+            const start = (page - 1) * pageSize;
+            const end = start + pageSize;
+            const currentItems = fileList.slice(start, end);
+
+            const table = document.getElementById("playlist-table");
+            table.innerHTML = "";
+            currentItems.forEach((file) => {
+                const row = document.createElement("tr");
+                row.innerHTML = `<td>${file.replace("shinkanzen_chokai_n2_CD-A_", "听力 ")}</td>`;
+                row.style.cursor = "pointer";
+                row.onclick = () => setAudioAndSubtitles(file);
+                if (file === currentFile) {
+                    row.classList.add("table-active-current");
+                }
+                table.appendChild(row);
+            });
+
+            renderPagination(fileList.length, page);
+        }
+
+        function renderPagination(totalItems, currentPage) {
+            const pageCount = Math.ceil(totalItems / pageSize);
+            const pagination = document.getElementById("pagination");
+            pagination.innerHTML = "";
+
+            const createPageItem = (page, label = page, active = false, disabled = false) => {
+                const li = document.createElement("li");
+                li.className = `page-item${active ? " active" : ""}${disabled ? " disabled" : ""}`;
+                const a = document.createElement("a");
+                a.className = "page-link";
+                a.href = "#";
+                a.innerText = label;
+                a.onclick = (e) => {
+                    e.preventDefault();
+                    if (!disabled) renderTablePage(page);
+                };
+                li.appendChild(a);
+                return li;
+            };
+
+            pagination.appendChild(createPageItem(currentPage - 1, "«", false, currentPage === 1));
+            for (let i = 1; i <= pageCount; i++) {
+                pagination.appendChild(createPageItem(i, i, currentPage === i));
+            }
+            pagination.appendChild(createPageItem(currentPage + 1, "»", false, currentPage === pageCount));
+        }
+
+        function getActiveSubtitleIndex(time) {
+            return currentSubtitles.findIndex((line) => time >= line.start && time < line.end);
+        }
+
+        function setActiveSubtitle(index) {
+            if (index === activeIndex) return;
+            if (lastActive) lastActive.classList.remove("active");
+            activeIndex = index;
+            if (index >= 0 && currentSubtitles[index] && currentSubtitles[index].element) {
+                currentSubtitles[index].element.classList.add("active");
+                currentSubtitles[index].element.scrollIntoView({ behavior: "smooth", block: "center" });
+                lastActive = currentSubtitles[index].element;
+            } else {
+                lastActive = null;
+            }
+        }
+
+        function maybeAutoPause(time) {
+            if (!autoPauseEnabled || time < ignorePauseUntil) return;
+            for (let i = 0; i < currentSubtitles.length; i++) {
+                const line = currentSubtitles[i];
+                const pauseKey = `${currentFile}:${i}`;
+                if (time >= line.end - 0.05 && time < line.end + 0.2 && pausedSubtitleKey !== pauseKey) {
+                    pausedSubtitleKey = pauseKey;
+                    const audio = getAudio();
+                    audio.pause();
+                    setStatus(`已停在第 ${i + 1} 句结尾`);
+                    return;
+                }
+            }
+        }
+
+        function continuePlayback() {
+            const audio = getAudio();
+            const nextTime = Math.min((audio.duration || Number.MAX_VALUE) - 0.01, audio.currentTime + 0.08);
+            audio.currentTime = Math.max(0, nextTime);
+            ignorePauseUntil = audio.currentTime + 0.35;
+            audio.play();
+            setStatus("继续播放中");
+        }
+
+        function replayCurrentLine() {
+            if (activeIndex < 0 || !currentSubtitles[activeIndex]) return;
+            const line = currentSubtitles[activeIndex];
+            const audio = getAudio();
+            pausedSubtitleKey = null;
+            ignorePauseUntil = -1;
+            audio.currentTime = line.start;
+            audio.play();
+            setStatus(`重播第 ${activeIndex + 1} 句`);
+        }
+
+        function formatSeconds(totalSeconds) {
+            const minutes = Math.floor(totalSeconds / 60);
+            const seconds = Math.floor(totalSeconds % 60);
+            return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+        }
+
+        function openDictionary(word, line) {
+            selectedWord = word.trim();
+            document.getElementById("dictionaryWord").textContent = selectedWord || "点击句子中的单词";
+            document.getElementById("dictionaryMeta").textContent = selectedWord
+                ? `当前词：${selectedWord}`
+                : "会显示当前点击词，并提供一键查词入口。";
+            document.getElementById("dictionarySentenceJa").innerHTML = escapeHtml(line.jp).replaceAll(escapeHtml(selectedWord), `<mark>${escapeHtml(selectedWord)}</mark>`);
+            document.getElementById("dictionarySentenceZh").textContent = line.zh || "";
+
+            const links = [
+                ["dictJotoba", `https://jotoba.de/search/0/${encodeURIComponent(selectedWord)}`],
+                ["dictJisho", `https://jisho.org/search/${encodeURIComponent(selectedWord)}`],
+                ["dictWeblio", `https://www.weblio.jp/content/${encodeURIComponent(selectedWord)}`]
+            ];
+
+            links.forEach(([id, href]) => {
+                const el = document.getElementById(id);
+                if (selectedWord) {
+                    el.href = href;
+                    el.classList.remove("disabled");
+                } else {
+                    el.removeAttribute("href");
+                    el.classList.add("disabled");
+                }
+            });
+
+            document.getElementById("copyWordBtn").disabled = !selectedWord;
+            setStatus(`已选中：${selectedWord}`);
+        }
+
+        function toggleChinese() {
+            showChinese = !showChinese;
+            currentSubtitles.forEach((line) => {
+                if (line.zhElement) {
+                    line.zhElement.style.display = showChinese ? "block" : "none";
+                }
+            });
+            document.getElementById("toggleZhBtn").textContent = showChinese ? "隐藏中文" : "显示中文";
+            setStatus(showChinese ? "已显示中文" : "已隐藏中文");
+        }
+
+        function syncSubtitles() {
+            const audio = getAudio();
+
+            audio.ontimeupdate = () => {
+                const time = audio.currentTime;
+                const index = getActiveSubtitleIndex(time);
+                setActiveSubtitle(index);
+                maybeAutoPause(time);
+            };
+
+            audio.onended = () => {
+                document.getElementById("subtitles").scrollTo({ top: 0, behavior: "smooth" });
+                setActiveSubtitle(-1);
+                pausedSubtitleKey = null;
+                setStatus("播放结束");
+            };
+
+            audio.onplay = () => {
+                if (activeIndex >= 0) {
+                    setStatus(`正在播放第 ${activeIndex + 1} 句`);
+                }
+            };
+
+            audio.onseeked = () => {
+                if (audio.currentTime < ignorePauseUntil - 0.4) {
+                    pausedSubtitleKey = null;
+                }
+            };
+        }
+
+        function bindEvents() {
+            document.getElementById("autoPauseToggle").addEventListener("change", (event) => {
+                autoPauseEnabled = event.target.checked;
+                setStatus(autoPauseEnabled ? "一句后停断已开启" : "一句后停断已关闭");
+            });
+
+            document.getElementById("resumeBtn").addEventListener("click", continuePlayback);
+            document.getElementById("replayBtn").addEventListener("click", replayCurrentLine);
+            document.getElementById("toggleZhBtn").addEventListener("click", toggleChinese);
+            document.getElementById("copyWordBtn").addEventListener("click", async () => {
+                if (!selectedWord) return;
+                try {
+                    await navigator.clipboard.writeText(selectedWord);
+                    setStatus(`已复制：${selectedWord}`);
+                } catch {
+                    setStatus("复制失败，请手动复制");
+                }
+            });
+        }
+
+        function init() {
+            const para = getQueryParam("para") || fileList[0];
+            renderTablePage();
+            bindEvents();
+            syncSubtitles();
+            setAudioAndSubtitles(para);
+            if (!segmenter) {
+                setStatus("当前浏览器不支持智能分词，仍可播放字幕");
+            }
+        }
+
+        init();
+    </script>
+</body>
+</html>

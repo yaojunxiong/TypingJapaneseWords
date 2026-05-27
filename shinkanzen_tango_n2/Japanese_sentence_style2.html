@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>打字练习</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        #target {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #eee;
+            border: 2px solid #ccc;
+            min-height: 40px;
+            color: #333;
+        }
+
+        #wrapper {
+            position: relative;
+            border: 2px solid #ccc;
+            background: #fff;
+            padding: 10px;
+            min-height: 40px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-family: sans-serif;
+        }
+
+        #highlight,
+        #input {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            white-space: pre-wrap;
+            word-break: break-word;
+            font-size: 16px;
+            font-family: inherit;
+            line-height: 1.5;
+        }
+
+        #highlight {
+            color: transparent;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .highlight-char {
+            background-color: #ffcccc;
+            color: red;
+        }
+
+        #input {
+            background: transparent;
+            z-index: 1;
+            outline: none;
+        }
+
+            #input:empty:before {
+                content: attr(data-placeholder);
+                color: #aaa;
+            }
+
+        #type-feedback {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="target" contenteditable="false"></div>
+  
+    <div id="wrapper">
+        <div id="highlight"></div>
+        <div id="input" contenteditable="true" spellcheck="false" data-placeholder="请输入日语句子进行练习1.."></div>
+         
+    </div>
+
+        <div id="type-feedback"></div>
+
+        <script>
+            const params = new URLSearchParams(window.location.search);
+            const sentence = params.get("sentencePara") || "（未指定）";
+
+            const target = document.getElementById("target");
+            const inputField = document.getElementById("input");
+            const highlightField = document.getElementById("highlight");
+            const typeFeedback = document.getElementById("type-feedback");
+
+            target.textContent = sentence;
+
+            inputField.addEventListener("input", () => {
+                const inputText = inputField.textContent;
+                updateHighlight(inputText, sentence);
+                updateFeedback(inputText, sentence);
+            });
+
+            function updateHighlight(inputText, targetText) {
+                let result = "";
+                const maxLen = Math.max(inputText.length, targetText.length);
+                for (let i = 0; i < maxLen; i++) {
+                    const inputChar = inputText[i] || "";
+                    const targetChar = targetText[i] || "";
+
+                    if (inputChar === targetChar) {
+                        result += inputChar;
+                    } else {
+                        result += `<span class="highlight-char">${inputChar || " "}</span>`;
+                    }
+                }
+                highlightField.innerHTML = result;
+            }
+
+            function updateFeedback(inputText, targetText) {
+                if (inputText === targetText) {
+                    typeFeedback.textContent = "输入正确！";
+                    typeFeedback.style.color = "green";
+                    document.getElementById("wrapper").style.borderColor = "green";
+                } else {
+                    typeFeedback.textContent = "输入错误，请继续尝试！";
+                    typeFeedback.style.color = "red";
+                    document.getElementById("wrapper").style.borderColor = "red";
+                }
+            }
+        </script>
+</body>
+</html>

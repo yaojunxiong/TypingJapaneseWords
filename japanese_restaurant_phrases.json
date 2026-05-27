@@ -1,0 +1,746 @@
+{
+    "VocabularyExamples": [
+        {
+            "Word": "すみません",
+            "Reading": "すみません",
+            "Meaning": "不好意思",
+            "ExampleSentence": "すみません、メニューをください。",
+            "Translation": "不好意思，请给我菜单。"
+        },
+        {
+            "Word": "メニュー",
+            "Reading": "メニュー",
+            "Meaning": "菜单",
+            "ExampleSentence": "すみません、メニューをください。",
+            "Translation": "不好意思，请给我菜单。"
+        },
+        {
+            "Word": "ください",
+            "Reading": "ください",
+            "Meaning": "请",
+            "ExampleSentence": "すみません、メニューをください。",
+            "Translation": "不好意思，请给我菜单。"
+        },
+        {
+            "Word": "お飲み物",
+            "Reading": "おのみもの",
+            "Meaning": "饮料",
+            "ExampleSentence": "お飲み物は何にしますか？",
+            "Translation": "您想喝点什么？"
+        },
+        {
+            "Word": "何にしますか？",
+            "Reading": "なにに しますか？",
+            "Meaning": "想要什么？",
+            "ExampleSentence": "お飲み物は何にしますか？",
+            "Translation": "您想喝点什么？"
+        },
+        {
+            "Word": "お水",
+            "Reading": "おみず",
+            "Meaning": "水",
+            "ExampleSentence": "お水をお願いします。",
+            "Translation": "请给我水。"
+        },
+        {
+            "Word": "お願いします",
+            "Reading": "おねがいします",
+            "Meaning": "拜托了",
+            "ExampleSentence": "お水をお願いします。",
+            "Translation": "请给我水。"
+        },
+        {
+            "Word": "コーヒー",
+            "Reading": "コーヒー",
+            "Meaning": "咖啡",
+            "ExampleSentence": "コーヒーをください。",
+            "Translation": "请给我咖啡。"
+        },
+        {
+            "Word": "まだ",
+            "Reading": "まだ",
+            "Meaning": "还",
+            "ExampleSentence": "まだ決まっていません。",
+            "Translation": "还没有决定好。"
+        },
+        {
+            "Word": "決まっていません",
+            "Reading": "きまっていません",
+            "Meaning": "还没决定",
+            "ExampleSentence": "まだ決まっていません。",
+            "Translation": "还没有决定好。"
+        },
+        {
+            "Word": "席",
+            "Reading": "せき",
+            "Meaning": "座位",
+            "ExampleSentence": "すみません、席はありますか？",
+            "Translation": "不好意思，有位子吗？"
+        },
+        {
+            "Word": "お会計",
+            "Reading": "おかいけい",
+            "Meaning": "结账",
+            "ExampleSentence": "お会計をお願いします。",
+            "Translation": "请结账。"
+        },
+        {
+            "Word": "おかわり",
+            "Reading": "おかわり",
+            "Meaning": "续杯",
+            "ExampleSentence": "お水をおかわりください。",
+            "Translation": "请再给我一杯水。"
+        },
+        {
+            "Word": "予約",
+            "Reading": "よやく",
+            "Meaning": "预约",
+            "ExampleSentence": "予約をしています。",
+            "Translation": "我有预约。"
+        },
+        {
+            "Word": "何名様",
+            "Reading": "なんめいさま",
+            "Meaning": "几位",
+            "ExampleSentence": "何名様ですか？",
+            "Translation": "请问几位？"
+        },
+        {
+            "Word": "メニュー",
+            "Reading": "メニュー",
+            "Meaning": "菜单",
+            "ExampleSentence": "メニューを見せてください。",
+            "Translation": "请给我菜单。"
+        },
+        {
+            "Word": "おすすめ",
+            "Reading": "おすすめ",
+            "Meaning": "推荐",
+            "ExampleSentence": "おすすめは何ですか？",
+            "Translation": "有什么推荐的吗？"
+        },
+        {
+            "Word": "料理",
+            "Reading": "りょうり",
+            "Meaning": "料理",
+            "ExampleSentence": "料理を注文したいです。",
+            "Translation": "我想点菜。"
+        },
+        {
+            "Word": "注文",
+            "Reading": "ちゅうもん",
+            "Meaning": "点餐",
+            "ExampleSentence": "注文をお願いします。",
+            "Translation": "我要点餐。"
+        },
+        {
+            "Word": "ベジタリアン",
+            "Reading": "ベジタリアン",
+            "Meaning": "素食者",
+            "ExampleSentence": "私はベジタリアンです。",
+            "Translation": "我是素食者。"
+        },
+        {
+            "Word": "辛い",
+            "Reading": "からい",
+            "Meaning": "辣",
+            "ExampleSentence": "この料理は辛いですか？",
+            "Translation": "这道菜辣吗？"
+        },
+        {
+            "Word": "アレルギー",
+            "Reading": "アレルギー",
+            "Meaning": "过敏",
+            "ExampleSentence": "私はナッツアレルギーがあります。",
+            "Translation": "我对坚果过敏。"
+        },
+        {
+            "Word": "デザート",
+            "Reading": "デザート",
+            "Meaning": "甜点",
+            "ExampleSentence": "デザートはありますか？",
+            "Translation": "有甜点吗？"
+        },
+        {
+            "Word": "飲み物",
+            "Reading": "のみもの",
+            "Meaning": "饮料",
+            "ExampleSentence": "飲み物は何がありますか？",
+            "Translation": "有什么饮料？"
+        },
+        {
+            "Word": "氷なし",
+            "Reading": "こおりなし",
+            "Meaning": "不加冰",
+            "ExampleSentence": "氷なしでお願いします。",
+            "Translation": "请不要加冰。"
+        },
+        {
+            "Word": "おかわり",
+            "Reading": "おかわり",
+            "Meaning": "续杯",
+            "ExampleSentence": "お水のおかわりをください。",
+            "Translation": "请再给我一杯水。"
+        },
+        {
+            "Word": "割り勘",
+            "Reading": "わりかん",
+            "Meaning": "AA制",
+            "ExampleSentence": "割り勘にしましょう。",
+            "Translation": "我们AA吧。"
+        },
+        {
+            "Word": "クレジットカード",
+            "Reading": "クレジットカード",
+            "Meaning": "信用卡",
+            "ExampleSentence": "クレジットカードは使えますか？",
+            "Translation": "可以使用信用卡吗？"
+        },
+        {
+            "Word": "領収書",
+            "Reading": "りょうしゅうしょ",
+            "Meaning": "收据",
+            "ExampleSentence": "領収書をください。",
+            "Translation": "请给我收据。"
+        },
+        {
+            "Word": "美味しい",
+            "Reading": "おいしい",
+            "Meaning": "好吃",
+            "ExampleSentence": "この料理はとても美味しいです。",
+            "Translation": "这道菜非常好吃。"
+        },
+        {
+            "Word": "まずい",
+            "Reading": "まずい",
+            "Meaning": "难吃",
+            "ExampleSentence": "この料理はちょっとまずいですね。",
+            "Translation": "这道菜有点难吃呢。"
+        },
+        {
+            "Word": "量",
+            "Reading": "りょう",
+            "Meaning": "分量",
+            "ExampleSentence": "量が多いですね。",
+            "Translation": "分量很大呢。"
+        },
+        {
+            "Word": "塩辛い",
+            "Reading": "しおからい",
+            "Meaning": "咸",
+            "ExampleSentence": "このスープは塩辛いです。",
+            "Translation": "这碗汤有点咸。"
+        },
+        {
+            "Word": "甘い",
+            "Reading": "あまい",
+            "Meaning": "甜",
+            "ExampleSentence": "このデザートは甘いですね。",
+            "Translation": "这个甜点很甜呢。"
+        },
+        {
+            "Word": "お皿",
+            "Reading": "おさら",
+            "Meaning": "盘子",
+            "ExampleSentence": "お皿をもう一枚ください。",
+            "Translation": "请再给我一个盘子。"
+        },
+        {
+            "Word": "茶碗",
+            "Reading": "ちゃわん",
+            "Meaning": "饭碗",
+            "ExampleSentence": "茶碗をください。",
+            "Translation": "请给我一个饭碗。"
+        },
+        {
+            "Word": "箸",
+            "Reading": "はし",
+            "Meaning": "筷子",
+            "ExampleSentence": "箸をお願いします。",
+            "Translation": "请给我筷子。"
+        },
+        {
+            "Word": "スプーン",
+            "Reading": "スプーン",
+            "Meaning": "勺子",
+            "ExampleSentence": "スプーンをください。",
+            "Translation": "请给我勺子。"
+        },
+        {
+            "Word": "フォーク",
+            "Reading": "フォーク",
+            "Meaning": "叉子",
+            "ExampleSentence": "フォークをお願いします。",
+            "Translation": "请给我叉子。"
+        },
+        {
+            "Word": "ナイフ",
+            "Reading": "ナイフ",
+            "Meaning": "刀",
+            "ExampleSentence": "ナイフを使ってもいいですか？",
+            "Translation": "可以使用刀具吗？"
+        },
+        {
+            "Word": "コップ",
+            "Reading": "コップ",
+            "Meaning": "玻璃杯",
+            "ExampleSentence": "コップを一つください。",
+            "Translation": "请给我一个玻璃杯。"
+        },
+        {
+            "Word": "グラス",
+            "Reading": "グラス",
+            "Meaning": "玻璃杯（酒杯）",
+            "ExampleSentence": "ワイングラスをお願いします。",
+            "Translation": "请给我一个葡萄酒杯。"
+        },
+        {
+            "Word": "マグカップ",
+            "Reading": "マグカップ",
+            "Meaning": "马克杯",
+            "ExampleSentence": "マグカップにお茶を入れてください。",
+            "Translation": "请用马克杯装茶。"
+        },
+        {
+            "Word": "ティーカップ",
+            "Reading": "ティーカップ",
+            "Meaning": "茶杯",
+            "ExampleSentence": "ティーカップを持ってきてください。",
+            "Translation": "请拿茶杯来。"
+        },
+        {
+            "Word": "ワイングラス",
+            "Reading": "ワイングラス",
+            "Meaning": "葡萄酒杯",
+            "ExampleSentence": "ワイングラスをください。",
+            "Translation": "请给我一个葡萄酒杯。"
+        },
+        {
+            "Word": "おしぼり",
+            "Reading": "おしぼり",
+            "Meaning": "湿毛巾",
+            "ExampleSentence": "おしぼりをください。",
+            "Translation": "请给我湿毛巾。"
+        },
+        {
+            "Word": "ペーパーナプキン",
+            "Reading": "ペーパーナプキン",
+            "Meaning": "纸巾",
+            "ExampleSentence": "ペーパーナプキンをください。",
+            "Translation": "请给我纸巾。"
+        },
+        {
+            "Word": "ナプキン",
+            "Reading": "ナプキン",
+            "Meaning": "餐巾",
+            "ExampleSentence": "ナプキンをお願いします。",
+            "Translation": "请给我餐巾。"
+        },
+        {
+            "Word": "取り皿",
+            "Reading": "とりざら",
+            "Meaning": "分食盘",
+            "ExampleSentence": "取り皿をお願いします。",
+            "Translation": "请给我一个分食盘。"
+        },
+        {
+            "Word": "しょうゆ皿",
+            "Reading": "しょうゆざら",
+            "Meaning": "酱油碟",
+            "ExampleSentence": "しょうゆ皿をください。",
+            "Translation": "请给我一个酱油碟。"
+        },
+        {
+            "Word": "ストロー",
+            "Reading": "ストロー",
+            "Meaning": "吸管",
+            "ExampleSentence": "ストローをください。",
+            "Translation": "请给我吸管。"
+        },
+        {
+            "Word": "トレイ",
+            "Reading": "トレイ",
+            "Meaning": "托盘",
+            "ExampleSentence": "トレイを持ってきてください。",
+            "Translation": "请拿托盘过来。"
+        },
+        {
+            "Word": "氷",
+            "Reading": "こおり",
+            "Meaning": "冰块",
+            "ExampleSentence": "氷を入れてください。",
+            "Translation": "请加冰块。"
+        },
+        {
+            "Word": "塩",
+            "Reading": "しお",
+            "Meaning": "盐",
+            "ExampleSentence": "塩を取ってください。",
+            "Translation": "请把盐递给我。"
+        },
+        {
+            "Word": "砂糖",
+            "Reading": "さとう",
+            "Meaning": "糖",
+            "ExampleSentence": "砂糖を入れてもいいですか？",
+            "Translation": "可以加糖吗？"
+        },
+        {
+            "Word": "醤油",
+            "Reading": "しょうゆ",
+            "Meaning": "酱油",
+            "ExampleSentence": "醤油をください。",
+            "Translation": "请给我酱油。"
+        },
+        {
+            "Word": "味噌",
+            "Reading": "みそ",
+            "Meaning": "味噌",
+            "ExampleSentence": "味噌汁はありますか？",
+            "Translation": "有味噌汤吗？"
+        },
+        {
+            "Word": "酢",
+            "Reading": "す",
+            "Meaning": "醋",
+            "ExampleSentence": "酢をお願いします。",
+            "Translation": "请给我醋。"
+        },
+        {
+            "Word": "マヨネーズ",
+            "Reading": "マヨネーズ",
+            "Meaning": "蛋黄酱",
+            "ExampleSentence": "マヨネーズをつけてもいいですか？",
+            "Translation": "可以加蛋黄酱吗？"
+        },
+        {
+            "Word": "ケチャップ",
+            "Reading": "ケチャップ",
+            "Meaning": "番茄酱",
+            "ExampleSentence": "フライドポテトにケチャップをください。",
+            "Translation": "请给炸薯条加点番茄酱。"
+        },
+        {
+            "Word": "からし",
+            "Reading": "からし",
+            "Meaning": "芥末",
+            "ExampleSentence": "からしを入れてもいいですか？",
+            "Translation": "可以加芥末吗？"
+        },
+        {
+            "Word": "わさび",
+            "Reading": "わさび",
+            "Meaning": "山葵",
+            "ExampleSentence": "寿司にわさびを入れますか？",
+            "Translation": "寿司里要加山葵吗？"
+        },
+        {
+            "Word": "胡椒",
+            "Reading": "こしょう",
+            "Meaning": "胡椒",
+            "ExampleSentence": "胡椒を少し加えてください。",
+            "Translation": "请加一点胡椒。"
+        },
+        {
+            "Word": "オリーブオイル",
+            "Reading": "オリーブオイル",
+            "Meaning": "橄榄油",
+            "ExampleSentence": "オリーブオイルを使っていますか？",
+            "Translation": "有使用橄榄油吗？"
+        },
+        {
+            "Word": "ソース",
+            "Reading": "ソース",
+            "Meaning": "酱料",
+            "ExampleSentence": "このソースは何ですか？",
+            "Translation": "这个酱料是什么？"
+        },
+        {
+            "Word": "バター",
+            "Reading": "バター",
+            "Meaning": "黄油",
+            "ExampleSentence": "バターを塗ってもいいですか？",
+            "Translation": "可以抹黄油吗？"
+        },
+        {
+            "Word": "水",
+            "Reading": "みず",
+            "Meaning": "水",
+            "ExampleSentence": "水をください。",
+            "Translation": "请给我水。"
+        },
+        {
+            "Word": "お湯",
+            "Reading": "おゆ",
+            "Meaning": "热水",
+            "ExampleSentence": "お湯をお願いします。",
+            "Translation": "请给我热水。"
+        },
+        {
+            "Word": "お茶",
+            "Reading": "おちゃ",
+            "Meaning": "茶",
+            "ExampleSentence": "お茶を一杯ください。",
+            "Translation": "请给我一杯茶。"
+        },
+        {
+            "Word": "緑茶",
+            "Reading": "りょくちゃ",
+            "Meaning": "绿茶",
+            "ExampleSentence": "緑茶はありますか？",
+            "Translation": "有绿茶吗？"
+        },
+        {
+            "Word": "紅茶",
+            "Reading": "こうちゃ",
+            "Meaning": "红茶",
+            "ExampleSentence": "紅茶を飲みたいです。",
+            "Translation": "我想喝红茶。"
+        },
+        {
+            "Word": "コーヒー",
+            "Reading": "コーヒー",
+            "Meaning": "咖啡",
+            "ExampleSentence": "コーヒーはブラックでお願いします。",
+            "Translation": "请给我黑咖啡。"
+        },
+        {
+            "Word": "ビール",
+            "Reading": "ビール",
+            "Meaning": "啤酒",
+            "ExampleSentence": "ビールを一杯ください。",
+            "Translation": "请给我一杯啤酒。"
+        },
+        {
+            "Word": "ワイン",
+            "Reading": "ワイン",
+            "Meaning": "葡萄酒",
+            "ExampleSentence": "赤ワインと白ワイン、どちらにしますか？",
+            "Translation": "红酒和白酒，您要哪种？"
+        },
+        {
+            "Word": "日本酒",
+            "Reading": "にほんしゅ",
+            "Meaning": "日本酒",
+            "ExampleSentence": "日本酒を飲んでみたいです。",
+            "Translation": "我想尝试日本酒。"
+        },
+        {
+            "Word": "焼酎",
+            "Reading": "しょうちゅう",
+            "Meaning": "烧酒",
+            "ExampleSentence": "焼酎はありますか？",
+            "Translation": "有烧酒吗？"
+        },
+        {
+            "Word": "ソフトドリンク",
+            "Reading": "ソフトドリンク",
+            "Meaning": "软饮料",
+            "ExampleSentence": "ソフトドリンクのメニューはありますか？",
+            "Translation": "有软饮料的菜单吗？"
+        },
+        {
+            "Word": "ジュース",
+            "Reading": "ジュース",
+            "Meaning": "果汁",
+            "ExampleSentence": "オレンジジュースをください。",
+            "Translation": "请给我橙汁。"
+        },
+        {
+            "Word": "炭酸飲料",
+            "Reading": "たんさんいんりょう",
+            "Meaning": "碳酸饮料",
+            "ExampleSentence": "炭酸飲料はありますか？",
+            "Translation": "有碳酸饮料吗？"
+        },
+        {
+            "Word": "氷",
+            "Reading": "こおり",
+            "Meaning": "冰块",
+            "ExampleSentence": "氷を入れてください。",
+            "Translation": "请加冰块。"
+        },
+        {
+            "Word": "レモン",
+            "Reading": "レモン",
+            "Meaning": "柠檬",
+            "ExampleSentence": "レモンを添えてください。",
+            "Translation": "请加一点柠檬。"
+        },
+        {
+            "Word": "ラーメン",
+            "Reading": "ラーメン",
+            "Meaning": "拉面",
+            "ExampleSentence": "ラーメンを一杯ください。",
+            "Translation": "请给我一碗拉面。"
+        },
+        {
+            "Word": "寿司",
+            "Reading": "すし",
+            "Meaning": "寿司",
+            "ExampleSentence": "寿司のセットをお願いします。",
+            "Translation": "请给我一份寿司套餐。"
+        },
+        {
+            "Word": "天ぷら",
+            "Reading": "てんぷら",
+            "Meaning": "天妇罗",
+            "ExampleSentence": "天ぷらの盛り合わせをください。",
+            "Translation": "请给我一份天妇罗拼盘。"
+        },
+        {
+            "Word": "うどん",
+            "Reading": "うどん",
+            "Meaning": "乌冬面",
+            "ExampleSentence": "温かいうどんをお願いします。",
+            "Translation": "请给我一碗热乌冬面。"
+        },
+        {
+            "Word": "そば",
+            "Reading": "そば",
+            "Meaning": "荞麦面",
+            "ExampleSentence": "ざるそばを一つください。",
+            "Translation": "请给我一份冷荞麦面。"
+        },
+        {
+            "Word": "カレーライス",
+            "Reading": "カレーライス",
+            "Meaning": "咖喱饭",
+            "ExampleSentence": "カレーライスを大盛りでください。",
+            "Translation": "请给我一份大份咖喱饭。"
+        },
+        {
+            "Word": "オムライス",
+            "Reading": "オムライス",
+            "Meaning": "蛋包饭",
+            "ExampleSentence": "オムライスを注文したいです。",
+            "Translation": "我想点蛋包饭。"
+        },
+        {
+            "Word": "唐揚げ",
+            "Reading": "からあげ",
+            "Meaning": "日式炸鸡",
+            "ExampleSentence": "唐揚げをお願いします。",
+            "Translation": "请给我日式炸鸡。"
+        },
+        {
+            "Word": "刺身",
+            "Reading": "さしみ",
+            "Meaning": "生鱼片",
+            "ExampleSentence": "刺身の盛り合わせはありますか？",
+            "Translation": "有生鱼片拼盘吗？"
+        },
+        {
+            "Word": "焼き魚",
+            "Reading": "やきざかな",
+            "Meaning": "烤鱼",
+            "ExampleSentence": "焼き魚をおすすめしてください。",
+            "Translation": "请推荐一款烤鱼。"
+        },
+        {
+            "Word": "ステーキ",
+            "Reading": "ステーキ",
+            "Meaning": "牛排",
+            "ExampleSentence": "ステーキをミディアムでお願いします。",
+            "Translation": "请给我一份五分熟的牛排。"
+        },
+        {
+            "Word": "ハンバーグ",
+            "Reading": "ハンバーグ",
+            "Meaning": "汉堡肉",
+            "ExampleSentence": "ハンバーグセットをください。",
+            "Translation": "请给我一份汉堡肉套餐。"
+        },
+        {
+            "Word": "サラダ",
+            "Reading": "サラダ",
+            "Meaning": "沙拉",
+            "ExampleSentence": "シーザーサラダをください。",
+            "Translation": "请给我一份凯撒沙拉。"
+        },
+        {
+            "Word": "味噌汁",
+            "Reading": "みそしる",
+            "Meaning": "味噌汤",
+            "ExampleSentence": "味噌汁はついていますか？",
+            "Translation": "味噌汤包含在内吗？"
+        },
+        {
+            "Word": "餃子",
+            "Reading": "ぎょうざ",
+            "Meaning": "饺子",
+            "ExampleSentence": "餃子を6個お願いします。",
+            "Translation": "请给我六个饺子。"
+        },
+        {
+            "Word": "チャーハン",
+            "Reading": "チャーハン",
+            "Meaning": "炒饭",
+            "ExampleSentence": "チャーハンは何がありますか？",
+            "Translation": "有什么炒饭？"
+        },
+        {
+            "Word": "おにぎり",
+            "Reading": "おにぎり",
+            "Meaning": "饭团",
+            "ExampleSentence": "鮭のおにぎりをください。",
+            "Translation": "请给我一个三文鱼饭团。"
+        },
+        {
+            "Word": "お好み焼き",
+            "Reading": "おこのみやき",
+            "Meaning": "大阪烧",
+            "ExampleSentence": "お好み焼きを食べたいです。",
+            "Translation": "我想吃大阪烧。"
+        },
+        {
+            "Word": "たこ焼き",
+            "Reading": "たこやき",
+            "Meaning": "章鱼烧",
+            "ExampleSentence": "たこ焼きを一人前ください。",
+            "Translation": "请给我一份章鱼烧。"
+        },
+        {
+            "Word": "焼き鳥",
+            "Reading": "やきとり",
+            "Meaning": "日式串烧",
+            "ExampleSentence": "焼き鳥の盛り合わせをください。",
+            "Translation": "请给我一份日式串烧拼盘。"
+        },
+        {
+            "Word": "コロッケ",
+            "Reading": "コロッケ",
+            "Meaning": "炸可乐饼",
+            "ExampleSentence": "コロッケを2つください。",
+            "Translation": "请给我两个可乐饼。"
+        },
+        {
+            "Word": "茶碗蒸し",
+            "Reading": "ちゃわんむし",
+            "Meaning": "茶碗蒸",
+            "ExampleSentence": "茶碗蒸しはありますか？",
+            "Translation": "有茶碗蒸吗？"
+        },
+        {
+            "Word": "デザート",
+            "Reading": "デザート",
+            "Meaning": "甜点",
+            "ExampleSentence": "デザートのメニューを見せてください。",
+            "Translation": "请给我看甜点菜单。"
+        },
+        {
+            "Word": "アイスクリーム",
+            "Reading": "アイスクリーム",
+            "Meaning": "冰淇淋",
+            "ExampleSentence": "抹茶のアイスクリームをください。",
+            "Translation": "请给我一份抹茶冰淇淋。"
+        },
+        {
+            "Word": "ケーキ",
+            "Reading": "ケーキ",
+            "Meaning": "蛋糕",
+            "ExampleSentence": "チーズケーキをお願いします。",
+            "Translation": "请给我一块芝士蛋糕。"
+        }
+    ]
+}

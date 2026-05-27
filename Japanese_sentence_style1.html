@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>日语词卡连连看</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        .word-card {
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 12px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            user-select: none;
+            transition: all 0.3s ease;
+            margin-bottom: 8px;
+        }
+
+            .word-card.selected {
+                background-color: rgba(0, 123, 255, 0.2);
+                border-color: #007bff;
+            }
+
+            .word-card.matched {
+                opacity: 0;
+                pointer-events: none;
+                transform: translateY(-30px);
+                transition: opacity 0.5s ease, transform 0.5s ease;
+            }
+
+            .word-card.shake {
+                animation: shake 0.3s;
+            }
+
+        @keyframes shake {
+            0% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-5px);
+            }
+
+            50% {
+                transform: translateX(5px);
+            }
+
+            75% {
+                transform: translateX(-5px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .game-scroll {
+                flex-wrap: nowrap !important;
+                overflow-x: auto;
+            }
+
+            .game-column {
+                min-width: 140px;
+                flex: 0 0 auto;
+            }
+        }
+    </style>
+</head>
+<body class="bg-light text-dark">
+
+    <div class="container py-4">
+        <h2 class="mb-4 text-primary">📘 日语词卡练习</h2>
+
+        <!-- 词卡展示 -->
+        <div class="d-flex flex-wrap gap-2 mb-3" id="wordCards"></div>
+
+        <button class="btn btn-primary mb-4" onclick="generateMatchingGame()">🎮 开始连连看游戏</button>
+
+        <!-- 游戏区域 -->
+        <div class="game-area d-none row game-scroll justify-content-between" id="gameArea">
+            <div class="col-6 game-column d-flex flex-column align-items-stretch" id="jpColumn"></div>
+            <div class="col-6 game-column d-flex flex-column align-items-stretch" id="cnColumn"></div>
+        </div>
+
+        <div id="feedback" class="alert alert-danger mt-3 d-none"></div>
+        <div id="success" class="alert alert-success mt-3 fw-bold fs-5 d-none"></div>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const sentence = params.get("sentencePara");
+        let globalWordData = [];
+
+        fetch("Japanese_sentence_word_cards.json")
+            .then(response => response.json())
+            .then(data => {
+                const wordData = data[sentence];
+                if (!wordData) {
+                    document.getElementById("wordCards").innerHTML =
+                        `<div class="alert alert-warning">❌ 找不到该句子的词卡数据。<br><code>${sentence}</code></div>`;
+                    return;
+                }
+
+                globalWordData = wordData;
+                const cardContainer = document.getElementById("wordCards");
+
+                wordData.forEach(w => {
+                    const div = document.createElement("div");
+                    div.className = "word-card";
+                    div.innerHTML = `<strong>${w.jp}</strong><br><small>${w.reading}</small><br><em>${w.meaning}</em>`;
+                    cardContainer.appendChild(div);
+                });
+            });
+
+        function generateMatchingGame() {
+            const wordData = globalWordData;
+            if (!wordData || wordData.length === 0) return;
+
+            const jpCol = document.getElementById("jpColumn");
+            const cnCol = document.getElementById("cnColumn");
+            const feedback = document.getElementById("feedback");
+            const success = document.getElementById("success");
+
+            jpCol.innerHTML = '';
+            cnCol.innerHTML = '';
+            feedback.classList.add("d-none");
+            success.classList.add("d-none");
+
+            const gameArea = document.getElementById("gameArea");
+            gameArea.classList.remove("d-none");
+            gameArea.scrollIntoView({ behavior: "smooth" });
+
+            let selectedJP = null;
+            let selectedCN = null;
+            let matchedCount = 0;
+
+            const jpCards = wordData.map((w, i) => ({ text: w.jp, matchId: i }));
+            const cnCards = wordData.map((w, i) => ({ text: w.meaning, matchId: i }));
+
+            jpCards.sort(() => Math.random() - 0.5);
+            cnCards.sort(() => Math.random() - 0.5);
+
+            function createCard(text, matchId, type) {
+                const div = document.createElement("div");
+                div.className = "word-card";
+                div.textContent = text;
+                div.dataset.match = matchId;
+                div.dataset.type = type;
+
+                div.addEventListener("click", () => {
+                    if (div.classList.contains("matched")) return;
+
+                    if (type === "jp") {
+                        if (selectedJP) selectedJP.classList.remove("selected");
+                        selectedJP = div;
+                        div.classList.add("selected");
+                    } else {
+                        if (selectedCN) selectedCN.classList.remove("selected");
+                        selectedCN = div;
+                        div.classList.add("selected");
+                    }
+
+                    if (selectedJP && selectedCN) {
+                        if (selectedJP.dataset.match === selectedCN.dataset.match) {
+                            const jpRef = selectedJP;
+                            const cnRef = selectedCN;
+                            selectedJP = null;
+                            selectedCN = null;
+                            matchedCount++;
+
+                            feedback.classList.add("d-none");
+
+                            setTimeout(() => {
+                                jpRef.classList.add("matched");
+                                cnRef.classList.add("matched");
+
+                                setTimeout(() => {
+                                    jpRef.remove();
+                                    cnRef.remove();
+
+                                    if (matchedCount === wordData.length) {
+                                        success.classList.remove("d-none");
+                                        success.textContent = "🎉 よくできました！つぎもがんばってね！";
+                                    }
+                                }, 500);
+                            }, 300);
+                        } else {
+                            feedback.classList.remove("d-none");
+                            feedback.textContent = "❌ 配对错误，请再试一次！";
+                            selectedJP.classList.add("shake");
+                            selectedCN.classList.add("shake");
+
+                            setTimeout(() => {
+                                selectedJP.classList.remove("selected", "shake");
+                                selectedCN.classList.remove("selected", "shake");
+                                selectedJP = null;
+                                selectedCN = null;
+                            }, 500);
+                        }
+                    }
+                });
+
+                return div;
+            }
+
+            jpCards.forEach(c => jpCol.appendChild(createCard(c.text, c.matchId, "jp")));
+            cnCards.forEach(c => cnCol.appendChild(createCard(c.text, c.matchId, "cn")));
+        }
+    </script>
+</body>
+</html>

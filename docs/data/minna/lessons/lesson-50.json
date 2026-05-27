@@ -1,0 +1,828 @@
+{
+  "id": "minna-50",
+  "version": "20.3",
+  "status": "Mastery migrated",
+  "lesson": 50,
+  "title": {
+    "zh": "第50课",
+    "en": "Lesson 50",
+    "ja": "第50課"
+  },
+  "topic": {
+    "zh": "谦让语",
+    "en": "Humble Language"
+  },
+  "summary": {
+    "zh": "学习谦让语的基本形式 おVします / ごNします，以及常用特殊谦让动词。",
+    "en": "Learn humble forms おVします / ごNします and common special humble verbs."
+  },
+  "sections": [
+    {
+      "id": "l50-vocab",
+      "type": "vocab",
+      "title": {
+        "zh": "词汇 Vocabulary",
+        "en": "Vocabulary"
+      },
+      "items": [
+        {
+          "id": "l50-vocab-01",
+          "jp": "参ります",
+          "kana": "まいります",
+          "zh": "去、来",
+          "en": "go, come humbly",
+          "example": "明日3時に参ります。"
+        },
+        {
+          "id": "l50-vocab-02",
+          "jp": "おります",
+          "kana": "おります",
+          "zh": "在",
+          "en": "be humbly",
+          "example": "私は受付におります。"
+        },
+        {
+          "id": "l50-vocab-03",
+          "jp": "申します",
+          "kana": "もうします",
+          "zh": "叫、说",
+          "en": "say, be called humbly",
+          "example": "山田と申します。"
+        },
+        {
+          "id": "l50-vocab-04",
+          "jp": "いたします",
+          "kana": "いたします",
+          "zh": "做",
+          "en": "do humbly",
+          "example": "私が準備いたします。"
+        },
+        {
+          "id": "l50-vocab-05",
+          "jp": "拝見します",
+          "kana": "はいけんします",
+          "zh": "看、拜读",
+          "en": "look at humbly",
+          "example": "資料を拝見しました。"
+        },
+        {
+          "id": "l50-vocab-06",
+          "jp": "存じます",
+          "kana": "ぞんじます",
+          "zh": "知道、认为",
+          "en": "know, think humbly",
+          "example": "その件は存じております。"
+        },
+        {
+          "id": "l50-vocab-07",
+          "jp": "伺います",
+          "kana": "うかがいます",
+          "zh": "拜访、请教、听",
+          "en": "visit, ask, hear humbly",
+          "example": "明日先生のお宅へ伺います。"
+        },
+        {
+          "id": "l50-vocab-08",
+          "jp": "いただきます",
+          "kana": "いただきます",
+          "zh": "领受、吃喝",
+          "en": "receive, eat/drink humbly",
+          "example": "お茶をいただきます。"
+        },
+        {
+          "id": "l50-vocab-09",
+          "jp": "ございます",
+          "kana": "ございます",
+          "zh": "有、是",
+          "en": "be, have politely",
+          "example": "資料はこちらにございます。"
+        },
+        {
+          "id": "l50-vocab-10",
+          "jp": "案内します",
+          "kana": "あんないします",
+          "zh": "带路、介绍",
+          "en": "guide",
+          "example": "会場をご案内します。"
+        }
+      ]
+    },
+    {
+      "id": "l50-grammar",
+      "type": "grammar",
+      "title": {
+        "zh": "语法 Grammar",
+        "en": "Grammar"
+      },
+      "items": [
+        {
+          "id": "l50-grammar-01",
+          "pattern": "お + Vます形語幹 + します",
+          "zh": "谦让语基本形式，用于降低自己一方为对方做的动作。",
+          "en": "Basic humble form for actions done by your side for the other person.",
+          "example": "荷物をお持ちします。",
+          "practice": [
+            {
+              "id": "l50-practice-01",
+              "skill": "grammar",
+              "question": {
+                "zh": "表达：我来拿行李。",
+                "en": "Say humbly: I will carry the luggage."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "山田と申します。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "荷物をお持ちします。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "会場をご案内します。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "明日3時に参ります。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "谦让语基本形式，用于降低自己一方为对方做的动作。",
+                "en": "Basic humble form for actions done by your side for the other person."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l50-grammar-02",
+          "pattern": "ご + 漢語名詞 + します",
+          "zh": "汉语词动作常用 ご + 名词 + します。",
+          "en": "Many Sino-Japanese action nouns use ご + noun + します.",
+          "example": "会場をご案内します。",
+          "practice": [
+            {
+              "id": "l50-practice-02",
+              "skill": "grammar",
+              "question": {
+                "zh": "表达：我带您去会场。",
+                "en": "Say humbly: I will guide you to the venue."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "荷物をお持ちします。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "山田と申します。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "会場をご案内します。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "明日3時に参ります。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "汉语词动作常用 ご + 名词 + します。",
+                "en": "Many Sino-Japanese action nouns use ご + noun + します."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l50-grammar-03",
+          "pattern": "参ります / おります",
+          "zh": "自己一方的 行きます・来ます 用 参ります；います 用 おります。",
+          "en": "Use 参ります for your side's go/come and おります for your side's be.",
+          "example": "明日3時に参ります。私は受付におります。",
+          "practice": [
+            {
+              "id": "l50-practice-03",
+              "skill": "grammar",
+              "question": {
+                "zh": "表达：我明天三点去。",
+                "en": "Say humbly: I will go at 3 tomorrow."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "山田と申します。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "荷物をお持ちします。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "明日3時に参ります。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "会場をご案内します。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "自己一方的 行きます・来ます 用 参ります；います 用 おります。",
+                "en": "Use 参ります for your side's go/come and おります for your side's be."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l50-grammar-04",
+          "pattern": "申します / いたします",
+          "zh": "自己一方的 言います 用 申します；します 用 いたします。",
+          "en": "Use 申します for your side's say/be called and いたします for do.",
+          "example": "山田と申します。私が確認いたします。",
+          "practice": [
+            {
+              "id": "l50-practice-04",
+              "skill": "grammar",
+              "question": {
+                "zh": "表达：我叫山田。",
+                "en": "Say humbly: My name is Yamada."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "会場をご案内します。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "山田と申します。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "明日3時に参ります。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "荷物をお持ちします。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "自己一方的 言います 用 申します；します 用 いたします。",
+                "en": "Use 申します for your side's say/be called and いたします for do."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l50-grammar-05",
+          "pattern": "拝見します / 存じます",
+          "zh": "自己一方的 見ます 用 拝見します；知っています/思います 可用 存じます。",
+          "en": "Use 拝見します for your side's seeing and 存じます for knowing/thinking.",
+          "example": "資料を拝見しました。その件は存じております。",
+          "practice": [
+            {
+              "id": "l50-practice-05",
+              "skill": "grammar",
+              "question": {
+                "zh": "表达：我看了资料。",
+                "en": "Say humbly: I looked at the document."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "会場をご案内します。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "明日3時に参ります。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "荷物をお持ちします。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "資料を拝見しました。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "自己一方的 見ます 用 拝見します；知っています/思います 可用 存じます。",
+                "en": "Use 拝見します for your side's seeing and 存じます for knowing/thinking."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l50-grammar-06",
+          "pattern": "伺います",
+          "zh": "自己一方的 行きます、聞きます、訪問します 可用 伺います。",
+          "en": "Use 伺います for your side's go, ask, hear, or visit.",
+          "example": "明日先生のお宅へ伺います。お名前を伺ってもよろしいですか。",
+          "practice": [
+            {
+              "id": "l50-practice-06",
+              "skill": "grammar",
+              "question": {
+                "zh": "表达：明天我去拜访老师家。",
+                "en": "Say humbly: I will visit the teacher's home tomorrow."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "会場をご案内します。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "荷物をお持ちします。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "明日3時に参ります。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "明日先生のお宅へ伺います。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "自己一方的 行きます、聞きます、訪問します 可用 伺います。",
+                "en": "Use 伺います for your side's go, ask, hear, or visit."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l50-grammar-07",
+          "pattern": "いただきます / ございます",
+          "zh": "自己吃喝或领受用 いただきます；あります/です 的礼貌形式可用 ございます。",
+          "en": "Use いただきます for receiving/eating/drinking; use ございます as a polite form of あります/です.",
+          "example": "お茶をいただきます。資料はこちらにございます。",
+          "practice": [
+            {
+              "id": "l50-practice-07",
+              "skill": "grammar",
+              "question": {
+                "zh": "表达：资料在这里。",
+                "en": "Say politely: The document is here."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "資料はこちらにございます。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "荷物をお持ちします。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "会場をご案内します。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "明日3時に参ります。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "自己吃喝或领受用 いただきます；あります/です 的礼貌形式可用 ございます。",
+                "en": "Use いただきます for receiving/eating/drinking; use ございます as a polite form of あります/です."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l50-grammar-08",
+          "pattern": "謙譲語は自分側の動作",
+          "zh": "谦让语用于降低自己一方；对方动作要用尊敬语。",
+          "en": "Humble language lowers your side; use honorific language for the other person's actions.",
+          "example": "私が参ります。先生がいらっしゃいます。",
+          "practice": [
+            {
+              "id": "l50-practice-08",
+              "skill": "grammar",
+              "question": {
+                "zh": "选择正确：我去会议室。",
+                "en": "Choose the correct humble form: I will go to the meeting room."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "私が会議室へ参ります。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "明日3時に参ります。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "荷物をお持ちします。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "会場をご案内します。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "谦让语用于降低自己一方；对方动作要用尊敬语。",
+                "en": "Humble language lowers your side; use honorific language for the other person's actions."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l50-examples",
+      "type": "examples",
+      "title": {
+        "zh": "例句 Examples",
+        "en": "Examples"
+      },
+      "items": [
+        {
+          "id": "l50-example-01",
+          "jp": "お客様の荷物をお持ちします。",
+          "zh": "我来拿客人的行李。",
+          "en": "I will carry the customer's luggage."
+        },
+        {
+          "id": "l50-example-02",
+          "jp": "会議室までご案内します。",
+          "zh": "我带您到会议室。",
+          "en": "I will guide you to the meeting room."
+        },
+        {
+          "id": "l50-example-03",
+          "jp": "明日の午後、もう一度参ります。",
+          "zh": "明天下午我再来一次。",
+          "en": "I will come again tomorrow afternoon."
+        },
+        {
+          "id": "l50-example-04",
+          "jp": "担当の山田と申します。",
+          "zh": "我是负责人山田。",
+          "en": "I am Yamada, the person in charge."
+        },
+        {
+          "id": "l50-example-05",
+          "jp": "私がすぐ確認いたします。",
+          "zh": "我马上确认。",
+          "en": "I will check immediately."
+        },
+        {
+          "id": "l50-example-06",
+          "jp": "先生の論文を拝見しました。",
+          "zh": "我拜读了老师的论文。",
+          "en": "I read the teacher's paper."
+        },
+        {
+          "id": "l50-example-07",
+          "jp": "その件については存じております。",
+          "zh": "关于那件事，我知道。",
+          "en": "I know about that matter."
+        },
+        {
+          "id": "l50-example-08",
+          "jp": "明日10時に先生のお宅へ伺います。",
+          "zh": "明天10点我去拜访老师家。",
+          "en": "I will visit the teacher's home at 10 tomorrow."
+        }
+      ]
+    },
+    {
+      "id": "l50-mistakes",
+      "type": "mistakes",
+      "title": {
+        "zh": "常见错误 Common Mistakes",
+        "en": "Common Mistakes"
+      },
+      "items": [
+        {
+          "id": "l50-mistake-01",
+          "wrong": "先生の資料をご覧しました。",
+          "correct": "先生の資料を拝見しました。",
+          "reason": {
+            "zh": "自己看对方资料用谦让语 拝見します；ご覧になります 是对方看的尊敬语。",
+            "en": "Use humble 拝見します for your own seeing; ご覧になります is honorific for the other person's seeing."
+          }
+        },
+        {
+          "id": "l50-mistake-02",
+          "wrong": "私は明日いらっしゃいます。",
+          "correct": "私は明日参ります。",
+          "reason": {
+            "zh": "自己去/来用 参ります，不用尊敬语 いらっしゃいます。",
+            "en": "Use 参ります for your own go/come, not honorific いらっしゃいます."
+          }
+        },
+        {
+          "id": "l50-mistake-03",
+          "wrong": "お客様をお案内します。",
+          "correct": "お客様をご案内します。",
+          "reason": {
+            "zh": "案内 是汉语词动作，谦让形式通常用 ご案内します。",
+            "en": "案内 is a Sino-Japanese action noun, so use ご案内します."
+          }
+        }
+      ]
+    },
+    {
+      "id": "l50-quiz",
+      "type": "quiz",
+      "title": {
+        "zh": "最终测试 Final Test",
+        "en": "Final Test"
+      },
+      "items": [
+        {
+          "id": "l50-quiz-01",
+          "question": {
+            "zh": "「我来拿行李。」谦让表达是？",
+            "en": "Which is humble: I will carry the luggage?"
+          },
+          "options": [
+            {
+              "text": "荷物をお持ちします。",
+              "correct": true
+            },
+            {
+              "text": "荷物をお持ちになります。",
+              "correct": false
+            },
+            {
+              "text": "荷物を持たれます。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "自己一方为对方做动作，用 おVします。",
+            "en": "Use おVします for your side's action for the other person."
+          }
+        },
+        {
+          "id": "l50-quiz-02",
+          "question": {
+            "zh": "「我带您去会场。」谦让表达是？",
+            "en": "Which is humble: I will guide you to the venue?"
+          },
+          "options": [
+            {
+              "text": "会場をご案内します。",
+              "correct": true
+            },
+            {
+              "text": "会場をお案内します。",
+              "correct": false
+            },
+            {
+              "text": "会場をご案内になります。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "案内 常用 ご案内します。",
+            "en": "案内 commonly uses ご案内します."
+          }
+        },
+        {
+          "id": "l50-quiz-03",
+          "question": {
+            "zh": "「我明天三点去。」谦让表达是？",
+            "en": "Which is humble: I will go at 3 tomorrow?"
+          },
+          "options": [
+            {
+              "text": "明日3時に参ります。",
+              "correct": true
+            },
+            {
+              "text": "明日3時にいらっしゃいます。",
+              "correct": false
+            },
+            {
+              "text": "明日3時に伺われます。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "自己去/来用 参ります。",
+            "en": "Use 参ります for your own go/come."
+          }
+        },
+        {
+          "id": "l50-quiz-04",
+          "question": {
+            "zh": "「我叫山田。」谦让表达是？",
+            "en": "Which is humble: My name is Yamada?"
+          },
+          "options": [
+            {
+              "text": "山田と申します。",
+              "correct": true
+            },
+            {
+              "text": "山田とおっしゃいます。",
+              "correct": false
+            },
+            {
+              "text": "山田となさいます。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "自己说/叫作 用 申します。",
+            "en": "Use 申します for your own saying/name."
+          }
+        },
+        {
+          "id": "l50-quiz-05",
+          "question": {
+            "zh": "「我马上确认。」谦让表达是？",
+            "en": "Which is humble: I will check immediately?"
+          },
+          "options": [
+            {
+              "text": "私がすぐ確認いたします。",
+              "correct": true
+            },
+            {
+              "text": "私がすぐ確認なさいます。",
+              "correct": false
+            },
+            {
+              "text": "私がすぐご確認になります。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "自己做用 いたします。",
+            "en": "Use いたします for your own doing."
+          }
+        },
+        {
+          "id": "l50-quiz-06",
+          "question": {
+            "zh": "「我看了资料。」谦让表达是？",
+            "en": "Which is humble: I looked at the document?"
+          },
+          "options": [
+            {
+              "text": "資料を拝見しました。",
+              "correct": true
+            },
+            {
+              "text": "資料をご覧になりました。",
+              "correct": false
+            },
+            {
+              "text": "資料をお見しました。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "自己看用 拝見します。",
+            "en": "Use 拝見します for your own seeing."
+          }
+        },
+        {
+          "id": "l50-quiz-07",
+          "question": {
+            "zh": "「关于那件事，我知道。」谦让表达是？",
+            "en": "Which is humble: I know about that matter?"
+          },
+          "options": [
+            {
+              "text": "その件は存じております。",
+              "correct": true
+            },
+            {
+              "text": "その件はご存じです。",
+              "correct": false
+            },
+            {
+              "text": "その件はおっしゃいます。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "自己知道用 存じております；ご存じです 用于对方知道。",
+            "en": "Use 存じております for your own knowing; ご存じです is for the other person's knowing."
+          }
+        },
+        {
+          "id": "l50-quiz-08",
+          "question": {
+            "zh": "「明天我去拜访老师家。」谦让表达是？",
+            "en": "Which is humble: I will visit the teacher's home tomorrow?"
+          },
+          "options": [
+            {
+              "text": "明日先生のお宅へ伺います。",
+              "correct": true
+            },
+            {
+              "text": "明日先生のお宅へいらっしゃいます。",
+              "correct": false
+            },
+            {
+              "text": "明日先生のお宅へお伺いになります。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "自己拜访对方处所用 伺います。",
+            "en": "Use 伺います for your own visit to a respected person's place."
+          }
+        },
+        {
+          "id": "l50-quiz-09",
+          "question": {
+            "zh": "「资料在这里。」礼貌表达是？",
+            "en": "Which is polite: The document is here?"
+          },
+          "options": [
+            {
+              "text": "資料はこちらにございます。",
+              "correct": true
+            },
+            {
+              "text": "資料はこちらにいらっしゃいます。",
+              "correct": false
+            },
+            {
+              "text": "資料はこちらに参ります。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "物的存在可用 ございます。",
+            "en": "Use ございます for the existence of things."
+          }
+        },
+        {
+          "id": "l50-quiz-10",
+          "question": {
+            "zh": "下列哪句敬语方向正确？",
+            "en": "Which sentence has the correct direction of respect?"
+          },
+          "options": [
+            {
+              "text": "私が会議室へ参ります。",
+              "correct": true
+            },
+            {
+              "text": "私が会議室へいらっしゃいます。",
+              "correct": false
+            },
+            {
+              "text": "先生が会議室へ参ります。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "自己动作降低自己，用 参ります；老师动作应用尊敬语。",
+            "en": "Use 参ります for your own action; use honorific forms for the teacher's action."
+          }
+        }
+      ]
+    }
+  ]
+}

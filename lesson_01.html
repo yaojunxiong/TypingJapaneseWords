@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="第1课：N1はN2です。包含词汇、语法、例句朗读、小测验和 AI 角色扮演练习。">
+    <title>第1课 N1はN2です - AI互动学习</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-green">
+    <div id="navbar"></div>
+
+    <main class="container my-4 lesson-shell">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">首页</a></li>
+                <li class="breadcrumb-item"><a href="course_index.html">课程目录</a></li>
+                <li class="breadcrumb-item active" aria-current="page">第1课</li>
+            </ol>
+        </nav>
+
+        <header class="lesson-hero">
+            <span class="badge rounded-pill text-bg-success mb-2">Lesson 01</span>
+            <h1>第1课：N1 は N2 です</h1>
+            <p class="lead">学习“我是…… / 他是…… / 这是……”的基础判断句。</p>
+            <div class="d-flex flex-wrap gap-2">
+                <button class="btn btn-primary" data-speak="わたしは がくせいです。">朗读本课例句</button>
+                <button class="btn btn-outline-primary" id="markDoneBtn">标记本课已学</button>
+            </div>
+        </header>
+
+        <section class="lesson-section">
+            <h2>1. 本课目标</h2>
+            <ul class="lesson-checklist">
+                <li>会说：わたしは〇〇です。</li>
+                <li>会问：〇〇さんは学生ですか。</li>
+                <li>会回答：はい、そうです。 / いいえ、ちがいます。</li>
+            </ul>
+        </section>
+
+        <section class="lesson-section">
+            <h2>2. 重点词汇</h2>
+            <div class="vocab-grid">
+                <button class="vocab-card" data-speak="わたし"><strong>わたし</strong><span>我</span></button>
+                <button class="vocab-card" data-speak="あなた"><strong>あなた</strong><span>你</span></button>
+                <button class="vocab-card" data-speak="がくせい"><strong>がくせい</strong><span>学生</span></button>
+                <button class="vocab-card" data-speak="せんせい"><strong>せんせい</strong><span>老师</span></button>
+                <button class="vocab-card" data-speak="かいしゃいん"><strong>かいしゃいん</strong><span>公司职员</span></button>
+                <button class="vocab-card" data-speak="にほんじん"><strong>にほんじん</strong><span>日本人</span></button>
+            </div>
+        </section>
+
+        <section class="lesson-section grammar-card">
+            <h2>3. 核心语法</h2>
+            <p><strong>N1 は N2 です。</strong> 表示“ N1 是 N2 ”。</p>
+            <div class="example-line">
+                <button class="speak-mini" data-speak="わたしは がくせいです。">▶</button>
+                <ruby>私<rt>わたし</rt></ruby> は <ruby>学生<rt>がくせい</rt></ruby> です。<span>我是学生。</span>
+            </div>
+            <div class="example-line">
+                <button class="speak-mini" data-speak="ミラーさんは かいしゃいんです。">▶</button>
+                ミラーさん は <ruby>会社員<rt>かいしゃいん</rt></ruby> です。<span>米勒先生/女士是公司职员。</span>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <h2>4. 替换练习</h2>
+            <p>点击按钮生成新句子，然后跟读。</p>
+            <div class="practice-box">
+                <div id="patternSentence" class="pattern-sentence">わたしは がくせいです。</div>
+                <div class="d-flex flex-wrap gap-2 mt-3">
+                    <button class="btn btn-primary" id="newSentenceBtn">换一个句子</button>
+                    <button class="btn btn-outline-primary" id="speakSentenceBtn">朗读句子</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-section">
+            <h2>5. 小测验</h2>
+            <div id="quizBox" class="quiz-box"></div>
+            <button class="btn btn-primary mt-3" id="checkQuizBtn">提交答案</button>
+            <p id="quizResult" class="quiz-result mt-3"></p>
+        </section>
+
+        <section class="lesson-section">
+            <h2>6. AI 角色扮演</h2>
+            <div class="roleplay-box">
+                <p><strong>场景：</strong>第一次见面，自我介绍。</p>
+                <p><strong>老师：</strong>はじめまして。わたしは たなかです。あなたは？</p>
+                <label for="roleplayInput" class="form-label">你的回答：</label>
+                <textarea id="roleplayInput" class="form-control" rows="3" placeholder="例：わたしは ようようです。がくせいです。"></textarea>
+                <button class="btn btn-primary mt-3" id="roleplayCheckBtn">检查回答</button>
+                <p id="roleplayFeedback" class="mt-3"></p>
+            </div>
+        </section>
+
+        <div class="lesson-nav d-flex justify-content-between align-items-center mt-4">
+            <a class="btn btn-outline-secondary" href="course_index.html">返回目录</a>
+            <a class="btn btn-outline-secondary disabled" href="#" aria-disabled="true">下一课准备中</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 日语打字练习 | みんなの日本語 AI互动学习系统</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="theme.js"></script>
+    <script src="lesson_interactive.js"></script>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar').innerHTML = data);
+    </script>
+</body>
+</html>

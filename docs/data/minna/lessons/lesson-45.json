@@ -1,0 +1,828 @@
+{
+  "id": "minna-45",
+  "version": "20.3",
+  "status": "Mastery migrated",
+  "lesson": 45,
+  "title": {
+    "zh": "第45课",
+    "en": "Lesson 45",
+    "ja": "第45課"
+  },
+  "topic": {
+    "zh": "場合は",
+    "en": "Baai wa"
+  },
+  "summary": {
+    "zh": "学习在特定情况下的说明 場合は，以及表示意外转折、遗憾心情的 のに。",
+    "en": "Learn 場合は for specific situations and のに for unexpected contrast or disappointment."
+  },
+  "sections": [
+    {
+      "id": "l45-vocab",
+      "type": "vocab",
+      "title": {
+        "zh": "词汇 Vocabulary",
+        "en": "Vocabulary"
+      },
+      "items": [
+        {
+          "id": "l45-vocab-01",
+          "jp": "参加します",
+          "kana": "さんかします",
+          "zh": "参加",
+          "en": "participate",
+          "example": "会議に参加します。"
+        },
+        {
+          "id": "l45-vocab-02",
+          "jp": "申し込みます",
+          "kana": "もうしこみます",
+          "zh": "报名、申请",
+          "en": "apply, register",
+          "example": "イベントに申し込みます。"
+        },
+        {
+          "id": "l45-vocab-03",
+          "jp": "連絡します",
+          "kana": "れんらくします",
+          "zh": "联系",
+          "en": "contact",
+          "example": "遅れる場合は連絡してください。"
+        },
+        {
+          "id": "l45-vocab-04",
+          "jp": "中止",
+          "kana": "ちゅうし",
+          "zh": "中止、取消",
+          "en": "cancellation",
+          "example": "雨の場合は中止です。"
+        },
+        {
+          "id": "l45-vocab-05",
+          "jp": "変更",
+          "kana": "へんこう",
+          "zh": "变更",
+          "en": "change",
+          "example": "予定を変更します。"
+        },
+        {
+          "id": "l45-vocab-06",
+          "jp": "都合",
+          "kana": "つごう",
+          "zh": "方便、情况",
+          "en": "convenience, circumstances",
+          "example": "都合が悪い場合は知らせてください。"
+        },
+        {
+          "id": "l45-vocab-07",
+          "jp": "故障",
+          "kana": "こしょう",
+          "zh": "故障",
+          "en": "breakdown",
+          "example": "故障の場合はこの番号に電話してください。"
+        },
+        {
+          "id": "l45-vocab-08",
+          "jp": "相談します",
+          "kana": "そうだんします",
+          "zh": "商量、咨询",
+          "en": "consult",
+          "example": "困った場合は先生に相談します。"
+        },
+        {
+          "id": "l45-vocab-09",
+          "jp": "無理",
+          "kana": "むり",
+          "zh": "勉强、不可能",
+          "en": "impossible, unreasonable",
+          "example": "無理な場合は言ってください。"
+        },
+        {
+          "id": "l45-vocab-10",
+          "jp": "残念",
+          "kana": "ざんねん",
+          "zh": "遗憾",
+          "en": "unfortunate",
+          "example": "残念ですが、参加できません。"
+        }
+      ]
+    },
+    {
+      "id": "l45-grammar",
+      "type": "grammar",
+      "title": {
+        "zh": "语法 Grammar",
+        "en": "Grammar"
+      },
+      "items": [
+        {
+          "id": "l45-grammar-01",
+          "pattern": "V辞書形 + 場合は、〜",
+          "zh": "表示在将来或一般情况下发生某动作时，应如何处理。",
+          "en": "Shows what to do if an action happens in a future or general situation.",
+          "example": "遅れる場合は、連絡してください。",
+          "practice": [
+            {
+              "id": "l45-practice-01",
+              "skill": "grammar",
+              "question": {
+                "zh": "表达：迟到时请联系我。",
+                "en": "Say: If you will be late, please contact me."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "来られない場合は、メールを送ってください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "体の具合が悪い場合は、休んでください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "パスワードを忘れた場合は、再設定してください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "遅れる場合は、連絡してください。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "表示在将来或一般情况下发生某动作时，应如何处理。",
+                "en": "Shows what to do if an action happens in a future or general situation."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l45-grammar-02",
+          "pattern": "Vた形 + 場合は、〜",
+          "zh": "表示某事已经发生或成为事实时的处理方法。",
+          "en": "Shows what to do when something has happened or becomes the case.",
+          "example": "財布をなくした場合は、すぐ警察に行ってください。",
+          "practice": [
+            {
+              "id": "l45-practice-02",
+              "skill": "grammar",
+              "question": {
+                "zh": "表达：忘记密码时，请重新设置。",
+                "en": "Say: If you forgot your password, please reset it."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "パスワードを忘れた場合は、再設定してください。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "体の具合が悪い場合は、休んでください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "遅れる場合は、連絡してください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "来られない場合は、メールを送ってください。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示某事已经发生或成为事实时的处理方法。",
+                "en": "Shows what to do when something has happened or becomes the case."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l45-grammar-03",
+          "pattern": "Vない形 + 場合は、〜",
+          "zh": "表示某动作无法做或不做时的对应方法。",
+          "en": "Shows what to do when an action cannot be done or is not done.",
+          "example": "参加できない場合は、前の日までに連絡してください。",
+          "practice": [
+            {
+              "id": "l45-practice-03",
+              "skill": "grammar",
+              "question": {
+                "zh": "表达：不能来的时候，请发邮件。",
+                "en": "Say: If you cannot come, please send an email."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "遅れる場合は、連絡してください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "体の具合が悪い場合は、休んでください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "来られない場合は、メールを送ってください。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "パスワードを忘れた場合は、再設定してください。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示某动作无法做或不做时的对应方法。",
+                "en": "Shows what to do when an action cannot be done or is not done."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l45-grammar-04",
+          "pattern": "い形容詞 + 場合は、〜",
+          "zh": "表示处于某种い形容词状态时。",
+          "en": "Shows what to do when something is in an i-adjective state.",
+          "example": "体の具合が悪い場合は、無理をしないでください。",
+          "practice": [
+            {
+              "id": "l45-practice-04",
+              "skill": "grammar",
+              "question": {
+                "zh": "表达：身体不舒服时，请休息。",
+                "en": "Say: If you feel unwell, please rest."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "パスワードを忘れた場合は、再設定してください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "来られない場合は、メールを送ってください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "遅れる場合は、連絡してください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "体の具合が悪い場合は、休んでください。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "表示处于某种い形容词状态时。",
+                "en": "Shows what to do when something is in an i-adjective state."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l45-grammar-05",
+          "pattern": "な形容詞な / 名詞の + 場合は、〜",
+          "zh": "な形容词用 な場合，名词用 の場合。",
+          "en": "Use な場合 after na-adjectives and の場合 after nouns.",
+          "example": "無理な場合は、相談してください。雨の場合は、中止です。",
+          "practice": [
+            {
+              "id": "l45-practice-05",
+              "skill": "grammar",
+              "question": {
+                "zh": "表达：下雨时取消。",
+                "en": "Say: In case of rain, it will be canceled."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "来られない場合は、メールを送ってください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "パスワードを忘れた場合は、再設定してください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "遅れる場合は、連絡してください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "雨の場合は、中止です。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "な形容词用 な場合，名词用 の場合。",
+                "en": "Use な場合 after na-adjectives and の場合 after nouns."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l45-grammar-06",
+          "pattern": "普通形 + のに、〜",
+          "zh": "表示与预期相反的结果，带遗憾、不满或意外感。",
+          "en": "Shows an unexpected result contrary to expectation, often with disappointment.",
+          "example": "一生懸命勉強したのに、合格できませんでした。",
+          "practice": [
+            {
+              "id": "l45-practice-06",
+              "skill": "grammar",
+              "question": {
+                "zh": "表达：明明学习了很多，却没通过。",
+                "en": "Say: Although I studied a lot, I did not pass."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "来られない場合は、メールを送ってください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "遅れる場合は、連絡してください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "たくさん勉強したのに、合格できませんでした。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "パスワードを忘れた場合は、再設定してください。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "表示与预期相反的结果，带遗憾、不满或意外感。",
+                "en": "Shows an unexpected result contrary to expectation, often with disappointment."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l45-grammar-07",
+          "pattern": "な形容詞 / 名詞 + なのに、〜",
+          "zh": "な形容词和名词接逆接 のに 时用 なのに。",
+          "en": "Use なのに after na-adjectives and nouns for contrastive のに.",
+          "example": "日曜日なのに、会社へ行かなければなりません。",
+          "practice": [
+            {
+              "id": "l45-practice-07",
+              "skill": "grammar",
+              "question": {
+                "zh": "表达：明明是休息日，却要工作。",
+                "en": "Say: Although it is a day off, I have to work."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "パスワードを忘れた場合は、再設定してください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "遅れる場合は、連絡してください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "来られない場合は、メールを送ってください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "休みなのに、働かなければなりません。"
+                  },
+                  "correct": true
+                }
+              ],
+              "explanation": {
+                "zh": "な形容词和名词接逆接 のに 时用 なのに。",
+                "en": "Use なのに after na-adjectives and nouns for contrastive のに."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l45-grammar-08",
+          "pattern": "場合は vs たら",
+          "zh": "場合は更正式，常用于规则、通知、说明；たら更口语。",
+          "en": "場合は is more formal and common in rules, notices, or instructions; たら is more conversational.",
+          "example": "故障の場合は、この番号に電話してください。",
+          "practice": [
+            {
+              "id": "l45-practice-08",
+              "skill": "grammar",
+              "question": {
+                "zh": "正式说明：机器故障时，请联系工作人员。",
+                "en": "Formal instruction: In case the machine breaks, please contact staff."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "機械が故障した場合は、係員に連絡してください。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "遅れる場合は、連絡してください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "来られない場合は、メールを送ってください。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "パスワードを忘れた場合は、再設定してください。"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "場合は更正式，常用于规则、通知、说明；たら更口语。",
+                "en": "場合は is more formal and common in rules, notices, or instructions; たら is more conversational."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l45-examples",
+      "type": "examples",
+      "title": {
+        "zh": "例句 Examples",
+        "en": "Examples"
+      },
+      "items": [
+        {
+          "id": "l45-example-01",
+          "jp": "都合が悪い場合は、早めに知らせてください。",
+          "zh": "如果不方便，请尽早通知。",
+          "en": "If it is inconvenient, please let me know early."
+        },
+        {
+          "id": "l45-example-02",
+          "jp": "カードをなくした場合は、すぐ銀行に連絡してください。",
+          "zh": "如果丢了卡，请马上联系银行。",
+          "en": "If you lose your card, contact the bank immediately."
+        },
+        {
+          "id": "l45-example-03",
+          "jp": "参加できない場合は、前の日までにメールしてください。",
+          "zh": "如果不能参加，请在前一天之前发邮件。",
+          "en": "If you cannot participate, please email by the previous day."
+        },
+        {
+          "id": "l45-example-04",
+          "jp": "雨の場合は、イベントは中止になります。",
+          "zh": "下雨时，活动会取消。",
+          "en": "In case of rain, the event will be canceled."
+        },
+        {
+          "id": "l45-example-05",
+          "jp": "一生懸命練習したのに、試合に負けてしまいました。",
+          "zh": "明明努力练习了，却输掉了比赛。",
+          "en": "Although I practiced hard, I lost the match."
+        },
+        {
+          "id": "l45-example-06",
+          "jp": "薬を飲んだのに、熱が下がりません。",
+          "zh": "明明吃了药，烧却没退。",
+          "en": "Although I took medicine, my fever has not gone down."
+        },
+        {
+          "id": "l45-example-07",
+          "jp": "日曜日なのに、会社で会議があります。",
+          "zh": "明明是星期天，公司却有会议。",
+          "en": "Although it is Sunday, there is a meeting at the office."
+        },
+        {
+          "id": "l45-example-08",
+          "jp": "故障の場合は、この番号に電話してください。",
+          "zh": "发生故障时，请拨打这个号码。",
+          "en": "In case of a breakdown, please call this number."
+        }
+      ]
+    },
+    {
+      "id": "l45-mistakes",
+      "type": "mistakes",
+      "title": {
+        "zh": "常见错误 Common Mistakes",
+        "en": "Common Mistakes"
+      },
+      "items": [
+        {
+          "id": "l45-mistake-01",
+          "wrong": "雨な場合は、中止です。",
+          "correct": "雨の場合は、中止です。",
+          "reason": {
+            "zh": "名词接 場合は 用 の場合は。",
+            "en": "Use の場合は after nouns."
+          }
+        },
+        {
+          "id": "l45-mistake-02",
+          "wrong": "休みのに、働かなければなりません。",
+          "correct": "休みなのに、働かなければなりません。",
+          "reason": {
+            "zh": "名词接逆接 のに 时用 なのに。",
+            "en": "Use なのに after nouns with contrastive のに."
+          }
+        },
+        {
+          "id": "l45-mistake-03",
+          "wrong": "勉強した場合は、合格できませんでした。",
+          "correct": "勉強したのに、合格できませんでした。",
+          "reason": {
+            "zh": "表达与预期相反、遗憾结果时用 のに，不用 場合は。",
+            "en": "Use のに for an unexpected disappointing result, not 場合は."
+          }
+        }
+      ]
+    },
+    {
+      "id": "l45-quiz",
+      "type": "quiz",
+      "title": {
+        "zh": "最终测试 Final Test",
+        "en": "Final Test"
+      },
+      "items": [
+        {
+          "id": "l45-quiz-01",
+          "question": {
+            "zh": "「迟到时请联系。」正确的是？",
+            "en": "Which means: If you will be late, please contact me?"
+          },
+          "options": [
+            {
+              "text": "遅れる場合は、連絡してください。",
+              "correct": true
+            },
+            {
+              "text": "遅れるのに、連絡してください。",
+              "correct": false
+            },
+            {
+              "text": "遅れる場合に、連絡してください。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "说明特定情况的处理，用 場合は。",
+            "en": "Use 場合は for what to do in a specific situation."
+          }
+        },
+        {
+          "id": "l45-quiz-02",
+          "question": {
+            "zh": "「忘记密码时，请重新设置。」正确的是？",
+            "en": "Which means: If you forgot your password, please reset it?"
+          },
+          "options": [
+            {
+              "text": "パスワードを忘れた場合は、再設定してください。",
+              "correct": true
+            },
+            {
+              "text": "パスワードを忘れたのに、再設定してください。",
+              "correct": false
+            },
+            {
+              "text": "パスワードを忘れて場合は、再設定してください。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "已经发生的情况，用 た形 + 場合は。",
+            "en": "Use ta-form + 場合は for a situation that has happened."
+          }
+        },
+        {
+          "id": "l45-quiz-03",
+          "question": {
+            "zh": "「不能参加时请发邮件。」正确的是？",
+            "en": "Which means: If you cannot participate, please email?"
+          },
+          "options": [
+            {
+              "text": "参加できない場合は、メールしてください。",
+              "correct": true
+            },
+            {
+              "text": "参加できないのに、メールしてください。",
+              "correct": false
+            },
+            {
+              "text": "参加できません場合は、メールしてください。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "否定情况用 ない形 + 場合は。",
+            "en": "Use nai-form + 場合は for negative situations."
+          }
+        },
+        {
+          "id": "l45-quiz-04",
+          "question": {
+            "zh": "「身体不舒服时，请休息。」正确的是？",
+            "en": "Which means: If you feel unwell, please rest?"
+          },
+          "options": [
+            {
+              "text": "体の具合が悪い場合は、休んでください。",
+              "correct": true
+            },
+            {
+              "text": "体の具合が悪く場合は、休んでください。",
+              "correct": false
+            },
+            {
+              "text": "体の具合が悪いのに、休んでください。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "い形容词直接接 場合は。",
+            "en": "Attach 場合は directly to an i-adjective."
+          }
+        },
+        {
+          "id": "l45-quiz-05",
+          "question": {
+            "zh": "「下雨时取消。」正确的是？",
+            "en": "Which means: In case of rain, it is canceled?"
+          },
+          "options": [
+            {
+              "text": "雨の場合は、中止です。",
+              "correct": true
+            },
+            {
+              "text": "雨な場合は、中止です。",
+              "correct": false
+            },
+            {
+              "text": "雨なのに、中止です。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "名词 雨 后用 の場合は。",
+            "en": "Use の場合は after the noun 雨."
+          }
+        },
+        {
+          "id": "l45-quiz-06",
+          "question": {
+            "zh": "「明明学习很多，却没通过。」正确的是？",
+            "en": "Which means: Although I studied a lot, I did not pass?"
+          },
+          "options": [
+            {
+              "text": "たくさん勉強したのに、合格できませんでした。",
+              "correct": true
+            },
+            {
+              "text": "たくさん勉強した場合は、合格できませんでした。",
+              "correct": false
+            },
+            {
+              "text": "たくさん勉強してのに、合格できませんでした。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "与预期相反、带遗憾感时用 のに。",
+            "en": "Use のに for an unexpected disappointing result."
+          }
+        },
+        {
+          "id": "l45-quiz-07",
+          "question": {
+            "zh": "「明明是休息日，却要工作。」正确的是？",
+            "en": "Which means: Although it is a day off, I have to work?"
+          },
+          "options": [
+            {
+              "text": "休みなのに、働かなければなりません。",
+              "correct": true
+            },
+            {
+              "text": "休みのに、働かなければなりません。",
+              "correct": false
+            },
+            {
+              "text": "休みの場合は、働かなければなりません。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "名词接逆接 のに 用 なのに。",
+            "en": "Use なのに after nouns with contrastive のに."
+          }
+        },
+        {
+          "id": "l45-quiz-08",
+          "question": {
+            "zh": "「机器故障时，请联系工作人员。」正式表达是？",
+            "en": "Which is formal: If the machine breaks, contact staff?"
+          },
+          "options": [
+            {
+              "text": "機械が故障した場合は、係員に連絡してください。",
+              "correct": true
+            },
+            {
+              "text": "機械が故障したのに、係員に連絡してください。",
+              "correct": false
+            },
+            {
+              "text": "機械が故障して場合は、係員に連絡してください。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "正式说明某情况的处理，用 た形 + 場合は。",
+            "en": "Use ta-form + 場合は for formal instructions about a situation."
+          }
+        },
+        {
+          "id": "l45-quiz-09",
+          "question": {
+            "zh": "「吃了药，烧却没退。」正确的是？",
+            "en": "Which means: Although I took medicine, my fever did not go down?"
+          },
+          "options": [
+            {
+              "text": "薬を飲んだのに、熱が下がりません。",
+              "correct": true
+            },
+            {
+              "text": "薬を飲んだ場合は、熱が下がりません。",
+              "correct": false
+            },
+            {
+              "text": "薬を飲んでのに、熱が下がりません。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "预期退烧但实际没有，用 のに。",
+            "en": "Use のに when the result is contrary to expectation."
+          }
+        },
+        {
+          "id": "l45-quiz-10",
+          "question": {
+            "zh": "「不可能的时候，请说。」正确的是？",
+            "en": "Which means: If it is impossible, please say so?"
+          },
+          "options": [
+            {
+              "text": "無理な場合は、言ってください。",
+              "correct": true
+            },
+            {
+              "text": "無理の場合は、言ってください。",
+              "correct": false
+            },
+            {
+              "text": "無理のに、言ってください。",
+              "correct": false
+            }
+          ],
+          "explanation": {
+            "zh": "無理 是な形容词，接 場合は 用 な場合は。",
+            "en": "無理 is a na-adjective, so use な場合は."
+          }
+        }
+      ]
+    }
+  ]
+}

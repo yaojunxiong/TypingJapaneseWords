@@ -1,0 +1,2 @@
+# -*- coding: utf-8 -*- 
+import json; vocab_cards=json.load(open("vocab_cards.json",encoding="utf-8")); unmatched={}; [unmatched.setdefault(w["jp"],{"reading":w["reading"],"meaning":""}) for ws in vocab_cards.values() for w in ws if w["meaning"]==""]; json.dump(unmatched,open("unmatched_words.json","w",encoding="utf-8"),ensure_ascii=False,indent=2); print("unmatched_words.json has been generated.") 

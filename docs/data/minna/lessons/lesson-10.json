@@ -1,0 +1,693 @@
+{
+  "schema": "minna.lesson.v1",
+  "course": "minna",
+  "lessonNo": 10,
+  "lessonId": "minna_lesson_10",
+  "title": {
+    "zh": "第10课",
+    "en": "Lesson 10",
+    "ja": "第10課"
+  },
+  "subtitle": {
+    "zh": "存在句",
+    "en": "Existence sentences",
+    "ja": "存在文"
+  },
+  "focus": {
+    "zh": "学习「あります・います」、位置词、地点问答和并列「〜や〜」。",
+    "en": "Learn 「あります・います」, position words, place questions, and listing with 「〜や〜」.",
+    "ja": "「あります・います」、位置詞、場所の質問、並列「〜や〜」を学びます。"
+  },
+  "sections": [
+    {
+      "type": "vocab",
+      "id": "l10_vocab",
+      "title": {
+        "zh": "核心词汇",
+        "en": "Core Vocabulary",
+        "ja": "基本語彙"
+      },
+      "items": [
+        {
+          "id": "l10_v01",
+          "jp": "あります",
+          "kana": "あります",
+          "zh": "有（物）",
+          "en": "there is/are (things)",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l10_v02",
+          "jp": "います",
+          "kana": "います",
+          "zh": "有（人/动物）",
+          "en": "there is/are (people/animals)",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l10_v03",
+          "jp": "うえ",
+          "kana": "うえ",
+          "zh": "上面",
+          "en": "on/above",
+          "tags": [
+            "position"
+          ]
+        },
+        {
+          "id": "l10_v04",
+          "jp": "した",
+          "kana": "した",
+          "zh": "下面",
+          "en": "under",
+          "tags": [
+            "position"
+          ]
+        },
+        {
+          "id": "l10_v05",
+          "jp": "まえ",
+          "kana": "まえ",
+          "zh": "前面",
+          "en": "in front of",
+          "tags": [
+            "position"
+          ]
+        },
+        {
+          "id": "l10_v06",
+          "jp": "うしろ",
+          "kana": "うしろ",
+          "zh": "后面",
+          "en": "behind",
+          "tags": [
+            "position"
+          ]
+        },
+        {
+          "id": "l10_v07",
+          "jp": "みぎ",
+          "kana": "みぎ",
+          "zh": "右边",
+          "en": "right",
+          "tags": [
+            "position"
+          ]
+        },
+        {
+          "id": "l10_v08",
+          "jp": "ひだり",
+          "kana": "ひだり",
+          "zh": "左边",
+          "en": "left",
+          "tags": [
+            "position"
+          ]
+        },
+        {
+          "id": "l10_v09",
+          "jp": "なか",
+          "kana": "なか",
+          "zh": "里面",
+          "en": "inside",
+          "tags": [
+            "position"
+          ]
+        },
+        {
+          "id": "l10_v10",
+          "jp": "そと",
+          "kana": "そと",
+          "zh": "外面",
+          "en": "outside",
+          "tags": [
+            "position"
+          ]
+        },
+        {
+          "id": "l10_v11",
+          "jp": "となり",
+          "kana": "となり",
+          "zh": "旁边",
+          "en": "next to",
+          "tags": [
+            "position"
+          ]
+        },
+        {
+          "id": "l10_v12",
+          "jp": "ちかく",
+          "kana": "ちかく",
+          "zh": "附近",
+          "en": "near",
+          "tags": [
+            "position"
+          ]
+        },
+        {
+          "id": "l10_v13",
+          "jp": "あいだ",
+          "kana": "あいだ",
+          "zh": "中间",
+          "en": "between",
+          "tags": [
+            "position"
+          ]
+        },
+        {
+          "id": "l10_v14",
+          "jp": "つくえ",
+          "kana": "つくえ",
+          "zh": "桌子",
+          "en": "desk",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l10_v15",
+          "jp": "いす",
+          "kana": "いす",
+          "zh": "椅子",
+          "en": "chair",
+          "tags": [
+            "noun"
+          ]
+        },
+        {
+          "id": "l10_v16",
+          "jp": "ねこ",
+          "kana": "ねこ",
+          "zh": "猫",
+          "en": "cat",
+          "tags": [
+            "noun"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "grammar",
+      "id": "l10_grammar",
+      "title": {
+        "zh": "核心语法",
+        "en": "Core Grammar",
+        "ja": "基本文法"
+      },
+      "items": [
+        {
+          "id": "l10_g01",
+          "pattern": "場所に 物/人が あります・います",
+          "title": {
+            "zh": "某处有某物/某人",
+            "en": "There is ~ at ~"
+          },
+          "explanation": {
+            "zh": "物品用「あります」，人和动物用「います」。",
+            "en": "Use 「あります」 for things, 「います」 for people/animals."
+          },
+          "examples": [
+            {
+              "jp": "つくえの 上に 本が あります。",
+              "zh": "桌子上有书。",
+              "en": "There is a book on the desk."
+            }
+          ],
+          "practice": [
+            {
+              "question": {
+                "zh": "“椅子下面有猫”是？",
+                "en": "How to say “There is a cat under the chair”?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "いすの したに ねこが います。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "いすの したに ねこが あります。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "いすの したで ねこが います。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "いすの したを ねこが います。"
+                  }
+                }
+              ]
+            },
+            {
+              "question": {
+                "zh": "“书在桌上”应使用？",
+                "en": "For books on desk, which verb?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "あります"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "います"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "です"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "します"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l10_g02",
+          "pattern": "N1は N2に あります・います",
+          "title": {
+            "zh": "N1在N2",
+            "en": "N1 is in/at N2"
+          },
+          "explanation": {
+            "zh": "已知话题做主语时常用「N1は N2に あります/います」。",
+            "en": "Use topic pattern 「N1 は N2 に あります/います」 for known subjects."
+          },
+          "examples": [
+            {
+              "jp": "トイレは あそこに あります。",
+              "zh": "洗手间在那边。",
+              "en": "The toilet is over there."
+            }
+          ],
+          "practice": [
+            {
+              "question": {
+                "zh": "“老师在教室里”是？",
+                "en": "How to say “The teacher is in the classroom”?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "先生は 教室に います。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "先生は 教室に あります。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生が 教室を います。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生は 教室で あります。"
+                  }
+                }
+              ]
+            },
+            {
+              "question": {
+                "zh": "“银行在车站前”是？",
+                "en": "How to say “The bank is in front of station”?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "銀行は 駅の 前に あります。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "銀行は 駅の 前に います。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "銀行が 駅の 前を あります。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "銀行で 駅の 前に あります。"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l10_g03",
+          "pattern": "どこに ありますか / いますか",
+          "title": {
+            "zh": "在哪里有〜",
+            "en": "Where is ~?"
+          },
+          "explanation": {
+            "zh": "询问位置用「どこに」。",
+            "en": "Use 「どこに」 to ask location."
+          },
+          "examples": [
+            {
+              "jp": "かぎは どこに ありますか。",
+              "zh": "钥匙在哪里？",
+              "en": "Where is the key?"
+            }
+          ],
+          "practice": [
+            {
+              "question": {
+                "zh": "问“猫在哪里？”是？",
+                "en": "How to ask “Where is the cat?”?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "ねこは どこに いますか。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "ねこは どこで いますか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "ねこは どこを いますか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "ねこは どこが いますか。"
+                  }
+                }
+              ]
+            },
+            {
+              "question": {
+                "zh": "问“书在哪里？”是？",
+                "en": "How to ask “Where is the book?”?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "本は どこに ありますか。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "本は どこに いますか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "本は どこで ありますか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "本は どこを ありますか。"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l10_g04",
+          "pattern": "N1やN2（など）があります",
+          "title": {
+            "zh": "并列列举有〜",
+            "en": "Listing with や"
+          },
+          "explanation": {
+            "zh": "列举不完整项目可用「N1やN2（など）」。",
+            "en": "Use 「や」 to list representative items (non-exhaustive)."
+          },
+          "examples": [
+            {
+              "jp": "かばんの 中に 本や てがみが あります。",
+              "zh": "包里有书和信等。",
+              "en": "There are books and letters in the bag."
+            }
+          ],
+          "practice": [
+            {
+              "question": {
+                "zh": "“箱子里有照片和信”是？",
+                "en": "How to say “There are photos and letters in the box”?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "箱の 中に 写真や 手紙が あります。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "箱の 中に 写真と 手紙を あります。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "箱の 中で 写真や 手紙が あります。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "箱の 中に 写真や 手紙が います。"
+                  }
+                }
+              ]
+            },
+            {
+              "question": {
+                "zh": "并列举例常用？",
+                "en": "Which particle lists sample items?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "や"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "を"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "に"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "が"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examples",
+      "id": "l10_examples",
+      "title": {
+        "zh": "核心例句",
+        "en": "Core Examples",
+        "ja": "基本例文"
+      },
+      "items": [
+        {
+          "id": "l10_e01",
+          "jp": "つくえの 上に ノートが あります。",
+          "zh": "桌子上有笔记本。",
+          "en": "There is a notebook on the desk."
+        },
+        {
+          "id": "l10_e02",
+          "jp": "いすの 下に ねこが います。",
+          "zh": "椅子下面有猫。",
+          "en": "There is a cat under the chair."
+        },
+        {
+          "id": "l10_e03",
+          "jp": "銀行は 駅の 近くに あります。",
+          "zh": "银行在车站附近。",
+          "en": "The bank is near the station."
+        },
+        {
+          "id": "l10_e04",
+          "jp": "先生は 教室の 中に います。",
+          "zh": "老师在教室里。",
+          "en": "The teacher is in the classroom."
+        },
+        {
+          "id": "l10_e05",
+          "jp": "かばんの 中に かぎや 財布が あります。",
+          "zh": "包里有钥匙和钱包等。",
+          "en": "There are keys and a wallet in the bag."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "l10_quiz",
+      "title": {
+        "zh": "综合测试",
+        "en": "Final Test",
+        "ja": "まとめテスト"
+      },
+      "items": [
+        {
+          "id": "l10_q01",
+          "question": {
+            "zh": "“桌子上有书”是？",
+            "en": "Which means “There is a book on the desk”?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "つくえの 上に 本が あります。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "つくえの 上に 本が います。"
+              }
+            },
+            {
+              "text": {
+                "jp": "つくえで 本が あります。"
+              }
+            },
+            {
+              "text": {
+                "jp": "つくえを 上に 本が あります。"
+              }
+            }
+          ]
+        },
+        {
+          "id": "l10_q02",
+          "question": {
+            "zh": "“教室里有学生”是？",
+            "en": "Which means “There are students in the classroom”?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "教室に 学生が います。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "教室に 学生が あります。"
+              }
+            },
+            {
+              "text": {
+                "jp": "教室で 学生が います。"
+              }
+            },
+            {
+              "text": {
+                "jp": "教室を 学生が います。"
+              }
+            }
+          ]
+        },
+        {
+          "id": "l10_q03",
+          "question": {
+            "zh": "问“钥匙在哪里？”是？",
+            "en": "How to ask “Where is the key?”?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "かぎは どこに ありますか。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "かぎは どこに いますか。"
+              }
+            },
+            {
+              "text": {
+                "jp": "かぎは どこで ありますか。"
+              }
+            },
+            {
+              "text": {
+                "jp": "かぎは どこを ありますか。"
+              }
+            }
+          ]
+        },
+        {
+          "id": "l10_q04",
+          "question": {
+            "zh": "并列列举常用助词是？",
+            "en": "Which particle is used for listing?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "や"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "と"
+              }
+            },
+            {
+              "text": {
+                "jp": "を"
+              }
+            },
+            {
+              "text": {
+                "jp": "で"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

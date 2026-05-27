@@ -1,0 +1,122 @@
+// Minna Player v20.3
+// JSON-driven lesson player with practice blocks for vocab/grammar/examples, bilingual questions, stable quiz order, wrong-only mode, and progress sync.
+(function(){
+  const $=id=>document.getElementById(id);
+  const VERSION='20.3.1';
+  const PASS_RATE=80;
+  const WRONGBOOK_URL='./minna-wrongbook-v2.html?v=20.3';
+  const HOME_URL='./minna-index.html?v='+VERSION;
+  const QUESTION_LOG_KEY='minna_question_log_v1';
+  const params=()=>new URLSearchParams(location.search);
+  const wrongMode=()=>params().get('mode')==='wrong';
+  const I=()=>window.MinnaI18n;
+  const lang=()=>I&&I()?I().lang():'zh';
+  const pick=v=>{if(!v)return'';const l=lang();return v[l]||v.zh||v.en||v.ja||v.jp||''};
+  const text=(zh,en)=>lang()==='en'?en:zh;
+  const esc=s=>String(s||'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
+  let lesson=null, score=0, answered={}, quizOrder={}, user=null, cloud='init', saving=false, orderWork={};
+  function ensureI18n(){
+    if(window.MinnaI18n)return;
+    window.MinnaI18n={
+      lang:()=>localStorage.getItem('minna_ui_lang')||'zh',
+      pick:v=>{if(!v)return'';const l=localStorage.getItem('minna_ui_lang')||'zh';return typeof v==='object'?(v[l]||v.zh||v.en||v.ja||v.jp||''):String(v)},
+      installToggle:()=>{},
+      onChange:()=>{}
+    };
+  }
+  function withTimeout(promise,ms,label){
+    return Promise.race([
+      promise,
+      new Promise((_,reject)=>setTimeout(()=>reject(new Error((label||'request')+' timeout after '+ms+'ms')),ms))
+    ]);
+  }
+
+  function shuffleIndex(n){return Array.from({length:n},(_,i)=>i).map(i=>[Math.random(),i]).sort((a,b)=>a[0]-b[0]).map(x=>x[1])}
+  function sections(type){return (lesson.sections||[]).filter(s=>s.type===type)}
+  function baseQuizItems(){return sections('quiz').flatMap(s=>(s.items||[]).map(q=>normalizeQ(q,'quiz',s.id)))}
+  function practiceItems(){
+    const out=[];
+    (lesson.sections||[]).forEach(s=>{
+      if(s.type==='quiz')return;
+      (s.items||[]).forEach(item=>{
+        (item.practice||[]).forEach((p,idx)=>out.push(normalizeQ(p,p.skill||s.type,s.id,item,idx)));
+      });
+    });
+    return out;
+  }
+  function quizItems(){return practiceItems().concat(baseQuizItems())}
+  function vocabCount(){return sections('vocab').reduce((n,s)=>n+(s.items||[]).length,0)}
+  function grammarCount(){return sections('grammar').reduce((n,s)=>n+(s.items||[]).length,0)}
+  function wrongIds(){return Object.keys(answered).filter(k=>answered[k]===false)}
+  function wrongItems(){const ids=new Set(wrongIds());return quizItems().filter(q=>ids.has(q.id))}
+  function normalizeQ(q,skill,sectionId,parent,idx){const copy=Object.assign({},q);copy.id=copy.id||((parent&&parent.id?parent.id:sectionId)+'_practice_'+idx);copy.skill=copy.skill||skill||'quiz';copy.sectionId=sectionId||'';copy.parentId=parent&&parent.id||'';return copy}
+  function getOrder(q){const arr=q.type==='order'?(q.parts||[]):(q.options||[]);const len=arr.length;if(!quizOrder[q.id]||quizOrder[q.id].length!==len){quizOrder[q.id]=shuffleIndex(len)}return quizOrder[q.id]}
+  function payload(){const qs=quizItems(), answeredCount=Object.keys(answered).length, wrong=wrongIds();const rate=qs.length?Math.round(score/qs.length*100):0;return{v:20.3,schema:lesson.schema,lesson_no:lesson.lessonNo,score,completed_count:answeredCount,total_slides:Math.max(1,qs.length),wrong_count:wrong.length,wrong_ids:wrong,mastery_passed:qs.length>0&&answeredCount===qs.length&&rate>=PASS_RATE&&wrong.length===0,quiz_answered:answered,quiz_order:quizOrder,updated_client_at:new Date().toISOString()}}
+  async function initAuth(){if(!window.MinnaAuth){cloud='local';loadLocal();return}try{await withTimeout(MinnaAuth.init({lessonId:lesson.lessonId}),3500,'auth init');user=MinnaAuth.getUser&&MinnaAuth.getUser();const row=await withTimeout(MinnaAuth.loadProgress(lesson.lessonId),3500,'progress load');if(row&&row.progress){score=Number(row.progress.score)||0;answered=row.progress.quiz_answered||{};quizOrder=row.progress.quiz_order||{}}else loadLocal();cloud='ready'}catch(e){cloud='error:'+e.message;loadLocal()}}
+  function loadLocal(){try{const p=JSON.parse(localStorage.getItem('minna_v18_'+lesson.lessonId)||localStorage.getItem('minna_v17_'+lesson.lessonId)||'{}');score=Number(p.score)||score;answered=p.quiz_answered||answered;quizOrder=p.quiz_order||quizOrder}catch(e){}}
+  function cloudHtml(){if(saving)return text('保存中…','Saving…');if(cloud==='ready')return `<span class="cloudOk">${text('云端已连接','Cloud connected')}${user&&user.email?' · '+esc(user.email):''}</span>`;if(cloud==='local')return `<span class="cloudBad">${text('本地模式','Local mode')}</span>`;if(String(cloud).startsWith('error:'))return `<span class="cloudBad">${text('云端异常','Cloud issue')}：${esc(cloud.slice(6))}</span>`;return text('初始化中…','Initializing…')}
+  function sourceHtml(){const s=window.MinnaLessonContentSource||{};if(s.type==='supabase')return `<span class="cloudOk">${text('课程数据源','Content source')}：Supabase published</span><span class="small"> v${esc(s.version||'')} ${esc(s.updated_at||'')} ${s.updated_email?(' · '+esc(s.updated_email)):''}${s.forced?' · forced':''}</span>`;if(s.type==='file')return `<span class="cloudBad">${text('课程数据源','Content source')}：JSON file</span><span class="small"> ${esc(s.path||'')}${s.forced?' · forced':''}</span>`;if(s.type==='template')return `<span class="cloudBad">${text('课程数据源','Content source')}：Template</span><span class="small"> ${esc(s.reason||'')}</span>`;return `<span class="small">${text('课程数据源：未知','Content source: unknown')}</span>`}
+  function render(){if(!lesson||!I())return;document.title=`${pick(lesson.title)} | Minna v${VERSION}`;const sectionLinks=(lesson.sections||[]).filter(s=>!wrongMode()||s.type==='quiz').map(s=>`<a href="#${esc(s.id)}">${esc(pick(s.title))}</a>`).join('');$('app').innerHTML=`<header class="hero"><div class="wrap topbar"><div><span class="badge">Minna JSON Player v${VERSION}${wrongMode()?' · Wrong Practice':''}</span><h1>${esc(pick(lesson.title))}｜${esc(pick(lesson.subtitle))}</h1><p>${esc(wrongMode()?text('只练本课错题模式。','Wrong-answer practice mode for this lesson.'):pick(lesson.focus))}</p><div class="authBar authMain"><span id="cloudStatus">${cloudHtml()}</span><button id="loginBtn" class="light">${text('Google登录','Google Login')}</button><button id="logoutBtn" class="light">${text('退出','Log out')}</button><button id="saveBtn" class="ghost">${text('保存进度','Save Progress')}</button><button id="resetQuizBtn" class="light">${text('重做测试','Reset Quiz')}</button></div><div class="authBar sourceBar">${sourceHtml()}<a class="light sourceBtn" href="?source=file&v=${VERSION}">${text('强制文件JSON','Force file JSON')}</a><a class="light sourceBtn" href="?source=supabase&v=${VERSION}">${text('强制Supabase','Force Supabase')}</a></div></div><div id="langSlot"></div></div><div class="wrap lessonNav"><div class="quicklinks quicklinksPrimary"><a href="${HOME_URL}" class="primary">${text('课程首页','Home')}</a><a href="${WRONGBOOK_URL}">${text('全站错题本','Global Wrongbook')}</a><a href="?v=${VERSION}">${text('完整模式','Full Mode')}</a><a href="?mode=wrong&v=${VERSION}">${text('只练错题','Wrong Only')}</a><a href="#wrongBook">${text('本课错题本','Lesson Wrongbook')} (${wrongIds().length})</a></div><div class="quicklinks quicklinksSections">${sectionLinks}</div></div></header><main class="wrap">${summary()}${wrongMode()?wrongPracticeIntro():(lesson.sections||[]).filter(s=>s.type!=='quiz').map(section).join('')}${quizSectionRender()}${wrongBook()}</main><footer class="wrap footer">JSON · ${esc(lesson.lessonId)}</footer>`;I().installToggle($('langSlot'));bind();restore()}
+  function resultState(){const qs=quizItems(),total=qs.length,answeredCount=Object.keys(answered).length,wrong=wrongIds().length,rate=total?Math.round(score/total*100):0;if(!total)return{kind:'empty',rate,total,answeredCount,wrong,title:text('暂无测试题','No Test Items'),desc:text('本课还没有可判定通过状态的测试题。','This lesson has no test items to determine pass status.')};if(answeredCount<total)return{kind:'todo',rate,total,answeredCount,wrong,title:text('测试未完成','Test Not Finished'),desc:text('继续完成所有题目后，系统会自动判断是否通过。','Finish all questions and the system will judge pass status automatically.')};if(rate<PASS_RATE)return{kind:'fail',rate,total,answeredCount,wrong,title:text('未通过','Not Passed'),desc:text('正确率未达到 80%。建议重做测试，答错题会保留在错题本。','Accuracy is below 80%. Reset and try again; wrong answers remain in the wrongbook.')};if(wrong>0)return{kind:'fix',rate,total,answeredCount,wrong,title:text('分数达标，等待订正','Score OK, Corrections Needed'),desc:text('测试分数已达标，但还有错题。进入订正模式并把错题答对后，才会显示已通过。','Your score meets the threshold, but wrong answers remain. Correct them in correction mode to pass.')};return{kind:'pass',rate,total,answeredCount,wrong,title:text('已通过','Passed'),desc:text('测试已通过，错题已清零，可以继续下一课。','You passed and cleared all wrong answers. You can continue to the next lesson.')} }
+  function nextLessonUrl(){const n=Math.min(50,Number(lesson.lessonNo||1)+1);return`./minna-lesson-v16.html?n=${n}&v=${VERSION}`}
+  function resultPanel(){const r=resultState();const next=Number(lesson.lessonNo||1)<50?`<a class="primary" href="${nextLessonUrl()}">${text('进入下一课','Next Lesson')}</a>`:'';return`<div class="resultBox ${esc(r.kind)}"><h3>${esc(r.title)}</h3><p>${esc(r.desc)}</p><div class="resultMeta"><span>${text('完成','Answered')} ${r.answeredCount}/${r.total}</span><span>${text('正确率','Accuracy')} ${r.rate}%</span><span>${text('错题','Wrong')} ${r.wrong}</span><span>${text('通过标准','Pass')} ${PASS_RATE}% + ${text('错题清零','clear wrongs')}</span></div><p class="buttons"><a class="light" href="#wrongBook">${text('查看本课错题','View Lesson Wrongs')}</a><a class="ghost" href="${WRONGBOOK_URL}">${text('打开全站错题本','Open Global Wrongbook')}</a><a class="primary" href="?mode=wrong&v=${VERSION}">${text('订正错题','Correct Wrongs')}</a>${r.kind==='pass'?next:''}</p></div>`}
+  function summary(){const qs=quizItems();return`<section class="panel"><h2>${wrongMode()?text('错题订正模式','Wrong Correction Mode'):text('本课重点','Lesson Focus')}</h2><p>${esc(wrongMode()?text('这里只显示本课已答错的题。重新答对后会自动从错题本移除。','Only wrong answers are shown here. Correct answers are removed from the wrongbook automatically.'):pick(lesson.focus))}</p><div class="cards4"><div><b>${text('词汇','Vocabulary')}</b><span>${vocabCount()}</span></div><div><b>${text('语法','Grammar')}</b><span>${grammarCount()}</span></div><div><b>${text('练习','Practice')}</b><span>${Object.keys(answered).length}/${qs.length}</span></div><div><b>${text('错题','Wrong')}</b><span>${wrongIds().length}</span></div></div>${resultPanel()}<p class="buttons"><a class="ghost" href="${WRONGBOOK_URL}">${text('打开全站错题本','Open Global Wrongbook')}</a><a class="light" href="#wrongBook">${text('查看本课错题','View Lesson Wrongbook')}</a><a class="primary" href="?mode=wrong&v=${VERSION}">${text('订正本课错题','Correct Lesson Wrongs')}</a></p></section>`}
+  function wrongPracticeIntro(){return wrongItems().length?'':`<section class="panel"><h2>${text('暂无待订正错题','No wrong questions to correct')}</h2><p class="small">${text('如果刚才已经订正完成，这说明错题已清零。可以返回完整模式查看是否通过。','If you just finished corrections, your wrong answers are cleared. Return to full mode to confirm pass status.')}</p><p><a class="primary" href="?v=${VERSION}">${text('返回完整模式','Back to Full Mode')}</a></p></section>`}
+  function quizSectionRender(){if(wrongMode())return quiz({id:'wrong_only_quiz',title:{zh:'只练错题',en:'Wrong-only Quiz'},items:wrongItems()},true);return sections('quiz').map(s=>quiz(s,false)).join('')}
+  function section(s){if(s.type==='vocab')return vocab(s);if(s.type==='grammar')return grammar(s);if(s.type==='examples')return examples(s);if(s.type==='mistakes')return mistakes(s);if(s.type==='quiz')return quiz(s,false);return `<section class="panel" id="${esc(s.id)}"><h2>${esc(pick(s.title))}</h2><p class="small">Unsupported section: ${esc(s.type)}</p></section>`}
+  function practiceBlock(items,title){if(!items.length)return '';return `<div class="practiceBox"><h4>${esc(title||text('马上练习','Practice Now'))}</h4><p class="small">${text('做对会计入进度；答错会进入本课错题本。','Correct answers count toward progress; wrong answers go into this lesson wrongbook.')}</p>${items.map((q,i)=>q.type==='order'?qorder(q,i):qblock(q,i)).join('')}</div>`}
+  function vocab(s){return`<section class="panel" id="${esc(s.id)}"><h2>${esc(pick(s.title))}</h2><div class="vocabGrid">${(s.items||[]).map(v=>`<div class="vcard"><b>${esc(v.jp||'')}</b><small>${esc(v.kana||'')}</small><span>${esc(lang()==='en'?v.en:v.zh)}</span>${practiceBlock((v.practice||[]).map((p,i)=>normalizeQ(p,p.skill||'vocab',s.id,v,i)),text('词汇练习','Vocabulary Practice'))}</div>`).join('')}</div></section>`}
+  function grammar(s){return`<section class="panel" id="${esc(s.id)}"><h2>${esc(pick(s.title))}</h2>${(s.items||[]).map(g=>`<article class="gcard"><h3>${esc(g.pattern||pick(g.title))}</h3><p>${esc(pick(g.explanation))}</p>${(g.examples||[]).map(e=>`<p class="jp">${esc(e.jp)}</p><p>${esc(lang()==='en'?e.en:e.zh)}</p>`).join('')}${practiceBlock((g.practice||[]).map((p,i)=>normalizeQ(p,p.skill||'grammar',s.id,g,i)),text('语法练习','Grammar Practice'))}</article>`).join('')}</section>`}
+  function examples(s){return`<section class="panel" id="${esc(s.id)}"><h2>${esc(pick(s.title))}</h2>${(s.items||[]).map(e=>`<div class="example"><p class="jp">${esc(e.jp)}</p><p>${esc(lang()==='en'?e.en:e.zh)}</p>${practiceBlock((e.practice||[]).map((p,i)=>normalizeQ(p,p.skill||'examples',s.id,e,i)),text('例句练习','Example Practice'))}</div>`).join('')}</section>`}
+  function mistakes(s){return`<section class="panel" id="${esc(s.id)}"><h2>${esc(pick(s.title))}</h2>${(s.items||[]).map(m=>`<article class="gcard"><h3>${esc(m.wrong||pick(m.title))}</h3><p><b>${text('正确','Correct')}：</b>${esc(m.correct||'')}</p><p>${esc(lang()==='en'?m.en:m.zh)}</p></article>`).join('')}</section>`}
+  function quiz(s,alreadyNormalized){const items=alreadyNormalized?(s.items||[]):((s.items||[]).map(q=>normalizeQ(q,'quiz',s.id)));return`<section class="panel" id="${esc(s.id)}"><h2>${wrongMode()?text('只练错题','Wrong-only Quiz'):esc(pick(s.title))}</h2><p class="small">${text('选项顺序会随机生成并保存，刷新页面也会保持同一顺序。','Option order is randomized and saved, so refreshing keeps the same order.')}</p>${items.length?items.map((q,i)=>q.type==='order'?qorder(q,i):qblock(q,i)).join(''):`<p class="small">${text('暂无题目。','No questions.')}</p>`}<div class="scoreBox"><b>${text('得分','Score')}：</b><span id="scoreText">${score}/${quizItems().length}</span></div></section>`}
+  function optText(o){
+    const tx=o&&o.text;
+    if(typeof tx==='string')return tx;
+    if(!tx)return'';
+    return tx.jp||pick(tx);
+  }
+  function qblock(q,idx){const opts=q.options||[], ordered=getOrder(q).map(i=>opts[i]).filter(Boolean);return`<div class="qcard" id="${esc(q.id)}" data-qtype="choice"><h3>${idx+1}. ${esc(pick(q.question))}</h3><div class="opts">${ordered.map((o,i)=>`<button class="opt" data-q="${esc(q.id)}" data-ok="${o.correct?'1':'0'}" data-opt-index="${opts.indexOf(o)}">${String.fromCharCode(65+i)}. ${esc(optText(o))}</button>`).join('')}</div><p class="feedback small"></p></div>`}
+  function qorder(q,idx){const parts=q.parts||[], ordered=getOrder(q).map(i=>parts[i]).filter(Boolean);return`<div class="qcard" id="${esc(q.id)}" data-qtype="order"><h3>${idx+1}. ${esc(pick(q.question))}</h3><div class="sentenceBox" data-order-box="${esc(q.id)}"></div><div class="opts">${ordered.map((p,i)=>`<button class="orderPart" data-q="${esc(q.id)}" data-part="${esc(p)}">${esc(p)}</button>`).join('')}</div><p><button class="primary checkOrder" data-q="${esc(q.id)}">${text('检查排序','Check Order')}</button><button class="light clearOrder" data-q="${esc(q.id)}">${text('重排','Clear')}</button></p><p class="feedback small"></p></div>`}
+  function wrongBook(){const wrong=wrongItems();return `<section class="panel" id="wrongBook"><h2>${text('本课错题本','Lesson Wrong Answer Notebook')}</h2><p class="small">${text('这里会自动收集本课答错的题。点击“订正本课错题”，重新答对后会自动移出错题本。','This area collects wrong answers from this lesson. Click “Correct Lesson Wrongs”; correct answers are removed automatically.')}</p><p><a class="ghost" href="${WRONGBOOK_URL}">${text('打开全站错题本','Open Global Wrongbook')}</a><a class="primary" href="?mode=wrong&v=${VERSION}">${text('订正本课错题','Correct Lesson Wrongs')}</a></p>${wrong.length?wrong.map((q,i)=>wrongCard(q,i)).join(''):`<p class="small">${text('暂无错题。','No wrong answers yet.')}</p>`}</section>`}
+  function correctText(q){if(q.type==='order')return (q.answer||q.parts||[]).join(' / ');const correct=(q.options||[]).find(o=>o.correct);return correct?optText(correct):''}
+  function wrongCard(q,i){return `<article class="qcard"><h3>${i+1}. ${esc(pick(q.question))}</h3><p><b>${text('正确答案','Correct answer')}：</b>${esc(correctText(q))}</p><p class="small">${esc(pick(q.explanation))}</p><p class="small">${text('订正方法：进入订正模式，重新答对这题；保存后它会从错题本移除。','How to correct: open correction mode and answer this item correctly; after saving it will leave the wrongbook.')}</p><p><a class="light" href="#${esc(q.id)}">${text('回到原题','Back to question')}</a><a class="primary" href="?mode=wrong&v=${VERSION}#${esc(q.id)}">${text('订正这题','Correct This')}</a></p></article>`}
+  function bind(){document.querySelectorAll('.opt').forEach(b=>b.onclick=()=>answerChoice(b));document.querySelectorAll('.orderPart').forEach(b=>b.onclick=()=>addOrderPart(b));document.querySelectorAll('.checkOrder').forEach(b=>b.onclick=()=>answerOrder(b.dataset.q));document.querySelectorAll('.clearOrder').forEach(b=>b.onclick=()=>clearOrder(b.dataset.q));$('saveBtn')&&($('saveBtn').onclick=saveAll);$('resetQuizBtn')&&($('resetQuizBtn').onclick=resetQuiz);$('loginBtn')&&($('loginBtn').onclick=()=>window.MinnaAuth&&MinnaAuth.loginWithGoogle());$('logoutBtn')&&($('logoutBtn').onclick=async()=>{if(window.MinnaAuth){await MinnaAuth.logout();user=null;render()}})}
+  function findQ(id){return quizItems().find(q=>q.id===id)}
+  function canRetry(qid){return wrongMode()&&answered[qid]===false}
+  function lessonNoFromId(lessonId){const m=String(lessonId||'').match(/(\d{1,2})$/);return m?Number(m[1]):Number(lesson&&lesson.lessonNo||0)||0}
+  function upsertQuestionLog(qid,ok){
+    try{
+      const q=findQ(qid)||{};
+      const all=JSON.parse(localStorage.getItem(QUESTION_LOG_KEY)||'{}');
+      const prev=all[qid]||{id:qid,wrongCount:0,rightCount:0};
+      all[qid]={
+        ...prev,
+        id:qid,
+        lessonId:lesson&&lesson.lessonId||'',
+        lessonNo:lessonNoFromId(lesson&&lesson.lessonId),
+        skill:q.skill||q.sectionType||'quiz',
+        question:(q.question&&q.question.zh)||q.question||'',
+        wrongCount:Number(prev.wrongCount||0)+(ok?0:1),
+        rightCount:Number(prev.rightCount||0)+(ok?1:0),
+        lastResult:ok?'right':'wrong',
+        lastAt:new Date().toISOString()
+      };
+      localStorage.setItem(QUESTION_LOG_KEY,JSON.stringify(all));
+    }catch(e){}
+  }
+  function answerChoice(btn){const qid=btn.dataset.q,ok=btn.dataset.ok==='1',prev=answered[qid];if(prev!==undefined&&!canRetry(qid))return;answered[qid]=ok;if(ok&&prev!==true)score++;upsertQuestionLog(qid,ok);markChoice(btn,qid,ok);saveAll();setTimeout(()=>render(),ok&&wrongMode()?700:220)}
+  function addOrderPart(btn){const qid=btn.dataset.q;if(answered[qid]!==undefined&&!canRetry(qid))return;orderWork[qid]=orderWork[qid]||[];orderWork[qid].push(btn.dataset.part);btn.disabled=true;btn.classList.add('right');const box=document.querySelector(`[data-order-box="${CSS.escape(qid)}"]`);if(box)box.innerHTML=orderWork[qid].map(x=>`<span class="pill">${esc(x)}</span>`).join('')}
+  function clearOrder(qid){if(answered[qid]!==undefined&&!canRetry(qid))return;orderWork[qid]=[];const box=document.querySelector(`[data-order-box="${CSS.escape(qid)}"]`);if(box)box.innerHTML='';const card=document.getElementById(qid);if(card)card.querySelectorAll('.orderPart').forEach(b=>{b.disabled=false;b.classList.remove('right','wrong')})}
+  function answerOrder(qid){const prev=answered[qid];if(prev!==undefined&&!canRetry(qid))return;const q=findQ(qid), current=orderWork[qid]||[], answer=q&&(q.answer||q.parts)||[];const ok=current.join('\u0001')===answer.join('\u0001');answered[qid]=ok;if(ok&&prev!==true)score++;upsertQuestionLog(qid,ok);markOrder(qid,ok);saveAll();setTimeout(()=>render(),ok&&wrongMode()?700:350)}
+  function markChoice(btn,qid,ok){const card=document.getElementById(qid);if(!card)return;card.querySelectorAll('.opt').forEach(b=>{b.disabled=true;if(b.dataset.ok==='1')b.classList.add('right');else if(b===btn)b.classList.add('wrong')});const q=findQ(qid), fb=card.querySelector('.feedback');if(fb)fb.textContent=(ok?(wrongMode()?text('订正成功，已从错题本移除。','Corrected. Removed from wrongbook.'):text('答对了！','Correct!')):text('再看一次解释：','Review the explanation: '))+pick(q&&q.explanation);updateScore()}
+  function markOrder(qid,ok){const card=document.getElementById(qid);if(!card)return;card.querySelectorAll('.orderPart,.checkOrder,.clearOrder').forEach(b=>b.disabled=true);card.querySelectorAll('.orderPart').forEach(b=>b.classList.add(ok?'right':'wrong'));const q=findQ(qid), fb=card.querySelector('.feedback');if(fb)fb.textContent=(ok?text('排序正确！','Correct order!'):text('顺序不对。正确答案：','Wrong order. Correct answer: ')+correctText(q)+'。')+pick(q&&q.explanation);updateScore()}
+  function updateScore(){const st=$('scoreText');if(st)st.textContent=`${score}/${quizItems().length}`}
+  function restore(){Object.keys(answered).forEach(qid=>{const card=document.getElementById(qid), q=findQ(qid);if(!card||!q)return;const ok=answered[qid];if(wrongMode()&&ok===false){const fb=card.querySelector('.feedback');if(fb)fb.textContent=text('请重新作答；答对后会自动从错题本移除。','Answer again; a correct answer removes it from the wrongbook.');return}if(q.type==='order')markOrder(qid,ok);else{const btn=[...card.querySelectorAll('.opt')].find(b=>b.dataset.ok==='1')||card.querySelector('.opt');markChoice(btn,qid,ok)}})}
+  function resetQuiz(){if(!confirm(text('确定重做本课练习吗？会清空本课答题记录并重新随机选项顺序。','Reset this lesson practice? This clears answers and reshuffles option order.')))return;answered={};quizOrder={};score=0;orderWork={};saveAll();render()}
+  function updateCloud(){const el=$('cloudStatus');if(el)el.innerHTML=cloudHtml()}
+  async function saveAll(){saveLocal();if(!window.MinnaAuth){cloud='local';updateCloud();return}saving=true;updateCloud();try{await MinnaAuth.saveProgress(payload(),lesson.lessonId);cloud='ready'}catch(e){cloud='error:'+e.message}saving=false;updateCloud()}
+  function saveLocal(){try{localStorage.setItem('minna_v18_'+lesson.lessonId,JSON.stringify(payload()));const recent=JSON.parse(localStorage.getItem('minna_recent_lessons')||'[]').filter(x=>Number(x.n)!==lesson.lessonNo);recent.unshift({n:lesson.lessonNo,at:Date.now()});localStorage.setItem('minna_recent_lessons',JSON.stringify(recent.slice(0,5)));const days=JSON.parse(localStorage.getItem('minna_study_days')||'{}');days[new Date().toISOString().slice(0,10)]=true;localStorage.setItem('minna_study_days',JSON.stringify(days))}catch(e){}}
+  async function start(){ensureI18n();lesson=window.MinnaCurrentLessonJson;if(!lesson){$('app').innerHTML='<main class="wrap"><section class="panel">No JSON lesson data loaded.</section></main>';return}I().onChange(()=>render());await initAuth();render()}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
+})();

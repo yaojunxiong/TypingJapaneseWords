@@ -1,0 +1,693 @@
+{
+  "schema": "minna.lesson.v1",
+  "course": "minna",
+  "lessonNo": 4,
+  "lessonId": "minna_lesson_04",
+  "title": {
+    "zh": "第4课",
+    "en": "Lesson 4",
+    "ja": "第4課"
+  },
+  "subtitle": {
+    "zh": "时间・星期",
+    "en": "Time and days of the week",
+    "ja": "時間・曜日"
+  },
+  "focus": {
+    "zh": "学习时间表达、星期表达、时间范围「〜から〜まで」以及礼貌体过去形。",
+    "en": "Learn time expressions, weekdays, time ranges with 「〜から〜まで」, and polite past forms.",
+    "ja": "時間表現、曜日、「〜から〜まで」、ます形の過去を学びます。"
+  },
+  "sections": [
+    {
+      "type": "vocab",
+      "id": "l04_vocab",
+      "title": {
+        "zh": "核心词汇",
+        "en": "Core Vocabulary",
+        "ja": "基本語彙"
+      },
+      "items": [
+        {
+          "id": "l04_v01",
+          "jp": "今",
+          "kana": "いま",
+          "zh": "现在",
+          "en": "now",
+          "tags": [
+            "time"
+          ]
+        },
+        {
+          "id": "l04_v02",
+          "jp": "時",
+          "kana": "じ",
+          "zh": "点（钟）",
+          "en": "o'clock",
+          "tags": [
+            "time"
+          ]
+        },
+        {
+          "id": "l04_v03",
+          "jp": "分",
+          "kana": "ふん",
+          "zh": "分（分钟）",
+          "en": "minute",
+          "tags": [
+            "time"
+          ]
+        },
+        {
+          "id": "l04_v04",
+          "jp": "半",
+          "kana": "はん",
+          "zh": "半",
+          "en": "half",
+          "tags": [
+            "time"
+          ]
+        },
+        {
+          "id": "l04_v05",
+          "jp": "午前",
+          "kana": "ごぜん",
+          "zh": "上午",
+          "en": "a.m.",
+          "tags": [
+            "time"
+          ]
+        },
+        {
+          "id": "l04_v06",
+          "jp": "午後",
+          "kana": "ごご",
+          "zh": "下午",
+          "en": "p.m.",
+          "tags": [
+            "time"
+          ]
+        },
+        {
+          "id": "l04_v07",
+          "jp": "月曜日",
+          "kana": "げつようび",
+          "zh": "星期一",
+          "en": "Monday",
+          "tags": [
+            "weekday"
+          ]
+        },
+        {
+          "id": "l04_v08",
+          "jp": "火曜日",
+          "kana": "かようび",
+          "zh": "星期二",
+          "en": "Tuesday",
+          "tags": [
+            "weekday"
+          ]
+        },
+        {
+          "id": "l04_v09",
+          "jp": "水曜日",
+          "kana": "すいようび",
+          "zh": "星期三",
+          "en": "Wednesday",
+          "tags": [
+            "weekday"
+          ]
+        },
+        {
+          "id": "l04_v10",
+          "jp": "木曜日",
+          "kana": "もくようび",
+          "zh": "星期四",
+          "en": "Thursday",
+          "tags": [
+            "weekday"
+          ]
+        },
+        {
+          "id": "l04_v11",
+          "jp": "金曜日",
+          "kana": "きんようび",
+          "zh": "星期五",
+          "en": "Friday",
+          "tags": [
+            "weekday"
+          ]
+        },
+        {
+          "id": "l04_v12",
+          "jp": "土曜日",
+          "kana": "どようび",
+          "zh": "星期六",
+          "en": "Saturday",
+          "tags": [
+            "weekday"
+          ]
+        },
+        {
+          "id": "l04_v13",
+          "jp": "日曜日",
+          "kana": "にちようび",
+          "zh": "星期日",
+          "en": "Sunday",
+          "tags": [
+            "weekday"
+          ]
+        },
+        {
+          "id": "l04_v14",
+          "jp": "毎日",
+          "kana": "まいにち",
+          "zh": "每天",
+          "en": "every day",
+          "tags": [
+            "time"
+          ]
+        },
+        {
+          "id": "l04_v15",
+          "jp": "起きます",
+          "kana": "おきます",
+          "zh": "起床",
+          "en": "wake up",
+          "tags": [
+            "verb"
+          ]
+        },
+        {
+          "id": "l04_v16",
+          "jp": "寝ます",
+          "kana": "ねます",
+          "zh": "睡觉",
+          "en": "go to bed",
+          "tags": [
+            "verb"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "grammar",
+      "id": "l04_grammar",
+      "title": {
+        "zh": "核心语法",
+        "en": "Core Grammar",
+        "ja": "基本文法"
+      },
+      "items": [
+        {
+          "id": "l04_g01",
+          "pattern": "今 〜時 〜分です",
+          "title": {
+            "zh": "现在几点",
+            "en": "Telling the time"
+          },
+          "explanation": {
+            "zh": "使用「今〜時〜分です」表达具体时间，30分常说「半」。",
+            "en": "Use 「今〜時〜分です」 for clock time. 30 minutes is often 「半」."
+          },
+          "examples": [
+            {
+              "jp": "今 八時半です。",
+              "zh": "现在八点半。",
+              "en": "It is 8:30 now."
+            }
+          ],
+          "practice": [
+            {
+              "question": {
+                "zh": "“八点半”应说？",
+                "en": "How do you say 8:30?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "八時半です。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "八時三十分ですか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "八時です。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "半八時です。"
+                  }
+                }
+              ]
+            },
+            {
+              "question": {
+                "zh": "“三点十五分”应说？",
+                "en": "How do you say 3:15?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "三時十五分です。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "三分十五時です。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "十五時三分です。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "三時半です。"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l04_g02",
+          "pattern": "〜から 〜まで",
+          "title": {
+            "zh": "从〜到〜",
+            "en": "From ~ to ~"
+          },
+          "explanation": {
+            "zh": "表示时间范围，起点用「から」，终点用「まで」。",
+            "en": "Use 「から」 for the starting point and 「まで」 for the ending point."
+          },
+          "examples": [
+            {
+              "jp": "学校は 九時から 五時までです。",
+              "zh": "学校是9点到5点。",
+              "en": "School is from 9 to 5."
+            }
+          ],
+          "practice": [
+            {
+              "question": {
+                "zh": "“9点到5点”正确是？",
+                "en": "Which means “from 9 to 5”?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "九時から五時まで"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "九時まで五時から"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "九時に五時まで"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "九時で五時まで"
+                  }
+                }
+              ]
+            },
+            {
+              "question": {
+                "zh": "范围句式是？",
+                "en": "Which pattern expresses a range?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "AからBまで"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "AでBを"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "AはBが"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "AとBで"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l04_g03",
+          "pattern": "〜曜日 / 何曜日",
+          "title": {
+            "zh": "星期表达",
+            "en": "Weekday expressions"
+          },
+          "explanation": {
+            "zh": "问星期用「何曜日ですか」。回答可用「〜曜日です」。",
+            "en": "Ask weekdays with 「何曜日ですか」 and answer with 「〜曜日です」."
+          },
+          "examples": [
+            {
+              "jp": "休みは 何曜日ですか。日曜日です。",
+              "zh": "休息日是星期几？星期日。",
+              "en": "What day is your day off? Sunday."
+            }
+          ],
+          "practice": [
+            {
+              "question": {
+                "zh": "问“星期几”用？",
+                "en": "How do you ask “what weekday”?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "何曜日ですか。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "何時ですか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "何分ですか。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "どこですか。"
+                  }
+                }
+              ]
+            },
+            {
+              "question": {
+                "zh": "“星期三”是？",
+                "en": "Which is Wednesday?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "水曜日"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "木曜日"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "金曜日"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "火曜日"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l04_g04",
+          "pattern": "ます形过去：〜ました / 〜ませんでした",
+          "title": {
+            "zh": "礼貌体过去与过去否定",
+            "en": "Polite past and past negative"
+          },
+          "explanation": {
+            "zh": "动词ます形过去用「〜ました」，过去否定用「〜ませんでした」。",
+            "en": "Polite past is 「〜ました」 and past negative is 「〜ませんでした」."
+          },
+          "examples": [
+            {
+              "jp": "きのう 六時に 起きました。",
+              "zh": "昨天六点起床了。",
+              "en": "I woke up at six yesterday."
+            }
+          ],
+          "practice": [
+            {
+              "question": {
+                "zh": "“昨天学习了”应说？",
+                "en": "How to say “studied yesterday”?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "きのう 勉強しました。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "きのう 勉強します。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "きのう 勉強しません。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "きのう 勉強しませんでしたか。"
+                  }
+                }
+              ]
+            },
+            {
+              "question": {
+                "zh": "“昨天没睡”应说？",
+                "en": "How to say “did not sleep yesterday”?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "きのう 寝ませんでした。"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "きのう 寝ました。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "きのう 寝ません。"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "きのう 寝ます。"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "examples",
+      "id": "l04_examples",
+      "title": {
+        "zh": "核心例句",
+        "en": "Core Examples",
+        "ja": "基本例文"
+      },
+      "items": [
+        {
+          "id": "l04_e01",
+          "jp": "今 七時十分です。",
+          "zh": "现在7点10分。",
+          "en": "It is 7:10 now."
+        },
+        {
+          "id": "l04_e02",
+          "jp": "会社は 九時から 五時までです。",
+          "zh": "公司是9点到5点。",
+          "en": "The office is from 9 to 5."
+        },
+        {
+          "id": "l04_e03",
+          "jp": "会議は 月曜日です。",
+          "zh": "会议在星期一。",
+          "en": "The meeting is on Monday."
+        },
+        {
+          "id": "l04_e04",
+          "jp": "毎日 六時に 起きます。",
+          "zh": "我每天六点起床。",
+          "en": "I wake up at six every day."
+        },
+        {
+          "id": "l04_e05",
+          "jp": "きのう 十一時に 寝ました。",
+          "zh": "我昨天11点睡。",
+          "en": "I went to bed at 11 yesterday."
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "l04_quiz",
+      "title": {
+        "zh": "综合测试",
+        "en": "Final Test",
+        "ja": "まとめテスト"
+      },
+      "items": [
+        {
+          "id": "l04_q01",
+          "question": {
+            "zh": "“现在几点？”是？",
+            "en": "Which means “What time is it now?”?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "今 何時ですか。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "今 何曜日ですか。"
+              }
+            },
+            {
+              "text": {
+                "jp": "今 どこですか。"
+              }
+            },
+            {
+              "text": {
+                "jp": "今 だれですか。"
+              }
+            }
+          ]
+        },
+        {
+          "id": "l04_q02",
+          "question": {
+            "zh": "“从8点到12点”是？",
+            "en": "Which means “from 8 to 12”?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "八時から十二時まで"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "八時まで十二時から"
+              }
+            },
+            {
+              "text": {
+                "jp": "八時に十二時まで"
+              }
+            },
+            {
+              "text": {
+                "jp": "八時と十二時まで"
+              }
+            }
+          ]
+        },
+        {
+          "id": "l04_q03",
+          "question": {
+            "zh": "“星期五”是？",
+            "en": "Which is Friday?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "金曜日"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "木曜日"
+              }
+            },
+            {
+              "text": {
+                "jp": "水曜日"
+              }
+            },
+            {
+              "text": {
+                "jp": "土曜日"
+              }
+            }
+          ]
+        },
+        {
+          "id": "l04_q04",
+          "question": {
+            "zh": "“昨天没学习”是？",
+            "en": "Which means “did not study yesterday”?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "きのう 勉強しませんでした。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "きのう 勉強しました。"
+              }
+            },
+            {
+              "text": {
+                "jp": "きのう 勉強しません。"
+              }
+            },
+            {
+              "text": {
+                "jp": "きのう 勉強します。"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

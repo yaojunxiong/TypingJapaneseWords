@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>字幕同步 Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #111;
+            color: #fff;
+            padding: 20px;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+        }
+
+        .video-container {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+
+        .subtitles-container {
+            width: 100%;
+            max-width: 400px;
+            border: 1px solid #444;
+            background-color: #222;
+            border-radius: 10px;
+            padding: 10px;
+            overflow-y: auto;
+            max-height: 400px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+        }
+
+        .subtitle {
+            opacity: 0.7;
+            transition: all 0.3s ease;
+            text-align: center;
+            margin-bottom: 6px;
+            cursor: pointer;
+        }
+
+            .subtitle span {
+                display: block;
+            }
+
+            .subtitle .japanese {
+                color: #ffcc00;
+            }
+
+            .subtitle .chinese {
+                color: #ffffff;
+            }
+
+        .active {
+            opacity: 1;
+            color: #00ffff;
+            background-color: rgba(255, 255, 255, 0.1);
+            font-weight: bold;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            padding: 4px 6px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="text-center text-warning mb-4">🎬 字幕同步播放 Demo</h1>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <!-- 音频播放器 -->
+            <div class="col-12 col-md-6 mb-3">
+                <audio controls id="video" class="w-100">
+                    <source src="shinkanzen_chokai_n2_CD-A_001.mp3" type="audio/mpeg" />
+                </audio>
+            </div>
+
+            <!-- 字幕区域 -->
+            <div class="col-12 col-md-6">
+                <div id="subtitles" class="subtitles-container">
+                    <p class="text-center text-muted">字幕加载中...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 加载 JSON 文件
+        async function fetchSubtitles() {
+            const response = await fetch('shinkanzen_chokai_n2_CD-A_001.json');
+            return await response.json();
+        }
+
+        // 时间格式转为秒
+        function timeToSeconds(time) {
+            const [h, m, s] = time.split(",")[0].split(":");
+            const ms = time.split(",")[1];
+            return parseInt(h) * 3600 + parseInt(m) * 60 + parseFloat(s) + parseInt(ms) / 1000;
+        }
+
+        // 转换字幕数据
+        function parseSubtitles(data) {
+            return data.map(sub => {
+                const start = timeToSeconds(sub.start);
+                const end = timeToSeconds(sub.end);
+                return { start, end, jp: sub.jp, zh: sub.zh, element: null };
+            });
+        }
+
+        // 加载并渲染字幕
+        async function loadSubtitles() {
+            const data = await fetchSubtitles();
+            const subtitles = parseSubtitles(data);
+            const container = document.getElementById("subtitles");
+            container.innerHTML = "";
+
+            subtitles.forEach(line => {
+                const div = document.createElement("div");
+                div.className = "subtitle";
+                div.innerHTML = `<span class="japanese">${line.jp}</span><span class="chinese">${line.zh}</span>`;
+                div.onclick = () => {
+                    video.currentTime = line.start;
+                    video.play();
+                };
+                container.appendChild(div);
+                line.element = div;
+            });
+
+            const video = document.getElementById("video");
+            let lastActive = null;
+
+            video.ontimeupdate = () => {
+                const t = video.currentTime;
+                subtitles.forEach(line => {
+                    const isActive = t >= line.start && t <= line.end;
+                    const alreadyActive = line.element.classList.contains("active");
+
+                    if (isActive && !alreadyActive) {
+                        if (lastActive) lastActive.classList.remove("active");
+                        line.element.classList.add("active");
+                        line.element.scrollIntoView({ behavior: "smooth", block: "center" });
+                        lastActive = line.element;
+                    }
+                });
+            };
+
+            video.onended = () => {
+                container.scrollTo({ top: 0, behavior: "smooth" });
+                if (lastActive) lastActive.classList.remove("active");
+            };
+        }
+
+        // 页面加载后执行
+        loadSubtitles();
+    </script>
+</body>
+</html>
