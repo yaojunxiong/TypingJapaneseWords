@@ -106,10 +106,10 @@ export default async function LessonDetailPage({
       </section>
 
       <section className="homeMap card">
-        <a className="homeNode" href="#vocab">🟢<small>{tr(lang, '词汇', 'Vocab')}</small></a>
-        <a className="homeNode" href="#grammar">📦<small>{tr(lang, '语法', 'Grammar')}</small></a>
-        <a className="homeNode" href="#examples">🪙<small>{tr(lang, '例句', 'Examples')}</small></a>
-        <a className="homeNode" href="#quiz">🏅<small>{tr(lang, '测验', 'Quiz')}</small></a>
+        <Link className="homeNode" href={`/lessons/${no}/practice?stage=vocab`}>🟢<small>{tr(lang, '词汇', 'Vocab')}</small></Link>
+        <Link className="homeNode" href={`/lessons/${no}/practice?stage=grammar`}>📦<small>{tr(lang, '语法', 'Grammar')}</small></Link>
+        <Link className="homeNode" href={`/lessons/${no}/practice?stage=examples`}>🪙<small>{tr(lang, '例句', 'Examples')}</small></Link>
+        <Link className="homeNode" href={`/lessons/${no}/practice?stage=quiz`}>🏅<small>{tr(lang, '测验', 'Quiz')}</small></Link>
       </section>
 
       {!lesson ? (

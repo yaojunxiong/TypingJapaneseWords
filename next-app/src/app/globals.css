@@ -323,6 +323,112 @@ a:hover { text-decoration: underline; }
   border-radius: 14px;
   padding: 14px;
 }
+
+.practiceWrap {
+  max-width: 720px;
+  margin: 0 auto 14px;
+  text-align: center;
+}
+.practiceTopRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.practiceClose {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  border: 1px solid #e2e8f0;
+  display: grid;
+  place-items: center;
+  color: #64748b;
+}
+.practiceStats {
+  font-weight: 800;
+  color: #334155;
+}
+.practiceQuestion {
+  font-size: 38px;
+  line-height: 1.25;
+  font-weight: 900;
+  margin: 6px 0;
+}
+.practiceHint {
+  color: #94a3b8;
+  font-weight: 800;
+  margin: 0 0 6px;
+}
+.practiceProgress {
+  color: #64748b;
+  font-size: 36px;
+  font-weight: 900;
+  margin: 0 0 14px;
+}
+.practiceCard {
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 16px;
+  text-align: left;
+}
+.practiceBadge {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 6px 12px;
+  background: #fef3c7;
+  color: #a16207;
+  font-weight: 800;
+  margin: 0 0 8px;
+}
+.practiceChoices {
+  display: grid;
+  gap: 10px;
+}
+.practiceChoice {
+  width: 100%;
+  border: 2px solid #e5e7eb;
+  border-radius: 16px;
+  background: #fff;
+  min-height: 56px;
+  font-size: 28px;
+  font-weight: 800;
+  color: #111827;
+}
+.practiceChoice.right {
+  border-color: #22c55e;
+  background: #f0fdf4;
+  color: #166534;
+}
+.practiceChoice.wrong {
+  border-color: #ef4444;
+  background: #fef2f2;
+  color: #991b1b;
+}
+.practiceChoice.rightGhost {
+  border-color: #86efac;
+  background: #f0fdf4;
+  color: #166534;
+}
+.practiceChoice.disabled {
+  opacity: .66;
+}
+.practiceFeedback {
+  margin-top: 14px;
+  display: grid;
+  gap: 8px;
+}
+.practiceActions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.btnGhost {
+  background: #fff;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
+}
 .msgCard2 h2 { margin: 0 0 6px; }
 .msgIcon { font-size: 30px; margin-bottom: 6px; }
 .btn.ghost { background: #fff; color: #075985; border: 1px solid #bae6fd; }
