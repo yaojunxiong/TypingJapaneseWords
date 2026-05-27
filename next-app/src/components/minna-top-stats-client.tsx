@@ -11,6 +11,7 @@ type TopStats = {
   streak: number
   xp: number
   hearts: number
+  lessonLabel: string
 }
 
 function t(lang: Props['lang'], zh: string, en: string) {
@@ -34,7 +35,7 @@ function readNum(key: string, fallback: number) {
 }
 
 export default function MinnaTopStatsClient({ lang }: Props) {
-  const [stats, setStats] = useState<TopStats>({ lesson: 1, streak: 0, xp: 0, hearts: 5 })
+  const [stats, setStats] = useState<TopStats>({ lesson: 1, streak: 0, xp: 0, hearts: 5, lessonLabel: '' })
 
   function sync() {
     const state = readJson<{ lastLesson?: number }>('minna.mobile.learning.state.v1', {})
@@ -42,7 +43,8 @@ export default function MinnaTopStatsClient({ lang }: Props) {
     const streak = Math.max(0, readNum('minna_study_days', 0))
     const xp = Math.max(0, readNum('minna.xp.v1', 0))
     const hearts = Math.max(0, readNum('minna.hearts.v1', 5))
-    setStats({ lesson, streak, xp, hearts })
+    const lessonLabel = String(localStorage.getItem('minna.top.lesson_label.v1') || '').trim()
+    setStats({ lesson, streak, xp, hearts, lessonLabel })
   }
 
   useEffect(() => {
@@ -59,7 +61,7 @@ export default function MinnaTopStatsClient({ lang }: Props) {
 
   return (
     <div className="minnaTopStats">
-      <span>🇯🇵 {stats.lesson} {t(lang, '课', 'L')}</span>
+      <span>🇯🇵 {stats.lessonLabel || `${stats.lesson} ${t(lang, '课', 'L')}`}</span>
       <span>🔥 {stats.streak}</span>
       <span>💎 {stats.xp}</span>
       <span>❤️ {stats.hearts}</span>

@@ -94,6 +94,19 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
   }, [lessonNo])
 
   useEffect(() => {
+    try {
+      localStorage.setItem('minna.top.lesson_label.v1', `Lesson ${lessonNo}-${stageText}`)
+      window.dispatchEvent(new Event('minna:stats-update'))
+    } catch {}
+    return () => {
+      try {
+        localStorage.removeItem('minna.top.lesson_label.v1')
+        window.dispatchEvent(new Event('minna:stats-update'))
+      } catch {}
+    }
+  }, [lessonNo, stageText])
+
+  useEffect(() => {
     if (finished) return
     speakHint()
   }, [idx, finished])
@@ -206,7 +219,6 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
       <p className="practiceProgress">{idx + 1}/{total}</p>
 
       <div className="practiceCard">
-        <p className="practiceBadge">Lesson {lessonNo}-{stageText}</p>
         <h3>{t(lang, '选择答案', 'Choose an answer')}</h3>
         <div className="practiceChoices">
           {current.options.map((op, opIdx) => {
