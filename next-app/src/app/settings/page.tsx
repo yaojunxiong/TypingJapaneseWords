@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import MinnaNav from '@/components/minna-nav'
 import { getLang, tr } from '@/lib/i18n'
+import SettingsPracticeControls from '@/components/settings-practice-controls'
 
 export default async function SettingsPage() {
   const lang = await getLang()
@@ -40,6 +41,8 @@ export default async function SettingsPage() {
         <p><Link href="/login">{tr(lang, '登录', 'Sign in')}</Link></p>
         <p><Link href="/chat">{tr(lang, '聊天', 'Chat')}</Link></p>
       </section>
+
+      <SettingsPracticeControls lang={lang} />
     </main>
   )
 }

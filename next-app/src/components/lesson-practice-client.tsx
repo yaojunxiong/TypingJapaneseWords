@@ -189,26 +189,6 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
     <section className="practiceWrap card">
       <div style={{ display: 'flex', justifyContent: 'flex-start', marginBottom: 6 }}>
         <a className="practiceClose" href={`/lessons/${lessonNo}`}>✕</a>
-        <button
-          className="practiceSwitch"
-          onClick={() => {
-            const next = !voiceOn
-            setVoiceOn(next)
-            try { localStorage.setItem('minna.practice.voice.v1', next ? '1' : '0') } catch {}
-          }}
-        >
-          {voiceOn ? t(lang, '语音开', 'Voice On') : t(lang, '语音关', 'Voice Off')}
-        </button>
-        <button
-          className="practiceSwitch"
-          onClick={() => {
-            const next = !sfxOn
-            setSfxOn(next)
-            try { localStorage.setItem('minna.practice.sfx.v1', next ? '1' : '0') } catch {}
-          }}
-        >
-          {sfxOn ? t(lang, '音效开', 'SFX On') : t(lang, '音效关', 'SFX Off')}
-        </button>
       </div>
 
       <p className="practiceQuestion">{current.question}</p>
