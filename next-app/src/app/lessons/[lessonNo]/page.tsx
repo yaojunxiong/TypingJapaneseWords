@@ -2,6 +2,7 @@ import fs from 'node:fs/promises'
 import path from 'node:path'
 import Link from 'next/link'
 import MinnaNav from '@/components/minna-nav'
+import TopLabelSync from '@/components/top-label-sync'
 import { LESSONS_1_50 } from '@/lib/minna-lessons'
 import { getLang, type Lang, tr } from '@/lib/i18n'
 
@@ -97,6 +98,7 @@ export default async function LessonDetailPage({
   return (
     <main>
       <MinnaNav active="lessons" />
+      <TopLabelSync label={lang === 'en' ? `Lesson ${no}` : `第 ${no} 课`} />
 
       <section className="heroCard card">
         <div className="heroEmoji">📘</div>

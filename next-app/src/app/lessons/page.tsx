@@ -1,5 +1,6 @@
 import { cookies } from 'next/headers'
 import MinnaNav from '@/components/minna-nav'
+import TopLabelSync from '@/components/top-label-sync'
 import LessonsClient from '@/components/lessons-client'
 import { createClient } from '@/utils/supabase/server'
 import { hasSupabasePublicEnv } from '@/utils/supabase/config'
@@ -54,6 +55,7 @@ export default async function LessonsPage() {
   return (
     <main>
       <MinnaNav active="lessons" />
+      <TopLabelSync label={lang === 'en' ? 'Lessons' : '课程'} />
       <LessonsClient bypassLessonLock={bypassLessonLock} roleLabel={roleLabel} lang={lang} />
     </main>
   )

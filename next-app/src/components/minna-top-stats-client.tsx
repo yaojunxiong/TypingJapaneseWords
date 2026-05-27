@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 
 type Props = {
   lang: 'zh' | 'en'
+  active?: 'home' | 'login' | 'me' | 'toolbox' | 'lessons' | 'messages' | 'favorites' | 'chat' | 'settings'
 }
 
 type TopStats = {
@@ -61,7 +62,7 @@ export default function MinnaTopStatsClient({ lang }: Props) {
 
   return (
     <div className="minnaTopStats">
-      <span>🇯🇵 {stats.lessonLabel || `${stats.lesson} ${t(lang, '课', 'L')}`}</span>
+      <span>🇯🇵 {stats.lessonLabel || t(lang, '课程', 'Lessons')}</span>
       <span>🔥 {stats.streak}</span>
       <span>💎 {stats.xp}</span>
       <span>❤️ {stats.hearts}</span>
