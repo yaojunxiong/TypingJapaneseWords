@@ -40,6 +40,15 @@ function practiceSessionKey(lessonNo: number, stage: Props['stage']) {
   return `minna.practice.session.v1.${lessonNo}.${stage}`
 }
 
+function emitStatsUpdate() {
+  if (typeof window === 'undefined') return
+  window.setTimeout(() => {
+    try {
+      window.dispatchEvent(new Event('minna:stats-update'))
+    } catch {}
+  }, 0)
+}
+
 function readPracticeSession(lessonNo: number, stage: Props['stage'], total: number): PracticeSession | null {
   if (typeof window === 'undefined' || total <= 0) return null
   try {
@@ -203,7 +212,7 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
           at: new Date().toISOString()
         }
       })
-      window.dispatchEvent(new Event('minna:stats-update'))
+      emitStatsUpdate()
     } catch {}
   }
 
@@ -220,7 +229,7 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
         completed: total > 0 && finalScore >= Math.ceil(total * 0.8) && finalHearts > 0
       })
       clearPracticeSession(lessonNo, stage)
-      window.dispatchEvent(new Event('minna:stats-update'))
+      emitStatsUpdate()
     } catch {}
   }
 
@@ -253,7 +262,7 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
         markDailyCheckinLocal()
         setCheckedInOnce(true)
       }
-      window.dispatchEvent(new Event('minna:stats-update'))
+      emitStatsUpdate()
     } catch {}
     setSessionReady(true)
   }, [lessonNo, stage, total, checkedInOnce])
@@ -266,12 +275,12 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
   useEffect(() => {
     try {
       localStorage.setItem('minna.top.lesson_label.v1', `Lesson ${lessonNo}-${stageText}`)
-      window.dispatchEvent(new Event('minna:stats-update'))
+      emitStatsUpdate()
     } catch {}
     return () => {
       try {
         localStorage.removeItem('minna.top.lesson_label.v1')
-        window.dispatchEvent(new Event('minna:stats-update'))
+        emitStatsUpdate()
       } catch {}
     }
   }, [lessonNo, stageText])
@@ -294,7 +303,7 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
         try {
           const xp = Number(localStorage.getItem('minna.xp.v1') || '0')
           localStorage.setItem('minna.xp.v1', String(Math.max(0, xp) + 1))
-          window.dispatchEvent(new Event('minna:stats-update'))
+          emitStatsUpdate()
         } catch {}
         return next
       })
@@ -307,7 +316,7 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
         try {
           localStorage.setItem('minna.hearts.v1', String(next))
           saveMistake(optionIndex, next)
-          window.dispatchEvent(new Event('minna:stats-update'))
+          emitStatsUpdate()
         } catch {}
         return next
       })
@@ -339,7 +348,7 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
     clearPracticeSession(lessonNo, stage)
     try {
       localStorage.setItem('minna.hearts.v1', '5')
-      window.dispatchEvent(new Event('minna:stats-update'))
+      emitStatsUpdate()
     } catch {}
   }
 
