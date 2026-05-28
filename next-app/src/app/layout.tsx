@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { getLang } from '@/lib/i18n'
+import AuthCodeRedirect from '@/components/auth-code-redirect'
 
 export const metadata: Metadata = {
   title: 'Minna Next',
@@ -15,7 +16,10 @@ export default async function RootLayout({
   const lang = await getLang()
   return (
     <html lang={lang === 'en' ? 'en' : 'zh-CN'}>
-      <body>{children}</body>
+      <body>
+        <AuthCodeRedirect />
+        {children}
+      </body>
     </html>
   )
 }
