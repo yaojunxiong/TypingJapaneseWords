@@ -2,6 +2,8 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import { markDailyCheckinLocal, recordPracticeResult } from '@/lib/learning-cloud-sync'
+import { hasSupabasePublicEnv } from '@/utils/supabase/config'
+import { createClient } from '@/utils/supabase/client'
 
 type Lang = 'zh' | 'en'
 
@@ -148,6 +150,8 @@ function playCorrectCombo(combo: number) {
 }
 
 export default function LessonPracticeClient({ lessonNo, lang, stage, questions }: Props) {
+  const supabaseReady = hasSupabasePublicEnv()
+  const supabase = useMemo(() => createClient(), [])
   const [idx, setIdx] = useState(0)
   const [hearts, setHearts] = useState(5)
   const [score, setScore] = useState(0)
@@ -169,6 +173,68 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
     if (stage === 'examples') return t(lang, '例句训练', 'Example Training')
     return t(lang, '测验模式', 'Quiz Mode')
   }, [lang, stage])
+
+  async function readCloudPracticeSession(): Promise<PracticeSession | null> {
+    if (!supabaseReady || total <= 0) return null
+    try {
+      const { data: authData } = await supabase.auth.getUser()
+      const user = authData.user
+      if (!user) return null
+      const { data, error } = await supabase
+        .from('practice_sessions')
+        .select('lesson_no, stage, idx, score, hearts, completed')
+        .eq('user_id', user.id)
+        .eq('lesson_no', lessonNo)
+        .eq('stage', stage)
+        .maybeSingle()
+      if (error || !data || data.completed) return null
+      return {
+        lessonNo,
+        stage,
+        idx: Math.max(0, Math.min(total - 1, Number(data.idx) || 0)),
+        score: Math.max(0, Number(data.score) || 0),
+        hearts: Math.max(0, Math.min(5, Number(data.hearts) || 5))
+      }
+    } catch {
+      return null
+    }
+  }
+
+  async function writeCloudPracticeSession(session: PracticeSession) {
+    if (!supabaseReady) return
+    try {
+      const { data: authData } = await supabase.auth.getUser()
+      const user = authData.user
+      if (!user) return
+      await supabase
+        .from('practice_sessions')
+        .upsert({
+          user_id: user.id,
+          lesson_no: session.lessonNo,
+          stage: session.stage,
+          idx: session.idx,
+          score: session.score,
+          hearts: session.hearts,
+          completed: false,
+          updated_at: new Date().toISOString()
+        }, { onConflict: 'user_id,lesson_no,stage' })
+    } catch {}
+  }
+
+  async function clearCloudPracticeSession() {
+    if (!supabaseReady) return
+    try {
+      const { data: authData } = await supabase.auth.getUser()
+      const user = authData.user
+      if (!user) return
+      await supabase
+        .from('practice_sessions')
+        .delete()
+        .eq('user_id', user.id)
+        .eq('lesson_no', lessonNo)
+        .eq('stage', stage)
+    } catch {}
+  }
 
   function speakHint() {
     try {
@@ -229,47 +295,65 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
         completed: total > 0 && finalScore >= Math.ceil(total * 0.8) && finalHearts > 0
       })
       clearPracticeSession(lessonNo, stage)
+      void clearCloudPracticeSession()
       emitStatsUpdate()
     } catch {}
   }
 
   useEffect(() => {
-    setSessionReady(false)
-    try {
-      const v = localStorage.getItem('minna.practice.voice.v1')
-      const s = localStorage.getItem('minna.practice.sfx.v1')
-      if (v === '0') setVoiceOn(false)
-      if (s === '0') setSfxOn(false)
-      const stateRaw = localStorage.getItem('minna.mobile.learning.state.v1')
-      const state = stateRaw ? JSON.parse(stateRaw) : {}
-      state.lastLesson = Math.max(1, lessonNo)
-      localStorage.setItem('minna.mobile.learning.state.v1', JSON.stringify(state))
-      const h = Number(localStorage.getItem('minna.hearts.v1') || '')
-      if (Number.isFinite(h)) setHearts(Math.max(0, h))
-      else localStorage.setItem('minna.hearts.v1', '5')
+    let cancelled = false
+    async function loadSession() {
+      setSessionReady(false)
+      try {
+        const v = localStorage.getItem('minna.practice.voice.v1')
+        const s = localStorage.getItem('minna.practice.sfx.v1')
+        if (v === '0') setVoiceOn(false)
+        if (s === '0') setSfxOn(false)
+        const stateRaw = localStorage.getItem('minna.mobile.learning.state.v1')
+        const state = stateRaw ? JSON.parse(stateRaw) : {}
+        state.lastLesson = Math.max(1, lessonNo)
+        localStorage.setItem('minna.mobile.learning.state.v1', JSON.stringify(state))
+        const h = Number(localStorage.getItem('minna.hearts.v1') || '')
+        if (Number.isFinite(h)) setHearts(Math.max(0, h))
+        else localStorage.setItem('minna.hearts.v1', '5')
 
-      const session = readPracticeSession(lessonNo, stage, total)
-      if (session) {
-        setIdx(session.idx)
-        setScore(session.score)
-        setHearts(session.hearts)
-      } else {
-        setIdx(0)
-        setScore(0)
-      }
+        const localSession = readPracticeSession(lessonNo, stage, total)
+        if (localSession && !cancelled) {
+          setIdx(localSession.idx)
+          setScore(localSession.score)
+          setHearts(localSession.hearts)
+        } else if (!cancelled) {
+          setIdx(0)
+          setScore(0)
+        }
 
-      if (!checkedInOnce) {
-        markDailyCheckinLocal()
-        setCheckedInOnce(true)
-      }
-      emitStatsUpdate()
-    } catch {}
-    setSessionReady(true)
-  }, [lessonNo, stage, total, checkedInOnce])
+        const cloudSession = await readCloudPracticeSession()
+        if (cloudSession && !cancelled) {
+          setIdx(cloudSession.idx)
+          setScore(cloudSession.score)
+          setHearts(cloudSession.hearts)
+          writePracticeSession(cloudSession)
+        }
+
+        if (!checkedInOnce && !cancelled) {
+          markDailyCheckinLocal()
+          setCheckedInOnce(true)
+        }
+        emitStatsUpdate()
+      } catch {}
+      if (!cancelled) setSessionReady(true)
+    }
+    void loadSession()
+    return () => {
+      cancelled = true
+    }
+  }, [lessonNo, stage, total])
 
   useEffect(() => {
     if (!sessionReady || finished || total <= 0) return
-    writePracticeSession({ lessonNo, stage, idx, score, hearts })
+    const session = { lessonNo, stage, idx, score, hearts }
+    writePracticeSession(session)
+    void writeCloudPracticeSession(session)
   }, [lessonNo, stage, idx, score, hearts, finished, total, sessionReady])
 
   useEffect(() => {
@@ -346,6 +430,7 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
     setBurstText('')
     setPracticeSaved(false)
     clearPracticeSession(lessonNo, stage)
+    void clearCloudPracticeSession()
     try {
       localStorage.setItem('minna.hearts.v1', '5')
       emitStatsUpdate()
