@@ -3,10 +3,14 @@ const SUPABASE_FALLBACK_KEY = 'sb_publishable_missing_config'
 
 export function getSupabasePublicEnv() {
   const url = String(process.env.NEXT_PUBLIC_SUPABASE_URL || '').trim()
-  const key = String(process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY || '').trim()
+  const key = String(
+    process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ||
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ||
+    ''
+  ).trim()
   const missing: string[] = []
   if (!url) missing.push('NEXT_PUBLIC_SUPABASE_URL')
-  if (!key) missing.push('NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY')
+  if (!key) missing.push('NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY or NEXT_PUBLIC_SUPABASE_ANON_KEY')
   return {
     url,
     key,
