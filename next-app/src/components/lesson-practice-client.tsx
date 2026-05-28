@@ -24,8 +24,54 @@ type Props = {
   questions: PracticeQuestion[]
 }
 
+type PracticeSession = {
+  lessonNo: number
+  stage: Props['stage']
+  idx: number
+  score: number
+  hearts: number
+}
+
 function t(lang: Lang, zh: string, en: string) {
   return lang === 'en' ? en : zh
+}
+
+function practiceSessionKey(lessonNo: number, stage: Props['stage']) {
+  return `minna.practice.session.v1.${lessonNo}.${stage}`
+}
+
+function readPracticeSession(lessonNo: number, stage: Props['stage'], total: number): PracticeSession | null {
+  if (typeof window === 'undefined' || total <= 0) return null
+  try {
+    const raw = localStorage.getItem(practiceSessionKey(lessonNo, stage))
+    if (!raw) return null
+    const parsed = JSON.parse(raw) as Partial<PracticeSession>
+    if (Number(parsed.lessonNo) !== lessonNo || parsed.stage !== stage) return null
+    const idx = Math.max(0, Math.min(total - 1, Number(parsed.idx) || 0))
+    return {
+      lessonNo,
+      stage,
+      idx,
+      score: Math.max(0, Number(parsed.score) || 0),
+      hearts: Math.max(0, Math.min(5, Number(parsed.hearts) || 5))
+    }
+  } catch {
+    return null
+  }
+}
+
+function writePracticeSession(session: PracticeSession) {
+  if (typeof window === 'undefined') return
+  try {
+    localStorage.setItem(practiceSessionKey(session.lessonNo, session.stage), JSON.stringify(session))
+  } catch {}
+}
+
+function clearPracticeSession(lessonNo: number, stage: Props['stage']) {
+  if (typeof window === 'undefined') return
+  try {
+    localStorage.removeItem(practiceSessionKey(lessonNo, stage))
+  } catch {}
 }
 
 function playTone(freq: number, durationMs: number, type: OscillatorType = 'sine') {
@@ -104,6 +150,7 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
   const [burstText, setBurstText] = useState('')
   const [checkedInOnce, setCheckedInOnce] = useState(false)
   const [practiceSaved, setPracticeSaved] = useState(false)
+  const [sessionReady, setSessionReady] = useState(false)
 
   const total = questions.length
   const current = questions[idx]
@@ -172,11 +219,13 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
         hearts: finalHearts,
         completed: total > 0 && finalScore >= Math.ceil(total * 0.8) && finalHearts > 0
       })
+      clearPracticeSession(lessonNo, stage)
       window.dispatchEvent(new Event('minna:stats-update'))
     } catch {}
   }
 
   useEffect(() => {
+    setSessionReady(false)
     try {
       const v = localStorage.getItem('minna.practice.voice.v1')
       const s = localStorage.getItem('minna.practice.sfx.v1')
@@ -189,13 +238,30 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
       const h = Number(localStorage.getItem('minna.hearts.v1') || '')
       if (Number.isFinite(h)) setHearts(Math.max(0, h))
       else localStorage.setItem('minna.hearts.v1', '5')
+
+      const session = readPracticeSession(lessonNo, stage, total)
+      if (session) {
+        setIdx(session.idx)
+        setScore(session.score)
+        setHearts(session.hearts)
+      } else {
+        setIdx(0)
+        setScore(0)
+      }
+
       if (!checkedInOnce) {
         markDailyCheckinLocal()
         setCheckedInOnce(true)
       }
       window.dispatchEvent(new Event('minna:stats-update'))
     } catch {}
-  }, [lessonNo, checkedInOnce])
+    setSessionReady(true)
+  }, [lessonNo, stage, total, checkedInOnce])
+
+  useEffect(() => {
+    if (!sessionReady || finished || total <= 0) return
+    writePracticeSession({ lessonNo, stage, idx, score, hearts })
+  }, [lessonNo, stage, idx, score, hearts, finished, total, sessionReady])
 
   useEffect(() => {
     try {
@@ -270,6 +336,7 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
     setCombo(0)
     setBurstText('')
     setPracticeSaved(false)
+    clearPracticeSession(lessonNo, stage)
     try {
       localStorage.setItem('minna.hearts.v1', '5')
       window.dispatchEvent(new Event('minna:stats-update'))
