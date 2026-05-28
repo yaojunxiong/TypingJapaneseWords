@@ -164,6 +164,7 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
   const [checkedInOnce, setCheckedInOnce] = useState(false)
   const [practiceSaved, setPracticeSaved] = useState(false)
   const [sessionReady, setSessionReady] = useState(false)
+  const [cloudStatus, setCloudStatus] = useState(t(lang, '正在读取云端断点...', 'Loading cloud progress...'))
 
   const total = questions.length
   const current = questions[idx]
@@ -174,12 +175,30 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
     return t(lang, '测验模式', 'Quiz Mode')
   }, [lang, stage])
 
-  async function readCloudPracticeSession(): Promise<PracticeSession | null> {
-    if (!supabaseReady || total <= 0) return null
+  async function getCurrentUser() {
+    if (!supabaseReady) return null
     try {
+      const { data: sessionData } = await supabase.auth.getSession()
+      const sessionUser = sessionData.session?.user
+      if (sessionUser) return sessionUser
       const { data: authData } = await supabase.auth.getUser()
-      const user = authData.user
-      if (!user) return null
+      return authData.user
+    } catch {
+      return null
+    }
+  }
+
+  async function readCloudPracticeSession(): Promise<PracticeSession | null> {
+    if (!supabaseReady || total <= 0) {
+      setCloudStatus(t(lang, '云端断点：Supabase 环境未就绪', 'Cloud progress: Supabase env not ready'))
+      return null
+    }
+    try {
+      const user = await getCurrentUser()
+      if (!user) {
+        setCloudStatus(t(lang, '云端断点：请先登录同一个账号', 'Cloud progress: sign in first'))
+        return null
+      }
       const { data, error } = await supabase
         .from('practice_sessions')
         .select('lesson_no, stage, idx, score, hearts, completed')
@@ -187,15 +206,25 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
         .eq('lesson_no', lessonNo)
         .eq('stage', stage)
         .maybeSingle()
-      if (error || !data || data.completed) return null
-      return {
+      if (error) {
+        setCloudStatus(t(lang, `云端断点：读取失败 ${error.message}`, `Cloud progress: read failed ${error.message}`))
+        return null
+      }
+      if (!data || data.completed) {
+        setCloudStatus(t(lang, '云端断点：暂无未完成记录', 'Cloud progress: no unfinished session'))
+        return null
+      }
+      const cloudSession = {
         lessonNo,
         stage,
         idx: Math.max(0, Math.min(total - 1, Number(data.idx) || 0)),
         score: Math.max(0, Number(data.score) || 0),
         hearts: Math.max(0, Math.min(5, Number(data.hearts) || 5))
       }
-    } catch {
+      setCloudStatus(t(lang, `已恢复云端断点：第 ${cloudSession.idx + 1} 题`, `Restored cloud progress: question ${cloudSession.idx + 1}`))
+      return cloudSession
+    } catch (e) {
+      setCloudStatus(t(lang, `云端断点：读取异常 ${String(e)}`, `Cloud progress: read error ${String(e)}`))
       return null
     }
   }
@@ -203,10 +232,9 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
   async function writeCloudPracticeSession(session: PracticeSession) {
     if (!supabaseReady) return
     try {
-      const { data: authData } = await supabase.auth.getUser()
-      const user = authData.user
+      const user = await getCurrentUser()
       if (!user) return
-      await supabase
+      const { error } = await supabase
         .from('practice_sessions')
         .upsert({
           user_id: user.id,
@@ -218,14 +246,14 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
           completed: false,
           updated_at: new Date().toISOString()
         }, { onConflict: 'user_id,lesson_no,stage' })
+      if (!error) setCloudStatus(t(lang, `云端断点已保存：第 ${session.idx + 1} 题`, `Cloud progress saved: question ${session.idx + 1}`))
     } catch {}
   }
 
   async function clearCloudPracticeSession() {
     if (!supabaseReady) return
     try {
-      const { data: authData } = await supabase.auth.getUser()
-      const user = authData.user
+      const user = await getCurrentUser()
       if (!user) return
       await supabase
         .from('practice_sessions')
@@ -304,6 +332,7 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
     let cancelled = false
     async function loadSession() {
       setSessionReady(false)
+      setCloudStatus(t(lang, '正在读取云端断点...', 'Loading cloud progress...'))
       try {
         const v = localStorage.getItem('minna.practice.voice.v1')
         const s = localStorage.getItem('minna.practice.sfx.v1')
@@ -317,22 +346,22 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
         if (Number.isFinite(h)) setHearts(Math.max(0, h))
         else localStorage.setItem('minna.hearts.v1', '5')
 
-        const localSession = readPracticeSession(lessonNo, stage, total)
-        if (localSession && !cancelled) {
-          setIdx(localSession.idx)
-          setScore(localSession.score)
-          setHearts(localSession.hearts)
-        } else if (!cancelled) {
-          setIdx(0)
-          setScore(0)
-        }
-
         const cloudSession = await readCloudPracticeSession()
         if (cloudSession && !cancelled) {
           setIdx(cloudSession.idx)
           setScore(cloudSession.score)
           setHearts(cloudSession.hearts)
           writePracticeSession(cloudSession)
+        } else {
+          const localSession = readPracticeSession(lessonNo, stage, total)
+          if (localSession && !cancelled) {
+            setIdx(localSession.idx)
+            setScore(localSession.score)
+            setHearts(localSession.hearts)
+          } else if (!cancelled) {
+            setIdx(0)
+            setScore(0)
+          }
         }
 
         if (!checkedInOnce && !cancelled) {
@@ -347,7 +376,7 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
     return () => {
       cancelled = true
     }
-  }, [lessonNo, stage, total])
+  }, [lessonNo, stage, total, lang])
 
   useEffect(() => {
     if (!sessionReady || finished || total <= 0) return
@@ -453,6 +482,7 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
         <p className="small">{t(lang, '第', 'Lesson ')}{lessonNo}{t(lang, '课', '')}</p>
         <p><b>{t(lang, '得分', 'Score')}：{score}/{total}</b></p>
         <p className="small">{t(lang, '剩余体力', 'Hearts left')}：{'❤️'.repeat(Math.max(0, hearts)) || '0'}</p>
+        <p className="small">{cloudStatus}</p>
         <div className="practiceActions">
           <button className="btn" onClick={onRestart}>{t(lang, '再来一轮', 'Try Again')}</button>
           <a className="btn btnGhost" href={`/lessons/${lessonNo}`}>{t(lang, '返回课程', 'Back to lesson')}</a>
@@ -476,6 +506,7 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
         <p className={combo > 1 ? 'practiceCombo hot' : 'practiceCombo'}>{burstText}</p>
       ) : null}
       <p className="practiceProgress">{idx + 1}/{total}</p>
+      <p className="small">{cloudStatus}</p>
 
       <div className="practiceCard">
         <h3>{t(lang, '选择答案', 'Choose an answer')}</h3>
