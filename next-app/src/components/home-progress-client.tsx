@@ -48,6 +48,10 @@ function toStats(): HomeStats {
   }
 }
 
+function hasMeaningfulLocalProgress(s: HomeStats) {
+  return s.xp > 0 || s.crowns > 0 || s.mistakes > 0 || s.checkinDays > 0 || !!s.lastStudyDate
+}
+
 export default function HomeProgressClient({ lang }: Props) {
   const supabaseReady = hasSupabasePublicEnv()
   const supabase = useMemo(() => createClient(), [])
@@ -74,7 +78,8 @@ export default function HomeProgressClient({ lang }: Props) {
   }
 
   async function runCloudSync(forceUpload = false) {
-    readLocal()
+    const localBefore = toStats()
+    setStats(localBefore)
     if (!supabaseReady) {
       setSyncText(t(lang, '当前使用本地打卡进度', 'Using local check-in progress'))
       return
@@ -90,14 +95,18 @@ export default function HomeProgressClient({ lang }: Props) {
         return
       }
 
+      const protectLocal = forceUpload || hasMeaningfulLocalProgress(localBefore)
       const res = await syncLearningCloudNow({
         supabase,
         user: { id: user.id, email: user.email || '' },
-        forceUpload
+        forceUpload: protectLocal
       })
-      readLocal()
+      const after = toStats()
+      setStats(after)
       setSyncText(res.ok
-        ? t(lang, '已同步当前用户云端打卡进度', 'Synced current user cloud progress')
+        ? (protectLocal
+          ? t(lang, '已保护并上传当前本机进度', 'Protected and uploaded local progress')
+          : t(lang, '已同步当前用户云端打卡进度', 'Synced current user cloud progress'))
         : (res.warning ? `${t(lang, '同步提示', 'Sync note')}：${res.warning}` : t(lang, '同步未完成', 'Sync incomplete')))
     } catch (e) {
       setSyncText(`${t(lang, '同步失败', 'Sync failed')}：${String(e)}`)
