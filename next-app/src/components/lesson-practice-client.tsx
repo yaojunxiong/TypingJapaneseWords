@@ -3,7 +3,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { markDailyCheckinLocal, recordPracticeResult } from '@/lib/learning-cloud-sync'
 import { hasSupabasePublicEnv } from '@/utils/supabase/config'
-import { createClient } from '@/utils/supabase/client'
 
 type Lang = 'zh' | 'en'
 
@@ -151,7 +150,6 @@ function playCorrectCombo(combo: number) {
 
 export default function LessonPracticeClient({ lessonNo, lang, stage, questions }: Props) {
   const supabaseReady = hasSupabasePublicEnv()
-  const supabase = useMemo(() => createClient(), [])
   const [idx, setIdx] = useState(0)
   const [hearts, setHearts] = useState(5)
   const [score, setScore] = useState(0)
@@ -175,60 +173,41 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
     return t(lang, '测验模式', 'Quiz Mode')
   }, [lang, stage])
 
-  async function getCurrentUser() {
-    if (!supabaseReady) return null
-    try {
-      const { data: sessionData } = await supabase.auth.getSession()
-      const sessionUser = sessionData.session?.user
-      if (sessionUser) return sessionUser
-      const { data: authData } = await supabase.auth.getUser()
-      return authData.user
-    } catch {
-      return null
-    }
-  }
-
   function debugCloud(extra: string) {
     return ` [DEBUG ready=${supabaseReady} lesson=${lessonNo} stage=${stage} total=${total} ${extra}]`
   }
 
   async function readCloudPracticeSession(): Promise<PracticeSession | null> {
-    const user = await getCurrentUser()
     if (!supabaseReady || total <= 0) {
-      setCloudStatus(t(lang, '云端断点：Supabase 环境未就绪', 'Cloud progress: Supabase env not ready') + debugCloud(`user=${!!user}`))
+      setCloudStatus(t(lang, '云端断点：Supabase 环境未就绪', 'Cloud progress: Supabase env not ready') + debugCloud('apiUser=false'))
       return null
     }
     try {
-      if (!user) {
-        setCloudStatus(t(lang, '云端断点：请先登录同一个账号', 'Cloud progress: sign in first') + debugCloud('user=null'))
+      const res = await fetch(`/api/practice-session?lessonNo=${lessonNo}&stage=${stage}`)
+      if (res.status === 401) {
+        setCloudStatus(t(lang, '云端断点：请先登录同一个账号', 'Cloud progress: sign in first') + debugCloud('apiUser=false'))
         return null
       }
-      const { data, error } = await supabase
-        .from('practice_sessions')
-        .select('lesson_no, stage, idx, score, hearts, completed')
-        .eq('user_id', user.id)
-        .eq('lesson_no', lessonNo)
-        .eq('stage', stage)
-        .maybeSingle()
-      if (error) {
-        setCloudStatus(t(lang, `云端断点：读取失败 ${error.message}`, `Cloud progress: read failed ${error.message}`) + debugCloud(`user=${!!user} err=${error.message}`))
+      const json = await res.json()
+      if (!res.ok) {
+        setCloudStatus(t(lang, `云端断点：读取失败 ${json.error}`, `Cloud progress: read failed ${json.error}`) + debugCloud(`apiUser=true err=${json.error}`))
         return null
       }
-      if (!data || data.completed) {
-        setCloudStatus(t(lang, '云端断点：暂无未完成记录', 'Cloud progress: no unfinished session') + debugCloud(`user=${!!user} data=${!!data} completed=${data?.completed}`))
+      if (!json.session || json.session.completed) {
+        setCloudStatus(t(lang, '云端断点：暂无未完成记录', 'Cloud progress: no unfinished session') + debugCloud(`apiUser=true data=${!!json.session} completed=${json.session?.completed}`))
         return null
       }
       const cloudSession = {
         lessonNo,
         stage,
-        idx: Math.max(0, Math.min(total - 1, Number(data.idx) || 0)),
-        score: Math.max(0, Number(data.score) || 0),
-        hearts: Math.max(0, Math.min(5, Number(data.hearts) || 5))
+        idx: Math.max(0, Math.min(total - 1, Number(json.session.idx) || 0)),
+        score: Math.max(0, Number(json.session.score) || 0),
+        hearts: Math.max(0, Math.min(5, Number(json.session.hearts) || 5))
       }
-      setCloudStatus(t(lang, `已恢复云端断点：第 ${cloudSession.idx + 1} 题`, `Restored cloud progress: question ${cloudSession.idx + 1}`) + debugCloud(`user=${!!user} data.idx=${data.idx}`))
+      setCloudStatus(t(lang, `已恢复云端断点：第 ${cloudSession.idx + 1} 题`, `Restored cloud progress: question ${cloudSession.idx + 1}`) + debugCloud(`apiUser=true data.idx=${json.session.idx}`))
       return cloudSession
     } catch (e) {
-      setCloudStatus(t(lang, `云端断点：读取异常 ${String(e)}`, `Cloud progress: read error ${String(e)}`) + debugCloud(`user=${!!(await getCurrentUser().catch(() => null))}`))
+      setCloudStatus(t(lang, `云端断点：读取异常 ${String(e)}`, `Cloud progress: read error ${String(e)}`) + debugCloud('apiUser=error'))
       return null
     }
   }
@@ -236,35 +215,27 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
   async function writeCloudPracticeSession(session: PracticeSession) {
     if (!supabaseReady) return
     try {
-      const user = await getCurrentUser()
-      if (!user) return
-      const { error } = await supabase
-        .from('practice_sessions')
-        .upsert({
-          user_id: user.id,
-          lesson_no: session.lessonNo,
+      const res = await fetch('/api/practice-session', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          lessonNo: session.lessonNo,
           stage: session.stage,
           idx: session.idx,
           score: session.score,
-          hearts: session.hearts,
-          completed: false,
-          updated_at: new Date().toISOString()
-        }, { onConflict: 'user_id,lesson_no,stage' })
-      if (!error) setCloudStatus(t(lang, `云端断点已保存：第 ${session.idx + 1} 题`, `Cloud progress saved: question ${session.idx + 1}`))
+          hearts: session.hearts
+        })
+      })
+      if (res.ok) {
+        setCloudStatus(t(lang, `云端断点已保存：第 ${session.idx + 1} 题`, `Cloud progress saved: question ${session.idx + 1}`))
+      }
     } catch {}
   }
 
   async function clearCloudPracticeSession() {
     if (!supabaseReady) return
     try {
-      const user = await getCurrentUser()
-      if (!user) return
-      await supabase
-        .from('practice_sessions')
-        .delete()
-        .eq('user_id', user.id)
-        .eq('lesson_no', lessonNo)
-        .eq('stage', stage)
+      await fetch(`/api/practice-session?lessonNo=${lessonNo}&stage=${stage}`, { method: 'DELETE' })
     } catch {}
   }
 
