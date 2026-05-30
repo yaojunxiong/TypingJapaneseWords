@@ -1,4 +1,4 @@
-import { createBrowserClient } from '@supabase/ssr'
+import { createClient as makeClient } from '@supabase/supabase-js'
 import {
   getSafeSupabasePublicConfig,
   hasSupabasePublicEnv,
@@ -13,5 +13,5 @@ export const createClient = () => {
     warned = true
     console.warn(`[supabase] ${getSupabaseMissingEnvMessage()}`)
   }
-  return createBrowserClient(url, key)
+  return makeClient(url, key)
 }

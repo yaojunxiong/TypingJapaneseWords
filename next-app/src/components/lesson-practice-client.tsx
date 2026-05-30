@@ -413,7 +413,8 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
   function onPick(optionIndex: number) {
     if (picked !== null || finished) return
     setPicked(optionIndex)
-    if (current.options[optionIndex]?.correct) {
+    const isCorrect = current.options[optionIndex]?.correct
+    if (isCorrect) {
       const nextCombo = combo + 1
       setCombo(nextCombo)
       setBurstText(comboText(nextCombo))
@@ -441,6 +442,11 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
         return next
       })
     }
+    void writeCloudPracticeSession({
+      lessonNo, stage, idx,
+      score: isCorrect ? score + 1 : score,
+      hearts: isCorrect ? hearts : Math.max(0, hearts - 1)
+    })
   }
 
   function onNext() {
