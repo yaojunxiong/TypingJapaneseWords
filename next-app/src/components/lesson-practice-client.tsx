@@ -188,15 +188,19 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
     }
   }
 
+  function debugCloud(extra: string) {
+    return ` [DEBUG ready=${supabaseReady} lesson=${lessonNo} stage=${stage} total=${total} ${extra}]`
+  }
+
   async function readCloudPracticeSession(): Promise<PracticeSession | null> {
+    const user = await getCurrentUser()
     if (!supabaseReady || total <= 0) {
-      setCloudStatus(t(lang, '云端断点：Supabase 环境未就绪', 'Cloud progress: Supabase env not ready'))
+      setCloudStatus(t(lang, '云端断点：Supabase 环境未就绪', 'Cloud progress: Supabase env not ready') + debugCloud(`user=${!!user}`))
       return null
     }
     try {
-      const user = await getCurrentUser()
       if (!user) {
-        setCloudStatus(t(lang, '云端断点：请先登录同一个账号', 'Cloud progress: sign in first'))
+        setCloudStatus(t(lang, '云端断点：请先登录同一个账号', 'Cloud progress: sign in first') + debugCloud('user=null'))
         return null
       }
       const { data, error } = await supabase
@@ -207,11 +211,11 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
         .eq('stage', stage)
         .maybeSingle()
       if (error) {
-        setCloudStatus(t(lang, `云端断点：读取失败 ${error.message}`, `Cloud progress: read failed ${error.message}`))
+        setCloudStatus(t(lang, `云端断点：读取失败 ${error.message}`, `Cloud progress: read failed ${error.message}`) + debugCloud(`user=${!!user} err=${error.message}`))
         return null
       }
       if (!data || data.completed) {
-        setCloudStatus(t(lang, '云端断点：暂无未完成记录', 'Cloud progress: no unfinished session'))
+        setCloudStatus(t(lang, '云端断点：暂无未完成记录', 'Cloud progress: no unfinished session') + debugCloud(`user=${!!user} data=${!!data} completed=${data?.completed}`))
         return null
       }
       const cloudSession = {
@@ -221,10 +225,10 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
         score: Math.max(0, Number(data.score) || 0),
         hearts: Math.max(0, Math.min(5, Number(data.hearts) || 5))
       }
-      setCloudStatus(t(lang, `已恢复云端断点：第 ${cloudSession.idx + 1} 题`, `Restored cloud progress: question ${cloudSession.idx + 1}`))
+      setCloudStatus(t(lang, `已恢复云端断点：第 ${cloudSession.idx + 1} 题`, `Restored cloud progress: question ${cloudSession.idx + 1}`) + debugCloud(`user=${!!user} data.idx=${data.idx}`))
       return cloudSession
     } catch (e) {
-      setCloudStatus(t(lang, `云端断点：读取异常 ${String(e)}`, `Cloud progress: read error ${String(e)}`))
+      setCloudStatus(t(lang, `云端断点：读取异常 ${String(e)}`, `Cloud progress: read error ${String(e)}`) + debugCloud(`user=${!!(await getCurrentUser().catch(() => null))}`))
       return null
     }
   }
@@ -334,6 +338,10 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
       setSessionReady(false)
       setCloudStatus(t(lang, '正在读取云端断点...', 'Loading cloud progress...'))
       try {
+        if (total <= 0) {
+          setCloudStatus(t(lang, '云端断点：题目数为 0（等待加载）', 'Cloud progress: total=0 (waiting for data)') + debugCloud('total=0'))
+          return
+        }
         const v = localStorage.getItem('minna.practice.voice.v1')
         const s = localStorage.getItem('minna.practice.sfx.v1')
         if (v === '0') setVoiceOn(false)
