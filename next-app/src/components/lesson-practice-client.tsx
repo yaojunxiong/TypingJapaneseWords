@@ -390,7 +390,6 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
     if (!sessionReady || finished || total <= 0) return
     const session = { lessonNo, stage, idx, score, hearts }
     writePracticeSession(session)
-    void writeCloudPracticeSession(session)
   }, [lessonNo, stage, idx, score, hearts, finished, total, sessionReady])
 
   useEffect(() => {
@@ -452,9 +451,11 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
       setFinished(true)
       return
     }
-    setIdx((v) => v + 1)
+    const nextIdx = idx + 1
+    setIdx(nextIdx)
     setPicked(null)
     setBurstText('')
+    void writeCloudPracticeSession({ lessonNo, stage, idx: nextIdx, score, hearts })
   }
 
   function onRestart() {
