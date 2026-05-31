@@ -2,37 +2,7 @@ import Link from 'next/link'
 import { requireAdmin } from '@/lib/admin-auth'
 import { loadLesson, getLessonSections, type SectionDetail } from '@/lib/admin-lessons'
 import { getDrafts } from '@/lib/admin-drafts'
-
-
-/* ------------------------------------------------------------------ */
-/*  Helpers                                                           */
-/* ------------------------------------------------------------------ */
-
-function fmt(v: unknown): string {
-  if (v == null) return ''
-  if (typeof v === 'string') return v
-  if (typeof v === 'number' || typeof v === 'boolean') return String(v)
-
-  // LangText object { zh, en, ja }
-  if (typeof v === 'object' && !Array.isArray(v)) {
-    const obj = v as Record<string, unknown>
-    const zh = obj.zh, en = obj.en, ja = obj.ja
-    if (zh || en || ja) {
-      return [zh, en, ja].filter(Boolean).join(' · ')
-    }
-    // Fallback: pick first non-empty string value
-    for (const val of Object.values(obj)) {
-      if (typeof val === 'string' && val) return val
-    }
-    return JSON.stringify(obj).slice(0, 80)
-  }
-
-  if (Array.isArray(v)) {
-    return v.map((x) => String(x)).join(', ').slice(0, 100)
-  }
-
-  return String(v)
-}
+import { formatAdminValue as f } from '@/lib/admin-format'
 
 /* ------------------------------------------------------------------ */
 /*  Column config per section type                                    */
@@ -55,8 +25,8 @@ const SECTION_COLUMNS: Record<string, Column[]> = {
   grammar: [
     { key: 'id', label: 'ID' },
     { key: 'pattern', label: 'Pattern' },
-    { key: 'title', label: 'Title', render: fmt },
-    { key: 'meaning', label: 'Meaning', render: fmt },
+    { key: 'title', label: 'Title', render: f },
+    { key: 'meaning', label: 'Meaning', render: f },
   ],
   examples: [
     { key: 'id', label: 'ID' },
@@ -66,21 +36,22 @@ const SECTION_COLUMNS: Record<string, Column[]> = {
   ],
   quiz: [
     { key: 'id', label: 'ID' },
-    { key: 'question', label: 'Question', render: fmt },
+    { key: 'question', label: 'Question', render: f },
     {
       key: 'options',
       label: 'Options',
       render: (v: unknown) => {
         if (!Array.isArray(v)) return ''
         return v.map((o: unknown) => {
-          if (o && typeof o === 'object' && 'text' in o && 'correct' in o) {
-            return `${(o as { text: string; correct: boolean }).correct ? '✅' : ''}${fmt((o as { text: unknown }).text)}`
+          if (o && typeof o === 'object' && 'text' in o) {
+            const opt = o as { text?: unknown; correct?: boolean }
+            return `${opt.correct ? '✅' : ''}${f(opt.text)}`
           }
-          return String(o)
+          return f(o)
         }).join(' | ')
       },
     },
-    { key: 'explanation', label: 'Explanation', render: fmt },
+    { key: 'explanation', label: 'Explanation', render: f },
   ],
 }
 
@@ -174,7 +145,7 @@ export default async function AdminLessonDetailPage({
                     <tr key={i} style={{ borderBottom: '1px solid #eee' }}>
                       {(SECTION_COLUMNS[activeTab] || []).map((col) => (
                         <td key={col.key} style={{ padding: '4px', verticalAlign: 'top', whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
-                          {col.render ? col.render(item[col.key]) : fmt(item[col.key])}
+                          {col.render ? col.render(item[col.key]) : f(item[col.key])}
                         </td>
                       ))}
                       <td style={{ padding: '4px', whiteSpace: 'nowrap' }}>
