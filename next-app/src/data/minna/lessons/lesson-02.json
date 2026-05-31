@@ -34,8 +34,20 @@
           "kana": "これ",
           "zh": "这个",
           "en": "this one",
-          "tags": [
-            "demonstrative"
+          "tags": ["demonstrative"],
+          "practice": [
+            {
+              "id": "l02_v01_p01",
+              "skill": "vocab",
+              "question": { "zh": "「これ」的意思是？", "en": "What does これ mean?" },
+              "options": [
+                { "text": { "zh": "这个" }, "correct": true },
+                { "text": { "zh": "那个" } },
+                { "text": { "zh": "什么" } },
+                { "text": { "zh": "书" } }
+              ],
+              "explanation": { "zh": "「これ」= 这个。", "en": "これ means this one." }
+            }
           ]
         },
         {
@@ -44,8 +56,20 @@
           "kana": "それ",
           "zh": "那个",
           "en": "that one near you",
-          "tags": [
-            "demonstrative"
+          "tags": ["demonstrative"],
+          "practice": [
+            {
+              "id": "l02_v02_p01",
+              "skill": "vocab",
+              "question": { "zh": "「それ」的意思是？", "en": "What does それ mean?" },
+              "options": [
+                { "text": { "zh": "那个" }, "correct": true },
+                { "text": { "zh": "这个" } },
+                { "text": { "zh": "词典" } },
+                { "text": { "zh": "钥匙" } }
+              ],
+              "explanation": { "zh": "「それ」= 那个。", "en": "それ means that one." }
+            }
           ]
         },
         {
@@ -54,8 +78,20 @@
           "kana": "あれ",
           "zh": "那个",
           "en": "that one over there",
-          "tags": [
-            "demonstrative"
+          "tags": ["demonstrative"],
+          "practice": [
+            {
+              "id": "l02_v03_p01",
+              "skill": "vocab",
+              "question": { "zh": "「あれ」的意思是？", "en": "What does あれ mean?" },
+              "options": [
+                { "text": { "zh": "那个" }, "correct": true },
+                { "text": { "zh": "铅笔" } },
+                { "text": { "zh": "名片" } },
+                { "text": { "zh": "伞" } }
+              ],
+              "explanation": { "zh": "「あれ」= 那个。", "en": "あれ means that one over there." }
+            }
           ]
         },
         {
@@ -64,8 +100,20 @@
           "kana": "この",
           "zh": "这个～",
           "en": "this ~",
-          "tags": [
-            "modifier"
+          "tags": ["modifier"],
+          "practice": [
+            {
+              "id": "l02_v04_p01",
+              "skill": "vocab",
+              "question": { "zh": "「この」的意思是？", "en": "What does この mean?" },
+              "options": [
+                { "text": { "zh": "这个～" }, "correct": true },
+                { "text": { "zh": "那个～" } },
+                { "text": { "zh": "谁" } },
+                { "text": { "zh": "笔记本" } }
+              ],
+              "explanation": { "zh": "「この」= 这个～。", "en": "この means this ~." }
+            }
           ]
         },
         {
@@ -74,8 +122,20 @@
           "kana": "その",
           "zh": "那个～",
           "en": "that ~ near you",
-          "tags": [
-            "modifier"
+          "tags": ["modifier"],
+          "practice": [
+            {
+              "id": "l02_v05_p01",
+              "skill": "vocab",
+              "question": { "zh": "「その」的意思是？", "en": "What does その mean?" },
+              "options": [
+                { "text": { "zh": "那个～" }, "correct": true },
+                { "text": { "zh": "这个～" } },
+                { "text": { "zh": "手表" } },
+                { "text": { "zh": "杂志" } }
+              ],
+              "explanation": { "zh": "「その」= 那个～。", "en": "その means that ~." }
+            }
           ]
         },
         {
@@ -84,8 +144,20 @@
           "kana": "あの",
           "zh": "那个～",
           "en": "that ~ over there",
-          "tags": [
-            "modifier"
+          "tags": ["modifier"],
+          "practice": [
+            {
+              "id": "l02_v06_p01",
+              "skill": "vocab",
+              "question": { "zh": "「あの」的意思是？", "en": "What does あの mean?" },
+              "options": [
+                { "text": { "zh": "那个～" }, "correct": true },
+                { "text": { "zh": "这个～" } },
+                { "text": { "zh": "报纸" } },
+                { "text": { "zh": "圆珠笔" } }
+              ],
+              "explanation": { "zh": "「あの」= 那个～。", "en": "あの means that ~ over there." }
+            }
           ]
         },
         {
@@ -94,8 +166,20 @@
           "kana": "ほん",
           "zh": "书",
           "en": "book",
-          "tags": [
-            "object"
+          "tags": ["object"],
+          "practice": [
+            {
+              "id": "l02_v07_p01",
+              "skill": "vocab",
+              "question": { "zh": "「本」的意思是？", "en": "What does 本 mean?" },
+              "options": [
+                { "text": { "zh": "书" }, "correct": true },
+                { "text": { "zh": "词典" } },
+                { "text": { "zh": "笔记本" } },
+                { "text": { "zh": "杂志" } }
+              ],
+              "explanation": { "zh": "「本」= 书。", "en": "本 means book." }
+            }
           ]
         },
         {
@@ -104,8 +188,20 @@
           "kana": "じしょ",
           "zh": "词典",
           "en": "dictionary",
-          "tags": [
-            "object"
+          "tags": ["object"],
+          "practice": [
+            {
+              "id": "l02_v08_p01",
+              "skill": "vocab",
+              "question": { "zh": "「辞書」的意思是？", "en": "What does 辞書 mean?" },
+              "options": [
+                { "text": { "zh": "词典" }, "correct": true },
+                { "text": { "zh": "书" } },
+                { "text": { "zh": "报纸" } },
+                { "text": { "zh": "记事本" } }
+              ],
+              "explanation": { "zh": "「辞書」= 词典。", "en": "辞書 means dictionary." }
+            }
           ]
         },
         {
@@ -114,8 +210,20 @@
           "kana": "ざっし",
           "zh": "杂志",
           "en": "magazine",
-          "tags": [
-            "object"
+          "tags": ["object"],
+          "practice": [
+            {
+              "id": "l02_v09_p01",
+              "skill": "vocab",
+              "question": { "zh": "「雑誌」的意思是？", "en": "What does 雑誌 mean?" },
+              "options": [
+                { "text": { "zh": "杂志" }, "correct": true },
+                { "text": { "zh": "书" } },
+                { "text": { "zh": "报纸" } },
+                { "text": { "zh": "笔记本" } }
+              ],
+              "explanation": { "zh": "「雑誌」= 杂志。", "en": "雑誌 means magazine." }
+            }
           ]
         },
         {
@@ -124,8 +232,20 @@
           "kana": "しんぶん",
           "zh": "报纸",
           "en": "newspaper",
-          "tags": [
-            "object"
+          "tags": ["object"],
+          "practice": [
+            {
+              "id": "l02_v10_p01",
+              "skill": "vocab",
+              "question": { "zh": "「新聞」的意思是？", "en": "What does 新聞 mean?" },
+              "options": [
+                { "text": { "zh": "报纸" }, "correct": true },
+                { "text": { "zh": "杂志" } },
+                { "text": { "zh": "词典" } },
+                { "text": { "zh": "书" } }
+              ],
+              "explanation": { "zh": "「新聞」= 报纸。", "en": "新聞 means newspaper." }
+            }
           ]
         },
         {
@@ -134,8 +254,20 @@
           "kana": "ノート",
           "zh": "笔记本",
           "en": "notebook",
-          "tags": [
-            "object"
+          "tags": ["object"],
+          "practice": [
+            {
+              "id": "l02_v11_p01",
+              "skill": "vocab",
+              "question": { "zh": "「ノート」的意思是？", "en": "What does ノート mean?" },
+              "options": [
+                { "text": { "zh": "笔记本" }, "correct": true },
+                { "text": { "zh": "记事本" } },
+                { "text": { "zh": "书" } },
+                { "text": { "zh": "铅笔" } }
+              ],
+              "explanation": { "zh": "「ノート」= 笔记本。", "en": "ノート means notebook." }
+            }
           ]
         },
         {
@@ -144,8 +276,20 @@
           "kana": "てちょう",
           "zh": "记事本",
           "en": "pocket notebook",
-          "tags": [
-            "object"
+          "tags": ["object"],
+          "practice": [
+            {
+              "id": "l02_v12_p01",
+              "skill": "vocab",
+              "question": { "zh": "「手帳」的意思是？", "en": "What does 手帳 mean?" },
+              "options": [
+                { "text": { "zh": "记事本" }, "correct": true },
+                { "text": { "zh": "笔记本" } },
+                { "text": { "zh": "名片" } },
+                { "text": { "zh": "钥匙" } }
+              ],
+              "explanation": { "zh": "「手帳」= 记事本。", "en": "手帳 means pocket notebook." }
+            }
           ]
         },
         {
@@ -154,8 +298,20 @@
           "kana": "めいし",
           "zh": "名片",
           "en": "business card",
-          "tags": [
-            "object"
+          "tags": ["object"],
+          "practice": [
+            {
+              "id": "l02_v13_p01",
+              "skill": "vocab",
+              "question": { "zh": "「名刺」的意思是？", "en": "What does 名刺 mean?" },
+              "options": [
+                { "text": { "zh": "名片" }, "correct": true },
+                { "text": { "zh": "记事本" } },
+                { "text": { "zh": "伞" } },
+                { "text": { "zh": "报纸" } }
+              ],
+              "explanation": { "zh": "「名刺」= 名片。", "en": "名刺 means business card." }
+            }
           ]
         },
         {
@@ -164,8 +320,20 @@
           "kana": "えんぴつ",
           "zh": "铅笔",
           "en": "pencil",
-          "tags": [
-            "object"
+          "tags": ["object"],
+          "practice": [
+            {
+              "id": "l02_v14_p01",
+              "skill": "vocab",
+              "question": { "zh": "「鉛筆」的意思是？", "en": "What does 鉛筆 mean?" },
+              "options": [
+                { "text": { "zh": "铅笔" }, "correct": true },
+                { "text": { "zh": "圆珠笔" } },
+                { "text": { "zh": "自动铅笔" } },
+                { "text": { "zh": "词典" } }
+              ],
+              "explanation": { "zh": "「鉛筆」= 铅笔。", "en": "鉛筆 means pencil." }
+            }
           ]
         },
         {
@@ -174,8 +342,20 @@
           "kana": "ボールペン",
           "zh": "圆珠笔",
           "en": "ballpoint pen",
-          "tags": [
-            "object"
+          "tags": ["object"],
+          "practice": [
+            {
+              "id": "l02_v15_p01",
+              "skill": "vocab",
+              "question": { "zh": "「ボールペン」的意思是？", "en": "What does ボールペン mean?" },
+              "options": [
+                { "text": { "zh": "圆珠笔" }, "correct": true },
+                { "text": { "zh": "铅笔" } },
+                { "text": { "zh": "自动铅笔" } },
+                { "text": { "zh": "书" } }
+              ],
+              "explanation": { "zh": "「ボールペン」= 圆珠笔。", "en": "ボールペン means ballpoint pen." }
+            }
           ]
         },
         {
@@ -184,8 +364,20 @@
           "kana": "かぎ",
           "zh": "钥匙",
           "en": "key",
-          "tags": [
-            "object"
+          "tags": ["object"],
+          "practice": [
+            {
+              "id": "l02_v16_p01",
+              "skill": "vocab",
+              "question": { "zh": "「かぎ」的意思是？", "en": "What does かぎ mean?" },
+              "options": [
+                { "text": { "zh": "钥匙" }, "correct": true },
+                { "text": { "zh": "手表" } },
+                { "text": { "zh": "伞" } },
+                { "text": { "zh": "相机" } }
+              ],
+              "explanation": { "zh": "「かぎ」= 钥匙。", "en": "かぎ means key." }
+            }
           ]
         },
         {
@@ -194,8 +386,20 @@
           "kana": "とけい",
           "zh": "钟表 / 手表",
           "en": "clock / watch",
-          "tags": [
-            "object"
+          "tags": ["object"],
+          "practice": [
+            {
+              "id": "l02_v17_p01",
+              "skill": "vocab",
+              "question": { "zh": "「時計」的意思是？", "en": "What does 時計 mean?" },
+              "options": [
+                { "text": { "zh": "钟表 / 手表" }, "correct": true },
+                { "text": { "zh": "钥匙" } },
+                { "text": { "zh": "收音机" } },
+                { "text": { "zh": "电视" } }
+              ],
+              "explanation": { "zh": "「時計」= 钟表 / 手表。", "en": "時計 means clock / watch." }
+            }
           ]
         },
         {
@@ -204,8 +408,20 @@
           "kana": "かさ",
           "zh": "伞",
           "en": "umbrella",
-          "tags": [
-            "object"
+          "tags": ["object"],
+          "practice": [
+            {
+              "id": "l02_v18_p01",
+              "skill": "vocab",
+              "question": { "zh": "「傘」的意思是？", "en": "What does 傘 mean?" },
+              "options": [
+                { "text": { "zh": "伞" }, "correct": true },
+                { "text": { "zh": "钥匙" } },
+                { "text": { "zh": "包" } },
+                { "text": { "zh": "手表" } }
+              ],
+              "explanation": { "zh": "「傘」= 伞。", "en": "傘 means umbrella." }
+            }
           ]
         },
         {
@@ -214,8 +430,20 @@
           "kana": "なん",
           "zh": "什么",
           "en": "what",
-          "tags": [
-            "question"
+          "tags": ["question"],
+          "practice": [
+            {
+              "id": "l02_v19_p01",
+              "skill": "vocab",
+              "question": { "zh": "「何」的意思是？", "en": "What does 何 mean?" },
+              "options": [
+                { "text": { "zh": "什么" }, "correct": true },
+                { "text": { "zh": "谁" } },
+                { "text": { "zh": "那个" } },
+                { "text": { "zh": "这个" } }
+              ],
+              "explanation": { "zh": "「何」= 什么。", "en": "何 means what." }
+            }
           ]
         },
         {
@@ -224,8 +452,306 @@
           "kana": "だれ",
           "zh": "谁",
           "en": "who",
-          "tags": [
-            "question"
+          "tags": ["question"],
+          "practice": [
+            {
+              "id": "l02_v20_p01",
+              "skill": "vocab",
+              "question": { "zh": "「だれ」的意思是？", "en": "What does だれ mean?" },
+              "options": [
+                { "text": { "zh": "谁" }, "correct": true },
+                { "text": { "zh": "什么" } },
+                { "text": { "zh": "咖啡" } },
+                { "text": { "zh": "巧克力" } }
+              ],
+              "explanation": { "zh": "「だれ」= 谁。", "en": "だれ means who." }
+            }
+          ]
+        },
+        {
+          "id": "l02_v21",
+          "jp": "シャープペンシル",
+          "kana": "シャープペンシル",
+          "zh": "自动铅笔",
+          "en": "mechanical pencil",
+          "tags": ["object"],
+          "practice": [
+            {
+              "id": "l02_v21_p01",
+              "skill": "vocab",
+              "question": { "zh": "「シャープペンシル」的意思是？", "en": "What does シャープペンシル mean?" },
+              "options": [
+                { "text": { "zh": "自动铅笔" }, "correct": true },
+                { "text": { "zh": "铅笔" } },
+                { "text": { "zh": "圆珠笔" } },
+                { "text": { "zh": "笔记本" } }
+              ],
+              "explanation": { "zh": "「シャープペンシル」= 自动铅笔。", "en": "シャープペンシル means mechanical pencil." }
+            }
+          ]
+        },
+        {
+          "id": "l02_v22",
+          "jp": "かばん",
+          "kana": "かばん",
+          "zh": "包",
+          "en": "bag",
+          "tags": ["object"],
+          "practice": [
+            {
+              "id": "l02_v22_p01",
+              "skill": "vocab",
+              "question": { "zh": "「かばん」的意思是？", "en": "What does かばん mean?" },
+              "options": [
+                { "text": { "zh": "包" }, "correct": true },
+                { "text": { "zh": "伞" } },
+                { "text": { "zh": "钥匙" } },
+                { "text": { "zh": "笔记本" } }
+              ],
+              "explanation": { "zh": "「かばん」= 包。", "en": "かばん means bag." }
+            }
+          ]
+        },
+        {
+          "id": "l02_v23",
+          "jp": "テレビ",
+          "kana": "テレビ",
+          "zh": "电视",
+          "en": "television",
+          "tags": ["object"],
+          "practice": [
+            {
+              "id": "l02_v23_p01",
+              "skill": "vocab",
+              "question": { "zh": "「テレビ」的意思是？", "en": "What does テレビ mean?" },
+              "options": [
+                { "text": { "zh": "电视" }, "correct": true },
+                { "text": { "zh": "收音机" } },
+                { "text": { "zh": "相机" } },
+                { "text": { "zh": "电脑" } }
+              ],
+              "explanation": { "zh": "「テレビ」= 电视。", "en": "テレビ means television." }
+            }
+          ]
+        },
+        {
+          "id": "l02_v24",
+          "jp": "ラジオ",
+          "kana": "ラジオ",
+          "zh": "收音机",
+          "en": "radio",
+          "tags": ["object"],
+          "practice": [
+            {
+              "id": "l02_v24_p01",
+              "skill": "vocab",
+              "question": { "zh": "「ラジオ」的意思是？", "en": "What does ラジオ mean?" },
+              "options": [
+                { "text": { "zh": "收音机" }, "correct": true },
+                { "text": { "zh": "电视" } },
+                { "text": { "zh": "电脑" } },
+                { "text": { "zh": "相机" } }
+              ],
+              "explanation": { "zh": "「ラジオ」= 收音机。", "en": "ラジオ means radio." }
+            }
+          ]
+        },
+        {
+          "id": "l02_v25",
+          "jp": "カメラ",
+          "kana": "カメラ",
+          "zh": "相机",
+          "en": "camera",
+          "tags": ["object"],
+          "practice": [
+            {
+              "id": "l02_v25_p01",
+              "skill": "vocab",
+              "question": { "zh": "「カメラ」的意思是？", "en": "What does カメラ mean?" },
+              "options": [
+                { "text": { "zh": "相机" }, "correct": true },
+                { "text": { "zh": "电视" } },
+                { "text": { "zh": "收音机" } },
+                { "text": { "zh": "电脑" } }
+              ],
+              "explanation": { "zh": "「カメラ」= 相机。", "en": "カメラ means camera." }
+            }
+          ]
+        },
+        {
+          "id": "l02_v26",
+          "jp": "コンピューター",
+          "kana": "コンピューター",
+          "zh": "电脑",
+          "en": "computer",
+          "tags": ["object"],
+          "practice": [
+            {
+              "id": "l02_v26_p01",
+              "skill": "vocab",
+              "question": { "zh": "「コンピューター」的意思是？", "en": "What does コンピューター mean?" },
+              "options": [
+                { "text": { "zh": "电脑" }, "correct": true },
+                { "text": { "zh": "电视" } },
+                { "text": { "zh": "相机" } },
+                { "text": { "zh": "车" } }
+              ],
+              "explanation": { "zh": "「コンピューター」= 电脑。", "en": "コンピューター means computer." }
+            }
+          ]
+        },
+        {
+          "id": "l02_v27",
+          "jp": "車",
+          "kana": "くるま",
+          "zh": "车",
+          "en": "car",
+          "tags": ["object"],
+          "practice": [
+            {
+              "id": "l02_v27_p01",
+              "skill": "vocab",
+              "question": { "zh": "「車」的意思是？", "en": "What does 車 mean?" },
+              "options": [
+                { "text": { "zh": "车" }, "correct": true },
+                { "text": { "zh": "电脑" } },
+                { "text": { "zh": "椅子" } },
+                { "text": { "zh": "桌子" } }
+              ],
+              "explanation": { "zh": "「車」= 车。", "en": "車 means car." }
+            }
+          ]
+        },
+        {
+          "id": "l02_v28",
+          "jp": "机",
+          "kana": "つくえ",
+          "zh": "桌子",
+          "en": "desk",
+          "tags": ["object"],
+          "practice": [
+            {
+              "id": "l02_v28_p01",
+              "skill": "vocab",
+              "question": { "zh": "「机」的意思是？", "en": "What does 机 mean?" },
+              "options": [
+                { "text": { "zh": "桌子" }, "correct": true },
+                { "text": { "zh": "椅子" } },
+                { "text": { "zh": "车" } },
+                { "text": { "zh": "包" } }
+              ],
+              "explanation": { "zh": "「机」= 桌子。", "en": "机 means desk." }
+            }
+          ]
+        },
+        {
+          "id": "l02_v29",
+          "jp": "いす",
+          "kana": "いす",
+          "zh": "椅子",
+          "en": "chair",
+          "tags": ["object"],
+          "practice": [
+            {
+              "id": "l02_v29_p01",
+              "skill": "vocab",
+              "question": { "zh": "「いす」的意思是？", "en": "What does いす mean?" },
+              "options": [
+                { "text": { "zh": "椅子" }, "correct": true },
+                { "text": { "zh": "桌子" } },
+                { "text": { "zh": "床" } },
+                { "text": { "zh": "车" } }
+              ],
+              "explanation": { "zh": "「いす」= 椅子。", "en": "いす means chair." }
+            }
+          ]
+        },
+        {
+          "id": "l02_v30",
+          "jp": "チョコレート",
+          "kana": "チョコレート",
+          "zh": "巧克力",
+          "en": "chocolate",
+          "tags": ["food"],
+          "practice": [
+            {
+              "id": "l02_v30_p01",
+              "skill": "vocab",
+              "question": { "zh": "「チョコレート」的意思是？", "en": "What does チョコレート mean?" },
+              "options": [
+                { "text": { "zh": "巧克力" }, "correct": true },
+                { "text": { "zh": "咖啡" } },
+                { "text": { "zh": "英语" } },
+                { "text": { "zh": "日语" } }
+              ],
+              "explanation": { "zh": "「チョコレート」= 巧克力。", "en": "チョコレート means chocolate." }
+            }
+          ]
+        },
+        {
+          "id": "l02_v31",
+          "jp": "コーヒー",
+          "kana": "コーヒー",
+          "zh": "咖啡",
+          "en": "coffee",
+          "tags": ["food"],
+          "practice": [
+            {
+              "id": "l02_v31_p01",
+              "skill": "vocab",
+              "question": { "zh": "「コーヒー」的意思是？", "en": "What does コーヒー mean?" },
+              "options": [
+                { "text": { "zh": "咖啡" }, "correct": true },
+                { "text": { "zh": "巧克力" } },
+                { "text": { "zh": "电视" } },
+                { "text": { "zh": "杂志" } }
+              ],
+              "explanation": { "zh": "「コーヒー」= 咖啡。", "en": "コーヒー means coffee." }
+            }
+          ]
+        },
+        {
+          "id": "l02_v32",
+          "jp": "英語",
+          "kana": "えいご",
+          "zh": "英语",
+          "en": "English",
+          "tags": ["language"],
+          "practice": [
+            {
+              "id": "l02_v32_p01",
+              "skill": "vocab",
+              "question": { "zh": "「英語」的意思是？", "en": "What does 英語 mean?" },
+              "options": [
+                { "text": { "zh": "英语" }, "correct": true },
+                { "text": { "zh": "日语" } },
+                { "text": { "zh": "谁" } },
+                { "text": { "zh": "什么" } }
+              ],
+              "explanation": { "zh": "「英語」= 英语。", "en": "英語 means English." }
+            }
+          ]
+        },
+        {
+          "id": "l02_v33",
+          "jp": "日本語",
+          "kana": "にほんご",
+          "zh": "日语",
+          "en": "Japanese",
+          "tags": ["language"],
+          "practice": [
+            {
+              "id": "l02_v33_p01",
+              "skill": "vocab",
+              "question": { "zh": "「日本語」的意思是？", "en": "What does 日本語 mean?" },
+              "options": [
+                { "text": { "zh": "日语" }, "correct": true },
+                { "text": { "zh": "英语" } },
+                { "text": { "zh": "巧克力" } },
+                { "text": { "zh": "咖啡" } }
+              ],
+              "explanation": { "zh": "「日本語」= 日语。", "en": "日本語 means Japanese." }
+            }
           ]
         }
       ]
