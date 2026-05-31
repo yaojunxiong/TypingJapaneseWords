@@ -61,7 +61,7 @@ export default async function LessonPracticePage({
   const section = sections.find((x) => String(x.type || '') === s)
   const items = Array.isArray(section?.items) ? section!.items! : []
 
-  const questions = items.flatMap((item, idx) => {
+  const questions = items.flatMap((item, idx, arr) => {
     const fromPractice = (Array.isArray(item.practice) ? item.practice : [])
       .map((p, pIdx) => {
         const opts = (Array.isArray(p.options) ? p.options : []).map((op) => ({
@@ -113,7 +113,33 @@ export default async function LessonPracticePage({
       }
     })()
 
-    return quizLike ? [...fromPractice, quizLike] : fromPractice
+    if (quizLike) return [...fromPractice, quizLike]
+    if (fromPractice.length > 0) return fromPractice
+
+    const autoGen = (() => {
+      const jp = item.jp || ''
+      const correct = lang === 'en' ? (item.en || item.zh || '') : (item.zh || item.en || '')
+      if (!jp || !correct) return null
+      const distractors = arr
+        .filter((other) => other !== item)
+        .map((other) => lang === 'en' ? (other.en || other.zh || '') : (other.zh || other.en || ''))
+        .filter((t): t is string => !!t)
+      const pool = [...new Set([correct, ...distractors])]
+      const opts = pool
+        .sort(() => Math.random() - 0.5)
+        .slice(0, 4)
+        .map((text) => ({ text, correct: text === correct }))
+      if (opts.length < 2) return null
+      return {
+        id: `${item.id || idx}-auto`,
+        question: lang === 'en' ? `What does "${jp}" mean?` : `「${jp}」是什么意思？`,
+        hint: item.kana || jp,
+        options: opts,
+        explanation: item.kana ? `「${jp}」（${item.kana}）= ${correct}` : `「${jp}」= ${correct}`
+      }
+    })()
+
+    return autoGen ? [autoGen] : []
   })
 
   return (
