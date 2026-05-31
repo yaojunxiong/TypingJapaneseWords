@@ -15,23 +15,6 @@ type Props = {
   lang: 'zh' | 'en'
 }
 
-const PROD_ORIGIN = 'https://next-app-kohl-one.vercel.app'
-
-function pickOAuthOrigin() {
-  const fromEnv = String(process.env.NEXT_PUBLIC_APP_ORIGIN || '').trim()
-  if (fromEnv) return fromEnv.replace(/\/+$/, '')
-  if (typeof window === 'undefined') return PROD_ORIGIN
-
-  const current = String(window.location.origin || '').trim()
-  try {
-    const h = new URL(current).hostname.toLowerCase()
-    if (!h || h.endsWith('github.io')) return PROD_ORIGIN
-    return current
-  } catch {
-    return PROD_ORIGIN
-  }
-}
-
 function t(lang: Props['lang'], zh: string, en: string) {
   return lang === 'en' ? en : zh
 }
@@ -69,20 +52,6 @@ export default function AuthActions({ lang }: Props) {
     }
   }, [supabase, supabaseReady])
 
-  async function loginWithGoogle() {
-    if (!supabaseReady) {
-      setError(envMessage || t(lang, 'Supabase 环境变量未配置', 'Supabase env vars are not configured'))
-      return
-    }
-    setError('')
-    const origin = pickOAuthOrigin()
-    const { error } = await supabase.auth.signInWithOAuth({
-      provider: 'google',
-      options: { redirectTo: `${origin}/auth/callback?next=/me` }
-    })
-    if (error) setError(error.message)
-  }
-
   async function logout() {
     if (!supabaseReady) return
     setError('')
@@ -105,7 +74,7 @@ export default function AuthActions({ lang }: Props) {
       {!loading && !user ? (
         <>
           <p className="small">{t(lang, '当前未登录', 'Not signed in')}</p>
-          <button className="btn" onClick={loginWithGoogle}>{t(lang, 'Google 登录', 'Sign in with Google')}</button>
+          <a className="btn" href="/auth/signin">{t(lang, 'Google 登录', 'Sign in with Google')}</a>
         </>
       ) : null}
       {error ? <p className="small" style={{ color: '#b91c1c' }}>{t(lang, '错误', 'Error')}：{error}</p> : null}
