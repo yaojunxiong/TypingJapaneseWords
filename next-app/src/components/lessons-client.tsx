@@ -110,24 +110,28 @@ export default function LessonsClient({ bypassLessonLock, roleLabel, lang }: Pro
   }, [])
 
   const rows = useMemo(() => {
-    return LESSONS_1_50.map((lesson) => {
+    const result: Array<{
+      no: number; title: string; subtitle: string; crowns: number; done: boolean; locked: boolean; href: string
+    }> = []
+    for (const lesson of LESSONS_1_50) {
       const lessonKey = String(lesson.no)
       const completedStages = cloudCompleted ? (cloudCompleted[lessonKey] || []) : []
       const crowns = cloudCompleted ? completedStages.length : crownCount(local.crowns, lesson.no)
       const done = crowns >= 4
+      const prevDone = result.length > 0 ? result[result.length - 1].done : true
       let locked = false
       if (cloudCompleted && !bypassLessonLock && lesson.no > 1) {
-        const prevCompleted = (cloudCompleted[String(lesson.no - 1)] || []).length
-        locked = prevCompleted < 4
+        locked = !prevDone
       }
-      return {
+      result.push({
         ...lesson,
         crowns,
         done,
         locked,
         href: locked ? '#' : `/lessons/${lesson.no}`
-      }
-    })
+      })
+    }
+    return result
   }, [local, cloudCompleted, bypassLessonLock])
 
   return (
