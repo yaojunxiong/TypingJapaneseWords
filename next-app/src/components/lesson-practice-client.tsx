@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { markDailyCheckinLocal, recordPracticeResult } from '@/lib/learning-cloud-sync'
 import { hasSupabasePublicEnv } from '@/utils/supabase/config'
+import { addWrongAnswer, toggleFavorite, getReviewItems } from '@/lib/review-items'
 
 type Lang = 'zh' | 'en'
 
@@ -165,6 +166,7 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
   const [sessionReady, setSessionReady] = useState(false)
   const [saveError, setSaveError] = useState('')
   const [cloudStatus, setCloudStatus] = useState(t(lang, '正在读取云端学习进度...', 'Loading cloud progress...'))
+  const [favoriteIds, setFavoriteIds] = useState<Set<string>>(new Set())
   const autoAdvanceTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   const total = questions.length
@@ -175,6 +177,17 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
     if (stage === 'examples') return t(lang, '例句训练', 'Example Training')
     return t(lang, '测验模式', 'Quiz Mode')
   }, [lang, stage])
+
+  // Load existing favorites for this lesson
+  useEffect(() => {
+    async function loadFavorites() {
+      try {
+        const data = await getReviewItems({ sourceType: 'favorite', lessonNo })
+        if (data) setFavoriteIds(new Set(data.map((i) => i.question_id)))
+      } catch {}
+    }
+    void loadFavorites()
+  }, [lessonNo])
 
   // Cleanup auto-advance timer on unmount
   useEffect(() => {
@@ -474,6 +487,19 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
         emitStatsUpdate()
       } catch {}
 
+      // Save wrong answer to review_items
+      void addWrongAnswer({
+        lessonNo,
+        stage,
+        questionId: `${lessonNo}.${stage}.${idx}`,
+        questionText: current.question,
+        jp: current.hint,
+        correctAnswer: correctAnswerText(),
+        selectedAnswer: current.options[optionIndex]?.text || '',
+        options: current.options,
+        explanation: current.explanation,
+      })
+
       void writeCloudPracticeSession({ lessonNo, stage, idx, score, hearts: nextHearts })
     }
   }
@@ -562,6 +588,32 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
       <p className="practiceHint">
         {current.hint}
         <button className="practiceAudioBtn" onClick={speakHint}>🔊</button>
+      </p>
+      <p className="small" style={{ textAlign: 'right' }}>
+        <button
+          className="practiceAudioBtn"
+          onClick={async () => {
+            const id = `${lessonNo}.${stage}.${idx}`
+            const isFav = favoriteIds.has(id)
+            const result = await toggleFavorite({
+              lessonNo,
+              stage,
+              questionId: id,
+              questionText: current.question,
+              jp: current.hint,
+              correctAnswer: correctAnswerText(),
+              options: current.options,
+            })
+            if (result?.action === 'added') {
+              setFavoriteIds((prev) => new Set(prev).add(id))
+            } else if (result?.action === 'removed') {
+              setFavoriteIds((prev) => { const next = new Set(prev); next.delete(id); return next })
+            }
+          }}
+          title={t(lang, '收藏/取消收藏', 'Toggle favorite')}
+        >
+          {favoriteIds.has(`${lessonNo}.${stage}.${idx}`) ? '⭐' : '☆'}
+        </button>
       </p>
       {burstText ? (
         <p className={combo > 1 ? 'practiceCombo hot' : 'practiceCombo'}>{burstText}</p>

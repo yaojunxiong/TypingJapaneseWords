@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useCallback } from 'react'
 import Link from 'next/link'
-import { getReviewItems, removeFavorite, type ReviewItemRow } from '@/lib/review-items'
+import { getReviewItems, markMastered, type ReviewItemRow } from '@/lib/review-items'
 
 type Lang = 'zh' | 'en'
 
@@ -12,17 +12,18 @@ function t(lang: Lang, zh: string, en: string) {
 
 const STAGES = ['vocab', 'grammar', 'examples', 'quiz'] as const
 
-export default function FavoritesClient({ lang: initialLang }: { lang: Lang }) {
+export default function WrongAnswersClient({ lang: initialLang }: { lang: Lang }) {
   const [lang] = useState(initialLang)
   const [items, setItems] = useState<ReviewItemRow[]>([])
   const [filterLesson, setFilterLesson] = useState('')
   const [filterStage, setFilterStage] = useState('')
+  const [showMastered, setShowMastered] = useState(false)
   const [loading, setLoading] = useState(true)
 
   const load = useCallback(async () => {
     setLoading(true)
     try {
-      const data = await getReviewItems({ sourceType: 'favorite' })
+      const data = await getReviewItems({ sourceType: 'wrong_answer' })
       setItems(data || [])
     } catch {}
     setLoading(false)
@@ -33,24 +34,25 @@ export default function FavoritesClient({ lang: initialLang }: { lang: Lang }) {
   const filtered = items.filter((item) => {
     if (filterLesson && item.lesson_no !== Number(filterLesson)) return false
     if (filterStage && item.stage !== filterStage) return false
+    if (!showMastered && item.mastered) return false
     return true
   })
 
   const lessons = [...new Set(items.map((i) => i.lesson_no))].sort((a, b) => a - b)
 
-  async function handleRemove(id: string) {
+  async function handleMarkMastered(id: string) {
     try {
-      await removeFavorite(id)
-      setItems((prev) => prev.filter((i) => i.id !== id))
+      await markMastered(id)
+      setItems((prev) => prev.map((i) => i.id === id ? { ...i, mastered: true, correct_streak: 2 } : i))
     } catch {}
   }
 
   return (
     <>
       <section className="heroCard card">
-        <div className="heroEmoji">⭐</div>
-        <h2>{t(lang, '收藏例句', 'Saved Examples')}</h2>
-        <p className="small">{t(lang, '共', 'Total')} {items.length} {t(lang, '条收藏', 'items')}</p>
+        <div className="heroEmoji">📝</div>
+        <h2>{t(lang, '错题本', 'Wrong Answers')}</h2>
+        <p className="small">{t(lang, '共', 'Total')} {items.length} {t(lang, '道错题', 'items')}</p>
       </section>
 
       <section className="card">
@@ -67,34 +69,45 @@ export default function FavoritesClient({ lang: initialLang }: { lang: Lang }) {
               <option key={s} value={s}>{s}</option>
             ))}
           </select>
+          <label style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: '0.9rem' }}>
+            <input type="checkbox" checked={showMastered} onChange={(e) => setShowMastered(e.target.checked)} />
+            {t(lang, '显示已掌握', 'Show mastered')}
+          </label>
         </div>
 
         {loading ? (
           <p className="small">{t(lang, '加载中...', 'Loading...')}</p>
         ) : filtered.length === 0 ? (
           <div className="emptyBox">
-            <h4>{t(lang, '暂无收藏', 'No saved items')}</h4>
-            <p className="small">{t(lang, '练习时点击 ⭐ 按钮即可收藏。', 'Tap ⭐ during practice to save items.')}</p>
+            <h4>{t(lang, '暂无错题', 'No wrong answers')}</h4>
+            <p className="small">{t(lang, '完成练习后，答错的题目会自动出现在这里。', 'Wrong answers from practice will appear here.')}</p>
           </div>
         ) : (
           <div className="favGrid2">
             {filtered.map((item) => (
-              <article key={item.id} className="favCard2">
+              <article key={item.id} className="favCard2" style={{ opacity: item.mastered ? 0.5 : 1 }}>
                 <span>
                   {t(lang, `第 ${item.lesson_no} 课`, `Lesson ${item.lesson_no}`)} · {item.stage}
+                  {item.mastered ? ` ✅ ${t(lang, '已掌握', 'Mastered')}` : ''}
                 </span>
-                {item.jp ? <b>{item.jp}</b> : null}
-                {item.question_text ? <p>{item.question_text}</p> : null}
-                {item.zh ? <p>{item.zh}</p> : null}
-                {item.en ? <p>{item.en}</p> : null}
+                <b>{item.question_text}</b>
+                {item.jp ? <small>{item.jp}</small> : null}
+                <p style={{ color: '#e74c3c' }}>
+                  {t(lang, '你的回答：', 'Your answer: ')}{item.selected_answer}
+                </p>
+                <p style={{ color: '#27ae60' }}>
+                  {t(lang, '正确答案：', 'Correct: ')}{item.correct_answer}
+                </p>
                 {item.explanation ? <p className="small">{item.explanation}</p> : null}
                 <div className="favCardActions">
-                  <Link className="btn ghost" href={`/lessons/${item.lesson_no}`}>
-                    {t(lang, '打开课程', 'Open Lesson')}
+                  <Link className="btn ghost" href={`/lessons/${item.lesson_no}/practice?stage=${item.stage}`}>
+                    {t(lang, '去练习', 'Practice')}
                   </Link>
-                  <button className="btn" onClick={() => handleRemove(item.id)}>
-                    {t(lang, '取消收藏', 'Remove')}
-                  </button>
+                  {!item.mastered ? (
+                    <button className="btn" onClick={() => handleMarkMastered(item.id)}>
+                      {t(lang, '标记已掌握', 'Mark mastered')}
+                    </button>
+                  ) : null}
                 </div>
               </article>
             ))}

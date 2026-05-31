@@ -14,7 +14,7 @@ export default async function MinnaNav({ active }: Props) {
     { key: 'home', label: tr(lang, '首页', 'Home'), href: '/', icon: '🏠' },
     { key: 'lessons', label: tr(lang, '课程', 'Lessons'), href: '/lessons', icon: '🌳' },
     { key: 'toolbox', label: tr(lang, '学习', 'Learn'), href: '/toolbox', icon: '🧰' },
-    { key: 'favorites', label: tr(lang, '收藏', 'Saved'), href: '/favorites', icon: '💗' },
+    { key: 'favorites', label: tr(lang, '收藏', 'Saved'), href: '/review', icon: '💗' },
     { key: 'messages', label: tr(lang, '消息', 'Inbox'), href: '/messages', icon: '🐟' }
   ]
   const EXTRA_ITEMS: NavItem[] = [
