@@ -34,10 +34,10 @@ export default async function AdminPage() {
             <span>🔍 Audit 检查</span>
             <span style={{ fontSize: '0.8rem', opacity: 0.6 }}>查看 audit 报告 →</span>
           </Link>
-          <div className="practiceChoice disabled" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem' }}>
+          <Link href="/admin/publish" className="practiceChoice" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem', textDecoration: 'none' }}>
             <span>🚀 发布管理</span>
-            <span style={{ fontSize: '0.8rem', opacity: 0.6 }}>即将上线</span>
-          </div>
+            <span style={{ fontSize: '0.8rem', opacity: 0.6 }}>预览和发布 →</span>
+          </Link>
           <div className="practiceChoice disabled" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem' }}>
             <span>📊 Review 数据管理</span>
             <span style={{ fontSize: '0.8rem', opacity: 0.6 }}>即将上线</span>

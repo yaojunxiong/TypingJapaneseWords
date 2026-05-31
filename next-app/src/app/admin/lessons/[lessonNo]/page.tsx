@@ -155,10 +155,10 @@ export default async function AdminLessonDetailPage({
                               fontSize: '0.7rem',
                               padding: '1px 6px',
                               borderRadius: 8,
-                              background: draft.status === 'validated' ? '#27ae60' : draft.status === 'published' ? '#2980b9' : '#f39c12',
+                              background: draft.status === 'ready_to_publish' ? '#8e44ad' : draft.status === 'validated' ? '#27ae60' : draft.status === 'published' ? '#2980b9' : '#f39c12',
                               color: '#fff',
                             }}>
-                              {draft.status === 'draft' ? '草稿' : draft.status === 'validated' ? '已验' : draft.status === 'published' ? '已发布' : '已弃'}
+                              {draft.status === 'ready_to_publish' ? '待发布' : draft.status === 'draft' ? '草稿' : draft.status === 'validated' ? '已验' : draft.status === 'published' ? '已发布' : '已弃'}
                             </span>
                           )}
                           <Link

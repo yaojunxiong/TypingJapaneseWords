@@ -11,7 +11,7 @@ export interface LessonDraftRow {
   stage: string
   item_id: string
   draft_data: Record<string, unknown>
-  status: 'draft' | 'validated' | 'published' | 'discarded'
+  status: 'draft' | 'validated' | 'ready_to_publish' | 'published' | 'discarded'
   message: string | null
   created_by: string | null
   updated_by: string | null
