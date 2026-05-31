@@ -26,7 +26,7 @@ export type RoleRow = {
  */
 export function getEffectiveRole(roleRow: RoleRow | null, userEmail: string): string {
   const email = String(roleRow?.email || userEmail || '').toLowerCase()
-  const forcedAdmin = email === 'yaojunxiong@gmail.com'
+  const forcedAdmin = email === 'yaojunxiong23@gmail.com'
   const rawRole = forcedAdmin ? 'admin' : String(roleRow?.role || 'normal')
   const vipUntil = roleRow?.vip_until ? String(roleRow.vip_until) : ''
   const vipActive = rawRole === 'vip' && (!vipUntil || Date.parse(vipUntil) > Date.now())

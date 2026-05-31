@@ -14,8 +14,22 @@ export async function requireAdmin(): Promise<AdminUser> {
     throw new Error('not authenticated')
   }
 
-  const { data: isAdmin } = await supabase.rpc('is_admin')
-  if (!isAdmin) {
+  const email = (user.email || '').toLowerCase()
+
+  // Hardcoded admin email — always treated as admin
+  if (email === 'yaojunxiong23@gmail.com') {
+    return { id: user.id, email: user.email || '' }
+  }
+
+  // Check user_roles table — RLS policy auth.uid() = user_id allows reading own row
+  const { data: roleRow } = await supabase
+    .from('user_roles')
+    .select('role')
+    .eq('user_id', user.id)
+    .eq('role', 'admin')
+    .maybeSingle()
+
+  if (!roleRow) {
     throw new Error('not authorized')
   }
 
