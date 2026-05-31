@@ -9,15 +9,12 @@
 
 import fs from 'node:fs'
 import path from 'node:path'
-import { countQuestions } from '../src/lib/practice-helpers'
+import { generateQuestions, STAGES, type LessonDoc, type Stage } from '../src/lib/practice-questions'
 
 const ROOT = path.resolve(process.cwd())
 const LESSON_DIR = path.join(ROOT, 'src', 'data', 'minna', 'lessons')
 const REPORT_DIR = path.join(ROOT, 'reports')
 const REPORT_FILE = path.join(REPORT_DIR, 'lesson-migration-audit.md')
-
-const STAGES = ['vocab', 'grammar', 'examples', 'quiz'] as const
-type Stage = (typeof STAGES)[number]
 
 /* ------------------------------------------------------------------ */
 /*  Helpers                                                            */
@@ -94,11 +91,10 @@ function auditGrammar(items: unknown[]): SectionAudit {
   return { status, itemCount: items.length, practiceCount, issues }
 }
 
-function auditVocab(items: unknown[]): SectionAudit {
+function auditVocab(items: unknown[], generatedCount: number): SectionAudit {
   if (!items.length) return { status: 'EMPTY', itemCount: 0, practiceCount: 0, issues: ['no vocabulary items'] }
   const issues: string[] = []
   let practiceCount = 0
-  let totalGenerated = 0
 
   for (const item of items) {
     if (!item || typeof item !== 'object') { issues.push('item is not an object'); continue }
@@ -106,24 +102,21 @@ function auditVocab(items: unknown[]): SectionAudit {
     if (!i.jp && !i.ja) issues.push(`item ${i.id || '(no id)'} missing jp/ja`)
     if (!i.zh && !i.en) issues.push(`item ${i.id || '(no id)'} missing zh and en`)
 
-    totalGenerated += countQuestions(i)
-
     const practice = Array.isArray(i.practice) ? i.practice : []
     if (practice.length > 0) {
       practiceCount += practice.length
     }
   }
 
-  if (totalGenerated === 0) issues.push('no questions can be generated (0 total)')
+  if (generatedCount === 0) issues.push('no questions can be generated (0 total)')
   const status: SectionAudit['status'] = issues.length > 0 ? 'WEAK' : 'OK'
-  return { status, itemCount: items.length, practiceCount, issues }
+  return { status, itemCount: items.length, practiceCount: generatedCount, issues }
 }
 
-function auditExamples(items: unknown[]): SectionAudit {
+function auditExamples(items: unknown[], generatedCount: number): SectionAudit {
   if (!items.length) return { status: 'EMPTY', itemCount: 0, practiceCount: 0, issues: ['no example items'] }
   const issues: string[] = []
   let practiceCount = 0
-  let totalGenerated = 0
 
   for (const item of items) {
     if (!item || typeof item !== 'object') { issues.push('item is not an object'); continue }
@@ -131,17 +124,15 @@ function auditExamples(items: unknown[]): SectionAudit {
     if (!i.jp && !i.ja) issues.push(`item ${i.id || '(no id)'} missing jp/ja`)
     if (!i.zh && !i.en) issues.push(`item ${i.id || '(no id)'} missing zh and en`)
 
-    totalGenerated += countQuestions(i)
-
     const practice = Array.isArray(i.practice) ? i.practice : []
     if (practice.length > 0) {
       practiceCount += practice.length
     }
   }
 
-  if (totalGenerated === 0) issues.push('no questions can be generated (0 total)')
+  if (generatedCount === 0) issues.push('no questions can be generated (0 total)')
   const status: SectionAudit['status'] = issues.length > 0 ? 'WEAK' : 'OK'
-  return { status, itemCount: items.length, practiceCount, issues }
+  return { status, itemCount: items.length, practiceCount: generatedCount, issues }
 }
 
 function auditQuiz(items: unknown[]): SectionAudit {
@@ -180,11 +171,11 @@ type LessonResult = {
   metaIssues: string[]
 }
 
-const auditFunctions: Record<Stage, (items: unknown[]) => SectionAudit> = {
-  vocab: auditVocab,
-  grammar: auditGrammar,
-  examples: auditExamples,
-  quiz: auditQuiz,
+const auditFunctions: Record<Stage, (items: unknown[], generatedCount?: number) => SectionAudit> = {
+  vocab: (items, gen) => auditVocab(items, gen ?? 0),
+  grammar: (items) => auditGrammar(items),
+  examples: (items, gen) => auditExamples(items, gen ?? 0),
+  quiz: (items) => auditQuiz(items),
 }
 
 function auditLesson(no: number): LessonResult {
@@ -250,7 +241,10 @@ function auditLesson(no: number): LessonResult {
     if (items === undefined) {
       results[stage] = { status: 'MISSING', itemCount: 0, practiceCount: 0, issues: [`${stage} section not found`] }
     } else {
-      results[stage] = auditFunctions[stage](items)
+      const generatedCount = ['vocab', 'examples'].includes(stage)
+        ? generateQuestions(no, stage, raw as unknown as LessonDoc, 'zh').length
+        : undefined
+      results[stage] = auditFunctions[stage](items, generatedCount)
     }
   }
 

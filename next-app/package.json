@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "verify:lessons": "node scripts/verify-lessons.mjs",
-    "audit:lessons": "npx tsx scripts/audit-lessons.ts"
+    "audit:lessons": "npx tsx scripts/audit-lessons.ts",
+    "check:practice-pages": "npx tsx scripts/check-practice-pages.ts"
   },
   "dependencies": {
     "@supabase/ssr": "^0.5.2",
