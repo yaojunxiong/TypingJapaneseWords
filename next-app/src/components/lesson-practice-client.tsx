@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { markDailyCheckinLocal, recordPracticeResult } from '@/lib/learning-cloud-sync'
 import { hasSupabasePublicEnv } from '@/utils/supabase/config'
 
@@ -154,6 +154,7 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
   const [hearts, setHearts] = useState(5)
   const [score, setScore] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
+  const [locked, setLocked] = useState(false)
   const [finished, setFinished] = useState(false)
   const [voiceOn, setVoiceOn] = useState(true)
   const [sfxOn, setSfxOn] = useState(true)
@@ -162,7 +163,9 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
   const [checkedInOnce, setCheckedInOnce] = useState(false)
   const [practiceSaved, setPracticeSaved] = useState(false)
   const [sessionReady, setSessionReady] = useState(false)
+  const [saveError, setSaveError] = useState('')
   const [cloudStatus, setCloudStatus] = useState(t(lang, '正在读取云端学习进度...', 'Loading cloud progress...'))
+  const autoAdvanceTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   const total = questions.length
   const current = questions[idx]
@@ -172,6 +175,16 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
     if (stage === 'examples') return t(lang, '例句训练', 'Example Training')
     return t(lang, '测验模式', 'Quiz Mode')
   }, [lang, stage])
+
+  // Cleanup auto-advance timer on unmount
+  useEffect(() => {
+    return () => {
+      if (autoAdvanceTimer.current) {
+        clearTimeout(autoAdvanceTimer.current)
+        autoAdvanceTimer.current = null
+      }
+    }
+  }, [])
 
   function debugCloud(extra: string) {
     if (process.env.NODE_ENV === 'production') return ''
@@ -218,8 +231,8 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
     }
   }
 
-  async function writeCloudPracticeSession(session: PracticeSession, completed = false) {
-    if (!supabaseReady) return
+  async function writeCloudPracticeSession(session: PracticeSession, completed = false): Promise<boolean> {
+    if (!supabaseReady) return true
     try {
       const res = await fetch('/api/practice-session', {
         method: 'POST',
@@ -235,8 +248,12 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
       })
       if (res.ok) {
         setCloudStatus(t(lang, `已保存进度：第 ${session.idx + 1} 题`, `Saved: question ${session.idx + 1}`))
+        return true
       }
-    } catch {}
+      return false
+    } catch {
+      return false
+    }
   }
 
   async function clearCloudPracticeSession() {
@@ -292,8 +309,8 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
     } catch {}
   }
 
-  function savePracticeComplete(finalScore: number, finalHearts: number) {
-    if (practiceSaved) return
+  async function savePracticeComplete(finalScore: number, finalHearts: number): Promise<boolean> {
+    if (practiceSaved) return true
     setPracticeSaved(true)
     try {
       recordPracticeResult({
@@ -305,9 +322,19 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
         completed: total > 0 && finalScore >= Math.ceil(total * 0.8) && finalHearts > 0
       })
       clearPracticeSession(lessonNo, stage)
-      void writeCloudPracticeSession({ lessonNo, stage, idx, score: finalScore, hearts: finalHearts }, true)
+      const ok = await writeCloudPracticeSession({ lessonNo, stage, idx, score: finalScore, hearts: finalHearts }, true)
+      if (!ok) {
+        setPracticeSaved(false)
+        setSaveError(t(lang, '保存失败', 'Save failed'))
+        return false
+      }
       emitStatsUpdate()
-    } catch {}
+      return true
+    } catch {
+      setPracticeSaved(false)
+      setSaveError(t(lang, '保存失败', 'Save failed'))
+      return false
+    }
   }
 
   useEffect(() => {
@@ -388,69 +415,110 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
     speakHint()
   }, [idx, finished])
 
-  function onPick(optionIndex: number) {
-    if (picked !== null || finished) return
-    setPicked(optionIndex)
-    const isCorrect = current.options[optionIndex]?.correct
-    if (isCorrect) {
-      const nextCombo = combo + 1
-      setCombo(nextCombo)
-      setBurstText(comboText(nextCombo))
-      if (sfxOn) playCorrectCombo(nextCombo)
-      setScore((v) => {
-        const next = v + 1
-        try {
-          const xp = Number(localStorage.getItem('minna.xp.v1') || '0')
-          localStorage.setItem('minna.xp.v1', String(Math.max(0, xp) + 1))
-          emitStatsUpdate()
-        } catch {}
-        return next
-      })
-    } else {
-      setCombo(0)
-      setBurstText(t(lang, '再来一次', 'Try again'))
-      if (sfxOn) playTone(280, 120, 'sawtooth')
-      setHearts((v) => {
-        const next = Math.max(0, v - 1)
-        try {
-          localStorage.setItem('minna.hearts.v1', String(next))
-          saveMistake(optionIndex, next)
-          emitStatsUpdate()
-        } catch {}
-        return next
-      })
-    }
-    void writeCloudPracticeSession({
-      lessonNo, stage, idx,
-      score: isCorrect ? score + 1 : score,
-      hearts: isCorrect ? hearts : Math.max(0, hearts - 1)
-    })
-  }
-
-  function onNext() {
-    if (picked === null) return
-    if (sfxOn) playTone(720, 80, 'square')
-    if (idx >= total - 1 || hearts <= 0) {
-      savePracticeComplete(score, hearts)
+  function advanceToNext() {
+    if (idx >= total - 1) {
       setFinished(true)
       return
     }
     const nextIdx = idx + 1
     setIdx(nextIdx)
     setPicked(null)
+    setLocked(false)
     setBurstText('')
+    setSaveError('')
     void writeCloudPracticeSession({ lessonNo, stage, idx: nextIdx, score, hearts })
   }
 
+  function onPick(optionIndex: number) {
+    if (locked || finished || !current) return
+    setLocked(true)
+    setPicked(optionIndex)
+    const isCorrect = current.options[optionIndex]?.correct ?? false
+
+    if (isCorrect) {
+      const nextCombo = combo + 1
+      setCombo(nextCombo)
+      setBurstText(comboText(nextCombo))
+      if (sfxOn) playCorrectCombo(nextCombo)
+      const nextScore = score + 1
+      setScore(nextScore)
+      try {
+        const xp = Number(localStorage.getItem('minna.xp.v1') || '0')
+        localStorage.setItem('minna.xp.v1', String(Math.max(0, xp) + 1))
+        emitStatsUpdate()
+      } catch {}
+
+      const nextHearts = hearts
+      void writeCloudPracticeSession({ lessonNo, stage, idx, score: nextScore, hearts: nextHearts })
+
+      // Auto-advance after brief delay
+      autoAdvanceTimer.current = setTimeout(async () => {
+        if (idx >= total - 1) {
+          const ok = await savePracticeComplete(nextScore, nextHearts)
+          if (ok) {
+            setFinished(true)
+          }
+        } else {
+          advanceToNext()
+        }
+      }, 400)
+    } else {
+      setCombo(0)
+      setBurstText(t(lang, '再来一次', 'Try again'))
+      if (sfxOn) playTone(280, 120, 'sawtooth')
+      const nextHearts = Math.max(0, hearts - 1)
+      setHearts(nextHearts)
+      try {
+        localStorage.setItem('minna.hearts.v1', String(nextHearts))
+        saveMistake(optionIndex, nextHearts)
+        emitStatsUpdate()
+      } catch {}
+
+      void writeCloudPracticeSession({ lessonNo, stage, idx, score, hearts: nextHearts })
+    }
+  }
+
+  async function onNext() {
+    if (!locked) return
+    if (autoAdvanceTimer.current) {
+      clearTimeout(autoAdvanceTimer.current)
+      autoAdvanceTimer.current = null
+    }
+    if (saveError) {
+      // Retry save
+      setSaveError('')
+      const ok = await savePracticeComplete(score, hearts)
+      if (ok) {
+        setFinished(true)
+      }
+      return
+    }
+    if (sfxOn) playTone(720, 80, 'square')
+    if (idx >= total - 1 || hearts <= 0) {
+      const ok = await savePracticeComplete(score, hearts)
+      if (ok) {
+        setFinished(true)
+      }
+      return
+    }
+    advanceToNext()
+  }
+
   function onRestart() {
+    if (autoAdvanceTimer.current) {
+      clearTimeout(autoAdvanceTimer.current)
+      autoAdvanceTimer.current = null
+    }
     setIdx(0)
     setHearts(5)
     setScore(0)
     setPicked(null)
+    setLocked(false)
     setFinished(false)
     setCombo(0)
     setBurstText('')
     setPracticeSaved(false)
+    setSaveError('')
     clearPracticeSession(lessonNo, stage)
     void clearCloudPracticeSession()
     try {
@@ -505,17 +573,22 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
         <h3>{t(lang, '选择答案', 'Choose an answer')}</h3>
         <div className="practiceChoices">
           {current.options.map((op, opIdx) => {
-            const isPicked = picked === opIdx
-            const isCorrect = !!op.correct
-            const className = picked === null
-              ? 'practiceChoice'
-              : isPicked && isCorrect
-                ? 'practiceChoice right'
-                : isPicked && !isCorrect
-                  ? 'practiceChoice wrong'
-                  : !isPicked && isCorrect
-                    ? 'practiceChoice rightGhost'
-                    : 'practiceChoice disabled'
+            const isPickedOption = picked === opIdx
+            const isCorrectOption = !!op.correct
+            const isCorrectAnswer = locked && current.options[picked!]?.correct
+
+            let className: string
+            if (!locked) {
+              className = 'practiceChoice'
+            } else if (isPickedOption && isCorrectOption) {
+              className = 'practiceChoice right'
+            } else if (isPickedOption && !isCorrectOption) {
+              className = 'practiceChoice wrong'
+            } else if (!isPickedOption && isCorrectOption && !isCorrectAnswer) {
+              className = 'practiceChoice rightGhost'
+            } else {
+              className = 'practiceChoice disabled'
+            }
             return (
               <button key={`${op.text}-${opIdx}`} className={className} onClick={() => onPick(opIdx)}>
                 {op.text}
@@ -524,15 +597,27 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
           })}
         </div>
 
-        {picked !== null ? (
+        {locked ? (
           <div className="practiceFeedback">
             <p className="small">
-              {current.options[picked]?.correct
-                ? t(lang, '回答正确', 'Correct')
-                : t(lang, '回答错误', 'Incorrect')}
+              {current.options[picked!]?.correct
+                ? t(lang, '✅ 回答正确', '✅ Correct')
+                : t(lang, '❌ 回答错误', '❌ Incorrect')}
             </p>
+            {!current.options[picked!]?.correct ? (
+              <p className="small">
+                {t(lang, '正确答案：', 'Correct answer: ')}
+                {correctAnswerText()}
+              </p>
+            ) : null}
             {current.explanation ? <p className="small">{current.explanation}</p> : null}
-            <button className="btn" onClick={onNext}>{t(lang, '下一题', 'Next')}</button>
+            {saveError ? <p className="small" style={{ color: 'red' }}>{saveError}</p> : null}
+            {/* Show "下一题" only when wrong, save error, or last question completed*/}
+            {(!current.options[picked!]?.correct || saveError) ? (
+              <button className="btn" onClick={onNext}>
+                {saveError ? t(lang, '重试', 'Retry') : t(lang, '下一题', 'Next')}
+              </button>
+            ) : null}
           </div>
         ) : null}
       </div>
