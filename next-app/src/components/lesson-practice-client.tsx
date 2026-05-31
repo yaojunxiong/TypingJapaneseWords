@@ -165,6 +165,7 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
   const [practiceSaved, setPracticeSaved] = useState(false)
   const [sessionReady, setSessionReady] = useState(false)
   const [saveError, setSaveError] = useState('')
+  const [toastMsg, setToastMsg] = useState('')
   const [cloudStatus, setCloudStatus] = useState(t(lang, '正在读取云端学习进度...', 'Loading cloud progress...'))
   const [favoriteIds, setFavoriteIds] = useState<Set<string>>(new Set())
   const autoAdvanceTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -188,6 +189,13 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
     }
     void loadFavorites()
   }, [lessonNo])
+
+  // Auto-clear toast after 3s
+  useEffect(() => {
+    if (!toastMsg) return
+    const id = setTimeout(() => setToastMsg(''), 3000)
+    return () => clearTimeout(id)
+  }, [toastMsg])
 
   // Cleanup auto-advance timer on unmount
   useEffect(() => {
@@ -488,7 +496,7 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
       } catch {}
 
       // Save wrong answer to review_items
-      void addWrongAnswer({
+      addWrongAnswer({
         lessonNo,
         stage,
         questionId: `${lessonNo}.${stage}.${idx}`,
@@ -498,6 +506,9 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
         selectedAnswer: current.options[optionIndex]?.text || '',
         options: current.options,
         explanation: current.explanation,
+      }).catch((e) => {
+        console.error('addWrongAnswer failed:', e)
+        setToastMsg(t(lang, '错题保存失败', 'Failed to save mistake'))
       })
 
       void writeCloudPracticeSession({ lessonNo, stage, idx, score, hearts: nextHearts })
@@ -595,19 +606,26 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
           onClick={async () => {
             const id = `${lessonNo}.${stage}.${idx}`
             const isFav = favoriteIds.has(id)
-            const result = await toggleFavorite({
-              lessonNo,
-              stage,
-              questionId: id,
-              questionText: current.question,
-              jp: current.hint,
-              correctAnswer: correctAnswerText(),
-              options: current.options,
-            })
-            if (result?.action === 'added') {
-              setFavoriteIds((prev) => new Set(prev).add(id))
-            } else if (result?.action === 'removed') {
-              setFavoriteIds((prev) => { const next = new Set(prev); next.delete(id); return next })
+            try {
+              const result = await toggleFavorite({
+                lessonNo,
+                stage,
+                questionId: id,
+                questionText: current.question,
+                jp: current.hint,
+                correctAnswer: correctAnswerText(),
+                options: current.options,
+              })
+              if (result?.action === 'added') {
+                setFavoriteIds((prev) => new Set(prev).add(id))
+                setToastMsg(t(lang, '已收藏 ⭐', 'Saved ⭐'))
+              } else if (result?.action === 'removed') {
+                setFavoriteIds((prev) => { const next = new Set(prev); next.delete(id); return next })
+                setToastMsg(t(lang, '已取消收藏', 'Removed'))
+              }
+            } catch (e) {
+              console.error('toggleFavorite failed:', e)
+              setToastMsg(t(lang, '收藏失败，请检查登录', 'Save failed, check login'))
             }
           }}
           title={t(lang, '收藏/取消收藏', 'Toggle favorite')}
@@ -619,6 +637,7 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
         <p className={combo > 1 ? 'practiceCombo hot' : 'practiceCombo'}>{burstText}</p>
       ) : null}
       <p className="practiceProgress">{idx + 1}/{total}</p>
+      {toastMsg ? <p className="small" style={{ color: '#e74c3c', fontWeight: 'bold' }}>{toastMsg}</p> : null}
       <p className="small">{cloudStatus}</p>
 
       <div className="practiceCard">
