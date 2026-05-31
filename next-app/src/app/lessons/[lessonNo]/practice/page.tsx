@@ -3,6 +3,7 @@ import path from 'node:path'
 import MinnaNav from '@/components/minna-nav'
 import LessonPracticeClient from '@/components/lesson-practice-client'
 import { getLang, type Lang } from '@/lib/i18n'
+import { seededShuffle, strHash } from '@/lib/quiz-options'
 
 type LangText = { zh?: string; en?: string; ja?: string; jp?: string }
 type LessonPractice = {
@@ -26,30 +27,6 @@ type LessonItem = {
 }
 type LessonSection = { type?: string; items?: LessonItem[] }
 type LessonDoc = { sections?: LessonSection[] }
-
-function seededShuffle<T>(arr: T[], seed: number): T[] {
-  const result = [...arr]
-  let s = seed | 0
-  if (s === 0) s = 1
-  const next = () => {
-    s = (s * 1664525 + 1013904223) | 0
-    return ((s >>> 0) / 0xFFFFFFFF)
-  }
-  for (let i = result.length - 1; i > 0; i--) {
-    const j = Math.floor(next() * (i + 1));
-    [result[i], result[j]] = [result[j], result[i]]
-  }
-  return result
-}
-
-function strHash(s: string): number {
-  let h = 0
-  for (let i = 0; i < s.length; i++) {
-    h = ((h << 5) - h) + s.charCodeAt(i)
-    h |= 0
-  }
-  return Math.abs(h) || 1
-}
 
 function pick(text: LangText | undefined, lang: Lang) {
   if (!text) return ''
