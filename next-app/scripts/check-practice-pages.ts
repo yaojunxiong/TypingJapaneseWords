@@ -3,8 +3,10 @@
  *
  * Tests all 200 stage entries (50 lessons × 4 stages) against:
  *   - questions.length > 0
- *   - each question has >= 4 options
  *   - each question has exactly 1 correct option
+ *   - multiple-choice: options >= 4
+ *   - order (n >= 3 fragments): options >= 4
+ *   - order (n == 2 fragments): options >= 2 (max possible)
  *   - correct answer is not always at index 0 (shuffle verification)
  *   - no questions → would show "本课暂无可训练题目" (flagged)
  *
@@ -51,9 +53,14 @@ function checkStage(lessonNo: number, stage: Stage, lesson: Record<string, unkno
   }
 
   for (const q of questions) {
-    if (q.options.length < 4) {
+    // Determine min-options threshold by question type
+    const isOrder = q.questionType === 'order'
+    const fragCount = q.fragmentCount ?? 0
+    const minOpts = isOrder && fragCount === 2 ? 2 : 4
+
+    if (q.options.length < minOpts) {
       totalOptionsIssues++
-      flags.push(`${q.id}: ${q.options.length} options (< 4)`)
+      flags.push(`${q.id}: ${q.options.length} options (${isOrder ? `order/${fragCount}frag` : 'choice'}, need ≥${minOpts})`)
     }
 
     const correctCount = q.options.filter((o) => o.correct).length
@@ -103,11 +110,15 @@ function generateReport(results: StageCheck[]): string {
 
   let md = '# Full-Site Practice Page Quality Check\n\n'
   md += `Generated: ${new Date().toISOString()}\n\n`
+  md += '## Validation Rules\n\n'
+  md += '- **Multiple-choice**: options ≥ 4, exactly 1 correct\n'
+  md += '- **Order (n ≥ 3 fragments)**: options ≥ 4, exactly 1 correct\n'
+  md += '- **Order (n = 2 fragments)**: options ≥ 2 (max unique permutations), exactly 1 correct\n\n'
   md += '## Overall Summary\n\n'
   md += `- **${totalStages}** stages checked (50 lessons × 4 stages)\n`
   md += `- **${passed}** ✅ PASS / **${failed}** ❌ FAIL\n`
   md += `- **${totalQuestions}** total questions generated\n`
-  md += `- **${optionsIssues}** stages with <4 options issues\n`
+  md += `- **${optionsIssues}** stages with insufficient-options issues\n`
   md += `- **${correctIssues}** stages with !=1 correct issues\n`
   md += `- **${emptyFlags}** stages with 0 questions (empty state)\n`
   md += `- **${shuffleFlags}** stages with shuffle anomaly (all correct at index 0)\n\n`
@@ -143,7 +154,10 @@ function generateReport(results: StageCheck[]): string {
     }
   } else {
     md += '\n## 🎉 All Stages Passed\n\n'
-    md += 'Every stage generates questions with valid options (≥4, exactly 1 correct).\n'
+    md += 'Every stage generates valid questions:\n'
+    md += '- Choice questions: ≥4 options, exactly 1 correct\n'
+    md += '- Order questions (n≥3): ≥4 options, exactly 1 correct\n'
+    md += '- Order questions (n=2): ≥2 options, exactly 1 correct\n'
   }
 
   // Shuffle verification detail
@@ -186,7 +200,7 @@ function generateReport(results: StageCheck[]): string {
   md += '1. **Option text quality**: All options exist and have text, but distractors may be semantically unrelated or too easy to eliminate.\n'
   md += '2. **Question relevance**: The auto-generated practice questions (vocab/examples) always use the format `「XX」的含义是？` — this may not cover all useful exercise types.\n'
   md += '3. **LangText vs flat string inconsistency**: v2 quiz (lessons 39–50) stores option text as flat strings; v1 uses `{zh,en,jp}` objects. The page handles both, but the data inconsistency remains.\n'
-  md += '4. **Order-type questions**: Only 2-4 options are generated from permutations — if the original answer has few unique orderings, the question may be too easy.\n'
+  md += '4. **Order-type questions**: With 2 fragments only 2 unique permutations exist; with 3+ fragments we generate up to 6 and keep 4. The current permutation strategies (swap, reverse, rotate) may not cover all interesting orderings.\n'
   md += '5. **Explanations**: Not all questions have explanations — the page gracefully handles missing explanations, but learners lose feedback.\n'
   md += '6. **Cross-lesson consistency**: Lessons 26–50 have a `mistakes` section type that the audit ignores. This section does not generate practice, but learners may expect it.\n'
 

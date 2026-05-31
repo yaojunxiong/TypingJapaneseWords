@@ -1,6 +1,6 @@
 # みんなの日本語 初級 — Lesson Migration Audit Report
 
-Generated: 2026-05-31T07:53:57.296Z
+Generated: 2026-05-31T08:06:39.681Z
 
 ## Overall Status
 

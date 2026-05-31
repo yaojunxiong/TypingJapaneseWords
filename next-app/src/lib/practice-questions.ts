@@ -21,6 +21,10 @@ export type PracticeQuestion = {
   hint: string
   options: PracticeOption[]
   explanation?: string
+  /** 'choice' = multiple-choice, 'order' = permutation ordering */
+  questionType: 'choice' | 'order'
+  /** For order questions: number of source fragments (2 → max 2 unique permutations) */
+  fragmentCount?: number
 }
 export type Stage = 'vocab' | 'grammar' | 'examples' | 'quiz'
 
@@ -99,6 +103,7 @@ export function generateQuestions(
             hint: String(i.kana || i.jp || ''),
             options: seededShuffle(opts, strHash(`${i.id || idx}-p-${pIdx}`)),
             explanation: pickText(p.explanation as LangText | string | undefined, lang),
+            questionType: 'choice' as const,
           }
         }
 
@@ -114,6 +119,8 @@ export function generateQuestions(
             hint: String(i.kana || i.jp || ''),
             options: seededShuffle(orderOptions, strHash(`${i.id || idx}-order-${pIdx}`)),
             explanation: pickText(p.explanation as LangText | string | undefined, lang),
+            questionType: 'order' as const,
+            fragmentCount: ans.length,
           }
         }
         return null
@@ -132,6 +139,7 @@ export function generateQuestions(
         hint: String(i.kana || i.jp || ''),
         options: seededShuffle(opts, strHash(`${i.id || idx}-quiz`)),
         explanation: pickText(i.explanation as LangText | string | undefined, lang),
+        questionType: 'choice' as const,
       }
     })()
 

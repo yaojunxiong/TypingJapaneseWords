@@ -1,13 +1,19 @@
 # Full-Site Practice Page Quality Check
 
-Generated: 2026-05-31T07:54:42.612Z
+Generated: 2026-05-31T08:06:42.769Z
+
+## Validation Rules
+
+- **Multiple-choice**: options ≥ 4, exactly 1 correct
+- **Order (n ≥ 3 fragments)**: options ≥ 4, exactly 1 correct
+- **Order (n = 2 fragments)**: options ≥ 2 (max unique permutations), exactly 1 correct
 
 ## Overall Summary
 
 - **200** stages checked (50 lessons × 4 stages)
-- **199** ✅ PASS / **1** ❌ FAIL
+- **200** ✅ PASS / **0** ❌ FAIL
 - **1747** total questions generated
-- **1** stages with <4 options issues
+- **0** stages with insufficient-options issues
 - **0** stages with !=1 correct issues
 - **0** stages with 0 questions (empty state)
 - **0** stages with shuffle anomaly (all correct at index 0)
@@ -18,7 +24,7 @@ Generated: 2026-05-31T07:54:42.612Z
 |---|---|---|---|---|---|---|---|
 | 01 | vocab | ✅ | 17 | ✅ | ✅ | 5 | — |
 | 01 | grammar | ✅ | 6 | ✅ | ✅ | 1 | — |
-| 01 | examples | ❌ | 6 | ❌1 | ✅ | 2 | l01_e06-order-0: 2 options (< 4) |
+| 01 | examples | ✅ | 6 | ✅ | ✅ | 2 | — |
 | 01 | quiz | ✅ | 9 | ✅ | ✅ | 3 | — |
 | 02 | vocab | ✅ | 33 | ✅ | ✅ | 9 | — |
 | 02 | grammar | ✅ | 8 | ✅ | ✅ | 3 | — |
@@ -217,14 +223,12 @@ Generated: 2026-05-31T07:54:42.612Z
 | 50 | examples | ✅ | 8 | ✅ | ✅ | 1 | — |
 | 50 | quiz | ✅ | 10 | ✅ | ✅ | 3 | — |
 
-## Failed Stages Detail
+## 🎉 All Stages Passed
 
-### Lesson 01 — examples
-
-- Questions generated: 6
-- Correct at index 0: 2/6
-- ⚠️ l01_e06-order-0: 2 options (< 4)
-
+Every stage generates valid questions:
+- Choice questions: ≥4 options, exactly 1 correct
+- Order questions (n≥3): ≥4 options, exactly 1 correct
+- Order questions (n=2): ≥2 options, exactly 1 correct
 
 ## Shuffle Verification
 
@@ -245,6 +249,6 @@ The following issues cannot be auto-detected and require human verification:
 1. **Option text quality**: All options exist and have text, but distractors may be semantically unrelated or too easy to eliminate.
 2. **Question relevance**: The auto-generated practice questions (vocab/examples) always use the format `「XX」的含义是？` — this may not cover all useful exercise types.
 3. **LangText vs flat string inconsistency**: v2 quiz (lessons 39–50) stores option text as flat strings; v1 uses `{zh,en,jp}` objects. The page handles both, but the data inconsistency remains.
-4. **Order-type questions**: Only 2-4 options are generated from permutations — if the original answer has few unique orderings, the question may be too easy.
+4. **Order-type questions**: With 2 fragments only 2 unique permutations exist; with 3+ fragments we generate up to 6 and keep 4. The current permutation strategies (swap, reverse, rotate) may not cover all interesting orderings.
 5. **Explanations**: Not all questions have explanations — the page gracefully handles missing explanations, but learners lose feedback.
 6. **Cross-lesson consistency**: Lessons 26–50 have a `mistakes` section type that the audit ignores. This section does not generate practice, but learners may expect it.
