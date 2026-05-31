@@ -9,6 +9,7 @@
 
 import fs from 'node:fs'
 import path from 'node:path'
+import { countQuestions } from '../src/lib/practice-helpers'
 
 const ROOT = path.resolve(process.cwd())
 const LESSON_DIR = path.join(ROOT, 'src', 'data', 'minna', 'lessons')
@@ -93,27 +94,6 @@ function auditGrammar(items: unknown[]): SectionAudit {
   return { status, itemCount: items.length, practiceCount, issues }
 }
 
-/** Simulate practice/page.tsx question generation for a single item */
-function simulateQuestions(item: Record<string, unknown>): number {
-  let count = 0
-
-  // fromPractice path
-  const practice = Array.isArray(item.practice) ? (item.practice as Record<string, unknown>[]) : []
-  for (const p of practice) {
-    const opts = Array.isArray(p.options) ? (p.options as Record<string, unknown>[]) : []
-    const validOpts = opts.filter((o) => o && o.text && hasText(o.text))
-    if (validOpts.length > 1) count++
-    else if (String(p.type || '') === 'order' && Array.isArray(p.answer) && p.answer.length > 1) count++
-  }
-
-  // quizLike path
-  const opts = Array.isArray(item.options) ? (item.options as Record<string, unknown>[]) : []
-  const validOpts = opts.filter((o) => o && o.text && hasText(o.text))
-  if (validOpts.length > 1) count++
-
-  return count
-}
-
 function auditVocab(items: unknown[]): SectionAudit {
   if (!items.length) return { status: 'EMPTY', itemCount: 0, practiceCount: 0, issues: ['no vocabulary items'] }
   const issues: string[] = []
@@ -126,7 +106,7 @@ function auditVocab(items: unknown[]): SectionAudit {
     if (!i.jp && !i.ja) issues.push(`item ${i.id || '(no id)'} missing jp/ja`)
     if (!i.zh && !i.en) issues.push(`item ${i.id || '(no id)'} missing zh and en`)
 
-    totalGenerated += simulateQuestions(i)
+    totalGenerated += countQuestions(i)
 
     const practice = Array.isArray(i.practice) ? i.practice : []
     if (practice.length > 0) {
@@ -151,7 +131,7 @@ function auditExamples(items: unknown[]): SectionAudit {
     if (!i.jp && !i.ja) issues.push(`item ${i.id || '(no id)'} missing jp/ja`)
     if (!i.zh && !i.en) issues.push(`item ${i.id || '(no id)'} missing zh and en`)
 
-    totalGenerated += simulateQuestions(i)
+    totalGenerated += countQuestions(i)
 
     const practice = Array.isArray(i.practice) ? i.practice : []
     if (practice.length > 0) {

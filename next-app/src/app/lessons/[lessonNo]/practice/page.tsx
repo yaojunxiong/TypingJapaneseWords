@@ -4,6 +4,7 @@ import MinnaNav from '@/components/minna-nav'
 import LessonPracticeClient from '@/components/lesson-practice-client'
 import { getLang, type Lang } from '@/lib/i18n'
 import { seededShuffle, strHash } from '@/lib/quiz-options'
+import { pickText } from '@/lib/practice-helpers'
 
 type LangText = { zh?: string; en?: string; ja?: string; jp?: string }
 type LessonPractice = {
@@ -27,12 +28,6 @@ type LessonItem = {
 }
 type LessonSection = { type?: string; items?: LessonItem[] }
 type LessonDoc = { sections?: LessonSection[] }
-
-function pick(text: LangText | undefined, lang: Lang) {
-  if (!text) return ''
-  if (lang === 'en') return text.en || text.zh || text.ja || text.jp || ''
-  return text.zh || text.ja || text.en || text.jp || ''
-}
 
 async function loadLessonDoc(lessonNo: number): Promise<LessonDoc | null> {
   const fileNo = String(lessonNo).padStart(2, '0')
@@ -66,17 +61,17 @@ export default async function LessonPracticePage({
     const fromPractice = (Array.isArray(item.practice) ? item.practice : [])
       .map((p, pIdx) => {
         const opts = (Array.isArray(p.options) ? p.options : []).map((op) => ({
-          text: pick(op.text, lang),
+          text: pickText(op.text, lang),
           correct: !!op.correct
         })).filter((op) => op.text)
 
         if (opts.length > 1) {
           return {
             id: `${item.id || idx}-p-${pIdx}`,
-            question: pick(p.question, lang) || (lang === 'en' ? 'Choose the best answer' : '请选择最合适的答案'),
+            question: pickText(p.question, lang) || (lang === 'en' ? 'Choose the best answer' : '请选择最合适的答案'),
             hint: item.kana || item.jp || '',
             options: seededShuffle(opts, strHash(`${item.id || idx}-p-${pIdx}`)),
-            explanation: pick(p.explanation, lang)
+            explanation: pickText(p.explanation, lang)
           }
         }
 
@@ -89,10 +84,10 @@ export default async function LessonPracticePage({
           const orderOptions = unique.slice(0, 4).map((text) => ({ text, correct: text === right }))
           return {
             id: `${item.id || idx}-order-${pIdx}`,
-            question: pick(p.question, lang) || (lang === 'en' ? 'Arrange the sentence in correct order' : '选择正确语序'),
+            question: pickText(p.question, lang) || (lang === 'en' ? 'Arrange the sentence in correct order' : '选择正确语序'),
             hint: item.kana || item.jp || '',
             options: seededShuffle(orderOptions, strHash(`${item.id || idx}-order-${pIdx}`)),
-            explanation: pick(p.explanation, lang)
+            explanation: pickText(p.explanation, lang)
           }
         }
         return null
@@ -101,16 +96,16 @@ export default async function LessonPracticePage({
 
     const quizLike = (() => {
       const opts = (Array.isArray(item.options) ? item.options : []).map((op) => ({
-        text: pick(op.text, lang),
+        text: pickText(op.text, lang),
         correct: !!op.correct
       })).filter((op) => op.text)
       if (opts.length < 2) return null
       return {
         id: `${item.id || idx}-quiz`,
-        question: pick(item.question, lang) || (lang === 'en' ? 'Choose the best answer' : '请选择最合适的答案'),
+        question: pickText(item.question, lang) || (lang === 'en' ? 'Choose the best answer' : '请选择最合适的答案'),
         hint: item.kana || item.jp || '',
         options: seededShuffle(opts, strHash(`${item.id || idx}-quiz`)),
-        explanation: pick(item.explanation, lang)
+        explanation: pickText(item.explanation, lang)
       }
     })()
 
