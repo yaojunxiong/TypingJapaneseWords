@@ -24,6 +24,8 @@ type Props = {
   lang: Lang
   stage: 'vocab' | 'grammar' | 'examples' | 'quiz'
   questions: PracticeQuestion[]
+  isAuthed?: boolean
+  userEmail?: string
 }
 
 type PracticeSession = {
@@ -149,7 +151,7 @@ function playCorrectCombo(combo: number) {
   } catch {}
 }
 
-export default function LessonPracticeClient({ lessonNo, lang, stage, questions }: Props) {
+export default function LessonPracticeClient({ lessonNo, lang, stage, questions, isAuthed = false, userEmail = '' }: Props) {
   const supabaseReady = hasSupabasePublicEnv()
   const [idx, setIdx] = useState(0)
   const [hearts, setHearts] = useState(5)
@@ -496,20 +498,24 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
       } catch {}
 
       // Save wrong answer to review_items
-      addWrongAnswer({
-        lessonNo,
-        stage,
-        questionId: `${lessonNo}.${stage}.${idx}`,
-        questionText: current.question,
-        jp: current.hint,
-        correctAnswer: correctAnswerText(),
-        selectedAnswer: current.options[optionIndex]?.text || '',
-        options: current.options,
-        explanation: current.explanation,
-      }).catch((e) => {
-        console.error('addWrongAnswer failed:', e)
-        setToastMsg(t(lang, '错题保存失败', 'Failed to save mistake'))
-      })
+      if (isAuthed) {
+        addWrongAnswer({
+          lessonNo,
+          stage,
+          questionId: `${lessonNo}.${stage}.${idx}`,
+          questionText: current.question,
+          jp: current.hint,
+          correctAnswer: correctAnswerText(),
+          selectedAnswer: current.options[optionIndex]?.text || '',
+          options: current.options,
+          explanation: current.explanation,
+        }).catch((e) => {
+          console.error('addWrongAnswer failed:', e)
+          setToastMsg(t(lang, '错题保存失败', 'Failed to save mistake'))
+        })
+      } else {
+        console.log('addWrongAnswer skipped — user not authed')
+      }
 
       void writeCloudPracticeSession({ lessonNo, stage, idx, score, hearts: nextHearts })
     }
@@ -604,8 +610,11 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
         <button
           className="practiceAudioBtn"
           onClick={async () => {
+            if (!isAuthed) {
+              setToastMsg(t(lang, '请先登录', 'Please sign in first'))
+              return
+            }
             const id = `${lessonNo}.${stage}.${idx}`
-            const isFav = favoriteIds.has(id)
             try {
               const result = await toggleFavorite({
                 lessonNo,

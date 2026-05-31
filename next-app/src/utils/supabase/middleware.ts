@@ -13,12 +13,12 @@ export const createClient = (request: NextRequest) => {
   })
 
   if (!hasSupabasePublicEnv()) {
-    return supabaseResponse
+    return { supabase: null, supabaseResponse }
   }
 
   const { url, key } = getSafeSupabasePublicConfig()
 
-  createServerClient(url, key, {
+  const supabase = createServerClient(url, key, {
     cookies: {
       getAll() {
         return request.cookies.getAll()
@@ -35,5 +35,5 @@ export const createClient = (request: NextRequest) => {
     }
   })
 
-  return supabaseResponse
+  return { supabase, supabaseResponse }
 }

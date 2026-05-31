@@ -36,37 +36,43 @@ export default async function LessonPracticePage({
     ? String(stage) as 'vocab' | 'grammar' | 'examples' | 'quiz'
     : 'vocab')
 
-  // --- Unlock check ---
+  // --- Auth & Unlock check ---
+  let userEmail = ''
+  let isAuthed = false
   let isUnlocked = no === 1
-  if (!isUnlocked && hasSupabasePublicEnv()) {
+  if (hasSupabasePublicEnv()) {
     const cookieStore = await cookies()
     const supabase = createClient(cookieStore)
     const { data: { user } } = await supabase.auth.getUser()
     if (user) {
-      const { data: roleRaw } = await supabase
-        .from('user_roles')
-        .select('role,vip_until,email')
-        .eq('user_id', user.id)
-        .maybeSingle()
-      const roleRow = (roleRaw as RoleRow | null)
-      const bypassLessonLock = computeBypassLessonLock(roleRow, user.email || '')
-      if (bypassLessonLock) {
-        isUnlocked = true
-      } else {
-        const { data: completed } = await supabase
-          .from('practice_sessions')
-          .select('lesson_no, stage')
+      isAuthed = true
+      userEmail = user.email || ''
+      if (no > 1) {
+        const { data: roleRaw } = await supabase
+          .from('user_roles')
+          .select('role,vip_until,email')
           .eq('user_id', user.id)
-          .eq('completed', true)
-        const allCompletedStages: Record<string, string[]> = {}
-        for (const row of completed || []) {
-          if (!row.stage) continue
-          const key = String(row.lesson_no)
-          if (!allCompletedStages[key]) allCompletedStages[key] = []
-          allCompletedStages[key].push(row.stage)
+          .maybeSingle()
+        const roleRow = (roleRaw as RoleRow | null)
+        const bypassLessonLock = computeBypassLessonLock(roleRow, user.email || '')
+        if (bypassLessonLock) {
+          isUnlocked = true
+        } else {
+          const { data: completed } = await supabase
+            .from('practice_sessions')
+            .select('lesson_no, stage')
+            .eq('user_id', user.id)
+            .eq('completed', true)
+          const allCompletedStages: Record<string, string[]> = {}
+          for (const row of completed || []) {
+            if (!row.stage) continue
+            const key = String(row.lesson_no)
+            if (!allCompletedStages[key]) allCompletedStages[key] = []
+            allCompletedStages[key].push(row.stage)
+          }
+          const progress = getLessonProgress(no, allCompletedStages, undefined, false)
+          isUnlocked = progress.isUnlocked
         }
-        const progress = getLessonProgress(no, allCompletedStages, undefined, false)
-        isUnlocked = progress.isUnlocked
       }
     }
   }
@@ -92,7 +98,14 @@ export default async function LessonPracticePage({
   return (
     <main>
       <MinnaNav active="lessons" />
-      <LessonPracticeClient lessonNo={no} lang={lang} stage={s} questions={questions} />
+      <LessonPracticeClient
+        lessonNo={no}
+        lang={lang}
+        stage={s}
+        questions={questions}
+        isAuthed={isAuthed}
+        userEmail={userEmail}
+      />
     </main>
   )
 }
