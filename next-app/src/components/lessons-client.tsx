@@ -8,6 +8,7 @@ import {
   getLocalLearningSummary,
   syncLearningCloudNow
 } from '@/lib/learning-cloud-sync'
+import { computeAllLessons } from '@/lib/lesson-progress'
 
 type Props = {
   bypassLessonLock: boolean
@@ -16,39 +17,18 @@ type Props = {
 }
 
 type LocalState = {
-  currentLesson: number
-  crowns: Record<string, boolean>
   streak: number
   checkinDays: number
 }
 
-const STAGES = ['vocab', 'grammar', 'examples', 'review']
-
 function t(lang: Props['lang'], zh: string, en: string) {
   return lang === 'en' ? en : zh
-}
-
-function readJson<T>(key: string, fallback: T): T {
-  try {
-    const raw = localStorage.getItem(key)
-    if (!raw) return fallback
-    const parsed = JSON.parse(raw)
-    return parsed == null ? fallback : (parsed as T)
-  } catch {
-    return fallback
-  }
-}
-
-function crownCount(crowns: Record<string, boolean>, lessonNo: number) {
-  return STAGES.filter((s) => crowns[`lesson${lessonNo}.${s}`]).length
 }
 
 export default function LessonsClient({ bypassLessonLock, roleLabel, lang }: Props) {
   const supabaseReady = hasSupabasePublicEnv()
   const supabase = useMemo(() => createClient(), [])
   const [local, setLocal] = useState<LocalState>({
-    currentLesson: 1,
-    crowns: {},
     streak: 1,
     checkinDays: 0
   })
@@ -56,12 +36,8 @@ export default function LessonsClient({ bypassLessonLock, roleLabel, lang }: Pro
   const [syncText, setSyncText] = useState(t(lang, '读取本地进度...', 'Reading local progress...'))
 
   function loadLocalState() {
-    const st = readJson<{ lastLesson?: number }>('minna.mobile.learning.state.v1', {})
-    const crowns = readJson<Record<string, boolean>>('minna.crowns.v1', {})
     const summary = getLocalLearningSummary()
     setLocal({
-      currentLesson: Math.max(1, Number(st.lastLesson || summary.lastLesson || 1)),
-      crowns,
       streak: summary.streak,
       checkinDays: summary.checkinDays
     })
@@ -110,29 +86,18 @@ export default function LessonsClient({ bypassLessonLock, roleLabel, lang }: Pro
   }, [])
 
   const rows = useMemo(() => {
-    const result: Array<{
-      no: number; title: string; subtitle: string; crowns: number; done: boolean; locked: boolean; href: string
-    }> = []
-    for (const lesson of LESSONS_1_50) {
-      const lessonKey = String(lesson.no)
-      const completedStages = cloudCompleted ? (cloudCompleted[lessonKey] || []) : []
-      const crowns = cloudCompleted ? completedStages.length : crownCount(local.crowns, lesson.no)
-      const done = crowns >= 4
-      const prevDone = result.length > 0 ? result[result.length - 1].done : true
-      let locked = false
-      if (cloudCompleted && !bypassLessonLock && lesson.no > 1) {
-        locked = !prevDone
-      }
-      result.push({
-        ...lesson,
-        crowns,
-        done,
-        locked,
-        href: locked ? '#' : `/lessons/${lesson.no}`
-      })
-    }
-    return result
-  }, [local, cloudCompleted, bypassLessonLock])
+    const all = cloudCompleted
+      ? computeAllLessons(cloudCompleted, bypassLessonLock)
+      : null
+    return LESSONS_1_50.map((meta, i) => {
+      const p = all ? all[i] : null
+      const isUnlocked = p ? p.isUnlocked : true
+      const completedCount = p ? p.completedCount : 0
+      const isCompleted = p ? p.isCompleted : false
+      const isCurrent = p ? p.isCurrent : false
+      return { ...meta, completedCount, isCompleted, isUnlocked, isCurrent, href: isUnlocked ? `/lessons/${meta.no}` : '#' }
+    })
+  }, [cloudCompleted, bypassLessonLock])
 
   return (
     <>
@@ -141,7 +106,7 @@ export default function LessonsClient({ bypassLessonLock, roleLabel, lang }: Pro
         <h2>{t(lang, '课程', 'Lessons')}</h2>
         <p className="small">{t(lang, '第 1-50 课学习入口（迁移版）', 'Lesson 1-50 learning entrance')}</p>
         <p className="small">
-          {t(lang, '当前角色', 'Role')}：{roleLabel} · {t(lang, '当前课', 'Current lesson')}：{local.currentLesson} · {t(lang, '连续', 'Streak')} {local.streak} {t(lang, '天', 'days')}
+          {t(lang, '当前角色', 'Role')}：{roleLabel} · {t(lang, '连续', 'Streak')} {local.streak} {t(lang, '天', 'days')}
         </p>
         <p className="small">{syncText} · {t(lang, '打卡', 'Check-ins')} {local.checkinDays} {t(lang, '天', 'days')}</p>
       </section>
@@ -151,18 +116,18 @@ export default function LessonsClient({ bypassLessonLock, roleLabel, lang }: Pro
           <a
             key={row.no}
             href={row.href}
-            className={row.locked ? 'lessonCard2 locked' : 'lessonCard2'}
+            className={row.isUnlocked ? 'lessonCard2' : 'lessonCard2 locked'}
           >
-            <div className={row.done ? 'lessonNo done' : row.locked ? 'lessonNo muted' : 'lessonNo'}>
-              {row.done ? '✓' : row.no}
+            <div className={row.isCompleted ? 'lessonNo done' : row.isUnlocked ? 'lessonNo' : 'lessonNo muted'}>
+              {row.isCompleted ? '✓' : row.no}
             </div>
             <div className="lessonText2">
               <h3>{t(lang, `第 ${row.no} 课 · ${row.title}`, `Lesson ${row.no}`)}</h3>
               <p className="small">{row.subtitle}</p>
               <div className="lessonMeta2">
-                <span className={row.done ? 'metaPill done' : 'metaPill'}>👑 {row.crowns}/4</span>
+                <span className={row.isCompleted ? 'metaPill done' : 'metaPill'}>👑 {row.completedCount}/4</span>
                 <span className="metaPill">
-                  {row.locked ? t(lang, '未解锁', 'Locked') : row.done ? t(lang, '已完成', 'Done') : row.crowns > 0 ? t(lang, '学习中', 'Learning') : t(lang, '可学习', 'Ready')}
+                  {!row.isUnlocked ? t(lang, '未解锁', 'Locked') : row.isCompleted ? t(lang, '已完成', 'Done') : row.completedCount > 0 ? t(lang, '学习中', 'Learning') : t(lang, '可学习', 'Ready')}
                 </span>
               </div>
             </div>

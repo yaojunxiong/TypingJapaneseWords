@@ -10,6 +10,7 @@ import {
   markDailyCheckinLocal,
   syncLearningCloudNow
 } from '@/lib/learning-cloud-sync'
+import { findCurrentLesson, getLessonProgress, type LessonStageInfo } from '@/lib/lesson-progress'
 
 type Props = {
   lang: 'zh' | 'en'
@@ -26,12 +27,12 @@ type HomeStats = {
   lastStudyDate: string
 }
 
-const STAGES = [
+const STAGES: { key: LessonStageInfo['key']; icon: string; zh: string; en: string }[] = [
   { key: 'vocab', icon: '🟢', zh: '词汇', en: 'Vocab' },
   { key: 'grammar', icon: '📦', zh: '语法', en: 'Grammar' },
   { key: 'examples', icon: '🪙', zh: '例句', en: 'Examples' },
   { key: 'quiz', icon: '🏅', zh: '测验', en: 'Quiz' },
-] as const
+]
 
 function t(lang: Props['lang'], zh: string, en: string) {
   return lang === 'en' ? en : zh
@@ -74,32 +75,31 @@ export default function HomeProgressClient({ lang }: Props) {
   }))
   const [syncText, setSyncText] = useState(t(lang, '读取学习进度中...', 'Loading learning progress...'))
   const [syncing, setSyncing] = useState(false)
-  const [completedStages, setCompletedStages] = useState<Set<string>>(new Set())
-  const [stageLoaded, setStageLoaded] = useState(false)
+  const [allCompleted, setAllCompleted] = useState<Record<string, string[]> | null>(null)
 
-  const lessonNo = Math.max(1, Math.min(50, Number(stats.lastLesson || 1)))
+  const lessonNo = allCompleted
+    ? findCurrentLesson(allCompleted)
+    : Math.max(1, Math.min(50, Number(stats.lastLesson || 1)))
   const lesson = LESSONS_1_50.find((x) => x.no === lessonNo) || LESSONS_1_50[0]
   const checkedToday = stats.lastStudyDate === todayISO()
-  const completedCount = stageLoaded
-    ? completedStages.size
-    : Math.max(0, Math.min(4, stats.crowns - (lessonNo - 1) * 4))
-  const lessonCompleted = completedCount === 4
+  const progress = allCompleted ? getLessonProgress(lessonNo, allCompleted, lessonNo) : null
+  const completedCount = progress ? progress.completedCount : 0
+  const lessonCompleted = progress ? progress.isCompleted : false
+  const stageStatus = progress ? progress.stageStatus : STAGES.map((s) => ({ key: s.key, completed: false }))
 
   function readLocal() {
     setStats(toStats())
   }
 
-  async function loadCompletedStages(targetLessonNo = lessonNo) {
-    setStageLoaded(false)
+  async function loadAllCompleted() {
+    if (!supabaseReady) return
     try {
-      const res = await fetch(`/api/stage-completed?lessonNo=${targetLessonNo}`)
-      const data = await res.json()
-      setCompletedStages(new Set(Array.isArray(data.completed) ? data.completed : []))
-    } catch {
-      setCompletedStages(new Set())
-    } finally {
-      setStageLoaded(true)
-    }
+      const res = await fetch('/api/stage-completed')
+      if (res.ok) {
+        const data = await res.json()
+        setAllCompleted(data.lessons || {})
+      }
+    } catch {}
   }
 
   async function runCloudSync(forceUpload = false) {
@@ -163,8 +163,8 @@ export default function HomeProgressClient({ lang }: Props) {
   }, [])
 
   useEffect(() => {
-    void loadCompletedStages(lessonNo)
-  }, [lessonNo])
+    void loadAllCompleted()
+  }, [])
 
   return (
     <>
@@ -186,7 +186,8 @@ export default function HomeProgressClient({ lang }: Props) {
 
       <section className="homeMap card">
         {STAGES.map((stage) => {
-          const isCompleted = stageLoaded && completedStages.has(stage.key)
+          const info = stageStatus.find((s) => s.key === stage.key)
+          const isCompleted = info?.completed ?? false
           return (
             <Link
               key={stage.key}
