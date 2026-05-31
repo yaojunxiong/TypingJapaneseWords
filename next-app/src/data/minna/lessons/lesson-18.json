@@ -36,6 +36,47 @@
           "en": "can / be able to",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l18_v01_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「できます」的词汇意思是？",
+                "en": "What does できます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "会；能",
+                    "en": "can / be able to"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "弹奏",
+                    "en": "play (instrument)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "驾驶",
+                    "en": "drive"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "做饭",
+                    "en": "cook"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「できます」= 会；能。",
+                "en": "できます means can / be able to."
+              }
+            }
           ]
         },
         {
@@ -46,6 +87,47 @@
           "en": "play (instrument)",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l18_v02_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「弾きます」的词汇意思是？",
+                "en": "What does 弾きます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "弹奏",
+                    "en": "play (instrument)"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "会；能",
+                    "en": "can / be able to"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "驾驶",
+                    "en": "drive"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "做饭",
+                    "en": "cook"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「弾きます」= 弹奏。",
+                "en": "弾きます means play (instrument)."
+              }
+            }
           ]
         },
         {
@@ -56,6 +138,47 @@
           "en": "drive",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l18_v03_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「運転します」的词汇意思是？",
+                "en": "What does 運転します mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "驾驶",
+                    "en": "drive"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "会；能",
+                    "en": "can / be able to"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "弹奏",
+                    "en": "play (instrument)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "做饭",
+                    "en": "cook"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「運転します」= 驾驶。",
+                "en": "運転します means drive."
+              }
+            }
           ]
         },
         {
@@ -66,6 +189,47 @@
           "en": "cook",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l18_v04_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「料理します」的词汇意思是？",
+                "en": "What does 料理します mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "做饭",
+                    "en": "cook"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "会；能",
+                    "en": "can / be able to"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "弹奏",
+                    "en": "play (instrument)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "驾驶",
+                    "en": "drive"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「料理します」= 做饭。",
+                "en": "料理します means cook."
+              }
+            }
           ]
         },
         {
@@ -76,6 +240,47 @@
           "en": "collect",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l18_v05_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「集めます」的词汇意思是？",
+                "en": "What does 集めます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "收集",
+                    "en": "collect"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "会；能",
+                    "en": "can / be able to"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "弹奏",
+                    "en": "play (instrument)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "驾驶",
+                    "en": "drive"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「集めます」= 收集。",
+                "en": "集めます means collect."
+              }
+            }
           ]
         },
         {
@@ -86,6 +291,47 @@
           "en": "hobby",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l18_v06_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「趣味」的词汇意思是？",
+                "en": "What does 趣味 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "爱好",
+                    "en": "hobby"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "会；能",
+                    "en": "can / be able to"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "弹奏",
+                    "en": "play (instrument)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "驾驶",
+                    "en": "drive"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「趣味」= 爱好。",
+                "en": "趣味 means hobby."
+              }
+            }
           ]
         },
         {
@@ -96,6 +342,47 @@
           "en": "picture",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l18_v07_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「絵」的词汇意思是？",
+                "en": "What does 絵 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "画",
+                    "en": "picture"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "会；能",
+                    "en": "can / be able to"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "弹奏",
+                    "en": "play (instrument)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "驾驶",
+                    "en": "drive"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「絵」= 画。",
+                "en": "絵 means picture."
+              }
+            }
           ]
         },
         {
@@ -106,6 +393,47 @@
           "en": "song",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l18_v08_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「歌」的词汇意思是？",
+                "en": "What does 歌 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "歌曲",
+                    "en": "song"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "会；能",
+                    "en": "can / be able to"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "弹奏",
+                    "en": "play (instrument)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "驾驶",
+                    "en": "drive"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「歌」= 歌曲。",
+                "en": "歌 means song."
+              }
+            }
           ]
         },
         {
@@ -116,6 +444,47 @@
           "en": "guitar",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l18_v09_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「ギター」的词汇意思是？",
+                "en": "What does ギター mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "吉他",
+                    "en": "guitar"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "会；能",
+                    "en": "can / be able to"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "弹奏",
+                    "en": "play (instrument)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "驾驶",
+                    "en": "drive"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「ギター」= 吉他。",
+                "en": "ギター means guitar."
+              }
+            }
           ]
         },
         {
@@ -126,6 +495,47 @@
           "en": "piano",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l18_v10_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「ピアノ」的词汇意思是？",
+                "en": "What does ピアノ mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "钢琴",
+                    "en": "piano"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "会；能",
+                    "en": "can / be able to"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "弹奏",
+                    "en": "play (instrument)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "驾驶",
+                    "en": "drive"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「ピアノ」= 钢琴。",
+                "en": "ピアノ means piano."
+              }
+            }
           ]
         },
         {
@@ -136,6 +546,47 @@
           "en": "driver's license",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l18_v11_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「運転免許」的词汇意思是？",
+                "en": "What does 運転免許 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "驾照",
+                    "en": "driver's license"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "会；能",
+                    "en": "can / be able to"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "弹奏",
+                    "en": "play (instrument)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "驾驶",
+                    "en": "drive"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「運転免許」= 驾照。",
+                "en": "運転免許 means driver's license."
+              }
+            }
           ]
         },
         {
@@ -146,6 +597,47 @@
           "en": "travel",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l18_v12_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「旅行する」的词汇意思是？",
+                "en": "What does 旅行する mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "旅行",
+                    "en": "travel"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "会；能",
+                    "en": "can / be able to"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "弹奏",
+                    "en": "play (instrument)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "驾驶",
+                    "en": "drive"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「旅行する」= 旅行。",
+                "en": "旅行する means travel."
+              }
+            }
           ]
         },
         {
@@ -156,6 +648,47 @@
           "en": "sleep",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l18_v13_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「寝る」的词汇意思是？",
+                "en": "What does 寝る mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "睡觉",
+                    "en": "sleep"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "会；能",
+                    "en": "can / be able to"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "弹奏",
+                    "en": "play (instrument)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "驾驶",
+                    "en": "drive"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「寝る」= 睡觉。",
+                "en": "寝る means sleep."
+              }
+            }
           ]
         },
         {
@@ -166,6 +699,47 @@
           "en": "meal",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l18_v14_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「食事」的词汇意思是？",
+                "en": "What does 食事 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "用餐",
+                    "en": "meal"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "会；能",
+                    "en": "can / be able to"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "弹奏",
+                    "en": "play (instrument)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "驾驶",
+                    "en": "drive"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「食事」= 用餐。",
+                "en": "食事 means meal."
+              }
+            }
           ]
         },
         {
@@ -176,6 +750,47 @@
           "en": "work",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l18_v15_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「仕事」的词汇意思是？",
+                "en": "What does 仕事 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "工作",
+                    "en": "work"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "会；能",
+                    "en": "can / be able to"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "弹奏",
+                    "en": "play (instrument)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "驾驶",
+                    "en": "drive"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「仕事」= 工作。",
+                "en": "仕事 means work."
+              }
+            }
           ]
         },
         {
@@ -186,6 +801,47 @@
           "en": "before",
           "tags": [
             "grammar"
+          ],
+          "practice": [
+            {
+              "id": "l18_v16_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「まえに」的词汇意思是？",
+                "en": "What does まえに mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "在……之前",
+                    "en": "before"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "会；能",
+                    "en": "can / be able to"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "弹奏",
+                    "en": "play (instrument)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "驾驶",
+                    "en": "drive"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「まえに」= 在……之前。",
+                "en": "まえに means before."
+              }
+            }
           ]
         }
       ]
@@ -578,31 +1234,236 @@
           "id": "l18_e01",
           "jp": "私は漢字を読むことができます。",
           "zh": "我会读汉字。",
-          "en": "I can read kanji."
+          "en": "I can read kanji.",
+          "practice": [
+            {
+              "id": "l18_e01_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「私は漢字を読むことができます。」的例句意思是？",
+                "en": "What does 私は漢字を読むことができます。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "我会读汉字。",
+                    "en": "I can read kanji."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我的爱好是弹钢琴。",
+                    "en": "My hobby is playing the piano."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "睡前做拉伸。",
+                    "en": "I stretch before going to bed."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "开会前确认邮件。",
+                    "en": "I check email before the meeting."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「私は漢字を読むことができます。」= 我会读汉字。。",
+                "en": "私は漢字を読むことができます。 means I can read kanji.."
+              }
+            }
+          ]
         },
         {
           "id": "l18_e02",
           "jp": "趣味はピアノを弾くことです。",
           "zh": "我的爱好是弹钢琴。",
-          "en": "My hobby is playing the piano."
+          "en": "My hobby is playing the piano.",
+          "practice": [
+            {
+              "id": "l18_e02_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「趣味はピアノを弾くことです。」的例句意思是？",
+                "en": "What does 趣味はピアノを弾くことです。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "我的爱好是弹钢琴。",
+                    "en": "My hobby is playing the piano."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我会读汉字。",
+                    "en": "I can read kanji."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "睡前做拉伸。",
+                    "en": "I stretch before going to bed."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "开会前确认邮件。",
+                    "en": "I check email before the meeting."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「趣味はピアノを弾くことです。」= 我的爱好是弹钢琴。。",
+                "en": "趣味はピアノを弾くことです。 means My hobby is playing the piano.."
+              }
+            }
+          ]
         },
         {
           "id": "l18_e03",
           "jp": "寝るまえにストレッチします。",
           "zh": "睡前做拉伸。",
-          "en": "I stretch before going to bed."
+          "en": "I stretch before going to bed.",
+          "practice": [
+            {
+              "id": "l18_e03_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「寝るまえにストレッチします。」的例句意思是？",
+                "en": "What does 寝るまえにストレッチします。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "睡前做拉伸。",
+                    "en": "I stretch before going to bed."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我会读汉字。",
+                    "en": "I can read kanji."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "我的爱好是弹钢琴。",
+                    "en": "My hobby is playing the piano."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "开会前确认邮件。",
+                    "en": "I check email before the meeting."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「寝るまえにストレッチします。」= 睡前做拉伸。。",
+                "en": "寝るまえにストレッチします。 means I stretch before going to bed.."
+              }
+            }
+          ]
         },
         {
           "id": "l18_e04",
           "jp": "会議のまえにメールを確認します。",
           "zh": "开会前确认邮件。",
-          "en": "I check email before the meeting."
+          "en": "I check email before the meeting.",
+          "practice": [
+            {
+              "id": "l18_e04_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「会議のまえにメールを確認します。」的例句意思是？",
+                "en": "What does 会議のまえにメールを確認します。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "开会前确认邮件。",
+                    "en": "I check email before the meeting."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我会读汉字。",
+                    "en": "I can read kanji."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "我的爱好是弹钢琴。",
+                    "en": "My hobby is playing the piano."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "睡前做拉伸。",
+                    "en": "I stretch before going to bed."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「会議のまえにメールを確認します。」= 开会前确认邮件。。",
+                "en": "会議のまえにメールを確認します。 means I check email before the meeting.."
+              }
+            }
+          ]
         },
         {
           "id": "l18_e05",
           "jp": "兄は車を運転することができます。",
           "zh": "我哥哥会开车。",
-          "en": "My older brother can drive."
+          "en": "My older brother can drive.",
+          "practice": [
+            {
+              "id": "l18_e05_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「兄は車を運転することができます。」的例句意思是？",
+                "en": "What does 兄は車を運転することができます。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "我哥哥会开车。",
+                    "en": "My older brother can drive."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我会读汉字。",
+                    "en": "I can read kanji."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "我的爱好是弹钢琴。",
+                    "en": "My hobby is playing the piano."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "睡前做拉伸。",
+                    "en": "I stretch before going to bed."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「兄は車を運転することができます。」= 我哥哥会开车。。",
+                "en": "兄は車を運転することができます。 means My older brother can drive.."
+              }
+            }
+          ]
         }
       ]
     },

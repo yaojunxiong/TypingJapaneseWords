@@ -36,6 +36,47 @@
           "en": "go",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l05_v01_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「行きます」的词汇意思是？",
+                "en": "What does 行きます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "去",
+                    "en": "go"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "来",
+                    "en": "come"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "回去",
+                    "en": "go back"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "学校",
+                    "en": "school"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「行きます」= 去。",
+                "en": "行きます means go."
+              }
+            }
           ]
         },
         {
@@ -46,6 +87,47 @@
           "en": "come",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l05_v02_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「来ます」的词汇意思是？",
+                "en": "What does 来ます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "来",
+                    "en": "come"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "去",
+                    "en": "go"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "回去",
+                    "en": "go back"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "学校",
+                    "en": "school"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「来ます」= 来。",
+                "en": "来ます means come."
+              }
+            }
           ]
         },
         {
@@ -56,6 +138,47 @@
           "en": "go back",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l05_v03_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「帰ります」的词汇意思是？",
+                "en": "What does 帰ります mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "回去",
+                    "en": "go back"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "去",
+                    "en": "go"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "来",
+                    "en": "come"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "学校",
+                    "en": "school"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「帰ります」= 回去。",
+                "en": "帰ります means go back."
+              }
+            }
           ]
         },
         {
@@ -66,6 +189,47 @@
           "en": "school",
           "tags": [
             "place"
+          ],
+          "practice": [
+            {
+              "id": "l05_v04_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「学校」的词汇意思是？",
+                "en": "What does 学校 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "学校",
+                    "en": "school"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "去",
+                    "en": "go"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "来",
+                    "en": "come"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "回去",
+                    "en": "go back"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「学校」= 学校。",
+                "en": "学校 means school."
+              }
+            }
           ]
         },
         {
@@ -76,6 +240,47 @@
           "en": "company",
           "tags": [
             "place"
+          ],
+          "practice": [
+            {
+              "id": "l05_v05_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「会社」的词汇意思是？",
+                "en": "What does 会社 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "公司",
+                    "en": "company"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "去",
+                    "en": "go"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "来",
+                    "en": "come"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "回去",
+                    "en": "go back"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「会社」= 公司。",
+                "en": "会社 means company."
+              }
+            }
           ]
         },
         {
@@ -86,6 +291,47 @@
           "en": "home",
           "tags": [
             "place"
+          ],
+          "practice": [
+            {
+              "id": "l05_v06_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「うち」的词汇意思是？",
+                "en": "What does うち mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "家",
+                    "en": "home"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "去",
+                    "en": "go"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "来",
+                    "en": "come"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "回去",
+                    "en": "go back"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「うち」= 家。",
+                "en": "うち means home."
+              }
+            }
           ]
         },
         {
@@ -96,6 +342,47 @@
           "en": "station",
           "tags": [
             "place"
+          ],
+          "practice": [
+            {
+              "id": "l05_v07_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「駅」的词汇意思是？",
+                "en": "What does 駅 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "车站",
+                    "en": "station"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "去",
+                    "en": "go"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "来",
+                    "en": "come"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "回去",
+                    "en": "go back"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「駅」= 车站。",
+                "en": "駅 means station."
+              }
+            }
           ]
         },
         {
@@ -106,6 +393,47 @@
           "en": "train",
           "tags": [
             "transport"
+          ],
+          "practice": [
+            {
+              "id": "l05_v08_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「電車」的词汇意思是？",
+                "en": "What does 電車 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "电车",
+                    "en": "train"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "去",
+                    "en": "go"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "来",
+                    "en": "come"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "回去",
+                    "en": "go back"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「電車」= 电车。",
+                "en": "電車 means train."
+              }
+            }
           ]
         },
         {
@@ -116,6 +444,47 @@
           "en": "bus",
           "tags": [
             "transport"
+          ],
+          "practice": [
+            {
+              "id": "l05_v09_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「バス」的词汇意思是？",
+                "en": "What does バス mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "公交车",
+                    "en": "bus"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "去",
+                    "en": "go"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "来",
+                    "en": "come"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "回去",
+                    "en": "go back"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「バス」= 公交车。",
+                "en": "バス means bus."
+              }
+            }
           ]
         },
         {
@@ -126,6 +495,47 @@
           "en": "bicycle",
           "tags": [
             "transport"
+          ],
+          "practice": [
+            {
+              "id": "l05_v10_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「自転車」的词汇意思是？",
+                "en": "What does 自転車 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "自行车",
+                    "en": "bicycle"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "去",
+                    "en": "go"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "来",
+                    "en": "come"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "回去",
+                    "en": "go back"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「自転車」= 自行车。",
+                "en": "自転車 means bicycle."
+              }
+            }
           ]
         },
         {
@@ -136,6 +546,47 @@
           "en": "on foot",
           "tags": [
             "transport"
+          ],
+          "practice": [
+            {
+              "id": "l05_v11_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「歩いて」的词汇意思是？",
+                "en": "What does 歩いて mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "步行",
+                    "en": "on foot"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "去",
+                    "en": "go"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "来",
+                    "en": "come"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "回去",
+                    "en": "go back"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「歩いて」= 步行。",
+                "en": "歩いて means on foot."
+              }
+            }
           ]
         },
         {
@@ -146,6 +597,47 @@
           "en": "friend",
           "tags": [
             "person"
+          ],
+          "practice": [
+            {
+              "id": "l05_v12_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「友達」的词汇意思是？",
+                "en": "What does 友達 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "朋友",
+                    "en": "friend"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "去",
+                    "en": "go"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "来",
+                    "en": "come"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "回去",
+                    "en": "go back"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「友達」= 朋友。",
+                "en": "友達 means friend."
+              }
+            }
           ]
         },
         {
@@ -156,6 +648,47 @@
           "en": "alone",
           "tags": [
             "person"
+          ],
+          "practice": [
+            {
+              "id": "l05_v13_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「ひとりで」的词汇意思是？",
+                "en": "What does ひとりで mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "一个人",
+                    "en": "alone"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "去",
+                    "en": "go"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "来",
+                    "en": "come"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "回去",
+                    "en": "go back"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「ひとりで」= 一个人。",
+                "en": "ひとりで means alone."
+              }
+            }
           ]
         },
         {
@@ -166,6 +699,47 @@
           "en": "when",
           "tags": [
             "question"
+          ],
+          "practice": [
+            {
+              "id": "l05_v14_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「いつ」的词汇意思是？",
+                "en": "What does いつ mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "什么时候",
+                    "en": "when"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "去",
+                    "en": "go"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "来",
+                    "en": "come"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "回去",
+                    "en": "go back"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「いつ」= 什么时候。",
+                "en": "いつ means when."
+              }
+            }
           ]
         },
         {
@@ -176,6 +750,47 @@
           "en": "yesterday",
           "tags": [
             "time"
+          ],
+          "practice": [
+            {
+              "id": "l05_v15_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「きのう」的词汇意思是？",
+                "en": "What does きのう mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "昨天",
+                    "en": "yesterday"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "去",
+                    "en": "go"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "来",
+                    "en": "come"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "回去",
+                    "en": "go back"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「きのう」= 昨天。",
+                "en": "きのう means yesterday."
+              }
+            }
           ]
         },
         {
@@ -186,6 +801,47 @@
           "en": "tomorrow",
           "tags": [
             "time"
+          ],
+          "practice": [
+            {
+              "id": "l05_v16_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「あした」的词汇意思是？",
+                "en": "What does あした mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "明天",
+                    "en": "tomorrow"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "去",
+                    "en": "go"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "来",
+                    "en": "come"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "回去",
+                    "en": "go back"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「あした」= 明天。",
+                "en": "あした means tomorrow."
+              }
+            }
           ]
         }
       ]
@@ -530,31 +1186,236 @@
           "id": "l05_e01",
           "jp": "きのう 会社へ 行きました。",
           "zh": "昨天去了公司。",
-          "en": "I went to the office yesterday."
+          "en": "I went to the office yesterday.",
+          "practice": [
+            {
+              "id": "l05_e01_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「きのう 会社へ 行きました。」的例句意思是？",
+                "en": "What does きのう 会社へ 行きました。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "昨天去了公司。",
+                    "en": "I went to the office yesterday."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "每天早上坐电车去学校。",
+                    "en": "I go to school by train every morning."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "星期天和朋友去京都。",
+                    "en": "I will go to Kyoto with a friend on Sunday."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "明天一个人回家。",
+                    "en": "I will go home alone tomorrow."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「きのう 会社へ 行きました。」= 昨天去了公司。。",
+                "en": "きのう 会社へ 行きました。 means I went to the office yesterday.."
+              }
+            }
+          ]
         },
         {
           "id": "l05_e02",
           "jp": "毎朝 電車で 学校へ 行きます。",
           "zh": "每天早上坐电车去学校。",
-          "en": "I go to school by train every morning."
+          "en": "I go to school by train every morning.",
+          "practice": [
+            {
+              "id": "l05_e02_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「毎朝 電車で 学校へ 行きます。」的例句意思是？",
+                "en": "What does 毎朝 電車で 学校へ 行きます。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "每天早上坐电车去学校。",
+                    "en": "I go to school by train every morning."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "昨天去了公司。",
+                    "en": "I went to the office yesterday."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "星期天和朋友去京都。",
+                    "en": "I will go to Kyoto with a friend on Sunday."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "明天一个人回家。",
+                    "en": "I will go home alone tomorrow."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「毎朝 電車で 学校へ 行きます。」= 每天早上坐电车去学校。。",
+                "en": "毎朝 電車で 学校へ 行きます。 means I go to school by train every morning.."
+              }
+            }
+          ]
         },
         {
           "id": "l05_e03",
           "jp": "日曜日に 友達と 京都へ 行きます。",
           "zh": "星期天和朋友去京都。",
-          "en": "I will go to Kyoto with a friend on Sunday."
+          "en": "I will go to Kyoto with a friend on Sunday.",
+          "practice": [
+            {
+              "id": "l05_e03_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「日曜日に 友達と 京都へ 行きます。」的例句意思是？",
+                "en": "What does 日曜日に 友達と 京都へ 行きます。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "星期天和朋友去京都。",
+                    "en": "I will go to Kyoto with a friend on Sunday."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "昨天去了公司。",
+                    "en": "I went to the office yesterday."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "每天早上坐电车去学校。",
+                    "en": "I go to school by train every morning."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "明天一个人回家。",
+                    "en": "I will go home alone tomorrow."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「日曜日に 友達と 京都へ 行きます。」= 星期天和朋友去京都。。",
+                "en": "日曜日に 友達と 京都へ 行きます。 means I will go to Kyoto with a friend on Sunday.."
+              }
+            }
+          ]
         },
         {
           "id": "l05_e04",
           "jp": "あした ひとりで うちへ 帰ります。",
           "zh": "明天一个人回家。",
-          "en": "I will go home alone tomorrow."
+          "en": "I will go home alone tomorrow.",
+          "practice": [
+            {
+              "id": "l05_e04_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「あした ひとりで うちへ 帰ります。」的例句意思是？",
+                "en": "What does あした ひとりで うちへ 帰ります。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "明天一个人回家。",
+                    "en": "I will go home alone tomorrow."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "昨天去了公司。",
+                    "en": "I went to the office yesterday."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "每天早上坐电车去学校。",
+                    "en": "I go to school by train every morning."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "星期天和朋友去京都。",
+                    "en": "I will go to Kyoto with a friend on Sunday."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「あした ひとりで うちへ 帰ります。」= 明天一个人回家。。",
+                "en": "あした ひとりで うちへ 帰ります。 means I will go home alone tomorrow.."
+              }
+            }
+          ]
         },
         {
           "id": "l05_e05",
           "jp": "いつ 日本へ 来ますか。",
           "zh": "你什么时候来日本？",
-          "en": "When will you come to Japan?"
+          "en": "When will you come to Japan?",
+          "practice": [
+            {
+              "id": "l05_e05_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「いつ 日本へ 来ますか。」的例句意思是？",
+                "en": "What does いつ 日本へ 来ますか。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "你什么时候来日本？",
+                    "en": "When will you come to Japan?"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "昨天去了公司。",
+                    "en": "I went to the office yesterday."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "每天早上坐电车去学校。",
+                    "en": "I go to school by train every morning."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "星期天和朋友去京都。",
+                    "en": "I will go to Kyoto with a friend on Sunday."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「いつ 日本へ 来ますか。」= 你什么时候来日本？。",
+                "en": "いつ 日本へ 来ますか。 means When will you come to Japan?."
+              }
+            }
+          ]
         }
       ]
     },

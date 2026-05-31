@@ -36,6 +36,47 @@
           "en": "there is/are (things)",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l10_v01_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「あります」的词汇意思是？",
+                "en": "What does あります mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "有（物）",
+                    "en": "there is/are (things)"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "有（人/动物）",
+                    "en": "there is/are (people/animals)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "上面",
+                    "en": "on/above"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "下面",
+                    "en": "under"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「あります」= 有（物）。",
+                "en": "あります means there is/are (things)."
+              }
+            }
           ]
         },
         {
@@ -46,6 +87,47 @@
           "en": "there is/are (people/animals)",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l10_v02_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「います」的词汇意思是？",
+                "en": "What does います mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "有（人/动物）",
+                    "en": "there is/are (people/animals)"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "有（物）",
+                    "en": "there is/are (things)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "上面",
+                    "en": "on/above"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "下面",
+                    "en": "under"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「います」= 有（人/动物）。",
+                "en": "います means there is/are (people/animals)."
+              }
+            }
           ]
         },
         {
@@ -56,6 +138,47 @@
           "en": "on/above",
           "tags": [
             "position"
+          ],
+          "practice": [
+            {
+              "id": "l10_v03_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「うえ」的词汇意思是？",
+                "en": "What does うえ mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "上面",
+                    "en": "on/above"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "有（物）",
+                    "en": "there is/are (things)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "有（人/动物）",
+                    "en": "there is/are (people/animals)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "下面",
+                    "en": "under"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「うえ」= 上面。",
+                "en": "うえ means on/above."
+              }
+            }
           ]
         },
         {
@@ -66,6 +189,47 @@
           "en": "under",
           "tags": [
             "position"
+          ],
+          "practice": [
+            {
+              "id": "l10_v04_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「した」的词汇意思是？",
+                "en": "What does した mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "下面",
+                    "en": "under"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "有（物）",
+                    "en": "there is/are (things)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "有（人/动物）",
+                    "en": "there is/are (people/animals)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "上面",
+                    "en": "on/above"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「した」= 下面。",
+                "en": "した means under."
+              }
+            }
           ]
         },
         {
@@ -76,6 +240,47 @@
           "en": "in front of",
           "tags": [
             "position"
+          ],
+          "practice": [
+            {
+              "id": "l10_v05_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「まえ」的词汇意思是？",
+                "en": "What does まえ mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "前面",
+                    "en": "in front of"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "有（物）",
+                    "en": "there is/are (things)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "有（人/动物）",
+                    "en": "there is/are (people/animals)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "上面",
+                    "en": "on/above"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「まえ」= 前面。",
+                "en": "まえ means in front of."
+              }
+            }
           ]
         },
         {
@@ -86,6 +291,47 @@
           "en": "behind",
           "tags": [
             "position"
+          ],
+          "practice": [
+            {
+              "id": "l10_v06_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「うしろ」的词汇意思是？",
+                "en": "What does うしろ mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "后面",
+                    "en": "behind"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "有（物）",
+                    "en": "there is/are (things)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "有（人/动物）",
+                    "en": "there is/are (people/animals)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "上面",
+                    "en": "on/above"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「うしろ」= 后面。",
+                "en": "うしろ means behind."
+              }
+            }
           ]
         },
         {
@@ -96,6 +342,47 @@
           "en": "right",
           "tags": [
             "position"
+          ],
+          "practice": [
+            {
+              "id": "l10_v07_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「みぎ」的词汇意思是？",
+                "en": "What does みぎ mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "右边",
+                    "en": "right"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "有（物）",
+                    "en": "there is/are (things)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "有（人/动物）",
+                    "en": "there is/are (people/animals)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "上面",
+                    "en": "on/above"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「みぎ」= 右边。",
+                "en": "みぎ means right."
+              }
+            }
           ]
         },
         {
@@ -106,6 +393,47 @@
           "en": "left",
           "tags": [
             "position"
+          ],
+          "practice": [
+            {
+              "id": "l10_v08_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「ひだり」的词汇意思是？",
+                "en": "What does ひだり mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "左边",
+                    "en": "left"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "有（物）",
+                    "en": "there is/are (things)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "有（人/动物）",
+                    "en": "there is/are (people/animals)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "上面",
+                    "en": "on/above"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「ひだり」= 左边。",
+                "en": "ひだり means left."
+              }
+            }
           ]
         },
         {
@@ -116,6 +444,47 @@
           "en": "inside",
           "tags": [
             "position"
+          ],
+          "practice": [
+            {
+              "id": "l10_v09_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「なか」的词汇意思是？",
+                "en": "What does なか mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "里面",
+                    "en": "inside"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "有（物）",
+                    "en": "there is/are (things)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "有（人/动物）",
+                    "en": "there is/are (people/animals)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "上面",
+                    "en": "on/above"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「なか」= 里面。",
+                "en": "なか means inside."
+              }
+            }
           ]
         },
         {
@@ -126,6 +495,47 @@
           "en": "outside",
           "tags": [
             "position"
+          ],
+          "practice": [
+            {
+              "id": "l10_v10_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「そと」的词汇意思是？",
+                "en": "What does そと mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "外面",
+                    "en": "outside"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "有（物）",
+                    "en": "there is/are (things)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "有（人/动物）",
+                    "en": "there is/are (people/animals)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "上面",
+                    "en": "on/above"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「そと」= 外面。",
+                "en": "そと means outside."
+              }
+            }
           ]
         },
         {
@@ -136,6 +546,47 @@
           "en": "next to",
           "tags": [
             "position"
+          ],
+          "practice": [
+            {
+              "id": "l10_v11_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「となり」的词汇意思是？",
+                "en": "What does となり mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "旁边",
+                    "en": "next to"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "有（物）",
+                    "en": "there is/are (things)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "有（人/动物）",
+                    "en": "there is/are (people/animals)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "上面",
+                    "en": "on/above"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「となり」= 旁边。",
+                "en": "となり means next to."
+              }
+            }
           ]
         },
         {
@@ -146,6 +597,47 @@
           "en": "near",
           "tags": [
             "position"
+          ],
+          "practice": [
+            {
+              "id": "l10_v12_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「ちかく」的词汇意思是？",
+                "en": "What does ちかく mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "附近",
+                    "en": "near"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "有（物）",
+                    "en": "there is/are (things)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "有（人/动物）",
+                    "en": "there is/are (people/animals)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "上面",
+                    "en": "on/above"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「ちかく」= 附近。",
+                "en": "ちかく means near."
+              }
+            }
           ]
         },
         {
@@ -156,6 +648,47 @@
           "en": "between",
           "tags": [
             "position"
+          ],
+          "practice": [
+            {
+              "id": "l10_v13_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「あいだ」的词汇意思是？",
+                "en": "What does あいだ mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "中间",
+                    "en": "between"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "有（物）",
+                    "en": "there is/are (things)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "有（人/动物）",
+                    "en": "there is/are (people/animals)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "上面",
+                    "en": "on/above"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「あいだ」= 中间。",
+                "en": "あいだ means between."
+              }
+            }
           ]
         },
         {
@@ -166,6 +699,47 @@
           "en": "desk",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l10_v14_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「つくえ」的词汇意思是？",
+                "en": "What does つくえ mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "桌子",
+                    "en": "desk"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "有（物）",
+                    "en": "there is/are (things)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "有（人/动物）",
+                    "en": "there is/are (people/animals)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "上面",
+                    "en": "on/above"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「つくえ」= 桌子。",
+                "en": "つくえ means desk."
+              }
+            }
           ]
         },
         {
@@ -176,6 +750,47 @@
           "en": "chair",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l10_v15_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「いす」的词汇意思是？",
+                "en": "What does いす mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "椅子",
+                    "en": "chair"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "有（物）",
+                    "en": "there is/are (things)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "有（人/动物）",
+                    "en": "there is/are (people/animals)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "上面",
+                    "en": "on/above"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「いす」= 椅子。",
+                "en": "いす means chair."
+              }
+            }
           ]
         },
         {
@@ -186,6 +801,47 @@
           "en": "cat",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l10_v16_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「ねこ」的词汇意思是？",
+                "en": "What does ねこ mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "猫",
+                    "en": "cat"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "有（物）",
+                    "en": "there is/are (things)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "有（人/动物）",
+                    "en": "there is/are (people/animals)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "上面",
+                    "en": "on/above"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「ねこ」= 猫。",
+                "en": "ねこ means cat."
+              }
+            }
           ]
         }
       ]
@@ -530,31 +1186,236 @@
           "id": "l10_e01",
           "jp": "つくえの 上に ノートが あります。",
           "zh": "桌子上有笔记本。",
-          "en": "There is a notebook on the desk."
+          "en": "There is a notebook on the desk.",
+          "practice": [
+            {
+              "id": "l10_e01_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「つくえの 上に ノートが あります。」的例句意思是？",
+                "en": "What does つくえの 上に ノートが あります。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "桌子上有笔记本。",
+                    "en": "There is a notebook on the desk."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "椅子下面有猫。",
+                    "en": "There is a cat under the chair."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "银行在车站附近。",
+                    "en": "The bank is near the station."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "老师在教室里。",
+                    "en": "The teacher is in the classroom."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「つくえの 上に ノートが あります。」= 桌子上有笔记本。。",
+                "en": "つくえの 上に ノートが あります。 means There is a notebook on the desk.."
+              }
+            }
+          ]
         },
         {
           "id": "l10_e02",
           "jp": "いすの 下に ねこが います。",
           "zh": "椅子下面有猫。",
-          "en": "There is a cat under the chair."
+          "en": "There is a cat under the chair.",
+          "practice": [
+            {
+              "id": "l10_e02_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「いすの 下に ねこが います。」的例句意思是？",
+                "en": "What does いすの 下に ねこが います。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "椅子下面有猫。",
+                    "en": "There is a cat under the chair."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "桌子上有笔记本。",
+                    "en": "There is a notebook on the desk."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "银行在车站附近。",
+                    "en": "The bank is near the station."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "老师在教室里。",
+                    "en": "The teacher is in the classroom."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「いすの 下に ねこが います。」= 椅子下面有猫。。",
+                "en": "いすの 下に ねこが います。 means There is a cat under the chair.."
+              }
+            }
+          ]
         },
         {
           "id": "l10_e03",
           "jp": "銀行は 駅の 近くに あります。",
           "zh": "银行在车站附近。",
-          "en": "The bank is near the station."
+          "en": "The bank is near the station.",
+          "practice": [
+            {
+              "id": "l10_e03_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「銀行は 駅の 近くに あります。」的例句意思是？",
+                "en": "What does 銀行は 駅の 近くに あります。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "银行在车站附近。",
+                    "en": "The bank is near the station."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "桌子上有笔记本。",
+                    "en": "There is a notebook on the desk."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "椅子下面有猫。",
+                    "en": "There is a cat under the chair."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "老师在教室里。",
+                    "en": "The teacher is in the classroom."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「銀行は 駅の 近くに あります。」= 银行在车站附近。。",
+                "en": "銀行は 駅の 近くに あります。 means The bank is near the station.."
+              }
+            }
+          ]
         },
         {
           "id": "l10_e04",
           "jp": "先生は 教室の 中に います。",
           "zh": "老师在教室里。",
-          "en": "The teacher is in the classroom."
+          "en": "The teacher is in the classroom.",
+          "practice": [
+            {
+              "id": "l10_e04_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「先生は 教室の 中に います。」的例句意思是？",
+                "en": "What does 先生は 教室の 中に います。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "老师在教室里。",
+                    "en": "The teacher is in the classroom."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "桌子上有笔记本。",
+                    "en": "There is a notebook on the desk."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "椅子下面有猫。",
+                    "en": "There is a cat under the chair."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "银行在车站附近。",
+                    "en": "The bank is near the station."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「先生は 教室の 中に います。」= 老师在教室里。。",
+                "en": "先生は 教室の 中に います。 means The teacher is in the classroom.."
+              }
+            }
+          ]
         },
         {
           "id": "l10_e05",
           "jp": "かばんの 中に かぎや 財布が あります。",
           "zh": "包里有钥匙和钱包等。",
-          "en": "There are keys and a wallet in the bag."
+          "en": "There are keys and a wallet in the bag.",
+          "practice": [
+            {
+              "id": "l10_e05_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「かばんの 中に かぎや 財布が あります。」的例句意思是？",
+                "en": "What does かばんの 中に かぎや 財布が あります。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "包里有钥匙和钱包等。",
+                    "en": "There are keys and a wallet in the bag."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "桌子上有笔记本。",
+                    "en": "There is a notebook on the desk."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "椅子下面有猫。",
+                    "en": "There is a cat under the chair."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "银行在车站附近。",
+                    "en": "The bank is near the station."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「かばんの 中に かぎや 財布が あります。」= 包里有钥匙和钱包等。。",
+                "en": "かばんの 中に かぎや 財布が あります。 means There are keys and a wallet in the bag.."
+              }
+            }
+          ]
         }
       ]
     },

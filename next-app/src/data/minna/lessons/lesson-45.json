@@ -31,7 +31,48 @@
           "kana": "さんかします",
           "zh": "参加",
           "en": "participate",
-          "example": "会議に参加します。"
+          "example": "会議に参加します。",
+          "practice": [
+            {
+              "id": "l45-vocab-01_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「参加します」的词汇意思是？",
+                "en": "What does 参加します mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "参加",
+                    "en": "participate"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "报名、申请",
+                    "en": "apply, register"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "联系",
+                    "en": "contact"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "中止、取消",
+                    "en": "cancellation"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「参加します」= 参加。",
+                "en": "参加します means participate."
+              }
+            }
+          ]
         },
         {
           "id": "l45-vocab-02",
@@ -39,7 +80,48 @@
           "kana": "もうしこみます",
           "zh": "报名、申请",
           "en": "apply, register",
-          "example": "イベントに申し込みます。"
+          "example": "イベントに申し込みます。",
+          "practice": [
+            {
+              "id": "l45-vocab-02_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「申し込みます」的词汇意思是？",
+                "en": "What does 申し込みます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "报名、申请",
+                    "en": "apply, register"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "参加",
+                    "en": "participate"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "联系",
+                    "en": "contact"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "中止、取消",
+                    "en": "cancellation"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「申し込みます」= 报名、申请。",
+                "en": "申し込みます means apply, register."
+              }
+            }
+          ]
         },
         {
           "id": "l45-vocab-03",
@@ -47,7 +129,48 @@
           "kana": "れんらくします",
           "zh": "联系",
           "en": "contact",
-          "example": "遅れる場合は連絡してください。"
+          "example": "遅れる場合は連絡してください。",
+          "practice": [
+            {
+              "id": "l45-vocab-03_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「連絡します」的词汇意思是？",
+                "en": "What does 連絡します mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "联系",
+                    "en": "contact"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "参加",
+                    "en": "participate"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "报名、申请",
+                    "en": "apply, register"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "中止、取消",
+                    "en": "cancellation"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「連絡します」= 联系。",
+                "en": "連絡します means contact."
+              }
+            }
+          ]
         },
         {
           "id": "l45-vocab-04",
@@ -55,7 +178,48 @@
           "kana": "ちゅうし",
           "zh": "中止、取消",
           "en": "cancellation",
-          "example": "雨の場合は中止です。"
+          "example": "雨の場合は中止です。",
+          "practice": [
+            {
+              "id": "l45-vocab-04_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「中止」的词汇意思是？",
+                "en": "What does 中止 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "中止、取消",
+                    "en": "cancellation"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "参加",
+                    "en": "participate"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "报名、申请",
+                    "en": "apply, register"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "联系",
+                    "en": "contact"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「中止」= 中止、取消。",
+                "en": "中止 means cancellation."
+              }
+            }
+          ]
         },
         {
           "id": "l45-vocab-05",
@@ -63,7 +227,48 @@
           "kana": "へんこう",
           "zh": "变更",
           "en": "change",
-          "example": "予定を変更します。"
+          "example": "予定を変更します。",
+          "practice": [
+            {
+              "id": "l45-vocab-05_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「変更」的词汇意思是？",
+                "en": "What does 変更 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "变更",
+                    "en": "change"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "参加",
+                    "en": "participate"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "报名、申请",
+                    "en": "apply, register"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "联系",
+                    "en": "contact"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「変更」= 变更。",
+                "en": "変更 means change."
+              }
+            }
+          ]
         },
         {
           "id": "l45-vocab-06",
@@ -71,7 +276,48 @@
           "kana": "つごう",
           "zh": "方便、情况",
           "en": "convenience, circumstances",
-          "example": "都合が悪い場合は知らせてください。"
+          "example": "都合が悪い場合は知らせてください。",
+          "practice": [
+            {
+              "id": "l45-vocab-06_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「都合」的词汇意思是？",
+                "en": "What does 都合 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "方便、情况",
+                    "en": "convenience, circumstances"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "参加",
+                    "en": "participate"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "报名、申请",
+                    "en": "apply, register"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "联系",
+                    "en": "contact"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「都合」= 方便、情况。",
+                "en": "都合 means convenience, circumstances."
+              }
+            }
+          ]
         },
         {
           "id": "l45-vocab-07",
@@ -79,7 +325,48 @@
           "kana": "こしょう",
           "zh": "故障",
           "en": "breakdown",
-          "example": "故障の場合はこの番号に電話してください。"
+          "example": "故障の場合はこの番号に電話してください。",
+          "practice": [
+            {
+              "id": "l45-vocab-07_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「故障」的词汇意思是？",
+                "en": "What does 故障 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "故障",
+                    "en": "breakdown"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "参加",
+                    "en": "participate"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "报名、申请",
+                    "en": "apply, register"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "联系",
+                    "en": "contact"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「故障」= 故障。",
+                "en": "故障 means breakdown."
+              }
+            }
+          ]
         },
         {
           "id": "l45-vocab-08",
@@ -87,7 +374,48 @@
           "kana": "そうだんします",
           "zh": "商量、咨询",
           "en": "consult",
-          "example": "困った場合は先生に相談します。"
+          "example": "困った場合は先生に相談します。",
+          "practice": [
+            {
+              "id": "l45-vocab-08_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「相談します」的词汇意思是？",
+                "en": "What does 相談します mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "商量、咨询",
+                    "en": "consult"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "参加",
+                    "en": "participate"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "报名、申请",
+                    "en": "apply, register"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "联系",
+                    "en": "contact"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「相談します」= 商量、咨询。",
+                "en": "相談します means consult."
+              }
+            }
+          ]
         },
         {
           "id": "l45-vocab-09",
@@ -95,7 +423,48 @@
           "kana": "むり",
           "zh": "勉强、不可能",
           "en": "impossible, unreasonable",
-          "example": "無理な場合は言ってください。"
+          "example": "無理な場合は言ってください。",
+          "practice": [
+            {
+              "id": "l45-vocab-09_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「無理」的词汇意思是？",
+                "en": "What does 無理 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "勉强、不可能",
+                    "en": "impossible, unreasonable"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "参加",
+                    "en": "participate"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "报名、申请",
+                    "en": "apply, register"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "联系",
+                    "en": "contact"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「無理」= 勉强、不可能。",
+                "en": "無理 means impossible, unreasonable."
+              }
+            }
+          ]
         },
         {
           "id": "l45-vocab-10",
@@ -103,7 +472,48 @@
           "kana": "ざんねん",
           "zh": "遗憾",
           "en": "unfortunate",
-          "example": "残念ですが、参加できません。"
+          "example": "残念ですが、参加できません。",
+          "practice": [
+            {
+              "id": "l45-vocab-10_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「残念」的词汇意思是？",
+                "en": "What does 残念 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "遗憾",
+                    "en": "unfortunate"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "参加",
+                    "en": "participate"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "报名、申请",
+                    "en": "apply, register"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "联系",
+                    "en": "contact"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「残念」= 遗憾。",
+                "en": "残念 means unfortunate."
+              }
+            }
+          ]
         }
       ]
     },
@@ -481,49 +891,377 @@
           "id": "l45-example-01",
           "jp": "都合が悪い場合は、早めに知らせてください。",
           "zh": "如果不方便，请尽早通知。",
-          "en": "If it is inconvenient, please let me know early."
+          "en": "If it is inconvenient, please let me know early.",
+          "practice": [
+            {
+              "id": "l45-example-01_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「都合が悪い場合は、早めに知らせてください。」的例句意思是？",
+                "en": "What does 都合が悪い場合は、早めに知らせてください。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "如果不方便，请尽早通知。",
+                    "en": "If it is inconvenient, please let me know early."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "如果丢了卡，请马上联系银行。",
+                    "en": "If you lose your card, contact the bank immediately."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "如果不能参加，请在前一天之前发邮件。",
+                    "en": "If you cannot participate, please email by the previous day."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "下雨时，活动会取消。",
+                    "en": "In case of rain, the event will be canceled."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「都合が悪い場合は、早めに知らせてください。」= 如果不方便，请尽早通知。。",
+                "en": "都合が悪い場合は、早めに知らせてください。 means If it is inconvenient, please let me know early.."
+              }
+            }
+          ]
         },
         {
           "id": "l45-example-02",
           "jp": "カードをなくした場合は、すぐ銀行に連絡してください。",
           "zh": "如果丢了卡，请马上联系银行。",
-          "en": "If you lose your card, contact the bank immediately."
+          "en": "If you lose your card, contact the bank immediately.",
+          "practice": [
+            {
+              "id": "l45-example-02_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「カードをなくした場合は、すぐ銀行に連絡してください。」的例句意思是？",
+                "en": "What does カードをなくした場合は、すぐ銀行に連絡してください。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "如果丢了卡，请马上联系银行。",
+                    "en": "If you lose your card, contact the bank immediately."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "如果不方便，请尽早通知。",
+                    "en": "If it is inconvenient, please let me know early."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "如果不能参加，请在前一天之前发邮件。",
+                    "en": "If you cannot participate, please email by the previous day."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "下雨时，活动会取消。",
+                    "en": "In case of rain, the event will be canceled."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「カードをなくした場合は、すぐ銀行に連絡してください。」= 如果丢了卡，请马上联系银行。。",
+                "en": "カードをなくした場合は、すぐ銀行に連絡してください。 means If you lose your card, contact the bank immediately.."
+              }
+            }
+          ]
         },
         {
           "id": "l45-example-03",
           "jp": "参加できない場合は、前の日までにメールしてください。",
           "zh": "如果不能参加，请在前一天之前发邮件。",
-          "en": "If you cannot participate, please email by the previous day."
+          "en": "If you cannot participate, please email by the previous day.",
+          "practice": [
+            {
+              "id": "l45-example-03_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「参加できない場合は、前の日までにメールしてください。」的例句意思是？",
+                "en": "What does 参加できない場合は、前の日までにメールしてください。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "如果不能参加，请在前一天之前发邮件。",
+                    "en": "If you cannot participate, please email by the previous day."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "如果不方便，请尽早通知。",
+                    "en": "If it is inconvenient, please let me know early."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "如果丢了卡，请马上联系银行。",
+                    "en": "If you lose your card, contact the bank immediately."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "下雨时，活动会取消。",
+                    "en": "In case of rain, the event will be canceled."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「参加できない場合は、前の日までにメールしてください。」= 如果不能参加，请在前一天之前发邮件。。",
+                "en": "参加できない場合は、前の日までにメールしてください。 means If you cannot participate, please email by the previous day.."
+              }
+            }
+          ]
         },
         {
           "id": "l45-example-04",
           "jp": "雨の場合は、イベントは中止になります。",
           "zh": "下雨时，活动会取消。",
-          "en": "In case of rain, the event will be canceled."
+          "en": "In case of rain, the event will be canceled.",
+          "practice": [
+            {
+              "id": "l45-example-04_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「雨の場合は、イベントは中止になります。」的例句意思是？",
+                "en": "What does 雨の場合は、イベントは中止になります。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "下雨时，活动会取消。",
+                    "en": "In case of rain, the event will be canceled."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "如果不方便，请尽早通知。",
+                    "en": "If it is inconvenient, please let me know early."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "如果丢了卡，请马上联系银行。",
+                    "en": "If you lose your card, contact the bank immediately."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "如果不能参加，请在前一天之前发邮件。",
+                    "en": "If you cannot participate, please email by the previous day."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「雨の場合は、イベントは中止になります。」= 下雨时，活动会取消。。",
+                "en": "雨の場合は、イベントは中止になります。 means In case of rain, the event will be canceled.."
+              }
+            }
+          ]
         },
         {
           "id": "l45-example-05",
           "jp": "一生懸命練習したのに、試合に負けてしまいました。",
           "zh": "明明努力练习了，却输掉了比赛。",
-          "en": "Although I practiced hard, I lost the match."
+          "en": "Although I practiced hard, I lost the match.",
+          "practice": [
+            {
+              "id": "l45-example-05_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「一生懸命練習したのに、試合に負けてしまいました。」的例句意思是？",
+                "en": "What does 一生懸命練習したのに、試合に負けてしまいました。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "明明努力练习了，却输掉了比赛。",
+                    "en": "Although I practiced hard, I lost the match."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "如果不方便，请尽早通知。",
+                    "en": "If it is inconvenient, please let me know early."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "如果丢了卡，请马上联系银行。",
+                    "en": "If you lose your card, contact the bank immediately."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "如果不能参加，请在前一天之前发邮件。",
+                    "en": "If you cannot participate, please email by the previous day."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「一生懸命練習したのに、試合に負けてしまいました。」= 明明努力练习了，却输掉了比赛。。",
+                "en": "一生懸命練習したのに、試合に負けてしまいました。 means Although I practiced hard, I lost the match.."
+              }
+            }
+          ]
         },
         {
           "id": "l45-example-06",
           "jp": "薬を飲んだのに、熱が下がりません。",
           "zh": "明明吃了药，烧却没退。",
-          "en": "Although I took medicine, my fever has not gone down."
+          "en": "Although I took medicine, my fever has not gone down.",
+          "practice": [
+            {
+              "id": "l45-example-06_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「薬を飲んだのに、熱が下がりません。」的例句意思是？",
+                "en": "What does 薬を飲んだのに、熱が下がりません。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "明明吃了药，烧却没退。",
+                    "en": "Although I took medicine, my fever has not gone down."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "如果不方便，请尽早通知。",
+                    "en": "If it is inconvenient, please let me know early."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "如果丢了卡，请马上联系银行。",
+                    "en": "If you lose your card, contact the bank immediately."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "如果不能参加，请在前一天之前发邮件。",
+                    "en": "If you cannot participate, please email by the previous day."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「薬を飲んだのに、熱が下がりません。」= 明明吃了药，烧却没退。。",
+                "en": "薬を飲んだのに、熱が下がりません。 means Although I took medicine, my fever has not gone down.."
+              }
+            }
+          ]
         },
         {
           "id": "l45-example-07",
           "jp": "日曜日なのに、会社で会議があります。",
           "zh": "明明是星期天，公司却有会议。",
-          "en": "Although it is Sunday, there is a meeting at the office."
+          "en": "Although it is Sunday, there is a meeting at the office.",
+          "practice": [
+            {
+              "id": "l45-example-07_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「日曜日なのに、会社で会議があります。」的例句意思是？",
+                "en": "What does 日曜日なのに、会社で会議があります。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "明明是星期天，公司却有会议。",
+                    "en": "Although it is Sunday, there is a meeting at the office."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "如果不方便，请尽早通知。",
+                    "en": "If it is inconvenient, please let me know early."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "如果丢了卡，请马上联系银行。",
+                    "en": "If you lose your card, contact the bank immediately."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "如果不能参加，请在前一天之前发邮件。",
+                    "en": "If you cannot participate, please email by the previous day."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「日曜日なのに、会社で会議があります。」= 明明是星期天，公司却有会议。。",
+                "en": "日曜日なのに、会社で会議があります。 means Although it is Sunday, there is a meeting at the office.."
+              }
+            }
+          ]
         },
         {
           "id": "l45-example-08",
           "jp": "故障の場合は、この番号に電話してください。",
           "zh": "发生故障时，请拨打这个号码。",
-          "en": "In case of a breakdown, please call this number."
+          "en": "In case of a breakdown, please call this number.",
+          "practice": [
+            {
+              "id": "l45-example-08_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「故障の場合は、この番号に電話してください。」的例句意思是？",
+                "en": "What does 故障の場合は、この番号に電話してください。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "发生故障时，请拨打这个号码。",
+                    "en": "In case of a breakdown, please call this number."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "如果不方便，请尽早通知。",
+                    "en": "If it is inconvenient, please let me know early."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "如果丢了卡，请马上联系银行。",
+                    "en": "If you lose your card, contact the bank immediately."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "如果不能参加，请在前一天之前发邮件。",
+                    "en": "If you cannot participate, please email by the previous day."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「故障の場合は、この番号に電話してください。」= 发生故障时，请拨打这个号码。。",
+                "en": "故障の場合は、この番号に電話してください。 means In case of a breakdown, please call this number.."
+              }
+            }
+          ]
         }
       ]
     },

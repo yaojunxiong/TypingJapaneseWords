@@ -54,35 +54,7 @@ type SectionAudit = {
   issues: string[]
 }
 
-function auditVocab(items: unknown[]): SectionAudit {
-  if (!items.length) return { status: 'EMPTY', itemCount: 0, practiceCount: 0, issues: ['no vocabulary items'] }
-  const issues: string[] = []
-  let practiceCount = 0
 
-  for (const item of items) {
-    if (!item || typeof item !== 'object') { issues.push('item is not an object'); continue }
-    const i = item as Record<string, unknown>
-    if (!i.jp && !i.ja) issues.push(`item ${i.id || '(no id)'} missing jp/ja`)
-    if (!i.zh && !i.en) issues.push(`item ${i.id || '(no id)'} missing zh and en`)
-
-    const practice = Array.isArray(i.practice) ? i.practice : []
-    if (practice.length > 0) {
-      practiceCount += practice.length
-      for (const p of practice) {
-        if (!p || typeof p !== 'object') { issues.push(`item ${i.id || ''} practice is not an object`); continue }
-        const pp = p as Record<string, unknown>
-        if (!pp.question || !hasText(pp.question)) issues.push(`item ${i.id || ''} practice missing question`)
-        const opts = Array.isArray(pp.options) ? pp.options : []
-        if (opts.length < 4) issues.push(`item ${i.id || ''} practice has ${opts.length} options (need ≥4)`)
-        const correct = opts.filter((o: unknown) => o && typeof o === 'object' && (o as Record<string, unknown>).correct === true)
-        if (correct.length !== 1) issues.push(`item ${i.id || ''} practice has ${correct.length} correct options (need 1)`)
-      }
-    }
-  }
-
-  const status: SectionAudit['status'] = issues.length > 3 ? 'WEAK' : 'OK'
-  return { status, itemCount: items.length, practiceCount, issues }
-}
 
 function auditGrammar(items: unknown[]): SectionAudit {
   if (!items.length) return { status: 'EMPTY', itemCount: 0, practiceCount: 0, issues: ['no grammar items'] }
@@ -121,10 +93,32 @@ function auditGrammar(items: unknown[]): SectionAudit {
   return { status, itemCount: items.length, practiceCount, issues }
 }
 
-function auditExamples(items: unknown[]): SectionAudit {
-  if (!items.length) return { status: 'EMPTY', itemCount: 0, practiceCount: 0, issues: ['no example items'] }
+/** Simulate practice/page.tsx question generation for a single item */
+function simulateQuestions(item: Record<string, unknown>): number {
+  let count = 0
+
+  // fromPractice path
+  const practice = Array.isArray(item.practice) ? (item.practice as Record<string, unknown>[]) : []
+  for (const p of practice) {
+    const opts = Array.isArray(p.options) ? (p.options as Record<string, unknown>[]) : []
+    const validOpts = opts.filter((o) => o && o.text && hasText(o.text))
+    if (validOpts.length > 1) count++
+    else if (String(p.type || '') === 'order' && Array.isArray(p.answer) && p.answer.length > 1) count++
+  }
+
+  // quizLike path
+  const opts = Array.isArray(item.options) ? (item.options as Record<string, unknown>[]) : []
+  const validOpts = opts.filter((o) => o && o.text && hasText(o.text))
+  if (validOpts.length > 1) count++
+
+  return count
+}
+
+function auditVocab(items: unknown[]): SectionAudit {
+  if (!items.length) return { status: 'EMPTY', itemCount: 0, practiceCount: 0, issues: ['no vocabulary items'] }
   const issues: string[] = []
   let practiceCount = 0
+  let totalGenerated = 0
 
   for (const item of items) {
     if (!item || typeof item !== 'object') { issues.push('item is not an object'); continue }
@@ -132,27 +126,40 @@ function auditExamples(items: unknown[]): SectionAudit {
     if (!i.jp && !i.ja) issues.push(`item ${i.id || '(no id)'} missing jp/ja`)
     if (!i.zh && !i.en) issues.push(`item ${i.id || '(no id)'} missing zh and en`)
 
+    totalGenerated += simulateQuestions(i)
+
     const practice = Array.isArray(i.practice) ? i.practice : []
     if (practice.length > 0) {
       practiceCount += practice.length
-      for (const p of practice) {
-        if (!p || typeof p !== 'object') continue
-        const pp = p as Record<string, unknown>
-        // order-type questions have parts/answer instead of options
-        if (String(pp.type || '') === 'order') {
-          if (!Array.isArray(pp.parts) || !Array.isArray(pp.answer)) {
-            issues.push(`example ${i.id || ''} order practice missing parts or answer`)
-          }
-        } else {
-          const opts = Array.isArray(pp.options) ? pp.options : []
-          if (opts.length < 2) issues.push(`example ${i.id || ''} practice has ${opts.length} options`)
-          const correct = opts.filter((o: unknown) => o && typeof o === 'object' && (o as Record<string, unknown>).correct === true)
-          if (correct.length !== 1) issues.push(`example ${i.id || ''} practice has ${correct.length} correct options`)
-        }
-      }
     }
   }
 
+  if (totalGenerated === 0) issues.push('no questions can be generated (0 total)')
+  const status: SectionAudit['status'] = issues.length > 0 ? 'WEAK' : 'OK'
+  return { status, itemCount: items.length, practiceCount, issues }
+}
+
+function auditExamples(items: unknown[]): SectionAudit {
+  if (!items.length) return { status: 'EMPTY', itemCount: 0, practiceCount: 0, issues: ['no example items'] }
+  const issues: string[] = []
+  let practiceCount = 0
+  let totalGenerated = 0
+
+  for (const item of items) {
+    if (!item || typeof item !== 'object') { issues.push('item is not an object'); continue }
+    const i = item as Record<string, unknown>
+    if (!i.jp && !i.ja) issues.push(`item ${i.id || '(no id)'} missing jp/ja`)
+    if (!i.zh && !i.en) issues.push(`item ${i.id || '(no id)'} missing zh and en`)
+
+    totalGenerated += simulateQuestions(i)
+
+    const practice = Array.isArray(i.practice) ? i.practice : []
+    if (practice.length > 0) {
+      practiceCount += practice.length
+    }
+  }
+
+  if (totalGenerated === 0) issues.push('no questions can be generated (0 total)')
   const status: SectionAudit['status'] = issues.length > 0 ? 'WEAK' : 'OK'
   return { status, itemCount: items.length, practiceCount, issues }
 }

@@ -4,130 +4,1762 @@
   "status": "Mastery migrated",
   "lessonNo": 37,
   "lessonId": "minna_lesson_37",
-  "title": { "zh": "第37课", "en": "Lesson 37", "ja": "第37課" },
-  "subtitle": { "zh": "受身形", "en": "Passive form", "ja": "受身形" },
-  "focus": { "zh": "学习受身形变化，用「人に」表示动作来源，并区分直接被动、物作主语和受害被动。", "en": "Learn passive conjugation, use ni for the agent, and distinguish direct passive, object-subject passive, and adversity passive.", "ja": "受身形、人に、物主語の受身、迷惑の受身を学びます。" },
+  "title": {
+    "zh": "第37课",
+    "en": "Lesson 37",
+    "ja": "第37課"
+  },
+  "subtitle": {
+    "zh": "受身形",
+    "en": "Passive form",
+    "ja": "受身形"
+  },
+  "focus": {
+    "zh": "学习受身形变化，用「人に」表示动作来源，并区分直接被动、物作主语和受害被动。",
+    "en": "Learn passive conjugation, use ni for the agent, and distinguish direct passive, object-subject passive, and adversity passive.",
+    "ja": "受身形、人に、物主語の受身、迷惑の受身を学びます。"
+  },
   "sections": [
     {
       "type": "vocab",
       "id": "l37_vocab",
-      "title": { "zh": "核心词汇", "en": "Core Vocabulary", "ja": "基本語彙" },
+      "title": {
+        "zh": "核心词汇",
+        "en": "Core Vocabulary",
+        "ja": "基本語彙"
+      },
       "items": [
-        { "id": "l37_v01", "jp": "褒めます", "kana": "ほめます", "zh": "表扬", "en": "to praise", "tags": ["lesson37"] },
-        { "id": "l37_v02", "jp": "叱ります", "kana": "しかります", "zh": "责备", "en": "to scold", "tags": ["lesson37"] },
-        { "id": "l37_v03", "jp": "誘います", "kana": "さそいます", "zh": "邀请", "en": "to invite", "tags": ["lesson37"] },
-        { "id": "l37_v04", "jp": "招待します", "kana": "しょうたいします", "zh": "招待", "en": "to invite", "tags": ["lesson37"] },
-        { "id": "l37_v05", "jp": "頼みます", "kana": "たのみます", "zh": "拜托；请求", "en": "to ask; request", "tags": ["lesson37"] },
-        { "id": "l37_v06", "jp": "盗みます", "kana": "ぬすみます", "zh": "偷", "en": "to steal", "tags": ["lesson37"] },
-        { "id": "l37_v07", "jp": "建てます", "kana": "たてます", "zh": "建造", "en": "to build", "tags": ["lesson37"] },
-        { "id": "l37_v08", "jp": "輸出します", "kana": "ゆしゅつします", "zh": "出口", "en": "to export", "tags": ["lesson37"] },
-        { "id": "l37_v09", "jp": "発明します", "kana": "はつめいします", "zh": "发明", "en": "to invent", "tags": ["lesson37"] },
-        { "id": "l37_v10", "jp": "発見します", "kana": "はっけんします", "zh": "发现", "en": "to discover", "tags": ["lesson37"] }
+        {
+          "id": "l37_v01",
+          "jp": "褒めます",
+          "kana": "ほめます",
+          "zh": "表扬",
+          "en": "to praise",
+          "tags": [
+            "lesson37"
+          ],
+          "practice": [
+            {
+              "id": "l37_v01_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「褒めます」的词汇意思是？",
+                "en": "What does 褒めます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "表扬",
+                    "en": "to praise"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "责备",
+                    "en": "to scold"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "邀请",
+                    "en": "to invite"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "招待",
+                    "en": "to invite"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「褒めます」= 表扬。",
+                "en": "褒めます means to praise."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l37_v02",
+          "jp": "叱ります",
+          "kana": "しかります",
+          "zh": "责备",
+          "en": "to scold",
+          "tags": [
+            "lesson37"
+          ],
+          "practice": [
+            {
+              "id": "l37_v02_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「叱ります」的词汇意思是？",
+                "en": "What does 叱ります mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "责备",
+                    "en": "to scold"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "表扬",
+                    "en": "to praise"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "邀请",
+                    "en": "to invite"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "招待",
+                    "en": "to invite"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「叱ります」= 责备。",
+                "en": "叱ります means to scold."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l37_v03",
+          "jp": "誘います",
+          "kana": "さそいます",
+          "zh": "邀请",
+          "en": "to invite",
+          "tags": [
+            "lesson37"
+          ],
+          "practice": [
+            {
+              "id": "l37_v03_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「誘います」的词汇意思是？",
+                "en": "What does 誘います mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "邀请",
+                    "en": "to invite"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "表扬",
+                    "en": "to praise"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "责备",
+                    "en": "to scold"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "招待",
+                    "en": "to invite"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「誘います」= 邀请。",
+                "en": "誘います means to invite."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l37_v04",
+          "jp": "招待します",
+          "kana": "しょうたいします",
+          "zh": "招待",
+          "en": "to invite",
+          "tags": [
+            "lesson37"
+          ],
+          "practice": [
+            {
+              "id": "l37_v04_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「招待します」的词汇意思是？",
+                "en": "What does 招待します mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "招待",
+                    "en": "to invite"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "表扬",
+                    "en": "to praise"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "责备",
+                    "en": "to scold"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "邀请",
+                    "en": "to invite"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「招待します」= 招待。",
+                "en": "招待します means to invite."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l37_v05",
+          "jp": "頼みます",
+          "kana": "たのみます",
+          "zh": "拜托；请求",
+          "en": "to ask; request",
+          "tags": [
+            "lesson37"
+          ],
+          "practice": [
+            {
+              "id": "l37_v05_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「頼みます」的词汇意思是？",
+                "en": "What does 頼みます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "拜托；请求",
+                    "en": "to ask; request"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "表扬",
+                    "en": "to praise"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "责备",
+                    "en": "to scold"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "邀请",
+                    "en": "to invite"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「頼みます」= 拜托；请求。",
+                "en": "頼みます means to ask; request."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l37_v06",
+          "jp": "盗みます",
+          "kana": "ぬすみます",
+          "zh": "偷",
+          "en": "to steal",
+          "tags": [
+            "lesson37"
+          ],
+          "practice": [
+            {
+              "id": "l37_v06_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「盗みます」的词汇意思是？",
+                "en": "What does 盗みます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "偷",
+                    "en": "to steal"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "表扬",
+                    "en": "to praise"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "责备",
+                    "en": "to scold"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "邀请",
+                    "en": "to invite"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「盗みます」= 偷。",
+                "en": "盗みます means to steal."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l37_v07",
+          "jp": "建てます",
+          "kana": "たてます",
+          "zh": "建造",
+          "en": "to build",
+          "tags": [
+            "lesson37"
+          ],
+          "practice": [
+            {
+              "id": "l37_v07_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「建てます」的词汇意思是？",
+                "en": "What does 建てます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "建造",
+                    "en": "to build"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "表扬",
+                    "en": "to praise"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "责备",
+                    "en": "to scold"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "邀请",
+                    "en": "to invite"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「建てます」= 建造。",
+                "en": "建てます means to build."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l37_v08",
+          "jp": "輸出します",
+          "kana": "ゆしゅつします",
+          "zh": "出口",
+          "en": "to export",
+          "tags": [
+            "lesson37"
+          ],
+          "practice": [
+            {
+              "id": "l37_v08_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「輸出します」的词汇意思是？",
+                "en": "What does 輸出します mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "出口",
+                    "en": "to export"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "表扬",
+                    "en": "to praise"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "责备",
+                    "en": "to scold"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "邀请",
+                    "en": "to invite"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「輸出します」= 出口。",
+                "en": "輸出します means to export."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l37_v09",
+          "jp": "発明します",
+          "kana": "はつめいします",
+          "zh": "发明",
+          "en": "to invent",
+          "tags": [
+            "lesson37"
+          ],
+          "practice": [
+            {
+              "id": "l37_v09_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「発明します」的词汇意思是？",
+                "en": "What does 発明します mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "发明",
+                    "en": "to invent"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "表扬",
+                    "en": "to praise"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "责备",
+                    "en": "to scold"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "邀请",
+                    "en": "to invite"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「発明します」= 发明。",
+                "en": "発明します means to invent."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l37_v10",
+          "jp": "発見します",
+          "kana": "はっけんします",
+          "zh": "发现",
+          "en": "to discover",
+          "tags": [
+            "lesson37"
+          ],
+          "practice": [
+            {
+              "id": "l37_v10_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「発見します」的词汇意思是？",
+                "en": "What does 発見します mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "发现",
+                    "en": "to discover"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "表扬",
+                    "en": "to praise"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "责备",
+                    "en": "to scold"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "邀请",
+                    "en": "to invite"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「発見します」= 发现。",
+                "en": "発見します means to discover."
+              }
+            }
+          ]
+        }
       ]
     },
     {
       "type": "grammar",
       "id": "l37_grammar",
-      "title": { "zh": "核心语法", "en": "Core Grammar", "ja": "基本文法" },
+      "title": {
+        "zh": "核心语法",
+        "en": "Core Grammar",
+        "ja": "基本文法"
+      },
       "items": [
         {
           "id": "l37_g01",
           "pattern": "一类动词受身形：ない形去ない + れます",
-          "explanation": { "zh": "書きます→書かれます、呼びます→呼ばれます。", "en": "Group 1 passive uses the nai-stem + remasu: kakimasu to kakaremasu." },
-          "examples": [{ "jp": "先生に名前を呼ばれました。", "zh": "被老师叫了名字。", "en": "My name was called by the teacher." }],
-          "practice": [{ "id": "l37_g01_p01", "skill": "grammar", "question": { "zh": "「書きます」的受身形是？", "en": "Passive form of kakimasu?" }, "options": [{ "text": { "jp": "書かれます" }, "correct": true }, { "text": { "jp": "書きられます" } }, { "text": { "jp": "書けられます" } }, { "text": { "jp": "書かせます" } }], "explanation": { "zh": "書かない→書かれます。", "en": "Kakanai stem + remasu." } }]
+          "explanation": {
+            "zh": "書きます→書かれます、呼びます→呼ばれます。",
+            "en": "Group 1 passive uses the nai-stem + remasu: kakimasu to kakaremasu."
+          },
+          "examples": [
+            {
+              "jp": "先生に名前を呼ばれました。",
+              "zh": "被老师叫了名字。",
+              "en": "My name was called by the teacher."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l37_g01_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "「書きます」的受身形是？",
+                "en": "Passive form of kakimasu?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "書かれます"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "書きられます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "書けられます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "書かせます"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "書かない→書かれます。",
+                "en": "Kakanai stem + remasu."
+              }
+            }
+          ]
         },
         {
           "id": "l37_g02",
           "pattern": "二类动词受身形：ます形去ます + られます",
-          "explanation": { "zh": "褒めます→褒められます、見ます→見られます。", "en": "Group 2 passive uses the stem + raremasu." },
-          "examples": [{ "jp": "先生に褒められました。", "zh": "被老师表扬了。", "en": "I was praised by the teacher." }],
-          "practice": [{ "id": "l37_g02_p01", "skill": "grammar", "question": { "zh": "「褒めます」的受身形是？", "en": "Passive form of homemasu?" }, "options": [{ "text": { "jp": "褒められます" }, "correct": true }, { "text": { "jp": "褒めれます" } }, { "text": { "jp": "褒めされます" } }, { "text": { "jp": "褒めますられます" } }], "explanation": { "zh": "二类动词去ます加られます。", "en": "Stem + raremasu." } }]
+          "explanation": {
+            "zh": "褒めます→褒められます、見ます→見られます。",
+            "en": "Group 2 passive uses the stem + raremasu."
+          },
+          "examples": [
+            {
+              "jp": "先生に褒められました。",
+              "zh": "被老师表扬了。",
+              "en": "I was praised by the teacher."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l37_g02_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "「褒めます」的受身形是？",
+                "en": "Passive form of homemasu?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "褒められます"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "褒めれます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "褒めされます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "褒めますられます"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "二类动词去ます加られます。",
+                "en": "Stem + raremasu."
+              }
+            }
+          ]
         },
         {
           "id": "l37_g03",
           "pattern": "三类受身形：されます / 来られます",
-          "explanation": { "zh": "します→されます、来ます→来られます。", "en": "Irregular passive: shimasu to saremasu, kimasu to koraremasu." },
-          "examples": [{ "jp": "パーティーに招待されました。", "zh": "被邀请参加派对。", "en": "I was invited to a party." }],
-          "practice": [{ "id": "l37_g03_p01", "skill": "grammar", "question": { "zh": "「招待します」的受身形是？", "en": "Passive form of shoutai shimasu?" }, "options": [{ "text": { "jp": "招待されます" }, "correct": true }, { "text": { "jp": "招待しられます" } }, { "text": { "jp": "招待しますられます" } }, { "text": { "jp": "招待させます" } }], "explanation": { "zh": "します→されます。", "en": "Shimasu becomes saremasu." } }]
+          "explanation": {
+            "zh": "します→されます、来ます→来られます。",
+            "en": "Irregular passive: shimasu to saremasu, kimasu to koraremasu."
+          },
+          "examples": [
+            {
+              "jp": "パーティーに招待されました。",
+              "zh": "被邀请参加派对。",
+              "en": "I was invited to a party."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l37_g03_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "「招待します」的受身形是？",
+                "en": "Passive form of shoutai shimasu?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "招待されます"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "招待しられます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "招待しますられます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "招待させます"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "します→されます。",
+                "en": "Shimasu becomes saremasu."
+              }
+            }
+          ]
         },
         {
           "id": "l37_g04",
           "pattern": "人 は 人 に V受身",
-          "explanation": { "zh": "动作来源用「に」。表示“被某人……”。", "en": "Use ni for the person who performs the action." },
-          "examples": [{ "jp": "わたしは母に叱られました。", "zh": "我被妈妈骂了。", "en": "I was scolded by my mother." }],
-          "practice": [{ "id": "l37_g04_p01", "skill": "grammar", "question": { "zh": "“被老师表扬”是？", "en": "How do you say 'was praised by the teacher'?" }, "options": [{ "text": { "jp": "先生に褒められました" }, "correct": true }, { "text": { "jp": "先生を褒められました" } }, { "text": { "jp": "先生が褒めました" } }, { "text": { "jp": "先生で褒められました" } }], "explanation": { "zh": "动作来源用に。", "en": "Use ni for the agent." } }]
+          "explanation": {
+            "zh": "动作来源用「に」。表示“被某人……”。",
+            "en": "Use ni for the person who performs the action."
+          },
+          "examples": [
+            {
+              "jp": "わたしは母に叱られました。",
+              "zh": "我被妈妈骂了。",
+              "en": "I was scolded by my mother."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l37_g04_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“被老师表扬”是？",
+                "en": "How do you say 'was praised by the teacher'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "先生に褒められました"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "先生を褒められました"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生が褒めました"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生で褒められました"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "动作来源用に。",
+                "en": "Use ni for the agent."
+              }
+            }
+          ]
         },
         {
           "id": "l37_g05",
           "pattern": "物 が V受身",
-          "explanation": { "zh": "物作主语时，常用于“被建造、被发明、被发现”等客观叙述。", "en": "Object-subject passive is used for things being built, invented, discovered, etc." },
-          "examples": [{ "jp": "この寺は500年前に建てられました。", "zh": "这座寺庙建于500年前。", "en": "This temple was built 500 years ago." }],
-          "practice": [{ "id": "l37_g05_p01", "skill": "grammar", "question": { "zh": "“这座桥建于去年”是？", "en": "How do you say 'This bridge was built last year'?" }, "options": [{ "text": { "jp": "この橋は去年建てられました" }, "correct": true }, { "text": { "jp": "この橋は去年建てました" } }, { "text": { "jp": "この橋が去年建てました" } }, { "text": { "jp": "この橋は去年建てされました" } }], "explanation": { "zh": "物作主语用受身形。", "en": "Use passive when the thing is the subject." } }]
+          "explanation": {
+            "zh": "物作主语时，常用于“被建造、被发明、被发现”等客观叙述。",
+            "en": "Object-subject passive is used for things being built, invented, discovered, etc."
+          },
+          "examples": [
+            {
+              "jp": "この寺は500年前に建てられました。",
+              "zh": "这座寺庙建于500年前。",
+              "en": "This temple was built 500 years ago."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l37_g05_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“这座桥建于去年”是？",
+                "en": "How do you say 'This bridge was built last year'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "この橋は去年建てられました"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "この橋は去年建てました"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この橋が去年建てました"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "この橋は去年建てされました"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "物作主语用受身形。",
+                "en": "Use passive when the thing is the subject."
+              }
+            }
+          ]
         },
         {
           "id": "l37_g06",
           "pattern": "作品 / 発明 / 発見 + 受身",
-          "explanation": { "zh": "说明作品由谁创作、东西由谁发明或发现。", "en": "States who created, invented, or discovered something." },
-          "examples": [{ "jp": "この歌は多くの人に歌われています。", "zh": "这首歌被很多人唱。", "en": "This song is sung by many people." }],
-          "practice": [{ "id": "l37_g06_p01", "skill": "grammar", "question": { "zh": "“电话是贝尔发明的”是？", "en": "How do you say 'The telephone was invented by Bell'?" }, "options": [{ "text": { "jp": "電話はベルによって発明されました" }, "correct": true }, { "text": { "jp": "電話はベルに発明しました" } }, { "text": { "jp": "電話がベルを発明されました" } }, { "text": { "jp": "電話はベルで発明しました" } }], "explanation": { "zh": "正式说明发明者常用「によって」。", "en": "Ni yotte is often used for inventors/creators." } }]
+          "explanation": {
+            "zh": "说明作品由谁创作、东西由谁发明或发现。",
+            "en": "States who created, invented, or discovered something."
+          },
+          "examples": [
+            {
+              "jp": "この歌は多くの人に歌われています。",
+              "zh": "这首歌被很多人唱。",
+              "en": "This song is sung by many people."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l37_g06_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“电话是贝尔发明的”是？",
+                "en": "How do you say 'The telephone was invented by Bell'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "電話はベルによって発明されました"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "電話はベルに発明しました"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "電話がベルを発明されました"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "電話はベルで発明しました"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "正式说明发明者常用「によって」。",
+                "en": "Ni yotte is often used for inventors/creators."
+              }
+            }
+          ]
         },
         {
           "id": "l37_g07",
           "pattern": "持ち物 は 人 に V受身",
-          "explanation": { "zh": "自己的东西被别人怎么样，常带受害感。", "en": "When something belonging to you is affected by someone, it often carries adversity." },
-          "examples": [{ "jp": "わたしは弟にカメラを壊されました。", "zh": "我的相机被弟弟弄坏了。", "en": "My camera was broken by my younger brother." }],
-          "practice": [{ "id": "l37_g07_p01", "skill": "grammar", "question": { "zh": "“我的钱包被偷了”是？", "en": "How do you say 'My wallet was stolen'?" }, "options": [{ "text": { "jp": "財布を盗まれました" }, "correct": true }, { "text": { "jp": "財布が盗みました" } }, { "text": { "jp": "財布を盗みられました" } }, { "text": { "jp": "財布に盗まれました" } }], "explanation": { "zh": "盗みます→盗まれます。", "en": "Nusumimasu becomes nusumaremasu." } }]
+          "explanation": {
+            "zh": "自己的东西被别人怎么样，常带受害感。",
+            "en": "When something belonging to you is affected by someone, it often carries adversity."
+          },
+          "examples": [
+            {
+              "jp": "わたしは弟にカメラを壊されました。",
+              "zh": "我的相机被弟弟弄坏了。",
+              "en": "My camera was broken by my younger brother."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l37_g07_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“我的钱包被偷了”是？",
+                "en": "How do you say 'My wallet was stolen'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "財布を盗まれました"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "財布が盗みました"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "財布を盗みられました"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "財布に盗まれました"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "盗みます→盗まれます。",
+                "en": "Nusumimasu becomes nusumaremasu."
+              }
+            }
+          ]
         },
         {
           "id": "l37_g08",
           "pattern": "受害被动",
-          "explanation": { "zh": "别人动作间接影响自己时，可用受身表达困扰或不满。", "en": "Adversity passive shows that someone else's action negatively affected you." },
-          "examples": [{ "jp": "雨に降られて、困りました。", "zh": "被雨淋了，很困扰。", "en": "I was caught in the rain and had trouble." }],
-          "practice": [{ "id": "l37_g08_p01", "skill": "grammar", "question": { "zh": "“被雨淋了”是？", "en": "How do you say 'I was caught in the rain'?" }, "options": [{ "text": { "jp": "雨に降られました" }, "correct": true }, { "text": { "jp": "雨を降られました" } }, { "text": { "jp": "雨が降られました" } }, { "text": { "jp": "雨に降りました" } }], "explanation": { "zh": "受害被动常用「雨に降られる」。", "en": "The adversity passive uses ame ni furareru." } }]
+          "explanation": {
+            "zh": "别人动作间接影响自己时，可用受身表达困扰或不满。",
+            "en": "Adversity passive shows that someone else's action negatively affected you."
+          },
+          "examples": [
+            {
+              "jp": "雨に降られて、困りました。",
+              "zh": "被雨淋了，很困扰。",
+              "en": "I was caught in the rain and had trouble."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l37_g08_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“被雨淋了”是？",
+                "en": "How do you say 'I was caught in the rain'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "雨に降られました"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "雨を降られました"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "雨が降られました"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "雨に降りました"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "受害被动常用「雨に降られる」。",
+                "en": "The adversity passive uses ame ni furareru."
+              }
+            }
+          ]
         }
       ]
     },
     {
       "type": "examples",
       "id": "l37_examples",
-      "title": { "zh": "核心例句", "en": "Core Examples", "ja": "基本例文" },
+      "title": {
+        "zh": "核心例句",
+        "en": "Core Examples",
+        "ja": "基本例文"
+      },
       "items": [
-        { "id": "l37_e01", "jp": "わたしは先生に褒められました。", "zh": "我被老师表扬了。", "en": "I was praised by the teacher.", "tags": ["passive"] },
-        { "id": "l37_e02", "jp": "弟は父に叱られました。", "zh": "弟弟被父亲骂了。", "en": "My younger brother was scolded by our father.", "tags": ["passive"] },
-        { "id": "l37_e03", "jp": "パーティーに招待されました。", "zh": "被邀请参加派对。", "en": "I was invited to a party.", "tags": ["passive"] },
-        { "id": "l37_e04", "jp": "この建物は100年前に建てられました。", "zh": "这栋建筑建于100年前。", "en": "This building was built 100 years ago.", "tags": ["object"] },
-        { "id": "l37_e05", "jp": "この絵は有名な画家によって描かれました。", "zh": "这幅画由著名画家画成。", "en": "This picture was painted by a famous artist.", "tags": ["creator"] },
-        { "id": "l37_e06", "jp": "日本の車は世界中へ輸出されています。", "zh": "日本汽车被出口到全世界。", "en": "Japanese cars are exported around the world.", "tags": ["object"] },
-        { "id": "l37_e07", "jp": "電車で足を踏まれました。", "zh": "在电车上被踩了脚。", "en": "My foot was stepped on in the train.", "tags": ["adversity"] },
-        { "id": "l37_e08", "jp": "雨に降られて、服がぬれてしまいました。", "zh": "被雨淋了，衣服湿了。", "en": "I was caught in the rain and my clothes got wet.", "tags": ["adversity"] }
+        {
+          "id": "l37_e01",
+          "jp": "わたしは先生に褒められました。",
+          "zh": "我被老师表扬了。",
+          "en": "I was praised by the teacher.",
+          "tags": [
+            "passive"
+          ],
+          "practice": [
+            {
+              "id": "l37_e01_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「わたしは先生に褒められました。」的例句意思是？",
+                "en": "What does わたしは先生に褒められました。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "我被老师表扬了。",
+                    "en": "I was praised by the teacher."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "弟弟被父亲骂了。",
+                    "en": "My younger brother was scolded by our father."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "被邀请参加派对。",
+                    "en": "I was invited to a party."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这栋建筑建于100年前。",
+                    "en": "This building was built 100 years ago."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「わたしは先生に褒められました。」= 我被老师表扬了。。",
+                "en": "わたしは先生に褒められました。 means I was praised by the teacher.."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l37_e02",
+          "jp": "弟は父に叱られました。",
+          "zh": "弟弟被父亲骂了。",
+          "en": "My younger brother was scolded by our father.",
+          "tags": [
+            "passive"
+          ],
+          "practice": [
+            {
+              "id": "l37_e02_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「弟は父に叱られました。」的例句意思是？",
+                "en": "What does 弟は父に叱られました。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "弟弟被父亲骂了。",
+                    "en": "My younger brother was scolded by our father."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我被老师表扬了。",
+                    "en": "I was praised by the teacher."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "被邀请参加派对。",
+                    "en": "I was invited to a party."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这栋建筑建于100年前。",
+                    "en": "This building was built 100 years ago."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「弟は父に叱られました。」= 弟弟被父亲骂了。。",
+                "en": "弟は父に叱られました。 means My younger brother was scolded by our father.."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l37_e03",
+          "jp": "パーティーに招待されました。",
+          "zh": "被邀请参加派对。",
+          "en": "I was invited to a party.",
+          "tags": [
+            "passive"
+          ],
+          "practice": [
+            {
+              "id": "l37_e03_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「パーティーに招待されました。」的例句意思是？",
+                "en": "What does パーティーに招待されました。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "被邀请参加派对。",
+                    "en": "I was invited to a party."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我被老师表扬了。",
+                    "en": "I was praised by the teacher."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "弟弟被父亲骂了。",
+                    "en": "My younger brother was scolded by our father."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这栋建筑建于100年前。",
+                    "en": "This building was built 100 years ago."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「パーティーに招待されました。」= 被邀请参加派对。。",
+                "en": "パーティーに招待されました。 means I was invited to a party.."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l37_e04",
+          "jp": "この建物は100年前に建てられました。",
+          "zh": "这栋建筑建于100年前。",
+          "en": "This building was built 100 years ago.",
+          "tags": [
+            "object"
+          ],
+          "practice": [
+            {
+              "id": "l37_e04_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「この建物は100年前に建てられました。」的例句意思是？",
+                "en": "What does この建物は100年前に建てられました。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "这栋建筑建于100年前。",
+                    "en": "This building was built 100 years ago."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我被老师表扬了。",
+                    "en": "I was praised by the teacher."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "弟弟被父亲骂了。",
+                    "en": "My younger brother was scolded by our father."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "被邀请参加派对。",
+                    "en": "I was invited to a party."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「この建物は100年前に建てられました。」= 这栋建筑建于100年前。。",
+                "en": "この建物は100年前に建てられました。 means This building was built 100 years ago.."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l37_e05",
+          "jp": "この絵は有名な画家によって描かれました。",
+          "zh": "这幅画由著名画家画成。",
+          "en": "This picture was painted by a famous artist.",
+          "tags": [
+            "creator"
+          ],
+          "practice": [
+            {
+              "id": "l37_e05_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「この絵は有名な画家によって描かれました。」的例句意思是？",
+                "en": "What does この絵は有名な画家によって描かれました。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "这幅画由著名画家画成。",
+                    "en": "This picture was painted by a famous artist."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我被老师表扬了。",
+                    "en": "I was praised by the teacher."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "弟弟被父亲骂了。",
+                    "en": "My younger brother was scolded by our father."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "被邀请参加派对。",
+                    "en": "I was invited to a party."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「この絵は有名な画家によって描かれました。」= 这幅画由著名画家画成。。",
+                "en": "この絵は有名な画家によって描かれました。 means This picture was painted by a famous artist.."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l37_e06",
+          "jp": "日本の車は世界中へ輸出されています。",
+          "zh": "日本汽车被出口到全世界。",
+          "en": "Japanese cars are exported around the world.",
+          "tags": [
+            "object"
+          ],
+          "practice": [
+            {
+              "id": "l37_e06_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「日本の車は世界中へ輸出されています。」的例句意思是？",
+                "en": "What does 日本の車は世界中へ輸出されています。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "日本汽车被出口到全世界。",
+                    "en": "Japanese cars are exported around the world."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我被老师表扬了。",
+                    "en": "I was praised by the teacher."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "弟弟被父亲骂了。",
+                    "en": "My younger brother was scolded by our father."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "被邀请参加派对。",
+                    "en": "I was invited to a party."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「日本の車は世界中へ輸出されています。」= 日本汽车被出口到全世界。。",
+                "en": "日本の車は世界中へ輸出されています。 means Japanese cars are exported around the world.."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l37_e07",
+          "jp": "電車で足を踏まれました。",
+          "zh": "在电车上被踩了脚。",
+          "en": "My foot was stepped on in the train.",
+          "tags": [
+            "adversity"
+          ],
+          "practice": [
+            {
+              "id": "l37_e07_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「電車で足を踏まれました。」的例句意思是？",
+                "en": "What does 電車で足を踏まれました。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "在电车上被踩了脚。",
+                    "en": "My foot was stepped on in the train."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我被老师表扬了。",
+                    "en": "I was praised by the teacher."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "弟弟被父亲骂了。",
+                    "en": "My younger brother was scolded by our father."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "被邀请参加派对。",
+                    "en": "I was invited to a party."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「電車で足を踏まれました。」= 在电车上被踩了脚。。",
+                "en": "電車で足を踏まれました。 means My foot was stepped on in the train.."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l37_e08",
+          "jp": "雨に降られて、服がぬれてしまいました。",
+          "zh": "被雨淋了，衣服湿了。",
+          "en": "I was caught in the rain and my clothes got wet.",
+          "tags": [
+            "adversity"
+          ],
+          "practice": [
+            {
+              "id": "l37_e08_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「雨に降られて、服がぬれてしまいました。」的例句意思是？",
+                "en": "What does 雨に降られて、服がぬれてしまいました。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "被雨淋了，衣服湿了。",
+                    "en": "I was caught in the rain and my clothes got wet."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我被老师表扬了。",
+                    "en": "I was praised by the teacher."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "弟弟被父亲骂了。",
+                    "en": "My younger brother was scolded by our father."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "被邀请参加派对。",
+                    "en": "I was invited to a party."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「雨に降られて、服がぬれてしまいました。」= 被雨淋了，衣服湿了。。",
+                "en": "雨に降られて、服がぬれてしまいました。 means I was caught in the rain and my clothes got wet.."
+              }
+            }
+          ]
+        }
       ]
     },
     {
       "type": "mistakes",
       "id": "l37_mistakes",
-      "title": { "zh": "常见错误", "en": "Common Mistakes", "ja": "よくある間違い" },
+      "title": {
+        "zh": "常见错误",
+        "en": "Common Mistakes",
+        "ja": "よくある間違い"
+      },
       "items": [
-        { "id": "l37_m01", "wrong": "先生を褒められました。", "correct": "先生に褒められました。", "zh": "被谁做动作，动作来源用「に」。", "en": "The agent in passive is marked with ni." },
-        { "id": "l37_m02", "wrong": "この橋は去年建てました。", "correct": "この橋は去年建てられました。", "zh": "物作主语时要用受身形。", "en": "Use passive when the thing is the subject." },
-        { "id": "l37_m03", "wrong": "財布を盗みられました。", "correct": "財布を盗まれました。", "zh": "一类动词「盗みます」受身是「盗まれます」。", "en": "Nusumimasu becomes nusumaremasu." }
+        {
+          "id": "l37_m01",
+          "wrong": "先生を褒められました。",
+          "correct": "先生に褒められました。",
+          "zh": "被谁做动作，动作来源用「に」。",
+          "en": "The agent in passive is marked with ni."
+        },
+        {
+          "id": "l37_m02",
+          "wrong": "この橋は去年建てました。",
+          "correct": "この橋は去年建てられました。",
+          "zh": "物作主语时要用受身形。",
+          "en": "Use passive when the thing is the subject."
+        },
+        {
+          "id": "l37_m03",
+          "wrong": "財布を盗みられました。",
+          "correct": "財布を盗まれました。",
+          "zh": "一类动词「盗みます」受身是「盗まれます」。",
+          "en": "Nusumimasu becomes nusumaremasu."
+        }
       ]
     },
     {
       "type": "quiz",
       "id": "l37_quiz",
-      "title": { "zh": "综合测试", "en": "Final Test", "ja": "まとめテスト" },
+      "title": {
+        "zh": "综合测试",
+        "en": "Final Test",
+        "ja": "まとめテスト"
+      },
       "items": [
-        { "id": "l37_q01", "question": { "zh": "「呼びます」的受身形是？", "en": "Passive form of yobimasu?" }, "options": [{ "text": { "jp": "呼ばれます" }, "correct": true }, { "text": { "jp": "呼びられます" } }, { "text": { "jp": "呼べられます" } }, { "text": { "jp": "呼ばせます" } }], "explanation": { "zh": "呼ばない→呼ばれます。", "en": "Nai-stem + remasu." } },
-        { "id": "l37_q02", "question": { "zh": "「見ます」的受身形是？", "en": "Passive form of mimasu?" }, "options": [{ "text": { "jp": "見られます" }, "correct": true }, { "text": { "jp": "見れます" } }, { "text": { "jp": "見されます" } }, { "text": { "jp": "見ますられます" } }], "explanation": { "zh": "二类动词去ます加られます。", "en": "Stem + raremasu." } },
-        { "id": "l37_q03", "question": { "zh": "「します」的受身形是？", "en": "Passive form of shimasu?" }, "options": [{ "text": { "jp": "されます" }, "correct": true }, { "text": { "jp": "しられます" } }, { "text": { "jp": "しますられます" } }, { "text": { "jp": "させます" } }], "explanation": { "zh": "します→されます。", "en": "Shimasu becomes saremasu." } },
-        { "id": "l37_q04", "question": { "zh": "“被妈妈骂了”是？", "en": "How do you say 'I was scolded by my mother'?" }, "options": [{ "text": { "jp": "母に叱られました" }, "correct": true }, { "text": { "jp": "母を叱られました" } }, { "text": { "jp": "母が叱りました" } }, { "text": { "jp": "母で叱られました" } }], "explanation": { "zh": "动作来源用に。", "en": "Use ni for the agent." } },
-        { "id": "l37_q05", "question": { "zh": "“这座寺庙被建造”是？", "en": "How do you say 'This temple was built'?" }, "options": [{ "text": { "jp": "この寺は建てられました" }, "correct": true }, { "text": { "jp": "この寺は建てました" } }, { "text": { "jp": "この寺が建てました" } }, { "text": { "jp": "この寺は建てされました" } }], "explanation": { "zh": "建てます→建てられます。", "en": "Tatemasu becomes tateraremasu." } },
-        { "id": "l37_q06", "question": { "zh": "正式说明发明者常用？", "en": "Which particle phrase is often used for inventors/creators?" }, "options": [{ "text": { "jp": "によって" }, "correct": true }, { "text": { "jp": "をよって" } }, { "text": { "jp": "でに" } }, { "text": { "jp": "からを" } }], "explanation": { "zh": "发明/创作来源可用によって。", "en": "Ni yotte is used for creators/inventors." } },
-        { "id": "l37_q07", "question": { "zh": "“钱包被偷了”是？", "en": "How do you say 'My wallet was stolen'?" }, "options": [{ "text": { "jp": "財布を盗まれました" }, "correct": true }, { "text": { "jp": "財布を盗みられました" } }, { "text": { "jp": "財布が盗みました" } }, { "text": { "jp": "財布に盗まれました" } }], "explanation": { "zh": "盗みます→盗まれます。", "en": "Nusumimasu becomes nusumaremasu." } },
-        { "id": "l37_q08", "question": { "zh": "“被雨淋了”是？", "en": "How do you say 'I was caught in the rain'?" }, "options": [{ "text": { "jp": "雨に降られました" }, "correct": true }, { "text": { "jp": "雨を降られました" } }, { "text": { "jp": "雨が降られました" } }, { "text": { "jp": "雨に降りました" } }], "explanation": { "zh": "受害被动。", "en": "Adversity passive." } },
-        { "id": "l37_q09", "question": { "zh": "“日语在很多国家被学习”是？", "en": "How do you say 'Japanese is studied in many countries'?" }, "options": [{ "text": { "jp": "日本語は多くの国で勉強されています" }, "correct": true }, { "text": { "jp": "日本語は多くの国で勉強しています" } }, { "text": { "jp": "日本語が多くの国を勉強されています" } }, { "text": { "jp": "日本語は多くの国に勉強します" } }], "explanation": { "zh": "物/语言作主语用受身。", "en": "Use passive when the language is the subject." } },
-        { "id": "l37_q10", "question": { "zh": "“被弟弟弄坏了相机”是？", "en": "How do you say 'My camera was broken by my younger brother'?" }, "options": [{ "text": { "jp": "弟にカメラを壊されました" }, "correct": true }, { "text": { "jp": "弟をカメラに壊されました" } }, { "text": { "jp": "弟にカメラが壊しました" } }, { "text": { "jp": "弟でカメラを壊れました" } }], "explanation": { "zh": "受害被动：人に + 持ち物を + V受身。", "en": "Adversity passive: agent ni + possession o + passive verb." } }
+        {
+          "id": "l37_q01",
+          "question": {
+            "zh": "「呼びます」的受身形是？",
+            "en": "Passive form of yobimasu?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "呼ばれます"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "呼びられます"
+              }
+            },
+            {
+              "text": {
+                "jp": "呼べられます"
+              }
+            },
+            {
+              "text": {
+                "jp": "呼ばせます"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "呼ばない→呼ばれます。",
+            "en": "Nai-stem + remasu."
+          }
+        },
+        {
+          "id": "l37_q02",
+          "question": {
+            "zh": "「見ます」的受身形是？",
+            "en": "Passive form of mimasu?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "見られます"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "見れます"
+              }
+            },
+            {
+              "text": {
+                "jp": "見されます"
+              }
+            },
+            {
+              "text": {
+                "jp": "見ますられます"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "二类动词去ます加られます。",
+            "en": "Stem + raremasu."
+          }
+        },
+        {
+          "id": "l37_q03",
+          "question": {
+            "zh": "「します」的受身形是？",
+            "en": "Passive form of shimasu?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "されます"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "しられます"
+              }
+            },
+            {
+              "text": {
+                "jp": "しますられます"
+              }
+            },
+            {
+              "text": {
+                "jp": "させます"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "します→されます。",
+            "en": "Shimasu becomes saremasu."
+          }
+        },
+        {
+          "id": "l37_q04",
+          "question": {
+            "zh": "“被妈妈骂了”是？",
+            "en": "How do you say 'I was scolded by my mother'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "母に叱られました"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "母を叱られました"
+              }
+            },
+            {
+              "text": {
+                "jp": "母が叱りました"
+              }
+            },
+            {
+              "text": {
+                "jp": "母で叱られました"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "动作来源用に。",
+            "en": "Use ni for the agent."
+          }
+        },
+        {
+          "id": "l37_q05",
+          "question": {
+            "zh": "“这座寺庙被建造”是？",
+            "en": "How do you say 'This temple was built'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "この寺は建てられました"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "この寺は建てました"
+              }
+            },
+            {
+              "text": {
+                "jp": "この寺が建てました"
+              }
+            },
+            {
+              "text": {
+                "jp": "この寺は建てされました"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "建てます→建てられます。",
+            "en": "Tatemasu becomes tateraremasu."
+          }
+        },
+        {
+          "id": "l37_q06",
+          "question": {
+            "zh": "正式说明发明者常用？",
+            "en": "Which particle phrase is often used for inventors/creators?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "によって"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "をよって"
+              }
+            },
+            {
+              "text": {
+                "jp": "でに"
+              }
+            },
+            {
+              "text": {
+                "jp": "からを"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "发明/创作来源可用によって。",
+            "en": "Ni yotte is used for creators/inventors."
+          }
+        },
+        {
+          "id": "l37_q07",
+          "question": {
+            "zh": "“钱包被偷了”是？",
+            "en": "How do you say 'My wallet was stolen'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "財布を盗まれました"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "財布を盗みられました"
+              }
+            },
+            {
+              "text": {
+                "jp": "財布が盗みました"
+              }
+            },
+            {
+              "text": {
+                "jp": "財布に盗まれました"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "盗みます→盗まれます。",
+            "en": "Nusumimasu becomes nusumaremasu."
+          }
+        },
+        {
+          "id": "l37_q08",
+          "question": {
+            "zh": "“被雨淋了”是？",
+            "en": "How do you say 'I was caught in the rain'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "雨に降られました"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "雨を降られました"
+              }
+            },
+            {
+              "text": {
+                "jp": "雨が降られました"
+              }
+            },
+            {
+              "text": {
+                "jp": "雨に降りました"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "受害被动。",
+            "en": "Adversity passive."
+          }
+        },
+        {
+          "id": "l37_q09",
+          "question": {
+            "zh": "“日语在很多国家被学习”是？",
+            "en": "How do you say 'Japanese is studied in many countries'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "日本語は多くの国で勉強されています"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "日本語は多くの国で勉強しています"
+              }
+            },
+            {
+              "text": {
+                "jp": "日本語が多くの国を勉強されています"
+              }
+            },
+            {
+              "text": {
+                "jp": "日本語は多くの国に勉強します"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "物/语言作主语用受身。",
+            "en": "Use passive when the language is the subject."
+          }
+        },
+        {
+          "id": "l37_q10",
+          "question": {
+            "zh": "“被弟弟弄坏了相机”是？",
+            "en": "How do you say 'My camera was broken by my younger brother'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "弟にカメラを壊されました"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "弟をカメラに壊されました"
+              }
+            },
+            {
+              "text": {
+                "jp": "弟にカメラが壊しました"
+              }
+            },
+            {
+              "text": {
+                "jp": "弟でカメラを壊れました"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "受害被动：人に + 持ち物を + V受身。",
+            "en": "Adversity passive: agent ni + possession o + passive verb."
+          }
+        }
       ]
     }
   ]

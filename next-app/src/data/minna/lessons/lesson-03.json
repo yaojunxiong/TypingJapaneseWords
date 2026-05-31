@@ -36,6 +36,47 @@
           "en": "here",
           "tags": [
             "place"
+          ],
+          "practice": [
+            {
+              "id": "l03_v01_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「ここ」的词汇意思是？",
+                "en": "What does ここ mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "这里",
+                    "en": "here"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "那里",
+                    "en": "there (near you)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "哪里",
+                    "en": "where"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这边",
+                    "en": "this way"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「ここ」= 这里。",
+                "en": "ここ means here."
+              }
+            }
           ]
         },
         {
@@ -46,6 +87,47 @@
           "en": "there (near you)",
           "tags": [
             "place"
+          ],
+          "practice": [
+            {
+              "id": "l03_v02_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「そこ」的词汇意思是？",
+                "en": "What does そこ mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "那里",
+                    "en": "there (near you)"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "这里",
+                    "en": "here"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "哪里",
+                    "en": "where"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这边",
+                    "en": "this way"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「そこ」= 那里。",
+                "en": "そこ means there (near you)."
+              }
+            }
           ]
         },
         {
@@ -56,6 +138,47 @@
           "en": "over there",
           "tags": [
             "place"
+          ],
+          "practice": [
+            {
+              "id": "l03_v03_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「あそこ」的词汇意思是？",
+                "en": "What does あそこ mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "那里",
+                    "en": "over there"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "这里",
+                    "en": "here"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "哪里",
+                    "en": "where"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这边",
+                    "en": "this way"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「あそこ」= 那里。",
+                "en": "あそこ means over there."
+              }
+            }
           ]
         },
         {
@@ -66,6 +189,47 @@
           "en": "where",
           "tags": [
             "question"
+          ],
+          "practice": [
+            {
+              "id": "l03_v04_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「どこ」的词汇意思是？",
+                "en": "What does どこ mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "哪里",
+                    "en": "where"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "这里",
+                    "en": "here"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "那里",
+                    "en": "there (near you)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这边",
+                    "en": "this way"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「どこ」= 哪里。",
+                "en": "どこ means where."
+              }
+            }
           ]
         },
         {
@@ -76,6 +240,47 @@
           "en": "this way",
           "tags": [
             "place"
+          ],
+          "practice": [
+            {
+              "id": "l03_v05_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「こちら」的词汇意思是？",
+                "en": "What does こちら mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "这边",
+                    "en": "this way"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "这里",
+                    "en": "here"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "那里",
+                    "en": "there (near you)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "哪里",
+                    "en": "where"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「こちら」= 这边。",
+                "en": "こちら means this way."
+              }
+            }
           ]
         },
         {
@@ -86,6 +291,47 @@
           "en": "that way",
           "tags": [
             "place"
+          ],
+          "practice": [
+            {
+              "id": "l03_v06_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「そちら」的词汇意思是？",
+                "en": "What does そちら mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "那边",
+                    "en": "that way"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "这里",
+                    "en": "here"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "那里",
+                    "en": "there (near you)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "哪里",
+                    "en": "where"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「そちら」= 那边。",
+                "en": "そちら means that way."
+              }
+            }
           ]
         },
         {
@@ -96,6 +342,47 @@
           "en": "that way over there",
           "tags": [
             "place"
+          ],
+          "practice": [
+            {
+              "id": "l03_v07_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「あちら」的词汇意思是？",
+                "en": "What does あちら mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "那边",
+                    "en": "that way over there"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "这里",
+                    "en": "here"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "那里",
+                    "en": "there (near you)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "哪里",
+                    "en": "where"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「あちら」= 那边。",
+                "en": "あちら means that way over there."
+              }
+            }
           ]
         },
         {
@@ -106,6 +393,47 @@
           "en": "which way",
           "tags": [
             "question"
+          ],
+          "practice": [
+            {
+              "id": "l03_v08_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「どちら」的词汇意思是？",
+                "en": "What does どちら mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "哪边",
+                    "en": "which way"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "这里",
+                    "en": "here"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "那里",
+                    "en": "there (near you)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "哪里",
+                    "en": "where"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「どちら」= 哪边。",
+                "en": "どちら means which way."
+              }
+            }
           ]
         },
         {
@@ -116,6 +444,47 @@
           "en": "classroom",
           "tags": [
             "place"
+          ],
+          "practice": [
+            {
+              "id": "l03_v09_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「教室」的词汇意思是？",
+                "en": "What does 教室 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "教室",
+                    "en": "classroom"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "这里",
+                    "en": "here"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "那里",
+                    "en": "there (near you)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "哪里",
+                    "en": "where"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「教室」= 教室。",
+                "en": "教室 means classroom."
+              }
+            }
           ]
         },
         {
@@ -126,6 +495,47 @@
           "en": "cafeteria",
           "tags": [
             "place"
+          ],
+          "practice": [
+            {
+              "id": "l03_v10_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「食堂」的词汇意思是？",
+                "en": "What does 食堂 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "食堂",
+                    "en": "cafeteria"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "这里",
+                    "en": "here"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "那里",
+                    "en": "there (near you)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "哪里",
+                    "en": "where"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「食堂」= 食堂。",
+                "en": "食堂 means cafeteria."
+              }
+            }
           ]
         },
         {
@@ -136,6 +546,47 @@
           "en": "office",
           "tags": [
             "place"
+          ],
+          "practice": [
+            {
+              "id": "l03_v11_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「事務所」的词汇意思是？",
+                "en": "What does 事務所 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "办公室",
+                    "en": "office"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "这里",
+                    "en": "here"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "那里",
+                    "en": "there (near you)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "哪里",
+                    "en": "where"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「事務所」= 办公室。",
+                "en": "事務所 means office."
+              }
+            }
           ]
         },
         {
@@ -146,6 +597,47 @@
           "en": "meeting room",
           "tags": [
             "place"
+          ],
+          "practice": [
+            {
+              "id": "l03_v12_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「会議室」的词汇意思是？",
+                "en": "What does 会議室 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "会议室",
+                    "en": "meeting room"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "这里",
+                    "en": "here"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "那里",
+                    "en": "there (near you)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "哪里",
+                    "en": "where"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「会議室」= 会议室。",
+                "en": "会議室 means meeting room."
+              }
+            }
           ]
         },
         {
@@ -156,6 +648,47 @@
           "en": "reception",
           "tags": [
             "place"
+          ],
+          "practice": [
+            {
+              "id": "l03_v13_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「受付」的词汇意思是？",
+                "en": "What does 受付 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "前台",
+                    "en": "reception"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "这里",
+                    "en": "here"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "那里",
+                    "en": "there (near you)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "哪里",
+                    "en": "where"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「受付」= 前台。",
+                "en": "受付 means reception."
+              }
+            }
           ]
         },
         {
@@ -166,6 +699,47 @@
           "en": "toilet",
           "tags": [
             "place"
+          ],
+          "practice": [
+            {
+              "id": "l03_v14_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「トイレ」的词汇意思是？",
+                "en": "What does トイレ mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "洗手间",
+                    "en": "toilet"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "这里",
+                    "en": "here"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "那里",
+                    "en": "there (near you)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "哪里",
+                    "en": "where"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「トイレ」= 洗手间。",
+                "en": "トイレ means toilet."
+              }
+            }
           ]
         },
         {
@@ -176,6 +750,47 @@
           "en": "elevator",
           "tags": [
             "place"
+          ],
+          "practice": [
+            {
+              "id": "l03_v15_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「エレベーター」的词汇意思是？",
+                "en": "What does エレベーター mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "电梯",
+                    "en": "elevator"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "这里",
+                    "en": "here"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "那里",
+                    "en": "there (near you)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "哪里",
+                    "en": "where"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「エレベーター」= 电梯。",
+                "en": "エレベーター means elevator."
+              }
+            }
           ]
         },
         {
@@ -186,6 +801,47 @@
           "en": "stairs",
           "tags": [
             "place"
+          ],
+          "practice": [
+            {
+              "id": "l03_v16_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「階段」的词汇意思是？",
+                "en": "What does 階段 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "楼梯",
+                    "en": "stairs"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "这里",
+                    "en": "here"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "那里",
+                    "en": "there (near you)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "哪里",
+                    "en": "where"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「階段」= 楼梯。",
+                "en": "階段 means stairs."
+              }
+            }
           ]
         }
       ]
@@ -530,31 +1186,236 @@
           "id": "l03_e01",
           "jp": "ここは 事務所です。",
           "zh": "这里是办公室。",
-          "en": "This is the office."
+          "en": "This is the office.",
+          "practice": [
+            {
+              "id": "l03_e01_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「ここは 事務所です。」的例句意思是？",
+                "en": "What does ここは 事務所です。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "这里是办公室。",
+                    "en": "This is the office."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "食堂在那边。",
+                    "en": "The cafeteria is over there."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "洗手间在哪里？",
+                    "en": "Where is the toilet?"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "前台在这边。",
+                    "en": "Reception is this way."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「ここは 事務所です。」= 这里是办公室。。",
+                "en": "ここは 事務所です。 means This is the office.."
+              }
+            }
+          ]
         },
         {
           "id": "l03_e02",
           "jp": "食堂は あそこです。",
           "zh": "食堂在那边。",
-          "en": "The cafeteria is over there."
+          "en": "The cafeteria is over there.",
+          "practice": [
+            {
+              "id": "l03_e02_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「食堂は あそこです。」的例句意思是？",
+                "en": "What does 食堂は あそこです。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "食堂在那边。",
+                    "en": "The cafeteria is over there."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "这里是办公室。",
+                    "en": "This is the office."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "洗手间在哪里？",
+                    "en": "Where is the toilet?"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "前台在这边。",
+                    "en": "Reception is this way."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「食堂は あそこです。」= 食堂在那边。。",
+                "en": "食堂は あそこです。 means The cafeteria is over there.."
+              }
+            }
+          ]
         },
         {
           "id": "l03_e03",
           "jp": "トイレは どこですか。",
           "zh": "洗手间在哪里？",
-          "en": "Where is the toilet?"
+          "en": "Where is the toilet?",
+          "practice": [
+            {
+              "id": "l03_e03_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「トイレは どこですか。」的例句意思是？",
+                "en": "What does トイレは どこですか。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "洗手间在哪里？",
+                    "en": "Where is the toilet?"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "这里是办公室。",
+                    "en": "This is the office."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "食堂在那边。",
+                    "en": "The cafeteria is over there."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "前台在这边。",
+                    "en": "Reception is this way."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「トイレは どこですか。」= 洗手间在哪里？。",
+                "en": "トイレは どこですか。 means Where is the toilet?."
+              }
+            }
+          ]
         },
         {
           "id": "l03_e04",
           "jp": "受付は こちらです。",
           "zh": "前台在这边。",
-          "en": "Reception is this way."
+          "en": "Reception is this way.",
+          "practice": [
+            {
+              "id": "l03_e04_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「受付は こちらです。」的例句意思是？",
+                "en": "What does 受付は こちらです。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "前台在这边。",
+                    "en": "Reception is this way."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "这里是办公室。",
+                    "en": "This is the office."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "食堂在那边。",
+                    "en": "The cafeteria is over there."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "洗手间在哪里？",
+                    "en": "Where is the toilet?"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「受付は こちらです。」= 前台在这边。。",
+                "en": "受付は こちらです。 means Reception is this way.."
+              }
+            }
+          ]
         },
         {
           "id": "l03_e05",
           "jp": "会議室も 2階です。",
           "zh": "会议室也在二楼。",
-          "en": "The meeting room is also on the second floor."
+          "en": "The meeting room is also on the second floor.",
+          "practice": [
+            {
+              "id": "l03_e05_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「会議室も 2階です。」的例句意思是？",
+                "en": "What does 会議室も 2階です。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "会议室也在二楼。",
+                    "en": "The meeting room is also on the second floor."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "这里是办公室。",
+                    "en": "This is the office."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "食堂在那边。",
+                    "en": "The cafeteria is over there."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "洗手间在哪里？",
+                    "en": "Where is the toilet?"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「会議室も 2階です。」= 会议室也在二楼。。",
+                "en": "会議室も 2階です。 means The meeting room is also on the second floor.."
+              }
+            }
+          ]
         }
       ]
     },

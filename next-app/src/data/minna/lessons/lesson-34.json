@@ -4,130 +4,1763 @@
   "status": "Mastery migrated",
   "lessonNo": 34,
   "lessonId": "minna_lesson_34",
-  "title": { "zh": "第34课", "en": "Lesson 34", "ja": "第34課" },
-  "subtitle": { "zh": "〜とおりに", "en": "Following instructions", "ja": "〜とおりに" },
-  "focus": { "zh": "学习按照说明、示范或计划做事，表达做完之后，以及带着/不做某动作完成另一动作。", "en": "Learn to follow instructions or examples, express after doing something, and do one action with or without another.", "ja": "説明や見本のとおりにする、あとで、て/ないでを学びます。" },
+  "title": {
+    "zh": "第34课",
+    "en": "Lesson 34",
+    "ja": "第34課"
+  },
+  "subtitle": {
+    "zh": "〜とおりに",
+    "en": "Following instructions",
+    "ja": "〜とおりに"
+  },
+  "focus": {
+    "zh": "学习按照说明、示范或计划做事，表达做完之后，以及带着/不做某动作完成另一动作。",
+    "en": "Learn to follow instructions or examples, express after doing something, and do one action with or without another.",
+    "ja": "説明や見本のとおりにする、あとで、て/ないでを学びます。"
+  },
   "sections": [
     {
       "type": "vocab",
       "id": "l34_vocab",
-      "title": { "zh": "核心词汇", "en": "Core Vocabulary", "ja": "基本語彙" },
+      "title": {
+        "zh": "核心词汇",
+        "en": "Core Vocabulary",
+        "ja": "基本語彙"
+      },
       "items": [
-        { "id": "l34_v01", "jp": "磨きます", "kana": "みがきます", "zh": "刷；磨", "en": "to brush; polish", "tags": ["lesson34"] },
-        { "id": "l34_v02", "jp": "組み立てます", "kana": "くみたてます", "zh": "组装", "en": "to assemble", "tags": ["lesson34"] },
-        { "id": "l34_v03", "jp": "折ります", "kana": "おります", "zh": "折", "en": "to fold", "tags": ["lesson34"] },
-        { "id": "l34_v04", "jp": "気がつきます", "kana": "きがつきます", "zh": "注意到", "en": "to notice", "tags": ["lesson34"] },
-        { "id": "l34_v05", "jp": "つけます", "kana": "つけます", "zh": "沾；蘸；打开", "en": "to attach; turn on", "tags": ["lesson34"] },
-        { "id": "l34_v06", "jp": "説明書", "kana": "せつめいしょ", "zh": "说明书", "en": "manual", "tags": ["lesson34"] },
-        { "id": "l34_v07", "jp": "図", "kana": "ず", "zh": "图", "en": "diagram", "tags": ["lesson34"] },
-        { "id": "l34_v08", "jp": "線", "kana": "せん", "zh": "线", "en": "line", "tags": ["lesson34"] },
-        { "id": "l34_v09", "jp": "お手本", "kana": "おてほん", "zh": "范例；样板", "en": "model; example", "tags": ["lesson34"] },
-        { "id": "l34_v10", "jp": "しょうゆ", "kana": "しょうゆ", "zh": "酱油", "en": "soy sauce", "tags": ["lesson34"] }
+        {
+          "id": "l34_v01",
+          "jp": "磨きます",
+          "kana": "みがきます",
+          "zh": "刷；磨",
+          "en": "to brush; polish",
+          "tags": [
+            "lesson34"
+          ],
+          "practice": [
+            {
+              "id": "l34_v01_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「磨きます」的词汇意思是？",
+                "en": "What does 磨きます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "刷；磨",
+                    "en": "to brush; polish"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "组装",
+                    "en": "to assemble"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "折",
+                    "en": "to fold"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "注意到",
+                    "en": "to notice"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「磨きます」= 刷；磨。",
+                "en": "磨きます means to brush; polish."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l34_v02",
+          "jp": "組み立てます",
+          "kana": "くみたてます",
+          "zh": "组装",
+          "en": "to assemble",
+          "tags": [
+            "lesson34"
+          ],
+          "practice": [
+            {
+              "id": "l34_v02_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「組み立てます」的词汇意思是？",
+                "en": "What does 組み立てます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "组装",
+                    "en": "to assemble"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "刷；磨",
+                    "en": "to brush; polish"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "折",
+                    "en": "to fold"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "注意到",
+                    "en": "to notice"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「組み立てます」= 组装。",
+                "en": "組み立てます means to assemble."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l34_v03",
+          "jp": "折ります",
+          "kana": "おります",
+          "zh": "折",
+          "en": "to fold",
+          "tags": [
+            "lesson34"
+          ],
+          "practice": [
+            {
+              "id": "l34_v03_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「折ります」的词汇意思是？",
+                "en": "What does 折ります mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "折",
+                    "en": "to fold"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "刷；磨",
+                    "en": "to brush; polish"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "组装",
+                    "en": "to assemble"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "注意到",
+                    "en": "to notice"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「折ります」= 折。",
+                "en": "折ります means to fold."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l34_v04",
+          "jp": "気がつきます",
+          "kana": "きがつきます",
+          "zh": "注意到",
+          "en": "to notice",
+          "tags": [
+            "lesson34"
+          ],
+          "practice": [
+            {
+              "id": "l34_v04_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「気がつきます」的词汇意思是？",
+                "en": "What does 気がつきます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "注意到",
+                    "en": "to notice"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "刷；磨",
+                    "en": "to brush; polish"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "组装",
+                    "en": "to assemble"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "折",
+                    "en": "to fold"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「気がつきます」= 注意到。",
+                "en": "気がつきます means to notice."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l34_v05",
+          "jp": "つけます",
+          "kana": "つけます",
+          "zh": "沾；蘸；打开",
+          "en": "to attach; turn on",
+          "tags": [
+            "lesson34"
+          ],
+          "practice": [
+            {
+              "id": "l34_v05_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「つけます」的词汇意思是？",
+                "en": "What does つけます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "沾；蘸；打开",
+                    "en": "to attach; turn on"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "刷；磨",
+                    "en": "to brush; polish"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "组装",
+                    "en": "to assemble"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "折",
+                    "en": "to fold"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「つけます」= 沾；蘸；打开。",
+                "en": "つけます means to attach; turn on."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l34_v06",
+          "jp": "説明書",
+          "kana": "せつめいしょ",
+          "zh": "说明书",
+          "en": "manual",
+          "tags": [
+            "lesson34"
+          ],
+          "practice": [
+            {
+              "id": "l34_v06_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「説明書」的词汇意思是？",
+                "en": "What does 説明書 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "说明书",
+                    "en": "manual"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "刷；磨",
+                    "en": "to brush; polish"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "组装",
+                    "en": "to assemble"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "折",
+                    "en": "to fold"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「説明書」= 说明书。",
+                "en": "説明書 means manual."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l34_v07",
+          "jp": "図",
+          "kana": "ず",
+          "zh": "图",
+          "en": "diagram",
+          "tags": [
+            "lesson34"
+          ],
+          "practice": [
+            {
+              "id": "l34_v07_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「図」的词汇意思是？",
+                "en": "What does 図 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "图",
+                    "en": "diagram"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "刷；磨",
+                    "en": "to brush; polish"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "组装",
+                    "en": "to assemble"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "折",
+                    "en": "to fold"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「図」= 图。",
+                "en": "図 means diagram."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l34_v08",
+          "jp": "線",
+          "kana": "せん",
+          "zh": "线",
+          "en": "line",
+          "tags": [
+            "lesson34"
+          ],
+          "practice": [
+            {
+              "id": "l34_v08_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「線」的词汇意思是？",
+                "en": "What does 線 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "线",
+                    "en": "line"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "刷；磨",
+                    "en": "to brush; polish"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "组装",
+                    "en": "to assemble"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "折",
+                    "en": "to fold"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「線」= 线。",
+                "en": "線 means line."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l34_v09",
+          "jp": "お手本",
+          "kana": "おてほん",
+          "zh": "范例；样板",
+          "en": "model; example",
+          "tags": [
+            "lesson34"
+          ],
+          "practice": [
+            {
+              "id": "l34_v09_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「お手本」的词汇意思是？",
+                "en": "What does お手本 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "范例；样板",
+                    "en": "model; example"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "刷；磨",
+                    "en": "to brush; polish"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "组装",
+                    "en": "to assemble"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "折",
+                    "en": "to fold"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「お手本」= 范例；样板。",
+                "en": "お手本 means model; example."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l34_v10",
+          "jp": "しょうゆ",
+          "kana": "しょうゆ",
+          "zh": "酱油",
+          "en": "soy sauce",
+          "tags": [
+            "lesson34"
+          ],
+          "practice": [
+            {
+              "id": "l34_v10_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「しょうゆ」的词汇意思是？",
+                "en": "What does しょうゆ mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "酱油",
+                    "en": "soy sauce"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "刷；磨",
+                    "en": "to brush; polish"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "组装",
+                    "en": "to assemble"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "折",
+                    "en": "to fold"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「しょうゆ」= 酱油。",
+                "en": "しょうゆ means soy sauce."
+              }
+            }
+          ]
+        }
       ]
     },
     {
       "type": "grammar",
       "id": "l34_grammar",
-      "title": { "zh": "核心语法", "en": "Core Grammar", "ja": "基本文法" },
+      "title": {
+        "zh": "核心语法",
+        "en": "Core Grammar",
+        "ja": "基本文法"
+      },
       "items": [
         {
           "id": "l34_g01",
           "pattern": "名词 の とおりに",
-          "explanation": { "zh": "按照说明、图、范例等去做。", "en": "Do something according to a manual, diagram, model, or plan." },
-          "examples": [{ "jp": "説明書のとおりに組み立てます。", "zh": "按说明书组装。", "en": "Assemble it according to the manual." }],
-          "practice": [{ "id": "l34_g01_p01", "skill": "grammar", "question": { "zh": "“按说明书做”是？", "en": "How do you say 'do it according to the manual'?" }, "options": [{ "text": { "jp": "説明書のとおりにします" }, "correct": true }, { "text": { "jp": "説明書とおりにします" } }, { "text": { "jp": "説明書にとおりします" } }, { "text": { "jp": "説明書をとおりにします" } }], "explanation": { "zh": "名词后接「のとおりに」。", "en": "Use noun + no toori ni." } }]
+          "explanation": {
+            "zh": "按照说明、图、范例等去做。",
+            "en": "Do something according to a manual, diagram, model, or plan."
+          },
+          "examples": [
+            {
+              "jp": "説明書のとおりに組み立てます。",
+              "zh": "按说明书组装。",
+              "en": "Assemble it according to the manual."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l34_g01_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“按说明书做”是？",
+                "en": "How do you say 'do it according to the manual'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "説明書のとおりにします"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "説明書とおりにします"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "説明書にとおりします"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "説明書をとおりにします"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "名词后接「のとおりに」。",
+                "en": "Use noun + no toori ni."
+              }
+            }
+          ]
         },
         {
           "id": "l34_g02",
           "pattern": "动词辞书形 + とおりに",
-          "explanation": { "zh": "按照将要说明、指示的内容去做。", "en": "Do something as someone will explain or instruct." },
-          "examples": [{ "jp": "わたしが言うとおりに書いてください。", "zh": "请按我说的写。", "en": "Please write as I say." }],
-          "practice": [{ "id": "l34_g02_p01", "skill": "grammar", "question": { "zh": "“请按我说的做”是？", "en": "How do you say 'Please do as I say'?" }, "options": [{ "text": { "jp": "わたしが言うとおりにしてください" }, "correct": true }, { "text": { "jp": "わたしが言ってとおりにしてください" } }, { "text": { "jp": "わたしが言うのとおりしてください" } }, { "text": { "jp": "わたしが言いますとおりにしてください" } }], "explanation": { "zh": "动词辞书形直接接とおりに。", "en": "Dictionary form attaches directly to toori ni." } }]
+          "explanation": {
+            "zh": "按照将要说明、指示的内容去做。",
+            "en": "Do something as someone will explain or instruct."
+          },
+          "examples": [
+            {
+              "jp": "わたしが言うとおりに書いてください。",
+              "zh": "请按我说的写。",
+              "en": "Please write as I say."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l34_g02_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“请按我说的做”是？",
+                "en": "How do you say 'Please do as I say'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "わたしが言うとおりにしてください"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "わたしが言ってとおりにしてください"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "わたしが言うのとおりしてください"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "わたしが言いますとおりにしてください"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "动词辞书形直接接とおりに。",
+                "en": "Dictionary form attaches directly to toori ni."
+              }
+            }
+          ]
         },
         {
           "id": "l34_g03",
           "pattern": "动词た形 + とおりに",
-          "explanation": { "zh": "按照已经说过、看过、写好的内容做。", "en": "Do something as was already said, shown, or written." },
-          "examples": [{ "jp": "先生が説明したとおりに練習します。", "zh": "按老师说明的那样练习。", "en": "Practice as the teacher explained." }],
-          "practice": [{ "id": "l34_g03_p01", "skill": "grammar", "question": { "zh": "“按老师说过的做”是？", "en": "How do you say 'do as the teacher said'?" }, "options": [{ "text": { "jp": "先生が言ったとおりにします" }, "correct": true }, { "text": { "jp": "先生が言ってとおりにします" } }, { "text": { "jp": "先生が言ったのとおりします" } }, { "text": { "jp": "先生が言いましたとおりにします" } }], "explanation": { "zh": "已经说过用た形+とおりに。", "en": "Use past plain form + toori ni." } }]
+          "explanation": {
+            "zh": "按照已经说过、看过、写好的内容做。",
+            "en": "Do something as was already said, shown, or written."
+          },
+          "examples": [
+            {
+              "jp": "先生が説明したとおりに練習します。",
+              "zh": "按老师说明的那样练习。",
+              "en": "Practice as the teacher explained."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l34_g03_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“按老师说过的做”是？",
+                "en": "How do you say 'do as the teacher said'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "先生が言ったとおりにします"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "先生が言ってとおりにします"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生が言ったのとおりします"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生が言いましたとおりにします"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "已经说过用た形+とおりに。",
+                "en": "Use past plain form + toori ni."
+              }
+            }
+          ]
         },
         {
           "id": "l34_g04",
           "pattern": "动词た形 + あとで",
-          "explanation": { "zh": "表示一个动作完成之后再做另一个动作。", "en": "After completing one action, do another." },
-          "examples": [{ "jp": "ご飯を食べたあとで、薬を飲みます。", "zh": "吃饭后吃药。", "en": "I take medicine after eating." }],
-          "practice": [{ "id": "l34_g04_p01", "skill": "grammar", "question": { "zh": "“看电影后回家”是？", "en": "How do you say 'go home after watching a movie'?" }, "options": [{ "text": { "jp": "映画を見たあとで、帰ります" }, "correct": true }, { "text": { "jp": "映画を見てあとで、帰ります" } }, { "text": { "jp": "映画を見るあとで、帰ります" } }, { "text": { "jp": "映画を見ますあとで、帰ります" } }], "explanation": { "zh": "动词た形+あとで。", "en": "Past plain form + ato de." } }]
+          "explanation": {
+            "zh": "表示一个动作完成之后再做另一个动作。",
+            "en": "After completing one action, do another."
+          },
+          "examples": [
+            {
+              "jp": "ご飯を食べたあとで、薬を飲みます。",
+              "zh": "吃饭后吃药。",
+              "en": "I take medicine after eating."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l34_g04_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“看电影后回家”是？",
+                "en": "How do you say 'go home after watching a movie'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "映画を見たあとで、帰ります"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "映画を見てあとで、帰ります"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "映画を見るあとで、帰ります"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "映画を見ますあとで、帰ります"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "动词た形+あとで。",
+                "en": "Past plain form + ato de."
+              }
+            }
+          ]
         },
         {
           "id": "l34_g05",
           "pattern": "名词 の あとで",
-          "explanation": { "zh": "名词后接「のあとで」，表示“……之后”。", "en": "Noun + no ato de means after..." },
-          "examples": [{ "jp": "授業のあとで、図書館へ行きます。", "zh": "下课后去图书馆。", "en": "I go to the library after class." }],
-          "practice": [{ "id": "l34_g05_p01", "skill": "grammar", "question": { "zh": "“会议后”是？", "en": "How do you say 'after the meeting'?" }, "options": [{ "text": { "jp": "会議のあとで" }, "correct": true }, { "text": { "jp": "会議あとで" } }, { "text": { "jp": "会議にあとで" } }, { "text": { "jp": "会議をあとで" } }], "explanation": { "zh": "名词+のあとで。", "en": "Noun + no ato de." } }]
+          "explanation": {
+            "zh": "名词后接「のあとで」，表示“……之后”。",
+            "en": "Noun + no ato de means after..."
+          },
+          "examples": [
+            {
+              "jp": "授業のあとで、図書館へ行きます。",
+              "zh": "下课后去图书馆。",
+              "en": "I go to the library after class."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l34_g05_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“会议后”是？",
+                "en": "How do you say 'after the meeting'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "会議のあとで"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "会議あとで"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "会議にあとで"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "会議をあとで"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "名词+のあとで。",
+                "en": "Noun + no ato de."
+              }
+            }
+          ]
         },
         {
           "id": "l34_g06",
           "pattern": "动词て形 + 动词",
-          "explanation": { "zh": "表示伴随状态：带着、穿着、戴着等。", "en": "Shows an accompanying state: wearing, carrying, holding, etc." },
-          "examples": [{ "jp": "傘を持って出かけます。", "zh": "带着伞出门。", "en": "I go out carrying an umbrella." }],
-          "practice": [{ "id": "l34_g06_p01", "skill": "grammar", "question": { "zh": "“戴着帽子去”是？", "en": "How do you say 'go wearing a hat'?" }, "options": [{ "text": { "jp": "帽子をかぶって行きます" }, "correct": true }, { "text": { "jp": "帽子をかぶるで行きます" } }, { "text": { "jp": "帽子をかぶらないで行きます" } }, { "text": { "jp": "帽子をかぶったあとで行きますだけ" } }], "explanation": { "zh": "伴随状态用て形。", "en": "Use te-form for accompanying state." } }]
+          "explanation": {
+            "zh": "表示伴随状态：带着、穿着、戴着等。",
+            "en": "Shows an accompanying state: wearing, carrying, holding, etc."
+          },
+          "examples": [
+            {
+              "jp": "傘を持って出かけます。",
+              "zh": "带着伞出门。",
+              "en": "I go out carrying an umbrella."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l34_g06_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“戴着帽子去”是？",
+                "en": "How do you say 'go wearing a hat'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "帽子をかぶって行きます"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "帽子をかぶるで行きます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "帽子をかぶらないで行きます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "帽子をかぶったあとで行きますだけ"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "伴随状态用て形。",
+                "en": "Use te-form for accompanying state."
+              }
+            }
+          ]
         },
         {
           "id": "l34_g07",
           "pattern": "ない形 + ないで",
-          "explanation": { "zh": "表示不做A而做B。", "en": "Do B without doing A." },
-          "examples": [{ "jp": "朝ご飯を食べないで学校へ行きました。", "zh": "没吃早饭就去学校了。", "en": "I went to school without eating breakfast." }],
-          "practice": [{ "id": "l34_g07_p01", "skill": "grammar", "question": { "zh": "“不看字典写”是？", "en": "How do you say 'write without looking at the dictionary'?" }, "options": [{ "text": { "jp": "辞書を見ないで書きます" }, "correct": true }, { "text": { "jp": "辞書を見なくて書きます" } }, { "text": { "jp": "辞書を見てないで書きます" } }, { "text": { "jp": "辞書を見ないあとで書きます" } }], "explanation": { "zh": "不做A而做B用ない形+ないで。", "en": "Use nai-form + nai de." } }]
+          "explanation": {
+            "zh": "表示不做A而做B。",
+            "en": "Do B without doing A."
+          },
+          "examples": [
+            {
+              "jp": "朝ご飯を食べないで学校へ行きました。",
+              "zh": "没吃早饭就去学校了。",
+              "en": "I went to school without eating breakfast."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l34_g07_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“不看字典写”是？",
+                "en": "How do you say 'write without looking at the dictionary'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "辞書を見ないで書きます"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "辞書を見なくて書きます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "辞書を見てないで書きます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "辞書を見ないあとで書きます"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "不做A而做B用ない形+ないで。",
+                "en": "Use nai-form + nai de."
+              }
+            }
+          ]
         },
         {
           "id": "l34_g08",
           "pattern": "て vs ないで",
-          "explanation": { "zh": "「て」表示带着某状态做；「ないで」表示不做某事而做。", "en": "Te indicates doing with a state; nai de indicates doing without something." },
-          "examples": [{ "jp": "靴を脱いで入ります。 / 靴を脱がないで入ってはいけません。", "zh": "脱鞋进去。/ 不脱鞋不能进去。", "en": "Enter after taking off shoes. / You must not enter without taking off shoes." }],
-          "practice": [{ "id": "l34_g08_p01", "skill": "grammar", "question": { "zh": "“不带钱就出门了”是？", "en": "How do you say 'I went out without bringing money'?" }, "options": [{ "text": { "jp": "お金を持たないで出かけました" }, "correct": true }, { "text": { "jp": "お金を持って出かけませんでした" } }, { "text": { "jp": "お金を持たなくて出かけました" } }, { "text": { "jp": "お金を持ったあとで出かけません" } }], "explanation": { "zh": "without doing 用ないで。", "en": "Use nai de for 'without doing'." } }]
+          "explanation": {
+            "zh": "「て」表示带着某状态做；「ないで」表示不做某事而做。",
+            "en": "Te indicates doing with a state; nai de indicates doing without something."
+          },
+          "examples": [
+            {
+              "jp": "靴を脱いで入ります。 / 靴を脱がないで入ってはいけません。",
+              "zh": "脱鞋进去。/ 不脱鞋不能进去。",
+              "en": "Enter after taking off shoes. / You must not enter without taking off shoes."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l34_g08_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“不带钱就出门了”是？",
+                "en": "How do you say 'I went out without bringing money'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "お金を持たないで出かけました"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "お金を持って出かけませんでした"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "お金を持たなくて出かけました"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "お金を持ったあとで出かけません"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "without doing 用ないで。",
+                "en": "Use nai de for 'without doing'."
+              }
+            }
+          ]
         }
       ]
     },
     {
       "type": "examples",
       "id": "l34_examples",
-      "title": { "zh": "核心例句", "en": "Core Examples", "ja": "基本例文" },
+      "title": {
+        "zh": "核心例句",
+        "en": "Core Examples",
+        "ja": "基本例文"
+      },
       "items": [
-        { "id": "l34_e01", "jp": "説明書のとおりに机を組み立てます。", "zh": "按说明书组装桌子。", "en": "I assemble the desk according to the manual.", "tags": ["toori"] },
-        { "id": "l34_e02", "jp": "わたしがする通りにしてください。", "zh": "请照我做的这样做。", "en": "Please do as I do.", "tags": ["toori"] },
-        { "id": "l34_e03", "jp": "先生が言ったとおりに書きました。", "zh": "按老师说的写了。", "en": "I wrote it as the teacher said.", "tags": ["toori"] },
-        { "id": "l34_e04", "jp": "仕事が終わったあとで、飲みに行きます。", "zh": "工作结束后去喝一杯。", "en": "After work, I will go for a drink.", "tags": ["ato-de"] },
-        { "id": "l34_e05", "jp": "会議のあとで、部長に相談します。", "zh": "会议后和部长商量。", "en": "I will consult the manager after the meeting.", "tags": ["ato-de"] },
-        { "id": "l34_e06", "jp": "しょうゆをつけて食べます。", "zh": "蘸酱油吃。", "en": "Eat it with soy sauce.", "tags": ["te"] },
-        { "id": "l34_e07", "jp": "眼鏡をかけて本を読みます。", "zh": "戴着眼镜读书。", "en": "I read wearing glasses.", "tags": ["te"] },
-        { "id": "l34_e08", "jp": "朝ご飯を食べないで会社へ行きました。", "zh": "没吃早饭就去公司了。", "en": "I went to work without eating breakfast.", "tags": ["nai-de"] }
+        {
+          "id": "l34_e01",
+          "jp": "説明書のとおりに机を組み立てます。",
+          "zh": "按说明书组装桌子。",
+          "en": "I assemble the desk according to the manual.",
+          "tags": [
+            "toori"
+          ],
+          "practice": [
+            {
+              "id": "l34_e01_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「説明書のとおりに机を組み立てます。」的例句意思是？",
+                "en": "What does 説明書のとおりに机を組み立てます。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "按说明书组装桌子。",
+                    "en": "I assemble the desk according to the manual."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "请照我做的这样做。",
+                    "en": "Please do as I do."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "按老师说的写了。",
+                    "en": "I wrote it as the teacher said."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "工作结束后去喝一杯。",
+                    "en": "After work, I will go for a drink."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「説明書のとおりに机を組み立てます。」= 按说明书组装桌子。。",
+                "en": "説明書のとおりに机を組み立てます。 means I assemble the desk according to the manual.."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l34_e02",
+          "jp": "わたしがする通りにしてください。",
+          "zh": "请照我做的这样做。",
+          "en": "Please do as I do.",
+          "tags": [
+            "toori"
+          ],
+          "practice": [
+            {
+              "id": "l34_e02_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「わたしがする通りにしてください。」的例句意思是？",
+                "en": "What does わたしがする通りにしてください。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "请照我做的这样做。",
+                    "en": "Please do as I do."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "按说明书组装桌子。",
+                    "en": "I assemble the desk according to the manual."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "按老师说的写了。",
+                    "en": "I wrote it as the teacher said."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "工作结束后去喝一杯。",
+                    "en": "After work, I will go for a drink."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「わたしがする通りにしてください。」= 请照我做的这样做。。",
+                "en": "わたしがする通りにしてください。 means Please do as I do.."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l34_e03",
+          "jp": "先生が言ったとおりに書きました。",
+          "zh": "按老师说的写了。",
+          "en": "I wrote it as the teacher said.",
+          "tags": [
+            "toori"
+          ],
+          "practice": [
+            {
+              "id": "l34_e03_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「先生が言ったとおりに書きました。」的例句意思是？",
+                "en": "What does 先生が言ったとおりに書きました。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "按老师说的写了。",
+                    "en": "I wrote it as the teacher said."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "按说明书组装桌子。",
+                    "en": "I assemble the desk according to the manual."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "请照我做的这样做。",
+                    "en": "Please do as I do."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "工作结束后去喝一杯。",
+                    "en": "After work, I will go for a drink."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「先生が言ったとおりに書きました。」= 按老师说的写了。。",
+                "en": "先生が言ったとおりに書きました。 means I wrote it as the teacher said.."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l34_e04",
+          "jp": "仕事が終わったあとで、飲みに行きます。",
+          "zh": "工作结束后去喝一杯。",
+          "en": "After work, I will go for a drink.",
+          "tags": [
+            "ato-de"
+          ],
+          "practice": [
+            {
+              "id": "l34_e04_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「仕事が終わったあとで、飲みに行きます。」的例句意思是？",
+                "en": "What does 仕事が終わったあとで、飲みに行きます。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "工作结束后去喝一杯。",
+                    "en": "After work, I will go for a drink."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "按说明书组装桌子。",
+                    "en": "I assemble the desk according to the manual."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "请照我做的这样做。",
+                    "en": "Please do as I do."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "按老师说的写了。",
+                    "en": "I wrote it as the teacher said."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「仕事が終わったあとで、飲みに行きます。」= 工作结束后去喝一杯。。",
+                "en": "仕事が終わったあとで、飲みに行きます。 means After work, I will go for a drink.."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l34_e05",
+          "jp": "会議のあとで、部長に相談します。",
+          "zh": "会议后和部长商量。",
+          "en": "I will consult the manager after the meeting.",
+          "tags": [
+            "ato-de"
+          ],
+          "practice": [
+            {
+              "id": "l34_e05_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「会議のあとで、部長に相談します。」的例句意思是？",
+                "en": "What does 会議のあとで、部長に相談します。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "会议后和部长商量。",
+                    "en": "I will consult the manager after the meeting."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "按说明书组装桌子。",
+                    "en": "I assemble the desk according to the manual."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "请照我做的这样做。",
+                    "en": "Please do as I do."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "按老师说的写了。",
+                    "en": "I wrote it as the teacher said."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「会議のあとで、部長に相談します。」= 会议后和部长商量。。",
+                "en": "会議のあとで、部長に相談します。 means I will consult the manager after the meeting.."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l34_e06",
+          "jp": "しょうゆをつけて食べます。",
+          "zh": "蘸酱油吃。",
+          "en": "Eat it with soy sauce.",
+          "tags": [
+            "te"
+          ],
+          "practice": [
+            {
+              "id": "l34_e06_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「しょうゆをつけて食べます。」的例句意思是？",
+                "en": "What does しょうゆをつけて食べます。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "蘸酱油吃。",
+                    "en": "Eat it with soy sauce."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "按说明书组装桌子。",
+                    "en": "I assemble the desk according to the manual."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "请照我做的这样做。",
+                    "en": "Please do as I do."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "按老师说的写了。",
+                    "en": "I wrote it as the teacher said."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「しょうゆをつけて食べます。」= 蘸酱油吃。。",
+                "en": "しょうゆをつけて食べます。 means Eat it with soy sauce.."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l34_e07",
+          "jp": "眼鏡をかけて本を読みます。",
+          "zh": "戴着眼镜读书。",
+          "en": "I read wearing glasses.",
+          "tags": [
+            "te"
+          ],
+          "practice": [
+            {
+              "id": "l34_e07_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「眼鏡をかけて本を読みます。」的例句意思是？",
+                "en": "What does 眼鏡をかけて本を読みます。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "戴着眼镜读书。",
+                    "en": "I read wearing glasses."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "按说明书组装桌子。",
+                    "en": "I assemble the desk according to the manual."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "请照我做的这样做。",
+                    "en": "Please do as I do."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "按老师说的写了。",
+                    "en": "I wrote it as the teacher said."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「眼鏡をかけて本を読みます。」= 戴着眼镜读书。。",
+                "en": "眼鏡をかけて本を読みます。 means I read wearing glasses.."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l34_e08",
+          "jp": "朝ご飯を食べないで会社へ行きました。",
+          "zh": "没吃早饭就去公司了。",
+          "en": "I went to work without eating breakfast.",
+          "tags": [
+            "nai-de"
+          ],
+          "practice": [
+            {
+              "id": "l34_e08_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「朝ご飯を食べないで会社へ行きました。」的例句意思是？",
+                "en": "What does 朝ご飯を食べないで会社へ行きました。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "没吃早饭就去公司了。",
+                    "en": "I went to work without eating breakfast."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "按说明书组装桌子。",
+                    "en": "I assemble the desk according to the manual."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "请照我做的这样做。",
+                    "en": "Please do as I do."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "按老师说的写了。",
+                    "en": "I wrote it as the teacher said."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「朝ご飯を食べないで会社へ行きました。」= 没吃早饭就去公司了。。",
+                "en": "朝ご飯を食べないで会社へ行きました。 means I went to work without eating breakfast.."
+              }
+            }
+          ]
+        }
       ]
     },
     {
       "type": "mistakes",
       "id": "l34_mistakes",
-      "title": { "zh": "常见错误", "en": "Common Mistakes", "ja": "よくある間違い" },
+      "title": {
+        "zh": "常见错误",
+        "en": "Common Mistakes",
+        "ja": "よくある間違い"
+      },
       "items": [
-        { "id": "l34_m01", "wrong": "説明書とおりにします。", "correct": "説明書のとおりにします。", "zh": "名词后要接「のとおりに」。", "en": "Use noun + no toori ni." },
-        { "id": "l34_m02", "wrong": "映画を見るあとで帰ります。", "correct": "映画を見たあとで帰ります。", "zh": "动词后接あとで要用た形。", "en": "Use past plain form + ato de." },
-        { "id": "l34_m03", "wrong": "辞書を見なくて書きます。", "correct": "辞書を見ないで書きます。", "zh": "“不做A而做B”用ないで。", "en": "Use nai de for 'without doing A'." }
+        {
+          "id": "l34_m01",
+          "wrong": "説明書とおりにします。",
+          "correct": "説明書のとおりにします。",
+          "zh": "名词后要接「のとおりに」。",
+          "en": "Use noun + no toori ni."
+        },
+        {
+          "id": "l34_m02",
+          "wrong": "映画を見るあとで帰ります。",
+          "correct": "映画を見たあとで帰ります。",
+          "zh": "动词后接あとで要用た形。",
+          "en": "Use past plain form + ato de."
+        },
+        {
+          "id": "l34_m03",
+          "wrong": "辞書を見なくて書きます。",
+          "correct": "辞書を見ないで書きます。",
+          "zh": "“不做A而做B”用ないで。",
+          "en": "Use nai de for 'without doing A'."
+        }
       ]
     },
     {
       "type": "quiz",
       "id": "l34_quiz",
-      "title": { "zh": "综合测试", "en": "Final Test", "ja": "まとめテスト" },
+      "title": {
+        "zh": "综合测试",
+        "en": "Final Test",
+        "ja": "まとめテスト"
+      },
       "items": [
-        { "id": "l34_q01", "question": { "zh": "“按说明书”是？", "en": "How do you say 'according to the manual'?" }, "options": [{ "text": { "jp": "説明書のとおりに" }, "correct": true }, { "text": { "jp": "説明書とおりに" } }, { "text": { "jp": "説明書にとおり" } }, { "text": { "jp": "説明書をとおりに" } }], "explanation": { "zh": "名词+のとおりに。", "en": "Noun + no toori ni." } },
-        { "id": "l34_q02", "question": { "zh": "“按我说的做”是？", "en": "How do you say 'Do as I say'?" }, "options": [{ "text": { "jp": "わたしが言うとおりにしてください" }, "correct": true }, { "text": { "jp": "わたしが言ってとおりにしてください" } }, { "text": { "jp": "わたしが言いますとおりにしてください" } }, { "text": { "jp": "わたしの言うのとおりしてください" } }], "explanation": { "zh": "动词辞书形+とおりに。", "en": "Dictionary form + toori ni." } },
-        { "id": "l34_q03", "question": { "zh": "“按老师说明过的练习”是？", "en": "How do you say 'Practice as the teacher explained'?" }, "options": [{ "text": { "jp": "先生が説明したとおりに練習します" }, "correct": true }, { "text": { "jp": "先生が説明してとおりに練習します" } }, { "text": { "jp": "先生が説明しますとおりに練習します" } }, { "text": { "jp": "先生が説明したのとおり練習します" } }], "explanation": { "zh": "已经说明过，用た形。", "en": "Use past plain form." } },
-        { "id": "l34_q04", "question": { "zh": "“吃饭后吃药”是？", "en": "How do you say 'Take medicine after eating'?" }, "options": [{ "text": { "jp": "ご飯を食べたあとで、薬を飲みます" }, "correct": true }, { "text": { "jp": "ご飯を食べるあとで、薬を飲みます" } }, { "text": { "jp": "ご飯を食べてあとで、薬を飲みます" } }, { "text": { "jp": "ご飯を食べますあとで、薬を飲みます" } }], "explanation": { "zh": "动词た形+あとで。", "en": "Past plain form + ato de." } },
-        { "id": "l34_q05", "question": { "zh": "“会议后”是？", "en": "How do you say 'after the meeting'?" }, "options": [{ "text": { "jp": "会議のあとで" }, "correct": true }, { "text": { "jp": "会議あとで" } }, { "text": { "jp": "会議にあとで" } }, { "text": { "jp": "会議をあとで" } }], "explanation": { "zh": "名词+のあとで。", "en": "Noun + no ato de." } },
-        { "id": "l34_q06", "question": { "zh": "“带着伞出门”是？", "en": "How do you say 'go out with an umbrella'?" }, "options": [{ "text": { "jp": "傘を持って出かけます" }, "correct": true }, { "text": { "jp": "傘を持たないで出かけます" } }, { "text": { "jp": "傘を持つあとで出かけます" } }, { "text": { "jp": "傘を持ちますで出かけます" } }], "explanation": { "zh": "伴随状态用て形。", "en": "Use te-form for accompanying state." } },
-        { "id": "l34_q07", "question": { "zh": "“没吃早饭就去了”是？", "en": "How do you say 'went without eating breakfast'?" }, "options": [{ "text": { "jp": "朝ご飯を食べないで行きました" }, "correct": true }, { "text": { "jp": "朝ご飯を食べなくて行きました" } }, { "text": { "jp": "朝ご飯を食べてないで行きました" } }, { "text": { "jp": "朝ご飯を食べないあとで行きました" } }], "explanation": { "zh": "without doing 用ないで。", "en": "Use nai de." } },
-        { "id": "l34_q08", "question": { "zh": "“蘸酱油吃”是？", "en": "How do you say 'eat with soy sauce'?" }, "options": [{ "text": { "jp": "しょうゆをつけて食べます" }, "correct": true }, { "text": { "jp": "しょうゆをつけないで食べます" } }, { "text": { "jp": "しょうゆにつけるあとで食べます" } }, { "text": { "jp": "しょうゆをつけますで食べます" } }], "explanation": { "zh": "伴随动作/状态用て形。", "en": "Use te-form." } },
-        { "id": "l34_q09", "question": { "zh": "「ないで」表示什么？", "en": "What does nai de express?" }, "options": [{ "text": { "zh": "不做A而做B", "en": "Doing B without doing A" }, "correct": true }, { "text": { "zh": "做完A之后" } }, { "text": { "zh": "按A的方法" } }, { "text": { "zh": "A一定发生" } }], "explanation": { "zh": "ないで=without doing。", "en": "Nai de means without doing." } },
-        { "id": "l34_q10", "question": { "zh": "“请按图折”是？", "en": "How do you say 'Please fold it according to the diagram'?" }, "options": [{ "text": { "jp": "図のとおりに折ってください" }, "correct": true }, { "text": { "jp": "図とおりに折ってください" } }, { "text": { "jp": "図にとおり折ってください" } }, { "text": { "jp": "図をとおりに折ってください" } }], "explanation": { "zh": "图=名词，接のとおりに。", "en": "Zu is a noun, so use no toori ni." } }
+        {
+          "id": "l34_q01",
+          "question": {
+            "zh": "“按说明书”是？",
+            "en": "How do you say 'according to the manual'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "説明書のとおりに"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "説明書とおりに"
+              }
+            },
+            {
+              "text": {
+                "jp": "説明書にとおり"
+              }
+            },
+            {
+              "text": {
+                "jp": "説明書をとおりに"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "名词+のとおりに。",
+            "en": "Noun + no toori ni."
+          }
+        },
+        {
+          "id": "l34_q02",
+          "question": {
+            "zh": "“按我说的做”是？",
+            "en": "How do you say 'Do as I say'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "わたしが言うとおりにしてください"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "わたしが言ってとおりにしてください"
+              }
+            },
+            {
+              "text": {
+                "jp": "わたしが言いますとおりにしてください"
+              }
+            },
+            {
+              "text": {
+                "jp": "わたしの言うのとおりしてください"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "动词辞书形+とおりに。",
+            "en": "Dictionary form + toori ni."
+          }
+        },
+        {
+          "id": "l34_q03",
+          "question": {
+            "zh": "“按老师说明过的练习”是？",
+            "en": "How do you say 'Practice as the teacher explained'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "先生が説明したとおりに練習します"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "先生が説明してとおりに練習します"
+              }
+            },
+            {
+              "text": {
+                "jp": "先生が説明しますとおりに練習します"
+              }
+            },
+            {
+              "text": {
+                "jp": "先生が説明したのとおり練習します"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "已经说明过，用た形。",
+            "en": "Use past plain form."
+          }
+        },
+        {
+          "id": "l34_q04",
+          "question": {
+            "zh": "“吃饭后吃药”是？",
+            "en": "How do you say 'Take medicine after eating'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "ご飯を食べたあとで、薬を飲みます"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "ご飯を食べるあとで、薬を飲みます"
+              }
+            },
+            {
+              "text": {
+                "jp": "ご飯を食べてあとで、薬を飲みます"
+              }
+            },
+            {
+              "text": {
+                "jp": "ご飯を食べますあとで、薬を飲みます"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "动词た形+あとで。",
+            "en": "Past plain form + ato de."
+          }
+        },
+        {
+          "id": "l34_q05",
+          "question": {
+            "zh": "“会议后”是？",
+            "en": "How do you say 'after the meeting'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "会議のあとで"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "会議あとで"
+              }
+            },
+            {
+              "text": {
+                "jp": "会議にあとで"
+              }
+            },
+            {
+              "text": {
+                "jp": "会議をあとで"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "名词+のあとで。",
+            "en": "Noun + no ato de."
+          }
+        },
+        {
+          "id": "l34_q06",
+          "question": {
+            "zh": "“带着伞出门”是？",
+            "en": "How do you say 'go out with an umbrella'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "傘を持って出かけます"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "傘を持たないで出かけます"
+              }
+            },
+            {
+              "text": {
+                "jp": "傘を持つあとで出かけます"
+              }
+            },
+            {
+              "text": {
+                "jp": "傘を持ちますで出かけます"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "伴随状态用て形。",
+            "en": "Use te-form for accompanying state."
+          }
+        },
+        {
+          "id": "l34_q07",
+          "question": {
+            "zh": "“没吃早饭就去了”是？",
+            "en": "How do you say 'went without eating breakfast'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "朝ご飯を食べないで行きました"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "朝ご飯を食べなくて行きました"
+              }
+            },
+            {
+              "text": {
+                "jp": "朝ご飯を食べてないで行きました"
+              }
+            },
+            {
+              "text": {
+                "jp": "朝ご飯を食べないあとで行きました"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "without doing 用ないで。",
+            "en": "Use nai de."
+          }
+        },
+        {
+          "id": "l34_q08",
+          "question": {
+            "zh": "“蘸酱油吃”是？",
+            "en": "How do you say 'eat with soy sauce'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "しょうゆをつけて食べます"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "しょうゆをつけないで食べます"
+              }
+            },
+            {
+              "text": {
+                "jp": "しょうゆにつけるあとで食べます"
+              }
+            },
+            {
+              "text": {
+                "jp": "しょうゆをつけますで食べます"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "伴随动作/状态用て形。",
+            "en": "Use te-form."
+          }
+        },
+        {
+          "id": "l34_q09",
+          "question": {
+            "zh": "「ないで」表示什么？",
+            "en": "What does nai de express?"
+          },
+          "options": [
+            {
+              "text": {
+                "zh": "不做A而做B",
+                "en": "Doing B without doing A"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "做完A之后"
+              }
+            },
+            {
+              "text": {
+                "zh": "按A的方法"
+              }
+            },
+            {
+              "text": {
+                "zh": "A一定发生"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "ないで=without doing。",
+            "en": "Nai de means without doing."
+          }
+        },
+        {
+          "id": "l34_q10",
+          "question": {
+            "zh": "“请按图折”是？",
+            "en": "How do you say 'Please fold it according to the diagram'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "図のとおりに折ってください"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "図とおりに折ってください"
+              }
+            },
+            {
+              "text": {
+                "jp": "図にとおり折ってください"
+              }
+            },
+            {
+              "text": {
+                "jp": "図をとおりに折ってください"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "图=名词，接のとおりに。",
+            "en": "Zu is a noun, so use no toori ni."
+          }
+        }
       ]
     }
   ]

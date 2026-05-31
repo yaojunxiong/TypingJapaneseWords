@@ -31,7 +31,48 @@
           "kana": "りようします",
           "zh": "利用",
           "en": "use",
-          "example": "こちらの席をご利用ください。"
+          "example": "こちらの席をご利用ください。",
+          "practice": [
+            {
+              "id": "l49-vocab-01_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「利用します」的词汇意思是？",
+                "en": "What does 利用します mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "利用",
+                    "en": "use"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "任职",
+                    "en": "work for"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "度过",
+                    "en": "spend time"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "去、来、在",
+                    "en": "go, come, be honorifically"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「利用します」= 利用。",
+                "en": "利用します means use."
+              }
+            }
+          ]
         },
         {
           "id": "l49-vocab-02",
@@ -39,7 +80,48 @@
           "kana": "つとめます",
           "zh": "任职",
           "en": "work for",
-          "example": "先生は大学にお勤めです。"
+          "example": "先生は大学にお勤めです。",
+          "practice": [
+            {
+              "id": "l49-vocab-02_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「勤めます」的词汇意思是？",
+                "en": "What does 勤めます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "任职",
+                    "en": "work for"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "利用",
+                    "en": "use"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "度过",
+                    "en": "spend time"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "去、来、在",
+                    "en": "go, come, be honorifically"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「勤めます」= 任职。",
+                "en": "勤めます means work for."
+              }
+            }
+          ]
         },
         {
           "id": "l49-vocab-03",
@@ -47,7 +129,48 @@
           "kana": "すごします",
           "zh": "度过",
           "en": "spend time",
-          "example": "休みをどう過ごされましたか。"
+          "example": "休みをどう過ごされましたか。",
+          "practice": [
+            {
+              "id": "l49-vocab-03_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「過ごします」的词汇意思是？",
+                "en": "What does 過ごします mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "度过",
+                    "en": "spend time"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "利用",
+                    "en": "use"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "任职",
+                    "en": "work for"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "去、来、在",
+                    "en": "go, come, be honorifically"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「過ごします」= 度过。",
+                "en": "過ごします means spend time."
+              }
+            }
+          ]
         },
         {
           "id": "l49-vocab-04",
@@ -55,7 +178,48 @@
           "kana": "いらっしゃいます",
           "zh": "去、来、在",
           "en": "go, come, be honorifically",
-          "example": "先生は研究室にいらっしゃいます。"
+          "example": "先生は研究室にいらっしゃいます。",
+          "practice": [
+            {
+              "id": "l49-vocab-04_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「いらっしゃいます」的词汇意思是？",
+                "en": "What does いらっしゃいます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "去、来、在",
+                    "en": "go, come, be honorifically"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "利用",
+                    "en": "use"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "任职",
+                    "en": "work for"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "度过",
+                    "en": "spend time"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「いらっしゃいます」= 去、来、在。",
+                "en": "いらっしゃいます means go, come, be honorifically."
+              }
+            }
+          ]
         },
         {
           "id": "l49-vocab-05",
@@ -63,7 +227,48 @@
           "kana": "めしあがります",
           "zh": "吃、喝",
           "en": "eat, drink honorifically",
-          "example": "何を召し上がりますか。"
+          "example": "何を召し上がりますか。",
+          "practice": [
+            {
+              "id": "l49-vocab-05_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「召し上がります」的词汇意思是？",
+                "en": "What does 召し上がります mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "吃、喝",
+                    "en": "eat, drink honorifically"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "利用",
+                    "en": "use"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "任职",
+                    "en": "work for"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "度过",
+                    "en": "spend time"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「召し上がります」= 吃、喝。",
+                "en": "召し上がります means eat, drink honorifically."
+              }
+            }
+          ]
         },
         {
           "id": "l49-vocab-06",
@@ -71,7 +276,48 @@
           "kana": "ごらんになります",
           "zh": "看",
           "en": "look, watch honorifically",
-          "example": "この資料をご覧になりますか。"
+          "example": "この資料をご覧になりますか。",
+          "practice": [
+            {
+              "id": "l49-vocab-06_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「ご覧になります」的词汇意思是？",
+                "en": "What does ご覧になります mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "看",
+                    "en": "look, watch honorifically"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "利用",
+                    "en": "use"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "任职",
+                    "en": "work for"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "度过",
+                    "en": "spend time"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「ご覧になります」= 看。",
+                "en": "ご覧になります means look, watch honorifically."
+              }
+            }
+          ]
         },
         {
           "id": "l49-vocab-07",
@@ -79,7 +325,48 @@
           "kana": "おっしゃいます",
           "zh": "说",
           "en": "say honorifically",
-          "example": "先生は何とおっしゃいましたか。"
+          "example": "先生は何とおっしゃいましたか。",
+          "practice": [
+            {
+              "id": "l49-vocab-07_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「おっしゃいます」的词汇意思是？",
+                "en": "What does おっしゃいます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "说",
+                    "en": "say honorifically"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "利用",
+                    "en": "use"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "任职",
+                    "en": "work for"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "度过",
+                    "en": "spend time"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「おっしゃいます」= 说。",
+                "en": "おっしゃいます means say honorifically."
+              }
+            }
+          ]
         },
         {
           "id": "l49-vocab-08",
@@ -87,7 +374,48 @@
           "kana": "なさいます",
           "zh": "做",
           "en": "do honorifically",
-          "example": "週末は何をなさいますか。"
+          "example": "週末は何をなさいますか。",
+          "practice": [
+            {
+              "id": "l49-vocab-08_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「なさいます」的词汇意思是？",
+                "en": "What does なさいます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "做",
+                    "en": "do honorifically"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "利用",
+                    "en": "use"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "任职",
+                    "en": "work for"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "度过",
+                    "en": "spend time"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「なさいます」= 做。",
+                "en": "なさいます means do honorifically."
+              }
+            }
+          ]
         },
         {
           "id": "l49-vocab-09",
@@ -95,7 +423,48 @@
           "kana": "おたく",
           "zh": "府上、您家",
           "en": "your home",
-          "example": "先生のお宅へ伺います。"
+          "example": "先生のお宅へ伺います。",
+          "practice": [
+            {
+              "id": "l49-vocab-09_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「お宅」的词汇意思是？",
+                "en": "What does お宅 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "府上、您家",
+                    "en": "your home"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "利用",
+                    "en": "use"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "任职",
+                    "en": "work for"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "度过",
+                    "en": "spend time"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「お宅」= 府上、您家。",
+                "en": "お宅 means your home."
+              }
+            }
+          ]
         },
         {
           "id": "l49-vocab-10",
@@ -103,7 +472,48 @@
           "kana": "かかりいん",
           "zh": "工作人员",
           "en": "staff member",
-          "example": "係員にお聞きください。"
+          "example": "係員にお聞きください。",
+          "practice": [
+            {
+              "id": "l49-vocab-10_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「係員」的词汇意思是？",
+                "en": "What does 係員 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "工作人员",
+                    "en": "staff member"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "利用",
+                    "en": "use"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "任职",
+                    "en": "work for"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "度过",
+                    "en": "spend time"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「係員」= 工作人员。",
+                "en": "係員 means staff member."
+              }
+            }
+          ]
         }
       ]
     },
@@ -481,49 +891,377 @@
           "id": "l49-example-01",
           "jp": "先生はもう帰られました。",
           "zh": "老师已经回去了。",
-          "en": "The teacher has already gone home."
+          "en": "The teacher has already gone home.",
+          "practice": [
+            {
+              "id": "l49-example-01_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「先生はもう帰られました。」的例句意思是？",
+                "en": "What does 先生はもう帰られました。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "老师已经回去了。",
+                    "en": "The teacher has already gone home."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "社长每天早上读报纸。",
+                    "en": "The company president reads the newspaper every morning."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "请使用这边的电梯。",
+                    "en": "Please use this elevator."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "老师现在在研究室。",
+                    "en": "The teacher is in the lab now."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「先生はもう帰られました。」= 老师已经回去了。。",
+                "en": "先生はもう帰られました。 means The teacher has already gone home.."
+              }
+            }
+          ]
         },
         {
           "id": "l49-example-02",
           "jp": "社長は毎朝新聞をお読みになります。",
           "zh": "社长每天早上读报纸。",
-          "en": "The company president reads the newspaper every morning."
+          "en": "The company president reads the newspaper every morning.",
+          "practice": [
+            {
+              "id": "l49-example-02_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「社長は毎朝新聞をお読みになります。」的例句意思是？",
+                "en": "What does 社長は毎朝新聞をお読みになります。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "社长每天早上读报纸。",
+                    "en": "The company president reads the newspaper every morning."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "老师已经回去了。",
+                    "en": "The teacher has already gone home."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "请使用这边的电梯。",
+                    "en": "Please use this elevator."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "老师现在在研究室。",
+                    "en": "The teacher is in the lab now."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「社長は毎朝新聞をお読みになります。」= 社长每天早上读报纸。。",
+                "en": "社長は毎朝新聞をお読みになります。 means The company president reads the newspaper every morning.."
+              }
+            }
+          ]
         },
         {
           "id": "l49-example-03",
           "jp": "こちらのエレベーターをご利用ください。",
           "zh": "请使用这边的电梯。",
-          "en": "Please use this elevator."
+          "en": "Please use this elevator.",
+          "practice": [
+            {
+              "id": "l49-example-03_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「こちらのエレベーターをご利用ください。」的例句意思是？",
+                "en": "What does こちらのエレベーターをご利用ください。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "请使用这边的电梯。",
+                    "en": "Please use this elevator."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "老师已经回去了。",
+                    "en": "The teacher has already gone home."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "社长每天早上读报纸。",
+                    "en": "The company president reads the newspaper every morning."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "老师现在在研究室。",
+                    "en": "The teacher is in the lab now."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「こちらのエレベーターをご利用ください。」= 请使用这边的电梯。。",
+                "en": "こちらのエレベーターをご利用ください。 means Please use this elevator.."
+              }
+            }
+          ]
         },
         {
           "id": "l49-example-04",
           "jp": "先生は今研究室にいらっしゃいます。",
           "zh": "老师现在在研究室。",
-          "en": "The teacher is in the lab now."
+          "en": "The teacher is in the lab now.",
+          "practice": [
+            {
+              "id": "l49-example-04_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「先生は今研究室にいらっしゃいます。」的例句意思是？",
+                "en": "What does 先生は今研究室にいらっしゃいます。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "老师现在在研究室。",
+                    "en": "The teacher is in the lab now."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "老师已经回去了。",
+                    "en": "The teacher has already gone home."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "社长每天早上读报纸。",
+                    "en": "The company president reads the newspaper every morning."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "请使用这边的电梯。",
+                    "en": "Please use this elevator."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「先生は今研究室にいらっしゃいます。」= 老师现在在研究室。。",
+                "en": "先生は今研究室にいらっしゃいます。 means The teacher is in the lab now.."
+              }
+            }
+          ]
         },
         {
           "id": "l49-example-05",
           "jp": "何を召し上がりますか。",
           "zh": "您吃点什么？",
-          "en": "What would you like to eat?"
+          "en": "What would you like to eat?",
+          "practice": [
+            {
+              "id": "l49-example-05_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「何を召し上がりますか。」的例句意思是？",
+                "en": "What does 何を召し上がりますか。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "您吃点什么？",
+                    "en": "What would you like to eat?"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "老师已经回去了。",
+                    "en": "The teacher has already gone home."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "社长每天早上读报纸。",
+                    "en": "The company president reads the newspaper every morning."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "请使用这边的电梯。",
+                    "en": "Please use this elevator."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「何を召し上がりますか。」= 您吃点什么？。",
+                "en": "何を召し上がりますか。 means What would you like to eat?."
+              }
+            }
+          ]
         },
         {
           "id": "l49-example-06",
           "jp": "この写真をご覧になりましたか。",
           "zh": "您看过这张照片了吗？",
-          "en": "Have you seen this photo?"
+          "en": "Have you seen this photo?",
+          "practice": [
+            {
+              "id": "l49-example-06_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「この写真をご覧になりましたか。」的例句意思是？",
+                "en": "What does この写真をご覧になりましたか。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "您看过这张照片了吗？",
+                    "en": "Have you seen this photo?"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "老师已经回去了。",
+                    "en": "The teacher has already gone home."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "社长每天早上读报纸。",
+                    "en": "The company president reads the newspaper every morning."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "请使用这边的电梯。",
+                    "en": "Please use this elevator."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「この写真をご覧になりましたか。」= 您看过这张照片了吗？。",
+                "en": "この写真をご覧になりましたか。 means Have you seen this photo?."
+              }
+            }
+          ]
         },
         {
           "id": "l49-example-07",
           "jp": "先生は明日の予定についておっしゃいました。",
           "zh": "老师说了明天的安排。",
-          "en": "The teacher spoke about tomorrow's schedule."
+          "en": "The teacher spoke about tomorrow's schedule.",
+          "practice": [
+            {
+              "id": "l49-example-07_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「先生は明日の予定についておっしゃいました。」的例句意思是？",
+                "en": "What does 先生は明日の予定についておっしゃいました。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "老师说了明天的安排。",
+                    "en": "The teacher spoke about tomorrow's schedule."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "老师已经回去了。",
+                    "en": "The teacher has already gone home."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "社长每天早上读报纸。",
+                    "en": "The company president reads the newspaper every morning."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "请使用这边的电梯。",
+                    "en": "Please use this elevator."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「先生は明日の予定についておっしゃいました。」= 老师说了明天的安排。。",
+                "en": "先生は明日の予定についておっしゃいました。 means The teacher spoke about tomorrow's schedule.."
+              }
+            }
+          ]
         },
         {
           "id": "l49-example-08",
           "jp": "週末は何をなさいますか。",
           "zh": "您周末做什么？",
-          "en": "What will you do on the weekend?"
+          "en": "What will you do on the weekend?",
+          "practice": [
+            {
+              "id": "l49-example-08_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「週末は何をなさいますか。」的例句意思是？",
+                "en": "What does 週末は何をなさいますか。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "您周末做什么？",
+                    "en": "What will you do on the weekend?"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "老师已经回去了。",
+                    "en": "The teacher has already gone home."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "社长每天早上读报纸。",
+                    "en": "The company president reads the newspaper every morning."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "请使用这边的电梯。",
+                    "en": "Please use this elevator."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「週末は何をなさいますか。」= 您周末做什么？。",
+                "en": "週末は何をなさいますか。 means What will you do on the weekend?."
+              }
+            }
+          ]
         }
       ]
     },

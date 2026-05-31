@@ -31,7 +31,48 @@
           "kana": "なきます",
           "zh": "哭",
           "en": "cry",
-          "example": "赤ちゃんが泣いています。"
+          "example": "赤ちゃんが泣いています。",
+          "practice": [
+            {
+              "id": "l44-vocab-01_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「泣きます」的词汇意思是？",
+                "en": "What does 泣きます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "哭",
+                    "en": "cry"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "笑",
+                    "en": "laugh, smile"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "睡觉",
+                    "en": "sleep"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "干",
+                    "en": "dry"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「泣きます」= 哭。",
+                "en": "泣きます means cry."
+              }
+            }
+          ]
         },
         {
           "id": "l44-vocab-02",
@@ -39,7 +80,48 @@
           "kana": "わらいます",
           "zh": "笑",
           "en": "laugh, smile",
-          "example": "みんなが笑いました。"
+          "example": "みんなが笑いました。",
+          "practice": [
+            {
+              "id": "l44-vocab-02_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「笑います」的词汇意思是？",
+                "en": "What does 笑います mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "笑",
+                    "en": "laugh, smile"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "哭",
+                    "en": "cry"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "睡觉",
+                    "en": "sleep"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "干",
+                    "en": "dry"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「笑います」= 笑。",
+                "en": "笑います means laugh, smile."
+              }
+            }
+          ]
         },
         {
           "id": "l44-vocab-03",
@@ -47,7 +129,48 @@
           "kana": "ねむります",
           "zh": "睡觉",
           "en": "sleep",
-          "example": "よく眠りました。"
+          "example": "よく眠りました。",
+          "practice": [
+            {
+              "id": "l44-vocab-03_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「眠ります」的词汇意思是？",
+                "en": "What does 眠ります mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "睡觉",
+                    "en": "sleep"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "哭",
+                    "en": "cry"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "笑",
+                    "en": "laugh, smile"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "干",
+                    "en": "dry"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「眠ります」= 睡觉。",
+                "en": "眠ります means sleep."
+              }
+            }
+          ]
         },
         {
           "id": "l44-vocab-04",
@@ -55,7 +178,48 @@
           "kana": "かわきます",
           "zh": "干",
           "en": "dry",
-          "example": "服が乾きました。"
+          "example": "服が乾きました。",
+          "practice": [
+            {
+              "id": "l44-vocab-04_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「乾きます」的词汇意思是？",
+                "en": "What does 乾きます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "干",
+                    "en": "dry"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "哭",
+                    "en": "cry"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "笑",
+                    "en": "laugh, smile"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "睡觉",
+                    "en": "sleep"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「乾きます」= 干。",
+                "en": "乾きます means dry."
+              }
+            }
+          ]
         },
         {
           "id": "l44-vocab-05",
@@ -63,7 +227,48 @@
           "kana": "ぬれます",
           "zh": "湿",
           "en": "get wet",
-          "example": "雨で服がぬれました。"
+          "example": "雨で服がぬれました。",
+          "practice": [
+            {
+              "id": "l44-vocab-05_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「ぬれます」的词汇意思是？",
+                "en": "What does ぬれます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "湿",
+                    "en": "get wet"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "哭",
+                    "en": "cry"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "笑",
+                    "en": "laugh, smile"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "睡觉",
+                    "en": "sleep"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「ぬれます」= 湿。",
+                "en": "ぬれます means get wet."
+              }
+            }
+          ]
         },
         {
           "id": "l44-vocab-06",
@@ -71,7 +276,48 @@
           "kana": "すべります",
           "zh": "滑",
           "en": "slip",
-          "example": "この道は滑りやすいです。"
+          "example": "この道は滑りやすいです。",
+          "practice": [
+            {
+              "id": "l44-vocab-06_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「滑ります」的词汇意思是？",
+                "en": "What does 滑ります mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "滑",
+                    "en": "slip"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "哭",
+                    "en": "cry"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "笑",
+                    "en": "laugh, smile"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "睡觉",
+                    "en": "sleep"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「滑ります」= 滑。",
+                "en": "滑ります means slip."
+              }
+            }
+          ]
         },
         {
           "id": "l44-vocab-07",
@@ -79,7 +325,48 @@
           "kana": "おこします",
           "zh": "叫醒、引起",
           "en": "wake someone, cause",
-          "example": "弟を起こします。"
+          "example": "弟を起こします。",
+          "practice": [
+            {
+              "id": "l44-vocab-07_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「起こします」的词汇意思是？",
+                "en": "What does 起こします mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "叫醒、引起",
+                    "en": "wake someone, cause"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "哭",
+                    "en": "cry"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "笑",
+                    "en": "laugh, smile"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "睡觉",
+                    "en": "sleep"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「起こします」= 叫醒、引起。",
+                "en": "起こします means wake someone, cause."
+              }
+            }
+          ]
         },
         {
           "id": "l44-vocab-08",
@@ -87,7 +374,48 @@
           "kana": "あんぜん",
           "zh": "安全",
           "en": "safe",
-          "example": "道を安全にします。"
+          "example": "道を安全にします。",
+          "practice": [
+            {
+              "id": "l44-vocab-08_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「安全」的词汇意思是？",
+                "en": "What does 安全 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "安全",
+                    "en": "safe"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "哭",
+                    "en": "cry"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "笑",
+                    "en": "laugh, smile"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "睡觉",
+                    "en": "sleep"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「安全」= 安全。",
+                "en": "安全 means safe."
+              }
+            }
+          ]
         },
         {
           "id": "l44-vocab-09",
@@ -95,7 +423,48 @@
           "kana": "ふくざつ",
           "zh": "复杂",
           "en": "complicated",
-          "example": "説明が複雑すぎます。"
+          "example": "説明が複雑すぎます。",
+          "practice": [
+            {
+              "id": "l44-vocab-09_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「複雑」的词汇意思是？",
+                "en": "What does 複雑 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "复杂",
+                    "en": "complicated"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "哭",
+                    "en": "cry"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "笑",
+                    "en": "laugh, smile"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "睡觉",
+                    "en": "sleep"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「複雑」= 复杂。",
+                "en": "複雑 means complicated."
+              }
+            }
+          ]
         },
         {
           "id": "l44-vocab-10",
@@ -103,7 +472,48 @@
           "kana": "かんたん",
           "zh": "简单",
           "en": "easy, simple",
-          "example": "使い方を簡単にします。"
+          "example": "使い方を簡単にします。",
+          "practice": [
+            {
+              "id": "l44-vocab-10_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「簡単」的词汇意思是？",
+                "en": "What does 簡単 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "简单",
+                    "en": "easy, simple"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "哭",
+                    "en": "cry"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "笑",
+                    "en": "laugh, smile"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "睡觉",
+                    "en": "sleep"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「簡単」= 简单。",
+                "en": "簡単 means easy, simple."
+              }
+            }
+          ]
         }
       ]
     },
@@ -481,49 +891,377 @@
           "id": "l44-example-01",
           "jp": "昨日ゲームをしすぎて、目が疲れました。",
           "zh": "昨天游戏玩太多，眼睛累了。",
-          "en": "I played games too much yesterday, so my eyes got tired."
+          "en": "I played games too much yesterday, so my eyes got tired.",
+          "practice": [
+            {
+              "id": "l44-example-01_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「昨日ゲームをしすぎて、目が疲れました。」的例句意思是？",
+                "en": "What does 昨日ゲームをしすぎて、目が疲れました。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "昨天游戏玩太多，眼睛累了。",
+                    "en": "I played games too much yesterday, so my eyes got tired."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "这杯咖啡太苦了。",
+                    "en": "This coffee is too bitter."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这个说明太复杂，我不懂。",
+                    "en": "This explanation is too complicated, so I do not understand."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这本词典例句多，很好用。",
+                    "en": "This dictionary has many examples and is easy to use."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「昨日ゲームをしすぎて、目が疲れました。」= 昨天游戏玩太多，眼睛累了。。",
+                "en": "昨日ゲームをしすぎて、目が疲れました。 means I played games too much yesterday, so my eyes got tired.."
+              }
+            }
+          ]
         },
         {
           "id": "l44-example-02",
           "jp": "このコーヒーは苦すぎます。",
           "zh": "这杯咖啡太苦了。",
-          "en": "This coffee is too bitter."
+          "en": "This coffee is too bitter.",
+          "practice": [
+            {
+              "id": "l44-example-02_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「このコーヒーは苦すぎます。」的例句意思是？",
+                "en": "What does このコーヒーは苦すぎます。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "这杯咖啡太苦了。",
+                    "en": "This coffee is too bitter."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "昨天游戏玩太多，眼睛累了。",
+                    "en": "I played games too much yesterday, so my eyes got tired."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这个说明太复杂，我不懂。",
+                    "en": "This explanation is too complicated, so I do not understand."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这本词典例句多，很好用。",
+                    "en": "This dictionary has many examples and is easy to use."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「このコーヒーは苦すぎます。」= 这杯咖啡太苦了。。",
+                "en": "このコーヒーは苦すぎます。 means This coffee is too bitter.."
+              }
+            }
+          ]
         },
         {
           "id": "l44-example-03",
           "jp": "この説明は複雑すぎて、わかりません。",
           "zh": "这个说明太复杂，我不懂。",
-          "en": "This explanation is too complicated, so I do not understand."
+          "en": "This explanation is too complicated, so I do not understand.",
+          "practice": [
+            {
+              "id": "l44-example-03_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「この説明は複雑すぎて、わかりません。」的例句意思是？",
+                "en": "What does この説明は複雑すぎて、わかりません。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "这个说明太复杂，我不懂。",
+                    "en": "This explanation is too complicated, so I do not understand."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "昨天游戏玩太多，眼睛累了。",
+                    "en": "I played games too much yesterday, so my eyes got tired."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这杯咖啡太苦了。",
+                    "en": "This coffee is too bitter."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这本词典例句多，很好用。",
+                    "en": "This dictionary has many examples and is easy to use."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「この説明は複雑すぎて、わかりません。」= 这个说明太复杂，我不懂。。",
+                "en": "この説明は複雑すぎて、わかりません。 means This explanation is too complicated, so I do not understand.."
+              }
+            }
+          ]
         },
         {
           "id": "l44-example-04",
           "jp": "この辞書は例文が多くて、使いやすいです。",
           "zh": "这本词典例句多，很好用。",
-          "en": "This dictionary has many examples and is easy to use."
+          "en": "This dictionary has many examples and is easy to use.",
+          "practice": [
+            {
+              "id": "l44-example-04_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「この辞書は例文が多くて、使いやすいです。」的例句意思是？",
+                "en": "What does この辞書は例文が多くて、使いやすいです。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "这本词典例句多，很好用。",
+                    "en": "This dictionary has many examples and is easy to use."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "昨天游戏玩太多，眼睛累了。",
+                    "en": "I played games too much yesterday, so my eyes got tired."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这杯咖啡太苦了。",
+                    "en": "This coffee is too bitter."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这个说明太复杂，我不懂。",
+                    "en": "This explanation is too complicated, so I do not understand."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「この辞書は例文が多くて、使いやすいです。」= 这本词典例句多，很好用。。",
+                "en": "この辞書は例文が多くて、使いやすいです。 means This dictionary has many examples and is easy to use.."
+              }
+            }
+          ]
         },
         {
           "id": "l44-example-05",
           "jp": "この道は暗くて、歩きにくいです。",
           "zh": "这条路很暗，不好走。",
-          "en": "This road is dark and hard to walk on."
+          "en": "This road is dark and hard to walk on.",
+          "practice": [
+            {
+              "id": "l44-example-05_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「この道は暗くて、歩きにくいです。」的例句意思是？",
+                "en": "What does この道は暗くて、歩きにくいです。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "这条路很暗，不好走。",
+                    "en": "This road is dark and hard to walk on."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "昨天游戏玩太多，眼睛累了。",
+                    "en": "I played games too much yesterday, so my eyes got tired."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这杯咖啡太苦了。",
+                    "en": "This coffee is too bitter."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这个说明太复杂，我不懂。",
+                    "en": "This explanation is too complicated, so I do not understand."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「この道は暗くて、歩きにくいです。」= 这条路很暗，不好走。。",
+                "en": "この道は暗くて、歩きにくいです。 means This road is dark and hard to walk on.."
+              }
+            }
+          ]
         },
         {
           "id": "l44-example-06",
           "jp": "すみません、音を小さくしてください。",
           "zh": "不好意思，请把声音调小。",
-          "en": "Excuse me, please turn the sound down."
+          "en": "Excuse me, please turn the sound down.",
+          "practice": [
+            {
+              "id": "l44-example-06_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「すみません、音を小さくしてください。」的例句意思是？",
+                "en": "What does すみません、音を小さくしてください。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "不好意思，请把声音调小。",
+                    "en": "Excuse me, please turn the sound down."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "昨天游戏玩太多，眼睛累了。",
+                    "en": "I played games too much yesterday, so my eyes got tired."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这杯咖啡太苦了。",
+                    "en": "This coffee is too bitter."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这个说明太复杂，我不懂。",
+                    "en": "This explanation is too complicated, so I do not understand."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「すみません、音を小さくしてください。」= 不好意思，请把声音调小。。",
+                "en": "すみません、音を小さくしてください。 means Excuse me, please turn the sound down.."
+              }
+            }
+          ]
         },
         {
           "id": "l44-example-07",
           "jp": "この資料をもっと見やすくしましょう。",
           "zh": "我们把这份资料做得更容易看吧。",
-          "en": "Let's make this document easier to read."
+          "en": "Let's make this document easier to read.",
+          "practice": [
+            {
+              "id": "l44-example-07_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「この資料をもっと見やすくしましょう。」的例句意思是？",
+                "en": "What does この資料をもっと見やすくしましょう。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "我们把这份资料做得更容易看吧。",
+                    "en": "Let's make this document easier to read."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "昨天游戏玩太多，眼睛累了。",
+                    "en": "I played games too much yesterday, so my eyes got tired."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这杯咖啡太苦了。",
+                    "en": "This coffee is too bitter."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这个说明太复杂，我不懂。",
+                    "en": "This explanation is too complicated, so I do not understand."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「この資料をもっと見やすくしましょう。」= 我们把这份资料做得更容易看吧。。",
+                "en": "この資料をもっと見やすくしましょう。 means Let's make this document easier to read.."
+              }
+            }
+          ]
         },
         {
           "id": "l44-example-08",
           "jp": "新しいアプリは前より使いやすくなりました。",
           "zh": "新的应用比以前更容易用了。",
-          "en": "The new app became easier to use than before."
+          "en": "The new app became easier to use than before.",
+          "practice": [
+            {
+              "id": "l44-example-08_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「新しいアプリは前より使いやすくなりました。」的例句意思是？",
+                "en": "What does 新しいアプリは前より使いやすくなりました。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "新的应用比以前更容易用了。",
+                    "en": "The new app became easier to use than before."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "昨天游戏玩太多，眼睛累了。",
+                    "en": "I played games too much yesterday, so my eyes got tired."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这杯咖啡太苦了。",
+                    "en": "This coffee is too bitter."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这个说明太复杂，我不懂。",
+                    "en": "This explanation is too complicated, so I do not understand."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「新しいアプリは前より使いやすくなりました。」= 新的应用比以前更容易用了。。",
+                "en": "新しいアプリは前より使いやすくなりました。 means The new app became easier to use than before.."
+              }
+            }
+          ]
         }
       ]
     },

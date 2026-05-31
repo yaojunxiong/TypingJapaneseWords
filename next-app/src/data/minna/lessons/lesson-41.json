@@ -31,7 +31,48 @@
           "kana": "いただきます",
           "zh": "领受、得到",
           "en": "humbly receive",
-          "example": "先生に本をいただきました。"
+          "example": "先生に本をいただきました。",
+          "practice": [
+            {
+              "id": "l41-vocab-01_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「いただきます」的词汇意思是？",
+                "en": "What does いただきます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "领受、得到",
+                    "en": "humbly receive"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "给我、给我们",
+                    "en": "give to me/us honorifically"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "给、做给下位对象",
+                    "en": "give to younger/lower beings"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "表扬",
+                    "en": "praise"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「いただきます」= 领受、得到。",
+                "en": "いただきます means humbly receive."
+              }
+            }
+          ]
         },
         {
           "id": "l41-vocab-02",
@@ -39,7 +80,48 @@
           "kana": "くださいます",
           "zh": "给我、给我们",
           "en": "give to me/us honorifically",
-          "example": "先生が説明してくださいました。"
+          "example": "先生が説明してくださいました。",
+          "practice": [
+            {
+              "id": "l41-vocab-02_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「くださいます」的词汇意思是？",
+                "en": "What does くださいます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "给我、给我们",
+                    "en": "give to me/us honorifically"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "领受、得到",
+                    "en": "humbly receive"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "给、做给下位对象",
+                    "en": "give to younger/lower beings"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "表扬",
+                    "en": "praise"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「くださいます」= 给我、给我们。",
+                "en": "くださいます means give to me/us honorifically."
+              }
+            }
+          ]
         },
         {
           "id": "l41-vocab-03",
@@ -47,7 +129,48 @@
           "kana": "やります",
           "zh": "给、做给下位对象",
           "en": "give to younger/lower beings",
-          "example": "花に水をやります。"
+          "example": "花に水をやります。",
+          "practice": [
+            {
+              "id": "l41-vocab-03_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「やります」的词汇意思是？",
+                "en": "What does やります mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "给、做给下位对象",
+                    "en": "give to younger/lower beings"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "领受、得到",
+                    "en": "humbly receive"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "给我、给我们",
+                    "en": "give to me/us honorifically"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "表扬",
+                    "en": "praise"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「やります」= 给、做给下位对象。",
+                "en": "やります means give to younger/lower beings."
+              }
+            }
+          ]
         },
         {
           "id": "l41-vocab-04",
@@ -55,7 +178,48 @@
           "kana": "ほめます",
           "zh": "表扬",
           "en": "praise",
-          "example": "先生が学生をほめました。"
+          "example": "先生が学生をほめました。",
+          "practice": [
+            {
+              "id": "l41-vocab-04_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「ほめます」的词汇意思是？",
+                "en": "What does ほめます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "表扬",
+                    "en": "praise"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "领受、得到",
+                    "en": "humbly receive"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "给我、给我们",
+                    "en": "give to me/us honorifically"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "给、做给下位对象",
+                    "en": "give to younger/lower beings"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「ほめます」= 表扬。",
+                "en": "ほめます means praise."
+              }
+            }
+          ]
         },
         {
           "id": "l41-vocab-05",
@@ -63,7 +227,48 @@
           "kana": "しかります",
           "zh": "批评、责备",
           "en": "scold",
-          "example": "母にしかられました。"
+          "example": "母にしかられました。",
+          "practice": [
+            {
+              "id": "l41-vocab-05_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「しかります」的词汇意思是？",
+                "en": "What does しかります mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "批评、责备",
+                    "en": "scold"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "领受、得到",
+                    "en": "humbly receive"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "给我、给我们",
+                    "en": "give to me/us honorifically"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "给、做给下位对象",
+                    "en": "give to younger/lower beings"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「しかります」= 批评、责备。",
+                "en": "しかります means scold."
+              }
+            }
+          ]
         },
         {
           "id": "l41-vocab-06",
@@ -71,7 +276,48 @@
           "kana": "しょうたいします",
           "zh": "邀请",
           "en": "invite",
-          "example": "友達をパーティーに招待します。"
+          "example": "友達をパーティーに招待します。",
+          "practice": [
+            {
+              "id": "l41-vocab-06_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「招待します」的词汇意思是？",
+                "en": "What does 招待します mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "邀请",
+                    "en": "invite"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "领受、得到",
+                    "en": "humbly receive"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "给我、给我们",
+                    "en": "give to me/us honorifically"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "给、做给下位对象",
+                    "en": "give to younger/lower beings"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「招待します」= 邀请。",
+                "en": "招待します means invite."
+              }
+            }
+          ]
         },
         {
           "id": "l41-vocab-07",
@@ -79,7 +325,48 @@
           "kana": "ちゅういします",
           "zh": "提醒、注意",
           "en": "warn, advise",
-          "example": "先生が学生に注意しました。"
+          "example": "先生が学生に注意しました。",
+          "practice": [
+            {
+              "id": "l41-vocab-07_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「注意します」的词汇意思是？",
+                "en": "What does 注意します mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "提醒、注意",
+                    "en": "warn, advise"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "领受、得到",
+                    "en": "humbly receive"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "给我、给我们",
+                    "en": "give to me/us honorifically"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "给、做给下位对象",
+                    "en": "give to younger/lower beings"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「注意します」= 提醒、注意。",
+                "en": "注意します means warn, advise."
+              }
+            }
+          ]
         },
         {
           "id": "l41-vocab-08",
@@ -87,7 +374,48 @@
           "kana": "しんせつ",
           "zh": "亲切",
           "en": "kind",
-          "example": "親切に教えてくださいました。"
+          "example": "親切に教えてくださいました。",
+          "practice": [
+            {
+              "id": "l41-vocab-08_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「親切」的词汇意思是？",
+                "en": "What does 親切 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "亲切",
+                    "en": "kind"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "领受、得到",
+                    "en": "humbly receive"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "给我、给我们",
+                    "en": "give to me/us honorifically"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "给、做给下位对象",
+                    "en": "give to younger/lower beings"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「親切」= 亲切。",
+                "en": "親切 means kind."
+              }
+            }
+          ]
         },
         {
           "id": "l41-vocab-09",
@@ -95,7 +423,48 @@
           "kana": "おいわい",
           "zh": "祝贺、贺礼",
           "en": "celebration gift",
-          "example": "結婚のお祝いをいただきました。"
+          "example": "結婚のお祝いをいただきました。",
+          "practice": [
+            {
+              "id": "l41-vocab-09_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「お祝い」的词汇意思是？",
+                "en": "What does お祝い mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "祝贺、贺礼",
+                    "en": "celebration gift"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "领受、得到",
+                    "en": "humbly receive"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "给我、给我们",
+                    "en": "give to me/us honorifically"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "给、做给下位对象",
+                    "en": "give to younger/lower beings"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「お祝い」= 祝贺、贺礼。",
+                "en": "お祝い means celebration gift."
+              }
+            }
+          ]
         },
         {
           "id": "l41-vocab-10",
@@ -103,7 +472,48 @@
           "kana": "おみやげ",
           "zh": "伴手礼",
           "en": "souvenir",
-          "example": "部長にお土産をいただきました。"
+          "example": "部長にお土産をいただきました。",
+          "practice": [
+            {
+              "id": "l41-vocab-10_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「お土産」的词汇意思是？",
+                "en": "What does お土産 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "伴手礼",
+                    "en": "souvenir"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "领受、得到",
+                    "en": "humbly receive"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "给我、给我们",
+                    "en": "give to me/us honorifically"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "给、做给下位对象",
+                    "en": "give to younger/lower beings"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「お土産」= 伴手礼。",
+                "en": "お土産 means souvenir."
+              }
+            }
+          ]
         }
       ]
     },
@@ -481,49 +891,377 @@
           "id": "l41-example-01",
           "jp": "先生に推薦状を書いていただきました。",
           "zh": "我请老师给我写了推荐信。",
-          "en": "I had my teacher write a recommendation letter for me."
+          "en": "I had my teacher write a recommendation letter for me.",
+          "practice": [
+            {
+              "id": "l41-example-01_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「先生に推薦状を書いていただきました。」的例句意思是？",
+                "en": "What does 先生に推薦状を書いていただきました。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "我请老师给我写了推荐信。",
+                    "en": "I had my teacher write a recommendation letter for me."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "部长来机场接我了。",
+                    "en": "The department manager came to the airport to pick me up."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "祖母给我看了旧照片。",
+                    "en": "My grandmother showed me old photos."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "我给狗喂了药。",
+                    "en": "I gave the dog medicine."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「先生に推薦状を書いていただきました。」= 我请老师给我写了推荐信。。",
+                "en": "先生に推薦状を書いていただきました。 means I had my teacher write a recommendation letter for me.."
+              }
+            }
+          ]
         },
         {
           "id": "l41-example-02",
           "jp": "部長が空港まで迎えに来てくださいました。",
           "zh": "部长来机场接我了。",
-          "en": "The department manager came to the airport to pick me up."
+          "en": "The department manager came to the airport to pick me up.",
+          "practice": [
+            {
+              "id": "l41-example-02_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「部長が空港まで迎えに来てくださいました。」的例句意思是？",
+                "en": "What does 部長が空港まで迎えに来てくださいました。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "部长来机场接我了。",
+                    "en": "The department manager came to the airport to pick me up."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我请老师给我写了推荐信。",
+                    "en": "I had my teacher write a recommendation letter for me."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "祖母给我看了旧照片。",
+                    "en": "My grandmother showed me old photos."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "我给狗喂了药。",
+                    "en": "I gave the dog medicine."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「部長が空港まで迎えに来てくださいました。」= 部长来机场接我了。。",
+                "en": "部長が空港まで迎えに来てくださいました。 means The department manager came to the airport to pick me up.."
+              }
+            }
+          ]
         },
         {
           "id": "l41-example-03",
           "jp": "祖母に古い写真を見せていただきました。",
           "zh": "祖母给我看了旧照片。",
-          "en": "My grandmother showed me old photos."
+          "en": "My grandmother showed me old photos.",
+          "practice": [
+            {
+              "id": "l41-example-03_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「祖母に古い写真を見せていただきました。」的例句意思是？",
+                "en": "What does 祖母に古い写真を見せていただきました。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "祖母给我看了旧照片。",
+                    "en": "My grandmother showed me old photos."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我请老师给我写了推荐信。",
+                    "en": "I had my teacher write a recommendation letter for me."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "部长来机场接我了。",
+                    "en": "The department manager came to the airport to pick me up."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "我给狗喂了药。",
+                    "en": "I gave the dog medicine."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「祖母に古い写真を見せていただきました。」= 祖母给我看了旧照片。。",
+                "en": "祖母に古い写真を見せていただきました。 means My grandmother showed me old photos.."
+              }
+            }
+          ]
         },
         {
           "id": "l41-example-04",
           "jp": "犬に薬を飲ませてやりました。",
           "zh": "我给狗喂了药。",
-          "en": "I gave the dog medicine."
+          "en": "I gave the dog medicine.",
+          "practice": [
+            {
+              "id": "l41-example-04_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「犬に薬を飲ませてやりました。」的例句意思是？",
+                "en": "What does 犬に薬を飲ませてやりました。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "我给狗喂了药。",
+                    "en": "I gave the dog medicine."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我请老师给我写了推荐信。",
+                    "en": "I had my teacher write a recommendation letter for me."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "部长来机场接我了。",
+                    "en": "The department manager came to the airport to pick me up."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "祖母给我看了旧照片。",
+                    "en": "My grandmother showed me old photos."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「犬に薬を飲ませてやりました。」= 我给狗喂了药。。",
+                "en": "犬に薬を飲ませてやりました。 means I gave the dog medicine.."
+              }
+            }
+          ]
         },
         {
           "id": "l41-example-05",
           "jp": "先生が私の間違いを注意してくださいました。",
           "zh": "老师提醒了我的错误。",
-          "en": "The teacher pointed out my mistake for me."
+          "en": "The teacher pointed out my mistake for me.",
+          "practice": [
+            {
+              "id": "l41-example-05_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「先生が私の間違いを注意してくださいました。」的例句意思是？",
+                "en": "What does 先生が私の間違いを注意してくださいました。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "老师提醒了我的错误。",
+                    "en": "The teacher pointed out my mistake for me."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我请老师给我写了推荐信。",
+                    "en": "I had my teacher write a recommendation letter for me."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "部长来机场接我了。",
+                    "en": "The department manager came to the airport to pick me up."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "祖母给我看了旧照片。",
+                    "en": "My grandmother showed me old photos."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「先生が私の間違いを注意してくださいました。」= 老师提醒了我的错误。。",
+                "en": "先生が私の間違いを注意してくださいました。 means The teacher pointed out my mistake for me.."
+              }
+            }
+          ]
         },
         {
           "id": "l41-example-06",
           "jp": "社長に結婚のお祝いをいただきました。",
           "zh": "我从社长那里收到了结婚贺礼。",
-          "en": "I received a wedding gift from the company president."
+          "en": "I received a wedding gift from the company president.",
+          "practice": [
+            {
+              "id": "l41-example-06_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「社長に結婚のお祝いをいただきました。」的例句意思是？",
+                "en": "What does 社長に結婚のお祝いをいただきました。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "我从社长那里收到了结婚贺礼。",
+                    "en": "I received a wedding gift from the company president."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我请老师给我写了推荐信。",
+                    "en": "I had my teacher write a recommendation letter for me."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "部长来机场接我了。",
+                    "en": "The department manager came to the airport to pick me up."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "祖母给我看了旧照片。",
+                    "en": "My grandmother showed me old photos."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「社長に結婚のお祝いをいただきました。」= 我从社长那里收到了结婚贺礼。。",
+                "en": "社長に結婚のお祝いをいただきました。 means I received a wedding gift from the company president.."
+              }
+            }
+          ]
         },
         {
           "id": "l41-example-07",
           "jp": "この資料をコピーしてくださいませんか。",
           "zh": "可以请您复印这份资料吗？",
-          "en": "Could you copy this document for me?"
+          "en": "Could you copy this document for me?",
+          "practice": [
+            {
+              "id": "l41-example-07_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「この資料をコピーしてくださいませんか。」的例句意思是？",
+                "en": "What does この資料をコピーしてくださいませんか。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "可以请您复印这份资料吗？",
+                    "en": "Could you copy this document for me?"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我请老师给我写了推荐信。",
+                    "en": "I had my teacher write a recommendation letter for me."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "部长来机场接我了。",
+                    "en": "The department manager came to the airport to pick me up."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "祖母给我看了旧照片。",
+                    "en": "My grandmother showed me old photos."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「この資料をコピーしてくださいませんか。」= 可以请您复印这份资料吗？。",
+                "en": "この資料をコピーしてくださいませんか。 means Could you copy this document for me?."
+              }
+            }
+          ]
         },
         {
           "id": "l41-example-08",
           "jp": "弟に自転車の乗り方を教えてやりました。",
           "zh": "我教弟弟骑自行车。",
-          "en": "I taught my younger brother how to ride a bicycle."
+          "en": "I taught my younger brother how to ride a bicycle.",
+          "practice": [
+            {
+              "id": "l41-example-08_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「弟に自転車の乗り方を教えてやりました。」的例句意思是？",
+                "en": "What does 弟に自転車の乗り方を教えてやりました。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "我教弟弟骑自行车。",
+                    "en": "I taught my younger brother how to ride a bicycle."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我请老师给我写了推荐信。",
+                    "en": "I had my teacher write a recommendation letter for me."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "部长来机场接我了。",
+                    "en": "The department manager came to the airport to pick me up."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "祖母给我看了旧照片。",
+                    "en": "My grandmother showed me old photos."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「弟に自転車の乗り方を教えてやりました。」= 我教弟弟骑自行车。。",
+                "en": "弟に自転車の乗り方を教えてやりました。 means I taught my younger brother how to ride a bicycle.."
+              }
+            }
+          ]
         }
       ]
     },

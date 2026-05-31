@@ -31,7 +31,48 @@
           "kana": "ふえます",
           "zh": "增加",
           "en": "increase",
-          "example": "人口が増えています。"
+          "example": "人口が増えています。",
+          "practice": [
+            {
+              "id": "l43-vocab-01_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「増えます」的词汇意思是？",
+                "en": "What does 増えます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "增加",
+                    "en": "increase"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "减少",
+                    "en": "decrease"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "上升",
+                    "en": "rise"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "下降",
+                    "en": "fall"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「増えます」= 增加。",
+                "en": "増えます means increase."
+              }
+            }
+          ]
         },
         {
           "id": "l43-vocab-02",
@@ -39,7 +80,48 @@
           "kana": "へります",
           "zh": "减少",
           "en": "decrease",
-          "example": "水が減りました。"
+          "example": "水が減りました。",
+          "practice": [
+            {
+              "id": "l43-vocab-02_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「減ります」的词汇意思是？",
+                "en": "What does 減ります mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "减少",
+                    "en": "decrease"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "增加",
+                    "en": "increase"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "上升",
+                    "en": "rise"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "下降",
+                    "en": "fall"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「減ります」= 减少。",
+                "en": "減ります means decrease."
+              }
+            }
+          ]
         },
         {
           "id": "l43-vocab-03",
@@ -47,7 +129,48 @@
           "kana": "あがります",
           "zh": "上升",
           "en": "rise",
-          "example": "値段が上がりました。"
+          "example": "値段が上がりました。",
+          "practice": [
+            {
+              "id": "l43-vocab-03_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「上がります」的词汇意思是？",
+                "en": "What does 上がります mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "上升",
+                    "en": "rise"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "增加",
+                    "en": "increase"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "减少",
+                    "en": "decrease"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "下降",
+                    "en": "fall"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「上がります」= 上升。",
+                "en": "上がります means rise."
+              }
+            }
+          ]
         },
         {
           "id": "l43-vocab-04",
@@ -55,7 +178,48 @@
           "kana": "さがります",
           "zh": "下降",
           "en": "fall",
-          "example": "熱が下がりました。"
+          "example": "熱が下がりました。",
+          "practice": [
+            {
+              "id": "l43-vocab-04_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「下がります」的词汇意思是？",
+                "en": "What does 下がります mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "下降",
+                    "en": "fall"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "增加",
+                    "en": "increase"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "减少",
+                    "en": "decrease"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "上升",
+                    "en": "rise"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「下がります」= 下降。",
+                "en": "下がります means fall."
+              }
+            }
+          ]
         },
         {
           "id": "l43-vocab-05",
@@ -63,7 +227,48 @@
           "kana": "きれます",
           "zh": "断、用完",
           "en": "break, run out",
-          "example": "電池が切れそうです。"
+          "example": "電池が切れそうです。",
+          "practice": [
+            {
+              "id": "l43-vocab-05_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「切れます」的词汇意思是？",
+                "en": "What does 切れます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "断、用完",
+                    "en": "break, run out"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "增加",
+                    "en": "increase"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "减少",
+                    "en": "decrease"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "上升",
+                    "en": "rise"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「切れます」= 断、用完。",
+                "en": "切れます means break, run out."
+              }
+            }
+          ]
         },
         {
           "id": "l43-vocab-06",
@@ -71,7 +276,48 @@
           "kana": "とれます",
           "zh": "脱落、取下",
           "en": "come off",
-          "example": "ボタンが取れそうです。"
+          "example": "ボタンが取れそうです。",
+          "practice": [
+            {
+              "id": "l43-vocab-06_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「取れます」的词汇意思是？",
+                "en": "What does 取れます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "脱落、取下",
+                    "en": "come off"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "增加",
+                    "en": "increase"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "减少",
+                    "en": "decrease"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "上升",
+                    "en": "rise"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「取れます」= 脱落、取下。",
+                "en": "取れます means come off."
+              }
+            }
+          ]
         },
         {
           "id": "l43-vocab-07",
@@ -79,7 +325,48 @@
           "kana": "おちます",
           "zh": "掉落",
           "en": "fall",
-          "example": "本が落ちそうです。"
+          "example": "本が落ちそうです。",
+          "practice": [
+            {
+              "id": "l43-vocab-07_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「落ちます」的词汇意思是？",
+                "en": "What does 落ちます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "掉落",
+                    "en": "fall"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "增加",
+                    "en": "increase"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "减少",
+                    "en": "decrease"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "上升",
+                    "en": "rise"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「落ちます」= 掉落。",
+                "en": "落ちます means fall."
+              }
+            }
+          ]
         },
         {
           "id": "l43-vocab-08",
@@ -87,7 +374,48 @@
           "kana": "なくなります",
           "zh": "没有了、用完",
           "en": "run out, disappear",
-          "example": "時間がなくなりそうです。"
+          "example": "時間がなくなりそうです。",
+          "practice": [
+            {
+              "id": "l43-vocab-08_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「なくなります」的词汇意思是？",
+                "en": "What does なくなります mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "没有了、用完",
+                    "en": "run out, disappear"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "增加",
+                    "en": "increase"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "减少",
+                    "en": "decrease"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "上升",
+                    "en": "rise"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「なくなります」= 没有了、用完。",
+                "en": "なくなります means run out, disappear."
+              }
+            }
+          ]
         },
         {
           "id": "l43-vocab-09",
@@ -95,7 +423,48 @@
           "kana": "じょうぶ",
           "zh": "结实",
           "en": "sturdy",
-          "example": "このかばんは丈夫そうです。"
+          "example": "このかばんは丈夫そうです。",
+          "practice": [
+            {
+              "id": "l43-vocab-09_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「丈夫」的词汇意思是？",
+                "en": "What does 丈夫 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "结实",
+                    "en": "sturdy"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "增加",
+                    "en": "increase"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "减少",
+                    "en": "decrease"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "上升",
+                    "en": "rise"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「丈夫」= 结实。",
+                "en": "丈夫 means sturdy."
+              }
+            }
+          ]
         },
         {
           "id": "l43-vocab-10",
@@ -103,7 +472,48 @@
           "kana": "へん",
           "zh": "奇怪",
           "en": "strange",
-          "example": "この音は変そうです。"
+          "example": "この音は変そうです。",
+          "practice": [
+            {
+              "id": "l43-vocab-10_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「変」的词汇意思是？",
+                "en": "What does 変 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "奇怪",
+                    "en": "strange"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "增加",
+                    "en": "increase"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "减少",
+                    "en": "decrease"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "上升",
+                    "en": "rise"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「変」= 奇怪。",
+                "en": "変 means strange."
+              }
+            }
+          ]
         }
       ]
     },
@@ -481,49 +891,377 @@
           "id": "l43-example-01",
           "jp": "空が暗くなりました。雨が降りそうです。",
           "zh": "天空变暗了，看起来要下雨。",
-          "en": "The sky has become dark. It looks like it will rain."
+          "en": "The sky has become dark. It looks like it will rain.",
+          "practice": [
+            {
+              "id": "l43-example-01_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「空が暗くなりました。雨が降りそうです。」的例句意思是？",
+                "en": "What does 空が暗くなりました。雨が降りそうです。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "天空变暗了，看起来要下雨。",
+                    "en": "The sky has become dark. It looks like it will rain."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "这碗汤看起来很烫，请小心。",
+                    "en": "This soup looks hot, so please be careful."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这个包看起来很结实，但是有点贵。",
+                    "en": "This bag looks sturdy, but it is a little expensive."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "扣子看起来快掉了。",
+                    "en": "The button looks like it is about to come off."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「空が暗くなりました。雨が降りそうです。」= 天空变暗了，看起来要下雨。。",
+                "en": "空が暗くなりました。雨が降りそうです。 means The sky has become dark. It looks like it will rain.."
+              }
+            }
+          ]
         },
         {
           "id": "l43-example-02",
           "jp": "このスープは熱そうですから、気をつけてください。",
           "zh": "这碗汤看起来很烫，请小心。",
-          "en": "This soup looks hot, so please be careful."
+          "en": "This soup looks hot, so please be careful.",
+          "practice": [
+            {
+              "id": "l43-example-02_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「このスープは熱そうですから、気をつけてください。」的例句意思是？",
+                "en": "What does このスープは熱そうですから、気をつけてください。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "这碗汤看起来很烫，请小心。",
+                    "en": "This soup looks hot, so please be careful."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "天空变暗了，看起来要下雨。",
+                    "en": "The sky has become dark. It looks like it will rain."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这个包看起来很结实，但是有点贵。",
+                    "en": "This bag looks sturdy, but it is a little expensive."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "扣子看起来快掉了。",
+                    "en": "The button looks like it is about to come off."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「このスープは熱そうですから、気をつけてください。」= 这碗汤看起来很烫，请小心。。",
+                "en": "このスープは熱そうですから、気をつけてください。 means This soup looks hot, so please be careful.."
+              }
+            }
+          ]
         },
         {
           "id": "l43-example-03",
           "jp": "このかばんは丈夫そうですが、少し高いです。",
           "zh": "这个包看起来很结实，但是有点贵。",
-          "en": "This bag looks sturdy, but it is a little expensive."
+          "en": "This bag looks sturdy, but it is a little expensive.",
+          "practice": [
+            {
+              "id": "l43-example-03_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「このかばんは丈夫そうですが、少し高いです。」的例句意思是？",
+                "en": "What does このかばんは丈夫そうですが、少し高いです。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "这个包看起来很结实，但是有点贵。",
+                    "en": "This bag looks sturdy, but it is a little expensive."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "天空变暗了，看起来要下雨。",
+                    "en": "The sky has become dark. It looks like it will rain."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这碗汤看起来很烫，请小心。",
+                    "en": "This soup looks hot, so please be careful."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "扣子看起来快掉了。",
+                    "en": "The button looks like it is about to come off."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「このかばんは丈夫そうですが、少し高いです。」= 这个包看起来很结实，但是有点贵。。",
+                "en": "このかばんは丈夫そうですが、少し高いです。 means This bag looks sturdy, but it is a little expensive.."
+              }
+            }
+          ]
         },
         {
           "id": "l43-example-04",
           "jp": "ボタンが取れそうです。",
           "zh": "扣子看起来快掉了。",
-          "en": "The button looks like it is about to come off."
+          "en": "The button looks like it is about to come off.",
+          "practice": [
+            {
+              "id": "l43-example-04_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「ボタンが取れそうです。」的例句意思是？",
+                "en": "What does ボタンが取れそうです。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "扣子看起来快掉了。",
+                    "en": "The button looks like it is about to come off."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "天空变暗了，看起来要下雨。",
+                    "en": "The sky has become dark. It looks like it will rain."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这碗汤看起来很烫，请小心。",
+                    "en": "This soup looks hot, so please be careful."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这个包看起来很结实，但是有点贵。",
+                    "en": "This bag looks sturdy, but it is a little expensive."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「ボタンが取れそうです。」= 扣子看起来快掉了。。",
+                "en": "ボタンが取れそうです。 means The button looks like it is about to come off.."
+              }
+            }
+          ]
         },
         {
           "id": "l43-example-05",
           "jp": "この映画はあまり面白くなさそうです。",
           "zh": "这部电影看起来不太有趣。",
-          "en": "This movie does not look very interesting."
+          "en": "This movie does not look very interesting.",
+          "practice": [
+            {
+              "id": "l43-example-05_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「この映画はあまり面白くなさそうです。」的例句意思是？",
+                "en": "What does この映画はあまり面白くなさそうです。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "这部电影看起来不太有趣。",
+                    "en": "This movie does not look very interesting."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "天空变暗了，看起来要下雨。",
+                    "en": "The sky has become dark. It looks like it will rain."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这碗汤看起来很烫，请小心。",
+                    "en": "This soup looks hot, so please be careful."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这个包看起来很结实，但是有点贵。",
+                    "en": "This bag looks sturdy, but it is a little expensive."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「この映画はあまり面白くなさそうです。」= 这部电影看起来不太有趣。。",
+                "en": "この映画はあまり面白くなさそうです。 means This movie does not look very interesting.."
+              }
+            }
+          ]
         },
         {
           "id": "l43-example-06",
           "jp": "この部屋は静かではなさそうです。",
           "zh": "这个房间看起来不安静。",
-          "en": "This room does not look quiet."
+          "en": "This room does not look quiet.",
+          "practice": [
+            {
+              "id": "l43-example-06_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「この部屋は静かではなさそうです。」的例句意思是？",
+                "en": "What does この部屋は静かではなさそうです。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "这个房间看起来不安静。",
+                    "en": "This room does not look quiet."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "天空变暗了，看起来要下雨。",
+                    "en": "The sky has become dark. It looks like it will rain."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这碗汤看起来很烫，请小心。",
+                    "en": "This soup looks hot, so please be careful."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这个包看起来很结实，但是有点贵。",
+                    "en": "This bag looks sturdy, but it is a little expensive."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「この部屋は静かではなさそうです。」= 这个房间看起来不安静。。",
+                "en": "この部屋は静かではなさそうです。 means This room does not look quiet.."
+              }
+            }
+          ]
         },
         {
           "id": "l43-example-07",
           "jp": "ちょっと郵便局へ行ってきます。",
           "zh": "我去一下邮局就回来。",
-          "en": "I will go to the post office and come back."
+          "en": "I will go to the post office and come back.",
+          "practice": [
+            {
+              "id": "l43-example-07_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「ちょっと郵便局へ行ってきます。」的例句意思是？",
+                "en": "What does ちょっと郵便局へ行ってきます。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "我去一下邮局就回来。",
+                    "en": "I will go to the post office and come back."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "天空变暗了，看起来要下雨。",
+                    "en": "The sky has become dark. It looks like it will rain."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这碗汤看起来很烫，请小心。",
+                    "en": "This soup looks hot, so please be careful."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这个包看起来很结实，但是有点贵。",
+                    "en": "This bag looks sturdy, but it is a little expensive."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「ちょっと郵便局へ行ってきます。」= 我去一下邮局就回来。。",
+                "en": "ちょっと郵便局へ行ってきます。 means I will go to the post office and come back.."
+              }
+            }
+          ]
         },
         {
           "id": "l43-example-08",
           "jp": "時間がなくなりそうですから、急ぎましょう。",
           "zh": "时间快不够了，我们快点吧。",
-          "en": "It looks like we are running out of time, so let's hurry."
+          "en": "It looks like we are running out of time, so let's hurry.",
+          "practice": [
+            {
+              "id": "l43-example-08_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「時間がなくなりそうですから、急ぎましょう。」的例句意思是？",
+                "en": "What does 時間がなくなりそうですから、急ぎましょう。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "时间快不够了，我们快点吧。",
+                    "en": "It looks like we are running out of time, so let's hurry."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "天空变暗了，看起来要下雨。",
+                    "en": "The sky has become dark. It looks like it will rain."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这碗汤看起来很烫，请小心。",
+                    "en": "This soup looks hot, so please be careful."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这个包看起来很结实，但是有点贵。",
+                    "en": "This bag looks sturdy, but it is a little expensive."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「時間がなくなりそうですから、急ぎましょう。」= 时间快不够了，我们快点吧。。",
+                "en": "時間がなくなりそうですから、急ぎましょう。 means It looks like we are running out of time, so let's hurry.."
+              }
+            }
+          ]
         }
       ]
     },

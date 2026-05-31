@@ -36,6 +36,47 @@
           "en": "want (thing)",
           "tags": [
             "adj-i"
+          ],
+          "practice": [
+            {
+              "id": "l13_v01_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「欲しい」的词汇意思是？",
+                "en": "What does 欲しい mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "想要",
+                    "en": "want (thing)"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "想借",
+                    "en": "want to borrow"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "想买",
+                    "en": "want to buy"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "想喝",
+                    "en": "want to drink"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「欲しい」= 想要。",
+                "en": "欲しい means want (thing)."
+              }
+            }
           ]
         },
         {
@@ -46,6 +87,47 @@
           "en": "want to borrow",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l13_v02_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「借りたい」的词汇意思是？",
+                "en": "What does 借りたい mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "想借",
+                    "en": "want to borrow"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "想要",
+                    "en": "want (thing)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "想买",
+                    "en": "want to buy"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "想喝",
+                    "en": "want to drink"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「借りたい」= 想借。",
+                "en": "借りたい means want to borrow."
+              }
+            }
           ]
         },
         {
@@ -56,6 +138,47 @@
           "en": "want to buy",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l13_v03_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「買いたい」的词汇意思是？",
+                "en": "What does 買いたい mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "想买",
+                    "en": "want to buy"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "想要",
+                    "en": "want (thing)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "想借",
+                    "en": "want to borrow"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "想喝",
+                    "en": "want to drink"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「買いたい」= 想买。",
+                "en": "買いたい means want to buy."
+              }
+            }
           ]
         },
         {
@@ -66,6 +189,47 @@
           "en": "want to drink",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l13_v04_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「飲みたい」的词汇意思是？",
+                "en": "What does 飲みたい mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "想喝",
+                    "en": "want to drink"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "想要",
+                    "en": "want (thing)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "想借",
+                    "en": "want to borrow"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "想买",
+                    "en": "want to buy"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「飲みたい」= 想喝。",
+                "en": "飲みたい means want to drink."
+              }
+            }
           ]
         },
         {
@@ -76,6 +240,47 @@
           "en": "travel",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l13_v05_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「旅行」的词汇意思是？",
+                "en": "What does 旅行 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "旅行",
+                    "en": "travel"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "想要",
+                    "en": "want (thing)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "想借",
+                    "en": "want to borrow"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "想买",
+                    "en": "want to buy"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「旅行」= 旅行。",
+                "en": "旅行 means travel."
+              }
+            }
           ]
         },
         {
@@ -86,6 +291,47 @@
           "en": "photo",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l13_v06_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「写真」的词汇意思是？",
+                "en": "What does 写真 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "照片",
+                    "en": "photo"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "想要",
+                    "en": "want (thing)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "想借",
+                    "en": "want to borrow"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "想买",
+                    "en": "want to buy"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「写真」= 照片。",
+                "en": "写真 means photo."
+              }
+            }
           ]
         },
         {
@@ -96,6 +342,47 @@
           "en": "camera",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l13_v07_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「カメラ」的词汇意思是？",
+                "en": "What does カメラ mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "相机",
+                    "en": "camera"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "想要",
+                    "en": "want (thing)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "想借",
+                    "en": "want to borrow"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "想买",
+                    "en": "want to buy"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「カメラ」= 相机。",
+                "en": "カメラ means camera."
+              }
+            }
           ]
         },
         {
@@ -106,6 +393,47 @@
           "en": "present",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l13_v08_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「プレゼント」的词汇意思是？",
+                "en": "What does プレゼント mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "礼物",
+                    "en": "present"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "想要",
+                    "en": "want (thing)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "想借",
+                    "en": "want to borrow"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "想买",
+                    "en": "want to buy"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「プレゼント」= 礼物。",
+                "en": "プレゼント means present."
+              }
+            }
           ]
         },
         {
@@ -116,6 +444,47 @@
           "en": "time",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l13_v09_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「時間」的词汇意思是？",
+                "en": "What does 時間 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "时间",
+                    "en": "time"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "想要",
+                    "en": "want (thing)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "想借",
+                    "en": "want to borrow"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "想买",
+                    "en": "want to buy"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「時間」= 时间。",
+                "en": "時間 means time."
+              }
+            }
           ]
         },
         {
@@ -126,6 +495,47 @@
           "en": "money",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l13_v10_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「お金」的词汇意思是？",
+                "en": "What does お金 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "钱",
+                    "en": "money"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "想要",
+                    "en": "want (thing)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "想借",
+                    "en": "want to borrow"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "想买",
+                    "en": "want to buy"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「お金」= 钱。",
+                "en": "お金 means money."
+              }
+            }
           ]
         },
         {
@@ -136,6 +546,47 @@
           "en": "weekend",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l13_v11_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「週末」的词汇意思是？",
+                "en": "What does 週末 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "周末",
+                    "en": "weekend"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "想要",
+                    "en": "want (thing)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "想借",
+                    "en": "want to borrow"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "想买",
+                    "en": "want to buy"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「週末」= 周末。",
+                "en": "週末 means weekend."
+              }
+            }
           ]
         },
         {
@@ -146,6 +597,47 @@
           "en": "sea",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l13_v12_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「海」的词汇意思是？",
+                "en": "What does 海 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "海",
+                    "en": "sea"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "想要",
+                    "en": "want (thing)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "想借",
+                    "en": "want to borrow"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "想买",
+                    "en": "want to buy"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「海」= 海。",
+                "en": "海 means sea."
+              }
+            }
           ]
         },
         {
@@ -156,6 +648,47 @@
           "en": "mountain",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l13_v13_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「山」的词汇意思是？",
+                "en": "What does 山 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "山",
+                    "en": "mountain"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "想要",
+                    "en": "want (thing)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "想借",
+                    "en": "want to borrow"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "想买",
+                    "en": "want to buy"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「山」= 山。",
+                "en": "山 means mountain."
+              }
+            }
           ]
         },
         {
@@ -166,6 +699,47 @@
           "en": "hot spring",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l13_v14_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「温泉」的词汇意思是？",
+                "en": "What does 温泉 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "温泉",
+                    "en": "hot spring"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "想要",
+                    "en": "want (thing)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "想借",
+                    "en": "want to borrow"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "想买",
+                    "en": "want to buy"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「温泉」= 温泉。",
+                "en": "温泉 means hot spring."
+              }
+            }
           ]
         },
         {
@@ -176,6 +750,47 @@
           "en": "therefore",
           "tags": [
             "conj"
+          ],
+          "practice": [
+            {
+              "id": "l13_v15_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「だから」的词汇意思是？",
+                "en": "What does だから mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "所以",
+                    "en": "therefore"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "想要",
+                    "en": "want (thing)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "想借",
+                    "en": "want to borrow"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "想买",
+                    "en": "want to buy"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「だから」= 所以。",
+                "en": "だから means therefore."
+              }
+            }
           ]
         },
         {
@@ -186,6 +801,47 @@
           "en": "want to do~",
           "tags": [
             "grammar"
+          ],
+          "practice": [
+            {
+              "id": "l13_v16_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「〜たいです」的词汇意思是？",
+                "en": "What does 〜たいです mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "想做〜",
+                    "en": "want to do~"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "想要",
+                    "en": "want (thing)"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "想借",
+                    "en": "want to borrow"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "想买",
+                    "en": "want to buy"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「〜たいです」= 想做〜。",
+                "en": "〜たいです means want to do~."
+              }
+            }
           ]
         }
       ]
@@ -578,31 +1234,236 @@
           "id": "l13_e01",
           "jp": "私は新しい辞書がほしいです。",
           "zh": "我想要一本新词典。",
-          "en": "I want a new dictionary."
+          "en": "I want a new dictionary.",
+          "practice": [
+            {
+              "id": "l13_e01_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「私は新しい辞書がほしいです。」的例句意思是？",
+                "en": "What does 私は新しい辞書がほしいです。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "我想要一本新词典。",
+                    "en": "I want a new dictionary."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "周末我想去海边。",
+                    "en": "I want to go to the sea this weekend."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "你想吃什么？",
+                    "en": "What do you want to eat?"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "因为没有钱，所以不买。",
+                    "en": "I will not buy it because I have no money."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「私は新しい辞書がほしいです。」= 我想要一本新词典。。",
+                "en": "私は新しい辞書がほしいです。 means I want a new dictionary.."
+              }
+            }
+          ]
         },
         {
           "id": "l13_e02",
           "jp": "週末に海へ行きたいです。",
           "zh": "周末我想去海边。",
-          "en": "I want to go to the sea this weekend."
+          "en": "I want to go to the sea this weekend.",
+          "practice": [
+            {
+              "id": "l13_e02_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「週末に海へ行きたいです。」的例句意思是？",
+                "en": "What does 週末に海へ行きたいです。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "周末我想去海边。",
+                    "en": "I want to go to the sea this weekend."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我想要一本新词典。",
+                    "en": "I want a new dictionary."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "你想吃什么？",
+                    "en": "What do you want to eat?"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "因为没有钱，所以不买。",
+                    "en": "I will not buy it because I have no money."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「週末に海へ行きたいです。」= 周末我想去海边。。",
+                "en": "週末に海へ行きたいです。 means I want to go to the sea this weekend.."
+              }
+            }
+          ]
         },
         {
           "id": "l13_e03",
           "jp": "何を食べたいですか。",
           "zh": "你想吃什么？",
-          "en": "What do you want to eat?"
+          "en": "What do you want to eat?",
+          "practice": [
+            {
+              "id": "l13_e03_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「何を食べたいですか。」的例句意思是？",
+                "en": "What does 何を食べたいですか。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "你想吃什么？",
+                    "en": "What do you want to eat?"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我想要一本新词典。",
+                    "en": "I want a new dictionary."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "周末我想去海边。",
+                    "en": "I want to go to the sea this weekend."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "因为没有钱，所以不买。",
+                    "en": "I will not buy it because I have no money."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「何を食べたいですか。」= 你想吃什么？。",
+                "en": "何を食べたいですか。 means What do you want to eat?."
+              }
+            }
+          ]
         },
         {
           "id": "l13_e04",
           "jp": "お金がありませんから、買いません。",
           "zh": "因为没有钱，所以不买。",
-          "en": "I will not buy it because I have no money."
+          "en": "I will not buy it because I have no money.",
+          "practice": [
+            {
+              "id": "l13_e04_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「お金がありませんから、買いません。」的例句意思是？",
+                "en": "What does お金がありませんから、買いません。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "因为没有钱，所以不买。",
+                    "en": "I will not buy it because I have no money."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我想要一本新词典。",
+                    "en": "I want a new dictionary."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "周末我想去海边。",
+                    "en": "I want to go to the sea this weekend."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "你想吃什么？",
+                    "en": "What do you want to eat?"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「お金がありませんから、買いません。」= 因为没有钱，所以不买。。",
+                "en": "お金がありませんから、買いません。 means I will not buy it because I have no money.."
+              }
+            }
+          ]
         },
         {
           "id": "l13_e05",
           "jp": "夏休みに温泉へ行きたいです。",
           "zh": "暑假我想去温泉。",
-          "en": "I want to go to a hot spring during summer vacation."
+          "en": "I want to go to a hot spring during summer vacation.",
+          "practice": [
+            {
+              "id": "l13_e05_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「夏休みに温泉へ行きたいです。」的例句意思是？",
+                "en": "What does 夏休みに温泉へ行きたいです。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "暑假我想去温泉。",
+                    "en": "I want to go to a hot spring during summer vacation."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我想要一本新词典。",
+                    "en": "I want a new dictionary."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "周末我想去海边。",
+                    "en": "I want to go to the sea this weekend."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "你想吃什么？",
+                    "en": "What do you want to eat?"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「夏休みに温泉へ行きたいです。」= 暑假我想去温泉。。",
+                "en": "夏休みに温泉へ行きたいです。 means I want to go to a hot spring during summer vacation.."
+              }
+            }
+          ]
         }
       ]
     },

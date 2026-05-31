@@ -1,6 +1,6 @@
 # みんなの日本語 初級 — Lesson Migration Audit Report
 
-Generated: 2026-05-31T07:10:55.783Z
+Generated: 2026-05-31T07:25:10.612Z
 
 ## Overall Status
 
@@ -11,9 +11,9 @@ Generated: 2026-05-31T07:10:55.783Z
 
 | Stage | ✅ OK | ⚠️ WEAK | ⬜ EMPTY | ❌ MISSING | 💥 INVALID | Items | Practice Qs |
 |---|---|---|---|---|---|---|---|
-| vocab | 50 | 0 | 0 | 0 | 0 | 668 | 50 |
+| vocab | 50 | 0 | 0 | 0 | 0 | 668 | 668 |
 | grammar | 50 | 0 | 0 | 0 | 0 | 301 | 398 |
-| examples | 50 | 0 | 0 | 0 | 0 | 326 | 6 |
+| examples | 50 | 0 | 0 | 0 | 0 | 326 | 326 |
 | quiz | 50 | 0 | 0 | 0 | 0 | 355 | 355 |
 
 ## Per-Lesson Detail
@@ -21,55 +21,55 @@ Generated: 2026-05-31T07:10:55.783Z
 | Lesson | Schema | Vocab | Grammar | Examples | Quiz | Issues |
 |---|---|---|---|---|---|---|
 | 01 | v1 | ✅ 17/17 | ✅ 5/6 | ✅ 6/6 | ✅ 9/9 | — |
-| 02 | v1 | ✅ 33/33 | ✅ 4/8 | ✅ 5/0 | ✅ 4/4 | — |
-| 03 | v1 | ✅ 16/0 | ✅ 4/8 | ✅ 5/0 | ✅ 4/4 | — |
-| 04 | v1 | ✅ 16/0 | ✅ 4/8 | ✅ 5/0 | ✅ 4/4 | — |
-| 05 | v1 | ✅ 16/0 | ✅ 4/8 | ✅ 5/0 | ✅ 4/4 | — |
-| 06 | v1 | ✅ 16/0 | ✅ 4/8 | ✅ 5/0 | ✅ 4/4 | — |
-| 07 | v1 | ✅ 16/0 | ✅ 4/8 | ✅ 5/0 | ✅ 4/4 | — |
-| 08 | v1 | ✅ 16/0 | ✅ 4/8 | ✅ 5/0 | ✅ 4/4 | — |
-| 09 | v1 | ✅ 16/0 | ✅ 4/8 | ✅ 5/0 | ✅ 4/4 | — |
-| 10 | v1 | ✅ 16/0 | ✅ 4/8 | ✅ 5/0 | ✅ 4/4 | — |
-| 11 | v1 | ✅ 16/0 | ✅ 4/8 | ✅ 5/0 | ✅ 4/4 | — |
-| 12 | v1 | ✅ 16/0 | ✅ 4/8 | ✅ 5/0 | ✅ 4/4 | — |
-| 13 | v1 | ✅ 16/0 | ✅ 4/8 | ✅ 5/0 | ✅ 4/4 | — |
-| 14 | v1 | ✅ 16/0 | ✅ 4/8 | ✅ 5/0 | ✅ 4/4 | — |
-| 15 | v1 | ✅ 16/0 | ✅ 4/8 | ✅ 5/0 | ✅ 4/4 | — |
-| 16 | v1 | ✅ 16/0 | ✅ 4/8 | ✅ 5/0 | ✅ 4/4 | — |
-| 17 | v1 | ✅ 16/0 | ✅ 4/8 | ✅ 5/0 | ✅ 4/4 | — |
-| 18 | v1 | ✅ 16/0 | ✅ 4/8 | ✅ 5/0 | ✅ 4/4 | — |
-| 19 | v1 | ✅ 16/0 | ✅ 4/8 | ✅ 5/0 | ✅ 4/4 | — |
-| 20 | v1 | ✅ 16/0 | ✅ 4/8 | ✅ 5/0 | ✅ 4/4 | — |
-| 21 | v1 | ✅ 16/0 | ✅ 4/8 | ✅ 5/0 | ✅ 4/4 | — |
-| 22 | v1 | ✅ 16/0 | ✅ 4/8 | ✅ 5/0 | ✅ 4/4 | — |
-| 23 | v1 | ✅ 16/0 | ✅ 4/8 | ✅ 5/0 | ✅ 4/4 | — |
-| 24 | v1 | ✅ 16/0 | ✅ 4/8 | ✅ 5/0 | ✅ 4/4 | — |
-| 25 | v1 | ✅ 16/0 | ✅ 4/8 | ✅ 5/0 | ✅ 4/4 | — |
-| 26 | v1 | ✅ 10/0 | ✅ 8/8 | ✅ 8/0 | ✅ 10/10 | unexpected section types: mistakes |
-| 27 | v1 | ✅ 10/0 | ✅ 8/8 | ✅ 8/0 | ✅ 10/10 | unexpected section types: mistakes |
-| 28 | v1 | ✅ 10/0 | ✅ 8/8 | ✅ 8/0 | ✅ 10/10 | unexpected section types: mistakes |
-| 29 | v1 | ✅ 10/0 | ✅ 8/8 | ✅ 8/0 | ✅ 10/10 | unexpected section types: mistakes |
-| 30 | v1 | ✅ 10/0 | ✅ 8/8 | ✅ 8/0 | ✅ 10/10 | unexpected section types: mistakes |
-| 31 | v1 | ✅ 10/0 | ✅ 8/8 | ✅ 8/0 | ✅ 10/10 | unexpected section types: mistakes |
-| 32 | v1 | ✅ 10/0 | ✅ 8/8 | ✅ 8/0 | ✅ 10/10 | unexpected section types: mistakes |
-| 33 | v1 | ✅ 10/0 | ✅ 8/8 | ✅ 8/0 | ✅ 10/10 | unexpected section types: mistakes |
-| 34 | v1 | ✅ 10/0 | ✅ 8/8 | ✅ 8/0 | ✅ 10/10 | unexpected section types: mistakes |
-| 35 | v1 | ✅ 10/0 | ✅ 8/8 | ✅ 8/0 | ✅ 10/10 | unexpected section types: mistakes |
-| 36 | v1 | ✅ 10/0 | ✅ 8/8 | ✅ 8/0 | ✅ 10/10 | unexpected section types: mistakes |
-| 37 | v1 | ✅ 10/0 | ✅ 8/8 | ✅ 8/0 | ✅ 10/10 | unexpected section types: mistakes |
-| 38 | v1 | ✅ 10/0 | ✅ 8/8 | ✅ 8/0 | ✅ 10/10 | unexpected section types: mistakes |
-| 39 | v2 | ✅ 10/0 | ✅ 8/8 | ✅ 8/0 | ✅ 10/10 | unexpected section types: mistakes |
-| 40 | v2 | ✅ 10/0 | ✅ 8/8 | ✅ 8/0 | ✅ 10/10 | unexpected section types: mistakes |
-| 41 | v2 | ✅ 10/0 | ✅ 8/8 | ✅ 8/0 | ✅ 10/10 | unexpected section types: mistakes |
-| 42 | v2 | ✅ 10/0 | ✅ 8/8 | ✅ 8/0 | ✅ 10/10 | unexpected section types: mistakes |
-| 43 | v2 | ✅ 10/0 | ✅ 8/8 | ✅ 8/0 | ✅ 10/10 | unexpected section types: mistakes |
-| 44 | v2 | ✅ 10/0 | ✅ 8/8 | ✅ 8/0 | ✅ 10/10 | unexpected section types: mistakes |
-| 45 | v2 | ✅ 10/0 | ✅ 8/8 | ✅ 8/0 | ✅ 10/10 | unexpected section types: mistakes |
-| 46 | v2 | ✅ 10/0 | ✅ 8/8 | ✅ 8/0 | ✅ 10/10 | unexpected section types: mistakes |
-| 47 | v2 | ✅ 10/0 | ✅ 8/8 | ✅ 8/0 | ✅ 10/10 | unexpected section types: mistakes |
-| 48 | v2 | ✅ 10/0 | ✅ 8/8 | ✅ 8/0 | ✅ 10/10 | unexpected section types: mistakes |
-| 49 | v2 | ✅ 10/0 | ✅ 8/8 | ✅ 8/0 | ✅ 10/10 | unexpected section types: mistakes |
-| 50 | v2 | ✅ 10/0 | ✅ 8/8 | ✅ 8/0 | ✅ 10/10 | unexpected section types: mistakes |
+| 02 | v1 | ✅ 33/33 | ✅ 4/8 | ✅ 5/5 | ✅ 4/4 | — |
+| 03 | v1 | ✅ 16/16 | ✅ 4/8 | ✅ 5/5 | ✅ 4/4 | — |
+| 04 | v1 | ✅ 16/16 | ✅ 4/8 | ✅ 5/5 | ✅ 4/4 | — |
+| 05 | v1 | ✅ 16/16 | ✅ 4/8 | ✅ 5/5 | ✅ 4/4 | — |
+| 06 | v1 | ✅ 16/16 | ✅ 4/8 | ✅ 5/5 | ✅ 4/4 | — |
+| 07 | v1 | ✅ 16/16 | ✅ 4/8 | ✅ 5/5 | ✅ 4/4 | — |
+| 08 | v1 | ✅ 16/16 | ✅ 4/8 | ✅ 5/5 | ✅ 4/4 | — |
+| 09 | v1 | ✅ 16/16 | ✅ 4/8 | ✅ 5/5 | ✅ 4/4 | — |
+| 10 | v1 | ✅ 16/16 | ✅ 4/8 | ✅ 5/5 | ✅ 4/4 | — |
+| 11 | v1 | ✅ 16/16 | ✅ 4/8 | ✅ 5/5 | ✅ 4/4 | — |
+| 12 | v1 | ✅ 16/16 | ✅ 4/8 | ✅ 5/5 | ✅ 4/4 | — |
+| 13 | v1 | ✅ 16/16 | ✅ 4/8 | ✅ 5/5 | ✅ 4/4 | — |
+| 14 | v1 | ✅ 16/16 | ✅ 4/8 | ✅ 5/5 | ✅ 4/4 | — |
+| 15 | v1 | ✅ 16/16 | ✅ 4/8 | ✅ 5/5 | ✅ 4/4 | — |
+| 16 | v1 | ✅ 16/16 | ✅ 4/8 | ✅ 5/5 | ✅ 4/4 | — |
+| 17 | v1 | ✅ 16/16 | ✅ 4/8 | ✅ 5/5 | ✅ 4/4 | — |
+| 18 | v1 | ✅ 16/16 | ✅ 4/8 | ✅ 5/5 | ✅ 4/4 | — |
+| 19 | v1 | ✅ 16/16 | ✅ 4/8 | ✅ 5/5 | ✅ 4/4 | — |
+| 20 | v1 | ✅ 16/16 | ✅ 4/8 | ✅ 5/5 | ✅ 4/4 | — |
+| 21 | v1 | ✅ 16/16 | ✅ 4/8 | ✅ 5/5 | ✅ 4/4 | — |
+| 22 | v1 | ✅ 16/16 | ✅ 4/8 | ✅ 5/5 | ✅ 4/4 | — |
+| 23 | v1 | ✅ 16/16 | ✅ 4/8 | ✅ 5/5 | ✅ 4/4 | — |
+| 24 | v1 | ✅ 16/16 | ✅ 4/8 | ✅ 5/5 | ✅ 4/4 | — |
+| 25 | v1 | ✅ 16/16 | ✅ 4/8 | ✅ 5/5 | ✅ 4/4 | — |
+| 26 | v1 | ✅ 10/10 | ✅ 8/8 | ✅ 8/8 | ✅ 10/10 | unexpected section types: mistakes |
+| 27 | v1 | ✅ 10/10 | ✅ 8/8 | ✅ 8/8 | ✅ 10/10 | unexpected section types: mistakes |
+| 28 | v1 | ✅ 10/10 | ✅ 8/8 | ✅ 8/8 | ✅ 10/10 | unexpected section types: mistakes |
+| 29 | v1 | ✅ 10/10 | ✅ 8/8 | ✅ 8/8 | ✅ 10/10 | unexpected section types: mistakes |
+| 30 | v1 | ✅ 10/10 | ✅ 8/8 | ✅ 8/8 | ✅ 10/10 | unexpected section types: mistakes |
+| 31 | v1 | ✅ 10/10 | ✅ 8/8 | ✅ 8/8 | ✅ 10/10 | unexpected section types: mistakes |
+| 32 | v1 | ✅ 10/10 | ✅ 8/8 | ✅ 8/8 | ✅ 10/10 | unexpected section types: mistakes |
+| 33 | v1 | ✅ 10/10 | ✅ 8/8 | ✅ 8/8 | ✅ 10/10 | unexpected section types: mistakes |
+| 34 | v1 | ✅ 10/10 | ✅ 8/8 | ✅ 8/8 | ✅ 10/10 | unexpected section types: mistakes |
+| 35 | v1 | ✅ 10/10 | ✅ 8/8 | ✅ 8/8 | ✅ 10/10 | unexpected section types: mistakes |
+| 36 | v1 | ✅ 10/10 | ✅ 8/8 | ✅ 8/8 | ✅ 10/10 | unexpected section types: mistakes |
+| 37 | v1 | ✅ 10/10 | ✅ 8/8 | ✅ 8/8 | ✅ 10/10 | unexpected section types: mistakes |
+| 38 | v1 | ✅ 10/10 | ✅ 8/8 | ✅ 8/8 | ✅ 10/10 | unexpected section types: mistakes |
+| 39 | v2 | ✅ 10/10 | ✅ 8/8 | ✅ 8/8 | ✅ 10/10 | unexpected section types: mistakes |
+| 40 | v2 | ✅ 10/10 | ✅ 8/8 | ✅ 8/8 | ✅ 10/10 | unexpected section types: mistakes |
+| 41 | v2 | ✅ 10/10 | ✅ 8/8 | ✅ 8/8 | ✅ 10/10 | unexpected section types: mistakes |
+| 42 | v2 | ✅ 10/10 | ✅ 8/8 | ✅ 8/8 | ✅ 10/10 | unexpected section types: mistakes |
+| 43 | v2 | ✅ 10/10 | ✅ 8/8 | ✅ 8/8 | ✅ 10/10 | unexpected section types: mistakes |
+| 44 | v2 | ✅ 10/10 | ✅ 8/8 | ✅ 8/8 | ✅ 10/10 | unexpected section types: mistakes |
+| 45 | v2 | ✅ 10/10 | ✅ 8/8 | ✅ 8/8 | ✅ 10/10 | unexpected section types: mistakes |
+| 46 | v2 | ✅ 10/10 | ✅ 8/8 | ✅ 8/8 | ✅ 10/10 | unexpected section types: mistakes |
+| 47 | v2 | ✅ 10/10 | ✅ 8/8 | ✅ 8/8 | ✅ 10/10 | unexpected section types: mistakes |
+| 48 | v2 | ✅ 10/10 | ✅ 8/8 | ✅ 8/8 | ✅ 10/10 | unexpected section types: mistakes |
+| 49 | v2 | ✅ 10/10 | ✅ 8/8 | ✅ 8/8 | ✅ 10/10 | unexpected section types: mistakes |
+| 50 | v2 | ✅ 10/10 | ✅ 8/8 | ✅ 8/8 | ✅ 10/10 | unexpected section types: mistakes |
 
 ## Schema Formats
 

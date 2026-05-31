@@ -36,6 +36,47 @@
           "en": "please do~",
           "tags": [
             "grammar"
+          ],
+          "practice": [
+            {
+              "id": "l14_v01_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「てください」的词汇意思是？",
+                "en": "What does てください mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "请做〜",
+                    "en": "please do~"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "等待",
+                    "en": "wait"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "着急；赶快",
+                    "en": "hurry"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "拿",
+                    "en": "carry"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「てください」= 请做〜。",
+                "en": "てください means please do~."
+              }
+            }
           ]
         },
         {
@@ -46,6 +87,47 @@
           "en": "wait",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l14_v02_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「待ちます」的词汇意思是？",
+                "en": "What does 待ちます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "等待",
+                    "en": "wait"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "请做〜",
+                    "en": "please do~"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "着急；赶快",
+                    "en": "hurry"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "拿",
+                    "en": "carry"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「待ちます」= 等待。",
+                "en": "待ちます means wait."
+              }
+            }
           ]
         },
         {
@@ -56,6 +138,47 @@
           "en": "hurry",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l14_v03_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「急ぎます」的词汇意思是？",
+                "en": "What does 急ぎます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "着急；赶快",
+                    "en": "hurry"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "请做〜",
+                    "en": "please do~"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "等待",
+                    "en": "wait"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "拿",
+                    "en": "carry"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「急ぎます」= 着急；赶快。",
+                "en": "急ぎます means hurry."
+              }
+            }
           ]
         },
         {
@@ -66,6 +189,47 @@
           "en": "carry",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l14_v04_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「持ちます」的词汇意思是？",
+                "en": "What does 持ちます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "拿",
+                    "en": "carry"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "请做〜",
+                    "en": "please do~"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "等待",
+                    "en": "wait"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "着急；赶快",
+                    "en": "hurry"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「持ちます」= 拿。",
+                "en": "持ちます means carry."
+              }
+            }
           ]
         },
         {
@@ -76,6 +240,47 @@
           "en": "take",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l14_v05_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「取ります」的词汇意思是？",
+                "en": "What does 取ります mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "拿取",
+                    "en": "take"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "请做〜",
+                    "en": "please do~"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "等待",
+                    "en": "wait"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "着急；赶快",
+                    "en": "hurry"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「取ります」= 拿取。",
+                "en": "取ります means take."
+              }
+            }
           ]
         },
         {
@@ -86,6 +291,47 @@
           "en": "help",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l14_v06_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「手伝います」的词汇意思是？",
+                "en": "What does 手伝います mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "帮忙",
+                    "en": "help"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "请做〜",
+                    "en": "please do~"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "等待",
+                    "en": "wait"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "着急；赶快",
+                    "en": "hurry"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「手伝います」= 帮忙。",
+                "en": "手伝います means help."
+              }
+            }
           ]
         },
         {
@@ -96,6 +342,47 @@
           "en": "call",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l14_v07_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「呼びます」的词汇意思是？",
+                "en": "What does 呼びます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "叫；呼叫",
+                    "en": "call"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "请做〜",
+                    "en": "please do~"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "等待",
+                    "en": "wait"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "着急；赶快",
+                    "en": "hurry"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「呼びます」= 叫；呼叫。",
+                "en": "呼びます means call."
+              }
+            }
           ]
         },
         {
@@ -106,6 +393,47 @@
           "en": "use",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l14_v08_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「使います」的词汇意思是？",
+                "en": "What does 使います mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "使用",
+                    "en": "use"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "请做〜",
+                    "en": "please do~"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "等待",
+                    "en": "wait"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "着急；赶快",
+                    "en": "hurry"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「使います」= 使用。",
+                "en": "使います means use."
+              }
+            }
           ]
         },
         {
@@ -116,6 +444,47 @@
           "en": "stop",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l14_v09_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「止めます」的词汇意思是？",
+                "en": "What does 止めます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "停止",
+                    "en": "stop"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "请做〜",
+                    "en": "please do~"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "等待",
+                    "en": "wait"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "着急；赶快",
+                    "en": "hurry"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「止めます」= 停止。",
+                "en": "止めます means stop."
+              }
+            }
           ]
         },
         {
@@ -126,6 +495,47 @@
           "en": "sit",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l14_v10_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「座ります」的词汇意思是？",
+                "en": "What does 座ります mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "坐",
+                    "en": "sit"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "请做〜",
+                    "en": "please do~"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "等待",
+                    "en": "wait"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "着急；赶快",
+                    "en": "hurry"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「座ります」= 坐。",
+                "en": "座ります means sit."
+              }
+            }
           ]
         },
         {
@@ -136,6 +546,47 @@
           "en": "stand",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l14_v11_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「立ちます」的词汇意思是？",
+                "en": "What does 立ちます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "站",
+                    "en": "stand"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "请做〜",
+                    "en": "please do~"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "等待",
+                    "en": "wait"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "着急；赶快",
+                    "en": "hurry"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「立ちます」= 站。",
+                "en": "立ちます means stand."
+              }
+            }
           ]
         },
         {
@@ -146,6 +597,47 @@
           "en": "open",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l14_v12_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「開けます」的词汇意思是？",
+                "en": "What does 開けます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "打开",
+                    "en": "open"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "请做〜",
+                    "en": "please do~"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "等待",
+                    "en": "wait"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "着急；赶快",
+                    "en": "hurry"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「開けます」= 打开。",
+                "en": "開けます means open."
+              }
+            }
           ]
         },
         {
@@ -156,6 +648,47 @@
           "en": "close",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l14_v13_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「閉めます」的词汇意思是？",
+                "en": "What does 閉めます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "关上",
+                    "en": "close"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "请做〜",
+                    "en": "please do~"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "等待",
+                    "en": "wait"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "着急；赶快",
+                    "en": "hurry"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「閉めます」= 关上。",
+                "en": "閉めます means close."
+              }
+            }
           ]
         },
         {
@@ -166,6 +699,47 @@
           "en": "electricity/light",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l14_v14_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「電気」的词汇意思是？",
+                "en": "What does 電気 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "电灯；电",
+                    "en": "electricity/light"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "请做〜",
+                    "en": "please do~"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "等待",
+                    "en": "wait"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "着急；赶快",
+                    "en": "hurry"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「電気」= 电灯；电。",
+                "en": "電気 means electricity/light."
+              }
+            }
           ]
         },
         {
@@ -176,6 +750,47 @@
           "en": "window",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l14_v15_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「窓」的词汇意思是？",
+                "en": "What does 窓 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "窗户",
+                    "en": "window"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "请做〜",
+                    "en": "please do~"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "等待",
+                    "en": "wait"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "着急；赶快",
+                    "en": "hurry"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「窓」= 窗户。",
+                "en": "窓 means window."
+              }
+            }
           ]
         },
         {
@@ -186,6 +801,47 @@
           "en": "door",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l14_v16_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「ドア」的词汇意思是？",
+                "en": "What does ドア mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "门",
+                    "en": "door"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "请做〜",
+                    "en": "please do~"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "等待",
+                    "en": "wait"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "着急；赶快",
+                    "en": "hurry"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「ドア」= 门。",
+                "en": "ドア means door."
+              }
+            }
           ]
         }
       ]
@@ -578,31 +1234,236 @@
           "id": "l14_e01",
           "jp": "ここに座ってください。",
           "zh": "请坐这里。",
-          "en": "Please sit here."
+          "en": "Please sit here.",
+          "practice": [
+            {
+              "id": "l14_e01_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「ここに座ってください。」的例句意思是？",
+                "en": "What does ここに座ってください。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "请坐这里。",
+                    "en": "Please sit here."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "打开窗户让房间变亮。",
+                    "en": "Open the window and make the room bright."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "下课后我问老师问题。",
+                    "en": "I ask the teacher after class ends."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "请不要在这里吃东西。",
+                    "en": "Please do not eat here."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「ここに座ってください。」= 请坐这里。。",
+                "en": "ここに座ってください。 means Please sit here.."
+              }
+            }
+          ]
         },
         {
           "id": "l14_e02",
           "jp": "窓を開けて、部屋を明るくします。",
           "zh": "打开窗户让房间变亮。",
-          "en": "Open the window and make the room bright."
+          "en": "Open the window and make the room bright.",
+          "practice": [
+            {
+              "id": "l14_e02_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「窓を開けて、部屋を明るくします。」的例句意思是？",
+                "en": "What does 窓を開けて、部屋を明るくします。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "打开窗户让房间变亮。",
+                    "en": "Open the window and make the room bright."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "请坐这里。",
+                    "en": "Please sit here."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "下课后我问老师问题。",
+                    "en": "I ask the teacher after class ends."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "请不要在这里吃东西。",
+                    "en": "Please do not eat here."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「窓を開けて、部屋を明るくします。」= 打开窗户让房间变亮。。",
+                "en": "窓を開けて、部屋を明るくします。 means Open the window and make the room bright.."
+              }
+            }
+          ]
         },
         {
           "id": "l14_e03",
           "jp": "授業が終わってから、先生に質問します。",
           "zh": "下课后我问老师问题。",
-          "en": "I ask the teacher after class ends."
+          "en": "I ask the teacher after class ends.",
+          "practice": [
+            {
+              "id": "l14_e03_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「授業が終わってから、先生に質問します。」的例句意思是？",
+                "en": "What does 授業が終わってから、先生に質問します。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "下课后我问老师问题。",
+                    "en": "I ask the teacher after class ends."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "请坐这里。",
+                    "en": "Please sit here."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "打开窗户让房间变亮。",
+                    "en": "Open the window and make the room bright."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "请不要在这里吃东西。",
+                    "en": "Please do not eat here."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「授業が終わってから、先生に質問します。」= 下课后我问老师问题。。",
+                "en": "授業が終わってから、先生に質問します。 means I ask the teacher after class ends.."
+              }
+            }
+          ]
         },
         {
           "id": "l14_e04",
           "jp": "ここで食べないでください。",
           "zh": "请不要在这里吃东西。",
-          "en": "Please do not eat here."
+          "en": "Please do not eat here.",
+          "practice": [
+            {
+              "id": "l14_e04_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「ここで食べないでください。」的例句意思是？",
+                "en": "What does ここで食べないでください。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "请不要在这里吃东西。",
+                    "en": "Please do not eat here."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "请坐这里。",
+                    "en": "Please sit here."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "打开窗户让房间变亮。",
+                    "en": "Open the window and make the room bright."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "下课后我问老师问题。",
+                    "en": "I ask the teacher after class ends."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「ここで食べないでください。」= 请不要在这里吃东西。。",
+                "en": "ここで食べないでください。 means Please do not eat here.."
+              }
+            }
+          ]
         },
         {
           "id": "l14_e05",
           "jp": "荷物を持って、駅まで行きます。",
           "zh": "我拿着行李去车站。",
-          "en": "I carry my luggage and go to the station."
+          "en": "I carry my luggage and go to the station.",
+          "practice": [
+            {
+              "id": "l14_e05_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「荷物を持って、駅まで行きます。」的例句意思是？",
+                "en": "What does 荷物を持って、駅まで行きます。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "我拿着行李去车站。",
+                    "en": "I carry my luggage and go to the station."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "请坐这里。",
+                    "en": "Please sit here."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "打开窗户让房间变亮。",
+                    "en": "Open the window and make the room bright."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "下课后我问老师问题。",
+                    "en": "I ask the teacher after class ends."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「荷物を持って、駅まで行きます。」= 我拿着行李去车站。。",
+                "en": "荷物を持って、駅まで行きます。 means I carry my luggage and go to the station.."
+              }
+            }
+          ]
         }
       ]
     },

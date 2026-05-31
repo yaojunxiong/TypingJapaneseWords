@@ -36,6 +36,47 @@
           "en": "like",
           "tags": [
             "na-adj"
+          ],
+          "practice": [
+            {
+              "id": "l09_v01_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「好き」的词汇意思是？",
+                "en": "What does 好き mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "喜欢",
+                    "en": "like"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "讨厌",
+                    "en": "dislike"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "擅长",
+                    "en": "good at"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "不擅长",
+                    "en": "poor at"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「好き」= 喜欢。",
+                "en": "好き means like."
+              }
+            }
           ]
         },
         {
@@ -46,6 +87,47 @@
           "en": "dislike",
           "tags": [
             "na-adj"
+          ],
+          "practice": [
+            {
+              "id": "l09_v02_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「嫌い」的词汇意思是？",
+                "en": "What does 嫌い mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "讨厌",
+                    "en": "dislike"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "喜欢",
+                    "en": "like"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "擅长",
+                    "en": "good at"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "不擅长",
+                    "en": "poor at"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「嫌い」= 讨厌。",
+                "en": "嫌い means dislike."
+              }
+            }
           ]
         },
         {
@@ -56,6 +138,47 @@
           "en": "good at",
           "tags": [
             "na-adj"
+          ],
+          "practice": [
+            {
+              "id": "l09_v03_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「上手」的词汇意思是？",
+                "en": "What does 上手 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "擅长",
+                    "en": "good at"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "喜欢",
+                    "en": "like"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "讨厌",
+                    "en": "dislike"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "不擅长",
+                    "en": "poor at"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「上手」= 擅长。",
+                "en": "上手 means good at."
+              }
+            }
           ]
         },
         {
@@ -66,6 +189,47 @@
           "en": "poor at",
           "tags": [
             "na-adj"
+          ],
+          "practice": [
+            {
+              "id": "l09_v04_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「下手」的词汇意思是？",
+                "en": "What does 下手 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "不擅长",
+                    "en": "poor at"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "喜欢",
+                    "en": "like"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "讨厌",
+                    "en": "dislike"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "擅长",
+                    "en": "good at"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「下手」= 不擅长。",
+                "en": "下手 means poor at."
+              }
+            }
           ]
         },
         {
@@ -76,6 +240,47 @@
           "en": "understand",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l09_v05_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「わかります」的词汇意思是？",
+                "en": "What does わかります mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "明白/懂",
+                    "en": "understand"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "喜欢",
+                    "en": "like"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "讨厌",
+                    "en": "dislike"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "擅长",
+                    "en": "good at"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「わかります」= 明白/懂。",
+                "en": "わかります means understand."
+              }
+            }
           ]
         },
         {
@@ -86,6 +291,47 @@
           "en": "have/exist",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l09_v06_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「あります」的词汇意思是？",
+                "en": "What does あります mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "有",
+                    "en": "have/exist"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "喜欢",
+                    "en": "like"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "讨厌",
+                    "en": "dislike"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "擅长",
+                    "en": "good at"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「あります」= 有。",
+                "en": "あります means have/exist."
+              }
+            }
           ]
         },
         {
@@ -96,6 +342,47 @@
           "en": "baseball",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l09_v07_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「やきゅう」的词汇意思是？",
+                "en": "What does やきゅう mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "棒球",
+                    "en": "baseball"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "喜欢",
+                    "en": "like"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "讨厌",
+                    "en": "dislike"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "擅长",
+                    "en": "good at"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「やきゅう」= 棒球。",
+                "en": "やきゅう means baseball."
+              }
+            }
           ]
         },
         {
@@ -106,6 +393,47 @@
           "en": "soccer",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l09_v08_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「サッカー」的词汇意思是？",
+                "en": "What does サッカー mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "足球",
+                    "en": "soccer"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "喜欢",
+                    "en": "like"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "讨厌",
+                    "en": "dislike"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "擅长",
+                    "en": "good at"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「サッカー」= 足球。",
+                "en": "サッカー means soccer."
+              }
+            }
           ]
         },
         {
@@ -116,6 +444,47 @@
           "en": "cooking",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l09_v09_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「りょうり」的词汇意思是？",
+                "en": "What does りょうり mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "料理",
+                    "en": "cooking"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "喜欢",
+                    "en": "like"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "讨厌",
+                    "en": "dislike"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "擅长",
+                    "en": "good at"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「りょうり」= 料理。",
+                "en": "りょうり means cooking."
+              }
+            }
           ]
         },
         {
@@ -126,6 +495,47 @@
           "en": "music",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l09_v10_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「おんがく」的词汇意思是？",
+                "en": "What does おんがく mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "音乐",
+                    "en": "music"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "喜欢",
+                    "en": "like"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "讨厌",
+                    "en": "dislike"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "擅长",
+                    "en": "good at"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「おんがく」= 音乐。",
+                "en": "おんがく means music."
+              }
+            }
           ]
         },
         {
@@ -136,6 +546,47 @@
           "en": "song",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l09_v11_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「うた」的词汇意思是？",
+                "en": "What does うた mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "歌",
+                    "en": "song"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "喜欢",
+                    "en": "like"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "讨厌",
+                    "en": "dislike"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "擅长",
+                    "en": "good at"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「うた」= 歌。",
+                "en": "うた means song."
+              }
+            }
           ]
         },
         {
@@ -146,6 +597,47 @@
           "en": "time",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l09_v12_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「じかん」的词汇意思是？",
+                "en": "What does じかん mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "时间",
+                    "en": "time"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "喜欢",
+                    "en": "like"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "讨厌",
+                    "en": "dislike"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "擅长",
+                    "en": "good at"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「じかん」= 时间。",
+                "en": "じかん means time."
+              }
+            }
           ]
         },
         {
@@ -156,6 +648,47 @@
           "en": "why",
           "tags": [
             "question"
+          ],
+          "practice": [
+            {
+              "id": "l09_v13_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「どうして」的词汇意思是？",
+                "en": "What does どうして mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "为什么",
+                    "en": "why"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "喜欢",
+                    "en": "like"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "讨厌",
+                    "en": "dislike"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "擅长",
+                    "en": "good at"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「どうして」= 为什么。",
+                "en": "どうして means why."
+              }
+            }
           ]
         },
         {
@@ -166,6 +699,47 @@
           "en": "because",
           "tags": [
             "grammar"
+          ],
+          "practice": [
+            {
+              "id": "l09_v14_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「から」的词汇意思是？",
+                "en": "What does から mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "因为",
+                    "en": "because"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "喜欢",
+                    "en": "like"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "讨厌",
+                    "en": "dislike"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "擅长",
+                    "en": "good at"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「から」= 因为。",
+                "en": "から means because."
+              }
+            }
           ]
         },
         {
@@ -176,6 +750,47 @@
           "en": "very",
           "tags": [
             "adverb"
+          ],
+          "practice": [
+            {
+              "id": "l09_v15_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「とても」的词汇意思是？",
+                "en": "What does とても mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "非常",
+                    "en": "very"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "喜欢",
+                    "en": "like"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "讨厌",
+                    "en": "dislike"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "擅长",
+                    "en": "good at"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「とても」= 非常。",
+                "en": "とても means very."
+              }
+            }
           ]
         },
         {
@@ -186,6 +801,47 @@
           "en": "not very",
           "tags": [
             "adverb"
+          ],
+          "practice": [
+            {
+              "id": "l09_v16_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「あまり」的词汇意思是？",
+                "en": "What does あまり mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "不太（接否定）",
+                    "en": "not very"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "喜欢",
+                    "en": "like"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "讨厌",
+                    "en": "dislike"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "擅长",
+                    "en": "good at"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「あまり」= 不太（接否定）。",
+                "en": "あまり means not very."
+              }
+            }
           ]
         }
       ]
@@ -530,31 +1186,236 @@
           "id": "l09_e01",
           "jp": "わたしは 野球が 好きです。",
           "zh": "我喜欢棒球。",
-          "en": "I like baseball."
+          "en": "I like baseball.",
+          "practice": [
+            {
+              "id": "l09_e01_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「わたしは 野球が 好きです。」的例句意思是？",
+                "en": "What does わたしは 野球が 好きです。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "我喜欢棒球。",
+                    "en": "I like baseball."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我哥哥擅长足球。",
+                    "en": "My older brother is good at soccer."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "我妈妈做饭非常好。",
+                    "en": "My mother is very good at cooking."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "我懂日语，但说得还不太好。",
+                    "en": "I understand Japanese, but I am still poor at speaking it."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「わたしは 野球が 好きです。」= 我喜欢棒球。。",
+                "en": "わたしは 野球が 好きです。 means I like baseball.."
+              }
+            }
+          ]
         },
         {
           "id": "l09_e02",
           "jp": "兄は サッカーが 上手です。",
           "zh": "我哥哥擅长足球。",
-          "en": "My older brother is good at soccer."
+          "en": "My older brother is good at soccer.",
+          "practice": [
+            {
+              "id": "l09_e02_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「兄は サッカーが 上手です。」的例句意思是？",
+                "en": "What does 兄は サッカーが 上手です。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "我哥哥擅长足球。",
+                    "en": "My older brother is good at soccer."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我喜欢棒球。",
+                    "en": "I like baseball."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "我妈妈做饭非常好。",
+                    "en": "My mother is very good at cooking."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "我懂日语，但说得还不太好。",
+                    "en": "I understand Japanese, but I am still poor at speaking it."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「兄は サッカーが 上手です。」= 我哥哥擅长足球。。",
+                "en": "兄は サッカーが 上手です。 means My older brother is good at soccer.."
+              }
+            }
+          ]
         },
         {
           "id": "l09_e03",
           "jp": "母は 料理が とても 上手です。",
           "zh": "我妈妈做饭非常好。",
-          "en": "My mother is very good at cooking."
+          "en": "My mother is very good at cooking.",
+          "practice": [
+            {
+              "id": "l09_e03_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「母は 料理が とても 上手です。」的例句意思是？",
+                "en": "What does 母は 料理が とても 上手です。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "我妈妈做饭非常好。",
+                    "en": "My mother is very good at cooking."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我喜欢棒球。",
+                    "en": "I like baseball."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "我哥哥擅长足球。",
+                    "en": "My older brother is good at soccer."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "我懂日语，但说得还不太好。",
+                    "en": "I understand Japanese, but I am still poor at speaking it."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「母は 料理が とても 上手です。」= 我妈妈做饭非常好。。",
+                "en": "母は 料理が とても 上手です。 means My mother is very good at cooking.."
+              }
+            }
+          ]
         },
         {
           "id": "l09_e04",
           "jp": "日本語が わかりますが、話すのは まだ 下手です。",
           "zh": "我懂日语，但说得还不太好。",
-          "en": "I understand Japanese, but I am still poor at speaking it."
+          "en": "I understand Japanese, but I am still poor at speaking it.",
+          "practice": [
+            {
+              "id": "l09_e04_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「日本語が わかりますが、話すのは まだ 下手です。」的例句意思是？",
+                "en": "What does 日本語が わかりますが、話すのは まだ 下手です。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "我懂日语，但说得还不太好。",
+                    "en": "I understand Japanese, but I am still poor at speaking it."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我喜欢棒球。",
+                    "en": "I like baseball."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "我哥哥擅长足球。",
+                    "en": "My older brother is good at soccer."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "我妈妈做饭非常好。",
+                    "en": "My mother is very good at cooking."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「日本語が わかりますが、話すのは まだ 下手です。」= 我懂日语，但说得还不太好。。",
+                "en": "日本語が わかりますが、話すのは まだ 下手です。 means I understand Japanese, but I am still poor at speaking it.."
+              }
+            }
+          ]
         },
         {
           "id": "l09_e05",
           "jp": "どうして 勉強しますか。日本で 働きたいですから。",
           "zh": "为什么学习？因为想在日本工作。",
-          "en": "Why do you study? Because I want to work in Japan."
+          "en": "Why do you study? Because I want to work in Japan.",
+          "practice": [
+            {
+              "id": "l09_e05_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「どうして 勉強しますか。日本で 働きたいですから。」的例句意思是？",
+                "en": "What does どうして 勉強しますか。日本で 働きたいですから。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "为什么学习？因为想在日本工作。",
+                    "en": "Why do you study? Because I want to work in Japan."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我喜欢棒球。",
+                    "en": "I like baseball."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "我哥哥擅长足球。",
+                    "en": "My older brother is good at soccer."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "我妈妈做饭非常好。",
+                    "en": "My mother is very good at cooking."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「どうして 勉強しますか。日本で 働きたいですから。」= 为什么学习？因为想在日本工作。。",
+                "en": "どうして 勉強しますか。日本で 働きたいですから。 means Why do you study? Because I want to work in Japan.."
+              }
+            }
+          ]
         }
       ]
     },

@@ -36,6 +36,47 @@
           "en": "give",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l07_v01_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「あげます」的词汇意思是？",
+                "en": "What does あげます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "给",
+                    "en": "give"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "收到",
+                    "en": "receive"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "借给",
+                    "en": "lend"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "借入",
+                    "en": "borrow"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「あげます」= 给。",
+                "en": "あげます means give."
+              }
+            }
           ]
         },
         {
@@ -46,6 +87,47 @@
           "en": "receive",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l07_v02_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「もらいます」的词汇意思是？",
+                "en": "What does もらいます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "收到",
+                    "en": "receive"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "给",
+                    "en": "give"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "借给",
+                    "en": "lend"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "借入",
+                    "en": "borrow"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「もらいます」= 收到。",
+                "en": "もらいます means receive."
+              }
+            }
           ]
         },
         {
@@ -56,6 +138,47 @@
           "en": "lend",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l07_v03_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「かします」的词汇意思是？",
+                "en": "What does かします mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "借给",
+                    "en": "lend"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "给",
+                    "en": "give"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "收到",
+                    "en": "receive"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "借入",
+                    "en": "borrow"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「かします」= 借给。",
+                "en": "かします means lend."
+              }
+            }
           ]
         },
         {
@@ -66,6 +189,47 @@
           "en": "borrow",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l07_v04_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「かります」的词汇意思是？",
+                "en": "What does かります mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "借入",
+                    "en": "borrow"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "给",
+                    "en": "give"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "收到",
+                    "en": "receive"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "借给",
+                    "en": "lend"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「かります」= 借入。",
+                "en": "かります means borrow."
+              }
+            }
           ]
         },
         {
@@ -76,6 +240,47 @@
           "en": "teach",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l07_v05_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「おしえます」的词汇意思是？",
+                "en": "What does おしえます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "教",
+                    "en": "teach"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "给",
+                    "en": "give"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "收到",
+                    "en": "receive"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "借给",
+                    "en": "lend"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「おしえます」= 教。",
+                "en": "おしえます means teach."
+              }
+            }
           ]
         },
         {
@@ -86,6 +291,47 @@
           "en": "learn from",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l07_v06_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「ならいます」的词汇意思是？",
+                "en": "What does ならいます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "学习（向人）",
+                    "en": "learn from"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "给",
+                    "en": "give"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "收到",
+                    "en": "receive"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "借给",
+                    "en": "lend"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「ならいます」= 学习（向人）。",
+                "en": "ならいます means learn from."
+              }
+            }
           ]
         },
         {
@@ -96,6 +342,47 @@
           "en": "make a phone call",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l07_v07_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「でんわを かけます」的词汇意思是？",
+                "en": "What does でんわを かけます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "打电话",
+                    "en": "make a phone call"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "给",
+                    "en": "give"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "收到",
+                    "en": "receive"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "借给",
+                    "en": "lend"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「でんわを かけます」= 打电话。",
+                "en": "でんわを かけます means make a phone call."
+              }
+            }
           ]
         },
         {
@@ -106,6 +393,47 @@
           "en": "chopsticks",
           "tags": [
             "object"
+          ],
+          "practice": [
+            {
+              "id": "l07_v08_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「はし」的词汇意思是？",
+                "en": "What does はし mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "筷子",
+                    "en": "chopsticks"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "给",
+                    "en": "give"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "收到",
+                    "en": "receive"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "借给",
+                    "en": "lend"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「はし」= 筷子。",
+                "en": "はし means chopsticks."
+              }
+            }
           ]
         },
         {
@@ -116,6 +444,47 @@
           "en": "spoon",
           "tags": [
             "object"
+          ],
+          "practice": [
+            {
+              "id": "l07_v09_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「スプーン」的词汇意思是？",
+                "en": "What does スプーン mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "勺子",
+                    "en": "spoon"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "给",
+                    "en": "give"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "收到",
+                    "en": "receive"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "借给",
+                    "en": "lend"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「スプーン」= 勺子。",
+                "en": "スプーン means spoon."
+              }
+            }
           ]
         },
         {
@@ -126,6 +495,47 @@
           "en": "knife",
           "tags": [
             "object"
+          ],
+          "practice": [
+            {
+              "id": "l07_v10_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「ナイフ」的词汇意思是？",
+                "en": "What does ナイフ mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "刀",
+                    "en": "knife"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "给",
+                    "en": "give"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "收到",
+                    "en": "receive"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "借给",
+                    "en": "lend"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「ナイフ」= 刀。",
+                "en": "ナイフ means knife."
+              }
+            }
           ]
         },
         {
@@ -136,6 +546,47 @@
           "en": "fork",
           "tags": [
             "object"
+          ],
+          "practice": [
+            {
+              "id": "l07_v11_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「フォーク」的词汇意思是？",
+                "en": "What does フォーク mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "叉子",
+                    "en": "fork"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "给",
+                    "en": "give"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "收到",
+                    "en": "receive"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "借给",
+                    "en": "lend"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「フォーク」= 叉子。",
+                "en": "フォーク means fork."
+              }
+            }
           ]
         },
         {
@@ -146,6 +597,47 @@
           "en": "book",
           "tags": [
             "object"
+          ],
+          "practice": [
+            {
+              "id": "l07_v12_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「ほん」的词汇意思是？",
+                "en": "What does ほん mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "书",
+                    "en": "book"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "给",
+                    "en": "give"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "收到",
+                    "en": "receive"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "借给",
+                    "en": "lend"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「ほん」= 书。",
+                "en": "ほん means book."
+              }
+            }
           ]
         },
         {
@@ -156,6 +648,47 @@
           "en": "letter",
           "tags": [
             "object"
+          ],
+          "practice": [
+            {
+              "id": "l07_v13_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「てがみ」的词汇意思是？",
+                "en": "What does てがみ mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "信",
+                    "en": "letter"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "给",
+                    "en": "give"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "收到",
+                    "en": "receive"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "借给",
+                    "en": "lend"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「てがみ」= 信。",
+                "en": "てがみ means letter."
+              }
+            }
           ]
         },
         {
@@ -166,6 +699,47 @@
           "en": "present",
           "tags": [
             "object"
+          ],
+          "practice": [
+            {
+              "id": "l07_v14_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「プレゼント」的词汇意思是？",
+                "en": "What does プレゼント mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "礼物",
+                    "en": "present"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "给",
+                    "en": "give"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "收到",
+                    "en": "receive"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "借给",
+                    "en": "lend"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「プレゼント」= 礼物。",
+                "en": "プレゼント means present."
+              }
+            }
           ]
         },
         {
@@ -176,6 +750,47 @@
           "en": "teacher",
           "tags": [
             "person"
+          ],
+          "practice": [
+            {
+              "id": "l07_v15_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「せんせい」的词汇意思是？",
+                "en": "What does せんせい mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "老师",
+                    "en": "teacher"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "给",
+                    "en": "give"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "收到",
+                    "en": "receive"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "借给",
+                    "en": "lend"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「せんせい」= 老师。",
+                "en": "せんせい means teacher."
+              }
+            }
           ]
         },
         {
@@ -186,6 +801,47 @@
           "en": "friend",
           "tags": [
             "person"
+          ],
+          "practice": [
+            {
+              "id": "l07_v16_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「ともだち」的词汇意思是？",
+                "en": "What does ともだち mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "朋友",
+                    "en": "friend"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "给",
+                    "en": "give"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "收到",
+                    "en": "receive"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "借给",
+                    "en": "lend"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「ともだち」= 朋友。",
+                "en": "ともだち means friend."
+              }
+            }
           ]
         }
       ]
@@ -530,31 +1186,236 @@
           "id": "l07_e01",
           "jp": "わたしは 妹に はしを あげました。",
           "zh": "我给妹妹筷子。",
-          "en": "I gave chopsticks to my younger sister."
+          "en": "I gave chopsticks to my younger sister.",
+          "practice": [
+            {
+              "id": "l07_e01_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「わたしは 妹に はしを あげました。」的例句意思是？",
+                "en": "What does わたしは 妹に はしを あげました。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "我给妹妹筷子。",
+                    "en": "I gave chopsticks to my younger sister."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我收到老师给的日语书。",
+                    "en": "I received a Japanese book from my teacher."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "我把伞借给朋友。",
+                    "en": "I lent an umbrella to my friend."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "昨天向老师学习了日语。",
+                    "en": "I learned Japanese from my teacher yesterday."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「わたしは 妹に はしを あげました。」= 我给妹妹筷子。。",
+                "en": "わたしは 妹に はしを あげました。 means I gave chopsticks to my younger sister.."
+              }
+            }
+          ]
         },
         {
           "id": "l07_e02",
           "jp": "先生に 日本語の 本を もらいました。",
           "zh": "我收到老师给的日语书。",
-          "en": "I received a Japanese book from my teacher."
+          "en": "I received a Japanese book from my teacher.",
+          "practice": [
+            {
+              "id": "l07_e02_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「先生に 日本語の 本を もらいました。」的例句意思是？",
+                "en": "What does 先生に 日本語の 本を もらいました。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "我收到老师给的日语书。",
+                    "en": "I received a Japanese book from my teacher."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我给妹妹筷子。",
+                    "en": "I gave chopsticks to my younger sister."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "我把伞借给朋友。",
+                    "en": "I lent an umbrella to my friend."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "昨天向老师学习了日语。",
+                    "en": "I learned Japanese from my teacher yesterday."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「先生に 日本語の 本を もらいました。」= 我收到老师给的日语书。。",
+                "en": "先生に 日本語の 本を もらいました。 means I received a Japanese book from my teacher.."
+              }
+            }
+          ]
         },
         {
           "id": "l07_e03",
           "jp": "友達に 傘を かしました。",
           "zh": "我把伞借给朋友。",
-          "en": "I lent an umbrella to my friend."
+          "en": "I lent an umbrella to my friend.",
+          "practice": [
+            {
+              "id": "l07_e03_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「友達に 傘を かしました。」的例句意思是？",
+                "en": "What does 友達に 傘を かしました。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "我把伞借给朋友。",
+                    "en": "I lent an umbrella to my friend."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我给妹妹筷子。",
+                    "en": "I gave chopsticks to my younger sister."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "我收到老师给的日语书。",
+                    "en": "I received a Japanese book from my teacher."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "昨天向老师学习了日语。",
+                    "en": "I learned Japanese from my teacher yesterday."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「友達に 傘を かしました。」= 我把伞借给朋友。。",
+                "en": "友達に 傘を かしました。 means I lent an umbrella to my friend.."
+              }
+            }
+          ]
         },
         {
           "id": "l07_e04",
           "jp": "きのう 先生に 日本語を ならいました。",
           "zh": "昨天向老师学习了日语。",
-          "en": "I learned Japanese from my teacher yesterday."
+          "en": "I learned Japanese from my teacher yesterday.",
+          "practice": [
+            {
+              "id": "l07_e04_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「きのう 先生に 日本語を ならいました。」的例句意思是？",
+                "en": "What does きのう 先生に 日本語を ならいました。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "昨天向老师学习了日语。",
+                    "en": "I learned Japanese from my teacher yesterday."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我给妹妹筷子。",
+                    "en": "I gave chopsticks to my younger sister."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "我收到老师给的日语书。",
+                    "en": "I received a Japanese book from my teacher."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "我把伞借给朋友。",
+                    "en": "I lent an umbrella to my friend."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「きのう 先生に 日本語を ならいました。」= 昨天向老师学习了日语。。",
+                "en": "きのう 先生に 日本語を ならいました。 means I learned Japanese from my teacher yesterday.."
+              }
+            }
+          ]
         },
         {
           "id": "l07_e05",
           "jp": "もう 宿題を しましたか。",
           "zh": "已经做作业了吗？",
-          "en": "Have you already done your homework?"
+          "en": "Have you already done your homework?",
+          "practice": [
+            {
+              "id": "l07_e05_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「もう 宿題を しましたか。」的例句意思是？",
+                "en": "What does もう 宿題を しましたか。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "已经做作业了吗？",
+                    "en": "Have you already done your homework?"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我给妹妹筷子。",
+                    "en": "I gave chopsticks to my younger sister."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "我收到老师给的日语书。",
+                    "en": "I received a Japanese book from my teacher."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "我把伞借给朋友。",
+                    "en": "I lent an umbrella to my friend."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「もう 宿題を しましたか。」= 已经做作业了吗？。",
+                "en": "もう 宿題を しましたか。 means Have you already done your homework?."
+              }
+            }
+          ]
         }
       ]
     },

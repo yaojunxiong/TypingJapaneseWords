@@ -31,7 +31,48 @@
           "kana": "ちょきんします",
           "zh": "存钱",
           "en": "save money",
-          "example": "旅行のために貯金します。"
+          "example": "旅行のために貯金します。",
+          "practice": [
+            {
+              "id": "l42-vocab-01_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「貯金します」的词汇意思是？",
+                "en": "What does 貯金します mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "存钱",
+                    "en": "save money"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "准备",
+                    "en": "prepare"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "调查、查询",
+                    "en": "look up, investigate"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "预约",
+                    "en": "reserve"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「貯金します」= 存钱。",
+                "en": "貯金します means save money."
+              }
+            }
+          ]
         },
         {
           "id": "l42-vocab-02",
@@ -39,7 +80,48 @@
           "kana": "じゅんびします",
           "zh": "准备",
           "en": "prepare",
-          "example": "試験のために準備します。"
+          "example": "試験のために準備します。",
+          "practice": [
+            {
+              "id": "l42-vocab-02_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「準備します」的词汇意思是？",
+                "en": "What does 準備します mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "准备",
+                    "en": "prepare"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "存钱",
+                    "en": "save money"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "调查、查询",
+                    "en": "look up, investigate"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "预约",
+                    "en": "reserve"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「準備します」= 准备。",
+                "en": "準備します means prepare."
+              }
+            }
+          ]
         },
         {
           "id": "l42-vocab-03",
@@ -47,7 +129,48 @@
           "kana": "しらべます",
           "zh": "调查、查询",
           "en": "look up, investigate",
-          "example": "資料を調べます。"
+          "example": "資料を調べます。",
+          "practice": [
+            {
+              "id": "l42-vocab-03_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「調べます」的词汇意思是？",
+                "en": "What does 調べます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "调查、查询",
+                    "en": "look up, investigate"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "存钱",
+                    "en": "save money"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "准备",
+                    "en": "prepare"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "预约",
+                    "en": "reserve"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「調べます」= 调查、查询。",
+                "en": "調べます means look up, investigate."
+              }
+            }
+          ]
         },
         {
           "id": "l42-vocab-04",
@@ -55,7 +178,48 @@
           "kana": "よやくします",
           "zh": "预约",
           "en": "reserve",
-          "example": "ホテルを予約します。"
+          "example": "ホテルを予約します。",
+          "practice": [
+            {
+              "id": "l42-vocab-04_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「予約します」的词汇意思是？",
+                "en": "What does 予約します mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "预约",
+                    "en": "reserve"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "存钱",
+                    "en": "save money"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "准备",
+                    "en": "prepare"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "调查、查询",
+                    "en": "look up, investigate"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「予約します」= 预约。",
+                "en": "予約します means reserve."
+              }
+            }
+          ]
         },
         {
           "id": "l42-vocab-05",
@@ -63,7 +227,48 @@
           "kana": "りゅうがく",
           "zh": "留学",
           "en": "study abroad",
-          "example": "留学のために日本語を勉強します。"
+          "example": "留学のために日本語を勉強します。",
+          "practice": [
+            {
+              "id": "l42-vocab-05_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「留学」的词汇意思是？",
+                "en": "What does 留学 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "留学",
+                    "en": "study abroad"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "存钱",
+                    "en": "save money"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "准备",
+                    "en": "prepare"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "调查、查询",
+                    "en": "look up, investigate"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「留学」= 留学。",
+                "en": "留学 means study abroad."
+              }
+            }
+          ]
         },
         {
           "id": "l42-vocab-06",
@@ -71,7 +276,48 @@
           "kana": "けんこう",
           "zh": "健康",
           "en": "health",
-          "example": "健康のために歩きます。"
+          "example": "健康のために歩きます。",
+          "practice": [
+            {
+              "id": "l42-vocab-06_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「健康」的词汇意思是？",
+                "en": "What does 健康 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "健康",
+                    "en": "health"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "存钱",
+                    "en": "save money"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "准备",
+                    "en": "prepare"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "调查、查询",
+                    "en": "look up, investigate"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「健康」= 健康。",
+                "en": "健康 means health."
+              }
+            }
+          ]
         },
         {
           "id": "l42-vocab-07",
@@ -79,7 +325,48 @@
           "kana": "しょうらい",
           "zh": "将来",
           "en": "future",
-          "example": "将来のために勉強します。"
+          "example": "将来のために勉強します。",
+          "practice": [
+            {
+              "id": "l42-vocab-07_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「将来」的词汇意思是？",
+                "en": "What does 将来 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "将来",
+                    "en": "future"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "存钱",
+                    "en": "save money"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "准备",
+                    "en": "prepare"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "调查、查询",
+                    "en": "look up, investigate"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「将来」= 将来。",
+                "en": "将来 means future."
+              }
+            }
+          ]
         },
         {
           "id": "l42-vocab-08",
@@ -87,7 +374,48 @@
           "kana": "ひつよう",
           "zh": "必要",
           "en": "necessary",
-          "example": "ビザを取るのに写真が必要です。"
+          "example": "ビザを取るのに写真が必要です。",
+          "practice": [
+            {
+              "id": "l42-vocab-08_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「必要」的词汇意思是？",
+                "en": "What does 必要 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "必要",
+                    "en": "necessary"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "存钱",
+                    "en": "save money"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "准备",
+                    "en": "prepare"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "调查、查询",
+                    "en": "look up, investigate"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「必要」= 必要。",
+                "en": "必要 means necessary."
+              }
+            }
+          ]
         },
         {
           "id": "l42-vocab-09",
@@ -95,7 +423,48 @@
           "kana": "ひよう",
           "zh": "费用",
           "en": "cost",
-          "example": "旅行の費用を計算します。"
+          "example": "旅行の費用を計算します。",
+          "practice": [
+            {
+              "id": "l42-vocab-09_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「費用」的词汇意思是？",
+                "en": "What does 費用 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "费用",
+                    "en": "cost"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "存钱",
+                    "en": "save money"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "准备",
+                    "en": "prepare"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "调查、查询",
+                    "en": "look up, investigate"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「費用」= 费用。",
+                "en": "費用 means cost."
+              }
+            }
+          ]
         },
         {
           "id": "l42-vocab-10",
@@ -103,7 +472,48 @@
           "kana": "じかん",
           "zh": "时间",
           "en": "time",
-          "example": "ここまで来るのに時間がかかります。"
+          "example": "ここまで来るのに時間がかかります。",
+          "practice": [
+            {
+              "id": "l42-vocab-10_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「時間」的词汇意思是？",
+                "en": "What does 時間 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "时间",
+                    "en": "time"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "存钱",
+                    "en": "save money"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "准备",
+                    "en": "prepare"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "调查、查询",
+                    "en": "look up, investigate"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「時間」= 时间。",
+                "en": "時間 means time."
+              }
+            }
+          ]
         }
       ]
     },
@@ -481,49 +891,377 @@
           "id": "l42-example-01",
           "jp": "大学院に入るために、研究計画を書いています。",
           "zh": "为了进研究生院，我正在写研究计划。",
-          "en": "I am writing a research plan in order to enter graduate school."
+          "en": "I am writing a research plan in order to enter graduate school.",
+          "practice": [
+            {
+              "id": "l42-example-01_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「大学院に入るために、研究計画を書いています。」的例句意思是？",
+                "en": "What does 大学院に入るために、研究計画を書いています。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "为了进研究生院，我正在写研究计划。",
+                    "en": "I am writing a research plan in order to enter graduate school."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "为了家人，我每天努力工作。",
+                    "en": "I work hard every day for my family."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这本词典查汉字很方便。",
+                    "en": "This dictionary is convenient for looking up kanji."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "搬家花了大约20万日元。",
+                    "en": "It cost about 200,000 yen to move."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「大学院に入るために、研究計画を書いています。」= 为了进研究生院，我正在写研究计划。。",
+                "en": "大学院に入るために、研究計画を書いています。 means I am writing a research plan in order to enter graduate school.."
+              }
+            }
+          ]
         },
         {
           "id": "l42-example-02",
           "jp": "家族のために、毎日一生懸命働いています。",
           "zh": "为了家人，我每天努力工作。",
-          "en": "I work hard every day for my family."
+          "en": "I work hard every day for my family.",
+          "practice": [
+            {
+              "id": "l42-example-02_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「家族のために、毎日一生懸命働いています。」的例句意思是？",
+                "en": "What does 家族のために、毎日一生懸命働いています。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "为了家人，我每天努力工作。",
+                    "en": "I work hard every day for my family."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "为了进研究生院，我正在写研究计划。",
+                    "en": "I am writing a research plan in order to enter graduate school."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这本词典查汉字很方便。",
+                    "en": "This dictionary is convenient for looking up kanji."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "搬家花了大约20万日元。",
+                    "en": "It cost about 200,000 yen to move."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「家族のために、毎日一生懸命働いています。」= 为了家人，我每天努力工作。。",
+                "en": "家族のために、毎日一生懸命働いています。 means I work hard every day for my family.."
+              }
+            }
+          ]
         },
         {
           "id": "l42-example-03",
           "jp": "この辞書は漢字を調べるのに便利です。",
           "zh": "这本词典查汉字很方便。",
-          "en": "This dictionary is convenient for looking up kanji."
+          "en": "This dictionary is convenient for looking up kanji.",
+          "practice": [
+            {
+              "id": "l42-example-03_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「この辞書は漢字を調べるのに便利です。」的例句意思是？",
+                "en": "What does この辞書は漢字を調べるのに便利です。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "这本词典查汉字很方便。",
+                    "en": "This dictionary is convenient for looking up kanji."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "为了进研究生院，我正在写研究计划。",
+                    "en": "I am writing a research plan in order to enter graduate school."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "为了家人，我每天努力工作。",
+                    "en": "I work hard every day for my family."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "搬家花了大约20万日元。",
+                    "en": "It cost about 200,000 yen to move."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「この辞書は漢字を調べるのに便利です。」= 这本词典查汉字很方便。。",
+                "en": "この辞書は漢字を調べるのに便利です。 means This dictionary is convenient for looking up kanji.."
+              }
+            }
+          ]
         },
         {
           "id": "l42-example-04",
           "jp": "引っ越すのに20万円ぐらいかかりました。",
           "zh": "搬家花了大约20万日元。",
-          "en": "It cost about 200,000 yen to move."
+          "en": "It cost about 200,000 yen to move.",
+          "practice": [
+            {
+              "id": "l42-example-04_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「引っ越すのに20万円ぐらいかかりました。」的例句意思是？",
+                "en": "What does 引っ越すのに20万円ぐらいかかりました。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "搬家花了大约20万日元。",
+                    "en": "It cost about 200,000 yen to move."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "为了进研究生院，我正在写研究计划。",
+                    "en": "I am writing a research plan in order to enter graduate school."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "为了家人，我每天努力工作。",
+                    "en": "I work hard every day for my family."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这本词典查汉字很方便。",
+                    "en": "This dictionary is convenient for looking up kanji."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「引っ越すのに20万円ぐらいかかりました。」= 搬家花了大约20万日元。。",
+                "en": "引っ越すのに20万円ぐらいかかりました。 means It cost about 200,000 yen to move.."
+              }
+            }
+          ]
         },
         {
           "id": "l42-example-05",
           "jp": "空港まで行くのに1時間半かかります。",
           "zh": "去机场需要一个半小时。",
-          "en": "It takes an hour and a half to get to the airport."
+          "en": "It takes an hour and a half to get to the airport.",
+          "practice": [
+            {
+              "id": "l42-example-05_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「空港まで行くのに1時間半かかります。」的例句意思是？",
+                "en": "What does 空港まで行くのに1時間半かかります。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "去机场需要一个半小时。",
+                    "en": "It takes an hour and a half to get to the airport."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "为了进研究生院，我正在写研究计划。",
+                    "en": "I am writing a research plan in order to enter graduate school."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "为了家人，我每天努力工作。",
+                    "en": "I work hard every day for my family."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这本词典查汉字很方便。",
+                    "en": "This dictionary is convenient for looking up kanji."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「空港まで行くのに1時間半かかります。」= 去机场需要一个半小时。。",
+                "en": "空港まで行くのに1時間半かかります。 means It takes an hour and a half to get to the airport.."
+              }
+            }
+          ]
         },
         {
           "id": "l42-example-06",
           "jp": "試験を受けるのに身分証明書が必要です。",
           "zh": "参加考试需要身份证件。",
-          "en": "An ID is required to take the exam."
+          "en": "An ID is required to take the exam.",
+          "practice": [
+            {
+              "id": "l42-example-06_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「試験を受けるのに身分証明書が必要です。」的例句意思是？",
+                "en": "What does 試験を受けるのに身分証明書が必要です。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "参加考试需要身份证件。",
+                    "en": "An ID is required to take the exam."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "为了进研究生院，我正在写研究计划。",
+                    "en": "I am writing a research plan in order to enter graduate school."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "为了家人，我每天努力工作。",
+                    "en": "I work hard every day for my family."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这本词典查汉字很方便。",
+                    "en": "This dictionary is convenient for looking up kanji."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「試験を受けるのに身分証明書が必要です。」= 参加考试需要身份证件。。",
+                "en": "試験を受けるのに身分証明書が必要です。 means An ID is required to take the exam.."
+              }
+            }
+          ]
         },
         {
           "id": "l42-example-07",
           "jp": "将来のために、英語も勉強しています。",
           "zh": "为了将来，我也在学英语。",
-          "en": "I am also studying English for my future."
+          "en": "I am also studying English for my future.",
+          "practice": [
+            {
+              "id": "l42-example-07_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「将来のために、英語も勉強しています。」的例句意思是？",
+                "en": "What does 将来のために、英語も勉強しています。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "为了将来，我也在学英语。",
+                    "en": "I am also studying English for my future."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "为了进研究生院，我正在写研究计划。",
+                    "en": "I am writing a research plan in order to enter graduate school."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "为了家人，我每天努力工作。",
+                    "en": "I work hard every day for my family."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这本词典查汉字很方便。",
+                    "en": "This dictionary is convenient for looking up kanji."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「将来のために、英語も勉強しています。」= 为了将来，我也在学英语。。",
+                "en": "将来のために、英語も勉強しています。 means I am also studying English for my future.."
+              }
+            }
+          ]
         },
         {
           "id": "l42-example-08",
           "jp": "写真を整理するのにこのアプリを使っています。",
           "zh": "我用这个应用整理照片。",
-          "en": "I use this app for organizing photos."
+          "en": "I use this app for organizing photos.",
+          "practice": [
+            {
+              "id": "l42-example-08_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「写真を整理するのにこのアプリを使っています。」的例句意思是？",
+                "en": "What does 写真を整理するのにこのアプリを使っています。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "我用这个应用整理照片。",
+                    "en": "I use this app for organizing photos."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "为了进研究生院，我正在写研究计划。",
+                    "en": "I am writing a research plan in order to enter graduate school."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "为了家人，我每天努力工作。",
+                    "en": "I work hard every day for my family."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这本词典查汉字很方便。",
+                    "en": "This dictionary is convenient for looking up kanji."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「写真を整理するのにこのアプリを使っています。」= 我用这个应用整理照片。。",
+                "en": "写真を整理するのにこのアプリを使っています。 means I use this app for organizing photos.."
+              }
+            }
+          ]
         }
       ]
     },

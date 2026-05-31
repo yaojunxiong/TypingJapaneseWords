@@ -36,6 +36,47 @@
           "en": "push",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l23_v01_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「押します」的词汇意思是？",
+                "en": "What does 押します mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "按",
+                    "en": "push"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "转",
+                    "en": "turn"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "拉",
+                    "en": "pull"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "转弯",
+                    "en": "turn (direction)"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「押します」= 按。",
+                "en": "押します means push."
+              }
+            }
           ]
         },
         {
@@ -46,6 +87,47 @@
           "en": "turn",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l23_v02_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「回します」的词汇意思是？",
+                "en": "What does 回します mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "转",
+                    "en": "turn"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "按",
+                    "en": "push"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "拉",
+                    "en": "pull"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "转弯",
+                    "en": "turn (direction)"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「回します」= 转。",
+                "en": "回します means turn."
+              }
+            }
           ]
         },
         {
@@ -56,6 +138,47 @@
           "en": "pull",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l23_v03_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「引きます」的词汇意思是？",
+                "en": "What does 引きます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "拉",
+                    "en": "pull"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "按",
+                    "en": "push"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "转",
+                    "en": "turn"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "转弯",
+                    "en": "turn (direction)"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「引きます」= 拉。",
+                "en": "引きます means pull."
+              }
+            }
           ]
         },
         {
@@ -66,6 +189,47 @@
           "en": "turn (direction)",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l23_v04_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「曲がります」的词汇意思是？",
+                "en": "What does 曲がります mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "转弯",
+                    "en": "turn (direction)"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "按",
+                    "en": "push"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "转",
+                    "en": "turn"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "拉",
+                    "en": "pull"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「曲がります」= 转弯。",
+                "en": "曲がります means turn (direction)."
+              }
+            }
           ]
         },
         {
@@ -76,6 +240,47 @@
           "en": "touch",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l23_v05_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「触ります」的词汇意思是？",
+                "en": "What does 触ります mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "触摸",
+                    "en": "touch"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "按",
+                    "en": "push"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "转",
+                    "en": "turn"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "拉",
+                    "en": "pull"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「触ります」= 触摸。",
+                "en": "触ります means touch."
+              }
+            }
           ]
         },
         {
@@ -86,6 +291,47 @@
           "en": "cross",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l23_v06_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「渡ります」的词汇意思是？",
+                "en": "What does 渡ります mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "通过；过（桥）",
+                    "en": "cross"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "按",
+                    "en": "push"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "转",
+                    "en": "turn"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "拉",
+                    "en": "pull"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「渡ります」= 通过；过（桥）。",
+                "en": "渡ります means cross."
+              }
+            }
           ]
         },
         {
@@ -96,6 +342,47 @@
           "en": "traffic light",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l23_v07_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「信号」的词汇意思是？",
+                "en": "What does 信号 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "信号灯",
+                    "en": "traffic light"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "按",
+                    "en": "push"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "转",
+                    "en": "turn"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "拉",
+                    "en": "pull"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「信号」= 信号灯。",
+                "en": "信号 means traffic light."
+              }
+            }
           ]
         },
         {
@@ -106,6 +393,47 @@
           "en": "corner",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l23_v08_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「角」的词汇意思是？",
+                "en": "What does 角 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "拐角",
+                    "en": "corner"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "按",
+                    "en": "push"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "转",
+                    "en": "turn"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "拉",
+                    "en": "pull"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「角」= 拐角。",
+                "en": "角 means corner."
+              }
+            }
           ]
         },
         {
@@ -116,6 +444,47 @@
           "en": "road",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l23_v09_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「道」的词汇意思是？",
+                "en": "What does 道 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "路",
+                    "en": "road"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "按",
+                    "en": "push"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "转",
+                    "en": "turn"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "拉",
+                    "en": "pull"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「道」= 路。",
+                "en": "道 means road."
+              }
+            }
           ]
         },
         {
@@ -126,6 +495,47 @@
           "en": "straight",
           "tags": [
             "adv"
+          ],
+          "practice": [
+            {
+              "id": "l23_v10_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「まっすぐ」的词汇意思是？",
+                "en": "What does まっすぐ mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "笔直地",
+                    "en": "straight"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "按",
+                    "en": "push"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "转",
+                    "en": "turn"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "拉",
+                    "en": "pull"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「まっすぐ」= 笔直地。",
+                "en": "まっすぐ means straight."
+              }
+            }
           ]
         },
         {
@@ -136,6 +546,47 @@
           "en": "danger",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l23_v11_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「危険」的词汇意思是？",
+                "en": "What does 危険 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "危险",
+                    "en": "danger"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "按",
+                    "en": "push"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "转",
+                    "en": "turn"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "拉",
+                    "en": "pull"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「危険」= 危险。",
+                "en": "危険 means danger."
+              }
+            }
           ]
         },
         {
@@ -146,6 +597,47 @@
           "en": "safety",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l23_v12_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「安全」的词汇意思是？",
+                "en": "What does 安全 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "安全",
+                    "en": "safety"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "按",
+                    "en": "push"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "转",
+                    "en": "turn"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "拉",
+                    "en": "pull"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「安全」= 安全。",
+                "en": "安全 means safety."
+              }
+            }
           ]
         },
         {
@@ -156,6 +648,47 @@
           "en": "dark",
           "tags": [
             "adj-i"
+          ],
+          "practice": [
+            {
+              "id": "l23_v13_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「暗い」的词汇意思是？",
+                "en": "What does 暗い mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "暗",
+                    "en": "dark"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "按",
+                    "en": "push"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "转",
+                    "en": "turn"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "拉",
+                    "en": "pull"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「暗い」= 暗。",
+                "en": "暗い means dark."
+              }
+            }
           ]
         },
         {
@@ -166,6 +699,47 @@
           "en": "bright",
           "tags": [
             "adj-i"
+          ],
+          "practice": [
+            {
+              "id": "l23_v14_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「明るい」的词汇意思是？",
+                "en": "What does 明るい mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "明亮",
+                    "en": "bright"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "按",
+                    "en": "push"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "转",
+                    "en": "turn"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "拉",
+                    "en": "pull"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「明るい」= 明亮。",
+                "en": "明るい means bright."
+              }
+            }
           ]
         },
         {
@@ -176,6 +750,47 @@
           "en": "time/when",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l23_v15_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「時」的词汇意思是？",
+                "en": "What does 時 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "时候",
+                    "en": "time/when"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "按",
+                    "en": "push"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "转",
+                    "en": "turn"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "拉",
+                    "en": "pull"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「時」= 时候。",
+                "en": "時 means time/when."
+              }
+            }
           ]
         },
         {
@@ -186,6 +801,47 @@
           "en": "be troubled",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l23_v16_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「困ります」的词汇意思是？",
+                "en": "What does 困ります mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "困扰",
+                    "en": "be troubled"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "按",
+                    "en": "push"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "转",
+                    "en": "turn"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "拉",
+                    "en": "pull"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「困ります」= 困扰。",
+                "en": "困ります means be troubled."
+              }
+            }
           ]
         }
       ]
@@ -578,31 +1234,236 @@
           "id": "l23_e01",
           "jp": "この道をまっすぐ行くと、駅があります。",
           "zh": "这条路直走就到车站。",
-          "en": "If you go straight on this road, you will find the station."
+          "en": "If you go straight on this road, you will find the station.",
+          "practice": [
+            {
+              "id": "l23_e01_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「この道をまっすぐ行くと、駅があります。」的例句意思是？",
+                "en": "What does この道をまっすぐ行くと、駅があります。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "这条路直走就到车站。",
+                    "en": "If you go straight on this road, you will find the station."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "去日本的时候你会带什么？",
+                    "en": "What will you bring when going to Japan?"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "拐角后看见了一家老店。",
+                    "en": "When I turned the corner, I saw an old shop."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "遇到困难时我会和朋友商量。",
+                    "en": "When I am in trouble, I consult my friends."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「この道をまっすぐ行くと、駅があります。」= 这条路直走就到车站。。",
+                "en": "この道をまっすぐ行くと、駅があります。 means If you go straight on this road, you will find the station.."
+              }
+            }
+          ]
         },
         {
           "id": "l23_e02",
           "jp": "日本へ行くとき、何を持って行きますか。",
           "zh": "去日本的时候你会带什么？",
-          "en": "What will you bring when going to Japan?"
+          "en": "What will you bring when going to Japan?",
+          "practice": [
+            {
+              "id": "l23_e02_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「日本へ行くとき、何を持って行きますか。」的例句意思是？",
+                "en": "What does 日本へ行くとき、何を持って行きますか。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "去日本的时候你会带什么？",
+                    "en": "What will you bring when going to Japan?"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "这条路直走就到车站。",
+                    "en": "If you go straight on this road, you will find the station."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "拐角后看见了一家老店。",
+                    "en": "When I turned the corner, I saw an old shop."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "遇到困难时我会和朋友商量。",
+                    "en": "When I am in trouble, I consult my friends."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「日本へ行くとき、何を持って行きますか。」= 去日本的时候你会带什么？。",
+                "en": "日本へ行くとき、何を持って行きますか。 means What will you bring when going to Japan?."
+              }
+            }
+          ]
         },
         {
           "id": "l23_e03",
           "jp": "角を曲がったとき、古い店が見えました。",
           "zh": "拐角后看见了一家老店。",
-          "en": "When I turned the corner, I saw an old shop."
+          "en": "When I turned the corner, I saw an old shop.",
+          "practice": [
+            {
+              "id": "l23_e03_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「角を曲がったとき、古い店が見えました。」的例句意思是？",
+                "en": "What does 角を曲がったとき、古い店が見えました。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "拐角后看见了一家老店。",
+                    "en": "When I turned the corner, I saw an old shop."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "这条路直走就到车站。",
+                    "en": "If you go straight on this road, you will find the station."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "去日本的时候你会带什么？",
+                    "en": "What will you bring when going to Japan?"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "遇到困难时我会和朋友商量。",
+                    "en": "When I am in trouble, I consult my friends."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「角を曲がったとき、古い店が見えました。」= 拐角后看见了一家老店。。",
+                "en": "角を曲がったとき、古い店が見えました。 means When I turned the corner, I saw an old shop.."
+              }
+            }
+          ]
         },
         {
           "id": "l23_e04",
           "jp": "困ったときは、友だちに相談します。",
           "zh": "遇到困难时我会和朋友商量。",
-          "en": "When I am in trouble, I consult my friends."
+          "en": "When I am in trouble, I consult my friends.",
+          "practice": [
+            {
+              "id": "l23_e04_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「困ったときは、友だちに相談します。」的例句意思是？",
+                "en": "What does 困ったときは、友だちに相談します。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "遇到困难时我会和朋友商量。",
+                    "en": "When I am in trouble, I consult my friends."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "这条路直走就到车站。",
+                    "en": "If you go straight on this road, you will find the station."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "去日本的时候你会带什么？",
+                    "en": "What will you bring when going to Japan?"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "拐角后看见了一家老店。",
+                    "en": "When I turned the corner, I saw an old shop."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「困ったときは、友だちに相談します。」= 遇到困难时我会和朋友商量。。",
+                "en": "困ったときは、友だちに相談します。 means When I am in trouble, I consult my friends.."
+              }
+            }
+          ]
         },
         {
           "id": "l23_e05",
           "jp": "夜、暗い道を歩くときは注意してください。",
           "zh": "晚上走暗路时请注意。",
-          "en": "Please be careful when walking on dark roads at night."
+          "en": "Please be careful when walking on dark roads at night.",
+          "practice": [
+            {
+              "id": "l23_e05_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「夜、暗い道を歩くときは注意してください。」的例句意思是？",
+                "en": "What does 夜、暗い道を歩くときは注意してください。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "晚上走暗路时请注意。",
+                    "en": "Please be careful when walking on dark roads at night."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "这条路直走就到车站。",
+                    "en": "If you go straight on this road, you will find the station."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "去日本的时候你会带什么？",
+                    "en": "What will you bring when going to Japan?"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "拐角后看见了一家老店。",
+                    "en": "When I turned the corner, I saw an old shop."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「夜、暗い道を歩くときは注意してください。」= 晚上走暗路时请注意。。",
+                "en": "夜、暗い道を歩くときは注意してください。 means Please be careful when walking on dark roads at night.."
+              }
+            }
+          ]
         }
       ]
     },

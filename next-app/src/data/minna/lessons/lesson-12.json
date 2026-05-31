@@ -36,6 +36,47 @@
           "en": "many",
           "tags": [
             "adj-i"
+          ],
+          "practice": [
+            {
+              "id": "l12_v01_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「多い」的词汇意思是？",
+                "en": "What does 多い mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "多",
+                    "en": "many"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "少",
+                    "en": "few"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "暖和",
+                    "en": "warm"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "凉快",
+                    "en": "cool"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「多い」= 多。",
+                "en": "多い means many."
+              }
+            }
           ]
         },
         {
@@ -46,6 +87,47 @@
           "en": "few",
           "tags": [
             "adj-i"
+          ],
+          "practice": [
+            {
+              "id": "l12_v02_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「少ない」的词汇意思是？",
+                "en": "What does 少ない mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "少",
+                    "en": "few"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "多",
+                    "en": "many"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "暖和",
+                    "en": "warm"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "凉快",
+                    "en": "cool"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「少ない」= 少。",
+                "en": "少ない means few."
+              }
+            }
           ]
         },
         {
@@ -56,6 +138,47 @@
           "en": "warm",
           "tags": [
             "adj-i"
+          ],
+          "practice": [
+            {
+              "id": "l12_v03_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「暖かい」的词汇意思是？",
+                "en": "What does 暖かい mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "暖和",
+                    "en": "warm"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "多",
+                    "en": "many"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "少",
+                    "en": "few"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "凉快",
+                    "en": "cool"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「暖かい」= 暖和。",
+                "en": "暖かい means warm."
+              }
+            }
           ]
         },
         {
@@ -66,6 +189,47 @@
           "en": "cool",
           "tags": [
             "adj-i"
+          ],
+          "practice": [
+            {
+              "id": "l12_v04_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「涼しい」的词汇意思是？",
+                "en": "What does 涼しい mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "凉快",
+                    "en": "cool"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "多",
+                    "en": "many"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "少",
+                    "en": "few"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "暖和",
+                    "en": "warm"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「涼しい」= 凉快。",
+                "en": "涼しい means cool."
+              }
+            }
           ]
         },
         {
@@ -76,6 +240,47 @@
           "en": "fast",
           "tags": [
             "adj-i"
+          ],
+          "practice": [
+            {
+              "id": "l12_v05_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「速い」的词汇意思是？",
+                "en": "What does 速い mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "快（速度）",
+                    "en": "fast"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "多",
+                    "en": "many"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "少",
+                    "en": "few"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "暖和",
+                    "en": "warm"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「速い」= 快（速度）。",
+                "en": "速い means fast."
+              }
+            }
           ]
         },
         {
@@ -86,6 +291,47 @@
           "en": "slow",
           "tags": [
             "adj-i"
+          ],
+          "practice": [
+            {
+              "id": "l12_v06_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「遅い」的词汇意思是？",
+                "en": "What does 遅い mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "慢",
+                    "en": "slow"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "多",
+                    "en": "many"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "少",
+                    "en": "few"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "暖和",
+                    "en": "warm"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「遅い」= 慢。",
+                "en": "遅い means slow."
+              }
+            }
           ]
         },
         {
@@ -96,6 +342,47 @@
           "en": "near",
           "tags": [
             "adj-i"
+          ],
+          "practice": [
+            {
+              "id": "l12_v07_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「近い」的词汇意思是？",
+                "en": "What does 近い mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "近",
+                    "en": "near"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "多",
+                    "en": "many"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "少",
+                    "en": "few"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "暖和",
+                    "en": "warm"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「近い」= 近。",
+                "en": "近い means near."
+              }
+            }
           ]
         },
         {
@@ -106,6 +393,47 @@
           "en": "far",
           "tags": [
             "adj-i"
+          ],
+          "practice": [
+            {
+              "id": "l12_v08_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「遠い」的词汇意思是？",
+                "en": "What does 遠い mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "远",
+                    "en": "far"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "多",
+                    "en": "many"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "少",
+                    "en": "few"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "暖和",
+                    "en": "warm"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「遠い」= 远。",
+                "en": "遠い means far."
+              }
+            }
           ]
         },
         {
@@ -116,6 +444,47 @@
           "en": "famous",
           "tags": [
             "adj-na"
+          ],
+          "practice": [
+            {
+              "id": "l12_v09_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「有名」的词汇意思是？",
+                "en": "What does 有名 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "有名",
+                    "en": "famous"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "多",
+                    "en": "many"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "少",
+                    "en": "few"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "暖和",
+                    "en": "warm"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「有名」= 有名。",
+                "en": "有名 means famous."
+              }
+            }
           ]
         },
         {
@@ -126,6 +495,47 @@
           "en": "convenient",
           "tags": [
             "adj-na"
+          ],
+          "practice": [
+            {
+              "id": "l12_v10_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「便利」的词汇意思是？",
+                "en": "What does 便利 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "方便",
+                    "en": "convenient"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "多",
+                    "en": "many"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "少",
+                    "en": "few"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "暖和",
+                    "en": "warm"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「便利」= 方便。",
+                "en": "便利 means convenient."
+              }
+            }
           ]
         },
         {
@@ -136,6 +546,47 @@
           "en": "lively",
           "tags": [
             "adj-na"
+          ],
+          "practice": [
+            {
+              "id": "l12_v11_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「にぎやか」的词汇意思是？",
+                "en": "What does にぎやか mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "热闹",
+                    "en": "lively"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "多",
+                    "en": "many"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "少",
+                    "en": "few"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "暖和",
+                    "en": "warm"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「にぎやか」= 热闹。",
+                "en": "にぎやか means lively."
+              }
+            }
           ]
         },
         {
@@ -146,6 +597,47 @@
           "en": "quiet",
           "tags": [
             "adj-na"
+          ],
+          "practice": [
+            {
+              "id": "l12_v12_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「静か」的词汇意思是？",
+                "en": "What does 静か mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "安静",
+                    "en": "quiet"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "多",
+                    "en": "many"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "少",
+                    "en": "few"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "暖和",
+                    "en": "warm"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「静か」= 安静。",
+                "en": "静か means quiet."
+              }
+            }
           ]
         },
         {
@@ -156,6 +648,47 @@
           "en": "season",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l12_v13_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「季節」的词汇意思是？",
+                "en": "What does 季節 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "季节",
+                    "en": "season"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "多",
+                    "en": "many"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "少",
+                    "en": "few"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "暖和",
+                    "en": "warm"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「季節」= 季节。",
+                "en": "季節 means season."
+              }
+            }
           ]
         },
         {
@@ -166,6 +699,47 @@
           "en": "spring",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l12_v14_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「春」的词汇意思是？",
+                "en": "What does 春 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "春天",
+                    "en": "spring"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "多",
+                    "en": "many"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "少",
+                    "en": "few"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "暖和",
+                    "en": "warm"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「春」= 春天。",
+                "en": "春 means spring."
+              }
+            }
           ]
         },
         {
@@ -176,6 +750,47 @@
           "en": "summer",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l12_v15_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「夏」的词汇意思是？",
+                "en": "What does 夏 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "夏天",
+                    "en": "summer"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "多",
+                    "en": "many"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "少",
+                    "en": "few"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "暖和",
+                    "en": "warm"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「夏」= 夏天。",
+                "en": "夏 means summer."
+              }
+            }
           ]
         },
         {
@@ -186,6 +801,47 @@
           "en": "the most",
           "tags": [
             "adv"
+          ],
+          "practice": [
+            {
+              "id": "l12_v16_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「一番」的词汇意思是？",
+                "en": "What does 一番 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "最",
+                    "en": "the most"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "多",
+                    "en": "many"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "少",
+                    "en": "few"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "暖和",
+                    "en": "warm"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「一番」= 最。",
+                "en": "一番 means the most."
+              }
+            }
           ]
         }
       ]
@@ -578,31 +1234,236 @@
           "id": "l12_e01",
           "jp": "きのうの映画は面白かったです。",
           "zh": "昨天的电影很有趣。",
-          "en": "Yesterday's movie was interesting."
+          "en": "Yesterday's movie was interesting.",
+          "practice": [
+            {
+              "id": "l12_e01_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「きのうの映画は面白かったです。」的例句意思是？",
+                "en": "What does きのうの映画は面白かったです。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "昨天的电影很有趣。",
+                    "en": "Yesterday's movie was interesting."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "去年的冬天不太冷。",
+                    "en": "Last winter was not very cold."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "A店和B店哪家更便宜？",
+                    "en": "Which is cheaper, store A or B?"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这个城市哪里最热闹？",
+                    "en": "Where is the liveliest in this town?"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「きのうの映画は面白かったです。」= 昨天的电影很有趣。。",
+                "en": "きのうの映画は面白かったです。 means Yesterday's movie was interesting.."
+              }
+            }
+          ]
         },
         {
           "id": "l12_e02",
           "jp": "去年の冬はあまり寒くなかったです。",
           "zh": "去年的冬天不太冷。",
-          "en": "Last winter was not very cold."
+          "en": "Last winter was not very cold.",
+          "practice": [
+            {
+              "id": "l12_e02_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「去年の冬はあまり寒くなかったです。」的例句意思是？",
+                "en": "What does 去年の冬はあまり寒くなかったです。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "去年的冬天不太冷。",
+                    "en": "Last winter was not very cold."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "昨天的电影很有趣。",
+                    "en": "Yesterday's movie was interesting."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "A店和B店哪家更便宜？",
+                    "en": "Which is cheaper, store A or B?"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这个城市哪里最热闹？",
+                    "en": "Where is the liveliest in this town?"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「去年の冬はあまり寒くなかったです。」= 去年的冬天不太冷。。",
+                "en": "去年の冬はあまり寒くなかったです。 means Last winter was not very cold.."
+              }
+            }
+          ]
         },
         {
           "id": "l12_e03",
           "jp": "A店とB店とどちらが安いですか。",
           "zh": "A店和B店哪家更便宜？",
-          "en": "Which is cheaper, store A or B?"
+          "en": "Which is cheaper, store A or B?",
+          "practice": [
+            {
+              "id": "l12_e03_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「A店とB店とどちらが安いですか。」的例句意思是？",
+                "en": "What does A店とB店とどちらが安いですか。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "A店和B店哪家更便宜？",
+                    "en": "Which is cheaper, store A or B?"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "昨天的电影很有趣。",
+                    "en": "Yesterday's movie was interesting."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "去年的冬天不太冷。",
+                    "en": "Last winter was not very cold."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "这个城市哪里最热闹？",
+                    "en": "Where is the liveliest in this town?"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「A店とB店とどちらが安いですか。」= A店和B店哪家更便宜？。",
+                "en": "A店とB店とどちらが安いですか。 means Which is cheaper, store A or B?."
+              }
+            }
+          ]
         },
         {
           "id": "l12_e04",
           "jp": "この町でどこが一番にぎやかですか。",
           "zh": "这个城市哪里最热闹？",
-          "en": "Where is the liveliest in this town?"
+          "en": "Where is the liveliest in this town?",
+          "practice": [
+            {
+              "id": "l12_e04_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「この町でどこが一番にぎやかですか。」的例句意思是？",
+                "en": "What does この町でどこが一番にぎやかですか。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "这个城市哪里最热闹？",
+                    "en": "Where is the liveliest in this town?"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "昨天的电影很有趣。",
+                    "en": "Yesterday's movie was interesting."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "去年的冬天不太冷。",
+                    "en": "Last winter was not very cold."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "A店和B店哪家更便宜？",
+                    "en": "Which is cheaper, store A or B?"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「この町でどこが一番にぎやかですか。」= 这个城市哪里最热闹？。",
+                "en": "この町でどこが一番にぎやかですか。 means Where is the liveliest in this town?."
+              }
+            }
+          ]
         },
         {
           "id": "l12_e05",
           "jp": "日本の季節の中で春が一番好きです。",
           "zh": "在日本的季节里我最喜欢春天。",
-          "en": "I like spring the most among Japanese seasons."
+          "en": "I like spring the most among Japanese seasons.",
+          "practice": [
+            {
+              "id": "l12_e05_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「日本の季節の中で春が一番好きです。」的例句意思是？",
+                "en": "What does 日本の季節の中で春が一番好きです。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "在日本的季节里我最喜欢春天。",
+                    "en": "I like spring the most among Japanese seasons."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "昨天的电影很有趣。",
+                    "en": "Yesterday's movie was interesting."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "去年的冬天不太冷。",
+                    "en": "Last winter was not very cold."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "A店和B店哪家更便宜？",
+                    "en": "Which is cheaper, store A or B?"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「日本の季節の中で春が一番好きです。」= 在日本的季节里我最喜欢春天。。",
+                "en": "日本の季節の中で春が一番好きです。 means I like spring the most among Japanese seasons.."
+              }
+            }
+          ]
         }
       ]
     },

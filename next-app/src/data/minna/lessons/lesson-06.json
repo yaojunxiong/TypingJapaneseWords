@@ -36,6 +36,47 @@
           "en": "eat",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l06_v01_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「食べます」的词汇意思是？",
+                "en": "What does 食べます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "吃",
+                    "en": "eat"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "喝",
+                    "en": "drink"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "看",
+                    "en": "watch"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "听",
+                    "en": "listen"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「食べます」= 吃。",
+                "en": "食べます means eat."
+              }
+            }
           ]
         },
         {
@@ -46,6 +87,47 @@
           "en": "drink",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l06_v02_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「飲みます」的词汇意思是？",
+                "en": "What does 飲みます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "喝",
+                    "en": "drink"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "吃",
+                    "en": "eat"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "看",
+                    "en": "watch"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "听",
+                    "en": "listen"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「飲みます」= 喝。",
+                "en": "飲みます means drink."
+              }
+            }
           ]
         },
         {
@@ -56,6 +138,47 @@
           "en": "watch",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l06_v03_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「見ます」的词汇意思是？",
+                "en": "What does 見ます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "看",
+                    "en": "watch"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "吃",
+                    "en": "eat"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "喝",
+                    "en": "drink"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "听",
+                    "en": "listen"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「見ます」= 看。",
+                "en": "見ます means watch."
+              }
+            }
           ]
         },
         {
@@ -66,6 +189,47 @@
           "en": "listen",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l06_v04_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「聞きます」的词汇意思是？",
+                "en": "What does 聞きます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "听",
+                    "en": "listen"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "吃",
+                    "en": "eat"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "喝",
+                    "en": "drink"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "看",
+                    "en": "watch"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「聞きます」= 听。",
+                "en": "聞きます means listen."
+              }
+            }
           ]
         },
         {
@@ -76,6 +240,47 @@
           "en": "read",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l06_v05_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「読みます」的词汇意思是？",
+                "en": "What does 読みます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "读",
+                    "en": "read"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "吃",
+                    "en": "eat"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "喝",
+                    "en": "drink"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "看",
+                    "en": "watch"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「読みます」= 读。",
+                "en": "読みます means read."
+              }
+            }
           ]
         },
         {
@@ -86,6 +291,47 @@
           "en": "write",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l06_v06_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「書きます」的词汇意思是？",
+                "en": "What does 書きます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "写",
+                    "en": "write"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "吃",
+                    "en": "eat"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "喝",
+                    "en": "drink"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "看",
+                    "en": "watch"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「書きます」= 写。",
+                "en": "書きます means write."
+              }
+            }
           ]
         },
         {
@@ -96,6 +342,47 @@
           "en": "buy",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l06_v07_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「買います」的词汇意思是？",
+                "en": "What does 買います mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "买",
+                    "en": "buy"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "吃",
+                    "en": "eat"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "喝",
+                    "en": "drink"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "看",
+                    "en": "watch"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「買います」= 买。",
+                "en": "買います means buy."
+              }
+            }
           ]
         },
         {
@@ -106,6 +393,47 @@
           "en": "take (a photo)",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l06_v08_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「撮ります」的词汇意思是？",
+                "en": "What does 撮ります mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "拍（照）",
+                    "en": "take (a photo)"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "吃",
+                    "en": "eat"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "喝",
+                    "en": "drink"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "看",
+                    "en": "watch"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「撮ります」= 拍（照）。",
+                "en": "撮ります means take (a photo)."
+              }
+            }
           ]
         },
         {
@@ -116,6 +444,47 @@
           "en": "do",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l06_v09_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「します」的词汇意思是？",
+                "en": "What does します mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "做",
+                    "en": "do"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "吃",
+                    "en": "eat"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "喝",
+                    "en": "drink"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "看",
+                    "en": "watch"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「します」= 做。",
+                "en": "します means do."
+              }
+            }
           ]
         },
         {
@@ -126,6 +495,47 @@
           "en": "meet",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l06_v10_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「会います」的词汇意思是？",
+                "en": "What does 会います mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "见面",
+                    "en": "meet"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "吃",
+                    "en": "eat"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "喝",
+                    "en": "drink"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "看",
+                    "en": "watch"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「会います」= 见面。",
+                "en": "会います means meet."
+              }
+            }
           ]
         },
         {
@@ -136,6 +546,47 @@
           "en": "meal",
           "tags": [
             "object"
+          ],
+          "practice": [
+            {
+              "id": "l06_v11_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「ご飯」的词汇意思是？",
+                "en": "What does ご飯 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "米饭 / 饭",
+                    "en": "meal"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "吃",
+                    "en": "eat"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "喝",
+                    "en": "drink"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "看",
+                    "en": "watch"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「ご飯」= 米饭 / 饭。",
+                "en": "ご飯 means meal."
+              }
+            }
           ]
         },
         {
@@ -146,6 +597,47 @@
           "en": "water",
           "tags": [
             "object"
+          ],
+          "practice": [
+            {
+              "id": "l06_v12_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「水」的词汇意思是？",
+                "en": "What does 水 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "水",
+                    "en": "water"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "吃",
+                    "en": "eat"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "喝",
+                    "en": "drink"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "看",
+                    "en": "watch"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「水」= 水。",
+                "en": "水 means water."
+              }
+            }
           ]
         },
         {
@@ -156,6 +648,47 @@
           "en": "movie",
           "tags": [
             "object"
+          ],
+          "practice": [
+            {
+              "id": "l06_v13_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「映画」的词汇意思是？",
+                "en": "What does 映画 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "电影",
+                    "en": "movie"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "吃",
+                    "en": "eat"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "喝",
+                    "en": "drink"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "看",
+                    "en": "watch"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「映画」= 电影。",
+                "en": "映画 means movie."
+              }
+            }
           ]
         },
         {
@@ -166,6 +699,47 @@
           "en": "music",
           "tags": [
             "object"
+          ],
+          "practice": [
+            {
+              "id": "l06_v14_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「音楽」的词汇意思是？",
+                "en": "What does 音楽 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "音乐",
+                    "en": "music"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "吃",
+                    "en": "eat"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "喝",
+                    "en": "drink"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "看",
+                    "en": "watch"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「音楽」= 音乐。",
+                "en": "音楽 means music."
+              }
+            }
           ]
         },
         {
@@ -176,6 +750,47 @@
           "en": "letter",
           "tags": [
             "object"
+          ],
+          "practice": [
+            {
+              "id": "l06_v15_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「手紙」的词汇意思是？",
+                "en": "What does 手紙 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "信",
+                    "en": "letter"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "吃",
+                    "en": "eat"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "喝",
+                    "en": "drink"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "看",
+                    "en": "watch"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「手紙」= 信。",
+                "en": "手紙 means letter."
+              }
+            }
           ]
         },
         {
@@ -186,6 +801,47 @@
           "en": "photo",
           "tags": [
             "object"
+          ],
+          "practice": [
+            {
+              "id": "l06_v16_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「写真」的词汇意思是？",
+                "en": "What does 写真 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "照片",
+                    "en": "photo"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "吃",
+                    "en": "eat"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "喝",
+                    "en": "drink"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "看",
+                    "en": "watch"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「写真」= 照片。",
+                "en": "写真 means photo."
+              }
+            }
           ]
         }
       ]
@@ -530,31 +1186,236 @@
           "id": "l06_e01",
           "jp": "朝 水を 飲みます。",
           "zh": "早上喝水。",
-          "en": "I drink water in the morning."
+          "en": "I drink water in the morning.",
+          "practice": [
+            {
+              "id": "l06_e01_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「朝 水を 飲みます。」的例句意思是？",
+                "en": "What does 朝 水を 飲みます。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "早上喝水。",
+                    "en": "I drink water in the morning."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "晚上写信。",
+                    "en": "I write a letter at night."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "周六和朋友看电影。",
+                    "en": "I watch a movie with a friend on Saturday."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "一起听音乐吗？",
+                    "en": "Would you like to listen to music together?"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「朝 水を 飲みます。」= 早上喝水。。",
+                "en": "朝 水を 飲みます。 means I drink water in the morning.."
+              }
+            }
+          ]
         },
         {
           "id": "l06_e02",
           "jp": "夜 手紙を 書きます。",
           "zh": "晚上写信。",
-          "en": "I write a letter at night."
+          "en": "I write a letter at night.",
+          "practice": [
+            {
+              "id": "l06_e02_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「夜 手紙を 書きます。」的例句意思是？",
+                "en": "What does 夜 手紙を 書きます。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "晚上写信。",
+                    "en": "I write a letter at night."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "早上喝水。",
+                    "en": "I drink water in the morning."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "周六和朋友看电影。",
+                    "en": "I watch a movie with a friend on Saturday."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "一起听音乐吗？",
+                    "en": "Would you like to listen to music together?"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「夜 手紙を 書きます。」= 晚上写信。。",
+                "en": "夜 手紙を 書きます。 means I write a letter at night.."
+              }
+            }
+          ]
         },
         {
           "id": "l06_e03",
           "jp": "土曜日に 友達と 映画を 見ます。",
           "zh": "周六和朋友看电影。",
-          "en": "I watch a movie with a friend on Saturday."
+          "en": "I watch a movie with a friend on Saturday.",
+          "practice": [
+            {
+              "id": "l06_e03_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「土曜日に 友達と 映画を 見ます。」的例句意思是？",
+                "en": "What does 土曜日に 友達と 映画を 見ます。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "周六和朋友看电影。",
+                    "en": "I watch a movie with a friend on Saturday."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "早上喝水。",
+                    "en": "I drink water in the morning."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "晚上写信。",
+                    "en": "I write a letter at night."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "一起听音乐吗？",
+                    "en": "Would you like to listen to music together?"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「土曜日に 友達と 映画を 見ます。」= 周六和朋友看电影。。",
+                "en": "土曜日に 友達と 映画を 見ます。 means I watch a movie with a friend on Saturday.."
+              }
+            }
+          ]
         },
         {
           "id": "l06_e04",
           "jp": "いっしょに 音楽を 聞きませんか。",
           "zh": "一起听音乐吗？",
-          "en": "Would you like to listen to music together?"
+          "en": "Would you like to listen to music together?",
+          "practice": [
+            {
+              "id": "l06_e04_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「いっしょに 音楽を 聞きませんか。」的例句意思是？",
+                "en": "What does いっしょに 音楽を 聞きませんか。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "一起听音乐吗？",
+                    "en": "Would you like to listen to music together?"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "早上喝水。",
+                    "en": "I drink water in the morning."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "晚上写信。",
+                    "en": "I write a letter at night."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "周六和朋友看电影。",
+                    "en": "I watch a movie with a friend on Saturday."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「いっしょに 音楽を 聞きませんか。」= 一起听音乐吗？。",
+                "en": "いっしょに 音楽を 聞きませんか。 means Would you like to listen to music together?."
+              }
+            }
+          ]
         },
         {
           "id": "l06_e05",
           "jp": "では、写真を 撮りましょう。",
           "zh": "那么，我们拍照吧。",
-          "en": "Well then, let’s take a photo."
+          "en": "Well then, let’s take a photo.",
+          "practice": [
+            {
+              "id": "l06_e05_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「では、写真を 撮りましょう。」的例句意思是？",
+                "en": "What does では、写真を 撮りましょう。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "那么，我们拍照吧。",
+                    "en": "Well then, let’s take a photo."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "早上喝水。",
+                    "en": "I drink water in the morning."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "晚上写信。",
+                    "en": "I write a letter at night."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "周六和朋友看电影。",
+                    "en": "I watch a movie with a friend on Saturday."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「では、写真を 撮りましょう。」= 那么，我们拍照吧。。",
+                "en": "では、写真を 撮りましょう。 means Well then, let’s take a photo.."
+              }
+            }
+          ]
         }
       ]
     },

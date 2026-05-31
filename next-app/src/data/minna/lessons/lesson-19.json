@@ -36,6 +36,47 @@
           "en": "have experienced~",
           "tags": [
             "grammar"
+          ],
+          "practice": [
+            {
+              "id": "l19_v01_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「たことがあります」的词汇意思是？",
+                "en": "What does たことがあります mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "有过……经验",
+                    "en": "have experienced~"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "攀登",
+                    "en": "climb"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "住宿",
+                    "en": "stay overnight"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "打扫",
+                    "en": "clean"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「たことがあります」= 有过……经验。",
+                "en": "たことがあります means have experienced~."
+              }
+            }
           ]
         },
         {
@@ -46,6 +87,47 @@
           "en": "climb",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l19_v02_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「登ります」的词汇意思是？",
+                "en": "What does 登ります mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "攀登",
+                    "en": "climb"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "有过……经验",
+                    "en": "have experienced~"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "住宿",
+                    "en": "stay overnight"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "打扫",
+                    "en": "clean"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「登ります」= 攀登。",
+                "en": "登ります means climb."
+              }
+            }
           ]
         },
         {
@@ -56,6 +138,47 @@
           "en": "stay overnight",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l19_v03_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「泊まります」的词汇意思是？",
+                "en": "What does 泊まります mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "住宿",
+                    "en": "stay overnight"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "有过……经验",
+                    "en": "have experienced~"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "攀登",
+                    "en": "climb"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "打扫",
+                    "en": "clean"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「泊まります」= 住宿。",
+                "en": "泊まります means stay overnight."
+              }
+            }
           ]
         },
         {
@@ -66,6 +189,47 @@
           "en": "clean",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l19_v04_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「掃除します」的词汇意思是？",
+                "en": "What does 掃除します mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "打扫",
+                    "en": "clean"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "有过……经验",
+                    "en": "have experienced~"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "攀登",
+                    "en": "climb"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "住宿",
+                    "en": "stay overnight"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「掃除します」= 打扫。",
+                "en": "掃除します means clean."
+              }
+            }
           ]
         },
         {
@@ -76,6 +240,47 @@
           "en": "do laundry",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l19_v05_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「洗濯します」的词汇意思是？",
+                "en": "What does 洗濯します mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "洗衣服",
+                    "en": "do laundry"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "有过……经验",
+                    "en": "have experienced~"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "攀登",
+                    "en": "climb"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "住宿",
+                    "en": "stay overnight"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「洗濯します」= 洗衣服。",
+                "en": "洗濯します means do laundry."
+              }
+            }
           ]
         },
         {
@@ -86,6 +291,47 @@
           "en": "become",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l19_v06_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「なります」的词汇意思是？",
+                "en": "What does なります mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "变成",
+                    "en": "become"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "有过……经验",
+                    "en": "have experienced~"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "攀登",
+                    "en": "climb"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "住宿",
+                    "en": "stay overnight"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「なります」= 变成。",
+                "en": "なります means become."
+              }
+            }
           ]
         },
         {
@@ -96,6 +342,47 @@
           "en": "do/make",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l19_v07_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「します」的词汇意思是？",
+                "en": "What does します mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "做；决定",
+                    "en": "do/make"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "有过……经验",
+                    "en": "have experienced~"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "攀登",
+                    "en": "climb"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "住宿",
+                    "en": "stay overnight"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「します」= 做；决定。",
+                "en": "します means do/make."
+              }
+            }
           ]
         },
         {
@@ -106,6 +393,47 @@
           "en": "Mt. Fuji",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l19_v08_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「富士山」的词汇意思是？",
+                "en": "What does 富士山 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "富士山",
+                    "en": "Mt. Fuji"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "有过……经验",
+                    "en": "have experienced~"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "攀登",
+                    "en": "climb"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "住宿",
+                    "en": "stay overnight"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「富士山」= 富士山。",
+                "en": "富士山 means Mt. Fuji."
+              }
+            }
           ]
         },
         {
@@ -116,6 +444,47 @@
           "en": "Kyoto",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l19_v09_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「京都」的词汇意思是？",
+                "en": "What does 京都 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "京都",
+                    "en": "Kyoto"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "有过……经验",
+                    "en": "have experienced~"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "攀登",
+                    "en": "climb"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "住宿",
+                    "en": "stay overnight"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「京都」= 京都。",
+                "en": "京都 means Kyoto."
+              }
+            }
           ]
         },
         {
@@ -126,6 +495,47 @@
           "en": "warmly / become warm",
           "tags": [
             "adj"
+          ],
+          "practice": [
+            {
+              "id": "l19_v10_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「温かく」的词汇意思是？",
+                "en": "What does 温かく mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "变暖（副）",
+                    "en": "warmly / become warm"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "有过……经验",
+                    "en": "have experienced~"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "攀登",
+                    "en": "climb"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "住宿",
+                    "en": "stay overnight"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「温かく」= 变暖（副）。",
+                "en": "温かく means warmly / become warm."
+              }
+            }
           ]
         },
         {
@@ -136,6 +546,47 @@
           "en": "energetically",
           "tags": [
             "adj"
+          ],
+          "practice": [
+            {
+              "id": "l19_v11_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「元気に」的词汇意思是？",
+                "en": "What does 元気に mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "变精神（副）",
+                    "en": "energetically"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "有过……经验",
+                    "en": "have experienced~"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "攀登",
+                    "en": "climb"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "住宿",
+                    "en": "stay overnight"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「元気に」= 变精神（副）。",
+                "en": "元気に means energetically."
+              }
+            }
           ]
         },
         {
@@ -146,6 +597,47 @@
           "en": "doctor",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l19_v12_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「医者」的词汇意思是？",
+                "en": "What does 医者 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "医生",
+                    "en": "doctor"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "有过……经验",
+                    "en": "have experienced~"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "攀登",
+                    "en": "climb"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "住宿",
+                    "en": "stay overnight"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「医者」= 医生。",
+                "en": "医者 means doctor."
+              }
+            }
           ]
         },
         {
@@ -156,6 +648,47 @@
           "en": "material/document",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l19_v13_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「資料」的词汇意思是？",
+                "en": "What does 資料 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "资料",
+                    "en": "material/document"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "有过……经验",
+                    "en": "have experienced~"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "攀登",
+                    "en": "climb"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "住宿",
+                    "en": "stay overnight"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「資料」= 资料。",
+                "en": "資料 means material/document."
+              }
+            }
           ]
         },
         {
@@ -166,6 +699,47 @@
           "en": "meeting",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l19_v14_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「会議」的词汇意思是？",
+                "en": "What does 会議 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "会议",
+                    "en": "meeting"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "有过……经验",
+                    "en": "have experienced~"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "攀登",
+                    "en": "climb"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "住宿",
+                    "en": "stay overnight"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「会議」= 会议。",
+                "en": "会議 means meeting."
+              }
+            }
           ]
         },
         {
@@ -176,6 +750,47 @@
           "en": "tea",
           "tags": [
             "noun"
+          ],
+          "practice": [
+            {
+              "id": "l19_v15_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「お茶」的词汇意思是？",
+                "en": "What does お茶 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "茶",
+                    "en": "tea"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "有过……经验",
+                    "en": "have experienced~"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "攀登",
+                    "en": "climb"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "住宿",
+                    "en": "stay overnight"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「お茶」= 茶。",
+                "en": "お茶 means tea."
+              }
+            }
           ]
         },
         {
@@ -186,6 +801,47 @@
           "en": "choose",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l19_v16_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「選びます」的词汇意思是？",
+                "en": "What does 選びます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "选择",
+                    "en": "choose"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "有过……经验",
+                    "en": "have experienced~"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "攀登",
+                    "en": "climb"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "住宿",
+                    "en": "stay overnight"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「選びます」= 选择。",
+                "en": "選びます means choose."
+              }
+            }
           ]
         }
       ]
@@ -578,31 +1234,236 @@
           "id": "l19_e01",
           "jp": "私は富士山に登ったことがあります。",
           "zh": "我爬过富士山。",
-          "en": "I have climbed Mt. Fuji."
+          "en": "I have climbed Mt. Fuji.",
+          "practice": [
+            {
+              "id": "l19_e01_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「私は富士山に登ったことがあります。」的例句意思是？",
+                "en": "What does 私は富士山に登ったことがあります。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "我爬过富士山。",
+                    "en": "I have climbed Mt. Fuji."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "会议已经开始了。",
+                    "en": "The meeting has already started."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "饮料我选咖啡。",
+                    "en": "I'll have coffee."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "到了春天，天气变暖了。",
+                    "en": "It became warm in spring."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「私は富士山に登ったことがあります。」= 我爬过富士山。。",
+                "en": "私は富士山に登ったことがあります。 means I have climbed Mt. Fuji.."
+              }
+            }
+          ]
         },
         {
           "id": "l19_e02",
           "jp": "会議はもう始まりました。",
           "zh": "会议已经开始了。",
-          "en": "The meeting has already started."
+          "en": "The meeting has already started.",
+          "practice": [
+            {
+              "id": "l19_e02_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「会議はもう始まりました。」的例句意思是？",
+                "en": "What does 会議はもう始まりました。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "会议已经开始了。",
+                    "en": "The meeting has already started."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我爬过富士山。",
+                    "en": "I have climbed Mt. Fuji."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "饮料我选咖啡。",
+                    "en": "I'll have coffee."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "到了春天，天气变暖了。",
+                    "en": "It became warm in spring."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「会議はもう始まりました。」= 会议已经开始了。。",
+                "en": "会議はもう始まりました。 means The meeting has already started.."
+              }
+            }
+          ]
         },
         {
           "id": "l19_e03",
           "jp": "飲み物はコーヒーにします。",
           "zh": "饮料我选咖啡。",
-          "en": "I'll have coffee."
+          "en": "I'll have coffee.",
+          "practice": [
+            {
+              "id": "l19_e03_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「飲み物はコーヒーにします。」的例句意思是？",
+                "en": "What does 飲み物はコーヒーにします。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "饮料我选咖啡。",
+                    "en": "I'll have coffee."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我爬过富士山。",
+                    "en": "I have climbed Mt. Fuji."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "会议已经开始了。",
+                    "en": "The meeting has already started."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "到了春天，天气变暖了。",
+                    "en": "It became warm in spring."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「飲み物はコーヒーにします。」= 饮料我选咖啡。。",
+                "en": "飲み物はコーヒーにします。 means I'll have coffee.."
+              }
+            }
+          ]
         },
         {
           "id": "l19_e04",
           "jp": "春になって、暖かくなりました。",
           "zh": "到了春天，天气变暖了。",
-          "en": "It became warm in spring."
+          "en": "It became warm in spring.",
+          "practice": [
+            {
+              "id": "l19_e04_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「春になって、暖かくなりました。」的例句意思是？",
+                "en": "What does 春になって、暖かくなりました。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "到了春天，天气变暖了。",
+                    "en": "It became warm in spring."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我爬过富士山。",
+                    "en": "I have climbed Mt. Fuji."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "会议已经开始了。",
+                    "en": "The meeting has already started."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "饮料我选咖啡。",
+                    "en": "I'll have coffee."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「春になって、暖かくなりました。」= 到了春天，天气变暖了。。",
+                "en": "春になって、暖かくなりました。 means It became warm in spring.."
+              }
+            }
+          ]
         },
         {
           "id": "l19_e05",
           "jp": "京都で旅館に泊まったことがあります。",
           "zh": "我在京都住过旅馆。",
-          "en": "I have stayed at an inn in Kyoto."
+          "en": "I have stayed at an inn in Kyoto.",
+          "practice": [
+            {
+              "id": "l19_e05_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「京都で旅館に泊まったことがあります。」的例句意思是？",
+                "en": "What does 京都で旅館に泊まったことがあります。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "我在京都住过旅馆。",
+                    "en": "I have stayed at an inn in Kyoto."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "我爬过富士山。",
+                    "en": "I have climbed Mt. Fuji."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "会议已经开始了。",
+                    "en": "The meeting has already started."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "饮料我选咖啡。",
+                    "en": "I'll have coffee."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「京都で旅館に泊まったことがあります。」= 我在京都住过旅馆。。",
+                "en": "京都で旅館に泊まったことがあります。 means I have stayed at an inn in Kyoto.."
+              }
+            }
+          ]
         }
       ]
     },

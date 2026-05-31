@@ -4,130 +4,1762 @@
   "status": "Mastery migrated",
   "lessonNo": 35,
   "lessonId": "minna_lesson_35",
-  "title": { "zh": "第35课", "en": "Lesson 35", "ja": "第35課" },
-  "subtitle": { "zh": "条件形", "en": "Conditional form", "ja": "条件形" },
-  "focus": { "zh": "学习条件形「〜ば」、话题条件「なら」，以及询问建议的「疑问词+ばいいですか」。", "en": "Learn the ba conditional, topic-based nara, and wh-word + ba ii desu ka for asking advice.", "ja": "条件形〜ば、なら、疑問詞+ばいいですかを学びます。" },
+  "title": {
+    "zh": "第35课",
+    "en": "Lesson 35",
+    "ja": "第35課"
+  },
+  "subtitle": {
+    "zh": "条件形",
+    "en": "Conditional form",
+    "ja": "条件形"
+  },
+  "focus": {
+    "zh": "学习条件形「〜ば」、话题条件「なら」，以及询问建议的「疑问词+ばいいですか」。",
+    "en": "Learn the ba conditional, topic-based nara, and wh-word + ba ii desu ka for asking advice.",
+    "ja": "条件形〜ば、なら、疑問詞+ばいいですかを学びます。"
+  },
   "sections": [
     {
       "type": "vocab",
       "id": "l35_vocab",
-      "title": { "zh": "核心词汇", "en": "Core Vocabulary", "ja": "基本語彙" },
+      "title": {
+        "zh": "核心词汇",
+        "en": "Core Vocabulary",
+        "ja": "基本語彙"
+      },
       "items": [
-        { "id": "l35_v01", "jp": "咲きます", "kana": "さきます", "zh": "开花", "en": "to bloom", "tags": ["lesson35"] },
-        { "id": "l35_v02", "jp": "変わります", "kana": "かわります", "zh": "改变", "en": "to change", "tags": ["lesson35"] },
-        { "id": "l35_v03", "jp": "困ります", "kana": "こまります", "zh": "为难", "en": "to be troubled", "tags": ["lesson35"] },
-        { "id": "l35_v04", "jp": "押します", "kana": "おします", "zh": "按；推", "en": "to push", "tags": ["lesson35"] },
-        { "id": "l35_v05", "jp": "直します", "kana": "なおします", "zh": "修理；改正", "en": "to fix", "tags": ["lesson35"] },
-        { "id": "l35_v06", "jp": "拾います", "kana": "ひろいます", "zh": "捡", "en": "to pick up", "tags": ["lesson35"] },
-        { "id": "l35_v07", "jp": "連絡します", "kana": "れんらくします", "zh": "联系", "en": "to contact", "tags": ["lesson35"] },
-        { "id": "l35_v08", "jp": "正しい", "kana": "ただしい", "zh": "正确", "en": "correct", "tags": ["lesson35"] },
-        { "id": "l35_v09", "jp": "詳しい", "kana": "くわしい", "zh": "详细；熟悉", "en": "detailed; knowledgeable", "tags": ["lesson35"] },
-        { "id": "l35_v10", "jp": "方法", "kana": "ほうほう", "zh": "方法", "en": "method", "tags": ["lesson35"] }
+        {
+          "id": "l35_v01",
+          "jp": "咲きます",
+          "kana": "さきます",
+          "zh": "开花",
+          "en": "to bloom",
+          "tags": [
+            "lesson35"
+          ],
+          "practice": [
+            {
+              "id": "l35_v01_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「咲きます」的词汇意思是？",
+                "en": "What does 咲きます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "开花",
+                    "en": "to bloom"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "改变",
+                    "en": "to change"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "为难",
+                    "en": "to be troubled"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "按；推",
+                    "en": "to push"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「咲きます」= 开花。",
+                "en": "咲きます means to bloom."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l35_v02",
+          "jp": "変わります",
+          "kana": "かわります",
+          "zh": "改变",
+          "en": "to change",
+          "tags": [
+            "lesson35"
+          ],
+          "practice": [
+            {
+              "id": "l35_v02_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「変わります」的词汇意思是？",
+                "en": "What does 変わります mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "改变",
+                    "en": "to change"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "开花",
+                    "en": "to bloom"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "为难",
+                    "en": "to be troubled"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "按；推",
+                    "en": "to push"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「変わります」= 改变。",
+                "en": "変わります means to change."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l35_v03",
+          "jp": "困ります",
+          "kana": "こまります",
+          "zh": "为难",
+          "en": "to be troubled",
+          "tags": [
+            "lesson35"
+          ],
+          "practice": [
+            {
+              "id": "l35_v03_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「困ります」的词汇意思是？",
+                "en": "What does 困ります mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "为难",
+                    "en": "to be troubled"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "开花",
+                    "en": "to bloom"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "改变",
+                    "en": "to change"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "按；推",
+                    "en": "to push"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「困ります」= 为难。",
+                "en": "困ります means to be troubled."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l35_v04",
+          "jp": "押します",
+          "kana": "おします",
+          "zh": "按；推",
+          "en": "to push",
+          "tags": [
+            "lesson35"
+          ],
+          "practice": [
+            {
+              "id": "l35_v04_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「押します」的词汇意思是？",
+                "en": "What does 押します mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "按；推",
+                    "en": "to push"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "开花",
+                    "en": "to bloom"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "改变",
+                    "en": "to change"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "为难",
+                    "en": "to be troubled"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「押します」= 按；推。",
+                "en": "押します means to push."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l35_v05",
+          "jp": "直します",
+          "kana": "なおします",
+          "zh": "修理；改正",
+          "en": "to fix",
+          "tags": [
+            "lesson35"
+          ],
+          "practice": [
+            {
+              "id": "l35_v05_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「直します」的词汇意思是？",
+                "en": "What does 直します mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "修理；改正",
+                    "en": "to fix"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "开花",
+                    "en": "to bloom"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "改变",
+                    "en": "to change"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "为难",
+                    "en": "to be troubled"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「直します」= 修理；改正。",
+                "en": "直します means to fix."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l35_v06",
+          "jp": "拾います",
+          "kana": "ひろいます",
+          "zh": "捡",
+          "en": "to pick up",
+          "tags": [
+            "lesson35"
+          ],
+          "practice": [
+            {
+              "id": "l35_v06_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「拾います」的词汇意思是？",
+                "en": "What does 拾います mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "捡",
+                    "en": "to pick up"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "开花",
+                    "en": "to bloom"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "改变",
+                    "en": "to change"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "为难",
+                    "en": "to be troubled"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「拾います」= 捡。",
+                "en": "拾います means to pick up."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l35_v07",
+          "jp": "連絡します",
+          "kana": "れんらくします",
+          "zh": "联系",
+          "en": "to contact",
+          "tags": [
+            "lesson35"
+          ],
+          "practice": [
+            {
+              "id": "l35_v07_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「連絡します」的词汇意思是？",
+                "en": "What does 連絡します mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "联系",
+                    "en": "to contact"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "开花",
+                    "en": "to bloom"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "改变",
+                    "en": "to change"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "为难",
+                    "en": "to be troubled"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「連絡します」= 联系。",
+                "en": "連絡します means to contact."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l35_v08",
+          "jp": "正しい",
+          "kana": "ただしい",
+          "zh": "正确",
+          "en": "correct",
+          "tags": [
+            "lesson35"
+          ],
+          "practice": [
+            {
+              "id": "l35_v08_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「正しい」的词汇意思是？",
+                "en": "What does 正しい mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "正确",
+                    "en": "correct"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "开花",
+                    "en": "to bloom"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "改变",
+                    "en": "to change"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "为难",
+                    "en": "to be troubled"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「正しい」= 正确。",
+                "en": "正しい means correct."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l35_v09",
+          "jp": "詳しい",
+          "kana": "くわしい",
+          "zh": "详细；熟悉",
+          "en": "detailed; knowledgeable",
+          "tags": [
+            "lesson35"
+          ],
+          "practice": [
+            {
+              "id": "l35_v09_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「詳しい」的词汇意思是？",
+                "en": "What does 詳しい mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "详细；熟悉",
+                    "en": "detailed; knowledgeable"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "开花",
+                    "en": "to bloom"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "改变",
+                    "en": "to change"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "为难",
+                    "en": "to be troubled"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「詳しい」= 详细；熟悉。",
+                "en": "詳しい means detailed; knowledgeable."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l35_v10",
+          "jp": "方法",
+          "kana": "ほうほう",
+          "zh": "方法",
+          "en": "method",
+          "tags": [
+            "lesson35"
+          ],
+          "practice": [
+            {
+              "id": "l35_v10_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「方法」的词汇意思是？",
+                "en": "What does 方法 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "方法",
+                    "en": "method"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "开花",
+                    "en": "to bloom"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "改变",
+                    "en": "to change"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "为难",
+                    "en": "to be troubled"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「方法」= 方法。",
+                "en": "方法 means method."
+              }
+            }
+          ]
+        }
       ]
     },
     {
       "type": "grammar",
       "id": "l35_grammar",
-      "title": { "zh": "核心语法", "en": "Core Grammar", "ja": "基本文法" },
+      "title": {
+        "zh": "核心语法",
+        "en": "Core Grammar",
+        "ja": "基本文法"
+      },
       "items": [
         {
           "id": "l35_g01",
           "pattern": "一类动词条件形：う段 → え段 + ば",
-          "explanation": { "zh": "行く→行けば、飲む→飲めば、話す→話せば。", "en": "Group 1 verbs change final u-sound to e-sound plus ba: iku to ikeba." },
-          "examples": [{ "jp": "駅へ行けば、わかります。", "zh": "去车站的话就知道了。", "en": "If you go to the station, you will know." }],
-          "practice": [{ "id": "l35_g01_p01", "skill": "grammar", "question": { "zh": "「行く」的条件形是？", "en": "Conditional form of iku?" }, "options": [{ "text": { "jp": "行けば" }, "correct": true }, { "text": { "jp": "行くば" } }, { "text": { "jp": "行きば" } }, { "text": { "jp": "行ったらば" } }], "explanation": { "zh": "く→けば。", "en": "Ku changes to keba." } }]
+          "explanation": {
+            "zh": "行く→行けば、飲む→飲めば、話す→話せば。",
+            "en": "Group 1 verbs change final u-sound to e-sound plus ba: iku to ikeba."
+          },
+          "examples": [
+            {
+              "jp": "駅へ行けば、わかります。",
+              "zh": "去车站的话就知道了。",
+              "en": "If you go to the station, you will know."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l35_g01_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "「行く」的条件形是？",
+                "en": "Conditional form of iku?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "行けば"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "行くば"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "行きば"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "行ったらば"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "く→けば。",
+                "en": "Ku changes to keba."
+              }
+            }
+          ]
         },
         {
           "id": "l35_g02",
           "pattern": "二类动词条件形：ます形去ます + れば",
-          "explanation": { "zh": "食べる→食べれば、見る→見れば。", "en": "Group 2 verbs use stem + reba: taberu to tabereba." },
-          "examples": [{ "jp": "薬を飲めば、よくなります。", "zh": "吃药的话会好。", "en": "If you take medicine, you will get better." }],
-          "practice": [{ "id": "l35_g02_p01", "skill": "grammar", "question": { "zh": "「食べる」的条件形是？", "en": "Conditional form of taberu?" }, "options": [{ "text": { "jp": "食べれば" }, "correct": true }, { "text": { "jp": "食べるば" } }, { "text": { "jp": "食べば" } }, { "text": { "jp": "食べたらば" } }], "explanation": { "zh": "二类动词去る加れば。", "en": "Drop ru and add reba." } }]
+          "explanation": {
+            "zh": "食べる→食べれば、見る→見れば。",
+            "en": "Group 2 verbs use stem + reba: taberu to tabereba."
+          },
+          "examples": [
+            {
+              "jp": "薬を飲めば、よくなります。",
+              "zh": "吃药的话会好。",
+              "en": "If you take medicine, you will get better."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l35_g02_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "「食べる」的条件形是？",
+                "en": "Conditional form of taberu?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "食べれば"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "食べるば"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "食べば"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "食べたらば"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "二类动词去る加れば。",
+                "en": "Drop ru and add reba."
+              }
+            }
+          ]
         },
         {
           "id": "l35_g03",
           "pattern": "三类条件形：すれば / 来れば",
-          "explanation": { "zh": "する→すれば、来る→来れば（くれば）。", "en": "Irregulars: suru to sureba, kuru to kureba." },
-          "examples": [{ "jp": "練習すれば、上手になります。", "zh": "练习的话会变擅长。", "en": "If you practice, you will improve." }],
-          "practice": [{ "id": "l35_g03_p01", "skill": "grammar", "question": { "zh": "「する」的条件形是？", "en": "Conditional form of suru?" }, "options": [{ "text": { "jp": "すれば" }, "correct": true }, { "text": { "jp": "するば" } }, { "text": { "jp": "しれば" } }, { "text": { "jp": "したらば" } }], "explanation": { "zh": "する→すれば。", "en": "Suru becomes sureba." } }]
+          "explanation": {
+            "zh": "する→すれば、来る→来れば（くれば）。",
+            "en": "Irregulars: suru to sureba, kuru to kureba."
+          },
+          "examples": [
+            {
+              "jp": "練習すれば、上手になります。",
+              "zh": "练习的话会变擅长。",
+              "en": "If you practice, you will improve."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l35_g03_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "「する」的条件形是？",
+                "en": "Conditional form of suru?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "すれば"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "するば"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "しれば"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "したらば"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "する→すれば。",
+                "en": "Suru becomes sureba."
+              }
+            }
+          ]
         },
         {
           "id": "l35_g04",
           "pattern": "い形容词：〜ければ",
-          "explanation": { "zh": "去掉い，加ければ：安い→安ければ。", "en": "Remove i and add kereba: yasui to yasukereba." },
-          "examples": [{ "jp": "安ければ、買います。", "zh": "便宜的话就买。", "en": "If it is cheap, I will buy it." }],
-          "practice": [{ "id": "l35_g04_p01", "skill": "grammar", "question": { "zh": "「高い」的条件形是？", "en": "Conditional form of takai?" }, "options": [{ "text": { "jp": "高ければ" }, "correct": true }, { "text": { "jp": "高いば" } }, { "text": { "jp": "高くれば" } }, { "text": { "jp": "高かったらば" } }], "explanation": { "zh": "い形容词去い加ければ。", "en": "Remove i and add kereba." } }]
+          "explanation": {
+            "zh": "去掉い，加ければ：安い→安ければ。",
+            "en": "Remove i and add kereba: yasui to yasukereba."
+          },
+          "examples": [
+            {
+              "jp": "安ければ、買います。",
+              "zh": "便宜的话就买。",
+              "en": "If it is cheap, I will buy it."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l35_g04_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "「高い」的条件形是？",
+                "en": "Conditional form of takai?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "高ければ"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "高いば"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "高くれば"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "高かったらば"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "い形容词去い加ければ。",
+                "en": "Remove i and add kereba."
+              }
+            }
+          ]
         },
         {
           "id": "l35_g05",
           "pattern": "な形容词 / 名词：なら",
-          "explanation": { "zh": "承接话题：“如果是……的话”。", "en": "Nara picks up a topic: if it is about..." },
-          "examples": [{ "jp": "日本語を勉強するなら、この本がいいです。", "zh": "如果学日语的话，这本书不错。", "en": "If you are studying Japanese, this book is good." }],
-          "practice": [{ "id": "l35_g05_p01", "skill": "grammar", "question": { "zh": "“如果是京都的话，我知道”是？", "en": "How do you say 'If it is Kyoto, I know'?" }, "options": [{ "text": { "jp": "京都なら、知っています" }, "correct": true }, { "text": { "jp": "京都ば、知っています" } }, { "text": { "jp": "京都であればなら、知っています" } }, { "text": { "jp": "京都だったらなら、知っています" } }], "explanation": { "zh": "承接话题用なら。", "en": "Use nara to pick up a topic." } }]
+          "explanation": {
+            "zh": "承接话题：“如果是……的话”。",
+            "en": "Nara picks up a topic: if it is about..."
+          },
+          "examples": [
+            {
+              "jp": "日本語を勉強するなら、この本がいいです。",
+              "zh": "如果学日语的话，这本书不错。",
+              "en": "If you are studying Japanese, this book is good."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l35_g05_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“如果是京都的话，我知道”是？",
+                "en": "How do you say 'If it is Kyoto, I know'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "京都なら、知っています"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "京都ば、知っています"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "京都であればなら、知っています"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "京都だったらなら、知っています"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "承接话题用なら。",
+                "en": "Use nara to pick up a topic."
+              }
+            }
+          ]
         },
         {
           "id": "l35_g06",
           "pattern": "疑问词 + ばいいですか",
-          "explanation": { "zh": "询问建议、方法：“怎么/去哪/问谁才好？”", "en": "Asks for advice or method: how/where/whom should I...?" },
-          "examples": [{ "jp": "駅へ行きたいんですが、どう行けばいいですか。", "zh": "我想去车站，怎么走好？", "en": "I want to go to the station. How should I get there?" }],
-          "practice": [{ "id": "l35_g06_p01", "skill": "grammar", "question": { "zh": "“该问谁好？”是？", "en": "How do you ask 'Whom should I ask?'" }, "options": [{ "text": { "jp": "だれに聞けばいいですか" }, "correct": true }, { "text": { "jp": "だれを聞けばいいですか" } }, { "text": { "jp": "だれに聞くばいいですか" } }, { "text": { "jp": "だれに聞いたらばいいですか" } }], "explanation": { "zh": "聞く→聞けば。", "en": "Kiku becomes kikeba." } }]
+          "explanation": {
+            "zh": "询问建议、方法：“怎么/去哪/问谁才好？”",
+            "en": "Asks for advice or method: how/where/whom should I...?"
+          },
+          "examples": [
+            {
+              "jp": "駅へ行きたいんですが、どう行けばいいですか。",
+              "zh": "我想去车站，怎么走好？",
+              "en": "I want to go to the station. How should I get there?"
+            }
+          ],
+          "practice": [
+            {
+              "id": "l35_g06_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“该问谁好？”是？",
+                "en": "How do you ask 'Whom should I ask?'"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "だれに聞けばいいですか"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "だれを聞けばいいですか"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "だれに聞くばいいですか"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "だれに聞いたらばいいですか"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "聞く→聞けば。",
+                "en": "Kiku becomes kikeba."
+              }
+            }
+          ]
         },
         {
           "id": "l35_g07",
           "pattern": "〜ば、〜",
-          "explanation": { "zh": "条件成立时，后项成立。常用于一般条件、建议、方法。", "en": "If the condition holds, the result follows. Useful for general conditions and advice." },
-          "examples": [{ "jp": "ここを押せば、ドアが開きます。", "zh": "按这里的话，门会开。", "en": "If you press here, the door opens." }],
-          "practice": [{ "id": "l35_g07_p01", "skill": "grammar", "question": { "zh": "“按这里就会动”是？", "en": "How do you say 'If you press here, it will move'?" }, "options": [{ "text": { "jp": "ここを押せば、動きます" }, "correct": true }, { "text": { "jp": "ここを押すば、動きます" } }, { "text": { "jp": "ここを押してば、動きます" } }, { "text": { "jp": "ここを押したらば、動きます" } }], "explanation": { "zh": "押す→押せば。", "en": "Osu becomes oseba." } }]
+          "explanation": {
+            "zh": "条件成立时，后项成立。常用于一般条件、建议、方法。",
+            "en": "If the condition holds, the result follows. Useful for general conditions and advice."
+          },
+          "examples": [
+            {
+              "jp": "ここを押せば、ドアが開きます。",
+              "zh": "按这里的话，门会开。",
+              "en": "If you press here, the door opens."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l35_g07_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“按这里就会动”是？",
+                "en": "How do you say 'If you press here, it will move'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "ここを押せば、動きます"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "ここを押すば、動きます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "ここを押してば、動きます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "ここを押したらば、動きます"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "押す→押せば。",
+                "en": "Osu becomes oseba."
+              }
+            }
+          ]
         },
         {
           "id": "l35_g08",
           "pattern": "なければ",
-          "explanation": { "zh": "ない形去い + ければ，表示“不……的话”。", "en": "For negative conditionals, replace nai with nakereba." },
-          "examples": [{ "jp": "時間がなければ、明日しましょう。", "zh": "如果没有时间，明天做吧。", "en": "If there is no time, let's do it tomorrow." }],
-          "practice": [{ "id": "l35_g08_p01", "skill": "grammar", "question": { "zh": "“不懂的话，请问老师”是？", "en": "How do you say 'If you do not understand, ask the teacher'?" }, "options": [{ "text": { "jp": "わからなければ、先生に聞いてください" }, "correct": true }, { "text": { "jp": "わからないば、先生に聞いてください" } }, { "text": { "jp": "わからなくれば、先生に聞いてください" } }, { "text": { "jp": "わからないならばいいです" } }], "explanation": { "zh": "わからない→わからなければ。", "en": "Wakaranai becomes wakaranakereba." } }]
+          "explanation": {
+            "zh": "ない形去い + ければ，表示“不……的话”。",
+            "en": "For negative conditionals, replace nai with nakereba."
+          },
+          "examples": [
+            {
+              "jp": "時間がなければ、明日しましょう。",
+              "zh": "如果没有时间，明天做吧。",
+              "en": "If there is no time, let's do it tomorrow."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l35_g08_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“不懂的话，请问老师”是？",
+                "en": "How do you say 'If you do not understand, ask the teacher'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "わからなければ、先生に聞いてください"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "わからないば、先生に聞いてください"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "わからなくれば、先生に聞いてください"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "わからないならばいいです"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "わからない→わからなければ。",
+                "en": "Wakaranai becomes wakaranakereba."
+              }
+            }
+          ]
         }
       ]
     },
     {
       "type": "examples",
       "id": "l35_examples",
-      "title": { "zh": "核心例句", "en": "Core Examples", "ja": "基本例文" },
+      "title": {
+        "zh": "核心例句",
+        "en": "Core Examples",
+        "ja": "基本例文"
+      },
       "items": [
-        { "id": "l35_e01", "jp": "春になれば、桜が咲きます。", "zh": "到了春天，樱花会开。", "en": "When spring comes, cherry blossoms bloom.", "tags": ["ba"] },
-        { "id": "l35_e02", "jp": "安ければ、買いたいです。", "zh": "便宜的话，我想买。", "en": "If it is cheap, I want to buy it.", "tags": ["i-adj"] },
-        { "id": "l35_e03", "jp": "練習すれば、上手になります。", "zh": "练习的话会变擅长。", "en": "If you practice, you will improve.", "tags": ["ba"] },
-        { "id": "l35_e04", "jp": "日本料理なら、この店がいいです。", "zh": "如果是日本菜的话，这家店不错。", "en": "If it is Japanese food, this restaurant is good.", "tags": ["nara"] },
-        { "id": "l35_e05", "jp": "駅へ行きたいんですが、どう行けばいいですか。", "zh": "我想去车站，怎么走好？", "en": "I want to go to the station. How should I get there?", "tags": ["advice"] },
-        { "id": "l35_e06", "jp": "困ったとき、だれに連絡すればいいですか。", "zh": "遇到困难时，该联系谁好？", "en": "When I am in trouble, whom should I contact?", "tags": ["advice"] },
-        { "id": "l35_e07", "jp": "ここを押せば、お湯が出ます。", "zh": "按这里的话，热水会出来。", "en": "If you press here, hot water comes out.", "tags": ["method"] },
-        { "id": "l35_e08", "jp": "わからなければ、もう一度聞いてください。", "zh": "不懂的话，请再问一次。", "en": "If you do not understand, please ask again.", "tags": ["negative"] }
+        {
+          "id": "l35_e01",
+          "jp": "春になれば、桜が咲きます。",
+          "zh": "到了春天，樱花会开。",
+          "en": "When spring comes, cherry blossoms bloom.",
+          "tags": [
+            "ba"
+          ],
+          "practice": [
+            {
+              "id": "l35_e01_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「春になれば、桜が咲きます。」的例句意思是？",
+                "en": "What does 春になれば、桜が咲きます。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "到了春天，樱花会开。",
+                    "en": "When spring comes, cherry blossoms bloom."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "便宜的话，我想买。",
+                    "en": "If it is cheap, I want to buy it."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "练习的话会变擅长。",
+                    "en": "If you practice, you will improve."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "如果是日本菜的话，这家店不错。",
+                    "en": "If it is Japanese food, this restaurant is good."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「春になれば、桜が咲きます。」= 到了春天，樱花会开。。",
+                "en": "春になれば、桜が咲きます。 means When spring comes, cherry blossoms bloom.."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l35_e02",
+          "jp": "安ければ、買いたいです。",
+          "zh": "便宜的话，我想买。",
+          "en": "If it is cheap, I want to buy it.",
+          "tags": [
+            "i-adj"
+          ],
+          "practice": [
+            {
+              "id": "l35_e02_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「安ければ、買いたいです。」的例句意思是？",
+                "en": "What does 安ければ、買いたいです。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "便宜的话，我想买。",
+                    "en": "If it is cheap, I want to buy it."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "到了春天，樱花会开。",
+                    "en": "When spring comes, cherry blossoms bloom."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "练习的话会变擅长。",
+                    "en": "If you practice, you will improve."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "如果是日本菜的话，这家店不错。",
+                    "en": "If it is Japanese food, this restaurant is good."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「安ければ、買いたいです。」= 便宜的话，我想买。。",
+                "en": "安ければ、買いたいです。 means If it is cheap, I want to buy it.."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l35_e03",
+          "jp": "練習すれば、上手になります。",
+          "zh": "练习的话会变擅长。",
+          "en": "If you practice, you will improve.",
+          "tags": [
+            "ba"
+          ],
+          "practice": [
+            {
+              "id": "l35_e03_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「練習すれば、上手になります。」的例句意思是？",
+                "en": "What does 練習すれば、上手になります。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "练习的话会变擅长。",
+                    "en": "If you practice, you will improve."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "到了春天，樱花会开。",
+                    "en": "When spring comes, cherry blossoms bloom."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "便宜的话，我想买。",
+                    "en": "If it is cheap, I want to buy it."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "如果是日本菜的话，这家店不错。",
+                    "en": "If it is Japanese food, this restaurant is good."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「練習すれば、上手になります。」= 练习的话会变擅长。。",
+                "en": "練習すれば、上手になります。 means If you practice, you will improve.."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l35_e04",
+          "jp": "日本料理なら、この店がいいです。",
+          "zh": "如果是日本菜的话，这家店不错。",
+          "en": "If it is Japanese food, this restaurant is good.",
+          "tags": [
+            "nara"
+          ],
+          "practice": [
+            {
+              "id": "l35_e04_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「日本料理なら、この店がいいです。」的例句意思是？",
+                "en": "What does 日本料理なら、この店がいいです。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "如果是日本菜的话，这家店不错。",
+                    "en": "If it is Japanese food, this restaurant is good."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "到了春天，樱花会开。",
+                    "en": "When spring comes, cherry blossoms bloom."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "便宜的话，我想买。",
+                    "en": "If it is cheap, I want to buy it."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "练习的话会变擅长。",
+                    "en": "If you practice, you will improve."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「日本料理なら、この店がいいです。」= 如果是日本菜的话，这家店不错。。",
+                "en": "日本料理なら、この店がいいです。 means If it is Japanese food, this restaurant is good.."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l35_e05",
+          "jp": "駅へ行きたいんですが、どう行けばいいですか。",
+          "zh": "我想去车站，怎么走好？",
+          "en": "I want to go to the station. How should I get there?",
+          "tags": [
+            "advice"
+          ],
+          "practice": [
+            {
+              "id": "l35_e05_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「駅へ行きたいんですが、どう行けばいいですか。」的例句意思是？",
+                "en": "What does 駅へ行きたいんですが、どう行けばいいですか。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "我想去车站，怎么走好？",
+                    "en": "I want to go to the station. How should I get there?"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "到了春天，樱花会开。",
+                    "en": "When spring comes, cherry blossoms bloom."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "便宜的话，我想买。",
+                    "en": "If it is cheap, I want to buy it."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "练习的话会变擅长。",
+                    "en": "If you practice, you will improve."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「駅へ行きたいんですが、どう行けばいいですか。」= 我想去车站，怎么走好？。",
+                "en": "駅へ行きたいんですが、どう行けばいいですか。 means I want to go to the station. How should I get there?."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l35_e06",
+          "jp": "困ったとき、だれに連絡すればいいですか。",
+          "zh": "遇到困难时，该联系谁好？",
+          "en": "When I am in trouble, whom should I contact?",
+          "tags": [
+            "advice"
+          ],
+          "practice": [
+            {
+              "id": "l35_e06_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「困ったとき、だれに連絡すればいいですか。」的例句意思是？",
+                "en": "What does 困ったとき、だれに連絡すればいいですか。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "遇到困难时，该联系谁好？",
+                    "en": "When I am in trouble, whom should I contact?"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "到了春天，樱花会开。",
+                    "en": "When spring comes, cherry blossoms bloom."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "便宜的话，我想买。",
+                    "en": "If it is cheap, I want to buy it."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "练习的话会变擅长。",
+                    "en": "If you practice, you will improve."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「困ったとき、だれに連絡すればいいですか。」= 遇到困难时，该联系谁好？。",
+                "en": "困ったとき、だれに連絡すればいいですか。 means When I am in trouble, whom should I contact?."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l35_e07",
+          "jp": "ここを押せば、お湯が出ます。",
+          "zh": "按这里的话，热水会出来。",
+          "en": "If you press here, hot water comes out.",
+          "tags": [
+            "method"
+          ],
+          "practice": [
+            {
+              "id": "l35_e07_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「ここを押せば、お湯が出ます。」的例句意思是？",
+                "en": "What does ここを押せば、お湯が出ます。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "按这里的话，热水会出来。",
+                    "en": "If you press here, hot water comes out."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "到了春天，樱花会开。",
+                    "en": "When spring comes, cherry blossoms bloom."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "便宜的话，我想买。",
+                    "en": "If it is cheap, I want to buy it."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "练习的话会变擅长。",
+                    "en": "If you practice, you will improve."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「ここを押せば、お湯が出ます。」= 按这里的话，热水会出来。。",
+                "en": "ここを押せば、お湯が出ます。 means If you press here, hot water comes out.."
+              }
+            }
+          ]
+        },
+        {
+          "id": "l35_e08",
+          "jp": "わからなければ、もう一度聞いてください。",
+          "zh": "不懂的话，请再问一次。",
+          "en": "If you do not understand, please ask again.",
+          "tags": [
+            "negative"
+          ],
+          "practice": [
+            {
+              "id": "l35_e08_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「わからなければ、もう一度聞いてください。」的例句意思是？",
+                "en": "What does わからなければ、もう一度聞いてください。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "不懂的话，请再问一次。",
+                    "en": "If you do not understand, please ask again."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "到了春天，樱花会开。",
+                    "en": "When spring comes, cherry blossoms bloom."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "便宜的话，我想买。",
+                    "en": "If it is cheap, I want to buy it."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "练习的话会变擅长。",
+                    "en": "If you practice, you will improve."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「わからなければ、もう一度聞いてください。」= 不懂的话，请再问一次。。",
+                "en": "わからなければ、もう一度聞いてください。 means If you do not understand, please ask again.."
+              }
+            }
+          ]
+        }
       ]
     },
     {
       "type": "mistakes",
       "id": "l35_mistakes",
-      "title": { "zh": "常见错误", "en": "Common Mistakes", "ja": "よくある間違い" },
+      "title": {
+        "zh": "常见错误",
+        "en": "Common Mistakes",
+        "ja": "よくある間違い"
+      },
       "items": [
-        { "id": "l35_m01", "wrong": "行くば。", "correct": "行けば。", "zh": "一类动词条件形变え段+ば。", "en": "Group 1 conditional changes to e-sound + ba." },
-        { "id": "l35_m02", "wrong": "安いば買います。", "correct": "安ければ買います。", "zh": "い形容词去い加ければ。", "en": "I-adjectives remove i and add kereba." },
-        { "id": "l35_m03", "wrong": "京都ば知っています。", "correct": "京都なら知っています。", "zh": "承接话题“如果是京都的话”用なら。", "en": "Use nara to pick up a topic." }
+        {
+          "id": "l35_m01",
+          "wrong": "行くば。",
+          "correct": "行けば。",
+          "zh": "一类动词条件形变え段+ば。",
+          "en": "Group 1 conditional changes to e-sound + ba."
+        },
+        {
+          "id": "l35_m02",
+          "wrong": "安いば買います。",
+          "correct": "安ければ買います。",
+          "zh": "い形容词去い加ければ。",
+          "en": "I-adjectives remove i and add kereba."
+        },
+        {
+          "id": "l35_m03",
+          "wrong": "京都ば知っています。",
+          "correct": "京都なら知っています。",
+          "zh": "承接话题“如果是京都的话”用なら。",
+          "en": "Use nara to pick up a topic."
+        }
       ]
     },
     {
       "type": "quiz",
       "id": "l35_quiz",
-      "title": { "zh": "综合测试", "en": "Final Test", "ja": "まとめテスト" },
+      "title": {
+        "zh": "综合测试",
+        "en": "Final Test",
+        "ja": "まとめテスト"
+      },
       "items": [
-        { "id": "l35_q01", "question": { "zh": "「読む」的条件形是？", "en": "Conditional form of yomu?" }, "options": [{ "text": { "jp": "読めば" }, "correct": true }, { "text": { "jp": "読むば" } }, { "text": { "jp": "読みば" } }, { "text": { "jp": "読んだらば" } }], "explanation": { "zh": "む→めば。", "en": "Mu changes to meba." } },
-        { "id": "l35_q02", "question": { "zh": "「見る」的条件形是？", "en": "Conditional form of miru?" }, "options": [{ "text": { "jp": "見れば" }, "correct": true }, { "text": { "jp": "見るば" } }, { "text": { "jp": "見ば" } }, { "text": { "jp": "見たらば" } }], "explanation": { "zh": "二类动词去る加れば。", "en": "Drop ru and add reba." } },
-        { "id": "l35_q03", "question": { "zh": "「来る」的条件形是？", "en": "Conditional form of kuru?" }, "options": [{ "text": { "jp": "来れば" }, "correct": true }, { "text": { "jp": "来るば" } }, { "text": { "jp": "来たらば" } }, { "text": { "jp": "来ればいいなら" } }], "explanation": { "zh": "读作「くれば」。", "en": "It is read kureba." } },
-        { "id": "l35_q04", "question": { "zh": "「いい」的条件形是？", "en": "Conditional form of ii?" }, "options": [{ "text": { "jp": "よければ" }, "correct": true }, { "text": { "jp": "いければ" } }, { "text": { "jp": "いいければ" } }, { "text": { "jp": "よいば" } }], "explanation": { "zh": "いい的条件形是よければ。", "en": "Ii becomes yokereba." } },
-        { "id": "l35_q05", "question": { "zh": "“便宜的话买”是？", "en": "How do you say 'If it is cheap, I will buy it'?" }, "options": [{ "text": { "jp": "安ければ、買います" }, "correct": true }, { "text": { "jp": "安いば、買います" } }, { "text": { "jp": "安くれば、買います" } }, { "text": { "jp": "安いならば、買いますです" } }], "explanation": { "zh": "安い→安ければ。", "en": "Yasui becomes yasukereba." } },
-        { "id": "l35_q06", "question": { "zh": "“如果是日语的话，这本书好”是？", "en": "How do you say 'If it is Japanese, this book is good'?" }, "options": [{ "text": { "jp": "日本語なら、この本がいいです" }, "correct": true }, { "text": { "jp": "日本語ば、この本がいいです" } }, { "text": { "jp": "日本語であればなら、この本がいいです" } }, { "text": { "jp": "日本語だったらなら、この本がいいです" } }], "explanation": { "zh": "话题条件用なら。", "en": "Use nara for topic condition." } },
-        { "id": "l35_q07", "question": { "zh": "“怎么走好？”是？", "en": "How do you ask 'How should I go?'" }, "options": [{ "text": { "jp": "どう行けばいいですか" }, "correct": true }, { "text": { "jp": "どう行くばいいですか" } }, { "text": { "jp": "どう行ったらばいいですか" } }, { "text": { "jp": "どう行けばいいでしたか" } }], "explanation": { "zh": "行く→行けば。", "en": "Iku becomes ikeba." } },
-        { "id": "l35_q08", "question": { "zh": "“如果不懂”是？", "en": "How do you say 'If you do not understand'?" }, "options": [{ "text": { "jp": "わからなければ" }, "correct": true }, { "text": { "jp": "わからないば" } }, { "text": { "jp": "わからなくれば" } }, { "text": { "jp": "わからないならばいい" } }], "explanation": { "zh": "ない→なければ。", "en": "Nai becomes nakereba." } },
-        { "id": "l35_q09", "question": { "zh": "“按这里门会开”是？", "en": "How do you say 'If you press here, the door opens'?" }, "options": [{ "text": { "jp": "ここを押せば、ドアが開きます" }, "correct": true }, { "text": { "jp": "ここを押すば、ドアが開きます" } }, { "text": { "jp": "ここを押してば、ドアが開きます" } }, { "text": { "jp": "ここを押したらば、ドアが開きます" } }], "explanation": { "zh": "押す→押せば。", "en": "Osu becomes oseba." } },
-        { "id": "l35_q10", "question": { "zh": "“该联系谁好？”是？", "en": "How do you ask 'Whom should I contact?'" }, "options": [{ "text": { "jp": "だれに連絡すればいいですか" }, "correct": true }, { "text": { "jp": "だれを連絡すればいいですか" } }, { "text": { "jp": "だれに連絡するばいいですか" } }, { "text": { "jp": "だれに連絡したらばいいですか" } }], "explanation": { "zh": "する→すれば；联系对象用に。", "en": "Suru becomes sureba; contact target takes ni." } }
+        {
+          "id": "l35_q01",
+          "question": {
+            "zh": "「読む」的条件形是？",
+            "en": "Conditional form of yomu?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "読めば"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "読むば"
+              }
+            },
+            {
+              "text": {
+                "jp": "読みば"
+              }
+            },
+            {
+              "text": {
+                "jp": "読んだらば"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "む→めば。",
+            "en": "Mu changes to meba."
+          }
+        },
+        {
+          "id": "l35_q02",
+          "question": {
+            "zh": "「見る」的条件形是？",
+            "en": "Conditional form of miru?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "見れば"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "見るば"
+              }
+            },
+            {
+              "text": {
+                "jp": "見ば"
+              }
+            },
+            {
+              "text": {
+                "jp": "見たらば"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "二类动词去る加れば。",
+            "en": "Drop ru and add reba."
+          }
+        },
+        {
+          "id": "l35_q03",
+          "question": {
+            "zh": "「来る」的条件形是？",
+            "en": "Conditional form of kuru?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "来れば"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "来るば"
+              }
+            },
+            {
+              "text": {
+                "jp": "来たらば"
+              }
+            },
+            {
+              "text": {
+                "jp": "来ればいいなら"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "读作「くれば」。",
+            "en": "It is read kureba."
+          }
+        },
+        {
+          "id": "l35_q04",
+          "question": {
+            "zh": "「いい」的条件形是？",
+            "en": "Conditional form of ii?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "よければ"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "いければ"
+              }
+            },
+            {
+              "text": {
+                "jp": "いいければ"
+              }
+            },
+            {
+              "text": {
+                "jp": "よいば"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "いい的条件形是よければ。",
+            "en": "Ii becomes yokereba."
+          }
+        },
+        {
+          "id": "l35_q05",
+          "question": {
+            "zh": "“便宜的话买”是？",
+            "en": "How do you say 'If it is cheap, I will buy it'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "安ければ、買います"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "安いば、買います"
+              }
+            },
+            {
+              "text": {
+                "jp": "安くれば、買います"
+              }
+            },
+            {
+              "text": {
+                "jp": "安いならば、買いますです"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "安い→安ければ。",
+            "en": "Yasui becomes yasukereba."
+          }
+        },
+        {
+          "id": "l35_q06",
+          "question": {
+            "zh": "“如果是日语的话，这本书好”是？",
+            "en": "How do you say 'If it is Japanese, this book is good'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "日本語なら、この本がいいです"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "日本語ば、この本がいいです"
+              }
+            },
+            {
+              "text": {
+                "jp": "日本語であればなら、この本がいいです"
+              }
+            },
+            {
+              "text": {
+                "jp": "日本語だったらなら、この本がいいです"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "话题条件用なら。",
+            "en": "Use nara for topic condition."
+          }
+        },
+        {
+          "id": "l35_q07",
+          "question": {
+            "zh": "“怎么走好？”是？",
+            "en": "How do you ask 'How should I go?'"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "どう行けばいいですか"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "どう行くばいいですか"
+              }
+            },
+            {
+              "text": {
+                "jp": "どう行ったらばいいですか"
+              }
+            },
+            {
+              "text": {
+                "jp": "どう行けばいいでしたか"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "行く→行けば。",
+            "en": "Iku becomes ikeba."
+          }
+        },
+        {
+          "id": "l35_q08",
+          "question": {
+            "zh": "“如果不懂”是？",
+            "en": "How do you say 'If you do not understand'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "わからなければ"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "わからないば"
+              }
+            },
+            {
+              "text": {
+                "jp": "わからなくれば"
+              }
+            },
+            {
+              "text": {
+                "jp": "わからないならばいい"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "ない→なければ。",
+            "en": "Nai becomes nakereba."
+          }
+        },
+        {
+          "id": "l35_q09",
+          "question": {
+            "zh": "“按这里门会开”是？",
+            "en": "How do you say 'If you press here, the door opens'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "ここを押せば、ドアが開きます"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "ここを押すば、ドアが開きます"
+              }
+            },
+            {
+              "text": {
+                "jp": "ここを押してば、ドアが開きます"
+              }
+            },
+            {
+              "text": {
+                "jp": "ここを押したらば、ドアが開きます"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "押す→押せば。",
+            "en": "Osu becomes oseba."
+          }
+        },
+        {
+          "id": "l35_q10",
+          "question": {
+            "zh": "“该联系谁好？”是？",
+            "en": "How do you ask 'Whom should I contact?'"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "だれに連絡すればいいですか"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "だれを連絡すればいいですか"
+              }
+            },
+            {
+              "text": {
+                "jp": "だれに連絡するばいいですか"
+              }
+            },
+            {
+              "text": {
+                "jp": "だれに連絡したらばいいですか"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "する→すれば；联系对象用に。",
+            "en": "Suru becomes sureba; contact target takes ni."
+          }
+        }
       ]
     }
   ]

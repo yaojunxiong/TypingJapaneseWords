@@ -31,7 +31,48 @@
           "kana": "かぞえます",
           "zh": "数",
           "en": "count",
-          "example": "人数を数えます。"
+          "example": "人数を数えます。",
+          "practice": [
+            {
+              "id": "l40-vocab-01_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「数えます」的词汇意思是？",
+                "en": "What does 数えます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "数",
+                    "en": "count"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "测量",
+                    "en": "measure"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "确认",
+                    "en": "check, confirm"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "合适、正确",
+                    "en": "fit, match"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「数えます」= 数。",
+                "en": "数えます means count."
+              }
+            }
+          ]
         },
         {
           "id": "l40-vocab-02",
@@ -39,7 +80,48 @@
           "kana": "はかります",
           "zh": "测量",
           "en": "measure",
-          "example": "温度を測ります。"
+          "example": "温度を測ります。",
+          "practice": [
+            {
+              "id": "l40-vocab-02_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「測ります」的词汇意思是？",
+                "en": "What does 測ります mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "测量",
+                    "en": "measure"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "数",
+                    "en": "count"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "确认",
+                    "en": "check, confirm"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "合适、正确",
+                    "en": "fit, match"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「測ります」= 测量。",
+                "en": "測ります means measure."
+              }
+            }
+          ]
         },
         {
           "id": "l40-vocab-03",
@@ -47,7 +129,48 @@
           "kana": "たしかめます",
           "zh": "确认",
           "en": "check, confirm",
-          "example": "時間を確かめます。"
+          "example": "時間を確かめます。",
+          "practice": [
+            {
+              "id": "l40-vocab-03_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「確かめます」的词汇意思是？",
+                "en": "What does 確かめます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "确认",
+                    "en": "check, confirm"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "数",
+                    "en": "count"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "测量",
+                    "en": "measure"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "合适、正确",
+                    "en": "fit, match"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「確かめます」= 确认。",
+                "en": "確かめます means check, confirm."
+              }
+            }
+          ]
         },
         {
           "id": "l40-vocab-04",
@@ -55,7 +178,48 @@
           "kana": "あいます",
           "zh": "合适、正确",
           "en": "fit, match",
-          "example": "この答えは合っています。"
+          "example": "この答えは合っています。",
+          "practice": [
+            {
+              "id": "l40-vocab-04_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「合います」的词汇意思是？",
+                "en": "What does 合います mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "合适、正确",
+                    "en": "fit, match"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "数",
+                    "en": "count"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "测量",
+                    "en": "measure"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "确认",
+                    "en": "check, confirm"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「合います」= 合适、正确。",
+                "en": "合います means fit, match."
+              }
+            }
+          ]
         },
         {
           "id": "l40-vocab-05",
@@ -63,7 +227,48 @@
           "kana": "しゅっぱつします",
           "zh": "出发",
           "en": "depart",
-          "example": "8時に出発します。"
+          "example": "8時に出発します。",
+          "practice": [
+            {
+              "id": "l40-vocab-05_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「出発します」的词汇意思是？",
+                "en": "What does 出発します mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "出发",
+                    "en": "depart"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "数",
+                    "en": "count"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "测量",
+                    "en": "measure"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "确认",
+                    "en": "check, confirm"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「出発します」= 出发。",
+                "en": "出発します means depart."
+              }
+            }
+          ]
         },
         {
           "id": "l40-vocab-06",
@@ -71,7 +276,48 @@
           "kana": "とうちゃくします",
           "zh": "到达",
           "en": "arrive",
-          "example": "駅に到着しました。"
+          "example": "駅に到着しました。",
+          "practice": [
+            {
+              "id": "l40-vocab-06_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「到着します」的词汇意思是？",
+                "en": "What does 到着します mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "到达",
+                    "en": "arrive"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "数",
+                    "en": "count"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "测量",
+                    "en": "measure"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "确认",
+                    "en": "check, confirm"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「到着します」= 到达。",
+                "en": "到着します means arrive."
+              }
+            }
+          ]
         },
         {
           "id": "l40-vocab-07",
@@ -79,7 +325,48 @@
           "kana": "よいます",
           "zh": "醉、晕",
           "en": "get drunk, feel sick",
-          "example": "船に酔いました。"
+          "example": "船に酔いました。",
+          "practice": [
+            {
+              "id": "l40-vocab-07_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「酔います」的词汇意思是？",
+                "en": "What does 酔います mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "醉、晕",
+                    "en": "get drunk, feel sick"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "数",
+                    "en": "count"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "测量",
+                    "en": "measure"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "确认",
+                    "en": "check, confirm"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「酔います」= 醉、晕。",
+                "en": "酔います means get drunk, feel sick."
+              }
+            }
+          ]
         },
         {
           "id": "l40-vocab-08",
@@ -87,7 +374,48 @@
           "kana": "きけん",
           "zh": "危险",
           "en": "dangerous",
-          "example": "ここは危険です。"
+          "example": "ここは危険です。",
+          "practice": [
+            {
+              "id": "l40-vocab-08_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「危険」的词汇意思是？",
+                "en": "What does 危険 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "危险",
+                    "en": "dangerous"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "数",
+                    "en": "count"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "测量",
+                    "en": "measure"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "确认",
+                    "en": "check, confirm"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「危険」= 危险。",
+                "en": "危険 means dangerous."
+              }
+            }
+          ]
         },
         {
           "id": "l40-vocab-09",
@@ -95,7 +423,48 @@
           "kana": "ひつよう",
           "zh": "必要",
           "en": "necessary",
-          "example": "パスポートが必要です。"
+          "example": "パスポートが必要です。",
+          "practice": [
+            {
+              "id": "l40-vocab-09_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「必要」的词汇意思是？",
+                "en": "What does 必要 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "必要",
+                    "en": "necessary"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "数",
+                    "en": "count"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "测量",
+                    "en": "measure"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "确认",
+                    "en": "check, confirm"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「必要」= 必要。",
+                "en": "必要 means necessary."
+              }
+            }
+          ]
         },
         {
           "id": "l40-vocab-10",
@@ -103,7 +472,48 @@
           "kana": "うちゅう",
           "zh": "宇宙",
           "en": "space",
-          "example": "宇宙について調べます。"
+          "example": "宇宙について調べます。",
+          "practice": [
+            {
+              "id": "l40-vocab-10_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「宇宙」的词汇意思是？",
+                "en": "What does 宇宙 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "宇宙",
+                    "en": "space"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "数",
+                    "en": "count"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "测量",
+                    "en": "measure"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "确认",
+                    "en": "check, confirm"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「宇宙」= 宇宙。",
+                "en": "宇宙 means space."
+              }
+            }
+          ]
         }
       ]
     },
@@ -481,49 +891,377 @@
           "id": "l40-example-01",
           "jp": "駅までどうやって行くか、教えてください。",
           "zh": "请告诉我怎么去车站。",
-          "en": "Please tell me how to get to the station."
+          "en": "Please tell me how to get to the station.",
+          "practice": [
+            {
+              "id": "l40-example-01_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「駅までどうやって行くか、教えてください。」的例句意思是？",
+                "en": "What does 駅までどうやって行くか、教えてください。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "请告诉我怎么去车站。",
+                    "en": "Please tell me how to get to the station."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "决定明天几点出发了吗？",
+                    "en": "Have you decided what time to depart tomorrow?"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "我确认这个答案是否正确。",
+                    "en": "I will check whether this answer is correct."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "我们商量一下在哪里吃午饭吧。",
+                    "en": "Let's discuss where to eat lunch."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「駅までどうやって行くか、教えてください。」= 请告诉我怎么去车站。。",
+                "en": "駅までどうやって行くか、教えてください。 means Please tell me how to get to the station.."
+              }
+            }
+          ]
         },
         {
           "id": "l40-example-02",
           "jp": "明日何時に出発するか、決めましたか。",
           "zh": "决定明天几点出发了吗？",
-          "en": "Have you decided what time to depart tomorrow?"
+          "en": "Have you decided what time to depart tomorrow?",
+          "practice": [
+            {
+              "id": "l40-example-02_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「明日何時に出発するか、決めましたか。」的例句意思是？",
+                "en": "What does 明日何時に出発するか、決めましたか。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "决定明天几点出发了吗？",
+                    "en": "Have you decided what time to depart tomorrow?"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "请告诉我怎么去车站。",
+                    "en": "Please tell me how to get to the station."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "我确认这个答案是否正确。",
+                    "en": "I will check whether this answer is correct."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "我们商量一下在哪里吃午饭吧。",
+                    "en": "Let's discuss where to eat lunch."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「明日何時に出発するか、決めましたか。」= 决定明天几点出发了吗？。",
+                "en": "明日何時に出発するか、決めましたか。 means Have you decided what time to depart tomorrow?."
+              }
+            }
+          ]
         },
         {
           "id": "l40-example-03",
           "jp": "この答えが合っているか、確かめます。",
           "zh": "我确认这个答案是否正确。",
-          "en": "I will check whether this answer is correct."
+          "en": "I will check whether this answer is correct.",
+          "practice": [
+            {
+              "id": "l40-example-03_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「この答えが合っているか、確かめます。」的例句意思是？",
+                "en": "What does この答えが合っているか、確かめます。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "我确认这个答案是否正确。",
+                    "en": "I will check whether this answer is correct."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "请告诉我怎么去车站。",
+                    "en": "Please tell me how to get to the station."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "决定明天几点出发了吗？",
+                    "en": "Have you decided what time to depart tomorrow?"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "我们商量一下在哪里吃午饭吧。",
+                    "en": "Let's discuss where to eat lunch."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「この答えが合っているか、確かめます。」= 我确认这个答案是否正确。。",
+                "en": "この答えが合っているか、確かめます。 means I will check whether this answer is correct.."
+              }
+            }
+          ]
         },
         {
           "id": "l40-example-04",
           "jp": "どこで昼ご飯を食べるか、相談しましょう。",
           "zh": "我们商量一下在哪里吃午饭吧。",
-          "en": "Let's discuss where to eat lunch."
+          "en": "Let's discuss where to eat lunch.",
+          "practice": [
+            {
+              "id": "l40-example-04_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「どこで昼ご飯を食べるか、相談しましょう。」的例句意思是？",
+                "en": "What does どこで昼ご飯を食べるか、相談しましょう。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "我们商量一下在哪里吃午饭吧。",
+                    "en": "Let's discuss where to eat lunch."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "请告诉我怎么去车站。",
+                    "en": "Please tell me how to get to the station."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "决定明天几点出发了吗？",
+                    "en": "Have you decided what time to depart tomorrow?"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "我确认这个答案是否正确。",
+                    "en": "I will check whether this answer is correct."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「どこで昼ご飯を食べるか、相談しましょう。」= 我们商量一下在哪里吃午饭吧。。",
+                "en": "どこで昼ご飯を食べるか、相談しましょう。 means Let's discuss where to eat lunch.."
+              }
+            }
+          ]
         },
         {
           "id": "l40-example-05",
           "jp": "だれに電話したらいいか、わかりません。",
           "zh": "我不知道该给谁打电话。",
-          "en": "I do not know whom I should call."
+          "en": "I do not know whom I should call.",
+          "practice": [
+            {
+              "id": "l40-example-05_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「だれに電話したらいいか、わかりません。」的例句意思是？",
+                "en": "What does だれに電話したらいいか、わかりません。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "我不知道该给谁打电话。",
+                    "en": "I do not know whom I should call."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "请告诉我怎么去车站。",
+                    "en": "Please tell me how to get to the station."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "决定明天几点出发了吗？",
+                    "en": "Have you decided what time to depart tomorrow?"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "我确认这个答案是否正确。",
+                    "en": "I will check whether this answer is correct."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「だれに電話したらいいか、わかりません。」= 我不知道该给谁打电话。。",
+                "en": "だれに電話したらいいか、わかりません。 means I do not know whom I should call.."
+              }
+            }
+          ]
         },
         {
           "id": "l40-example-06",
           "jp": "この道が危険か、地図で調べました。",
           "zh": "我用地图查了这条路是否危险。",
-          "en": "I checked on the map whether this road is dangerous."
+          "en": "I checked on the map whether this road is dangerous.",
+          "practice": [
+            {
+              "id": "l40-example-06_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「この道が危険か、地図で調べました。」的例句意思是？",
+                "en": "What does この道が危険か、地図で調べました。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "我用地图查了这条路是否危险。",
+                    "en": "I checked on the map whether this road is dangerous."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "请告诉我怎么去车站。",
+                    "en": "Please tell me how to get to the station."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "决定明天几点出发了吗？",
+                    "en": "Have you decided what time to depart tomorrow?"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "我确认这个答案是否正确。",
+                    "en": "I will check whether this answer is correct."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「この道が危険か、地図で調べました。」= 我用地图查了这条路是否危险。。",
+                "en": "この道が危険か、地図で調べました。 means I checked on the map whether this road is dangerous.."
+              }
+            }
+          ]
         },
         {
           "id": "l40-example-07",
           "jp": "新しいアプリを使ってみました。",
           "zh": "我试着用了新的应用。",
-          "en": "I tried using the new app."
+          "en": "I tried using the new app.",
+          "practice": [
+            {
+              "id": "l40-example-07_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「新しいアプリを使ってみました。」的例句意思是？",
+                "en": "What does 新しいアプリを使ってみました。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "我试着用了新的应用。",
+                    "en": "I tried using the new app."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "请告诉我怎么去车站。",
+                    "en": "Please tell me how to get to the station."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "决定明天几点出发了吗？",
+                    "en": "Have you decided what time to depart tomorrow?"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "我确认这个答案是否正确。",
+                    "en": "I will check whether this answer is correct."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「新しいアプリを使ってみました。」= 我试着用了新的应用。。",
+                "en": "新しいアプリを使ってみました。 means I tried using the new app.."
+              }
+            }
+          ]
         },
         {
           "id": "l40-example-08",
           "jp": "宇宙について何を知っているか、話してください。",
           "zh": "请说说你对宇宙了解些什么。",
-          "en": "Please talk about what you know about space."
+          "en": "Please talk about what you know about space.",
+          "practice": [
+            {
+              "id": "l40-example-08_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「宇宙について何を知っているか、話してください。」的例句意思是？",
+                "en": "What does 宇宙について何を知っているか、話してください。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "请说说你对宇宙了解些什么。",
+                    "en": "Please talk about what you know about space."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "请告诉我怎么去车站。",
+                    "en": "Please tell me how to get to the station."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "决定明天几点出发了吗？",
+                    "en": "Have you decided what time to depart tomorrow?"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "我确认这个答案是否正确。",
+                    "en": "I will check whether this answer is correct."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「宇宙について何を知っているか、話してください。」= 请说说你对宇宙了解些什么。。",
+                "en": "宇宙について何を知っているか、話してください。 means Please talk about what you know about space.."
+              }
+            }
+          ]
         }
       ]
     },

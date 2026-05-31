@@ -36,6 +36,47 @@
           "en": "now",
           "tags": [
             "time"
+          ],
+          "practice": [
+            {
+              "id": "l04_v01_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「今」的词汇意思是？",
+                "en": "What does 今 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "现在",
+                    "en": "now"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "点（钟）",
+                    "en": "o'clock"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "分（分钟）",
+                    "en": "minute"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "半",
+                    "en": "half"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「今」= 现在。",
+                "en": "今 means now."
+              }
+            }
           ]
         },
         {
@@ -46,6 +87,47 @@
           "en": "o'clock",
           "tags": [
             "time"
+          ],
+          "practice": [
+            {
+              "id": "l04_v02_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「時」的词汇意思是？",
+                "en": "What does 時 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "点（钟）",
+                    "en": "o'clock"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "现在",
+                    "en": "now"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "分（分钟）",
+                    "en": "minute"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "半",
+                    "en": "half"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「時」= 点（钟）。",
+                "en": "時 means o'clock."
+              }
+            }
           ]
         },
         {
@@ -56,6 +138,47 @@
           "en": "minute",
           "tags": [
             "time"
+          ],
+          "practice": [
+            {
+              "id": "l04_v03_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「分」的词汇意思是？",
+                "en": "What does 分 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "分（分钟）",
+                    "en": "minute"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "现在",
+                    "en": "now"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "点（钟）",
+                    "en": "o'clock"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "半",
+                    "en": "half"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「分」= 分（分钟）。",
+                "en": "分 means minute."
+              }
+            }
           ]
         },
         {
@@ -66,6 +189,47 @@
           "en": "half",
           "tags": [
             "time"
+          ],
+          "practice": [
+            {
+              "id": "l04_v04_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「半」的词汇意思是？",
+                "en": "What does 半 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "半",
+                    "en": "half"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "现在",
+                    "en": "now"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "点（钟）",
+                    "en": "o'clock"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "分（分钟）",
+                    "en": "minute"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「半」= 半。",
+                "en": "半 means half."
+              }
+            }
           ]
         },
         {
@@ -76,6 +240,47 @@
           "en": "a.m.",
           "tags": [
             "time"
+          ],
+          "practice": [
+            {
+              "id": "l04_v05_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「午前」的词汇意思是？",
+                "en": "What does 午前 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "上午",
+                    "en": "a.m."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "现在",
+                    "en": "now"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "点（钟）",
+                    "en": "o'clock"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "分（分钟）",
+                    "en": "minute"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「午前」= 上午。",
+                "en": "午前 means a.m.."
+              }
+            }
           ]
         },
         {
@@ -86,6 +291,47 @@
           "en": "p.m.",
           "tags": [
             "time"
+          ],
+          "practice": [
+            {
+              "id": "l04_v06_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「午後」的词汇意思是？",
+                "en": "What does 午後 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "下午",
+                    "en": "p.m."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "现在",
+                    "en": "now"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "点（钟）",
+                    "en": "o'clock"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "分（分钟）",
+                    "en": "minute"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「午後」= 下午。",
+                "en": "午後 means p.m.."
+              }
+            }
           ]
         },
         {
@@ -96,6 +342,47 @@
           "en": "Monday",
           "tags": [
             "weekday"
+          ],
+          "practice": [
+            {
+              "id": "l04_v07_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「月曜日」的词汇意思是？",
+                "en": "What does 月曜日 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "星期一",
+                    "en": "Monday"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "现在",
+                    "en": "now"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "点（钟）",
+                    "en": "o'clock"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "分（分钟）",
+                    "en": "minute"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「月曜日」= 星期一。",
+                "en": "月曜日 means Monday."
+              }
+            }
           ]
         },
         {
@@ -106,6 +393,47 @@
           "en": "Tuesday",
           "tags": [
             "weekday"
+          ],
+          "practice": [
+            {
+              "id": "l04_v08_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「火曜日」的词汇意思是？",
+                "en": "What does 火曜日 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "星期二",
+                    "en": "Tuesday"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "现在",
+                    "en": "now"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "点（钟）",
+                    "en": "o'clock"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "分（分钟）",
+                    "en": "minute"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「火曜日」= 星期二。",
+                "en": "火曜日 means Tuesday."
+              }
+            }
           ]
         },
         {
@@ -116,6 +444,47 @@
           "en": "Wednesday",
           "tags": [
             "weekday"
+          ],
+          "practice": [
+            {
+              "id": "l04_v09_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「水曜日」的词汇意思是？",
+                "en": "What does 水曜日 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "星期三",
+                    "en": "Wednesday"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "现在",
+                    "en": "now"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "点（钟）",
+                    "en": "o'clock"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "分（分钟）",
+                    "en": "minute"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「水曜日」= 星期三。",
+                "en": "水曜日 means Wednesday."
+              }
+            }
           ]
         },
         {
@@ -126,6 +495,47 @@
           "en": "Thursday",
           "tags": [
             "weekday"
+          ],
+          "practice": [
+            {
+              "id": "l04_v10_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「木曜日」的词汇意思是？",
+                "en": "What does 木曜日 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "星期四",
+                    "en": "Thursday"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "现在",
+                    "en": "now"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "点（钟）",
+                    "en": "o'clock"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "分（分钟）",
+                    "en": "minute"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「木曜日」= 星期四。",
+                "en": "木曜日 means Thursday."
+              }
+            }
           ]
         },
         {
@@ -136,6 +546,47 @@
           "en": "Friday",
           "tags": [
             "weekday"
+          ],
+          "practice": [
+            {
+              "id": "l04_v11_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「金曜日」的词汇意思是？",
+                "en": "What does 金曜日 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "星期五",
+                    "en": "Friday"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "现在",
+                    "en": "now"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "点（钟）",
+                    "en": "o'clock"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "分（分钟）",
+                    "en": "minute"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「金曜日」= 星期五。",
+                "en": "金曜日 means Friday."
+              }
+            }
           ]
         },
         {
@@ -146,6 +597,47 @@
           "en": "Saturday",
           "tags": [
             "weekday"
+          ],
+          "practice": [
+            {
+              "id": "l04_v12_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「土曜日」的词汇意思是？",
+                "en": "What does 土曜日 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "星期六",
+                    "en": "Saturday"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "现在",
+                    "en": "now"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "点（钟）",
+                    "en": "o'clock"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "分（分钟）",
+                    "en": "minute"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「土曜日」= 星期六。",
+                "en": "土曜日 means Saturday."
+              }
+            }
           ]
         },
         {
@@ -156,6 +648,47 @@
           "en": "Sunday",
           "tags": [
             "weekday"
+          ],
+          "practice": [
+            {
+              "id": "l04_v13_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「日曜日」的词汇意思是？",
+                "en": "What does 日曜日 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "星期日",
+                    "en": "Sunday"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "现在",
+                    "en": "now"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "点（钟）",
+                    "en": "o'clock"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "分（分钟）",
+                    "en": "minute"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「日曜日」= 星期日。",
+                "en": "日曜日 means Sunday."
+              }
+            }
           ]
         },
         {
@@ -166,6 +699,47 @@
           "en": "every day",
           "tags": [
             "time"
+          ],
+          "practice": [
+            {
+              "id": "l04_v14_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「毎日」的词汇意思是？",
+                "en": "What does 毎日 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "每天",
+                    "en": "every day"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "现在",
+                    "en": "now"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "点（钟）",
+                    "en": "o'clock"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "分（分钟）",
+                    "en": "minute"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「毎日」= 每天。",
+                "en": "毎日 means every day."
+              }
+            }
           ]
         },
         {
@@ -176,6 +750,47 @@
           "en": "wake up",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l04_v15_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「起きます」的词汇意思是？",
+                "en": "What does 起きます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "起床",
+                    "en": "wake up"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "现在",
+                    "en": "now"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "点（钟）",
+                    "en": "o'clock"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "分（分钟）",
+                    "en": "minute"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「起きます」= 起床。",
+                "en": "起きます means wake up."
+              }
+            }
           ]
         },
         {
@@ -186,6 +801,47 @@
           "en": "go to bed",
           "tags": [
             "verb"
+          ],
+          "practice": [
+            {
+              "id": "l04_v16_p01",
+              "skill": "vocab",
+              "question": {
+                "zh": "「寝ます」的词汇意思是？",
+                "en": "What does 寝ます mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "睡觉",
+                    "en": "go to bed"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "现在",
+                    "en": "now"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "点（钟）",
+                    "en": "o'clock"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "分（分钟）",
+                    "en": "minute"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「寝ます」= 睡觉。",
+                "en": "寝ます means go to bed."
+              }
+            }
           ]
         }
       ]
@@ -530,31 +1186,236 @@
           "id": "l04_e01",
           "jp": "今 七時十分です。",
           "zh": "现在7点10分。",
-          "en": "It is 7:10 now."
+          "en": "It is 7:10 now.",
+          "practice": [
+            {
+              "id": "l04_e01_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「今 七時十分です。」的例句意思是？",
+                "en": "What does 今 七時十分です。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "现在7点10分。",
+                    "en": "It is 7:10 now."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "公司是9点到5点。",
+                    "en": "The office is from 9 to 5."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "会议在星期一。",
+                    "en": "The meeting is on Monday."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "我每天六点起床。",
+                    "en": "I wake up at six every day."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「今 七時十分です。」= 现在7点10分。。",
+                "en": "今 七時十分です。 means It is 7:10 now.."
+              }
+            }
+          ]
         },
         {
           "id": "l04_e02",
           "jp": "会社は 九時から 五時までです。",
           "zh": "公司是9点到5点。",
-          "en": "The office is from 9 to 5."
+          "en": "The office is from 9 to 5.",
+          "practice": [
+            {
+              "id": "l04_e02_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「会社は 九時から 五時までです。」的例句意思是？",
+                "en": "What does 会社は 九時から 五時までです。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "公司是9点到5点。",
+                    "en": "The office is from 9 to 5."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "现在7点10分。",
+                    "en": "It is 7:10 now."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "会议在星期一。",
+                    "en": "The meeting is on Monday."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "我每天六点起床。",
+                    "en": "I wake up at six every day."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「会社は 九時から 五時までです。」= 公司是9点到5点。。",
+                "en": "会社は 九時から 五時までです。 means The office is from 9 to 5.."
+              }
+            }
+          ]
         },
         {
           "id": "l04_e03",
           "jp": "会議は 月曜日です。",
           "zh": "会议在星期一。",
-          "en": "The meeting is on Monday."
+          "en": "The meeting is on Monday.",
+          "practice": [
+            {
+              "id": "l04_e03_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「会議は 月曜日です。」的例句意思是？",
+                "en": "What does 会議は 月曜日です。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "会议在星期一。",
+                    "en": "The meeting is on Monday."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "现在7点10分。",
+                    "en": "It is 7:10 now."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "公司是9点到5点。",
+                    "en": "The office is from 9 to 5."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "我每天六点起床。",
+                    "en": "I wake up at six every day."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「会議は 月曜日です。」= 会议在星期一。。",
+                "en": "会議は 月曜日です。 means The meeting is on Monday.."
+              }
+            }
+          ]
         },
         {
           "id": "l04_e04",
           "jp": "毎日 六時に 起きます。",
           "zh": "我每天六点起床。",
-          "en": "I wake up at six every day."
+          "en": "I wake up at six every day.",
+          "practice": [
+            {
+              "id": "l04_e04_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「毎日 六時に 起きます。」的例句意思是？",
+                "en": "What does 毎日 六時に 起きます。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "我每天六点起床。",
+                    "en": "I wake up at six every day."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "现在7点10分。",
+                    "en": "It is 7:10 now."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "公司是9点到5点。",
+                    "en": "The office is from 9 to 5."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "会议在星期一。",
+                    "en": "The meeting is on Monday."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「毎日 六時に 起きます。」= 我每天六点起床。。",
+                "en": "毎日 六時に 起きます。 means I wake up at six every day.."
+              }
+            }
+          ]
         },
         {
           "id": "l04_e05",
           "jp": "きのう 十一時に 寝ました。",
           "zh": "我昨天11点睡。",
-          "en": "I went to bed at 11 yesterday."
+          "en": "I went to bed at 11 yesterday.",
+          "practice": [
+            {
+              "id": "l04_e05_p01",
+              "skill": "examples",
+              "question": {
+                "zh": "「きのう 十一時に 寝ました。」的例句意思是？",
+                "en": "What does きのう 十一時に 寝ました。 mean?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "我昨天11点睡。",
+                    "en": "I went to bed at 11 yesterday."
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "现在7点10分。",
+                    "en": "It is 7:10 now."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "公司是9点到5点。",
+                    "en": "The office is from 9 to 5."
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "会议在星期一。",
+                    "en": "The meeting is on Monday."
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「きのう 十一時に 寝ました。」= 我昨天11点睡。。",
+                "en": "きのう 十一時に 寝ました。 means I went to bed at 11 yesterday.."
+              }
+            }
+          ]
         }
       ]
     },
