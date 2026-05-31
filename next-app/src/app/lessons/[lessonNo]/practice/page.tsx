@@ -10,6 +10,8 @@ import { getLang, tr, type Lang } from '@/lib/i18n'
 import { generateQuestions, type LessonDoc } from '@/lib/practice-questions'
 import { getLessonProgress, computeBypassLessonLock, type RoleRow } from '@/lib/lesson-progress'
 
+export const dynamic = 'force-dynamic'
+
 async function loadLessonDoc(lessonNo: number): Promise<LessonDoc | null> {
   const fileNo = String(lessonNo).padStart(2, '0')
   const filePath = path.resolve(process.cwd(), 'src', 'data', 'minna', 'lessons', `lesson-${fileNo}.json`)
@@ -103,8 +105,6 @@ export default async function LessonPracticePage({
         lang={lang}
         stage={s}
         questions={questions}
-        isAuthed={isAuthed}
-        userEmail={userEmail}
       />
     </main>
   )

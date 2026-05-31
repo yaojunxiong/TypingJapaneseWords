@@ -3,6 +3,8 @@ import { cookies } from 'next/headers'
 import { createClient } from '@/utils/supabase/server'
 import { hasSupabasePublicEnv } from '@/utils/supabase/config'
 
+export const dynamic = 'force-dynamic'
+
 /* ------------------------------------------------------------------ */
 /*  GET — list review items with optional filters                     */
 /* ------------------------------------------------------------------ */
@@ -14,11 +16,18 @@ export async function GET(request: NextRequest) {
 
   const cookieStore = await cookies()
   const supabase = createClient(cookieStore)
-  const { data: userData } = await supabase.auth.getUser()
+  const { data: userData, error: getUserError } = await supabase.auth.getUser()
   const user = userData?.user
 
   if (!user) {
-    return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
+    const allCookies = cookieStore.getAll()
+    const sbCookies = allCookies.filter((c) => c.name.startsWith('sb-'))
+    console.error('GET /api/review-items — getUser() failed:', {
+      error: getUserError?.message,
+      hasSbCookies: sbCookies.length > 0,
+      sbCookieNames: sbCookies.map((c) => c.name),
+    })
+    return NextResponse.json({ error: `unauthorized: ${getUserError?.message || 'no user'}` }, { status: 401 })
   }
 
   const { searchParams } = new URL(request.url)
@@ -61,11 +70,18 @@ export async function POST(request: NextRequest) {
 
   const cookieStore = await cookies()
   const supabase = createClient(cookieStore)
-  const { data: userData } = await supabase.auth.getUser()
+  const { data: userData, error: getUserError } = await supabase.auth.getUser()
   const user = userData?.user
 
   if (!user) {
-    return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
+    const allCookies = cookieStore.getAll()
+    const sbCookies = allCookies.filter((c) => c.name.startsWith('sb-'))
+    console.error('POST /api/review-items — getUser() failed:', {
+      error: getUserError?.message,
+      hasSbCookies: sbCookies.length > 0,
+      sbCookieNames: sbCookies.map((c) => c.name),
+    })
+    return NextResponse.json({ error: `unauthorized: ${getUserError?.message || 'no user'}` }, { status: 401 })
   }
 
   const body = await request.json()
@@ -201,11 +217,18 @@ export async function PATCH(request: NextRequest) {
 
   const cookieStore = await cookies()
   const supabase = createClient(cookieStore)
-  const { data: userData } = await supabase.auth.getUser()
+  const { data: userData, error: getUserError } = await supabase.auth.getUser()
   const user = userData?.user
 
   if (!user) {
-    return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
+    const allCookies = cookieStore.getAll()
+    const sbCookies = allCookies.filter((c) => c.name.startsWith('sb-'))
+    console.error('PATCH /api/review-items — getUser() failed:', {
+      error: getUserError?.message,
+      hasSbCookies: sbCookies.length > 0,
+      sbCookieNames: sbCookies.map((c) => c.name),
+    })
+    return NextResponse.json({ error: `unauthorized: ${getUserError?.message || 'no user'}` }, { status: 401 })
   }
 
   const body = await request.json()
@@ -275,11 +298,18 @@ export async function DELETE(request: NextRequest) {
 
   const cookieStore = await cookies()
   const supabase = createClient(cookieStore)
-  const { data: userData } = await supabase.auth.getUser()
+  const { data: userData, error: getUserError } = await supabase.auth.getUser()
   const user = userData?.user
 
   if (!user) {
-    return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
+    const allCookies = cookieStore.getAll()
+    const sbCookies = allCookies.filter((c) => c.name.startsWith('sb-'))
+    console.error('DELETE /api/review-items — getUser() failed:', {
+      error: getUserError?.message,
+      hasSbCookies: sbCookies.length > 0,
+      sbCookieNames: sbCookies.map((c) => c.name),
+    })
+    return NextResponse.json({ error: `unauthorized: ${getUserError?.message || 'no user'}` }, { status: 401 })
   }
 
   const { searchParams } = new URL(request.url)

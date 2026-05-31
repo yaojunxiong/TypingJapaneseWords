@@ -24,8 +24,6 @@ type Props = {
   lang: Lang
   stage: 'vocab' | 'grammar' | 'examples' | 'quiz'
   questions: PracticeQuestion[]
-  isAuthed?: boolean
-  userEmail?: string
 }
 
 type PracticeSession = {
@@ -151,7 +149,7 @@ function playCorrectCombo(combo: number) {
   } catch {}
 }
 
-export default function LessonPracticeClient({ lessonNo, lang, stage, questions, isAuthed = false, userEmail = '' }: Props) {
+export default function LessonPracticeClient({ lessonNo, lang, stage, questions }: Props) {
   const supabaseReady = hasSupabasePublicEnv()
   const [idx, setIdx] = useState(0)
   const [hearts, setHearts] = useState(5)
@@ -497,25 +495,20 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions,
         emitStatsUpdate()
       } catch {}
 
-      // Save wrong answer to review_items
-      if (isAuthed) {
-        addWrongAnswer({
-          lessonNo,
-          stage,
-          questionId: `${lessonNo}.${stage}.${idx}`,
-          questionText: current.question,
-          jp: current.hint,
-          correctAnswer: correctAnswerText(),
-          selectedAnswer: current.options[optionIndex]?.text || '',
-          options: current.options,
-          explanation: current.explanation,
-        }).catch((e) => {
-          console.error('addWrongAnswer failed:', e)
-          setToastMsg(t(lang, '错题保存失败', 'Failed to save mistake'))
-        })
-      } else {
-        console.log('addWrongAnswer skipped — user not authed')
-      }
+      // Save wrong answer to review_items (API handles auth — 401 is silently ignored)
+      addWrongAnswer({
+        lessonNo,
+        stage,
+        questionId: `${lessonNo}.${stage}.${idx}`,
+        questionText: current.question,
+        jp: current.hint,
+        correctAnswer: correctAnswerText(),
+        selectedAnswer: current.options[optionIndex]?.text || '',
+        options: current.options,
+        explanation: current.explanation,
+      }).catch((e) => {
+        console.error('addWrongAnswer failed:', e)
+      })
 
       void writeCloudPracticeSession({ lessonNo, stage, idx, score, hearts: nextHearts })
     }
@@ -610,10 +603,7 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions,
         <button
           className="practiceAudioBtn"
           onClick={async () => {
-            if (!isAuthed) {
-              setToastMsg(t(lang, '请先登录', 'Please sign in first'))
-              return
-            }
+            console.log('favorite clicked, calling POST /api/review-items')
             const id = `${lessonNo}.${stage}.${idx}`
             try {
               const result = await toggleFavorite({
@@ -625,6 +615,7 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions,
                 correctAnswer: correctAnswerText(),
                 options: current.options,
               })
+              console.log('favorite API response:', result)
               if (result?.action === 'added') {
                 setFavoriteIds((prev) => new Set(prev).add(id))
                 setToastMsg(t(lang, '已收藏 ⭐', 'Saved ⭐'))
@@ -634,7 +625,7 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions,
               }
             } catch (e) {
               console.error('toggleFavorite failed:', e)
-              setToastMsg(t(lang, '收藏失败，请检查登录', 'Save failed, check login'))
+              setToastMsg(String(e instanceof Error ? e.message : e))
             }
           }}
           title={t(lang, '收藏/取消收藏', 'Toggle favorite')}
