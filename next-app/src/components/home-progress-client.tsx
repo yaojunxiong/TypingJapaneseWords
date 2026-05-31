@@ -26,6 +26,13 @@ type HomeStats = {
   lastStudyDate: string
 }
 
+const STAGES = [
+  { key: 'vocab', icon: '🟢', zh: '词汇', en: 'Vocab' },
+  { key: 'grammar', icon: '📦', zh: '语法', en: 'Grammar' },
+  { key: 'examples', icon: '🪙', zh: '例句', en: 'Examples' },
+  { key: 'quiz', icon: '🏅', zh: '测验', en: 'Quiz' },
+] as const
+
 function t(lang: Props['lang'], zh: string, en: string) {
   return lang === 'en' ? en : zh
 }
@@ -67,14 +74,32 @@ export default function HomeProgressClient({ lang }: Props) {
   }))
   const [syncText, setSyncText] = useState(t(lang, '读取学习进度中...', 'Loading learning progress...'))
   const [syncing, setSyncing] = useState(false)
+  const [completedStages, setCompletedStages] = useState<Set<string>>(new Set())
+  const [stageLoaded, setStageLoaded] = useState(false)
 
   const lessonNo = Math.max(1, Math.min(50, Number(stats.lastLesson || 1)))
   const lesson = LESSONS_1_50.find((x) => x.no === lessonNo) || LESSONS_1_50[0]
   const checkedToday = stats.lastStudyDate === todayISO()
-  const stageProgress = Math.max(0, Math.min(4, stats.crowns - (lessonNo - 1) * 4))
+  const completedCount = stageLoaded
+    ? completedStages.size
+    : Math.max(0, Math.min(4, stats.crowns - (lessonNo - 1) * 4))
+  const lessonCompleted = completedCount === 4
 
   function readLocal() {
     setStats(toStats())
+  }
+
+  async function loadCompletedStages(targetLessonNo = lessonNo) {
+    setStageLoaded(false)
+    try {
+      const res = await fetch(`/api/stage-completed?lessonNo=${targetLessonNo}`)
+      const data = await res.json()
+      setCompletedStages(new Set(Array.isArray(data.completed) ? data.completed : []))
+    } catch {
+      setCompletedStages(new Set())
+    } finally {
+      setStageLoaded(true)
+    }
   }
 
   async function runCloudSync(forceUpload = false) {
@@ -137,30 +162,48 @@ export default function HomeProgressClient({ lang }: Props) {
     void runCloudSync(false)
   }, [])
 
+  useEffect(() => {
+    void loadCompletedStages(lessonNo)
+  }, [lessonNo])
+
   return (
     <>
-      <section className="homeStageCard">
+      <section className={`homeStageCard ${lessonCompleted ? 'completed' : 'inProgress'}`}>
         <div>
           <p className="homeStageTop">
+            {lessonCompleted
+              ? t(lang, '本课已完成 · 4/4', 'Lesson completed · 4/4')
+              : t(lang, `学习中 · 已完成 ${completedCount}/4`, `In progress · ${completedCount}/4 completed`)}
+            {' · '}
             {checkedToday
               ? t(lang, `今日已打卡 · 连续 ${stats.streak} 天`, `Checked in today · ${stats.streak}-day streak`)
               : t(lang, `今日未打卡 · 已累计 ${stats.checkinDays} 天`, `Not checked in today · ${stats.checkinDays} days total`)}
           </p>
           <h2>{t(lang, `第 ${lessonNo} 课 · ${lesson.title}`, `Lesson ${lessonNo}`)}</h2>
         </div>
-        <span className="homeStageIcon">{checkedToday ? '✅' : '📅'}</span>
+        <span className="homeStageIcon">{lessonCompleted ? '✅' : '🟡'}</span>
       </section>
 
       <section className="homeMap card">
-        <Link className="homeNode" href={`/lessons/${lessonNo}/practice?stage=vocab`}>🟢<small>{t(lang, '词汇', 'Vocab')}</small></Link>
-        <Link className="homeNode" href={`/lessons/${lessonNo}/practice?stage=grammar`}>📦<small>{t(lang, '语法', 'Grammar')}</small></Link>
-        <Link className="homeNode" href={`/lessons/${lessonNo}/practice?stage=examples`}>🪙<small>{t(lang, '例句', 'Examples')}</small></Link>
-        <Link className="homeNode" href={`/lessons/${lessonNo}/practice?stage=quiz`}>🏅<small>{t(lang, '测验', 'Quiz')}</small></Link>
+        {STAGES.map((stage) => {
+          const isCompleted = stageLoaded && completedStages.has(stage.key)
+          return (
+            <Link
+              key={stage.key}
+              className={`homeNode ${isCompleted ? 'completed' : ''}`}
+              href={`/lessons/${lessonNo}/practice?stage=${stage.key}`}
+            >
+              <span className="stageIcon">{stage.icon}</span>
+              <small>{t(lang, stage.zh, stage.en)}</small>
+              {isCompleted ? <span className="stageBadge">✅</span> : null}
+            </Link>
+          )
+        })}
       </section>
 
       <section className="homeLevelCard card">
         <span className="homeTag">{t(lang, '当前真实进度', 'Current Progress')}</span>
-        <h2>{stageProgress}/4</h2>
+        <h2>{completedCount}/4</h2>
         <p>
           {t(lang, '打卡', 'Check-ins')} {stats.checkinDays} · XP {stats.xp} · {t(lang, '皇冠', 'Crowns')} {stats.crowns} · {t(lang, '错题', 'Mistakes')} {stats.mistakes}
         </p>
