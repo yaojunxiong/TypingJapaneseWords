@@ -115,7 +115,11 @@ export default function LessonsClient({ bypassLessonLock, roleLabel, lang }: Pro
       const completedStages = cloudCompleted ? (cloudCompleted[lessonKey] || []) : []
       const crowns = cloudCompleted ? completedStages.length : crownCount(local.crowns, lesson.no)
       const done = crowns >= 4
-      const locked = !bypassLessonLock && lesson.no > local.currentLesson && crowns === 0
+      let locked = false
+      if (cloudCompleted && !bypassLessonLock && lesson.no > 1) {
+        const prevCompleted = (cloudCompleted[String(lesson.no - 1)] || []).length
+        locked = prevCompleted < 4
+      }
       return {
         ...lesson,
         crowns,
