@@ -55,7 +55,7 @@ export async function POST(request: NextRequest) {
   }
 
   const body = await request.json()
-  const { lessonNo, stage, idx, score, hearts } = body
+  const { lessonNo, stage, idx, score, hearts, completed } = body
 
   if (lessonNo == null || !stage || idx == null || score == null || hearts == null) {
     return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
@@ -70,7 +70,7 @@ export async function POST(request: NextRequest) {
       idx: Number(idx),
       score: Number(score),
       hearts: Number(hearts),
-      completed: false,
+      completed: completed === true,
       updated_at: new Date().toISOString()
     }, { onConflict: 'user_id,lesson_no,stage' })
 

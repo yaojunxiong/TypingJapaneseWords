@@ -218,7 +218,7 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
     }
   }
 
-  async function writeCloudPracticeSession(session: PracticeSession) {
+  async function writeCloudPracticeSession(session: PracticeSession, completed = false) {
     if (!supabaseReady) return
     try {
       const res = await fetch('/api/practice-session', {
@@ -229,7 +229,8 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
           stage: session.stage,
           idx: session.idx,
           score: session.score,
-          hearts: session.hearts
+          hearts: session.hearts,
+          completed
         })
       })
       if (res.ok) {
@@ -304,7 +305,7 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
         completed: total > 0 && finalScore >= Math.ceil(total * 0.8) && finalHearts > 0
       })
       clearPracticeSession(lessonNo, stage)
-      void clearCloudPracticeSession()
+      void writeCloudPracticeSession({ lessonNo, stage, idx, score: finalScore, hearts: finalHearts }, true)
       emitStatsUpdate()
     } catch {}
   }
