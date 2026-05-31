@@ -52,6 +52,7 @@ export default function LessonsClient({ bypassLessonLock, roleLabel, lang }: Pro
     streak: 1,
     checkinDays: 0
   })
+  const [cloudCompleted, setCloudCompleted] = useState<Record<string, string[]> | null>(null)
   const [syncText, setSyncText] = useState(t(lang, '读取本地进度...', 'Reading local progress...'))
 
   function loadLocalState() {
@@ -89,13 +90,30 @@ export default function LessonsClient({ bypassLessonLock, roleLabel, lang }: Pro
       : (res.warning ? `${t(lang, '同步提示', 'Sync note')}：${res.warning}` : t(lang, '同步未完成', 'Sync incomplete')))
   }
 
+  async function loadCloudCompleted() {
+    if (!supabaseReady) return
+    try {
+      const res = await fetch('/api/stage-completed')
+      if (res.ok) {
+        const data = await res.json()
+        setCloudCompleted(data.lessons || {})
+      }
+    } catch {}
+  }
+
   useEffect(() => {
-    void syncAndReload()
+    async function init() {
+      await syncAndReload()
+      await loadCloudCompleted()
+    }
+    void init()
   }, [])
 
   const rows = useMemo(() => {
     return LESSONS_1_50.map((lesson) => {
-      const crowns = crownCount(local.crowns, lesson.no)
+      const lessonKey = String(lesson.no)
+      const completedStages = cloudCompleted ? (cloudCompleted[lessonKey] || []) : []
+      const crowns = cloudCompleted ? completedStages.length : crownCount(local.crowns, lesson.no)
       const done = crowns >= 4
       const locked = !bypassLessonLock && lesson.no > local.currentLesson && crowns === 0
       return {
@@ -106,7 +124,7 @@ export default function LessonsClient({ bypassLessonLock, roleLabel, lang }: Pro
         href: locked ? '#' : `/lessons/${lesson.no}`
       }
     })
-  }, [local, bypassLessonLock])
+  }, [local, cloudCompleted, bypassLessonLock])
 
   return (
     <>
@@ -136,7 +154,7 @@ export default function LessonsClient({ bypassLessonLock, roleLabel, lang }: Pro
               <div className="lessonMeta2">
                 <span className={row.done ? 'metaPill done' : 'metaPill'}>👑 {row.crowns}/4</span>
                 <span className="metaPill">
-                  {row.locked ? t(lang, '未解锁', 'Locked') : row.done ? t(lang, '已完成', 'Done') : t(lang, '可学习', 'Ready')}
+                  {row.locked ? t(lang, '未解锁', 'Locked') : row.done ? t(lang, '已完成', 'Done') : row.crowns > 0 ? t(lang, '学习中', 'Learning') : t(lang, '可学习', 'Ready')}
                 </span>
               </div>
             </div>
