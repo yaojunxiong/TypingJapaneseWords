@@ -69,15 +69,12 @@ create policy "Users can delete own review items"
   for delete
   using (auth.uid() = user_id);
 
--- Admin can read all (for debugging)
+-- Admin can read all (requires is_admin() function)
+-- See migration 20260531000001 for the function definition.
 create policy "Admin can read all review items"
   on public.review_items
   for select
   using (
     auth.uid() = user_id
-    or exists (
-      select 1 from public.user_roles
-      where user_id = auth.uid()
-        and role = 'admin'
-    )
+    or public.is_admin()
   );
