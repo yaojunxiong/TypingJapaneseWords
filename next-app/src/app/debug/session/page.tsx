@@ -1,77 +1,161 @@
-import { cookies } from 'next/headers'
+import { cookies, headers } from 'next/headers'
 import { createClient } from '@/utils/supabase/server'
-import { hasSupabasePublicEnv } from '@/utils/supabase/config'
+import {
+  hasSupabasePublicEnv,
+  getSupabasePublicEnv,
+  getSupabaseMissingEnvMessage,
+} from '@/utils/supabase/config'
 
-/**
- * /debug/session — diagnostic page to check Supabase auth state on the server.
- * Visit this URL when logged in to verify the server can read your session.
- */
 export default async function DebugSessionPage() {
+  const envInfo = getSupabasePublicEnv()
   const envOk = hasSupabasePublicEnv()
-  let userId = '—'
-  let userEmail = '—'
-  let errorMessage = '—'
-  let cookieNames: string[] = []
-  let allHeaders: Record<string, string> = {}
+  const envMessage = getSupabaseMissingEnvMessage()
+
+  // Server-side auth state
+  let userId = '(null)'
+  let userEmail = '(null)'
+  let authError = '(none)'
+
+  // Cookies
+  let cookieList: { name: string; value: string }[] = []
+  let hasSbCookie = false
+  let host = '(unknown)'
 
   if (envOk) {
     try {
+      const headerStore = await headers()
+      host = headerStore.get('host') || '(unknown)'
+
       const cookieStore = await cookies()
-      cookieNames = cookieStore.getAll().map((c) => c.name)
+      cookieList = cookieStore.getAll()
+      hasSbCookie = cookieList.some((c) => c.name.startsWith('sb-'))
+
       const supabase = createClient(cookieStore)
       const { data, error } = await supabase.auth.getUser()
+
       if (error) {
-        errorMessage = error.message
+        authError = error.message
       }
       if (data.user) {
         userId = data.user.id
         userEmail = data.user.email || '(no email)'
-      } else {
-        userId = '(null — not logged in)'
       }
     } catch (e) {
-      errorMessage = String(e)
+      authError = String(e)
     }
   }
 
-  return (
-    <main style={{ padding: '1rem', fontFamily: 'monospace', fontSize: '0.9rem', maxWidth: 720, margin: '0 auto' }}>
-      <h1>🔍 Session Debug</h1>
+  const sbCookies = cookieList.filter((c) => c.name.startsWith('sb-'))
+  const otherCookies = cookieList.filter((c) => !c.name.startsWith('sb-'))
 
+  return (
+    <main style={{ padding: '1rem', fontFamily: 'monospace', fontSize: '0.85rem', maxWidth: 800, margin: '0 auto' }}>
+      <h1 style={{ fontSize: '1.3rem' }}>🔍 Session Debug</h1>
+
+      {/* Auth status banner */}
+      <div style={{
+        padding: '1rem',
+        borderRadius: 8,
+        marginBottom: 12,
+        background: userId !== '(null)' ? '#d4edda' : '#fff3cd',
+        border: `1px solid ${userId !== '(null)' ? '#c3e6cb' : '#ffeeba'}`,
+      }}>
+        <strong>{userId !== '(null)' ? '✅ SERVER FINDS USER' : '⚠️ SERVER FINDS NO USER'}</strong>
+      </div>
+
+      {/* Auth state */}
       <section style={{ background: '#f5f5f5', padding: '1rem', borderRadius: 8, marginBottom: 12 }}>
-        <h2>Supabase Auth (server-side)</h2>
-        <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+        <h2 style={{ margin: '0 0 8px' }}>Supabase Auth (server-side)</h2>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.85rem' }}>
           <tbody>
-            <tr><td style={{ padding: '4px 8px', fontWeight: 'bold' }}>Env configured</td><td>{envOk ? '✅ yes' : '❌ no'}</td></tr>
-            <tr><td style={{ padding: '4px 8px', fontWeight: 'bold' }}>User ID</td><td style={{ wordBreak: 'break-all' }}>{userId}</td></tr>
-            <tr><td style={{ padding: '4px 8px', fontWeight: 'bold' }}>Email</td><td>{userEmail}</td></tr>
-            <tr><td style={{ padding: '4px 8px', fontWeight: 'bold' }}>Auth error</td><td style={{ color: errorMessage !== '—' ? '#b91c1c' : undefined }}>{errorMessage}</td></tr>
+            <tr><td style={{ padding: '2px 8px', fontWeight: 'bold', width: 160 }}>User ID</td><td style={{ wordBreak: 'break-all', fontFamily: 'monospace', fontSize: '0.75rem' }}>{userId}</td></tr>
+            <tr><td style={{ padding: '2px 8px', fontWeight: 'bold' }}>Email</td><td>{userEmail}</td></tr>
+            <tr><td style={{ padding: '2px 8px', fontWeight: 'bold' }}>Auth error</td><td style={{ color: authError !== '(none)' ? '#b91c1c' : undefined }}>{authError}</td></tr>
+            <tr><td style={{ padding: '2px 8px', fontWeight: 'bold' }}>Request host</td><td>{host}</td></tr>
           </tbody>
         </table>
       </section>
 
+      {/* Environment */}
       <section style={{ background: '#f5f5f5', padding: '1rem', borderRadius: 8, marginBottom: 12 }}>
-        <h2>Cookies ({cookieNames.length})</h2>
-        {cookieNames.length === 0 ? (
-          <p className="small">No cookies found</p>
+        <h2 style={{ margin: '0 0 8px' }}>Environment</h2>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.85rem' }}>
+          <tbody>
+            <tr><td style={{ padding: '2px 8px', fontWeight: 'bold', width: 160 }}>SUPABASE_URL</td><td style={{ wordBreak: 'break-all', fontSize: '0.75rem' }}>{envInfo.url ? '✅ ' + envInfo.url : '❌ missing'}</td></tr>
+            <tr><td style={{ padding: '2px 8px', fontWeight: 'bold' }}>SUPABASE_KEY</td><td style={{ wordBreak: 'break-all', fontSize: '0.75rem' }}>{envInfo.key && !envInfo.key.includes('missing') ? '✅ set' : '❌ missing'}</td></tr>
+            <tr><td style={{ padding: '2px 8px', fontWeight: 'bold' }}>Missing vars</td><td>{envMessage || '(none)'}</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      {/* Cookies */}
+      <section style={{ background: '#f5f5f5', padding: '1rem', borderRadius: 8, marginBottom: 12 }}>
+        <h2 style={{ margin: '0 0 8px' }}>
+          Cookies ({cookieList.length})
+          {hasSbCookie ? <span style={{ color: '#28a745', marginLeft: 8 }}>✅ sb-* cookies found</span>
+            : <span style={{ color: '#dc3545', marginLeft: 8 }}>❌ No sb-* cookies</span>}
+        </h2>
+
+        {cookieList.length === 0 ? (
+          <p className="small">No cookies in the request — check that cookies are enabled and the auth callback completed.</p>
         ) : (
-          <ul style={{ margin: 0, paddingLeft: 20 }}>
-            {cookieNames.map((name) => (
-              <li key={name} style={{ wordBreak: 'break-all' }}>{name}</li>
-            ))}
-          </ul>
+          <>
+            {sbCookies.length > 0 && (
+              <div style={{ marginBottom: 8 }}>
+                <strong>Supabase auth cookies:</strong>
+                <ul style={{ margin: '4px 0', paddingLeft: 20 }}>
+                  {sbCookies.map((c) => (
+                    <li key={c.name} style={{ wordBreak: 'break-all', fontSize: '0.8rem' }}>
+                      {c.name}
+                      <span style={{ color: '#666', marginLeft: 8 }}>{c.value.substring(0, 40)}...</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {otherCookies.length > 0 && (
+              <div>
+                <strong>Other cookies:</strong>
+                <ul style={{ margin: '4px 0', paddingLeft: 20 }}>
+                  {otherCookies.map((c) => (
+                    <li key={c.name} style={{ wordBreak: 'break-all', fontSize: '0.8rem' }}>
+                      {c.name}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </>
         )}
       </section>
 
+      {/* Troubleshooting */}
       <section style={{ background: '#f5f5f5', padding: '1rem', borderRadius: 8 }}>
-        <h2>How to interpret</h2>
-        <ul style={{ margin: 0, paddingLeft: 20 }}>
-          <li><b>Not logged in</b> → User ID will be &quot;(null)"</li>
-          <li><b>Logged in</b> → User ID + email will appear</li>
-          <li>If you <em>are</em> logged in but the page shows &quot;null&quot;, the middleware may not be refreshing the session.</li>
-          <li>Check the cookies list — Supabase auth cookies start with <code>sb-</code> or <code>supabase-</code>.</li>
-          <li>If <code>sb-...</code> cookies are missing, the auth callback or login flow did not complete.</li>
-        </ul>
+        <h2 style={{ margin: '0 0 8px' }}>Troubleshooting</h2>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.85rem' }}>
+          <tbody>
+            <tr><td style={{ padding: '2px 8px', fontWeight: 'bold', width: 160 }}>Callbacks URL</td><td>origin/auth/callback</td></tr>
+            <tr><td style={{ padding: '2px 8px', fontWeight: 'bold' }}>Login link</td><td><a href="/auth/signin" target="_blank">/auth/signin</a></td></tr>
+            <tr><td style={{ padding: '2px 8px', fontWeight: 'bold' }}>Callback URL</td><td>{host ? `https://${host}/auth/callback` : '(need host)'}</td></tr>
+          </tbody>
+        </table>
+        <p style={{ marginTop: 8, fontSize: '0.85rem' }}>
+          If User ID is &quot;(null)&quot; but you ARE logged in:
+        </p>
+        <ol style={{ fontSize: '0.85rem', paddingLeft: 20 }}>
+          <li>Check Supabase Dashboard → Authentication → URL Configuration</li>
+          <li>Site URL must be <code>https://next-app-kohl-one.vercel.app</code></li>
+          <li>Redirect URLs must include <code>https://next-app-kohl-one.vercel.app/auth/callback</code></li>
+          <li>If sb-* cookies are missing entirely, the auth callback did not set them properly</li>
+          <li>If sb-* cookies exist but getUser() returns null, the token is expired or malformed</li>
+          <li>Clear cookies and re-login from <a href="/auth/signin">/auth/signin</a></li>
+        </ol>
+        <p style={{ marginTop: 8 }}>
+          <a href="/debug/session" style={{ background: '#0070f3', color: 'white', padding: '4px 12px', borderRadius: 4, textDecoration: 'none' }}>
+            Refresh this page
+          </a>
+        </p>
       </section>
     </main>
   )
