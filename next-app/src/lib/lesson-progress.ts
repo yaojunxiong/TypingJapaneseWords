@@ -15,6 +15,34 @@ export type LessonProgress = {
   stageStatus: LessonStageInfo[]
 }
 
+export type RoleRow = {
+  role: string | null
+  vip_until: string | null
+  email: string | null
+}
+
+/**
+ * Compute the effective role (admin → admin, expired vip → normal, etc.).
+ */
+export function getEffectiveRole(roleRow: RoleRow | null, userEmail: string): string {
+  const email = String(roleRow?.email || userEmail || '').toLowerCase()
+  const forcedAdmin = email === 'yaojunxiong@gmail.com'
+  const rawRole = forcedAdmin ? 'admin' : String(roleRow?.role || 'normal')
+  const vipUntil = roleRow?.vip_until ? String(roleRow.vip_until) : ''
+  const vipActive = rawRole === 'vip' && (!vipUntil || Date.parse(vipUntil) > Date.now())
+  const memberActive = rawRole === 'member'
+  return rawRole === 'admin' ? 'admin' : memberActive ? 'member' : vipActive ? 'vip' : 'normal'
+}
+
+/**
+ * Compute whether the user should bypass lesson locks.
+ * Used by both the lessons list page and practice page.
+ */
+export function computeBypassLessonLock(roleRow: RoleRow | null, userEmail: string): boolean {
+  const effectiveRole = getEffectiveRole(roleRow, userEmail)
+  return effectiveRole === 'admin' || effectiveRole === 'vip' || effectiveRole === 'member'
+}
+
 function getCompletedCount(lessonNo: number, allCompletedStages: Record<string, string[]>): number {
   const stages = allCompletedStages[String(lessonNo)] || []
   return LESSON_STAGES.filter((s) => stages.includes(s)).length

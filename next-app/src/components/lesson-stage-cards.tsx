@@ -21,15 +21,19 @@ export default function LessonStageCards({ lessonNo, lang }: { lessonNo: number;
   const [stageStatus, setStageStatus] = useState<LessonStageInfo[]>(
     STAGES.map((s) => ({ key: s.key, completed: false }))
   )
+  const [isUnlocked, setIsUnlocked] = useState(() => lessonNo === 1)
   const [loaded, setLoaded] = useState(false)
 
   useEffect(() => {
-    fetch(`/api/stage-completed?lessonNo=${lessonNo}`)
+    // Fetch ALL completed stages (no lessonNo filter) so we can compute unlock
+    fetch(`/api/stage-completed`)
       .then((res) => res.json())
       .then((data) => {
-        const completed = Array.isArray(data.completed) ? data.completed : []
-        const progress = getLessonProgress(lessonNo, { [String(lessonNo)]: completed })
+        const allCompleted: Record<string, string[]> = data.lessons || {}
+        // Compute unlock from all data (same logic as practice page server-side)
+        const progress = getLessonProgress(lessonNo, allCompleted, undefined, false)
         setStageStatus(progress.stageStatus)
+        setIsUnlocked(progress.isUnlocked)
       })
       .catch(() => {})
       .finally(() => setLoaded(true))
@@ -40,16 +44,24 @@ export default function LessonStageCards({ lessonNo, lang }: { lessonNo: number;
       {STAGES.map((stage) => {
         const info = stageStatus.find((s) => s.key === stage.key)
         const isCompleted = loaded && (info?.completed ?? false)
+        if (isUnlocked) {
+          return (
+            <Link
+              key={stage.key}
+              className={`homeNode ${isCompleted ? 'completed' : ''}`}
+              href={`/lessons/${lessonNo}/practice?stage=${stage.key}`}
+            >
+              <span className="stageIcon">{stage.icon}</span>
+              <small>{t(lang, stage.zh, stage.en)}</small>
+              {isCompleted ? <span className="stageBadge">✅</span> : null}
+            </Link>
+          )
+        }
         return (
-          <Link
-            key={stage.key}
-            className={`homeNode ${isCompleted ? 'completed' : ''}`}
-            href={`/lessons/${lessonNo}/practice?stage=${stage.key}`}
-          >
-            <span className="stageIcon">{stage.icon}</span>
+          <div key={stage.key} className="homeNode locked" style={{ opacity: 0.5, cursor: 'not-allowed' }} title={t(lang, '课程未解锁', 'Lesson locked')}>
+            <span className="stageIcon">🔒</span>
             <small>{t(lang, stage.zh, stage.en)}</small>
-            {isCompleted ? <span className="stageBadge">✅</span> : null}
-          </Link>
+          </div>
         )
       })}
     </section>

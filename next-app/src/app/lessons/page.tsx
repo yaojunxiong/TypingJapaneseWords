@@ -5,27 +5,7 @@ import LessonsClient from '@/components/lessons-client'
 import { createClient } from '@/utils/supabase/server'
 import { hasSupabasePublicEnv } from '@/utils/supabase/config'
 import { getLang } from '@/lib/i18n'
-
-type RoleRow = {
-  role: string | null
-  vip_until: string | null
-  email: string | null
-}
-
-function roleInfo(row: RoleRow | null, userEmail: string) {
-  const now = Date.now()
-  const accountEmail = String(row?.email || userEmail || '').toLowerCase()
-  const forcedAdmin = accountEmail === 'yaojunxiong@gmail.com'
-  const rawRole = forcedAdmin ? 'admin' : String(row?.role || 'normal')
-  const vipUntil = row?.vip_until ? String(row.vip_until) : ''
-  const vipActive = rawRole === 'vip' && (!vipUntil || Date.parse(vipUntil) > now)
-  const memberActive = rawRole === 'member'
-  const effectiveRole = rawRole === 'admin' ? 'admin' : memberActive ? 'member' : vipActive ? 'vip' : 'normal'
-  return {
-    effectiveRole,
-    bypassLessonLock: effectiveRole === 'admin' || effectiveRole === 'vip' || effectiveRole === 'member'
-  }
-}
+import { computeBypassLessonLock, getEffectiveRole, type RoleRow } from '@/lib/lesson-progress'
 
 export default async function LessonsPage() {
   let bypassLessonLock = false
@@ -46,9 +26,8 @@ export default async function LessonsPage() {
         .maybeSingle()
       const data = (roleRaw as RoleRow | null) || null
 
-      const info = roleInfo(data || null, user.email || '')
-      bypassLessonLock = info.bypassLessonLock
-      roleLabel = info.effectiveRole
+      bypassLessonLock = computeBypassLessonLock(data, user.email || '')
+      roleLabel = getEffectiveRole(data, user.email || '')
     }
   }
 
