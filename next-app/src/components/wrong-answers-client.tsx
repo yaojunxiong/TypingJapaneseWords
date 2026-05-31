@@ -31,10 +31,14 @@ export default function WrongAnswersClient({ lang: initialLang }: { lang: Lang }
 
   useEffect(() => { void load() }, [load])
 
+  const unmasteredCount = items.filter((i) => !i.mastered).length
+  const masteredCount = items.filter((i) => i.mastered).length
+
   const filtered = items.filter((item) => {
     if (filterLesson && item.lesson_no !== Number(filterLesson)) return false
     if (filterStage && item.stage !== filterStage) return false
     if (!showMastered && item.mastered) return false
+    if (showMastered && !item.mastered) return false
     return true
   })
 
@@ -52,27 +56,41 @@ export default function WrongAnswersClient({ lang: initialLang }: { lang: Lang }
       <section className="heroCard card">
         <div className="heroEmoji">📝</div>
         <h2>{t(lang, '错题本', 'Wrong Answers')}</h2>
-        <p className="small">{t(lang, '共', 'Total')} {items.length} {t(lang, '道错题', 'items')}</p>
+        <p className="small">
+          {unmasteredCount} {t(lang, '道未掌握', 'unmastered')} · {masteredCount} {t(lang, '道已掌握', 'mastered')}
+        </p>
       </section>
 
       <section className="card">
-        <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 12 }}>
-          <select value={filterLesson} onChange={(e) => setFilterLesson(e.target.value)} className="btn ghost" style={{ padding: '4px 8px' }}>
+        <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginBottom: 12 }}>
+          <div style={{ display: 'flex', gap: 2, background: '#f0f0f0', borderRadius: 6, padding: 2 }}>
+            <button
+              className={!showMastered ? 'btn' : 'btn ghost'}
+              style={{ padding: '4px 12px', fontSize: '0.85rem' }}
+              onClick={() => setShowMastered(false)}
+            >
+              {t(lang, '未掌握', 'Unmastered')} ({unmasteredCount})
+            </button>
+            <button
+              className={showMastered ? 'btn' : 'btn ghost'}
+              style={{ padding: '4px 12px', fontSize: '0.85rem' }}
+              onClick={() => setShowMastered(true)}
+            >
+              {t(lang, '已掌握', 'Mastered')} ({masteredCount})
+            </button>
+          </div>
+          <select value={filterLesson} onChange={(e) => setFilterLesson(e.target.value)} className="btn ghost" style={{ padding: '4px 8px', fontSize: '0.85rem' }}>
             <option value="">{t(lang, '全部课程', 'All Lessons')}</option>
             {lessons.map((l) => (
               <option key={l} value={l}>{t(lang, `第 ${l} 课`, `Lesson ${l}`)}</option>
             ))}
           </select>
-          <select value={filterStage} onChange={(e) => setFilterStage(e.target.value)} className="btn ghost" style={{ padding: '4px 8px' }}>
+          <select value={filterStage} onChange={(e) => setFilterStage(e.target.value)} className="btn ghost" style={{ padding: '4px 8px', fontSize: '0.85rem' }}>
             <option value="">{t(lang, '全部类型', 'All Stages')}</option>
             {STAGES.map((s) => (
               <option key={s} value={s}>{s}</option>
             ))}
           </select>
-          <label style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: '0.9rem' }}>
-            <input type="checkbox" checked={showMastered} onChange={(e) => setShowMastered(e.target.checked)} />
-            {t(lang, '显示已掌握', 'Show mastered')}
-          </label>
         </div>
 
         {loading ? (

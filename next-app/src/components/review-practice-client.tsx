@@ -101,9 +101,8 @@ export default function ReviewPracticeClient({ lang: initialLang }: { lang: Lang
     const isCorrect = current.options[optionIndex]?.correct ?? false
 
     if (isCorrect) {
-      const nextCombo = combo + 1
-      setCombo(nextCombo)
-      setBurstText(t(lang, '回答正确', 'Correct'))
+      setCombo((v) => v + 1)
+      setBurstText(t(lang, '已掌握，已移出错题本 ✅', 'Mastered, removed from review ✅'))
       setScore((v) => v + 1)
       void updateReviewResult(current.reviewItemId, true)
 
@@ -113,7 +112,6 @@ export default function ReviewPracticeClient({ lang: initialLang }: { lang: Lang
     } else {
       setCombo(0)
       setBurstText(t(lang, '回答错误', 'Incorrect'))
-      setScore((v) => Math.max(0, v - 1))
       void updateReviewResult(current.reviewItemId, false)
     }
   }
@@ -168,8 +166,8 @@ export default function ReviewPracticeClient({ lang: initialLang }: { lang: Lang
     return (
       <section className="practiceWrap card">
         <h2>{t(lang, '复习完成', 'Review Complete')}</h2>
-        <p><b>{t(lang, '得分', 'Score')}：{Math.max(0, score)}/{filteredQuestions.length}</b></p>
-        <p className="small">{t(lang, '连续答对 2 次的题目已自动标记为已掌握', 'Questions answered correctly twice are now mastered')}</p>
+        <p><b>{t(lang, '已掌握', 'Mastered')}：{Math.max(0, score)}/{filteredQuestions.length}</b></p>
+        <p className="small">{t(lang, '答对的题目已自动移出错题本', 'Correct questions are removed from review')}</p>
         <div className="practiceActions">
           <button className="btn" onClick={onRestart}>{t(lang, '再来一轮', 'Try Again')}</button>
           <Link className="btn btnGhost" href="/review">{t(lang, '返回复习中心', 'Back to Review Center')}</Link>
@@ -232,7 +230,7 @@ export default function ReviewPracticeClient({ lang: initialLang }: { lang: Lang
               <div className="practiceFeedback">
                 <p className="small">
                   {current.options[picked!]?.correct
-                    ? t(lang, '✅ 回答正确', '✅ Correct')
+                    ? t(lang, '✅ 已掌握，已移出错题本', '✅ Mastered, removed from review')
                     : t(lang, '❌ 回答错误', '❌ Incorrect')}
                 </p>
                 {!current.options[picked!]?.correct ? (

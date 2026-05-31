@@ -261,15 +261,14 @@ export async function PATCH(request: NextRequest) {
   }
 
   if (correct !== undefined) {
-    const nextStreak = correct
-      ? (existing.correct_streak || 0) + 1
-      : 0
-    updatePayload.correct_streak = nextStreak
     updatePayload.review_count = (existing.review_count || 0) + 1
-
-    // Auto-mastered after 2 consecutive correct
-    if (nextStreak >= 2) {
+    if (correct) {
+      updatePayload.correct_streak = (existing.correct_streak || 0) + 1
+      // Review practice: one correct answer → mastered immediately
       updatePayload.mastered = true
+    } else {
+      updatePayload.correct_streak = 0
+      // mastered stays unchanged on wrong answer in review mode
     }
   }
 
