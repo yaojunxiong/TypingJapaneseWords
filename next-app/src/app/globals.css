@@ -555,6 +555,50 @@ a:hover { text-decoration: underline; }
   margin: 10px 0 12px;
   font-size: 14px;
 }
+/* Admin layout */
+.adminShell {
+  min-height: 100dvh;
+  background: #f1f5f9;
+}
+.adminTopNav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #0f172a;
+  color: #f8fafc;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.adminTopNav a {
+  color: #94a3b8;
+  text-decoration: none;
+}
+.adminTopNav a:hover { color: #fff; text-decoration: none; }
+.adminTopNavBrand {
+  font-size: 18px;
+  font-weight: 900;
+  color: #fff !important;
+  letter-spacing: -0.03em;
+}
+.adminTopNavLinks {
+  display: flex;
+  gap: 12px;
+  margin-left: 8px;
+}
+.adminContent {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 24px 20px;
+}
+.adminContent main {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
 .emptyBox {
   border: 1px dashed #cbd5e1;
   border-radius: 12px;

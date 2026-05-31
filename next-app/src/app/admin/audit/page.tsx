@@ -2,7 +2,8 @@ import fs from 'node:fs/promises'
 import path from 'node:path'
 import Link from 'next/link'
 import { requireAdmin } from '@/lib/admin-auth'
-import MinnaNav from '@/components/minna-nav'
+import { getDrafts, auditDrafts } from '@/lib/admin-drafts'
+
 
 export const dynamic = 'force-dynamic'
 
@@ -30,22 +31,19 @@ export default async function AdminAuditPage() {
     await requireAdmin()
   } catch {
     return (
-      <main>
-        <MinnaNav active="lessons" />
-        <section className="card" style={{ textAlign: 'center', padding: '3rem 1rem' }}>
-          <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🔒</div>
-          <h2>无权限</h2>
-          <p><Link href="/">返回首页</Link></p>
-        </section>
-      </main>
+      <section className="card" style={{ textAlign: 'center', padding: '3rem 1rem' }}>
+        <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🔒</div>
+        <h2>无权限</h2>
+        <p><Link href="/">返回首页</Link></p>
+      </section>
     )
   }
 
   const reports = await readReports()
+  const allDrafts = await getDrafts()
+  const draftAudit = auditDrafts(allDrafts)
 
-  return (
-    <main>
-      <MinnaNav active="lessons" />
+  return <>
       <section className="heroCard card">
         <div className="heroEmoji">🔍</div>
         <h2>Audit 检查</h2>
@@ -85,6 +83,111 @@ export default async function AdminAuditPage() {
           <Link href="/admin">← 返回后台首页</Link>
         </p>
       </section>
-    </main>
-  )
+
+      {/* Draft audit */}
+      <section className="card" style={{ marginTop: 16 }}>
+        <h3>草稿审计</h3>
+        <p className="small" style={{ color: '#666', marginBottom: 12 }}>lesson_drafts 表中的草稿统计</p>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: 12, marginBottom: 16 }}>
+          <div style={{ background: '#f0f8ff', padding: 12, borderRadius: 6 }}>
+            <div style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>{draftAudit.total}</div>
+            <div className="small">总计</div>
+          </div>
+          {Object.entries(draftAudit.byStatus).map(([status, count]) => (
+            <div key={status} style={{ background: '#fafafa', padding: 12, borderRadius: 6 }}>
+              <div style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>{count}</div>
+              <div className="small">{status}</div>
+            </div>
+          ))}
+        </div>
+
+        {draftAudit.issues.length > 0 && (
+          <div style={{ background: '#fff5f5', padding: 12, borderRadius: 6, marginBottom: 16 }}>
+            <h4 style={{ color: '#e74c3c', marginBottom: 8 }}>验证问题 ({draftAudit.issues.length})</h4>
+            {draftAudit.issues.map((issue, i) => (
+              <p key={i} className="small" style={{ color: '#c0392b', margin: '2px 0' }}>⚠ {issue}</p>
+            ))}
+          </div>
+        )}
+
+        {draftAudit.total > 0 && (
+          <details style={{ marginTop: 12 }}>
+            <summary className="small" style={{ cursor: 'pointer' }}>按课程详情</summary>
+            <div style={{ marginTop: 8 }}>
+              <h4 className="small">按课程</h4>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                {Object.entries(draftAudit.byLesson)
+                  .sort(([a], [b]) => Number(a) - Number(b))
+                  .map(([lessonNo, count]) => (
+                    <Link
+                      key={lessonNo}
+                      href={`/admin/lessons/${lessonNo}`}
+                      style={{
+                        padding: '2px 10px',
+                        background: '#e8f4fd',
+                        borderRadius: 12,
+                        fontSize: '0.75rem',
+                        textDecoration: 'none',
+                        color: '#2980b9',
+                      }}
+                    >
+                      L{lessonNo} ({count})
+                    </Link>
+                  ))}
+              </div>
+              <h4 className="small" style={{ marginTop: 8 }}>按阶段</h4>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                {Object.entries(draftAudit.byStage).map(([stage, count]) => (
+                  <span key={stage} style={{ padding: '2px 10px', background: '#f0f0f0', borderRadius: 12, fontSize: '0.75rem' }}>
+                    {stage} ({count})
+                  </span>
+                ))}
+              </div>
+            </div>
+          </details>
+        )}
+
+        {draftAudit.total > 0 && allDrafts.length > 0 && (
+          <div style={{ marginTop: 16 }}>
+            <h4 className="small">所有草稿</h4>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.75rem' }}>
+              <thead>
+                <tr style={{ borderBottom: '2px solid #ddd' }}>
+                  <th style={{ padding: 4, textAlign: 'left' }}>ID</th>
+                  <th style={{ padding: 4, textAlign: 'left' }}>课程</th>
+                  <th style={{ padding: 4, textAlign: 'left' }}>阶段</th>
+                  <th style={{ padding: 4, textAlign: 'left' }}>项目</th>
+                  <th style={{ padding: 4, textAlign: 'left' }}>状态</th>
+                  <th style={{ padding: 4, textAlign: 'left' }}>更新</th>
+                </tr>
+              </thead>
+              <tbody>
+                {allDrafts.slice(0, 50).map((d) => (
+                  <tr key={d.id} style={{ borderBottom: '1px solid #eee' }}>
+                    <td style={{ padding: 4, fontFamily: 'monospace', fontSize: '0.65rem' }}>{d.id.slice(0, 8)}</td>
+                    <td style={{ padding: 4 }}>L{d.lesson_no}</td>
+                    <td style={{ padding: 4 }}>{d.stage}</td>
+                    <td style={{ padding: 4, fontFamily: 'monospace', fontSize: '0.65rem' }}>{d.item_id}</td>
+                    <td style={{ padding: 4 }}>
+                      <span style={{
+                        padding: '1px 6px',
+                        borderRadius: 8,
+                        background: d.status === 'draft' ? '#f39c12' : d.status === 'validated' ? '#27ae60' : d.status === 'published' ? '#2980b9' : '#95a5a6',
+                        color: '#fff',
+                        fontSize: '0.65rem',
+                      }}>
+                        {d.status}
+                      </span>
+                    </td>
+                    <td style={{ padding: 4, fontSize: '0.65rem' }}>{d.updated_at?.slice(0, 10) || '-'}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            {allDrafts.length > 50 && <p className="small" style={{ marginTop: 4 }}>仅显示前 50 条</p>}
+          </div>
+        )}
+      </section>
+  </>
 }

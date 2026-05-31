@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import { requireAdmin } from '@/lib/admin-auth'
 import { getAllLessons, type LessonOverview } from '@/lib/admin-lessons'
-import MinnaNav from '@/components/minna-nav'
 
 const STAGE_COLORS: Record<string, string> = {
   vocab: '#3498db',
@@ -37,14 +36,11 @@ export default async function AdminLessonsPage() {
     await requireAdmin()
   } catch {
     return (
-      <main>
-        <MinnaNav active="lessons" />
-        <section className="card" style={{ textAlign: 'center', padding: '3rem 1rem' }}>
-          <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🔒</div>
-          <h2>无权限</h2>
-          <p><Link href="/">返回首页</Link></p>
-        </section>
-      </main>
+      <section className="card" style={{ textAlign: 'center', padding: '3rem 1rem' }}>
+        <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🔒</div>
+        <h2>无权限</h2>
+        <p><Link href="/">返回首页</Link></p>
+      </section>
     )
   }
 
@@ -54,9 +50,7 @@ export default async function AdminLessonsPage() {
   const weakCount = lessons.filter((l) => l.status === 'WEAK').length
   const missingCount = lessons.filter((l) => l.status === 'MISSING').length
 
-  return (
-    <main>
-      <MinnaNav active="lessons" />
+  return <>
       <section className="heroCard card">
         <div className="heroEmoji">📖</div>
         <h2>课程数据管理</h2>
@@ -114,6 +108,5 @@ export default async function AdminLessonsPage() {
           <Link href="/admin">← 返回后台首页</Link>
         </p>
       </section>
-    </main>
-  )
+  </>
 }

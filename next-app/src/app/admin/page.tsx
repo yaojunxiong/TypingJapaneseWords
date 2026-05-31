@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { requireAdmin } from '@/lib/admin-auth'
-import MinnaNav from '@/components/minna-nav'
 
 export default async function AdminPage() {
   let adminEmail = ''
@@ -9,21 +8,16 @@ export default async function AdminPage() {
     adminEmail = admin.email
   } catch {
     return (
-      <main>
-        <MinnaNav active="lessons" />
-        <section className="card" style={{ textAlign: 'center', padding: '3rem 1rem' }}>
-          <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🔒</div>
-          <h2>无权限</h2>
-          <p>只有管理员可以访问此页面。</p>
-          <p><Link href="/">返回首页</Link></p>
-        </section>
-      </main>
+      <section className="card" style={{ textAlign: 'center', padding: '3rem 1rem' }}>
+        <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🔒</div>
+        <h2>无权限</h2>
+        <p>只有管理员可以访问此页面。</p>
+        <p><Link href="/">返回首页</Link></p>
+      </section>
     )
   }
 
-  return (
-    <main>
-      <MinnaNav active="lessons" />
+  return <>
       <section className="heroCard card">
         <div className="heroEmoji">🛠️</div>
         <h2>Admin Console</h2>
@@ -33,7 +27,7 @@ export default async function AdminPage() {
       <section className="card">
         <div className="practiceChoices" style={{ flexDirection: 'column' }}>
           <Link href="/admin/lessons" className="practiceChoice" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem', textDecoration: 'none' }}>
-            <span>📖 {adminEmail ? '课程数据管理' : 'Lessons'}</span>
+            <span>📖 课程数据管理</span>
             <span style={{ fontSize: '0.8rem', opacity: 0.6 }}>Lesson 1-50 数据概览 →</span>
           </Link>
           <Link href="/admin/audit" className="practiceChoice" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem', textDecoration: 'none' }}>
@@ -50,6 +44,5 @@ export default async function AdminPage() {
           </div>
         </div>
       </section>
-    </main>
-  )
+  </>
 }
