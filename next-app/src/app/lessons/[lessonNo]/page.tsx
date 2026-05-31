@@ -3,6 +3,7 @@ import path from 'node:path'
 import Link from 'next/link'
 import MinnaNav from '@/components/minna-nav'
 import TopLabelSync from '@/components/top-label-sync'
+import LessonStageCards from '@/components/lesson-stage-cards'
 import { LESSONS_1_50 } from '@/lib/minna-lessons'
 import { getLang, type Lang, tr } from '@/lib/i18n'
 
@@ -107,12 +108,7 @@ export default async function LessonDetailPage({
         {pick(lesson?.focus, lang) ? <p className="small">{pick(lesson?.focus, lang)}</p> : null}
       </section>
 
-      <section className="homeMap card">
-        <Link className="homeNode" href={`/lessons/${no}/practice?stage=vocab`}>🟢<small>{tr(lang, '词汇', 'Vocab')}</small></Link>
-        <Link className="homeNode" href={`/lessons/${no}/practice?stage=grammar`}>📦<small>{tr(lang, '语法', 'Grammar')}</small></Link>
-        <Link className="homeNode" href={`/lessons/${no}/practice?stage=examples`}>🪙<small>{tr(lang, '例句', 'Examples')}</small></Link>
-        <Link className="homeNode" href={`/lessons/${no}/practice?stage=quiz`}>🏅<small>{tr(lang, '测验', 'Quiz')}</small></Link>
-      </section>
+      <LessonStageCards lessonNo={no} lang={lang} />
 
       {!lesson ? (
         <section className="card">

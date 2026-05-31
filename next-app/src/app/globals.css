@@ -152,6 +152,7 @@ a:hover { text-decoration: underline; }
   padding: 20px;
 }
 .homeNode {
+  position: relative;
   min-height: 88px;
   border-radius: 18px;
   border: 1px solid #e2e8f0;
@@ -173,6 +174,25 @@ a:hover { text-decoration: underline; }
   text-decoration: none;
   border-color: #38bdf8;
   background: #f0f9ff;
+}
+.homeNode.completed {
+  background: #dcfce7;
+  border-color: #22c55e;
+  color: #166534;
+}
+.homeNode.completed small {
+  color: #166534;
+}
+.homeNode.completed:hover {
+  border-color: #22c55e;
+  background: #bbf7d0;
+}
+.stageBadge {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  font-size: 14px;
+  line-height: 1;
 }
 .homeLevelCard { text-align: center; }
 .homeLevelCard h2 { margin: 10px 0 8px; font-size: 42px; }
