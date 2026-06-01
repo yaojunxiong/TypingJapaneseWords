@@ -22,9 +22,33 @@ export type ReviewItemRow = {
   review_count: number
   correct_streak: number
   mastered: boolean
+  resolved_at: string | null
   created_at: string
   updated_at: string
   last_reviewed_at: string | null
+}
+
+export type UserAttemptRow = {
+  id: string
+  user_id: string
+  lesson_no: number
+  item_type: string
+  item_id: string
+  mode: 'practice' | 'review' | 'quiz'
+  is_correct: boolean
+  user_answer: string | null
+  correct_answer: string | null
+  created_at: string
+}
+
+export type RecordAttemptParams = {
+  lessonNo: number
+  itemType: string
+  itemId: string
+  mode: 'practice' | 'review' | 'quiz'
+  isCorrect: boolean
+  userAnswer?: string
+  correctAnswer?: string
 }
 
 export type AddWrongAnswerParams = {
