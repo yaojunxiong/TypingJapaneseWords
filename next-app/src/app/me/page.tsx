@@ -17,6 +17,21 @@ type Profile = {
   updated_at: string | null
 }
 
+type LearningStateRow = {
+  state: {
+    xp?: number
+    streak?: number
+    lastLesson?: number
+    lastStudyDate?: string
+    crowns?: Record<string, boolean>
+    studyDays?: Record<string, boolean>
+  } | null
+}
+
+type LearningMistakesRow = {
+  mistakes: unknown[] | null
+}
+
 async function initProfile() {
   'use server'
 
@@ -85,6 +100,27 @@ export default async function MePage() {
     .maybeSingle()
   const profile = (profileRaw as Profile | null) || null
 
+  const { data: learningStateRaw } = await supabase
+    .from('minna_learning_state')
+    .select('state')
+    .eq('user_id', user.id)
+    .maybeSingle()
+  const { data: mistakesRaw } = await supabase
+    .from('minna_learning_mistakes')
+    .select('mistakes')
+    .eq('user_id', user.id)
+    .maybeSingle()
+
+  const learningState = (learningStateRaw as LearningStateRow | null)?.state || {}
+  const cloudCrowns = Object.keys(learningState.crowns || {}).filter((k) => {
+    const v = (learningState.crowns || {})[k]
+    return !!v && (k.includes('.vocab') || k.includes('.grammar') || k.includes('.examples') || k.includes('.review') || k.includes('.quiz'))
+  }).length
+  const cloudCheckins = Object.keys(learningState.studyDays || {}).filter((k) => (learningState.studyDays || {})[k]).length
+  const cloudMistakes = Array.isArray((mistakesRaw as LearningMistakesRow | null)?.mistakes)
+    ? ((mistakesRaw as LearningMistakesRow).mistakes || []).length
+    : 0
+
   return (
     <main>
       <MinnaNav active="me" />
@@ -114,6 +150,17 @@ export default async function MePage() {
             <p className="small">{tr(lang, '更新时间', 'Updated at')}：{profile.updated_at || '-'}</p>
           </>
         ) : null}
+      </section>
+
+      <section className="card">
+        <h2>{tr(lang, '云端学习数据', 'Cloud Learning Data')}</h2>
+        <p className="small">XP：{Math.max(0, Number(learningState.xp || 0))}</p>
+        <p className="small">{tr(lang, '连续', 'Streak')}：{Math.max(1, Number(learningState.streak || 1))}</p>
+        <p className="small">{tr(lang, '最近课程', 'Last lesson')}：{Math.max(1, Number(learningState.lastLesson || 1))}</p>
+        <p className="small">{tr(lang, '最近学习日', 'Last study date')}：{String(learningState.lastStudyDate || '-')}</p>
+        <p className="small">Crowns：{cloudCrowns}</p>
+        <p className="small">{tr(lang, '打卡天数', 'Check-in days')}：{cloudCheckins}</p>
+        <p className="small">{tr(lang, '错题', 'Mistakes')}：{cloudMistakes}</p>
       </section>
 
       <section className="card">

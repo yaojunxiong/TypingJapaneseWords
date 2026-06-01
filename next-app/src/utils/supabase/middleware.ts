@@ -5,7 +5,7 @@ import {
   hasSupabasePublicEnv
 } from '@/utils/supabase/config'
 
-export const createClient = (request: NextRequest) => {
+export const createClient = async (request: NextRequest) => {
   let supabaseResponse = NextResponse.next({
     request: {
       headers: request.headers
@@ -18,7 +18,7 @@ export const createClient = (request: NextRequest) => {
 
   const { url, key } = getSafeSupabasePublicConfig()
 
-  createServerClient(url, key, {
+  const supabase = createServerClient(url, key, {
     cookies: {
       getAll() {
         return request.cookies.getAll()
@@ -34,6 +34,8 @@ export const createClient = (request: NextRequest) => {
       }
     }
   })
+
+  await supabase.auth.getUser()
 
   return supabaseResponse
 }

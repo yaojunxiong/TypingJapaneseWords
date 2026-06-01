@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
+import { LEARNING_KEYS } from '@/lib/learning-cloud-sync'
 
 type FavItem = {
   id?: string
@@ -38,6 +39,7 @@ function writeList(list: FavItem[]) {
   try {
     localStorage.setItem(KEY, JSON.stringify(list))
     localStorage.setItem(UPDATED_KEY, new Date().toISOString())
+    localStorage.setItem(LEARNING_KEYS.cloudStateDirtyAt, String(Date.now()))
   } catch {}
 }
 
@@ -70,6 +72,7 @@ export default function FavoriteToggleButton({ lessonNo, item, lang }: Props) {
     const exists = list.some((x) => identity(x) === key)
     const next = exists ? list.filter((x) => identity(x) !== key) : list.concat(favItem)
     writeList(next)
+    window.dispatchEvent(new Event('minna:stats-update'))
     setSaved(!exists)
   }
 

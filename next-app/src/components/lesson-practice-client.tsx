@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
-import { markDailyCheckinLocal } from '@/lib/learning-cloud-sync'
+import { LEARNING_KEYS, markDailyCheckinLocal } from '@/lib/learning-cloud-sync'
 
 type Lang = 'zh' | 'en'
 
@@ -54,6 +54,31 @@ function readMistakes(): MistakeItem[] {
 function writeMistakes(list: MistakeItem[]) {
   try {
     localStorage.setItem(MISTAKES_KEY, JSON.stringify(list))
+    localStorage.setItem(LEARNING_KEYS.cloudMistakesDirtyAt, String(Date.now()))
+  } catch {}
+}
+
+function markStateDirty() {
+  try {
+    localStorage.setItem(LEARNING_KEYS.cloudStateDirtyAt, String(Date.now()))
+  } catch {}
+}
+
+function markLessonProgress(lessonNo: number, stage: Props['stage']) {
+  if (stage === 'review') return
+  try {
+    const crownsRaw = localStorage.getItem(LEARNING_KEYS.crowns)
+    const crowns = crownsRaw ? (JSON.parse(crownsRaw) as Record<string, boolean>) : {}
+    crowns[`lesson${lessonNo}.${stage}`] = true
+    localStorage.setItem(LEARNING_KEYS.crowns, JSON.stringify(crowns))
+
+    const stateRaw = localStorage.getItem(LEARNING_KEYS.state)
+    const state = stateRaw ? (JSON.parse(stateRaw) as Record<string, unknown>) : {}
+    state.lastLesson = Math.max(1, Number(state.lastLesson || 1), lessonNo)
+    state.updatedAt = new Date().toISOString()
+    localStorage.setItem(LEARNING_KEYS.state, JSON.stringify(state))
+    markStateDirty()
+    window.dispatchEvent(new Event('minna:stats-update'))
   } catch {}
 }
 
@@ -300,6 +325,9 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
     if (picked === null) return
     if (sfxOn) playTone(720, 80, 'square')
     if (idx >= total - 1 || hearts <= 0) {
+      if (score > 0 || (picked !== null && current.options[picked]?.correct)) {
+        markLessonProgress(lessonNo, stage)
+      }
       setFinished(true)
       return
     }

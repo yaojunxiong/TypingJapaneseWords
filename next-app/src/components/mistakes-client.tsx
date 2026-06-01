@@ -82,6 +82,13 @@ export default function MistakesClient({ lang }: Props) {
   useEffect(() => {
     setList(readList())
     void syncCloud(false)
+    if (!supabaseReady) return
+    const { data: sub } = supabase.auth.onAuthStateChange(() => {
+      void syncCloud(false)
+    })
+    return () => {
+      sub.subscription.unsubscribe()
+    }
   }, [])
 
   const shown = useMemo(() => list.slice().reverse(), [list])

@@ -35,8 +35,8 @@ function writeList(list: FavItem[]) {
   } catch {}
 }
 
-function identity(v: FavItem, i: number) {
-  return String(v.id || `${v.lessonNo || 1}-${v.jp || ''}-${v.kana || ''}-${v.meaning || ''}-${i}`)
+function identity(v: FavItem) {
+  return String(v.id || `${v.lessonNo || 1}-${v.jp || ''}-${v.kana || ''}-${v.meaning || ''}`)
 }
 
 type Props = {
@@ -56,8 +56,8 @@ export default function FavoritesClient({ lang }: Props) {
 
   function uniqueById(items: FavItem[]) {
     const map = new Map<string, FavItem>()
-    items.forEach((v, i) => {
-      map.set(identity(v, i), v)
+    items.forEach((v) => {
+      map.set(identity(v), v)
     })
     return Array.from(map.values())
   }
@@ -127,11 +127,18 @@ export default function FavoritesClient({ lang }: Props) {
     const local = readList()
     setList(local)
     void syncCloud(local)
+    if (!supabaseReady) return
+    const { data: sub } = supabase.auth.onAuthStateChange(() => {
+      void syncCloud(readList())
+    })
+    return () => {
+      sub.subscription.unsubscribe()
+    }
   }, [])
 
   const shown = useMemo(() => {
     const term = q.trim().toLowerCase()
-    const rows = list.map((v, i) => ({ v, rowKey: identity(v, i) }))
+    const rows = list.map((v) => ({ v, rowKey: identity(v) }))
     if (!term) return rows
     return rows.filter(({ v }) =>
       [v.jp, v.kana, v.meaning, `第${v.lessonNo || 1}课`]
@@ -142,7 +149,7 @@ export default function FavoritesClient({ lang }: Props) {
   }, [list, q])
 
   function removeOne(rowKey: string) {
-    const next = list.filter((x, i) => identity(x, i) !== rowKey)
+    const next = list.filter((x) => identity(x) !== rowKey)
     setList(next)
     writeList(next)
     void syncCloud(next)
