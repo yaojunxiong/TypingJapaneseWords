@@ -110,6 +110,13 @@ export default function ToolboxClient({ lang }: Props) {
   useEffect(() => {
     readLocalStats()
     void runCloudSync(false)
+    if (!supabaseReady) return
+    const { data: sub } = supabase.auth.onAuthStateChange(() => {
+      void runCloudSync(false)
+    })
+    return () => {
+      sub.subscription.unsubscribe()
+    }
   }, [])
 
   const cards = useMemo(
