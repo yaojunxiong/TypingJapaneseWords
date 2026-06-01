@@ -32,11 +32,19 @@ export default async function AdminPage() {
           </Link>
           <Link href="/admin/audit" className="practiceChoice" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem', textDecoration: 'none' }}>
             <span>🔍 Audit 检查</span>
-            <span style={{ fontSize: '0.8rem', opacity: 0.6 }}>查看 audit 报告 →</span>
+            <span style={{ fontSize: '0.8rem', opacity: 0.6 }}>默认检查第 1 课，可切换课号 →</span>
           </Link>
           <Link href="/admin/publish" className="practiceChoice" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem', textDecoration: 'none' }}>
             <span>🚀 发布管理</span>
             <span style={{ fontSize: '0.8rem', opacity: 0.6 }}>预览和发布 →</span>
+          </Link>
+          <Link href="/admin/drafts" className="practiceChoice" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem', textDecoration: 'none' }}>
+            <span>🗂️ Draft 列表</span>
+            <span style={{ fontSize: '0.8rem', opacity: 0.6 }}>audit / preview / publish →</span>
+          </Link>
+          <Link href="/admin/membership-requests" className="practiceChoice" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem', textDecoration: 'none' }}>
+            <span>👑 会员等级审批</span>
+            <span style={{ fontSize: '0.8rem', opacity: 0.6 }}>free {'->'} vip1/vip2/vip3 →</span>
           </Link>
           <div className="practiceChoice disabled" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem' }}>
             <span>📊 Review 数据管理</span>

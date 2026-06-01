@@ -406,7 +406,12 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
                     ? 'practiceChoice rightGhost'
                     : 'practiceChoice disabled'
             return (
-              <button key={`${op.text}-${opIdx}`} className={className} onClick={() => onPick(opIdx)}>
+              <button
+                key={`${op.text}-${opIdx}`}
+                className={className}
+                onClick={() => onPick(opIdx)}
+                data-testid="answer-option"
+              >
                 {op.text}
               </button>
             )
@@ -416,12 +421,14 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
         {picked !== null ? (
           <div className="practiceFeedback">
             <p className="small">
-              {current.options[picked]?.correct
-                ? t(lang, '回答正确', 'Correct')
-                : t(lang, '回答错误', 'Incorrect')}
+              <span data-testid={current.options[picked]?.correct ? 'review-correct' : undefined}>
+                {current.options[picked]?.correct
+                  ? t(lang, '回答正确', 'Correct')
+                  : t(lang, '回答错误', 'Incorrect')}
+              </span>
             </p>
             {current.explanation ? <p className="small">{current.explanation}</p> : null}
-            <button className="btn" onClick={onNext}>{t(lang, '下一题', 'Next')}</button>
+            <button className="btn" onClick={onNext} data-testid="submit-answer">{t(lang, '下一题', 'Next')}</button>
           </div>
         ) : null}
       </div>

@@ -40,6 +40,12 @@ export interface SectionDetail {
   items: Record<string, unknown>[]
 }
 
+export interface LessonContentAudit {
+  lessonNo: number
+  totalIssues: number
+  issues: string[]
+}
+
 /* ------------------------------------------------------------------ */
 /*  Helpers                                                           */
 /* ------------------------------------------------------------------ */
@@ -149,4 +155,82 @@ export async function getLessonSections(lessonNo: number): Promise<SectionDetail
     type: s.type,
     items: s.items as Record<string, unknown>[],
   }))
+}
+
+export async function auditLessonContent(lessonNo: number): Promise<LessonContentAudit> {
+  const doc = await loadLesson(lessonNo)
+  const issues: string[] = []
+
+  if (!doc) {
+    return {
+      lessonNo,
+      totalIssues: 1,
+      issues: ['lesson file not found'],
+    }
+  }
+
+  const sectionMap = new Map<string, Record<string, unknown>[]>()
+  for (const section of doc.sections || []) {
+    sectionMap.set(String(section.type || ''), Array.isArray(section.items) ? (section.items as Record<string, unknown>[]) : [])
+  }
+
+  const vocab = sectionMap.get('vocab') || []
+  const examples = sectionMap.get('examples') || []
+  const quiz = sectionMap.get('quiz') || []
+
+  const normalizedVocab = new Map<string, number[]>()
+  for (const item of vocab) {
+    const id = Number(item.id || 0)
+    const jp = String(item.jp || '').trim()
+    const zh = String(item.zh || '').trim()
+
+    if (!jp) issues.push(`vocab#${id || '?'} missing jp`)
+    if (!zh) issues.push(`vocab#${id || '?'} missing zh`)
+
+    if (jp) {
+      const key = jp.toLowerCase()
+      const ids = normalizedVocab.get(key) || []
+      ids.push(id)
+      normalizedVocab.set(key, ids)
+    }
+  }
+
+  for (const [jp, ids] of normalizedVocab.entries()) {
+    if (ids.length > 1) {
+      issues.push(`duplicate vocab jp "${jp}" at ids: ${ids.join(',')}`)
+    }
+  }
+
+  for (const item of examples) {
+    const id = Number(item.id || 0)
+    const jp = String(item.jp || item.ja || '').trim()
+    const zh = String(item.zh || '').trim()
+    if (!jp) issues.push(`examples#${id || '?'} missing jp/ja`)
+    if (!zh) issues.push(`examples#${id || '?'} missing zh`)
+  }
+
+  for (const item of quiz) {
+    const id = Number(item.id || 0)
+    const question = String(item.question || '').trim()
+    if (!question) issues.push(`quiz#${id || '?'} missing question`)
+
+    const options = Array.isArray(item.options) ? (item.options as Array<{ text?: unknown; correct?: unknown }>) : []
+    if (options.length < 4) issues.push(`quiz#${id || '?'} has fewer than 4 options`)
+
+    const correctCount = options.filter((o) => Boolean(o?.correct)).length
+    if (correctCount !== 1) {
+      issues.push(`quiz#${id || '?'} must have exactly 1 correct option (got ${correctCount})`)
+    }
+
+    const emptyOptionCount = options.filter((o) => !String(o?.text || '').trim()).length
+    if (emptyOptionCount > 0) {
+      issues.push(`quiz#${id || '?'} has ${emptyOptionCount} empty option text`)
+    }
+  }
+
+  return {
+    lessonNo,
+    totalIssues: issues.length,
+    issues,
+  }
 }

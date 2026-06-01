@@ -4,6 +4,7 @@ import { loadLesson } from '@/lib/admin-lessons'
 import { getDrafts } from '@/lib/admin-drafts'
 
 import DraftEditorForm from '@/components/admin/draft-editor-form'
+import LessonOneEditor from '@/components/admin/lesson-one-editor'
 
 export const dynamic = 'force-dynamic'
 
@@ -29,6 +30,54 @@ export default async function EditDraftPage({ params, searchParams }: PageProps)
   const { lessonNo } = await params
   const { stage, id } = await searchParams
   const no = Math.max(1, Math.min(50, Number(lessonNo) || 1))
+
+  if (no !== 1) {
+    return (
+      <main>
+        <section className="card" style={{ textAlign: 'center', padding: '3rem' }}>
+          <h2>当前仅支持第 1 课编辑</h2>
+          <p>请前往 <Link href="/admin/lessons/1/edit">/admin/lessons/1/edit</Link></p>
+          <p><Link href="/admin/lessons">← 返回课程列表</Link></p>
+        </section>
+      </main>
+    )
+  }
+
+  if (!stage && !id) {
+    const doc = await loadLesson(no)
+    const vocabItems = (doc?.sections?.find((s) => s.type === 'vocab')?.items || []) as Record<string, unknown>[]
+    const examplesItems = (doc?.sections?.find((s) => s.type === 'examples')?.items || []) as Record<string, unknown>[]
+    const quizItems = (doc?.sections?.find((s) => s.type === 'quiz')?.items || []) as Record<string, unknown>[]
+    const vocabDrafts = await getDrafts({ lessonNo: no, stage: 'vocab' })
+
+    return (
+      <main>
+        <section className="heroCard card">
+          <div className="heroEmoji">🧩</div>
+          <h2>第 1 课编辑台</h2>
+          <p className="small">支持查看 vocab/examples/quiz；当前先开放 vocab 新增/编辑/删除并保存到 Supabase</p>
+        </section>
+        <section className="card">
+          <LessonOneEditor
+            lessonNo={1}
+            vocabItems={vocabItems}
+            examplesItems={examplesItems}
+            quizItems={quizItems}
+            vocabDrafts={vocabDrafts.map((d) => ({
+              id: d.id,
+              item_id: d.item_id,
+              draft_data: d.draft_data,
+              updated_at: d.updated_at,
+              updated_by: d.updated_by,
+            }))}
+          />
+          <p className="small" style={{ marginTop: 12 }}>
+            <Link href="/admin/lessons/1">← 返回第 1 课详情</Link>
+          </p>
+        </section>
+      </main>
+    )
+  }
 
   if (!stage || !id) {
     return (

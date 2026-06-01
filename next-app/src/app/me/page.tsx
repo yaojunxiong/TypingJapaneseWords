@@ -8,6 +8,9 @@ import {
   getSupabaseMissingEnvMessage
 } from '@/utils/supabase/config'
 import { getLang, tr } from '@/lib/i18n'
+import MembershipRequestForm from '@/components/membership-request-form'
+import MembershipRequestFlowchart from '@/components/membership-request-flowchart'
+import { ensureUserMembership, getMembershipLevels } from '@/lib/memberships'
 
 type Profile = {
   user_id: string
@@ -121,6 +124,17 @@ export default async function MePage() {
     ? ((mistakesRaw as LearningMistakesRow).mistakes || []).length
     : 0
 
+  const membership = await ensureUserMembership(user.id)
+  const levels = await getMembershipLevels()
+  const { data: membershipRequests } = await supabase
+    .from('membership_requests')
+    .select('id,current_level,requested_level,status,created_at,reason,reject_reason')
+    .eq('user_id', user.id)
+    .order('created_at', { ascending: false })
+    .limit(10)
+  const latestReq = membershipRequests?.[0] || null
+  const hasPendingRequest = (membershipRequests || []).some((r) => r.status === 'pending')
+
   return (
     <main>
       <MinnaNav active="me" />
@@ -161,6 +175,50 @@ export default async function MePage() {
         <p className="small">Crowns：{cloudCrowns}</p>
         <p className="small">{tr(lang, '打卡天数', 'Check-in days')}：{cloudCheckins}</p>
         <p className="small">{tr(lang, '错题', 'Mistakes')}：{cloudMistakes}</p>
+      </section>
+
+      <section className="card">
+        <h2>会员等级申请</h2>
+        <p className="small">第一版仅支持 free {'->'} vip1/vip2/vip3（无支付、无过期）</p>
+        <p className="small">最近申请状态：{latestReq ? latestReq.status : 'none'}</p>
+        <MembershipRequestForm
+          currentLevel={membership.level}
+          levels={levels.map((l) => ({ level_code: l.level_code, title: l.title }))}
+          hasPending={hasPendingRequest}
+        />
+      </section>
+
+      <section className="card">
+        <h2>申请流程图</h2>
+        <MembershipRequestFlowchart
+          currentLevel={latestReq ? latestReq.current_level : membership.level}
+          requestedLevel={latestReq ? latestReq.requested_level : 'vip1'}
+          status={(latestReq ? latestReq.status : 'none') as 'pending' | 'approved' | 'rejected' | 'none'}
+        />
+        {latestReq ? (
+          <p className="small">
+            最近申请：{latestReq.current_level} {'->'} {latestReq.requested_level} · {latestReq.status}
+          </p>
+        ) : (
+          <p className="small">暂无申请记录</p>
+        )}
+        {latestReq?.status === 'rejected' && latestReq.reject_reason ? (
+          <p className="small">驳回原因：{latestReq.reject_reason}</p>
+        ) : null}
+      </section>
+
+      <section className="card">
+        <h2>历史申请</h2>
+        {(membershipRequests || []).length === 0 ? (
+          <p className="small">暂无记录</p>
+        ) : (
+          (membershipRequests || []).map((r) => (
+            <p key={r.id} className="small">
+              {String(r.created_at || '').slice(0, 19).replace('T', ' ')} · {r.current_level} {'->'} {r.requested_level} · {r.status} · {r.reason || '-'}
+              {r.status === 'rejected' && r.reject_reason ? ` · reject_reason: ${r.reject_reason}` : ''}
+            </p>
+          ))
+        )}
       </section>
 
       <section className="card">

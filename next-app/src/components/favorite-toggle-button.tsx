@@ -77,7 +77,13 @@ export default function FavoriteToggleButton({ lessonNo, item, lang }: Props) {
   }
 
   return (
-    <button className={saved ? 'btn' : 'btn ghost'} onClick={toggle} type="button">
+    <button
+      className={saved ? 'btn' : 'btn ghost'}
+      onClick={toggle}
+      type="button"
+      data-testid="favorite-toggle"
+      aria-label={saved ? t(lang, '取消收藏', 'Remove favorite') : t(lang, '收藏', 'Save favorite')}
+    >
       {saved ? `★ ${t(lang, '已收藏', 'Saved')}` : `☆ ${t(lang, '收藏', 'Save')}`}
     </button>
   )

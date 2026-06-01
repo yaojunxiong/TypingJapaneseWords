@@ -3,6 +3,7 @@ import path from 'node:path'
 import Link from 'next/link'
 import { requireAdmin } from '@/lib/admin-auth'
 import { getDrafts, auditDrafts } from '@/lib/admin-drafts'
+import { auditLessonContent } from '@/lib/admin-lessons'
 
 
 export const dynamic = 'force-dynamic'
@@ -26,7 +27,11 @@ async function readReports(): Promise<{ name: string; content: string }[]> {
   return reports
 }
 
-export default async function AdminAuditPage() {
+export default async function AdminAuditPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ lessonNo?: string }>
+}) {
   try {
     await requireAdmin()
   } catch {
@@ -39,9 +44,13 @@ export default async function AdminAuditPage() {
     )
   }
 
+  const { lessonNo } = await searchParams
+  const selectedLessonNo = Math.max(1, Math.min(50, Number(lessonNo) || 1))
+
   const reports = await readReports()
   const allDrafts = await getDrafts()
   const draftAudit = auditDrafts(allDrafts)
+  const lessonAudit = await auditLessonContent(selectedLessonNo)
 
   return <>
       <section className="heroCard card">
@@ -86,6 +95,43 @@ export default async function AdminAuditPage() {
 
       {/* Draft audit */}
       <section className="card" style={{ marginTop: 16 }}>
+        <h3>课文一键审计</h3>
+        <form method="get" action="/admin/audit" style={{ display: 'flex', gap: 8, marginBottom: 12, alignItems: 'center' }}>
+          <label htmlFor="lessonNo" className="small" style={{ color: '#555' }}>课号</label>
+          <input
+            id="lessonNo"
+            name="lessonNo"
+            type="number"
+            min={1}
+            max={50}
+            defaultValue={selectedLessonNo}
+            style={{ width: 96, padding: '4px 8px', border: '1px solid #ccc', borderRadius: 6 }}
+          />
+          <button type="submit" className="btn" style={{ padding: '5px 12px' }}>检查</button>
+        </form>
+        <p className="small" style={{ color: '#666', marginBottom: 12 }}>
+          规则: 空字段、重复词汇、缺中文、quiz 无正确答案、选项少于 4 个
+        </p>
+        <div style={{ display: 'flex', gap: 10, marginBottom: 10, flexWrap: 'wrap' }}>
+          <span style={{ padding: '2px 10px', borderRadius: 999, background: lessonAudit.totalIssues === 0 ? '#eafaf0' : '#fdecec', color: lessonAudit.totalIssues === 0 ? '#2d7a46' : '#c0392b', fontSize: '0.8rem', fontWeight: 600 }}>
+            {lessonAudit.totalIssues === 0 ? 'PASS' : 'FAIL'}
+          </span>
+          <span className="small" style={{ color: '#666' }}>Lesson {selectedLessonNo}</span>
+          <span className="small" style={{ color: '#666' }}>问题数量: {lessonAudit.totalIssues}</span>
+        </div>
+        {lessonAudit.totalIssues === 0 ? (
+          <div style={{ background: '#f0fff4', padding: 12, borderRadius: 6, color: '#2d7a46', marginBottom: 16 }}>
+            第 {selectedLessonNo} 课检查通过，没有发现问题。
+          </div>
+        ) : (
+          <div style={{ background: '#fff5f5', padding: 12, borderRadius: 6, marginBottom: 16 }}>
+            <h4 style={{ color: '#e74c3c', marginBottom: 8 }}>发现问题 ({lessonAudit.totalIssues})</h4>
+            {lessonAudit.issues.map((issue, i) => (
+              <p key={i} className="small" style={{ color: '#c0392b', margin: '2px 0' }}>⚠ {issue}</p>
+            ))}
+          </div>
+        )}
+
         <h3>草稿审计</h3>
         <p className="small" style={{ color: '#666', marginBottom: 12 }}>lesson_drafts 表中的草稿统计</p>
 

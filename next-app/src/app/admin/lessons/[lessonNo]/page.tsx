@@ -204,6 +204,12 @@ export default async function AdminLessonDetailPage({
         <p className="small" style={{ marginTop: 16 }}>
           <Link href="/admin/lessons">← 返回课程列表</Link>
           {' · '}
+          {no === 1 && (
+            <>
+              <Link href="/admin/lessons/1/edit">进入第 1 课编辑台</Link>
+              {' · '}
+            </>
+          )}
           <Link href={`/lessons/${no}`}>查看课程页面 →</Link>
         </p>
       </section>

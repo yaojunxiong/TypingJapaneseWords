@@ -1,11 +1,14 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import Link from 'next/link'
+import { cookies } from 'next/headers'
 import MinnaNav from '@/components/minna-nav'
 import TopLabelSync from '@/components/top-label-sync'
 import LessonStageCards from '@/components/lesson-stage-cards'
+import FavoriteToggleButton from '@/components/favorite-toggle-button'
 import { LESSONS_1_50 } from '@/lib/minna-lessons'
 import { getLang, type Lang, tr } from '@/lib/i18n'
+import { createClient } from '@/utils/supabase/server'
 
 type LangText = { zh?: string; en?: string; ja?: string; jp?: string }
 
@@ -84,6 +87,44 @@ async function loadLessonDoc(lessonNo: number): Promise<LessonDoc | null> {
   }
 }
 
+async function overlayPublishedItems(lessonNo: number, lesson: LessonDoc | null): Promise<LessonDoc | null> {
+  if (!lesson || lessonNo !== 1 || !Array.isArray(lesson.sections)) return lesson
+  try {
+    const cookieStore = await cookies()
+    const supabase = createClient(cookieStore)
+    const { data, error } = await supabase
+      .from('lesson_published_items')
+      .select('stage,item_id,item_data')
+      .eq('lesson_no', lessonNo)
+
+    if (error || !Array.isArray(data) || data.length === 0) return lesson
+
+    const byStage = new Map<string, Array<{ item_id: string; item_data: Record<string, unknown> }>>()
+    for (const row of data as Array<{ stage: string; item_id: string; item_data: Record<string, unknown> }>) {
+      const list = byStage.get(row.stage) || []
+      list.push({ item_id: row.item_id, item_data: row.item_data })
+      byStage.set(row.stage, list)
+    }
+
+    return {
+      ...lesson,
+      sections: lesson.sections.map((sec) => {
+        const rows = byStage.get(String(sec.type || ''))
+        if (!rows || !Array.isArray(sec.items)) return sec
+        const map = new Map(rows.map((r) => [r.item_id, r.item_data]))
+        const items = sec.items.map((item) => {
+          const id = String((item as Record<string, unknown>).id || '')
+          const override = map.get(id)
+          return override ? { ...item, ...override } : item
+        })
+        return { ...sec, items }
+      }),
+    }
+  } catch {
+    return lesson
+  }
+}
+
 export default async function LessonDetailPage({
   params
 }: {
@@ -93,7 +134,8 @@ export default async function LessonDetailPage({
   const no = Math.max(1, Math.min(50, Number(lessonNo) || 1))
   const lang = await getLang()
   const meta = LESSONS_1_50.find((x) => x.no === no) || LESSONS_1_50[0]
-  const lesson = await loadLessonDoc(no)
+  const rawLesson = await loadLessonDoc(no)
+  const lesson = await overlayPublishedItems(no, rawLesson)
   const sections = Array.isArray(lesson?.sections) ? lesson!.sections! : []
 
   return (
@@ -134,6 +176,18 @@ export default async function LessonDetailPage({
                 {item.kana ? <small>{item.kana}</small> : null}
                 {item.zh || item.en ? <p>{lang === 'en' ? (item.en || item.zh) : (item.zh || item.en)}</p> : null}
                 {pick(item.explanation, lang) ? <p className="small">{pick(item.explanation, lang)}</p> : null}
+                <div style={{ marginTop: 8 }}>
+                  <FavoriteToggleButton
+                    lessonNo={no}
+                    item={{
+                      id: item.id,
+                      jp: item.jp || pick(item.title, lang),
+                      kana: item.kana || '',
+                      meaning: lang === 'en' ? (item.en || item.zh || '') : (item.zh || item.en || '')
+                    }}
+                    lang={lang}
+                  />
+                </div>
 
                 {Array.isArray(item.examples) && item.examples.length ? (
                   <div className="emptyBox" style={{ marginTop: 8, textAlign: 'left' }}>

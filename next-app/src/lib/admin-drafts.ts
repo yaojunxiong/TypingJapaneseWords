@@ -69,6 +69,18 @@ export async function getDrafts(filters?: {
   return (data || []) as LessonDraftRow[]
 }
 
+export async function getDraftById(id: string): Promise<LessonDraftRow | null> {
+  const supabase = await getServerClient()
+  const { data, error } = await supabase
+    .from('lesson_drafts')
+    .select('*')
+    .eq('id', id)
+    .maybeSingle()
+
+  if (error) throw new Error(error.message)
+  return (data || null) as LessonDraftRow | null
+}
+
 export async function saveDraft(params: {
   lessonNo: number
   stage: string

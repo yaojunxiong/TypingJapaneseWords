@@ -11,7 +11,9 @@
     "audit:lessons": "npx tsx scripts/audit-lessons.ts",
     "check:practice-pages": "npx tsx scripts/check-practice-pages.ts",
     "check:unlock": "npx tsx scripts/check-unlock-access.ts",
-    "check:review-items": "npx tsx scripts/check-review-items.ts"
+    "check:review-items": "npx tsx scripts/check-review-items.ts",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui"
   },
   "dependencies": {
     "@supabase/ssr": "^0.5.2",
@@ -21,6 +23,7 @@
     "react-dom": "19.1.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.55.0",
     "@tailwindcss/postcss": "^4.3.0",
     "@types/node": "^22.15.17",
     "@types/react": "^19.1.5",
