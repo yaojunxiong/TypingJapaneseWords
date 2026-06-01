@@ -97,14 +97,14 @@ export default function MistakesClient({ lang }: Props) {
     <>
       <section className="heroCard card">
         <div className="heroEmoji">🔥</div>
-        <h2>{t(lang, '错题复习', 'Mistake Review')}</h2>
-        <p className="small">{t(lang, '查看并回顾你的错题记录（迁移版）', 'Review your mistake records')}</p>
+        <h2>{t(lang, '错题本', 'Mistake Notebook')}</h2>
+        <p className="small">{t(lang, '查看并回顾你的错题记录（学习中心）', 'Review your mistake records from Learning Center')}</p>
       </section>
 
       <section className="card">
         <div className="favTop">
           <div>
-            <h3>{t(lang, '错题列表', 'Mistake List')}</h3>
+            <h3>{t(lang, '错题本列表', 'Mistake Notebook')}</h3>
             <p className="small">{t(lang, '共', 'Total')} {list.length} {t(lang, '条', 'items')}</p>
             <p className="small">{syncText}</p>
           </div>
@@ -128,6 +128,11 @@ export default function MistakesClient({ lang }: Props) {
                   <b>{m.jp || m.question || t(lang, '题目', 'Question')}</b>
                   <small>{m.kana || ''}</small>
                   <p>{m.meaning || m.answer || t(lang, '待复习', 'Ready to review')}</p>
+                  <div className="favCardActions">
+                    <a className="btn ghost" href={`/lessons/${lessonNo}/practice?stage=review`}>
+                      {t(lang, '进入复习模式', 'Start Review Mode')}
+                    </a>
+                  </div>
                 </article>
               )
             })}

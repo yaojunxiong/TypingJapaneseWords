@@ -11,17 +11,59 @@ type PracticeOption = {
 }
 
 type PracticeQuestion = {
+  id?: string
+  sourceId?: string
   question: string
   hint: string
   options: PracticeOption[]
   explanation?: string
 }
 
+type MistakeItem = {
+  lessonNo?: number
+  stage?: string
+  jp?: string
+  kana?: string
+  meaning?: string
+  question?: string
+  answer?: string
+  sourceId?: string
+  at?: string
+}
+
 type Props = {
   lessonNo: number
   lang: Lang
-  stage: 'vocab' | 'grammar' | 'examples' | 'quiz'
+  stage: 'vocab' | 'grammar' | 'examples' | 'quiz' | 'review'
   questions: PracticeQuestion[]
+}
+
+const MISTAKES_KEY = 'minna.mistakes.v1'
+
+function readMistakes(): MistakeItem[] {
+  try {
+    const raw = localStorage.getItem(MISTAKES_KEY)
+    if (!raw) return []
+    const parsed = JSON.parse(raw)
+    return Array.isArray(parsed) ? parsed : []
+  } catch {
+    return []
+  }
+}
+
+function writeMistakes(list: MistakeItem[]) {
+  try {
+    localStorage.setItem(MISTAKES_KEY, JSON.stringify(list))
+  } catch {}
+}
+
+function mistakeKey(m: MistakeItem) {
+  return [
+    Math.max(1, Number(m.lessonNo || 1)),
+    String(m.sourceId || ''),
+    String(m.question || '').trim(),
+    String(m.answer || '').trim()
+  ].join('||')
 }
 
 function t(lang: Lang, zh: string, en: string) {
@@ -93,6 +135,23 @@ function playCorrectCombo(combo: number) {
 }
 
 export default function LessonPracticeClient({ lessonNo, lang, stage, questions }: Props) {
+  const reviewMode = stage === 'review'
+  const runtimeQuestions = useMemo(() => {
+    if (!reviewMode) return questions
+    const mistakes = readMistakes().filter((m) => Math.max(1, Number(m.lessonNo || 1)) === lessonNo)
+    return mistakes.map((m, i) => ({
+      id: `review-${i}`,
+      sourceId: String(m.sourceId || ''),
+      question: String(m.question || m.jp || (lang === 'en' ? 'Choose the best answer' : '请选择最合适的答案')),
+      hint: String(m.kana || m.jp || ''),
+      options: [
+        { text: String(m.answer || m.meaning || ''), correct: true },
+        { text: lang === 'en' ? 'Skip' : '跳过', correct: false }
+      ],
+      explanation: String(m.meaning || '')
+    }))
+  }, [questions, reviewMode, lessonNo, lang])
+
   const [idx, setIdx] = useState(0)
   const [hearts, setHearts] = useState(5)
   const [score, setScore] = useState(0)
@@ -104,12 +163,13 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
   const [burstText, setBurstText] = useState('')
   const [checkedInOnce, setCheckedInOnce] = useState(false)
 
-  const total = questions.length
-  const current = questions[idx]
+  const total = runtimeQuestions.length
+  const current = runtimeQuestions[idx]
   const stageText = useMemo(() => {
     if (stage === 'vocab') return t(lang, '词汇训练', 'Vocabulary Training')
     if (stage === 'grammar') return t(lang, '语法训练', 'Grammar Training')
     if (stage === 'examples') return t(lang, '例句训练', 'Example Training')
+    if (stage === 'review') return t(lang, '错题复习模式', 'Mistake Review Mode')
     return t(lang, '测验模式', 'Quiz Mode')
   }, [lang, stage])
 
@@ -187,6 +247,20 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
         } catch {}
         return next
       })
+      if (reviewMode) {
+        const before = readMistakes()
+        const targetKey = mistakeKey({
+          lessonNo,
+          sourceId: current.sourceId,
+          question: current.question,
+          answer: current.options[optionIndex]?.text || ''
+        })
+        const next = before.filter((m) => mistakeKey(m) !== targetKey)
+        if (next.length !== before.length) {
+          writeMistakes(next)
+          window.dispatchEvent(new Event('minna:stats-update'))
+        }
+      }
     } else {
       setCombo(0)
       setBurstText(t(lang, '再来一次', 'Try again'))
@@ -199,6 +273,26 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
         } catch {}
         return next
       })
+      if (!reviewMode) {
+        const correct = current.options.find((op) => op.correct)
+        const item: MistakeItem = {
+          lessonNo,
+          stage,
+          jp: current.hint || current.question,
+          kana: current.hint || '',
+          meaning: current.explanation || '',
+          question: current.question,
+          answer: correct?.text || '',
+          sourceId: current.sourceId || current.id || '',
+          at: new Date().toISOString()
+        }
+        const before = readMistakes()
+        const targetKey = mistakeKey(item)
+        const deduped = before.filter((m) => mistakeKey(m) !== targetKey)
+        deduped.push(item)
+        writeMistakes(deduped)
+        window.dispatchEvent(new Event('minna:stats-update'))
+      }
     }
   }
 

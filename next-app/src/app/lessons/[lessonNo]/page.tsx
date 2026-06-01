@@ -3,6 +3,7 @@ import path from 'node:path'
 import Link from 'next/link'
 import MinnaNav from '@/components/minna-nav'
 import TopLabelSync from '@/components/top-label-sync'
+import FavoriteToggleButton from '@/components/favorite-toggle-button'
 import { LESSONS_1_50 } from '@/lib/minna-lessons'
 import { getLang, type Lang, tr } from '@/lib/i18n'
 
@@ -138,6 +139,18 @@ export default async function LessonDetailPage({
                 {item.kana ? <small>{item.kana}</small> : null}
                 {item.zh || item.en ? <p>{lang === 'en' ? (item.en || item.zh) : (item.zh || item.en)}</p> : null}
                 {pick(item.explanation, lang) ? <p className="small">{pick(item.explanation, lang)}</p> : null}
+                <div style={{ marginTop: 8 }}>
+                  <FavoriteToggleButton
+                    lessonNo={no}
+                    item={{
+                      id: item.id,
+                      jp: item.jp || pick(item.title, lang),
+                      kana: item.kana || '',
+                      meaning: lang === 'en' ? (item.en || item.zh || '') : (item.zh || item.en || '')
+                    }}
+                    lang={lang}
+                  />
+                </div>
 
                 {Array.isArray(item.examples) && item.examples.length ? (
                   <div className="emptyBox" style={{ marginTop: 8, textAlign: 'left' }}>

@@ -55,7 +55,9 @@ export default async function LessonPracticePage({
   const { stage } = await searchParams
   const no = Math.max(1, Math.min(50, Number(lessonNo) || 1))
   const lang = await getLang()
-  const s = ['vocab', 'grammar', 'examples', 'quiz'].includes(String(stage || '')) ? String(stage) as 'vocab' | 'grammar' | 'examples' | 'quiz' : 'vocab'
+  const s = ['vocab', 'grammar', 'examples', 'quiz', 'review'].includes(String(stage || ''))
+    ? String(stage) as 'vocab' | 'grammar' | 'examples' | 'quiz' | 'review'
+    : 'vocab'
   const lesson = await loadLessonDoc(no)
   const sections = Array.isArray(lesson?.sections) ? lesson!.sections! : []
   const section = sections.find((x) => String(x.type || '') === s)
@@ -72,6 +74,7 @@ export default async function LessonPracticePage({
         if (opts.length > 1) {
           return {
             id: `${item.id || idx}-p-${pIdx}`,
+            sourceId: String(item.id || `${idx}-p-${pIdx}`),
             question: pick(p.question, lang) || (lang === 'en' ? 'Choose the best answer' : '请选择最合适的答案'),
             hint: item.kana || item.jp || '',
             options: opts,
@@ -88,6 +91,7 @@ export default async function LessonPracticePage({
           const orderOptions = unique.slice(0, 4).map((text) => ({ text, correct: text === right }))
           return {
             id: `${item.id || idx}-order-${pIdx}`,
+            sourceId: String(item.id || `${idx}-order-${pIdx}`),
             question: pick(p.question, lang) || (lang === 'en' ? 'Arrange the sentence in correct order' : '选择正确语序'),
             hint: item.kana || item.jp || '',
             options: orderOptions,
@@ -106,6 +110,7 @@ export default async function LessonPracticePage({
       if (opts.length < 2) return null
       return {
         id: `${item.id || idx}-quiz`,
+        sourceId: String(item.id || `${idx}-quiz`),
         question: pick(item.question, lang) || (lang === 'en' ? 'Choose the best answer' : '请选择最合适的答案'),
         hint: item.kana || item.jp || '',
         options: opts,

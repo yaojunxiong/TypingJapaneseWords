@@ -116,8 +116,8 @@ export default function ToolboxClient({ lang }: Props) {
     () => [
       {
         icon: '🔥',
-        title: t(lang, '错题复习', 'Mistake Review'),
-        desc: t(lang, '自动记录并强化复习', 'Review automatically tracked mistakes'),
+        title: t(lang, '错题本', 'Mistake Notebook'),
+        desc: t(lang, '自动记录错题并进入复习模式', 'Track mistakes automatically and review them'),
         href: '/mistakes',
         count: stats.mistakes
       },
