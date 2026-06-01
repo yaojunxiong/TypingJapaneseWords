@@ -158,3 +158,40 @@ test('membership request flow: user apply vip1 then admin approve', async ({ bro
   await adminContext.close()
   await userContext.close()
 })
+
+test('membership pending limit blocks duplicate submission', async ({ browser, baseURL }) => {
+  const userCookie = process.env.E2E_MEMBER_COOKIE || ''
+  if (!userCookie) {
+    test.info().annotations.push({
+      type: 'info',
+      description: 'E2E_MEMBER_COOKIE not set; pending-limit test skipped by design.',
+    })
+    return
+  }
+
+  const token = Date.now()
+  const userContext = await browser.newContext({
+    baseURL,
+    extraHTTPHeaders: { Cookie: userCookie },
+  })
+  const page = await userContext.newPage()
+  await page.goto('/me')
+
+  // Try create first pending request (for current level, allowed option is first option)
+  const firstOption = await page.getByTestId('membership-requested-level').inputValue()
+  await page.getByTestId('membership-reason').fill(`E2E pending #1 ${token}`)
+  await page.getByTestId('membership-submit').click()
+
+  await page.goto('/me')
+  await expect(page.getByText(/最近申请状态：pending/)).toBeVisible()
+
+  // Second submission should be blocked while pending exists
+  await page.getByTestId('membership-reason').fill(`E2E pending #2 ${token}`)
+  if (firstOption === 'vip2') {
+    await page.getByTestId('membership-requested-level').selectOption('vip3')
+  }
+  await page.getByTestId('membership-submit').click()
+  await expect(page.getByText(/已有 pending 申请|已有申请正在审批中/)).toBeVisible()
+
+  await userContext.close()
+})

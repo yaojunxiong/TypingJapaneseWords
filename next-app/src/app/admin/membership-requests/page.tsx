@@ -3,6 +3,7 @@ import { cookies } from 'next/headers'
 import { createClient } from '@/utils/supabase/server'
 import { requireAdmin } from '@/lib/admin-auth'
 import MembershipRequestActions from '@/components/admin/membership-request-actions'
+import MembershipRequestFlowchart from '@/components/membership-request-flowchart'
 
 export const dynamic = 'force-dynamic'
 
@@ -23,7 +24,7 @@ export default async function AdminMembershipRequestsPage() {
   const supabase = createClient(cookieStore)
   const { data, error } = await supabase
     .from('membership_requests')
-    .select('id,user_id,current_level,requested_level,reason,status,created_at,reviewed_at,review_note,reject_reason')
+    .select('id,user_id,current_level,requested_level,reason,status,created_at,reviewed_at,review_note,reject_reason,workflow_version_id,workflow_instance_id')
     .order('created_at', { ascending: false })
 
   if (error) {
@@ -31,6 +32,16 @@ export default async function AdminMembershipRequestsPage() {
   }
 
   const rows = data || []
+  const versionIds = Array.from(new Set(rows.map((r) => r.workflow_version_id).filter(Boolean)))
+  const instanceIds = Array.from(new Set(rows.map((r) => r.workflow_instance_id).filter(Boolean)))
+  const { data: versions } = versionIds.length > 0
+    ? await supabase.from('workflow_versions').select('id,version_number,status').in('id', versionIds)
+    : { data: [] as Array<{ id: string; version_number: number; status: string }> }
+  const { data: instances } = instanceIds.length > 0
+    ? await supabase.from('workflow_instances').select('id,current_node_key,status').in('id', instanceIds)
+    : { data: [] as Array<{ id: string; current_node_key: string; status: string }> }
+  const versionMap = new Map((versions || []).map((v) => [v.id, v]))
+  const instanceMap = new Map((instances || []).map((i) => [i.id, i]))
 
   return (
     <>
@@ -50,6 +61,8 @@ export default async function AdminMembershipRequestsPage() {
               <th style={{ padding: 6, textAlign: 'left' }}>申请等级</th>
               <th style={{ padding: 6, textAlign: 'left' }}>理由</th>
               <th style={{ padding: 6, textAlign: 'left' }}>状态</th>
+              <th style={{ padding: 6, textAlign: 'left' }}>流程版本</th>
+              <th style={{ padding: 6, textAlign: 'left' }}>当前节点</th>
               <th style={{ padding: 6, textAlign: 'left' }}>审批</th>
             </tr>
           </thead>
@@ -63,7 +76,21 @@ export default async function AdminMembershipRequestsPage() {
                 <td style={{ padding: 6, maxWidth: 220 }}>{String(r.reason || '-')}</td>
                 <td style={{ padding: 6 }}>{String(r.status || '-')}</td>
                 <td style={{ padding: 6 }}>
+                  {r.workflow_version_id && versionMap.get(r.workflow_version_id as string)
+                    ? `v${versionMap.get(r.workflow_version_id as string)?.version_number}`
+                    : '-'}
+                </td>
+                <td style={{ padding: 6 }}>{r.workflow_instance_id ? (instanceMap.get(r.workflow_instance_id as string)?.current_node_key || '-') : '-'}</td>
+                <td style={{ padding: 6 }}>
                   {r.status === 'pending' ? <MembershipRequestActions requestId={r.id} /> : <span className="small">{String(r.reject_reason || r.review_note || '-')}</span>}
+                  <div style={{ marginTop: 8 }}>
+                    <MembershipRequestFlowchart
+                      currentLevel={String(r.current_level || 'free')}
+                      requestedLevel={String(r.requested_level || 'vip1')}
+                      status={String(r.status || 'none') as 'pending' | 'approved' | 'rejected' | 'none'}
+                      currentNodeKey={String((r.workflow_instance_id && instanceMap.get(r.workflow_instance_id as string)?.current_node_key) || '')}
+                    />
+                  </div>
                 </td>
               </tr>
             ))}

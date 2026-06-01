@@ -4,6 +4,7 @@ interface Props {
   currentLevel: string
   requestedLevel: string
   status: RequestStatus
+  currentNodeKey?: string
 }
 
 interface Step {
@@ -48,7 +49,7 @@ function iconFor(step: Step): string {
   return '⏳'
 }
 
-export default function MembershipRequestFlowchart({ currentLevel, requestedLevel, status }: Props) {
+export default function MembershipRequestFlowchart({ currentLevel, requestedLevel, status, currentNodeKey = '' }: Props) {
   const steps = stepsForStatus(status)
 
   return (
@@ -57,14 +58,19 @@ export default function MembershipRequestFlowchart({ currentLevel, requestedLeve
         {currentLevel} {'->'} {requestedLevel}
       </p>
       <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }} data-testid="membership-flowchart">
-        {steps.map((step, i) => (
+        {steps.map((step, i) => {
+          const activeByNode = (currentNodeKey.includes('approval') && step.label.includes('审批'))
+            || (currentNodeKey.includes('approved') && step.label.includes('通过结束'))
+            || (currentNodeKey.includes('rejected') && step.label.includes('驳回结束'))
+          const isHighlighted = activeByNode || (status === 'pending' && i === 1)
+          return (
           <div key={`${step.label}-${i}`} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <div style={{ padding: '6px 10px', borderRadius: 8, border: '1px solid #ddd', background: '#fafafa', fontSize: '0.8rem' }}>
+            <div style={{ padding: '6px 10px', borderRadius: 8, border: isHighlighted ? '2px solid #3498db' : '1px solid #ddd', background: isHighlighted ? '#eef6ff' : '#fafafa', fontSize: '0.8rem' }}>
               [{step.label}{iconFor(step) ? ` ${iconFor(step)}` : ''}]
             </div>
             {i < steps.length - 1 ? <span style={{ color: '#999' }}>→</span> : null}
           </div>
-        ))}
+        )})}
       </div>
     </div>
   )

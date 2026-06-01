@@ -46,6 +46,10 @@ export default async function AdminPage() {
             <span>👑 会员等级审批</span>
             <span style={{ fontSize: '0.8rem', opacity: 0.6 }}>free {'->'} vip1/vip2/vip3 →</span>
           </Link>
+          <Link href="/admin/workflows" className="practiceChoice" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem', textDecoration: 'none' }}>
+            <span>🧭 流程版本管理</span>
+            <span style={{ fontSize: '0.8rem', opacity: 0.6 }}>membership workflow versions →</span>
+          </Link>
           <div className="practiceChoice disabled" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem' }}>
             <span>📊 Review 数据管理</span>
             <span style={{ fontSize: '0.8rem', opacity: 0.6 }}>即将上线</span>

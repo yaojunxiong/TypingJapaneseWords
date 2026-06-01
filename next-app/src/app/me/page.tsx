@@ -128,12 +128,30 @@ export default async function MePage() {
   const levels = await getMembershipLevels()
   const { data: membershipRequests } = await supabase
     .from('membership_requests')
-    .select('id,current_level,requested_level,status,created_at,reason,reject_reason')
+    .select('id,current_level,requested_level,status,created_at,reason,reject_reason,workflow_version_id,workflow_instance_id')
     .eq('user_id', user.id)
     .order('created_at', { ascending: false })
     .limit(10)
   const latestReq = membershipRequests?.[0] || null
   const hasPendingRequest = (membershipRequests || []).some((r) => r.status === 'pending')
+
+  const workflowVersionIds = Array.from(new Set((membershipRequests || []).map((r) => r.workflow_version_id).filter(Boolean)))
+  const { data: workflowVersions } = workflowVersionIds.length > 0
+    ? await supabase
+      .from('workflow_versions')
+      .select('id,version_number,status')
+      .in('id', workflowVersionIds)
+    : { data: [] as Array<{ id: string; version_number: number; status: string }> }
+  const workflowVersionMap = new Map((workflowVersions || []).map((v) => [v.id, v]))
+
+  const latestInstanceId = latestReq?.workflow_instance_id || null
+  const { data: latestInstance } = latestInstanceId
+    ? await supabase
+      .from('workflow_instances')
+      .select('id,current_node_key,status')
+      .eq('id', latestInstanceId)
+      .maybeSingle()
+    : { data: null as { id: string; current_node_key: string; status: string } | null }
 
   return (
     <main>
@@ -183,7 +201,14 @@ export default async function MePage() {
         <p className="small">最近申请状态：{latestReq ? latestReq.status : 'none'}</p>
         <MembershipRequestForm
           currentLevel={membership.level}
-          levels={levels.map((l) => ({ level_code: l.level_code, title: l.title }))}
+          levels={levels
+            .filter((l) => {
+              if (membership.level === 'free') return ['vip1', 'vip2', 'vip3'].includes(l.level_code)
+              if (membership.level === 'vip1') return ['vip2', 'vip3'].includes(l.level_code)
+              if (membership.level === 'vip2') return l.level_code === 'vip3'
+              return false
+            })
+            .map((l) => ({ level_code: l.level_code, title: l.title }))}
           hasPending={hasPendingRequest}
         />
       </section>
@@ -194,6 +219,7 @@ export default async function MePage() {
           currentLevel={latestReq ? latestReq.current_level : membership.level}
           requestedLevel={latestReq ? latestReq.requested_level : 'vip1'}
           status={(latestReq ? latestReq.status : 'none') as 'pending' | 'approved' | 'rejected' | 'none'}
+          currentNodeKey={String((latestInstance as { current_node_key?: string } | null)?.current_node_key || '')}
         />
         {latestReq ? (
           <p className="small">
@@ -215,6 +241,9 @@ export default async function MePage() {
           (membershipRequests || []).map((r) => (
             <p key={r.id} className="small">
               {String(r.created_at || '').slice(0, 19).replace('T', ' ')} · {r.current_level} {'->'} {r.requested_level} · {r.status} · {r.reason || '-'}
+              {r.workflow_version_id && workflowVersionMap.get(r.workflow_version_id as string)
+                ? ` · workflow: v${workflowVersionMap.get(r.workflow_version_id as string)?.version_number}`
+                : ''}
               {r.status === 'rejected' && r.reject_reason ? ` · reject_reason: ${r.reject_reason}` : ''}
             </p>
           ))

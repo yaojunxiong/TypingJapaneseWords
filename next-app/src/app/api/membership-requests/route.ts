@@ -3,6 +3,7 @@ import { cookies } from 'next/headers'
 import { createClient } from '@/utils/supabase/server'
 import { ensureUserMembership } from '@/lib/memberships'
 import { sendMembershipApprovalEmailMock } from '@/lib/membership-email-mock'
+import { createWorkflowInstanceForMembership, getActiveMembershipWorkflowVersion } from '@/lib/membership-workflows'
 
 export const dynamic = 'force-dynamic'
 
@@ -23,8 +24,15 @@ export async function POST(request: NextRequest) {
     if (!reason) return NextResponse.json({ error: 'reason is required' }, { status: 400 })
 
     const membership = await ensureUserMembership(user.id)
-    if (membership.level !== 'free') {
-      return NextResponse.json({ error: 'v1 only supports free -> vip1/vip2/vip3' }, { status: 400 })
+    const allowedByCurrent: Record<string, string[]> = {
+      free: ['vip1', 'vip2', 'vip3'],
+      vip1: ['vip2', 'vip3'],
+      vip2: ['vip3'],
+      vip3: [],
+    }
+    const allowedTargets = allowedByCurrent[membership.level] || []
+    if (!allowedTargets.includes(requestedLevel)) {
+      return NextResponse.json({ error: `cannot request ${requestedLevel} from ${membership.level}` }, { status: 400 })
     }
 
     const { data: existingPending, error: pendingError } = await supabase
@@ -38,6 +46,8 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'pending request already exists' }, { status: 409 })
     }
 
+    const workflowVersion = await getActiveMembershipWorkflowVersion()
+
     const { data, error } = await supabase
       .from('membership_requests')
       .insert({
@@ -46,10 +56,22 @@ export async function POST(request: NextRequest) {
         requested_level: requestedLevel,
         reason,
         status: 'pending',
+        workflow_version_id: workflowVersion.id,
       })
-      .select('id,current_level,requested_level,status,created_at')
+      .select('id,current_level,requested_level,status,created_at,workflow_version_id')
       .single()
     if (error) throw new Error(error.message)
+
+    const workflowInstanceId = await createWorkflowInstanceForMembership({
+      workflowVersionId: workflowVersion.id,
+      membershipRequestId: data.id,
+    })
+
+    const { error: bindError } = await supabase
+      .from('membership_requests')
+      .update({ workflow_instance_id: workflowInstanceId })
+      .eq('id', data.id)
+    if (bindError) throw new Error(bindError.message)
 
     const mockMail = sendMembershipApprovalEmailMock({
       requestId: data.id,

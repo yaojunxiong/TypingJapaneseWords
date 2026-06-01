@@ -42,15 +42,16 @@ export default function MembershipRequestForm({ currentLevel, levels, hasPending
   return (
     <div style={{ display: 'grid', gap: 8 }}>
       <p className="small" data-testid="membership-current-level">当前等级：{currentLevel}</p>
+      {levels.length === 0 ? <p className="small">当前没有可申请的更高等级。</p> : null}
       <label className="small">申请升级到</label>
-      <select data-testid="membership-requested-level" value={requestedLevel} onChange={(e) => setRequestedLevel(e.target.value)} style={{ padding: 8, borderRadius: 6, border: '1px solid #ccc' }}>
+      <select data-testid="membership-requested-level" value={requestedLevel} onChange={(e) => setRequestedLevel(e.target.value)} style={{ padding: 8, borderRadius: 6, border: '1px solid #ccc' }} disabled={levels.length === 0}>
         {levels.map((l) => (
           <option key={l.level_code} value={l.level_code}>{l.level_code} ({l.title})</option>
         ))}
       </select>
       <label className="small">申请理由</label>
       <textarea data-testid="membership-reason" value={reason} onChange={(e) => setReason(e.target.value)} rows={4} style={{ padding: 8, borderRadius: 6, border: '1px solid #ccc' }} />
-      <button data-testid="membership-submit" className="btn" disabled={loading || hasPending} onClick={submit} style={{ width: 180 }}>
+      <button data-testid="membership-submit" className="btn" disabled={loading || hasPending || levels.length === 0} onClick={submit} style={{ width: 180 }}>
         {loading ? '提交中...' : '提交会员升级申请'}
       </button>
       {hasPending ? <p className="small">已有 pending 申请，暂不可重复提交。</p> : null}
