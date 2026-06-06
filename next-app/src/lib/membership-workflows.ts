@@ -17,11 +17,14 @@ export interface WorkflowNodeRow {
   workflow_version_id: string
   node_key: string
   node_name: string
-  node_type: 'start' | 'approval' | 'end'
+  node_type: 'start' | 'task' | 'approval' | 'end'
   order_index: number
   assignee_type: string | null
   assignee_value: string | null
   approval_mode: string | null
+  approver_user_id: string | null
+  approver_role: string | null
+  approver_email: string | null
 }
 
 export interface WorkflowTransitionRow {
@@ -29,7 +32,7 @@ export interface WorkflowTransitionRow {
   workflow_version_id: string
   from_node_key: string
   to_node_key: string
-  action: 'submit' | 'approve' | 'reject'
+  action: 'submit' | 'approve' | 'reject' | 'refuse' | 'close' | 'return' | 'approval'
 }
 
 async function getServerClient() {

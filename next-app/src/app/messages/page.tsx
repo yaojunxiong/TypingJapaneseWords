@@ -234,6 +234,13 @@ export default async function MessagesPage() {
 
       <section className="msgGrid">
         <article className="msgCard2">
+          <div className="msgIcon">📚</div>
+          <h2>{tr(lang, '学习广场', 'Learning Square')}</h2>
+          <p className="small">{tr(lang, '发帖讨论语法、单词、错题求助、学习打卡和官方公告。', 'Discuss grammar, vocabulary, wrong answers, check-ins, and announcements.')}</p>
+          <Link className="btn ghost" href="/messages/forum">{tr(lang, '打开学习广场', 'Open Forum')}</Link>
+        </article>
+
+        <article className="msgCard2">
           <div className="msgIcon">🤝</div>
           <h2>{tr(lang, '好友', 'Friends')}</h2>
           <p className="small">{tr(lang, '发送申请、通过好友、查看社交关系。', 'Send requests, approve friends, and manage your social graph.')}</p>

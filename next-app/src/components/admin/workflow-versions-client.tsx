@@ -58,6 +58,7 @@ export default function WorkflowVersionsClient({ versions }: { versions: Version
             <th style={{ padding: 6, textAlign: 'left' }}>status</th>
             <th style={{ padding: 6, textAlign: 'left' }}>created_at</th>
             <th style={{ padding: 6, textAlign: 'left' }}>published_at</th>
+            <th style={{ padding: 6, textAlign: 'left' }}>流程图</th>
             <th style={{ padding: 6, textAlign: 'left' }}>操作</th>
           </tr>
         </thead>
@@ -68,6 +69,16 @@ export default function WorkflowVersionsClient({ versions }: { versions: Version
               <td style={{ padding: 6 }}>{v.status}</td>
               <td style={{ padding: 6 }}>{String(v.created_at || '').slice(0, 19).replace('T', ' ')}</td>
               <td style={{ padding: 6 }}>{v.published_at ? String(v.published_at).slice(0, 19).replace('T', ' ') : '-'}</td>
+              <td style={{ padding: 6 }}>
+                <Link
+                  href={`/admin/workflows/${v.id}/diagram`}
+                  className="workflowIconButton"
+                  title={`查看 v${v.version_number} 流程图`}
+                  aria-label={`查看 v${v.version_number} 流程图`}
+                >
+                  🗺️
+                </Link>
+              </td>
               <td style={{ padding: 6, display: 'flex', gap: 8 }}>
                 <Link href={`/admin/workflows/membership-application/versions/${v.id}`}>查看</Link>
                 {v.status === 'draft' ? (
