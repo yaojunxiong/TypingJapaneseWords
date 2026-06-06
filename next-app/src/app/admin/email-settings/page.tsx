@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { revalidatePath } from 'next/cache'
 import { cookies } from 'next/headers'
+import { redirect } from 'next/navigation'
 import { requireAdmin } from '@/lib/admin-auth'
 import { sendEmail } from '@/lib/email-service'
 import { createClient } from '@/utils/supabase/server'
@@ -15,7 +16,7 @@ async function saveEmailSettings(formData: FormData) {
   const supabase = createClient(cookieStore)
   const provider = String(formData.get('provider') || 'mock')
 
-  await supabase.from('email_settings').upsert({
+  const { error } = await supabase.from('email_settings').upsert({
     id: 1,
     enabled: formData.get('enabled') === 'on',
     provider,
@@ -24,9 +25,16 @@ async function saveEmailSettings(formData: FormData) {
     admin_email: String(formData.get('admin_email') || '').trim() || null,
     gas_webhook_url: String(formData.get('gas_webhook_url') || '').trim() || null,
     resend_from_email: String(formData.get('resend_from_email') || '').trim() || null
+  }, {
+    onConflict: 'id'
   })
 
+  if (error) {
+    redirect(`/admin/email-settings?error=${encodeURIComponent(error.message)}`)
+  }
+
   revalidatePath('/admin/email-settings')
+  redirect('/admin/email-settings?saved=1')
 }
 
 async function sendTestEmail(formData: FormData) {
@@ -56,7 +64,11 @@ async function sendTestEmail(formData: FormData) {
   revalidatePath('/admin/email-settings')
 }
 
-export default async function AdminEmailSettingsPage() {
+export default async function AdminEmailSettingsPage({
+  searchParams
+}: {
+  searchParams?: Promise<{ saved?: string; error?: string }>
+}) {
   try {
     await requireAdmin()
   } catch {
@@ -64,6 +76,7 @@ export default async function AdminEmailSettingsPage() {
   }
 
   const cookieStore = await cookies()
+  const params = await searchParams
   const supabase = createClient(cookieStore)
   const { data } = await supabase
     .from('email_settings')
@@ -90,6 +103,20 @@ export default async function AdminEmailSettingsPage() {
         <h2>邮件发送配置</h2>
         <p className="small">SMTP 密码/API Key 只从环境变量读取；这里保存开关、provider 和发件地址。</p>
       </section>
+
+      {params?.saved === '1' ? (
+        <section className="card">
+          <p className="forumNotice">邮件配置已保存。</p>
+        </section>
+      ) : null}
+
+      {params?.error ? (
+        <section className="card">
+          <h2>保存失败</h2>
+          <p className="small">{params.error}</p>
+          <p className="small">如果错误包含 provider check constraint，请确认数据库已允许当前 provider 值。</p>
+        </section>
+      ) : null}
 
       <section className="card">
         <h2>当前配置</h2>
