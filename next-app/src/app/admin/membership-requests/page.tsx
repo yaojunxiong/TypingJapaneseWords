@@ -255,7 +255,8 @@ export default async function AdminMembershipRequestsPage() {
   const taskRows: TaskDisplayRow[] = []
 
   for (const request of requests) {
-    const workflowCode = shortCode('WF', request.workflow_instance_id || request.id)
+    const workflowInstanceOrRequestId = request.workflow_instance_id || request.id
+    const workflowCode = shortCode('WF', workflowInstanceOrRequestId)
     const instance = request.workflow_instance_id ? instanceMap.get(request.workflow_instance_id) : undefined
     const graphNodes = request.workflow_version_id ? (nodesByVersion.get(request.workflow_version_id) || []) : []
     const nodeList = [...graphNodes].sort((a, b) => a.order_index - b.order_index)
@@ -297,7 +298,7 @@ export default async function AdminMembershipRequestsPage() {
         workflowCode,
         requestId: request.id,
         workflowId: request.workflow_version_id,
-        workflowInstanceId: request.workflow_instance_id,
+        workflowInstanceId: workflowInstanceOrRequestId,
         requestCreatedAt: request.created_at,
         userId: request.user_id,
         currentLevel: String(request.current_level || 'free'),
@@ -340,7 +341,7 @@ export default async function AdminMembershipRequestsPage() {
         workflowCode,
         requestId: request.id,
         workflowId: request.workflow_version_id,
-        workflowInstanceId: request.workflow_instance_id,
+        workflowInstanceId: workflowInstanceOrRequestId,
         requestCreatedAt: request.created_at,
         userId: request.user_id,
         currentLevel: String(request.current_level || 'free'),
