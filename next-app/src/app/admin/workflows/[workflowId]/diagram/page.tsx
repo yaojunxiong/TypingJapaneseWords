@@ -50,6 +50,13 @@ function shortCode(prefix: string, value: string | null | undefined) {
   return `${prefix}-${value.slice(0, 8)}`
 }
 
+function statusLabel(status: string | null | undefined) {
+  if (status === 'approved') return '已通过'
+  if (status === 'rejected') return '已拒绝'
+  if (status === 'pending') return '待处理'
+  return status || '-'
+}
+
 function edgeId(transition: WorkflowTransitionRow, index: number) {
   return `${transition.from_node_key}-${transition.to_node_key}-${transition.action}-${index}`
 }
@@ -249,7 +256,7 @@ export default async function WorkflowDiagramPage({ params, searchParams }: Prop
       instanceMeta = {
         workflowCode: shortCode('WF', instance.id),
         currentNodeKey: instance.current_node_key,
-        currentStatus: membershipRequest?.status || instance.status || statuses.outcome,
+        currentStatus: statusLabel(membershipRequest?.status || instance.status || statuses.outcome),
         businessType: definition?.definition_key || instance.reference_type || 'workflow',
       }
     }

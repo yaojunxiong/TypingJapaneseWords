@@ -73,23 +73,26 @@ function nodeTone(status: DiagramVisualStatus) {
       border: '#16a34a',
       background: '#f0fdf4',
       titleBackground: '#dcfce7',
-      text: '#166534'
+      text: '#166534',
+      ring: '0 0 0 2px rgba(22,163,74,0.16), 0 10px 24px rgba(22,163,74,0.10)'
     }
   }
   if (status === 'active') {
     return {
-      border: '#2563eb',
-      background: '#eff6ff',
-      titleBackground: '#dbeafe',
-      text: '#1d4ed8'
+      border: '#1d4ed8',
+      background: '#dbeafe',
+      titleBackground: '#bfdbfe',
+      text: '#1e40af',
+      ring: '0 0 0 4px rgba(37,99,235,0.22), 0 16px 36px rgba(37,99,235,0.18)'
     }
   }
   if (status === 'rejected') {
     return {
-      border: '#ea580c',
+      border: '#dc2626',
       background: '#fff7ed',
-      titleBackground: '#fed7aa',
-      text: '#c2410c'
+      titleBackground: '#fdba74',
+      text: '#c2410c',
+      ring: '0 0 0 2px rgba(220,38,38,0.16), 0 10px 24px rgba(194,65,12,0.12)'
     }
   }
   if (status === 'skipped') {
@@ -97,14 +100,16 @@ function nodeTone(status: DiagramVisualStatus) {
       border: '#94a3b8',
       background: '#f8fafc',
       titleBackground: '#e2e8f0',
-      text: '#475569'
+      text: '#475569',
+      ring: '0 1px 2px rgba(148,163,184,0.08)'
     }
   }
   return {
     border: '#64748b',
     background: '#f8fafc',
     titleBackground: '#e2e8f0',
-    text: '#334155'
+    text: '#334155',
+    ring: '0 1px 2px rgba(100,116,139,0.08)'
   }
 }
 
@@ -112,7 +117,7 @@ function edgeTone(status: DiagramVisualStatus) {
   if (status === 'completed' || status === 'approved') {
     return {
       color: '#16a34a',
-      width: 2.5,
+      width: 3,
       dash: undefined,
       labelFill: '#166534',
       labelBackground: '#ecfdf5'
@@ -121,7 +126,7 @@ function edgeTone(status: DiagramVisualStatus) {
   if (status === 'active') {
     return {
       color: '#2563eb',
-      width: 3,
+      width: 3.5,
       dash: undefined,
       labelFill: '#1d4ed8',
       labelBackground: '#dbeafe'
@@ -129,8 +134,8 @@ function edgeTone(status: DiagramVisualStatus) {
   }
   if (status === 'rejected') {
     return {
-      color: '#ea580c',
-      width: 2.5,
+      color: '#dc2626',
+      width: 3,
       dash: undefined,
       labelFill: '#c2410c',
       labelBackground: '#ffedd5'
@@ -139,25 +144,33 @@ function edgeTone(status: DiagramVisualStatus) {
   if (status === 'skipped') {
     return {
       color: '#94a3b8',
-      width: 1.8,
-      dash: '6 4',
+      width: 2,
+      dash: '7 5',
       labelFill: '#64748b',
       labelBackground: '#f1f5f9'
     }
   }
   return {
-    color: '#16a34a',
+    color: '#64748b',
     width: 2,
-    dash: undefined,
-    labelFill: '#166534',
-    labelBackground: '#ecfdf5'
+    dash: '5 4',
+    labelFill: '#475569',
+    labelBackground: '#f1f5f9'
   }
 }
 
 function WorkflowK2Node({ data }: NodeProps<Node<{ label: string; type: string; meta: string; status: DiagramVisualStatus }>>) {
   const tone = nodeTone(data.status)
   return (
-    <div className="workflowK2Node" style={{ borderColor: tone.border, background: tone.background, boxShadow: data.status === 'active' ? '0 0 0 3px rgba(37,99,235,0.12)' : undefined }}>
+    <div
+      className="workflowK2Node"
+      style={{
+        borderColor: tone.border,
+        background: tone.background,
+        boxShadow: tone.ring,
+        transform: data.status === 'active' ? 'translateY(-2px)' : undefined
+      }}
+    >
       <Handle
         type="target"
         position={Position.Left}
@@ -276,7 +289,9 @@ export default function WorkflowDiagramClient({
           </div>
           <div className="card">
             <p className="small">当前状态</p>
-            <strong>{instanceMeta.currentStatus}</strong>
+            <strong style={{ color: instanceMeta.currentStatus === 'approved' ? '#166534' : instanceMeta.currentStatus === 'rejected' ? '#c2410c' : '#1d4ed8' }}>
+              {instanceMeta.currentStatus}
+            </strong>
           </div>
           <div className="card">
             <p className="small">业务类型</p>
