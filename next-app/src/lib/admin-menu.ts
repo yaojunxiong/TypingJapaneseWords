@@ -38,7 +38,7 @@ export const adminMenuGroups: AdminMenuGroup[] = [
     roles: allRoles,
     items: [
       { label: '后台首页', href: '/admin', description: 'Admin Console 总览', roles: allRoles, enabled: true },
-      { label: '部署检查', href: '/admin/audit', description: '当前复用 Audit 检查入口', roles: ['super_admin', 'content_admin'], enabled: true }
+      { label: '部署检查', href: '/admin/deployment-check', description: '环境变量与关键路由检查', roles: ['super_admin', 'content_admin'], enabled: true }
     ]
   },
   {
@@ -137,7 +137,7 @@ export const adminMenuGroups: AdminMenuGroup[] = [
     items: [
       { label: '系统参数', href: '/admin', description: '预留入口', roles: ['super_admin'], enabled: false, status: 'coming_soon' },
       { label: '操作日志', href: '/admin', description: '预留入口', roles: ['super_admin'], enabled: false, status: 'coming_soon' },
-      { label: '部署检查', href: '/admin/audit', description: '课程数据和发布前检查', roles: ['super_admin'], enabled: true }
+      { label: '部署检查', href: '/admin/deployment-check', description: '环境变量与关键路由检查', roles: ['super_admin'], enabled: true }
     ]
   }
 ]
