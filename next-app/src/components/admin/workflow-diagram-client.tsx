@@ -4,8 +4,10 @@ import '@xyflow/react/dist/style.css'
 import {
   Background,
   Controls,
+  Handle,
   MarkerType,
   MiniMap,
+  Position,
   ReactFlow,
   type Edge,
   type Node,
@@ -56,6 +58,11 @@ function nodeIcon(type: string) {
 function WorkflowK2Node({ data }: NodeProps<Node<{ label: string; type: string; meta: string }>>) {
   return (
     <div className="workflowK2Node">
+      <Handle
+        type="target"
+        position={Position.Left}
+        style={{ opacity: 0, width: 10, height: 10, border: 'none', background: 'transparent' }}
+      />
       <div className="workflowK2NodeTitle">
         <span className="workflowK2NodeIcon">{nodeIcon(data.type)}</span>
         <b>{data.label}</b>
@@ -64,6 +71,11 @@ function WorkflowK2Node({ data }: NodeProps<Node<{ label: string; type: string; 
         <span>{data.type}</span>
         {data.meta ? <small>{data.meta}</small> : null}
       </div>
+      <Handle
+        type="source"
+        position={Position.Right}
+        style={{ opacity: 0, width: 10, height: 10, border: 'none', background: 'transparent' }}
+      />
     </div>
   )
 }
@@ -90,6 +102,8 @@ export default function WorkflowDiagramClient({
       id: node.node_key,
       type: 'k2',
       position: buildPosition(index, sorted.length),
+      sourcePosition: Position.Right,
+      targetPosition: Position.Left,
       data: {
         label: node.node_name,
         type: node.node_type,
