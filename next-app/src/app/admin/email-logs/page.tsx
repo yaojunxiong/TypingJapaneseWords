@@ -5,6 +5,25 @@ import { createClient } from '@/utils/supabase/server'
 
 export const dynamic = 'force-dynamic'
 
+function formatJstDateTime(value: string | null) {
+  if (!value) return '-'
+
+  const date = new Date(value)
+  if (Number.isNaN(date.getTime())) return '-'
+
+  const formatter = new Intl.DateTimeFormat('sv-SE', {
+    timeZone: 'Asia/Tokyo',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false
+  })
+
+  return formatter.format(date).replace(' ', ' ')
+}
+
 export default async function AdminEmailLogsPage() {
   try {
     await requireAdmin()
@@ -34,7 +53,7 @@ export default async function AdminEmailLogsPage() {
         <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.82rem' }}>
           <thead>
             <tr style={{ borderBottom: '2px solid #ddd' }}>
-              <th style={{ padding: 6, textAlign: 'left' }}>创建时间</th>
+              <th style={{ padding: 6, textAlign: 'left' }}>创建时间 (JST)</th>
               <th style={{ padding: 6, textAlign: 'left' }}>Provider</th>
               <th style={{ padding: 6, textAlign: 'left' }}>模板</th>
               <th style={{ padding: 6, textAlign: 'left' }}>收件人</th>
@@ -46,7 +65,7 @@ export default async function AdminEmailLogsPage() {
           <tbody>
             {(data || []).map((log) => (
               <tr key={log.id} style={{ borderBottom: '1px solid #eee', verticalAlign: 'top' }}>
-                <td style={{ padding: 6 }}>{String(log.created_at || '').slice(0, 19).replace('T', ' ')}</td>
+                <td style={{ padding: 6 }}>{formatJstDateTime(log.created_at)}</td>
                 <td style={{ padding: 6 }}>{log.provider}</td>
                 <td style={{ padding: 6 }}>{log.template_key || '-'}</td>
                 <td style={{ padding: 6 }}>{log.to_email}</td>
