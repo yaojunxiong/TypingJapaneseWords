@@ -1,5 +1,7 @@
 import type { SupabaseClient } from '@supabase/supabase-js'
+import { createClient as createSupabaseClient } from '@supabase/supabase-js'
 import nodemailer from 'nodemailer'
+import { getSafeSupabasePublicConfig } from '@/utils/supabase/config'
 
 export type EmailProvider = 'mock' | 'gmail_gas' | 'resend' | 'mailtrap_sandbox' | 'brevo' | 'brevo_smtp'
 
@@ -39,6 +41,13 @@ type TemplateInput = {
   referenceId?: string
 }
 
+export type EmailSendResult = {
+  ok: boolean
+  provider: EmailProvider
+  status: 'pending' | 'sent' | 'failed'
+  error?: string
+}
+
 const defaultSettings: EmailSettings = {
   enabled: false,
   provider: 'mock',
@@ -55,14 +64,41 @@ function renderTemplate(text: string, variables: Record<string, string | null | 
   })
 }
 
+function createServiceClient() {
+  const serviceRoleKey = String(process.env.SUPABASE_SERVICE_ROLE_KEY || '').trim()
+  if (!serviceRoleKey) return null
+  const { url } = getSafeSupabasePublicConfig()
+  return createSupabaseClient(url, serviceRoleKey, {
+    auth: {
+      persistSession: false,
+      autoRefreshToken: false
+    }
+  })
+}
+
 async function getEmailSettings(supabase: SupabaseClient): Promise<EmailSettings> {
-  const { data, error } = await supabase
+  const settingsClient = createServiceClient() || supabase
+  const { data, error } = await settingsClient
     .from('email_settings')
     .select('enabled,provider,from_name,from_email,admin_email,gas_webhook_url,resend_from_email')
     .eq('id', 1)
     .maybeSingle()
 
-  if (error || !data) return defaultSettings
+  if (!error && data) return normalizeEmailSettings(data)
+
+  if (error) throw new Error(`email_settings read failed: ${error.message}`)
+  return defaultSettings
+}
+
+function normalizeEmailSettings(data: {
+  enabled: unknown
+  provider: unknown
+  from_name: unknown
+  from_email: unknown
+  admin_email: unknown
+  gas_webhook_url: unknown
+  resend_from_email: unknown
+}): EmailSettings {
   const provider = String(data.provider || 'mock')
   return {
     enabled: Boolean(data.enabled),
@@ -76,7 +112,8 @@ async function getEmailSettings(supabase: SupabaseClient): Promise<EmailSettings
 }
 
 async function getEmailTemplate(supabase: SupabaseClient, templateKey: string): Promise<EmailTemplate | null> {
-  const { data, error } = await supabase
+  const templateClient = createServiceClient() || supabase
+  const { data, error } = await templateClient
     .from('email_templates')
     .select('template_key,subject,body,enabled')
     .eq('template_key', templateKey)
@@ -225,8 +262,16 @@ async function sendViaBrevoSmtp(settings: EmailSettings, input: EmailInput) {
   })
 }
 
-export async function sendEmail(supabase: SupabaseClient, input: EmailInput) {
-  const settings = await getEmailSettings(supabase)
+export async function sendEmail(supabase: SupabaseClient, input: EmailInput): Promise<EmailSendResult> {
+  let settings: EmailSettings
+  try {
+    settings = await getEmailSettings(supabase)
+  } catch (error) {
+    const message = error instanceof Error ? error.message : 'unknown email settings error'
+    console.error('email settings read failed', message)
+    return { ok: false, provider: 'mock', status: 'failed', error: message }
+  }
+
   const { data: logRow, error: logError } = await supabase
     .from('email_logs')
     .insert({
@@ -245,14 +290,20 @@ export async function sendEmail(supabase: SupabaseClient, input: EmailInput) {
 
   if (logError) {
     console.error('email log insert failed', logError.message)
-    return
+    return { ok: false, provider: settings.provider, status: 'failed', error: logError.message }
   }
 
-  if (!settings.enabled || settings.provider === 'mock') return
+  if (!settings.enabled || settings.provider === 'mock') {
+    return { ok: true, provider: settings.provider, status: 'pending' }
+  }
   const shouldSendPendingAdmin = input.templateKey === 'forum_post_pending_admin'
   const shouldSendTestEmail = input.templateKey === 'test_email'
-  if ((settings.provider === 'resend' || settings.provider === 'brevo') && !shouldSendPendingAdmin) return
-  if (settings.provider === 'brevo_smtp' && !shouldSendPendingAdmin && !shouldSendTestEmail) return
+  if ((settings.provider === 'resend' || settings.provider === 'brevo') && !shouldSendPendingAdmin) {
+    return { ok: true, provider: settings.provider, status: 'pending' }
+  }
+  if (settings.provider === 'brevo_smtp' && !shouldSendPendingAdmin && !shouldSendTestEmail) {
+    return { ok: true, provider: settings.provider, status: 'pending' }
+  }
 
   try {
     if (settings.provider === 'gmail_gas') await sendViaGmailGas(settings, input)
@@ -265,12 +316,14 @@ export async function sendEmail(supabase: SupabaseClient, input: EmailInput) {
       .from('email_logs')
       .update({ status: 'sent', sent_at: new Date().toISOString(), error_message: null })
       .eq('id', logRow?.id)
+    return { ok: true, provider: settings.provider, status: 'sent' }
   } catch (error) {
     const message = error instanceof Error ? error.message : 'unknown email error'
     await supabase
       .from('email_logs')
       .update({ status: 'failed', error_message: message })
       .eq('id', logRow?.id)
+    return { ok: false, provider: settings.provider, status: 'failed', error: message }
   }
 }
 

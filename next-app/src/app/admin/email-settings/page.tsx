@@ -45,7 +45,7 @@ async function sendTestEmail(formData: FormData) {
   const supabase = createClient(cookieStore)
   const to = String(formData.get('to_email') || '').trim() || admin.email
 
-  await sendEmail(supabase, {
+  const result = await sendEmail(supabase, {
     to,
     subject: '测试邮件：邮件系统',
     body: [
@@ -62,12 +62,14 @@ async function sendTestEmail(formData: FormData) {
 
   revalidatePath('/admin/email-logs')
   revalidatePath('/admin/email-settings')
+  const message = result.error || `${result.provider} / ${result.status}`
+  redirect(`/admin/email-settings?test=${result.status}&provider=${result.provider}&message=${encodeURIComponent(message)}`)
 }
 
 export default async function AdminEmailSettingsPage({
   searchParams
 }: {
-  searchParams?: Promise<{ saved?: string; error?: string }>
+  searchParams?: Promise<{ saved?: string; error?: string; test?: string; provider?: string; message?: string }>
 }) {
   try {
     await requireAdmin()
@@ -115,6 +117,16 @@ export default async function AdminEmailSettingsPage({
           <h2>保存失败</h2>
           <p className="small">{params.error}</p>
           <p className="small">如果错误包含 provider check constraint，请确认数据库已允许当前 provider 值。</p>
+        </section>
+      ) : null}
+
+      {params?.test ? (
+        <section className="card">
+          <h2>测试邮件结果</h2>
+          <p className={params.test === 'sent' ? 'forumNotice' : 'small'}>
+            Provider：{params.provider || '-'}；状态：{params.test}
+          </p>
+          {params.message ? <p className="small">{params.message}</p> : null}
         </section>
       ) : null}
 
