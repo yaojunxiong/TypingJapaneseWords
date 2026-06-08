@@ -3,6 +3,7 @@ import { revalidatePath } from 'next/cache'
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import { requireAdmin } from '@/lib/admin-auth'
+import EmailTestSubmitButton from '@/components/admin/email-test-submit-button'
 import { sendEmail } from '@/lib/email-service'
 import { createClient } from '@/utils/supabase/server'
 
@@ -40,30 +41,45 @@ async function saveEmailSettings(formData: FormData) {
 async function sendTestEmail(formData: FormData) {
   'use server'
 
-  const admin = await requireAdmin()
-  const cookieStore = await cookies()
-  const supabase = createClient(cookieStore)
-  const to = String(formData.get('to_email') || '').trim() || admin.email
+  try {
+    const admin = await requireAdmin()
+    const cookieStore = await cookies()
+    const supabase = createClient(cookieStore)
+    const to = String(formData.get('to_email') || '').trim() || admin.email
 
-  const result = await sendEmail(supabase, {
-    to,
-    subject: '测试邮件：邮件系统',
-    body: [
-      '这是一封测试邮件记录。',
-      '',
-      'mock provider 只写入 email_logs；mailtrap_sandbox 会发送到 Mailtrap Sandbox Inbox；gmail_gas 会通过 GAS Webhook 真实发送；resend/brevo/brevo_smtp 当前仅真实发送论坛待审管理员通知。',
-      `触发管理员：${admin.email}`,
-      `生成时间：${new Date().toLocaleString('zh-CN')}`
-    ].join('\n'),
-    templateKey: 'test_email',
-    workflowType: 'email_system_test',
-    referenceType: 'email_settings'
-  })
+    const result = await sendEmail(supabase, {
+      to,
+      subject: '测试邮件：邮件系统',
+      body: [
+        '这是一封测试邮件记录。',
+        '',
+        'mock provider 只写入 email_logs；mailtrap_sandbox 会发送到 Mailtrap Sandbox Inbox；gmail_gas 会通过 GAS Webhook 真实发送；resend/brevo/brevo_smtp 当前仅真实发送论坛待审管理员通知。',
+        `触发管理员：${admin.email}`,
+        `生成时间：${new Date().toLocaleString('zh-CN')}`
+      ].join('\n'),
+      templateKey: 'test_email',
+      workflowType: 'email_system_test',
+      referenceType: 'email_settings'
+    })
 
-  revalidatePath('/admin/email-logs')
-  revalidatePath('/admin/email-settings')
-  const message = result.error || `${result.provider} / ${result.status}`
-  redirect(`/admin/email-settings?test=${result.status}&provider=${result.provider}&message=${encodeURIComponent(message)}`)
+    revalidatePath('/admin/email-logs')
+    revalidatePath('/admin/email-settings')
+
+    let message = result.error || `${result.provider} / ${result.status}`
+    if (result.status === 'sent') {
+      message = '测试邮件已发送，请查看邮箱和邮件日志'
+    } else if (result.status === 'failed') {
+      message = result.error || '测试邮件发送失败，请检查 provider 配置和邮件日志'
+    } else if (result.status === 'pending') {
+      message = '测试邮件请求已记录，请到邮件日志确认执行结果'
+    }
+
+    redirect(`/admin/email-settings?test=${result.status}&provider=${result.provider}&message=${encodeURIComponent(message)}`)
+  } catch (error) {
+    revalidatePath('/admin/email-settings')
+    const message = error instanceof Error ? error.message : '测试邮件发送失败'
+    redirect(`/admin/email-settings?test=failed&provider=unknown&message=${encodeURIComponent(message)}`)
+  }
 }
 
 export default async function AdminEmailSettingsPage({
@@ -123,10 +139,25 @@ export default async function AdminEmailSettingsPage({
       {params?.test ? (
         <section className="card">
           <h2>测试邮件结果</h2>
-          <p className={params.test === 'sent' ? 'forumNotice' : 'small'}>
-            Provider：{params.provider || '-'}；状态：{params.test}
-          </p>
-          {params.message ? <p className="small">{params.message}</p> : null}
+          {params.test === 'sent' ? (
+            <p className="forumNotice">测试邮件已发送，请查看邮箱和邮件日志。</p>
+          ) : null}
+          {params.test === 'failed' ? (
+            <p className="small" style={{ color: '#b91c1c', fontWeight: 700 }}>测试邮件发送失败。</p>
+          ) : null}
+          {params.test === 'pending' ? (
+            <p className="small" style={{ color: '#92400e', fontWeight: 700 }}>测试邮件请求已提交，当前 provider 暂未同步返回 sent。</p>
+          ) : null}
+          <p className="small">Provider：{params.provider || '-'}；状态：{params.test}</p>
+          {params.message ? (
+            <p
+              className="small"
+              style={params.test === 'failed' ? { color: '#991b1b', fontWeight: 600 } : undefined}
+            >
+              {params.message}
+            </p>
+          ) : null}
+          <p className="small"><Link href="/admin/email-logs">查看邮件日志</Link></p>
         </section>
       ) : null}
 
@@ -189,7 +220,7 @@ export default async function AdminEmailSettingsPage({
           <span>测试收件人</span>
           <input name="to_email" type="email" defaultValue={adminEmail} placeholder="默认使用当前管理员邮箱" />
         </label>
-        <button className="btn" type="submit">发送测试邮件</button>
+        <EmailTestSubmitButton />
         <p className="small"><Link href="/admin/email-logs">查看邮件日志</Link></p>
       </form>
     </>
