@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>大家的日本语 AI 视频重制项目现状梳理</title>
+  <style>
+    :root {
+      --bg: #f5f8ff;
+      --card: #ffffff;
+      --ink: #1e293b;
+      --muted: #64748b;
+      --blue: #2563eb;
+      --cyan: #06b6d4;
+      --green: #16a34a;
+      --orange: #f97316;
+      --red: #ef4444;
+      --line: #dbeafe;
+      --soft-blue: #eff6ff;
+      --soft-green: #ecfdf5;
+      --soft-orange: #fff7ed;
+      --soft-red: #fef2f2;
+      --shadow: 0 18px 45px rgba(37, 99, 235, .12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, .16), transparent 34%),
+        linear-gradient(180deg, #f8fbff 0%, var(--bg) 100%);
+      line-height: 1.72;
+    }
+
+    .wrap {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 34px 0 80px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
+      color: white;
+      border-radius: 28px;
+      padding: 34px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -80px;
+      width: 260px;
+      height: 260px;
+      background: rgba(255,255,255,.16);
+      border-radius: 50%;
+    }
+
+    h1, h2, h3 { line-height: 1.25; margin: 0 0 14px; }
+    h1 { font-size: clamp(28px, 5vw, 48px); letter-spacing: -0.04em; }
+    h2 { font-size: clamp(22px, 3vw, 30px); margin-top: 8px; }
+    h3 { font-size: 20px; }
+
+    .hero p { max-width: 830px; font-size: 18px; opacity: .95; margin: 0 0 18px; }
+
+    .badges { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.18);
+      border: 1px solid rgba(255,255,255,.25);
+      font-size: 14px;
+      font-weight: 700;
+      backdrop-filter: blur(8px);
+    }
+
+    .grid { display: grid; gap: 18px; }
+    .grid.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+    .section { margin-top: 24px; }
+    .card {
+      background: rgba(255,255,255,.92);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, .06);
+    }
+
+    .kpi {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      min-height: 128px;
+    }
+    .kpi strong { font-size: 30px; color: var(--blue); line-height: 1; }
+    .kpi span { color: var(--muted); font-size: 14px; }
+
+    .status {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 12px;
+      letter-spacing: .02em;
+    }
+    .done { background: var(--soft-green); color: var(--green); }
+    .doing { background: var(--soft-orange); color: var(--orange); }
+    .todo { background: var(--soft-blue); color: var(--blue); }
+    .risk { background: var(--soft-red); color: var(--red); }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 16px;
+      font-size: 14px;
+    }
+    th, td { padding: 13px 14px; text-align: left; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+    th { background: #eff6ff; color: #1d4ed8; font-size: 13px; }
+    tr:last-child td { border-bottom: none; }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .step {
+      background: #fff;
+      border: 1px solid #bfdbfe;
+      border-radius: 18px;
+      padding: 16px;
+      position: relative;
+      min-height: 120px;
+    }
+    .step b { color: var(--blue); display: block; margin-bottom: 6px; }
+    .step small { color: var(--muted); }
+
+    .callout {
+      border-left: 6px solid var(--blue);
+      background: #eff6ff;
+      padding: 18px 20px;
+      border-radius: 16px;
+      margin: 16px 0 0;
+    }
+
+    .warning {
+      border-left-color: var(--orange);
+      background: #fff7ed;
+    }
+
+    code, pre {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+    code {
+      background: #f1f5f9;
+      padding: 2px 6px;
+      border-radius: 7px;
+      color: #0f172a;
+    }
+    pre {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 18px;
+      border-radius: 18px;
+      overflow: auto;
+      line-height: 1.55;
+      font-size: 13px;
+    }
+
+    ul { margin-top: 8px; padding-left: 22px; }
+    li { margin: 5px 0; }
+
+    .footer {
+      margin-top: 28px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    @media (max-width: 900px) {
+      .grid.cols-2, .grid.cols-3 { grid-template-columns: 1fr; }
+      .flow { grid-template-columns: 1fr; }
+      .hero { padding: 26px 22px; }
+      table { display: block; overflow-x: auto; white-space: nowrap; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <h1>《大家的日本语》AI 视频重制项目现状梳理</h1>
+      <p>当前正确方向已经从“从零生成动画”调整为“复用现有会话视频，做 Video-to-Video 动漫风格重制”。第一目标不是立刻做 50 课流水线，而是先把第 1 课会话视频做出可接受的样板效果。</p>
+      <div class="badges">
+        <span class="badge">🎬 原视频重制优先</span>
+        <span class="badge">🎧 保留原日语音频</span>
+        <span class="badge">🧩 先第1课样板</span>
+        <span class="badge">🤖 后续接 Kling / Seedance / Runway</span>
+        <span class="badge">🧪 先5秒测试</span>
+      </div>
+    </section>
+
+    <section class="section grid cols-3">
+      <div class="card kpi">
+        <strong>V2V</strong>
+        <span>核心路线：原视频 → 动漫风格化 → 保留原音频 → 加学习字幕</span>
+      </div>
+      <div class="card kpi">
+        <strong>第1课</strong>
+        <span>当前样板课：会话视频《第1課 はじめまして》</span>
+      </div>
+      <div class="card kpi">
+        <strong>50课</strong>
+        <span>第1课效果确认后，再抽象为批量重制流水线</span>
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2>一、项目当前已有基础</h2>
+      <table>
+        <thead>
+          <tr><th>模块</th><th>现状</th><th>价值</th><th>状态</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>TypingJapaneseWords GitHub Pages 旧资源</td>
+            <td><code>EveryonesJapanese/index.html</code> 已整理了多课视频入口和 mp4 资源。</td>
+            <td>不用从零准备素材，可以直接复用现成视频做重制。</td>
+            <td><span class="status done">已具备</span></td>
+          </tr>
+          <tr>
+            <td>第1课会话视频</td>
+            <td>可通过 GitHub Pages 原地址访问：<code>大家的日本语第2版-会话_P1_第1課.mp4</code></td>
+            <td>适合作为 AI 动漫化样板视频。</td>
+            <td><span class="status done">已具备</span></td>
+          </tr>
+          <tr>
+            <td>Next.js / Supabase / Vercel 新学习系统</td>
+            <td>已有登录、课程、练习、复习、管理员后台等基础框架。</td>
+            <td>未来用于承载视频、学习进度、错题闭环和后台管理。</td>
+            <td><span class="status doing">建设中</span></td>
+          </tr>
+          <tr>
+            <td>Remotion 方向</td>
+            <td>适合做字幕、片头片尾、进度条、合成包装。</td>
+            <td>不负责生成高级动漫画面，只负责教学视频包装。</td>
+            <td><span class="status todo">待集成</span></td>
+          </tr>
+          <tr>
+            <td>AI 视频模型</td>
+            <td>Kling、Seedance、Runway、Luma、Pika 等可做 Video-to-Video 测试。</td>
+            <td>负责把原视频画面改成动漫短剧风格。</td>
+            <td><span class="status todo">待测试</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section card">
+      <h2>二、关键路线判断</h2>
+      <div class="callout">
+        <strong>现在不要再从零做第1课动画。</strong><br />
+        更正确的路线是：复用原视频的镜头、动作、节奏和音频，只改变视觉风格，再叠加适合学习者的中日字幕、标题、进度条和练习入口。
+      </div>
+      <div class="flow">
+        <div class="step"><b>1. 读取旧资源</b><small>解析 EveryonesJapanese/index.html，生成视频 manifest。</small></div>
+        <div class="step"><b>2. 下载第1课</b><small>保存 conversation.mp4，作为样板源视频。</small></div>
+        <div class="step"><b>3. 提取音频</b><small>保留原日语音频，避免重新配音导致失真。</small></div>
+        <div class="step"><b>4. 切分片段</b><small>按镜头或固定 5 秒切分，先取一段测试。</small></div>
+        <div class="step"><b>5. V2V 动漫化</b><small>用 Kling / Seedance / Runway 测试画风。</small></div>
+        <div class="step"><b>6. 合成包装</b><small>原音频 + 新画面 + 中日字幕 + 学习包装。</small></div>
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2>三、为什么前面“拆组件”方向效果差</h2>
+      <table>
+        <thead>
+          <tr><th>原方案</th><th>问题</th><th>现在调整</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>从课文生成分镜 JSON，再用 Remotion 从零做动画</td>
+            <td>工程量大，角色动作生硬，像 PPT，不像原视频短剧。</td>
+            <td>先用原视频做 Video-to-Video 风格化。</td>
+          </tr>
+          <tr>
+            <td>先做复杂数据库和后台</td>
+            <td>还没确定最终效果，容易把低质量模板批量化。</td>
+            <td>先做第1课效果样板，再抽象数据结构。</td>
+          </tr>
+          <tr>
+            <td>让 Remotion 负责动画主体</td>
+            <td>Remotion 强在合成，不强在电影级动漫生成。</td>
+            <td>AI 视频模型负责画面，Remotion 负责字幕和包装。</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section grid cols-2">
+      <div class="card">
+        <h2>四、下一步最优先</h2>
+        <h3>Import Existing EveryonesJapanese Video Assets V0</h3>
+        <ul>
+          <li>解析 <code>EveryonesJapanese/index.html</code>，生成所有视频资源清单。</li>
+          <li>新增 <code>/admin/video-remake/assets</code>，显示视频资源索引。</li>
+          <li>只下载和分析第 1 课会话视频。</li>
+          <li>提取音频、生成 metadata、切分 clips、生成 remake prompts。</li>
+          <li>新增 <code>/admin/video-remake/lesson-1</code>，可预览原视频和每段 clip。</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>五、第1课验收标准</h2>
+        <ul>
+          <li>打开后台能看到第 1 课原视频。</li>
+          <li>能看到 duration、resolution、fps、codec 等 metadata。</li>
+          <li>能播放切分出来的 5 秒片段。</li>
+          <li>能复制每段 Video-to-Video prompt。</li>
+          <li>先拿 1 个 5 秒片段去 Kling / Seedance / Runway 测试。</li>
+          <li>动漫化后能重新叠回原音频，时长不乱。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2>六、建议的默认动漫化 Prompt</h2>
+      <pre>Transform this video into a clean Japanese anime educational short-drama style.
+Keep the original camera movement, character positions, gestures, timing, and scene composition.
+Do not change dialogue timing.
+Preserve the original story and shot rhythm.
+Change only the visual style.
+Make the characters look like friendly anime language-school students and teachers.
+Use clean line art, soft colors, bright classroom atmosphere, and high-quality TV anime look.</pre>
+      <div class="callout warning">
+        <strong>注意：</strong>不要要求模型重新创作剧情，也不要要求它改变人物站位、动作和对白节奏。第一阶段目标是“原视频不变，只换画风”。
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2>七、给 Codex 的下一步任务摘要</h2>
+      <pre>任务：Import Existing EveryonesJapanese Video Assets V0
+
+目标：
+复用旧项目 EveryonesJapanese/index.html 中已有的视频资源，生成 manifest，并针对第1课会话视频建立重制分析后台。
+
+需要实现：
+1. scripts/import-everyones-japanese-assets.ts
+2. public/videos/everyones-japanese/manifest.json
+3. /admin/video-remake/assets
+4. 下载第1课会话视频到 public/videos/source/everyones-japanese/lesson-1/conversation.mp4
+5. 提取 audio.mp3
+6. 生成 metadata.json
+7. 切分 clips/scene_001.mp4 等
+8. 生成 scenes.json，每个片段带 remakePrompt
+9. /admin/video-remake/lesson-1 预览页
+10. scripts/remake-lesson-1-compose.sh，用于后续拼接 AI 重制片段并覆盖原音频
+
+暂时不要做：
+- 不要接 AI 视频 API
+- 不要做完整 50 课流水线
+- 不要从零生成动画剧情
+- 不要重构课程数据库
+
+完成标准：
+可以在后台看到旧视频资源清单，可以进入第1课重制分析页，可以播放原视频和切分 clips，可以复制 prompt 去外部 AI 工具测试。</pre>
+    </section>
+
+    <section class="section card">
+      <h2>八、阶段规划</h2>
+      <table>
+        <thead>
+          <tr><th>阶段</th><th>目标</th><th>产出</th><th>是否现在做</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Phase 0</td>
+            <td>旧资源导入与第1课分析</td>
+            <td>manifest、metadata、clips、prompt、预览页</td>
+            <td><span class="status done">现在做</span></td>
+          </tr>
+          <tr>
+            <td>Phase 1</td>
+            <td>第1课 5 秒片段 V2V 测试</td>
+            <td>不同模型效果对比：Kling / Seedance / Runway / Luma</td>
+            <td><span class="status doing">紧接着做</span></td>
+          </tr>
+          <tr>
+            <td>Phase 2</td>
+            <td>第1课完整动漫化样板</td>
+            <td>完整第1课 anime remake final mp4</td>
+            <td><span class="status todo">效果确认后做</span></td>
+          </tr>
+          <tr>
+            <td>Phase 3</td>
+            <td>Remotion 学习包装</td>
+            <td>中日字幕、标题、进度条、结尾练习入口</td>
+            <td><span class="status todo">第1课成片后做</span></td>
+          </tr>
+          <tr>
+            <td>Phase 4</td>
+            <td>批量流水线</td>
+            <td>50 课资源批量切分、任务队列、成本控制</td>
+            <td><span class="status risk">暂缓</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section card">
+      <h2>九、最终结论</h2>
+      <div class="callout">
+        <strong>当前最正确的下一步：</strong><br />
+        不再从零做第1课动画，而是先把旧项目现有视频资源导入新后台，针对第1课会话视频做“原视频分析 + 5 秒片段动漫化测试”。第1课效果满意后，再做完整课程流水线。
+      </div>
+    </section>
+
+    <p class="footer">Generated for みんなの日本語 初級 AI互动学习系统 · 2026-06-10</p>
+  </main>
+</body>
+</html>
