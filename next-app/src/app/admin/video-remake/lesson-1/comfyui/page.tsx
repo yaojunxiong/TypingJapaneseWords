@@ -145,12 +145,12 @@ function ResultVideoCard({ video }: { video: ResultVideo }) {
       <code className="code" style={{ display: "block", overflowWrap: "anywhere" }}>
         {video.diskPath}
       </code>
-      <p className="small">页面链接：</p>
-      <code className="code" style={{ display: "block", overflowWrap: "anywhere" }}>
-        {video.publicUrl}
-      </code>
       {video.exists ? (
         <>
+          <p className="small">页面链接：</p>
+          <code className="code" style={{ display: "block", overflowWrap: "anywhere" }}>
+            {video.publicUrl}
+          </code>
           <video
             controls
             src={video.publicUrl}
@@ -164,6 +164,21 @@ function ResultVideoCard({ video }: { video: ResultVideo }) {
         </>
       ) : (
         <div style={{ marginTop: 12, display: "grid", gap: 8 }}>
+          <button
+            disabled
+            type="button"
+            style={{
+              justifySelf: "start",
+              border: "1px solid #cbd5e1",
+              borderRadius: 999,
+              padding: "8px 12px",
+              color: "#64748b",
+              background: "#f1f5f9",
+              cursor: "not-allowed"
+            }}
+          >
+            尚未生成
+          </button>
           {video.missingHint ? <p className="small">{video.missingHint}</p> : null}
           {video.missingCommands.map((command) => (
             <code className="code" key={command}>
@@ -212,6 +227,7 @@ export default function LessonOneComfyUiPage() {
   const checkpointCount = patchReport.checkpointReplacements?.length ?? 0;
   const promptCount = patchReport.promptReplacements?.length ?? 0;
   const imageCount = patchReport.imageReplacements?.length ?? 0;
+  const allResultVideosMissing = !comfyuiTestVideoExists && !remakeClipExists && !finalRemakeExists;
   const resultVideos = [
     resultVideo(
       "ComfyUI 测试动漫片",
@@ -257,6 +273,16 @@ export default function LessonOneComfyUiPage() {
           <RefreshResultStatusButton />
         </div>
       </div>
+
+      {allResultVideosMissing ? (
+        <section className="card">
+          <h2>结果尚未生成</h2>
+          <p>当前三个视频都尚未生成，请先运行：</p>
+          <code className="code">npm run queue:lesson1-comfyui</code>
+          <p>生成完成后运行：</p>
+          <code className="code">npm run pull:lesson1-comfyui-output</code>
+        </section>
+      ) : null}
 
       <section className="card">
         <h2>当前最短验证路径</h2>
@@ -525,6 +551,11 @@ export default function LessonOneComfyUiPage() {
           <code className="code">npm run open:comfyui</code>
         </div>
         <p className="small">浏览器不能可靠直接打开本地 Finder，请在终端运行上面的命令。</p>
+        <p className="small">
+          本地开发如果出现 <code className="code">.next/vendor-chunks/next.js ENOENT</code>，
+          请执行 <code className="code">rm -rf .next</code> 后重新启动{" "}
+          <code className="code">npm run dev</code>。
+        </p>
       </section>
 
       <section className="card">
