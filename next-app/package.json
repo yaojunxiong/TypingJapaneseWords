@@ -13,7 +13,19 @@
     "check:unlock": "npx tsx scripts/check-unlock-access.ts",
     "check:review-items": "npx tsx scripts/check-review-items.ts",
     "test:e2e": "playwright test",
-    "test:e2e:ui": "playwright test --ui"
+    "test:e2e:ui": "playwright test --ui",
+    "prepare:lesson1-comfyui": "tsx scripts/prepare-comfyui-lesson-1.ts",
+    "prepare:lesson1-comfyui-run": "tsx scripts/prepare-comfyui-run-lesson-1.ts",
+    "patch:lesson1-comfyui-workflow": "tsx scripts/patch-comfyui-workflow-lesson-1.ts",
+    "export:lesson1-comfyui-api": "tsx scripts/export-comfyui-api-workflow-lesson-1.ts",
+    "queue:lesson1-comfyui": "tsx scripts/queue-comfyui-lesson-1.ts",
+    "pull:lesson1-comfyui-output": "tsx scripts/pull-comfyui-output-lesson-1.ts",
+    "open:lesson1-comfyui-inputs": "open public/videos/source/everyones-japanese/lesson-1/comfyui-inputs",
+    "open:lesson1-comfyui-patched": "open public/videos/source/everyones-japanese/lesson-1/comfyui-inputs",
+    "open:comfyui-ltx-workflow": "open /Users/jimmy/ComfyUI/venv/lib/python3.11/site-packages/comfyui_workflow_templates_media_video/templates",
+    "open:comfyui-input": "open /Users/jimmy/ComfyUI/input",
+    "open:comfyui-output": "open /Users/jimmy/ComfyUI/output",
+    "open:comfyui": "open http://127.0.0.1:8188"
   },
   "dependencies": {
     "@supabase/ssr": "^0.5.2",
@@ -22,7 +34,8 @@
     "next": "^15.5.18",
     "nodemailer": "^8.0.10",
     "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react-dom": "19.1.0",
+    "ffmpeg-static": "^5.2.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.55.0",
@@ -33,6 +46,7 @@
     "@types/react-dom": "^19.1.5",
     "eslint": "^9.27.0",
     "eslint-config-next": "^15.5.18",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "tsx": "^4.19.4"
   }
 }

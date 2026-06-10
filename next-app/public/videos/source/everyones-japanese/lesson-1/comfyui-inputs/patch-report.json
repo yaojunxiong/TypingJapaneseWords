@@ -1,0 +1,31 @@
+{
+  "detectedFormat": "ui",
+  "checkpointReplacements": [
+    {
+      "path": "nodes[8].widgets_values[0]",
+      "before": "ltx-video-2b-v0.9.5.safetensors",
+      "after": "ltx-video-2b-v0.9.5.safetensors"
+    }
+  ],
+  "promptReplacements": [
+    {
+      "path": "nodes[3].widgets_values[0]",
+      "before": "low quality, worst quality, deformed, distorted, disfigured, motion smear, motion artifacts, fused fingers, bad anatomy, weird hand, ugly",
+      "after": "text, watermark, logo, blurry, low quality, distorted face, extra people"
+    },
+    {
+      "path": "nodes[11].widgets_values[0]",
+      "before": "A red fox moving gracefully, its russet coat vibrant against the white landscape, leaving perfect star-shaped prints behind as steam rises from its breath in the crisp winter air. The scene is wrapped in snow-muffled silence, broken only by the gentle murmur of water still flowing beneath the ice.",
+      "after": "Transform the source image into a clean Japanese anime educational conversation style. Keep the original character positions, camera framing, and classroom atmosphere. Use friendly language-school students and teachers, clean line art, soft colors, natural facial expressions, and a high-quality TV anime look. Do not add new characters. Do not change the lesson content."
+    }
+  ],
+  "imageReplacements": [
+    {
+      "path": "nodes[12].widgets_values[0]",
+      "before": "ltxv_image_to_video_input_image.jpg",
+      "after": "lesson1_middle_frame.png"
+    }
+  ],
+  "warnings": [],
+  "patchedWorkflowPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/comfyui-inputs/lesson1_ltxv_image_to_video_patched.json"
+}
