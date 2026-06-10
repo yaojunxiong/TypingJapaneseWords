@@ -94,6 +94,26 @@ type ResultVideo = {
   openLabel: string;
 };
 
+type SceneComfyStatus = {
+  sceneId: string;
+  clipPublicPath: string;
+  clipDiskPath: string;
+  inputPublicPath: string;
+  inputDiskPath: string;
+  patchedWorkflowDiskPath: string;
+  apiWorkflowDiskPath: string;
+  remakePublicPath: string;
+  remakeDiskPath: string;
+  previewPublicPath: string;
+  previewDiskPath: string;
+  originalExists: boolean;
+  inputExists: boolean;
+  patchedWorkflowExists: boolean;
+  apiWorkflowExists: boolean;
+  remakeExists: boolean;
+  previewExists: boolean;
+};
+
 const frameNames = ["first_frame.png", "middle_frame.png", "later_frame.png"];
 
 function frameInfo(filename: string, metadata: ComfyMetadata) {
@@ -191,6 +211,59 @@ function ResultVideoCard({ video }: { video: ResultVideo }) {
   );
 }
 
+function sceneComfyStatuses(): SceneComfyStatus[] {
+  const clipsDir = publicPathToDisk("/videos/source/everyones-japanese/lesson-1/clips");
+  if (!fs.existsSync(clipsDir)) {
+    return [];
+  }
+
+  return fs
+    .readdirSync(clipsDir)
+    .filter((filename) => /^scene_\d{3}\.mp4$/.test(filename))
+    .sort()
+    .map((filename) => {
+      const sceneId = filename.match(/^scene_(\d{3})\.mp4$/)?.[1] ?? "000";
+      const clipPublicPath = `/videos/source/everyones-japanese/lesson-1/clips/${filename}`;
+      const inputPublicPath = `${LESSON_1_COMFYUI_INPUTS_PATH}/scenes/lesson1_scene_${sceneId}_middle_frame.png`;
+      const remakePublicPath = `/videos/source/everyones-japanese/lesson-1/remake-clips/scene_${sceneId}_remake.mp4`;
+      const previewPublicPath = `/videos/remake/everyones-japanese/lesson-1/scene-previews/scene_${sceneId}_comfyui-test.mp4`;
+      const patchedWorkflowDiskPath = publicPathToDisk(
+        `${LESSON_1_COMFYUI_INPUTS_PATH}/scenes/lesson1_scene_${sceneId}_ltxv_patched.json`
+      );
+      const apiWorkflowDiskPath = publicPathToDisk(
+        `${LESSON_1_COMFYUI_INPUTS_PATH}/scenes/lesson1_scene_${sceneId}_api_workflow.json`
+      );
+      const clipDiskPath = publicPathToDisk(clipPublicPath);
+      const inputDiskPath = publicPathToDisk(inputPublicPath);
+      const remakeDiskPath = publicPathToDisk(remakePublicPath);
+      const previewDiskPath = publicPathToDisk(previewPublicPath);
+
+      return {
+        sceneId,
+        clipPublicPath,
+        clipDiskPath,
+        inputPublicPath,
+        inputDiskPath,
+        patchedWorkflowDiskPath,
+        apiWorkflowDiskPath,
+        remakePublicPath,
+        remakeDiskPath,
+        previewPublicPath,
+        previewDiskPath,
+        originalExists: fs.existsSync(clipDiskPath),
+        inputExists: fs.existsSync(inputDiskPath),
+        patchedWorkflowExists: fs.existsSync(patchedWorkflowDiskPath),
+        apiWorkflowExists: fs.existsSync(apiWorkflowDiskPath),
+        remakeExists: fs.existsSync(remakeDiskPath),
+        previewExists: fs.existsSync(previewDiskPath)
+      };
+    });
+}
+
+function StatusText({ exists, ready = "已生成", missing = "未生成" }: { exists: boolean; ready?: string; missing?: string }) {
+  return <strong style={{ color: exists ? "#047857" : "#b91c1c" }}>{exists ? ready : missing}</strong>;
+}
+
 export default function LessonOneComfyUiPage() {
   const metadataPath = publicPathToDisk(`${LESSON_1_COMFYUI_INPUTS_PATH}/metadata.json`);
   const runInstructionsPath = publicPathToDisk(COMFYUI_RUN_INSTRUCTIONS_PUBLIC_PATH);
@@ -228,6 +301,9 @@ export default function LessonOneComfyUiPage() {
   const promptCount = patchReport.promptReplacements?.length ?? 0;
   const imageCount = patchReport.imageReplacements?.length ?? 0;
   const allResultVideosMissing = !comfyuiTestVideoExists && !remakeClipExists && !finalRemakeExists;
+  const sceneStatuses = sceneComfyStatuses();
+  const remadeSceneCount = sceneStatuses.filter((scene) => scene.remakeExists).length;
+  const preparedSceneCount = sceneStatuses.filter((scene) => scene.inputExists && scene.apiWorkflowExists).length;
   const resultVideos = [
     resultVideo(
       "ComfyUI 测试动漫片",
@@ -353,6 +429,118 @@ export default function LessonOneComfyUiPage() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 14 }}>
           {resultVideos.map((video) => (
             <ResultVideoCard key={video.publicUrl} video={video} />
+          ))}
+        </div>
+      </section>
+
+      <section className="card">
+        <h2>多 scene 自动化</h2>
+        <p className="small">
+          已扫描 {sceneStatuses.length} 个 scene，已准备 {preparedSceneCount} 个 ComfyUI 输入/API workflow，已回填{" "}
+          {remadeSceneCount} 个 remake clip。合成时会优先使用已存在的{" "}
+          <code className="code">scene_xxx_remake.mp4</code>，缺失的 scene 自动回退原片段。
+        </p>
+        <div style={{ display: "grid", gap: 8, margin: "12px 0" }}>
+          <code className="code">npm run prepare:lesson1-comfyui-scenes</code>
+          <code className="code">npm run queue:lesson1-comfyui-scene -- 001</code>
+          <code className="code">npm run pull:lesson1-comfyui-scene -- 001</code>
+          <code className="code">npm run compose:lesson-1-remake</code>
+        </div>
+        {finalRemakeExists ? (
+          <div style={{ marginTop: 14 }}>
+            <h3>final.mp4 预览</h3>
+            <video
+              controls
+              src={LESSON_1_FINAL_REMAKE_PUBLIC_PATH}
+              style={{ width: "100%", borderRadius: 8, background: "#0f172a" }}
+            />
+            <div style={{ marginTop: 12 }}>
+              <a className="pillLink" href={LESSON_1_FINAL_REMAKE_PUBLIC_PATH} target="_blank" rel="noreferrer">
+                打开 final.mp4
+              </a>
+            </div>
+          </div>
+        ) : null}
+        <div style={{ display: "grid", gap: 14, marginTop: 16 }}>
+          {sceneStatuses.map((scene) => (
+            <article key={scene.sceneId} style={{ border: "1px solid #e2e8f0", borderRadius: 8, padding: 14 }}>
+              <div style={{ display: "flex", justifyContent: "space-between", gap: 12, flexWrap: "wrap" }}>
+                <h3 style={{ marginTop: 0 }}>scene_{scene.sceneId}.mp4</h3>
+                <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+                  <span>原片段：<StatusText exists={scene.originalExists} ready="存在" missing="缺失" /></span>
+                  <span>输入图：<StatusText exists={scene.inputExists} /></span>
+                  <span>API workflow：<StatusText exists={scene.apiWorkflowExists} /></span>
+                  <span>remake：<StatusText exists={scene.remakeExists} /></span>
+                </div>
+              </div>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 12 }}>
+                <div>
+                  <p className="small">原片段</p>
+                  {scene.originalExists ? (
+                    <>
+                      <video
+                        controls
+                        src={scene.clipPublicPath}
+                        style={{ width: "100%", borderRadius: 8, background: "#0f172a" }}
+                      />
+                      <a className="pillLink" href={scene.clipPublicPath} target="_blank" rel="noreferrer">
+                        打开原片段
+                      </a>
+                    </>
+                  ) : (
+                    <button disabled type="button">缺失</button>
+                  )}
+                </div>
+                <div>
+                  <p className="small">ComfyUI 输入图</p>
+                  {scene.inputExists ? (
+                    <>
+                      <img
+                        src={scene.inputPublicPath}
+                        alt={`scene ${scene.sceneId} middle frame`}
+                        style={{ width: "100%", aspectRatio: "16 / 9", objectFit: "cover", borderRadius: 8 }}
+                      />
+                      <code className="code" style={{ display: "block", overflowWrap: "anywhere", marginTop: 8 }}>
+                        {scene.inputPublicPath}
+                      </code>
+                    </>
+                  ) : (
+                    <code className="code">npm run prepare:lesson1-comfyui-scenes</code>
+                  )}
+                </div>
+                <div>
+                  <p className="small">remake 片段</p>
+                  {scene.remakeExists ? (
+                    <>
+                      <video
+                        controls
+                        src={scene.remakePublicPath}
+                        style={{ width: "100%", borderRadius: 8, background: "#0f172a" }}
+                      />
+                      <a className="pillLink" href={scene.remakePublicPath} target="_blank" rel="noreferrer">
+                        打开 scene_{scene.sceneId}_remake.mp4
+                      </a>
+                    </>
+                  ) : (
+                    <div style={{ display: "grid", gap: 8 }}>
+                      <button disabled type="button">尚未生成</button>
+                      <code className="code">npm run queue:lesson1-comfyui-scene -- {scene.sceneId}</code>
+                      <code className="code">npm run pull:lesson1-comfyui-scene -- {scene.sceneId}</code>
+                    </div>
+                  )}
+                </div>
+              </div>
+              <details style={{ marginTop: 12 }}>
+                <summary>路径与 workflow</summary>
+                <div style={{ display: "grid", gap: 8, marginTop: 10 }}>
+                  <code className="code" style={{ overflowWrap: "anywhere" }}>{scene.clipDiskPath}</code>
+                  <code className="code" style={{ overflowWrap: "anywhere" }}>{scene.inputDiskPath}</code>
+                  <code className="code" style={{ overflowWrap: "anywhere" }}>{scene.patchedWorkflowDiskPath}</code>
+                  <code className="code" style={{ overflowWrap: "anywhere" }}>{scene.apiWorkflowDiskPath}</code>
+                  <code className="code" style={{ overflowWrap: "anywhere" }}>{scene.remakeDiskPath}</code>
+                </div>
+              </details>
+            </article>
           ))}
         </div>
       </section>

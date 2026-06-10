@@ -27,7 +27,10 @@
     "open:comfyui-output": "open /Users/jimmy/ComfyUI/output",
     "open:comfyui": "open http://127.0.0.1:8188",
     "fix:lesson1-comfyui-output": "tsx scripts/fix-comfyui-output-lesson-1.ts",
-    "compose:lesson-1-remake": "tsx scripts/compose-lesson-1-remake.ts"
+    "compose:lesson-1-remake": "tsx scripts/compose-lesson-1-remake.ts",
+    "prepare:lesson1-comfyui-scenes": "tsx scripts/prepare-comfyui-scenes-lesson-1.ts",
+    "queue:lesson1-comfyui-scene": "tsx scripts/queue-comfyui-scene-lesson-1.ts",
+    "pull:lesson1-comfyui-scene": "tsx scripts/pull-comfyui-scene-lesson-1.ts"
   },
   "dependencies": {
     "@supabase/ssr": "^0.5.2",
