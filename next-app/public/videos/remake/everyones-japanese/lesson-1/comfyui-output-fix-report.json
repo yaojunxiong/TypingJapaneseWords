@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-06-10T05:04:52.377Z",
+  "strategy": "center-crop to source scene aspect, then scale to source scene resolution",
+  "referenceScenePath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/clips/scene_001.mp4",
+  "targetResolution": {
+    "width": 1920,
+    "height": 1080
+  },
+  "fixedFiles": [
+    {
+      "label": "ComfyUI test preview",
+      "path": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/remake/everyones-japanese/lesson-1/comfyui-test.mp4",
+      "before": {
+        "width": 768,
+        "height": 512,
+        "duration": 4.041667
+      },
+      "after": {
+        "width": 1920,
+        "height": 1080,
+        "duration": 4.033333
+      }
+    },
+    {
+      "label": "scene_001 remake clip",
+      "path": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/remake-clips/scene_001_remake.mp4",
+      "before": {
+        "width": 768,
+        "height": 512,
+        "duration": 4.041667
+      },
+      "after": {
+        "width": 1920,
+        "height": 1080,
+        "duration": 4.033333
+      }
+    }
+  ]
+}

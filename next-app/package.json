@@ -25,7 +25,9 @@
     "open:comfyui-ltx-workflow": "open /Users/jimmy/ComfyUI/venv/lib/python3.11/site-packages/comfyui_workflow_templates_media_video/templates",
     "open:comfyui-input": "open /Users/jimmy/ComfyUI/input",
     "open:comfyui-output": "open /Users/jimmy/ComfyUI/output",
-    "open:comfyui": "open http://127.0.0.1:8188"
+    "open:comfyui": "open http://127.0.0.1:8188",
+    "fix:lesson1-comfyui-output": "tsx scripts/fix-comfyui-output-lesson-1.ts",
+    "compose:lesson-1-remake": "tsx scripts/compose-lesson-1-remake.ts"
   },
   "dependencies": {
     "@supabase/ssr": "^0.5.2",

@@ -285,6 +285,41 @@ export default function LessonOneComfyUiPage() {
       ) : null}
 
       <section className="card">
+        <h2>当前测试片预览说明</h2>
+        <div style={{ display: "grid", gap: 8 }}>
+          <p>
+            comfyui-test.mp4：{" "}
+            <strong style={{ color: comfyuiTestVideoExists ? "#047857" : "#b91c1c" }}>
+              {comfyuiTestVideoExists ? "已生成" : "尚未生成"}
+            </strong>
+          </p>
+          <p>
+            scene_001_remake.mp4：{" "}
+            <strong style={{ color: remakeClipExists ? "#047857" : "#b91c1c" }}>
+              {remakeClipExists ? "已生成" : "尚未生成"}
+            </strong>
+          </p>
+          <p>
+            final.mp4：{" "}
+            <strong style={{ color: finalRemakeExists ? "#047857" : "#b91c1c" }}>
+              {finalRemakeExists ? "已生成" : "尚未生成"}
+            </strong>
+          </p>
+          {comfyuiTestVideoExists && remakeClipExists && !finalRemakeExists ? (
+            <p>
+              下一步建议运行 <code className="code">npm run compose:lesson-1-remake</code>。
+            </p>
+          ) : null}
+          {comfyuiTestVideoExists && remakeClipExists ? (
+            <p className="small">
+              如果画面有黑边，先运行 <code className="code">npm run fix:lesson1-comfyui-output</code>，
+              再运行 <code className="code">npm run compose:lesson-1-remake</code>。
+            </p>
+          ) : null}
+        </div>
+      </section>
+
+      <section className="card">
         <h2>当前最短验证路径</h2>
         {!comfyuiTestVideoExists ? (
           <ol style={{ lineHeight: 1.8 }}>
