@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import Link from "next/link";
 import { CopyPromptButton } from "@/components/copy-prompt-button";
+import { RefreshResultStatusButton } from "@/components/refresh-result-status-button";
 import {
   COMFYUI_API_WORKFLOW_PUBLIC_PATH,
   COMFYUI_API_EXPORT_REPORT_PUBLIC_PATH,
@@ -81,6 +82,18 @@ type OutputMetadata = {
   fileSize?: number;
 };
 
+type ResultVideo = {
+  title: string;
+  diskPath: string;
+  publicUrl: string;
+  exists: boolean;
+  presentLabel: string;
+  missingLabel: string;
+  missingCommands: string[];
+  missingHint?: string;
+  openLabel: string;
+};
+
 const frameNames = ["first_frame.png", "middle_frame.png", "later_frame.png"];
 
 function frameInfo(filename: string, metadata: ComfyMetadata) {
@@ -94,6 +107,73 @@ function frameInfo(filename: string, metadata: ComfyMetadata) {
     exists: fs.existsSync(publicPathToDisk(relativePath)),
     isRecommended: filename === "middle_frame.png"
   };
+}
+
+function resultVideo(
+  title: string,
+  publicUrl: string,
+  presentLabel: string,
+  missingLabel: string,
+  missingCommands: string[],
+  openLabel: string,
+  missingHint?: string
+): ResultVideo {
+  const diskPath = publicPathToDisk(publicUrl);
+  return {
+    title,
+    diskPath,
+    publicUrl,
+    exists: fs.existsSync(diskPath),
+    presentLabel,
+    missingLabel,
+    missingCommands,
+    missingHint,
+    openLabel
+  };
+}
+
+function ResultVideoCard({ video }: { video: ResultVideo }) {
+  return (
+    <article style={{ border: "1px solid #e2e8f0", borderRadius: 8, padding: 14 }}>
+      <div style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "center" }}>
+        <h3 style={{ marginTop: 0 }}>{video.title}</h3>
+        <strong style={{ color: video.exists ? "#047857" : "#b91c1c" }}>
+          {video.exists ? video.presentLabel : video.missingLabel}
+        </strong>
+      </div>
+      <p className="small">文件路径：</p>
+      <code className="code" style={{ display: "block", overflowWrap: "anywhere" }}>
+        {video.diskPath}
+      </code>
+      <p className="small">页面链接：</p>
+      <code className="code" style={{ display: "block", overflowWrap: "anywhere" }}>
+        {video.publicUrl}
+      </code>
+      {video.exists ? (
+        <>
+          <video
+            controls
+            src={video.publicUrl}
+            style={{ width: "100%", marginTop: 12, borderRadius: 8, background: "#0f172a" }}
+          />
+          <div style={{ marginTop: 12 }}>
+            <a className="pillLink" href={video.publicUrl} target="_blank" rel="noreferrer">
+              {video.openLabel}
+            </a>
+          </div>
+        </>
+      ) : (
+        <div style={{ marginTop: 12, display: "grid", gap: 8 }}>
+          {video.missingHint ? <p className="small">{video.missingHint}</p> : null}
+          {video.missingCommands.map((command) => (
+            <code className="code" key={command}>
+              {command}
+            </code>
+          ))}
+        </div>
+      )}
+    </article>
+  );
 }
 
 export default function LessonOneComfyUiPage() {
@@ -132,6 +212,33 @@ export default function LessonOneComfyUiPage() {
   const checkpointCount = patchReport.checkpointReplacements?.length ?? 0;
   const promptCount = patchReport.promptReplacements?.length ?? 0;
   const imageCount = patchReport.imageReplacements?.length ?? 0;
+  const resultVideos = [
+    resultVideo(
+      "ComfyUI 测试动漫片",
+      LESSON_1_COMFYUI_TEST_PUBLIC_PATH,
+      "已生成",
+      "尚未生成",
+      ["npm run queue:lesson1-comfyui", "npm run pull:lesson1-comfyui-output"],
+      "打开动漫测试片"
+    ),
+    resultVideo(
+      "Scene 001 重绘片段",
+      LESSON_1_REMAKE_CLIP_PUBLIC_PATH,
+      "已生成",
+      "尚未生成",
+      ["npm run pull:lesson1-comfyui-output"],
+      "打开 scene_001_remake.mp4"
+    ),
+    resultVideo(
+      "Lesson 1 Final 合成结果",
+      LESSON_1_FINAL_REMAKE_PUBLIC_PATH,
+      "已生成",
+      "尚未合成",
+      remakeClipExists ? ["npm run compose:lesson-1-remake"] : [],
+      "打开 final.mp4",
+      remakeClipExists ? undefined : "请先生成或拉取 ComfyUI 输出，再合成 final.mp4。"
+    )
+  ];
 
   return (
     <main>
@@ -147,8 +254,47 @@ export default function LessonOneComfyUiPage() {
           <a className="pillLink" href={COMFYUI_URL} target="_blank" rel="noreferrer">
             打开 ComfyUI
           </a>
+          <RefreshResultStatusButton />
         </div>
       </div>
+
+      <section className="card">
+        <h2>当前最短验证路径</h2>
+        {!comfyuiTestVideoExists ? (
+          <ol style={{ lineHeight: 1.8 }}>
+            <li>
+              确认 ComfyUI 已启动：<code className="code">{COMFYUI_URL}</code>
+            </li>
+            <li>
+              运行 <code className="code">npm run queue:lesson1-comfyui</code>
+            </li>
+            <li>等生成完成</li>
+            <li>
+              运行 <code className="code">npm run pull:lesson1-comfyui-output</code>
+            </li>
+            <li>回到本页点击“打开动漫测试片”</li>
+          </ol>
+        ) : !finalRemakeExists ? (
+          <ol style={{ lineHeight: 1.8 }}>
+            <li>点击“打开动漫测试片”确认效果</li>
+            <li>
+              满意后运行 <code className="code">npm run compose:lesson-1-remake</code>
+            </li>
+            <li>回到本页点击“打开 final.mp4”</li>
+          </ol>
+        ) : (
+          <p>Lesson 1 动漫片合成结果已生成，可以直接点击 final.mp4 验证。</p>
+        )}
+      </section>
+
+      <section className="card">
+        <h2>动漫片结果验证</h2>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 14 }}>
+          {resultVideos.map((video) => (
+            <ResultVideoCard key={video.publicUrl} video={video} />
+          ))}
+        </div>
+      </section>
 
       <section className="card">
         <h2>半自动运行准备</h2>

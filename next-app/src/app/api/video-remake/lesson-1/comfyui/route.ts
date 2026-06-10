@@ -27,6 +27,28 @@ import {
 
 const frameFiles = ["first_frame.png", "middle_frame.png", "later_frame.png"];
 
+function videoStatus(publicUrl: string) {
+  const diskPath = publicPathToDisk(publicUrl);
+  if (!fs.existsSync(diskPath)) {
+    return {
+      exists: false,
+      publicUrl,
+      diskPath,
+      fileSize: null,
+      modifiedAt: null
+    };
+  }
+
+  const stat = fs.statSync(diskPath);
+  return {
+    exists: true,
+    publicUrl,
+    diskPath,
+    fileSize: stat.size,
+    modifiedAt: stat.mtime.toISOString()
+  };
+}
+
 export async function GET() {
   const sourceVideoDiskPath = publicPathToDisk(LESSON_1_SOURCE_VIDEO_PATH);
   const inputFolderDiskPath = publicPathToDisk(LESSON_1_COMFYUI_INPUTS_PATH);
@@ -73,6 +95,11 @@ export async function GET() {
     queueResultPath: publicPathToDisk(COMFYUI_QUEUE_RESULT_PUBLIC_PATH),
     queueResultPublicPath: COMFYUI_QUEUE_RESULT_PUBLIC_PATH,
     queueResultExists: fs.existsSync(publicPathToDisk(COMFYUI_QUEUE_RESULT_PUBLIC_PATH)),
+    resultVideos: {
+      comfyuiTest: videoStatus(LESSON_1_COMFYUI_TEST_PUBLIC_PATH),
+      scene001Remake: videoStatus(LESSON_1_REMAKE_CLIP_PUBLIC_PATH),
+      final: videoStatus(LESSON_1_FINAL_REMAKE_PUBLIC_PATH)
+    },
     comfyuiTestVideo: LESSON_1_COMFYUI_TEST_PUBLIC_PATH,
     comfyuiTestVideoExists: fs.existsSync(publicPathToDisk(LESSON_1_COMFYUI_TEST_PUBLIC_PATH)),
     remakeClipPath: publicPathToDisk(LESSON_1_REMAKE_CLIP_PUBLIC_PATH),
