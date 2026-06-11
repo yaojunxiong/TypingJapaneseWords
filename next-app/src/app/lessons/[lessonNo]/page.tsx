@@ -122,6 +122,10 @@ export default async function LessonDetailPage({
         <Link className="homeNode" href={`/lessons/${no}/practice?stage=examples`}>🪙<small>{tr(lang, '例句', 'Examples')}</small></Link>
         <Link className="homeNode" href={`/lessons/${no}/practice?stage=quiz`}>🏅<small>{tr(lang, '测验', 'Quiz')}</small></Link>
         <Link className="homeNode" href={`/lessons/${no}/practice?stage=conversation`}>🔤<small>{tr(lang, '会话', 'Conversation')}</small></Link>
+        <Link className="homeNode" href={`/lessons/${no}/practice?stage=conversation_vocab`}>📖<small>{tr(lang, '会话关键词汇', 'Conv Vocab')}</small></Link>
+        <Link className="homeNode" href={`/lessons/${no}/practice?stage=conversation_grammar`}>🔷<small>{tr(lang, '会话核心语法', 'Conv Grammar')}</small></Link>
+        <Link className="homeNode" href={`/lessons/${no}/practice?stage=conversation_examples`}>💬<small>{tr(lang, '会话替换例句', 'Conv Examples')}</small></Link>
+        <Link className="homeNode" href={`/lessons/${no}/practice?stage=conversation_quiz`}>🏆<small>{tr(lang, '会话专项测试', 'Conv Quiz')}</small></Link>
       </section>
 
       {lesson?.conversationVideo ? (
@@ -167,7 +171,7 @@ export default async function LessonDetailPage({
             {items.map((item, itemIdx) => (
               <article key={`${item.id || 'item'}-${itemIdx}`} className="favCard2" style={{ marginBottom: 10 }}>
                 {item.pattern ? <span>{item.pattern}</span> : null}
-                <b>{item.jp || pick(item.title, lang) || tr(lang, '内容', 'Content')}</b>
+                <b>{(item as Record<string, string>).word || item.jp || pick(item.title, lang) || tr(lang, '内容', 'Content')}</b>
                 {item.kana ? <small>{item.kana}</small> : null}
                 {item.zh || item.en ? <p>{lang === 'en' ? (item.en || item.zh) : (item.zh || item.en)}</p> : null}
                 {pick(item.explanation, lang) ? <p className="small">{pick(item.explanation, lang)}</p> : null}

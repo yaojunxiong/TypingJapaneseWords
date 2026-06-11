@@ -34,7 +34,7 @@ type MistakeItem = {
 type Props = {
   lessonNo: number
   lang: Lang
-  stage: 'vocab' | 'grammar' | 'examples' | 'quiz' | 'review'
+  stage: 'vocab' | 'grammar' | 'examples' | 'quiz' | 'review' | 'conversation_vocab' | 'conversation_grammar' | 'conversation_examples' | 'conversation_quiz'
   questions: PracticeQuestion[]
 }
 

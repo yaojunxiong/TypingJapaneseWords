@@ -3,6 +3,10 @@ import path from 'node:path'
 import MinnaNav from '@/components/minna-nav'
 import LessonPracticeClient from '@/components/lesson-practice-client'
 import LessonConversationClient from '@/components/lesson-conversation-client'
+import LessonConversationVocabClient from '@/components/lesson-conversation-vocab-client'
+import LessonConversationGrammarClient from '@/components/lesson-conversation-grammar-client'
+import LessonConversationExamplesClient from '@/components/lesson-conversation-examples-client'
+import LessonConversationQuizClient from '@/components/lesson-conversation-quiz-client'
 import { getLang, type Lang } from '@/lib/i18n'
 
 type LangText = { zh?: string; en?: string; ja?: string; jp?: string }
@@ -56,11 +60,103 @@ export default async function LessonPracticePage({
   const { stage } = await searchParams
   const no = Math.max(1, Math.min(50, Number(lessonNo) || 1))
   const lang = await getLang()
-  const s = ['vocab', 'grammar', 'examples', 'quiz', 'review', 'conversation'].includes(String(stage || ''))
-    ? String(stage) as 'vocab' | 'grammar' | 'examples' | 'quiz' | 'review' | 'conversation'
+  const s = ['vocab', 'grammar', 'examples', 'quiz', 'review', 'conversation', 'conversation_vocab', 'conversation_grammar', 'conversation_examples', 'conversation_quiz'].includes(String(stage || ''))
+    ? String(stage) as 'vocab' | 'grammar' | 'examples' | 'quiz' | 'review' | 'conversation' | 'conversation_vocab' | 'conversation_grammar' | 'conversation_examples' | 'conversation_quiz'
     : 'vocab'
   const lesson = await loadLessonDoc(no)
   const sections = Array.isArray(lesson?.sections) ? lesson!.sections! : []
+
+  if (s === 'conversation_vocab') {
+    const convVocabSection = sections.find((x) => String(x.type || '') === 'conversation_vocab')
+    const items = (Array.isArray(convVocabSection?.items) ? convVocabSection!.items! : []).map((item) => ({
+      word: String((item as Record<string, unknown>).word || ''),
+      kana: String(item.kana || ''),
+      zh: String(item.zh || ''),
+      fromConversationId: String((item as Record<string, unknown>).fromConversationId || ''),
+      importance: (String((item as Record<string, unknown>).importance || 'core') === 'core' ? 'core' : 'support') as 'core' | 'support',
+      needsReview: !!(item as Record<string, unknown>).needsReview
+    }))
+
+    return (
+      <main>
+        <MinnaNav active="lessons" />
+        <LessonConversationVocabClient lessonNo={no} lang={lang} items={items} />
+      </main>
+    )
+  }
+
+  if (s === 'conversation_grammar') {
+    const convGrammarSection = sections.find((x) => String(x.type || '') === 'conversation_grammar')
+    const items = (Array.isArray(convGrammarSection?.items) ? convGrammarSection!.items! : []).map((item) => ({
+      pattern: String((item as Record<string, unknown>).pattern || ''),
+      meaningZh: String(((item as Record<string, unknown>).meaning as Record<string, string> | undefined)?.zh || ''),
+      meaningEn: String(((item as Record<string, unknown>).meaning as Record<string, string> | undefined)?.en || ''),
+      conversationExample: String((item as Record<string, unknown>).conversationExample || ''),
+      fromConversationId: String((item as Record<string, unknown>).fromConversationId || ''),
+      explanationZh: String((item as Record<string, unknown>).explanationZh || ''),
+      needsReview: !!(item as Record<string, unknown>).needsReview
+    }))
+
+    return (
+      <main>
+        <MinnaNav active="lessons" />
+        <LessonConversationGrammarClient lessonNo={no} lang={lang} items={items} />
+      </main>
+    )
+  }
+
+  if (s === 'conversation_examples') {
+    const convExamplesSection = sections.find((x) => String(x.type || '') === 'conversation_examples')
+    const items = (Array.isArray(convExamplesSection?.items) ? convExamplesSection!.items! : []).map((item) => {
+      const exArr = (item as Record<string, unknown>).examples
+      return {
+        basedOnId: String((item as Record<string, unknown>).basedOnId || ''),
+        pattern: String((item as Record<string, unknown>).pattern || ''),
+        origin: String((item as Record<string, unknown>).origin || ''),
+        examples: Array.isArray(exArr) ? (exArr as Array<Record<string, string>>).map((ex) => ({
+          jp: String(ex.jp || ''),
+          kana: String(ex.kana || ''),
+          zh: String(ex.zh || '')
+        })) : [],
+        needsReview: !!(item as Record<string, unknown>).needsReview
+      }
+    })
+
+    return (
+      <main>
+        <MinnaNav active="lessons" />
+        <LessonConversationExamplesClient lessonNo={no} lang={lang} items={items} />
+      </main>
+    )
+  }
+
+  if (s === 'conversation_quiz') {
+    const convQuizSection = sections.find((x) => String(x.type || '') === 'conversation_quiz')
+    const items = (Array.isArray(convQuizSection?.items) ? convQuizSection!.items! : []).map((item) => {
+      const raw = item as Record<string, unknown>
+      return {
+        id: String(raw.id || ''),
+        type: String(raw.type || ''),
+        prompt: (raw.prompt as Record<string, string>) || {},
+        choices: Array.isArray(raw.choices) ? (raw.choices as Array<Record<string, unknown>>).map((ch) => ({
+          text: (ch.text as Record<string, string>) || {},
+          correct: !!ch.correct
+        })) : undefined,
+        parts: Array.isArray(raw.parts) ? (raw.parts as string[]) : undefined,
+        correctOrder: Array.isArray(raw.correctOrder) ? (raw.correctOrder as string[]) : undefined,
+        fromConversationId: String(raw.fromConversationId || ''),
+        explanationZh: String(raw.explanationZh || ''),
+        needsReview: !!raw.needsReview
+      }
+    })
+
+    return (
+      <main>
+        <MinnaNav active="lessons" />
+        <LessonConversationQuizClient lessonNo={no} lang={lang} items={items} />
+      </main>
+    )
+  }
 
   if (s === 'conversation') {
     const convSection = sections.find((x) => String(x.type || '') === 'conversation')
