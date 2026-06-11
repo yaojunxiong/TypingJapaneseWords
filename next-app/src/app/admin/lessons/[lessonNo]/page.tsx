@@ -8,10 +8,8 @@ import AdminCollapsibleSection from '@/components/admin-collapsible-section'
 import AdminSectionExpandControls from '@/components/admin-section-expand-controls'
 import AdminSectionTypeFilter from '@/components/admin-section-type-filter'
 import AdminRecentLessonWriter from '@/components/admin-recent-lesson-writer'
-import { createClient } from '@/utils/supabase/server'
 import { getLang, tr, type Lang } from '@/lib/i18n'
-
-type RoleRow = { role: string | null }
+import { checkAdminAccess } from '@/lib/admin-auth'
 type LangText = { zh?: string; en?: string; ja?: string; jp?: string }
 type LessonPractice = {
   question?: LangText
@@ -98,11 +96,9 @@ export default async function AdminLessonDetailPage({
   const nextNo = Math.min(50, no + 1)
 
   const cookieStore = await cookies()
-  const supabase = createClient(cookieStore)
-  const { data: userData } = await supabase.auth.getUser()
-  const user = userData.user
+  const adminCheck = await checkAdminAccess(cookieStore)
 
-  if (!user) {
+  if (!adminCheck.userAuthed) {
     return (
       <main>
         <MinnaNav active="me" />
@@ -115,20 +111,14 @@ export default async function AdminLessonDetailPage({
     )
   }
 
-  const { data: roleRaw } = await supabase
-    .from('user_roles')
-    .select('role')
-    .eq('user_id', user.id)
-    .maybeSingle()
-  const role = String((roleRaw as RoleRow | null)?.role || 'normal')
-  if (role !== 'admin') {
+  if (!adminCheck.isAdmin) {
     return (
       <main>
         <MinnaNav active="me" />
         <h1>{tr(lang, '管理员后台', 'Admin')}</h1>
         <section className="card">
           <p className="small">{tr(lang, '你没有管理员权限。', 'You do not have admin access.')}</p>
-          <p className="small">{tr(lang, '当前角色', 'Current role')}：{role}</p>
+          <p className="small">{tr(lang, '当前角色', 'Current role')}：{adminCheck.role}</p>
           <p><Link href={backHref}>{tr(lang, '返回后台', 'Back to Admin')}</Link></p>
         </section>
       </main>

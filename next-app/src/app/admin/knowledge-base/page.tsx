@@ -3,11 +3,9 @@ import path from 'node:path'
 import { cookies } from 'next/headers'
 import Link from 'next/link'
 import MinnaNav from '@/components/minna-nav'
-import { createClient } from '@/utils/supabase/server'
 import { getLang, tr } from '@/lib/i18n'
 import { mdToHtml } from '@/lib/markdown'
-
-type RoleRow = { role: string | null }
+import { checkAdminAccess } from '@/lib/admin-auth'
 
 const KB_DIR = path.resolve(process.cwd(), 'docs', 'knowledge-base')
 
@@ -51,11 +49,9 @@ export default async function AdminKnowledgeBasePage({
   const { file } = await searchParams
 
   const cookieStore = await cookies()
-  const supabase = createClient(cookieStore)
-  const { data: userData } = await supabase.auth.getUser()
-  const user = userData.user
+  const adminCheck = await checkAdminAccess(cookieStore)
 
-  if (!user) {
+  if (!adminCheck.userAuthed) {
     return (
       <main>
         <MinnaNav active="me" />
@@ -68,22 +64,14 @@ export default async function AdminKnowledgeBasePage({
     )
   }
 
-  const { data: roleRaw } = await supabase
-    .from('user_roles')
-    .select('role')
-    .eq('user_id', user.id)
-    .maybeSingle()
-  const role = String((roleRaw as RoleRow | null)?.role || 'normal')
-  const isAdmin = role === 'admin'
-
-  if (!isAdmin) {
+  if (!adminCheck.isAdmin) {
     return (
       <main>
         <MinnaNav active="me" />
         <h1>{tr(lang, '管理员后台', 'Admin')}</h1>
         <section className="card">
           <p className="small">{tr(lang, '你没有管理员权限。', 'You do not have admin access.')}</p>
-          <p className="small">{tr(lang, '当前角色', 'Current role')}：{role}</p>
+          <p className="small">{tr(lang, '当前角色', 'Current role')}：{adminCheck.role}</p>
           <p><Link href="/lessons">{tr(lang, '返回课程', 'Back to lessons')}</Link></p>
         </section>
       </main>

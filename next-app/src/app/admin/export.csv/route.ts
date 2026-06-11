@@ -2,9 +2,7 @@ import fs from 'node:fs/promises'
 import path from 'node:path'
 import { cookies } from 'next/headers'
 import { NextResponse, type NextRequest } from 'next/server'
-import { createClient } from '@/utils/supabase/server'
-
-type RoleRow = { role: string | null }
+import { checkAdminAccess } from '@/lib/admin-auth'
 type LangText = { zh?: string; en?: string; ja?: string; jp?: string }
 type LessonItem = {
   id?: string
@@ -140,18 +138,10 @@ function buildCsvFromHits(hits: SearchHit[]) {
 
 export async function GET(request: NextRequest) {
   const cookieStore = await cookies()
-  const supabase = createClient(cookieStore)
-  const { data: userData } = await supabase.auth.getUser()
-  const user = userData.user
-  if (!user) return new NextResponse('Unauthorized', { status: 401 })
+  const adminCheck = await checkAdminAccess(cookieStore)
 
-  const { data: roleRaw } = await supabase
-    .from('user_roles')
-    .select('role')
-    .eq('user_id', user.id)
-    .maybeSingle()
-  const role = String((roleRaw as RoleRow | null)?.role || 'normal')
-  if (role !== 'admin') return new NextResponse('Forbidden', { status: 403 })
+  if (!adminCheck.userAuthed) return new NextResponse('Unauthorized', { status: 401 })
+  if (!adminCheck.isAdmin) return new NextResponse('Forbidden', { status: 403 })
 
   const reqUrl = new URL(request.url)
   const query = String(reqUrl.searchParams.get('q') || '').trim()

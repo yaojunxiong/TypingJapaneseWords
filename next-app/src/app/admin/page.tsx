@@ -6,10 +6,7 @@ import MinnaNav from '@/components/minna-nav'
 import AdminRecentLessonCard from '@/components/admin-recent-lesson-card'
 import { createClient } from '@/utils/supabase/server'
 import { getLang, tr, type Lang } from '@/lib/i18n'
-
-type RoleRow = {
-  role: string | null
-}
+import { checkAdminAccess } from '@/lib/admin-auth'
 
 type LangText = { zh?: string; en?: string; ja?: string; jp?: string }
 
@@ -328,11 +325,9 @@ export default async function AdminPage({
   const sortBy = ['lesson', 'match'].includes(String(sort || 'lesson')) ? String(sort || 'lesson') : 'lesson'
 
   const cookieStore = await cookies()
-  const supabase = createClient(cookieStore)
-  const { data: userData } = await supabase.auth.getUser()
-  const user = userData.user
+  const adminCheck = await checkAdminAccess(cookieStore)
 
-  if (!user) {
+  if (!adminCheck.userAuthed) {
     return (
       <main>
         <MinnaNav active="me" />
@@ -345,22 +340,14 @@ export default async function AdminPage({
     )
   }
 
-  const { data: roleRaw } = await supabase
-    .from('user_roles')
-    .select('role')
-    .eq('user_id', user.id)
-    .maybeSingle()
-  const role = String((roleRaw as RoleRow | null)?.role || 'normal')
-  const isAdmin = role === 'admin'
-
-  if (!isAdmin) {
+  if (!adminCheck.isAdmin) {
     return (
       <main>
         <MinnaNav active="me" />
         <h1>{tr(lang, '管理员后台', 'Admin')}</h1>
         <section className="card">
           <p className="small">{tr(lang, '你没有管理员权限。', 'You do not have admin access.')}</p>
-          <p className="small">{tr(lang, '当前角色', 'Current role')}：{role}</p>
+          <p className="small">{tr(lang, '当前角色', 'Current role')}：{adminCheck.role}</p>
           <p><Link href="/lessons">{tr(lang, '返回课程', 'Back to lessons')}</Link></p>
         </section>
       </main>
@@ -398,8 +385,8 @@ export default async function AdminPage({
 
       <section className="card">
         <h2>{tr(lang, '权限状态', 'Access')}</h2>
-        <p className="small">{tr(lang, '已登录账号', 'Signed-in account')}：{user.email || user.id}</p>
-        <p className="small">{tr(lang, '角色', 'Role')}：{role}</p>
+        <p className="small">{tr(lang, '已登录账号', 'Signed-in account')}：{adminCheck.userEmail || adminCheck.userId || '-'}</p>
+        <p className="small">{tr(lang, '角色', 'Role')}：{adminCheck.role}{adminCheck.bypassed ? ` (${tr(lang, '本地绕过', 'local bypass')})` : ''}</p>
       </section>
 
       <AdminRecentLessonCard backHref={backHref} lang={lang} />
