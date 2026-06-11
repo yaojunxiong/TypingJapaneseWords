@@ -117,15 +117,21 @@ export default async function LessonDetailPage({
       </section>
 
       <section className="homeMap card">
-        <Link className="homeNode" href={`/lessons/${no}/practice?stage=vocab`}>🟢<small>{tr(lang, '词汇', 'Vocab')}</small></Link>
-        <Link className="homeNode" href={`/lessons/${no}/practice?stage=grammar`}>📦<small>{tr(lang, '语法', 'Grammar')}</small></Link>
-        <Link className="homeNode" href={`/lessons/${no}/practice?stage=examples`}>🪙<small>{tr(lang, '例句', 'Examples')}</small></Link>
-        <Link className="homeNode" href={`/lessons/${no}/practice?stage=quiz`}>🏅<small>{tr(lang, '测验', 'Quiz')}</small></Link>
-        <Link className="homeNode" href={`/lessons/${no}/practice?stage=conversation`}>🔤<small>{tr(lang, '会话', 'Conversation')}</small></Link>
-        <Link className="homeNode" href={`/lessons/${no}/practice?stage=conversation_vocab`}>📖<small>{tr(lang, '会话关键词汇', 'Conv Vocab')}</small></Link>
-        <Link className="homeNode" href={`/lessons/${no}/practice?stage=conversation_grammar`}>🔷<small>{tr(lang, '会话核心语法', 'Conv Grammar')}</small></Link>
-        <Link className="homeNode" href={`/lessons/${no}/practice?stage=conversation_examples`}>💬<small>{tr(lang, '会话替换例句', 'Conv Examples')}</small></Link>
-        <Link className="homeNode" href={`/lessons/${no}/practice?stage=conversation_quiz`}>🏆<small>{tr(lang, '会话专项测试', 'Conv Quiz')}</small></Link>
+        <div style={{ opacity: 0.4, display: 'contents' }}>
+          <Link className="homeNode" href={`/lessons/${no}/practice?stage=vocab`}>🟢<small>{tr(lang, '词汇', 'Vocab')}</small></Link>
+          <Link className="homeNode" href={`/lessons/${no}/practice?stage=grammar`}>📦<small>{tr(lang, '语法', 'Grammar')}</small></Link>
+          <Link className="homeNode" href={`/lessons/${no}/practice?stage=examples`}>🪙<small>{tr(lang, '例句', 'Examples')}</small></Link>
+          <Link className="homeNode" href={`/lessons/${no}/practice?stage=quiz`}>🏅<small>{tr(lang, '测验', 'Quiz')}</small></Link>
+        </div>
+        <hr style={{ width: '100%', margin: '8px 0', border: 'none', borderTop: '1px dashed #ccc' }} />
+        <div style={{ fontWeight: 'bold', fontSize: '0.85em', color: '#2563eb', width: '100%', textAlign: 'center' }}>
+          {tr(lang, '▼ 会话主线（推荐）', '▼ Conversation Mainline')}
+        </div>
+        <Link className="homeNode" href={`/lessons/${no}/practice?stage=conversation`} style={{ fontWeight: 'bold' }}>🔤<small>{tr(lang, '会话', 'Conversation')}</small></Link>
+        <Link className="homeNode" href={`/lessons/${no}/practice?stage=conversation_vocab`} style={{ fontWeight: 'bold' }}>📖<small>{tr(lang, '会话关键词汇', 'Conv Vocab')}</small></Link>
+        <Link className="homeNode" href={`/lessons/${no}/practice?stage=conversation_grammar`} style={{ fontWeight: 'bold' }}>🔷<small>{tr(lang, '会话核心语法', 'Conv Grammar')}</small></Link>
+        <Link className="homeNode" href={`/lessons/${no}/practice?stage=conversation_examples`} style={{ fontWeight: 'bold' }}>💬<small>{tr(lang, '会话替换例句', 'Conv Examples')}</small></Link>
+        <Link className="homeNode" href={`/lessons/${no}/practice?stage=conversation_quiz`} style={{ fontWeight: 'bold' }}>🏆<small>{tr(lang, '会话专项测试', 'Conv Quiz')}</small></Link>
       </section>
 
       {lesson?.conversationVideo ? (
