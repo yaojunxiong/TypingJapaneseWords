@@ -784,6 +784,7 @@ a:hover { text-decoration: underline; }
   color: #334155;
 }
 .adminKbMarkdown img { max-width: 100%; border-radius: 8px; }
+.stepLink:hover { background: #f0f9ff; text-decoration: none; }
 @media (max-width: 700px) {
   .adminKbLayout { flex-direction: column; }
   .adminKbSidebar {
