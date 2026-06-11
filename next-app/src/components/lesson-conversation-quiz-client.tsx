@@ -1,6 +1,7 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
+import { recordLearningEvent } from '@/lib/learning-event-log'
 
 type Choice = {
   text: Record<string, string>
@@ -40,11 +41,29 @@ export default function LessonConversationQuizClient({ lessonNo, lang, items }: 
   const [built, setBuilt] = useState<string[]>([])
   const done = idx >= items.length
 
+  useEffect(() => {
+    const stage = 'conversation_quiz'
+    const ct = 'conversation_quiz'
+    recordLearningEvent({
+      lessonNo, stage, contentType: ct,
+      contentId: `l${String(lessonNo).padStart(2, '0')}-${stage}`,
+      eventType: 'view_content'
+    }).catch(() => {})
+  }, [lessonNo])
+
   function handleSelect(value: string, correct: boolean) {
     if (answered) return
     setSelected(value)
     setAnswered(true)
     if (correct) setScore((s) => s + 1)
+    const item = items[idx]
+    recordLearningEvent({
+      lessonNo, stage: 'conversation_quiz', contentType: 'conversation_quiz',
+      contentId: item.id || `q-${idx}`,
+      eventType: 'quiz_answer',
+      result: correct ? 'correct' : 'wrong',
+      metadata: { selectedAnswer: value }
+    }).catch(() => {})
   }
 
   function handleOrderSelect(part: string) {
@@ -63,6 +82,12 @@ export default function LessonConversationQuizClient({ lessonNo, lang, items }: 
     const item = items[idx]
     const correct = item.correctOrder?.join('') === built.join('')
     if (correct) setScore((s) => s + 1)
+    recordLearningEvent({
+      lessonNo, stage: 'conversation_quiz', contentType: 'conversation_quiz',
+      contentId: item.id || `q-${idx}`,
+      eventType: 'quiz_answer',
+      result: correct ? 'correct' : 'wrong',
+    }).catch(() => {})
   }
 
   function handleNext() {

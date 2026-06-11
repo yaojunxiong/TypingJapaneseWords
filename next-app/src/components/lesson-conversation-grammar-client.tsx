@@ -1,5 +1,8 @@
 'use client'
 
+import { useEffect } from 'react'
+import { recordLearningEvent } from '@/lib/learning-event-log'
+
 type ConversationGrammarItem = {
   pattern: string
   meaningZh: string
@@ -19,6 +22,16 @@ type Props = {
 const t = (lang: 'zh' | 'en', zh: string, en: string) => lang === 'en' ? en : zh
 
 export default function LessonConversationGrammarClient({ lessonNo, lang, items }: Props) {
+  useEffect(() => {
+    const stage = 'conversation_grammar'
+    const ct = 'conversation_grammar'
+    recordLearningEvent({
+      lessonNo, stage, contentType: ct,
+      contentId: `l${String(lessonNo).padStart(2, '0')}-${stage}`,
+      eventType: 'view_content'
+    }).catch(() => {})
+  }, [lessonNo])
+
   return (
     <main>
       <section className="heroCard card">

@@ -1,5 +1,8 @@
 'use client'
 
+import { useEffect } from 'react'
+import { recordLearningEvent } from '@/lib/learning-event-log'
+
 type ConversationVocabItem = {
   word: string
   kana: string
@@ -20,6 +23,16 @@ const t = (lang: 'zh' | 'en', zh: string, en: string) => lang === 'en' ? en : zh
 export default function LessonConversationVocabClient({ lessonNo, lang, items }: Props) {
   const core = items.filter((i) => i.importance === 'core')
   const support = items.filter((i) => i.importance !== 'core')
+
+  useEffect(() => {
+    const stage = 'conversation_vocab'
+    const ct = 'conversation_vocab'
+    recordLearningEvent({
+      lessonNo, stage, contentType: ct,
+      contentId: `l${String(lessonNo).padStart(2, '0')}-${stage}`,
+      eventType: 'view_content'
+    }).catch(() => {})
+  }, [lessonNo])
 
   return (
     <main>

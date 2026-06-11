@@ -1,5 +1,8 @@
 'use client'
 
+import { useEffect } from 'react'
+import { recordLearningEvent } from '@/lib/learning-event-log'
+
 type ExampleSentence = {
   jp: string
   kana: string
@@ -23,6 +26,16 @@ type Props = {
 const t = (lang: 'zh' | 'en', zh: string, en: string) => lang === 'en' ? en : zh
 
 export default function LessonConversationExamplesClient({ lessonNo, lang, items }: Props) {
+  useEffect(() => {
+    const stage = 'conversation_examples'
+    const ct = 'conversation_example'
+    recordLearningEvent({
+      lessonNo, stage, contentType: ct,
+      contentId: `l${String(lessonNo).padStart(2, '0')}-${stage}`,
+      eventType: 'view_content'
+    }).catch(() => {})
+  }, [lessonNo])
+
   return (
     <main>
       <section className="heroCard card">
