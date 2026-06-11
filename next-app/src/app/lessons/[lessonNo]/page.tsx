@@ -65,110 +65,87 @@ export default async function LessonDetailPage({
   const lang = await getLang()
   const meta = LESSONS_1_50.find((x) => x.no === no) || LESSONS_1_50[0]
   const lesson = await loadLessonDoc(no)
-  const isLesson1 = no === 1
-
   return (
     <main>
       <MinnaNav active="lessons" />
       <TopLabelSync label={lang === 'en' ? `Lesson ${no}` : `第 ${no} 课`} />
 
-      {isLesson1 ? (
-        <>
-          <section className="heroCard card">
-            <h2>{tr(lang, '第1课 会话主线学习', 'Lesson 1 · Conversation Mainline')}</h2>
-            <p className="small">
-              {tr(lang,
-                '看视频、学会话词汇和语法，通过例句和测试练习，最后完成跟读录音和背诵。',
-                'Watch the video, learn conversation vocab & grammar, practice with examples & quiz, then record and recite.')}
-            </p>
-            {lesson?.conversationMainlineStatus ? (
-              <p className="small" style={{ marginTop: 4 }}>
-                {tr(lang,
-                  `会话 ${lesson.conversationMainlineStatus.conversationItemCount} 句 · 词汇 ${lesson.conversationMainlineStatus.vocabItemCount} 项 · 语法 ${lesson.conversationMainlineStatus.grammarItemCount} 点 · 测试 ${lesson.conversationMainlineStatus.quizItemCount} 题`,
-                  `${lesson.conversationMainlineStatus.conversationItemCount} sentences · ${lesson.conversationMainlineStatus.vocabItemCount} vocab · ${lesson.conversationMainlineStatus.grammarItemCount} grammar · ${lesson.conversationMainlineStatus.quizItemCount} quiz`)}
-              </p>
-            ) : null}
-          </section>
+      <section className="heroCard card">
+        <h2>{lang === 'en' ? `Lesson ${no} · Conversation Mainline` : `第 ${no} 课 · 会话主线学习`}</h2>
+        <p className="small">
+          {tr(lang,
+            '看视频、学会话词汇和语法，通过例句和测试练习，最后完成跟读录音和背诵。',
+            'Watch the video, learn conversation vocab & grammar, practice with examples & quiz, then record and recite.')}
+        </p>
+        {lesson?.conversationMainlineStatus ? (
+          <p className="small" style={{ marginTop: 4 }}>
+            {tr(lang, `会话主线内容已就绪，待人工审核。`, `Conversation mainline content ready, needs review.`)}
+          </p>
+        ) : null}
+      </section>
 
-          <section className="card" style={{ padding: 0, overflow: 'hidden' }}>
-            {MAINLINE_STEPS.map((step, i) => {
-              const href = step.stage.includes('#')
-                ? `/lessons/${no}/practice?stage=conversation`
-                : `/lessons/${no}/practice?stage=${step.stage}`
-              return (
-                <Link
-                  key={step.key}
-                  href={href}
-                  style={{
-                    display: 'flex', alignItems: 'center', gap: 12,
-                    padding: '14px 18px', borderBottom: i < MAINLINE_STEPS.length - 1 ? '1px solid #f1f5f9' : 'none',
-                    textDecoration: 'none', color: 'inherit', transition: 'background 0.15s',
-                  }}
-                  className="stepLink"
-                >
-                  <span style={{
-                    width: 28, height: 28, borderRadius: 14, background: '#e0f2fe',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    fontWeight: 700, fontSize: 13, color: '#0369a1', flexShrink: 0
-                  }}>
-                    {i + 1}
-                  </span>
-                  <span style={{ fontSize: 20, flexShrink: 0 }}>{step.emoji}</span>
-                  <div>
-                    <div style={{ fontWeight: 600, fontSize: 15 }}>
-                      {lang === 'en' ? step.en : step.zh}
-                    </div>
-                    <div className="small" style={{ fontSize: 12, marginTop: 1 }}>
-                      {step.stage.includes('#')
-                        ? tr(lang, '会话页面底部功能区', 'Bottom of conversation page')
-                        : step.key === 'video'
-                          ? tr(lang, '打开视频跟读', 'Open video to follow along')
-                          : step.key === 'conversation'
-                            ? tr(lang, '逐句背诵并录音', 'Recite and record each sentence')
-                            : tr(lang, '独立练习页', 'Dedicated practice page')
-                      }
-                    </div>
-                  </div>
-                  <span style={{ marginLeft: 'auto', color: '#94a3b8', fontSize: 18 }}>→</span>
-                </Link>
-              )
-            })}
-          </section>
-
-          {lesson?.conversationVideo?.videoUrl ? (
-            <section className="card" style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
-              <span style={{ fontSize: 24 }}>🎬</span>
-              <div style={{ flex: 1 }}>
-                <strong>{tr(lang, '会话视频', 'Conversation Video')}</strong>
-                <p className="small" style={{ margin: '2px 0 0' }}>
-                  {tr(lang, '来源：大家的日本語字幕播放器', 'Source: Minna no Nihongo Subtitle Player')}
-                </p>
+      <section className="card" style={{ padding: 0, overflow: 'hidden' }}>
+        {MAINLINE_STEPS.map((step, i) => {
+          const href = step.stage.includes('#')
+            ? `/lessons/${no}/practice?stage=conversation`
+            : `/lessons/${no}/practice?stage=${step.stage}`
+          return (
+            <Link
+              key={step.key}
+              href={href}
+              style={{
+                display: 'flex', alignItems: 'center', gap: 12,
+                padding: '14px 18px', borderBottom: i < MAINLINE_STEPS.length - 1 ? '1px solid #f1f5f9' : 'none',
+                textDecoration: 'none', color: 'inherit', transition: 'background 0.15s',
+              }}
+              className="stepLink"
+            >
+              <span style={{
+                width: 28, height: 28, borderRadius: 14, background: '#e0f2fe',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                fontWeight: 700, fontSize: 13, color: '#0369a1', flexShrink: 0
+              }}>
+                {i + 1}
+              </span>
+              <span style={{ fontSize: 20, flexShrink: 0 }}>{step.emoji}</span>
+              <div>
+                <div style={{ fontWeight: 600, fontSize: 15 }}>
+                  {lang === 'en' ? step.en : step.zh}
+                </div>
+                <div className="small" style={{ fontSize: 12, marginTop: 1 }}>
+                  {step.stage.includes('#')
+                    ? tr(lang, '会话页面底部功能区', 'Bottom of conversation page')
+                    : step.key === 'video'
+                      ? tr(lang, '打开视频跟读', 'Open video to follow along')
+                      : step.key === 'conversation'
+                        ? tr(lang, '逐句背诵并录音', 'Recite and record each sentence')
+                        : tr(lang, '独立练习页', 'Dedicated practice page')
+                  }
+                </div>
               </div>
-              <a className="btn" href={lesson.conversationVideo.videoUrl} target="_blank" rel="noopener noreferrer">
-                {tr(lang, '播放视频', 'Play Video')}
-              </a>
-              <a className="btn ghost" href={lesson.conversationVideo.sourcePageUrl} target="_blank" rel="noopener noreferrer">
-                {tr(lang, '资源页', 'Resource Page')}
-              </a>
-            </section>
-          ) : null}
-        </>
-      ) : (
-        <>
-          <section className="heroCard card">
-            <h2>{lang === 'en' ? `Lesson ${no}` : `第 ${no} 课 · ${meta.title}`}</h2>
-            <p className="small">{meta.subtitle}</p>
-          </section>
+              <span style={{ marginLeft: 'auto', color: '#94a3b8', fontSize: 18 }}>→</span>
+            </Link>
+          )
+        })}
+      </section>
 
-          <section className="homeMap card">
-            <Link className="homeNode" href={`/lessons/${no}/practice?stage=vocab`}>🟢<small>{tr(lang, '词汇', 'Vocab')}</small></Link>
-            <Link className="homeNode" href={`/lessons/${no}/practice?stage=grammar`}>📦<small>{tr(lang, '语法', 'Grammar')}</small></Link>
-            <Link className="homeNode" href={`/lessons/${no}/practice?stage=examples`}>🪙<small>{tr(lang, '例句', 'Examples')}</small></Link>
-            <Link className="homeNode" href={`/lessons/${no}/practice?stage=quiz`}>🏅<small>{tr(lang, '测验', 'Quiz')}</small></Link>
-            <Link className="homeNode" href={`/lessons/${no}/practice?stage=conversation`}>🔤<small>{tr(lang, '会话', 'Conversation')}</small></Link>
-          </section>
-        </>
-      )}
+      {lesson?.conversationVideo?.videoUrl ? (
+        <section className="card" style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
+          <span style={{ fontSize: 24 }}>🎬</span>
+          <div style={{ flex: 1 }}>
+            <strong>{tr(lang, '会话视频', 'Conversation Video')}</strong>
+            <p className="small" style={{ margin: '2px 0 0' }}>
+              {tr(lang, '来源：大家的日本語字幕播放器', 'Source: Minna no Nihongo Subtitle Player')}
+            </p>
+          </div>
+          <a className="btn" href={lesson.conversationVideo.videoUrl} target="_blank" rel="noopener noreferrer">
+            {tr(lang, '播放视频', 'Play Video')}
+          </a>
+          <a className="btn ghost" href={lesson.conversationVideo.sourcePageUrl} target="_blank" rel="noopener noreferrer">
+            {tr(lang, '资源页', 'Resource Page')}
+          </a>
+        </section>
+      ) : null}
 
       {!lesson ? (
         <section className="card">

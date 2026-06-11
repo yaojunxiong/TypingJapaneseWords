@@ -756,6 +756,2558 @@
           }
         }
       ]
+    },
+    {
+      "type": "conversation",
+      "id": "l14_conversation",
+      "sourceType": "official_video_subtitle",
+      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P14_%E7%AC%AC14%E8%AA%B2.json",
+      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P14_%E7%AC%AC14%E8%AA%B2.mp4",
+      "title": {
+        "zh": "会话背诵",
+        "en": "Conversation Practice"
+      },
+      "dialogTitle": {
+        "zh": "第14课会话",
+        "en": "第14课会话"
+      },
+      "conversationGoal": {
+        "zh": "第14课会话练习",
+        "en": "Lesson 14 Conversation Practice"
+      },
+      "items": [
+        {
+          "id": "l14-conv-001",
+          "speaker": "",
+          "jp": "ミドリ町までお願いします",
+          "kana": "",
+          "zh": "请送我到绿町。",
+          "keyword": "",
+          "videoStart": "0:00.0",
+          "videoEnd": "0:02.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-conv-002",
+          "speaker": "",
+          "jp": "はい",
+          "kana": "はい",
+          "zh": "好的。",
+          "keyword": "",
+          "videoStart": "0:02.0",
+          "videoEnd": "0:04.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-conv-003",
+          "speaker": "",
+          "jp": "すみません",
+          "kana": "すみません",
+          "zh": "不好意思。",
+          "keyword": "",
+          "videoStart": "0:04.0",
+          "videoEnd": "0:06.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-conv-004",
+          "speaker": "",
+          "jp": "あの信号を右へ曲がってください",
+          "kana": "",
+          "zh": "请在那个红绿灯处右转。",
+          "keyword": "信号",
+          "videoStart": "0:06.0",
+          "videoEnd": "0:10.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-conv-005",
+          "speaker": "",
+          "jp": "おかげで",
+          "kana": "おかげで",
+          "zh": "多亏了你。",
+          "keyword": "",
+          "videoStart": "0:12.0",
+          "videoEnd": "0:14.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-conv-006",
+          "speaker": "",
+          "jp": "おかげで",
+          "kana": "おかげで",
+          "zh": "多亏了你。",
+          "keyword": "",
+          "videoStart": "0:14.0",
+          "videoEnd": "0:16.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-conv-007",
+          "speaker": "",
+          "jp": "おかげで",
+          "kana": "おかげで",
+          "zh": "多亏了你。",
+          "keyword": "",
+          "videoStart": "0:16.0",
+          "videoEnd": "0:18.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-conv-008",
+          "speaker": "",
+          "jp": "おかげで",
+          "kana": "おかげで",
+          "zh": "多亏了你。",
+          "keyword": "",
+          "videoStart": "0:18.0",
+          "videoEnd": "0:20.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-conv-009",
+          "speaker": "",
+          "jp": "おかげで",
+          "kana": "おかげで",
+          "zh": "多亏了你。",
+          "keyword": "",
+          "videoStart": "0:20.0",
+          "videoEnd": "0:22.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-conv-010",
+          "speaker": "",
+          "jp": "おかげで",
+          "kana": "おかげで",
+          "zh": "多亏了你。",
+          "keyword": "",
+          "videoStart": "0:22.0",
+          "videoEnd": "0:24.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-conv-011",
+          "speaker": "",
+          "jp": "おかげで",
+          "kana": "おかげで",
+          "zh": "多亏了你。",
+          "keyword": "",
+          "videoStart": "0:24.0",
+          "videoEnd": "0:26.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-conv-012",
+          "speaker": "",
+          "jp": "おかげで",
+          "kana": "おかげで",
+          "zh": "多亏了你。",
+          "keyword": "",
+          "videoStart": "0:26.0",
+          "videoEnd": "0:28.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-conv-013",
+          "speaker": "",
+          "jp": "見てください",
+          "kana": "",
+          "zh": "请看一下。",
+          "keyword": "",
+          "videoStart": "0:28.0",
+          "videoEnd": "0:30.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-conv-014",
+          "speaker": "",
+          "jp": "右ですね",
+          "kana": "",
+          "zh": "右边，对吧？",
+          "keyword": "",
+          "videoStart": "0:30.0",
+          "videoEnd": "0:32.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-conv-015",
+          "speaker": "",
+          "jp": "まっすぐですか",
+          "kana": "まっすぐですか",
+          "zh": "是直走吗？",
+          "keyword": "",
+          "videoStart": "0:42.0",
+          "videoEnd": "0:44.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-conv-016",
+          "speaker": "",
+          "jp": "まっすぐいってください",
+          "kana": "まっすぐいってください",
+          "zh": "请直走。",
+          "keyword": "",
+          "videoStart": "0:44.0",
+          "videoEnd": "0:46.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-conv-017",
+          "speaker": "",
+          "jp": "あの花屋の前で止めてください",
+          "kana": "",
+          "zh": "请在那家花店前停一下。",
+          "keyword": "花屋",
+          "videoStart": "0:52.0",
+          "videoEnd": "0:56.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-conv-018",
+          "speaker": "",
+          "jp": "はい",
+          "kana": "はい",
+          "zh": "好的。",
+          "keyword": "",
+          "videoStart": "0:56.0",
+          "videoEnd": "0:58.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-conv-019",
+          "speaker": "",
+          "jp": "1800円です",
+          "kana": "",
+          "zh": "是1800日元。",
+          "keyword": "1800円です",
+          "videoStart": "1:06.0",
+          "videoEnd": "1:08.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-conv-020",
+          "speaker": "",
+          "jp": "これでお願いします",
+          "kana": "",
+          "zh": "我用这个付款。",
+          "keyword": "",
+          "videoStart": "1:08.0",
+          "videoEnd": "1:10.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-conv-021",
+          "speaker": "",
+          "jp": "3000円お預かりします",
+          "kana": "",
+          "zh": "收到3000日元。",
+          "keyword": "3000円",
+          "videoStart": "1:14.0",
+          "videoEnd": "1:16.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-conv-022",
+          "speaker": "",
+          "jp": "ありがとうございました",
+          "kana": "ありがとうございました",
+          "zh": "谢谢您。",
+          "keyword": "",
+          "videoStart": "1:22.0",
+          "videoEnd": "1:24.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-conv-023",
+          "speaker": "",
+          "jp": "ありがとうございました",
+          "kana": "ありがとうございました",
+          "zh": "谢谢您。",
+          "keyword": "",
+          "videoStart": "1:26.0",
+          "videoEnd": "1:28.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_vocab",
+      "id": "l14_conversation_vocab",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话关键词汇",
+        "en": "Conversation Key Vocabulary"
+      },
+      "description": {
+        "zh": "以下词汇从会话原文中提取。",
+        "en": "Vocabulary from the conversation."
+      },
+      "items": [
+        {
+          "word": "ミドリ町までお願いします",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l14-conv-001",
+          "sourceSentence": "ミドリ町までお願いします",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "はい",
+          "kana": "はい",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l14-conv-002",
+          "sourceSentence": "はい",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "すみません",
+          "kana": "すみません",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l14-conv-003",
+          "sourceSentence": "すみません",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "あの信号を右へ曲がってください",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l14-conv-004",
+          "sourceSentence": "あの信号を右へ曲がってください",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "おかげで",
+          "kana": "おかげで",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l14-conv-005",
+          "sourceSentence": "おかげで",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "見てください",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l14-conv-013",
+          "sourceSentence": "見てください",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "右ですね",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l14-conv-014",
+          "sourceSentence": "右ですね",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "まっすぐですか",
+          "kana": "まっすぐですか",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l14-conv-015",
+          "sourceSentence": "まっすぐですか",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "まっすぐいってください",
+          "kana": "まっすぐいってください",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l14-conv-016",
+          "sourceSentence": "まっすぐいってください",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "あの花屋の前で止めてください",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l14-conv-017",
+          "sourceSentence": "あの花屋の前で止めてください",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "円です",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l14-conv-019",
+          "sourceSentence": "1800円です",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "これでお願いします",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l14-conv-020",
+          "sourceSentence": "これでお願いします",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "円お預かりします",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l14-conv-021",
+          "sourceSentence": "3000円お預かりします",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "ありがとうございました",
+          "kana": "ありがとうございました",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l14-conv-022",
+          "sourceSentence": "ありがとうございました",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_grammar",
+      "id": "l14_conversation_grammar",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话核心语法",
+        "en": "Conversation Core Grammar"
+      },
+      "description": {
+        "zh": "以下语法点从会话原文中提取。",
+        "en": "Grammar points from the conversation."
+      },
+      "items": [
+        {
+          "pattern": "〜ます",
+          "meaning": {
+            "zh": "（动词敬体）",
+            "en": "polite verb form"
+          },
+          "conversationExample": "ミドリ町までお願いします",
+          "fromConversationId": "l14-conv-001",
+          "sourceSentence": "ミドリ町までお願いします",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ます」是动词的敬体形式。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ません",
+          "meaning": {
+            "zh": "不…（否定）",
+            "en": "negative form"
+          },
+          "conversationExample": "すみません",
+          "fromConversationId": "l14-conv-003",
+          "sourceSentence": "すみません",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ません」是「ます」的否定形式。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜を〜",
+          "meaning": {
+            "zh": "…（宾语标记）",
+            "en": "object marker"
+          },
+          "conversationExample": "あの信号を右へ曲がってください",
+          "fromConversationId": "l14-conv-004",
+          "sourceSentence": "あの信号を右へ曲がってください",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「を」标记动作的对象。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜です",
+          "meaning": {
+            "zh": "是…（礼貌判断）",
+            "en": "is/am (polite copula)"
+          },
+          "conversationExample": "右ですね",
+          "fromConversationId": "l14-conv-014",
+          "sourceSentence": "右ですね",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「です」是日语礼貌判断助动词，相当于中文的\"是\"。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ました",
+          "meaning": {
+            "zh": "…了（过去）",
+            "en": "past tense"
+          },
+          "conversationExample": "ありがとうございました",
+          "fromConversationId": "l14-conv-022",
+          "sourceSentence": "ありがとうございました",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ました」是「ます」的过去形。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_examples",
+      "id": "l14_conversation_examples",
+      "sourceType": "ai_generated_from_official_conversation",
+      "title": {
+        "zh": "会话替换例句",
+        "en": "Conversation Replacement Examples"
+      },
+      "description": {
+        "zh": "以下例句基于会话原句生成。",
+        "en": "Examples generated from conversation sentences."
+      },
+      "items": [
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "ミドリ町までお願いします",
+          "fromConversationId": "l14-conv-001",
+          "sourceSentence": "ミドリ町までお願いします",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "はい",
+          "fromConversationId": "l14-conv-002",
+          "sourceSentence": "はい",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "すみません",
+          "fromConversationId": "l14-conv-003",
+          "sourceSentence": "すみません",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "信号",
+          "originalSentence": "あの信号を右へ曲がってください",
+          "fromConversationId": "l14-conv-004",
+          "sourceSentence": "あの信号を右へ曲がってください",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "おかげで",
+          "fromConversationId": "l14-conv-005",
+          "sourceSentence": "おかげで",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "おかげで",
+          "fromConversationId": "l14-conv-006",
+          "sourceSentence": "おかげで",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "おかげで",
+          "fromConversationId": "l14-conv-007",
+          "sourceSentence": "おかげで",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "おかげで",
+          "fromConversationId": "l14-conv-008",
+          "sourceSentence": "おかげで",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "おかげで",
+          "fromConversationId": "l14-conv-009",
+          "sourceSentence": "おかげで",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "おかげで",
+          "fromConversationId": "l14-conv-010",
+          "sourceSentence": "おかげで",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "おかげで",
+          "fromConversationId": "l14-conv-011",
+          "sourceSentence": "おかげで",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "おかげで",
+          "fromConversationId": "l14-conv-012",
+          "sourceSentence": "おかげで",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "見てください",
+          "fromConversationId": "l14-conv-013",
+          "sourceSentence": "見てください",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "右ですね",
+          "fromConversationId": "l14-conv-014",
+          "sourceSentence": "右ですね",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "まっすぐですか",
+          "fromConversationId": "l14-conv-015",
+          "sourceSentence": "まっすぐですか",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "まっすぐいってください",
+          "fromConversationId": "l14-conv-016",
+          "sourceSentence": "まっすぐいってください",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "花屋",
+          "originalSentence": "あの花屋の前で止めてください",
+          "fromConversationId": "l14-conv-017",
+          "sourceSentence": "あの花屋の前で止めてください",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "はい",
+          "fromConversationId": "l14-conv-018",
+          "sourceSentence": "はい",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "1800円です",
+          "originalSentence": "1800円です",
+          "fromConversationId": "l14-conv-019",
+          "sourceSentence": "1800円です",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [
+            {
+              "jp": "佐藤です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "田中です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "山田です",
+              "kana": "",
+              "zh": ""
+            }
+          ],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "これでお願いします",
+          "fromConversationId": "l14-conv-020",
+          "sourceSentence": "これでお願いします",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "3000円",
+          "originalSentence": "3000円お預かりします",
+          "fromConversationId": "l14-conv-021",
+          "sourceSentence": "3000円お預かりします",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "ありがとうございました",
+          "fromConversationId": "l14-conv-022",
+          "sourceSentence": "ありがとうございました",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "ありがとうございました",
+          "fromConversationId": "l14-conv-023",
+          "sourceSentence": "ありがとうございました",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_quiz",
+      "id": "l14_conversation_quiz",
+      "sourceType": "generated_from_official_video_subtitle",
+      "title": {
+        "zh": "会话专项测试",
+        "en": "Conversation Quiz"
+      },
+      "description": {
+        "zh": "测试题围绕会话内容设计。",
+        "en": "Quiz based on the conversation."
+      },
+      "items": [
+        {
+          "id": "l14-q-001-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「ミドリ町までお願いします」是什么意思？",
+            "en": "What does \"ミドリ町までお願いします\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请送我到绿町。",
+                "en": "请送我到绿町。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "ミドリ町までお願いします",
+          "fromConversationId": "l14-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-001-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「请送我到绿町。」的日语说法。",
+            "en": "Select Japanese for \"请送我到绿町。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "ミドリ町までお願いします"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ミドリ町までお願いします",
+          "fromConversationId": "l14-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-001-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「ミドリ町までお願いします」的中文意思是？",
+            "en": "What does \"ミドリ町までお願いします\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请送我到绿町。",
+                "en": "请送我到绿町。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ミドリ町までお願いします",
+          "fromConversationId": "l14-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-002-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「はい」是什么意思？",
+            "en": "What does \"はい\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "好的。",
+                "en": "好的。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "はい",
+          "fromConversationId": "l14-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-002-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「好的。」的日语说法。",
+            "en": "Select Japanese for \"好的。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "はい"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい",
+          "fromConversationId": "l14-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-002-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「はい」的中文意思是？",
+            "en": "What does \"はい\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "好的。",
+                "en": "好的。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい",
+          "fromConversationId": "l14-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-003-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「すみません」是什么意思？",
+            "en": "What does \"すみません\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不好意思。",
+                "en": "不好意思。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "すみません",
+          "fromConversationId": "l14-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-003-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「不好意思。」的日语说法。",
+            "en": "Select Japanese for \"不好意思。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "すみません"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "すみません",
+          "fromConversationId": "l14-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-003-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「すみません」的中文意思是？",
+            "en": "What does \"すみません\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不好意思。",
+                "en": "不好意思。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "すみません",
+          "fromConversationId": "l14-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-004-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「あの信号を右へ曲がってください」是什么意思？",
+            "en": "What does \"あの信号を右へ曲がってください\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请在那个红绿灯处右转。",
+                "en": "请在那个红绿灯处右转。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "あの信号を右へ曲がってください",
+          "fromConversationId": "l14-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-004-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「请在那个红绿灯处右转。」的日语说法。",
+            "en": "Select Japanese for \"请在那个红绿灯处右转。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "あの信号を右へ曲がってください"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "あの信号を右へ曲がってください",
+          "fromConversationId": "l14-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-004-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「あの信号を右へ曲がってください」的中文意思是？",
+            "en": "What does \"あの信号を右へ曲がってください\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请在那个红绿灯处右转。",
+                "en": "请在那个红绿灯处右转。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "あの信号を右へ曲がってください",
+          "fromConversationId": "l14-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-005-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「おかげで」是什么意思？",
+            "en": "What does \"おかげで\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "多亏了你。",
+                "en": "多亏了你。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "おかげで",
+          "fromConversationId": "l14-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-005-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「多亏了你。」的日语说法。",
+            "en": "Select Japanese for \"多亏了你。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "おかげで"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "おかげで",
+          "fromConversationId": "l14-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-005-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「おかげで」的中文意思是？",
+            "en": "What does \"おかげで\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "多亏了你。",
+                "en": "多亏了你。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "おかげで",
+          "fromConversationId": "l14-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-006-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「おかげで」是什么意思？",
+            "en": "What does \"おかげで\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "多亏了你。",
+                "en": "多亏了你。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "おかげで",
+          "fromConversationId": "l14-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-006-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「多亏了你。」的日语说法。",
+            "en": "Select Japanese for \"多亏了你。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "おかげで"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "おかげで",
+          "fromConversationId": "l14-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-006-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「おかげで」的中文意思是？",
+            "en": "What does \"おかげで\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "多亏了你。",
+                "en": "多亏了你。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "おかげで",
+          "fromConversationId": "l14-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-007-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「おかげで」是什么意思？",
+            "en": "What does \"おかげで\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "多亏了你。",
+                "en": "多亏了你。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "おかげで",
+          "fromConversationId": "l14-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-007-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「多亏了你。」的日语说法。",
+            "en": "Select Japanese for \"多亏了你。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "おかげで"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "おかげで",
+          "fromConversationId": "l14-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-007-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「おかげで」的中文意思是？",
+            "en": "What does \"おかげで\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "多亏了你。",
+                "en": "多亏了你。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "おかげで",
+          "fromConversationId": "l14-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-008-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「おかげで」是什么意思？",
+            "en": "What does \"おかげで\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "多亏了你。",
+                "en": "多亏了你。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "おかげで",
+          "fromConversationId": "l14-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-008-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「多亏了你。」的日语说法。",
+            "en": "Select Japanese for \"多亏了你。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "おかげで"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "おかげで",
+          "fromConversationId": "l14-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-008-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「おかげで」的中文意思是？",
+            "en": "What does \"おかげで\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "多亏了你。",
+                "en": "多亏了你。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "おかげで",
+          "fromConversationId": "l14-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-009-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「おかげで」是什么意思？",
+            "en": "What does \"おかげで\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "多亏了你。",
+                "en": "多亏了你。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "おかげで",
+          "fromConversationId": "l14-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-009-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「多亏了你。」的日语说法。",
+            "en": "Select Japanese for \"多亏了你。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "おかげで"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "おかげで",
+          "fromConversationId": "l14-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-009-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「おかげで」的中文意思是？",
+            "en": "What does \"おかげで\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "多亏了你。",
+                "en": "多亏了你。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "おかげで",
+          "fromConversationId": "l14-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-010-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「おかげで」是什么意思？",
+            "en": "What does \"おかげで\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "多亏了你。",
+                "en": "多亏了你。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "おかげで",
+          "fromConversationId": "l14-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-010-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「多亏了你。」的日语说法。",
+            "en": "Select Japanese for \"多亏了你。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "おかげで"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "おかげで",
+          "fromConversationId": "l14-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-010-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「おかげで」的中文意思是？",
+            "en": "What does \"おかげで\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "多亏了你。",
+                "en": "多亏了你。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "おかげで",
+          "fromConversationId": "l14-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-011-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「おかげで」是什么意思？",
+            "en": "What does \"おかげで\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "多亏了你。",
+                "en": "多亏了你。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "おかげで",
+          "fromConversationId": "l14-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-011-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「多亏了你。」的日语说法。",
+            "en": "Select Japanese for \"多亏了你。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "おかげで"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "おかげで",
+          "fromConversationId": "l14-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-011-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「おかげで」的中文意思是？",
+            "en": "What does \"おかげで\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "多亏了你。",
+                "en": "多亏了你。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "おかげで",
+          "fromConversationId": "l14-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-012-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「おかげで」是什么意思？",
+            "en": "What does \"おかげで\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "多亏了你。",
+                "en": "多亏了你。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "おかげで",
+          "fromConversationId": "l14-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-012-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「多亏了你。」的日语说法。",
+            "en": "Select Japanese for \"多亏了你。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "おかげで"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "おかげで",
+          "fromConversationId": "l14-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-012-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「おかげで」的中文意思是？",
+            "en": "What does \"おかげで\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "多亏了你。",
+                "en": "多亏了你。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "おかげで",
+          "fromConversationId": "l14-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-013-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「見てください」是什么意思？",
+            "en": "What does \"見てください\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请看一下。",
+                "en": "请看一下。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "見てください",
+          "fromConversationId": "l14-conv-013",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-013-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「请看一下。」的日语说法。",
+            "en": "Select Japanese for \"请看一下。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "見てください"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "見てください",
+          "fromConversationId": "l14-conv-013",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-013-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「見てください」的中文意思是？",
+            "en": "What does \"見てください\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请看一下。",
+                "en": "请看一下。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "見てください",
+          "fromConversationId": "l14-conv-013",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-014-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「右ですね」是什么意思？",
+            "en": "What does \"右ですね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "右边，对吧？",
+                "en": "右边，对吧？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "右ですね",
+          "fromConversationId": "l14-conv-014",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-014-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「右边，对吧？」的日语说法。",
+            "en": "Select Japanese for \"右边，对吧？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "右ですね"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "右ですね",
+          "fromConversationId": "l14-conv-014",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-014-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「右ですね」的中文意思是？",
+            "en": "What does \"右ですね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "右边，对吧？",
+                "en": "右边，对吧？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "右ですね",
+          "fromConversationId": "l14-conv-014",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-015-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「まっすぐですか」是什么意思？",
+            "en": "What does \"まっすぐですか\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是直走吗？",
+                "en": "是直走吗？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "まっすぐですか",
+          "fromConversationId": "l14-conv-015",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-015-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「是直走吗？」的日语说法。",
+            "en": "Select Japanese for \"是直走吗？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "まっすぐですか"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "まっすぐですか",
+          "fromConversationId": "l14-conv-015",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-015-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「まっすぐですか」的中文意思是？",
+            "en": "What does \"まっすぐですか\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是直走吗？",
+                "en": "是直走吗？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "まっすぐですか",
+          "fromConversationId": "l14-conv-015",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-016-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「まっすぐいってください」是什么意思？",
+            "en": "What does \"まっすぐいってください\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请直走。",
+                "en": "请直走。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "まっすぐいってください",
+          "fromConversationId": "l14-conv-016",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-016-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「请直走。」的日语说法。",
+            "en": "Select Japanese for \"请直走。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "まっすぐいってください"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "まっすぐいってください",
+          "fromConversationId": "l14-conv-016",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-016-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「まっすぐいってください」的中文意思是？",
+            "en": "What does \"まっすぐいってください\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请直走。",
+                "en": "请直走。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "まっすぐいってください",
+          "fromConversationId": "l14-conv-016",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-017-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「あの花屋の前で止めてください」是什么意思？",
+            "en": "What does \"あの花屋の前で止めてください\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请在那家花店前停一下。",
+                "en": "请在那家花店前停一下。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "あの花屋の前で止めてください",
+          "fromConversationId": "l14-conv-017",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-017-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「请在那家花店前停一下。」的日语说法。",
+            "en": "Select Japanese for \"请在那家花店前停一下。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "あの花屋の前で止めてください"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "あの花屋の前で止めてください",
+          "fromConversationId": "l14-conv-017",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-017-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「あの花屋の前で止めてください」的中文意思是？",
+            "en": "What does \"あの花屋の前で止めてください\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请在那家花店前停一下。",
+                "en": "请在那家花店前停一下。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "あの花屋の前で止めてください",
+          "fromConversationId": "l14-conv-017",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-018-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「はい」是什么意思？",
+            "en": "What does \"はい\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "好的。",
+                "en": "好的。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "はい",
+          "fromConversationId": "l14-conv-018",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-018-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「好的。」的日语说法。",
+            "en": "Select Japanese for \"好的。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "はい"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい",
+          "fromConversationId": "l14-conv-018",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-018-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「はい」的中文意思是？",
+            "en": "What does \"はい\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "好的。",
+                "en": "好的。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい",
+          "fromConversationId": "l14-conv-018",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-019-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「1800円です」是什么意思？",
+            "en": "What does \"1800円です\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是1800日元。",
+                "en": "是1800日元。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "1800円です",
+          "fromConversationId": "l14-conv-019",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-019-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「是1800日元。」的日语说法。",
+            "en": "Select Japanese for \"是1800日元。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "1800円です"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "1800円です",
+          "fromConversationId": "l14-conv-019",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-019-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「1800円です」的中文意思是？",
+            "en": "What does \"1800円です\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是1800日元。",
+                "en": "是1800日元。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "1800円です",
+          "fromConversationId": "l14-conv-019",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-020-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「これでお願いします」是什么意思？",
+            "en": "What does \"これでお願いします\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我用这个付款。",
+                "en": "我用这个付款。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "これでお願いします",
+          "fromConversationId": "l14-conv-020",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-020-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「我用这个付款。」的日语说法。",
+            "en": "Select Japanese for \"我用这个付款。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "これでお願いします"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "これでお願いします",
+          "fromConversationId": "l14-conv-020",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-020-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「これでお願いします」的中文意思是？",
+            "en": "What does \"これでお願いします\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我用这个付款。",
+                "en": "我用这个付款。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "これでお願いします",
+          "fromConversationId": "l14-conv-020",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-021-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「3000円お預かりします」是什么意思？",
+            "en": "What does \"3000円お預かりします\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "收到3000日元。",
+                "en": "收到3000日元。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "3000円お預かりします",
+          "fromConversationId": "l14-conv-021",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-021-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「收到3000日元。」的日语说法。",
+            "en": "Select Japanese for \"收到3000日元。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "3000円お預かりします"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "3000円お預かりします",
+          "fromConversationId": "l14-conv-021",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-021-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「3000円お預かりします」的中文意思是？",
+            "en": "What does \"3000円お預かりします\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "收到3000日元。",
+                "en": "收到3000日元。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "3000円お預かりします",
+          "fromConversationId": "l14-conv-021",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-022-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「ありがとうございました」是什么意思？",
+            "en": "What does \"ありがとうございました\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "谢谢您。",
+                "en": "谢谢您。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "ありがとうございました",
+          "fromConversationId": "l14-conv-022",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-022-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「谢谢您。」的日语说法。",
+            "en": "Select Japanese for \"谢谢您。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "ありがとうございました"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ありがとうございました",
+          "fromConversationId": "l14-conv-022",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-022-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「ありがとうございました」的中文意思是？",
+            "en": "What does \"ありがとうございました\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "谢谢您。",
+                "en": "谢谢您。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ありがとうございました",
+          "fromConversationId": "l14-conv-022",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-023-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「ありがとうございました」是什么意思？",
+            "en": "What does \"ありがとうございました\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "谢谢您。",
+                "en": "谢谢您。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "ありがとうございました",
+          "fromConversationId": "l14-conv-023",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-023-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「谢谢您。」的日语说法。",
+            "en": "Select Japanese for \"谢谢您。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "ありがとうございました"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ありがとうございました",
+          "fromConversationId": "l14-conv-023",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l14-q-023-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「ありがとうございました」的中文意思是？",
+            "en": "What does \"ありがとうございました\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "谢谢您。",
+                "en": "谢谢您。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ありがとうございました",
+          "fromConversationId": "l14-conv-023",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
     }
   ],
   "conversationVideo": {
@@ -764,6 +3316,22 @@
     "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P14_%E7%AC%AC14%E8%AA%B2.mp4",
     "subtitleUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P14_%E7%AC%AC14%E8%AA%B2.json",
     "sourceType": "official_video_resource",
-    "status": "linked_not_imported"
+    "status": "imported_with_subtitles"
+  },
+  "conversationMainlineStatus": {
+    "videoLinked": "published",
+    "subtitleParsed": "published",
+    "subtitleCleaned": "published",
+    "humanReviewed": "not_started",
+    "importedToLessonJson": "published",
+    "vocabReady": "needs_review",
+    "grammarReady": "needs_review",
+    "examplesReady": "needs_review",
+    "quizReady": "needs_review",
+    "reciteReady": "needs_review",
+    "recordingReady": "published",
+    "scoringReady": "published",
+    "publishedToStaging": "not_started",
+    "verifiedOnline": "not_started"
   }
 }

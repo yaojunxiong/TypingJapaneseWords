@@ -688,6 +688,1383 @@
           ]
         }
       ]
+    },
+    {
+      "type": "conversation",
+      "id": "l07_conversation",
+      "sourceType": "official_video_subtitle",
+      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P7_%E7%AC%AC7%E8%AA%B2.json",
+      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P7_%E7%AC%AC7%E8%AA%B2.mp4",
+      "title": {
+        "zh": "会话背诵",
+        "en": "Conversation Practice"
+      },
+      "dialogTitle": {
+        "zh": "赠送",
+        "en": "赠送"
+      },
+      "conversationGoal": {
+        "zh": "能使用工具/手段表达和赠送物品",
+        "en": "Express means of action and give gifts"
+      },
+      "items": [
+        {
+          "id": "l07-conv-001",
+          "speaker": "",
+          "jp": "はい",
+          "kana": "はい",
+          "zh": "是的",
+          "keyword": "",
+          "videoStart": "0:00.0",
+          "videoEnd": "0:07.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-conv-002",
+          "speaker": "",
+          "jp": "はい サントスです",
+          "kana": "はい サントスです",
+          "zh": "是的，是桑托斯",
+          "keyword": "",
+          "videoStart": "0:12.0",
+          "videoEnd": "0:16.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-conv-003",
+          "speaker": "",
+          "jp": "いらっしゃい どうぞおがりください",
+          "kana": "いらっしゃい どうぞおがりください",
+          "zh": "欢迎，请进来吧。",
+          "keyword": "",
+          "videoStart": "0:22.0",
+          "videoEnd": "0:25.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-conv-004",
+          "speaker": "",
+          "jp": "失礼します",
+          "kana": "",
+          "zh": "打扰了。",
+          "keyword": "失礼",
+          "videoStart": "0:25.0",
+          "videoEnd": "0:28.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-conv-006",
+          "speaker": "",
+          "jp": "コーヒーはいかがですか?",
+          "kana": "コーヒーはいかがですか?",
+          "zh": "你想要咖啡吗？",
+          "keyword": "",
+          "videoStart": "0:50.0",
+          "videoEnd": "0:52.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-conv-007",
+          "speaker": "",
+          "jp": "ありがとうございます",
+          "kana": "ありがとうございます",
+          "zh": "谢谢",
+          "keyword": "",
+          "videoStart": "0:52.0",
+          "videoEnd": "0:55.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-conv-009",
+          "speaker": "",
+          "jp": "どうぞ",
+          "kana": "どうぞ",
+          "zh": "请",
+          "keyword": "",
+          "videoStart": "1:07.0",
+          "videoEnd": "1:09.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-conv-010",
+          "speaker": "",
+          "jp": "いただきます",
+          "kana": "いただきます",
+          "zh": "我开动了。",
+          "keyword": "",
+          "videoStart": "1:09.0",
+          "videoEnd": "1:11.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-conv-011",
+          "speaker": "",
+          "jp": "このスポーン素敵ですね",
+          "kana": "",
+          "zh": "这把勺子真漂亮啊。",
+          "keyword": "素敵です",
+          "videoStart": "1:12.0",
+          "videoEnd": "1:15.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-conv-012",
+          "speaker": "",
+          "jp": "ええ、会社の人にもらいました",
+          "kana": "",
+          "zh": "是公司的人送的。",
+          "keyword": "会社",
+          "videoStart": "1:15.0",
+          "videoEnd": "1:18.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-conv-013",
+          "speaker": "",
+          "jp": "メキシコのお見上げです",
+          "kana": "",
+          "zh": "是从墨西哥带回来的纪念品。",
+          "keyword": "見上",
+          "videoStart": "1:18.0",
+          "videoEnd": "1:21.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_vocab",
+      "id": "l07_conversation_vocab",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话关键词汇",
+        "en": "Conversation Key Vocabulary"
+      },
+      "description": {
+        "zh": "以下词汇从会话原文中提取。",
+        "en": "Vocabulary from the conversation."
+      },
+      "items": [
+        {
+          "word": "はい",
+          "kana": "はい",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l07-conv-001",
+          "sourceSentence": "はい",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "サントスです",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l07-conv-002",
+          "sourceSentence": "はい サントスです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "いらっしゃい",
+          "kana": "いらっしゃい",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l07-conv-003",
+          "sourceSentence": "いらっしゃい どうぞおがりください",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "どうぞおがりください",
+          "kana": "どうぞおがりください",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l07-conv-003",
+          "sourceSentence": "いらっしゃい どうぞおがりください",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "失礼します",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l07-conv-004",
+          "sourceSentence": "失礼します",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "コーヒーはいかがですか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l07-conv-006",
+          "sourceSentence": "コーヒーはいかがですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "ありがとうございます",
+          "kana": "ありがとうございます",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l07-conv-007",
+          "sourceSentence": "ありがとうございます",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "どうぞ",
+          "kana": "どうぞ",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l07-conv-009",
+          "sourceSentence": "どうぞ",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "いただきます",
+          "kana": "いただきます",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l07-conv-010",
+          "sourceSentence": "いただきます",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "このスポーン素敵ですね",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l07-conv-011",
+          "sourceSentence": "このスポーン素敵ですね",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "ええ",
+          "kana": "ええ",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l07-conv-012",
+          "sourceSentence": "ええ、会社の人にもらいました",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "会社の人にもらいました",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l07-conv-012",
+          "sourceSentence": "ええ、会社の人にもらいました",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "メキシコのお見上げです",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l07-conv-013",
+          "sourceSentence": "メキシコのお見上げです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_grammar",
+      "id": "l07_conversation_grammar",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话核心语法",
+        "en": "Conversation Core Grammar"
+      },
+      "description": {
+        "zh": "以下语法点从会话原文中提取。",
+        "en": "Grammar points from the conversation."
+      },
+      "items": [
+        {
+          "pattern": "〜です",
+          "meaning": {
+            "zh": "是…（礼貌判断）",
+            "en": "is/am (polite copula)"
+          },
+          "conversationExample": "はい サントスです",
+          "fromConversationId": "l07-conv-002",
+          "sourceSentence": "はい サントスです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「です」是日语礼貌判断助动词，相当于中文的\"是\"。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ます",
+          "meaning": {
+            "zh": "（动词敬体）",
+            "en": "polite verb form"
+          },
+          "conversationExample": "失礼します",
+          "fromConversationId": "l07-conv-004",
+          "sourceSentence": "失礼します",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ます」是动词的敬体形式。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜か",
+          "meaning": {
+            "zh": "…吗？（疑问）",
+            "en": "question marker"
+          },
+          "conversationExample": "コーヒーはいかがですか?",
+          "fromConversationId": "l07-conv-006",
+          "sourceSentence": "コーヒーはいかがですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "句尾加「か」构成疑问句。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜に〜",
+          "meaning": {
+            "zh": "在/向…",
+            "en": "to/at"
+          },
+          "conversationExample": "ええ、会社の人にもらいました",
+          "fromConversationId": "l07-conv-012",
+          "sourceSentence": "ええ、会社の人にもらいました",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「に」表示时间、地点或方向。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ました",
+          "meaning": {
+            "zh": "…了（过去）",
+            "en": "past tense"
+          },
+          "conversationExample": "ええ、会社の人にもらいました",
+          "fromConversationId": "l07-conv-012",
+          "sourceSentence": "ええ、会社の人にもらいました",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ました」是「ます」的过去形。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_examples",
+      "id": "l07_conversation_examples",
+      "sourceType": "ai_generated_from_official_conversation",
+      "title": {
+        "zh": "会话替换例句",
+        "en": "Conversation Replacement Examples"
+      },
+      "description": {
+        "zh": "以下例句基于会话原句生成。",
+        "en": "Examples generated from conversation sentences."
+      },
+      "items": [
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "はい",
+          "fromConversationId": "l07-conv-001",
+          "sourceSentence": "はい",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "替换练习",
+          "originalSentence": "はい サントスです",
+          "fromConversationId": "l07-conv-002",
+          "sourceSentence": "はい サントスです",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [
+            {
+              "jp": "はい佐藤です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "はい田中です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "はい山田です",
+              "kana": "",
+              "zh": ""
+            }
+          ],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "いらっしゃい どうぞおがりください",
+          "fromConversationId": "l07-conv-003",
+          "sourceSentence": "いらっしゃい どうぞおがりください",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "失礼",
+          "originalSentence": "失礼します",
+          "fromConversationId": "l07-conv-004",
+          "sourceSentence": "失礼します",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "コーヒーはいかがですか?",
+          "fromConversationId": "l07-conv-006",
+          "sourceSentence": "コーヒーはいかがですか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "ありがとうございます",
+          "fromConversationId": "l07-conv-007",
+          "sourceSentence": "ありがとうございます",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "どうぞ",
+          "fromConversationId": "l07-conv-009",
+          "sourceSentence": "どうぞ",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "いただきます",
+          "fromConversationId": "l07-conv-010",
+          "sourceSentence": "いただきます",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "素敵です",
+          "originalSentence": "このスポーン素敵ですね",
+          "fromConversationId": "l07-conv-011",
+          "sourceSentence": "このスポーン素敵ですね",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "会社",
+          "originalSentence": "ええ、会社の人にもらいました",
+          "fromConversationId": "l07-conv-012",
+          "sourceSentence": "ええ、会社の人にもらいました",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "見上",
+          "originalSentence": "メキシコのお見上げです",
+          "fromConversationId": "l07-conv-013",
+          "sourceSentence": "メキシコのお見上げです",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_quiz",
+      "id": "l07_conversation_quiz",
+      "sourceType": "generated_from_official_video_subtitle",
+      "title": {
+        "zh": "会话专项测试",
+        "en": "Conversation Quiz"
+      },
+      "description": {
+        "zh": "测试题围绕会话内容设计。",
+        "en": "Quiz based on the conversation."
+      },
+      "items": [
+        {
+          "id": "l07-q-001-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「はい」是什么意思？",
+            "en": "What does \"はい\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是的",
+                "en": "是的"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "はい",
+          "fromConversationId": "l07-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-q-001-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「是的」的日语说法。",
+            "en": "Select Japanese for \"是的\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "はい"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい",
+          "fromConversationId": "l07-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-q-001-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「はい」的中文意思是？",
+            "en": "What does \"はい\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是的",
+                "en": "是的"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい",
+          "fromConversationId": "l07-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-q-002-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「はい サントスです」是什么意思？",
+            "en": "What does \"はい サントスです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是的，是桑托斯",
+                "en": "是的，是桑托斯"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "はい サントスです",
+          "fromConversationId": "l07-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-q-002-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「是的，是桑托斯」的日语说法。",
+            "en": "Select Japanese for \"是的，是桑托斯\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "はい サントスです"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい サントスです",
+          "fromConversationId": "l07-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-q-002-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「はい サントスです」的中文意思是？",
+            "en": "What does \"はい サントスです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是的，是桑托斯",
+                "en": "是的，是桑托斯"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい サントスです",
+          "fromConversationId": "l07-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-q-003-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「いらっしゃい どうぞおがりください」是什么意思？",
+            "en": "What does \"いらっしゃい どうぞおがりください\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "欢迎，请进来吧。",
+                "en": "欢迎，请进来吧。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "いらっしゃい どうぞおがりください",
+          "fromConversationId": "l07-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-q-003-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「欢迎，请进来吧。」的日语说法。",
+            "en": "Select Japanese for \"欢迎，请进来吧。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "いらっしゃい どうぞおがりください"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "いらっしゃい どうぞおがりください",
+          "fromConversationId": "l07-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-q-003-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「いらっしゃい どうぞおがりください」的中文意思是？",
+            "en": "What does \"いらっしゃい どうぞおがりください\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "欢迎，请进来吧。",
+                "en": "欢迎，请进来吧。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "いらっしゃい どうぞおがりください",
+          "fromConversationId": "l07-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-q-004-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「失礼します」是什么意思？",
+            "en": "What does \"失礼します\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "打扰了。",
+                "en": "打扰了。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "失礼します",
+          "fromConversationId": "l07-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-q-004-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「打扰了。」的日语说法。",
+            "en": "Select Japanese for \"打扰了。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "失礼します"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "失礼します",
+          "fromConversationId": "l07-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-q-004-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「失礼します」的中文意思是？",
+            "en": "What does \"失礼します\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "打扰了。",
+                "en": "打扰了。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "失礼します",
+          "fromConversationId": "l07-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-q-006-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「コーヒーはいかがですか?」是什么意思？",
+            "en": "What does \"コーヒーはいかがですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "你想要咖啡吗？",
+                "en": "你想要咖啡吗？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "コーヒーはいかがですか?",
+          "fromConversationId": "l07-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-q-006-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「你想要咖啡吗？」的日语说法。",
+            "en": "Select Japanese for \"你想要咖啡吗？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "コーヒーはいかがですか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "コーヒーはいかがですか?",
+          "fromConversationId": "l07-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-q-006-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「コーヒーはいかがですか?」的中文意思是？",
+            "en": "What does \"コーヒーはいかがですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "你想要咖啡吗？",
+                "en": "你想要咖啡吗？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "コーヒーはいかがですか?",
+          "fromConversationId": "l07-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-q-007-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「ありがとうございます」是什么意思？",
+            "en": "What does \"ありがとうございます\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "谢谢",
+                "en": "谢谢"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "ありがとうございます",
+          "fromConversationId": "l07-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-q-007-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「谢谢」的日语说法。",
+            "en": "Select Japanese for \"谢谢\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "ありがとうございます"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ありがとうございます",
+          "fromConversationId": "l07-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-q-007-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「ありがとうございます」的中文意思是？",
+            "en": "What does \"ありがとうございます\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "谢谢",
+                "en": "谢谢"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ありがとうございます",
+          "fromConversationId": "l07-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-q-009-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「どうぞ」是什么意思？",
+            "en": "What does \"どうぞ\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请",
+                "en": "请"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "どうぞ",
+          "fromConversationId": "l07-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-q-009-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「请」的日语说法。",
+            "en": "Select Japanese for \"请\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "どうぞ"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "どうぞ",
+          "fromConversationId": "l07-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-q-009-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「どうぞ」的中文意思是？",
+            "en": "What does \"どうぞ\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请",
+                "en": "请"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "どうぞ",
+          "fromConversationId": "l07-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-q-010-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「いただきます」是什么意思？",
+            "en": "What does \"いただきます\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我开动了。",
+                "en": "我开动了。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "いただきます",
+          "fromConversationId": "l07-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-q-010-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「我开动了。」的日语说法。",
+            "en": "Select Japanese for \"我开动了。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "いただきます"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "いただきます",
+          "fromConversationId": "l07-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-q-010-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「いただきます」的中文意思是？",
+            "en": "What does \"いただきます\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我开动了。",
+                "en": "我开动了。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "いただきます",
+          "fromConversationId": "l07-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-q-011-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「このスポーン素敵ですね」是什么意思？",
+            "en": "What does \"このスポーン素敵ですね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "这把勺子真漂亮啊。",
+                "en": "这把勺子真漂亮啊。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "このスポーン素敵ですね",
+          "fromConversationId": "l07-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-q-011-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「这把勺子真漂亮啊。」的日语说法。",
+            "en": "Select Japanese for \"这把勺子真漂亮啊。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "このスポーン素敵ですね"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "このスポーン素敵ですね",
+          "fromConversationId": "l07-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-q-011-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「このスポーン素敵ですね」的中文意思是？",
+            "en": "What does \"このスポーン素敵ですね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "这把勺子真漂亮啊。",
+                "en": "这把勺子真漂亮啊。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "このスポーン素敵ですね",
+          "fromConversationId": "l07-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-q-012-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「ええ、会社の人にもらいました」是什么意思？",
+            "en": "What does \"ええ、会社の人にもらいました\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是公司的人送的。",
+                "en": "是公司的人送的。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "ええ、会社の人にもらいました",
+          "fromConversationId": "l07-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-q-012-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「是公司的人送的。」的日语说法。",
+            "en": "Select Japanese for \"是公司的人送的。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "ええ、会社の人にもらいました"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ええ、会社の人にもらいました",
+          "fromConversationId": "l07-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-q-012-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「ええ、会社の人にもらいました」的中文意思是？",
+            "en": "What does \"ええ、会社の人にもらいました\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是公司的人送的。",
+                "en": "是公司的人送的。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ええ、会社の人にもらいました",
+          "fromConversationId": "l07-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-q-013-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「メキシコのお見上げです」是什么意思？",
+            "en": "What does \"メキシコのお見上げです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是从墨西哥带回来的纪念品。",
+                "en": "是从墨西哥带回来的纪念品。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "メキシコのお見上げです",
+          "fromConversationId": "l07-conv-013",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-q-013-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「是从墨西哥带回来的纪念品。」的日语说法。",
+            "en": "Select Japanese for \"是从墨西哥带回来的纪念品。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "メキシコのお見上げです"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "メキシコのお見上げです",
+          "fromConversationId": "l07-conv-013",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l07-q-013-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「メキシコのお見上げです」的中文意思是？",
+            "en": "What does \"メキシコのお見上げです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是从墨西哥带回来的纪念品。",
+                "en": "是从墨西哥带回来的纪念品。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "メキシコのお見上げです",
+          "fromConversationId": "l07-conv-013",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
     }
   ],
   "conversationVideo": {
@@ -696,6 +2073,22 @@
     "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P7_%E7%AC%AC7%E8%AA%B2.mp4",
     "subtitleUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P7_%E7%AC%AC7%E8%AA%B2.json",
     "sourceType": "official_video_resource",
-    "status": "linked_not_imported"
+    "status": "imported_with_subtitles"
+  },
+  "conversationMainlineStatus": {
+    "videoLinked": "published",
+    "subtitleParsed": "published",
+    "subtitleCleaned": "published",
+    "humanReviewed": "not_started",
+    "importedToLessonJson": "published",
+    "vocabReady": "needs_review",
+    "grammarReady": "needs_review",
+    "examplesReady": "needs_review",
+    "quizReady": "needs_review",
+    "reciteReady": "needs_review",
+    "recordingReady": "published",
+    "scoringReady": "published",
+    "publishedToStaging": "not_started",
+    "verifiedOnline": "not_started"
   }
 }

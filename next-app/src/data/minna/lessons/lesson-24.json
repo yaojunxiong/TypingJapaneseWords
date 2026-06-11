@@ -756,6 +756,1813 @@
           }
         }
       ]
+    },
+    {
+      "type": "conversation",
+      "id": "l24_conversation",
+      "sourceType": "official_video_subtitle",
+      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P24_%E7%AC%AC24%E8%AA%B2.json",
+      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P24_%E7%AC%AC24%E8%AA%B2.mp4",
+      "title": {
+        "zh": "会话背诵",
+        "en": "Conversation Practice"
+      },
+      "dialogTitle": {
+        "zh": "第24课会话",
+        "en": "第24课会话"
+      },
+      "conversationGoal": {
+        "zh": "第24课会话练习",
+        "en": "Lesson 24 Conversation Practice"
+      },
+      "items": [
+        {
+          "id": "l24-conv-001",
+          "speaker": "",
+          "jp": "1",
+          "kana": "1",
+          "zh": "1",
+          "keyword": "",
+          "videoStart": "0:00.0",
+          "videoEnd": "0:04.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-conv-002",
+          "speaker": "",
+          "jp": "ん",
+          "kana": "ん",
+          "zh": "嗯。",
+          "keyword": "",
+          "videoStart": "0:04.0",
+          "videoEnd": "0:09.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-conv-003",
+          "speaker": "",
+          "jp": "ワンさん、日曜日引っ越しですね",
+          "kana": "",
+          "zh": "ワン先生，您周日要搬家对吧？",
+          "keyword": "日曜日引",
+          "videoStart": "0:10.0",
+          "videoEnd": "0:13.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-conv-004",
+          "speaker": "",
+          "jp": "手伝いに行きましょうか？",
+          "kana": "",
+          "zh": "要我去帮忙吗？",
+          "keyword": "手伝",
+          "videoStart": "0:13.0",
+          "videoEnd": "0:15.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-conv-005",
+          "speaker": "",
+          "jp": "ありがとうございます",
+          "kana": "ありがとうございます",
+          "zh": "谢谢你。",
+          "keyword": "",
+          "videoStart": "0:15.0",
+          "videoEnd": "0:17.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-conv-006",
+          "speaker": "",
+          "jp": "じゃあ、すみませんが9時ごろお願いします",
+          "kana": "",
+          "zh": "那就麻烦你九点左右过来吧。",
+          "keyword": "9時",
+          "videoStart": "0:17.0",
+          "videoEnd": "0:20.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-conv-007",
+          "speaker": "",
+          "jp": "他に誰が手伝いに行きますか？",
+          "kana": "",
+          "zh": "还有谁会来帮忙呢？",
+          "keyword": "手伝",
+          "videoStart": "0:20.0",
+          "videoEnd": "0:23.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-conv-008",
+          "speaker": "",
+          "jp": "山田さんとミラーさんが来てくれます",
+          "kana": "",
+          "zh": "山田先生和米勒先生会来帮忙。",
+          "keyword": "山田",
+          "videoStart": "0:23.0",
+          "videoEnd": "0:27.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-conv-009",
+          "speaker": "",
+          "jp": "車は？",
+          "kana": "",
+          "zh": "车子怎么办？",
+          "keyword": "",
+          "videoStart": "0:27.0",
+          "videoEnd": "0:28.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-conv-010",
+          "speaker": "",
+          "jp": "山田さんに貸してもらいます",
+          "kana": "",
+          "zh": "我会让山田先生借给我们。",
+          "keyword": "山田",
+          "videoStart": "0:28.0",
+          "videoEnd": "0:31.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-conv-011",
+          "speaker": "",
+          "jp": "昼ごはんはどうしますか？",
+          "kana": "",
+          "zh": "午饭怎么办？",
+          "keyword": "",
+          "videoStart": "0:31.0",
+          "videoEnd": "0:34.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-conv-012",
+          "speaker": "",
+          "jp": "えーと",
+          "kana": "えーと",
+          "zh": "嗯……",
+          "keyword": "",
+          "videoStart": "0:34.0",
+          "videoEnd": "0:36.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-conv-013",
+          "speaker": "",
+          "jp": "私がお弁当を持っていきましょうか？",
+          "kana": "",
+          "zh": "要我带便当去吗？",
+          "keyword": "弁当",
+          "videoStart": "0:36.0",
+          "videoEnd": "0:39.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-conv-014",
+          "speaker": "",
+          "jp": "すみません、お願いします",
+          "kana": "",
+          "zh": "不好意思，那就拜托你了。",
+          "keyword": "",
+          "videoStart": "0:39.0",
+          "videoEnd": "0:41.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-conv-015",
+          "speaker": "",
+          "jp": "じゃあ、日曜日に",
+          "kana": "",
+          "zh": "那我们星期天见。",
+          "keyword": "日曜日",
+          "videoStart": "0:41.0",
+          "videoEnd": "0:44.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_vocab",
+      "id": "l24_conversation_vocab",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话关键词汇",
+        "en": "Conversation Key Vocabulary"
+      },
+      "description": {
+        "zh": "以下词汇从会话原文中提取。",
+        "en": "Vocabulary from the conversation."
+      },
+      "items": [
+        {
+          "word": "ワンさん",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l24-conv-003",
+          "sourceSentence": "ワンさん、日曜日引っ越しですね",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "日曜日引っ越しですね",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l24-conv-003",
+          "sourceSentence": "ワンさん、日曜日引っ越しですね",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "手伝いに行きましょうか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l24-conv-004",
+          "sourceSentence": "手伝いに行きましょうか？",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "ありがとうございます",
+          "kana": "ありがとうございます",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l24-conv-005",
+          "sourceSentence": "ありがとうございます",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "じゃあ",
+          "kana": "じゃあ",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l24-conv-006",
+          "sourceSentence": "じゃあ、すみませんが9時ごろお願いします",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "すみませんが",
+          "kana": "すみませんが",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l24-conv-006",
+          "sourceSentence": "じゃあ、すみませんが9時ごろお願いします",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "時ごろお願いします",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l24-conv-006",
+          "sourceSentence": "じゃあ、すみませんが9時ごろお願いします",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "他に誰が手伝いに行きますか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l24-conv-007",
+          "sourceSentence": "他に誰が手伝いに行きますか？",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "山田さんとミラーさんが来てくれます",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l24-conv-008",
+          "sourceSentence": "山田さんとミラーさんが来てくれます",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "車は",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l24-conv-009",
+          "sourceSentence": "車は？",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "山田さんに貸してもらいます",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l24-conv-010",
+          "sourceSentence": "山田さんに貸してもらいます",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "昼ごはんはどうしますか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l24-conv-011",
+          "sourceSentence": "昼ごはんはどうしますか？",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "えーと",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l24-conv-012",
+          "sourceSentence": "えーと",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "私がお弁当を持っていきましょうか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l24-conv-013",
+          "sourceSentence": "私がお弁当を持っていきましょうか？",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "すみません",
+          "kana": "すみません",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l24-conv-014",
+          "sourceSentence": "すみません、お願いします",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "お願いします",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l24-conv-014",
+          "sourceSentence": "すみません、お願いします",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "日曜日に",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l24-conv-015",
+          "sourceSentence": "じゃあ、日曜日に",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_grammar",
+      "id": "l24_conversation_grammar",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话核心语法",
+        "en": "Conversation Core Grammar"
+      },
+      "description": {
+        "zh": "以下语法点从会话原文中提取。",
+        "en": "Grammar points from the conversation."
+      },
+      "items": [
+        {
+          "pattern": "〜です",
+          "meaning": {
+            "zh": "是…（礼貌判断）",
+            "en": "is/am (polite copula)"
+          },
+          "conversationExample": "ワンさん、日曜日引っ越しですね",
+          "fromConversationId": "l24-conv-003",
+          "sourceSentence": "ワンさん、日曜日引っ越しですね",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「です」是日语礼貌判断助动词，相当于中文的\"是\"。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜か",
+          "meaning": {
+            "zh": "…吗？（疑问）",
+            "en": "question marker"
+          },
+          "conversationExample": "手伝いに行きましょうか？",
+          "fromConversationId": "l24-conv-004",
+          "sourceSentence": "手伝いに行きましょうか？",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "句尾加「か」构成疑问句。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜に〜",
+          "meaning": {
+            "zh": "在/向…",
+            "en": "to/at"
+          },
+          "conversationExample": "手伝いに行きましょうか？",
+          "fromConversationId": "l24-conv-004",
+          "sourceSentence": "手伝いに行きましょうか？",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「に」表示时间、地点或方向。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ます",
+          "meaning": {
+            "zh": "（动词敬体）",
+            "en": "polite verb form"
+          },
+          "conversationExample": "ありがとうございます",
+          "fromConversationId": "l24-conv-005",
+          "sourceSentence": "ありがとうございます",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ます」是动词的敬体形式。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ません",
+          "meaning": {
+            "zh": "不…（否定）",
+            "en": "negative form"
+          },
+          "conversationExample": "じゃあ、すみませんが9時ごろお願いします",
+          "fromConversationId": "l24-conv-006",
+          "sourceSentence": "じゃあ、すみませんが9時ごろお願いします",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ません」是「ます」的否定形式。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜を〜",
+          "meaning": {
+            "zh": "…（宾语标记）",
+            "en": "object marker"
+          },
+          "conversationExample": "私がお弁当を持っていきましょうか？",
+          "fromConversationId": "l24-conv-013",
+          "sourceSentence": "私がお弁当を持っていきましょうか？",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「を」标记动作的对象。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_examples",
+      "id": "l24_conversation_examples",
+      "sourceType": "ai_generated_from_official_conversation",
+      "title": {
+        "zh": "会话替换例句",
+        "en": "Conversation Replacement Examples"
+      },
+      "description": {
+        "zh": "以下例句基于会话原句生成。",
+        "en": "Examples generated from conversation sentences."
+      },
+      "items": [
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "1",
+          "fromConversationId": "l24-conv-001",
+          "sourceSentence": "1",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "ん",
+          "fromConversationId": "l24-conv-002",
+          "sourceSentence": "ん",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "日曜日引",
+          "originalSentence": "ワンさん、日曜日引っ越しですね",
+          "fromConversationId": "l24-conv-003",
+          "sourceSentence": "ワンさん、日曜日引っ越しですね",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "手伝",
+          "originalSentence": "手伝いに行きましょうか？",
+          "fromConversationId": "l24-conv-004",
+          "sourceSentence": "手伝いに行きましょうか？",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "ありがとうございます",
+          "fromConversationId": "l24-conv-005",
+          "sourceSentence": "ありがとうございます",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "9時",
+          "originalSentence": "じゃあ、すみませんが9時ごろお願いします",
+          "fromConversationId": "l24-conv-006",
+          "sourceSentence": "じゃあ、すみませんが9時ごろお願いします",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "手伝",
+          "originalSentence": "他に誰が手伝いに行きますか？",
+          "fromConversationId": "l24-conv-007",
+          "sourceSentence": "他に誰が手伝いに行きますか？",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "山田",
+          "originalSentence": "山田さんとミラーさんが来てくれます",
+          "fromConversationId": "l24-conv-008",
+          "sourceSentence": "山田さんとミラーさんが来てくれます",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "車は？",
+          "fromConversationId": "l24-conv-009",
+          "sourceSentence": "車は？",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "山田",
+          "originalSentence": "山田さんに貸してもらいます",
+          "fromConversationId": "l24-conv-010",
+          "sourceSentence": "山田さんに貸してもらいます",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "昼ごはんはどうしますか？",
+          "fromConversationId": "l24-conv-011",
+          "sourceSentence": "昼ごはんはどうしますか？",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "えーと",
+          "fromConversationId": "l24-conv-012",
+          "sourceSentence": "えーと",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "弁当",
+          "originalSentence": "私がお弁当を持っていきましょうか？",
+          "fromConversationId": "l24-conv-013",
+          "sourceSentence": "私がお弁当を持っていきましょうか？",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "すみません、お願いします",
+          "fromConversationId": "l24-conv-014",
+          "sourceSentence": "すみません、お願いします",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "日曜日",
+          "originalSentence": "じゃあ、日曜日に",
+          "fromConversationId": "l24-conv-015",
+          "sourceSentence": "じゃあ、日曜日に",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_quiz",
+      "id": "l24_conversation_quiz",
+      "sourceType": "generated_from_official_video_subtitle",
+      "title": {
+        "zh": "会话专项测试",
+        "en": "Conversation Quiz"
+      },
+      "description": {
+        "zh": "测试题围绕会话内容设计。",
+        "en": "Quiz based on the conversation."
+      },
+      "items": [
+        {
+          "id": "l24-q-001-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「1」是什么意思？",
+            "en": "What does \"1\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "1",
+                "en": "1"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "1",
+          "fromConversationId": "l24-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-001-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「1」的日语说法。",
+            "en": "Select Japanese for \"1\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "1"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "1",
+          "fromConversationId": "l24-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-001-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「1」的中文意思是？",
+            "en": "What does \"1\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "1",
+                "en": "1"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "1",
+          "fromConversationId": "l24-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-002-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「ん」是什么意思？",
+            "en": "What does \"ん\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "嗯。",
+                "en": "嗯。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "ん",
+          "fromConversationId": "l24-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-002-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「嗯。」的日语说法。",
+            "en": "Select Japanese for \"嗯。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "ん"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ん",
+          "fromConversationId": "l24-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-002-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「ん」的中文意思是？",
+            "en": "What does \"ん\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "嗯。",
+                "en": "嗯。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ん",
+          "fromConversationId": "l24-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-003-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「ワンさん、日曜日引っ越しですね」是什么意思？",
+            "en": "What does \"ワンさん、日曜日引っ越しですね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "ワン先生，您周日要搬家对吧？",
+                "en": "ワン先生，您周日要搬家对吧？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "ワンさん、日曜日引っ越しですね",
+          "fromConversationId": "l24-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-003-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「ワン先生，您周日要搬家对吧？」的日语说法。",
+            "en": "Select Japanese for \"ワン先生，您周日要搬家对吧？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "ワンさん、日曜日引っ越しですね"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ワンさん、日曜日引っ越しですね",
+          "fromConversationId": "l24-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-003-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「ワンさん、日曜日引っ越しですね」的中文意思是？",
+            "en": "What does \"ワンさん、日曜日引っ越しですね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "ワン先生，您周日要搬家对吧？",
+                "en": "ワン先生，您周日要搬家对吧？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ワンさん、日曜日引っ越しですね",
+          "fromConversationId": "l24-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-004-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「手伝いに行きましょうか？」是什么意思？",
+            "en": "What does \"手伝いに行きましょうか？\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "要我去帮忙吗？",
+                "en": "要我去帮忙吗？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "手伝いに行きましょうか？",
+          "fromConversationId": "l24-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-004-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「要我去帮忙吗？」的日语说法。",
+            "en": "Select Japanese for \"要我去帮忙吗？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "手伝いに行きましょうか？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "手伝いに行きましょうか？",
+          "fromConversationId": "l24-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-004-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「手伝いに行きましょうか？」的中文意思是？",
+            "en": "What does \"手伝いに行きましょうか？\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "要我去帮忙吗？",
+                "en": "要我去帮忙吗？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "手伝いに行きましょうか？",
+          "fromConversationId": "l24-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-005-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「ありがとうございます」是什么意思？",
+            "en": "What does \"ありがとうございます\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "谢谢你。",
+                "en": "谢谢你。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "ありがとうございます",
+          "fromConversationId": "l24-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-005-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「谢谢你。」的日语说法。",
+            "en": "Select Japanese for \"谢谢你。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "ありがとうございます"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ありがとうございます",
+          "fromConversationId": "l24-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-005-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「ありがとうございます」的中文意思是？",
+            "en": "What does \"ありがとうございます\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "谢谢你。",
+                "en": "谢谢你。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ありがとうございます",
+          "fromConversationId": "l24-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-006-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「じゃあ、すみませんが9時ごろお願いします」是什么意思？",
+            "en": "What does \"じゃあ、すみませんが9時ごろお願いします\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那就麻烦你九点左右过来吧。",
+                "en": "那就麻烦你九点左右过来吧。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "じゃあ、すみませんが9時ごろお願いします",
+          "fromConversationId": "l24-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-006-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「那就麻烦你九点左右过来吧。」的日语说法。",
+            "en": "Select Japanese for \"那就麻烦你九点左右过来吧。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "じゃあ、すみませんが9時ごろお願いします"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "じゃあ、すみませんが9時ごろお願いします",
+          "fromConversationId": "l24-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-006-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「じゃあ、すみませんが9時ごろお願いします」的中文意思是？",
+            "en": "What does \"じゃあ、すみませんが9時ごろお願いします\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那就麻烦你九点左右过来吧。",
+                "en": "那就麻烦你九点左右过来吧。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "じゃあ、すみませんが9時ごろお願いします",
+          "fromConversationId": "l24-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-007-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「他に誰が手伝いに行きますか？」是什么意思？",
+            "en": "What does \"他に誰が手伝いに行きますか？\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "还有谁会来帮忙呢？",
+                "en": "还有谁会来帮忙呢？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "他に誰が手伝いに行きますか？",
+          "fromConversationId": "l24-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-007-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「还有谁会来帮忙呢？」的日语说法。",
+            "en": "Select Japanese for \"还有谁会来帮忙呢？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "他に誰が手伝いに行きますか？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "他に誰が手伝いに行きますか？",
+          "fromConversationId": "l24-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-007-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「他に誰が手伝いに行きますか？」的中文意思是？",
+            "en": "What does \"他に誰が手伝いに行きますか？\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "还有谁会来帮忙呢？",
+                "en": "还有谁会来帮忙呢？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "他に誰が手伝いに行きますか？",
+          "fromConversationId": "l24-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-008-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「山田さんとミラーさんが来てくれます」是什么意思？",
+            "en": "What does \"山田さんとミラーさんが来てくれます\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "山田先生和米勒先生会来帮忙。",
+                "en": "山田先生和米勒先生会来帮忙。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "山田さんとミラーさんが来てくれます",
+          "fromConversationId": "l24-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-008-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「山田先生和米勒先生会来帮忙。」的日语说法。",
+            "en": "Select Japanese for \"山田先生和米勒先生会来帮忙。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "山田さんとミラーさんが来てくれます"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "山田さんとミラーさんが来てくれます",
+          "fromConversationId": "l24-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-008-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「山田さんとミラーさんが来てくれます」的中文意思是？",
+            "en": "What does \"山田さんとミラーさんが来てくれます\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "山田先生和米勒先生会来帮忙。",
+                "en": "山田先生和米勒先生会来帮忙。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "山田さんとミラーさんが来てくれます",
+          "fromConversationId": "l24-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-009-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「車は？」是什么意思？",
+            "en": "What does \"車は？\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "车子怎么办？",
+                "en": "车子怎么办？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "車は？",
+          "fromConversationId": "l24-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-009-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「车子怎么办？」的日语说法。",
+            "en": "Select Japanese for \"车子怎么办？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "車は？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "車は？",
+          "fromConversationId": "l24-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-009-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「車は？」的中文意思是？",
+            "en": "What does \"車は？\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "车子怎么办？",
+                "en": "车子怎么办？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "車は？",
+          "fromConversationId": "l24-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-010-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「山田さんに貸してもらいます」是什么意思？",
+            "en": "What does \"山田さんに貸してもらいます\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我会让山田先生借给我们。",
+                "en": "我会让山田先生借给我们。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "山田さんに貸してもらいます",
+          "fromConversationId": "l24-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-010-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「我会让山田先生借给我们。」的日语说法。",
+            "en": "Select Japanese for \"我会让山田先生借给我们。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "山田さんに貸してもらいます"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "山田さんに貸してもらいます",
+          "fromConversationId": "l24-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-010-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「山田さんに貸してもらいます」的中文意思是？",
+            "en": "What does \"山田さんに貸してもらいます\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我会让山田先生借给我们。",
+                "en": "我会让山田先生借给我们。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "山田さんに貸してもらいます",
+          "fromConversationId": "l24-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-011-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「昼ごはんはどうしますか？」是什么意思？",
+            "en": "What does \"昼ごはんはどうしますか？\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "午饭怎么办？",
+                "en": "午饭怎么办？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "昼ごはんはどうしますか？",
+          "fromConversationId": "l24-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-011-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「午饭怎么办？」的日语说法。",
+            "en": "Select Japanese for \"午饭怎么办？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "昼ごはんはどうしますか？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "昼ごはんはどうしますか？",
+          "fromConversationId": "l24-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-011-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「昼ごはんはどうしますか？」的中文意思是？",
+            "en": "What does \"昼ごはんはどうしますか？\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "午饭怎么办？",
+                "en": "午饭怎么办？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "昼ごはんはどうしますか？",
+          "fromConversationId": "l24-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-012-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「えーと」是什么意思？",
+            "en": "What does \"えーと\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "嗯……",
+                "en": "嗯……"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "えーと",
+          "fromConversationId": "l24-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-012-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「嗯……」的日语说法。",
+            "en": "Select Japanese for \"嗯……\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "えーと"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "えーと",
+          "fromConversationId": "l24-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-012-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「えーと」的中文意思是？",
+            "en": "What does \"えーと\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "嗯……",
+                "en": "嗯……"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "えーと",
+          "fromConversationId": "l24-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-013-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「私がお弁当を持っていきましょうか？」是什么意思？",
+            "en": "What does \"私がお弁当を持っていきましょうか？\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "要我带便当去吗？",
+                "en": "要我带便当去吗？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "私がお弁当を持っていきましょうか？",
+          "fromConversationId": "l24-conv-013",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-013-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「要我带便当去吗？」的日语说法。",
+            "en": "Select Japanese for \"要我带便当去吗？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "私がお弁当を持っていきましょうか？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "私がお弁当を持っていきましょうか？",
+          "fromConversationId": "l24-conv-013",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-013-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「私がお弁当を持っていきましょうか？」的中文意思是？",
+            "en": "What does \"私がお弁当を持っていきましょうか？\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "要我带便当去吗？",
+                "en": "要我带便当去吗？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "私がお弁当を持っていきましょうか？",
+          "fromConversationId": "l24-conv-013",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-014-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「すみません、お願いします」是什么意思？",
+            "en": "What does \"すみません、お願いします\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不好意思，那就拜托你了。",
+                "en": "不好意思，那就拜托你了。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "すみません、お願いします",
+          "fromConversationId": "l24-conv-014",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-014-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「不好意思，那就拜托你了。」的日语说法。",
+            "en": "Select Japanese for \"不好意思，那就拜托你了。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "すみません、お願いします"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "すみません、お願いします",
+          "fromConversationId": "l24-conv-014",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-014-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「すみません、お願いします」的中文意思是？",
+            "en": "What does \"すみません、お願いします\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不好意思，那就拜托你了。",
+                "en": "不好意思，那就拜托你了。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "すみません、お願いします",
+          "fromConversationId": "l24-conv-014",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-015-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「じゃあ、日曜日に」是什么意思？",
+            "en": "What does \"じゃあ、日曜日に\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那我们星期天见。",
+                "en": "那我们星期天见。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "じゃあ、日曜日に",
+          "fromConversationId": "l24-conv-015",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-015-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「那我们星期天见。」的日语说法。",
+            "en": "Select Japanese for \"那我们星期天见。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "じゃあ、日曜日に"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "じゃあ、日曜日に",
+          "fromConversationId": "l24-conv-015",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l24-q-015-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「じゃあ、日曜日に」的中文意思是？",
+            "en": "What does \"じゃあ、日曜日に\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那我们星期天见。",
+                "en": "那我们星期天见。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "じゃあ、日曜日に",
+          "fromConversationId": "l24-conv-015",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
     }
   ],
   "conversationVideo": {
@@ -764,6 +2571,22 @@
     "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P24_%E7%AC%AC24%E8%AA%B2.mp4",
     "subtitleUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P24_%E7%AC%AC24%E8%AA%B2.json",
     "sourceType": "official_video_resource",
-    "status": "linked_not_imported"
+    "status": "imported_with_subtitles"
+  },
+  "conversationMainlineStatus": {
+    "videoLinked": "published",
+    "subtitleParsed": "published",
+    "subtitleCleaned": "published",
+    "humanReviewed": "not_started",
+    "importedToLessonJson": "published",
+    "vocabReady": "needs_review",
+    "grammarReady": "needs_review",
+    "examplesReady": "needs_review",
+    "quizReady": "needs_review",
+    "reciteReady": "needs_review",
+    "recordingReady": "published",
+    "scoringReady": "published",
+    "publishedToStaging": "not_started",
+    "verifiedOnline": "not_started"
   }
 }

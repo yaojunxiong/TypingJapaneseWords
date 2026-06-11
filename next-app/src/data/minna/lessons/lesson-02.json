@@ -744,6 +744,1318 @@
           }
         }
       ]
+    },
+    {
+      "type": "conversation",
+      "id": "l02_conversation",
+      "sourceType": "official_video_subtitle",
+      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P2_%E7%AC%AC2%E8%AA%B2.json",
+      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P2_%E7%AC%AC2%E8%AA%B2.mp4",
+      "title": {
+        "zh": "会话背诵",
+        "en": "Conversation Practice"
+      },
+      "dialogTitle": {
+        "zh": "物品所属",
+        "en": "物品所属"
+      },
+      "conversationGoal": {
+        "zh": "能用物产名词询问和回答物品所属",
+        "en": "Ask and answer about belongings"
+      },
+      "items": [
+        {
+          "id": "l02-conv-001",
+          "speaker": "",
+          "jp": "はい、どなたですか?",
+          "kana": "はい、どなたですか?",
+          "zh": "您好，请问是哪位？",
+          "keyword": "",
+          "videoStart": "0:00.0",
+          "videoEnd": "0:14.6",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-conv-002",
+          "speaker": "",
+          "jp": "408のサントスです",
+          "kana": "408のサントスです",
+          "zh": "我是408号的桑托斯",
+          "keyword": "408",
+          "videoStart": "0:15.9",
+          "videoEnd": "0:17.3",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-conv-003",
+          "speaker": "",
+          "jp": "こんにちは、サントスです",
+          "kana": "こんにちは、サントスです",
+          "zh": "你好，我是桑托斯",
+          "keyword": "",
+          "videoStart": "0:17.3",
+          "videoEnd": "0:22.3",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-conv-004",
+          "speaker": "",
+          "jp": "これからお世話になります",
+          "kana": "",
+          "zh": "今后请多多关照",
+          "keyword": "世話",
+          "videoStart": "0:22.3",
+          "videoEnd": "0:24.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-conv-005",
+          "speaker": "",
+          "jp": "どうぞよろしくお願いします",
+          "kana": "",
+          "zh": "请多关照",
+          "keyword": "",
+          "videoStart": "0:24.1",
+          "videoEnd": "0:26.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-conv-006",
+          "speaker": "",
+          "jp": "こちらこそよろしくお願いします",
+          "kana": "",
+          "zh": "我才是，请多关照",
+          "keyword": "",
+          "videoStart": "0:26.1",
+          "videoEnd": "0:28.6",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-conv-007",
+          "speaker": "",
+          "jp": "あのー、サントスさんのお店はどこですか?",
+          "kana": "",
+          "zh": "那个，桑托斯先生的店在哪里？",
+          "keyword": "",
+          "videoStart": "0:28.6",
+          "videoEnd": "0:30.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-conv-008",
+          "speaker": "",
+          "jp": "あのー、これコーヒーです",
+          "kana": "あのー、これコーヒーです",
+          "zh": "那个，这是咖啡",
+          "keyword": "",
+          "videoStart": "0:30.0",
+          "videoEnd": "0:32.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-conv-009",
+          "speaker": "",
+          "jp": "どうぞ",
+          "kana": "どうぞ",
+          "zh": "请用",
+          "keyword": "",
+          "videoStart": "0:32.1",
+          "videoEnd": "0:33.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-conv-010",
+          "speaker": "",
+          "jp": "どうもありがとうございます",
+          "kana": "どうもありがとうございます",
+          "zh": "非常感谢",
+          "keyword": "",
+          "videoStart": "0:33.1",
+          "videoEnd": "0:39.6",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_vocab",
+      "id": "l02_conversation_vocab",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话关键词汇",
+        "en": "Conversation Key Vocabulary"
+      },
+      "description": {
+        "zh": "以下词汇从会话原文中提取。",
+        "en": "Vocabulary from the conversation."
+      },
+      "items": [
+        {
+          "word": "はい",
+          "kana": "はい",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l02-conv-001",
+          "sourceSentence": "はい、どなたですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "どなたですか",
+          "kana": "どなたですか",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l02-conv-001",
+          "sourceSentence": "はい、どなたですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "のサントスです",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l02-conv-002",
+          "sourceSentence": "408のサントスです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "こんにちは",
+          "kana": "こんにちは",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l02-conv-003",
+          "sourceSentence": "こんにちは、サントスです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "サントスです",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l02-conv-003",
+          "sourceSentence": "こんにちは、サントスです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "これからお世話になります",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l02-conv-004",
+          "sourceSentence": "これからお世話になります",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "どうぞよろしくお願いします",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l02-conv-005",
+          "sourceSentence": "どうぞよろしくお願いします",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "こちらこそよろしくお願いします",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l02-conv-006",
+          "sourceSentence": "こちらこそよろしくお願いします",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "あのー",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l02-conv-007",
+          "sourceSentence": "あのー、サントスさんのお店はどこですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "サントスさんのお店はどこですか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l02-conv-007",
+          "sourceSentence": "あのー、サントスさんのお店はどこですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "これコーヒーです",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l02-conv-008",
+          "sourceSentence": "あのー、これコーヒーです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "どうぞ",
+          "kana": "どうぞ",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l02-conv-009",
+          "sourceSentence": "どうぞ",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "どうもありがとうございます",
+          "kana": "どうもありがとうございます",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l02-conv-010",
+          "sourceSentence": "どうもありがとうございます",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_grammar",
+      "id": "l02_conversation_grammar",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话核心语法",
+        "en": "Conversation Core Grammar"
+      },
+      "description": {
+        "zh": "以下语法点从会话原文中提取。",
+        "en": "Grammar points from the conversation."
+      },
+      "items": [
+        {
+          "pattern": "〜です",
+          "meaning": {
+            "zh": "是…（礼貌判断）",
+            "en": "is/am (polite copula)"
+          },
+          "conversationExample": "はい、どなたですか?",
+          "fromConversationId": "l02-conv-001",
+          "sourceSentence": "はい、どなたですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「です」是日语礼貌判断助动词，相当于中文的\"是\"。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜か",
+          "meaning": {
+            "zh": "…吗？（疑问）",
+            "en": "question marker"
+          },
+          "conversationExample": "はい、どなたですか?",
+          "fromConversationId": "l02-conv-001",
+          "sourceSentence": "はい、どなたですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "句尾加「か」构成疑问句。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜に〜",
+          "meaning": {
+            "zh": "在/向…",
+            "en": "to/at"
+          },
+          "conversationExample": "こんにちは、サントスです",
+          "fromConversationId": "l02-conv-003",
+          "sourceSentence": "こんにちは、サントスです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「に」表示时间、地点或方向。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜から",
+          "meaning": {
+            "zh": "从…",
+            "en": "from"
+          },
+          "conversationExample": "これからお世話になります",
+          "fromConversationId": "l02-conv-004",
+          "sourceSentence": "これからお世話になります",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「から」表示起点或来源。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ます",
+          "meaning": {
+            "zh": "（动词敬体）",
+            "en": "polite verb form"
+          },
+          "conversationExample": "これからお世話になります",
+          "fromConversationId": "l02-conv-004",
+          "sourceSentence": "これからお世話になります",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ます」是动词的敬体形式。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_examples",
+      "id": "l02_conversation_examples",
+      "sourceType": "ai_generated_from_official_conversation",
+      "title": {
+        "zh": "会话替换例句",
+        "en": "Conversation Replacement Examples"
+      },
+      "description": {
+        "zh": "以下例句基于会话原句生成。",
+        "en": "Examples generated from conversation sentences."
+      },
+      "items": [
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "はい、どなたですか?",
+          "fromConversationId": "l02-conv-001",
+          "sourceSentence": "はい、どなたですか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "408",
+          "originalSentence": "408のサントスです",
+          "fromConversationId": "l02-conv-002",
+          "sourceSentence": "408のサントスです",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [
+            {
+              "jp": "408の佐藤です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "408の田中です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "408の山田です",
+              "kana": "",
+              "zh": ""
+            }
+          ],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "替换练习",
+          "originalSentence": "こんにちは、サントスです",
+          "fromConversationId": "l02-conv-003",
+          "sourceSentence": "こんにちは、サントスです",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [
+            {
+              "jp": "こんにちは佐藤です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "こんにちは田中です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "こんにちは山田です",
+              "kana": "",
+              "zh": ""
+            }
+          ],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "世話",
+          "originalSentence": "これからお世話になります",
+          "fromConversationId": "l02-conv-004",
+          "sourceSentence": "これからお世話になります",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "どうぞよろしくお願いします",
+          "fromConversationId": "l02-conv-005",
+          "sourceSentence": "どうぞよろしくお願いします",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "こちらこそよろしくお願いします",
+          "fromConversationId": "l02-conv-006",
+          "sourceSentence": "こちらこそよろしくお願いします",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "あのー、サントスさんのお店はどこですか?",
+          "fromConversationId": "l02-conv-007",
+          "sourceSentence": "あのー、サントスさんのお店はどこですか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "替换练习",
+          "originalSentence": "あのー、これコーヒーです",
+          "fromConversationId": "l02-conv-008",
+          "sourceSentence": "あのー、これコーヒーです",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [
+            {
+              "jp": "あのー、これ佐藤です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "あのー、これ田中です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "あのー、これ山田です",
+              "kana": "",
+              "zh": ""
+            }
+          ],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "どうぞ",
+          "fromConversationId": "l02-conv-009",
+          "sourceSentence": "どうぞ",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "どうもありがとうございます",
+          "fromConversationId": "l02-conv-010",
+          "sourceSentence": "どうもありがとうございます",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_quiz",
+      "id": "l02_conversation_quiz",
+      "sourceType": "generated_from_official_video_subtitle",
+      "title": {
+        "zh": "会话专项测试",
+        "en": "Conversation Quiz"
+      },
+      "description": {
+        "zh": "测试题围绕会话内容设计。",
+        "en": "Quiz based on the conversation."
+      },
+      "items": [
+        {
+          "id": "l02-q-001-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「はい、どなたですか?」是什么意思？",
+            "en": "What does \"はい、どなたですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "您好，请问是哪位？",
+                "en": "您好，请问是哪位？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "はい、どなたですか?",
+          "fromConversationId": "l02-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-q-001-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「您好，请问是哪位？」的日语说法。",
+            "en": "Select Japanese for \"您好，请问是哪位？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "はい、どなたですか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい、どなたですか?",
+          "fromConversationId": "l02-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-q-001-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「はい、どなたですか?」的中文意思是？",
+            "en": "What does \"はい、どなたですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "您好，请问是哪位？",
+                "en": "您好，请问是哪位？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい、どなたですか?",
+          "fromConversationId": "l02-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-q-002-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「408のサントスです」是什么意思？",
+            "en": "What does \"408のサントスです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我是408号的桑托斯",
+                "en": "我是408号的桑托斯"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "408のサントスです",
+          "fromConversationId": "l02-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-q-002-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「我是408号的桑托斯」的日语说法。",
+            "en": "Select Japanese for \"我是408号的桑托斯\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "408のサントスです"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "408のサントスです",
+          "fromConversationId": "l02-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-q-002-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「408のサントスです」的中文意思是？",
+            "en": "What does \"408のサントスです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我是408号的桑托斯",
+                "en": "我是408号的桑托斯"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "408のサントスです",
+          "fromConversationId": "l02-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-q-003-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「こんにちは、サントスです」是什么意思？",
+            "en": "What does \"こんにちは、サントスです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "你好，我是桑托斯",
+                "en": "你好，我是桑托斯"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "こんにちは、サントスです",
+          "fromConversationId": "l02-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-q-003-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「你好，我是桑托斯」的日语说法。",
+            "en": "Select Japanese for \"你好，我是桑托斯\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "こんにちは、サントスです"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "こんにちは、サントスです",
+          "fromConversationId": "l02-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-q-003-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「こんにちは、サントスです」的中文意思是？",
+            "en": "What does \"こんにちは、サントスです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "你好，我是桑托斯",
+                "en": "你好，我是桑托斯"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "こんにちは、サントスです",
+          "fromConversationId": "l02-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-q-004-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「これからお世話になります」是什么意思？",
+            "en": "What does \"これからお世話になります\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "今后请多多关照",
+                "en": "今后请多多关照"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "これからお世話になります",
+          "fromConversationId": "l02-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-q-004-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「今后请多多关照」的日语说法。",
+            "en": "Select Japanese for \"今后请多多关照\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "これからお世話になります"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "これからお世話になります",
+          "fromConversationId": "l02-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-q-004-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「これからお世話になります」的中文意思是？",
+            "en": "What does \"これからお世話になります\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "今后请多多关照",
+                "en": "今后请多多关照"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "これからお世話になります",
+          "fromConversationId": "l02-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-q-005-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「どうぞよろしくお願いします」是什么意思？",
+            "en": "What does \"どうぞよろしくお願いします\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请多关照",
+                "en": "请多关照"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "どうぞよろしくお願いします",
+          "fromConversationId": "l02-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-q-005-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「请多关照」的日语说法。",
+            "en": "Select Japanese for \"请多关照\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "どうぞよろしくお願いします"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "どうぞよろしくお願いします",
+          "fromConversationId": "l02-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-q-005-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「どうぞよろしくお願いします」的中文意思是？",
+            "en": "What does \"どうぞよろしくお願いします\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请多关照",
+                "en": "请多关照"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "どうぞよろしくお願いします",
+          "fromConversationId": "l02-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-q-006-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「こちらこそよろしくお願いします」是什么意思？",
+            "en": "What does \"こちらこそよろしくお願いします\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我才是，请多关照",
+                "en": "我才是，请多关照"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "こちらこそよろしくお願いします",
+          "fromConversationId": "l02-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-q-006-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「我才是，请多关照」的日语说法。",
+            "en": "Select Japanese for \"我才是，请多关照\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "こちらこそよろしくお願いします"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "こちらこそよろしくお願いします",
+          "fromConversationId": "l02-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-q-006-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「こちらこそよろしくお願いします」的中文意思是？",
+            "en": "What does \"こちらこそよろしくお願いします\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我才是，请多关照",
+                "en": "我才是，请多关照"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "こちらこそよろしくお願いします",
+          "fromConversationId": "l02-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-q-007-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「あのー、サントスさんのお店はどこですか?」是什么意思？",
+            "en": "What does \"あのー、サントスさんのお店はどこですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那个，桑托斯先生的店在哪里？",
+                "en": "那个，桑托斯先生的店在哪里？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "あのー、サントスさんのお店はどこですか?",
+          "fromConversationId": "l02-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-q-007-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「那个，桑托斯先生的店在哪里？」的日语说法。",
+            "en": "Select Japanese for \"那个，桑托斯先生的店在哪里？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "あのー、サントスさんのお店はどこですか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "あのー、サントスさんのお店はどこですか?",
+          "fromConversationId": "l02-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-q-007-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「あのー、サントスさんのお店はどこですか?」的中文意思是？",
+            "en": "What does \"あのー、サントスさんのお店はどこですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那个，桑托斯先生的店在哪里？",
+                "en": "那个，桑托斯先生的店在哪里？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "あのー、サントスさんのお店はどこですか?",
+          "fromConversationId": "l02-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-q-008-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「あのー、これコーヒーです」是什么意思？",
+            "en": "What does \"あのー、これコーヒーです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那个，这是咖啡",
+                "en": "那个，这是咖啡"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "あのー、これコーヒーです",
+          "fromConversationId": "l02-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-q-008-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「那个，这是咖啡」的日语说法。",
+            "en": "Select Japanese for \"那个，这是咖啡\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "あのー、これコーヒーです"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "あのー、これコーヒーです",
+          "fromConversationId": "l02-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-q-008-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「あのー、これコーヒーです」的中文意思是？",
+            "en": "What does \"あのー、これコーヒーです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那个，这是咖啡",
+                "en": "那个，这是咖啡"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "あのー、これコーヒーです",
+          "fromConversationId": "l02-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-q-009-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「どうぞ」是什么意思？",
+            "en": "What does \"どうぞ\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请用",
+                "en": "请用"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "どうぞ",
+          "fromConversationId": "l02-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-q-009-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「请用」的日语说法。",
+            "en": "Select Japanese for \"请用\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "どうぞ"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "どうぞ",
+          "fromConversationId": "l02-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-q-009-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「どうぞ」的中文意思是？",
+            "en": "What does \"どうぞ\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请用",
+                "en": "请用"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "どうぞ",
+          "fromConversationId": "l02-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-q-010-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「どうもありがとうございます」是什么意思？",
+            "en": "What does \"どうもありがとうございます\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "非常感谢",
+                "en": "非常感谢"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "どうもありがとうございます",
+          "fromConversationId": "l02-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-q-010-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「非常感谢」的日语说法。",
+            "en": "Select Japanese for \"非常感谢\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "どうもありがとうございます"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "どうもありがとうございます",
+          "fromConversationId": "l02-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l02-q-010-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「どうもありがとうございます」的中文意思是？",
+            "en": "What does \"どうもありがとうございます\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "非常感谢",
+                "en": "非常感谢"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "どうもありがとうございます",
+          "fromConversationId": "l02-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
     }
   ],
   "conversationVideo": {
@@ -752,6 +2064,22 @@
     "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P2_%E7%AC%AC2%E8%AA%B2.mp4",
     "subtitleUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P2_%E7%AC%AC2%E8%AA%B2.json",
     "sourceType": "official_video_resource",
-    "status": "linked_not_imported"
+    "status": "imported_with_subtitles"
+  },
+  "conversationMainlineStatus": {
+    "videoLinked": "published",
+    "subtitleParsed": "published",
+    "subtitleCleaned": "published",
+    "humanReviewed": "not_started",
+    "importedToLessonJson": "published",
+    "vocabReady": "needs_review",
+    "grammarReady": "needs_review",
+    "examplesReady": "needs_review",
+    "quizReady": "needs_review",
+    "reciteReady": "needs_review",
+    "recordingReady": "published",
+    "scoringReady": "published",
+    "publishedToStaging": "not_started",
+    "verifiedOnline": "not_started"
   }
 }

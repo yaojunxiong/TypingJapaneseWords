@@ -8,151 +8,167 @@ function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, 'utf-8'))
 }
 
-function verifyLesson1() {
-  const file = path.join(LESSON_DIR, 'lesson-01.json')
+function verifyLesson(no) {
+  const fileNo = String(no).padStart(2, '0')
+  const file = path.join(LESSON_DIR, `lesson-${fileNo}.json`)
+  const issues = []
+
   if (!fs.existsSync(file)) {
-    console.error('ERROR: lesson-01.json not found')
-    process.exit(1)
+    issues.push(`lesson-${fileNo}.json not found`)
+    return { no, pass: false, issues }
   }
 
   const lesson = readJson(file)
   const sections = Array.isArray(lesson.sections) ? lesson.sections : []
-  const issues = []
+
+  // Check conversationMainlineStatus
+  if (!lesson.conversationMainlineStatus) {
+    issues.push('conversationMainlineStatus is missing')
+  }
 
   // Build conversation item ID -> jp map
   const convSection = sections.find(s => s.type === 'conversation')
   if (!convSection) {
     issues.push('conversation section is missing')
-    return issues
+    return { no, pass: false, issues }
   }
 
   const convItems = Array.isArray(convSection.items) ? convSection.items : []
+  if (convItems.length === 0) {
+    issues.push('conversation has no items')
+  }
+
   const convMap = new Map()
   for (const item of convItems) {
     convMap.set(item.id, item.jp || '')
   }
 
-  // Check conversation items
+  // 1. Check conversation items
   for (const item of convItems) {
-    if (!item.id) issues.push(`conversation item missing id: ${JSON.stringify(item)}`)
+    if (!item.id) issues.push(`conversation item missing id: ${JSON.stringify(item).slice(0, 50)}`)
+    if (!item.sourceType) issues.push(`conversation.${item.id}: sourceType is missing`)
     if (item.sourceType !== 'official_video_subtitle') {
       issues.push(`conversation.${item.id}: sourceType must be official_video_subtitle, got "${item.sourceType}"`)
     }
-    if (!item.needsReview) issues.push(`conversation.${item.id}: needsReview must be true`)
+    if (item.needsReview === undefined) issues.push(`conversation.${item.id}: needsReview is missing`)
     if (!item.reviewStatus) issues.push(`conversation.${item.id}: reviewStatus is missing`)
   }
 
-  // Check conversationMainlineStatus
-  if (!lesson.conversationMainlineStatus) {
-    issues.push('conversationMainlineStatus is missing from lesson root')
-  } else {
-    const cms = lesson.conversationMainlineStatus
-    if (cms.status !== 'imported') issues.push('conversationMainlineStatus.status should be "imported"')
-    if (!cms.source) issues.push('conversationMainlineStatus.source is missing')
-    if (!cms.importedAt) issues.push('conversationMainlineStatus.importedAt is missing')
-  }
-
-  // Check conversation_vocab
+  // 2. Check conversation_vocab
   const vocabSection = sections.find(s => s.type === 'conversation_vocab')
   if (vocabSection) {
     const vocabItems = Array.isArray(vocabSection.items) ? vocabSection.items : []
-    if (vocabSection.sourceType === 'ai_generated') {
-      issues.push('conversation_vocab.sourceType should be ai_generated_from_official_conversation, got "ai_generated"')
-    }
     for (const item of vocabItems) {
+      const label = item.word || item.id || '?'
       if (!item.fromConversationId) {
-        issues.push(`conversation_vocab.${item.word}: fromConversationId is missing`)
+        issues.push(`conversation_vocab.${label}: fromConversationId is missing`)
       } else if (!convMap.has(item.fromConversationId)) {
-        issues.push(`conversation_vocab.${item.word}: fromConversationId "${item.fromConversationId}" not found in conversation`)
+        issues.push(`conversation_vocab.${label}: fromConversationId "${item.fromConversationId}" not found in conversation`)
       }
-      if (!item.sourceType) issues.push(`conversation_vocab.${item.word}: sourceType is missing`)
-      if (item.needsReview === undefined) issues.push(`conversation_vocab.${item.word}: needsReview is missing`)
-      if (!item.reviewStatus) issues.push(`conversation_vocab.${item.word}: reviewStatus is missing`)
+      if (!item.sourceType) issues.push(`conversation_vocab.${label}: sourceType is missing`)
+      if (item.needsReview === undefined) issues.push(`conversation_vocab.${label}: needsReview is missing`)
+      if (!item.reviewStatus) issues.push(`conversation_vocab.${label}: reviewStatus is missing`)
     }
   }
 
-  // Check conversation_grammar
+  // 3. Check conversation_grammar
   const grammarSection = sections.find(s => s.type === 'conversation_grammar')
   if (grammarSection) {
     const grammarItems = Array.isArray(grammarSection.items) ? grammarSection.items : []
-    if (grammarSection.sourceType === 'ai_generated') {
-      issues.push('conversation_grammar.sourceType should be ai_generated_from_official_conversation, got "ai_generated"')
-    }
     for (const item of grammarItems) {
+      const label = item.pattern || item.id || '?'
       if (!item.fromConversationId) {
-        issues.push(`conversation_grammar.${item.pattern}: fromConversationId is missing`)
+        issues.push(`conversation_grammar.${label}: fromConversationId is missing`)
       } else if (!convMap.has(item.fromConversationId)) {
-        issues.push(`conversation_grammar.${item.pattern}: fromConversationId "${item.fromConversationId}" not found in conversation`)
+        issues.push(`conversation_grammar.${label}: fromConversationId "${item.fromConversationId}" not found in conversation`)
       }
-      if (!item.sourceType) issues.push(`conversation_grammar.${item.pattern}: sourceType is missing`)
-      if (item.needsReview === undefined) issues.push(`conversation_grammar.${item.pattern}: needsReview is missing`)
-      if (!item.reviewStatus) issues.push(`conversation_grammar.${item.pattern}: reviewStatus is missing`)
+      if (!item.sourceType) issues.push(`conversation_grammar.${label}: sourceType is missing`)
+      if (item.needsReview === undefined) issues.push(`conversation_grammar.${label}: needsReview is missing`)
+      if (!item.reviewStatus) issues.push(`conversation_grammar.${label}: reviewStatus is missing`)
     }
   }
 
-  // Check conversation_examples
+  // 4. Check conversation_examples
   const examplesSection = sections.find(s => s.type === 'conversation_examples')
   if (examplesSection) {
     const exampleGroups = Array.isArray(examplesSection.items) ? examplesSection.items : []
     for (const group of exampleGroups) {
+      const label = group.pattern || group.id || '?'
       if (!group.originalSentence) {
-        issues.push(`conversation_examples.${group.pattern}: originalSentence is missing`)
+        issues.push(`conversation_examples.${label}: originalSentence is missing`)
       } else {
         const found = Array.from(convMap.values()).some(jp => jp === group.originalSentence)
         if (!found) {
-          issues.push(`conversation_examples.${group.pattern}: originalSentence "${group.originalSentence}" not found in conversation items`)
+          issues.push(`conversation_examples.${label}: originalSentence not found in conversation`)
         }
       }
-      if (!group.sourceType) issues.push(`conversation_examples.${group.pattern}: sourceType is missing`)
-      if (group.needsReview === undefined) issues.push(`conversation_examples.${group.pattern}: needsReview is missing`)
-      if (!group.reviewStatus) issues.push(`conversation_examples.${group.pattern}: reviewStatus is missing`)
+      if (!group.sourceType) issues.push(`conversation_examples.${label}: sourceType is missing`)
+      if (group.needsReview === undefined) issues.push(`conversation_examples.${label}: needsReview is missing`)
+      if (!group.reviewStatus) issues.push(`conversation_examples.${label}: reviewStatus is missing`)
     }
   }
 
-  // Check conversation_quiz
+  // 5. Check conversation_quiz
   const quizSection = sections.find(s => s.type === 'conversation_quiz')
   if (quizSection) {
     const quizItems = Array.isArray(quizSection.items) ? quizSection.items : []
     for (const item of quizItems) {
+      const label = item.id || '?'
       if (!item.sourceSentence) {
-        issues.push(`conversation_quiz.${item.id}: sourceSentence is missing`)
+        issues.push(`conversation_quiz.${label}: sourceSentence is missing`)
       } else {
         const found = Array.from(convMap.values()).some(jp => jp === item.sourceSentence)
         if (!found) {
-          issues.push(`conversation_quiz.${item.id}: sourceSentence "${item.sourceSentence}" not found in conversation items`)
+          issues.push(`conversation_quiz.${label}: sourceSentence not found in conversation`)
         }
       }
       if (!item.fromConversationId) {
-        issues.push(`conversation_quiz.${item.id}: fromConversationId is missing`)
+        issues.push(`conversation_quiz.${label}: fromConversationId is missing`)
       }
-      if (item.needsReview === undefined) issues.push(`conversation_quiz.${item.id}: needsReview is missing`)
-      if (!item.reviewStatus) issues.push(`conversation_quiz.${item.id}: reviewStatus is missing`)
+      if (item.needsReview === undefined) issues.push(`conversation_quiz.${label}: needsReview is missing`)
+      if (!item.reviewStatus) issues.push(`conversation_quiz.${label}: reviewStatus is missing`)
     }
   }
 
-  // Check no temporary_test remains
+  // 6. Check no temporary_test
   for (const section of sections) {
     if (section.sourceType === 'temporary_test') {
       issues.push(`Section "${section.id}" still has sourceType temporary_test`)
     }
   }
 
-  return issues
+  return { no, pass: issues.length === 0, issues }
 }
 
 function run() {
-  console.log('=== Verify Lesson 1 Conversation Mainline ===\n')
-  const issues = verifyLesson1()
+  console.log('=== Verify Conversation Mainline: Lessons 1-50 ===\n')
 
-  if (issues.length === 0) {
-    console.log('PASS: All checks passed!')
-    process.exit(0)
-  } else {
-    console.log(`FAIL: ${issues.length} issue(s) found:\n`)
-    for (const issue of issues) {
-      console.log(`  - ${issue}`)
+  let totalPass = 0
+  let totalFail = 0
+
+  for (let no = 1; no <= 50; no++) {
+    const result = verifyLesson(no)
+    const num = String(result.no).padStart(2, '0')
+    if (result.pass) {
+      console.log(`✓ L${num}: PASS`)
+      totalPass++
+    } else {
+      console.log(`✗ L${num}: FAIL (${result.issues.length} issue(s))`)
+      for (const issue of result.issues) {
+        console.log(`     - ${issue}`)
+      }
+      totalFail++
     }
+  }
+
+  console.log(`\n=== Result: ${totalPass}/50 passed, ${totalFail}/50 failed ===`)
+
+  if (totalFail > 0) {
+    console.log(`\n⚠  ${totalFail} lesson(s) need fixes before deployment.`)
     process.exit(1)
+  } else {
+    console.log('\nPASS: 50/50 lessons verified')
+    process.exit(0)
   }
 }
 

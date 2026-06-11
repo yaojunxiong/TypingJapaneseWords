@@ -756,6 +756,2283 @@
           }
         }
       ]
+    },
+    {
+      "type": "conversation",
+      "id": "l22_conversation",
+      "sourceType": "official_video_subtitle",
+      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P22_%E7%AC%AC22%E8%AA%B2.json",
+      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P22_%E7%AC%AC22%E8%AA%B2.mp4",
+      "title": {
+        "zh": "会话背诵",
+        "en": "Conversation Practice"
+      },
+      "dialogTitle": {
+        "zh": "第22课会话",
+        "en": "第22课会话"
+      },
+      "conversationGoal": {
+        "zh": "第22课会话练习",
+        "en": "Lesson 22 Conversation Practice"
+      },
+      "items": [
+        {
+          "id": "l22-conv-001",
+          "speaker": "",
+          "jp": "【音楽】",
+          "kana": "",
+          "zh": "【音乐】",
+          "keyword": "音楽",
+          "videoStart": "0:00.0",
+          "videoEnd": "0:22.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-conv-002",
+          "speaker": "",
+          "jp": "どんな部屋をお探しですか?",
+          "kana": "",
+          "zh": "您在找什么样的房间呢？",
+          "keyword": "部屋",
+          "videoStart": "0:22.0",
+          "videoEnd": "0:24.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-conv-003",
+          "speaker": "",
+          "jp": "そうですね",
+          "kana": "そうですね",
+          "zh": "这个嘛……",
+          "keyword": "",
+          "videoStart": "0:24.0",
+          "videoEnd": "0:26.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-conv-004",
+          "speaker": "",
+          "jp": "やちんは8万円ぐらいで、駅から遠くないところがいいです",
+          "kana": "",
+          "zh": "房租在八万日元左右，最好离车站不要太远。",
+          "keyword": "8万円",
+          "videoStart": "0:26.0",
+          "videoEnd": "0:32.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-conv-005",
+          "speaker": "",
+          "jp": "【音楽】",
+          "kana": "",
+          "zh": "【音乐】",
+          "keyword": "音楽",
+          "videoStart": "0:32.0",
+          "videoEnd": "0:35.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-conv-006",
+          "speaker": "",
+          "jp": "では、こちらはいかがですか?",
+          "kana": "では、こちらはいかがですか?",
+          "zh": "那么，您觉得这个怎么样？",
+          "keyword": "",
+          "videoStart": "0:35.0",
+          "videoEnd": "0:37.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-conv-007",
+          "speaker": "",
+          "jp": "駅から10分で、やちんは8万3000円です",
+          "kana": "",
+          "zh": "离车站步行10分钟，房租是8万3千日元。",
+          "keyword": "8万3000円です",
+          "videoStart": "0:37.0",
+          "videoEnd": "0:43.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-conv-008",
+          "speaker": "",
+          "jp": "ダイニングキッチンと、和室ですね",
+          "kana": "",
+          "zh": "是带餐厨间和日式房间的户型。",
+          "keyword": "和室です",
+          "videoStart": "0:43.0",
+          "videoEnd": "0:48.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-conv-009",
+          "speaker": "",
+          "jp": "【音楽】",
+          "kana": "",
+          "zh": "【音乐】",
+          "keyword": "音楽",
+          "videoStart": "0:48.0",
+          "videoEnd": "0:53.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-conv-010",
+          "speaker": "",
+          "jp": "すみません",
+          "kana": "すみません",
+          "zh": "不好意思。",
+          "keyword": "",
+          "videoStart": "0:53.0",
+          "videoEnd": "0:55.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-conv-011",
+          "speaker": "",
+          "jp": "ここは何ですか?",
+          "kana": "",
+          "zh": "这里是什么？",
+          "keyword": "",
+          "videoStart": "0:55.0",
+          "videoEnd": "0:57.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-conv-012",
+          "speaker": "",
+          "jp": "押し入れです",
+          "kana": "",
+          "zh": "是壁橱。",
+          "keyword": "",
+          "videoStart": "0:57.0",
+          "videoEnd": "0:59.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-conv-013",
+          "speaker": "",
+          "jp": "布団を入れるところですよ",
+          "kana": "",
+          "zh": "是用来放被褥的地方哦。",
+          "keyword": "布団",
+          "videoStart": "0:59.0",
+          "videoEnd": "1:01.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-conv-014",
+          "speaker": "",
+          "jp": "【音楽】",
+          "kana": "",
+          "zh": "【音乐】",
+          "keyword": "音楽",
+          "videoStart": "1:01.0",
+          "videoEnd": "1:13.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-conv-015",
+          "speaker": "",
+          "jp": "そうですか?",
+          "kana": "そうですか?",
+          "zh": "是这样吗？",
+          "keyword": "",
+          "videoStart": "1:13.0",
+          "videoEnd": "1:15.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-conv-016",
+          "speaker": "",
+          "jp": "この部屋、今日見ることができますか?",
+          "kana": "",
+          "zh": "这个房间今天可以看吗？",
+          "keyword": "今日見",
+          "videoStart": "1:15.0",
+          "videoEnd": "1:17.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-conv-017",
+          "speaker": "",
+          "jp": "はい、今から行きましょうか",
+          "kana": "",
+          "zh": "可以哦，现在就过去看看吗？",
+          "keyword": "",
+          "videoStart": "1:17.0",
+          "videoEnd": "1:19.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-conv-018",
+          "speaker": "",
+          "jp": "はい、お願いします",
+          "kana": "",
+          "zh": "好的，麻烦您了。",
+          "keyword": "",
+          "videoStart": "1:19.0",
+          "videoEnd": "1:21.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-conv-019",
+          "speaker": "",
+          "jp": "【音楽】",
+          "kana": "",
+          "zh": "【音乐】",
+          "keyword": "音楽",
+          "videoStart": "1:23.0",
+          "videoEnd": "1:47.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_vocab",
+      "id": "l22_conversation_vocab",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话关键词汇",
+        "en": "Conversation Key Vocabulary"
+      },
+      "description": {
+        "zh": "以下词汇从会话原文中提取。",
+        "en": "Vocabulary from the conversation."
+      },
+      "items": [
+        {
+          "word": "音楽",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l22-conv-001",
+          "sourceSentence": "【音楽】",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "どんな部屋をお探しですか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l22-conv-002",
+          "sourceSentence": "どんな部屋をお探しですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "そうですね",
+          "kana": "そうですね",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l22-conv-003",
+          "sourceSentence": "そうですね",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "やちんは",
+          "kana": "やちんは",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l22-conv-004",
+          "sourceSentence": "やちんは8万円ぐらいで、駅から遠くないところがいいです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "万円ぐらいで",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l22-conv-004",
+          "sourceSentence": "やちんは8万円ぐらいで、駅から遠くないところがいいです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "駅から遠くないところがいいです",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l22-conv-004",
+          "sourceSentence": "やちんは8万円ぐらいで、駅から遠くないところがいいです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "では",
+          "kana": "では",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l22-conv-006",
+          "sourceSentence": "では、こちらはいかがですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "こちらはいかがですか",
+          "kana": "こちらはいかがですか",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l22-conv-006",
+          "sourceSentence": "では、こちらはいかがですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "駅から",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l22-conv-007",
+          "sourceSentence": "駅から10分で、やちんは8万3000円です",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "分で",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l22-conv-007",
+          "sourceSentence": "駅から10分で、やちんは8万3000円です",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "円です",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l22-conv-007",
+          "sourceSentence": "駅から10分で、やちんは8万3000円です",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "ダイニングキッチンと",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l22-conv-008",
+          "sourceSentence": "ダイニングキッチンと、和室ですね",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "和室ですね",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l22-conv-008",
+          "sourceSentence": "ダイニングキッチンと、和室ですね",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "すみません",
+          "kana": "すみません",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l22-conv-010",
+          "sourceSentence": "すみません",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "ここは何ですか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l22-conv-011",
+          "sourceSentence": "ここは何ですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "押し入れです",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l22-conv-012",
+          "sourceSentence": "押し入れです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "布団を入れるところですよ",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l22-conv-013",
+          "sourceSentence": "布団を入れるところですよ",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "そうですか",
+          "kana": "そうですか",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l22-conv-015",
+          "sourceSentence": "そうですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "この部屋",
+          "kana": "",
+          "zh": "",
+          "importance": "support",
+          "fromConversationId": "l22-conv-016",
+          "sourceSentence": "この部屋、今日見ることができますか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "今日見ることができますか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l22-conv-016",
+          "sourceSentence": "この部屋、今日見ることができますか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "はい",
+          "kana": "はい",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l22-conv-017",
+          "sourceSentence": "はい、今から行きましょうか",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "今から行きましょうか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l22-conv-017",
+          "sourceSentence": "はい、今から行きましょうか",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "お願いします",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l22-conv-018",
+          "sourceSentence": "はい、お願いします",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_grammar",
+      "id": "l22_conversation_grammar",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话核心语法",
+        "en": "Conversation Core Grammar"
+      },
+      "description": {
+        "zh": "以下语法点从会话原文中提取。",
+        "en": "Grammar points from the conversation."
+      },
+      "items": [
+        {
+          "pattern": "〜です",
+          "meaning": {
+            "zh": "是…（礼貌判断）",
+            "en": "is/am (polite copula)"
+          },
+          "conversationExample": "どんな部屋をお探しですか?",
+          "fromConversationId": "l22-conv-002",
+          "sourceSentence": "どんな部屋をお探しですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「です」是日语礼貌判断助动词，相当于中文的\"是\"。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜か",
+          "meaning": {
+            "zh": "…吗？（疑问）",
+            "en": "question marker"
+          },
+          "conversationExample": "どんな部屋をお探しですか?",
+          "fromConversationId": "l22-conv-002",
+          "sourceSentence": "どんな部屋をお探しですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "句尾加「か」构成疑问句。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜を〜",
+          "meaning": {
+            "zh": "…（宾语标记）",
+            "en": "object marker"
+          },
+          "conversationExample": "どんな部屋をお探しですか?",
+          "fromConversationId": "l22-conv-002",
+          "sourceSentence": "どんな部屋をお探しですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「を」标记动作的对象。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜から",
+          "meaning": {
+            "zh": "从…",
+            "en": "from"
+          },
+          "conversationExample": "やちんは8万円ぐらいで、駅から遠くないところがいいです",
+          "fromConversationId": "l22-conv-004",
+          "sourceSentence": "やちんは8万円ぐらいで、駅から遠くないところがいいです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「から」表示起点或来源。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ません",
+          "meaning": {
+            "zh": "不…（否定）",
+            "en": "negative form"
+          },
+          "conversationExample": "すみません",
+          "fromConversationId": "l22-conv-010",
+          "sourceSentence": "すみません",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ません」是「ます」的否定形式。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ます",
+          "meaning": {
+            "zh": "（动词敬体）",
+            "en": "polite verb form"
+          },
+          "conversationExample": "この部屋、今日見ることができますか?",
+          "fromConversationId": "l22-conv-016",
+          "sourceSentence": "この部屋、今日見ることができますか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ます」是动词的敬体形式。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_examples",
+      "id": "l22_conversation_examples",
+      "sourceType": "ai_generated_from_official_conversation",
+      "title": {
+        "zh": "会话替换例句",
+        "en": "Conversation Replacement Examples"
+      },
+      "description": {
+        "zh": "以下例句基于会话原句生成。",
+        "en": "Examples generated from conversation sentences."
+      },
+      "items": [
+        {
+          "pattern": "音楽",
+          "originalSentence": "【音楽】",
+          "fromConversationId": "l22-conv-001",
+          "sourceSentence": "【音楽】",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "部屋",
+          "originalSentence": "どんな部屋をお探しですか?",
+          "fromConversationId": "l22-conv-002",
+          "sourceSentence": "どんな部屋をお探しですか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "そうですね",
+          "fromConversationId": "l22-conv-003",
+          "sourceSentence": "そうですね",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "8万円",
+          "originalSentence": "やちんは8万円ぐらいで、駅から遠くないところがいいです",
+          "fromConversationId": "l22-conv-004",
+          "sourceSentence": "やちんは8万円ぐらいで、駅から遠くないところがいいです",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "音楽",
+          "originalSentence": "【音楽】",
+          "fromConversationId": "l22-conv-005",
+          "sourceSentence": "【音楽】",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "では、こちらはいかがですか?",
+          "fromConversationId": "l22-conv-006",
+          "sourceSentence": "では、こちらはいかがですか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "8万3000円です",
+          "originalSentence": "駅から10分で、やちんは8万3000円です",
+          "fromConversationId": "l22-conv-007",
+          "sourceSentence": "駅から10分で、やちんは8万3000円です",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [
+            {
+              "jp": "駅から10分で、やちんは佐藤です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "駅から10分で、やちんは田中です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "駅から10分で、やちんは山田です",
+              "kana": "",
+              "zh": ""
+            }
+          ],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "和室です",
+          "originalSentence": "ダイニングキッチンと、和室ですね",
+          "fromConversationId": "l22-conv-008",
+          "sourceSentence": "ダイニングキッチンと、和室ですね",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "音楽",
+          "originalSentence": "【音楽】",
+          "fromConversationId": "l22-conv-009",
+          "sourceSentence": "【音楽】",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "すみません",
+          "fromConversationId": "l22-conv-010",
+          "sourceSentence": "すみません",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "ここは何ですか?",
+          "fromConversationId": "l22-conv-011",
+          "sourceSentence": "ここは何ですか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "押し入れです",
+          "fromConversationId": "l22-conv-012",
+          "sourceSentence": "押し入れです",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "布団",
+          "originalSentence": "布団を入れるところですよ",
+          "fromConversationId": "l22-conv-013",
+          "sourceSentence": "布団を入れるところですよ",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "音楽",
+          "originalSentence": "【音楽】",
+          "fromConversationId": "l22-conv-014",
+          "sourceSentence": "【音楽】",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "そうですか?",
+          "fromConversationId": "l22-conv-015",
+          "sourceSentence": "そうですか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "今日見",
+          "originalSentence": "この部屋、今日見ることができますか?",
+          "fromConversationId": "l22-conv-016",
+          "sourceSentence": "この部屋、今日見ることができますか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "はい、今から行きましょうか",
+          "fromConversationId": "l22-conv-017",
+          "sourceSentence": "はい、今から行きましょうか",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "はい、お願いします",
+          "fromConversationId": "l22-conv-018",
+          "sourceSentence": "はい、お願いします",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "音楽",
+          "originalSentence": "【音楽】",
+          "fromConversationId": "l22-conv-019",
+          "sourceSentence": "【音楽】",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_quiz",
+      "id": "l22_conversation_quiz",
+      "sourceType": "generated_from_official_video_subtitle",
+      "title": {
+        "zh": "会话专项测试",
+        "en": "Conversation Quiz"
+      },
+      "description": {
+        "zh": "测试题围绕会话内容设计。",
+        "en": "Quiz based on the conversation."
+      },
+      "items": [
+        {
+          "id": "l22-q-001-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「【音楽】」是什么意思？",
+            "en": "What does \"【音楽】\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "【音乐】",
+                "en": "【音乐】"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "【音楽】",
+          "fromConversationId": "l22-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-001-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「【音乐】」的日语说法。",
+            "en": "Select Japanese for \"【音乐】\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "【音楽】"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "【音楽】",
+          "fromConversationId": "l22-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-001-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「【音楽】」的中文意思是？",
+            "en": "What does \"【音楽】\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "【音乐】",
+                "en": "【音乐】"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "【音楽】",
+          "fromConversationId": "l22-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-002-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「どんな部屋をお探しですか?」是什么意思？",
+            "en": "What does \"どんな部屋をお探しですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "您在找什么样的房间呢？",
+                "en": "您在找什么样的房间呢？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "どんな部屋をお探しですか?",
+          "fromConversationId": "l22-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-002-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「您在找什么样的房间呢？」的日语说法。",
+            "en": "Select Japanese for \"您在找什么样的房间呢？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "どんな部屋をお探しですか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "どんな部屋をお探しですか?",
+          "fromConversationId": "l22-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-002-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「どんな部屋をお探しですか?」的中文意思是？",
+            "en": "What does \"どんな部屋をお探しですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "您在找什么样的房间呢？",
+                "en": "您在找什么样的房间呢？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "どんな部屋をお探しですか?",
+          "fromConversationId": "l22-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-003-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「そうですね」是什么意思？",
+            "en": "What does \"そうですね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "这个嘛……",
+                "en": "这个嘛……"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "そうですね",
+          "fromConversationId": "l22-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-003-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「这个嘛……」的日语说法。",
+            "en": "Select Japanese for \"这个嘛……\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "そうですね"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "そうですね",
+          "fromConversationId": "l22-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-003-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「そうですね」的中文意思是？",
+            "en": "What does \"そうですね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "这个嘛……",
+                "en": "这个嘛……"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "そうですね",
+          "fromConversationId": "l22-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-004-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「やちんは8万円ぐらいで、駅から遠くないところがいいです」是什么意思？",
+            "en": "What does \"やちんは8万円ぐらいで、駅から遠くないところがいいです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "房租在八万日元左右，最好离车站不要太远。",
+                "en": "房租在八万日元左右，最好离车站不要太远。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "やちんは8万円ぐらいで、駅から遠くないところがいいです",
+          "fromConversationId": "l22-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-004-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「房租在八万日元左右，最好离车站不要太远。」的日语说法。",
+            "en": "Select Japanese for \"房租在八万日元左右，最好离车站不要太远。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "やちんは8万円ぐらいで、駅から遠くないところがいいです"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "やちんは8万円ぐらいで、駅から遠くないところがいいです",
+          "fromConversationId": "l22-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-004-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「やちんは8万円ぐらいで、駅から遠くないところがいいです」的中文意思是？",
+            "en": "What does \"やちんは8万円ぐらいで、駅から遠くないところがいいです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "房租在八万日元左右，最好离车站不要太远。",
+                "en": "房租在八万日元左右，最好离车站不要太远。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "やちんは8万円ぐらいで、駅から遠くないところがいいです",
+          "fromConversationId": "l22-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-005-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「【音楽】」是什么意思？",
+            "en": "What does \"【音楽】\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "【音乐】",
+                "en": "【音乐】"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "【音楽】",
+          "fromConversationId": "l22-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-005-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「【音乐】」的日语说法。",
+            "en": "Select Japanese for \"【音乐】\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "【音楽】"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "【音楽】",
+          "fromConversationId": "l22-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-005-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「【音楽】」的中文意思是？",
+            "en": "What does \"【音楽】\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "【音乐】",
+                "en": "【音乐】"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "【音楽】",
+          "fromConversationId": "l22-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-006-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「では、こちらはいかがですか?」是什么意思？",
+            "en": "What does \"では、こちらはいかがですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那么，您觉得这个怎么样？",
+                "en": "那么，您觉得这个怎么样？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "では、こちらはいかがですか?",
+          "fromConversationId": "l22-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-006-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「那么，您觉得这个怎么样？」的日语说法。",
+            "en": "Select Japanese for \"那么，您觉得这个怎么样？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "では、こちらはいかがですか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "では、こちらはいかがですか?",
+          "fromConversationId": "l22-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-006-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「では、こちらはいかがですか?」的中文意思是？",
+            "en": "What does \"では、こちらはいかがですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那么，您觉得这个怎么样？",
+                "en": "那么，您觉得这个怎么样？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "では、こちらはいかがですか?",
+          "fromConversationId": "l22-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-007-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「駅から10分で、やちんは8万3000円です」是什么意思？",
+            "en": "What does \"駅から10分で、やちんは8万3000円です\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "离车站步行10分钟，房租是8万3千日元。",
+                "en": "离车站步行10分钟，房租是8万3千日元。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "駅から10分で、やちんは8万3000円です",
+          "fromConversationId": "l22-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-007-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「离车站步行10分钟，房租是8万3千日元。」的日语说法。",
+            "en": "Select Japanese for \"离车站步行10分钟，房租是8万3千日元。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "駅から10分で、やちんは8万3000円です"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "駅から10分で、やちんは8万3000円です",
+          "fromConversationId": "l22-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-007-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「駅から10分で、やちんは8万3000円です」的中文意思是？",
+            "en": "What does \"駅から10分で、やちんは8万3000円です\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "离车站步行10分钟，房租是8万3千日元。",
+                "en": "离车站步行10分钟，房租是8万3千日元。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "駅から10分で、やちんは8万3000円です",
+          "fromConversationId": "l22-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-008-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「ダイニングキッチンと、和室ですね」是什么意思？",
+            "en": "What does \"ダイニングキッチンと、和室ですね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是带餐厨间和日式房间的户型。",
+                "en": "是带餐厨间和日式房间的户型。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "ダイニングキッチンと、和室ですね",
+          "fromConversationId": "l22-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-008-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「是带餐厨间和日式房间的户型。」的日语说法。",
+            "en": "Select Japanese for \"是带餐厨间和日式房间的户型。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "ダイニングキッチンと、和室ですね"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ダイニングキッチンと、和室ですね",
+          "fromConversationId": "l22-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-008-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「ダイニングキッチンと、和室ですね」的中文意思是？",
+            "en": "What does \"ダイニングキッチンと、和室ですね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是带餐厨间和日式房间的户型。",
+                "en": "是带餐厨间和日式房间的户型。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ダイニングキッチンと、和室ですね",
+          "fromConversationId": "l22-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-009-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「【音楽】」是什么意思？",
+            "en": "What does \"【音楽】\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "【音乐】",
+                "en": "【音乐】"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "【音楽】",
+          "fromConversationId": "l22-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-009-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「【音乐】」的日语说法。",
+            "en": "Select Japanese for \"【音乐】\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "【音楽】"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "【音楽】",
+          "fromConversationId": "l22-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-009-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「【音楽】」的中文意思是？",
+            "en": "What does \"【音楽】\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "【音乐】",
+                "en": "【音乐】"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "【音楽】",
+          "fromConversationId": "l22-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-010-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「すみません」是什么意思？",
+            "en": "What does \"すみません\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不好意思。",
+                "en": "不好意思。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "すみません",
+          "fromConversationId": "l22-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-010-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「不好意思。」的日语说法。",
+            "en": "Select Japanese for \"不好意思。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "すみません"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "すみません",
+          "fromConversationId": "l22-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-010-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「すみません」的中文意思是？",
+            "en": "What does \"すみません\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不好意思。",
+                "en": "不好意思。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "すみません",
+          "fromConversationId": "l22-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-011-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「ここは何ですか?」是什么意思？",
+            "en": "What does \"ここは何ですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "这里是什么？",
+                "en": "这里是什么？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "ここは何ですか?",
+          "fromConversationId": "l22-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-011-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「这里是什么？」的日语说法。",
+            "en": "Select Japanese for \"这里是什么？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "ここは何ですか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ここは何ですか?",
+          "fromConversationId": "l22-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-011-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「ここは何ですか?」的中文意思是？",
+            "en": "What does \"ここは何ですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "这里是什么？",
+                "en": "这里是什么？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ここは何ですか?",
+          "fromConversationId": "l22-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-012-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「押し入れです」是什么意思？",
+            "en": "What does \"押し入れです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是壁橱。",
+                "en": "是壁橱。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "押し入れです",
+          "fromConversationId": "l22-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-012-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「是壁橱。」的日语说法。",
+            "en": "Select Japanese for \"是壁橱。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "押し入れです"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "押し入れです",
+          "fromConversationId": "l22-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-012-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「押し入れです」的中文意思是？",
+            "en": "What does \"押し入れです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是壁橱。",
+                "en": "是壁橱。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "押し入れです",
+          "fromConversationId": "l22-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-013-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「布団を入れるところですよ」是什么意思？",
+            "en": "What does \"布団を入れるところですよ\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是用来放被褥的地方哦。",
+                "en": "是用来放被褥的地方哦。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "布団を入れるところですよ",
+          "fromConversationId": "l22-conv-013",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-013-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「是用来放被褥的地方哦。」的日语说法。",
+            "en": "Select Japanese for \"是用来放被褥的地方哦。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "布団を入れるところですよ"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "布団を入れるところですよ",
+          "fromConversationId": "l22-conv-013",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-013-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「布団を入れるところですよ」的中文意思是？",
+            "en": "What does \"布団を入れるところですよ\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是用来放被褥的地方哦。",
+                "en": "是用来放被褥的地方哦。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "布団を入れるところですよ",
+          "fromConversationId": "l22-conv-013",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-014-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「【音楽】」是什么意思？",
+            "en": "What does \"【音楽】\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "【音乐】",
+                "en": "【音乐】"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "【音楽】",
+          "fromConversationId": "l22-conv-014",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-014-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「【音乐】」的日语说法。",
+            "en": "Select Japanese for \"【音乐】\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "【音楽】"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "【音楽】",
+          "fromConversationId": "l22-conv-014",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-014-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「【音楽】」的中文意思是？",
+            "en": "What does \"【音楽】\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "【音乐】",
+                "en": "【音乐】"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "【音楽】",
+          "fromConversationId": "l22-conv-014",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-015-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「そうですか?」是什么意思？",
+            "en": "What does \"そうですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是这样吗？",
+                "en": "是这样吗？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "そうですか?",
+          "fromConversationId": "l22-conv-015",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-015-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「是这样吗？」的日语说法。",
+            "en": "Select Japanese for \"是这样吗？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "そうですか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "そうですか?",
+          "fromConversationId": "l22-conv-015",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-015-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「そうですか?」的中文意思是？",
+            "en": "What does \"そうですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是这样吗？",
+                "en": "是这样吗？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "そうですか?",
+          "fromConversationId": "l22-conv-015",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-016-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「この部屋、今日見ることができますか?」是什么意思？",
+            "en": "What does \"この部屋、今日見ることができますか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "这个房间今天可以看吗？",
+                "en": "这个房间今天可以看吗？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "この部屋、今日見ることができますか?",
+          "fromConversationId": "l22-conv-016",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-016-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「这个房间今天可以看吗？」的日语说法。",
+            "en": "Select Japanese for \"这个房间今天可以看吗？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "この部屋、今日見ることができますか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "この部屋、今日見ることができますか?",
+          "fromConversationId": "l22-conv-016",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-016-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「この部屋、今日見ることができますか?」的中文意思是？",
+            "en": "What does \"この部屋、今日見ることができますか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "这个房间今天可以看吗？",
+                "en": "这个房间今天可以看吗？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "この部屋、今日見ることができますか?",
+          "fromConversationId": "l22-conv-016",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-017-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「はい、今から行きましょうか」是什么意思？",
+            "en": "What does \"はい、今から行きましょうか\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "可以哦，现在就过去看看吗？",
+                "en": "可以哦，现在就过去看看吗？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "はい、今から行きましょうか",
+          "fromConversationId": "l22-conv-017",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-017-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「可以哦，现在就过去看看吗？」的日语说法。",
+            "en": "Select Japanese for \"可以哦，现在就过去看看吗？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "はい、今から行きましょうか"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい、今から行きましょうか",
+          "fromConversationId": "l22-conv-017",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-017-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「はい、今から行きましょうか」的中文意思是？",
+            "en": "What does \"はい、今から行きましょうか\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "可以哦，现在就过去看看吗？",
+                "en": "可以哦，现在就过去看看吗？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい、今から行きましょうか",
+          "fromConversationId": "l22-conv-017",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-018-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「はい、お願いします」是什么意思？",
+            "en": "What does \"はい、お願いします\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "好的，麻烦您了。",
+                "en": "好的，麻烦您了。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "はい、お願いします",
+          "fromConversationId": "l22-conv-018",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-018-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「好的，麻烦您了。」的日语说法。",
+            "en": "Select Japanese for \"好的，麻烦您了。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "はい、お願いします"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい、お願いします",
+          "fromConversationId": "l22-conv-018",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-018-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「はい、お願いします」的中文意思是？",
+            "en": "What does \"はい、お願いします\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "好的，麻烦您了。",
+                "en": "好的，麻烦您了。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい、お願いします",
+          "fromConversationId": "l22-conv-018",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-019-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「【音楽】」是什么意思？",
+            "en": "What does \"【音楽】\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "【音乐】",
+                "en": "【音乐】"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "【音楽】",
+          "fromConversationId": "l22-conv-019",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-019-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「【音乐】」的日语说法。",
+            "en": "Select Japanese for \"【音乐】\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "【音楽】"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "【音楽】",
+          "fromConversationId": "l22-conv-019",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l22-q-019-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「【音楽】」的中文意思是？",
+            "en": "What does \"【音楽】\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "【音乐】",
+                "en": "【音乐】"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "【音楽】",
+          "fromConversationId": "l22-conv-019",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
     }
   ],
   "conversationVideo": {
@@ -764,6 +3041,22 @@
     "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P22_%E7%AC%AC22%E8%AA%B2.mp4",
     "subtitleUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P22_%E7%AC%AC22%E8%AA%B2.json",
     "sourceType": "official_video_resource",
-    "status": "linked_not_imported"
+    "status": "imported_with_subtitles"
+  },
+  "conversationMainlineStatus": {
+    "videoLinked": "published",
+    "subtitleParsed": "published",
+    "subtitleCleaned": "published",
+    "humanReviewed": "not_started",
+    "importedToLessonJson": "published",
+    "vocabReady": "needs_review",
+    "grammarReady": "needs_review",
+    "examplesReady": "needs_review",
+    "quizReady": "needs_review",
+    "reciteReady": "needs_review",
+    "recordingReady": "published",
+    "scoringReady": "published",
+    "publishedToStaging": "not_started",
+    "verifiedOnline": "not_started"
   }
 }

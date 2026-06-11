@@ -756,6 +756,3086 @@
           }
         }
       ]
+    },
+    {
+      "type": "conversation",
+      "id": "l13_conversation",
+      "sourceType": "official_video_subtitle",
+      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P13_%E7%AC%AC13%E8%AA%B2.json",
+      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P13_%E7%AC%AC13%E8%AA%B2.mp4",
+      "title": {
+        "zh": "会话背诵",
+        "en": "Conversation Practice"
+      },
+      "dialogTitle": {
+        "zh": "第13课会话",
+        "en": "第13课会话"
+      },
+      "conversationGoal": {
+        "zh": "第13课会话练习",
+        "en": "Lesson 13 Conversation Practice"
+      },
+      "items": [
+        {
+          "id": "l13-conv-001",
+          "speaker": "",
+          "jp": "12時ですよ 昼ご飯を食べに行きませんか",
+          "kana": "",
+          "zh": "已经12点了，要不要一起去吃午饭？",
+          "keyword": "12時です",
+          "videoStart": "0:30.0",
+          "videoEnd": "0:33.6",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-conv-002",
+          "speaker": "",
+          "jp": "ええ どこへ行きますか",
+          "kana": "",
+          "zh": "好啊，去哪儿呢？",
+          "keyword": "",
+          "videoStart": "0:33.6",
+          "videoEnd": "0:36.6",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-conv-003",
+          "speaker": "",
+          "jp": "そうですね 今日は日本料理が食べたいですね",
+          "kana": "",
+          "zh": "嗯……今天想吃日本料理呢。",
+          "keyword": "日本料理",
+          "videoStart": "0:36.6",
+          "videoEnd": "0:42.6",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-conv-004",
+          "speaker": "",
+          "jp": "じゃあ 鶴屋へ行きましょう",
+          "kana": "",
+          "zh": "那我们去“鶴屋”吧。",
+          "keyword": "鶴屋",
+          "videoStart": "0:42.6",
+          "videoEnd": "0:48.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-conv-005",
+          "speaker": "",
+          "jp": "ごちそうさまでした",
+          "kana": "ごちそうさまでした",
+          "zh": "谢谢款待。",
+          "keyword": "",
+          "videoStart": "0:48.1",
+          "videoEnd": "0:50.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-conv-006",
+          "speaker": "",
+          "jp": "私は天ぷら定食",
+          "kana": "",
+          "zh": "我点的是天妇罗套餐。",
+          "keyword": "定食",
+          "videoStart": "0:50.1",
+          "videoEnd": "0:54.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-conv-007",
+          "speaker": "",
+          "jp": "私は牛丼",
+          "kana": "",
+          "zh": "我点的是牛肉饭。",
+          "keyword": "牛丼",
+          "videoStart": "0:54.1",
+          "videoEnd": "0:56.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-conv-008",
+          "speaker": "",
+          "jp": "天ぷら定食と牛丼ですね",
+          "kana": "",
+          "zh": "天妇罗套餐和牛肉饭对吧？",
+          "keyword": "牛丼です",
+          "videoStart": "0:56.1",
+          "videoEnd": "0:58.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-conv-009",
+          "speaker": "",
+          "jp": "少しお待ちください",
+          "kana": "",
+          "zh": "请稍等一下。",
+          "keyword": "",
+          "videoStart": "0:58.1",
+          "videoEnd": "1:00.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-conv-010",
+          "speaker": "",
+          "jp": "天ぷら定食、お待たせしました",
+          "kana": "",
+          "zh": "您的天妇罗套餐，久等了。",
+          "keyword": "定食",
+          "videoStart": "1:00.1",
+          "videoEnd": "1:04.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-conv-011",
+          "speaker": "",
+          "jp": "できました",
+          "kana": "できました",
+          "zh": "准备好了。",
+          "keyword": "",
+          "videoStart": "1:04.1",
+          "videoEnd": "1:07.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-conv-012",
+          "speaker": "",
+          "jp": "天ぷら定食、お待たせしました",
+          "kana": "",
+          "zh": "您的天妇罗套餐，久等了。",
+          "keyword": "定食",
+          "videoStart": "1:08.1",
+          "videoEnd": "1:12.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-conv-013",
+          "speaker": "",
+          "jp": "できました",
+          "kana": "できました",
+          "zh": "做好了。",
+          "keyword": "",
+          "videoStart": "1:12.1",
+          "videoEnd": "1:14.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-conv-014",
+          "speaker": "",
+          "jp": "できました",
+          "kana": "できました",
+          "zh": "好了。",
+          "keyword": "",
+          "videoStart": "1:14.1",
+          "videoEnd": "1:16.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-conv-015",
+          "speaker": "",
+          "jp": "できました",
+          "kana": "できました",
+          "zh": "好了。",
+          "keyword": "",
+          "videoStart": "1:16.1",
+          "videoEnd": "1:19.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-conv-016",
+          "speaker": "",
+          "jp": "牛丼、お待たせしました",
+          "kana": "",
+          "zh": "您的牛肉饭，久等了。",
+          "keyword": "牛丼",
+          "videoStart": "1:22.1",
+          "videoEnd": "1:25.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-conv-017",
+          "speaker": "",
+          "jp": "できました",
+          "kana": "できました",
+          "zh": "做好了。",
+          "keyword": "",
+          "videoStart": "1:25.1",
+          "videoEnd": "1:27.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-conv-018",
+          "speaker": "",
+          "jp": "できました",
+          "kana": "できました",
+          "zh": "好了。",
+          "keyword": "",
+          "videoStart": "1:27.1",
+          "videoEnd": "1:29.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-conv-019",
+          "speaker": "",
+          "jp": "天ぷら定食は980円でございます",
+          "kana": "",
+          "zh": "天妇罗套餐是980日元。",
+          "keyword": "980円",
+          "videoStart": "1:37.1",
+          "videoEnd": "1:41.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-conv-020",
+          "speaker": "",
+          "jp": "すみません 別々にお願いします",
+          "kana": "",
+          "zh": "不好意思，请分开结账。",
+          "keyword": "",
+          "videoStart": "1:41.1",
+          "videoEnd": "1:43.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-conv-021",
+          "speaker": "",
+          "jp": "天ぷら定食は980円",
+          "kana": "",
+          "zh": "天妇罗套餐是980日元。",
+          "keyword": "980円",
+          "videoStart": "1:43.1",
+          "videoEnd": "1:47.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-conv-022",
+          "speaker": "",
+          "jp": "牛丼は700円です",
+          "kana": "",
+          "zh": "牛肉饭是700日元。",
+          "keyword": "700円です",
+          "videoStart": "1:47.1",
+          "videoEnd": "1:50.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-conv-023",
+          "speaker": "",
+          "jp": "1680円でございます",
+          "kana": "",
+          "zh": "一共是1680日元。",
+          "keyword": "1680円",
+          "videoStart": "1:51.1",
+          "videoEnd": "1:53.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-conv-024",
+          "speaker": "",
+          "jp": "すみません 別々にお願いします",
+          "kana": "",
+          "zh": "不好意思，请分开付。",
+          "keyword": "",
+          "videoStart": "1:53.1",
+          "videoEnd": "1:56.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-conv-025",
+          "speaker": "",
+          "jp": "はい",
+          "kana": "はい",
+          "zh": "好的。",
+          "keyword": "",
+          "videoStart": "1:56.1",
+          "videoEnd": "1:57.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-conv-026",
+          "speaker": "",
+          "jp": "天ぷら定食は980円",
+          "kana": "",
+          "zh": "天妇罗套餐是980日元。",
+          "keyword": "980円",
+          "videoStart": "1:57.1",
+          "videoEnd": "1:59.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-conv-027",
+          "speaker": "",
+          "jp": "牛丼は700円です",
+          "kana": "",
+          "zh": "牛肉饭是700日元。",
+          "keyword": "700円です",
+          "videoStart": "1:59.1",
+          "videoEnd": "2:01.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_vocab",
+      "id": "l13_conversation_vocab",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话关键词汇",
+        "en": "Conversation Key Vocabulary"
+      },
+      "description": {
+        "zh": "以下词汇从会话原文中提取。",
+        "en": "Vocabulary from the conversation."
+      },
+      "items": [
+        {
+          "word": "時ですよ",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l13-conv-001",
+          "sourceSentence": "12時ですよ 昼ご飯を食べに行きませんか",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "昼ご飯を食べに行きませんか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l13-conv-001",
+          "sourceSentence": "12時ですよ 昼ご飯を食べに行きませんか",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "ええ",
+          "kana": "ええ",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l13-conv-002",
+          "sourceSentence": "ええ どこへ行きますか",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "どこへ行きますか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l13-conv-002",
+          "sourceSentence": "ええ どこへ行きますか",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "そうですね",
+          "kana": "そうですね",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l13-conv-003",
+          "sourceSentence": "そうですね 今日は日本料理が食べたいですね",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "今日は日本料理が食べたいですね",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l13-conv-003",
+          "sourceSentence": "そうですね 今日は日本料理が食べたいですね",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "じゃあ",
+          "kana": "じゃあ",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l13-conv-004",
+          "sourceSentence": "じゃあ 鶴屋へ行きましょう",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "鶴屋へ行きましょう",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l13-conv-004",
+          "sourceSentence": "じゃあ 鶴屋へ行きましょう",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "ごちそうさまでした",
+          "kana": "ごちそうさまでした",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l13-conv-005",
+          "sourceSentence": "ごちそうさまでした",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "私は天ぷら定食",
+          "kana": "",
+          "zh": "",
+          "importance": "support",
+          "fromConversationId": "l13-conv-006",
+          "sourceSentence": "私は天ぷら定食",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "私は牛丼",
+          "kana": "",
+          "zh": "",
+          "importance": "support",
+          "fromConversationId": "l13-conv-007",
+          "sourceSentence": "私は牛丼",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "天ぷら定食と牛丼ですね",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l13-conv-008",
+          "sourceSentence": "天ぷら定食と牛丼ですね",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "少しお待ちください",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l13-conv-009",
+          "sourceSentence": "少しお待ちください",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "天ぷら定食",
+          "kana": "",
+          "zh": "",
+          "importance": "support",
+          "fromConversationId": "l13-conv-010",
+          "sourceSentence": "天ぷら定食、お待たせしました",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "お待たせしました",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l13-conv-010",
+          "sourceSentence": "天ぷら定食、お待たせしました",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "できました",
+          "kana": "できました",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l13-conv-011",
+          "sourceSentence": "できました",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "牛丼",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l13-conv-016",
+          "sourceSentence": "牛丼、お待たせしました",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "天ぷら定食は",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l13-conv-019",
+          "sourceSentence": "天ぷら定食は980円でございます",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "円でございます",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l13-conv-019",
+          "sourceSentence": "天ぷら定食は980円でございます",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "すみません",
+          "kana": "すみません",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l13-conv-020",
+          "sourceSentence": "すみません 別々にお願いします",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "にお願いします",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l13-conv-020",
+          "sourceSentence": "すみません 別々にお願いします",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "牛丼は",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l13-conv-022",
+          "sourceSentence": "牛丼は700円です",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "円です",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l13-conv-022",
+          "sourceSentence": "牛丼は700円です",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "はい",
+          "kana": "はい",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l13-conv-025",
+          "sourceSentence": "はい",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_grammar",
+      "id": "l13_conversation_grammar",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话核心语法",
+        "en": "Conversation Core Grammar"
+      },
+      "description": {
+        "zh": "以下语法点从会话原文中提取。",
+        "en": "Grammar points from the conversation."
+      },
+      "items": [
+        {
+          "pattern": "〜です",
+          "meaning": {
+            "zh": "是…（礼貌判断）",
+            "en": "is/am (polite copula)"
+          },
+          "conversationExample": "12時ですよ 昼ご飯を食べに行きませんか",
+          "fromConversationId": "l13-conv-001",
+          "sourceSentence": "12時ですよ 昼ご飯を食べに行きませんか",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「です」是日语礼貌判断助动词，相当于中文的\"是\"。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜を〜",
+          "meaning": {
+            "zh": "…（宾语标记）",
+            "en": "object marker"
+          },
+          "conversationExample": "12時ですよ 昼ご飯を食べに行きませんか",
+          "fromConversationId": "l13-conv-001",
+          "sourceSentence": "12時ですよ 昼ご飯を食べに行きませんか",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「を」标记动作的对象。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜に〜",
+          "meaning": {
+            "zh": "在/向…",
+            "en": "to/at"
+          },
+          "conversationExample": "12時ですよ 昼ご飯を食べに行きませんか",
+          "fromConversationId": "l13-conv-001",
+          "sourceSentence": "12時ですよ 昼ご飯を食べに行きませんか",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「に」表示时间、地点或方向。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ません",
+          "meaning": {
+            "zh": "不…（否定）",
+            "en": "negative form"
+          },
+          "conversationExample": "12時ですよ 昼ご飯を食べに行きませんか",
+          "fromConversationId": "l13-conv-001",
+          "sourceSentence": "12時ですよ 昼ご飯を食べに行きませんか",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ません」是「ます」的否定形式。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ます",
+          "meaning": {
+            "zh": "（动词敬体）",
+            "en": "polite verb form"
+          },
+          "conversationExample": "ええ どこへ行きますか",
+          "fromConversationId": "l13-conv-002",
+          "sourceSentence": "ええ どこへ行きますか",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ます」是动词的敬体形式。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ました",
+          "meaning": {
+            "zh": "…了（过去）",
+            "en": "past tense"
+          },
+          "conversationExample": "天ぷら定食、お待たせしました",
+          "fromConversationId": "l13-conv-010",
+          "sourceSentence": "天ぷら定食、お待たせしました",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ました」是「ます」的过去形。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_examples",
+      "id": "l13_conversation_examples",
+      "sourceType": "ai_generated_from_official_conversation",
+      "title": {
+        "zh": "会话替换例句",
+        "en": "Conversation Replacement Examples"
+      },
+      "description": {
+        "zh": "以下例句基于会话原句生成。",
+        "en": "Examples generated from conversation sentences."
+      },
+      "items": [
+        {
+          "pattern": "12時です",
+          "originalSentence": "12時ですよ 昼ご飯を食べに行きませんか",
+          "fromConversationId": "l13-conv-001",
+          "sourceSentence": "12時ですよ 昼ご飯を食べに行きませんか",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "ええ どこへ行きますか",
+          "fromConversationId": "l13-conv-002",
+          "sourceSentence": "ええ どこへ行きますか",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "日本料理",
+          "originalSentence": "そうですね 今日は日本料理が食べたいですね",
+          "fromConversationId": "l13-conv-003",
+          "sourceSentence": "そうですね 今日は日本料理が食べたいですね",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "鶴屋",
+          "originalSentence": "じゃあ 鶴屋へ行きましょう",
+          "fromConversationId": "l13-conv-004",
+          "sourceSentence": "じゃあ 鶴屋へ行きましょう",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "ごちそうさまでした",
+          "fromConversationId": "l13-conv-005",
+          "sourceSentence": "ごちそうさまでした",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "定食",
+          "originalSentence": "私は天ぷら定食",
+          "fromConversationId": "l13-conv-006",
+          "sourceSentence": "私は天ぷら定食",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "牛丼",
+          "originalSentence": "私は牛丼",
+          "fromConversationId": "l13-conv-007",
+          "sourceSentence": "私は牛丼",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "牛丼です",
+          "originalSentence": "天ぷら定食と牛丼ですね",
+          "fromConversationId": "l13-conv-008",
+          "sourceSentence": "天ぷら定食と牛丼ですね",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "少しお待ちください",
+          "fromConversationId": "l13-conv-009",
+          "sourceSentence": "少しお待ちください",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "定食",
+          "originalSentence": "天ぷら定食、お待たせしました",
+          "fromConversationId": "l13-conv-010",
+          "sourceSentence": "天ぷら定食、お待たせしました",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "できました",
+          "fromConversationId": "l13-conv-011",
+          "sourceSentence": "できました",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "定食",
+          "originalSentence": "天ぷら定食、お待たせしました",
+          "fromConversationId": "l13-conv-012",
+          "sourceSentence": "天ぷら定食、お待たせしました",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "できました",
+          "fromConversationId": "l13-conv-013",
+          "sourceSentence": "できました",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "できました",
+          "fromConversationId": "l13-conv-014",
+          "sourceSentence": "できました",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "できました",
+          "fromConversationId": "l13-conv-015",
+          "sourceSentence": "できました",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "牛丼",
+          "originalSentence": "牛丼、お待たせしました",
+          "fromConversationId": "l13-conv-016",
+          "sourceSentence": "牛丼、お待たせしました",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "できました",
+          "fromConversationId": "l13-conv-017",
+          "sourceSentence": "できました",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "できました",
+          "fromConversationId": "l13-conv-018",
+          "sourceSentence": "できました",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "980円",
+          "originalSentence": "天ぷら定食は980円でございます",
+          "fromConversationId": "l13-conv-019",
+          "sourceSentence": "天ぷら定食は980円でございます",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "すみません 別々にお願いします",
+          "fromConversationId": "l13-conv-020",
+          "sourceSentence": "すみません 別々にお願いします",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "980円",
+          "originalSentence": "天ぷら定食は980円",
+          "fromConversationId": "l13-conv-021",
+          "sourceSentence": "天ぷら定食は980円",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "700円です",
+          "originalSentence": "牛丼は700円です",
+          "fromConversationId": "l13-conv-022",
+          "sourceSentence": "牛丼は700円です",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [
+            {
+              "jp": "牛丼は佐藤です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "牛丼は田中です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "牛丼は山田です",
+              "kana": "",
+              "zh": ""
+            }
+          ],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "1680円",
+          "originalSentence": "1680円でございます",
+          "fromConversationId": "l13-conv-023",
+          "sourceSentence": "1680円でございます",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "すみません 別々にお願いします",
+          "fromConversationId": "l13-conv-024",
+          "sourceSentence": "すみません 別々にお願いします",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "はい",
+          "fromConversationId": "l13-conv-025",
+          "sourceSentence": "はい",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "980円",
+          "originalSentence": "天ぷら定食は980円",
+          "fromConversationId": "l13-conv-026",
+          "sourceSentence": "天ぷら定食は980円",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "700円です",
+          "originalSentence": "牛丼は700円です",
+          "fromConversationId": "l13-conv-027",
+          "sourceSentence": "牛丼は700円です",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [
+            {
+              "jp": "牛丼は佐藤です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "牛丼は田中です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "牛丼は山田です",
+              "kana": "",
+              "zh": ""
+            }
+          ],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_quiz",
+      "id": "l13_conversation_quiz",
+      "sourceType": "generated_from_official_video_subtitle",
+      "title": {
+        "zh": "会话专项测试",
+        "en": "Conversation Quiz"
+      },
+      "description": {
+        "zh": "测试题围绕会话内容设计。",
+        "en": "Quiz based on the conversation."
+      },
+      "items": [
+        {
+          "id": "l13-q-001-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「12時ですよ 昼ご飯を食べに行きませんか」是什么意思？",
+            "en": "What does \"12時ですよ 昼ご飯を食べに行きませんか\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "已经12点了，要不要一起去吃午饭？",
+                "en": "已经12点了，要不要一起去吃午饭？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "12時ですよ 昼ご飯を食べに行きませんか",
+          "fromConversationId": "l13-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-001-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「已经12点了，要不要一起去吃午饭？」的日语说法。",
+            "en": "Select Japanese for \"已经12点了，要不要一起去吃午饭？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "12時ですよ 昼ご飯を食べに行きませんか"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "12時ですよ 昼ご飯を食べに行きませんか",
+          "fromConversationId": "l13-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-001-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「12時ですよ 昼ご飯を食べに行きませんか」的中文意思是？",
+            "en": "What does \"12時ですよ 昼ご飯を食べに行きませんか\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "已经12点了，要不要一起去吃午饭？",
+                "en": "已经12点了，要不要一起去吃午饭？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "12時ですよ 昼ご飯を食べに行きませんか",
+          "fromConversationId": "l13-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-002-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「ええ どこへ行きますか」是什么意思？",
+            "en": "What does \"ええ どこへ行きますか\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "好啊，去哪儿呢？",
+                "en": "好啊，去哪儿呢？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "ええ どこへ行きますか",
+          "fromConversationId": "l13-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-002-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「好啊，去哪儿呢？」的日语说法。",
+            "en": "Select Japanese for \"好啊，去哪儿呢？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "ええ どこへ行きますか"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ええ どこへ行きますか",
+          "fromConversationId": "l13-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-002-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「ええ どこへ行きますか」的中文意思是？",
+            "en": "What does \"ええ どこへ行きますか\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "好啊，去哪儿呢？",
+                "en": "好啊，去哪儿呢？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ええ どこへ行きますか",
+          "fromConversationId": "l13-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-003-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「そうですね 今日は日本料理が食べたいですね」是什么意思？",
+            "en": "What does \"そうですね 今日は日本料理が食べたいですね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "嗯……今天想吃日本料理呢。",
+                "en": "嗯……今天想吃日本料理呢。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "そうですね 今日は日本料理が食べたいですね",
+          "fromConversationId": "l13-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-003-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「嗯……今天想吃日本料理呢。」的日语说法。",
+            "en": "Select Japanese for \"嗯……今天想吃日本料理呢。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "そうですね 今日は日本料理が食べたいですね"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "そうですね 今日は日本料理が食べたいですね",
+          "fromConversationId": "l13-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-003-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「そうですね 今日は日本料理が食べたいですね」的中文意思是？",
+            "en": "What does \"そうですね 今日は日本料理が食べたいですね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "嗯……今天想吃日本料理呢。",
+                "en": "嗯……今天想吃日本料理呢。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "そうですね 今日は日本料理が食べたいですね",
+          "fromConversationId": "l13-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-004-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「じゃあ 鶴屋へ行きましょう」是什么意思？",
+            "en": "What does \"じゃあ 鶴屋へ行きましょう\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那我们去“鶴屋”吧。",
+                "en": "那我们去“鶴屋”吧。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "じゃあ 鶴屋へ行きましょう",
+          "fromConversationId": "l13-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-004-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「那我们去“鶴屋”吧。」的日语说法。",
+            "en": "Select Japanese for \"那我们去“鶴屋”吧。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "じゃあ 鶴屋へ行きましょう"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "じゃあ 鶴屋へ行きましょう",
+          "fromConversationId": "l13-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-004-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「じゃあ 鶴屋へ行きましょう」的中文意思是？",
+            "en": "What does \"じゃあ 鶴屋へ行きましょう\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那我们去“鶴屋”吧。",
+                "en": "那我们去“鶴屋”吧。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "じゃあ 鶴屋へ行きましょう",
+          "fromConversationId": "l13-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-005-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「ごちそうさまでした」是什么意思？",
+            "en": "What does \"ごちそうさまでした\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "谢谢款待。",
+                "en": "谢谢款待。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "ごちそうさまでした",
+          "fromConversationId": "l13-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-005-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「谢谢款待。」的日语说法。",
+            "en": "Select Japanese for \"谢谢款待。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "ごちそうさまでした"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ごちそうさまでした",
+          "fromConversationId": "l13-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-005-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「ごちそうさまでした」的中文意思是？",
+            "en": "What does \"ごちそうさまでした\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "谢谢款待。",
+                "en": "谢谢款待。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ごちそうさまでした",
+          "fromConversationId": "l13-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-006-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「私は天ぷら定食」是什么意思？",
+            "en": "What does \"私は天ぷら定食\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我点的是天妇罗套餐。",
+                "en": "我点的是天妇罗套餐。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "私は天ぷら定食",
+          "fromConversationId": "l13-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-006-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「我点的是天妇罗套餐。」的日语说法。",
+            "en": "Select Japanese for \"我点的是天妇罗套餐。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "私は天ぷら定食"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "私は天ぷら定食",
+          "fromConversationId": "l13-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-006-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「私は天ぷら定食」的中文意思是？",
+            "en": "What does \"私は天ぷら定食\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我点的是天妇罗套餐。",
+                "en": "我点的是天妇罗套餐。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "私は天ぷら定食",
+          "fromConversationId": "l13-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-007-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「私は牛丼」是什么意思？",
+            "en": "What does \"私は牛丼\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我点的是牛肉饭。",
+                "en": "我点的是牛肉饭。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "私は牛丼",
+          "fromConversationId": "l13-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-007-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「我点的是牛肉饭。」的日语说法。",
+            "en": "Select Japanese for \"我点的是牛肉饭。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "私は牛丼"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "私は牛丼",
+          "fromConversationId": "l13-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-007-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「私は牛丼」的中文意思是？",
+            "en": "What does \"私は牛丼\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我点的是牛肉饭。",
+                "en": "我点的是牛肉饭。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "私は牛丼",
+          "fromConversationId": "l13-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-008-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「天ぷら定食と牛丼ですね」是什么意思？",
+            "en": "What does \"天ぷら定食と牛丼ですね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "天妇罗套餐和牛肉饭对吧？",
+                "en": "天妇罗套餐和牛肉饭对吧？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "天ぷら定食と牛丼ですね",
+          "fromConversationId": "l13-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-008-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「天妇罗套餐和牛肉饭对吧？」的日语说法。",
+            "en": "Select Japanese for \"天妇罗套餐和牛肉饭对吧？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "天ぷら定食と牛丼ですね"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "天ぷら定食と牛丼ですね",
+          "fromConversationId": "l13-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-008-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「天ぷら定食と牛丼ですね」的中文意思是？",
+            "en": "What does \"天ぷら定食と牛丼ですね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "天妇罗套餐和牛肉饭对吧？",
+                "en": "天妇罗套餐和牛肉饭对吧？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "天ぷら定食と牛丼ですね",
+          "fromConversationId": "l13-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-009-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「少しお待ちください」是什么意思？",
+            "en": "What does \"少しお待ちください\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请稍等一下。",
+                "en": "请稍等一下。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "少しお待ちください",
+          "fromConversationId": "l13-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-009-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「请稍等一下。」的日语说法。",
+            "en": "Select Japanese for \"请稍等一下。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "少しお待ちください"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "少しお待ちください",
+          "fromConversationId": "l13-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-009-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「少しお待ちください」的中文意思是？",
+            "en": "What does \"少しお待ちください\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请稍等一下。",
+                "en": "请稍等一下。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "少しお待ちください",
+          "fromConversationId": "l13-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-010-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「天ぷら定食、お待たせしました」是什么意思？",
+            "en": "What does \"天ぷら定食、お待たせしました\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "您的天妇罗套餐，久等了。",
+                "en": "您的天妇罗套餐，久等了。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "天ぷら定食、お待たせしました",
+          "fromConversationId": "l13-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-010-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「您的天妇罗套餐，久等了。」的日语说法。",
+            "en": "Select Japanese for \"您的天妇罗套餐，久等了。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "天ぷら定食、お待たせしました"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "天ぷら定食、お待たせしました",
+          "fromConversationId": "l13-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-010-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「天ぷら定食、お待たせしました」的中文意思是？",
+            "en": "What does \"天ぷら定食、お待たせしました\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "您的天妇罗套餐，久等了。",
+                "en": "您的天妇罗套餐，久等了。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "天ぷら定食、お待たせしました",
+          "fromConversationId": "l13-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-011-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「できました」是什么意思？",
+            "en": "What does \"できました\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "准备好了。",
+                "en": "准备好了。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "できました",
+          "fromConversationId": "l13-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-011-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「准备好了。」的日语说法。",
+            "en": "Select Japanese for \"准备好了。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "できました"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "できました",
+          "fromConversationId": "l13-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-011-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「できました」的中文意思是？",
+            "en": "What does \"できました\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "准备好了。",
+                "en": "准备好了。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "できました",
+          "fromConversationId": "l13-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-012-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「天ぷら定食、お待たせしました」是什么意思？",
+            "en": "What does \"天ぷら定食、お待たせしました\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "您的天妇罗套餐，久等了。",
+                "en": "您的天妇罗套餐，久等了。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "天ぷら定食、お待たせしました",
+          "fromConversationId": "l13-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-012-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「您的天妇罗套餐，久等了。」的日语说法。",
+            "en": "Select Japanese for \"您的天妇罗套餐，久等了。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "天ぷら定食、お待たせしました"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "天ぷら定食、お待たせしました",
+          "fromConversationId": "l13-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-012-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「天ぷら定食、お待たせしました」的中文意思是？",
+            "en": "What does \"天ぷら定食、お待たせしました\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "您的天妇罗套餐，久等了。",
+                "en": "您的天妇罗套餐，久等了。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "天ぷら定食、お待たせしました",
+          "fromConversationId": "l13-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-013-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「できました」是什么意思？",
+            "en": "What does \"できました\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "做好了。",
+                "en": "做好了。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "できました",
+          "fromConversationId": "l13-conv-013",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-013-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「做好了。」的日语说法。",
+            "en": "Select Japanese for \"做好了。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "できました"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "できました",
+          "fromConversationId": "l13-conv-013",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-013-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「できました」的中文意思是？",
+            "en": "What does \"できました\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "做好了。",
+                "en": "做好了。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "できました",
+          "fromConversationId": "l13-conv-013",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-014-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「できました」是什么意思？",
+            "en": "What does \"できました\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "好了。",
+                "en": "好了。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "できました",
+          "fromConversationId": "l13-conv-014",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-014-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「好了。」的日语说法。",
+            "en": "Select Japanese for \"好了。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "できました"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "できました",
+          "fromConversationId": "l13-conv-014",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-014-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「できました」的中文意思是？",
+            "en": "What does \"できました\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "好了。",
+                "en": "好了。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "できました",
+          "fromConversationId": "l13-conv-014",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-015-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「できました」是什么意思？",
+            "en": "What does \"できました\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "好了。",
+                "en": "好了。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "できました",
+          "fromConversationId": "l13-conv-015",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-015-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「好了。」的日语说法。",
+            "en": "Select Japanese for \"好了。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "できました"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "できました",
+          "fromConversationId": "l13-conv-015",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-015-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「できました」的中文意思是？",
+            "en": "What does \"できました\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "好了。",
+                "en": "好了。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "できました",
+          "fromConversationId": "l13-conv-015",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-016-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「牛丼、お待たせしました」是什么意思？",
+            "en": "What does \"牛丼、お待たせしました\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "您的牛肉饭，久等了。",
+                "en": "您的牛肉饭，久等了。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "牛丼、お待たせしました",
+          "fromConversationId": "l13-conv-016",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-016-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「您的牛肉饭，久等了。」的日语说法。",
+            "en": "Select Japanese for \"您的牛肉饭，久等了。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "牛丼、お待たせしました"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "牛丼、お待たせしました",
+          "fromConversationId": "l13-conv-016",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-016-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「牛丼、お待たせしました」的中文意思是？",
+            "en": "What does \"牛丼、お待たせしました\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "您的牛肉饭，久等了。",
+                "en": "您的牛肉饭，久等了。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "牛丼、お待たせしました",
+          "fromConversationId": "l13-conv-016",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-017-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「できました」是什么意思？",
+            "en": "What does \"できました\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "做好了。",
+                "en": "做好了。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "できました",
+          "fromConversationId": "l13-conv-017",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-017-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「做好了。」的日语说法。",
+            "en": "Select Japanese for \"做好了。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "できました"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "できました",
+          "fromConversationId": "l13-conv-017",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-017-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「できました」的中文意思是？",
+            "en": "What does \"できました\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "做好了。",
+                "en": "做好了。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "できました",
+          "fromConversationId": "l13-conv-017",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-018-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「できました」是什么意思？",
+            "en": "What does \"できました\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "好了。",
+                "en": "好了。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "できました",
+          "fromConversationId": "l13-conv-018",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-018-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「好了。」的日语说法。",
+            "en": "Select Japanese for \"好了。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "できました"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "できました",
+          "fromConversationId": "l13-conv-018",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-018-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「できました」的中文意思是？",
+            "en": "What does \"できました\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "好了。",
+                "en": "好了。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "できました",
+          "fromConversationId": "l13-conv-018",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-019-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「天ぷら定食は980円でございます」是什么意思？",
+            "en": "What does \"天ぷら定食は980円でございます\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "天妇罗套餐是980日元。",
+                "en": "天妇罗套餐是980日元。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "天ぷら定食は980円でございます",
+          "fromConversationId": "l13-conv-019",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-019-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「天妇罗套餐是980日元。」的日语说法。",
+            "en": "Select Japanese for \"天妇罗套餐是980日元。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "天ぷら定食は980円でございます"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "天ぷら定食は980円でございます",
+          "fromConversationId": "l13-conv-019",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-019-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「天ぷら定食は980円でございます」的中文意思是？",
+            "en": "What does \"天ぷら定食は980円でございます\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "天妇罗套餐是980日元。",
+                "en": "天妇罗套餐是980日元。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "天ぷら定食は980円でございます",
+          "fromConversationId": "l13-conv-019",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-020-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「すみません 別々にお願いします」是什么意思？",
+            "en": "What does \"すみません 別々にお願いします\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不好意思，请分开结账。",
+                "en": "不好意思，请分开结账。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "すみません 別々にお願いします",
+          "fromConversationId": "l13-conv-020",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-020-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「不好意思，请分开结账。」的日语说法。",
+            "en": "Select Japanese for \"不好意思，请分开结账。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "すみません 別々にお願いします"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "すみません 別々にお願いします",
+          "fromConversationId": "l13-conv-020",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-020-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「すみません 別々にお願いします」的中文意思是？",
+            "en": "What does \"すみません 別々にお願いします\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不好意思，请分开结账。",
+                "en": "不好意思，请分开结账。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "すみません 別々にお願いします",
+          "fromConversationId": "l13-conv-020",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-021-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「天ぷら定食は980円」是什么意思？",
+            "en": "What does \"天ぷら定食は980円\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "天妇罗套餐是980日元。",
+                "en": "天妇罗套餐是980日元。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "天ぷら定食は980円",
+          "fromConversationId": "l13-conv-021",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-021-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「天妇罗套餐是980日元。」的日语说法。",
+            "en": "Select Japanese for \"天妇罗套餐是980日元。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "天ぷら定食は980円"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "天ぷら定食は980円",
+          "fromConversationId": "l13-conv-021",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-021-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「天ぷら定食は980円」的中文意思是？",
+            "en": "What does \"天ぷら定食は980円\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "天妇罗套餐是980日元。",
+                "en": "天妇罗套餐是980日元。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "天ぷら定食は980円",
+          "fromConversationId": "l13-conv-021",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-022-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「牛丼は700円です」是什么意思？",
+            "en": "What does \"牛丼は700円です\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "牛肉饭是700日元。",
+                "en": "牛肉饭是700日元。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "牛丼は700円です",
+          "fromConversationId": "l13-conv-022",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-022-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「牛肉饭是700日元。」的日语说法。",
+            "en": "Select Japanese for \"牛肉饭是700日元。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "牛丼は700円です"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "牛丼は700円です",
+          "fromConversationId": "l13-conv-022",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-022-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「牛丼は700円です」的中文意思是？",
+            "en": "What does \"牛丼は700円です\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "牛肉饭是700日元。",
+                "en": "牛肉饭是700日元。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "牛丼は700円です",
+          "fromConversationId": "l13-conv-022",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-023-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「1680円でございます」是什么意思？",
+            "en": "What does \"1680円でございます\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "一共是1680日元。",
+                "en": "一共是1680日元。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "1680円でございます",
+          "fromConversationId": "l13-conv-023",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-023-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「一共是1680日元。」的日语说法。",
+            "en": "Select Japanese for \"一共是1680日元。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "1680円でございます"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "1680円でございます",
+          "fromConversationId": "l13-conv-023",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-023-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「1680円でございます」的中文意思是？",
+            "en": "What does \"1680円でございます\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "一共是1680日元。",
+                "en": "一共是1680日元。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "1680円でございます",
+          "fromConversationId": "l13-conv-023",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-024-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「すみません 別々にお願いします」是什么意思？",
+            "en": "What does \"すみません 別々にお願いします\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不好意思，请分开付。",
+                "en": "不好意思，请分开付。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "すみません 別々にお願いします",
+          "fromConversationId": "l13-conv-024",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-024-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「不好意思，请分开付。」的日语说法。",
+            "en": "Select Japanese for \"不好意思，请分开付。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "すみません 別々にお願いします"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "すみません 別々にお願いします",
+          "fromConversationId": "l13-conv-024",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-024-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「すみません 別々にお願いします」的中文意思是？",
+            "en": "What does \"すみません 別々にお願いします\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不好意思，请分开付。",
+                "en": "不好意思，请分开付。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "すみません 別々にお願いします",
+          "fromConversationId": "l13-conv-024",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-025-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「はい」是什么意思？",
+            "en": "What does \"はい\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "好的。",
+                "en": "好的。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "はい",
+          "fromConversationId": "l13-conv-025",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-025-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「好的。」的日语说法。",
+            "en": "Select Japanese for \"好的。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "はい"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい",
+          "fromConversationId": "l13-conv-025",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-025-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「はい」的中文意思是？",
+            "en": "What does \"はい\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "好的。",
+                "en": "好的。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい",
+          "fromConversationId": "l13-conv-025",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-026-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「天ぷら定食は980円」是什么意思？",
+            "en": "What does \"天ぷら定食は980円\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "天妇罗套餐是980日元。",
+                "en": "天妇罗套餐是980日元。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "天ぷら定食は980円",
+          "fromConversationId": "l13-conv-026",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-026-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「天妇罗套餐是980日元。」的日语说法。",
+            "en": "Select Japanese for \"天妇罗套餐是980日元。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "天ぷら定食は980円"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "天ぷら定食は980円",
+          "fromConversationId": "l13-conv-026",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-026-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「天ぷら定食は980円」的中文意思是？",
+            "en": "What does \"天ぷら定食は980円\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "天妇罗套餐是980日元。",
+                "en": "天妇罗套餐是980日元。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "天ぷら定食は980円",
+          "fromConversationId": "l13-conv-026",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-027-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「牛丼は700円です」是什么意思？",
+            "en": "What does \"牛丼は700円です\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "牛肉饭是700日元。",
+                "en": "牛肉饭是700日元。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "牛丼は700円です",
+          "fromConversationId": "l13-conv-027",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-027-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「牛肉饭是700日元。」的日语说法。",
+            "en": "Select Japanese for \"牛肉饭是700日元。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "牛丼は700円です"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "牛丼は700円です",
+          "fromConversationId": "l13-conv-027",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l13-q-027-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「牛丼は700円です」的中文意思是？",
+            "en": "What does \"牛丼は700円です\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "牛肉饭是700日元。",
+                "en": "牛肉饭是700日元。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "牛丼は700円です",
+          "fromConversationId": "l13-conv-027",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
     }
   ],
   "conversationVideo": {
@@ -764,6 +3844,22 @@
     "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P13_%E7%AC%AC13%E8%AA%B2.mp4",
     "subtitleUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P13_%E7%AC%AC13%E8%AA%B2.json",
     "sourceType": "official_video_resource",
-    "status": "linked_not_imported"
+    "status": "imported_with_subtitles"
+  },
+  "conversationMainlineStatus": {
+    "videoLinked": "published",
+    "subtitleParsed": "published",
+    "subtitleCleaned": "published",
+    "humanReviewed": "not_started",
+    "importedToLessonJson": "published",
+    "vocabReady": "needs_review",
+    "grammarReady": "needs_review",
+    "examplesReady": "needs_review",
+    "quizReady": "needs_review",
+    "reciteReady": "needs_review",
+    "recordingReady": "published",
+    "scoringReady": "published",
+    "publishedToStaging": "not_started",
+    "verifiedOnline": "not_started"
   }
 }

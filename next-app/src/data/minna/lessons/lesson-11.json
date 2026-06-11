@@ -756,6 +756,2041 @@
           }
         }
       ]
+    },
+    {
+      "type": "conversation",
+      "id": "l11_conversation",
+      "sourceType": "official_video_subtitle",
+      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P11_%E7%AC%AC11%E8%AA%B2.json",
+      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P11_%E7%AC%AC11%E8%AA%B2.mp4",
+      "title": {
+        "zh": "会话背诵",
+        "en": "Conversation Practice"
+      },
+      "dialogTitle": {
+        "zh": "第11课会话",
+        "en": "第11课会话"
+      },
+      "conversationGoal": {
+        "zh": "第11课会话练习",
+        "en": "Lesson 11 Conversation Practice"
+      },
+      "items": [
+        {
+          "id": "l11-conv-001",
+          "speaker": "",
+          "jp": "イイテンキですね",
+          "kana": "イイテンキですね",
+          "zh": "天气真好啊。",
+          "keyword": "",
+          "videoStart": "0:00.0",
+          "videoEnd": "0:02.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-conv-002",
+          "speaker": "",
+          "jp": "お出かけですか?",
+          "kana": "",
+          "zh": "要出门吗？",
+          "keyword": "",
+          "videoStart": "0:02.0",
+          "videoEnd": "0:04.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-conv-003",
+          "speaker": "",
+          "jp": "え、ちょっと郵便局まで",
+          "kana": "",
+          "zh": "嗯，我去一下邮局。",
+          "keyword": "郵便局",
+          "videoStart": "0:04.0",
+          "videoEnd": "0:06.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-conv-004",
+          "speaker": "",
+          "jp": "そうですか? 行ってらっしゃい",
+          "kana": "",
+          "zh": "是吗？一路顺风。",
+          "keyword": "",
+          "videoStart": "0:06.0",
+          "videoEnd": "0:08.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-conv-005",
+          "speaker": "",
+          "jp": "行ってきます",
+          "kana": "",
+          "zh": "我出门了。",
+          "keyword": "",
+          "videoStart": "0:08.0",
+          "videoEnd": "0:10.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-conv-006",
+          "speaker": "",
+          "jp": "これ、オーストラリアまでお願いします",
+          "kana": "",
+          "zh": "这个，请寄到澳大利亚。",
+          "keyword": "",
+          "videoStart": "0:31.0",
+          "videoEnd": "0:34.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-conv-007",
+          "speaker": "",
+          "jp": "はい",
+          "kana": "はい",
+          "zh": "好的。",
+          "keyword": "",
+          "videoStart": "0:34.0",
+          "videoEnd": "0:36.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-conv-008",
+          "speaker": "",
+          "jp": "船便ですか?",
+          "kana": "",
+          "zh": "是海运吗？",
+          "keyword": "船便です",
+          "videoStart": "0:36.0",
+          "videoEnd": "0:38.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-conv-009",
+          "speaker": "",
+          "jp": "航空便ですか?",
+          "kana": "",
+          "zh": "还是航空寄送？",
+          "keyword": "航空便です",
+          "videoStart": "0:38.0",
+          "videoEnd": "0:40.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-conv-010",
+          "speaker": "",
+          "jp": "航空便はいくらですか?",
+          "kana": "",
+          "zh": "航空寄送多少钱？",
+          "keyword": "航空便",
+          "videoStart": "0:40.0",
+          "videoEnd": "0:42.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-conv-011",
+          "speaker": "",
+          "jp": "7600円です",
+          "kana": "",
+          "zh": "是7600日元。",
+          "keyword": "7600円です",
+          "videoStart": "0:42.0",
+          "videoEnd": "0:46.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-conv-012",
+          "speaker": "",
+          "jp": "船便は?",
+          "kana": "",
+          "zh": "海运呢？",
+          "keyword": "船便",
+          "videoStart": "0:46.0",
+          "videoEnd": "0:48.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-conv-013",
+          "speaker": "",
+          "jp": "3,450円です",
+          "kana": "",
+          "zh": "是3450日元。",
+          "keyword": "450円です",
+          "videoStart": "0:48.0",
+          "videoEnd": "0:50.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-conv-014",
+          "speaker": "",
+          "jp": "どのくらいかかりますか?",
+          "kana": "どのくらいかかりますか?",
+          "zh": "大概要多久？",
+          "keyword": "",
+          "videoStart": "0:50.0",
+          "videoEnd": "0:52.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-conv-015",
+          "speaker": "",
+          "jp": "航空便で7日くらいです",
+          "kana": "",
+          "zh": "航空寄送大约7天。",
+          "keyword": "7日",
+          "videoStart": "0:52.0",
+          "videoEnd": "0:54.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-conv-016",
+          "speaker": "",
+          "jp": "船便で2ヶ月くらいです",
+          "kana": "",
+          "zh": "海运大概需要2个月。",
+          "keyword": "船便",
+          "videoStart": "0:54.0",
+          "videoEnd": "0:58.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-conv-017",
+          "speaker": "",
+          "jp": "じゃあ、船便でお願いします",
+          "kana": "",
+          "zh": "那就请用海运寄吧。",
+          "keyword": "船便",
+          "videoStart": "0:58.0",
+          "videoEnd": "1:01.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_vocab",
+      "id": "l11_conversation_vocab",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话关键词汇",
+        "en": "Conversation Key Vocabulary"
+      },
+      "description": {
+        "zh": "以下词汇从会话原文中提取。",
+        "en": "Vocabulary from the conversation."
+      },
+      "items": [
+        {
+          "word": "イイテンキですね",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l11-conv-001",
+          "sourceSentence": "イイテンキですね",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "お出かけですか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l11-conv-002",
+          "sourceSentence": "お出かけですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "ちょっと郵便局まで",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l11-conv-003",
+          "sourceSentence": "え、ちょっと郵便局まで",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "そうですか",
+          "kana": "そうですか",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l11-conv-004",
+          "sourceSentence": "そうですか? 行ってらっしゃい",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "行ってらっしゃい",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l11-conv-004",
+          "sourceSentence": "そうですか? 行ってらっしゃい",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "行ってきます",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l11-conv-005",
+          "sourceSentence": "行ってきます",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "これ",
+          "kana": "これ",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l11-conv-006",
+          "sourceSentence": "これ、オーストラリアまでお願いします",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "オーストラリアまでお願いします",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l11-conv-006",
+          "sourceSentence": "これ、オーストラリアまでお願いします",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "はい",
+          "kana": "はい",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l11-conv-007",
+          "sourceSentence": "はい",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "船便ですか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l11-conv-008",
+          "sourceSentence": "船便ですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "航空便ですか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l11-conv-009",
+          "sourceSentence": "航空便ですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "航空便はいくらですか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l11-conv-010",
+          "sourceSentence": "航空便はいくらですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "円です",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l11-conv-011",
+          "sourceSentence": "7600円です",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "船便は",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l11-conv-012",
+          "sourceSentence": "船便は?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "どのくらいかかりますか",
+          "kana": "どのくらいかかりますか",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l11-conv-014",
+          "sourceSentence": "どのくらいかかりますか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "航空便で",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l11-conv-015",
+          "sourceSentence": "航空便で7日くらいです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "日くらいです",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l11-conv-015",
+          "sourceSentence": "航空便で7日くらいです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "船便で",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l11-conv-016",
+          "sourceSentence": "船便で2ヶ月くらいです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "ヶ月くらいです",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l11-conv-016",
+          "sourceSentence": "船便で2ヶ月くらいです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "じゃあ",
+          "kana": "じゃあ",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l11-conv-017",
+          "sourceSentence": "じゃあ、船便でお願いします",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "船便でお願いします",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l11-conv-017",
+          "sourceSentence": "じゃあ、船便でお願いします",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_grammar",
+      "id": "l11_conversation_grammar",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话核心语法",
+        "en": "Conversation Core Grammar"
+      },
+      "description": {
+        "zh": "以下语法点从会话原文中提取。",
+        "en": "Grammar points from the conversation."
+      },
+      "items": [
+        {
+          "pattern": "〜です",
+          "meaning": {
+            "zh": "是…（礼貌判断）",
+            "en": "is/am (polite copula)"
+          },
+          "conversationExample": "イイテンキですね",
+          "fromConversationId": "l11-conv-001",
+          "sourceSentence": "イイテンキですね",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「です」是日语礼貌判断助动词，相当于中文的\"是\"。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜か",
+          "meaning": {
+            "zh": "…吗？（疑问）",
+            "en": "question marker"
+          },
+          "conversationExample": "お出かけですか?",
+          "fromConversationId": "l11-conv-002",
+          "sourceSentence": "お出かけですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "句尾加「か」构成疑问句。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ます",
+          "meaning": {
+            "zh": "（动词敬体）",
+            "en": "polite verb form"
+          },
+          "conversationExample": "行ってきます",
+          "fromConversationId": "l11-conv-005",
+          "sourceSentence": "行ってきます",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ます」是动词的敬体形式。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_examples",
+      "id": "l11_conversation_examples",
+      "sourceType": "ai_generated_from_official_conversation",
+      "title": {
+        "zh": "会话替换例句",
+        "en": "Conversation Replacement Examples"
+      },
+      "description": {
+        "zh": "以下例句基于会话原句生成。",
+        "en": "Examples generated from conversation sentences."
+      },
+      "items": [
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "イイテンキですね",
+          "fromConversationId": "l11-conv-001",
+          "sourceSentence": "イイテンキですね",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "お出かけですか?",
+          "fromConversationId": "l11-conv-002",
+          "sourceSentence": "お出かけですか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "郵便局",
+          "originalSentence": "え、ちょっと郵便局まで",
+          "fromConversationId": "l11-conv-003",
+          "sourceSentence": "え、ちょっと郵便局まで",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "そうですか? 行ってらっしゃい",
+          "fromConversationId": "l11-conv-004",
+          "sourceSentence": "そうですか? 行ってらっしゃい",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "行ってきます",
+          "fromConversationId": "l11-conv-005",
+          "sourceSentence": "行ってきます",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "これ、オーストラリアまでお願いします",
+          "fromConversationId": "l11-conv-006",
+          "sourceSentence": "これ、オーストラリアまでお願いします",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "はい",
+          "fromConversationId": "l11-conv-007",
+          "sourceSentence": "はい",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "船便です",
+          "originalSentence": "船便ですか?",
+          "fromConversationId": "l11-conv-008",
+          "sourceSentence": "船便ですか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "航空便です",
+          "originalSentence": "航空便ですか?",
+          "fromConversationId": "l11-conv-009",
+          "sourceSentence": "航空便ですか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "航空便",
+          "originalSentence": "航空便はいくらですか?",
+          "fromConversationId": "l11-conv-010",
+          "sourceSentence": "航空便はいくらですか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "7600円です",
+          "originalSentence": "7600円です",
+          "fromConversationId": "l11-conv-011",
+          "sourceSentence": "7600円です",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [
+            {
+              "jp": "佐藤です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "田中です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "山田です",
+              "kana": "",
+              "zh": ""
+            }
+          ],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "船便",
+          "originalSentence": "船便は?",
+          "fromConversationId": "l11-conv-012",
+          "sourceSentence": "船便は?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "450円です",
+          "originalSentence": "3,450円です",
+          "fromConversationId": "l11-conv-013",
+          "sourceSentence": "3,450円です",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [
+            {
+              "jp": "佐藤です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "田中です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "山田です",
+              "kana": "",
+              "zh": ""
+            }
+          ],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "どのくらいかかりますか?",
+          "fromConversationId": "l11-conv-014",
+          "sourceSentence": "どのくらいかかりますか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "7日",
+          "originalSentence": "航空便で7日くらいです",
+          "fromConversationId": "l11-conv-015",
+          "sourceSentence": "航空便で7日くらいです",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "船便",
+          "originalSentence": "船便で2ヶ月くらいです",
+          "fromConversationId": "l11-conv-016",
+          "sourceSentence": "船便で2ヶ月くらいです",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "船便",
+          "originalSentence": "じゃあ、船便でお願いします",
+          "fromConversationId": "l11-conv-017",
+          "sourceSentence": "じゃあ、船便でお願いします",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_quiz",
+      "id": "l11_conversation_quiz",
+      "sourceType": "generated_from_official_video_subtitle",
+      "title": {
+        "zh": "会话专项测试",
+        "en": "Conversation Quiz"
+      },
+      "description": {
+        "zh": "测试题围绕会话内容设计。",
+        "en": "Quiz based on the conversation."
+      },
+      "items": [
+        {
+          "id": "l11-q-001-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「イイテンキですね」是什么意思？",
+            "en": "What does \"イイテンキですね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "天气真好啊。",
+                "en": "天气真好啊。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "イイテンキですね",
+          "fromConversationId": "l11-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-001-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「天气真好啊。」的日语说法。",
+            "en": "Select Japanese for \"天气真好啊。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "イイテンキですね"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "イイテンキですね",
+          "fromConversationId": "l11-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-001-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「イイテンキですね」的中文意思是？",
+            "en": "What does \"イイテンキですね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "天气真好啊。",
+                "en": "天气真好啊。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "イイテンキですね",
+          "fromConversationId": "l11-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-002-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「お出かけですか?」是什么意思？",
+            "en": "What does \"お出かけですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "要出门吗？",
+                "en": "要出门吗？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "お出かけですか?",
+          "fromConversationId": "l11-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-002-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「要出门吗？」的日语说法。",
+            "en": "Select Japanese for \"要出门吗？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "お出かけですか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "お出かけですか?",
+          "fromConversationId": "l11-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-002-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「お出かけですか?」的中文意思是？",
+            "en": "What does \"お出かけですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "要出门吗？",
+                "en": "要出门吗？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "お出かけですか?",
+          "fromConversationId": "l11-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-003-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「え、ちょっと郵便局まで」是什么意思？",
+            "en": "What does \"え、ちょっと郵便局まで\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "嗯，我去一下邮局。",
+                "en": "嗯，我去一下邮局。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "え、ちょっと郵便局まで",
+          "fromConversationId": "l11-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-003-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「嗯，我去一下邮局。」的日语说法。",
+            "en": "Select Japanese for \"嗯，我去一下邮局。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "え、ちょっと郵便局まで"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "え、ちょっと郵便局まで",
+          "fromConversationId": "l11-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-003-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「え、ちょっと郵便局まで」的中文意思是？",
+            "en": "What does \"え、ちょっと郵便局まで\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "嗯，我去一下邮局。",
+                "en": "嗯，我去一下邮局。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "え、ちょっと郵便局まで",
+          "fromConversationId": "l11-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-004-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「そうですか? 行ってらっしゃい」是什么意思？",
+            "en": "What does \"そうですか? 行ってらっしゃい\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是吗？一路顺风。",
+                "en": "是吗？一路顺风。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "そうですか? 行ってらっしゃい",
+          "fromConversationId": "l11-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-004-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「是吗？一路顺风。」的日语说法。",
+            "en": "Select Japanese for \"是吗？一路顺风。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "そうですか? 行ってらっしゃい"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "そうですか? 行ってらっしゃい",
+          "fromConversationId": "l11-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-004-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「そうですか? 行ってらっしゃい」的中文意思是？",
+            "en": "What does \"そうですか? 行ってらっしゃい\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是吗？一路顺风。",
+                "en": "是吗？一路顺风。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "そうですか? 行ってらっしゃい",
+          "fromConversationId": "l11-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-005-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「行ってきます」是什么意思？",
+            "en": "What does \"行ってきます\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我出门了。",
+                "en": "我出门了。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "行ってきます",
+          "fromConversationId": "l11-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-005-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「我出门了。」的日语说法。",
+            "en": "Select Japanese for \"我出门了。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "行ってきます"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "行ってきます",
+          "fromConversationId": "l11-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-005-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「行ってきます」的中文意思是？",
+            "en": "What does \"行ってきます\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我出门了。",
+                "en": "我出门了。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "行ってきます",
+          "fromConversationId": "l11-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-006-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「これ、オーストラリアまでお願いします」是什么意思？",
+            "en": "What does \"これ、オーストラリアまでお願いします\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "这个，请寄到澳大利亚。",
+                "en": "这个，请寄到澳大利亚。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "これ、オーストラリアまでお願いします",
+          "fromConversationId": "l11-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-006-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「这个，请寄到澳大利亚。」的日语说法。",
+            "en": "Select Japanese for \"这个，请寄到澳大利亚。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "これ、オーストラリアまでお願いします"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "これ、オーストラリアまでお願いします",
+          "fromConversationId": "l11-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-006-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「これ、オーストラリアまでお願いします」的中文意思是？",
+            "en": "What does \"これ、オーストラリアまでお願いします\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "这个，请寄到澳大利亚。",
+                "en": "这个，请寄到澳大利亚。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "これ、オーストラリアまでお願いします",
+          "fromConversationId": "l11-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-007-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「はい」是什么意思？",
+            "en": "What does \"はい\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "好的。",
+                "en": "好的。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "はい",
+          "fromConversationId": "l11-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-007-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「好的。」的日语说法。",
+            "en": "Select Japanese for \"好的。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "はい"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい",
+          "fromConversationId": "l11-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-007-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「はい」的中文意思是？",
+            "en": "What does \"はい\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "好的。",
+                "en": "好的。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい",
+          "fromConversationId": "l11-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-008-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「船便ですか?」是什么意思？",
+            "en": "What does \"船便ですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是海运吗？",
+                "en": "是海运吗？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "船便ですか?",
+          "fromConversationId": "l11-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-008-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「是海运吗？」的日语说法。",
+            "en": "Select Japanese for \"是海运吗？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "船便ですか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "船便ですか?",
+          "fromConversationId": "l11-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-008-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「船便ですか?」的中文意思是？",
+            "en": "What does \"船便ですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是海运吗？",
+                "en": "是海运吗？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "船便ですか?",
+          "fromConversationId": "l11-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-009-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「航空便ですか?」是什么意思？",
+            "en": "What does \"航空便ですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "还是航空寄送？",
+                "en": "还是航空寄送？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "航空便ですか?",
+          "fromConversationId": "l11-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-009-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「还是航空寄送？」的日语说法。",
+            "en": "Select Japanese for \"还是航空寄送？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "航空便ですか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "航空便ですか?",
+          "fromConversationId": "l11-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-009-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「航空便ですか?」的中文意思是？",
+            "en": "What does \"航空便ですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "还是航空寄送？",
+                "en": "还是航空寄送？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "航空便ですか?",
+          "fromConversationId": "l11-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-010-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「航空便はいくらですか?」是什么意思？",
+            "en": "What does \"航空便はいくらですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "航空寄送多少钱？",
+                "en": "航空寄送多少钱？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "航空便はいくらですか?",
+          "fromConversationId": "l11-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-010-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「航空寄送多少钱？」的日语说法。",
+            "en": "Select Japanese for \"航空寄送多少钱？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "航空便はいくらですか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "航空便はいくらですか?",
+          "fromConversationId": "l11-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-010-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「航空便はいくらですか?」的中文意思是？",
+            "en": "What does \"航空便はいくらですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "航空寄送多少钱？",
+                "en": "航空寄送多少钱？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "航空便はいくらですか?",
+          "fromConversationId": "l11-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-011-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「7600円です」是什么意思？",
+            "en": "What does \"7600円です\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是7600日元。",
+                "en": "是7600日元。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "7600円です",
+          "fromConversationId": "l11-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-011-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「是7600日元。」的日语说法。",
+            "en": "Select Japanese for \"是7600日元。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "7600円です"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "7600円です",
+          "fromConversationId": "l11-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-011-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「7600円です」的中文意思是？",
+            "en": "What does \"7600円です\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是7600日元。",
+                "en": "是7600日元。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "7600円です",
+          "fromConversationId": "l11-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-012-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「船便は?」是什么意思？",
+            "en": "What does \"船便は?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "海运呢？",
+                "en": "海运呢？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "船便は?",
+          "fromConversationId": "l11-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-012-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「海运呢？」的日语说法。",
+            "en": "Select Japanese for \"海运呢？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "船便は?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "船便は?",
+          "fromConversationId": "l11-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-012-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「船便は?」的中文意思是？",
+            "en": "What does \"船便は?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "海运呢？",
+                "en": "海运呢？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "船便は?",
+          "fromConversationId": "l11-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-013-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「3,450円です」是什么意思？",
+            "en": "What does \"3,450円です\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是3450日元。",
+                "en": "是3450日元。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "3,450円です",
+          "fromConversationId": "l11-conv-013",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-013-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「是3450日元。」的日语说法。",
+            "en": "Select Japanese for \"是3450日元。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "3,450円です"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "3,450円です",
+          "fromConversationId": "l11-conv-013",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-013-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「3,450円です」的中文意思是？",
+            "en": "What does \"3,450円です\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是3450日元。",
+                "en": "是3450日元。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "3,450円です",
+          "fromConversationId": "l11-conv-013",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-014-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「どのくらいかかりますか?」是什么意思？",
+            "en": "What does \"どのくらいかかりますか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "大概要多久？",
+                "en": "大概要多久？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "どのくらいかかりますか?",
+          "fromConversationId": "l11-conv-014",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-014-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「大概要多久？」的日语说法。",
+            "en": "Select Japanese for \"大概要多久？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "どのくらいかかりますか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "どのくらいかかりますか?",
+          "fromConversationId": "l11-conv-014",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-014-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「どのくらいかかりますか?」的中文意思是？",
+            "en": "What does \"どのくらいかかりますか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "大概要多久？",
+                "en": "大概要多久？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "どのくらいかかりますか?",
+          "fromConversationId": "l11-conv-014",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-015-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「航空便で7日くらいです」是什么意思？",
+            "en": "What does \"航空便で7日くらいです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "航空寄送大约7天。",
+                "en": "航空寄送大约7天。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "航空便で7日くらいです",
+          "fromConversationId": "l11-conv-015",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-015-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「航空寄送大约7天。」的日语说法。",
+            "en": "Select Japanese for \"航空寄送大约7天。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "航空便で7日くらいです"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "航空便で7日くらいです",
+          "fromConversationId": "l11-conv-015",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-015-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「航空便で7日くらいです」的中文意思是？",
+            "en": "What does \"航空便で7日くらいです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "航空寄送大约7天。",
+                "en": "航空寄送大约7天。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "航空便で7日くらいです",
+          "fromConversationId": "l11-conv-015",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-016-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「船便で2ヶ月くらいです」是什么意思？",
+            "en": "What does \"船便で2ヶ月くらいです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "海运大概需要2个月。",
+                "en": "海运大概需要2个月。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "船便で2ヶ月くらいです",
+          "fromConversationId": "l11-conv-016",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-016-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「海运大概需要2个月。」的日语说法。",
+            "en": "Select Japanese for \"海运大概需要2个月。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "船便で2ヶ月くらいです"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "船便で2ヶ月くらいです",
+          "fromConversationId": "l11-conv-016",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-016-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「船便で2ヶ月くらいです」的中文意思是？",
+            "en": "What does \"船便で2ヶ月くらいです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "海运大概需要2个月。",
+                "en": "海运大概需要2个月。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "船便で2ヶ月くらいです",
+          "fromConversationId": "l11-conv-016",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-017-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「じゃあ、船便でお願いします」是什么意思？",
+            "en": "What does \"じゃあ、船便でお願いします\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那就请用海运寄吧。",
+                "en": "那就请用海运寄吧。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "じゃあ、船便でお願いします",
+          "fromConversationId": "l11-conv-017",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-017-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「那就请用海运寄吧。」的日语说法。",
+            "en": "Select Japanese for \"那就请用海运寄吧。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "じゃあ、船便でお願いします"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "じゃあ、船便でお願いします",
+          "fromConversationId": "l11-conv-017",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l11-q-017-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「じゃあ、船便でお願いします」的中文意思是？",
+            "en": "What does \"じゃあ、船便でお願いします\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那就请用海运寄吧。",
+                "en": "那就请用海运寄吧。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "じゃあ、船便でお願いします",
+          "fromConversationId": "l11-conv-017",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
     }
   ],
   "conversationVideo": {
@@ -764,6 +2799,22 @@
     "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P11_%E7%AC%AC11%E8%AA%B2.mp4",
     "subtitleUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P11_%E7%AC%AC11%E8%AA%B2.json",
     "sourceType": "official_video_resource",
-    "status": "linked_not_imported"
+    "status": "imported_with_subtitles"
+  },
+  "conversationMainlineStatus": {
+    "videoLinked": "published",
+    "subtitleParsed": "published",
+    "subtitleCleaned": "published",
+    "humanReviewed": "not_started",
+    "importedToLessonJson": "published",
+    "vocabReady": "needs_review",
+    "grammarReady": "needs_review",
+    "examplesReady": "needs_review",
+    "quizReady": "needs_review",
+    "reciteReady": "needs_review",
+    "recordingReady": "published",
+    "scoringReady": "published",
+    "publishedToStaging": "not_started",
+    "verifiedOnline": "not_started"
   }
 }

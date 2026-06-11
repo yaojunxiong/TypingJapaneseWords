@@ -688,6 +688,1640 @@
           ]
         }
       ]
+    },
+    {
+      "type": "conversation",
+      "id": "l10_conversation",
+      "sourceType": "official_video_subtitle",
+      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P10_%E7%AC%AC10%E8%AA%B2.json",
+      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P10_%E7%AC%AC10%E8%AA%B2.mp4",
+      "title": {
+        "zh": "会话背诵",
+        "en": "Conversation Practice"
+      },
+      "dialogTitle": {
+        "zh": "存在",
+        "en": "存在"
+      },
+      "conversationGoal": {
+        "zh": "能询问和回答人物/物品的存在",
+        "en": "Ask and answer about existence"
+      },
+      "items": [
+        {
+          "id": "l10-conv-001",
+          "speaker": "",
+          "jp": "アジアストア",
+          "kana": "アジアストア",
+          "zh": "亚洲商店",
+          "keyword": "",
+          "videoStart": "0:00.0",
+          "videoEnd": "0:05.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-conv-002",
+          "speaker": "",
+          "jp": "すみません アジアストアはどこですか?",
+          "kana": "すみません アジアストアはどこですか?",
+          "zh": "不好意思，亚洲商店在哪里？",
+          "keyword": "",
+          "videoStart": "0:10.0",
+          "videoEnd": "0:13.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-conv-003",
+          "speaker": "",
+          "jp": "アジアストアですか?",
+          "kana": "アジアストアですか?",
+          "zh": "您是说亚洲商店吗？",
+          "keyword": "",
+          "videoStart": "0:13.0",
+          "videoEnd": "0:15.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-conv-004",
+          "speaker": "",
+          "jp": "あそこに白いビルがありますね",
+          "kana": "",
+          "zh": "那边有一栋白色的大楼，对吧？",
+          "keyword": "",
+          "videoStart": "0:15.0",
+          "videoEnd": "0:18.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-conv-005",
+          "speaker": "",
+          "jp": "あのビルの中です",
+          "kana": "",
+          "zh": "就在那栋楼里",
+          "keyword": "",
+          "videoStart": "0:18.0",
+          "videoEnd": "0:20.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-conv-006",
+          "speaker": "",
+          "jp": "そうですか どうもすみません",
+          "kana": "そうですか どうもすみません",
+          "zh": "是这样啊，真不好意思",
+          "keyword": "",
+          "videoStart": "0:20.0",
+          "videoEnd": "0:23.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-conv-007",
+          "speaker": "",
+          "jp": "いいえ",
+          "kana": "いいえ",
+          "zh": "不客气",
+          "keyword": "",
+          "videoStart": "0:23.0",
+          "videoEnd": "0:24.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-conv-008",
+          "speaker": "",
+          "jp": "アジアストア",
+          "kana": "アジアストア",
+          "zh": "亚洲商店",
+          "keyword": "",
+          "videoStart": "0:30.0",
+          "videoEnd": "0:34.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-conv-009",
+          "speaker": "",
+          "jp": "あの",
+          "kana": "あの",
+          "zh": "那个……",
+          "keyword": "",
+          "videoStart": "0:36.0",
+          "videoEnd": "0:38.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-conv-010",
+          "speaker": "",
+          "jp": "ナンプラーありますか?",
+          "kana": "ナンプラーありますか?",
+          "zh": "请问有鱼露吗？",
+          "keyword": "",
+          "videoStart": "0:39.0",
+          "videoEnd": "0:42.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-conv-011",
+          "speaker": "",
+          "jp": "はい あちらにタイ料理のコーナーがあります",
+          "kana": "",
+          "zh": "有的，那边有一个泰国菜专区",
+          "keyword": "料理",
+          "videoStart": "0:42.0",
+          "videoEnd": "0:46.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-conv-012",
+          "speaker": "",
+          "jp": "ナンプラーは一番下です",
+          "kana": "",
+          "zh": "鱼露在最下面一层",
+          "keyword": "一番下です",
+          "videoStart": "0:48.0",
+          "videoEnd": "0:51.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-conv-013",
+          "speaker": "",
+          "jp": "わかりました どうも",
+          "kana": "わかりました どうも",
+          "zh": "我知道了，谢谢",
+          "keyword": "",
+          "videoStart": "0:51.0",
+          "videoEnd": "0:54.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_vocab",
+      "id": "l10_conversation_vocab",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话关键词汇",
+        "en": "Conversation Key Vocabulary"
+      },
+      "description": {
+        "zh": "以下词汇从会话原文中提取。",
+        "en": "Vocabulary from the conversation."
+      },
+      "items": [
+        {
+          "word": "アジアストア",
+          "kana": "",
+          "zh": "",
+          "importance": "support",
+          "fromConversationId": "l10-conv-001",
+          "sourceSentence": "アジアストア",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "すみません",
+          "kana": "すみません",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l10-conv-002",
+          "sourceSentence": "すみません アジアストアはどこですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "アジアストアはどこですか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l10-conv-002",
+          "sourceSentence": "すみません アジアストアはどこですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "アジアストアですか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l10-conv-003",
+          "sourceSentence": "アジアストアですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "あそこに白いビルがありますね",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l10-conv-004",
+          "sourceSentence": "あそこに白いビルがありますね",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "あのビルの中です",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l10-conv-005",
+          "sourceSentence": "あのビルの中です",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "そうですか",
+          "kana": "そうですか",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l10-conv-006",
+          "sourceSentence": "そうですか どうもすみません",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "どうもすみません",
+          "kana": "どうもすみません",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l10-conv-006",
+          "sourceSentence": "そうですか どうもすみません",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "いいえ",
+          "kana": "いいえ",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l10-conv-007",
+          "sourceSentence": "いいえ",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "あの",
+          "kana": "あの",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l10-conv-009",
+          "sourceSentence": "あの",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "ナンプラーありますか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l10-conv-010",
+          "sourceSentence": "ナンプラーありますか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "はい",
+          "kana": "はい",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l10-conv-011",
+          "sourceSentence": "はい あちらにタイ料理のコーナーがあります",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "あちらにタイ料理のコーナーがあります",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l10-conv-011",
+          "sourceSentence": "はい あちらにタイ料理のコーナーがあります",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "ナンプラーは一番下です",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l10-conv-012",
+          "sourceSentence": "ナンプラーは一番下です",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "わかりました",
+          "kana": "わかりました",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l10-conv-013",
+          "sourceSentence": "わかりました どうも",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "どうも",
+          "kana": "どうも",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l10-conv-013",
+          "sourceSentence": "わかりました どうも",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_grammar",
+      "id": "l10_conversation_grammar",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话核心语法",
+        "en": "Conversation Core Grammar"
+      },
+      "description": {
+        "zh": "以下语法点从会话原文中提取。",
+        "en": "Grammar points from the conversation."
+      },
+      "items": [
+        {
+          "pattern": "〜です",
+          "meaning": {
+            "zh": "是…（礼貌判断）",
+            "en": "is/am (polite copula)"
+          },
+          "conversationExample": "すみません アジアストアはどこですか?",
+          "fromConversationId": "l10-conv-002",
+          "sourceSentence": "すみません アジアストアはどこですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「です」是日语礼貌判断助动词，相当于中文的\"是\"。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜か",
+          "meaning": {
+            "zh": "…吗？（疑问）",
+            "en": "question marker"
+          },
+          "conversationExample": "すみません アジアストアはどこですか?",
+          "fromConversationId": "l10-conv-002",
+          "sourceSentence": "すみません アジアストアはどこですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "句尾加「か」构成疑问句。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ません",
+          "meaning": {
+            "zh": "不…（否定）",
+            "en": "negative form"
+          },
+          "conversationExample": "すみません アジアストアはどこですか?",
+          "fromConversationId": "l10-conv-002",
+          "sourceSentence": "すみません アジアストアはどこですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ません」是「ます」的否定形式。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜に〜",
+          "meaning": {
+            "zh": "在/向…",
+            "en": "to/at"
+          },
+          "conversationExample": "あそこに白いビルがありますね",
+          "fromConversationId": "l10-conv-004",
+          "sourceSentence": "あそこに白いビルがありますね",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「に」表示时间、地点或方向。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ます",
+          "meaning": {
+            "zh": "（动词敬体）",
+            "en": "polite verb form"
+          },
+          "conversationExample": "あそこに白いビルがありますね",
+          "fromConversationId": "l10-conv-004",
+          "sourceSentence": "あそこに白いビルがありますね",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ます」是动词的敬体形式。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ました",
+          "meaning": {
+            "zh": "…了（过去）",
+            "en": "past tense"
+          },
+          "conversationExample": "わかりました どうも",
+          "fromConversationId": "l10-conv-013",
+          "sourceSentence": "わかりました どうも",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ました」是「ます」的过去形。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_examples",
+      "id": "l10_conversation_examples",
+      "sourceType": "ai_generated_from_official_conversation",
+      "title": {
+        "zh": "会话替换例句",
+        "en": "Conversation Replacement Examples"
+      },
+      "description": {
+        "zh": "以下例句基于会话原句生成。",
+        "en": "Examples generated from conversation sentences."
+      },
+      "items": [
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "アジアストア",
+          "fromConversationId": "l10-conv-001",
+          "sourceSentence": "アジアストア",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "すみません アジアストアはどこですか?",
+          "fromConversationId": "l10-conv-002",
+          "sourceSentence": "すみません アジアストアはどこですか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "アジアストアですか?",
+          "fromConversationId": "l10-conv-003",
+          "sourceSentence": "アジアストアですか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "あそこに白いビルがありますね",
+          "fromConversationId": "l10-conv-004",
+          "sourceSentence": "あそこに白いビルがありますね",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "替换练习",
+          "originalSentence": "あのビルの中です",
+          "fromConversationId": "l10-conv-005",
+          "sourceSentence": "あのビルの中です",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [
+            {
+              "jp": "あのビルの佐藤です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "あのビルの田中です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "あのビルの山田です",
+              "kana": "",
+              "zh": ""
+            }
+          ],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "そうですか どうもすみません",
+          "fromConversationId": "l10-conv-006",
+          "sourceSentence": "そうですか どうもすみません",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "いいえ",
+          "fromConversationId": "l10-conv-007",
+          "sourceSentence": "いいえ",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "アジアストア",
+          "fromConversationId": "l10-conv-008",
+          "sourceSentence": "アジアストア",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "あの",
+          "fromConversationId": "l10-conv-009",
+          "sourceSentence": "あの",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "ナンプラーありますか?",
+          "fromConversationId": "l10-conv-010",
+          "sourceSentence": "ナンプラーありますか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "料理",
+          "originalSentence": "はい あちらにタイ料理のコーナーがあります",
+          "fromConversationId": "l10-conv-011",
+          "sourceSentence": "はい あちらにタイ料理のコーナーがあります",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "一番下です",
+          "originalSentence": "ナンプラーは一番下です",
+          "fromConversationId": "l10-conv-012",
+          "sourceSentence": "ナンプラーは一番下です",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [
+            {
+              "jp": "ナンプラーは佐藤です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "ナンプラーは田中です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "ナンプラーは山田です",
+              "kana": "",
+              "zh": ""
+            }
+          ],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "わかりました どうも",
+          "fromConversationId": "l10-conv-013",
+          "sourceSentence": "わかりました どうも",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_quiz",
+      "id": "l10_conversation_quiz",
+      "sourceType": "generated_from_official_video_subtitle",
+      "title": {
+        "zh": "会话专项测试",
+        "en": "Conversation Quiz"
+      },
+      "description": {
+        "zh": "测试题围绕会话内容设计。",
+        "en": "Quiz based on the conversation."
+      },
+      "items": [
+        {
+          "id": "l10-q-001-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「アジアストア」是什么意思？",
+            "en": "What does \"アジアストア\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "亚洲商店",
+                "en": "亚洲商店"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "アジアストア",
+          "fromConversationId": "l10-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-001-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「亚洲商店」的日语说法。",
+            "en": "Select Japanese for \"亚洲商店\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "アジアストア"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "アジアストア",
+          "fromConversationId": "l10-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-001-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「アジアストア」的中文意思是？",
+            "en": "What does \"アジアストア\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "亚洲商店",
+                "en": "亚洲商店"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "アジアストア",
+          "fromConversationId": "l10-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-002-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「すみません アジアストアはどこですか?」是什么意思？",
+            "en": "What does \"すみません アジアストアはどこですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不好意思，亚洲商店在哪里？",
+                "en": "不好意思，亚洲商店在哪里？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "すみません アジアストアはどこですか?",
+          "fromConversationId": "l10-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-002-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「不好意思，亚洲商店在哪里？」的日语说法。",
+            "en": "Select Japanese for \"不好意思，亚洲商店在哪里？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "すみません アジアストアはどこですか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "すみません アジアストアはどこですか?",
+          "fromConversationId": "l10-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-002-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「すみません アジアストアはどこですか?」的中文意思是？",
+            "en": "What does \"すみません アジアストアはどこですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不好意思，亚洲商店在哪里？",
+                "en": "不好意思，亚洲商店在哪里？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "すみません アジアストアはどこですか?",
+          "fromConversationId": "l10-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-003-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「アジアストアですか?」是什么意思？",
+            "en": "What does \"アジアストアですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "您是说亚洲商店吗？",
+                "en": "您是说亚洲商店吗？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "アジアストアですか?",
+          "fromConversationId": "l10-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-003-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「您是说亚洲商店吗？」的日语说法。",
+            "en": "Select Japanese for \"您是说亚洲商店吗？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "アジアストアですか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "アジアストアですか?",
+          "fromConversationId": "l10-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-003-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「アジアストアですか?」的中文意思是？",
+            "en": "What does \"アジアストアですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "您是说亚洲商店吗？",
+                "en": "您是说亚洲商店吗？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "アジアストアですか?",
+          "fromConversationId": "l10-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-004-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「あそこに白いビルがありますね」是什么意思？",
+            "en": "What does \"あそこに白いビルがありますね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那边有一栋白色的大楼，对吧？",
+                "en": "那边有一栋白色的大楼，对吧？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "あそこに白いビルがありますね",
+          "fromConversationId": "l10-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-004-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「那边有一栋白色的大楼，对吧？」的日语说法。",
+            "en": "Select Japanese for \"那边有一栋白色的大楼，对吧？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "あそこに白いビルがありますね"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "あそこに白いビルがありますね",
+          "fromConversationId": "l10-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-004-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「あそこに白いビルがありますね」的中文意思是？",
+            "en": "What does \"あそこに白いビルがありますね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那边有一栋白色的大楼，对吧？",
+                "en": "那边有一栋白色的大楼，对吧？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "あそこに白いビルがありますね",
+          "fromConversationId": "l10-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-005-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「あのビルの中です」是什么意思？",
+            "en": "What does \"あのビルの中です\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "就在那栋楼里",
+                "en": "就在那栋楼里"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "あのビルの中です",
+          "fromConversationId": "l10-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-005-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「就在那栋楼里」的日语说法。",
+            "en": "Select Japanese for \"就在那栋楼里\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "あのビルの中です"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "あのビルの中です",
+          "fromConversationId": "l10-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-005-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「あのビルの中です」的中文意思是？",
+            "en": "What does \"あのビルの中です\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "就在那栋楼里",
+                "en": "就在那栋楼里"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "あのビルの中です",
+          "fromConversationId": "l10-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-006-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「そうですか どうもすみません」是什么意思？",
+            "en": "What does \"そうですか どうもすみません\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是这样啊，真不好意思",
+                "en": "是这样啊，真不好意思"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "そうですか どうもすみません",
+          "fromConversationId": "l10-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-006-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「是这样啊，真不好意思」的日语说法。",
+            "en": "Select Japanese for \"是这样啊，真不好意思\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "そうですか どうもすみません"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "そうですか どうもすみません",
+          "fromConversationId": "l10-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-006-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「そうですか どうもすみません」的中文意思是？",
+            "en": "What does \"そうですか どうもすみません\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是这样啊，真不好意思",
+                "en": "是这样啊，真不好意思"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "そうですか どうもすみません",
+          "fromConversationId": "l10-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-007-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「いいえ」是什么意思？",
+            "en": "What does \"いいえ\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不客气",
+                "en": "不客气"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "いいえ",
+          "fromConversationId": "l10-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-007-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「不客气」的日语说法。",
+            "en": "Select Japanese for \"不客气\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "いいえ"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "いいえ",
+          "fromConversationId": "l10-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-007-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「いいえ」的中文意思是？",
+            "en": "What does \"いいえ\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不客气",
+                "en": "不客气"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "いいえ",
+          "fromConversationId": "l10-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-008-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「アジアストア」是什么意思？",
+            "en": "What does \"アジアストア\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "亚洲商店",
+                "en": "亚洲商店"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "アジアストア",
+          "fromConversationId": "l10-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-008-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「亚洲商店」的日语说法。",
+            "en": "Select Japanese for \"亚洲商店\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "アジアストア"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "アジアストア",
+          "fromConversationId": "l10-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-008-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「アジアストア」的中文意思是？",
+            "en": "What does \"アジアストア\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "亚洲商店",
+                "en": "亚洲商店"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "アジアストア",
+          "fromConversationId": "l10-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-009-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「あの」是什么意思？",
+            "en": "What does \"あの\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那个……",
+                "en": "那个……"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "あの",
+          "fromConversationId": "l10-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-009-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「那个……」的日语说法。",
+            "en": "Select Japanese for \"那个……\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "あの"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "あの",
+          "fromConversationId": "l10-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-009-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「あの」的中文意思是？",
+            "en": "What does \"あの\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那个……",
+                "en": "那个……"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "あの",
+          "fromConversationId": "l10-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-010-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「ナンプラーありますか?」是什么意思？",
+            "en": "What does \"ナンプラーありますか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请问有鱼露吗？",
+                "en": "请问有鱼露吗？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "ナンプラーありますか?",
+          "fromConversationId": "l10-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-010-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「请问有鱼露吗？」的日语说法。",
+            "en": "Select Japanese for \"请问有鱼露吗？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "ナンプラーありますか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ナンプラーありますか?",
+          "fromConversationId": "l10-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-010-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「ナンプラーありますか?」的中文意思是？",
+            "en": "What does \"ナンプラーありますか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请问有鱼露吗？",
+                "en": "请问有鱼露吗？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ナンプラーありますか?",
+          "fromConversationId": "l10-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-011-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「はい あちらにタイ料理のコーナーがあります」是什么意思？",
+            "en": "What does \"はい あちらにタイ料理のコーナーがあります\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "有的，那边有一个泰国菜专区",
+                "en": "有的，那边有一个泰国菜专区"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "はい あちらにタイ料理のコーナーがあります",
+          "fromConversationId": "l10-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-011-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「有的，那边有一个泰国菜专区」的日语说法。",
+            "en": "Select Japanese for \"有的，那边有一个泰国菜专区\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "はい あちらにタイ料理のコーナーがあります"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい あちらにタイ料理のコーナーがあります",
+          "fromConversationId": "l10-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-011-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「はい あちらにタイ料理のコーナーがあります」的中文意思是？",
+            "en": "What does \"はい あちらにタイ料理のコーナーがあります\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "有的，那边有一个泰国菜专区",
+                "en": "有的，那边有一个泰国菜专区"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい あちらにタイ料理のコーナーがあります",
+          "fromConversationId": "l10-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-012-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「ナンプラーは一番下です」是什么意思？",
+            "en": "What does \"ナンプラーは一番下です\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "鱼露在最下面一层",
+                "en": "鱼露在最下面一层"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "ナンプラーは一番下です",
+          "fromConversationId": "l10-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-012-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「鱼露在最下面一层」的日语说法。",
+            "en": "Select Japanese for \"鱼露在最下面一层\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "ナンプラーは一番下です"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ナンプラーは一番下です",
+          "fromConversationId": "l10-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-012-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「ナンプラーは一番下です」的中文意思是？",
+            "en": "What does \"ナンプラーは一番下です\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "鱼露在最下面一层",
+                "en": "鱼露在最下面一层"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ナンプラーは一番下です",
+          "fromConversationId": "l10-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-013-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「わかりました どうも」是什么意思？",
+            "en": "What does \"わかりました どうも\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我知道了，谢谢",
+                "en": "我知道了，谢谢"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "わかりました どうも",
+          "fromConversationId": "l10-conv-013",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-013-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「我知道了，谢谢」的日语说法。",
+            "en": "Select Japanese for \"我知道了，谢谢\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "わかりました どうも"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "わかりました どうも",
+          "fromConversationId": "l10-conv-013",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l10-q-013-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「わかりました どうも」的中文意思是？",
+            "en": "What does \"わかりました どうも\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我知道了，谢谢",
+                "en": "我知道了，谢谢"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "わかりました どうも",
+          "fromConversationId": "l10-conv-013",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
     }
   ],
   "conversationVideo": {
@@ -696,6 +2330,22 @@
     "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P10_%E7%AC%AC10%E8%AA%B2.mp4",
     "subtitleUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P10_%E7%AC%AC10%E8%AA%B2.json",
     "sourceType": "official_video_resource",
-    "status": "linked_not_imported"
+    "status": "imported_with_subtitles"
+  },
+  "conversationMainlineStatus": {
+    "videoLinked": "published",
+    "subtitleParsed": "published",
+    "subtitleCleaned": "published",
+    "humanReviewed": "not_started",
+    "importedToLessonJson": "published",
+    "vocabReady": "needs_review",
+    "grammarReady": "needs_review",
+    "examplesReady": "needs_review",
+    "quizReady": "needs_review",
+    "reciteReady": "needs_review",
+    "recordingReady": "published",
+    "scoringReady": "published",
+    "publishedToStaging": "not_started",
+    "verifiedOnline": "not_started"
   }
 }

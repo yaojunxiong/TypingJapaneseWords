@@ -823,6 +823,1793 @@
           }
         }
       ]
+    },
+    {
+      "type": "conversation",
+      "id": "l39_conversation",
+      "sourceType": "official_video_subtitle",
+      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P39_%E7%AC%AC39%E8%AA%B2.json",
+      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P39_%E7%AC%AC39%E8%AA%B2.mp4",
+      "title": {
+        "zh": "会话背诵",
+        "en": "Conversation Practice"
+      },
+      "dialogTitle": {
+        "zh": "第39课会话",
+        "en": "第39课会话"
+      },
+      "conversationGoal": {
+        "zh": "第39课会话练习",
+        "en": "Lesson 39 Conversation Practice"
+      },
+      "items": [
+        {
+          "id": "l39-conv-001",
+          "speaker": "",
+          "jp": "ん",
+          "kana": "ん",
+          "zh": "嗯",
+          "keyword": "",
+          "videoStart": "0:00.0",
+          "videoEnd": "0:02.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-conv-002",
+          "speaker": "",
+          "jp": "遅れてすみません",
+          "kana": "",
+          "zh": "不好意思来晚了",
+          "keyword": "",
+          "videoStart": "0:14.0",
+          "videoEnd": "0:16.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-conv-003",
+          "speaker": "",
+          "jp": "みなさんどうしたんですか",
+          "kana": "みなさんどうしたんですか",
+          "zh": "大家怎么了？",
+          "keyword": "",
+          "videoStart": "0:16.0",
+          "videoEnd": "0:18.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-conv-004",
+          "speaker": "",
+          "jp": "実は来る途中で事故があって",
+          "kana": "",
+          "zh": "其实在来的路上出了事故",
+          "keyword": "事故",
+          "videoStart": "0:18.0",
+          "videoEnd": "0:21.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-conv-005",
+          "speaker": "",
+          "jp": "バスが遅れてしまったんです",
+          "kana": "",
+          "zh": "公交车因此晚点了",
+          "keyword": "",
+          "videoStart": "0:21.0",
+          "videoEnd": "0:23.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-conv-006",
+          "speaker": "",
+          "jp": "バスの事故ですか",
+          "kana": "",
+          "zh": "是公交车出事故了吗？",
+          "keyword": "事故です",
+          "videoStart": "0:23.0",
+          "videoEnd": "0:25.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-conv-007",
+          "speaker": "",
+          "jp": "いいえ 交差点でトラックと車がぶつかって",
+          "kana": "",
+          "zh": "不是，是在十字路口卡车和汽车相撞了",
+          "keyword": "交差点",
+          "videoStart": "0:25.0",
+          "videoEnd": "0:29.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-conv-008",
+          "speaker": "",
+          "jp": "バスが動かなかったんです",
+          "kana": "",
+          "zh": "公交车动不了了",
+          "keyword": "",
+          "videoStart": "0:29.0",
+          "videoEnd": "0:31.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-conv-009",
+          "speaker": "",
+          "jp": "それは大変でしたね",
+          "kana": "",
+          "zh": "那可真糟糕啊",
+          "keyword": "大変",
+          "videoStart": "0:31.0",
+          "videoEnd": "0:33.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-conv-010",
+          "speaker": "",
+          "jp": "連絡がないのでみんな心配していたんですよ",
+          "kana": "",
+          "zh": "大家因为没收到联络，都很担心你呢",
+          "keyword": "心配",
+          "videoStart": "0:33.0",
+          "videoEnd": "0:36.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-conv-011",
+          "speaker": "",
+          "jp": "電話したかったんですが",
+          "kana": "",
+          "zh": "我本来想打电话的",
+          "keyword": "電話",
+          "videoStart": "0:36.0",
+          "videoEnd": "0:38.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-conv-012",
+          "speaker": "",
+          "jp": "携帯を家に忘れてしまって",
+          "kana": "",
+          "zh": "结果把手机忘在家里了",
+          "keyword": "携帯",
+          "videoStart": "0:38.0",
+          "videoEnd": "0:40.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-conv-013",
+          "speaker": "",
+          "jp": "どうもすみませんでした",
+          "kana": "どうもすみませんでした",
+          "zh": "真的非常抱歉",
+          "keyword": "",
+          "videoStart": "0:40.0",
+          "videoEnd": "0:42.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-conv-014",
+          "speaker": "",
+          "jp": "分かりました",
+          "kana": "",
+          "zh": "我知道了",
+          "keyword": "",
+          "videoStart": "0:42.0",
+          "videoEnd": "0:44.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-conv-015",
+          "speaker": "",
+          "jp": "じゃあ会議を始めましょう",
+          "kana": "",
+          "zh": "那我们开始开会吧",
+          "keyword": "会議",
+          "videoStart": "0:44.0",
+          "videoEnd": "0:46.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_vocab",
+      "id": "l39_conversation_vocab",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话关键词汇",
+        "en": "Conversation Key Vocabulary"
+      },
+      "description": {
+        "zh": "以下词汇从会话原文中提取。",
+        "en": "Vocabulary from the conversation."
+      },
+      "items": [
+        {
+          "word": "遅れてすみません",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l39-conv-002",
+          "sourceSentence": "遅れてすみません",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "みなさんどうしたんですか",
+          "kana": "みなさんどうしたんですか",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l39-conv-003",
+          "sourceSentence": "みなさんどうしたんですか",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "実は来る途中で事故があって",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l39-conv-004",
+          "sourceSentence": "実は来る途中で事故があって",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "バスが遅れてしまったんです",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l39-conv-005",
+          "sourceSentence": "バスが遅れてしまったんです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "バスの事故ですか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l39-conv-006",
+          "sourceSentence": "バスの事故ですか",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "いいえ",
+          "kana": "いいえ",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l39-conv-007",
+          "sourceSentence": "いいえ 交差点でトラックと車がぶつかって",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "交差点でトラックと車がぶつかって",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l39-conv-007",
+          "sourceSentence": "いいえ 交差点でトラックと車がぶつかって",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "バスが動かなかったんです",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l39-conv-008",
+          "sourceSentence": "バスが動かなかったんです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "それは大変でしたね",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l39-conv-009",
+          "sourceSentence": "それは大変でしたね",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "連絡がないのでみんな心配していたんですよ",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l39-conv-010",
+          "sourceSentence": "連絡がないのでみんな心配していたんですよ",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "電話したかったんですが",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l39-conv-011",
+          "sourceSentence": "電話したかったんですが",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "携帯を家に忘れてしまって",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l39-conv-012",
+          "sourceSentence": "携帯を家に忘れてしまって",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "どうもすみませんでした",
+          "kana": "どうもすみませんでした",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l39-conv-013",
+          "sourceSentence": "どうもすみませんでした",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "分かりました",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l39-conv-014",
+          "sourceSentence": "分かりました",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "じゃあ会議を始めましょう",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l39-conv-015",
+          "sourceSentence": "じゃあ会議を始めましょう",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_grammar",
+      "id": "l39_conversation_grammar",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话核心语法",
+        "en": "Conversation Core Grammar"
+      },
+      "description": {
+        "zh": "以下语法点从会话原文中提取。",
+        "en": "Grammar points from the conversation."
+      },
+      "items": [
+        {
+          "pattern": "〜ません",
+          "meaning": {
+            "zh": "不…（否定）",
+            "en": "negative form"
+          },
+          "conversationExample": "遅れてすみません",
+          "fromConversationId": "l39-conv-002",
+          "sourceSentence": "遅れてすみません",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ません」是「ます」的否定形式。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜です",
+          "meaning": {
+            "zh": "是…（礼貌判断）",
+            "en": "is/am (polite copula)"
+          },
+          "conversationExample": "みなさんどうしたんですか",
+          "fromConversationId": "l39-conv-003",
+          "sourceSentence": "みなさんどうしたんですか",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「です」是日语礼貌判断助动词，相当于中文的\"是\"。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜を〜",
+          "meaning": {
+            "zh": "…（宾语标记）",
+            "en": "object marker"
+          },
+          "conversationExample": "携帯を家に忘れてしまって",
+          "fromConversationId": "l39-conv-012",
+          "sourceSentence": "携帯を家に忘れてしまって",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「を」标记动作的对象。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜に〜",
+          "meaning": {
+            "zh": "在/向…",
+            "en": "to/at"
+          },
+          "conversationExample": "携帯を家に忘れてしまって",
+          "fromConversationId": "l39-conv-012",
+          "sourceSentence": "携帯を家に忘れてしまって",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「に」表示时间、地点或方向。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ました",
+          "meaning": {
+            "zh": "…了（过去）",
+            "en": "past tense"
+          },
+          "conversationExample": "分かりました",
+          "fromConversationId": "l39-conv-014",
+          "sourceSentence": "分かりました",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ました」是「ます」的过去形。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_examples",
+      "id": "l39_conversation_examples",
+      "sourceType": "ai_generated_from_official_conversation",
+      "title": {
+        "zh": "会话替换例句",
+        "en": "Conversation Replacement Examples"
+      },
+      "description": {
+        "zh": "以下例句基于会话原句生成。",
+        "en": "Examples generated from conversation sentences."
+      },
+      "items": [
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "ん",
+          "fromConversationId": "l39-conv-001",
+          "sourceSentence": "ん",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "遅れてすみません",
+          "fromConversationId": "l39-conv-002",
+          "sourceSentence": "遅れてすみません",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "みなさんどうしたんですか",
+          "fromConversationId": "l39-conv-003",
+          "sourceSentence": "みなさんどうしたんですか",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "事故",
+          "originalSentence": "実は来る途中で事故があって",
+          "fromConversationId": "l39-conv-004",
+          "sourceSentence": "実は来る途中で事故があって",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "バスが遅れてしまったんです",
+          "fromConversationId": "l39-conv-005",
+          "sourceSentence": "バスが遅れてしまったんです",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "事故です",
+          "originalSentence": "バスの事故ですか",
+          "fromConversationId": "l39-conv-006",
+          "sourceSentence": "バスの事故ですか",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [
+            {
+              "jp": "バスの佐藤ですか",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "バスの田中ですか",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "バスの山田ですか",
+              "kana": "",
+              "zh": ""
+            }
+          ],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "交差点",
+          "originalSentence": "いいえ 交差点でトラックと車がぶつかって",
+          "fromConversationId": "l39-conv-007",
+          "sourceSentence": "いいえ 交差点でトラックと車がぶつかって",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "バスが動かなかったんです",
+          "fromConversationId": "l39-conv-008",
+          "sourceSentence": "バスが動かなかったんです",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "大変",
+          "originalSentence": "それは大変でしたね",
+          "fromConversationId": "l39-conv-009",
+          "sourceSentence": "それは大変でしたね",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "心配",
+          "originalSentence": "連絡がないのでみんな心配していたんですよ",
+          "fromConversationId": "l39-conv-010",
+          "sourceSentence": "連絡がないのでみんな心配していたんですよ",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "電話",
+          "originalSentence": "電話したかったんですが",
+          "fromConversationId": "l39-conv-011",
+          "sourceSentence": "電話したかったんですが",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "携帯",
+          "originalSentence": "携帯を家に忘れてしまって",
+          "fromConversationId": "l39-conv-012",
+          "sourceSentence": "携帯を家に忘れてしまって",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "どうもすみませんでした",
+          "fromConversationId": "l39-conv-013",
+          "sourceSentence": "どうもすみませんでした",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "分かりました",
+          "fromConversationId": "l39-conv-014",
+          "sourceSentence": "分かりました",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "会議",
+          "originalSentence": "じゃあ会議を始めましょう",
+          "fromConversationId": "l39-conv-015",
+          "sourceSentence": "じゃあ会議を始めましょう",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_quiz",
+      "id": "l39_conversation_quiz",
+      "sourceType": "generated_from_official_video_subtitle",
+      "title": {
+        "zh": "会话专项测试",
+        "en": "Conversation Quiz"
+      },
+      "description": {
+        "zh": "测试题围绕会话内容设计。",
+        "en": "Quiz based on the conversation."
+      },
+      "items": [
+        {
+          "id": "l39-q-001-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「ん」是什么意思？",
+            "en": "What does \"ん\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "嗯",
+                "en": "嗯"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "ん",
+          "fromConversationId": "l39-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-001-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「嗯」的日语说法。",
+            "en": "Select Japanese for \"嗯\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "ん"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ん",
+          "fromConversationId": "l39-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-001-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「ん」的中文意思是？",
+            "en": "What does \"ん\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "嗯",
+                "en": "嗯"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ん",
+          "fromConversationId": "l39-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-002-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「遅れてすみません」是什么意思？",
+            "en": "What does \"遅れてすみません\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不好意思来晚了",
+                "en": "不好意思来晚了"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "遅れてすみません",
+          "fromConversationId": "l39-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-002-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「不好意思来晚了」的日语说法。",
+            "en": "Select Japanese for \"不好意思来晚了\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "遅れてすみません"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "遅れてすみません",
+          "fromConversationId": "l39-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-002-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「遅れてすみません」的中文意思是？",
+            "en": "What does \"遅れてすみません\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不好意思来晚了",
+                "en": "不好意思来晚了"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "遅れてすみません",
+          "fromConversationId": "l39-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-003-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「みなさんどうしたんですか」是什么意思？",
+            "en": "What does \"みなさんどうしたんですか\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "大家怎么了？",
+                "en": "大家怎么了？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "みなさんどうしたんですか",
+          "fromConversationId": "l39-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-003-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「大家怎么了？」的日语说法。",
+            "en": "Select Japanese for \"大家怎么了？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "みなさんどうしたんですか"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "みなさんどうしたんですか",
+          "fromConversationId": "l39-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-003-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「みなさんどうしたんですか」的中文意思是？",
+            "en": "What does \"みなさんどうしたんですか\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "大家怎么了？",
+                "en": "大家怎么了？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "みなさんどうしたんですか",
+          "fromConversationId": "l39-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-004-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「実は来る途中で事故があって」是什么意思？",
+            "en": "What does \"実は来る途中で事故があって\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "其实在来的路上出了事故",
+                "en": "其实在来的路上出了事故"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "実は来る途中で事故があって",
+          "fromConversationId": "l39-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-004-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「其实在来的路上出了事故」的日语说法。",
+            "en": "Select Japanese for \"其实在来的路上出了事故\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "実は来る途中で事故があって"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "実は来る途中で事故があって",
+          "fromConversationId": "l39-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-004-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「実は来る途中で事故があって」的中文意思是？",
+            "en": "What does \"実は来る途中で事故があって\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "其实在来的路上出了事故",
+                "en": "其实在来的路上出了事故"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "実は来る途中で事故があって",
+          "fromConversationId": "l39-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-005-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「バスが遅れてしまったんです」是什么意思？",
+            "en": "What does \"バスが遅れてしまったんです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "公交车因此晚点了",
+                "en": "公交车因此晚点了"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "バスが遅れてしまったんです",
+          "fromConversationId": "l39-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-005-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「公交车因此晚点了」的日语说法。",
+            "en": "Select Japanese for \"公交车因此晚点了\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "バスが遅れてしまったんです"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "バスが遅れてしまったんです",
+          "fromConversationId": "l39-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-005-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「バスが遅れてしまったんです」的中文意思是？",
+            "en": "What does \"バスが遅れてしまったんです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "公交车因此晚点了",
+                "en": "公交车因此晚点了"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "バスが遅れてしまったんです",
+          "fromConversationId": "l39-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-006-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「バスの事故ですか」是什么意思？",
+            "en": "What does \"バスの事故ですか\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是公交车出事故了吗？",
+                "en": "是公交车出事故了吗？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "バスの事故ですか",
+          "fromConversationId": "l39-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-006-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「是公交车出事故了吗？」的日语说法。",
+            "en": "Select Japanese for \"是公交车出事故了吗？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "バスの事故ですか"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "バスの事故ですか",
+          "fromConversationId": "l39-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-006-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「バスの事故ですか」的中文意思是？",
+            "en": "What does \"バスの事故ですか\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是公交车出事故了吗？",
+                "en": "是公交车出事故了吗？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "バスの事故ですか",
+          "fromConversationId": "l39-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-007-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「いいえ 交差点でトラックと車がぶつかって」是什么意思？",
+            "en": "What does \"いいえ 交差点でトラックと車がぶつかって\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不是，是在十字路口卡车和汽车相撞了",
+                "en": "不是，是在十字路口卡车和汽车相撞了"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "いいえ 交差点でトラックと車がぶつかって",
+          "fromConversationId": "l39-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-007-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「不是，是在十字路口卡车和汽车相撞了」的日语说法。",
+            "en": "Select Japanese for \"不是，是在十字路口卡车和汽车相撞了\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "いいえ 交差点でトラックと車がぶつかって"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "いいえ 交差点でトラックと車がぶつかって",
+          "fromConversationId": "l39-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-007-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「いいえ 交差点でトラックと車がぶつかって」的中文意思是？",
+            "en": "What does \"いいえ 交差点でトラックと車がぶつかって\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不是，是在十字路口卡车和汽车相撞了",
+                "en": "不是，是在十字路口卡车和汽车相撞了"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "いいえ 交差点でトラックと車がぶつかって",
+          "fromConversationId": "l39-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-008-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「バスが動かなかったんです」是什么意思？",
+            "en": "What does \"バスが動かなかったんです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "公交车动不了了",
+                "en": "公交车动不了了"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "バスが動かなかったんです",
+          "fromConversationId": "l39-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-008-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「公交车动不了了」的日语说法。",
+            "en": "Select Japanese for \"公交车动不了了\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "バスが動かなかったんです"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "バスが動かなかったんです",
+          "fromConversationId": "l39-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-008-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「バスが動かなかったんです」的中文意思是？",
+            "en": "What does \"バスが動かなかったんです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "公交车动不了了",
+                "en": "公交车动不了了"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "バスが動かなかったんです",
+          "fromConversationId": "l39-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-009-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「それは大変でしたね」是什么意思？",
+            "en": "What does \"それは大変でしたね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那可真糟糕啊",
+                "en": "那可真糟糕啊"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "それは大変でしたね",
+          "fromConversationId": "l39-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-009-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「那可真糟糕啊」的日语说法。",
+            "en": "Select Japanese for \"那可真糟糕啊\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "それは大変でしたね"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "それは大変でしたね",
+          "fromConversationId": "l39-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-009-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「それは大変でしたね」的中文意思是？",
+            "en": "What does \"それは大変でしたね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那可真糟糕啊",
+                "en": "那可真糟糕啊"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "それは大変でしたね",
+          "fromConversationId": "l39-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-010-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「連絡がないのでみんな心配していたんですよ」是什么意思？",
+            "en": "What does \"連絡がないのでみんな心配していたんですよ\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "大家因为没收到联络，都很担心你呢",
+                "en": "大家因为没收到联络，都很担心你呢"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "連絡がないのでみんな心配していたんですよ",
+          "fromConversationId": "l39-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-010-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「大家因为没收到联络，都很担心你呢」的日语说法。",
+            "en": "Select Japanese for \"大家因为没收到联络，都很担心你呢\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "連絡がないのでみんな心配していたんですよ"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "連絡がないのでみんな心配していたんですよ",
+          "fromConversationId": "l39-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-010-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「連絡がないのでみんな心配していたんですよ」的中文意思是？",
+            "en": "What does \"連絡がないのでみんな心配していたんですよ\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "大家因为没收到联络，都很担心你呢",
+                "en": "大家因为没收到联络，都很担心你呢"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "連絡がないのでみんな心配していたんですよ",
+          "fromConversationId": "l39-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-011-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「電話したかったんですが」是什么意思？",
+            "en": "What does \"電話したかったんですが\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我本来想打电话的",
+                "en": "我本来想打电话的"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "電話したかったんですが",
+          "fromConversationId": "l39-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-011-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「我本来想打电话的」的日语说法。",
+            "en": "Select Japanese for \"我本来想打电话的\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "電話したかったんですが"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "電話したかったんですが",
+          "fromConversationId": "l39-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-011-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「電話したかったんですが」的中文意思是？",
+            "en": "What does \"電話したかったんですが\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我本来想打电话的",
+                "en": "我本来想打电话的"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "電話したかったんですが",
+          "fromConversationId": "l39-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-012-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「携帯を家に忘れてしまって」是什么意思？",
+            "en": "What does \"携帯を家に忘れてしまって\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "结果把手机忘在家里了",
+                "en": "结果把手机忘在家里了"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "携帯を家に忘れてしまって",
+          "fromConversationId": "l39-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-012-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「结果把手机忘在家里了」的日语说法。",
+            "en": "Select Japanese for \"结果把手机忘在家里了\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "携帯を家に忘れてしまって"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "携帯を家に忘れてしまって",
+          "fromConversationId": "l39-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-012-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「携帯を家に忘れてしまって」的中文意思是？",
+            "en": "What does \"携帯を家に忘れてしまって\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "结果把手机忘在家里了",
+                "en": "结果把手机忘在家里了"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "携帯を家に忘れてしまって",
+          "fromConversationId": "l39-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-013-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「どうもすみませんでした」是什么意思？",
+            "en": "What does \"どうもすみませんでした\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "真的非常抱歉",
+                "en": "真的非常抱歉"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "どうもすみませんでした",
+          "fromConversationId": "l39-conv-013",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-013-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「真的非常抱歉」的日语说法。",
+            "en": "Select Japanese for \"真的非常抱歉\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "どうもすみませんでした"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "どうもすみませんでした",
+          "fromConversationId": "l39-conv-013",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-013-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「どうもすみませんでした」的中文意思是？",
+            "en": "What does \"どうもすみませんでした\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "真的非常抱歉",
+                "en": "真的非常抱歉"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "どうもすみませんでした",
+          "fromConversationId": "l39-conv-013",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-014-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「分かりました」是什么意思？",
+            "en": "What does \"分かりました\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我知道了",
+                "en": "我知道了"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "分かりました",
+          "fromConversationId": "l39-conv-014",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-014-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「我知道了」的日语说法。",
+            "en": "Select Japanese for \"我知道了\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "分かりました"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "分かりました",
+          "fromConversationId": "l39-conv-014",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-014-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「分かりました」的中文意思是？",
+            "en": "What does \"分かりました\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我知道了",
+                "en": "我知道了"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "分かりました",
+          "fromConversationId": "l39-conv-014",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-015-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「じゃあ会議を始めましょう」是什么意思？",
+            "en": "What does \"じゃあ会議を始めましょう\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那我们开始开会吧",
+                "en": "那我们开始开会吧"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "じゃあ会議を始めましょう",
+          "fromConversationId": "l39-conv-015",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-015-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「那我们开始开会吧」的日语说法。",
+            "en": "Select Japanese for \"那我们开始开会吧\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "じゃあ会議を始めましょう"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "じゃあ会議を始めましょう",
+          "fromConversationId": "l39-conv-015",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l39-q-015-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「じゃあ会議を始めましょう」的中文意思是？",
+            "en": "What does \"じゃあ会議を始めましょう\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那我们开始开会吧",
+                "en": "那我们开始开会吧"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "じゃあ会議を始めましょう",
+          "fromConversationId": "l39-conv-015",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
     }
   ],
   "conversationVideo": {
@@ -831,6 +2618,22 @@
     "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P39_%E7%AC%AC39%E8%AA%B2.mp4",
     "subtitleUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P39_%E7%AC%AC39%E8%AA%B2.json",
     "sourceType": "official_video_resource",
-    "status": "linked_not_imported"
+    "status": "imported_with_subtitles"
+  },
+  "conversationMainlineStatus": {
+    "videoLinked": "published",
+    "subtitleParsed": "published",
+    "subtitleCleaned": "published",
+    "humanReviewed": "not_started",
+    "importedToLessonJson": "published",
+    "vocabReady": "needs_review",
+    "grammarReady": "needs_review",
+    "examplesReady": "needs_review",
+    "quizReady": "needs_review",
+    "reciteReady": "needs_review",
+    "recordingReady": "published",
+    "scoringReady": "published",
+    "publishedToStaging": "not_started",
+    "verifiedOnline": "not_started"
   }
 }

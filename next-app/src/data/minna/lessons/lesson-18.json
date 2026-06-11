@@ -756,6 +756,1441 @@
           }
         }
       ]
+    },
+    {
+      "type": "conversation",
+      "id": "l18_conversation",
+      "sourceType": "official_video_subtitle",
+      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P18_%E7%AC%AC18%E8%AA%B2.json",
+      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P18_%E7%AC%AC18%E8%AA%B2.mp4",
+      "title": {
+        "zh": "会话背诵",
+        "en": "Conversation Practice"
+      },
+      "dialogTitle": {
+        "zh": "第18课会话",
+        "en": "第18课会话"
+      },
+      "conversationGoal": {
+        "zh": "第18课会话练习",
+        "en": "Lesson 18 Conversation Practice"
+      },
+      "items": [
+        {
+          "id": "l18-conv-001",
+          "speaker": "",
+          "jp": "サントスさんの趣味は何ですか？",
+          "kana": "",
+          "zh": "桑托斯先生的兴趣是什么？",
+          "keyword": "趣味",
+          "videoStart": "0:00.0",
+          "videoEnd": "0:11.3",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-conv-002",
+          "speaker": "",
+          "jp": "写真です",
+          "kana": "",
+          "zh": "是摄影。",
+          "keyword": "写真です",
+          "videoStart": "0:11.3",
+          "videoEnd": "0:13.3",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-conv-003",
+          "speaker": "",
+          "jp": "どんな写真を撮りますか？",
+          "kana": "",
+          "zh": "您拍什么样的照片呢？",
+          "keyword": "写真",
+          "videoStart": "0:13.3",
+          "videoEnd": "0:15.6",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-conv-004",
+          "speaker": "",
+          "jp": "動物の写真です",
+          "kana": "",
+          "zh": "动物的照片。",
+          "keyword": "写真です",
+          "videoStart": "0:15.6",
+          "videoEnd": "0:17.3",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-conv-005",
+          "speaker": "",
+          "jp": "特にうまが好きです",
+          "kana": "",
+          "zh": "我特别喜欢马。",
+          "keyword": "",
+          "videoStart": "0:17.3",
+          "videoEnd": "0:20.7",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-conv-006",
+          "speaker": "",
+          "jp": "それは面白いですね",
+          "kana": "",
+          "zh": "那真有趣啊。",
+          "keyword": "面白",
+          "videoStart": "0:23.7",
+          "videoEnd": "0:27.2",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-conv-007",
+          "speaker": "",
+          "jp": "日本へ来てから馬の写真を撮りましたか？",
+          "kana": "",
+          "zh": "来日本以后有拍马的照片吗？",
+          "keyword": "写真",
+          "videoStart": "0:31.0",
+          "videoEnd": "0:36.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-conv-008",
+          "speaker": "",
+          "jp": "いいえ、日本ではなかなか馬を見ることができません",
+          "kana": "",
+          "zh": "没有，在日本很难看到马。",
+          "keyword": "日本",
+          "videoStart": "0:36.0",
+          "videoEnd": "0:41.5",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-conv-009",
+          "speaker": "",
+          "jp": "北海道に馬がたくさんいますよ",
+          "kana": "",
+          "zh": "北海道有很多马哦。",
+          "keyword": "北海道",
+          "videoStart": "0:41.5",
+          "videoEnd": "0:45.2",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-conv-010",
+          "speaker": "",
+          "jp": "本当ですか？",
+          "kana": "",
+          "zh": "真的吗？",
+          "keyword": "本当です",
+          "videoStart": "0:45.2",
+          "videoEnd": "0:46.9",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-conv-011",
+          "speaker": "",
+          "jp": "じゃあ、夏休みにぜひ行きたいです",
+          "kana": "",
+          "zh": "那我暑假一定想去看看。",
+          "keyword": "夏休",
+          "videoStart": "0:46.9",
+          "videoEnd": "0:50.7",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_vocab",
+      "id": "l18_conversation_vocab",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话关键词汇",
+        "en": "Conversation Key Vocabulary"
+      },
+      "description": {
+        "zh": "以下词汇从会话原文中提取。",
+        "en": "Vocabulary from the conversation."
+      },
+      "items": [
+        {
+          "word": "サントスさんの趣味は何ですか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l18-conv-001",
+          "sourceSentence": "サントスさんの趣味は何ですか？",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "写真です",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l18-conv-002",
+          "sourceSentence": "写真です",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "どんな写真を撮りますか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l18-conv-003",
+          "sourceSentence": "どんな写真を撮りますか？",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "動物の写真です",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l18-conv-004",
+          "sourceSentence": "動物の写真です",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "特にうまが好きです",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l18-conv-005",
+          "sourceSentence": "特にうまが好きです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "それは面白いですね",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l18-conv-006",
+          "sourceSentence": "それは面白いですね",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "日本へ来てから馬の写真を撮りましたか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l18-conv-007",
+          "sourceSentence": "日本へ来てから馬の写真を撮りましたか？",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "いいえ",
+          "kana": "いいえ",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l18-conv-008",
+          "sourceSentence": "いいえ、日本ではなかなか馬を見ることができません",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "日本ではなかなか馬を見ることができません",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l18-conv-008",
+          "sourceSentence": "いいえ、日本ではなかなか馬を見ることができません",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "北海道に馬がたくさんいますよ",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l18-conv-009",
+          "sourceSentence": "北海道に馬がたくさんいますよ",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "本当ですか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l18-conv-010",
+          "sourceSentence": "本当ですか？",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "じゃあ",
+          "kana": "じゃあ",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l18-conv-011",
+          "sourceSentence": "じゃあ、夏休みにぜひ行きたいです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "夏休みにぜひ行きたいです",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l18-conv-011",
+          "sourceSentence": "じゃあ、夏休みにぜひ行きたいです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_grammar",
+      "id": "l18_conversation_grammar",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话核心语法",
+        "en": "Conversation Core Grammar"
+      },
+      "description": {
+        "zh": "以下语法点从会话原文中提取。",
+        "en": "Grammar points from the conversation."
+      },
+      "items": [
+        {
+          "pattern": "〜です",
+          "meaning": {
+            "zh": "是…（礼貌判断）",
+            "en": "is/am (polite copula)"
+          },
+          "conversationExample": "サントスさんの趣味は何ですか？",
+          "fromConversationId": "l18-conv-001",
+          "sourceSentence": "サントスさんの趣味は何ですか？",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「です」是日语礼貌判断助动词，相当于中文的\"是\"。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜か",
+          "meaning": {
+            "zh": "…吗？（疑问）",
+            "en": "question marker"
+          },
+          "conversationExample": "サントスさんの趣味は何ですか？",
+          "fromConversationId": "l18-conv-001",
+          "sourceSentence": "サントスさんの趣味は何ですか？",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "句尾加「か」构成疑问句。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜を〜",
+          "meaning": {
+            "zh": "…（宾语标记）",
+            "en": "object marker"
+          },
+          "conversationExample": "どんな写真を撮りますか？",
+          "fromConversationId": "l18-conv-003",
+          "sourceSentence": "どんな写真を撮りますか？",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「を」标记动作的对象。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ます",
+          "meaning": {
+            "zh": "（动词敬体）",
+            "en": "polite verb form"
+          },
+          "conversationExample": "どんな写真を撮りますか？",
+          "fromConversationId": "l18-conv-003",
+          "sourceSentence": "どんな写真を撮りますか？",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ます」是动词的敬体形式。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜に〜",
+          "meaning": {
+            "zh": "在/向…",
+            "en": "to/at"
+          },
+          "conversationExample": "特にうまが好きです",
+          "fromConversationId": "l18-conv-005",
+          "sourceSentence": "特にうまが好きです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「に」表示时间、地点或方向。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜から",
+          "meaning": {
+            "zh": "从…",
+            "en": "from"
+          },
+          "conversationExample": "日本へ来てから馬の写真を撮りましたか？",
+          "fromConversationId": "l18-conv-007",
+          "sourceSentence": "日本へ来てから馬の写真を撮りましたか？",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「から」表示起点或来源。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ました",
+          "meaning": {
+            "zh": "…了（过去）",
+            "en": "past tense"
+          },
+          "conversationExample": "日本へ来てから馬の写真を撮りましたか？",
+          "fromConversationId": "l18-conv-007",
+          "sourceSentence": "日本へ来てから馬の写真を撮りましたか？",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ました」是「ます」的过去形。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ません",
+          "meaning": {
+            "zh": "不…（否定）",
+            "en": "negative form"
+          },
+          "conversationExample": "いいえ、日本ではなかなか馬を見ることができません",
+          "fromConversationId": "l18-conv-008",
+          "sourceSentence": "いいえ、日本ではなかなか馬を見ることができません",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ません」是「ます」的否定形式。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_examples",
+      "id": "l18_conversation_examples",
+      "sourceType": "ai_generated_from_official_conversation",
+      "title": {
+        "zh": "会话替换例句",
+        "en": "Conversation Replacement Examples"
+      },
+      "description": {
+        "zh": "以下例句基于会话原句生成。",
+        "en": "Examples generated from conversation sentences."
+      },
+      "items": [
+        {
+          "pattern": "趣味",
+          "originalSentence": "サントスさんの趣味は何ですか？",
+          "fromConversationId": "l18-conv-001",
+          "sourceSentence": "サントスさんの趣味は何ですか？",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "写真です",
+          "originalSentence": "写真です",
+          "fromConversationId": "l18-conv-002",
+          "sourceSentence": "写真です",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [
+            {
+              "jp": "佐藤です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "田中です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "山田です",
+              "kana": "",
+              "zh": ""
+            }
+          ],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "写真",
+          "originalSentence": "どんな写真を撮りますか？",
+          "fromConversationId": "l18-conv-003",
+          "sourceSentence": "どんな写真を撮りますか？",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "写真です",
+          "originalSentence": "動物の写真です",
+          "fromConversationId": "l18-conv-004",
+          "sourceSentence": "動物の写真です",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [
+            {
+              "jp": "動物の佐藤です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "動物の田中です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "動物の山田です",
+              "kana": "",
+              "zh": ""
+            }
+          ],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "特にうまが好きです",
+          "fromConversationId": "l18-conv-005",
+          "sourceSentence": "特にうまが好きです",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "面白",
+          "originalSentence": "それは面白いですね",
+          "fromConversationId": "l18-conv-006",
+          "sourceSentence": "それは面白いですね",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "写真",
+          "originalSentence": "日本へ来てから馬の写真を撮りましたか？",
+          "fromConversationId": "l18-conv-007",
+          "sourceSentence": "日本へ来てから馬の写真を撮りましたか？",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "日本",
+          "originalSentence": "いいえ、日本ではなかなか馬を見ることができません",
+          "fromConversationId": "l18-conv-008",
+          "sourceSentence": "いいえ、日本ではなかなか馬を見ることができません",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "北海道",
+          "originalSentence": "北海道に馬がたくさんいますよ",
+          "fromConversationId": "l18-conv-009",
+          "sourceSentence": "北海道に馬がたくさんいますよ",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "本当です",
+          "originalSentence": "本当ですか？",
+          "fromConversationId": "l18-conv-010",
+          "sourceSentence": "本当ですか？",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "夏休",
+          "originalSentence": "じゃあ、夏休みにぜひ行きたいです",
+          "fromConversationId": "l18-conv-011",
+          "sourceSentence": "じゃあ、夏休みにぜひ行きたいです",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_quiz",
+      "id": "l18_conversation_quiz",
+      "sourceType": "generated_from_official_video_subtitle",
+      "title": {
+        "zh": "会话专项测试",
+        "en": "Conversation Quiz"
+      },
+      "description": {
+        "zh": "测试题围绕会话内容设计。",
+        "en": "Quiz based on the conversation."
+      },
+      "items": [
+        {
+          "id": "l18-q-001-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「サントスさんの趣味は何ですか？」是什么意思？",
+            "en": "What does \"サントスさんの趣味は何ですか？\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "桑托斯先生的兴趣是什么？",
+                "en": "桑托斯先生的兴趣是什么？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "サントスさんの趣味は何ですか？",
+          "fromConversationId": "l18-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-q-001-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「桑托斯先生的兴趣是什么？」的日语说法。",
+            "en": "Select Japanese for \"桑托斯先生的兴趣是什么？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "サントスさんの趣味は何ですか？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "サントスさんの趣味は何ですか？",
+          "fromConversationId": "l18-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-q-001-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「サントスさんの趣味は何ですか？」的中文意思是？",
+            "en": "What does \"サントスさんの趣味は何ですか？\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "桑托斯先生的兴趣是什么？",
+                "en": "桑托斯先生的兴趣是什么？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "サントスさんの趣味は何ですか？",
+          "fromConversationId": "l18-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-q-002-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「写真です」是什么意思？",
+            "en": "What does \"写真です\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是摄影。",
+                "en": "是摄影。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "写真です",
+          "fromConversationId": "l18-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-q-002-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「是摄影。」的日语说法。",
+            "en": "Select Japanese for \"是摄影。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "写真です"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "写真です",
+          "fromConversationId": "l18-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-q-002-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「写真です」的中文意思是？",
+            "en": "What does \"写真です\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是摄影。",
+                "en": "是摄影。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "写真です",
+          "fromConversationId": "l18-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-q-003-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「どんな写真を撮りますか？」是什么意思？",
+            "en": "What does \"どんな写真を撮りますか？\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "您拍什么样的照片呢？",
+                "en": "您拍什么样的照片呢？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "どんな写真を撮りますか？",
+          "fromConversationId": "l18-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-q-003-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「您拍什么样的照片呢？」的日语说法。",
+            "en": "Select Japanese for \"您拍什么样的照片呢？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "どんな写真を撮りますか？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "どんな写真を撮りますか？",
+          "fromConversationId": "l18-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-q-003-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「どんな写真を撮りますか？」的中文意思是？",
+            "en": "What does \"どんな写真を撮りますか？\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "您拍什么样的照片呢？",
+                "en": "您拍什么样的照片呢？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "どんな写真を撮りますか？",
+          "fromConversationId": "l18-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-q-004-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「動物の写真です」是什么意思？",
+            "en": "What does \"動物の写真です\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "动物的照片。",
+                "en": "动物的照片。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "動物の写真です",
+          "fromConversationId": "l18-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-q-004-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「动物的照片。」的日语说法。",
+            "en": "Select Japanese for \"动物的照片。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "動物の写真です"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "動物の写真です",
+          "fromConversationId": "l18-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-q-004-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「動物の写真です」的中文意思是？",
+            "en": "What does \"動物の写真です\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "动物的照片。",
+                "en": "动物的照片。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "動物の写真です",
+          "fromConversationId": "l18-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-q-005-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「特にうまが好きです」是什么意思？",
+            "en": "What does \"特にうまが好きです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我特别喜欢马。",
+                "en": "我特别喜欢马。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "特にうまが好きです",
+          "fromConversationId": "l18-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-q-005-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「我特别喜欢马。」的日语说法。",
+            "en": "Select Japanese for \"我特别喜欢马。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "特にうまが好きです"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "特にうまが好きです",
+          "fromConversationId": "l18-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-q-005-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「特にうまが好きです」的中文意思是？",
+            "en": "What does \"特にうまが好きです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我特别喜欢马。",
+                "en": "我特别喜欢马。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "特にうまが好きです",
+          "fromConversationId": "l18-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-q-006-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「それは面白いですね」是什么意思？",
+            "en": "What does \"それは面白いですね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那真有趣啊。",
+                "en": "那真有趣啊。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "それは面白いですね",
+          "fromConversationId": "l18-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-q-006-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「那真有趣啊。」的日语说法。",
+            "en": "Select Japanese for \"那真有趣啊。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "それは面白いですね"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "それは面白いですね",
+          "fromConversationId": "l18-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-q-006-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「それは面白いですね」的中文意思是？",
+            "en": "What does \"それは面白いですね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那真有趣啊。",
+                "en": "那真有趣啊。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "それは面白いですね",
+          "fromConversationId": "l18-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-q-007-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「日本へ来てから馬の写真を撮りましたか？」是什么意思？",
+            "en": "What does \"日本へ来てから馬の写真を撮りましたか？\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "来日本以后有拍马的照片吗？",
+                "en": "来日本以后有拍马的照片吗？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "日本へ来てから馬の写真を撮りましたか？",
+          "fromConversationId": "l18-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-q-007-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「来日本以后有拍马的照片吗？」的日语说法。",
+            "en": "Select Japanese for \"来日本以后有拍马的照片吗？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "日本へ来てから馬の写真を撮りましたか？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "日本へ来てから馬の写真を撮りましたか？",
+          "fromConversationId": "l18-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-q-007-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「日本へ来てから馬の写真を撮りましたか？」的中文意思是？",
+            "en": "What does \"日本へ来てから馬の写真を撮りましたか？\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "来日本以后有拍马的照片吗？",
+                "en": "来日本以后有拍马的照片吗？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "日本へ来てから馬の写真を撮りましたか？",
+          "fromConversationId": "l18-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-q-008-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「いいえ、日本ではなかなか馬を見ることができません」是什么意思？",
+            "en": "What does \"いいえ、日本ではなかなか馬を見ることができません\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "没有，在日本很难看到马。",
+                "en": "没有，在日本很难看到马。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "いいえ、日本ではなかなか馬を見ることができません",
+          "fromConversationId": "l18-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-q-008-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「没有，在日本很难看到马。」的日语说法。",
+            "en": "Select Japanese for \"没有，在日本很难看到马。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "いいえ、日本ではなかなか馬を見ることができません"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "いいえ、日本ではなかなか馬を見ることができません",
+          "fromConversationId": "l18-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-q-008-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「いいえ、日本ではなかなか馬を見ることができません」的中文意思是？",
+            "en": "What does \"いいえ、日本ではなかなか馬を見ることができません\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "没有，在日本很难看到马。",
+                "en": "没有，在日本很难看到马。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "いいえ、日本ではなかなか馬を見ることができません",
+          "fromConversationId": "l18-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-q-009-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「北海道に馬がたくさんいますよ」是什么意思？",
+            "en": "What does \"北海道に馬がたくさんいますよ\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "北海道有很多马哦。",
+                "en": "北海道有很多马哦。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "北海道に馬がたくさんいますよ",
+          "fromConversationId": "l18-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-q-009-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「北海道有很多马哦。」的日语说法。",
+            "en": "Select Japanese for \"北海道有很多马哦。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "北海道に馬がたくさんいますよ"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "北海道に馬がたくさんいますよ",
+          "fromConversationId": "l18-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-q-009-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「北海道に馬がたくさんいますよ」的中文意思是？",
+            "en": "What does \"北海道に馬がたくさんいますよ\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "北海道有很多马哦。",
+                "en": "北海道有很多马哦。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "北海道に馬がたくさんいますよ",
+          "fromConversationId": "l18-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-q-010-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「本当ですか？」是什么意思？",
+            "en": "What does \"本当ですか？\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "真的吗？",
+                "en": "真的吗？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "本当ですか？",
+          "fromConversationId": "l18-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-q-010-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「真的吗？」的日语说法。",
+            "en": "Select Japanese for \"真的吗？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "本当ですか？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "本当ですか？",
+          "fromConversationId": "l18-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-q-010-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「本当ですか？」的中文意思是？",
+            "en": "What does \"本当ですか？\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "真的吗？",
+                "en": "真的吗？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "本当ですか？",
+          "fromConversationId": "l18-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-q-011-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「じゃあ、夏休みにぜひ行きたいです」是什么意思？",
+            "en": "What does \"じゃあ、夏休みにぜひ行きたいです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那我暑假一定想去看看。",
+                "en": "那我暑假一定想去看看。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "じゃあ、夏休みにぜひ行きたいです",
+          "fromConversationId": "l18-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-q-011-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「那我暑假一定想去看看。」的日语说法。",
+            "en": "Select Japanese for \"那我暑假一定想去看看。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "じゃあ、夏休みにぜひ行きたいです"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "じゃあ、夏休みにぜひ行きたいです",
+          "fromConversationId": "l18-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l18-q-011-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「じゃあ、夏休みにぜひ行きたいです」的中文意思是？",
+            "en": "What does \"じゃあ、夏休みにぜひ行きたいです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那我暑假一定想去看看。",
+                "en": "那我暑假一定想去看看。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "じゃあ、夏休みにぜひ行きたいです",
+          "fromConversationId": "l18-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
     }
   ],
   "conversationVideo": {
@@ -764,6 +2199,22 @@
     "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P18_%E7%AC%AC18%E8%AA%B2.mp4",
     "subtitleUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P18_%E7%AC%AC18%E8%AA%B2.json",
     "sourceType": "official_video_resource",
-    "status": "linked_not_imported"
+    "status": "imported_with_subtitles"
+  },
+  "conversationMainlineStatus": {
+    "videoLinked": "published",
+    "subtitleParsed": "published",
+    "subtitleCleaned": "published",
+    "humanReviewed": "not_started",
+    "importedToLessonJson": "published",
+    "vocabReady": "needs_review",
+    "grammarReady": "needs_review",
+    "examplesReady": "needs_review",
+    "quizReady": "needs_review",
+    "reciteReady": "needs_review",
+    "recordingReady": "published",
+    "scoringReady": "published",
+    "publishedToStaging": "not_started",
+    "verifiedOnline": "not_started"
   }
 }

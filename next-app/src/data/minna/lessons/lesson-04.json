@@ -688,6 +688,1509 @@
           ]
         }
       ]
+    },
+    {
+      "type": "conversation",
+      "id": "l04_conversation",
+      "sourceType": "official_video_subtitle",
+      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P4_%E7%AC%AC4%E8%AA%B2.json",
+      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P4_%E7%AC%AC4%E8%AA%B2.mp4",
+      "title": {
+        "zh": "会话背诵",
+        "en": "Conversation Practice"
+      },
+      "dialogTitle": {
+        "zh": "位置",
+        "en": "位置"
+      },
+      "conversationGoal": {
+        "zh": "能询问和回答物品位置",
+        "en": "Ask and answer where things are"
+      },
+      "items": [
+        {
+          "id": "l04-conv-001",
+          "speaker": "",
+          "jp": "【アスカの電話番号】",
+          "kana": "",
+          "zh": "【Asuka的电话号码】",
+          "keyword": "電話番号",
+          "videoStart": "0:00.0",
+          "videoEnd": "0:02.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-conv-002",
+          "speaker": "",
+          "jp": "すみません アスカの電話番号は何番ですか?",
+          "kana": "",
+          "zh": "不好意思，请问Asuka的电话号码是多少？",
+          "keyword": "何番です",
+          "videoStart": "0:11.0",
+          "videoEnd": "0:14.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-conv-003",
+          "speaker": "",
+          "jp": "アスカですか?",
+          "kana": "アスカですか?",
+          "zh": "您是说Asuka吗？",
+          "keyword": "",
+          "videoStart": "0:15.0",
+          "videoEnd": "0:16.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-conv-004",
+          "speaker": "",
+          "jp": "5275-2725です",
+          "kana": "5275-2725です",
+          "zh": "是5275-2725",
+          "keyword": "2725です",
+          "videoStart": "0:24.0",
+          "videoEnd": "0:28.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-conv-005",
+          "speaker": "",
+          "jp": "どうもありがとうございます",
+          "kana": "どうもありがとうございます",
+          "zh": "非常感谢您",
+          "keyword": "",
+          "videoStart": "0:30.0",
+          "videoEnd": "0:32.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-conv-006",
+          "speaker": "",
+          "jp": "はい アスカです",
+          "kana": "はい アスカです",
+          "zh": "您好，这里是Asuka",
+          "keyword": "",
+          "videoStart": "0:38.0",
+          "videoEnd": "0:40.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-conv-007",
+          "speaker": "",
+          "jp": "すみません そちらは何時までですか?",
+          "kana": "",
+          "zh": "不好意思，请问你们营业到几点？",
+          "keyword": "何時",
+          "videoStart": "0:41.0",
+          "videoEnd": "0:44.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-conv-008",
+          "speaker": "",
+          "jp": "10時までです",
+          "kana": "",
+          "zh": "营业到10点",
+          "keyword": "10時",
+          "videoStart": "0:46.0",
+          "videoEnd": "0:47.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-conv-009",
+          "speaker": "",
+          "jp": "休みは何曜日ですか?",
+          "kana": "",
+          "zh": "你们星期几休息？",
+          "keyword": "何曜日です",
+          "videoStart": "0:51.0",
+          "videoEnd": "0:53.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-conv-010",
+          "speaker": "",
+          "jp": "日曜日です",
+          "kana": "",
+          "zh": "星期天休息",
+          "keyword": "日曜日です",
+          "videoStart": "0:54.0",
+          "videoEnd": "0:55.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-conv-011",
+          "speaker": "",
+          "jp": "【アスカの電話番号】",
+          "kana": "",
+          "zh": "【Asuka的电话号码】",
+          "keyword": "電話番号",
+          "videoStart": "0:55.0",
+          "videoEnd": "0:57.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-conv-012",
+          "speaker": "",
+          "jp": "そうですか どうも",
+          "kana": "そうですか どうも",
+          "zh": "是这样啊，谢谢",
+          "keyword": "",
+          "videoStart": "0:58.0",
+          "videoEnd": "1:00.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_vocab",
+      "id": "l04_conversation_vocab",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话关键词汇",
+        "en": "Conversation Key Vocabulary"
+      },
+      "description": {
+        "zh": "以下词汇从会话原文中提取。",
+        "en": "Vocabulary from the conversation."
+      },
+      "items": [
+        {
+          "word": "アスカの電話番号",
+          "kana": "",
+          "zh": "",
+          "importance": "support",
+          "fromConversationId": "l04-conv-001",
+          "sourceSentence": "【アスカの電話番号】",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "すみません",
+          "kana": "すみません",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l04-conv-002",
+          "sourceSentence": "すみません アスカの電話番号は何番ですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "アスカの電話番号は何番ですか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l04-conv-002",
+          "sourceSentence": "すみません アスカの電話番号は何番ですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "アスカですか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l04-conv-003",
+          "sourceSentence": "アスカですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "です",
+          "kana": "です",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l04-conv-004",
+          "sourceSentence": "5275-2725です",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "どうもありがとうございます",
+          "kana": "どうもありがとうございます",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l04-conv-005",
+          "sourceSentence": "どうもありがとうございます",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "はい",
+          "kana": "はい",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l04-conv-006",
+          "sourceSentence": "はい アスカです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "アスカです",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l04-conv-006",
+          "sourceSentence": "はい アスカです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "そちらは何時までですか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l04-conv-007",
+          "sourceSentence": "すみません そちらは何時までですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "時までです",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l04-conv-008",
+          "sourceSentence": "10時までです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "休みは何曜日ですか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l04-conv-009",
+          "sourceSentence": "休みは何曜日ですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "日曜日です",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l04-conv-010",
+          "sourceSentence": "日曜日です",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "そうですか",
+          "kana": "そうですか",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l04-conv-012",
+          "sourceSentence": "そうですか どうも",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "どうも",
+          "kana": "どうも",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l04-conv-012",
+          "sourceSentence": "そうですか どうも",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_grammar",
+      "id": "l04_conversation_grammar",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话核心语法",
+        "en": "Conversation Core Grammar"
+      },
+      "description": {
+        "zh": "以下语法点从会话原文中提取。",
+        "en": "Grammar points from the conversation."
+      },
+      "items": [
+        {
+          "pattern": "〜です",
+          "meaning": {
+            "zh": "是…（礼貌判断）",
+            "en": "is/am (polite copula)"
+          },
+          "conversationExample": "すみません アスカの電話番号は何番ですか?",
+          "fromConversationId": "l04-conv-002",
+          "sourceSentence": "すみません アスカの電話番号は何番ですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「です」是日语礼貌判断助动词，相当于中文的\"是\"。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜か",
+          "meaning": {
+            "zh": "…吗？（疑问）",
+            "en": "question marker"
+          },
+          "conversationExample": "すみません アスカの電話番号は何番ですか?",
+          "fromConversationId": "l04-conv-002",
+          "sourceSentence": "すみません アスカの電話番号は何番ですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "句尾加「か」构成疑问句。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ません",
+          "meaning": {
+            "zh": "不…（否定）",
+            "en": "negative form"
+          },
+          "conversationExample": "すみません アスカの電話番号は何番ですか?",
+          "fromConversationId": "l04-conv-002",
+          "sourceSentence": "すみません アスカの電話番号は何番ですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ません」是「ます」的否定形式。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ます",
+          "meaning": {
+            "zh": "（动词敬体）",
+            "en": "polite verb form"
+          },
+          "conversationExample": "どうもありがとうございます",
+          "fromConversationId": "l04-conv-005",
+          "sourceSentence": "どうもありがとうございます",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ます」是动词的敬体形式。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_examples",
+      "id": "l04_conversation_examples",
+      "sourceType": "ai_generated_from_official_conversation",
+      "title": {
+        "zh": "会话替换例句",
+        "en": "Conversation Replacement Examples"
+      },
+      "description": {
+        "zh": "以下例句基于会话原句生成。",
+        "en": "Examples generated from conversation sentences."
+      },
+      "items": [
+        {
+          "pattern": "電話番号",
+          "originalSentence": "【アスカの電話番号】",
+          "fromConversationId": "l04-conv-001",
+          "sourceSentence": "【アスカの電話番号】",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "何番です",
+          "originalSentence": "すみません アスカの電話番号は何番ですか?",
+          "fromConversationId": "l04-conv-002",
+          "sourceSentence": "すみません アスカの電話番号は何番ですか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "アスカですか?",
+          "fromConversationId": "l04-conv-003",
+          "sourceSentence": "アスカですか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "2725です",
+          "originalSentence": "5275-2725です",
+          "fromConversationId": "l04-conv-004",
+          "sourceSentence": "5275-2725です",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [
+            {
+              "jp": "佐藤です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "田中です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "山田です",
+              "kana": "",
+              "zh": ""
+            }
+          ],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "どうもありがとうございます",
+          "fromConversationId": "l04-conv-005",
+          "sourceSentence": "どうもありがとうございます",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "替换练习",
+          "originalSentence": "はい アスカです",
+          "fromConversationId": "l04-conv-006",
+          "sourceSentence": "はい アスカです",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [
+            {
+              "jp": "はい佐藤です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "はい田中です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "はい山田です",
+              "kana": "",
+              "zh": ""
+            }
+          ],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "何時",
+          "originalSentence": "すみません そちらは何時までですか?",
+          "fromConversationId": "l04-conv-007",
+          "sourceSentence": "すみません そちらは何時までですか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "10時",
+          "originalSentence": "10時までです",
+          "fromConversationId": "l04-conv-008",
+          "sourceSentence": "10時までです",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "何曜日です",
+          "originalSentence": "休みは何曜日ですか?",
+          "fromConversationId": "l04-conv-009",
+          "sourceSentence": "休みは何曜日ですか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "日曜日です",
+          "originalSentence": "日曜日です",
+          "fromConversationId": "l04-conv-010",
+          "sourceSentence": "日曜日です",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [
+            {
+              "jp": "佐藤です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "田中です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "山田です",
+              "kana": "",
+              "zh": ""
+            }
+          ],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "電話番号",
+          "originalSentence": "【アスカの電話番号】",
+          "fromConversationId": "l04-conv-011",
+          "sourceSentence": "【アスカの電話番号】",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "そうですか どうも",
+          "fromConversationId": "l04-conv-012",
+          "sourceSentence": "そうですか どうも",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_quiz",
+      "id": "l04_conversation_quiz",
+      "sourceType": "generated_from_official_video_subtitle",
+      "title": {
+        "zh": "会话专项测试",
+        "en": "Conversation Quiz"
+      },
+      "description": {
+        "zh": "测试题围绕会话内容设计。",
+        "en": "Quiz based on the conversation."
+      },
+      "items": [
+        {
+          "id": "l04-q-001-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「【アスカの電話番号】」是什么意思？",
+            "en": "What does \"【アスカの電話番号】\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "【Asuka的电话号码】",
+                "en": "【Asuka的电话号码】"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "【アスカの電話番号】",
+          "fromConversationId": "l04-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-q-001-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「【Asuka的电话号码】」的日语说法。",
+            "en": "Select Japanese for \"【Asuka的电话号码】\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "【アスカの電話番号】"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "【アスカの電話番号】",
+          "fromConversationId": "l04-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-q-001-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「【アスカの電話番号】」的中文意思是？",
+            "en": "What does \"【アスカの電話番号】\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "【Asuka的电话号码】",
+                "en": "【Asuka的电话号码】"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "【アスカの電話番号】",
+          "fromConversationId": "l04-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-q-002-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「すみません アスカの電話番号は何番ですか?」是什么意思？",
+            "en": "What does \"すみません アスカの電話番号は何番ですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不好意思，请问Asuka的电话号码是多少？",
+                "en": "不好意思，请问Asuka的电话号码是多少？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "すみません アスカの電話番号は何番ですか?",
+          "fromConversationId": "l04-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-q-002-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「不好意思，请问Asuka的电话号码是多少？」的日语说法。",
+            "en": "Select Japanese for \"不好意思，请问Asuka的电话号码是多少？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "すみません アスカの電話番号は何番ですか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "すみません アスカの電話番号は何番ですか?",
+          "fromConversationId": "l04-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-q-002-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「すみません アスカの電話番号は何番ですか?」的中文意思是？",
+            "en": "What does \"すみません アスカの電話番号は何番ですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不好意思，请问Asuka的电话号码是多少？",
+                "en": "不好意思，请问Asuka的电话号码是多少？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "すみません アスカの電話番号は何番ですか?",
+          "fromConversationId": "l04-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-q-003-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「アスカですか?」是什么意思？",
+            "en": "What does \"アスカですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "您是说Asuka吗？",
+                "en": "您是说Asuka吗？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "アスカですか?",
+          "fromConversationId": "l04-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-q-003-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「您是说Asuka吗？」的日语说法。",
+            "en": "Select Japanese for \"您是说Asuka吗？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "アスカですか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "アスカですか?",
+          "fromConversationId": "l04-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-q-003-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「アスカですか?」的中文意思是？",
+            "en": "What does \"アスカですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "您是说Asuka吗？",
+                "en": "您是说Asuka吗？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "アスカですか?",
+          "fromConversationId": "l04-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-q-004-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「5275-2725です」是什么意思？",
+            "en": "What does \"5275-2725です\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是5275-2725",
+                "en": "是5275-2725"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "5275-2725です",
+          "fromConversationId": "l04-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-q-004-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「是5275-2725」的日语说法。",
+            "en": "Select Japanese for \"是5275-2725\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "5275-2725です"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "5275-2725です",
+          "fromConversationId": "l04-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-q-004-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「5275-2725です」的中文意思是？",
+            "en": "What does \"5275-2725です\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是5275-2725",
+                "en": "是5275-2725"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "5275-2725です",
+          "fromConversationId": "l04-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-q-005-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「どうもありがとうございます」是什么意思？",
+            "en": "What does \"どうもありがとうございます\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "非常感谢您",
+                "en": "非常感谢您"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "どうもありがとうございます",
+          "fromConversationId": "l04-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-q-005-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「非常感谢您」的日语说法。",
+            "en": "Select Japanese for \"非常感谢您\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "どうもありがとうございます"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "どうもありがとうございます",
+          "fromConversationId": "l04-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-q-005-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「どうもありがとうございます」的中文意思是？",
+            "en": "What does \"どうもありがとうございます\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "非常感谢您",
+                "en": "非常感谢您"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "どうもありがとうございます",
+          "fromConversationId": "l04-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-q-006-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「はい アスカです」是什么意思？",
+            "en": "What does \"はい アスカです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "您好，这里是Asuka",
+                "en": "您好，这里是Asuka"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "はい アスカです",
+          "fromConversationId": "l04-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-q-006-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「您好，这里是Asuka」的日语说法。",
+            "en": "Select Japanese for \"您好，这里是Asuka\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "はい アスカです"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい アスカです",
+          "fromConversationId": "l04-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-q-006-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「はい アスカです」的中文意思是？",
+            "en": "What does \"はい アスカです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "您好，这里是Asuka",
+                "en": "您好，这里是Asuka"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい アスカです",
+          "fromConversationId": "l04-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-q-007-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「すみません そちらは何時までですか?」是什么意思？",
+            "en": "What does \"すみません そちらは何時までですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不好意思，请问你们营业到几点？",
+                "en": "不好意思，请问你们营业到几点？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "すみません そちらは何時までですか?",
+          "fromConversationId": "l04-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-q-007-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「不好意思，请问你们营业到几点？」的日语说法。",
+            "en": "Select Japanese for \"不好意思，请问你们营业到几点？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "すみません そちらは何時までですか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "すみません そちらは何時までですか?",
+          "fromConversationId": "l04-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-q-007-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「すみません そちらは何時までですか?」的中文意思是？",
+            "en": "What does \"すみません そちらは何時までですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不好意思，请问你们营业到几点？",
+                "en": "不好意思，请问你们营业到几点？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "すみません そちらは何時までですか?",
+          "fromConversationId": "l04-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-q-008-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「10時までです」是什么意思？",
+            "en": "What does \"10時までです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "营业到10点",
+                "en": "营业到10点"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "10時までです",
+          "fromConversationId": "l04-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-q-008-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「营业到10点」的日语说法。",
+            "en": "Select Japanese for \"营业到10点\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "10時までです"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "10時までです",
+          "fromConversationId": "l04-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-q-008-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「10時までです」的中文意思是？",
+            "en": "What does \"10時までです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "营业到10点",
+                "en": "营业到10点"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "10時までです",
+          "fromConversationId": "l04-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-q-009-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「休みは何曜日ですか?」是什么意思？",
+            "en": "What does \"休みは何曜日ですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "你们星期几休息？",
+                "en": "你们星期几休息？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "休みは何曜日ですか?",
+          "fromConversationId": "l04-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-q-009-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「你们星期几休息？」的日语说法。",
+            "en": "Select Japanese for \"你们星期几休息？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "休みは何曜日ですか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "休みは何曜日ですか?",
+          "fromConversationId": "l04-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-q-009-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「休みは何曜日ですか?」的中文意思是？",
+            "en": "What does \"休みは何曜日ですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "你们星期几休息？",
+                "en": "你们星期几休息？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "休みは何曜日ですか?",
+          "fromConversationId": "l04-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-q-010-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「日曜日です」是什么意思？",
+            "en": "What does \"日曜日です\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "星期天休息",
+                "en": "星期天休息"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "日曜日です",
+          "fromConversationId": "l04-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-q-010-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「星期天休息」的日语说法。",
+            "en": "Select Japanese for \"星期天休息\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "日曜日です"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "日曜日です",
+          "fromConversationId": "l04-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-q-010-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「日曜日です」的中文意思是？",
+            "en": "What does \"日曜日です\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "星期天休息",
+                "en": "星期天休息"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "日曜日です",
+          "fromConversationId": "l04-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-q-011-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「【アスカの電話番号】」是什么意思？",
+            "en": "What does \"【アスカの電話番号】\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "【Asuka的电话号码】",
+                "en": "【Asuka的电话号码】"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "【アスカの電話番号】",
+          "fromConversationId": "l04-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-q-011-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「【Asuka的电话号码】」的日语说法。",
+            "en": "Select Japanese for \"【Asuka的电话号码】\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "【アスカの電話番号】"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "【アスカの電話番号】",
+          "fromConversationId": "l04-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-q-011-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「【アスカの電話番号】」的中文意思是？",
+            "en": "What does \"【アスカの電話番号】\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "【Asuka的电话号码】",
+                "en": "【Asuka的电话号码】"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "【アスカの電話番号】",
+          "fromConversationId": "l04-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-q-012-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「そうですか どうも」是什么意思？",
+            "en": "What does \"そうですか どうも\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是这样啊，谢谢",
+                "en": "是这样啊，谢谢"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "そうですか どうも",
+          "fromConversationId": "l04-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-q-012-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「是这样啊，谢谢」的日语说法。",
+            "en": "Select Japanese for \"是这样啊，谢谢\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "そうですか どうも"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "そうですか どうも",
+          "fromConversationId": "l04-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l04-q-012-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「そうですか どうも」的中文意思是？",
+            "en": "What does \"そうですか どうも\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是这样啊，谢谢",
+                "en": "是这样啊，谢谢"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "そうですか どうも",
+          "fromConversationId": "l04-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
     }
   ],
   "conversationVideo": {
@@ -696,6 +2199,22 @@
     "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P4_%E7%AC%AC4%E8%AA%B2.mp4",
     "subtitleUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P4_%E7%AC%AC4%E8%AA%B2.json",
     "sourceType": "official_video_resource",
-    "status": "linked_not_imported"
+    "status": "imported_with_subtitles"
+  },
+  "conversationMainlineStatus": {
+    "videoLinked": "published",
+    "subtitleParsed": "published",
+    "subtitleCleaned": "published",
+    "humanReviewed": "not_started",
+    "importedToLessonJson": "published",
+    "vocabReady": "needs_review",
+    "grammarReady": "needs_review",
+    "examplesReady": "needs_review",
+    "quizReady": "needs_review",
+    "reciteReady": "needs_review",
+    "recordingReady": "published",
+    "scoringReady": "published",
+    "publishedToStaging": "not_started",
+    "verifiedOnline": "not_started"
   }
 }

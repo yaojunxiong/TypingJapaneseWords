@@ -688,6 +688,1424 @@
           ]
         }
       ]
+    },
+    {
+      "type": "conversation",
+      "id": "l08_conversation",
+      "sourceType": "official_video_subtitle",
+      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P8_%E7%AC%AC8%E8%AA%B2.json",
+      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P8_%E7%AC%AC8%E8%AA%B2.mp4",
+      "title": {
+        "zh": "会话背诵",
+        "en": "Conversation Practice"
+      },
+      "dialogTitle": {
+        "zh": "描述",
+        "en": "描述"
+      },
+      "conversationGoal": {
+        "zh": "能描述物品特征和使用形容词",
+        "en": "Describe things using adjectives"
+      },
+      "items": [
+        {
+          "id": "l08-conv-001",
+          "speaker": "",
+          "jp": "【音楽】",
+          "kana": "",
+          "zh": "【音乐】",
+          "keyword": "音楽",
+          "videoStart": "0:00.0",
+          "videoEnd": "0:07.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-conv-002",
+          "speaker": "",
+          "jp": "マリアさん 日本の生活はどうですか?",
+          "kana": "",
+          "zh": "玛丽亚小姐，日本的生活怎么样？",
+          "keyword": "生活",
+          "videoStart": "0:13.5",
+          "videoEnd": "0:16.8",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-conv-003",
+          "speaker": "",
+          "jp": "毎日とても楽しいです",
+          "kana": "",
+          "zh": "每天都很开心。",
+          "keyword": "毎日",
+          "videoStart": "0:16.8",
+          "videoEnd": "0:19.8",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-conv-004",
+          "speaker": "",
+          "jp": "そうですか サントスさん お仕事はどうですか?",
+          "kana": "",
+          "zh": "是吗？桑托斯先生，工作怎么样？",
+          "keyword": "仕事",
+          "videoStart": "0:19.8",
+          "videoEnd": "0:25.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-conv-005",
+          "speaker": "",
+          "jp": "そうですね 忙しいですが面白いです",
+          "kana": "",
+          "zh": "是啊，虽然很忙，但挺有意思的。",
+          "keyword": "面白",
+          "videoStart": "0:25.1",
+          "videoEnd": "0:29.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-conv-006",
+          "speaker": "",
+          "jp": "コーヒー もういっぱいいかがですか?",
+          "kana": "コーヒー もういっぱいいかがですか?",
+          "zh": "再来一杯咖啡怎么样？",
+          "keyword": "",
+          "videoStart": "0:31.6",
+          "videoEnd": "0:34.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-conv-007",
+          "speaker": "",
+          "jp": "いいえ 結構です",
+          "kana": "",
+          "zh": "不用了，谢谢。",
+          "keyword": "結構です",
+          "videoStart": "0:34.1",
+          "videoEnd": "0:36.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-conv-008",
+          "speaker": "",
+          "jp": "もう6時ですね そろそろ失礼します",
+          "kana": "",
+          "zh": "已经6点了，我该告辞了。",
+          "keyword": "失礼",
+          "videoStart": "0:41.1",
+          "videoEnd": "0:45.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-conv-009",
+          "speaker": "",
+          "jp": "そうですか",
+          "kana": "そうですか",
+          "zh": "这样啊。",
+          "keyword": "",
+          "videoStart": "0:45.1",
+          "videoEnd": "0:47.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-conv-010",
+          "speaker": "",
+          "jp": "今日はどうもありがとうございました",
+          "kana": "",
+          "zh": "今天真的非常感谢。",
+          "keyword": "今日",
+          "videoStart": "0:48.1",
+          "videoEnd": "0:50.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-conv-011",
+          "speaker": "",
+          "jp": "いいえ またいらっしゃってください",
+          "kana": "いいえ またいらっしゃってください",
+          "zh": "不客气，请再来玩。",
+          "keyword": "",
+          "videoStart": "0:50.1",
+          "videoEnd": "0:53.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_vocab",
+      "id": "l08_conversation_vocab",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话关键词汇",
+        "en": "Conversation Key Vocabulary"
+      },
+      "description": {
+        "zh": "以下词汇从会话原文中提取。",
+        "en": "Vocabulary from the conversation."
+      },
+      "items": [
+        {
+          "word": "音楽",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l08-conv-001",
+          "sourceSentence": "【音楽】",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "マリアさん",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l08-conv-002",
+          "sourceSentence": "マリアさん 日本の生活はどうですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "日本の生活はどうですか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l08-conv-002",
+          "sourceSentence": "マリアさん 日本の生活はどうですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "毎日とても楽しいです",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l08-conv-003",
+          "sourceSentence": "毎日とても楽しいです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "そうですか",
+          "kana": "そうですか",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l08-conv-004",
+          "sourceSentence": "そうですか サントスさん お仕事はどうですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "サントスさん",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l08-conv-004",
+          "sourceSentence": "そうですか サントスさん お仕事はどうですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "お仕事はどうですか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l08-conv-004",
+          "sourceSentence": "そうですか サントスさん お仕事はどうですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "そうですね",
+          "kana": "そうですね",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l08-conv-005",
+          "sourceSentence": "そうですね 忙しいですが面白いです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "忙しいですが面白いです",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l08-conv-005",
+          "sourceSentence": "そうですね 忙しいですが面白いです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "コーヒー",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l08-conv-006",
+          "sourceSentence": "コーヒー もういっぱいいかがですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "もういっぱいいかがですか",
+          "kana": "もういっぱいいかがですか",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l08-conv-006",
+          "sourceSentence": "コーヒー もういっぱいいかがですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "いいえ",
+          "kana": "いいえ",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l08-conv-007",
+          "sourceSentence": "いいえ 結構です",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "結構です",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l08-conv-007",
+          "sourceSentence": "いいえ 結構です",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "もう",
+          "kana": "もう",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l08-conv-008",
+          "sourceSentence": "もう6時ですね そろそろ失礼します",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "時ですね",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l08-conv-008",
+          "sourceSentence": "もう6時ですね そろそろ失礼します",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "そろそろ失礼します",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l08-conv-008",
+          "sourceSentence": "もう6時ですね そろそろ失礼します",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "今日はどうもありがとうございました",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l08-conv-010",
+          "sourceSentence": "今日はどうもありがとうございました",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "またいらっしゃってください",
+          "kana": "またいらっしゃってください",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l08-conv-011",
+          "sourceSentence": "いいえ またいらっしゃってください",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_grammar",
+      "id": "l08_conversation_grammar",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话核心语法",
+        "en": "Conversation Core Grammar"
+      },
+      "description": {
+        "zh": "以下语法点从会话原文中提取。",
+        "en": "Grammar points from the conversation."
+      },
+      "items": [
+        {
+          "pattern": "〜です",
+          "meaning": {
+            "zh": "是…（礼貌判断）",
+            "en": "is/am (polite copula)"
+          },
+          "conversationExample": "マリアさん 日本の生活はどうですか?",
+          "fromConversationId": "l08-conv-002",
+          "sourceSentence": "マリアさん 日本の生活はどうですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「です」是日语礼貌判断助动词，相当于中文的\"是\"。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜か",
+          "meaning": {
+            "zh": "…吗？（疑问）",
+            "en": "question marker"
+          },
+          "conversationExample": "マリアさん 日本の生活はどうですか?",
+          "fromConversationId": "l08-conv-002",
+          "sourceSentence": "マリアさん 日本の生活はどうですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "句尾加「か」构成疑问句。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ます",
+          "meaning": {
+            "zh": "（动词敬体）",
+            "en": "polite verb form"
+          },
+          "conversationExample": "もう6時ですね そろそろ失礼します",
+          "fromConversationId": "l08-conv-008",
+          "sourceSentence": "もう6時ですね そろそろ失礼します",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ます」是动词的敬体形式。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ました",
+          "meaning": {
+            "zh": "…了（过去）",
+            "en": "past tense"
+          },
+          "conversationExample": "今日はどうもありがとうございました",
+          "fromConversationId": "l08-conv-010",
+          "sourceSentence": "今日はどうもありがとうございました",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ました」是「ます」的过去形。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_examples",
+      "id": "l08_conversation_examples",
+      "sourceType": "ai_generated_from_official_conversation",
+      "title": {
+        "zh": "会话替换例句",
+        "en": "Conversation Replacement Examples"
+      },
+      "description": {
+        "zh": "以下例句基于会话原句生成。",
+        "en": "Examples generated from conversation sentences."
+      },
+      "items": [
+        {
+          "pattern": "音楽",
+          "originalSentence": "【音楽】",
+          "fromConversationId": "l08-conv-001",
+          "sourceSentence": "【音楽】",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "生活",
+          "originalSentence": "マリアさん 日本の生活はどうですか?",
+          "fromConversationId": "l08-conv-002",
+          "sourceSentence": "マリアさん 日本の生活はどうですか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "毎日",
+          "originalSentence": "毎日とても楽しいです",
+          "fromConversationId": "l08-conv-003",
+          "sourceSentence": "毎日とても楽しいです",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "仕事",
+          "originalSentence": "そうですか サントスさん お仕事はどうですか?",
+          "fromConversationId": "l08-conv-004",
+          "sourceSentence": "そうですか サントスさん お仕事はどうですか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "面白",
+          "originalSentence": "そうですね 忙しいですが面白いです",
+          "fromConversationId": "l08-conv-005",
+          "sourceSentence": "そうですね 忙しいですが面白いです",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "コーヒー もういっぱいいかがですか?",
+          "fromConversationId": "l08-conv-006",
+          "sourceSentence": "コーヒー もういっぱいいかがですか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "結構です",
+          "originalSentence": "いいえ 結構です",
+          "fromConversationId": "l08-conv-007",
+          "sourceSentence": "いいえ 結構です",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [
+            {
+              "jp": "いいえ佐藤です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "いいえ田中です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "いいえ山田です",
+              "kana": "",
+              "zh": ""
+            }
+          ],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "失礼",
+          "originalSentence": "もう6時ですね そろそろ失礼します",
+          "fromConversationId": "l08-conv-008",
+          "sourceSentence": "もう6時ですね そろそろ失礼します",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "そうですか",
+          "fromConversationId": "l08-conv-009",
+          "sourceSentence": "そうですか",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "今日",
+          "originalSentence": "今日はどうもありがとうございました",
+          "fromConversationId": "l08-conv-010",
+          "sourceSentence": "今日はどうもありがとうございました",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "いいえ またいらっしゃってください",
+          "fromConversationId": "l08-conv-011",
+          "sourceSentence": "いいえ またいらっしゃってください",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_quiz",
+      "id": "l08_conversation_quiz",
+      "sourceType": "generated_from_official_video_subtitle",
+      "title": {
+        "zh": "会话专项测试",
+        "en": "Conversation Quiz"
+      },
+      "description": {
+        "zh": "测试题围绕会话内容设计。",
+        "en": "Quiz based on the conversation."
+      },
+      "items": [
+        {
+          "id": "l08-q-001-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「【音楽】」是什么意思？",
+            "en": "What does \"【音楽】\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "【音乐】",
+                "en": "【音乐】"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "【音楽】",
+          "fromConversationId": "l08-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-q-001-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「【音乐】」的日语说法。",
+            "en": "Select Japanese for \"【音乐】\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "【音楽】"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "【音楽】",
+          "fromConversationId": "l08-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-q-001-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「【音楽】」的中文意思是？",
+            "en": "What does \"【音楽】\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "【音乐】",
+                "en": "【音乐】"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "【音楽】",
+          "fromConversationId": "l08-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-q-002-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「マリアさん 日本の生活はどうですか?」是什么意思？",
+            "en": "What does \"マリアさん 日本の生活はどうですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "玛丽亚小姐，日本的生活怎么样？",
+                "en": "玛丽亚小姐，日本的生活怎么样？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "マリアさん 日本の生活はどうですか?",
+          "fromConversationId": "l08-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-q-002-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「玛丽亚小姐，日本的生活怎么样？」的日语说法。",
+            "en": "Select Japanese for \"玛丽亚小姐，日本的生活怎么样？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "マリアさん 日本の生活はどうですか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "マリアさん 日本の生活はどうですか?",
+          "fromConversationId": "l08-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-q-002-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「マリアさん 日本の生活はどうですか?」的中文意思是？",
+            "en": "What does \"マリアさん 日本の生活はどうですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "玛丽亚小姐，日本的生活怎么样？",
+                "en": "玛丽亚小姐，日本的生活怎么样？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "マリアさん 日本の生活はどうですか?",
+          "fromConversationId": "l08-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-q-003-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「毎日とても楽しいです」是什么意思？",
+            "en": "What does \"毎日とても楽しいです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "每天都很开心。",
+                "en": "每天都很开心。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "毎日とても楽しいです",
+          "fromConversationId": "l08-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-q-003-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「每天都很开心。」的日语说法。",
+            "en": "Select Japanese for \"每天都很开心。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "毎日とても楽しいです"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "毎日とても楽しいです",
+          "fromConversationId": "l08-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-q-003-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「毎日とても楽しいです」的中文意思是？",
+            "en": "What does \"毎日とても楽しいです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "每天都很开心。",
+                "en": "每天都很开心。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "毎日とても楽しいです",
+          "fromConversationId": "l08-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-q-004-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「そうですか サントスさん お仕事はどうですか?」是什么意思？",
+            "en": "What does \"そうですか サントスさん お仕事はどうですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是吗？桑托斯先生，工作怎么样？",
+                "en": "是吗？桑托斯先生，工作怎么样？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "そうですか サントスさん お仕事はどうですか?",
+          "fromConversationId": "l08-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-q-004-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「是吗？桑托斯先生，工作怎么样？」的日语说法。",
+            "en": "Select Japanese for \"是吗？桑托斯先生，工作怎么样？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "そうですか サントスさん お仕事はどうですか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "そうですか サントスさん お仕事はどうですか?",
+          "fromConversationId": "l08-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-q-004-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「そうですか サントスさん お仕事はどうですか?」的中文意思是？",
+            "en": "What does \"そうですか サントスさん お仕事はどうですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是吗？桑托斯先生，工作怎么样？",
+                "en": "是吗？桑托斯先生，工作怎么样？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "そうですか サントスさん お仕事はどうですか?",
+          "fromConversationId": "l08-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-q-005-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「そうですね 忙しいですが面白いです」是什么意思？",
+            "en": "What does \"そうですね 忙しいですが面白いです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是啊，虽然很忙，但挺有意思的。",
+                "en": "是啊，虽然很忙，但挺有意思的。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "そうですね 忙しいですが面白いです",
+          "fromConversationId": "l08-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-q-005-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「是啊，虽然很忙，但挺有意思的。」的日语说法。",
+            "en": "Select Japanese for \"是啊，虽然很忙，但挺有意思的。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "そうですね 忙しいですが面白いです"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "そうですね 忙しいですが面白いです",
+          "fromConversationId": "l08-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-q-005-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「そうですね 忙しいですが面白いです」的中文意思是？",
+            "en": "What does \"そうですね 忙しいですが面白いです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是啊，虽然很忙，但挺有意思的。",
+                "en": "是啊，虽然很忙，但挺有意思的。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "そうですね 忙しいですが面白いです",
+          "fromConversationId": "l08-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-q-006-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「コーヒー もういっぱいいかがですか?」是什么意思？",
+            "en": "What does \"コーヒー もういっぱいいかがですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "再来一杯咖啡怎么样？",
+                "en": "再来一杯咖啡怎么样？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "コーヒー もういっぱいいかがですか?",
+          "fromConversationId": "l08-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-q-006-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「再来一杯咖啡怎么样？」的日语说法。",
+            "en": "Select Japanese for \"再来一杯咖啡怎么样？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "コーヒー もういっぱいいかがですか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "コーヒー もういっぱいいかがですか?",
+          "fromConversationId": "l08-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-q-006-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「コーヒー もういっぱいいかがですか?」的中文意思是？",
+            "en": "What does \"コーヒー もういっぱいいかがですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "再来一杯咖啡怎么样？",
+                "en": "再来一杯咖啡怎么样？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "コーヒー もういっぱいいかがですか?",
+          "fromConversationId": "l08-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-q-007-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「いいえ 結構です」是什么意思？",
+            "en": "What does \"いいえ 結構です\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不用了，谢谢。",
+                "en": "不用了，谢谢。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "いいえ 結構です",
+          "fromConversationId": "l08-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-q-007-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「不用了，谢谢。」的日语说法。",
+            "en": "Select Japanese for \"不用了，谢谢。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "いいえ 結構です"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "いいえ 結構です",
+          "fromConversationId": "l08-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-q-007-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「いいえ 結構です」的中文意思是？",
+            "en": "What does \"いいえ 結構です\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不用了，谢谢。",
+                "en": "不用了，谢谢。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "いいえ 結構です",
+          "fromConversationId": "l08-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-q-008-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「もう6時ですね そろそろ失礼します」是什么意思？",
+            "en": "What does \"もう6時ですね そろそろ失礼します\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "已经6点了，我该告辞了。",
+                "en": "已经6点了，我该告辞了。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "もう6時ですね そろそろ失礼します",
+          "fromConversationId": "l08-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-q-008-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「已经6点了，我该告辞了。」的日语说法。",
+            "en": "Select Japanese for \"已经6点了，我该告辞了。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "もう6時ですね そろそろ失礼します"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "もう6時ですね そろそろ失礼します",
+          "fromConversationId": "l08-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-q-008-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「もう6時ですね そろそろ失礼します」的中文意思是？",
+            "en": "What does \"もう6時ですね そろそろ失礼します\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "已经6点了，我该告辞了。",
+                "en": "已经6点了，我该告辞了。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "もう6時ですね そろそろ失礼します",
+          "fromConversationId": "l08-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-q-009-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「そうですか」是什么意思？",
+            "en": "What does \"そうですか\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "这样啊。",
+                "en": "这样啊。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "そうですか",
+          "fromConversationId": "l08-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-q-009-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「这样啊。」的日语说法。",
+            "en": "Select Japanese for \"这样啊。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "そうですか"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "そうですか",
+          "fromConversationId": "l08-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-q-009-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「そうですか」的中文意思是？",
+            "en": "What does \"そうですか\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "这样啊。",
+                "en": "这样啊。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "そうですか",
+          "fromConversationId": "l08-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-q-010-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「今日はどうもありがとうございました」是什么意思？",
+            "en": "What does \"今日はどうもありがとうございました\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "今天真的非常感谢。",
+                "en": "今天真的非常感谢。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "今日はどうもありがとうございました",
+          "fromConversationId": "l08-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-q-010-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「今天真的非常感谢。」的日语说法。",
+            "en": "Select Japanese for \"今天真的非常感谢。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "今日はどうもありがとうございました"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "今日はどうもありがとうございました",
+          "fromConversationId": "l08-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-q-010-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「今日はどうもありがとうございました」的中文意思是？",
+            "en": "What does \"今日はどうもありがとうございました\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "今天真的非常感谢。",
+                "en": "今天真的非常感谢。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "今日はどうもありがとうございました",
+          "fromConversationId": "l08-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-q-011-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「いいえ またいらっしゃってください」是什么意思？",
+            "en": "What does \"いいえ またいらっしゃってください\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不客气，请再来玩。",
+                "en": "不客气，请再来玩。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "いいえ またいらっしゃってください",
+          "fromConversationId": "l08-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-q-011-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「不客气，请再来玩。」的日语说法。",
+            "en": "Select Japanese for \"不客气，请再来玩。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "いいえ またいらっしゃってください"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "いいえ またいらっしゃってください",
+          "fromConversationId": "l08-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l08-q-011-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「いいえ またいらっしゃってください」的中文意思是？",
+            "en": "What does \"いいえ またいらっしゃってください\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不客气，请再来玩。",
+                "en": "不客气，请再来玩。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "いいえ またいらっしゃってください",
+          "fromConversationId": "l08-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
     }
   ],
   "conversationVideo": {
@@ -696,6 +2114,22 @@
     "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P8_%E7%AC%AC8%E8%AA%B2.mp4",
     "subtitleUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P8_%E7%AC%AC8%E8%AA%B2.json",
     "sourceType": "official_video_resource",
-    "status": "linked_not_imported"
+    "status": "imported_with_subtitles"
+  },
+  "conversationMainlineStatus": {
+    "videoLinked": "published",
+    "subtitleParsed": "published",
+    "subtitleCleaned": "published",
+    "humanReviewed": "not_started",
+    "importedToLessonJson": "published",
+    "vocabReady": "needs_review",
+    "grammarReady": "needs_review",
+    "examplesReady": "needs_review",
+    "quizReady": "needs_review",
+    "reciteReady": "needs_review",
+    "recordingReady": "published",
+    "scoringReady": "published",
+    "publishedToStaging": "not_started",
+    "verifiedOnline": "not_started"
   }
 }

@@ -756,6 +756,1261 @@
           }
         }
       ]
+    },
+    {
+      "type": "conversation",
+      "id": "l20_conversation",
+      "sourceType": "official_video_subtitle",
+      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P20_%E7%AC%AC20%E8%AA%B2.json",
+      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P20_%E7%AC%AC20%E8%AA%B2.mp4",
+      "title": {
+        "zh": "会话背诵",
+        "en": "Conversation Practice"
+      },
+      "dialogTitle": {
+        "zh": "第20课会话",
+        "en": "第20课会话"
+      },
+      "conversationGoal": {
+        "zh": "第20课会话练习",
+        "en": "Lesson 20 Conversation Practice"
+      },
+      "items": [
+        {
+          "id": "l20-conv-001",
+          "speaker": "",
+          "jp": "【音楽】",
+          "kana": "",
+          "zh": "【音乐】",
+          "keyword": "音楽",
+          "videoStart": "0:00.0",
+          "videoEnd": "0:07.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-conv-002",
+          "speaker": "",
+          "jp": "夏休みは国へ帰る?",
+          "kana": "",
+          "zh": "暑假要回国吗？",
+          "keyword": "夏休",
+          "videoStart": "0:10.0",
+          "videoEnd": "0:12.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-conv-003",
+          "speaker": "",
+          "jp": "うん、帰りたいけど",
+          "kana": "",
+          "zh": "嗯，我是想回去啦……",
+          "keyword": "",
+          "videoStart": "0:13.0",
+          "videoEnd": "0:15.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-conv-004",
+          "speaker": "",
+          "jp": "そう、ターコン君、富士山に登ったことある?",
+          "kana": "",
+          "zh": "对了，Tākon君，你爬过富士山吗？",
+          "keyword": "富士山",
+          "videoStart": "0:16.0",
+          "videoEnd": "0:20.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-conv-005",
+          "speaker": "",
+          "jp": "うん、ない",
+          "kana": "うん、ない",
+          "zh": "嗯，还没有。",
+          "keyword": "",
+          "videoStart": "0:24.0",
+          "videoEnd": "0:26.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-conv-006",
+          "speaker": "",
+          "jp": "じゃあよかったら、一緒に行かない?",
+          "kana": "",
+          "zh": "那，要不要一起去啊？",
+          "keyword": "一緒",
+          "videoStart": "0:27.0",
+          "videoEnd": "0:29.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-conv-007",
+          "speaker": "",
+          "jp": "いつ頃?",
+          "kana": "",
+          "zh": "大概什么时候？",
+          "keyword": "",
+          "videoStart": "0:30.0",
+          "videoEnd": "0:31.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-conv-008",
+          "speaker": "",
+          "jp": "8月の初め頃はどう?",
+          "kana": "",
+          "zh": "八月初怎么样？",
+          "keyword": "8月",
+          "videoStart": "0:32.0",
+          "videoEnd": "0:34.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-conv-009",
+          "speaker": "",
+          "jp": "じゃあいろいろ調べて、また電話するよ",
+          "kana": "",
+          "zh": "那我查一查，再打电话给你。",
+          "keyword": "電話",
+          "videoStart": "0:35.0",
+          "videoEnd": "0:38.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-conv-010",
+          "speaker": "",
+          "jp": "ありがとう、待ってるよ",
+          "kana": "",
+          "zh": "谢谢你，我等你电话哦。",
+          "keyword": "",
+          "videoStart": "0:39.0",
+          "videoEnd": "0:41.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_vocab",
+      "id": "l20_conversation_vocab",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话关键词汇",
+        "en": "Conversation Key Vocabulary"
+      },
+      "description": {
+        "zh": "以下词汇从会话原文中提取。",
+        "en": "Vocabulary from the conversation."
+      },
+      "items": [
+        {
+          "word": "音楽",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l20-conv-001",
+          "sourceSentence": "【音楽】",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "夏休みは国へ帰る",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l20-conv-002",
+          "sourceSentence": "夏休みは国へ帰る?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "うん",
+          "kana": "うん",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l20-conv-003",
+          "sourceSentence": "うん、帰りたいけど",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "帰りたいけど",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l20-conv-003",
+          "sourceSentence": "うん、帰りたいけど",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "そう",
+          "kana": "そう",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l20-conv-004",
+          "sourceSentence": "そう、ターコン君、富士山に登ったことある?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "ターコン君",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l20-conv-004",
+          "sourceSentence": "そう、ターコン君、富士山に登ったことある?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "富士山に登ったことある",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l20-conv-004",
+          "sourceSentence": "そう、ターコン君、富士山に登ったことある?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "ない",
+          "kana": "ない",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l20-conv-005",
+          "sourceSentence": "うん、ない",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "じゃあよかったら",
+          "kana": "じゃあよかったら",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l20-conv-006",
+          "sourceSentence": "じゃあよかったら、一緒に行かない?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "一緒に行かない",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l20-conv-006",
+          "sourceSentence": "じゃあよかったら、一緒に行かない?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "いつ頃",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l20-conv-007",
+          "sourceSentence": "いつ頃?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "月の初め頃はどう",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l20-conv-008",
+          "sourceSentence": "8月の初め頃はどう?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "じゃあいろいろ調べて",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l20-conv-009",
+          "sourceSentence": "じゃあいろいろ調べて、また電話するよ",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "また電話するよ",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l20-conv-009",
+          "sourceSentence": "じゃあいろいろ調べて、また電話するよ",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "ありがとう",
+          "kana": "ありがとう",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l20-conv-010",
+          "sourceSentence": "ありがとう、待ってるよ",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "待ってるよ",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l20-conv-010",
+          "sourceSentence": "ありがとう、待ってるよ",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_grammar",
+      "id": "l20_conversation_grammar",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话核心语法",
+        "en": "Conversation Core Grammar"
+      },
+      "description": {
+        "zh": "以下语法点从会话原文中提取。",
+        "en": "Grammar points from the conversation."
+      },
+      "items": [
+        {
+          "pattern": "〜に〜",
+          "meaning": {
+            "zh": "在/向…",
+            "en": "to/at"
+          },
+          "conversationExample": "そう、ターコン君、富士山に登ったことある?",
+          "fromConversationId": "l20-conv-004",
+          "sourceSentence": "そう、ターコン君、富士山に登ったことある?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「に」表示时间、地点或方向。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜か",
+          "meaning": {
+            "zh": "…吗？（疑问）",
+            "en": "question marker"
+          },
+          "conversationExample": "じゃあよかったら、一緒に行かない?",
+          "fromConversationId": "l20-conv-006",
+          "sourceSentence": "じゃあよかったら、一緒に行かない?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "句尾加「か」构成疑问句。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_examples",
+      "id": "l20_conversation_examples",
+      "sourceType": "ai_generated_from_official_conversation",
+      "title": {
+        "zh": "会话替换例句",
+        "en": "Conversation Replacement Examples"
+      },
+      "description": {
+        "zh": "以下例句基于会话原句生成。",
+        "en": "Examples generated from conversation sentences."
+      },
+      "items": [
+        {
+          "pattern": "音楽",
+          "originalSentence": "【音楽】",
+          "fromConversationId": "l20-conv-001",
+          "sourceSentence": "【音楽】",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "夏休",
+          "originalSentence": "夏休みは国へ帰る?",
+          "fromConversationId": "l20-conv-002",
+          "sourceSentence": "夏休みは国へ帰る?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "うん、帰りたいけど",
+          "fromConversationId": "l20-conv-003",
+          "sourceSentence": "うん、帰りたいけど",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "富士山",
+          "originalSentence": "そう、ターコン君、富士山に登ったことある?",
+          "fromConversationId": "l20-conv-004",
+          "sourceSentence": "そう、ターコン君、富士山に登ったことある?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "うん、ない",
+          "fromConversationId": "l20-conv-005",
+          "sourceSentence": "うん、ない",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "一緒",
+          "originalSentence": "じゃあよかったら、一緒に行かない?",
+          "fromConversationId": "l20-conv-006",
+          "sourceSentence": "じゃあよかったら、一緒に行かない?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "いつ頃?",
+          "fromConversationId": "l20-conv-007",
+          "sourceSentence": "いつ頃?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "8月",
+          "originalSentence": "8月の初め頃はどう?",
+          "fromConversationId": "l20-conv-008",
+          "sourceSentence": "8月の初め頃はどう?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "電話",
+          "originalSentence": "じゃあいろいろ調べて、また電話するよ",
+          "fromConversationId": "l20-conv-009",
+          "sourceSentence": "じゃあいろいろ調べて、また電話するよ",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "ありがとう、待ってるよ",
+          "fromConversationId": "l20-conv-010",
+          "sourceSentence": "ありがとう、待ってるよ",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_quiz",
+      "id": "l20_conversation_quiz",
+      "sourceType": "generated_from_official_video_subtitle",
+      "title": {
+        "zh": "会话专项测试",
+        "en": "Conversation Quiz"
+      },
+      "description": {
+        "zh": "测试题围绕会话内容设计。",
+        "en": "Quiz based on the conversation."
+      },
+      "items": [
+        {
+          "id": "l20-q-001-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「【音楽】」是什么意思？",
+            "en": "What does \"【音楽】\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "【音乐】",
+                "en": "【音乐】"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "【音楽】",
+          "fromConversationId": "l20-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-q-001-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「【音乐】」的日语说法。",
+            "en": "Select Japanese for \"【音乐】\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "【音楽】"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "【音楽】",
+          "fromConversationId": "l20-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-q-001-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「【音楽】」的中文意思是？",
+            "en": "What does \"【音楽】\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "【音乐】",
+                "en": "【音乐】"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "【音楽】",
+          "fromConversationId": "l20-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-q-002-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「夏休みは国へ帰る?」是什么意思？",
+            "en": "What does \"夏休みは国へ帰る?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "暑假要回国吗？",
+                "en": "暑假要回国吗？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "夏休みは国へ帰る?",
+          "fromConversationId": "l20-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-q-002-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「暑假要回国吗？」的日语说法。",
+            "en": "Select Japanese for \"暑假要回国吗？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "夏休みは国へ帰る?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "夏休みは国へ帰る?",
+          "fromConversationId": "l20-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-q-002-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「夏休みは国へ帰る?」的中文意思是？",
+            "en": "What does \"夏休みは国へ帰る?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "暑假要回国吗？",
+                "en": "暑假要回国吗？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "夏休みは国へ帰る?",
+          "fromConversationId": "l20-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-q-003-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「うん、帰りたいけど」是什么意思？",
+            "en": "What does \"うん、帰りたいけど\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "嗯，我是想回去啦……",
+                "en": "嗯，我是想回去啦……"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "うん、帰りたいけど",
+          "fromConversationId": "l20-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-q-003-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「嗯，我是想回去啦……」的日语说法。",
+            "en": "Select Japanese for \"嗯，我是想回去啦……\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "うん、帰りたいけど"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "うん、帰りたいけど",
+          "fromConversationId": "l20-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-q-003-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「うん、帰りたいけど」的中文意思是？",
+            "en": "What does \"うん、帰りたいけど\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "嗯，我是想回去啦……",
+                "en": "嗯，我是想回去啦……"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "うん、帰りたいけど",
+          "fromConversationId": "l20-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-q-004-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「そう、ターコン君、富士山に登ったことある?」是什么意思？",
+            "en": "What does \"そう、ターコン君、富士山に登ったことある?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "对了，Tākon君，你爬过富士山吗？",
+                "en": "对了，Tākon君，你爬过富士山吗？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "そう、ターコン君、富士山に登ったことある?",
+          "fromConversationId": "l20-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-q-004-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「对了，Tākon君，你爬过富士山吗？」的日语说法。",
+            "en": "Select Japanese for \"对了，Tākon君，你爬过富士山吗？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "そう、ターコン君、富士山に登ったことある?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "そう、ターコン君、富士山に登ったことある?",
+          "fromConversationId": "l20-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-q-004-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「そう、ターコン君、富士山に登ったことある?」的中文意思是？",
+            "en": "What does \"そう、ターコン君、富士山に登ったことある?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "对了，Tākon君，你爬过富士山吗？",
+                "en": "对了，Tākon君，你爬过富士山吗？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "そう、ターコン君、富士山に登ったことある?",
+          "fromConversationId": "l20-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-q-005-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「うん、ない」是什么意思？",
+            "en": "What does \"うん、ない\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "嗯，还没有。",
+                "en": "嗯，还没有。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "うん、ない",
+          "fromConversationId": "l20-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-q-005-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「嗯，还没有。」的日语说法。",
+            "en": "Select Japanese for \"嗯，还没有。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "うん、ない"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "うん、ない",
+          "fromConversationId": "l20-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-q-005-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「うん、ない」的中文意思是？",
+            "en": "What does \"うん、ない\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "嗯，还没有。",
+                "en": "嗯，还没有。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "うん、ない",
+          "fromConversationId": "l20-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-q-006-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「じゃあよかったら、一緒に行かない?」是什么意思？",
+            "en": "What does \"じゃあよかったら、一緒に行かない?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那，要不要一起去啊？",
+                "en": "那，要不要一起去啊？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "じゃあよかったら、一緒に行かない?",
+          "fromConversationId": "l20-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-q-006-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「那，要不要一起去啊？」的日语说法。",
+            "en": "Select Japanese for \"那，要不要一起去啊？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "じゃあよかったら、一緒に行かない?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "じゃあよかったら、一緒に行かない?",
+          "fromConversationId": "l20-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-q-006-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「じゃあよかったら、一緒に行かない?」的中文意思是？",
+            "en": "What does \"じゃあよかったら、一緒に行かない?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那，要不要一起去啊？",
+                "en": "那，要不要一起去啊？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "じゃあよかったら、一緒に行かない?",
+          "fromConversationId": "l20-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-q-007-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「いつ頃?」是什么意思？",
+            "en": "What does \"いつ頃?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "大概什么时候？",
+                "en": "大概什么时候？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "いつ頃?",
+          "fromConversationId": "l20-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-q-007-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「大概什么时候？」的日语说法。",
+            "en": "Select Japanese for \"大概什么时候？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "いつ頃?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "いつ頃?",
+          "fromConversationId": "l20-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-q-007-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「いつ頃?」的中文意思是？",
+            "en": "What does \"いつ頃?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "大概什么时候？",
+                "en": "大概什么时候？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "いつ頃?",
+          "fromConversationId": "l20-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-q-008-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「8月の初め頃はどう?」是什么意思？",
+            "en": "What does \"8月の初め頃はどう?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "八月初怎么样？",
+                "en": "八月初怎么样？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "8月の初め頃はどう?",
+          "fromConversationId": "l20-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-q-008-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「八月初怎么样？」的日语说法。",
+            "en": "Select Japanese for \"八月初怎么样？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "8月の初め頃はどう?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "8月の初め頃はどう?",
+          "fromConversationId": "l20-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-q-008-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「8月の初め頃はどう?」的中文意思是？",
+            "en": "What does \"8月の初め頃はどう?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "八月初怎么样？",
+                "en": "八月初怎么样？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "8月の初め頃はどう?",
+          "fromConversationId": "l20-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-q-009-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「じゃあいろいろ調べて、また電話するよ」是什么意思？",
+            "en": "What does \"じゃあいろいろ調べて、また電話するよ\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那我查一查，再打电话给你。",
+                "en": "那我查一查，再打电话给你。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "じゃあいろいろ調べて、また電話するよ",
+          "fromConversationId": "l20-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-q-009-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「那我查一查，再打电话给你。」的日语说法。",
+            "en": "Select Japanese for \"那我查一查，再打电话给你。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "じゃあいろいろ調べて、また電話するよ"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "じゃあいろいろ調べて、また電話するよ",
+          "fromConversationId": "l20-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-q-009-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「じゃあいろいろ調べて、また電話するよ」的中文意思是？",
+            "en": "What does \"じゃあいろいろ調べて、また電話するよ\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那我查一查，再打电话给你。",
+                "en": "那我查一查，再打电话给你。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "じゃあいろいろ調べて、また電話するよ",
+          "fromConversationId": "l20-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-q-010-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「ありがとう、待ってるよ」是什么意思？",
+            "en": "What does \"ありがとう、待ってるよ\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "谢谢你，我等你电话哦。",
+                "en": "谢谢你，我等你电话哦。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "ありがとう、待ってるよ",
+          "fromConversationId": "l20-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-q-010-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「谢谢你，我等你电话哦。」的日语说法。",
+            "en": "Select Japanese for \"谢谢你，我等你电话哦。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "ありがとう、待ってるよ"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ありがとう、待ってるよ",
+          "fromConversationId": "l20-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l20-q-010-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「ありがとう、待ってるよ」的中文意思是？",
+            "en": "What does \"ありがとう、待ってるよ\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "谢谢你，我等你电话哦。",
+                "en": "谢谢你，我等你电话哦。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ありがとう、待ってるよ",
+          "fromConversationId": "l20-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
     }
   ],
   "conversationVideo": {
@@ -764,6 +2019,22 @@
     "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P20_%E7%AC%AC20%E8%AA%B2.mp4",
     "subtitleUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P20_%E7%AC%AC20%E8%AA%B2.json",
     "sourceType": "official_video_resource",
-    "status": "linked_not_imported"
+    "status": "imported_with_subtitles"
+  },
+  "conversationMainlineStatus": {
+    "videoLinked": "published",
+    "subtitleParsed": "published",
+    "subtitleCleaned": "published",
+    "humanReviewed": "not_started",
+    "importedToLessonJson": "published",
+    "vocabReady": "needs_review",
+    "grammarReady": "needs_review",
+    "examplesReady": "needs_review",
+    "quizReady": "needs_review",
+    "reciteReady": "needs_review",
+    "recordingReady": "published",
+    "scoringReady": "published",
+    "publishedToStaging": "not_started",
+    "verifiedOnline": "not_started"
   }
 }

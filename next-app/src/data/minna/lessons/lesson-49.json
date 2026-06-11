@@ -823,6 +823,1599 @@
           }
         }
       ]
+    },
+    {
+      "type": "conversation",
+      "id": "l49_conversation",
+      "sourceType": "official_video_subtitle",
+      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P49_%E7%AC%AC49%E8%AA%B2.json",
+      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P49_%E7%AC%AC49%E8%AA%B2.mp4",
+      "title": {
+        "zh": "会话背诵",
+        "en": "Conversation Practice"
+      },
+      "dialogTitle": {
+        "zh": "第49课会话",
+        "en": "第49课会话"
+      },
+      "conversationGoal": {
+        "zh": "第49课会话练习",
+        "en": "Lesson 49 Conversation Practice"
+      },
+      "items": [
+        {
+          "id": "l49-conv-001",
+          "speaker": "",
+          "jp": "【音楽】",
+          "kana": "",
+          "zh": "【音乐】",
+          "keyword": "音楽",
+          "videoStart": "0:00.4",
+          "videoEnd": "0:21.5",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-conv-002",
+          "speaker": "",
+          "jp": "はい、ひまわり小学校です。",
+          "kana": "",
+          "zh": "您好，这里是向日葵小学。",
+          "keyword": "小学校です",
+          "videoStart": "0:21.5",
+          "videoEnd": "0:30.9",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-conv-003",
+          "speaker": "",
+          "jp": "おはようございます。5年2組のハンス・シュミットの母ですが、",
+          "kana": "",
+          "zh": "早上好，我是五年二班的汉斯·施密特的母亲。",
+          "keyword": "5年2組",
+          "videoStart": "0:30.9",
+          "videoEnd": "0:35.5",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-conv-004",
+          "speaker": "",
+          "jp": "井上先生はいらっしゃいますか？",
+          "kana": "",
+          "zh": "请问井上老师在吗？",
+          "keyword": "井上先生",
+          "videoStart": "0:35.5",
+          "videoEnd": "0:40.3",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-conv-005",
+          "speaker": "",
+          "jp": "まだなんですが。では、井上先生に伝えていただきたいんですが、",
+          "kana": "",
+          "zh": "他还没到……那我想拜托您转告井上老师。",
+          "keyword": "井上先生",
+          "videoStart": "0:40.3",
+          "videoEnd": "0:47.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-conv-006",
+          "speaker": "",
+          "jp": "はい、なんでしょうか？",
+          "kana": "はい、なんでしょうか？",
+          "zh": "好的，请说。",
+          "keyword": "",
+          "videoStart": "0:47.0",
+          "videoEnd": "0:49.2",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-conv-007",
+          "speaker": "",
+          "jp": "実はハンスが昨夜から熱を出しまして、熱がまだ下がらないんです。",
+          "kana": "",
+          "zh": "其实汉斯从昨晚开始发烧，到现在还没有退烧。",
+          "keyword": "昨夜",
+          "videoStart": "0:49.2",
+          "videoEnd": "0:56.5",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-conv-008",
+          "speaker": "",
+          "jp": "それは、いけませんね。",
+          "kana": "それは、いけませんね。",
+          "zh": "那可不行呢。",
+          "keyword": "",
+          "videoStart": "0:56.5",
+          "videoEnd": "0:59.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-conv-009",
+          "speaker": "",
+          "jp": "それで今日は学校を休ませますので、",
+          "kana": "",
+          "zh": "所以他今天会请假不上学，",
+          "keyword": "学校",
+          "videoStart": "0:59.1",
+          "videoEnd": "1:02.3",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-conv-010",
+          "speaker": "",
+          "jp": "先生によろしくお伝えください。",
+          "kana": "",
+          "zh": "请代我向老师转达。",
+          "keyword": "先生",
+          "videoStart": "1:02.3",
+          "videoEnd": "1:05.3",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-conv-011",
+          "speaker": "",
+          "jp": "わかりました。どうぞお大事に。",
+          "kana": "",
+          "zh": "好的，请多保重。",
+          "keyword": "大事",
+          "videoStart": "1:05.3",
+          "videoEnd": "1:08.5",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-conv-012",
+          "speaker": "",
+          "jp": "ありがとうございます。失礼いたします。",
+          "kana": "",
+          "zh": "谢谢您，失礼了。",
+          "keyword": "失礼",
+          "videoStart": "1:08.5",
+          "videoEnd": "1:12.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_vocab",
+      "id": "l49_conversation_vocab",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话关键词汇",
+        "en": "Conversation Key Vocabulary"
+      },
+      "description": {
+        "zh": "以下词汇从会话原文中提取。",
+        "en": "Vocabulary from the conversation."
+      },
+      "items": [
+        {
+          "word": "音楽",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l49-conv-001",
+          "sourceSentence": "【音楽】",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "はい",
+          "kana": "はい",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l49-conv-002",
+          "sourceSentence": "はい、ひまわり小学校です。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "ひまわり小学校です",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l49-conv-002",
+          "sourceSentence": "はい、ひまわり小学校です。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "おはようございます",
+          "kana": "おはようございます",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l49-conv-003",
+          "sourceSentence": "おはようございます。5年2組のハンス・シュミットの母ですが、",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "組のハンス・シュミットの母ですが",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l49-conv-003",
+          "sourceSentence": "おはようございます。5年2組のハンス・シュミットの母ですが、",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "井上先生はいらっしゃいますか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l49-conv-004",
+          "sourceSentence": "井上先生はいらっしゃいますか？",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "まだなんですが",
+          "kana": "まだなんですが",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l49-conv-005",
+          "sourceSentence": "まだなんですが。では、井上先生に伝えていただきたいんですが、",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "では",
+          "kana": "では",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l49-conv-005",
+          "sourceSentence": "まだなんですが。では、井上先生に伝えていただきたいんですが、",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "井上先生に伝えていただきたいんですが",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l49-conv-005",
+          "sourceSentence": "まだなんですが。では、井上先生に伝えていただきたいんですが、",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "なんでしょうか",
+          "kana": "なんでしょうか",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l49-conv-006",
+          "sourceSentence": "はい、なんでしょうか？",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "実はハンスが昨夜から熱を出しまして",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l49-conv-007",
+          "sourceSentence": "実はハンスが昨夜から熱を出しまして、熱がまだ下がらないんです。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "熱がまだ下がらないんです",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l49-conv-007",
+          "sourceSentence": "実はハンスが昨夜から熱を出しまして、熱がまだ下がらないんです。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "それは",
+          "kana": "それは",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l49-conv-008",
+          "sourceSentence": "それは、いけませんね。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "いけませんね",
+          "kana": "いけませんね",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l49-conv-008",
+          "sourceSentence": "それは、いけませんね。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "それで今日は学校を休ませますので",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l49-conv-009",
+          "sourceSentence": "それで今日は学校を休ませますので、",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "先生によろしくお伝えください",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l49-conv-010",
+          "sourceSentence": "先生によろしくお伝えください。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "わかりました",
+          "kana": "わかりました",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l49-conv-011",
+          "sourceSentence": "わかりました。どうぞお大事に。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "どうぞお大事に",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l49-conv-011",
+          "sourceSentence": "わかりました。どうぞお大事に。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "ありがとうございます",
+          "kana": "ありがとうございます",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l49-conv-012",
+          "sourceSentence": "ありがとうございます。失礼いたします。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "失礼いたします",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l49-conv-012",
+          "sourceSentence": "ありがとうございます。失礼いたします。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_grammar",
+      "id": "l49_conversation_grammar",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话核心语法",
+        "en": "Conversation Core Grammar"
+      },
+      "description": {
+        "zh": "以下语法点从会话原文中提取。",
+        "en": "Grammar points from the conversation."
+      },
+      "items": [
+        {
+          "pattern": "〜です",
+          "meaning": {
+            "zh": "是…（礼貌判断）",
+            "en": "is/am (polite copula)"
+          },
+          "conversationExample": "はい、ひまわり小学校です。",
+          "fromConversationId": "l49-conv-002",
+          "sourceSentence": "はい、ひまわり小学校です。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「です」是日语礼貌判断助动词，相当于中文的\"是\"。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ます",
+          "meaning": {
+            "zh": "（动词敬体）",
+            "en": "polite verb form"
+          },
+          "conversationExample": "おはようございます。5年2組のハンス・シュミットの母ですが、",
+          "fromConversationId": "l49-conv-003",
+          "sourceSentence": "おはようございます。5年2組のハンス・シュミットの母ですが、",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ます」是动词的敬体形式。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜か",
+          "meaning": {
+            "zh": "…吗？（疑问）",
+            "en": "question marker"
+          },
+          "conversationExample": "井上先生はいらっしゃいますか？",
+          "fromConversationId": "l49-conv-004",
+          "sourceSentence": "井上先生はいらっしゃいますか？",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "句尾加「か」构成疑问句。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜に〜",
+          "meaning": {
+            "zh": "在/向…",
+            "en": "to/at"
+          },
+          "conversationExample": "まだなんですが。では、井上先生に伝えていただきたいんですが、",
+          "fromConversationId": "l49-conv-005",
+          "sourceSentence": "まだなんですが。では、井上先生に伝えていただきたいんですが、",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「に」表示时间、地点或方向。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜から",
+          "meaning": {
+            "zh": "从…",
+            "en": "from"
+          },
+          "conversationExample": "実はハンスが昨夜から熱を出しまして、熱がまだ下がらないんです。",
+          "fromConversationId": "l49-conv-007",
+          "sourceSentence": "実はハンスが昨夜から熱を出しまして、熱がまだ下がらないんです。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「から」表示起点或来源。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜を〜",
+          "meaning": {
+            "zh": "…（宾语标记）",
+            "en": "object marker"
+          },
+          "conversationExample": "実はハンスが昨夜から熱を出しまして、熱がまだ下がらないんです。",
+          "fromConversationId": "l49-conv-007",
+          "sourceSentence": "実はハンスが昨夜から熱を出しまして、熱がまだ下がらないんです。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「を」标记动作的对象。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ません",
+          "meaning": {
+            "zh": "不…（否定）",
+            "en": "negative form"
+          },
+          "conversationExample": "それは、いけませんね。",
+          "fromConversationId": "l49-conv-008",
+          "sourceSentence": "それは、いけませんね。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ません」是「ます」的否定形式。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ました",
+          "meaning": {
+            "zh": "…了（过去）",
+            "en": "past tense"
+          },
+          "conversationExample": "わかりました。どうぞお大事に。",
+          "fromConversationId": "l49-conv-011",
+          "sourceSentence": "わかりました。どうぞお大事に。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ました」是「ます」的过去形。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_examples",
+      "id": "l49_conversation_examples",
+      "sourceType": "ai_generated_from_official_conversation",
+      "title": {
+        "zh": "会话替换例句",
+        "en": "Conversation Replacement Examples"
+      },
+      "description": {
+        "zh": "以下例句基于会话原句生成。",
+        "en": "Examples generated from conversation sentences."
+      },
+      "items": [
+        {
+          "pattern": "音楽",
+          "originalSentence": "【音楽】",
+          "fromConversationId": "l49-conv-001",
+          "sourceSentence": "【音楽】",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "小学校です",
+          "originalSentence": "はい、ひまわり小学校です。",
+          "fromConversationId": "l49-conv-002",
+          "sourceSentence": "はい、ひまわり小学校です。",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [
+            {
+              "jp": "はい、ひまわり佐藤です。",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "はい、ひまわり田中です。",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "はい、ひまわり山田です。",
+              "kana": "",
+              "zh": ""
+            }
+          ],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "5年2組",
+          "originalSentence": "おはようございます。5年2組のハンス・シュミットの母ですが、",
+          "fromConversationId": "l49-conv-003",
+          "sourceSentence": "おはようございます。5年2組のハンス・シュミットの母ですが、",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "井上先生",
+          "originalSentence": "井上先生はいらっしゃいますか？",
+          "fromConversationId": "l49-conv-004",
+          "sourceSentence": "井上先生はいらっしゃいますか？",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "井上先生",
+          "originalSentence": "まだなんですが。では、井上先生に伝えていただきたいんですが、",
+          "fromConversationId": "l49-conv-005",
+          "sourceSentence": "まだなんですが。では、井上先生に伝えていただきたいんですが、",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "はい、なんでしょうか？",
+          "fromConversationId": "l49-conv-006",
+          "sourceSentence": "はい、なんでしょうか？",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "昨夜",
+          "originalSentence": "実はハンスが昨夜から熱を出しまして、熱がまだ下がらないんです。",
+          "fromConversationId": "l49-conv-007",
+          "sourceSentence": "実はハンスが昨夜から熱を出しまして、熱がまだ下がらないんです。",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "それは、いけませんね。",
+          "fromConversationId": "l49-conv-008",
+          "sourceSentence": "それは、いけませんね。",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "学校",
+          "originalSentence": "それで今日は学校を休ませますので、",
+          "fromConversationId": "l49-conv-009",
+          "sourceSentence": "それで今日は学校を休ませますので、",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "先生",
+          "originalSentence": "先生によろしくお伝えください。",
+          "fromConversationId": "l49-conv-010",
+          "sourceSentence": "先生によろしくお伝えください。",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "大事",
+          "originalSentence": "わかりました。どうぞお大事に。",
+          "fromConversationId": "l49-conv-011",
+          "sourceSentence": "わかりました。どうぞお大事に。",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "失礼",
+          "originalSentence": "ありがとうございます。失礼いたします。",
+          "fromConversationId": "l49-conv-012",
+          "sourceSentence": "ありがとうございます。失礼いたします。",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_quiz",
+      "id": "l49_conversation_quiz",
+      "sourceType": "generated_from_official_video_subtitle",
+      "title": {
+        "zh": "会话专项测试",
+        "en": "Conversation Quiz"
+      },
+      "description": {
+        "zh": "测试题围绕会话内容设计。",
+        "en": "Quiz based on the conversation."
+      },
+      "items": [
+        {
+          "id": "l49-q-001-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「【音楽】」是什么意思？",
+            "en": "What does \"【音楽】\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "【音乐】",
+                "en": "【音乐】"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "【音楽】",
+          "fromConversationId": "l49-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-q-001-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「【音乐】」的日语说法。",
+            "en": "Select Japanese for \"【音乐】\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "【音楽】"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "【音楽】",
+          "fromConversationId": "l49-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-q-001-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「【音楽】」的中文意思是？",
+            "en": "What does \"【音楽】\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "【音乐】",
+                "en": "【音乐】"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "【音楽】",
+          "fromConversationId": "l49-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-q-002-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「はい、ひまわり小学校です。」是什么意思？",
+            "en": "What does \"はい、ひまわり小学校です。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "您好，这里是向日葵小学。",
+                "en": "您好，这里是向日葵小学。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "はい、ひまわり小学校です。",
+          "fromConversationId": "l49-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-q-002-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「您好，这里是向日葵小学。」的日语说法。",
+            "en": "Select Japanese for \"您好，这里是向日葵小学。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "はい、ひまわり小学校です。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい、ひまわり小学校です。",
+          "fromConversationId": "l49-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-q-002-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「はい、ひまわり小学校です。」的中文意思是？",
+            "en": "What does \"はい、ひまわり小学校です。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "您好，这里是向日葵小学。",
+                "en": "您好，这里是向日葵小学。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい、ひまわり小学校です。",
+          "fromConversationId": "l49-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-q-003-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「おはようございます。5年2組のハンス・シュミットの母ですが、」是什么意思？",
+            "en": "What does \"おはようございます。5年2組のハンス・シュミットの母ですが、\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "早上好，我是五年二班的汉斯·施密特的母亲。",
+                "en": "早上好，我是五年二班的汉斯·施密特的母亲。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "おはようございます。5年2組のハンス・シュミットの母ですが、",
+          "fromConversationId": "l49-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-q-003-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「早上好，我是五年二班的汉斯·施密特的母亲。」的日语说法。",
+            "en": "Select Japanese for \"早上好，我是五年二班的汉斯·施密特的母亲。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "おはようございます。5年2組のハンス・シュミットの母ですが、"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "おはようございます。5年2組のハンス・シュミットの母ですが、",
+          "fromConversationId": "l49-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-q-003-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「おはようございます。5年2組のハンス・シュミットの母ですが、」的中文意思是？",
+            "en": "What does \"おはようございます。5年2組のハンス・シュミットの母ですが、\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "早上好，我是五年二班的汉斯·施密特的母亲。",
+                "en": "早上好，我是五年二班的汉斯·施密特的母亲。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "おはようございます。5年2組のハンス・シュミットの母ですが、",
+          "fromConversationId": "l49-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-q-004-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「井上先生はいらっしゃいますか？」是什么意思？",
+            "en": "What does \"井上先生はいらっしゃいますか？\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请问井上老师在吗？",
+                "en": "请问井上老师在吗？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "井上先生はいらっしゃいますか？",
+          "fromConversationId": "l49-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-q-004-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「请问井上老师在吗？」的日语说法。",
+            "en": "Select Japanese for \"请问井上老师在吗？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "井上先生はいらっしゃいますか？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "井上先生はいらっしゃいますか？",
+          "fromConversationId": "l49-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-q-004-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「井上先生はいらっしゃいますか？」的中文意思是？",
+            "en": "What does \"井上先生はいらっしゃいますか？\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请问井上老师在吗？",
+                "en": "请问井上老师在吗？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "井上先生はいらっしゃいますか？",
+          "fromConversationId": "l49-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-q-005-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「まだなんですが。では、井上先生に伝えていただきたいんですが、」是什么意思？",
+            "en": "What does \"まだなんですが。では、井上先生に伝えていただきたいんですが、\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "他还没到……那我想拜托您转告井上老师。",
+                "en": "他还没到……那我想拜托您转告井上老师。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "まだなんですが。では、井上先生に伝えていただきたいんですが、",
+          "fromConversationId": "l49-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-q-005-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「他还没到……那我想拜托您转告井上老师。」的日语说法。",
+            "en": "Select Japanese for \"他还没到……那我想拜托您转告井上老师。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "まだなんですが。では、井上先生に伝えていただきたいんですが、"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "まだなんですが。では、井上先生に伝えていただきたいんですが、",
+          "fromConversationId": "l49-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-q-005-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「まだなんですが。では、井上先生に伝えていただきたいんですが、」的中文意思是？",
+            "en": "What does \"まだなんですが。では、井上先生に伝えていただきたいんですが、\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "他还没到……那我想拜托您转告井上老师。",
+                "en": "他还没到……那我想拜托您转告井上老师。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "まだなんですが。では、井上先生に伝えていただきたいんですが、",
+          "fromConversationId": "l49-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-q-006-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「はい、なんでしょうか？」是什么意思？",
+            "en": "What does \"はい、なんでしょうか？\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "好的，请说。",
+                "en": "好的，请说。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "はい、なんでしょうか？",
+          "fromConversationId": "l49-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-q-006-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「好的，请说。」的日语说法。",
+            "en": "Select Japanese for \"好的，请说。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "はい、なんでしょうか？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい、なんでしょうか？",
+          "fromConversationId": "l49-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-q-006-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「はい、なんでしょうか？」的中文意思是？",
+            "en": "What does \"はい、なんでしょうか？\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "好的，请说。",
+                "en": "好的，请说。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい、なんでしょうか？",
+          "fromConversationId": "l49-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-q-007-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「実はハンスが昨夜から熱を出しまして、熱がまだ下がらないんです。」是什么意思？",
+            "en": "What does \"実はハンスが昨夜から熱を出しまして、熱がまだ下がらないんです。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "其实汉斯从昨晚开始发烧，到现在还没有退烧。",
+                "en": "其实汉斯从昨晚开始发烧，到现在还没有退烧。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "実はハンスが昨夜から熱を出しまして、熱がまだ下がらないんです。",
+          "fromConversationId": "l49-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-q-007-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「其实汉斯从昨晚开始发烧，到现在还没有退烧。」的日语说法。",
+            "en": "Select Japanese for \"其实汉斯从昨晚开始发烧，到现在还没有退烧。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "実はハンスが昨夜から熱を出しまして、熱がまだ下がらないんです。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "実はハンスが昨夜から熱を出しまして、熱がまだ下がらないんです。",
+          "fromConversationId": "l49-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-q-007-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「実はハンスが昨夜から熱を出しまして、熱がまだ下がらないんです。」的中文意思是？",
+            "en": "What does \"実はハンスが昨夜から熱を出しまして、熱がまだ下がらないんです。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "其实汉斯从昨晚开始发烧，到现在还没有退烧。",
+                "en": "其实汉斯从昨晚开始发烧，到现在还没有退烧。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "実はハンスが昨夜から熱を出しまして、熱がまだ下がらないんです。",
+          "fromConversationId": "l49-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-q-008-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「それは、いけませんね。」是什么意思？",
+            "en": "What does \"それは、いけませんね。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那可不行呢。",
+                "en": "那可不行呢。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "それは、いけませんね。",
+          "fromConversationId": "l49-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-q-008-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「那可不行呢。」的日语说法。",
+            "en": "Select Japanese for \"那可不行呢。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "それは、いけませんね。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "それは、いけませんね。",
+          "fromConversationId": "l49-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-q-008-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「それは、いけませんね。」的中文意思是？",
+            "en": "What does \"それは、いけませんね。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那可不行呢。",
+                "en": "那可不行呢。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "それは、いけませんね。",
+          "fromConversationId": "l49-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-q-009-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「それで今日は学校を休ませますので、」是什么意思？",
+            "en": "What does \"それで今日は学校を休ませますので、\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "所以他今天会请假不上学，",
+                "en": "所以他今天会请假不上学，"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "それで今日は学校を休ませますので、",
+          "fromConversationId": "l49-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-q-009-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「所以他今天会请假不上学，」的日语说法。",
+            "en": "Select Japanese for \"所以他今天会请假不上学，\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "それで今日は学校を休ませますので、"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "それで今日は学校を休ませますので、",
+          "fromConversationId": "l49-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-q-009-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「それで今日は学校を休ませますので、」的中文意思是？",
+            "en": "What does \"それで今日は学校を休ませますので、\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "所以他今天会请假不上学，",
+                "en": "所以他今天会请假不上学，"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "それで今日は学校を休ませますので、",
+          "fromConversationId": "l49-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-q-010-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「先生によろしくお伝えください。」是什么意思？",
+            "en": "What does \"先生によろしくお伝えください。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请代我向老师转达。",
+                "en": "请代我向老师转达。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "先生によろしくお伝えください。",
+          "fromConversationId": "l49-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-q-010-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「请代我向老师转达。」的日语说法。",
+            "en": "Select Japanese for \"请代我向老师转达。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "先生によろしくお伝えください。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "先生によろしくお伝えください。",
+          "fromConversationId": "l49-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-q-010-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「先生によろしくお伝えください。」的中文意思是？",
+            "en": "What does \"先生によろしくお伝えください。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请代我向老师转达。",
+                "en": "请代我向老师转达。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "先生によろしくお伝えください。",
+          "fromConversationId": "l49-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-q-011-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「わかりました。どうぞお大事に。」是什么意思？",
+            "en": "What does \"わかりました。どうぞお大事に。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "好的，请多保重。",
+                "en": "好的，请多保重。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "わかりました。どうぞお大事に。",
+          "fromConversationId": "l49-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-q-011-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「好的，请多保重。」的日语说法。",
+            "en": "Select Japanese for \"好的，请多保重。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "わかりました。どうぞお大事に。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "わかりました。どうぞお大事に。",
+          "fromConversationId": "l49-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-q-011-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「わかりました。どうぞお大事に。」的中文意思是？",
+            "en": "What does \"わかりました。どうぞお大事に。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "好的，请多保重。",
+                "en": "好的，请多保重。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "わかりました。どうぞお大事に。",
+          "fromConversationId": "l49-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-q-012-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「ありがとうございます。失礼いたします。」是什么意思？",
+            "en": "What does \"ありがとうございます。失礼いたします。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "谢谢您，失礼了。",
+                "en": "谢谢您，失礼了。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "ありがとうございます。失礼いたします。",
+          "fromConversationId": "l49-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-q-012-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「谢谢您，失礼了。」的日语说法。",
+            "en": "Select Japanese for \"谢谢您，失礼了。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "ありがとうございます。失礼いたします。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ありがとうございます。失礼いたします。",
+          "fromConversationId": "l49-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l49-q-012-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「ありがとうございます。失礼いたします。」的中文意思是？",
+            "en": "What does \"ありがとうございます。失礼いたします。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "谢谢您，失礼了。",
+                "en": "谢谢您，失礼了。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ありがとうございます。失礼いたします。",
+          "fromConversationId": "l49-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
     }
   ],
   "conversationVideo": {
@@ -831,6 +2424,22 @@
     "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P49_%E7%AC%AC49%E8%AA%B2.mp4",
     "subtitleUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P49_%E7%AC%AC49%E8%AA%B2.json",
     "sourceType": "official_video_resource",
-    "status": "linked_not_imported"
+    "status": "imported_with_subtitles"
+  },
+  "conversationMainlineStatus": {
+    "videoLinked": "published",
+    "subtitleParsed": "published",
+    "subtitleCleaned": "published",
+    "humanReviewed": "not_started",
+    "importedToLessonJson": "published",
+    "vocabReady": "needs_review",
+    "grammarReady": "needs_review",
+    "examplesReady": "needs_review",
+    "quizReady": "needs_review",
+    "reciteReady": "needs_review",
+    "recordingReady": "published",
+    "scoringReady": "published",
+    "publishedToStaging": "not_started",
+    "verifiedOnline": "not_started"
   }
 }

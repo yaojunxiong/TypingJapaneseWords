@@ -1024,6 +1024,1319 @@
           }
         }
       ]
+    },
+    {
+      "type": "conversation",
+      "id": "l36_conversation",
+      "sourceType": "official_video_subtitle",
+      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P36_%E7%AC%AC36%E8%AA%B2.json",
+      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P36_%E7%AC%AC36%E8%AA%B2.mp4",
+      "title": {
+        "zh": "会话背诵",
+        "en": "Conversation Practice"
+      },
+      "dialogTitle": {
+        "zh": "第36课会话",
+        "en": "第36课会话"
+      },
+      "conversationGoal": {
+        "zh": "第36课会话练习",
+        "en": "Lesson 36 Conversation Practice"
+      },
+      "items": [
+        {
+          "id": "l36-conv-001",
+          "speaker": "",
+          "jp": "みなさんこんにちは。今日のお客様は、今年80歳の小川よねさんです。",
+          "kana": "",
+          "zh": "大家好，今天的嘉宾是今年已经80岁的**小川よね女士**。",
+          "keyword": "小川よ",
+          "videoStart": "0:00.0",
+          "videoEnd": "0:16.2",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l36-conv-002",
+          "speaker": "",
+          "jp": "こんにちは。お元気ですね。何か特別なことをしていらっしゃいますか？",
+          "kana": "",
+          "zh": "您好，看您精神很好，平时有什么特别的养生秘诀吗？",
+          "keyword": "特別",
+          "videoStart": "0:16.2",
+          "videoEnd": "0:23.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l36-conv-003",
+          "speaker": "",
+          "jp": "毎日運動するようにしています。どんな運動ですか？",
+          "kana": "",
+          "zh": "我每天都会尽量锻炼。是什么样的运动呢？",
+          "keyword": "運動です",
+          "videoStart": "0:23.0",
+          "videoEnd": "0:30.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l36-conv-004",
+          "speaker": "",
+          "jp": "ダンスとか、水泳とか。",
+          "kana": "",
+          "zh": "像是跳舞啊、游泳之类的。",
+          "keyword": "水泳",
+          "videoStart": "0:30.1",
+          "videoEnd": "0:34.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l36-conv-005",
+          "speaker": "",
+          "jp": "最近、500メートルを泳げるようになりました。すごいですね！食べ物は？",
+          "kana": "",
+          "zh": "最近我已经能游500米了。——好厉害啊！那饮食方面呢？",
+          "keyword": "500",
+          "videoStart": "0:34.1",
+          "videoEnd": "0:42.4",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l36-conv-006",
+          "speaker": "",
+          "jp": "何でも食べますが、特に魚が好きです。毎日違う料理を作るようにしています。",
+          "kana": "",
+          "zh": "我什么都吃，特别喜欢吃鱼。我尽量每天都做不一样的菜。",
+          "keyword": "料理",
+          "videoStart": "0:42.4",
+          "videoEnd": "0:51.8",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l36-conv-007",
+          "speaker": "",
+          "jp": "頭と体をよく使っていらっしゃるんですね。来年、フランスへ行きたいと思っています。",
+          "kana": "",
+          "zh": "您真是动脑又动身体呢。我打算明年去法国旅行。",
+          "keyword": "来年",
+          "videoStart": "0:51.8",
+          "videoEnd": "0:59.9",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l36-conv-008",
+          "speaker": "",
+          "jp": "それでフランス語の勉強も始めました。何でもチャレンジする気持ちが大切なんですね。",
+          "kana": "",
+          "zh": "所以我也开始学习法语了。我觉得敢于挑战一切的心态非常重要。",
+          "keyword": "大切",
+          "videoStart": "0:59.9",
+          "videoEnd": "1:07.6",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l36-conv-009",
+          "speaker": "",
+          "jp": "楽しいお話、どうもありがとうございました。",
+          "kana": "",
+          "zh": "感谢您带来的精彩分享。",
+          "keyword": "",
+          "videoStart": "1:07.6",
+          "videoEnd": "1:12.2",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_vocab",
+      "id": "l36_conversation_vocab",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话关键词汇",
+        "en": "Conversation Key Vocabulary"
+      },
+      "description": {
+        "zh": "以下词汇从会话原文中提取。",
+        "en": "Vocabulary from the conversation."
+      },
+      "items": [
+        {
+          "word": "みなさんこんにちは",
+          "kana": "みなさんこんにちは",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l36-conv-001",
+          "sourceSentence": "みなさんこんにちは。今日のお客様は、今年80歳の小川よねさんです。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "今日のお客様は",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l36-conv-001",
+          "sourceSentence": "みなさんこんにちは。今日のお客様は、今年80歳の小川よねさんです。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "今年",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l36-conv-001",
+          "sourceSentence": "みなさんこんにちは。今日のお客様は、今年80歳の小川よねさんです。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "歳の小川よねさんです",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l36-conv-001",
+          "sourceSentence": "みなさんこんにちは。今日のお客様は、今年80歳の小川よねさんです。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "こんにちは",
+          "kana": "こんにちは",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l36-conv-002",
+          "sourceSentence": "こんにちは。お元気ですね。何か特別なことをしていらっしゃいますか？",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "お元気ですね",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l36-conv-002",
+          "sourceSentence": "こんにちは。お元気ですね。何か特別なことをしていらっしゃいますか？",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "何か特別なことをしていらっしゃいますか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l36-conv-002",
+          "sourceSentence": "こんにちは。お元気ですね。何か特別なことをしていらっしゃいますか？",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "毎日運動するようにしています",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l36-conv-003",
+          "sourceSentence": "毎日運動するようにしています。どんな運動ですか？",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "どんな運動ですか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l36-conv-003",
+          "sourceSentence": "毎日運動するようにしています。どんな運動ですか？",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "ダンスとか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l36-conv-004",
+          "sourceSentence": "ダンスとか、水泳とか。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "水泳とか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l36-conv-004",
+          "sourceSentence": "ダンスとか、水泳とか。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "最近",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l36-conv-005",
+          "sourceSentence": "最近、500メートルを泳げるようになりました。すごいですね！食べ物は？",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "メートルを泳げるようになりました",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l36-conv-005",
+          "sourceSentence": "最近、500メートルを泳げるようになりました。すごいですね！食べ物は？",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "すごいですね",
+          "kana": "すごいですね",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l36-conv-005",
+          "sourceSentence": "最近、500メートルを泳げるようになりました。すごいですね！食べ物は？",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "食べ物は",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l36-conv-005",
+          "sourceSentence": "最近、500メートルを泳げるようになりました。すごいですね！食べ物は？",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "何でも食べますが",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l36-conv-006",
+          "sourceSentence": "何でも食べますが、特に魚が好きです。毎日違う料理を作るようにしています。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "特に魚が好きです",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l36-conv-006",
+          "sourceSentence": "何でも食べますが、特に魚が好きです。毎日違う料理を作るようにしています。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "毎日違う料理を作るようにしています",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l36-conv-006",
+          "sourceSentence": "何でも食べますが、特に魚が好きです。毎日違う料理を作るようにしています。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "頭と体をよく使っていらっしゃるんですね",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l36-conv-007",
+          "sourceSentence": "頭と体をよく使っていらっしゃるんですね。来年、フランスへ行きたいと思っています。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "来年",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l36-conv-007",
+          "sourceSentence": "頭と体をよく使っていらっしゃるんですね。来年、フランスへ行きたいと思っています。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "フランスへ行きたいと思っています",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l36-conv-007",
+          "sourceSentence": "頭と体をよく使っていらっしゃるんですね。来年、フランスへ行きたいと思っています。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "それでフランス語の勉強も始めました",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l36-conv-008",
+          "sourceSentence": "それでフランス語の勉強も始めました。何でもチャレンジする気持ちが大切なんですね。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "何でもチャレンジする気持ちが大切なんですね",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l36-conv-008",
+          "sourceSentence": "それでフランス語の勉強も始めました。何でもチャレンジする気持ちが大切なんですね。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "楽しいお話",
+          "kana": "",
+          "zh": "",
+          "importance": "support",
+          "fromConversationId": "l36-conv-009",
+          "sourceSentence": "楽しいお話、どうもありがとうございました。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "どうもありがとうございました",
+          "kana": "どうもありがとうございました",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l36-conv-009",
+          "sourceSentence": "楽しいお話、どうもありがとうございました。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_grammar",
+      "id": "l36_conversation_grammar",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话核心语法",
+        "en": "Conversation Core Grammar"
+      },
+      "description": {
+        "zh": "以下语法点从会话原文中提取。",
+        "en": "Grammar points from the conversation."
+      },
+      "items": [
+        {
+          "pattern": "〜です",
+          "meaning": {
+            "zh": "是…（礼貌判断）",
+            "en": "is/am (polite copula)"
+          },
+          "conversationExample": "みなさんこんにちは。今日のお客様は、今年80歳の小川よねさんです。",
+          "fromConversationId": "l36-conv-001",
+          "sourceSentence": "みなさんこんにちは。今日のお客様は、今年80歳の小川よねさんです。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「です」是日语礼貌判断助动词，相当于中文的\"是\"。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜に〜",
+          "meaning": {
+            "zh": "在/向…",
+            "en": "to/at"
+          },
+          "conversationExample": "みなさんこんにちは。今日のお客様は、今年80歳の小川よねさんです。",
+          "fromConversationId": "l36-conv-001",
+          "sourceSentence": "みなさんこんにちは。今日のお客様は、今年80歳の小川よねさんです。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「に」表示时间、地点或方向。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜か",
+          "meaning": {
+            "zh": "…吗？（疑问）",
+            "en": "question marker"
+          },
+          "conversationExample": "こんにちは。お元気ですね。何か特別なことをしていらっしゃいますか？",
+          "fromConversationId": "l36-conv-002",
+          "sourceSentence": "こんにちは。お元気ですね。何か特別なことをしていらっしゃいますか？",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "句尾加「か」构成疑问句。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜を〜",
+          "meaning": {
+            "zh": "…（宾语标记）",
+            "en": "object marker"
+          },
+          "conversationExample": "こんにちは。お元気ですね。何か特別なことをしていらっしゃいますか？",
+          "fromConversationId": "l36-conv-002",
+          "sourceSentence": "こんにちは。お元気ですね。何か特別なことをしていらっしゃいますか？",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「を」标记动作的对象。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ます",
+          "meaning": {
+            "zh": "（动词敬体）",
+            "en": "polite verb form"
+          },
+          "conversationExample": "こんにちは。お元気ですね。何か特別なことをしていらっしゃいますか？",
+          "fromConversationId": "l36-conv-002",
+          "sourceSentence": "こんにちは。お元気ですね。何か特別なことをしていらっしゃいますか？",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ます」是动词的敬体形式。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ました",
+          "meaning": {
+            "zh": "…了（过去）",
+            "en": "past tense"
+          },
+          "conversationExample": "最近、500メートルを泳げるようになりました。すごいですね！食べ物は？",
+          "fromConversationId": "l36-conv-005",
+          "sourceSentence": "最近、500メートルを泳げるようになりました。すごいですね！食べ物は？",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ました」是「ます」的过去形。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_examples",
+      "id": "l36_conversation_examples",
+      "sourceType": "ai_generated_from_official_conversation",
+      "title": {
+        "zh": "会话替换例句",
+        "en": "Conversation Replacement Examples"
+      },
+      "description": {
+        "zh": "以下例句基于会话原句生成。",
+        "en": "Examples generated from conversation sentences."
+      },
+      "items": [
+        {
+          "pattern": "小川よ",
+          "originalSentence": "みなさんこんにちは。今日のお客様は、今年80歳の小川よねさんです。",
+          "fromConversationId": "l36-conv-001",
+          "sourceSentence": "みなさんこんにちは。今日のお客様は、今年80歳の小川よねさんです。",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "特別",
+          "originalSentence": "こんにちは。お元気ですね。何か特別なことをしていらっしゃいますか？",
+          "fromConversationId": "l36-conv-002",
+          "sourceSentence": "こんにちは。お元気ですね。何か特別なことをしていらっしゃいますか？",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "運動です",
+          "originalSentence": "毎日運動するようにしています。どんな運動ですか？",
+          "fromConversationId": "l36-conv-003",
+          "sourceSentence": "毎日運動するようにしています。どんな運動ですか？",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "水泳",
+          "originalSentence": "ダンスとか、水泳とか。",
+          "fromConversationId": "l36-conv-004",
+          "sourceSentence": "ダンスとか、水泳とか。",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "500",
+          "originalSentence": "最近、500メートルを泳げるようになりました。すごいですね！食べ物は？",
+          "fromConversationId": "l36-conv-005",
+          "sourceSentence": "最近、500メートルを泳げるようになりました。すごいですね！食べ物は？",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "料理",
+          "originalSentence": "何でも食べますが、特に魚が好きです。毎日違う料理を作るようにしています。",
+          "fromConversationId": "l36-conv-006",
+          "sourceSentence": "何でも食べますが、特に魚が好きです。毎日違う料理を作るようにしています。",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "来年",
+          "originalSentence": "頭と体をよく使っていらっしゃるんですね。来年、フランスへ行きたいと思っています。",
+          "fromConversationId": "l36-conv-007",
+          "sourceSentence": "頭と体をよく使っていらっしゃるんですね。来年、フランスへ行きたいと思っています。",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "大切",
+          "originalSentence": "それでフランス語の勉強も始めました。何でもチャレンジする気持ちが大切なんですね。",
+          "fromConversationId": "l36-conv-008",
+          "sourceSentence": "それでフランス語の勉強も始めました。何でもチャレンジする気持ちが大切なんですね。",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "楽しいお話、どうもありがとうございました。",
+          "fromConversationId": "l36-conv-009",
+          "sourceSentence": "楽しいお話、どうもありがとうございました。",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_quiz",
+      "id": "l36_conversation_quiz",
+      "sourceType": "generated_from_official_video_subtitle",
+      "title": {
+        "zh": "会话专项测试",
+        "en": "Conversation Quiz"
+      },
+      "description": {
+        "zh": "测试题围绕会话内容设计。",
+        "en": "Quiz based on the conversation."
+      },
+      "items": [
+        {
+          "id": "l36-q-001-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「みなさんこんにちは。今日のお客様は、今年80歳の小川よねさんです。」是什么意思？",
+            "en": "What does \"みなさんこんにちは。今日のお客様は、今年80歳の小川よねさんです。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "大家好，今天的嘉宾是今年已经80岁的**小川よね女士**。",
+                "en": "大家好，今天的嘉宾是今年已经80岁的**小川よね女士**。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "みなさんこんにちは。今日のお客様は、今年80歳の小川よねさんです。",
+          "fromConversationId": "l36-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l36-q-001-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「大家好，今天的嘉宾是今年已经80岁的**小川よね女士**。」的日语说法。",
+            "en": "Select Japanese for \"大家好，今天的嘉宾是今年已经80岁的**小川よね女士**。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "みなさんこんにちは。今日のお客様は、今年80歳の小川よねさんです。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "みなさんこんにちは。今日のお客様は、今年80歳の小川よねさんです。",
+          "fromConversationId": "l36-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l36-q-001-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「みなさんこんにちは。今日のお客様は、今年80歳の小川よねさんです。」的中文意思是？",
+            "en": "What does \"みなさんこんにちは。今日のお客様は、今年80歳の小川よねさんです。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "大家好，今天的嘉宾是今年已经80岁的**小川よね女士**。",
+                "en": "大家好，今天的嘉宾是今年已经80岁的**小川よね女士**。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "みなさんこんにちは。今日のお客様は、今年80歳の小川よねさんです。",
+          "fromConversationId": "l36-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l36-q-002-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「こんにちは。お元気ですね。何か特別なことをしていらっしゃいますか？」是什么意思？",
+            "en": "What does \"こんにちは。お元気ですね。何か特別なことをしていらっしゃいますか？\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "您好，看您精神很好，平时有什么特别的养生秘诀吗？",
+                "en": "您好，看您精神很好，平时有什么特别的养生秘诀吗？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "こんにちは。お元気ですね。何か特別なことをしていらっしゃいますか？",
+          "fromConversationId": "l36-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l36-q-002-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「您好，看您精神很好，平时有什么特别的养生秘诀吗？」的日语说法。",
+            "en": "Select Japanese for \"您好，看您精神很好，平时有什么特别的养生秘诀吗？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "こんにちは。お元気ですね。何か特別なことをしていらっしゃいますか？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "こんにちは。お元気ですね。何か特別なことをしていらっしゃいますか？",
+          "fromConversationId": "l36-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l36-q-002-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「こんにちは。お元気ですね。何か特別なことをしていらっしゃいますか？」的中文意思是？",
+            "en": "What does \"こんにちは。お元気ですね。何か特別なことをしていらっしゃいますか？\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "您好，看您精神很好，平时有什么特别的养生秘诀吗？",
+                "en": "您好，看您精神很好，平时有什么特别的养生秘诀吗？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "こんにちは。お元気ですね。何か特別なことをしていらっしゃいますか？",
+          "fromConversationId": "l36-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l36-q-003-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「毎日運動するようにしています。どんな運動ですか？」是什么意思？",
+            "en": "What does \"毎日運動するようにしています。どんな運動ですか？\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我每天都会尽量锻炼。是什么样的运动呢？",
+                "en": "我每天都会尽量锻炼。是什么样的运动呢？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "毎日運動するようにしています。どんな運動ですか？",
+          "fromConversationId": "l36-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l36-q-003-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「我每天都会尽量锻炼。是什么样的运动呢？」的日语说法。",
+            "en": "Select Japanese for \"我每天都会尽量锻炼。是什么样的运动呢？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "毎日運動するようにしています。どんな運動ですか？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "毎日運動するようにしています。どんな運動ですか？",
+          "fromConversationId": "l36-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l36-q-003-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「毎日運動するようにしています。どんな運動ですか？」的中文意思是？",
+            "en": "What does \"毎日運動するようにしています。どんな運動ですか？\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我每天都会尽量锻炼。是什么样的运动呢？",
+                "en": "我每天都会尽量锻炼。是什么样的运动呢？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "毎日運動するようにしています。どんな運動ですか？",
+          "fromConversationId": "l36-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l36-q-004-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「ダンスとか、水泳とか。」是什么意思？",
+            "en": "What does \"ダンスとか、水泳とか。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "像是跳舞啊、游泳之类的。",
+                "en": "像是跳舞啊、游泳之类的。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "ダンスとか、水泳とか。",
+          "fromConversationId": "l36-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l36-q-004-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「像是跳舞啊、游泳之类的。」的日语说法。",
+            "en": "Select Japanese for \"像是跳舞啊、游泳之类的。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "ダンスとか、水泳とか。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ダンスとか、水泳とか。",
+          "fromConversationId": "l36-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l36-q-004-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「ダンスとか、水泳とか。」的中文意思是？",
+            "en": "What does \"ダンスとか、水泳とか。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "像是跳舞啊、游泳之类的。",
+                "en": "像是跳舞啊、游泳之类的。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ダンスとか、水泳とか。",
+          "fromConversationId": "l36-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l36-q-005-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「最近、500メートルを泳げるようになりました。すごいですね！食べ物は？」是什么意思？",
+            "en": "What does \"最近、500メートルを泳げるようになりました。すごいですね！食べ物は？\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "最近我已经能游500米了。——好厉害啊！那饮食方面呢？",
+                "en": "最近我已经能游500米了。——好厉害啊！那饮食方面呢？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "最近、500メートルを泳げるようになりました。すごいですね！食べ物は？",
+          "fromConversationId": "l36-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l36-q-005-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「最近我已经能游500米了。——好厉害啊！那饮食方面呢？」的日语说法。",
+            "en": "Select Japanese for \"最近我已经能游500米了。——好厉害啊！那饮食方面呢？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "最近、500メートルを泳げるようになりました。すごいですね！食べ物は？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "最近、500メートルを泳げるようになりました。すごいですね！食べ物は？",
+          "fromConversationId": "l36-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l36-q-005-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「最近、500メートルを泳げるようになりました。すごいですね！食べ物は？」的中文意思是？",
+            "en": "What does \"最近、500メートルを泳げるようになりました。すごいですね！食べ物は？\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "最近我已经能游500米了。——好厉害啊！那饮食方面呢？",
+                "en": "最近我已经能游500米了。——好厉害啊！那饮食方面呢？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "最近、500メートルを泳げるようになりました。すごいですね！食べ物は？",
+          "fromConversationId": "l36-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l36-q-006-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「何でも食べますが、特に魚が好きです。毎日違う料理を作るようにしています。」是什么意思？",
+            "en": "What does \"何でも食べますが、特に魚が好きです。毎日違う料理を作るようにしています。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我什么都吃，特别喜欢吃鱼。我尽量每天都做不一样的菜。",
+                "en": "我什么都吃，特别喜欢吃鱼。我尽量每天都做不一样的菜。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "何でも食べますが、特に魚が好きです。毎日違う料理を作るようにしています。",
+          "fromConversationId": "l36-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l36-q-006-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「我什么都吃，特别喜欢吃鱼。我尽量每天都做不一样的菜。」的日语说法。",
+            "en": "Select Japanese for \"我什么都吃，特别喜欢吃鱼。我尽量每天都做不一样的菜。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "何でも食べますが、特に魚が好きです。毎日違う料理を作るようにしています。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "何でも食べますが、特に魚が好きです。毎日違う料理を作るようにしています。",
+          "fromConversationId": "l36-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l36-q-006-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「何でも食べますが、特に魚が好きです。毎日違う料理を作るようにしています。」的中文意思是？",
+            "en": "What does \"何でも食べますが、特に魚が好きです。毎日違う料理を作るようにしています。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我什么都吃，特别喜欢吃鱼。我尽量每天都做不一样的菜。",
+                "en": "我什么都吃，特别喜欢吃鱼。我尽量每天都做不一样的菜。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "何でも食べますが、特に魚が好きです。毎日違う料理を作るようにしています。",
+          "fromConversationId": "l36-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l36-q-007-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「頭と体をよく使っていらっしゃるんですね。来年、フランスへ行きたいと思っています。」是什么意思？",
+            "en": "What does \"頭と体をよく使っていらっしゃるんですね。来年、フランスへ行きたいと思っています。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "您真是动脑又动身体呢。我打算明年去法国旅行。",
+                "en": "您真是动脑又动身体呢。我打算明年去法国旅行。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "頭と体をよく使っていらっしゃるんですね。来年、フランスへ行きたいと思っています。",
+          "fromConversationId": "l36-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l36-q-007-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「您真是动脑又动身体呢。我打算明年去法国旅行。」的日语说法。",
+            "en": "Select Japanese for \"您真是动脑又动身体呢。我打算明年去法国旅行。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "頭と体をよく使っていらっしゃるんですね。来年、フランスへ行きたいと思っています。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "頭と体をよく使っていらっしゃるんですね。来年、フランスへ行きたいと思っています。",
+          "fromConversationId": "l36-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l36-q-007-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「頭と体をよく使っていらっしゃるんですね。来年、フランスへ行きたいと思っています。」的中文意思是？",
+            "en": "What does \"頭と体をよく使っていらっしゃるんですね。来年、フランスへ行きたいと思っています。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "您真是动脑又动身体呢。我打算明年去法国旅行。",
+                "en": "您真是动脑又动身体呢。我打算明年去法国旅行。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "頭と体をよく使っていらっしゃるんですね。来年、フランスへ行きたいと思っています。",
+          "fromConversationId": "l36-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l36-q-008-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「それでフランス語の勉強も始めました。何でもチャレンジする気持ちが大切なんですね。」是什么意思？",
+            "en": "What does \"それでフランス語の勉強も始めました。何でもチャレンジする気持ちが大切なんですね。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "所以我也开始学习法语了。我觉得敢于挑战一切的心态非常重要。",
+                "en": "所以我也开始学习法语了。我觉得敢于挑战一切的心态非常重要。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "それでフランス語の勉強も始めました。何でもチャレンジする気持ちが大切なんですね。",
+          "fromConversationId": "l36-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l36-q-008-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「所以我也开始学习法语了。我觉得敢于挑战一切的心态非常重要。」的日语说法。",
+            "en": "Select Japanese for \"所以我也开始学习法语了。我觉得敢于挑战一切的心态非常重要。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "それでフランス語の勉強も始めました。何でもチャレンジする気持ちが大切なんですね。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "それでフランス語の勉強も始めました。何でもチャレンジする気持ちが大切なんですね。",
+          "fromConversationId": "l36-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l36-q-008-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「それでフランス語の勉強も始めました。何でもチャレンジする気持ちが大切なんですね。」的中文意思是？",
+            "en": "What does \"それでフランス語の勉強も始めました。何でもチャレンジする気持ちが大切なんですね。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "所以我也开始学习法语了。我觉得敢于挑战一切的心态非常重要。",
+                "en": "所以我也开始学习法语了。我觉得敢于挑战一切的心态非常重要。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "それでフランス語の勉強も始めました。何でもチャレンジする気持ちが大切なんですね。",
+          "fromConversationId": "l36-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l36-q-009-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「楽しいお話、どうもありがとうございました。」是什么意思？",
+            "en": "What does \"楽しいお話、どうもありがとうございました。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "感谢您带来的精彩分享。",
+                "en": "感谢您带来的精彩分享。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "楽しいお話、どうもありがとうございました。",
+          "fromConversationId": "l36-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l36-q-009-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「感谢您带来的精彩分享。」的日语说法。",
+            "en": "Select Japanese for \"感谢您带来的精彩分享。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "楽しいお話、どうもありがとうございました。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "楽しいお話、どうもありがとうございました。",
+          "fromConversationId": "l36-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l36-q-009-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「楽しいお話、どうもありがとうございました。」的中文意思是？",
+            "en": "What does \"楽しいお話、どうもありがとうございました。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "感谢您带来的精彩分享。",
+                "en": "感谢您带来的精彩分享。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "楽しいお話、どうもありがとうございました。",
+          "fromConversationId": "l36-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
     }
   ],
   "conversationVideo": {
@@ -1032,6 +2345,22 @@
     "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P36_%E7%AC%AC36%E8%AA%B2.mp4",
     "subtitleUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P36_%E7%AC%AC36%E8%AA%B2.json",
     "sourceType": "official_video_resource",
-    "status": "linked_not_imported"
+    "status": "imported_with_subtitles"
+  },
+  "conversationMainlineStatus": {
+    "videoLinked": "published",
+    "subtitleParsed": "published",
+    "subtitleCleaned": "published",
+    "humanReviewed": "not_started",
+    "importedToLessonJson": "published",
+    "vocabReady": "needs_review",
+    "grammarReady": "needs_review",
+    "examplesReady": "needs_review",
+    "quizReady": "needs_review",
+    "reciteReady": "needs_review",
+    "recordingReady": "published",
+    "scoringReady": "published",
+    "publishedToStaging": "not_started",
+    "verifiedOnline": "not_started"
   }
 }

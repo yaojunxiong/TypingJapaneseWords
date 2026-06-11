@@ -823,6 +823,1536 @@
           }
         }
       ]
+    },
+    {
+      "type": "conversation",
+      "id": "l44_conversation",
+      "sourceType": "official_video_subtitle",
+      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P44_%E7%AC%AC44%E8%AA%B2.json",
+      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P44_%E7%AC%AC44%E8%AA%B2.mp4",
+      "title": {
+        "zh": "会话背诵",
+        "en": "Conversation Practice"
+      },
+      "dialogTitle": {
+        "zh": "第44课会话",
+        "en": "第44课会话"
+      },
+      "conversationGoal": {
+        "zh": "第44课会话练习",
+        "en": "Lesson 44 Conversation Practice"
+      },
+      "items": [
+        {
+          "id": "l44-conv-001",
+          "speaker": "",
+          "jp": "【音楽】",
+          "kana": "",
+          "zh": "【音乐】",
+          "keyword": "音楽",
+          "videoStart": "0:00.0",
+          "videoEnd": "0:09.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-conv-002",
+          "speaker": "",
+          "jp": "いらっしゃいませ。今日はどうなさいますか?",
+          "kana": "",
+          "zh": "欢迎光临。今天您想做什么造型？",
+          "keyword": "今日",
+          "videoStart": "0:09.0",
+          "videoEnd": "0:12.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-conv-003",
+          "speaker": "",
+          "jp": "カットをお願いします。",
+          "kana": "",
+          "zh": "请帮我剪个头发。",
+          "keyword": "",
+          "videoStart": "0:12.0",
+          "videoEnd": "0:14.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-conv-004",
+          "speaker": "",
+          "jp": "じゃあ、シャンプーをしますから。",
+          "kana": "じゃあ、シャンプーをしますから。",
+          "zh": "那我先帮您洗头吧。",
+          "keyword": "",
+          "videoStart": "0:14.0",
+          "videoEnd": "0:16.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-conv-005",
+          "speaker": "",
+          "jp": "こちらへどうぞ。",
+          "kana": "こちらへどうぞ。",
+          "zh": "这边请。",
+          "keyword": "",
+          "videoStart": "0:16.0",
+          "videoEnd": "0:18.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-conv-006",
+          "speaker": "",
+          "jp": "カットはどういうふうになさいますか?",
+          "kana": "カットはどういうふうになさいますか?",
+          "zh": "您想剪成什么样的发型？",
+          "keyword": "",
+          "videoStart": "0:22.0",
+          "videoEnd": "0:25.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-conv-007",
+          "speaker": "",
+          "jp": "ショートにしたいんですけど、この写真みたいにしてください。",
+          "kana": "",
+          "zh": "我想剪短，请剪成像这张照片这样的发型。",
+          "keyword": "写真",
+          "videoStart": "0:26.0",
+          "videoEnd": "0:30.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-conv-008",
+          "speaker": "",
+          "jp": "あー、素敵ですね。",
+          "kana": "",
+          "zh": "啊，这发型真不错。",
+          "keyword": "素敵です",
+          "videoStart": "0:31.0",
+          "videoEnd": "0:33.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-conv-009",
+          "speaker": "",
+          "jp": "前の長さはこれでよろしいでしょうか?",
+          "kana": "",
+          "zh": "前面的长度这样可以吗？",
+          "keyword": "",
+          "videoStart": "0:50.0",
+          "videoEnd": "0:53.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-conv-010",
+          "speaker": "",
+          "jp": "そうですね、もう少し短くしてください。",
+          "kana": "",
+          "zh": "嗯……请再剪短一点。",
+          "keyword": "",
+          "videoStart": "0:54.0",
+          "videoEnd": "0:58.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-conv-011",
+          "speaker": "",
+          "jp": "どうもお疲れ様でした。",
+          "kana": "",
+          "zh": "辛苦您了。",
+          "keyword": "",
+          "videoStart": "1:12.0",
+          "videoEnd": "1:14.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-conv-012",
+          "speaker": "",
+          "jp": "ありがとうございました。",
+          "kana": "ありがとうございました。",
+          "zh": "非常感谢。",
+          "keyword": "",
+          "videoStart": "1:14.0",
+          "videoEnd": "1:16.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_vocab",
+      "id": "l44_conversation_vocab",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话关键词汇",
+        "en": "Conversation Key Vocabulary"
+      },
+      "description": {
+        "zh": "以下词汇从会话原文中提取。",
+        "en": "Vocabulary from the conversation."
+      },
+      "items": [
+        {
+          "word": "音楽",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l44-conv-001",
+          "sourceSentence": "【音楽】",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "いらっしゃいませ",
+          "kana": "いらっしゃいませ",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l44-conv-002",
+          "sourceSentence": "いらっしゃいませ。今日はどうなさいますか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "今日はどうなさいますか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l44-conv-002",
+          "sourceSentence": "いらっしゃいませ。今日はどうなさいますか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "カットをお願いします",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l44-conv-003",
+          "sourceSentence": "カットをお願いします。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "じゃあ",
+          "kana": "じゃあ",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l44-conv-004",
+          "sourceSentence": "じゃあ、シャンプーをしますから。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "シャンプーをしますから",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l44-conv-004",
+          "sourceSentence": "じゃあ、シャンプーをしますから。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "こちらへどうぞ",
+          "kana": "こちらへどうぞ",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l44-conv-005",
+          "sourceSentence": "こちらへどうぞ。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "カットはどういうふうになさいますか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l44-conv-006",
+          "sourceSentence": "カットはどういうふうになさいますか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "ショートにしたいんですけど",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l44-conv-007",
+          "sourceSentence": "ショートにしたいんですけど、この写真みたいにしてください。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "この写真みたいにしてください",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l44-conv-007",
+          "sourceSentence": "ショートにしたいんですけど、この写真みたいにしてください。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "あー",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l44-conv-008",
+          "sourceSentence": "あー、素敵ですね。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "素敵ですね",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l44-conv-008",
+          "sourceSentence": "あー、素敵ですね。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "前の長さはこれでよろしいでしょうか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l44-conv-009",
+          "sourceSentence": "前の長さはこれでよろしいでしょうか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "そうですね",
+          "kana": "そうですね",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l44-conv-010",
+          "sourceSentence": "そうですね、もう少し短くしてください。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "もう少し短くしてください",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l44-conv-010",
+          "sourceSentence": "そうですね、もう少し短くしてください。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "どうもお疲れ様でした",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l44-conv-011",
+          "sourceSentence": "どうもお疲れ様でした。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "ありがとうございました",
+          "kana": "ありがとうございました",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l44-conv-012",
+          "sourceSentence": "ありがとうございました。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_grammar",
+      "id": "l44_conversation_grammar",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话核心语法",
+        "en": "Conversation Core Grammar"
+      },
+      "description": {
+        "zh": "以下语法点从会话原文中提取。",
+        "en": "Grammar points from the conversation."
+      },
+      "items": [
+        {
+          "pattern": "〜か",
+          "meaning": {
+            "zh": "…吗？（疑问）",
+            "en": "question marker"
+          },
+          "conversationExample": "いらっしゃいませ。今日はどうなさいますか?",
+          "fromConversationId": "l44-conv-002",
+          "sourceSentence": "いらっしゃいませ。今日はどうなさいますか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "句尾加「か」构成疑问句。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ます",
+          "meaning": {
+            "zh": "（动词敬体）",
+            "en": "polite verb form"
+          },
+          "conversationExample": "いらっしゃいませ。今日はどうなさいますか?",
+          "fromConversationId": "l44-conv-002",
+          "sourceSentence": "いらっしゃいませ。今日はどうなさいますか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ます」是动词的敬体形式。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜を〜",
+          "meaning": {
+            "zh": "…（宾语标记）",
+            "en": "object marker"
+          },
+          "conversationExample": "カットをお願いします。",
+          "fromConversationId": "l44-conv-003",
+          "sourceSentence": "カットをお願いします。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「を」标记动作的对象。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜から",
+          "meaning": {
+            "zh": "从…",
+            "en": "from"
+          },
+          "conversationExample": "じゃあ、シャンプーをしますから。",
+          "fromConversationId": "l44-conv-004",
+          "sourceSentence": "じゃあ、シャンプーをしますから。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「から」表示起点或来源。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜に〜",
+          "meaning": {
+            "zh": "在/向…",
+            "en": "to/at"
+          },
+          "conversationExample": "カットはどういうふうになさいますか?",
+          "fromConversationId": "l44-conv-006",
+          "sourceSentence": "カットはどういうふうになさいますか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「に」表示时间、地点或方向。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜です",
+          "meaning": {
+            "zh": "是…（礼貌判断）",
+            "en": "is/am (polite copula)"
+          },
+          "conversationExample": "ショートにしたいんですけど、この写真みたいにしてください。",
+          "fromConversationId": "l44-conv-007",
+          "sourceSentence": "ショートにしたいんですけど、この写真みたいにしてください。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「です」是日语礼貌判断助动词，相当于中文的\"是\"。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ました",
+          "meaning": {
+            "zh": "…了（过去）",
+            "en": "past tense"
+          },
+          "conversationExample": "ありがとうございました。",
+          "fromConversationId": "l44-conv-012",
+          "sourceSentence": "ありがとうございました。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ました」是「ます」的过去形。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_examples",
+      "id": "l44_conversation_examples",
+      "sourceType": "ai_generated_from_official_conversation",
+      "title": {
+        "zh": "会话替换例句",
+        "en": "Conversation Replacement Examples"
+      },
+      "description": {
+        "zh": "以下例句基于会话原句生成。",
+        "en": "Examples generated from conversation sentences."
+      },
+      "items": [
+        {
+          "pattern": "音楽",
+          "originalSentence": "【音楽】",
+          "fromConversationId": "l44-conv-001",
+          "sourceSentence": "【音楽】",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "今日",
+          "originalSentence": "いらっしゃいませ。今日はどうなさいますか?",
+          "fromConversationId": "l44-conv-002",
+          "sourceSentence": "いらっしゃいませ。今日はどうなさいますか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "カットをお願いします。",
+          "fromConversationId": "l44-conv-003",
+          "sourceSentence": "カットをお願いします。",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "じゃあ、シャンプーをしますから。",
+          "fromConversationId": "l44-conv-004",
+          "sourceSentence": "じゃあ、シャンプーをしますから。",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "こちらへどうぞ。",
+          "fromConversationId": "l44-conv-005",
+          "sourceSentence": "こちらへどうぞ。",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "カットはどういうふうになさいますか?",
+          "fromConversationId": "l44-conv-006",
+          "sourceSentence": "カットはどういうふうになさいますか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "写真",
+          "originalSentence": "ショートにしたいんですけど、この写真みたいにしてください。",
+          "fromConversationId": "l44-conv-007",
+          "sourceSentence": "ショートにしたいんですけど、この写真みたいにしてください。",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "素敵です",
+          "originalSentence": "あー、素敵ですね。",
+          "fromConversationId": "l44-conv-008",
+          "sourceSentence": "あー、素敵ですね。",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "前の長さはこれでよろしいでしょうか?",
+          "fromConversationId": "l44-conv-009",
+          "sourceSentence": "前の長さはこれでよろしいでしょうか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "そうですね、もう少し短くしてください。",
+          "fromConversationId": "l44-conv-010",
+          "sourceSentence": "そうですね、もう少し短くしてください。",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "どうもお疲れ様でした。",
+          "fromConversationId": "l44-conv-011",
+          "sourceSentence": "どうもお疲れ様でした。",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "ありがとうございました。",
+          "fromConversationId": "l44-conv-012",
+          "sourceSentence": "ありがとうございました。",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_quiz",
+      "id": "l44_conversation_quiz",
+      "sourceType": "generated_from_official_video_subtitle",
+      "title": {
+        "zh": "会话专项测试",
+        "en": "Conversation Quiz"
+      },
+      "description": {
+        "zh": "测试题围绕会话内容设计。",
+        "en": "Quiz based on the conversation."
+      },
+      "items": [
+        {
+          "id": "l44-q-001-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「【音楽】」是什么意思？",
+            "en": "What does \"【音楽】\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "【音乐】",
+                "en": "【音乐】"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "【音楽】",
+          "fromConversationId": "l44-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-q-001-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「【音乐】」的日语说法。",
+            "en": "Select Japanese for \"【音乐】\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "【音楽】"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "【音楽】",
+          "fromConversationId": "l44-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-q-001-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「【音楽】」的中文意思是？",
+            "en": "What does \"【音楽】\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "【音乐】",
+                "en": "【音乐】"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "【音楽】",
+          "fromConversationId": "l44-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-q-002-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「いらっしゃいませ。今日はどうなさいますか?」是什么意思？",
+            "en": "What does \"いらっしゃいませ。今日はどうなさいますか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "欢迎光临。今天您想做什么造型？",
+                "en": "欢迎光临。今天您想做什么造型？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "いらっしゃいませ。今日はどうなさいますか?",
+          "fromConversationId": "l44-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-q-002-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「欢迎光临。今天您想做什么造型？」的日语说法。",
+            "en": "Select Japanese for \"欢迎光临。今天您想做什么造型？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "いらっしゃいませ。今日はどうなさいますか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "いらっしゃいませ。今日はどうなさいますか?",
+          "fromConversationId": "l44-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-q-002-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「いらっしゃいませ。今日はどうなさいますか?」的中文意思是？",
+            "en": "What does \"いらっしゃいませ。今日はどうなさいますか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "欢迎光临。今天您想做什么造型？",
+                "en": "欢迎光临。今天您想做什么造型？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "いらっしゃいませ。今日はどうなさいますか?",
+          "fromConversationId": "l44-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-q-003-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「カットをお願いします。」是什么意思？",
+            "en": "What does \"カットをお願いします。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请帮我剪个头发。",
+                "en": "请帮我剪个头发。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "カットをお願いします。",
+          "fromConversationId": "l44-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-q-003-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「请帮我剪个头发。」的日语说法。",
+            "en": "Select Japanese for \"请帮我剪个头发。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "カットをお願いします。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "カットをお願いします。",
+          "fromConversationId": "l44-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-q-003-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「カットをお願いします。」的中文意思是？",
+            "en": "What does \"カットをお願いします。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请帮我剪个头发。",
+                "en": "请帮我剪个头发。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "カットをお願いします。",
+          "fromConversationId": "l44-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-q-004-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「じゃあ、シャンプーをしますから。」是什么意思？",
+            "en": "What does \"じゃあ、シャンプーをしますから。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那我先帮您洗头吧。",
+                "en": "那我先帮您洗头吧。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "じゃあ、シャンプーをしますから。",
+          "fromConversationId": "l44-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-q-004-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「那我先帮您洗头吧。」的日语说法。",
+            "en": "Select Japanese for \"那我先帮您洗头吧。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "じゃあ、シャンプーをしますから。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "じゃあ、シャンプーをしますから。",
+          "fromConversationId": "l44-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-q-004-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「じゃあ、シャンプーをしますから。」的中文意思是？",
+            "en": "What does \"じゃあ、シャンプーをしますから。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那我先帮您洗头吧。",
+                "en": "那我先帮您洗头吧。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "じゃあ、シャンプーをしますから。",
+          "fromConversationId": "l44-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-q-005-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「こちらへどうぞ。」是什么意思？",
+            "en": "What does \"こちらへどうぞ。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "这边请。",
+                "en": "这边请。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "こちらへどうぞ。",
+          "fromConversationId": "l44-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-q-005-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「这边请。」的日语说法。",
+            "en": "Select Japanese for \"这边请。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "こちらへどうぞ。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "こちらへどうぞ。",
+          "fromConversationId": "l44-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-q-005-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「こちらへどうぞ。」的中文意思是？",
+            "en": "What does \"こちらへどうぞ。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "这边请。",
+                "en": "这边请。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "こちらへどうぞ。",
+          "fromConversationId": "l44-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-q-006-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「カットはどういうふうになさいますか?」是什么意思？",
+            "en": "What does \"カットはどういうふうになさいますか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "您想剪成什么样的发型？",
+                "en": "您想剪成什么样的发型？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "カットはどういうふうになさいますか?",
+          "fromConversationId": "l44-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-q-006-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「您想剪成什么样的发型？」的日语说法。",
+            "en": "Select Japanese for \"您想剪成什么样的发型？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "カットはどういうふうになさいますか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "カットはどういうふうになさいますか?",
+          "fromConversationId": "l44-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-q-006-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「カットはどういうふうになさいますか?」的中文意思是？",
+            "en": "What does \"カットはどういうふうになさいますか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "您想剪成什么样的发型？",
+                "en": "您想剪成什么样的发型？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "カットはどういうふうになさいますか?",
+          "fromConversationId": "l44-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-q-007-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「ショートにしたいんですけど、この写真みたいにしてください。」是什么意思？",
+            "en": "What does \"ショートにしたいんですけど、この写真みたいにしてください。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我想剪短，请剪成像这张照片这样的发型。",
+                "en": "我想剪短，请剪成像这张照片这样的发型。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "ショートにしたいんですけど、この写真みたいにしてください。",
+          "fromConversationId": "l44-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-q-007-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「我想剪短，请剪成像这张照片这样的发型。」的日语说法。",
+            "en": "Select Japanese for \"我想剪短，请剪成像这张照片这样的发型。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "ショートにしたいんですけど、この写真みたいにしてください。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ショートにしたいんですけど、この写真みたいにしてください。",
+          "fromConversationId": "l44-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-q-007-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「ショートにしたいんですけど、この写真みたいにしてください。」的中文意思是？",
+            "en": "What does \"ショートにしたいんですけど、この写真みたいにしてください。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我想剪短，请剪成像这张照片这样的发型。",
+                "en": "我想剪短，请剪成像这张照片这样的发型。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ショートにしたいんですけど、この写真みたいにしてください。",
+          "fromConversationId": "l44-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-q-008-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「あー、素敵ですね。」是什么意思？",
+            "en": "What does \"あー、素敵ですね。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "啊，这发型真不错。",
+                "en": "啊，这发型真不错。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "あー、素敵ですね。",
+          "fromConversationId": "l44-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-q-008-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「啊，这发型真不错。」的日语说法。",
+            "en": "Select Japanese for \"啊，这发型真不错。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "あー、素敵ですね。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "あー、素敵ですね。",
+          "fromConversationId": "l44-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-q-008-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「あー、素敵ですね。」的中文意思是？",
+            "en": "What does \"あー、素敵ですね。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "啊，这发型真不错。",
+                "en": "啊，这发型真不错。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "あー、素敵ですね。",
+          "fromConversationId": "l44-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-q-009-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「前の長さはこれでよろしいでしょうか?」是什么意思？",
+            "en": "What does \"前の長さはこれでよろしいでしょうか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "前面的长度这样可以吗？",
+                "en": "前面的长度这样可以吗？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "前の長さはこれでよろしいでしょうか?",
+          "fromConversationId": "l44-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-q-009-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「前面的长度这样可以吗？」的日语说法。",
+            "en": "Select Japanese for \"前面的长度这样可以吗？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "前の長さはこれでよろしいでしょうか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "前の長さはこれでよろしいでしょうか?",
+          "fromConversationId": "l44-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-q-009-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「前の長さはこれでよろしいでしょうか?」的中文意思是？",
+            "en": "What does \"前の長さはこれでよろしいでしょうか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "前面的长度这样可以吗？",
+                "en": "前面的长度这样可以吗？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "前の長さはこれでよろしいでしょうか?",
+          "fromConversationId": "l44-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-q-010-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「そうですね、もう少し短くしてください。」是什么意思？",
+            "en": "What does \"そうですね、もう少し短くしてください。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "嗯……请再剪短一点。",
+                "en": "嗯……请再剪短一点。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "そうですね、もう少し短くしてください。",
+          "fromConversationId": "l44-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-q-010-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「嗯……请再剪短一点。」的日语说法。",
+            "en": "Select Japanese for \"嗯……请再剪短一点。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "そうですね、もう少し短くしてください。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "そうですね、もう少し短くしてください。",
+          "fromConversationId": "l44-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-q-010-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「そうですね、もう少し短くしてください。」的中文意思是？",
+            "en": "What does \"そうですね、もう少し短くしてください。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "嗯……请再剪短一点。",
+                "en": "嗯……请再剪短一点。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "そうですね、もう少し短くしてください。",
+          "fromConversationId": "l44-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-q-011-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「どうもお疲れ様でした。」是什么意思？",
+            "en": "What does \"どうもお疲れ様でした。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "辛苦您了。",
+                "en": "辛苦您了。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "どうもお疲れ様でした。",
+          "fromConversationId": "l44-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-q-011-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「辛苦您了。」的日语说法。",
+            "en": "Select Japanese for \"辛苦您了。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "どうもお疲れ様でした。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "どうもお疲れ様でした。",
+          "fromConversationId": "l44-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-q-011-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「どうもお疲れ様でした。」的中文意思是？",
+            "en": "What does \"どうもお疲れ様でした。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "辛苦您了。",
+                "en": "辛苦您了。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "どうもお疲れ様でした。",
+          "fromConversationId": "l44-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-q-012-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「ありがとうございました。」是什么意思？",
+            "en": "What does \"ありがとうございました。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "非常感谢。",
+                "en": "非常感谢。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "ありがとうございました。",
+          "fromConversationId": "l44-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-q-012-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「非常感谢。」的日语说法。",
+            "en": "Select Japanese for \"非常感谢。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "ありがとうございました。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ありがとうございました。",
+          "fromConversationId": "l44-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l44-q-012-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「ありがとうございました。」的中文意思是？",
+            "en": "What does \"ありがとうございました。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "非常感谢。",
+                "en": "非常感谢。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ありがとうございました。",
+          "fromConversationId": "l44-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
     }
   ],
   "conversationVideo": {
@@ -831,6 +2361,22 @@
     "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P44_%E7%AC%AC44%E8%AA%B2.mp4",
     "subtitleUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P44_%E7%AC%AC44%E8%AA%B2.json",
     "sourceType": "official_video_resource",
-    "status": "linked_not_imported"
+    "status": "imported_with_subtitles"
+  },
+  "conversationMainlineStatus": {
+    "videoLinked": "published",
+    "subtitleParsed": "published",
+    "subtitleCleaned": "published",
+    "humanReviewed": "not_started",
+    "importedToLessonJson": "published",
+    "vocabReady": "needs_review",
+    "grammarReady": "needs_review",
+    "examplesReady": "needs_review",
+    "quizReady": "needs_review",
+    "reciteReady": "needs_review",
+    "recordingReady": "published",
+    "scoringReady": "published",
+    "publishedToStaging": "not_started",
+    "verifiedOnline": "not_started"
   }
 }

@@ -756,6 +756,2037 @@
           }
         }
       ]
+    },
+    {
+      "type": "conversation",
+      "id": "l12_conversation",
+      "sourceType": "official_video_subtitle",
+      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P12_%E7%AC%AC12%E8%AA%B2.json",
+      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P12_%E7%AC%AC12%E8%AA%B2.mp4",
+      "title": {
+        "zh": "会话背诵",
+        "en": "Conversation Practice"
+      },
+      "dialogTitle": {
+        "zh": "第12课会话",
+        "en": "第12课会话"
+      },
+      "conversationGoal": {
+        "zh": "第12课会话练习",
+        "en": "Lesson 12 Conversation Practice"
+      },
+      "items": [
+        {
+          "id": "l12-conv-001",
+          "speaker": "",
+          "jp": "ん",
+          "kana": "ん",
+          "zh": "嗯",
+          "keyword": "",
+          "videoStart": "0:00.0",
+          "videoEnd": "0:02.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-conv-002",
+          "speaker": "",
+          "jp": "ただいま",
+          "kana": "ただいま",
+          "zh": "我回来了。",
+          "keyword": "",
+          "videoStart": "0:09.1",
+          "videoEnd": "0:10.8",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-conv-003",
+          "speaker": "",
+          "jp": "おかえりなさい",
+          "kana": "おかえりなさい",
+          "zh": "欢迎回来。",
+          "keyword": "",
+          "videoStart": "0:10.8",
+          "videoEnd": "0:12.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-conv-004",
+          "speaker": "",
+          "jp": "これ、京都のお土産です",
+          "kana": "",
+          "zh": "这是我从京都带回来的特产。",
+          "keyword": "土産です",
+          "videoStart": "0:12.0",
+          "videoEnd": "0:14.8",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-conv-005",
+          "speaker": "",
+          "jp": "どうもありがとうございます",
+          "kana": "どうもありがとうございます",
+          "zh": "非常感谢你。",
+          "keyword": "",
+          "videoStart": "0:14.8",
+          "videoEnd": "0:18.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-conv-006",
+          "speaker": "",
+          "jp": "祇園祭はどうでしたか？",
+          "kana": "",
+          "zh": "祇园祭怎么样？",
+          "keyword": "祇園祭",
+          "videoStart": "0:18.1",
+          "videoEnd": "0:20.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-conv-007",
+          "speaker": "",
+          "jp": "面白かったです",
+          "kana": "",
+          "zh": "很好玩。",
+          "keyword": "面白",
+          "videoStart": "0:20.1",
+          "videoEnd": "0:21.3",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-conv-008",
+          "speaker": "",
+          "jp": "とてもにぎやかでした",
+          "kana": "とてもにぎやかでした",
+          "zh": "非常热闹。",
+          "keyword": "",
+          "videoStart": "0:21.3",
+          "videoEnd": "0:24.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-conv-009",
+          "speaker": "",
+          "jp": "祇園祭は、",
+          "kana": "",
+          "zh": "祇园祭是",
+          "keyword": "祇園祭",
+          "videoStart": "0:24.0",
+          "videoEnd": "0:25.6",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-conv-010",
+          "speaker": "",
+          "jp": "京都のお祭りで、",
+          "kana": "",
+          "zh": "京都的节日，",
+          "keyword": "京都",
+          "videoStart": "0:25.6",
+          "videoEnd": "0:27.4",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-conv-011",
+          "speaker": "",
+          "jp": "一番有名ですからね",
+          "kana": "",
+          "zh": "是最有名的嘛。",
+          "keyword": "一番有名です",
+          "videoStart": "0:27.4",
+          "videoEnd": "0:29.6",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-conv-012",
+          "speaker": "",
+          "jp": "そうですか",
+          "kana": "そうですか",
+          "zh": "是吗？",
+          "keyword": "",
+          "videoStart": "0:29.6",
+          "videoEnd": "0:31.3",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-conv-013",
+          "speaker": "",
+          "jp": "写真をたくさん撮りました",
+          "kana": "",
+          "zh": "我拍了很多照片。",
+          "keyword": "写真",
+          "videoStart": "0:31.3",
+          "videoEnd": "0:35.6",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-conv-014",
+          "speaker": "",
+          "jp": "これです",
+          "kana": "これです",
+          "zh": "就是这些。",
+          "keyword": "",
+          "videoStart": "0:35.6",
+          "videoEnd": "0:38.6",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-conv-015",
+          "speaker": "",
+          "jp": "うわっ",
+          "kana": "うわっ",
+          "zh": "哇！",
+          "keyword": "",
+          "videoStart": "0:39.6",
+          "videoEnd": "0:40.6",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-conv-016",
+          "speaker": "",
+          "jp": "すごい人ですね",
+          "kana": "",
+          "zh": "人好多啊！",
+          "keyword": "",
+          "videoStart": "0:40.6",
+          "videoEnd": "0:44.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-conv-017",
+          "speaker": "",
+          "jp": "ちょっと疲れました",
+          "kana": "",
+          "zh": "有点累了。",
+          "keyword": "",
+          "videoStart": "0:44.1",
+          "videoEnd": "0:47.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_vocab",
+      "id": "l12_conversation_vocab",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话关键词汇",
+        "en": "Conversation Key Vocabulary"
+      },
+      "description": {
+        "zh": "以下词汇从会话原文中提取。",
+        "en": "Vocabulary from the conversation."
+      },
+      "items": [
+        {
+          "word": "ただいま",
+          "kana": "ただいま",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l12-conv-002",
+          "sourceSentence": "ただいま",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "おかえりなさい",
+          "kana": "おかえりなさい",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l12-conv-003",
+          "sourceSentence": "おかえりなさい",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "これ",
+          "kana": "これ",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l12-conv-004",
+          "sourceSentence": "これ、京都のお土産です",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "京都のお土産です",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l12-conv-004",
+          "sourceSentence": "これ、京都のお土産です",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "どうもありがとうございます",
+          "kana": "どうもありがとうございます",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l12-conv-005",
+          "sourceSentence": "どうもありがとうございます",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "祇園祭はどうでしたか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l12-conv-006",
+          "sourceSentence": "祇園祭はどうでしたか？",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "面白かったです",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l12-conv-007",
+          "sourceSentence": "面白かったです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "とてもにぎやかでした",
+          "kana": "とてもにぎやかでした",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l12-conv-008",
+          "sourceSentence": "とてもにぎやかでした",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "祇園祭は",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l12-conv-009",
+          "sourceSentence": "祇園祭は、",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "京都のお祭りで",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l12-conv-010",
+          "sourceSentence": "京都のお祭りで、",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "一番有名ですからね",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l12-conv-011",
+          "sourceSentence": "一番有名ですからね",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "そうですか",
+          "kana": "そうですか",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l12-conv-012",
+          "sourceSentence": "そうですか",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "写真をたくさん撮りました",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l12-conv-013",
+          "sourceSentence": "写真をたくさん撮りました",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "これです",
+          "kana": "これです",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l12-conv-014",
+          "sourceSentence": "これです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "うわっ",
+          "kana": "うわっ",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l12-conv-015",
+          "sourceSentence": "うわっ",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "すごい人ですね",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l12-conv-016",
+          "sourceSentence": "すごい人ですね",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "ちょっと疲れました",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l12-conv-017",
+          "sourceSentence": "ちょっと疲れました",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_grammar",
+      "id": "l12_conversation_grammar",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话核心语法",
+        "en": "Conversation Core Grammar"
+      },
+      "description": {
+        "zh": "以下语法点从会话原文中提取。",
+        "en": "Grammar points from the conversation."
+      },
+      "items": [
+        {
+          "pattern": "〜です",
+          "meaning": {
+            "zh": "是…（礼貌判断）",
+            "en": "is/am (polite copula)"
+          },
+          "conversationExample": "これ、京都のお土産です",
+          "fromConversationId": "l12-conv-004",
+          "sourceSentence": "これ、京都のお土産です",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「です」是日语礼貌判断助动词，相当于中文的\"是\"。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ます",
+          "meaning": {
+            "zh": "（动词敬体）",
+            "en": "polite verb form"
+          },
+          "conversationExample": "どうもありがとうございます",
+          "fromConversationId": "l12-conv-005",
+          "sourceSentence": "どうもありがとうございます",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ます」是动词的敬体形式。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜か",
+          "meaning": {
+            "zh": "…吗？（疑问）",
+            "en": "question marker"
+          },
+          "conversationExample": "祇園祭はどうでしたか？",
+          "fromConversationId": "l12-conv-006",
+          "sourceSentence": "祇園祭はどうでしたか？",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "句尾加「か」构成疑问句。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜に〜",
+          "meaning": {
+            "zh": "在/向…",
+            "en": "to/at"
+          },
+          "conversationExample": "とてもにぎやかでした",
+          "fromConversationId": "l12-conv-008",
+          "sourceSentence": "とてもにぎやかでした",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「に」表示时间、地点或方向。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜から",
+          "meaning": {
+            "zh": "从…",
+            "en": "from"
+          },
+          "conversationExample": "一番有名ですからね",
+          "fromConversationId": "l12-conv-011",
+          "sourceSentence": "一番有名ですからね",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「から」表示起点或来源。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜を〜",
+          "meaning": {
+            "zh": "…（宾语标记）",
+            "en": "object marker"
+          },
+          "conversationExample": "写真をたくさん撮りました",
+          "fromConversationId": "l12-conv-013",
+          "sourceSentence": "写真をたくさん撮りました",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「を」标记动作的对象。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ました",
+          "meaning": {
+            "zh": "…了（过去）",
+            "en": "past tense"
+          },
+          "conversationExample": "写真をたくさん撮りました",
+          "fromConversationId": "l12-conv-013",
+          "sourceSentence": "写真をたくさん撮りました",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ました」是「ます」的过去形。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_examples",
+      "id": "l12_conversation_examples",
+      "sourceType": "ai_generated_from_official_conversation",
+      "title": {
+        "zh": "会话替换例句",
+        "en": "Conversation Replacement Examples"
+      },
+      "description": {
+        "zh": "以下例句基于会话原句生成。",
+        "en": "Examples generated from conversation sentences."
+      },
+      "items": [
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "ん",
+          "fromConversationId": "l12-conv-001",
+          "sourceSentence": "ん",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "ただいま",
+          "fromConversationId": "l12-conv-002",
+          "sourceSentence": "ただいま",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "おかえりなさい",
+          "fromConversationId": "l12-conv-003",
+          "sourceSentence": "おかえりなさい",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "土産です",
+          "originalSentence": "これ、京都のお土産です",
+          "fromConversationId": "l12-conv-004",
+          "sourceSentence": "これ、京都のお土産です",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [
+            {
+              "jp": "これ、京都のお佐藤です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "これ、京都のお田中です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "これ、京都のお山田です",
+              "kana": "",
+              "zh": ""
+            }
+          ],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "どうもありがとうございます",
+          "fromConversationId": "l12-conv-005",
+          "sourceSentence": "どうもありがとうございます",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "祇園祭",
+          "originalSentence": "祇園祭はどうでしたか？",
+          "fromConversationId": "l12-conv-006",
+          "sourceSentence": "祇園祭はどうでしたか？",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "面白",
+          "originalSentence": "面白かったです",
+          "fromConversationId": "l12-conv-007",
+          "sourceSentence": "面白かったです",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "とてもにぎやかでした",
+          "fromConversationId": "l12-conv-008",
+          "sourceSentence": "とてもにぎやかでした",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "祇園祭",
+          "originalSentence": "祇園祭は、",
+          "fromConversationId": "l12-conv-009",
+          "sourceSentence": "祇園祭は、",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "京都",
+          "originalSentence": "京都のお祭りで、",
+          "fromConversationId": "l12-conv-010",
+          "sourceSentence": "京都のお祭りで、",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "一番有名です",
+          "originalSentence": "一番有名ですからね",
+          "fromConversationId": "l12-conv-011",
+          "sourceSentence": "一番有名ですからね",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "そうですか",
+          "fromConversationId": "l12-conv-012",
+          "sourceSentence": "そうですか",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "写真",
+          "originalSentence": "写真をたくさん撮りました",
+          "fromConversationId": "l12-conv-013",
+          "sourceSentence": "写真をたくさん撮りました",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "これです",
+          "fromConversationId": "l12-conv-014",
+          "sourceSentence": "これです",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "うわっ",
+          "fromConversationId": "l12-conv-015",
+          "sourceSentence": "うわっ",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "すごい人ですね",
+          "fromConversationId": "l12-conv-016",
+          "sourceSentence": "すごい人ですね",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "ちょっと疲れました",
+          "fromConversationId": "l12-conv-017",
+          "sourceSentence": "ちょっと疲れました",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_quiz",
+      "id": "l12_conversation_quiz",
+      "sourceType": "generated_from_official_video_subtitle",
+      "title": {
+        "zh": "会话专项测试",
+        "en": "Conversation Quiz"
+      },
+      "description": {
+        "zh": "测试题围绕会话内容设计。",
+        "en": "Quiz based on the conversation."
+      },
+      "items": [
+        {
+          "id": "l12-q-001-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「ん」是什么意思？",
+            "en": "What does \"ん\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "嗯",
+                "en": "嗯"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "ん",
+          "fromConversationId": "l12-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-001-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「嗯」的日语说法。",
+            "en": "Select Japanese for \"嗯\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "ん"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ん",
+          "fromConversationId": "l12-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-001-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「ん」的中文意思是？",
+            "en": "What does \"ん\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "嗯",
+                "en": "嗯"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ん",
+          "fromConversationId": "l12-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-002-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「ただいま」是什么意思？",
+            "en": "What does \"ただいま\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我回来了。",
+                "en": "我回来了。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "ただいま",
+          "fromConversationId": "l12-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-002-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「我回来了。」的日语说法。",
+            "en": "Select Japanese for \"我回来了。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "ただいま"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ただいま",
+          "fromConversationId": "l12-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-002-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「ただいま」的中文意思是？",
+            "en": "What does \"ただいま\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我回来了。",
+                "en": "我回来了。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ただいま",
+          "fromConversationId": "l12-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-003-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「おかえりなさい」是什么意思？",
+            "en": "What does \"おかえりなさい\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "欢迎回来。",
+                "en": "欢迎回来。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "おかえりなさい",
+          "fromConversationId": "l12-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-003-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「欢迎回来。」的日语说法。",
+            "en": "Select Japanese for \"欢迎回来。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "おかえりなさい"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "おかえりなさい",
+          "fromConversationId": "l12-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-003-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「おかえりなさい」的中文意思是？",
+            "en": "What does \"おかえりなさい\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "欢迎回来。",
+                "en": "欢迎回来。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "おかえりなさい",
+          "fromConversationId": "l12-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-004-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「これ、京都のお土産です」是什么意思？",
+            "en": "What does \"これ、京都のお土産です\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "这是我从京都带回来的特产。",
+                "en": "这是我从京都带回来的特产。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "これ、京都のお土産です",
+          "fromConversationId": "l12-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-004-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「这是我从京都带回来的特产。」的日语说法。",
+            "en": "Select Japanese for \"这是我从京都带回来的特产。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "これ、京都のお土産です"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "これ、京都のお土産です",
+          "fromConversationId": "l12-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-004-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「これ、京都のお土産です」的中文意思是？",
+            "en": "What does \"これ、京都のお土産です\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "这是我从京都带回来的特产。",
+                "en": "这是我从京都带回来的特产。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "これ、京都のお土産です",
+          "fromConversationId": "l12-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-005-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「どうもありがとうございます」是什么意思？",
+            "en": "What does \"どうもありがとうございます\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "非常感谢你。",
+                "en": "非常感谢你。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "どうもありがとうございます",
+          "fromConversationId": "l12-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-005-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「非常感谢你。」的日语说法。",
+            "en": "Select Japanese for \"非常感谢你。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "どうもありがとうございます"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "どうもありがとうございます",
+          "fromConversationId": "l12-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-005-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「どうもありがとうございます」的中文意思是？",
+            "en": "What does \"どうもありがとうございます\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "非常感谢你。",
+                "en": "非常感谢你。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "どうもありがとうございます",
+          "fromConversationId": "l12-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-006-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「祇園祭はどうでしたか？」是什么意思？",
+            "en": "What does \"祇園祭はどうでしたか？\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "祇园祭怎么样？",
+                "en": "祇园祭怎么样？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "祇園祭はどうでしたか？",
+          "fromConversationId": "l12-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-006-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「祇园祭怎么样？」的日语说法。",
+            "en": "Select Japanese for \"祇园祭怎么样？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "祇園祭はどうでしたか？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "祇園祭はどうでしたか？",
+          "fromConversationId": "l12-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-006-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「祇園祭はどうでしたか？」的中文意思是？",
+            "en": "What does \"祇園祭はどうでしたか？\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "祇园祭怎么样？",
+                "en": "祇园祭怎么样？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "祇園祭はどうでしたか？",
+          "fromConversationId": "l12-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-007-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「面白かったです」是什么意思？",
+            "en": "What does \"面白かったです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "很好玩。",
+                "en": "很好玩。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "面白かったです",
+          "fromConversationId": "l12-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-007-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「很好玩。」的日语说法。",
+            "en": "Select Japanese for \"很好玩。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "面白かったです"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "面白かったです",
+          "fromConversationId": "l12-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-007-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「面白かったです」的中文意思是？",
+            "en": "What does \"面白かったです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "很好玩。",
+                "en": "很好玩。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "面白かったです",
+          "fromConversationId": "l12-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-008-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「とてもにぎやかでした」是什么意思？",
+            "en": "What does \"とてもにぎやかでした\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "非常热闹。",
+                "en": "非常热闹。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "とてもにぎやかでした",
+          "fromConversationId": "l12-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-008-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「非常热闹。」的日语说法。",
+            "en": "Select Japanese for \"非常热闹。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "とてもにぎやかでした"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "とてもにぎやかでした",
+          "fromConversationId": "l12-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-008-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「とてもにぎやかでした」的中文意思是？",
+            "en": "What does \"とてもにぎやかでした\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "非常热闹。",
+                "en": "非常热闹。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "とてもにぎやかでした",
+          "fromConversationId": "l12-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-009-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「祇園祭は、」是什么意思？",
+            "en": "What does \"祇園祭は、\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "祇园祭是",
+                "en": "祇园祭是"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "祇園祭は、",
+          "fromConversationId": "l12-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-009-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「祇园祭是」的日语说法。",
+            "en": "Select Japanese for \"祇园祭是\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "祇園祭は、"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "祇園祭は、",
+          "fromConversationId": "l12-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-009-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「祇園祭は、」的中文意思是？",
+            "en": "What does \"祇園祭は、\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "祇园祭是",
+                "en": "祇园祭是"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "祇園祭は、",
+          "fromConversationId": "l12-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-010-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「京都のお祭りで、」是什么意思？",
+            "en": "What does \"京都のお祭りで、\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "京都的节日，",
+                "en": "京都的节日，"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "京都のお祭りで、",
+          "fromConversationId": "l12-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-010-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「京都的节日，」的日语说法。",
+            "en": "Select Japanese for \"京都的节日，\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "京都のお祭りで、"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "京都のお祭りで、",
+          "fromConversationId": "l12-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-010-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「京都のお祭りで、」的中文意思是？",
+            "en": "What does \"京都のお祭りで、\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "京都的节日，",
+                "en": "京都的节日，"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "京都のお祭りで、",
+          "fromConversationId": "l12-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-011-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「一番有名ですからね」是什么意思？",
+            "en": "What does \"一番有名ですからね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是最有名的嘛。",
+                "en": "是最有名的嘛。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "一番有名ですからね",
+          "fromConversationId": "l12-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-011-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「是最有名的嘛。」的日语说法。",
+            "en": "Select Japanese for \"是最有名的嘛。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "一番有名ですからね"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "一番有名ですからね",
+          "fromConversationId": "l12-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-011-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「一番有名ですからね」的中文意思是？",
+            "en": "What does \"一番有名ですからね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是最有名的嘛。",
+                "en": "是最有名的嘛。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "一番有名ですからね",
+          "fromConversationId": "l12-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-012-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「そうですか」是什么意思？",
+            "en": "What does \"そうですか\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是吗？",
+                "en": "是吗？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "そうですか",
+          "fromConversationId": "l12-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-012-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「是吗？」的日语说法。",
+            "en": "Select Japanese for \"是吗？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "そうですか"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "そうですか",
+          "fromConversationId": "l12-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-012-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「そうですか」的中文意思是？",
+            "en": "What does \"そうですか\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是吗？",
+                "en": "是吗？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "そうですか",
+          "fromConversationId": "l12-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-013-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「写真をたくさん撮りました」是什么意思？",
+            "en": "What does \"写真をたくさん撮りました\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我拍了很多照片。",
+                "en": "我拍了很多照片。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "写真をたくさん撮りました",
+          "fromConversationId": "l12-conv-013",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-013-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「我拍了很多照片。」的日语说法。",
+            "en": "Select Japanese for \"我拍了很多照片。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "写真をたくさん撮りました"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "写真をたくさん撮りました",
+          "fromConversationId": "l12-conv-013",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-013-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「写真をたくさん撮りました」的中文意思是？",
+            "en": "What does \"写真をたくさん撮りました\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我拍了很多照片。",
+                "en": "我拍了很多照片。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "写真をたくさん撮りました",
+          "fromConversationId": "l12-conv-013",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-014-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「これです」是什么意思？",
+            "en": "What does \"これです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "就是这些。",
+                "en": "就是这些。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "これです",
+          "fromConversationId": "l12-conv-014",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-014-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「就是这些。」的日语说法。",
+            "en": "Select Japanese for \"就是这些。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "これです"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "これです",
+          "fromConversationId": "l12-conv-014",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-014-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「これです」的中文意思是？",
+            "en": "What does \"これです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "就是这些。",
+                "en": "就是这些。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "これです",
+          "fromConversationId": "l12-conv-014",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-015-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「うわっ」是什么意思？",
+            "en": "What does \"うわっ\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "哇！",
+                "en": "哇！"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "うわっ",
+          "fromConversationId": "l12-conv-015",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-015-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「哇！」的日语说法。",
+            "en": "Select Japanese for \"哇！\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "うわっ"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "うわっ",
+          "fromConversationId": "l12-conv-015",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-015-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「うわっ」的中文意思是？",
+            "en": "What does \"うわっ\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "哇！",
+                "en": "哇！"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "うわっ",
+          "fromConversationId": "l12-conv-015",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-016-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「すごい人ですね」是什么意思？",
+            "en": "What does \"すごい人ですね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "人好多啊！",
+                "en": "人好多啊！"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "すごい人ですね",
+          "fromConversationId": "l12-conv-016",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-016-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「人好多啊！」的日语说法。",
+            "en": "Select Japanese for \"人好多啊！\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "すごい人ですね"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "すごい人ですね",
+          "fromConversationId": "l12-conv-016",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-016-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「すごい人ですね」的中文意思是？",
+            "en": "What does \"すごい人ですね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "人好多啊！",
+                "en": "人好多啊！"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "すごい人ですね",
+          "fromConversationId": "l12-conv-016",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-017-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「ちょっと疲れました」是什么意思？",
+            "en": "What does \"ちょっと疲れました\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "有点累了。",
+                "en": "有点累了。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "ちょっと疲れました",
+          "fromConversationId": "l12-conv-017",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-017-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「有点累了。」的日语说法。",
+            "en": "Select Japanese for \"有点累了。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "ちょっと疲れました"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ちょっと疲れました",
+          "fromConversationId": "l12-conv-017",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l12-q-017-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「ちょっと疲れました」的中文意思是？",
+            "en": "What does \"ちょっと疲れました\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "有点累了。",
+                "en": "有点累了。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ちょっと疲れました",
+          "fromConversationId": "l12-conv-017",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
     }
   ],
   "conversationVideo": {
@@ -764,6 +2795,22 @@
     "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P12_%E7%AC%AC12%E8%AA%B2.mp4",
     "subtitleUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P12_%E7%AC%AC12%E8%AA%B2.json",
     "sourceType": "official_video_resource",
-    "status": "linked_not_imported"
+    "status": "imported_with_subtitles"
+  },
+  "conversationMainlineStatus": {
+    "videoLinked": "published",
+    "subtitleParsed": "published",
+    "subtitleCleaned": "published",
+    "humanReviewed": "not_started",
+    "importedToLessonJson": "published",
+    "vocabReady": "needs_review",
+    "grammarReady": "needs_review",
+    "examplesReady": "needs_review",
+    "quizReady": "needs_review",
+    "reciteReady": "needs_review",
+    "recordingReady": "published",
+    "scoringReady": "published",
+    "publishedToStaging": "not_started",
+    "verifiedOnline": "not_started"
   }
 }

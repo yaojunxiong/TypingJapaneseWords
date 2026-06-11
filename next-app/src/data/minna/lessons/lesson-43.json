@@ -823,6 +823,2036 @@
           }
         }
       ]
+    },
+    {
+      "type": "conversation",
+      "id": "l43_conversation",
+      "sourceType": "official_video_subtitle",
+      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P43_%E7%AC%AC43%E8%AA%B2.json",
+      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P43_%E7%AC%AC43%E8%AA%B2.mp4",
+      "title": {
+        "zh": "会话背诵",
+        "en": "Conversation Practice"
+      },
+      "dialogTitle": {
+        "zh": "第43课会话",
+        "en": "第43课会话"
+      },
+      "conversationGoal": {
+        "zh": "第43课会话练习",
+        "en": "Lesson 43 Conversation Practice"
+      },
+      "items": [
+        {
+          "id": "l43-conv-001",
+          "speaker": "",
+          "jp": "これどなたの写真ですか?",
+          "kana": "",
+          "zh": "这是谁的照片？",
+          "keyword": "写真です",
+          "videoStart": "0:00.0",
+          "videoEnd": "0:10.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-conv-002",
+          "speaker": "",
+          "jp": "息子のハンズです",
+          "kana": "",
+          "zh": "是我儿子汉斯的。",
+          "keyword": "息子",
+          "videoStart": "0:10.8",
+          "videoEnd": "0:12.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-conv-003",
+          "speaker": "",
+          "jp": "運動会の時撮った写真です",
+          "kana": "",
+          "zh": "这是运动会时拍的照片。",
+          "keyword": "写真です",
+          "videoStart": "0:12.1",
+          "videoEnd": "0:15.3",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-conv-004",
+          "speaker": "",
+          "jp": "元気そうですね",
+          "kana": "",
+          "zh": "看起来很有精神呢。",
+          "keyword": "元気",
+          "videoStart": "0:15.3",
+          "videoEnd": "0:16.5",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-conv-005",
+          "speaker": "",
+          "jp": "ええ、ハンズは走るのが早いんですよ",
+          "kana": "",
+          "zh": "是啊，汉斯跑得很快哦。",
+          "keyword": "",
+          "videoStart": "0:16.5",
+          "videoEnd": "0:20.6",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-conv-006",
+          "speaker": "",
+          "jp": "日本の小学校にも慣れて",
+          "kana": "",
+          "zh": "他也已经习惯了日本的小学，",
+          "keyword": "小学校",
+          "videoStart": "0:20.6",
+          "videoEnd": "0:23.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-conv-007",
+          "speaker": "",
+          "jp": "友達もできて",
+          "kana": "",
+          "zh": "交到了朋友，",
+          "keyword": "友達",
+          "videoStart": "0:23.0",
+          "videoEnd": "0:25.3",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-conv-008",
+          "speaker": "",
+          "jp": "毎日楽しそうです",
+          "kana": "",
+          "zh": "每天看起来都很开心。",
+          "keyword": "毎日楽",
+          "videoStart": "0:25.3",
+          "videoEnd": "0:27.3",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-conv-009",
+          "speaker": "",
+          "jp": "よかったですね",
+          "kana": "よかったですね",
+          "zh": "那太好了。",
+          "keyword": "",
+          "videoStart": "0:27.3",
+          "videoEnd": "0:28.6",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-conv-010",
+          "speaker": "",
+          "jp": "こちらの方は奥さんですか?",
+          "kana": "",
+          "zh": "这位是您太太吗？",
+          "keyword": "",
+          "videoStart": "0:28.6",
+          "videoEnd": "0:31.8",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-conv-011",
+          "speaker": "",
+          "jp": "綺麗な方ですね",
+          "kana": "",
+          "zh": "真是位漂亮的女士啊。",
+          "keyword": "綺麗",
+          "videoStart": "0:32.5",
+          "videoEnd": "0:33.7",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-conv-012",
+          "speaker": "",
+          "jp": "ありがとうございます",
+          "kana": "ありがとうございます",
+          "zh": "谢谢您。",
+          "keyword": "",
+          "videoStart": "0:33.7",
+          "videoEnd": "0:35.3",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-conv-013",
+          "speaker": "",
+          "jp": "妻はいろいろなことに興味があって",
+          "kana": "",
+          "zh": "我妻子对各种事情都感兴趣，",
+          "keyword": "興味",
+          "videoStart": "0:35.3",
+          "videoEnd": "0:42.3",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-conv-014",
+          "speaker": "",
+          "jp": "一緒にいると面白いんですよ",
+          "kana": "",
+          "zh": "跟她在一起很有意思。",
+          "keyword": "面白",
+          "videoStart": "0:42.3",
+          "videoEnd": "0:46.7",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-conv-015",
+          "speaker": "",
+          "jp": "そうですか",
+          "kana": "そうですか",
+          "zh": "是这样啊。",
+          "keyword": "",
+          "videoStart": "0:46.7",
+          "videoEnd": "0:47.6",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-conv-016",
+          "speaker": "",
+          "jp": "特に歴史が好きで",
+          "kana": "",
+          "zh": "她特别喜欢历史，",
+          "keyword": "歴史",
+          "videoStart": "0:47.6",
+          "videoEnd": "0:50.2",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-conv-017",
+          "speaker": "",
+          "jp": "時間があれば古い街を歩いています",
+          "kana": "",
+          "zh": "有时间就会去老街散步。",
+          "keyword": "時間",
+          "videoStart": "0:50.8",
+          "videoEnd": "0:55.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_vocab",
+      "id": "l43_conversation_vocab",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话关键词汇",
+        "en": "Conversation Key Vocabulary"
+      },
+      "description": {
+        "zh": "以下词汇从会话原文中提取。",
+        "en": "Vocabulary from the conversation."
+      },
+      "items": [
+        {
+          "word": "これどなたの写真ですか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l43-conv-001",
+          "sourceSentence": "これどなたの写真ですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "息子のハンズです",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l43-conv-002",
+          "sourceSentence": "息子のハンズです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "運動会の時撮った写真です",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l43-conv-003",
+          "sourceSentence": "運動会の時撮った写真です",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "元気そうですね",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l43-conv-004",
+          "sourceSentence": "元気そうですね",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "ええ",
+          "kana": "ええ",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l43-conv-005",
+          "sourceSentence": "ええ、ハンズは走るのが早いんですよ",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "ハンズは走るのが早いんですよ",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l43-conv-005",
+          "sourceSentence": "ええ、ハンズは走るのが早いんですよ",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "日本の小学校にも慣れて",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l43-conv-006",
+          "sourceSentence": "日本の小学校にも慣れて",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "友達もできて",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l43-conv-007",
+          "sourceSentence": "友達もできて",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "毎日楽しそうです",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l43-conv-008",
+          "sourceSentence": "毎日楽しそうです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "よかったですね",
+          "kana": "よかったですね",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l43-conv-009",
+          "sourceSentence": "よかったですね",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "こちらの方は奥さんですか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l43-conv-010",
+          "sourceSentence": "こちらの方は奥さんですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "綺麗な方ですね",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l43-conv-011",
+          "sourceSentence": "綺麗な方ですね",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "ありがとうございます",
+          "kana": "ありがとうございます",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l43-conv-012",
+          "sourceSentence": "ありがとうございます",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "妻はいろいろなことに興味があって",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l43-conv-013",
+          "sourceSentence": "妻はいろいろなことに興味があって",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "一緒にいると面白いんですよ",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l43-conv-014",
+          "sourceSentence": "一緒にいると面白いんですよ",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "そうですか",
+          "kana": "そうですか",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l43-conv-015",
+          "sourceSentence": "そうですか",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "特に歴史が好きで",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l43-conv-016",
+          "sourceSentence": "特に歴史が好きで",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "時間があれば古い街を歩いています",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l43-conv-017",
+          "sourceSentence": "時間があれば古い街を歩いています",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_grammar",
+      "id": "l43_conversation_grammar",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话核心语法",
+        "en": "Conversation Core Grammar"
+      },
+      "description": {
+        "zh": "以下语法点从会话原文中提取。",
+        "en": "Grammar points from the conversation."
+      },
+      "items": [
+        {
+          "pattern": "〜です",
+          "meaning": {
+            "zh": "是…（礼貌判断）",
+            "en": "is/am (polite copula)"
+          },
+          "conversationExample": "これどなたの写真ですか?",
+          "fromConversationId": "l43-conv-001",
+          "sourceSentence": "これどなたの写真ですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「です」是日语礼貌判断助动词，相当于中文的\"是\"。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜か",
+          "meaning": {
+            "zh": "…吗？（疑问）",
+            "en": "question marker"
+          },
+          "conversationExample": "これどなたの写真ですか?",
+          "fromConversationId": "l43-conv-001",
+          "sourceSentence": "これどなたの写真ですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "句尾加「か」构成疑问句。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜に〜",
+          "meaning": {
+            "zh": "在/向…",
+            "en": "to/at"
+          },
+          "conversationExample": "日本の小学校にも慣れて",
+          "fromConversationId": "l43-conv-006",
+          "sourceSentence": "日本の小学校にも慣れて",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「に」表示时间、地点或方向。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ます",
+          "meaning": {
+            "zh": "（动词敬体）",
+            "en": "polite verb form"
+          },
+          "conversationExample": "ありがとうございます",
+          "fromConversationId": "l43-conv-012",
+          "sourceSentence": "ありがとうございます",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ます」是动词的敬体形式。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜を〜",
+          "meaning": {
+            "zh": "…（宾语标记）",
+            "en": "object marker"
+          },
+          "conversationExample": "時間があれば古い街を歩いています",
+          "fromConversationId": "l43-conv-017",
+          "sourceSentence": "時間があれば古い街を歩いています",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「を」标记动作的对象。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_examples",
+      "id": "l43_conversation_examples",
+      "sourceType": "ai_generated_from_official_conversation",
+      "title": {
+        "zh": "会话替换例句",
+        "en": "Conversation Replacement Examples"
+      },
+      "description": {
+        "zh": "以下例句基于会话原句生成。",
+        "en": "Examples generated from conversation sentences."
+      },
+      "items": [
+        {
+          "pattern": "写真です",
+          "originalSentence": "これどなたの写真ですか?",
+          "fromConversationId": "l43-conv-001",
+          "sourceSentence": "これどなたの写真ですか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "息子",
+          "originalSentence": "息子のハンズです",
+          "fromConversationId": "l43-conv-002",
+          "sourceSentence": "息子のハンズです",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [
+            {
+              "jp": "息子の佐藤です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "息子の田中です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "息子の山田です",
+              "kana": "",
+              "zh": ""
+            }
+          ],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "写真です",
+          "originalSentence": "運動会の時撮った写真です",
+          "fromConversationId": "l43-conv-003",
+          "sourceSentence": "運動会の時撮った写真です",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [
+            {
+              "jp": "運動会の時撮った佐藤です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "運動会の時撮った田中です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "運動会の時撮った山田です",
+              "kana": "",
+              "zh": ""
+            }
+          ],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "元気",
+          "originalSentence": "元気そうですね",
+          "fromConversationId": "l43-conv-004",
+          "sourceSentence": "元気そうですね",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "ええ、ハンズは走るのが早いんですよ",
+          "fromConversationId": "l43-conv-005",
+          "sourceSentence": "ええ、ハンズは走るのが早いんですよ",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "小学校",
+          "originalSentence": "日本の小学校にも慣れて",
+          "fromConversationId": "l43-conv-006",
+          "sourceSentence": "日本の小学校にも慣れて",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "友達",
+          "originalSentence": "友達もできて",
+          "fromConversationId": "l43-conv-007",
+          "sourceSentence": "友達もできて",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "毎日楽",
+          "originalSentence": "毎日楽しそうです",
+          "fromConversationId": "l43-conv-008",
+          "sourceSentence": "毎日楽しそうです",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "よかったですね",
+          "fromConversationId": "l43-conv-009",
+          "sourceSentence": "よかったですね",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "こちらの方は奥さんですか?",
+          "fromConversationId": "l43-conv-010",
+          "sourceSentence": "こちらの方は奥さんですか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "綺麗",
+          "originalSentence": "綺麗な方ですね",
+          "fromConversationId": "l43-conv-011",
+          "sourceSentence": "綺麗な方ですね",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "ありがとうございます",
+          "fromConversationId": "l43-conv-012",
+          "sourceSentence": "ありがとうございます",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "興味",
+          "originalSentence": "妻はいろいろなことに興味があって",
+          "fromConversationId": "l43-conv-013",
+          "sourceSentence": "妻はいろいろなことに興味があって",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "面白",
+          "originalSentence": "一緒にいると面白いんですよ",
+          "fromConversationId": "l43-conv-014",
+          "sourceSentence": "一緒にいると面白いんですよ",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "そうですか",
+          "fromConversationId": "l43-conv-015",
+          "sourceSentence": "そうですか",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "歴史",
+          "originalSentence": "特に歴史が好きで",
+          "fromConversationId": "l43-conv-016",
+          "sourceSentence": "特に歴史が好きで",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "時間",
+          "originalSentence": "時間があれば古い街を歩いています",
+          "fromConversationId": "l43-conv-017",
+          "sourceSentence": "時間があれば古い街を歩いています",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_quiz",
+      "id": "l43_conversation_quiz",
+      "sourceType": "generated_from_official_video_subtitle",
+      "title": {
+        "zh": "会话专项测试",
+        "en": "Conversation Quiz"
+      },
+      "description": {
+        "zh": "测试题围绕会话内容设计。",
+        "en": "Quiz based on the conversation."
+      },
+      "items": [
+        {
+          "id": "l43-q-001-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「これどなたの写真ですか?」是什么意思？",
+            "en": "What does \"これどなたの写真ですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "这是谁的照片？",
+                "en": "这是谁的照片？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "これどなたの写真ですか?",
+          "fromConversationId": "l43-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-001-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「这是谁的照片？」的日语说法。",
+            "en": "Select Japanese for \"这是谁的照片？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "これどなたの写真ですか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "これどなたの写真ですか?",
+          "fromConversationId": "l43-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-001-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「これどなたの写真ですか?」的中文意思是？",
+            "en": "What does \"これどなたの写真ですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "这是谁的照片？",
+                "en": "这是谁的照片？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "これどなたの写真ですか?",
+          "fromConversationId": "l43-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-002-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「息子のハンズです」是什么意思？",
+            "en": "What does \"息子のハンズです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是我儿子汉斯的。",
+                "en": "是我儿子汉斯的。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "息子のハンズです",
+          "fromConversationId": "l43-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-002-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「是我儿子汉斯的。」的日语说法。",
+            "en": "Select Japanese for \"是我儿子汉斯的。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "息子のハンズです"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "息子のハンズです",
+          "fromConversationId": "l43-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-002-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「息子のハンズです」的中文意思是？",
+            "en": "What does \"息子のハンズです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是我儿子汉斯的。",
+                "en": "是我儿子汉斯的。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "息子のハンズです",
+          "fromConversationId": "l43-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-003-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「運動会の時撮った写真です」是什么意思？",
+            "en": "What does \"運動会の時撮った写真です\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "这是运动会时拍的照片。",
+                "en": "这是运动会时拍的照片。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "運動会の時撮った写真です",
+          "fromConversationId": "l43-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-003-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「这是运动会时拍的照片。」的日语说法。",
+            "en": "Select Japanese for \"这是运动会时拍的照片。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "運動会の時撮った写真です"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "運動会の時撮った写真です",
+          "fromConversationId": "l43-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-003-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「運動会の時撮った写真です」的中文意思是？",
+            "en": "What does \"運動会の時撮った写真です\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "这是运动会时拍的照片。",
+                "en": "这是运动会时拍的照片。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "運動会の時撮った写真です",
+          "fromConversationId": "l43-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-004-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「元気そうですね」是什么意思？",
+            "en": "What does \"元気そうですね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "看起来很有精神呢。",
+                "en": "看起来很有精神呢。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "元気そうですね",
+          "fromConversationId": "l43-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-004-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「看起来很有精神呢。」的日语说法。",
+            "en": "Select Japanese for \"看起来很有精神呢。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "元気そうですね"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "元気そうですね",
+          "fromConversationId": "l43-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-004-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「元気そうですね」的中文意思是？",
+            "en": "What does \"元気そうですね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "看起来很有精神呢。",
+                "en": "看起来很有精神呢。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "元気そうですね",
+          "fromConversationId": "l43-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-005-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「ええ、ハンズは走るのが早いんですよ」是什么意思？",
+            "en": "What does \"ええ、ハンズは走るのが早いんですよ\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是啊，汉斯跑得很快哦。",
+                "en": "是啊，汉斯跑得很快哦。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "ええ、ハンズは走るのが早いんですよ",
+          "fromConversationId": "l43-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-005-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「是啊，汉斯跑得很快哦。」的日语说法。",
+            "en": "Select Japanese for \"是啊，汉斯跑得很快哦。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "ええ、ハンズは走るのが早いんですよ"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ええ、ハンズは走るのが早いんですよ",
+          "fromConversationId": "l43-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-005-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「ええ、ハンズは走るのが早いんですよ」的中文意思是？",
+            "en": "What does \"ええ、ハンズは走るのが早いんですよ\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是啊，汉斯跑得很快哦。",
+                "en": "是啊，汉斯跑得很快哦。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ええ、ハンズは走るのが早いんですよ",
+          "fromConversationId": "l43-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-006-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「日本の小学校にも慣れて」是什么意思？",
+            "en": "What does \"日本の小学校にも慣れて\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "他也已经习惯了日本的小学，",
+                "en": "他也已经习惯了日本的小学，"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "日本の小学校にも慣れて",
+          "fromConversationId": "l43-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-006-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「他也已经习惯了日本的小学，」的日语说法。",
+            "en": "Select Japanese for \"他也已经习惯了日本的小学，\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "日本の小学校にも慣れて"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "日本の小学校にも慣れて",
+          "fromConversationId": "l43-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-006-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「日本の小学校にも慣れて」的中文意思是？",
+            "en": "What does \"日本の小学校にも慣れて\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "他也已经习惯了日本的小学，",
+                "en": "他也已经习惯了日本的小学，"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "日本の小学校にも慣れて",
+          "fromConversationId": "l43-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-007-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「友達もできて」是什么意思？",
+            "en": "What does \"友達もできて\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "交到了朋友，",
+                "en": "交到了朋友，"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "友達もできて",
+          "fromConversationId": "l43-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-007-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「交到了朋友，」的日语说法。",
+            "en": "Select Japanese for \"交到了朋友，\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "友達もできて"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "友達もできて",
+          "fromConversationId": "l43-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-007-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「友達もできて」的中文意思是？",
+            "en": "What does \"友達もできて\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "交到了朋友，",
+                "en": "交到了朋友，"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "友達もできて",
+          "fromConversationId": "l43-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-008-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「毎日楽しそうです」是什么意思？",
+            "en": "What does \"毎日楽しそうです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "每天看起来都很开心。",
+                "en": "每天看起来都很开心。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "毎日楽しそうです",
+          "fromConversationId": "l43-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-008-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「每天看起来都很开心。」的日语说法。",
+            "en": "Select Japanese for \"每天看起来都很开心。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "毎日楽しそうです"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "毎日楽しそうです",
+          "fromConversationId": "l43-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-008-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「毎日楽しそうです」的中文意思是？",
+            "en": "What does \"毎日楽しそうです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "每天看起来都很开心。",
+                "en": "每天看起来都很开心。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "毎日楽しそうです",
+          "fromConversationId": "l43-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-009-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「よかったですね」是什么意思？",
+            "en": "What does \"よかったですね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那太好了。",
+                "en": "那太好了。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "よかったですね",
+          "fromConversationId": "l43-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-009-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「那太好了。」的日语说法。",
+            "en": "Select Japanese for \"那太好了。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "よかったですね"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "よかったですね",
+          "fromConversationId": "l43-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-009-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「よかったですね」的中文意思是？",
+            "en": "What does \"よかったですね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那太好了。",
+                "en": "那太好了。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "よかったですね",
+          "fromConversationId": "l43-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-010-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「こちらの方は奥さんですか?」是什么意思？",
+            "en": "What does \"こちらの方は奥さんですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "这位是您太太吗？",
+                "en": "这位是您太太吗？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "こちらの方は奥さんですか?",
+          "fromConversationId": "l43-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-010-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「这位是您太太吗？」的日语说法。",
+            "en": "Select Japanese for \"这位是您太太吗？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "こちらの方は奥さんですか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "こちらの方は奥さんですか?",
+          "fromConversationId": "l43-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-010-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「こちらの方は奥さんですか?」的中文意思是？",
+            "en": "What does \"こちらの方は奥さんですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "这位是您太太吗？",
+                "en": "这位是您太太吗？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "こちらの方は奥さんですか?",
+          "fromConversationId": "l43-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-011-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「綺麗な方ですね」是什么意思？",
+            "en": "What does \"綺麗な方ですね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "真是位漂亮的女士啊。",
+                "en": "真是位漂亮的女士啊。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "綺麗な方ですね",
+          "fromConversationId": "l43-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-011-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「真是位漂亮的女士啊。」的日语说法。",
+            "en": "Select Japanese for \"真是位漂亮的女士啊。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "綺麗な方ですね"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "綺麗な方ですね",
+          "fromConversationId": "l43-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-011-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「綺麗な方ですね」的中文意思是？",
+            "en": "What does \"綺麗な方ですね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "真是位漂亮的女士啊。",
+                "en": "真是位漂亮的女士啊。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "綺麗な方ですね",
+          "fromConversationId": "l43-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-012-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「ありがとうございます」是什么意思？",
+            "en": "What does \"ありがとうございます\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "谢谢您。",
+                "en": "谢谢您。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "ありがとうございます",
+          "fromConversationId": "l43-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-012-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「谢谢您。」的日语说法。",
+            "en": "Select Japanese for \"谢谢您。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "ありがとうございます"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ありがとうございます",
+          "fromConversationId": "l43-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-012-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「ありがとうございます」的中文意思是？",
+            "en": "What does \"ありがとうございます\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "谢谢您。",
+                "en": "谢谢您。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ありがとうございます",
+          "fromConversationId": "l43-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-013-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「妻はいろいろなことに興味があって」是什么意思？",
+            "en": "What does \"妻はいろいろなことに興味があって\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我妻子对各种事情都感兴趣，",
+                "en": "我妻子对各种事情都感兴趣，"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "妻はいろいろなことに興味があって",
+          "fromConversationId": "l43-conv-013",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-013-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「我妻子对各种事情都感兴趣，」的日语说法。",
+            "en": "Select Japanese for \"我妻子对各种事情都感兴趣，\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "妻はいろいろなことに興味があって"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "妻はいろいろなことに興味があって",
+          "fromConversationId": "l43-conv-013",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-013-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「妻はいろいろなことに興味があって」的中文意思是？",
+            "en": "What does \"妻はいろいろなことに興味があって\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我妻子对各种事情都感兴趣，",
+                "en": "我妻子对各种事情都感兴趣，"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "妻はいろいろなことに興味があって",
+          "fromConversationId": "l43-conv-013",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-014-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「一緒にいると面白いんですよ」是什么意思？",
+            "en": "What does \"一緒にいると面白いんですよ\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "跟她在一起很有意思。",
+                "en": "跟她在一起很有意思。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "一緒にいると面白いんですよ",
+          "fromConversationId": "l43-conv-014",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-014-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「跟她在一起很有意思。」的日语说法。",
+            "en": "Select Japanese for \"跟她在一起很有意思。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "一緒にいると面白いんですよ"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "一緒にいると面白いんですよ",
+          "fromConversationId": "l43-conv-014",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-014-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「一緒にいると面白いんですよ」的中文意思是？",
+            "en": "What does \"一緒にいると面白いんですよ\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "跟她在一起很有意思。",
+                "en": "跟她在一起很有意思。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "一緒にいると面白いんですよ",
+          "fromConversationId": "l43-conv-014",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-015-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「そうですか」是什么意思？",
+            "en": "What does \"そうですか\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是这样啊。",
+                "en": "是这样啊。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "そうですか",
+          "fromConversationId": "l43-conv-015",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-015-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「是这样啊。」的日语说法。",
+            "en": "Select Japanese for \"是这样啊。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "そうですか"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "そうですか",
+          "fromConversationId": "l43-conv-015",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-015-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「そうですか」的中文意思是？",
+            "en": "What does \"そうですか\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是这样啊。",
+                "en": "是这样啊。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "そうですか",
+          "fromConversationId": "l43-conv-015",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-016-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「特に歴史が好きで」是什么意思？",
+            "en": "What does \"特に歴史が好きで\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "她特别喜欢历史，",
+                "en": "她特别喜欢历史，"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "特に歴史が好きで",
+          "fromConversationId": "l43-conv-016",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-016-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「她特别喜欢历史，」的日语说法。",
+            "en": "Select Japanese for \"她特别喜欢历史，\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "特に歴史が好きで"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "特に歴史が好きで",
+          "fromConversationId": "l43-conv-016",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-016-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「特に歴史が好きで」的中文意思是？",
+            "en": "What does \"特に歴史が好きで\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "她特别喜欢历史，",
+                "en": "她特别喜欢历史，"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "特に歴史が好きで",
+          "fromConversationId": "l43-conv-016",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-017-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「時間があれば古い街を歩いています」是什么意思？",
+            "en": "What does \"時間があれば古い街を歩いています\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "有时间就会去老街散步。",
+                "en": "有时间就会去老街散步。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "時間があれば古い街を歩いています",
+          "fromConversationId": "l43-conv-017",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-017-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「有时间就会去老街散步。」的日语说法。",
+            "en": "Select Japanese for \"有时间就会去老街散步。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "時間があれば古い街を歩いています"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "時間があれば古い街を歩いています",
+          "fromConversationId": "l43-conv-017",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l43-q-017-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「時間があれば古い街を歩いています」的中文意思是？",
+            "en": "What does \"時間があれば古い街を歩いています\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "有时间就会去老街散步。",
+                "en": "有时间就会去老街散步。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "時間があれば古い街を歩いています",
+          "fromConversationId": "l43-conv-017",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
     }
   ],
   "conversationVideo": {
@@ -831,6 +2861,22 @@
     "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P43_%E7%AC%AC43%E8%AA%B2.mp4",
     "subtitleUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P43_%E7%AC%AC43%E8%AA%B2.json",
     "sourceType": "official_video_resource",
-    "status": "linked_not_imported"
+    "status": "imported_with_subtitles"
+  },
+  "conversationMainlineStatus": {
+    "videoLinked": "published",
+    "subtitleParsed": "published",
+    "subtitleCleaned": "published",
+    "humanReviewed": "not_started",
+    "importedToLessonJson": "published",
+    "vocabReady": "needs_review",
+    "grammarReady": "needs_review",
+    "examplesReady": "needs_review",
+    "quizReady": "needs_review",
+    "reciteReady": "needs_review",
+    "recordingReady": "published",
+    "scoringReady": "published",
+    "publishedToStaging": "not_started",
+    "verifiedOnline": "not_started"
   }
 }

@@ -688,6 +688,2263 @@
           ]
         }
       ]
+    },
+    {
+      "type": "conversation",
+      "id": "l09_conversation",
+      "sourceType": "official_video_subtitle",
+      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P9_%E7%AC%AC9%E8%AA%B2.json",
+      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P9_%E7%AC%AC9%E8%AA%B2.mp4",
+      "title": {
+        "zh": "会话背诵",
+        "en": "Conversation Practice"
+      },
+      "dialogTitle": {
+        "zh": "喜好",
+        "en": "喜好"
+      },
+      "conversationGoal": {
+        "zh": "能表达喜好和情感",
+        "en": "Express likes and feelings"
+      },
+      "items": [
+        {
+          "id": "l09-conv-001",
+          "speaker": "",
+          "jp": "3",
+          "kana": "3",
+          "zh": "3",
+          "keyword": "",
+          "videoStart": "0:00.0",
+          "videoEnd": "0:04.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-conv-002",
+          "speaker": "",
+          "jp": "2",
+          "kana": "2",
+          "zh": "2",
+          "keyword": "",
+          "videoStart": "0:04.0",
+          "videoEnd": "0:08.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-conv-003",
+          "speaker": "",
+          "jp": "2",
+          "kana": "2",
+          "zh": "2",
+          "keyword": "",
+          "videoStart": "0:08.0",
+          "videoEnd": "0:12.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-conv-004",
+          "speaker": "",
+          "jp": "3",
+          "kana": "3",
+          "zh": "3",
+          "keyword": "",
+          "videoStart": "0:12.0",
+          "videoEnd": "0:16.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-conv-005",
+          "speaker": "",
+          "jp": "3",
+          "kana": "3",
+          "zh": "3",
+          "keyword": "",
+          "videoStart": "0:16.0",
+          "videoEnd": "0:20.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-conv-006",
+          "speaker": "",
+          "jp": "はい",
+          "kana": "はい",
+          "zh": "是的",
+          "keyword": "",
+          "videoStart": "0:20.0",
+          "videoEnd": "0:22.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-conv-007",
+          "speaker": "",
+          "jp": "キムラさんですか?ミラーです",
+          "kana": "キムラさんですか?ミラーです",
+          "zh": "是木村女士吗？我是米勒。",
+          "keyword": "",
+          "videoStart": "0:22.0",
+          "videoEnd": "0:25.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-conv-008",
+          "speaker": "",
+          "jp": "あ、ミラーさんこんばんはお元気ですか?",
+          "kana": "",
+          "zh": "啊，米勒先生，晚上好，您还好吗？",
+          "keyword": "元気です",
+          "videoStart": "0:25.0",
+          "videoEnd": "0:29.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-conv-009",
+          "speaker": "",
+          "jp": "はい、元気です",
+          "kana": "",
+          "zh": "是的，我很好。",
+          "keyword": "元気です",
+          "videoStart": "0:29.0",
+          "videoEnd": "0:31.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-conv-010",
+          "speaker": "",
+          "jp": "あの、キムラさん、クラシックのコンサートを一緒に行きませんか?",
+          "kana": "",
+          "zh": "那个，木村女士，要不要一起去听古典音乐会？",
+          "keyword": "一緒",
+          "videoStart": "0:31.0",
+          "videoEnd": "0:36.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-conv-011",
+          "speaker": "",
+          "jp": "いいですね",
+          "kana": "いいですね",
+          "zh": "听起来不错呢。",
+          "keyword": "",
+          "videoStart": "0:36.0",
+          "videoEnd": "0:38.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-conv-012",
+          "speaker": "",
+          "jp": "いつですか?",
+          "kana": "いつですか?",
+          "zh": "是什么时候？",
+          "keyword": "",
+          "videoStart": "0:38.0",
+          "videoEnd": "0:40.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-conv-013",
+          "speaker": "",
+          "jp": "来週の金曜日の晩です",
+          "kana": "",
+          "zh": "是下周星期五的晚上。",
+          "keyword": "金曜日",
+          "videoStart": "0:40.0",
+          "videoEnd": "0:43.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-conv-014",
+          "speaker": "",
+          "jp": "金曜日いいですか?",
+          "kana": "",
+          "zh": "星期五可以吗？",
+          "keyword": "金曜日",
+          "videoStart": "0:43.0",
+          "videoEnd": "0:46.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-conv-015",
+          "speaker": "",
+          "jp": "金曜日の晩はちょっと…",
+          "kana": "",
+          "zh": "星期五晚上有点不太方便……",
+          "keyword": "金曜日",
+          "videoStart": "0:50.0",
+          "videoEnd": "0:53.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-conv-016",
+          "speaker": "",
+          "jp": "ダメですか?",
+          "kana": "ダメですか?",
+          "zh": "不行吗？",
+          "keyword": "",
+          "videoStart": "0:53.0",
+          "videoEnd": "0:56.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-conv-017",
+          "speaker": "",
+          "jp": "え、残念ですが友達と約束がありますから",
+          "kana": "",
+          "zh": "嗯，真遗憾，我和朋友有约了。",
+          "keyword": "約束",
+          "videoStart": "0:56.0",
+          "videoEnd": "1:02.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-conv-018",
+          "speaker": "",
+          "jp": "そうですか",
+          "kana": "そうですか",
+          "zh": "这样啊。",
+          "keyword": "",
+          "videoStart": "1:02.0",
+          "videoEnd": "1:05.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-conv-019",
+          "speaker": "",
+          "jp": "え、また今度お願いします",
+          "kana": "",
+          "zh": "那，下次请再邀请我吧。",
+          "keyword": "今度",
+          "videoStart": "1:05.0",
+          "videoEnd": "1:09.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_vocab",
+      "id": "l09_conversation_vocab",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话关键词汇",
+        "en": "Conversation Key Vocabulary"
+      },
+      "description": {
+        "zh": "以下词汇从会话原文中提取。",
+        "en": "Vocabulary from the conversation."
+      },
+      "items": [
+        {
+          "word": "はい",
+          "kana": "はい",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l09-conv-006",
+          "sourceSentence": "はい",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "キムラさんですか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l09-conv-007",
+          "sourceSentence": "キムラさんですか?ミラーです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "ミラーです",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l09-conv-007",
+          "sourceSentence": "キムラさんですか?ミラーです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "ミラーさんこんばんはお元気ですか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l09-conv-008",
+          "sourceSentence": "あ、ミラーさんこんばんはお元気ですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "元気です",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l09-conv-009",
+          "sourceSentence": "はい、元気です",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "あの",
+          "kana": "あの",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l09-conv-010",
+          "sourceSentence": "あの、キムラさん、クラシックのコンサートを一緒に行きませんか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "キムラさん",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l09-conv-010",
+          "sourceSentence": "あの、キムラさん、クラシックのコンサートを一緒に行きませんか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "クラシックのコンサートを一緒に行きませんか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l09-conv-010",
+          "sourceSentence": "あの、キムラさん、クラシックのコンサートを一緒に行きませんか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "いいですね",
+          "kana": "いいですね",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l09-conv-011",
+          "sourceSentence": "いいですね",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "いつですか",
+          "kana": "いつですか",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l09-conv-012",
+          "sourceSentence": "いつですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "来週の金曜日の晩です",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l09-conv-013",
+          "sourceSentence": "来週の金曜日の晩です",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "金曜日いいですか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l09-conv-014",
+          "sourceSentence": "金曜日いいですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "金曜日の晩はちょっと",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l09-conv-015",
+          "sourceSentence": "金曜日の晩はちょっと…",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "ダメですか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l09-conv-016",
+          "sourceSentence": "ダメですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "残念ですが友達と約束がありますから",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l09-conv-017",
+          "sourceSentence": "え、残念ですが友達と約束がありますから",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "そうですか",
+          "kana": "そうですか",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l09-conv-018",
+          "sourceSentence": "そうですか",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "また今度お願いします",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l09-conv-019",
+          "sourceSentence": "え、また今度お願いします",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_grammar",
+      "id": "l09_conversation_grammar",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话核心语法",
+        "en": "Conversation Core Grammar"
+      },
+      "description": {
+        "zh": "以下语法点从会话原文中提取。",
+        "en": "Grammar points from the conversation."
+      },
+      "items": [
+        {
+          "pattern": "〜です",
+          "meaning": {
+            "zh": "是…（礼貌判断）",
+            "en": "is/am (polite copula)"
+          },
+          "conversationExample": "キムラさんですか?ミラーです",
+          "fromConversationId": "l09-conv-007",
+          "sourceSentence": "キムラさんですか?ミラーです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「です」是日语礼貌判断助动词，相当于中文的\"是\"。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜か",
+          "meaning": {
+            "zh": "…吗？（疑问）",
+            "en": "question marker"
+          },
+          "conversationExample": "キムラさんですか?ミラーです",
+          "fromConversationId": "l09-conv-007",
+          "sourceSentence": "キムラさんですか?ミラーです",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "句尾加「か」构成疑问句。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜を〜",
+          "meaning": {
+            "zh": "…（宾语标记）",
+            "en": "object marker"
+          },
+          "conversationExample": "あの、キムラさん、クラシックのコンサートを一緒に行きませんか?",
+          "fromConversationId": "l09-conv-010",
+          "sourceSentence": "あの、キムラさん、クラシックのコンサートを一緒に行きませんか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「を」标记动作的对象。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜に〜",
+          "meaning": {
+            "zh": "在/向…",
+            "en": "to/at"
+          },
+          "conversationExample": "あの、キムラさん、クラシックのコンサートを一緒に行きませんか?",
+          "fromConversationId": "l09-conv-010",
+          "sourceSentence": "あの、キムラさん、クラシックのコンサートを一緒に行きませんか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「に」表示时间、地点或方向。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ません",
+          "meaning": {
+            "zh": "不…（否定）",
+            "en": "negative form"
+          },
+          "conversationExample": "あの、キムラさん、クラシックのコンサートを一緒に行きませんか?",
+          "fromConversationId": "l09-conv-010",
+          "sourceSentence": "あの、キムラさん、クラシックのコンサートを一緒に行きませんか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ません」是「ます」的否定形式。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜から",
+          "meaning": {
+            "zh": "从…",
+            "en": "from"
+          },
+          "conversationExample": "え、残念ですが友達と約束がありますから",
+          "fromConversationId": "l09-conv-017",
+          "sourceSentence": "え、残念ですが友達と約束がありますから",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「から」表示起点或来源。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ます",
+          "meaning": {
+            "zh": "（动词敬体）",
+            "en": "polite verb form"
+          },
+          "conversationExample": "え、残念ですが友達と約束がありますから",
+          "fromConversationId": "l09-conv-017",
+          "sourceSentence": "え、残念ですが友達と約束がありますから",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ます」是动词的敬体形式。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_examples",
+      "id": "l09_conversation_examples",
+      "sourceType": "ai_generated_from_official_conversation",
+      "title": {
+        "zh": "会话替换例句",
+        "en": "Conversation Replacement Examples"
+      },
+      "description": {
+        "zh": "以下例句基于会话原句生成。",
+        "en": "Examples generated from conversation sentences."
+      },
+      "items": [
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "3",
+          "fromConversationId": "l09-conv-001",
+          "sourceSentence": "3",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "2",
+          "fromConversationId": "l09-conv-002",
+          "sourceSentence": "2",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "2",
+          "fromConversationId": "l09-conv-003",
+          "sourceSentence": "2",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "3",
+          "fromConversationId": "l09-conv-004",
+          "sourceSentence": "3",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "3",
+          "fromConversationId": "l09-conv-005",
+          "sourceSentence": "3",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "はい",
+          "fromConversationId": "l09-conv-006",
+          "sourceSentence": "はい",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "替换练习",
+          "originalSentence": "キムラさんですか?ミラーです",
+          "fromConversationId": "l09-conv-007",
+          "sourceSentence": "キムラさんですか?ミラーです",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [
+            {
+              "jp": "キムラさんですか佐藤です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "キムラさんですか田中です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "キムラさんですか山田です",
+              "kana": "",
+              "zh": ""
+            }
+          ],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "元気です",
+          "originalSentence": "あ、ミラーさんこんばんはお元気ですか?",
+          "fromConversationId": "l09-conv-008",
+          "sourceSentence": "あ、ミラーさんこんばんはお元気ですか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "元気です",
+          "originalSentence": "はい、元気です",
+          "fromConversationId": "l09-conv-009",
+          "sourceSentence": "はい、元気です",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [
+            {
+              "jp": "はい佐藤です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "はい田中です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "はい山田です",
+              "kana": "",
+              "zh": ""
+            }
+          ],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "一緒",
+          "originalSentence": "あの、キムラさん、クラシックのコンサートを一緒に行きませんか?",
+          "fromConversationId": "l09-conv-010",
+          "sourceSentence": "あの、キムラさん、クラシックのコンサートを一緒に行きませんか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "いいですね",
+          "fromConversationId": "l09-conv-011",
+          "sourceSentence": "いいですね",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "いつですか?",
+          "fromConversationId": "l09-conv-012",
+          "sourceSentence": "いつですか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "金曜日",
+          "originalSentence": "来週の金曜日の晩です",
+          "fromConversationId": "l09-conv-013",
+          "sourceSentence": "来週の金曜日の晩です",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [
+            {
+              "jp": "来週の金曜日の佐藤です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "来週の金曜日の田中です",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "来週の金曜日の山田です",
+              "kana": "",
+              "zh": ""
+            }
+          ],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "金曜日",
+          "originalSentence": "金曜日いいですか?",
+          "fromConversationId": "l09-conv-014",
+          "sourceSentence": "金曜日いいですか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "金曜日",
+          "originalSentence": "金曜日の晩はちょっと…",
+          "fromConversationId": "l09-conv-015",
+          "sourceSentence": "金曜日の晩はちょっと…",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "ダメですか?",
+          "fromConversationId": "l09-conv-016",
+          "sourceSentence": "ダメですか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "約束",
+          "originalSentence": "え、残念ですが友達と約束がありますから",
+          "fromConversationId": "l09-conv-017",
+          "sourceSentence": "え、残念ですが友達と約束がありますから",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "そうですか",
+          "fromConversationId": "l09-conv-018",
+          "sourceSentence": "そうですか",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "今度",
+          "originalSentence": "え、また今度お願いします",
+          "fromConversationId": "l09-conv-019",
+          "sourceSentence": "え、また今度お願いします",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_quiz",
+      "id": "l09_conversation_quiz",
+      "sourceType": "generated_from_official_video_subtitle",
+      "title": {
+        "zh": "会话专项测试",
+        "en": "Conversation Quiz"
+      },
+      "description": {
+        "zh": "测试题围绕会话内容设计。",
+        "en": "Quiz based on the conversation."
+      },
+      "items": [
+        {
+          "id": "l09-q-001-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「3」是什么意思？",
+            "en": "What does \"3\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "3",
+                "en": "3"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "3",
+          "fromConversationId": "l09-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-001-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「3」的日语说法。",
+            "en": "Select Japanese for \"3\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "3"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "3",
+          "fromConversationId": "l09-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-001-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「3」的中文意思是？",
+            "en": "What does \"3\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "3",
+                "en": "3"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "3",
+          "fromConversationId": "l09-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-002-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「2」是什么意思？",
+            "en": "What does \"2\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "2",
+                "en": "2"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "2",
+          "fromConversationId": "l09-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-002-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「2」的日语说法。",
+            "en": "Select Japanese for \"2\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "2"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "2",
+          "fromConversationId": "l09-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-002-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「2」的中文意思是？",
+            "en": "What does \"2\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "2",
+                "en": "2"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "2",
+          "fromConversationId": "l09-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-003-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「2」是什么意思？",
+            "en": "What does \"2\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "2",
+                "en": "2"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "2",
+          "fromConversationId": "l09-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-003-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「2」的日语说法。",
+            "en": "Select Japanese for \"2\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "2"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "2",
+          "fromConversationId": "l09-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-003-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「2」的中文意思是？",
+            "en": "What does \"2\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "2",
+                "en": "2"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "2",
+          "fromConversationId": "l09-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-004-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「3」是什么意思？",
+            "en": "What does \"3\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "3",
+                "en": "3"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "3",
+          "fromConversationId": "l09-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-004-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「3」的日语说法。",
+            "en": "Select Japanese for \"3\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "3"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "3",
+          "fromConversationId": "l09-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-004-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「3」的中文意思是？",
+            "en": "What does \"3\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "3",
+                "en": "3"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "3",
+          "fromConversationId": "l09-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-005-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「3」是什么意思？",
+            "en": "What does \"3\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "3",
+                "en": "3"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "3",
+          "fromConversationId": "l09-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-005-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「3」的日语说法。",
+            "en": "Select Japanese for \"3\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "3"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "3",
+          "fromConversationId": "l09-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-005-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「3」的中文意思是？",
+            "en": "What does \"3\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "3",
+                "en": "3"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "3",
+          "fromConversationId": "l09-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-006-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「はい」是什么意思？",
+            "en": "What does \"はい\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是的",
+                "en": "是的"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "はい",
+          "fromConversationId": "l09-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-006-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「是的」的日语说法。",
+            "en": "Select Japanese for \"是的\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "はい"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい",
+          "fromConversationId": "l09-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-006-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「はい」的中文意思是？",
+            "en": "What does \"はい\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是的",
+                "en": "是的"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい",
+          "fromConversationId": "l09-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-007-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「キムラさんですか?ミラーです」是什么意思？",
+            "en": "What does \"キムラさんですか?ミラーです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是木村女士吗？我是米勒。",
+                "en": "是木村女士吗？我是米勒。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "キムラさんですか?ミラーです",
+          "fromConversationId": "l09-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-007-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「是木村女士吗？我是米勒。」的日语说法。",
+            "en": "Select Japanese for \"是木村女士吗？我是米勒。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "キムラさんですか?ミラーです"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "キムラさんですか?ミラーです",
+          "fromConversationId": "l09-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-007-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「キムラさんですか?ミラーです」的中文意思是？",
+            "en": "What does \"キムラさんですか?ミラーです\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是木村女士吗？我是米勒。",
+                "en": "是木村女士吗？我是米勒。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "キムラさんですか?ミラーです",
+          "fromConversationId": "l09-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-008-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「あ、ミラーさんこんばんはお元気ですか?」是什么意思？",
+            "en": "What does \"あ、ミラーさんこんばんはお元気ですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "啊，米勒先生，晚上好，您还好吗？",
+                "en": "啊，米勒先生，晚上好，您还好吗？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "あ、ミラーさんこんばんはお元気ですか?",
+          "fromConversationId": "l09-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-008-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「啊，米勒先生，晚上好，您还好吗？」的日语说法。",
+            "en": "Select Japanese for \"啊，米勒先生，晚上好，您还好吗？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "あ、ミラーさんこんばんはお元気ですか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "あ、ミラーさんこんばんはお元気ですか?",
+          "fromConversationId": "l09-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-008-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「あ、ミラーさんこんばんはお元気ですか?」的中文意思是？",
+            "en": "What does \"あ、ミラーさんこんばんはお元気ですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "啊，米勒先生，晚上好，您还好吗？",
+                "en": "啊，米勒先生，晚上好，您还好吗？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "あ、ミラーさんこんばんはお元気ですか?",
+          "fromConversationId": "l09-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-009-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「はい、元気です」是什么意思？",
+            "en": "What does \"はい、元気です\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是的，我很好。",
+                "en": "是的，我很好。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "はい、元気です",
+          "fromConversationId": "l09-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-009-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「是的，我很好。」的日语说法。",
+            "en": "Select Japanese for \"是的，我很好。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "はい、元気です"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい、元気です",
+          "fromConversationId": "l09-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-009-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「はい、元気です」的中文意思是？",
+            "en": "What does \"はい、元気です\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是的，我很好。",
+                "en": "是的，我很好。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい、元気です",
+          "fromConversationId": "l09-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-010-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「あの、キムラさん、クラシックのコンサートを一緒に行きませんか?」是什么意思？",
+            "en": "What does \"あの、キムラさん、クラシックのコンサートを一緒に行きませんか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那个，木村女士，要不要一起去听古典音乐会？",
+                "en": "那个，木村女士，要不要一起去听古典音乐会？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "あの、キムラさん、クラシックのコンサートを一緒に行きませんか?",
+          "fromConversationId": "l09-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-010-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「那个，木村女士，要不要一起去听古典音乐会？」的日语说法。",
+            "en": "Select Japanese for \"那个，木村女士，要不要一起去听古典音乐会？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "あの、キムラさん、クラシックのコンサートを一緒に行きませんか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "あの、キムラさん、クラシックのコンサートを一緒に行きませんか?",
+          "fromConversationId": "l09-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-010-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「あの、キムラさん、クラシックのコンサートを一緒に行きませんか?」的中文意思是？",
+            "en": "What does \"あの、キムラさん、クラシックのコンサートを一緒に行きませんか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那个，木村女士，要不要一起去听古典音乐会？",
+                "en": "那个，木村女士，要不要一起去听古典音乐会？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "あの、キムラさん、クラシックのコンサートを一緒に行きませんか?",
+          "fromConversationId": "l09-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-011-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「いいですね」是什么意思？",
+            "en": "What does \"いいですね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "听起来不错呢。",
+                "en": "听起来不错呢。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "いいですね",
+          "fromConversationId": "l09-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-011-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「听起来不错呢。」的日语说法。",
+            "en": "Select Japanese for \"听起来不错呢。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "いいですね"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "いいですね",
+          "fromConversationId": "l09-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-011-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「いいですね」的中文意思是？",
+            "en": "What does \"いいですね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "听起来不错呢。",
+                "en": "听起来不错呢。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "いいですね",
+          "fromConversationId": "l09-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-012-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「いつですか?」是什么意思？",
+            "en": "What does \"いつですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是什么时候？",
+                "en": "是什么时候？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "いつですか?",
+          "fromConversationId": "l09-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-012-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「是什么时候？」的日语说法。",
+            "en": "Select Japanese for \"是什么时候？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "いつですか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "いつですか?",
+          "fromConversationId": "l09-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-012-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「いつですか?」的中文意思是？",
+            "en": "What does \"いつですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是什么时候？",
+                "en": "是什么时候？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "いつですか?",
+          "fromConversationId": "l09-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-013-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「来週の金曜日の晩です」是什么意思？",
+            "en": "What does \"来週の金曜日の晩です\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是下周星期五的晚上。",
+                "en": "是下周星期五的晚上。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "来週の金曜日の晩です",
+          "fromConversationId": "l09-conv-013",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-013-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「是下周星期五的晚上。」的日语说法。",
+            "en": "Select Japanese for \"是下周星期五的晚上。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "来週の金曜日の晩です"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "来週の金曜日の晩です",
+          "fromConversationId": "l09-conv-013",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-013-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「来週の金曜日の晩です」的中文意思是？",
+            "en": "What does \"来週の金曜日の晩です\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是下周星期五的晚上。",
+                "en": "是下周星期五的晚上。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "来週の金曜日の晩です",
+          "fromConversationId": "l09-conv-013",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-014-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「金曜日いいですか?」是什么意思？",
+            "en": "What does \"金曜日いいですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "星期五可以吗？",
+                "en": "星期五可以吗？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "金曜日いいですか?",
+          "fromConversationId": "l09-conv-014",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-014-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「星期五可以吗？」的日语说法。",
+            "en": "Select Japanese for \"星期五可以吗？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "金曜日いいですか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "金曜日いいですか?",
+          "fromConversationId": "l09-conv-014",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-014-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「金曜日いいですか?」的中文意思是？",
+            "en": "What does \"金曜日いいですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "星期五可以吗？",
+                "en": "星期五可以吗？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "金曜日いいですか?",
+          "fromConversationId": "l09-conv-014",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-015-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「金曜日の晩はちょっと…」是什么意思？",
+            "en": "What does \"金曜日の晩はちょっと…\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "星期五晚上有点不太方便……",
+                "en": "星期五晚上有点不太方便……"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "金曜日の晩はちょっと…",
+          "fromConversationId": "l09-conv-015",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-015-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「星期五晚上有点不太方便……」的日语说法。",
+            "en": "Select Japanese for \"星期五晚上有点不太方便……\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "金曜日の晩はちょっと…"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "金曜日の晩はちょっと…",
+          "fromConversationId": "l09-conv-015",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-015-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「金曜日の晩はちょっと…」的中文意思是？",
+            "en": "What does \"金曜日の晩はちょっと…\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "星期五晚上有点不太方便……",
+                "en": "星期五晚上有点不太方便……"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "金曜日の晩はちょっと…",
+          "fromConversationId": "l09-conv-015",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-016-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「ダメですか?」是什么意思？",
+            "en": "What does \"ダメですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不行吗？",
+                "en": "不行吗？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "ダメですか?",
+          "fromConversationId": "l09-conv-016",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-016-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「不行吗？」的日语说法。",
+            "en": "Select Japanese for \"不行吗？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "ダメですか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ダメですか?",
+          "fromConversationId": "l09-conv-016",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-016-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「ダメですか?」的中文意思是？",
+            "en": "What does \"ダメですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不行吗？",
+                "en": "不行吗？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ダメですか?",
+          "fromConversationId": "l09-conv-016",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-017-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「え、残念ですが友達と約束がありますから」是什么意思？",
+            "en": "What does \"え、残念ですが友達と約束がありますから\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "嗯，真遗憾，我和朋友有约了。",
+                "en": "嗯，真遗憾，我和朋友有约了。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "え、残念ですが友達と約束がありますから",
+          "fromConversationId": "l09-conv-017",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-017-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「嗯，真遗憾，我和朋友有约了。」的日语说法。",
+            "en": "Select Japanese for \"嗯，真遗憾，我和朋友有约了。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "え、残念ですが友達と約束がありますから"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "え、残念ですが友達と約束がありますから",
+          "fromConversationId": "l09-conv-017",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-017-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「え、残念ですが友達と約束がありますから」的中文意思是？",
+            "en": "What does \"え、残念ですが友達と約束がありますから\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "嗯，真遗憾，我和朋友有约了。",
+                "en": "嗯，真遗憾，我和朋友有约了。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "え、残念ですが友達と約束がありますから",
+          "fromConversationId": "l09-conv-017",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-018-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「そうですか」是什么意思？",
+            "en": "What does \"そうですか\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "这样啊。",
+                "en": "这样啊。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "そうですか",
+          "fromConversationId": "l09-conv-018",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-018-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「这样啊。」的日语说法。",
+            "en": "Select Japanese for \"这样啊。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "そうですか"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "そうですか",
+          "fromConversationId": "l09-conv-018",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-018-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「そうですか」的中文意思是？",
+            "en": "What does \"そうですか\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "这样啊。",
+                "en": "这样啊。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "そうですか",
+          "fromConversationId": "l09-conv-018",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-019-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「え、また今度お願いします」是什么意思？",
+            "en": "What does \"え、また今度お願いします\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那，下次请再邀请我吧。",
+                "en": "那，下次请再邀请我吧。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "え、また今度お願いします",
+          "fromConversationId": "l09-conv-019",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-019-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「那，下次请再邀请我吧。」的日语说法。",
+            "en": "Select Japanese for \"那，下次请再邀请我吧。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "え、また今度お願いします"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "え、また今度お願いします",
+          "fromConversationId": "l09-conv-019",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l09-q-019-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「え、また今度お願いします」的中文意思是？",
+            "en": "What does \"え、また今度お願いします\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那，下次请再邀请我吧。",
+                "en": "那，下次请再邀请我吧。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "え、また今度お願いします",
+          "fromConversationId": "l09-conv-019",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
     }
   ],
   "conversationVideo": {
@@ -696,6 +2953,22 @@
     "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P9_%E7%AC%AC9%E8%AA%B2.mp4",
     "subtitleUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P9_%E7%AC%AC9%E8%AA%B2.json",
     "sourceType": "official_video_resource",
-    "status": "linked_not_imported"
+    "status": "imported_with_subtitles"
+  },
+  "conversationMainlineStatus": {
+    "videoLinked": "published",
+    "subtitleParsed": "published",
+    "subtitleCleaned": "published",
+    "humanReviewed": "not_started",
+    "importedToLessonJson": "published",
+    "vocabReady": "needs_review",
+    "grammarReady": "needs_review",
+    "examplesReady": "needs_review",
+    "quizReady": "needs_review",
+    "reciteReady": "needs_review",
+    "recordingReady": "published",
+    "scoringReady": "published",
+    "publishedToStaging": "not_started",
+    "verifiedOnline": "not_started"
   }
 }

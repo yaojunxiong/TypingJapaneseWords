@@ -688,6 +688,1518 @@
           ]
         }
       ]
+    },
+    {
+      "type": "conversation",
+      "id": "l03_conversation",
+      "sourceType": "official_video_subtitle",
+      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P3_%E7%AC%AC3%E8%AA%B2.json",
+      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P3_%E7%AC%AC3%E8%AA%B2.mp4",
+      "title": {
+        "zh": "会话背诵",
+        "en": "Conversation Practice"
+      },
+      "dialogTitle": {
+        "zh": "指示词",
+        "en": "指示词"
+      },
+      "conversationGoal": {
+        "zh": "能使用指示词询问和回答物品位置",
+        "en": "Ask and answer about locations using demonstratives"
+      },
+      "items": [
+        {
+          "id": "l03-conv-001",
+          "speaker": "",
+          "jp": "おはようございます。",
+          "kana": "おはようございます。",
+          "zh": "早上好。",
+          "keyword": "",
+          "videoStart": "0:00.0",
+          "videoEnd": "0:02.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-conv-002",
+          "speaker": "",
+          "jp": "すみません。ワインオリーバーはどこですか?",
+          "kana": "すみません。ワインオリーバーはどこですか?",
+          "zh": "不好意思，请问葡萄酒橄榄店在哪里？",
+          "keyword": "",
+          "videoStart": "0:02.0",
+          "videoEnd": "0:06.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-conv-003",
+          "speaker": "",
+          "jp": "地下1階です。",
+          "kana": "",
+          "zh": "在地下一层。",
+          "keyword": "地下1階です",
+          "videoStart": "0:06.0",
+          "videoEnd": "0:09.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-conv-004",
+          "speaker": "",
+          "jp": "どうも。",
+          "kana": "どうも。",
+          "zh": "谢谢。",
+          "keyword": "",
+          "videoStart": "0:11.0",
+          "videoEnd": "0:13.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-conv-005",
+          "speaker": "",
+          "jp": "おはようございます。",
+          "kana": "おはようございます。",
+          "zh": "早上好。",
+          "keyword": "",
+          "videoStart": "0:30.0",
+          "videoEnd": "0:32.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-conv-006",
+          "speaker": "",
+          "jp": "すみません。そのワインを見せてください。",
+          "kana": "",
+          "zh": "不好意思，请让我看看那瓶葡萄酒。",
+          "keyword": "",
+          "videoStart": "0:46.0",
+          "videoEnd": "0:49.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-conv-007",
+          "speaker": "",
+          "jp": "はい、どうぞ。",
+          "kana": "はい、どうぞ。",
+          "zh": "好的，给您。",
+          "keyword": "",
+          "videoStart": "0:51.0",
+          "videoEnd": "0:53.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-conv-008",
+          "speaker": "",
+          "jp": "これはどこのワインですか?",
+          "kana": "これはどこのワインですか?",
+          "zh": "这瓶葡萄酒是哪里的？",
+          "keyword": "",
+          "videoStart": "0:54.0",
+          "videoEnd": "0:57.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-conv-009",
+          "speaker": "",
+          "jp": "日本のです。",
+          "kana": "",
+          "zh": "是日本的。",
+          "keyword": "日本",
+          "videoStart": "0:57.0",
+          "videoEnd": "0:59.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-conv-010",
+          "speaker": "",
+          "jp": "いくらですか?",
+          "kana": "いくらですか?",
+          "zh": "多少钱？",
+          "keyword": "",
+          "videoStart": "0:59.0",
+          "videoEnd": "1:01.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-conv-011",
+          "speaker": "",
+          "jp": "2500円です。",
+          "kana": "",
+          "zh": "2500日元。",
+          "keyword": "2500円です",
+          "videoStart": "1:01.0",
+          "videoEnd": "1:03.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-conv-012",
+          "speaker": "",
+          "jp": "じゃあ、これをください。",
+          "kana": "じゃあ、これをください。",
+          "zh": "那就请给我这个吧。",
+          "keyword": "",
+          "videoStart": "1:03.0",
+          "videoEnd": "1:05.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_vocab",
+      "id": "l03_conversation_vocab",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话关键词汇",
+        "en": "Conversation Key Vocabulary"
+      },
+      "description": {
+        "zh": "以下词汇从会话原文中提取。",
+        "en": "Vocabulary from the conversation."
+      },
+      "items": [
+        {
+          "word": "おはようございます",
+          "kana": "おはようございます",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l03-conv-001",
+          "sourceSentence": "おはようございます。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "すみません",
+          "kana": "すみません",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l03-conv-002",
+          "sourceSentence": "すみません。ワインオリーバーはどこですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "ワインオリーバーはどこですか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l03-conv-002",
+          "sourceSentence": "すみません。ワインオリーバーはどこですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "地下",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l03-conv-003",
+          "sourceSentence": "地下1階です。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "階です",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l03-conv-003",
+          "sourceSentence": "地下1階です。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "どうも",
+          "kana": "どうも",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l03-conv-004",
+          "sourceSentence": "どうも。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "そのワインを見せてください",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l03-conv-006",
+          "sourceSentence": "すみません。そのワインを見せてください。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "はい",
+          "kana": "はい",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l03-conv-007",
+          "sourceSentence": "はい、どうぞ。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "どうぞ",
+          "kana": "どうぞ",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l03-conv-007",
+          "sourceSentence": "はい、どうぞ。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "これはどこのワインですか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l03-conv-008",
+          "sourceSentence": "これはどこのワインですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "日本のです",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l03-conv-009",
+          "sourceSentence": "日本のです。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "いくらですか",
+          "kana": "いくらですか",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l03-conv-010",
+          "sourceSentence": "いくらですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "円です",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l03-conv-011",
+          "sourceSentence": "2500円です。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "じゃあ",
+          "kana": "じゃあ",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l03-conv-012",
+          "sourceSentence": "じゃあ、これをください。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "これをください",
+          "kana": "これをください",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l03-conv-012",
+          "sourceSentence": "じゃあ、これをください。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_grammar",
+      "id": "l03_conversation_grammar",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话核心语法",
+        "en": "Conversation Core Grammar"
+      },
+      "description": {
+        "zh": "以下语法点从会话原文中提取。",
+        "en": "Grammar points from the conversation."
+      },
+      "items": [
+        {
+          "pattern": "〜ます",
+          "meaning": {
+            "zh": "（动词敬体）",
+            "en": "polite verb form"
+          },
+          "conversationExample": "おはようございます。",
+          "fromConversationId": "l03-conv-001",
+          "sourceSentence": "おはようございます。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ます」是动词的敬体形式。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜です",
+          "meaning": {
+            "zh": "是…（礼貌判断）",
+            "en": "is/am (polite copula)"
+          },
+          "conversationExample": "すみません。ワインオリーバーはどこですか?",
+          "fromConversationId": "l03-conv-002",
+          "sourceSentence": "すみません。ワインオリーバーはどこですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「です」是日语礼貌判断助动词，相当于中文的\"是\"。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜か",
+          "meaning": {
+            "zh": "…吗？（疑问）",
+            "en": "question marker"
+          },
+          "conversationExample": "すみません。ワインオリーバーはどこですか?",
+          "fromConversationId": "l03-conv-002",
+          "sourceSentence": "すみません。ワインオリーバーはどこですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "句尾加「か」构成疑问句。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ません",
+          "meaning": {
+            "zh": "不…（否定）",
+            "en": "negative form"
+          },
+          "conversationExample": "すみません。ワインオリーバーはどこですか?",
+          "fromConversationId": "l03-conv-002",
+          "sourceSentence": "すみません。ワインオリーバーはどこですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ません」是「ます」的否定形式。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜を〜",
+          "meaning": {
+            "zh": "…（宾语标记）",
+            "en": "object marker"
+          },
+          "conversationExample": "すみません。そのワインを見せてください。",
+          "fromConversationId": "l03-conv-006",
+          "sourceSentence": "すみません。そのワインを見せてください。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「を」标记动作的对象。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_examples",
+      "id": "l03_conversation_examples",
+      "sourceType": "ai_generated_from_official_conversation",
+      "title": {
+        "zh": "会话替换例句",
+        "en": "Conversation Replacement Examples"
+      },
+      "description": {
+        "zh": "以下例句基于会话原句生成。",
+        "en": "Examples generated from conversation sentences."
+      },
+      "items": [
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "おはようございます。",
+          "fromConversationId": "l03-conv-001",
+          "sourceSentence": "おはようございます。",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "すみません。ワインオリーバーはどこですか?",
+          "fromConversationId": "l03-conv-002",
+          "sourceSentence": "すみません。ワインオリーバーはどこですか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "地下1階です",
+          "originalSentence": "地下1階です。",
+          "fromConversationId": "l03-conv-003",
+          "sourceSentence": "地下1階です。",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [
+            {
+              "jp": "佐藤です。",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "田中です。",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "山田です。",
+              "kana": "",
+              "zh": ""
+            }
+          ],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "どうも。",
+          "fromConversationId": "l03-conv-004",
+          "sourceSentence": "どうも。",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "おはようございます。",
+          "fromConversationId": "l03-conv-005",
+          "sourceSentence": "おはようございます。",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "すみません。そのワインを見せてください。",
+          "fromConversationId": "l03-conv-006",
+          "sourceSentence": "すみません。そのワインを見せてください。",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "はい、どうぞ。",
+          "fromConversationId": "l03-conv-007",
+          "sourceSentence": "はい、どうぞ。",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "これはどこのワインですか?",
+          "fromConversationId": "l03-conv-008",
+          "sourceSentence": "これはどこのワインですか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "日本",
+          "originalSentence": "日本のです。",
+          "fromConversationId": "l03-conv-009",
+          "sourceSentence": "日本のです。",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "いくらですか?",
+          "fromConversationId": "l03-conv-010",
+          "sourceSentence": "いくらですか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "2500円です",
+          "originalSentence": "2500円です。",
+          "fromConversationId": "l03-conv-011",
+          "sourceSentence": "2500円です。",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [
+            {
+              "jp": "佐藤です。",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "田中です。",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "山田です。",
+              "kana": "",
+              "zh": ""
+            }
+          ],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "じゃあ、これをください。",
+          "fromConversationId": "l03-conv-012",
+          "sourceSentence": "じゃあ、これをください。",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_quiz",
+      "id": "l03_conversation_quiz",
+      "sourceType": "generated_from_official_video_subtitle",
+      "title": {
+        "zh": "会话专项测试",
+        "en": "Conversation Quiz"
+      },
+      "description": {
+        "zh": "测试题围绕会话内容设计。",
+        "en": "Quiz based on the conversation."
+      },
+      "items": [
+        {
+          "id": "l03-q-001-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「おはようございます。」是什么意思？",
+            "en": "What does \"おはようございます。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "早上好。",
+                "en": "早上好。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "おはようございます。",
+          "fromConversationId": "l03-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-q-001-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「早上好。」的日语说法。",
+            "en": "Select Japanese for \"早上好。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "おはようございます。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "おはようございます。",
+          "fromConversationId": "l03-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-q-001-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「おはようございます。」的中文意思是？",
+            "en": "What does \"おはようございます。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "早上好。",
+                "en": "早上好。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "おはようございます。",
+          "fromConversationId": "l03-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-q-002-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「すみません。ワインオリーバーはどこですか?」是什么意思？",
+            "en": "What does \"すみません。ワインオリーバーはどこですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不好意思，请问葡萄酒橄榄店在哪里？",
+                "en": "不好意思，请问葡萄酒橄榄店在哪里？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "すみません。ワインオリーバーはどこですか?",
+          "fromConversationId": "l03-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-q-002-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「不好意思，请问葡萄酒橄榄店在哪里？」的日语说法。",
+            "en": "Select Japanese for \"不好意思，请问葡萄酒橄榄店在哪里？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "すみません。ワインオリーバーはどこですか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "すみません。ワインオリーバーはどこですか?",
+          "fromConversationId": "l03-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-q-002-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「すみません。ワインオリーバーはどこですか?」的中文意思是？",
+            "en": "What does \"すみません。ワインオリーバーはどこですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不好意思，请问葡萄酒橄榄店在哪里？",
+                "en": "不好意思，请问葡萄酒橄榄店在哪里？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "すみません。ワインオリーバーはどこですか?",
+          "fromConversationId": "l03-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-q-003-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「地下1階です。」是什么意思？",
+            "en": "What does \"地下1階です。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "在地下一层。",
+                "en": "在地下一层。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "地下1階です。",
+          "fromConversationId": "l03-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-q-003-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「在地下一层。」的日语说法。",
+            "en": "Select Japanese for \"在地下一层。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "地下1階です。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "地下1階です。",
+          "fromConversationId": "l03-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-q-003-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「地下1階です。」的中文意思是？",
+            "en": "What does \"地下1階です。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "在地下一层。",
+                "en": "在地下一层。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "地下1階です。",
+          "fromConversationId": "l03-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-q-004-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「どうも。」是什么意思？",
+            "en": "What does \"どうも。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "谢谢。",
+                "en": "谢谢。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "どうも。",
+          "fromConversationId": "l03-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-q-004-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「谢谢。」的日语说法。",
+            "en": "Select Japanese for \"谢谢。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "どうも。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "どうも。",
+          "fromConversationId": "l03-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-q-004-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「どうも。」的中文意思是？",
+            "en": "What does \"どうも。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "谢谢。",
+                "en": "谢谢。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "どうも。",
+          "fromConversationId": "l03-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-q-005-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「おはようございます。」是什么意思？",
+            "en": "What does \"おはようございます。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "早上好。",
+                "en": "早上好。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "おはようございます。",
+          "fromConversationId": "l03-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-q-005-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「早上好。」的日语说法。",
+            "en": "Select Japanese for \"早上好。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "おはようございます。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "おはようございます。",
+          "fromConversationId": "l03-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-q-005-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「おはようございます。」的中文意思是？",
+            "en": "What does \"おはようございます。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "早上好。",
+                "en": "早上好。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "おはようございます。",
+          "fromConversationId": "l03-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-q-006-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「すみません。そのワインを見せてください。」是什么意思？",
+            "en": "What does \"すみません。そのワインを見せてください。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不好意思，请让我看看那瓶葡萄酒。",
+                "en": "不好意思，请让我看看那瓶葡萄酒。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "すみません。そのワインを見せてください。",
+          "fromConversationId": "l03-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-q-006-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「不好意思，请让我看看那瓶葡萄酒。」的日语说法。",
+            "en": "Select Japanese for \"不好意思，请让我看看那瓶葡萄酒。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "すみません。そのワインを見せてください。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "すみません。そのワインを見せてください。",
+          "fromConversationId": "l03-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-q-006-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「すみません。そのワインを見せてください。」的中文意思是？",
+            "en": "What does \"すみません。そのワインを見せてください。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不好意思，请让我看看那瓶葡萄酒。",
+                "en": "不好意思，请让我看看那瓶葡萄酒。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "すみません。そのワインを見せてください。",
+          "fromConversationId": "l03-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-q-007-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「はい、どうぞ。」是什么意思？",
+            "en": "What does \"はい、どうぞ。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "好的，给您。",
+                "en": "好的，给您。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "はい、どうぞ。",
+          "fromConversationId": "l03-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-q-007-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「好的，给您。」的日语说法。",
+            "en": "Select Japanese for \"好的，给您。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "はい、どうぞ。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい、どうぞ。",
+          "fromConversationId": "l03-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-q-007-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「はい、どうぞ。」的中文意思是？",
+            "en": "What does \"はい、どうぞ。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "好的，给您。",
+                "en": "好的，给您。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい、どうぞ。",
+          "fromConversationId": "l03-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-q-008-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「これはどこのワインですか?」是什么意思？",
+            "en": "What does \"これはどこのワインですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "这瓶葡萄酒是哪里的？",
+                "en": "这瓶葡萄酒是哪里的？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "これはどこのワインですか?",
+          "fromConversationId": "l03-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-q-008-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「这瓶葡萄酒是哪里的？」的日语说法。",
+            "en": "Select Japanese for \"这瓶葡萄酒是哪里的？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "これはどこのワインですか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "これはどこのワインですか?",
+          "fromConversationId": "l03-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-q-008-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「これはどこのワインですか?」的中文意思是？",
+            "en": "What does \"これはどこのワインですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "这瓶葡萄酒是哪里的？",
+                "en": "这瓶葡萄酒是哪里的？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "これはどこのワインですか?",
+          "fromConversationId": "l03-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-q-009-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「日本のです。」是什么意思？",
+            "en": "What does \"日本のです。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是日本的。",
+                "en": "是日本的。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "日本のです。",
+          "fromConversationId": "l03-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-q-009-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「是日本的。」的日语说法。",
+            "en": "Select Japanese for \"是日本的。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "日本のです。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "日本のです。",
+          "fromConversationId": "l03-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-q-009-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「日本のです。」的中文意思是？",
+            "en": "What does \"日本のです。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是日本的。",
+                "en": "是日本的。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "日本のです。",
+          "fromConversationId": "l03-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-q-010-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「いくらですか?」是什么意思？",
+            "en": "What does \"いくらですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "多少钱？",
+                "en": "多少钱？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "いくらですか?",
+          "fromConversationId": "l03-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-q-010-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「多少钱？」的日语说法。",
+            "en": "Select Japanese for \"多少钱？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "いくらですか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "いくらですか?",
+          "fromConversationId": "l03-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-q-010-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「いくらですか?」的中文意思是？",
+            "en": "What does \"いくらですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "多少钱？",
+                "en": "多少钱？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "いくらですか?",
+          "fromConversationId": "l03-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-q-011-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「2500円です。」是什么意思？",
+            "en": "What does \"2500円です。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "2500日元。",
+                "en": "2500日元。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "2500円です。",
+          "fromConversationId": "l03-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-q-011-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「2500日元。」的日语说法。",
+            "en": "Select Japanese for \"2500日元。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "2500円です。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "2500円です。",
+          "fromConversationId": "l03-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-q-011-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「2500円です。」的中文意思是？",
+            "en": "What does \"2500円です。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "2500日元。",
+                "en": "2500日元。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "2500円です。",
+          "fromConversationId": "l03-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-q-012-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「じゃあ、これをください。」是什么意思？",
+            "en": "What does \"じゃあ、これをください。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那就请给我这个吧。",
+                "en": "那就请给我这个吧。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "じゃあ、これをください。",
+          "fromConversationId": "l03-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-q-012-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「那就请给我这个吧。」的日语说法。",
+            "en": "Select Japanese for \"那就请给我这个吧。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "じゃあ、これをください。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "じゃあ、これをください。",
+          "fromConversationId": "l03-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l03-q-012-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「じゃあ、これをください。」的中文意思是？",
+            "en": "What does \"じゃあ、これをください。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那就请给我这个吧。",
+                "en": "那就请给我这个吧。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "じゃあ、これをください。",
+          "fromConversationId": "l03-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
     }
   ],
   "conversationVideo": {
@@ -696,6 +2208,22 @@
     "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P3_%E7%AC%AC3%E8%AA%B2.mp4",
     "subtitleUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P3_%E7%AC%AC3%E8%AA%B2.json",
     "sourceType": "official_video_resource",
-    "status": "linked_not_imported"
+    "status": "imported_with_subtitles"
+  },
+  "conversationMainlineStatus": {
+    "videoLinked": "published",
+    "subtitleParsed": "published",
+    "subtitleCleaned": "published",
+    "humanReviewed": "not_started",
+    "importedToLessonJson": "published",
+    "vocabReady": "needs_review",
+    "grammarReady": "needs_review",
+    "examplesReady": "needs_review",
+    "quizReady": "needs_review",
+    "reciteReady": "needs_review",
+    "recordingReady": "published",
+    "scoringReady": "published",
+    "publishedToStaging": "not_started",
+    "verifiedOnline": "not_started"
   }
 }

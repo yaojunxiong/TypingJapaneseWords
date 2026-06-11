@@ -756,6 +756,1087 @@
           }
         }
       ]
+    },
+    {
+      "type": "conversation",
+      "id": "l25_conversation",
+      "sourceType": "official_video_subtitle",
+      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P25_%E7%AC%AC25%E8%AA%B2.json",
+      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P25_%E7%AC%AC25%E8%AA%B2.mp4",
+      "title": {
+        "zh": "会话背诵",
+        "en": "Conversation Practice"
+      },
+      "dialogTitle": {
+        "zh": "第25课会话",
+        "en": "第25课会话"
+      },
+      "conversationGoal": {
+        "zh": "第25课会话练习",
+        "en": "Lesson 25 Conversation Practice"
+      },
+      "items": [
+        {
+          "id": "l25-conv-001",
+          "speaker": "",
+          "jp": "てんきんおめでとうございます ありがとうございます",
+          "kana": "てんきんおめでとうございます ありがとうございます",
+          "zh": "恭喜你调职！非常感谢。",
+          "keyword": "",
+          "videoStart": "0:00.0",
+          "videoEnd": "0:19.6",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l25-conv-002",
+          "speaker": "",
+          "jp": "ミラーさんが東京へ行ったら寂しくなりますね そうですね",
+          "kana": "",
+          "zh": "米勒先生要去东京了，我们会很寂寞的呢。——是啊。",
+          "keyword": "東京",
+          "videoStart": "0:19.6",
+          "videoEnd": "0:25.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l25-conv-003",
+          "speaker": "",
+          "jp": "東京へ行っても大阪のことを忘れないでくださいね もちろん",
+          "kana": "",
+          "zh": "去了东京也别忘了大阪哦。——当然不会忘的。",
+          "keyword": "大阪",
+          "videoStart": "0:25.0",
+          "videoEnd": "0:31.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l25-conv-004",
+          "speaker": "",
+          "jp": "皆さん暇があったらぜひ東京や遊びに来てください",
+          "kana": "",
+          "zh": "大家有空的话，一定要来东京玩啊。",
+          "keyword": "東京",
+          "videoStart": "0:31.0",
+          "videoEnd": "0:35.6",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l25-conv-005",
+          "speaker": "",
+          "jp": "皆さんも大阪へ来たら電話をください 一緒に飲みましょうぜひ",
+          "kana": "",
+          "zh": "你们来大阪时也打个电话吧，一起去喝一杯！",
+          "keyword": "一緒",
+          "videoStart": "0:35.6",
+          "videoEnd": "0:42.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l25-conv-006",
+          "speaker": "",
+          "jp": "皆さん本当にいろいろお世話になりました 頑張ってください",
+          "kana": "",
+          "zh": "真的非常感谢大家一直以来的照顾。请加油！",
+          "keyword": "頑張",
+          "videoStart": "0:42.0",
+          "videoEnd": "0:47.6",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l25-conv-007",
+          "speaker": "",
+          "jp": "お体に気をつけて",
+          "kana": "",
+          "zh": "请多保重身体。",
+          "keyword": "",
+          "videoStart": "0:47.6",
+          "videoEnd": "0:49.6",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l25-conv-008",
+          "speaker": "",
+          "jp": "はい 皆さんもどうぞお元気で",
+          "kana": "",
+          "zh": "嗯，大家也请保重，祝你们一切顺利。",
+          "keyword": "元気",
+          "videoStart": "0:49.6",
+          "videoEnd": "0:54.6",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_vocab",
+      "id": "l25_conversation_vocab",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话关键词汇",
+        "en": "Conversation Key Vocabulary"
+      },
+      "description": {
+        "zh": "以下词汇从会话原文中提取。",
+        "en": "Vocabulary from the conversation."
+      },
+      "items": [
+        {
+          "word": "てんきんおめでとうございます",
+          "kana": "てんきんおめでとうございます",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l25-conv-001",
+          "sourceSentence": "てんきんおめでとうございます ありがとうございます",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "ありがとうございます",
+          "kana": "ありがとうございます",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l25-conv-001",
+          "sourceSentence": "てんきんおめでとうございます ありがとうございます",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "ミラーさんが東京へ行ったら寂しくなりますね",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l25-conv-002",
+          "sourceSentence": "ミラーさんが東京へ行ったら寂しくなりますね そうですね",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "そうですね",
+          "kana": "そうですね",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l25-conv-002",
+          "sourceSentence": "ミラーさんが東京へ行ったら寂しくなりますね そうですね",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "東京へ行っても大阪のことを忘れないでくださいね",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l25-conv-003",
+          "sourceSentence": "東京へ行っても大阪のことを忘れないでくださいね もちろん",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "もちろん",
+          "kana": "もちろん",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l25-conv-003",
+          "sourceSentence": "東京へ行っても大阪のことを忘れないでくださいね もちろん",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "皆さん暇があったらぜひ東京や遊びに来てください",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l25-conv-004",
+          "sourceSentence": "皆さん暇があったらぜひ東京や遊びに来てください",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "皆さんも大阪へ来たら電話をください",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l25-conv-005",
+          "sourceSentence": "皆さんも大阪へ来たら電話をください 一緒に飲みましょうぜひ",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "一緒に飲みましょうぜひ",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l25-conv-005",
+          "sourceSentence": "皆さんも大阪へ来たら電話をください 一緒に飲みましょうぜひ",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "皆さん本当にいろいろお世話になりました",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l25-conv-006",
+          "sourceSentence": "皆さん本当にいろいろお世話になりました 頑張ってください",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "頑張ってください",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l25-conv-006",
+          "sourceSentence": "皆さん本当にいろいろお世話になりました 頑張ってください",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "お体に気をつけて",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l25-conv-007",
+          "sourceSentence": "お体に気をつけて",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "はい",
+          "kana": "はい",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l25-conv-008",
+          "sourceSentence": "はい 皆さんもどうぞお元気で",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "皆さんもどうぞお元気で",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l25-conv-008",
+          "sourceSentence": "はい 皆さんもどうぞお元気で",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_grammar",
+      "id": "l25_conversation_grammar",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话核心语法",
+        "en": "Conversation Core Grammar"
+      },
+      "description": {
+        "zh": "以下语法点从会话原文中提取。",
+        "en": "Grammar points from the conversation."
+      },
+      "items": [
+        {
+          "pattern": "〜ます",
+          "meaning": {
+            "zh": "（动词敬体）",
+            "en": "polite verb form"
+          },
+          "conversationExample": "てんきんおめでとうございます ありがとうございます",
+          "fromConversationId": "l25-conv-001",
+          "sourceSentence": "てんきんおめでとうございます ありがとうございます",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ます」是动词的敬体形式。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜です",
+          "meaning": {
+            "zh": "是…（礼貌判断）",
+            "en": "is/am (polite copula)"
+          },
+          "conversationExample": "ミラーさんが東京へ行ったら寂しくなりますね そうですね",
+          "fromConversationId": "l25-conv-002",
+          "sourceSentence": "ミラーさんが東京へ行ったら寂しくなりますね そうですね",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「です」是日语礼貌判断助动词，相当于中文的\"是\"。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜を〜",
+          "meaning": {
+            "zh": "…（宾语标记）",
+            "en": "object marker"
+          },
+          "conversationExample": "東京へ行っても大阪のことを忘れないでくださいね もちろん",
+          "fromConversationId": "l25-conv-003",
+          "sourceSentence": "東京へ行っても大阪のことを忘れないでくださいね もちろん",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「を」标记动作的对象。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜に〜",
+          "meaning": {
+            "zh": "在/向…",
+            "en": "to/at"
+          },
+          "conversationExample": "皆さん暇があったらぜひ東京や遊びに来てください",
+          "fromConversationId": "l25-conv-004",
+          "sourceSentence": "皆さん暇があったらぜひ東京や遊びに来てください",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「に」表示时间、地点或方向。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ました",
+          "meaning": {
+            "zh": "…了（过去）",
+            "en": "past tense"
+          },
+          "conversationExample": "皆さん本当にいろいろお世話になりました 頑張ってください",
+          "fromConversationId": "l25-conv-006",
+          "sourceSentence": "皆さん本当にいろいろお世話になりました 頑張ってください",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ました」是「ます」的过去形。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_examples",
+      "id": "l25_conversation_examples",
+      "sourceType": "ai_generated_from_official_conversation",
+      "title": {
+        "zh": "会话替换例句",
+        "en": "Conversation Replacement Examples"
+      },
+      "description": {
+        "zh": "以下例句基于会话原句生成。",
+        "en": "Examples generated from conversation sentences."
+      },
+      "items": [
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "てんきんおめでとうございます ありがとうございます",
+          "fromConversationId": "l25-conv-001",
+          "sourceSentence": "てんきんおめでとうございます ありがとうございます",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "東京",
+          "originalSentence": "ミラーさんが東京へ行ったら寂しくなりますね そうですね",
+          "fromConversationId": "l25-conv-002",
+          "sourceSentence": "ミラーさんが東京へ行ったら寂しくなりますね そうですね",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "大阪",
+          "originalSentence": "東京へ行っても大阪のことを忘れないでくださいね もちろん",
+          "fromConversationId": "l25-conv-003",
+          "sourceSentence": "東京へ行っても大阪のことを忘れないでくださいね もちろん",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "東京",
+          "originalSentence": "皆さん暇があったらぜひ東京や遊びに来てください",
+          "fromConversationId": "l25-conv-004",
+          "sourceSentence": "皆さん暇があったらぜひ東京や遊びに来てください",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "一緒",
+          "originalSentence": "皆さんも大阪へ来たら電話をください 一緒に飲みましょうぜひ",
+          "fromConversationId": "l25-conv-005",
+          "sourceSentence": "皆さんも大阪へ来たら電話をください 一緒に飲みましょうぜひ",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "頑張",
+          "originalSentence": "皆さん本当にいろいろお世話になりました 頑張ってください",
+          "fromConversationId": "l25-conv-006",
+          "sourceSentence": "皆さん本当にいろいろお世話になりました 頑張ってください",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "お体に気をつけて",
+          "fromConversationId": "l25-conv-007",
+          "sourceSentence": "お体に気をつけて",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "元気",
+          "originalSentence": "はい 皆さんもどうぞお元気で",
+          "fromConversationId": "l25-conv-008",
+          "sourceSentence": "はい 皆さんもどうぞお元気で",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_quiz",
+      "id": "l25_conversation_quiz",
+      "sourceType": "generated_from_official_video_subtitle",
+      "title": {
+        "zh": "会话专项测试",
+        "en": "Conversation Quiz"
+      },
+      "description": {
+        "zh": "测试题围绕会话内容设计。",
+        "en": "Quiz based on the conversation."
+      },
+      "items": [
+        {
+          "id": "l25-q-001-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「てんきんおめでとうございます ありがとうございます」是什么意思？",
+            "en": "What does \"てんきんおめでとうございます ありがとうございます\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "恭喜你调职！非常感谢。",
+                "en": "恭喜你调职！非常感谢。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "てんきんおめでとうございます ありがとうございます",
+          "fromConversationId": "l25-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l25-q-001-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「恭喜你调职！非常感谢。」的日语说法。",
+            "en": "Select Japanese for \"恭喜你调职！非常感谢。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "てんきんおめでとうございます ありがとうございます"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "てんきんおめでとうございます ありがとうございます",
+          "fromConversationId": "l25-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l25-q-001-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「てんきんおめでとうございます ありがとうございます」的中文意思是？",
+            "en": "What does \"てんきんおめでとうございます ありがとうございます\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "恭喜你调职！非常感谢。",
+                "en": "恭喜你调职！非常感谢。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "てんきんおめでとうございます ありがとうございます",
+          "fromConversationId": "l25-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l25-q-002-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「ミラーさんが東京へ行ったら寂しくなりますね そうですね」是什么意思？",
+            "en": "What does \"ミラーさんが東京へ行ったら寂しくなりますね そうですね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "米勒先生要去东京了，我们会很寂寞的呢。——是啊。",
+                "en": "米勒先生要去东京了，我们会很寂寞的呢。——是啊。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "ミラーさんが東京へ行ったら寂しくなりますね そうですね",
+          "fromConversationId": "l25-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l25-q-002-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「米勒先生要去东京了，我们会很寂寞的呢。——是啊。」的日语说法。",
+            "en": "Select Japanese for \"米勒先生要去东京了，我们会很寂寞的呢。——是啊。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "ミラーさんが東京へ行ったら寂しくなりますね そうですね"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ミラーさんが東京へ行ったら寂しくなりますね そうですね",
+          "fromConversationId": "l25-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l25-q-002-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「ミラーさんが東京へ行ったら寂しくなりますね そうですね」的中文意思是？",
+            "en": "What does \"ミラーさんが東京へ行ったら寂しくなりますね そうですね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "米勒先生要去东京了，我们会很寂寞的呢。——是啊。",
+                "en": "米勒先生要去东京了，我们会很寂寞的呢。——是啊。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ミラーさんが東京へ行ったら寂しくなりますね そうですね",
+          "fromConversationId": "l25-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l25-q-003-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「東京へ行っても大阪のことを忘れないでくださいね もちろん」是什么意思？",
+            "en": "What does \"東京へ行っても大阪のことを忘れないでくださいね もちろん\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "去了东京也别忘了大阪哦。——当然不会忘的。",
+                "en": "去了东京也别忘了大阪哦。——当然不会忘的。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "東京へ行っても大阪のことを忘れないでくださいね もちろん",
+          "fromConversationId": "l25-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l25-q-003-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「去了东京也别忘了大阪哦。——当然不会忘的。」的日语说法。",
+            "en": "Select Japanese for \"去了东京也别忘了大阪哦。——当然不会忘的。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "東京へ行っても大阪のことを忘れないでくださいね もちろん"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "東京へ行っても大阪のことを忘れないでくださいね もちろん",
+          "fromConversationId": "l25-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l25-q-003-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「東京へ行っても大阪のことを忘れないでくださいね もちろん」的中文意思是？",
+            "en": "What does \"東京へ行っても大阪のことを忘れないでくださいね もちろん\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "去了东京也别忘了大阪哦。——当然不会忘的。",
+                "en": "去了东京也别忘了大阪哦。——当然不会忘的。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "東京へ行っても大阪のことを忘れないでくださいね もちろん",
+          "fromConversationId": "l25-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l25-q-004-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「皆さん暇があったらぜひ東京や遊びに来てください」是什么意思？",
+            "en": "What does \"皆さん暇があったらぜひ東京や遊びに来てください\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "大家有空的话，一定要来东京玩啊。",
+                "en": "大家有空的话，一定要来东京玩啊。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "皆さん暇があったらぜひ東京や遊びに来てください",
+          "fromConversationId": "l25-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l25-q-004-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「大家有空的话，一定要来东京玩啊。」的日语说法。",
+            "en": "Select Japanese for \"大家有空的话，一定要来东京玩啊。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "皆さん暇があったらぜひ東京や遊びに来てください"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "皆さん暇があったらぜひ東京や遊びに来てください",
+          "fromConversationId": "l25-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l25-q-004-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「皆さん暇があったらぜひ東京や遊びに来てください」的中文意思是？",
+            "en": "What does \"皆さん暇があったらぜひ東京や遊びに来てください\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "大家有空的话，一定要来东京玩啊。",
+                "en": "大家有空的话，一定要来东京玩啊。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "皆さん暇があったらぜひ東京や遊びに来てください",
+          "fromConversationId": "l25-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l25-q-005-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「皆さんも大阪へ来たら電話をください 一緒に飲みましょうぜひ」是什么意思？",
+            "en": "What does \"皆さんも大阪へ来たら電話をください 一緒に飲みましょうぜひ\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "你们来大阪时也打个电话吧，一起去喝一杯！",
+                "en": "你们来大阪时也打个电话吧，一起去喝一杯！"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "皆さんも大阪へ来たら電話をください 一緒に飲みましょうぜひ",
+          "fromConversationId": "l25-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l25-q-005-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「你们来大阪时也打个电话吧，一起去喝一杯！」的日语说法。",
+            "en": "Select Japanese for \"你们来大阪时也打个电话吧，一起去喝一杯！\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "皆さんも大阪へ来たら電話をください 一緒に飲みましょうぜひ"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "皆さんも大阪へ来たら電話をください 一緒に飲みましょうぜひ",
+          "fromConversationId": "l25-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l25-q-005-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「皆さんも大阪へ来たら電話をください 一緒に飲みましょうぜひ」的中文意思是？",
+            "en": "What does \"皆さんも大阪へ来たら電話をください 一緒に飲みましょうぜひ\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "你们来大阪时也打个电话吧，一起去喝一杯！",
+                "en": "你们来大阪时也打个电话吧，一起去喝一杯！"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "皆さんも大阪へ来たら電話をください 一緒に飲みましょうぜひ",
+          "fromConversationId": "l25-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l25-q-006-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「皆さん本当にいろいろお世話になりました 頑張ってください」是什么意思？",
+            "en": "What does \"皆さん本当にいろいろお世話になりました 頑張ってください\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "真的非常感谢大家一直以来的照顾。请加油！",
+                "en": "真的非常感谢大家一直以来的照顾。请加油！"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "皆さん本当にいろいろお世話になりました 頑張ってください",
+          "fromConversationId": "l25-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l25-q-006-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「真的非常感谢大家一直以来的照顾。请加油！」的日语说法。",
+            "en": "Select Japanese for \"真的非常感谢大家一直以来的照顾。请加油！\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "皆さん本当にいろいろお世話になりました 頑張ってください"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "皆さん本当にいろいろお世話になりました 頑張ってください",
+          "fromConversationId": "l25-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l25-q-006-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「皆さん本当にいろいろお世話になりました 頑張ってください」的中文意思是？",
+            "en": "What does \"皆さん本当にいろいろお世話になりました 頑張ってください\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "真的非常感谢大家一直以来的照顾。请加油！",
+                "en": "真的非常感谢大家一直以来的照顾。请加油！"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "皆さん本当にいろいろお世話になりました 頑張ってください",
+          "fromConversationId": "l25-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l25-q-007-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「お体に気をつけて」是什么意思？",
+            "en": "What does \"お体に気をつけて\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请多保重身体。",
+                "en": "请多保重身体。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "お体に気をつけて",
+          "fromConversationId": "l25-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l25-q-007-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「请多保重身体。」的日语说法。",
+            "en": "Select Japanese for \"请多保重身体。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "お体に気をつけて"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "お体に気をつけて",
+          "fromConversationId": "l25-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l25-q-007-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「お体に気をつけて」的中文意思是？",
+            "en": "What does \"お体に気をつけて\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请多保重身体。",
+                "en": "请多保重身体。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "お体に気をつけて",
+          "fromConversationId": "l25-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l25-q-008-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「はい 皆さんもどうぞお元気で」是什么意思？",
+            "en": "What does \"はい 皆さんもどうぞお元気で\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "嗯，大家也请保重，祝你们一切顺利。",
+                "en": "嗯，大家也请保重，祝你们一切顺利。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "はい 皆さんもどうぞお元気で",
+          "fromConversationId": "l25-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l25-q-008-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「嗯，大家也请保重，祝你们一切顺利。」的日语说法。",
+            "en": "Select Japanese for \"嗯，大家也请保重，祝你们一切顺利。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "はい 皆さんもどうぞお元気で"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい 皆さんもどうぞお元気で",
+          "fromConversationId": "l25-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l25-q-008-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「はい 皆さんもどうぞお元気で」的中文意思是？",
+            "en": "What does \"はい 皆さんもどうぞお元気で\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "嗯，大家也请保重，祝你们一切顺利。",
+                "en": "嗯，大家也请保重，祝你们一切顺利。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい 皆さんもどうぞお元気で",
+          "fromConversationId": "l25-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
     }
   ],
   "conversationVideo": {
@@ -764,6 +1845,22 @@
     "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P25_%E7%AC%AC25%E8%AA%B2.mp4",
     "subtitleUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P25_%E7%AC%AC25%E8%AA%B2.json",
     "sourceType": "official_video_resource",
-    "status": "linked_not_imported"
+    "status": "imported_with_subtitles"
+  },
+  "conversationMainlineStatus": {
+    "videoLinked": "published",
+    "subtitleParsed": "published",
+    "subtitleCleaned": "published",
+    "humanReviewed": "not_started",
+    "importedToLessonJson": "published",
+    "vocabReady": "needs_review",
+    "grammarReady": "needs_review",
+    "examplesReady": "needs_review",
+    "quizReady": "needs_review",
+    "reciteReady": "needs_review",
+    "recordingReady": "published",
+    "scoringReady": "published",
+    "publishedToStaging": "not_started",
+    "verifiedOnline": "not_started"
   }
 }

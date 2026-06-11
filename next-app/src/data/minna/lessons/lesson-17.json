@@ -756,6 +756,2442 @@
           }
         }
       ]
+    },
+    {
+      "type": "conversation",
+      "id": "l17_conversation",
+      "sourceType": "official_video_subtitle",
+      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P17_%E7%AC%AC17%E8%AA%B2.json",
+      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P17_%E7%AC%AC17%E8%AA%B2.mp4",
+      "title": {
+        "zh": "会话背诵",
+        "en": "Conversation Practice"
+      },
+      "dialogTitle": {
+        "zh": "第17课会话",
+        "en": "第17课会话"
+      },
+      "conversationGoal": {
+        "zh": "第17课会话练习",
+        "en": "Lesson 17 Conversation Practice"
+      },
+      "items": [
+        {
+          "id": "l17-conv-001",
+          "speaker": "",
+          "jp": "松本忠史さん",
+          "kana": "",
+          "zh": "松本忠史先生。",
+          "keyword": "松本忠史",
+          "videoStart": "0:00.0",
+          "videoEnd": "0:17.6",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-conv-002",
+          "speaker": "",
+          "jp": "はい",
+          "kana": "はい",
+          "zh": "在。",
+          "keyword": "",
+          "videoStart": "0:17.6",
+          "videoEnd": "0:18.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-conv-003",
+          "speaker": "",
+          "jp": "診察室へどうぞ",
+          "kana": "",
+          "zh": "请进诊察室。",
+          "keyword": "診察室",
+          "videoStart": "0:18.0",
+          "videoEnd": "0:19.8",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-conv-004",
+          "speaker": "",
+          "jp": "どうしましたか",
+          "kana": "どうしましたか",
+          "zh": "您哪里不舒服？",
+          "keyword": "",
+          "videoStart": "0:19.8",
+          "videoEnd": "0:26.3",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-conv-005",
+          "speaker": "",
+          "jp": "昨日から喉が痛くて",
+          "kana": "",
+          "zh": "从昨天开始喉咙就很痛。",
+          "keyword": "昨日",
+          "videoStart": "0:26.3",
+          "videoEnd": "0:28.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-conv-006",
+          "speaker": "",
+          "jp": "熱も少しあります",
+          "kana": "",
+          "zh": "还有点发烧。",
+          "keyword": "",
+          "videoStart": "0:28.1",
+          "videoEnd": "0:29.5",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-conv-007",
+          "speaker": "",
+          "jp": "そうですか",
+          "kana": "そうですか",
+          "zh": "这样啊。",
+          "keyword": "",
+          "videoStart": "0:29.5",
+          "videoEnd": "0:30.6",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-conv-008",
+          "speaker": "",
+          "jp": "ちょっと口を開けてください",
+          "kana": "",
+          "zh": "请张开嘴让我看看。",
+          "keyword": "",
+          "videoStart": "0:30.6",
+          "videoEnd": "0:35.7",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-conv-009",
+          "speaker": "",
+          "jp": "風邪ですね",
+          "kana": "",
+          "zh": "是感冒呢。",
+          "keyword": "風邪です",
+          "videoStart": "0:35.7",
+          "videoEnd": "0:44.5",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-conv-010",
+          "speaker": "",
+          "jp": "2、3日ゆっくり休んでください",
+          "kana": "",
+          "zh": "请好好休息两三天。",
+          "keyword": "3日",
+          "videoStart": "0:44.5",
+          "videoEnd": "0:46.7",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-conv-011",
+          "speaker": "",
+          "jp": "あのー",
+          "kana": "あのー",
+          "zh": "那个……",
+          "keyword": "",
+          "videoStart": "0:46.7",
+          "videoEnd": "0:48.7",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-conv-012",
+          "speaker": "",
+          "jp": "明日から東京へ出張しなければなりません",
+          "kana": "",
+          "zh": "我明天起要去东京出差。",
+          "keyword": "出張",
+          "videoStart": "0:48.7",
+          "videoEnd": "0:51.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-conv-013",
+          "speaker": "",
+          "jp": "じゃあ",
+          "kana": "じゃあ",
+          "zh": "那样的话……",
+          "keyword": "",
+          "videoStart": "0:51.1",
+          "videoEnd": "0:53.7",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-conv-014",
+          "speaker": "",
+          "jp": "今日は薬を飲んで",
+          "kana": "",
+          "zh": "今天请先吃药，",
+          "keyword": "今日",
+          "videoStart": "0:53.7",
+          "videoEnd": "0:55.5",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-conv-015",
+          "speaker": "",
+          "jp": "早く寝てください",
+          "kana": "",
+          "zh": "早点休息吧。",
+          "keyword": "",
+          "videoStart": "0:55.5",
+          "videoEnd": "0:56.7",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-conv-016",
+          "speaker": "",
+          "jp": "はい",
+          "kana": "はい",
+          "zh": "好的。",
+          "keyword": "",
+          "videoStart": "0:56.7",
+          "videoEnd": "0:58.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-conv-017",
+          "speaker": "",
+          "jp": "それから",
+          "kana": "それから",
+          "zh": "还有，",
+          "keyword": "",
+          "videoStart": "0:58.1",
+          "videoEnd": "1:00.1",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-conv-018",
+          "speaker": "",
+          "jp": "今晩はお風呂に入らないでくださいね",
+          "kana": "",
+          "zh": "今晚请不要洗澡哦。",
+          "keyword": "風呂",
+          "videoStart": "1:00.1",
+          "videoEnd": "1:03.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-conv-019",
+          "speaker": "",
+          "jp": "はい、わかりました",
+          "kana": "はい、わかりました",
+          "zh": "好的，我知道了。",
+          "keyword": "",
+          "videoStart": "1:03.0",
+          "videoEnd": "1:04.5",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-conv-020",
+          "speaker": "",
+          "jp": "じゃあお大事に",
+          "kana": "",
+          "zh": "那请多保重。",
+          "keyword": "大事",
+          "videoStart": "1:04.5",
+          "videoEnd": "1:06.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-conv-021",
+          "speaker": "",
+          "jp": "どうもありがとうございました",
+          "kana": "どうもありがとうございました",
+          "zh": "非常感谢您。",
+          "keyword": "",
+          "videoStart": "1:06.0",
+          "videoEnd": "1:07.5",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_vocab",
+      "id": "l17_conversation_vocab",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话关键词汇",
+        "en": "Conversation Key Vocabulary"
+      },
+      "description": {
+        "zh": "以下词汇从会话原文中提取。",
+        "en": "Vocabulary from the conversation."
+      },
+      "items": [
+        {
+          "word": "松本忠史さん",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l17-conv-001",
+          "sourceSentence": "松本忠史さん",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "はい",
+          "kana": "はい",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l17-conv-002",
+          "sourceSentence": "はい",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "診察室へどうぞ",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l17-conv-003",
+          "sourceSentence": "診察室へどうぞ",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "どうしましたか",
+          "kana": "どうしましたか",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l17-conv-004",
+          "sourceSentence": "どうしましたか",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "昨日から喉が痛くて",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l17-conv-005",
+          "sourceSentence": "昨日から喉が痛くて",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "熱も少しあります",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l17-conv-006",
+          "sourceSentence": "熱も少しあります",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "そうですか",
+          "kana": "そうですか",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l17-conv-007",
+          "sourceSentence": "そうですか",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "ちょっと口を開けてください",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l17-conv-008",
+          "sourceSentence": "ちょっと口を開けてください",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "風邪ですね",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l17-conv-009",
+          "sourceSentence": "風邪ですね",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "日ゆっくり休んでください",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l17-conv-010",
+          "sourceSentence": "2、3日ゆっくり休んでください",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "あのー",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l17-conv-011",
+          "sourceSentence": "あのー",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "明日から東京へ出張しなければなりません",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l17-conv-012",
+          "sourceSentence": "明日から東京へ出張しなければなりません",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "じゃあ",
+          "kana": "じゃあ",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l17-conv-013",
+          "sourceSentence": "じゃあ",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "今日は薬を飲んで",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l17-conv-014",
+          "sourceSentence": "今日は薬を飲んで",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "早く寝てください",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l17-conv-015",
+          "sourceSentence": "早く寝てください",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "それから",
+          "kana": "それから",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l17-conv-017",
+          "sourceSentence": "それから",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "今晩はお風呂に入らないでくださいね",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l17-conv-018",
+          "sourceSentence": "今晩はお風呂に入らないでくださいね",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "わかりました",
+          "kana": "わかりました",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l17-conv-019",
+          "sourceSentence": "はい、わかりました",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "じゃあお大事に",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l17-conv-020",
+          "sourceSentence": "じゃあお大事に",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "どうもありがとうございました",
+          "kana": "どうもありがとうございました",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l17-conv-021",
+          "sourceSentence": "どうもありがとうございました",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_grammar",
+      "id": "l17_conversation_grammar",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话核心语法",
+        "en": "Conversation Core Grammar"
+      },
+      "description": {
+        "zh": "以下语法点从会话原文中提取。",
+        "en": "Grammar points from the conversation."
+      },
+      "items": [
+        {
+          "pattern": "〜ました",
+          "meaning": {
+            "zh": "…了（过去）",
+            "en": "past tense"
+          },
+          "conversationExample": "どうしましたか",
+          "fromConversationId": "l17-conv-004",
+          "sourceSentence": "どうしましたか",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ました」是「ます」的过去形。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜から",
+          "meaning": {
+            "zh": "从…",
+            "en": "from"
+          },
+          "conversationExample": "昨日から喉が痛くて",
+          "fromConversationId": "l17-conv-005",
+          "sourceSentence": "昨日から喉が痛くて",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「から」表示起点或来源。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ます",
+          "meaning": {
+            "zh": "（动词敬体）",
+            "en": "polite verb form"
+          },
+          "conversationExample": "熱も少しあります",
+          "fromConversationId": "l17-conv-006",
+          "sourceSentence": "熱も少しあります",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ます」是动词的敬体形式。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜です",
+          "meaning": {
+            "zh": "是…（礼貌判断）",
+            "en": "is/am (polite copula)"
+          },
+          "conversationExample": "そうですか",
+          "fromConversationId": "l17-conv-007",
+          "sourceSentence": "そうですか",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「です」是日语礼貌判断助动词，相当于中文的\"是\"。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜を〜",
+          "meaning": {
+            "zh": "…（宾语标记）",
+            "en": "object marker"
+          },
+          "conversationExample": "ちょっと口を開けてください",
+          "fromConversationId": "l17-conv-008",
+          "sourceSentence": "ちょっと口を開けてください",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「を」标记动作的对象。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ません",
+          "meaning": {
+            "zh": "不…（否定）",
+            "en": "negative form"
+          },
+          "conversationExample": "明日から東京へ出張しなければなりません",
+          "fromConversationId": "l17-conv-012",
+          "sourceSentence": "明日から東京へ出張しなければなりません",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ません」是「ます」的否定形式。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜に〜",
+          "meaning": {
+            "zh": "在/向…",
+            "en": "to/at"
+          },
+          "conversationExample": "今晩はお風呂に入らないでくださいね",
+          "fromConversationId": "l17-conv-018",
+          "sourceSentence": "今晩はお風呂に入らないでくださいね",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「に」表示时间、地点或方向。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_examples",
+      "id": "l17_conversation_examples",
+      "sourceType": "ai_generated_from_official_conversation",
+      "title": {
+        "zh": "会话替换例句",
+        "en": "Conversation Replacement Examples"
+      },
+      "description": {
+        "zh": "以下例句基于会话原句生成。",
+        "en": "Examples generated from conversation sentences."
+      },
+      "items": [
+        {
+          "pattern": "松本忠史",
+          "originalSentence": "松本忠史さん",
+          "fromConversationId": "l17-conv-001",
+          "sourceSentence": "松本忠史さん",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "はい",
+          "fromConversationId": "l17-conv-002",
+          "sourceSentence": "はい",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "診察室",
+          "originalSentence": "診察室へどうぞ",
+          "fromConversationId": "l17-conv-003",
+          "sourceSentence": "診察室へどうぞ",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "どうしましたか",
+          "fromConversationId": "l17-conv-004",
+          "sourceSentence": "どうしましたか",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "昨日",
+          "originalSentence": "昨日から喉が痛くて",
+          "fromConversationId": "l17-conv-005",
+          "sourceSentence": "昨日から喉が痛くて",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "熱も少しあります",
+          "fromConversationId": "l17-conv-006",
+          "sourceSentence": "熱も少しあります",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "そうですか",
+          "fromConversationId": "l17-conv-007",
+          "sourceSentence": "そうですか",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "ちょっと口を開けてください",
+          "fromConversationId": "l17-conv-008",
+          "sourceSentence": "ちょっと口を開けてください",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "風邪です",
+          "originalSentence": "風邪ですね",
+          "fromConversationId": "l17-conv-009",
+          "sourceSentence": "風邪ですね",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "3日",
+          "originalSentence": "2、3日ゆっくり休んでください",
+          "fromConversationId": "l17-conv-010",
+          "sourceSentence": "2、3日ゆっくり休んでください",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "あのー",
+          "fromConversationId": "l17-conv-011",
+          "sourceSentence": "あのー",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "出張",
+          "originalSentence": "明日から東京へ出張しなければなりません",
+          "fromConversationId": "l17-conv-012",
+          "sourceSentence": "明日から東京へ出張しなければなりません",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "じゃあ",
+          "fromConversationId": "l17-conv-013",
+          "sourceSentence": "じゃあ",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "今日",
+          "originalSentence": "今日は薬を飲んで",
+          "fromConversationId": "l17-conv-014",
+          "sourceSentence": "今日は薬を飲んで",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "早く寝てください",
+          "fromConversationId": "l17-conv-015",
+          "sourceSentence": "早く寝てください",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "はい",
+          "fromConversationId": "l17-conv-016",
+          "sourceSentence": "はい",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "それから",
+          "fromConversationId": "l17-conv-017",
+          "sourceSentence": "それから",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "風呂",
+          "originalSentence": "今晩はお風呂に入らないでくださいね",
+          "fromConversationId": "l17-conv-018",
+          "sourceSentence": "今晩はお風呂に入らないでくださいね",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "はい、わかりました",
+          "fromConversationId": "l17-conv-019",
+          "sourceSentence": "はい、わかりました",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "大事",
+          "originalSentence": "じゃあお大事に",
+          "fromConversationId": "l17-conv-020",
+          "sourceSentence": "じゃあお大事に",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "どうもありがとうございました",
+          "fromConversationId": "l17-conv-021",
+          "sourceSentence": "どうもありがとうございました",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_quiz",
+      "id": "l17_conversation_quiz",
+      "sourceType": "generated_from_official_video_subtitle",
+      "title": {
+        "zh": "会话专项测试",
+        "en": "Conversation Quiz"
+      },
+      "description": {
+        "zh": "测试题围绕会话内容设计。",
+        "en": "Quiz based on the conversation."
+      },
+      "items": [
+        {
+          "id": "l17-q-001-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「松本忠史さん」是什么意思？",
+            "en": "What does \"松本忠史さん\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "松本忠史先生。",
+                "en": "松本忠史先生。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "松本忠史さん",
+          "fromConversationId": "l17-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-001-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「松本忠史先生。」的日语说法。",
+            "en": "Select Japanese for \"松本忠史先生。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "松本忠史さん"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "松本忠史さん",
+          "fromConversationId": "l17-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-001-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「松本忠史さん」的中文意思是？",
+            "en": "What does \"松本忠史さん\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "松本忠史先生。",
+                "en": "松本忠史先生。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "松本忠史さん",
+          "fromConversationId": "l17-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-002-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「はい」是什么意思？",
+            "en": "What does \"はい\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "在。",
+                "en": "在。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "はい",
+          "fromConversationId": "l17-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-002-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「在。」的日语说法。",
+            "en": "Select Japanese for \"在。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "はい"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい",
+          "fromConversationId": "l17-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-002-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「はい」的中文意思是？",
+            "en": "What does \"はい\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "在。",
+                "en": "在。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい",
+          "fromConversationId": "l17-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-003-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「診察室へどうぞ」是什么意思？",
+            "en": "What does \"診察室へどうぞ\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请进诊察室。",
+                "en": "请进诊察室。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "診察室へどうぞ",
+          "fromConversationId": "l17-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-003-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「请进诊察室。」的日语说法。",
+            "en": "Select Japanese for \"请进诊察室。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "診察室へどうぞ"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "診察室へどうぞ",
+          "fromConversationId": "l17-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-003-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「診察室へどうぞ」的中文意思是？",
+            "en": "What does \"診察室へどうぞ\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请进诊察室。",
+                "en": "请进诊察室。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "診察室へどうぞ",
+          "fromConversationId": "l17-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-004-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「どうしましたか」是什么意思？",
+            "en": "What does \"どうしましたか\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "您哪里不舒服？",
+                "en": "您哪里不舒服？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "どうしましたか",
+          "fromConversationId": "l17-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-004-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「您哪里不舒服？」的日语说法。",
+            "en": "Select Japanese for \"您哪里不舒服？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "どうしましたか"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "どうしましたか",
+          "fromConversationId": "l17-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-004-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「どうしましたか」的中文意思是？",
+            "en": "What does \"どうしましたか\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "您哪里不舒服？",
+                "en": "您哪里不舒服？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "どうしましたか",
+          "fromConversationId": "l17-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-005-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「昨日から喉が痛くて」是什么意思？",
+            "en": "What does \"昨日から喉が痛くて\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "从昨天开始喉咙就很痛。",
+                "en": "从昨天开始喉咙就很痛。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "昨日から喉が痛くて",
+          "fromConversationId": "l17-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-005-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「从昨天开始喉咙就很痛。」的日语说法。",
+            "en": "Select Japanese for \"从昨天开始喉咙就很痛。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "昨日から喉が痛くて"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "昨日から喉が痛くて",
+          "fromConversationId": "l17-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-005-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「昨日から喉が痛くて」的中文意思是？",
+            "en": "What does \"昨日から喉が痛くて\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "从昨天开始喉咙就很痛。",
+                "en": "从昨天开始喉咙就很痛。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "昨日から喉が痛くて",
+          "fromConversationId": "l17-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-006-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「熱も少しあります」是什么意思？",
+            "en": "What does \"熱も少しあります\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "还有点发烧。",
+                "en": "还有点发烧。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "熱も少しあります",
+          "fromConversationId": "l17-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-006-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「还有点发烧。」的日语说法。",
+            "en": "Select Japanese for \"还有点发烧。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "熱も少しあります"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "熱も少しあります",
+          "fromConversationId": "l17-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-006-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「熱も少しあります」的中文意思是？",
+            "en": "What does \"熱も少しあります\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "还有点发烧。",
+                "en": "还有点发烧。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "熱も少しあります",
+          "fromConversationId": "l17-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-007-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「そうですか」是什么意思？",
+            "en": "What does \"そうですか\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "这样啊。",
+                "en": "这样啊。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "そうですか",
+          "fromConversationId": "l17-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-007-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「这样啊。」的日语说法。",
+            "en": "Select Japanese for \"这样啊。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "そうですか"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "そうですか",
+          "fromConversationId": "l17-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-007-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「そうですか」的中文意思是？",
+            "en": "What does \"そうですか\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "这样啊。",
+                "en": "这样啊。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "そうですか",
+          "fromConversationId": "l17-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-008-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「ちょっと口を開けてください」是什么意思？",
+            "en": "What does \"ちょっと口を開けてください\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请张开嘴让我看看。",
+                "en": "请张开嘴让我看看。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "ちょっと口を開けてください",
+          "fromConversationId": "l17-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-008-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「请张开嘴让我看看。」的日语说法。",
+            "en": "Select Japanese for \"请张开嘴让我看看。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "ちょっと口を開けてください"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ちょっと口を開けてください",
+          "fromConversationId": "l17-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-008-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「ちょっと口を開けてください」的中文意思是？",
+            "en": "What does \"ちょっと口を開けてください\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请张开嘴让我看看。",
+                "en": "请张开嘴让我看看。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "ちょっと口を開けてください",
+          "fromConversationId": "l17-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-009-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「風邪ですね」是什么意思？",
+            "en": "What does \"風邪ですね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是感冒呢。",
+                "en": "是感冒呢。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "風邪ですね",
+          "fromConversationId": "l17-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-009-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「是感冒呢。」的日语说法。",
+            "en": "Select Japanese for \"是感冒呢。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "風邪ですね"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "風邪ですね",
+          "fromConversationId": "l17-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-009-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「風邪ですね」的中文意思是？",
+            "en": "What does \"風邪ですね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是感冒呢。",
+                "en": "是感冒呢。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "風邪ですね",
+          "fromConversationId": "l17-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-010-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「2、3日ゆっくり休んでください」是什么意思？",
+            "en": "What does \"2、3日ゆっくり休んでください\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请好好休息两三天。",
+                "en": "请好好休息两三天。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "2、3日ゆっくり休んでください",
+          "fromConversationId": "l17-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-010-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「请好好休息两三天。」的日语说法。",
+            "en": "Select Japanese for \"请好好休息两三天。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "2、3日ゆっくり休んでください"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "2、3日ゆっくり休んでください",
+          "fromConversationId": "l17-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-010-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「2、3日ゆっくり休んでください」的中文意思是？",
+            "en": "What does \"2、3日ゆっくり休んでください\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请好好休息两三天。",
+                "en": "请好好休息两三天。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "2、3日ゆっくり休んでください",
+          "fromConversationId": "l17-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-011-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「あのー」是什么意思？",
+            "en": "What does \"あのー\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那个……",
+                "en": "那个……"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "あのー",
+          "fromConversationId": "l17-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-011-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「那个……」的日语说法。",
+            "en": "Select Japanese for \"那个……\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "あのー"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "あのー",
+          "fromConversationId": "l17-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-011-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「あのー」的中文意思是？",
+            "en": "What does \"あのー\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那个……",
+                "en": "那个……"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "あのー",
+          "fromConversationId": "l17-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-012-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「明日から東京へ出張しなければなりません」是什么意思？",
+            "en": "What does \"明日から東京へ出張しなければなりません\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我明天起要去东京出差。",
+                "en": "我明天起要去东京出差。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "明日から東京へ出張しなければなりません",
+          "fromConversationId": "l17-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-012-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「我明天起要去东京出差。」的日语说法。",
+            "en": "Select Japanese for \"我明天起要去东京出差。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "明日から東京へ出張しなければなりません"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "明日から東京へ出張しなければなりません",
+          "fromConversationId": "l17-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-012-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「明日から東京へ出張しなければなりません」的中文意思是？",
+            "en": "What does \"明日から東京へ出張しなければなりません\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我明天起要去东京出差。",
+                "en": "我明天起要去东京出差。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "明日から東京へ出張しなければなりません",
+          "fromConversationId": "l17-conv-012",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-013-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「じゃあ」是什么意思？",
+            "en": "What does \"じゃあ\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那样的话……",
+                "en": "那样的话……"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "じゃあ",
+          "fromConversationId": "l17-conv-013",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-013-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「那样的话……」的日语说法。",
+            "en": "Select Japanese for \"那样的话……\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "じゃあ"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "じゃあ",
+          "fromConversationId": "l17-conv-013",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-013-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「じゃあ」的中文意思是？",
+            "en": "What does \"じゃあ\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那样的话……",
+                "en": "那样的话……"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "じゃあ",
+          "fromConversationId": "l17-conv-013",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-014-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「今日は薬を飲んで」是什么意思？",
+            "en": "What does \"今日は薬を飲んで\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "今天请先吃药，",
+                "en": "今天请先吃药，"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "今日は薬を飲んで",
+          "fromConversationId": "l17-conv-014",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-014-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「今天请先吃药，」的日语说法。",
+            "en": "Select Japanese for \"今天请先吃药，\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "今日は薬を飲んで"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "今日は薬を飲んで",
+          "fromConversationId": "l17-conv-014",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-014-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「今日は薬を飲んで」的中文意思是？",
+            "en": "What does \"今日は薬を飲んで\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "今天请先吃药，",
+                "en": "今天请先吃药，"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "今日は薬を飲んで",
+          "fromConversationId": "l17-conv-014",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-015-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「早く寝てください」是什么意思？",
+            "en": "What does \"早く寝てください\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "早点休息吧。",
+                "en": "早点休息吧。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "早く寝てください",
+          "fromConversationId": "l17-conv-015",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-015-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「早点休息吧。」的日语说法。",
+            "en": "Select Japanese for \"早点休息吧。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "早く寝てください"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "早く寝てください",
+          "fromConversationId": "l17-conv-015",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-015-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「早く寝てください」的中文意思是？",
+            "en": "What does \"早く寝てください\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "早点休息吧。",
+                "en": "早点休息吧。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "早く寝てください",
+          "fromConversationId": "l17-conv-015",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-016-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「はい」是什么意思？",
+            "en": "What does \"はい\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "好的。",
+                "en": "好的。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "はい",
+          "fromConversationId": "l17-conv-016",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-016-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「好的。」的日语说法。",
+            "en": "Select Japanese for \"好的。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "はい"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい",
+          "fromConversationId": "l17-conv-016",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-016-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「はい」的中文意思是？",
+            "en": "What does \"はい\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "好的。",
+                "en": "好的。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい",
+          "fromConversationId": "l17-conv-016",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-017-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「それから」是什么意思？",
+            "en": "What does \"それから\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "还有，",
+                "en": "还有，"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "それから",
+          "fromConversationId": "l17-conv-017",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-017-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「还有，」的日语说法。",
+            "en": "Select Japanese for \"还有，\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "それから"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "それから",
+          "fromConversationId": "l17-conv-017",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-017-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「それから」的中文意思是？",
+            "en": "What does \"それから\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "还有，",
+                "en": "还有，"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "それから",
+          "fromConversationId": "l17-conv-017",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-018-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「今晩はお風呂に入らないでくださいね」是什么意思？",
+            "en": "What does \"今晩はお風呂に入らないでくださいね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "今晚请不要洗澡哦。",
+                "en": "今晚请不要洗澡哦。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "今晩はお風呂に入らないでくださいね",
+          "fromConversationId": "l17-conv-018",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-018-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「今晚请不要洗澡哦。」的日语说法。",
+            "en": "Select Japanese for \"今晚请不要洗澡哦。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "今晩はお風呂に入らないでくださいね"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "今晩はお風呂に入らないでくださいね",
+          "fromConversationId": "l17-conv-018",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-018-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「今晩はお風呂に入らないでくださいね」的中文意思是？",
+            "en": "What does \"今晩はお風呂に入らないでくださいね\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "今晚请不要洗澡哦。",
+                "en": "今晚请不要洗澡哦。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "今晩はお風呂に入らないでくださいね",
+          "fromConversationId": "l17-conv-018",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-019-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「はい、わかりました」是什么意思？",
+            "en": "What does \"はい、わかりました\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "好的，我知道了。",
+                "en": "好的，我知道了。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "はい、わかりました",
+          "fromConversationId": "l17-conv-019",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-019-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「好的，我知道了。」的日语说法。",
+            "en": "Select Japanese for \"好的，我知道了。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "はい、わかりました"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい、わかりました",
+          "fromConversationId": "l17-conv-019",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-019-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「はい、わかりました」的中文意思是？",
+            "en": "What does \"はい、わかりました\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "好的，我知道了。",
+                "en": "好的，我知道了。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "はい、わかりました",
+          "fromConversationId": "l17-conv-019",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-020-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「じゃあお大事に」是什么意思？",
+            "en": "What does \"じゃあお大事に\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那请多保重。",
+                "en": "那请多保重。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "じゃあお大事に",
+          "fromConversationId": "l17-conv-020",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-020-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「那请多保重。」的日语说法。",
+            "en": "Select Japanese for \"那请多保重。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "じゃあお大事に"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "じゃあお大事に",
+          "fromConversationId": "l17-conv-020",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-020-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「じゃあお大事に」的中文意思是？",
+            "en": "What does \"じゃあお大事に\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "那请多保重。",
+                "en": "那请多保重。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "じゃあお大事に",
+          "fromConversationId": "l17-conv-020",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-021-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「どうもありがとうございました」是什么意思？",
+            "en": "What does \"どうもありがとうございました\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "非常感谢您。",
+                "en": "非常感谢您。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "どうもありがとうございました",
+          "fromConversationId": "l17-conv-021",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-021-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「非常感谢您。」的日语说法。",
+            "en": "Select Japanese for \"非常感谢您。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "どうもありがとうございました"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "どうもありがとうございました",
+          "fromConversationId": "l17-conv-021",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l17-q-021-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「どうもありがとうございました」的中文意思是？",
+            "en": "What does \"どうもありがとうございました\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "非常感谢您。",
+                "en": "非常感谢您。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "どうもありがとうございました",
+          "fromConversationId": "l17-conv-021",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
     }
   ],
   "conversationVideo": {
@@ -764,6 +3200,22 @@
     "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P17_%E7%AC%AC17%E8%AA%B2.mp4",
     "subtitleUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P17_%E7%AC%AC17%E8%AA%B2.json",
     "sourceType": "official_video_resource",
-    "status": "linked_not_imported"
+    "status": "imported_with_subtitles"
+  },
+  "conversationMainlineStatus": {
+    "videoLinked": "published",
+    "subtitleParsed": "published",
+    "subtitleCleaned": "published",
+    "humanReviewed": "not_started",
+    "importedToLessonJson": "published",
+    "vocabReady": "needs_review",
+    "grammarReady": "needs_review",
+    "examplesReady": "needs_review",
+    "quizReady": "needs_review",
+    "reciteReady": "needs_review",
+    "recordingReady": "published",
+    "scoringReady": "published",
+    "publishedToStaging": "not_started",
+    "verifiedOnline": "not_started"
   }
 }

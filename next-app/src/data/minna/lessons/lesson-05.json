@@ -688,6 +688,1421 @@
           ]
         }
       ]
+    },
+    {
+      "type": "conversation",
+      "id": "l05_conversation",
+      "sourceType": "official_video_subtitle",
+      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P5_%E7%AC%AC5%E8%AA%B2.json",
+      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P5_%E7%AC%AC5%E8%AA%B2.mp4",
+      "title": {
+        "zh": "会话背诵",
+        "en": "Conversation Practice"
+      },
+      "dialogTitle": {
+        "zh": "移动",
+        "en": "移动"
+      },
+      "conversationGoal": {
+        "zh": "能询问和回答移动目的地",
+        "en": "Ask and answer about movement destinations"
+      },
+      "items": [
+        {
+          "id": "l05-conv-001",
+          "speaker": "",
+          "jp": "3.3億円のコンサート",
+          "kana": "",
+          "zh": "33亿日元的演唱会",
+          "keyword": "3億円",
+          "videoStart": "0:00.0",
+          "videoEnd": "0:07.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-conv-002",
+          "speaker": "",
+          "jp": "すみません。甲子園までいくらですか?",
+          "kana": "",
+          "zh": "不好意思，到甲子园多少钱？",
+          "keyword": "甲子園",
+          "videoStart": "0:15.0",
+          "videoEnd": "0:19.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-conv-003",
+          "speaker": "",
+          "jp": "350円です。",
+          "kana": "",
+          "zh": "是350日元。",
+          "keyword": "350円です",
+          "videoStart": "0:25.0",
+          "videoEnd": "0:27.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-conv-004",
+          "speaker": "",
+          "jp": "350円ですね。ありがとうございました。",
+          "kana": "",
+          "zh": "350日元啊，谢谢您。",
+          "keyword": "350円です",
+          "videoStart": "0:28.0",
+          "videoEnd": "0:31.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-conv-005",
+          "speaker": "",
+          "jp": "どういたしまして。",
+          "kana": "どういたしまして。",
+          "zh": "不客气。",
+          "keyword": "",
+          "videoStart": "0:31.0",
+          "videoEnd": "0:33.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-conv-006",
+          "speaker": "",
+          "jp": "すみません。甲子園は何番線ですか?",
+          "kana": "",
+          "zh": "不好意思，请问去甲子园是几号站台？",
+          "keyword": "何番線です",
+          "videoStart": "0:40.0",
+          "videoEnd": "0:44.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-conv-007",
+          "speaker": "",
+          "jp": "5番線です。",
+          "kana": "",
+          "zh": "是5号站台。",
+          "keyword": "5番線です",
+          "videoStart": "0:44.0",
+          "videoEnd": "0:45.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-conv-008",
+          "speaker": "",
+          "jp": "どうも。",
+          "kana": "どうも。",
+          "zh": "谢谢。",
+          "keyword": "",
+          "videoStart": "0:45.0",
+          "videoEnd": "0:47.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-conv-009",
+          "speaker": "",
+          "jp": "あの、この電車は甲子園へ行きますか?",
+          "kana": "",
+          "zh": "请问，这班电车去甲子园吗？",
+          "keyword": "甲子園",
+          "videoStart": "0:53.0",
+          "videoEnd": "0:56.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-conv-010",
+          "speaker": "",
+          "jp": "いえ、次の普通ですよ。",
+          "kana": "",
+          "zh": "不，这班不是，下一班普通车才去。",
+          "keyword": "普通です",
+          "videoStart": "0:56.0",
+          "videoEnd": "0:59.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-conv-011",
+          "speaker": "",
+          "jp": "そうですか。どうも。",
+          "kana": "そうですか。どうも。",
+          "zh": "是这样啊，谢谢。",
+          "keyword": "",
+          "videoStart": "0:59.0",
+          "videoEnd": "1:02.0",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_vocab",
+      "id": "l05_conversation_vocab",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话关键词汇",
+        "en": "Conversation Key Vocabulary"
+      },
+      "description": {
+        "zh": "以下词汇从会话原文中提取。",
+        "en": "Vocabulary from the conversation."
+      },
+      "items": [
+        {
+          "word": "億円のコンサート",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l05-conv-001",
+          "sourceSentence": "3.3億円のコンサート",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "すみません",
+          "kana": "すみません",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l05-conv-002",
+          "sourceSentence": "すみません。甲子園までいくらですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "甲子園までいくらですか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l05-conv-002",
+          "sourceSentence": "すみません。甲子園までいくらですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "円です",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l05-conv-003",
+          "sourceSentence": "350円です。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "円ですね",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l05-conv-004",
+          "sourceSentence": "350円ですね。ありがとうございました。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "ありがとうございました",
+          "kana": "ありがとうございました",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l05-conv-004",
+          "sourceSentence": "350円ですね。ありがとうございました。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "どういたしまして",
+          "kana": "どういたしまして",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l05-conv-005",
+          "sourceSentence": "どういたしまして。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "甲子園は何番線ですか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l05-conv-006",
+          "sourceSentence": "すみません。甲子園は何番線ですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "番線です",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l05-conv-007",
+          "sourceSentence": "5番線です。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "どうも",
+          "kana": "どうも",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l05-conv-008",
+          "sourceSentence": "どうも。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "あの",
+          "kana": "あの",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l05-conv-009",
+          "sourceSentence": "あの、この電車は甲子園へ行きますか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "この電車は甲子園へ行きますか",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l05-conv-009",
+          "sourceSentence": "あの、この電車は甲子園へ行きますか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "いえ",
+          "kana": "いえ",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l05-conv-010",
+          "sourceSentence": "いえ、次の普通ですよ。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "次の普通ですよ",
+          "kana": "",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l05-conv-010",
+          "sourceSentence": "いえ、次の普通ですよ。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "word": "そうですか",
+          "kana": "そうですか",
+          "zh": "",
+          "importance": "core",
+          "fromConversationId": "l05-conv-011",
+          "sourceSentence": "そうですか。どうも。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_grammar",
+      "id": "l05_conversation_grammar",
+      "sourceType": "extracted_from_official_video_subtitle",
+      "title": {
+        "zh": "会话核心语法",
+        "en": "Conversation Core Grammar"
+      },
+      "description": {
+        "zh": "以下语法点从会话原文中提取。",
+        "en": "Grammar points from the conversation."
+      },
+      "items": [
+        {
+          "pattern": "〜です",
+          "meaning": {
+            "zh": "是…（礼貌判断）",
+            "en": "is/am (polite copula)"
+          },
+          "conversationExample": "すみません。甲子園までいくらですか?",
+          "fromConversationId": "l05-conv-002",
+          "sourceSentence": "すみません。甲子園までいくらですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「です」是日语礼貌判断助动词，相当于中文的\"是\"。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜か",
+          "meaning": {
+            "zh": "…吗？（疑问）",
+            "en": "question marker"
+          },
+          "conversationExample": "すみません。甲子園までいくらですか?",
+          "fromConversationId": "l05-conv-002",
+          "sourceSentence": "すみません。甲子園までいくらですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "句尾加「か」构成疑问句。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ません",
+          "meaning": {
+            "zh": "不…（否定）",
+            "en": "negative form"
+          },
+          "conversationExample": "すみません。甲子園までいくらですか?",
+          "fromConversationId": "l05-conv-002",
+          "sourceSentence": "すみません。甲子園までいくらですか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ません」是「ます」的否定形式。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ました",
+          "meaning": {
+            "zh": "…了（过去）",
+            "en": "past tense"
+          },
+          "conversationExample": "350円ですね。ありがとうございました。",
+          "fromConversationId": "l05-conv-004",
+          "sourceSentence": "350円ですね。ありがとうございました。",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ました」是「ます」的过去形。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "〜ます",
+          "meaning": {
+            "zh": "（动词敬体）",
+            "en": "polite verb form"
+          },
+          "conversationExample": "あの、この電車は甲子園へ行きますか?",
+          "fromConversationId": "l05-conv-009",
+          "sourceSentence": "あの、この電車は甲子園へ行きますか?",
+          "sourceType": "extracted_from_official_video_subtitle",
+          "explanationZh": "「ます」是动词的敬体形式。",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_examples",
+      "id": "l05_conversation_examples",
+      "sourceType": "ai_generated_from_official_conversation",
+      "title": {
+        "zh": "会话替换例句",
+        "en": "Conversation Replacement Examples"
+      },
+      "description": {
+        "zh": "以下例句基于会话原句生成。",
+        "en": "Examples generated from conversation sentences."
+      },
+      "items": [
+        {
+          "pattern": "3億円",
+          "originalSentence": "3.3億円のコンサート",
+          "fromConversationId": "l05-conv-001",
+          "sourceSentence": "3.3億円のコンサート",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "甲子園",
+          "originalSentence": "すみません。甲子園までいくらですか?",
+          "fromConversationId": "l05-conv-002",
+          "sourceSentence": "すみません。甲子園までいくらですか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "350円です",
+          "originalSentence": "350円です。",
+          "fromConversationId": "l05-conv-003",
+          "sourceSentence": "350円です。",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [
+            {
+              "jp": "佐藤です。",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "田中です。",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "山田です。",
+              "kana": "",
+              "zh": ""
+            }
+          ],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "350円です",
+          "originalSentence": "350円ですね。ありがとうございました。",
+          "fromConversationId": "l05-conv-004",
+          "sourceSentence": "350円ですね。ありがとうございました。",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "どういたしまして。",
+          "fromConversationId": "l05-conv-005",
+          "sourceSentence": "どういたしまして。",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "何番線です",
+          "originalSentence": "すみません。甲子園は何番線ですか?",
+          "fromConversationId": "l05-conv-006",
+          "sourceSentence": "すみません。甲子園は何番線ですか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "5番線です",
+          "originalSentence": "5番線です。",
+          "fromConversationId": "l05-conv-007",
+          "sourceSentence": "5番線です。",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [
+            {
+              "jp": "佐藤です。",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "田中です。",
+              "kana": "",
+              "zh": ""
+            },
+            {
+              "jp": "山田です。",
+              "kana": "",
+              "zh": ""
+            }
+          ],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "どうも。",
+          "fromConversationId": "l05-conv-008",
+          "sourceSentence": "どうも。",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "甲子園",
+          "originalSentence": "あの、この電車は甲子園へ行きますか?",
+          "fromConversationId": "l05-conv-009",
+          "sourceSentence": "あの、この電車は甲子園へ行きますか?",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "普通です",
+          "originalSentence": "いえ、次の普通ですよ。",
+          "fromConversationId": "l05-conv-010",
+          "sourceSentence": "いえ、次の普通ですよ。",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "pattern": "跟读练习",
+          "originalSentence": "そうですか。どうも。",
+          "fromConversationId": "l05-conv-011",
+          "sourceSentence": "そうですか。どうも。",
+          "sourceType": "ai_generated_from_official_conversation",
+          "replacements": [],
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
+    },
+    {
+      "type": "conversation_quiz",
+      "id": "l05_conversation_quiz",
+      "sourceType": "generated_from_official_video_subtitle",
+      "title": {
+        "zh": "会话专项测试",
+        "en": "Conversation Quiz"
+      },
+      "description": {
+        "zh": "测试题围绕会话内容设计。",
+        "en": "Quiz based on the conversation."
+      },
+      "items": [
+        {
+          "id": "l05-q-001-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「3.3億円のコンサート」是什么意思？",
+            "en": "What does \"3.3億円のコンサート\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "33亿日元的演唱会",
+                "en": "33亿日元的演唱会"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "3.3億円のコンサート",
+          "fromConversationId": "l05-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-q-001-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「33亿日元的演唱会」的日语说法。",
+            "en": "Select Japanese for \"33亿日元的演唱会\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "3.3億円のコンサート"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "3.3億円のコンサート",
+          "fromConversationId": "l05-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-q-001-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「3.3億円のコンサート」的中文意思是？",
+            "en": "What does \"3.3億円のコンサート\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "33亿日元的演唱会",
+                "en": "33亿日元的演唱会"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "3.3億円のコンサート",
+          "fromConversationId": "l05-conv-001",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-q-002-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「すみません。甲子園までいくらですか?」是什么意思？",
+            "en": "What does \"すみません。甲子園までいくらですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不好意思，到甲子园多少钱？",
+                "en": "不好意思，到甲子园多少钱？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "すみません。甲子園までいくらですか?",
+          "fromConversationId": "l05-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-q-002-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「不好意思，到甲子园多少钱？」的日语说法。",
+            "en": "Select Japanese for \"不好意思，到甲子园多少钱？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "すみません。甲子園までいくらですか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "すみません。甲子園までいくらですか?",
+          "fromConversationId": "l05-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-q-002-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「すみません。甲子園までいくらですか?」的中文意思是？",
+            "en": "What does \"すみません。甲子園までいくらですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不好意思，到甲子园多少钱？",
+                "en": "不好意思，到甲子园多少钱？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "すみません。甲子園までいくらですか?",
+          "fromConversationId": "l05-conv-002",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-q-003-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「350円です。」是什么意思？",
+            "en": "What does \"350円です。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是350日元。",
+                "en": "是350日元。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "350円です。",
+          "fromConversationId": "l05-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-q-003-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「是350日元。」的日语说法。",
+            "en": "Select Japanese for \"是350日元。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "350円です。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "350円です。",
+          "fromConversationId": "l05-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-q-003-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「350円です。」的中文意思是？",
+            "en": "What does \"350円です。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是350日元。",
+                "en": "是350日元。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "350円です。",
+          "fromConversationId": "l05-conv-003",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-q-004-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「350円ですね。ありがとうございました。」是什么意思？",
+            "en": "What does \"350円ですね。ありがとうございました。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "350日元啊，谢谢您。",
+                "en": "350日元啊，谢谢您。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "350円ですね。ありがとうございました。",
+          "fromConversationId": "l05-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-q-004-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「350日元啊，谢谢您。」的日语说法。",
+            "en": "Select Japanese for \"350日元啊，谢谢您。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "350円ですね。ありがとうございました。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "350円ですね。ありがとうございました。",
+          "fromConversationId": "l05-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-q-004-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「350円ですね。ありがとうございました。」的中文意思是？",
+            "en": "What does \"350円ですね。ありがとうございました。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "350日元啊，谢谢您。",
+                "en": "350日元啊，谢谢您。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "350円ですね。ありがとうございました。",
+          "fromConversationId": "l05-conv-004",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-q-005-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「どういたしまして。」是什么意思？",
+            "en": "What does \"どういたしまして。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不客气。",
+                "en": "不客气。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "どういたしまして。",
+          "fromConversationId": "l05-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-q-005-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「不客气。」的日语说法。",
+            "en": "Select Japanese for \"不客气。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "どういたしまして。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "どういたしまして。",
+          "fromConversationId": "l05-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-q-005-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「どういたしまして。」的中文意思是？",
+            "en": "What does \"どういたしまして。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不客气。",
+                "en": "不客气。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "どういたしまして。",
+          "fromConversationId": "l05-conv-005",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-q-006-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「すみません。甲子園は何番線ですか?」是什么意思？",
+            "en": "What does \"すみません。甲子園は何番線ですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不好意思，请问去甲子园是几号站台？",
+                "en": "不好意思，请问去甲子园是几号站台？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "すみません。甲子園は何番線ですか?",
+          "fromConversationId": "l05-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-q-006-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「不好意思，请问去甲子园是几号站台？」的日语说法。",
+            "en": "Select Japanese for \"不好意思，请问去甲子园是几号站台？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "すみません。甲子園は何番線ですか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "すみません。甲子園は何番線ですか?",
+          "fromConversationId": "l05-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-q-006-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「すみません。甲子園は何番線ですか?」的中文意思是？",
+            "en": "What does \"すみません。甲子園は何番線ですか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不好意思，请问去甲子园是几号站台？",
+                "en": "不好意思，请问去甲子园是几号站台？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "すみません。甲子園は何番線ですか?",
+          "fromConversationId": "l05-conv-006",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-q-007-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「5番線です。」是什么意思？",
+            "en": "What does \"5番線です。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是5号站台。",
+                "en": "是5号站台。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "5番線です。",
+          "fromConversationId": "l05-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-q-007-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「是5号站台。」的日语说法。",
+            "en": "Select Japanese for \"是5号站台。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "5番線です。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "5番線です。",
+          "fromConversationId": "l05-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-q-007-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「5番線です。」的中文意思是？",
+            "en": "What does \"5番線です。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是5号站台。",
+                "en": "是5号站台。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "5番線です。",
+          "fromConversationId": "l05-conv-007",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-q-008-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「どうも。」是什么意思？",
+            "en": "What does \"どうも。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "谢谢。",
+                "en": "谢谢。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "どうも。",
+          "fromConversationId": "l05-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-q-008-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「谢谢。」的日语说法。",
+            "en": "Select Japanese for \"谢谢。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "どうも。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "どうも。",
+          "fromConversationId": "l05-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-q-008-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「どうも。」的中文意思是？",
+            "en": "What does \"どうも。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "谢谢。",
+                "en": "谢谢。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "どうも。",
+          "fromConversationId": "l05-conv-008",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-q-009-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「あの、この電車は甲子園へ行きますか?」是什么意思？",
+            "en": "What does \"あの、この電車は甲子園へ行きますか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请问，这班电车去甲子园吗？",
+                "en": "请问，这班电车去甲子园吗？"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "あの、この電車は甲子園へ行きますか?",
+          "fromConversationId": "l05-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-q-009-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「请问，这班电车去甲子园吗？」的日语说法。",
+            "en": "Select Japanese for \"请问，这班电车去甲子园吗？\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "あの、この電車は甲子園へ行きますか?"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "あの、この電車は甲子園へ行きますか?",
+          "fromConversationId": "l05-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-q-009-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「あの、この電車は甲子園へ行きますか?」的中文意思是？",
+            "en": "What does \"あの、この電車は甲子園へ行きますか?\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请问，这班电车去甲子园吗？",
+                "en": "请问，这班电车去甲子园吗？"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "あの、この電車は甲子園へ行きますか?",
+          "fromConversationId": "l05-conv-009",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-q-010-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「いえ、次の普通ですよ。」是什么意思？",
+            "en": "What does \"いえ、次の普通ですよ。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不，这班不是，下一班普通车才去。",
+                "en": "不，这班不是，下一班普通车才去。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "いえ、次の普通ですよ。",
+          "fromConversationId": "l05-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-q-010-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「不，这班不是，下一班普通车才去。」的日语说法。",
+            "en": "Select Japanese for \"不，这班不是，下一班普通车才去。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "いえ、次の普通ですよ。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "いえ、次の普通ですよ。",
+          "fromConversationId": "l05-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-q-010-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「いえ、次の普通ですよ。」的中文意思是？",
+            "en": "What does \"いえ、次の普通ですよ。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "不，这班不是，下一班普通车才去。",
+                "en": "不，这班不是，下一班普通车才去。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "いえ、次の普通ですよ。",
+          "fromConversationId": "l05-conv-010",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-q-011-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「そうですか。どうも。」是什么意思？",
+            "en": "What does \"そうですか。どうも。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是这样啊，谢谢。",
+                "en": "是这样啊，谢谢。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我不确定",
+                "en": "I'm not sure"
+              }
+            }
+          ],
+          "sourceSentence": "そうですか。どうも。",
+          "fromConversationId": "l05-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-q-011-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「是这样啊，谢谢。」的日语说法。",
+            "en": "Select Japanese for \"是这样啊，谢谢。\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "そうですか。どうも。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "そうですか。どうも。",
+          "fromConversationId": "l05-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l05-q-011-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「そうですか。どうも。」的中文意思是？",
+            "en": "What does \"そうですか。どうも。\" mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "是这样啊，谢谢。",
+                "en": "是这样啊，谢谢。"
+              },
+              "correct": true
+            }
+          ],
+          "sourceSentence": "そうですか。どうも。",
+          "fromConversationId": "l05-conv-011",
+          "sourceType": "generated_from_official_video_subtitle",
+          "needsReview": true,
+          "reviewStatus": "needs_review"
+        }
+      ]
     }
   ],
   "conversationVideo": {
@@ -696,6 +2111,22 @@
     "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P5_%E7%AC%AC5%E8%AA%B2.mp4",
     "subtitleUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P5_%E7%AC%AC5%E8%AA%B2.json",
     "sourceType": "official_video_resource",
-    "status": "linked_not_imported"
+    "status": "imported_with_subtitles"
+  },
+  "conversationMainlineStatus": {
+    "videoLinked": "published",
+    "subtitleParsed": "published",
+    "subtitleCleaned": "published",
+    "humanReviewed": "not_started",
+    "importedToLessonJson": "published",
+    "vocabReady": "needs_review",
+    "grammarReady": "needs_review",
+    "examplesReady": "needs_review",
+    "quizReady": "needs_review",
+    "reciteReady": "needs_review",
+    "recordingReady": "published",
+    "scoringReady": "published",
+    "publishedToStaging": "not_started",
+    "verifiedOnline": "not_started"
   }
 }
