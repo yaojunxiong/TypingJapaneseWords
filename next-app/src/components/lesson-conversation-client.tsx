@@ -506,7 +506,7 @@ function SentenceSourceAudioPlayer({ videoUrl, videoStart, videoEnd, lang }: {
   const videoRef = useRef<HTMLVideoElement | null>(null)
   const [playing, setPlaying] = useState(false)
 
-  const hasTimes = videoUrl && startSec > 0 && endSec > startSec
+  const hasTimes = videoUrl && startSec >= 0 && endSec > startSec
 
   function handlePlay() {
     if (!hasTimes) return

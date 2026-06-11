@@ -8,6 +8,20 @@ function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, 'utf-8'))
 }
 
+function parseTimeToSeconds(value) {
+  if (value == null) return -1
+  if (typeof value === 'number') return value
+  const s = String(value).trim()
+  if (!s) return -1
+  const mss = s.match(/^(\d+):(\d+(?:\.\d+)?)$/)
+  if (mss) return Number(mss[1]) * 60 + Number(mss[2])
+  const hms = s.match(/^(\d+):(\d+):(\d+(?:\.\d+)?)$/)
+  if (hms) return Number(hms[1]) * 3600 + Number(hms[2]) * 60 + Number(hms[3])
+  const num = Number(s)
+  if (!isNaN(num)) return num
+  return -1
+}
+
 function verifyLesson(no) {
   const fileNo = String(no).padStart(2, '0')
   const file = path.join(LESSON_DIR, `lesson-${fileNo}.json`)
@@ -137,6 +151,27 @@ function verifyLesson(no) {
     }
   }
 
+  // 7. Check source audio timeline
+  for (const item of convItems) {
+    const vs = parseTimeToSeconds(item.videoStart)
+    const ve = parseTimeToSeconds(item.videoEnd)
+    if (vs < 0) issues.push(`conversation.${item.id}: videoStart missing or unparseable (${JSON.stringify(item.videoStart)})`)
+    if (ve < 0) issues.push(`conversation.${item.id}: videoEnd missing or unparseable (${JSON.stringify(item.videoEnd)})`)
+    if (vs >= 0 && ve >= 0 && ve <= vs) issues.push(`conversation.${item.id}: videoEnd(${ve}) <= videoStart(${vs})`)
+  }
+
+  // 8. Check conversationVideo.videoUrl
+  const cv = lesson.conversationVideo || {}
+  const secVideoUrl = convSection.videoUrl || ''
+  const videoUrl = secVideoUrl || cv.videoUrl || ''
+  if (!videoUrl) {
+    issues.push('No videoUrl found (check conversationVideo.videoUrl or conversation.videoUrl)')
+  } else if (videoUrl.includes('index.html')) {
+    issues.push(`videoUrl is index.html page, not MP4: ${videoUrl}`)
+  } else if (!videoUrl.endsWith('.mp4') && !videoUrl.includes('.mp4')) {
+    issues.push(`videoUrl may not be MP4: ${videoUrl.slice(-40)}`)
+  }
+
   return { no, pass: issues.length === 0, issues }
 }
 
@@ -167,7 +202,7 @@ function run() {
     console.log(`\n⚠  ${totalFail} lesson(s) need fixes before deployment.`)
     process.exit(1)
   } else {
-    console.log('\nPASS: 50/50 lessons verified')
+    console.log('\nPASS: 50/50 lessons verified with source audio timeline')
     process.exit(0)
   }
 }

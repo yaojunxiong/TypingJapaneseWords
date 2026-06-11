@@ -41,8 +41,8 @@ function makeConvId(lessonNo, index) {
 function formatTime(seconds) {
   const m = Math.floor(seconds / 60)
   const s = Math.floor(seconds % 60)
-  const cs = Math.floor((seconds % 1) * 10)
-  return `${m}:${String(s).padStart(2, '0')}.${cs}`
+  const cs = Math.round((seconds % 1) * 100)
+  return `${m}:${String(s).padStart(2, '0')}.${String(cs).padStart(2, '0')}`
 }
 
 function needsKana(jp) {
@@ -248,19 +248,26 @@ async function fetchSubtitles(lessonNo) {
 }
 
 function buildCleanedJson(lessonNo, subtitles) {
-  const items = subtitles.map((sub, i) => {
-    const id = makeConvId(lessonNo, i)
-    const jp = (sub.jp || '').trim()
-    const zh = (sub.zh || '').trim()
-    return {
-      id, speaker: '', jp, kana: needsKana(jp) ? '' : jp,
-      zh, keyword: extractKeyword(jp),
-      videoStart: formatTime(sub.start), videoEnd: formatTime(sub.end),
-      sourceType: 'official_video_subtitle', needsReview: true,
-      needsSpeakerReview: true, needsKanaReview: needsKana(jp),
-      needsKeywordReview: true
-    }
-  })
+  const items = subtitles
+    .filter(sub => {
+      const start = typeof sub.start === 'number' ? sub.start : 0
+      const end = typeof sub.end === 'number' ? sub.end : 0
+      const jp = (sub.jp || '').trim()
+      return jp.length > 0 && end - start >= 0.01
+    })
+    .map((sub, i) => {
+      const id = makeConvId(lessonNo, i)
+      const jp = (sub.jp || '').trim()
+      const zh = (sub.zh || '').trim()
+      return {
+        id, speaker: '', jp, kana: needsKana(jp) ? '' : jp,
+        zh, keyword: extractKeyword(jp),
+        videoStart: formatTime(sub.start), videoEnd: formatTime(sub.end),
+        sourceType: 'official_video_subtitle', needsReview: true,
+        needsSpeakerReview: true, needsKanaReview: needsKana(jp),
+        needsKeywordReview: true
+      }
+    })
   return {
     type: 'conversation', sourceType: 'official_video_subtitle',
     sourceUrl: `${SUBTITLE_BASE}/${encodeURIComponent(`大家的日本语第2版-会话_P${lessonNo}_第${lessonNo}課.json`)}`,

@@ -1051,8 +1051,8 @@
           "kana": "",
           "zh": "我想亲眼看一次茶道表演……",
           "keyword": "茶道",
-          "videoStart": "0:00.0",
-          "videoEnd": "0:10.0",
+          "videoStart": "0:00.00",
+          "videoEnd": "0:10.00",
           "sourceType": "official_video_subtitle",
           "needsReview": true,
           "needsSpeakerReview": true,
@@ -1067,8 +1067,8 @@
           "kana": "",
           "zh": "那下周六要不要一起去看看？",
           "keyword": "土曜日一緒",
-          "videoStart": "0:10.0",
-          "videoEnd": "0:14.0",
+          "videoStart": "0:10.00",
+          "videoEnd": "0:14.00",
           "sourceType": "official_video_subtitle",
           "needsReview": true,
           "needsSpeakerReview": true,
@@ -1083,8 +1083,8 @@
           "kana": "",
           "zh": "渡边先生，请为大家泡茶吧。",
           "keyword": "渡辺",
-          "videoStart": "0:25.0",
-          "videoEnd": "0:29.0",
+          "videoStart": "0:25.00",
+          "videoEnd": "0:29.00",
           "sourceType": "official_video_subtitle",
           "needsReview": true,
           "needsSpeakerReview": true,
@@ -1099,8 +1099,8 @@
           "kana": "",
           "zh": "克拉拉，请用点和果子。",
           "keyword": "菓子",
-          "videoStart": "0:29.0",
-          "videoEnd": "0:32.0",
+          "videoStart": "0:29.00",
+          "videoEnd": "0:32.00",
           "sourceType": "official_video_subtitle",
           "needsReview": true,
           "needsSpeakerReview": true,
@@ -1115,8 +1115,8 @@
           "kana": "",
           "zh": "诶，是先吃点心的吗？",
           "keyword": "菓子",
-          "videoStart": "0:32.0",
-          "videoEnd": "0:35.0",
+          "videoStart": "0:32.00",
+          "videoEnd": "0:35.00",
           "sourceType": "official_video_subtitle",
           "needsReview": true,
           "needsSpeakerReview": true,
@@ -1131,8 +1131,8 @@
           "kana": "",
           "zh": "是的，先吃点甜点再喝茶，会更美味哦。",
           "keyword": "菓子",
-          "videoStart": "0:35.0",
-          "videoEnd": "0:41.0",
+          "videoStart": "0:35.00",
+          "videoEnd": "0:41.00",
           "sourceType": "official_video_subtitle",
           "needsReview": true,
           "needsSpeakerReview": true,
@@ -1147,8 +1147,8 @@
           "kana": "そうですか。",
           "zh": "是这样啊。",
           "keyword": "",
-          "videoStart": "0:41.0",
-          "videoEnd": "0:43.0",
+          "videoStart": "0:41.00",
+          "videoEnd": "0:43.00",
           "sourceType": "official_video_subtitle",
           "needsReview": true,
           "needsSpeakerReview": true,
@@ -1157,14 +1157,30 @@
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l34-conv-009",
+          "id": "l34-conv-008",
           "speaker": "",
           "jp": "では、お茶を飲みましょう。",
           "kana": "",
           "zh": "那么，开始品茶吧。",
           "keyword": "",
-          "videoStart": "1:16.0",
-          "videoEnd": "1:19.0",
+          "videoStart": "1:16.00",
+          "videoEnd": "1:19.00",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l34-conv-009",
+          "speaker": "",
+          "jp": "まず、右手でお茶碗を持ちます。",
+          "kana": "",
+          "zh": "首先，用右手拿起茶碗。",
+          "keyword": "茶碗",
+          "videoStart": "1:19.00",
+          "videoEnd": "1:24.00",
           "sourceType": "official_video_subtitle",
           "needsReview": true,
           "needsSpeakerReview": true,
@@ -1175,12 +1191,12 @@
         {
           "id": "l34-conv-010",
           "speaker": "",
-          "jp": "まず、右手でお茶碗を持ちます。",
+          "jp": "次に、お茶碗を二回まわして、",
           "kana": "",
-          "zh": "首先，用右手拿起茶碗。",
-          "keyword": "茶碗",
-          "videoStart": "1:19.0",
-          "videoEnd": "1:24.0",
+          "zh": "然后把茶碗转两圈，",
+          "keyword": "二回",
+          "videoStart": "1:25.00",
+          "videoEnd": "1:31.00",
           "sourceType": "official_video_subtitle",
           "needsReview": true,
           "needsSpeakerReview": true,
@@ -1191,12 +1207,12 @@
         {
           "id": "l34-conv-011",
           "speaker": "",
-          "jp": "次に、お茶碗を二回まわして、",
+          "jp": "それから飲みます。",
           "kana": "",
-          "zh": "然后把茶碗转两圈，",
-          "keyword": "二回",
-          "videoStart": "1:25.0",
-          "videoEnd": "1:31.0",
+          "zh": "接着再喝茶。",
+          "keyword": "",
+          "videoStart": "1:31.00",
+          "videoEnd": "1:34.00",
           "sourceType": "official_video_subtitle",
           "needsReview": true,
           "needsSpeakerReview": true,
@@ -1207,28 +1223,12 @@
         {
           "id": "l34-conv-012",
           "speaker": "",
-          "jp": "それから飲みます。",
-          "kana": "",
-          "zh": "接着再喝茶。",
-          "keyword": "",
-          "videoStart": "1:31.0",
-          "videoEnd": "1:34.0",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l34-conv-013",
-          "speaker": "",
           "jp": "はい。",
           "kana": "はい。",
           "zh": "好的。",
           "keyword": "",
-          "videoStart": "1:34.0",
-          "videoEnd": "1:36.0",
+          "videoStart": "1:34.00",
+          "videoEnd": "1:36.00",
           "sourceType": "official_video_subtitle",
           "needsReview": true,
           "needsSpeakerReview": true,
@@ -1237,14 +1237,14 @@
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l34-conv-014",
+          "id": "l34-conv-013",
           "speaker": "",
           "jp": "じゃあ、私がした通りにしてください。",
           "kana": "",
           "zh": "那请按我刚才做的来试试吧。",
           "keyword": "",
-          "videoStart": "1:40.0",
-          "videoEnd": "1:44.0",
+          "videoStart": "1:40.00",
+          "videoEnd": "1:44.00",
           "sourceType": "official_video_subtitle",
           "needsReview": true,
           "needsSpeakerReview": true,
@@ -1253,14 +1253,30 @@
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l34-conv-015",
+          "id": "l34-conv-014",
           "speaker": "",
           "jp": "これでいいですか？",
           "kana": "これでいいですか？",
           "zh": "这样做可以吗？",
           "keyword": "",
-          "videoStart": "1:55.0",
-          "videoEnd": "1:58.0",
+          "videoStart": "1:55.00",
+          "videoEnd": "1:58.00",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l34-conv-015",
+          "speaker": "",
+          "jp": "はい。",
+          "kana": "はい。",
+          "zh": "可以的。",
+          "keyword": "",
+          "videoStart": "1:58.00",
+          "videoEnd": "2:00.00",
           "sourceType": "official_video_subtitle",
           "needsReview": true,
           "needsSpeakerReview": true,
@@ -1271,12 +1287,12 @@
         {
           "id": "l34-conv-016",
           "speaker": "",
-          "jp": "はい。",
-          "kana": "はい。",
-          "zh": "可以的。",
+          "jp": "いかがですか？",
+          "kana": "いかがですか？",
+          "zh": "觉得怎么样？",
           "keyword": "",
-          "videoStart": "1:58.0",
-          "videoEnd": "2:00.0",
+          "videoStart": "2:06.00",
+          "videoEnd": "2:08.00",
           "sourceType": "official_video_subtitle",
           "needsReview": true,
           "needsSpeakerReview": true,
@@ -1287,28 +1303,12 @@
         {
           "id": "l34-conv-017",
           "speaker": "",
-          "jp": "いかがですか？",
-          "kana": "いかがですか？",
-          "zh": "觉得怎么样？",
-          "keyword": "",
-          "videoStart": "2:06.0",
-          "videoEnd": "2:08.0",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l34-conv-018",
-          "speaker": "",
           "jp": "少し苦いですが、おいしいです。",
           "kana": "",
           "zh": "虽然有点苦，但很好喝。",
           "keyword": "",
-          "videoStart": "2:08.0",
-          "videoEnd": "2:11.0",
+          "videoStart": "2:08.00",
+          "videoEnd": "2:11.00",
           "sourceType": "official_video_subtitle",
           "needsReview": true,
           "needsSpeakerReview": true,
@@ -1479,7 +1479,7 @@
           "kana": "では",
           "zh": "",
           "importance": "core",
-          "fromConversationId": "l34-conv-009",
+          "fromConversationId": "l34-conv-008",
           "sourceSentence": "では、お茶を飲みましょう。",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
@@ -1490,7 +1490,7 @@
           "kana": "",
           "zh": "",
           "importance": "core",
-          "fromConversationId": "l34-conv-009",
+          "fromConversationId": "l34-conv-008",
           "sourceSentence": "では、お茶を飲みましょう。",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
@@ -1501,7 +1501,7 @@
           "kana": "まず",
           "zh": "",
           "importance": "core",
-          "fromConversationId": "l34-conv-010",
+          "fromConversationId": "l34-conv-009",
           "sourceSentence": "まず、右手でお茶碗を持ちます。",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
@@ -1512,7 +1512,7 @@
           "kana": "",
           "zh": "",
           "importance": "core",
-          "fromConversationId": "l34-conv-010",
+          "fromConversationId": "l34-conv-009",
           "sourceSentence": "まず、右手でお茶碗を持ちます。",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
@@ -1523,7 +1523,7 @@
           "kana": "",
           "zh": "",
           "importance": "core",
-          "fromConversationId": "l34-conv-011",
+          "fromConversationId": "l34-conv-010",
           "sourceSentence": "次に、お茶碗を二回まわして、",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
@@ -1534,7 +1534,7 @@
           "kana": "",
           "zh": "",
           "importance": "core",
-          "fromConversationId": "l34-conv-011",
+          "fromConversationId": "l34-conv-010",
           "sourceSentence": "次に、お茶碗を二回まわして、",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
@@ -1545,7 +1545,7 @@
           "kana": "",
           "zh": "",
           "importance": "core",
-          "fromConversationId": "l34-conv-012",
+          "fromConversationId": "l34-conv-011",
           "sourceSentence": "それから飲みます。",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
@@ -1556,7 +1556,7 @@
           "kana": "はい",
           "zh": "",
           "importance": "core",
-          "fromConversationId": "l34-conv-013",
+          "fromConversationId": "l34-conv-012",
           "sourceSentence": "はい。",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
@@ -1567,7 +1567,7 @@
           "kana": "",
           "zh": "",
           "importance": "core",
-          "fromConversationId": "l34-conv-014",
+          "fromConversationId": "l34-conv-013",
           "sourceSentence": "じゃあ、私がした通りにしてください。",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
@@ -1578,7 +1578,7 @@
           "kana": "これでいいですか",
           "zh": "",
           "importance": "core",
-          "fromConversationId": "l34-conv-015",
+          "fromConversationId": "l34-conv-014",
           "sourceSentence": "これでいいですか？",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
@@ -1589,7 +1589,7 @@
           "kana": "いかがですか",
           "zh": "",
           "importance": "core",
-          "fromConversationId": "l34-conv-017",
+          "fromConversationId": "l34-conv-016",
           "sourceSentence": "いかがですか？",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
@@ -1600,7 +1600,7 @@
           "kana": "",
           "zh": "",
           "importance": "core",
-          "fromConversationId": "l34-conv-018",
+          "fromConversationId": "l34-conv-017",
           "sourceSentence": "少し苦いですが、おいしいです。",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
@@ -1611,7 +1611,7 @@
           "kana": "おいしいです",
           "zh": "",
           "importance": "core",
-          "fromConversationId": "l34-conv-018",
+          "fromConversationId": "l34-conv-017",
           "sourceSentence": "少し苦いですが、おいしいです。",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
@@ -1709,7 +1709,7 @@
             "en": "polite verb form"
           },
           "conversationExample": "まず、右手でお茶碗を持ちます。",
-          "fromConversationId": "l34-conv-010",
+          "fromConversationId": "l34-conv-009",
           "sourceSentence": "まず、右手でお茶碗を持ちます。",
           "sourceType": "extracted_from_official_video_subtitle",
           "explanationZh": "「ます」是动词的敬体形式。",
@@ -1723,7 +1723,7 @@
             "en": "from"
           },
           "conversationExample": "それから飲みます。",
-          "fromConversationId": "l34-conv-012",
+          "fromConversationId": "l34-conv-011",
           "sourceSentence": "それから飲みます。",
           "sourceType": "extracted_from_official_video_subtitle",
           "explanationZh": "「から」表示起点或来源。",
@@ -1818,7 +1818,7 @@
         {
           "pattern": "跟读练习",
           "originalSentence": "では、お茶を飲みましょう。",
-          "fromConversationId": "l34-conv-009",
+          "fromConversationId": "l34-conv-008",
           "sourceSentence": "では、お茶を飲みましょう。",
           "sourceType": "ai_generated_from_official_conversation",
           "replacements": [],
@@ -1828,7 +1828,7 @@
         {
           "pattern": "茶碗",
           "originalSentence": "まず、右手でお茶碗を持ちます。",
-          "fromConversationId": "l34-conv-010",
+          "fromConversationId": "l34-conv-009",
           "sourceSentence": "まず、右手でお茶碗を持ちます。",
           "sourceType": "ai_generated_from_official_conversation",
           "replacements": [],
@@ -1838,7 +1838,7 @@
         {
           "pattern": "二回",
           "originalSentence": "次に、お茶碗を二回まわして、",
-          "fromConversationId": "l34-conv-011",
+          "fromConversationId": "l34-conv-010",
           "sourceSentence": "次に、お茶碗を二回まわして、",
           "sourceType": "ai_generated_from_official_conversation",
           "replacements": [],
@@ -1848,7 +1848,7 @@
         {
           "pattern": "跟读练习",
           "originalSentence": "それから飲みます。",
-          "fromConversationId": "l34-conv-012",
+          "fromConversationId": "l34-conv-011",
           "sourceSentence": "それから飲みます。",
           "sourceType": "ai_generated_from_official_conversation",
           "replacements": [],
@@ -1858,7 +1858,7 @@
         {
           "pattern": "跟读练习",
           "originalSentence": "はい。",
-          "fromConversationId": "l34-conv-013",
+          "fromConversationId": "l34-conv-012",
           "sourceSentence": "はい。",
           "sourceType": "ai_generated_from_official_conversation",
           "replacements": [],
@@ -1868,7 +1868,7 @@
         {
           "pattern": "跟读练习",
           "originalSentence": "じゃあ、私がした通りにしてください。",
-          "fromConversationId": "l34-conv-014",
+          "fromConversationId": "l34-conv-013",
           "sourceSentence": "じゃあ、私がした通りにしてください。",
           "sourceType": "ai_generated_from_official_conversation",
           "replacements": [],
@@ -1878,7 +1878,7 @@
         {
           "pattern": "跟读练习",
           "originalSentence": "これでいいですか？",
-          "fromConversationId": "l34-conv-015",
+          "fromConversationId": "l34-conv-014",
           "sourceSentence": "これでいいですか？",
           "sourceType": "ai_generated_from_official_conversation",
           "replacements": [],
@@ -1888,7 +1888,7 @@
         {
           "pattern": "跟读练习",
           "originalSentence": "はい。",
-          "fromConversationId": "l34-conv-016",
+          "fromConversationId": "l34-conv-015",
           "sourceSentence": "はい。",
           "sourceType": "ai_generated_from_official_conversation",
           "replacements": [],
@@ -1898,7 +1898,7 @@
         {
           "pattern": "跟读练习",
           "originalSentence": "いかがですか？",
-          "fromConversationId": "l34-conv-017",
+          "fromConversationId": "l34-conv-016",
           "sourceSentence": "いかがですか？",
           "sourceType": "ai_generated_from_official_conversation",
           "replacements": [],
@@ -1908,7 +1908,7 @@
         {
           "pattern": "跟读练习",
           "originalSentence": "少し苦いですが、おいしいです。",
-          "fromConversationId": "l34-conv-018",
+          "fromConversationId": "l34-conv-017",
           "sourceSentence": "少し苦いですが、おいしいです。",
           "sourceType": "ai_generated_from_official_conversation",
           "replacements": [],
@@ -2428,7 +2428,7 @@
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l34-q-009-listen-001",
+          "id": "l34-q-008-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
             "zh": "「では、お茶を飲みましょう。」是什么意思？",
@@ -2450,13 +2450,13 @@
             }
           ],
           "sourceSentence": "では、お茶を飲みましょう。",
-          "fromConversationId": "l34-conv-009",
+          "fromConversationId": "l34-conv-008",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l34-q-009-zh2jp-001",
+          "id": "l34-q-008-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
             "zh": "请选择「那么，开始品茶吧。」的日语说法。",
@@ -2471,13 +2471,13 @@
             }
           ],
           "sourceSentence": "では、お茶を飲みましょう。",
-          "fromConversationId": "l34-conv-009",
+          "fromConversationId": "l34-conv-008",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l34-q-009-recall-001",
+          "id": "l34-q-008-recall-001",
           "type": "recall_check",
           "prompt": {
             "zh": "「では、お茶を飲みましょう。」的中文意思是？",
@@ -2493,13 +2493,13 @@
             }
           ],
           "sourceSentence": "では、お茶を飲みましょう。",
-          "fromConversationId": "l34-conv-009",
+          "fromConversationId": "l34-conv-008",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l34-q-010-listen-001",
+          "id": "l34-q-009-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
             "zh": "「まず、右手でお茶碗を持ちます。」是什么意思？",
@@ -2521,13 +2521,13 @@
             }
           ],
           "sourceSentence": "まず、右手でお茶碗を持ちます。",
-          "fromConversationId": "l34-conv-010",
+          "fromConversationId": "l34-conv-009",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l34-q-010-zh2jp-001",
+          "id": "l34-q-009-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
             "zh": "请选择「首先，用右手拿起茶碗。」的日语说法。",
@@ -2542,13 +2542,13 @@
             }
           ],
           "sourceSentence": "まず、右手でお茶碗を持ちます。",
-          "fromConversationId": "l34-conv-010",
+          "fromConversationId": "l34-conv-009",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l34-q-010-recall-001",
+          "id": "l34-q-009-recall-001",
           "type": "recall_check",
           "prompt": {
             "zh": "「まず、右手でお茶碗を持ちます。」的中文意思是？",
@@ -2564,13 +2564,13 @@
             }
           ],
           "sourceSentence": "まず、右手でお茶碗を持ちます。",
-          "fromConversationId": "l34-conv-010",
+          "fromConversationId": "l34-conv-009",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l34-q-011-listen-001",
+          "id": "l34-q-010-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
             "zh": "「次に、お茶碗を二回まわして、」是什么意思？",
@@ -2592,13 +2592,13 @@
             }
           ],
           "sourceSentence": "次に、お茶碗を二回まわして、",
-          "fromConversationId": "l34-conv-011",
+          "fromConversationId": "l34-conv-010",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l34-q-011-zh2jp-001",
+          "id": "l34-q-010-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
             "zh": "请选择「然后把茶碗转两圈，」的日语说法。",
@@ -2613,13 +2613,13 @@
             }
           ],
           "sourceSentence": "次に、お茶碗を二回まわして、",
-          "fromConversationId": "l34-conv-011",
+          "fromConversationId": "l34-conv-010",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l34-q-011-recall-001",
+          "id": "l34-q-010-recall-001",
           "type": "recall_check",
           "prompt": {
             "zh": "「次に、お茶碗を二回まわして、」的中文意思是？",
@@ -2635,13 +2635,13 @@
             }
           ],
           "sourceSentence": "次に、お茶碗を二回まわして、",
-          "fromConversationId": "l34-conv-011",
+          "fromConversationId": "l34-conv-010",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l34-q-012-listen-001",
+          "id": "l34-q-011-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
             "zh": "「それから飲みます。」是什么意思？",
@@ -2663,13 +2663,13 @@
             }
           ],
           "sourceSentence": "それから飲みます。",
-          "fromConversationId": "l34-conv-012",
+          "fromConversationId": "l34-conv-011",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l34-q-012-zh2jp-001",
+          "id": "l34-q-011-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
             "zh": "请选择「接着再喝茶。」的日语说法。",
@@ -2684,13 +2684,13 @@
             }
           ],
           "sourceSentence": "それから飲みます。",
-          "fromConversationId": "l34-conv-012",
+          "fromConversationId": "l34-conv-011",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l34-q-012-recall-001",
+          "id": "l34-q-011-recall-001",
           "type": "recall_check",
           "prompt": {
             "zh": "「それから飲みます。」的中文意思是？",
@@ -2706,13 +2706,13 @@
             }
           ],
           "sourceSentence": "それから飲みます。",
-          "fromConversationId": "l34-conv-012",
+          "fromConversationId": "l34-conv-011",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l34-q-013-listen-001",
+          "id": "l34-q-012-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
             "zh": "「はい。」是什么意思？",
@@ -2734,13 +2734,13 @@
             }
           ],
           "sourceSentence": "はい。",
-          "fromConversationId": "l34-conv-013",
+          "fromConversationId": "l34-conv-012",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l34-q-013-zh2jp-001",
+          "id": "l34-q-012-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
             "zh": "请选择「好的。」的日语说法。",
@@ -2755,13 +2755,13 @@
             }
           ],
           "sourceSentence": "はい。",
-          "fromConversationId": "l34-conv-013",
+          "fromConversationId": "l34-conv-012",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l34-q-013-recall-001",
+          "id": "l34-q-012-recall-001",
           "type": "recall_check",
           "prompt": {
             "zh": "「はい。」的中文意思是？",
@@ -2777,13 +2777,13 @@
             }
           ],
           "sourceSentence": "はい。",
-          "fromConversationId": "l34-conv-013",
+          "fromConversationId": "l34-conv-012",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l34-q-014-listen-001",
+          "id": "l34-q-013-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
             "zh": "「じゃあ、私がした通りにしてください。」是什么意思？",
@@ -2805,13 +2805,13 @@
             }
           ],
           "sourceSentence": "じゃあ、私がした通りにしてください。",
-          "fromConversationId": "l34-conv-014",
+          "fromConversationId": "l34-conv-013",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l34-q-014-zh2jp-001",
+          "id": "l34-q-013-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
             "zh": "请选择「那请按我刚才做的来试试吧。」的日语说法。",
@@ -2826,13 +2826,13 @@
             }
           ],
           "sourceSentence": "じゃあ、私がした通りにしてください。",
-          "fromConversationId": "l34-conv-014",
+          "fromConversationId": "l34-conv-013",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l34-q-014-recall-001",
+          "id": "l34-q-013-recall-001",
           "type": "recall_check",
           "prompt": {
             "zh": "「じゃあ、私がした通りにしてください。」的中文意思是？",
@@ -2848,13 +2848,13 @@
             }
           ],
           "sourceSentence": "じゃあ、私がした通りにしてください。",
-          "fromConversationId": "l34-conv-014",
+          "fromConversationId": "l34-conv-013",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l34-q-015-listen-001",
+          "id": "l34-q-014-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
             "zh": "「これでいいですか？」是什么意思？",
@@ -2876,13 +2876,13 @@
             }
           ],
           "sourceSentence": "これでいいですか？",
-          "fromConversationId": "l34-conv-015",
+          "fromConversationId": "l34-conv-014",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l34-q-015-zh2jp-001",
+          "id": "l34-q-014-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
             "zh": "请选择「这样做可以吗？」的日语说法。",
@@ -2897,13 +2897,13 @@
             }
           ],
           "sourceSentence": "これでいいですか？",
-          "fromConversationId": "l34-conv-015",
+          "fromConversationId": "l34-conv-014",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l34-q-015-recall-001",
+          "id": "l34-q-014-recall-001",
           "type": "recall_check",
           "prompt": {
             "zh": "「これでいいですか？」的中文意思是？",
@@ -2919,13 +2919,13 @@
             }
           ],
           "sourceSentence": "これでいいですか？",
-          "fromConversationId": "l34-conv-015",
+          "fromConversationId": "l34-conv-014",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l34-q-016-listen-001",
+          "id": "l34-q-015-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
             "zh": "「はい。」是什么意思？",
@@ -2947,13 +2947,13 @@
             }
           ],
           "sourceSentence": "はい。",
-          "fromConversationId": "l34-conv-016",
+          "fromConversationId": "l34-conv-015",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l34-q-016-zh2jp-001",
+          "id": "l34-q-015-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
             "zh": "请选择「可以的。」的日语说法。",
@@ -2968,13 +2968,13 @@
             }
           ],
           "sourceSentence": "はい。",
-          "fromConversationId": "l34-conv-016",
+          "fromConversationId": "l34-conv-015",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l34-q-016-recall-001",
+          "id": "l34-q-015-recall-001",
           "type": "recall_check",
           "prompt": {
             "zh": "「はい。」的中文意思是？",
@@ -2990,13 +2990,13 @@
             }
           ],
           "sourceSentence": "はい。",
-          "fromConversationId": "l34-conv-016",
+          "fromConversationId": "l34-conv-015",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l34-q-017-listen-001",
+          "id": "l34-q-016-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
             "zh": "「いかがですか？」是什么意思？",
@@ -3018,13 +3018,13 @@
             }
           ],
           "sourceSentence": "いかがですか？",
-          "fromConversationId": "l34-conv-017",
+          "fromConversationId": "l34-conv-016",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l34-q-017-zh2jp-001",
+          "id": "l34-q-016-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
             "zh": "请选择「觉得怎么样？」的日语说法。",
@@ -3039,13 +3039,13 @@
             }
           ],
           "sourceSentence": "いかがですか？",
-          "fromConversationId": "l34-conv-017",
+          "fromConversationId": "l34-conv-016",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l34-q-017-recall-001",
+          "id": "l34-q-016-recall-001",
           "type": "recall_check",
           "prompt": {
             "zh": "「いかがですか？」的中文意思是？",
@@ -3061,13 +3061,13 @@
             }
           ],
           "sourceSentence": "いかがですか？",
-          "fromConversationId": "l34-conv-017",
+          "fromConversationId": "l34-conv-016",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l34-q-018-listen-001",
+          "id": "l34-q-017-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
             "zh": "「少し苦いですが、おいしいです。」是什么意思？",
@@ -3089,13 +3089,13 @@
             }
           ],
           "sourceSentence": "少し苦いですが、おいしいです。",
-          "fromConversationId": "l34-conv-018",
+          "fromConversationId": "l34-conv-017",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l34-q-018-zh2jp-001",
+          "id": "l34-q-017-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
             "zh": "请选择「虽然有点苦，但很好喝。」的日语说法。",
@@ -3110,13 +3110,13 @@
             }
           ],
           "sourceSentence": "少し苦いですが、おいしいです。",
-          "fromConversationId": "l34-conv-018",
+          "fromConversationId": "l34-conv-017",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l34-q-018-recall-001",
+          "id": "l34-q-017-recall-001",
           "type": "recall_check",
           "prompt": {
             "zh": "「少し苦いですが、おいしいです。」的中文意思是？",
@@ -3132,7 +3132,7 @@
             }
           ],
           "sourceSentence": "少し苦いですが、おいしいです。",
-          "fromConversationId": "l34-conv-018",
+          "fromConversationId": "l34-conv-017",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"

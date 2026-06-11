@@ -844,14 +844,14 @@
       },
       "items": [
         {
-          "id": "l45-conv-003",
+          "id": "l45-conv-001",
           "speaker": "",
           "jp": "みなさん",
           "kana": "みなさん",
           "zh": "大家",
           "keyword": "",
-          "videoStart": "0:22.0",
-          "videoEnd": "0:24.0",
+          "videoStart": "0:22.00",
+          "videoEnd": "0:24.00",
           "sourceType": "official_video_subtitle",
           "needsReview": true,
           "needsSpeakerReview": true,
@@ -860,14 +860,46 @@
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-conv-004",
+          "id": "l45-conv-002",
           "speaker": "",
           "jp": "このマラソンは健康マラソンですから",
           "kana": "",
           "zh": "这次是健康马拉松，",
           "keyword": "健康",
-          "videoStart": "0:24.0",
-          "videoEnd": "0:28.0",
+          "videoStart": "0:24.00",
+          "videoEnd": "0:28.00",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l45-conv-003",
+          "speaker": "",
+          "jp": "無理をしないでください",
+          "kana": "",
+          "zh": "请不要勉强自己。",
+          "keyword": "無理",
+          "videoStart": "0:28.00",
+          "videoEnd": "0:30.00",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l45-conv-004",
+          "speaker": "",
+          "jp": "もし気分が悪くなったら、かかりに行ってください",
+          "kana": "",
+          "zh": "如果感觉不舒服，请去找工作人员。",
+          "keyword": "気分",
+          "videoStart": "0:30.00",
+          "videoEnd": "0:36.00",
           "sourceType": "official_video_subtitle",
           "needsReview": true,
           "needsSpeakerReview": true,
@@ -878,76 +910,44 @@
         {
           "id": "l45-conv-005",
           "speaker": "",
-          "jp": "無理をしないでください",
-          "kana": "",
-          "zh": "请不要勉强自己。",
-          "keyword": "無理",
-          "videoStart": "0:28.0",
-          "videoEnd": "0:30.0",
+          "jp": "はい",
+          "kana": "はい",
+          "zh": "好的。",
+          "keyword": "",
+          "videoStart": "0:36.00",
+          "videoEnd": "0:38.00",
           "sourceType": "official_video_subtitle",
           "needsReview": true,
           "needsSpeakerReview": true,
-          "needsKanaReview": true,
+          "needsKanaReview": false,
           "needsKeywordReview": true,
           "reviewStatus": "needs_review"
         },
         {
           "id": "l45-conv-006",
           "speaker": "",
-          "jp": "もし気分が悪くなったら、かかりに行ってください",
-          "kana": "",
-          "zh": "如果感觉不舒服，请去找工作人员。",
-          "keyword": "気分",
-          "videoStart": "0:30.0",
-          "videoEnd": "0:36.0",
+          "jp": "すみません",
+          "kana": "すみません",
+          "zh": "不好意思",
+          "keyword": "",
+          "videoStart": "0:38.00",
+          "videoEnd": "0:40.00",
           "sourceType": "official_video_subtitle",
           "needsReview": true,
           "needsSpeakerReview": true,
-          "needsKanaReview": true,
+          "needsKanaReview": false,
           "needsKeywordReview": true,
           "reviewStatus": "needs_review"
         },
         {
           "id": "l45-conv-007",
           "speaker": "",
-          "jp": "はい",
-          "kana": "はい",
-          "zh": "好的。",
-          "keyword": "",
-          "videoStart": "0:36.0",
-          "videoEnd": "0:38.0",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l45-conv-008",
-          "speaker": "",
-          "jp": "すみません",
-          "kana": "すみません",
-          "zh": "不好意思",
-          "keyword": "",
-          "videoStart": "0:38.0",
-          "videoEnd": "0:40.0",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l45-conv-009",
-          "speaker": "",
           "jp": "コースを間違えた場合はどうしたらいいですか",
           "kana": "",
           "zh": "如果跑错路线了该怎么办？",
           "keyword": "場合",
-          "videoStart": "0:40.0",
-          "videoEnd": "0:44.0",
+          "videoStart": "0:40.00",
+          "videoEnd": "0:44.00",
           "sourceType": "official_video_subtitle",
           "needsReview": true,
           "needsSpeakerReview": true,
@@ -956,14 +956,46 @@
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-conv-010",
+          "id": "l45-conv-008",
           "speaker": "",
           "jp": "元のところに戻って続けてください",
           "kana": "",
           "zh": "请回到原来的位置继续跑。",
           "keyword": "",
-          "videoStart": "0:44.0",
-          "videoEnd": "0:48.0",
+          "videoStart": "0:44.00",
+          "videoEnd": "0:48.00",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": true,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l45-conv-009",
+          "speaker": "",
+          "jp": "あのー",
+          "kana": "あのー",
+          "zh": "那个……",
+          "keyword": "",
+          "videoStart": "0:48.00",
+          "videoEnd": "0:51.00",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l45-conv-010",
+          "speaker": "",
+          "jp": "途中でやめたい場合は",
+          "kana": "",
+          "zh": "如果想中途退出的话，",
+          "keyword": "場合",
+          "videoStart": "0:51.00",
+          "videoEnd": "0:53.00",
           "sourceType": "official_video_subtitle",
           "needsReview": true,
           "needsSpeakerReview": true,
@@ -974,28 +1006,28 @@
         {
           "id": "l45-conv-011",
           "speaker": "",
-          "jp": "あのー",
-          "kana": "あのー",
-          "zh": "那个……",
-          "keyword": "",
-          "videoStart": "0:48.0",
-          "videoEnd": "0:51.0",
+          "jp": "その場合は近くの係に名前を言って帰ってください",
+          "kana": "",
+          "zh": "请向附近的工作人员报上姓名后离开。",
+          "keyword": "名前",
+          "videoStart": "0:53.00",
+          "videoEnd": "1:01.00",
           "sourceType": "official_video_subtitle",
           "needsReview": true,
           "needsSpeakerReview": true,
-          "needsKanaReview": false,
+          "needsKanaReview": true,
           "needsKeywordReview": true,
           "reviewStatus": "needs_review"
         },
         {
           "id": "l45-conv-012",
           "speaker": "",
-          "jp": "途中でやめたい場合は",
+          "jp": "では、スタートの時間です",
           "kana": "",
-          "zh": "如果想中途退出的话，",
-          "keyword": "場合",
-          "videoStart": "0:51.0",
-          "videoEnd": "0:53.0",
+          "zh": "那么，现在是起跑时间。",
+          "keyword": "時間です",
+          "videoStart": "1:01.00",
+          "videoEnd": "1:05.00",
           "sourceType": "official_video_subtitle",
           "needsReview": true,
           "needsSpeakerReview": true,
@@ -1006,12 +1038,28 @@
         {
           "id": "l45-conv-013",
           "speaker": "",
-          "jp": "その場合は近くの係に名前を言って帰ってください",
+          "jp": "ミラーさん、マラソンはどうでしたか?",
+          "kana": "ミラーさん、マラソンはどうでしたか?",
+          "zh": "米勒先生，马拉松跑得怎么样？",
+          "keyword": "",
+          "videoStart": "1:35.00",
+          "videoEnd": "1:37.00",
+          "sourceType": "official_video_subtitle",
+          "needsReview": true,
+          "needsSpeakerReview": true,
+          "needsKanaReview": false,
+          "needsKeywordReview": true,
+          "reviewStatus": "needs_review"
+        },
+        {
+          "id": "l45-conv-014",
+          "speaker": "",
+          "jp": "二位でした",
           "kana": "",
-          "zh": "请向附近的工作人员报上姓名后离开。",
-          "keyword": "名前",
-          "videoStart": "0:53.0",
-          "videoEnd": "1:01.0",
+          "zh": "我拿了第二名。",
+          "keyword": "二位",
+          "videoStart": "1:37.00",
+          "videoEnd": "1:39.00",
           "sourceType": "official_video_subtitle",
           "needsReview": true,
           "needsSpeakerReview": true,
@@ -1020,14 +1068,14 @@
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-conv-014",
+          "id": "l45-conv-015",
           "speaker": "",
-          "jp": "では、スタートの時間です",
+          "jp": "二位だったんですか?",
           "kana": "",
-          "zh": "那么，现在是起跑时间。",
-          "keyword": "時間です",
-          "videoStart": "1:01.0",
-          "videoEnd": "1:05.0",
+          "zh": "拿了第二啊？",
+          "keyword": "二位",
+          "videoStart": "1:39.00",
+          "videoEnd": "1:41.00",
           "sourceType": "official_video_subtitle",
           "needsReview": true,
           "needsSpeakerReview": true,
@@ -1038,12 +1086,12 @@
         {
           "id": "l45-conv-016",
           "speaker": "",
-          "jp": "ミラーさん、マラソンはどうでしたか?",
-          "kana": "ミラーさん、マラソンはどうでしたか?",
-          "zh": "米勒先生，马拉松跑得怎么样？",
+          "jp": "すごいですね",
+          "kana": "すごいですね",
+          "zh": "好厉害啊。",
           "keyword": "",
-          "videoStart": "1:35.0",
-          "videoEnd": "1:37.0",
+          "videoStart": "1:41.00",
+          "videoEnd": "1:43.00",
           "sourceType": "official_video_subtitle",
           "needsReview": true,
           "needsSpeakerReview": true,
@@ -1054,12 +1102,12 @@
         {
           "id": "l45-conv-017",
           "speaker": "",
-          "jp": "二位でした",
+          "jp": "でも、一生懸命練習したのに優勝できなくて残念です",
           "kana": "",
-          "zh": "我拿了第二名。",
-          "keyword": "二位",
-          "videoStart": "1:37.0",
-          "videoEnd": "1:39.0",
+          "zh": "不过明明努力练习了，没能拿第一有点遗憾。",
+          "keyword": "残念です",
+          "videoStart": "1:43.00",
+          "videoEnd": "1:47.00",
           "sourceType": "official_video_subtitle",
           "needsReview": true,
           "needsSpeakerReview": true,
@@ -1070,60 +1118,12 @@
         {
           "id": "l45-conv-018",
           "speaker": "",
-          "jp": "二位だったんですか?",
-          "kana": "",
-          "zh": "拿了第二啊？",
-          "keyword": "二位",
-          "videoStart": "1:39.0",
-          "videoEnd": "1:41.0",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l45-conv-019",
-          "speaker": "",
-          "jp": "すごいですね",
-          "kana": "すごいですね",
-          "zh": "好厉害啊。",
-          "keyword": "",
-          "videoStart": "1:41.0",
-          "videoEnd": "1:43.0",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l45-conv-020",
-          "speaker": "",
-          "jp": "でも、一生懸命練習したのに優勝できなくて残念です",
-          "kana": "",
-          "zh": "不过明明努力练习了，没能拿第一有点遗憾。",
-          "keyword": "残念です",
-          "videoStart": "1:43.0",
-          "videoEnd": "1:47.0",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l45-conv-021",
-          "speaker": "",
           "jp": "また来年がありますよ",
           "kana": "",
           "zh": "明年还有机会嘛。",
           "keyword": "来年",
-          "videoStart": "1:47.0",
-          "videoEnd": "1:49.0",
+          "videoStart": "1:47.00",
+          "videoEnd": "1:49.00",
           "sourceType": "official_video_subtitle",
           "needsReview": true,
           "needsSpeakerReview": true,
@@ -1151,7 +1151,7 @@
           "kana": "みなさん",
           "zh": "",
           "importance": "core",
-          "fromConversationId": "l45-conv-003",
+          "fromConversationId": "l45-conv-001",
           "sourceSentence": "みなさん",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
@@ -1162,7 +1162,7 @@
           "kana": "",
           "zh": "",
           "importance": "core",
-          "fromConversationId": "l45-conv-004",
+          "fromConversationId": "l45-conv-002",
           "sourceSentence": "このマラソンは健康マラソンですから",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
@@ -1173,7 +1173,7 @@
           "kana": "",
           "zh": "",
           "importance": "core",
-          "fromConversationId": "l45-conv-005",
+          "fromConversationId": "l45-conv-003",
           "sourceSentence": "無理をしないでください",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
@@ -1184,7 +1184,7 @@
           "kana": "",
           "zh": "",
           "importance": "core",
-          "fromConversationId": "l45-conv-006",
+          "fromConversationId": "l45-conv-004",
           "sourceSentence": "もし気分が悪くなったら、かかりに行ってください",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
@@ -1195,7 +1195,7 @@
           "kana": "",
           "zh": "",
           "importance": "core",
-          "fromConversationId": "l45-conv-006",
+          "fromConversationId": "l45-conv-004",
           "sourceSentence": "もし気分が悪くなったら、かかりに行ってください",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
@@ -1206,7 +1206,7 @@
           "kana": "はい",
           "zh": "",
           "importance": "core",
-          "fromConversationId": "l45-conv-007",
+          "fromConversationId": "l45-conv-005",
           "sourceSentence": "はい",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
@@ -1217,7 +1217,7 @@
           "kana": "すみません",
           "zh": "",
           "importance": "core",
-          "fromConversationId": "l45-conv-008",
+          "fromConversationId": "l45-conv-006",
           "sourceSentence": "すみません",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
@@ -1228,7 +1228,7 @@
           "kana": "",
           "zh": "",
           "importance": "core",
-          "fromConversationId": "l45-conv-009",
+          "fromConversationId": "l45-conv-007",
           "sourceSentence": "コースを間違えた場合はどうしたらいいですか",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
@@ -1239,7 +1239,7 @@
           "kana": "",
           "zh": "",
           "importance": "core",
-          "fromConversationId": "l45-conv-010",
+          "fromConversationId": "l45-conv-008",
           "sourceSentence": "元のところに戻って続けてください",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
@@ -1250,7 +1250,7 @@
           "kana": "",
           "zh": "",
           "importance": "core",
-          "fromConversationId": "l45-conv-011",
+          "fromConversationId": "l45-conv-009",
           "sourceSentence": "あのー",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
@@ -1261,7 +1261,7 @@
           "kana": "",
           "zh": "",
           "importance": "core",
-          "fromConversationId": "l45-conv-012",
+          "fromConversationId": "l45-conv-010",
           "sourceSentence": "途中でやめたい場合は",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
@@ -1272,7 +1272,7 @@
           "kana": "",
           "zh": "",
           "importance": "core",
-          "fromConversationId": "l45-conv-013",
+          "fromConversationId": "l45-conv-011",
           "sourceSentence": "その場合は近くの係に名前を言って帰ってください",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
@@ -1283,7 +1283,7 @@
           "kana": "では",
           "zh": "",
           "importance": "core",
-          "fromConversationId": "l45-conv-014",
+          "fromConversationId": "l45-conv-012",
           "sourceSentence": "では、スタートの時間です",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
@@ -1294,7 +1294,7 @@
           "kana": "",
           "zh": "",
           "importance": "core",
-          "fromConversationId": "l45-conv-014",
+          "fromConversationId": "l45-conv-012",
           "sourceSentence": "では、スタートの時間です",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
@@ -1305,7 +1305,7 @@
           "kana": "",
           "zh": "",
           "importance": "core",
-          "fromConversationId": "l45-conv-016",
+          "fromConversationId": "l45-conv-013",
           "sourceSentence": "ミラーさん、マラソンはどうでしたか?",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
@@ -1316,7 +1316,7 @@
           "kana": "",
           "zh": "",
           "importance": "core",
-          "fromConversationId": "l45-conv-016",
+          "fromConversationId": "l45-conv-013",
           "sourceSentence": "ミラーさん、マラソンはどうでしたか?",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
@@ -1327,7 +1327,7 @@
           "kana": "",
           "zh": "",
           "importance": "core",
-          "fromConversationId": "l45-conv-017",
+          "fromConversationId": "l45-conv-014",
           "sourceSentence": "二位でした",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
@@ -1338,7 +1338,7 @@
           "kana": "",
           "zh": "",
           "importance": "core",
-          "fromConversationId": "l45-conv-018",
+          "fromConversationId": "l45-conv-015",
           "sourceSentence": "二位だったんですか?",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
@@ -1349,7 +1349,7 @@
           "kana": "すごいですね",
           "zh": "",
           "importance": "core",
-          "fromConversationId": "l45-conv-019",
+          "fromConversationId": "l45-conv-016",
           "sourceSentence": "すごいですね",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
@@ -1360,7 +1360,7 @@
           "kana": "でも",
           "zh": "",
           "importance": "core",
-          "fromConversationId": "l45-conv-020",
+          "fromConversationId": "l45-conv-017",
           "sourceSentence": "でも、一生懸命練習したのに優勝できなくて残念です",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
@@ -1371,7 +1371,7 @@
           "kana": "",
           "zh": "",
           "importance": "core",
-          "fromConversationId": "l45-conv-020",
+          "fromConversationId": "l45-conv-017",
           "sourceSentence": "でも、一生懸命練習したのに優勝できなくて残念です",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
@@ -1382,7 +1382,7 @@
           "kana": "",
           "zh": "",
           "importance": "core",
-          "fromConversationId": "l45-conv-021",
+          "fromConversationId": "l45-conv-018",
           "sourceSentence": "また来年がありますよ",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
@@ -1410,7 +1410,7 @@
             "en": "is/am (polite copula)"
           },
           "conversationExample": "このマラソンは健康マラソンですから",
-          "fromConversationId": "l45-conv-004",
+          "fromConversationId": "l45-conv-002",
           "sourceSentence": "このマラソンは健康マラソンですから",
           "sourceType": "extracted_from_official_video_subtitle",
           "explanationZh": "「です」是日语礼貌判断助动词，相当于中文的\"是\"。",
@@ -1424,7 +1424,7 @@
             "en": "from"
           },
           "conversationExample": "このマラソンは健康マラソンですから",
-          "fromConversationId": "l45-conv-004",
+          "fromConversationId": "l45-conv-002",
           "sourceSentence": "このマラソンは健康マラソンですから",
           "sourceType": "extracted_from_official_video_subtitle",
           "explanationZh": "「から」表示起点或来源。",
@@ -1438,7 +1438,7 @@
             "en": "object marker"
           },
           "conversationExample": "無理をしないでください",
-          "fromConversationId": "l45-conv-005",
+          "fromConversationId": "l45-conv-003",
           "sourceSentence": "無理をしないでください",
           "sourceType": "extracted_from_official_video_subtitle",
           "explanationZh": "「を」标记动作的对象。",
@@ -1452,7 +1452,7 @@
             "en": "to/at"
           },
           "conversationExample": "もし気分が悪くなったら、かかりに行ってください",
-          "fromConversationId": "l45-conv-006",
+          "fromConversationId": "l45-conv-004",
           "sourceSentence": "もし気分が悪くなったら、かかりに行ってください",
           "sourceType": "extracted_from_official_video_subtitle",
           "explanationZh": "「に」表示时间、地点或方向。",
@@ -1466,7 +1466,7 @@
             "en": "negative form"
           },
           "conversationExample": "すみません",
-          "fromConversationId": "l45-conv-008",
+          "fromConversationId": "l45-conv-006",
           "sourceSentence": "すみません",
           "sourceType": "extracted_from_official_video_subtitle",
           "explanationZh": "「ません」是「ます」的否定形式。",
@@ -1480,7 +1480,7 @@
             "en": "question marker"
           },
           "conversationExample": "ミラーさん、マラソンはどうでしたか?",
-          "fromConversationId": "l45-conv-016",
+          "fromConversationId": "l45-conv-013",
           "sourceSentence": "ミラーさん、マラソンはどうでしたか?",
           "sourceType": "extracted_from_official_video_subtitle",
           "explanationZh": "句尾加「か」构成疑问句。",
@@ -1494,7 +1494,7 @@
             "en": "polite verb form"
           },
           "conversationExample": "また来年がありますよ",
-          "fromConversationId": "l45-conv-021",
+          "fromConversationId": "l45-conv-018",
           "sourceSentence": "また来年がありますよ",
           "sourceType": "extracted_from_official_video_subtitle",
           "explanationZh": "「ます」是动词的敬体形式。",
@@ -1519,7 +1519,7 @@
         {
           "pattern": "跟读练习",
           "originalSentence": "みなさん",
-          "fromConversationId": "l45-conv-003",
+          "fromConversationId": "l45-conv-001",
           "sourceSentence": "みなさん",
           "sourceType": "ai_generated_from_official_conversation",
           "replacements": [],
@@ -1529,7 +1529,7 @@
         {
           "pattern": "健康",
           "originalSentence": "このマラソンは健康マラソンですから",
-          "fromConversationId": "l45-conv-004",
+          "fromConversationId": "l45-conv-002",
           "sourceSentence": "このマラソンは健康マラソンですから",
           "sourceType": "ai_generated_from_official_conversation",
           "replacements": [],
@@ -1539,7 +1539,7 @@
         {
           "pattern": "無理",
           "originalSentence": "無理をしないでください",
-          "fromConversationId": "l45-conv-005",
+          "fromConversationId": "l45-conv-003",
           "sourceSentence": "無理をしないでください",
           "sourceType": "ai_generated_from_official_conversation",
           "replacements": [],
@@ -1549,7 +1549,7 @@
         {
           "pattern": "気分",
           "originalSentence": "もし気分が悪くなったら、かかりに行ってください",
-          "fromConversationId": "l45-conv-006",
+          "fromConversationId": "l45-conv-004",
           "sourceSentence": "もし気分が悪くなったら、かかりに行ってください",
           "sourceType": "ai_generated_from_official_conversation",
           "replacements": [],
@@ -1559,7 +1559,7 @@
         {
           "pattern": "跟读练习",
           "originalSentence": "はい",
-          "fromConversationId": "l45-conv-007",
+          "fromConversationId": "l45-conv-005",
           "sourceSentence": "はい",
           "sourceType": "ai_generated_from_official_conversation",
           "replacements": [],
@@ -1569,7 +1569,7 @@
         {
           "pattern": "跟读练习",
           "originalSentence": "すみません",
-          "fromConversationId": "l45-conv-008",
+          "fromConversationId": "l45-conv-006",
           "sourceSentence": "すみません",
           "sourceType": "ai_generated_from_official_conversation",
           "replacements": [],
@@ -1579,7 +1579,7 @@
         {
           "pattern": "場合",
           "originalSentence": "コースを間違えた場合はどうしたらいいですか",
-          "fromConversationId": "l45-conv-009",
+          "fromConversationId": "l45-conv-007",
           "sourceSentence": "コースを間違えた場合はどうしたらいいですか",
           "sourceType": "ai_generated_from_official_conversation",
           "replacements": [],
@@ -1589,7 +1589,7 @@
         {
           "pattern": "跟读练习",
           "originalSentence": "元のところに戻って続けてください",
-          "fromConversationId": "l45-conv-010",
+          "fromConversationId": "l45-conv-008",
           "sourceSentence": "元のところに戻って続けてください",
           "sourceType": "ai_generated_from_official_conversation",
           "replacements": [],
@@ -1599,7 +1599,7 @@
         {
           "pattern": "跟读练习",
           "originalSentence": "あのー",
-          "fromConversationId": "l45-conv-011",
+          "fromConversationId": "l45-conv-009",
           "sourceSentence": "あのー",
           "sourceType": "ai_generated_from_official_conversation",
           "replacements": [],
@@ -1609,7 +1609,7 @@
         {
           "pattern": "場合",
           "originalSentence": "途中でやめたい場合は",
-          "fromConversationId": "l45-conv-012",
+          "fromConversationId": "l45-conv-010",
           "sourceSentence": "途中でやめたい場合は",
           "sourceType": "ai_generated_from_official_conversation",
           "replacements": [],
@@ -1619,7 +1619,7 @@
         {
           "pattern": "名前",
           "originalSentence": "その場合は近くの係に名前を言って帰ってください",
-          "fromConversationId": "l45-conv-013",
+          "fromConversationId": "l45-conv-011",
           "sourceSentence": "その場合は近くの係に名前を言って帰ってください",
           "sourceType": "ai_generated_from_official_conversation",
           "replacements": [],
@@ -1629,7 +1629,7 @@
         {
           "pattern": "時間です",
           "originalSentence": "では、スタートの時間です",
-          "fromConversationId": "l45-conv-014",
+          "fromConversationId": "l45-conv-012",
           "sourceSentence": "では、スタートの時間です",
           "sourceType": "ai_generated_from_official_conversation",
           "replacements": [
@@ -1655,7 +1655,7 @@
         {
           "pattern": "跟读练习",
           "originalSentence": "ミラーさん、マラソンはどうでしたか?",
-          "fromConversationId": "l45-conv-016",
+          "fromConversationId": "l45-conv-013",
           "sourceSentence": "ミラーさん、マラソンはどうでしたか?",
           "sourceType": "ai_generated_from_official_conversation",
           "replacements": [],
@@ -1665,7 +1665,7 @@
         {
           "pattern": "二位",
           "originalSentence": "二位でした",
-          "fromConversationId": "l45-conv-017",
+          "fromConversationId": "l45-conv-014",
           "sourceSentence": "二位でした",
           "sourceType": "ai_generated_from_official_conversation",
           "replacements": [],
@@ -1675,7 +1675,7 @@
         {
           "pattern": "二位",
           "originalSentence": "二位だったんですか?",
-          "fromConversationId": "l45-conv-018",
+          "fromConversationId": "l45-conv-015",
           "sourceSentence": "二位だったんですか?",
           "sourceType": "ai_generated_from_official_conversation",
           "replacements": [],
@@ -1685,7 +1685,7 @@
         {
           "pattern": "跟读练习",
           "originalSentence": "すごいですね",
-          "fromConversationId": "l45-conv-019",
+          "fromConversationId": "l45-conv-016",
           "sourceSentence": "すごいですね",
           "sourceType": "ai_generated_from_official_conversation",
           "replacements": [],
@@ -1695,7 +1695,7 @@
         {
           "pattern": "残念です",
           "originalSentence": "でも、一生懸命練習したのに優勝できなくて残念です",
-          "fromConversationId": "l45-conv-020",
+          "fromConversationId": "l45-conv-017",
           "sourceSentence": "でも、一生懸命練習したのに優勝できなくて残念です",
           "sourceType": "ai_generated_from_official_conversation",
           "replacements": [
@@ -1721,7 +1721,7 @@
         {
           "pattern": "来年",
           "originalSentence": "また来年がありますよ",
-          "fromConversationId": "l45-conv-021",
+          "fromConversationId": "l45-conv-018",
           "sourceSentence": "また来年がありますよ",
           "sourceType": "ai_generated_from_official_conversation",
           "replacements": [],
@@ -1744,7 +1744,7 @@
       },
       "items": [
         {
-          "id": "l45-q-003-listen-001",
+          "id": "l45-q-001-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
             "zh": "「みなさん」是什么意思？",
@@ -1766,13 +1766,13 @@
             }
           ],
           "sourceSentence": "みなさん",
-          "fromConversationId": "l45-conv-003",
+          "fromConversationId": "l45-conv-001",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-003-zh2jp-001",
+          "id": "l45-q-001-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
             "zh": "请选择「大家」的日语说法。",
@@ -1787,13 +1787,13 @@
             }
           ],
           "sourceSentence": "みなさん",
-          "fromConversationId": "l45-conv-003",
+          "fromConversationId": "l45-conv-001",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-003-recall-001",
+          "id": "l45-q-001-recall-001",
           "type": "recall_check",
           "prompt": {
             "zh": "「みなさん」的中文意思是？",
@@ -1809,13 +1809,13 @@
             }
           ],
           "sourceSentence": "みなさん",
-          "fromConversationId": "l45-conv-003",
+          "fromConversationId": "l45-conv-001",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-004-listen-001",
+          "id": "l45-q-002-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
             "zh": "「このマラソンは健康マラソンですから」是什么意思？",
@@ -1837,13 +1837,13 @@
             }
           ],
           "sourceSentence": "このマラソンは健康マラソンですから",
-          "fromConversationId": "l45-conv-004",
+          "fromConversationId": "l45-conv-002",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-004-zh2jp-001",
+          "id": "l45-q-002-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
             "zh": "请选择「这次是健康马拉松，」的日语说法。",
@@ -1858,13 +1858,13 @@
             }
           ],
           "sourceSentence": "このマラソンは健康マラソンですから",
-          "fromConversationId": "l45-conv-004",
+          "fromConversationId": "l45-conv-002",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-004-recall-001",
+          "id": "l45-q-002-recall-001",
           "type": "recall_check",
           "prompt": {
             "zh": "「このマラソンは健康マラソンですから」的中文意思是？",
@@ -1880,13 +1880,13 @@
             }
           ],
           "sourceSentence": "このマラソンは健康マラソンですから",
-          "fromConversationId": "l45-conv-004",
+          "fromConversationId": "l45-conv-002",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-005-listen-001",
+          "id": "l45-q-003-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
             "zh": "「無理をしないでください」是什么意思？",
@@ -1908,13 +1908,13 @@
             }
           ],
           "sourceSentence": "無理をしないでください",
-          "fromConversationId": "l45-conv-005",
+          "fromConversationId": "l45-conv-003",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-005-zh2jp-001",
+          "id": "l45-q-003-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
             "zh": "请选择「请不要勉强自己。」的日语说法。",
@@ -1929,13 +1929,13 @@
             }
           ],
           "sourceSentence": "無理をしないでください",
-          "fromConversationId": "l45-conv-005",
+          "fromConversationId": "l45-conv-003",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-005-recall-001",
+          "id": "l45-q-003-recall-001",
           "type": "recall_check",
           "prompt": {
             "zh": "「無理をしないでください」的中文意思是？",
@@ -1951,13 +1951,13 @@
             }
           ],
           "sourceSentence": "無理をしないでください",
-          "fromConversationId": "l45-conv-005",
+          "fromConversationId": "l45-conv-003",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-006-listen-001",
+          "id": "l45-q-004-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
             "zh": "「もし気分が悪くなったら、かかりに行ってください」是什么意思？",
@@ -1979,13 +1979,13 @@
             }
           ],
           "sourceSentence": "もし気分が悪くなったら、かかりに行ってください",
-          "fromConversationId": "l45-conv-006",
+          "fromConversationId": "l45-conv-004",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-006-zh2jp-001",
+          "id": "l45-q-004-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
             "zh": "请选择「如果感觉不舒服，请去找工作人员。」的日语说法。",
@@ -2000,13 +2000,13 @@
             }
           ],
           "sourceSentence": "もし気分が悪くなったら、かかりに行ってください",
-          "fromConversationId": "l45-conv-006",
+          "fromConversationId": "l45-conv-004",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-006-recall-001",
+          "id": "l45-q-004-recall-001",
           "type": "recall_check",
           "prompt": {
             "zh": "「もし気分が悪くなったら、かかりに行ってください」的中文意思是？",
@@ -2022,13 +2022,13 @@
             }
           ],
           "sourceSentence": "もし気分が悪くなったら、かかりに行ってください",
-          "fromConversationId": "l45-conv-006",
+          "fromConversationId": "l45-conv-004",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-007-listen-001",
+          "id": "l45-q-005-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
             "zh": "「はい」是什么意思？",
@@ -2050,13 +2050,13 @@
             }
           ],
           "sourceSentence": "はい",
-          "fromConversationId": "l45-conv-007",
+          "fromConversationId": "l45-conv-005",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-007-zh2jp-001",
+          "id": "l45-q-005-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
             "zh": "请选择「好的。」的日语说法。",
@@ -2071,13 +2071,13 @@
             }
           ],
           "sourceSentence": "はい",
-          "fromConversationId": "l45-conv-007",
+          "fromConversationId": "l45-conv-005",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-007-recall-001",
+          "id": "l45-q-005-recall-001",
           "type": "recall_check",
           "prompt": {
             "zh": "「はい」的中文意思是？",
@@ -2093,13 +2093,13 @@
             }
           ],
           "sourceSentence": "はい",
-          "fromConversationId": "l45-conv-007",
+          "fromConversationId": "l45-conv-005",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-008-listen-001",
+          "id": "l45-q-006-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
             "zh": "「すみません」是什么意思？",
@@ -2121,13 +2121,13 @@
             }
           ],
           "sourceSentence": "すみません",
-          "fromConversationId": "l45-conv-008",
+          "fromConversationId": "l45-conv-006",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-008-zh2jp-001",
+          "id": "l45-q-006-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
             "zh": "请选择「不好意思」的日语说法。",
@@ -2142,13 +2142,13 @@
             }
           ],
           "sourceSentence": "すみません",
-          "fromConversationId": "l45-conv-008",
+          "fromConversationId": "l45-conv-006",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-008-recall-001",
+          "id": "l45-q-006-recall-001",
           "type": "recall_check",
           "prompt": {
             "zh": "「すみません」的中文意思是？",
@@ -2164,13 +2164,13 @@
             }
           ],
           "sourceSentence": "すみません",
-          "fromConversationId": "l45-conv-008",
+          "fromConversationId": "l45-conv-006",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-009-listen-001",
+          "id": "l45-q-007-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
             "zh": "「コースを間違えた場合はどうしたらいいですか」是什么意思？",
@@ -2192,13 +2192,13 @@
             }
           ],
           "sourceSentence": "コースを間違えた場合はどうしたらいいですか",
-          "fromConversationId": "l45-conv-009",
+          "fromConversationId": "l45-conv-007",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-009-zh2jp-001",
+          "id": "l45-q-007-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
             "zh": "请选择「如果跑错路线了该怎么办？」的日语说法。",
@@ -2213,13 +2213,13 @@
             }
           ],
           "sourceSentence": "コースを間違えた場合はどうしたらいいですか",
-          "fromConversationId": "l45-conv-009",
+          "fromConversationId": "l45-conv-007",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-009-recall-001",
+          "id": "l45-q-007-recall-001",
           "type": "recall_check",
           "prompt": {
             "zh": "「コースを間違えた場合はどうしたらいいですか」的中文意思是？",
@@ -2235,13 +2235,13 @@
             }
           ],
           "sourceSentence": "コースを間違えた場合はどうしたらいいですか",
-          "fromConversationId": "l45-conv-009",
+          "fromConversationId": "l45-conv-007",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-010-listen-001",
+          "id": "l45-q-008-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
             "zh": "「元のところに戻って続けてください」是什么意思？",
@@ -2263,13 +2263,13 @@
             }
           ],
           "sourceSentence": "元のところに戻って続けてください",
-          "fromConversationId": "l45-conv-010",
+          "fromConversationId": "l45-conv-008",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-010-zh2jp-001",
+          "id": "l45-q-008-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
             "zh": "请选择「请回到原来的位置继续跑。」的日语说法。",
@@ -2284,13 +2284,13 @@
             }
           ],
           "sourceSentence": "元のところに戻って続けてください",
-          "fromConversationId": "l45-conv-010",
+          "fromConversationId": "l45-conv-008",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-010-recall-001",
+          "id": "l45-q-008-recall-001",
           "type": "recall_check",
           "prompt": {
             "zh": "「元のところに戻って続けてください」的中文意思是？",
@@ -2306,13 +2306,13 @@
             }
           ],
           "sourceSentence": "元のところに戻って続けてください",
-          "fromConversationId": "l45-conv-010",
+          "fromConversationId": "l45-conv-008",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-011-listen-001",
+          "id": "l45-q-009-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
             "zh": "「あのー」是什么意思？",
@@ -2334,13 +2334,13 @@
             }
           ],
           "sourceSentence": "あのー",
-          "fromConversationId": "l45-conv-011",
+          "fromConversationId": "l45-conv-009",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-011-zh2jp-001",
+          "id": "l45-q-009-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
             "zh": "请选择「那个……」的日语说法。",
@@ -2355,13 +2355,13 @@
             }
           ],
           "sourceSentence": "あのー",
-          "fromConversationId": "l45-conv-011",
+          "fromConversationId": "l45-conv-009",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-011-recall-001",
+          "id": "l45-q-009-recall-001",
           "type": "recall_check",
           "prompt": {
             "zh": "「あのー」的中文意思是？",
@@ -2377,13 +2377,13 @@
             }
           ],
           "sourceSentence": "あのー",
-          "fromConversationId": "l45-conv-011",
+          "fromConversationId": "l45-conv-009",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-012-listen-001",
+          "id": "l45-q-010-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
             "zh": "「途中でやめたい場合は」是什么意思？",
@@ -2405,13 +2405,13 @@
             }
           ],
           "sourceSentence": "途中でやめたい場合は",
-          "fromConversationId": "l45-conv-012",
+          "fromConversationId": "l45-conv-010",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-012-zh2jp-001",
+          "id": "l45-q-010-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
             "zh": "请选择「如果想中途退出的话，」的日语说法。",
@@ -2426,13 +2426,13 @@
             }
           ],
           "sourceSentence": "途中でやめたい場合は",
-          "fromConversationId": "l45-conv-012",
+          "fromConversationId": "l45-conv-010",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-012-recall-001",
+          "id": "l45-q-010-recall-001",
           "type": "recall_check",
           "prompt": {
             "zh": "「途中でやめたい場合は」的中文意思是？",
@@ -2448,13 +2448,13 @@
             }
           ],
           "sourceSentence": "途中でやめたい場合は",
-          "fromConversationId": "l45-conv-012",
+          "fromConversationId": "l45-conv-010",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-013-listen-001",
+          "id": "l45-q-011-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
             "zh": "「その場合は近くの係に名前を言って帰ってください」是什么意思？",
@@ -2476,13 +2476,13 @@
             }
           ],
           "sourceSentence": "その場合は近くの係に名前を言って帰ってください",
-          "fromConversationId": "l45-conv-013",
+          "fromConversationId": "l45-conv-011",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-013-zh2jp-001",
+          "id": "l45-q-011-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
             "zh": "请选择「请向附近的工作人员报上姓名后离开。」的日语说法。",
@@ -2497,13 +2497,13 @@
             }
           ],
           "sourceSentence": "その場合は近くの係に名前を言って帰ってください",
-          "fromConversationId": "l45-conv-013",
+          "fromConversationId": "l45-conv-011",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-013-recall-001",
+          "id": "l45-q-011-recall-001",
           "type": "recall_check",
           "prompt": {
             "zh": "「その場合は近くの係に名前を言って帰ってください」的中文意思是？",
@@ -2519,13 +2519,13 @@
             }
           ],
           "sourceSentence": "その場合は近くの係に名前を言って帰ってください",
-          "fromConversationId": "l45-conv-013",
+          "fromConversationId": "l45-conv-011",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-014-listen-001",
+          "id": "l45-q-012-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
             "zh": "「では、スタートの時間です」是什么意思？",
@@ -2547,13 +2547,13 @@
             }
           ],
           "sourceSentence": "では、スタートの時間です",
-          "fromConversationId": "l45-conv-014",
+          "fromConversationId": "l45-conv-012",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-014-zh2jp-001",
+          "id": "l45-q-012-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
             "zh": "请选择「那么，现在是起跑时间。」的日语说法。",
@@ -2568,13 +2568,13 @@
             }
           ],
           "sourceSentence": "では、スタートの時間です",
-          "fromConversationId": "l45-conv-014",
+          "fromConversationId": "l45-conv-012",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-014-recall-001",
+          "id": "l45-q-012-recall-001",
           "type": "recall_check",
           "prompt": {
             "zh": "「では、スタートの時間です」的中文意思是？",
@@ -2590,13 +2590,13 @@
             }
           ],
           "sourceSentence": "では、スタートの時間です",
-          "fromConversationId": "l45-conv-014",
+          "fromConversationId": "l45-conv-012",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-016-listen-001",
+          "id": "l45-q-013-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
             "zh": "「ミラーさん、マラソンはどうでしたか?」是什么意思？",
@@ -2618,13 +2618,13 @@
             }
           ],
           "sourceSentence": "ミラーさん、マラソンはどうでしたか?",
-          "fromConversationId": "l45-conv-016",
+          "fromConversationId": "l45-conv-013",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-016-zh2jp-001",
+          "id": "l45-q-013-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
             "zh": "请选择「米勒先生，马拉松跑得怎么样？」的日语说法。",
@@ -2639,13 +2639,13 @@
             }
           ],
           "sourceSentence": "ミラーさん、マラソンはどうでしたか?",
-          "fromConversationId": "l45-conv-016",
+          "fromConversationId": "l45-conv-013",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-016-recall-001",
+          "id": "l45-q-013-recall-001",
           "type": "recall_check",
           "prompt": {
             "zh": "「ミラーさん、マラソンはどうでしたか?」的中文意思是？",
@@ -2661,13 +2661,13 @@
             }
           ],
           "sourceSentence": "ミラーさん、マラソンはどうでしたか?",
-          "fromConversationId": "l45-conv-016",
+          "fromConversationId": "l45-conv-013",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-017-listen-001",
+          "id": "l45-q-014-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
             "zh": "「二位でした」是什么意思？",
@@ -2689,13 +2689,13 @@
             }
           ],
           "sourceSentence": "二位でした",
-          "fromConversationId": "l45-conv-017",
+          "fromConversationId": "l45-conv-014",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-017-zh2jp-001",
+          "id": "l45-q-014-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
             "zh": "请选择「我拿了第二名。」的日语说法。",
@@ -2710,13 +2710,13 @@
             }
           ],
           "sourceSentence": "二位でした",
-          "fromConversationId": "l45-conv-017",
+          "fromConversationId": "l45-conv-014",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-017-recall-001",
+          "id": "l45-q-014-recall-001",
           "type": "recall_check",
           "prompt": {
             "zh": "「二位でした」的中文意思是？",
@@ -2732,13 +2732,13 @@
             }
           ],
           "sourceSentence": "二位でした",
-          "fromConversationId": "l45-conv-017",
+          "fromConversationId": "l45-conv-014",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-018-listen-001",
+          "id": "l45-q-015-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
             "zh": "「二位だったんですか?」是什么意思？",
@@ -2760,13 +2760,13 @@
             }
           ],
           "sourceSentence": "二位だったんですか?",
-          "fromConversationId": "l45-conv-018",
+          "fromConversationId": "l45-conv-015",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-018-zh2jp-001",
+          "id": "l45-q-015-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
             "zh": "请选择「拿了第二啊？」的日语说法。",
@@ -2781,13 +2781,13 @@
             }
           ],
           "sourceSentence": "二位だったんですか?",
-          "fromConversationId": "l45-conv-018",
+          "fromConversationId": "l45-conv-015",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-018-recall-001",
+          "id": "l45-q-015-recall-001",
           "type": "recall_check",
           "prompt": {
             "zh": "「二位だったんですか?」的中文意思是？",
@@ -2803,13 +2803,13 @@
             }
           ],
           "sourceSentence": "二位だったんですか?",
-          "fromConversationId": "l45-conv-018",
+          "fromConversationId": "l45-conv-015",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-019-listen-001",
+          "id": "l45-q-016-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
             "zh": "「すごいですね」是什么意思？",
@@ -2831,13 +2831,13 @@
             }
           ],
           "sourceSentence": "すごいですね",
-          "fromConversationId": "l45-conv-019",
+          "fromConversationId": "l45-conv-016",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-019-zh2jp-001",
+          "id": "l45-q-016-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
             "zh": "请选择「好厉害啊。」的日语说法。",
@@ -2852,13 +2852,13 @@
             }
           ],
           "sourceSentence": "すごいですね",
-          "fromConversationId": "l45-conv-019",
+          "fromConversationId": "l45-conv-016",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-019-recall-001",
+          "id": "l45-q-016-recall-001",
           "type": "recall_check",
           "prompt": {
             "zh": "「すごいですね」的中文意思是？",
@@ -2874,13 +2874,13 @@
             }
           ],
           "sourceSentence": "すごいですね",
-          "fromConversationId": "l45-conv-019",
+          "fromConversationId": "l45-conv-016",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-020-listen-001",
+          "id": "l45-q-017-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
             "zh": "「でも、一生懸命練習したのに優勝できなくて残念です」是什么意思？",
@@ -2902,13 +2902,13 @@
             }
           ],
           "sourceSentence": "でも、一生懸命練習したのに優勝できなくて残念です",
-          "fromConversationId": "l45-conv-020",
+          "fromConversationId": "l45-conv-017",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-020-zh2jp-001",
+          "id": "l45-q-017-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
             "zh": "请选择「不过明明努力练习了，没能拿第一有点遗憾。」的日语说法。",
@@ -2923,13 +2923,13 @@
             }
           ],
           "sourceSentence": "でも、一生懸命練習したのに優勝できなくて残念です",
-          "fromConversationId": "l45-conv-020",
+          "fromConversationId": "l45-conv-017",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-020-recall-001",
+          "id": "l45-q-017-recall-001",
           "type": "recall_check",
           "prompt": {
             "zh": "「でも、一生懸命練習したのに優勝できなくて残念です」的中文意思是？",
@@ -2945,13 +2945,13 @@
             }
           ],
           "sourceSentence": "でも、一生懸命練習したのに優勝できなくて残念です",
-          "fromConversationId": "l45-conv-020",
+          "fromConversationId": "l45-conv-017",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-021-listen-001",
+          "id": "l45-q-018-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
             "zh": "「また来年がありますよ」是什么意思？",
@@ -2973,13 +2973,13 @@
             }
           ],
           "sourceSentence": "また来年がありますよ",
-          "fromConversationId": "l45-conv-021",
+          "fromConversationId": "l45-conv-018",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-021-zh2jp-001",
+          "id": "l45-q-018-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
             "zh": "请选择「明年还有机会嘛。」的日语说法。",
@@ -2994,13 +2994,13 @@
             }
           ],
           "sourceSentence": "また来年がありますよ",
-          "fromConversationId": "l45-conv-021",
+          "fromConversationId": "l45-conv-018",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l45-q-021-recall-001",
+          "id": "l45-q-018-recall-001",
           "type": "recall_check",
           "prompt": {
             "zh": "「また来年がありますよ」的中文意思是？",
@@ -3016,7 +3016,7 @@
             }
           ],
           "sourceSentence": "また来年がありますよ",
-          "fromConversationId": "l45-conv-021",
+          "fromConversationId": "l45-conv-018",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
