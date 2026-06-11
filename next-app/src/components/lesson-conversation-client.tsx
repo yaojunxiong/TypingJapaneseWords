@@ -6,6 +6,7 @@ import {
   calculateTextAccuracy, calculateKeywordAccuracy, calculateDurationScore,
   calculateOverallScore, generateFeedback, getExpectedDuration
 } from '@/lib/conversation-speech-score'
+import { parseTimeToSeconds } from '@/lib/parse-time'
 
 type ConversationItem = {
   id: string
@@ -14,12 +15,15 @@ type ConversationItem = {
   kana: string
   zh: string
   keyword: string
+  videoStart?: string | number
+  videoEnd?: string | number
 }
 
 type Props = {
   lessonNo: number
   lang: 'zh' | 'en'
   items: ConversationItem[]
+  videoUrl: string
 }
 
 const FAMILIARITY_KEY = 'minna.conversation.familiarity.v1'
@@ -35,7 +39,7 @@ function writeFamiliarity(data: FamiliarityMap) {
 
 function t(lang: 'zh' | 'en', zh: string, en: string) { return lang === 'en' ? en : zh }
 
-export default function LessonConversationClient({ lessonNo, lang, items }: Props) {
+export default function LessonConversationClient({ lessonNo, lang, items, videoUrl }: Props) {
   const [idx, setIdx] = useState(0)
   const [revealed, setRevealed] = useState(false)
   const [familiarity, setFamiliarity] = useState<FamiliarityMap>({})
@@ -319,6 +323,7 @@ export default function LessonConversationClient({ lessonNo, lang, items }: Prop
           speechSupported={speechSupported}
           analyzingId={analyzingId}
           familiarity={familiarity[current.id]}
+          videoUrl={videoUrl}
         />
       ) : null}
     </main>
@@ -329,7 +334,7 @@ function SentenceCard({
   item, lang, revealed, onReveal, onKnown, onUnfamiliar,
   recording, recordingDuration, audioUrl,
   onStartRecording, onStopRecording, onPlayRecording,
-  recentRecordings, onDeleteRecording, speechSupported, analyzingId, familiarity,
+  recentRecordings, onDeleteRecording, speechSupported, analyzingId, familiarity, videoUrl,
 }: {
   item: ConversationItem
   lang: 'zh' | 'en'
@@ -348,6 +353,7 @@ function SentenceCard({
   speechSupported: boolean
   analyzingId: number | null
   familiarity?: { status: string; count: number }
+  videoUrl: string
 }) {
   return (
     <section className="card" style={{ marginBottom: 14 }}>
@@ -387,6 +393,20 @@ function SentenceCard({
           <button className="btn ghost" onClick={onUnfamiliar} style={{ minWidth: 100 }}>
             {t(lang, '不熟', 'Not familiar')}
           </button>
+        </div>
+      ) : null}
+
+      {revealed && videoUrl ? (
+        <div style={{ marginTop: 16, borderTop: '1px solid #e2e8f0', paddingTop: 12 }}>
+          <h4 style={{ margin: '0 0 8px', fontSize: 14 }}>
+            {t(lang, '🔊 原声练习', '🔊 Source Audio')}
+          </h4>
+          <SentenceSourceAudioPlayer
+            videoUrl={videoUrl}
+            videoStart={item.videoStart}
+            videoEnd={item.videoEnd}
+            lang={lang}
+          />
         </div>
       ) : null}
 
@@ -471,6 +491,74 @@ function SentenceCard({
         </div>
       )}
     </section>
+  )
+}
+
+function SentenceSourceAudioPlayer({ videoUrl, videoStart, videoEnd, lang }: {
+  videoUrl: string
+  videoStart?: string | number
+  videoEnd?: string | number
+  lang: 'zh' | 'en'
+}) {
+  const startSec = parseTimeToSeconds(videoStart)
+  const endSec = parseTimeToSeconds(videoEnd)
+
+  const videoRef = useRef<HTMLVideoElement | null>(null)
+  const [playing, setPlaying] = useState(false)
+
+  const hasTimes = videoUrl && startSec > 0 && endSec > startSec
+
+  function handlePlay() {
+    if (!hasTimes) return
+    let video = videoRef.current
+    if (!video) {
+      video = document.createElement('video')
+      video.crossOrigin = 'anonymous'
+      video.preload = 'auto'
+      video.style.display = 'none'
+      document.body.appendChild(video)
+      videoRef.current = video
+    }
+
+    video.src = videoUrl
+    video.currentTime = startSec
+    setPlaying(true)
+
+    const onTimeUpdate = () => {
+      if (video && video.currentTime >= endSec) {
+        video.pause()
+        setPlaying(false)
+        video.removeEventListener('timeupdate', onTimeUpdate)
+      }
+    }
+    video.addEventListener('timeupdate', onTimeUpdate)
+    video.addEventListener('ended', () => setPlaying(false), { once: true })
+    video.addEventListener('pause', () => setPlaying(false), { once: true })
+
+    video.play().catch(() => setPlaying(false))
+  }
+
+  return (
+    <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center' }}>
+      {hasTimes ? (
+        <button className="btn" onClick={handlePlay} disabled={playing}
+          style={{ padding: '6px 12px', fontSize: 13, opacity: playing ? 0.7 : 1 }}>
+          {playing
+            ? t(lang, '播放中...', 'Playing...')
+            : t(lang, '播放原声', 'Play Audio')}
+        </button>
+      ) : (
+        <span className="small" style={{ color: '#94a3b8' }}>
+          {t(lang, '暂无原声时间轴', 'No audio timeline')}
+        </span>
+      )}
+      {videoUrl ? (
+        <a className="btn ghost" href={videoUrl} target="_blank" rel="noopener noreferrer"
+          style={{ padding: '6px 12px', fontSize: 13 }}>
+          {t(lang, '播放视频', 'Play Video')}
+        </a>
+      ) : null}
+    </div>
   )
 }
 

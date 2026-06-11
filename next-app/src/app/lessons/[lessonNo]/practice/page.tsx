@@ -160,13 +160,17 @@ export default async function LessonPracticePage({
 
   if (s === 'conversation') {
     const convSection = sections.find((x) => String(x.type || '') === 'conversation')
+    const sectionRecord = convSection as Record<string, unknown> | undefined
+    const videoUrl = String(sectionRecord?.videoUrl || '')
     const items = (Array.isArray(convSection?.items) ? convSection!.items! : []).map((item) => ({
       id: String(item.id || ''),
       speaker: String((item as Record<string, unknown>).speaker || ''),
       jp: String(item.jp || ''),
       kana: String(item.kana || ''),
       zh: String(item.zh || ''),
-      keyword: String((item as Record<string, unknown>).keyword || '')
+      keyword: String((item as Record<string, unknown>).keyword || ''),
+      videoStart: (item as Record<string, unknown>).videoStart as string | number | undefined,
+      videoEnd: (item as Record<string, unknown>).videoEnd as string | number | undefined,
     }))
 
     const cv = (lesson as Record<string, unknown>).conversationVideo as Record<string, unknown> | undefined
@@ -193,7 +197,7 @@ export default async function LessonPracticePage({
             </a>
           </section>
         ) : null}
-        <LessonConversationClient lessonNo={no} lang={lang} items={items} />
+        <LessonConversationClient lessonNo={no} lang={lang} items={items} videoUrl={videoUrl} />
       </main>
     )
   }
