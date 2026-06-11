@@ -19,6 +19,20 @@ export type AdminCheck = {
 export async function checkAdminAccess(
   cookieStore: Awaited<ReturnType<typeof cookies>>
 ): Promise<AdminCheck> {
+  if (
+    process.env.NODE_ENV === 'development' &&
+    process.env.NEXT_PUBLIC_ENABLE_LOCAL_ADMIN_BYPASS === 'true'
+  ) {
+    return {
+      isAdmin: true,
+      role: 'local-dev',
+      bypassed: true,
+      userAuthed: true,
+      userEmail: 'local-dev@example.local',
+      userId: 'local-dev'
+    }
+  }
+
   if (!hasSupabasePublicEnv()) {
     return {
       isAdmin: false,
@@ -40,20 +54,6 @@ export async function checkAdminAccess(
       userAuthed: false,
       userEmail: undefined,
       userId: undefined
-    }
-  }
-
-  if (
-    process.env.NODE_ENV === 'development' &&
-    process.env.NEXT_PUBLIC_ENABLE_LOCAL_ADMIN_BYPASS === 'true'
-  ) {
-    return {
-      isAdmin: true,
-      role: 'admin',
-      bypassed: true,
-      userAuthed: true,
-      userEmail: user.email || undefined,
-      userId: user.id
     }
   }
 

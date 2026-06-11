@@ -87,10 +87,10 @@ export default async function AdminKnowledgeBasePage({
     <main>
       <MinnaNav active="me" />
       <div className="adminKbHeader">
+        <p className="adminKbBack"><Link href="/admin">{tr(lang, '← 返回管理员后台', '← Back to Admin')}</Link></p>
         <h1>{tr(lang, '知识库', 'Knowledge Base')}</h1>
-        <p className="small">
-          {tr(lang, 'docs/knowledge-base/ 浏览（只读）', 'docs/knowledge-base/ browser (read-only)')}
-          {activeFile ? ` · ${displayName(activeFile)}` : ''}
+        <p className="adminKbDesc">
+          {tr(lang, '项目结构 · 课程数据 · 开发任务 · Bug · AI 提示词', 'Project structure · Lesson data · Tasks · Bugs · AI prompts')}
         </p>
       </div>
 

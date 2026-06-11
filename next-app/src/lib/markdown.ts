@@ -41,7 +41,7 @@ export function mdToHtml(md: string): string {
 
   function closeTable() {
     if (inTable) {
-      out.push('</tbody></table>')
+      out.push('</tbody></table></div>')
       inTable = false
       tableRows = []
     }
@@ -111,7 +111,7 @@ export function mdToHtml(md: string): string {
         if (!inTable) {
           inTable = true
           tableRows = [cells]
-          out.push('<table><thead><tr>')
+          out.push('<div class="table-wrap"><table><thead><tr>')
           for (const cell of cells) {
             out.push(`<th>${renderInline(cell)}</th>`)
           }
