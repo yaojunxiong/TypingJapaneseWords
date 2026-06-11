@@ -113,6 +113,7 @@ export default async function LessonDetailPage({
         <Link className="homeNode" href={`/lessons/${no}/practice?stage=grammar`}>📦<small>{tr(lang, '语法', 'Grammar')}</small></Link>
         <Link className="homeNode" href={`/lessons/${no}/practice?stage=examples`}>🪙<small>{tr(lang, '例句', 'Examples')}</small></Link>
         <Link className="homeNode" href={`/lessons/${no}/practice?stage=quiz`}>🏅<small>{tr(lang, '测验', 'Quiz')}</small></Link>
+        <Link className="homeNode" href={`/lessons/${no}/practice?stage=conversation`}>🔤<small>{tr(lang, '会话', 'Conversation')}</small></Link>
       </section>
 
       {!lesson ? (

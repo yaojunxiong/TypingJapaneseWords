@@ -2,6 +2,7 @@ import fs from 'node:fs/promises'
 import path from 'node:path'
 import MinnaNav from '@/components/minna-nav'
 import LessonPracticeClient from '@/components/lesson-practice-client'
+import LessonConversationClient from '@/components/lesson-conversation-client'
 import { getLang, type Lang } from '@/lib/i18n'
 
 type LangText = { zh?: string; en?: string; ja?: string; jp?: string }
@@ -55,11 +56,31 @@ export default async function LessonPracticePage({
   const { stage } = await searchParams
   const no = Math.max(1, Math.min(50, Number(lessonNo) || 1))
   const lang = await getLang()
-  const s = ['vocab', 'grammar', 'examples', 'quiz', 'review'].includes(String(stage || ''))
-    ? String(stage) as 'vocab' | 'grammar' | 'examples' | 'quiz' | 'review'
+  const s = ['vocab', 'grammar', 'examples', 'quiz', 'review', 'conversation'].includes(String(stage || ''))
+    ? String(stage) as 'vocab' | 'grammar' | 'examples' | 'quiz' | 'review' | 'conversation'
     : 'vocab'
   const lesson = await loadLessonDoc(no)
   const sections = Array.isArray(lesson?.sections) ? lesson!.sections! : []
+
+  if (s === 'conversation') {
+    const convSection = sections.find((x) => String(x.type || '') === 'conversation')
+    const items = (Array.isArray(convSection?.items) ? convSection!.items! : []).map((item) => ({
+      id: String(item.id || ''),
+      speaker: String((item as Record<string, unknown>).speaker || ''),
+      jp: String(item.jp || ''),
+      kana: String(item.kana || ''),
+      zh: String(item.zh || ''),
+      keyword: String((item as Record<string, unknown>).keyword || '')
+    }))
+
+    return (
+      <main>
+        <MinnaNav active="lessons" />
+        <LessonConversationClient lessonNo={no} lang={lang} items={items} />
+      </main>
+    )
+  }
+
   const section = sections.find((x) => String(x.type || '') === s)
   const items = Array.isArray(section?.items) ? section!.items! : []
 
