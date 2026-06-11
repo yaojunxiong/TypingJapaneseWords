@@ -4,8 +4,16 @@
   "status": "Mastery migrated",
   "lessonNo": 29,
   "lessonId": "minna_lesson_29",
-  "title": { "zh": "第29课", "en": "Lesson 29", "ja": "第29課" },
-  "subtitle": { "zh": "自动词", "en": "Intransitive verbs", "ja": "自動詞" },
+  "title": {
+    "zh": "第29课",
+    "en": "Lesson 29",
+    "ja": "第29課"
+  },
+  "subtitle": {
+    "zh": "自动词",
+    "en": "Intransitive verbs",
+    "ja": "自動詞"
+  },
   "focus": {
     "zh": "用自动词描述眼前结果状态，并用「てしまいました」表达完成、遗憾或意外。",
     "en": "Use intransitive verbs to describe resulting states, and use te shimaimashita for completion, regret, or accidents.",
@@ -15,124 +23,1025 @@
     {
       "type": "vocab",
       "id": "l29_vocab",
-      "title": { "zh": "核心词汇", "en": "Core Vocabulary", "ja": "基本語彙" },
+      "title": {
+        "zh": "核心词汇",
+        "en": "Core Vocabulary",
+        "ja": "基本語彙"
+      },
       "items": [
-        { "id": "l29_v01", "jp": "開きます", "kana": "あきます", "zh": "开着；打开（自动）", "en": "to open", "tags": ["lesson29", "intransitive"] },
-        { "id": "l29_v02", "jp": "閉まります", "kana": "しまります", "zh": "关着；关上（自动）", "en": "to close", "tags": ["lesson29", "intransitive"] },
-        { "id": "l29_v03", "jp": "つきます", "kana": "つきます", "zh": "亮；打开（灯）", "en": "to turn on", "tags": ["lesson29", "intransitive"] },
-        { "id": "l29_v04", "jp": "消えます", "kana": "きえます", "zh": "熄灭；消失", "en": "to go out; disappear", "tags": ["lesson29", "intransitive"] },
-        { "id": "l29_v05", "jp": "壊れます", "kana": "こわれます", "zh": "坏了", "en": "to break", "tags": ["lesson29", "intransitive"] },
-        { "id": "l29_v06", "jp": "割れます", "kana": "われます", "zh": "碎了；裂了", "en": "to break; crack", "tags": ["lesson29", "intransitive"] },
-        { "id": "l29_v07", "jp": "汚れます", "kana": "よごれます", "zh": "脏了", "en": "to get dirty", "tags": ["lesson29", "intransitive"] },
-        { "id": "l29_v08", "jp": "落ちます", "kana": "おちます", "zh": "掉落", "en": "to fall", "tags": ["lesson29", "intransitive"] },
-        { "id": "l29_v09", "jp": "止まります", "kana": "とまります", "zh": "停下", "en": "to stop", "tags": ["lesson29", "intransitive"] },
-        { "id": "l29_v10", "jp": "なくなります", "kana": "なくなります", "zh": "不见；用完", "en": "to be gone", "tags": ["lesson29", "intransitive"] }
+        {
+          "id": "l29_v01",
+          "jp": "開きます",
+          "kana": "あきます",
+          "zh": "开着；打开（自动）",
+          "en": "to open",
+          "tags": [
+            "lesson29",
+            "intransitive"
+          ]
+        },
+        {
+          "id": "l29_v02",
+          "jp": "閉まります",
+          "kana": "しまります",
+          "zh": "关着；关上（自动）",
+          "en": "to close",
+          "tags": [
+            "lesson29",
+            "intransitive"
+          ]
+        },
+        {
+          "id": "l29_v03",
+          "jp": "つきます",
+          "kana": "つきます",
+          "zh": "亮；打开（灯）",
+          "en": "to turn on",
+          "tags": [
+            "lesson29",
+            "intransitive"
+          ]
+        },
+        {
+          "id": "l29_v04",
+          "jp": "消えます",
+          "kana": "きえます",
+          "zh": "熄灭；消失",
+          "en": "to go out; disappear",
+          "tags": [
+            "lesson29",
+            "intransitive"
+          ]
+        },
+        {
+          "id": "l29_v05",
+          "jp": "壊れます",
+          "kana": "こわれます",
+          "zh": "坏了",
+          "en": "to break",
+          "tags": [
+            "lesson29",
+            "intransitive"
+          ]
+        },
+        {
+          "id": "l29_v06",
+          "jp": "割れます",
+          "kana": "われます",
+          "zh": "碎了；裂了",
+          "en": "to break; crack",
+          "tags": [
+            "lesson29",
+            "intransitive"
+          ]
+        },
+        {
+          "id": "l29_v07",
+          "jp": "汚れます",
+          "kana": "よごれます",
+          "zh": "脏了",
+          "en": "to get dirty",
+          "tags": [
+            "lesson29",
+            "intransitive"
+          ]
+        },
+        {
+          "id": "l29_v08",
+          "jp": "落ちます",
+          "kana": "おちます",
+          "zh": "掉落",
+          "en": "to fall",
+          "tags": [
+            "lesson29",
+            "intransitive"
+          ]
+        },
+        {
+          "id": "l29_v09",
+          "jp": "止まります",
+          "kana": "とまります",
+          "zh": "停下",
+          "en": "to stop",
+          "tags": [
+            "lesson29",
+            "intransitive"
+          ]
+        },
+        {
+          "id": "l29_v10",
+          "jp": "なくなります",
+          "kana": "なくなります",
+          "zh": "不见；用完",
+          "en": "to be gone",
+          "tags": [
+            "lesson29",
+            "intransitive"
+          ]
+        }
       ]
     },
     {
       "type": "grammar",
       "id": "l29_grammar",
-      "title": { "zh": "核心语法", "en": "Core Grammar", "ja": "基本文法" },
+      "title": {
+        "zh": "核心语法",
+        "en": "Core Grammar",
+        "ja": "基本文法"
+      },
       "items": [
         {
           "id": "l29_g01",
           "pattern": "自動詞 + ています",
-          "explanation": { "zh": "描述动作发生后留下的状态，重点是“现在是什么状态”。", "en": "Describes the state that remains after an action happened." },
-          "examples": [{ "jp": "ドアが開いています。", "zh": "门开着。", "en": "The door is open." }],
-          "practice": [{ "id": "l29_g01_p01", "skill": "grammar", "question": { "zh": "“门开着”正确的是？", "en": "How do you say 'The door is open'?" }, "options": [{ "text": { "jp": "ドアが開いています" }, "correct": true }, { "text": { "jp": "ドアを開いています" } }, { "text": { "jp": "ドアが開けています" } }, { "text": { "jp": "ドアを開けてあります" } }], "explanation": { "zh": "自动词「開きます」描述状态，用「が」。", "en": "Use the intransitive akimasu with ga." } }]
+          "explanation": {
+            "zh": "描述动作发生后留下的状态，重点是“现在是什么状态”。",
+            "en": "Describes the state that remains after an action happened."
+          },
+          "examples": [
+            {
+              "jp": "ドアが開いています。",
+              "zh": "门开着。",
+              "en": "The door is open."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l29_g01_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“门开着”正确的是？",
+                "en": "How do you say 'The door is open'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "ドアが開いています"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "ドアを開いています"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "ドアが開けています"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "ドアを開けてあります"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "自动词「開きます」描述状态，用「が」。",
+                "en": "Use the intransitive akimasu with ga."
+              }
+            }
+          ]
         },
         {
           "id": "l29_g02",
           "pattern": "N が + 自動詞",
-          "explanation": { "zh": "自动词句里，发生变化的对象通常用「が」。", "en": "The thing that changes state is usually marked with ga." },
-          "examples": [{ "jp": "電気がついています。", "zh": "灯亮着。", "en": "The light is on." }],
-          "practice": [{ "id": "l29_g02_p01", "skill": "grammar", "question": { "zh": "“灯亮着”正确的是？", "en": "How do you say 'The light is on'?" }, "options": [{ "text": { "jp": "電気がついています" }, "correct": true }, { "text": { "jp": "電気をついています" } }, { "text": { "jp": "電気がつけています" } }, { "text": { "jp": "電気をつけてあります" } }], "explanation": { "zh": "「つきます」是自动词。", "en": "Tsukimasu is intransitive here." } }]
+          "explanation": {
+            "zh": "自动词句里，发生变化的对象通常用「が」。",
+            "en": "The thing that changes state is usually marked with ga."
+          },
+          "examples": [
+            {
+              "jp": "電気がついています。",
+              "zh": "灯亮着。",
+              "en": "The light is on."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l29_g02_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“灯亮着”正确的是？",
+                "en": "How do you say 'The light is on'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "電気がついています"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "電気をついています"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "電気がつけています"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "電気をつけてあります"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「つきます」是自动词。",
+                "en": "Tsukimasu is intransitive here."
+              }
+            }
+          ]
         },
         {
           "id": "l29_g03",
           "pattern": "閉まっています / 消えています",
-          "explanation": { "zh": "用自动词て形 + います描述“关着、灭着”等结果状态。", "en": "Use intransitive te-form + imasu for states such as closed or off." },
-          "examples": [{ "jp": "窓が閉まっています。", "zh": "窗户关着。", "en": "The window is closed." }],
-          "practice": [{ "id": "l29_g03_p01", "skill": "grammar", "question": { "zh": "“窗户关着”正确的是？", "en": "How do you say 'The window is closed'?" }, "options": [{ "text": { "jp": "窓が閉まっています" }, "correct": true }, { "text": { "jp": "窓を閉まっています" } }, { "text": { "jp": "窓が閉めています" } }, { "text": { "jp": "窓を閉めています" } }], "explanation": { "zh": "自动词「閉まります」用「が」。", "en": "Use intransitive shimarimasu with ga." } }]
+          "explanation": {
+            "zh": "用自动词て形 + います描述“关着、灭着”等结果状态。",
+            "en": "Use intransitive te-form + imasu for states such as closed or off."
+          },
+          "examples": [
+            {
+              "jp": "窓が閉まっています。",
+              "zh": "窗户关着。",
+              "en": "The window is closed."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l29_g03_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“窗户关着”正确的是？",
+                "en": "How do you say 'The window is closed'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "窓が閉まっています"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "窓を閉まっています"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "窓が閉めています"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "窓を閉めています"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "自动词「閉まります」用「が」。",
+                "en": "Use intransitive shimarimasu with ga."
+              }
+            }
+          ]
         },
         {
           "id": "l29_g04",
           "pattern": "壊れています / 割れています",
-          "explanation": { "zh": "设备、物品损坏后的状态用自动词结果状态表达。", "en": "Use intransitive result-state expressions for broken objects." },
-          "examples": [{ "jp": "エレベーターが壊れています。", "zh": "电梯坏了。", "en": "The elevator is broken." }],
-          "practice": [{ "id": "l29_g04_p01", "skill": "grammar", "question": { "zh": "“杯子碎了/裂了”正确的是？", "en": "How do you say 'The cup is broken/cracked'?" }, "options": [{ "text": { "jp": "コップが割れています" }, "correct": true }, { "text": { "jp": "コップを割れています" } }, { "text": { "jp": "コップが割っています" } }, { "text": { "jp": "コップを割っています" } }], "explanation": { "zh": "「割れます」是自动词。", "en": "Waremasu is intransitive." } }]
+          "explanation": {
+            "zh": "设备、物品损坏后的状态用自动词结果状态表达。",
+            "en": "Use intransitive result-state expressions for broken objects."
+          },
+          "examples": [
+            {
+              "jp": "エレベーターが壊れています。",
+              "zh": "电梯坏了。",
+              "en": "The elevator is broken."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l29_g04_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“杯子碎了/裂了”正确的是？",
+                "en": "How do you say 'The cup is broken/cracked'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "コップが割れています"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "コップを割れています"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "コップが割っています"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "コップを割っています"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「割れます」是自动词。",
+                "en": "Waremasu is intransitive."
+              }
+            }
+          ]
         },
         {
           "id": "l29_g05",
           "pattern": "〜てしまいました：遗憾 / 意外",
-          "explanation": { "zh": "表达不小心、遗憾、糟糕等感觉。", "en": "Expresses regret, accident, or an unwanted result." },
-          "examples": [{ "jp": "財布をなくしてしまいました。", "zh": "把钱包弄丢了。", "en": "I lost my wallet." }],
-          "practice": [{ "id": "l29_g05_p01", "skill": "grammar", "question": { "zh": "“把护照忘了”应说？", "en": "How do you say 'I forgot my passport' with regret?" }, "options": [{ "text": { "jp": "パスポートを忘れてしまいました" }, "correct": true }, { "text": { "jp": "パスポートを忘れています" } }, { "text": { "jp": "パスポートが忘れてしまいました" } }, { "text": { "jp": "パスポートを忘れましたいます" } }], "explanation": { "zh": "遗憾用「てしまいました」。", "en": "Use te shimaimashita for regret." } }]
+          "explanation": {
+            "zh": "表达不小心、遗憾、糟糕等感觉。",
+            "en": "Expresses regret, accident, or an unwanted result."
+          },
+          "examples": [
+            {
+              "jp": "財布をなくしてしまいました。",
+              "zh": "把钱包弄丢了。",
+              "en": "I lost my wallet."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l29_g05_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“把护照忘了”应说？",
+                "en": "How do you say 'I forgot my passport' with regret?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "パスポートを忘れてしまいました"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "パスポートを忘れています"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "パスポートが忘れてしまいました"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "パスポートを忘れましたいます"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "遗憾用「てしまいました」。",
+                "en": "Use te shimaimashita for regret."
+              }
+            }
+          ]
         },
         {
           "id": "l29_g06",
           "pattern": "〜てしまいました：完成",
-          "explanation": { "zh": "也可表示动作完全做完，语气不一定负面。", "en": "It can also mean the action is completely finished, not necessarily negative." },
-          "examples": [{ "jp": "宿題をしてしまいました。", "zh": "作业做完了。", "en": "I finished my homework." }],
-          "practice": [{ "id": "l29_g06_p01", "skill": "grammar", "question": { "zh": "“作业全做完了”是？", "en": "How do you say 'I finished all my homework'?" }, "options": [{ "text": { "jp": "宿題を全部してしまいました" }, "correct": true }, { "text": { "jp": "宿題を全部しています" } }, { "text": { "jp": "宿題が全部してしまいました" } }, { "text": { "jp": "宿題を全部しながらです" } }], "explanation": { "zh": "完成用法也可用「てしまいました」。", "en": "Te shimaimashita can express completion." } }]
+          "explanation": {
+            "zh": "也可表示动作完全做完，语气不一定负面。",
+            "en": "It can also mean the action is completely finished, not necessarily negative."
+          },
+          "examples": [
+            {
+              "jp": "宿題をしてしまいました。",
+              "zh": "作业做完了。",
+              "en": "I finished my homework."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l29_g06_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“作业全做完了”是？",
+                "en": "How do you say 'I finished all my homework'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "宿題を全部してしまいました"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "宿題を全部しています"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "宿題が全部してしまいました"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "宿題を全部しながらです"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "完成用法也可用「てしまいました」。",
+                "en": "Te shimaimashita can express completion."
+              }
+            }
+          ]
         },
         {
           "id": "l29_g07",
           "pattern": "自動詞 vs 他動詞",
-          "explanation": { "zh": "自动词关注状态变化本身；他动词关注谁做了动作。", "en": "Intransitives focus on the state change; transitives focus on someone doing an action." },
-          "examples": [{ "jp": "ドアが開いています。", "zh": "门开着。", "en": "The door is open." }],
-          "practice": [{ "id": "l29_g07_p01", "skill": "grammar", "question": { "zh": "只描述“门开着”，不说谁开的，应选？", "en": "If you only describe the state 'the door is open', choose:" }, "options": [{ "text": { "jp": "ドアが開いています" }, "correct": true }, { "text": { "jp": "ドアを開けています" } }, { "text": { "jp": "ドアを開けました" } }, { "text": { "jp": "ドアが開けています" } }], "explanation": { "zh": "状态描述用自动词。", "en": "Use an intransitive verb for a state description." } }]
+          "explanation": {
+            "zh": "自动词关注状态变化本身；他动词关注谁做了动作。",
+            "en": "Intransitives focus on the state change; transitives focus on someone doing an action."
+          },
+          "examples": [
+            {
+              "jp": "ドアが開いています。",
+              "zh": "门开着。",
+              "en": "The door is open."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l29_g07_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "只描述“门开着”，不说谁开的，应选？",
+                "en": "If you only describe the state 'the door is open', choose:"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "ドアが開いています"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "ドアを開けています"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "ドアを開けました"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "ドアが開けています"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "状态描述用自动词。",
+                "en": "Use an intransitive verb for a state description."
+              }
+            }
+          ]
         },
         {
           "id": "l29_g08",
           "pattern": "状態描写：人を言わない",
-          "explanation": { "zh": "第29课常不说动作执行者，只描述眼前看到的结果。", "en": "Lesson 29 often omits the actor and describes the visible result." },
-          "examples": [{ "jp": "かばんが落ちています。", "zh": "包掉在那儿。", "en": "A bag has fallen there." }],
-          "practice": [{ "id": "l29_g08_p01", "skill": "grammar", "question": { "zh": "“车停着”状态描述是？", "en": "How do you describe 'The car is stopped/parked'?" }, "options": [{ "text": { "jp": "車が止まっています" }, "correct": true }, { "text": { "jp": "車を止まっています" } }, { "text": { "jp": "車が止めています" } }, { "text": { "jp": "車を止めています" } }], "explanation": { "zh": "「止まります」是自动词。", "en": "Tomarimasu is intransitive." } }]
+          "explanation": {
+            "zh": "第29课常不说动作执行者，只描述眼前看到的结果。",
+            "en": "Lesson 29 often omits the actor and describes the visible result."
+          },
+          "examples": [
+            {
+              "jp": "かばんが落ちています。",
+              "zh": "包掉在那儿。",
+              "en": "A bag has fallen there."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l29_g08_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“车停着”状态描述是？",
+                "en": "How do you describe 'The car is stopped/parked'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "車が止まっています"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "車を止まっています"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "車が止めています"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "車を止めています"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「止まります」是自动词。",
+                "en": "Tomarimasu is intransitive."
+              }
+            }
+          ]
         }
       ]
     },
     {
       "type": "examples",
       "id": "l29_examples",
-      "title": { "zh": "核心例句", "en": "Core Examples", "ja": "基本例文" },
+      "title": {
+        "zh": "核心例句",
+        "en": "Core Examples",
+        "ja": "基本例文"
+      },
       "items": [
-        { "id": "l29_e01", "jp": "ドアが開いています。", "zh": "门开着。", "en": "The door is open.", "tags": ["state"] },
-        { "id": "l29_e02", "jp": "窓が閉まっています。", "zh": "窗户关着。", "en": "The window is closed.", "tags": ["state"] },
-        { "id": "l29_e03", "jp": "電気が消えています。", "zh": "灯灭着。", "en": "The light is off.", "tags": ["state"] },
-        { "id": "l29_e04", "jp": "エレベーターが壊れています。", "zh": "电梯坏了。", "en": "The elevator is broken.", "tags": ["state"] },
-        { "id": "l29_e05", "jp": "コップが割れています。", "zh": "杯子碎了。", "en": "The cup is broken.", "tags": ["state"] },
-        { "id": "l29_e06", "jp": "道に財布が落ちています。", "zh": "路上掉着钱包。", "en": "A wallet is lying on the road.", "tags": ["state"] },
-        { "id": "l29_e07", "jp": "パスポートを忘れてしまいました。", "zh": "把护照忘了。", "en": "I forgot my passport.", "tags": ["regret"] },
-        { "id": "l29_e08", "jp": "レポートを全部書いてしまいました。", "zh": "报告全部写完了。", "en": "I finished writing the whole report.", "tags": ["completion"] }
+        {
+          "id": "l29_e01",
+          "jp": "ドアが開いています。",
+          "zh": "门开着。",
+          "en": "The door is open.",
+          "tags": [
+            "state"
+          ]
+        },
+        {
+          "id": "l29_e02",
+          "jp": "窓が閉まっています。",
+          "zh": "窗户关着。",
+          "en": "The window is closed.",
+          "tags": [
+            "state"
+          ]
+        },
+        {
+          "id": "l29_e03",
+          "jp": "電気が消えています。",
+          "zh": "灯灭着。",
+          "en": "The light is off.",
+          "tags": [
+            "state"
+          ]
+        },
+        {
+          "id": "l29_e04",
+          "jp": "エレベーターが壊れています。",
+          "zh": "电梯坏了。",
+          "en": "The elevator is broken.",
+          "tags": [
+            "state"
+          ]
+        },
+        {
+          "id": "l29_e05",
+          "jp": "コップが割れています。",
+          "zh": "杯子碎了。",
+          "en": "The cup is broken.",
+          "tags": [
+            "state"
+          ]
+        },
+        {
+          "id": "l29_e06",
+          "jp": "道に財布が落ちています。",
+          "zh": "路上掉着钱包。",
+          "en": "A wallet is lying on the road.",
+          "tags": [
+            "state"
+          ]
+        },
+        {
+          "id": "l29_e07",
+          "jp": "パスポートを忘れてしまいました。",
+          "zh": "把护照忘了。",
+          "en": "I forgot my passport.",
+          "tags": [
+            "regret"
+          ]
+        },
+        {
+          "id": "l29_e08",
+          "jp": "レポートを全部書いてしまいました。",
+          "zh": "报告全部写完了。",
+          "en": "I finished writing the whole report.",
+          "tags": [
+            "completion"
+          ]
+        }
       ]
     },
     {
       "type": "mistakes",
       "id": "l29_mistakes",
-      "title": { "zh": "常见错误", "en": "Common Mistakes", "ja": "よくある間違い" },
+      "title": {
+        "zh": "常见错误",
+        "en": "Common Mistakes",
+        "ja": "よくある間違い"
+      },
       "items": [
-        { "id": "l29_m01", "wrong": "ドアを開いています。", "correct": "ドアが開いています。", "zh": "描述门开着的状态用自动词和「が」。", "en": "Use the intransitive verb with ga for the state." },
-        { "id": "l29_m02", "wrong": "電気をついています。", "correct": "電気がついています。", "zh": "「つきます」是自动词，主语用「が」。", "en": "Tsukimasu is intransitive; use ga." },
-        { "id": "l29_m03", "wrong": "財布がなくしてしまいました。", "correct": "財布をなくしてしまいました。", "zh": "「なくします」是他动词，遗失对象用「を」。", "en": "Nakushimasu is transitive; mark the lost item with o." }
+        {
+          "id": "l29_m01",
+          "wrong": "ドアを開いています。",
+          "correct": "ドアが開いています。",
+          "zh": "描述门开着的状态用自动词和「が」。",
+          "en": "Use the intransitive verb with ga for the state."
+        },
+        {
+          "id": "l29_m02",
+          "wrong": "電気をついています。",
+          "correct": "電気がついています。",
+          "zh": "「つきます」是自动词，主语用「が」。",
+          "en": "Tsukimasu is intransitive; use ga."
+        },
+        {
+          "id": "l29_m03",
+          "wrong": "財布がなくしてしまいました。",
+          "correct": "財布をなくしてしまいました。",
+          "zh": "「なくします」是他动词，遗失对象用「を」。",
+          "en": "Nakushimasu is transitive; mark the lost item with o."
+        }
       ]
     },
     {
       "type": "quiz",
       "id": "l29_quiz",
-      "title": { "zh": "综合测试", "en": "Final Test", "ja": "まとめテスト" },
+      "title": {
+        "zh": "综合测试",
+        "en": "Final Test",
+        "ja": "まとめテスト"
+      },
       "items": [
-        { "id": "l29_q01", "question": { "zh": "“门开着”正确的是？", "en": "How do you say 'The door is open'?" }, "options": [{ "text": { "jp": "ドアが開いています" }, "correct": true }, { "text": { "jp": "ドアを開いています" } }, { "text": { "jp": "ドアが開けています" } }, { "text": { "jp": "ドアを開けていました" } }], "explanation": { "zh": "状态用自动词「開いています」。", "en": "Use intransitive aite imasu for the state." } },
-        { "id": "l29_q02", "question": { "zh": "“窗户关着”是？", "en": "How do you say 'The window is closed'?" }, "options": [{ "text": { "jp": "窓が閉まっています" }, "correct": true }, { "text": { "jp": "窓を閉まっています" } }, { "text": { "jp": "窓が閉めています" } }, { "text": { "jp": "窓を閉めてしまいました" } }], "explanation": { "zh": "「閉まります」是自动词。", "en": "Shimarimasu is intransitive." } },
-        { "id": "l29_q03", "question": { "zh": "“灯亮着”是？", "en": "How do you say 'The light is on'?" }, "options": [{ "text": { "jp": "電気がついています" }, "correct": true }, { "text": { "jp": "電気をついています" } }, { "text": { "jp": "電気がつけています" } }, { "text": { "jp": "電気をつけています" } }], "explanation": { "zh": "自动词「つきます」。", "en": "Tsukimasu is intransitive." } },
-        { "id": "l29_q04", "question": { "zh": "“电梯坏了”是？", "en": "How do you say 'The elevator is broken'?" }, "options": [{ "text": { "jp": "エレベーターが壊れています" }, "correct": true }, { "text": { "jp": "エレベーターを壊れています" } }, { "text": { "jp": "エレベーターが壊しています" } }, { "text": { "jp": "エレベーターを壊しています" } }], "explanation": { "zh": "「壊れます」是自动词。", "en": "Kowaremasu is intransitive." } },
-        { "id": "l29_q05", "question": { "zh": "表达遗憾“把钱包弄丢了”是？", "en": "How do you say 'I lost my wallet' with regret?" }, "options": [{ "text": { "jp": "財布をなくしてしまいました" }, "correct": true }, { "text": { "jp": "財布がなくしてしまいました" } }, { "text": { "jp": "財布をなくなってしまいました" } }, { "text": { "jp": "財布がなくします" } }], "explanation": { "zh": "人为弄丢用他动词「なくします」的て形。", "en": "Use the transitive nakushimasu in te-form." } },
-        { "id": "l29_q06", "question": { "zh": "“作业做完了”可说？", "en": "How can you say 'I finished my homework'?" }, "options": [{ "text": { "jp": "宿題をしてしまいました" }, "correct": true }, { "text": { "jp": "宿題がしてしまいました" } }, { "text": { "jp": "宿題をしています" } }, { "text": { "jp": "宿題がしてあります" } }], "explanation": { "zh": "てしまいました也可表示完成。", "en": "Te shimaimashita can express completion." } },
-        { "id": "l29_q07", "question": { "zh": "“包掉着/落在那里”是？", "en": "How do you say 'A bag has fallen there'?" }, "options": [{ "text": { "jp": "かばんが落ちています" }, "correct": true }, { "text": { "jp": "かばんを落ちています" } }, { "text": { "jp": "かばんが落としています" } }, { "text": { "jp": "かばんを落とされています" } }], "explanation": { "zh": "自然掉落状态用「落ちています」。", "en": "Use ochite imasu for a fallen state." } },
-        { "id": "l29_q08", "question": { "zh": "自动词状态句通常关注什么？", "en": "What does an intransitive state sentence focus on?" }, "options": [{ "text": { "zh": "结果状态", "en": "The resulting state" }, "correct": true }, { "text": { "zh": "动作执行者" } }, { "text": { "zh": "命令对方做动作" } }, { "text": { "zh": "一定表示将来" } }], "explanation": { "zh": "第29课重点是眼前状态。", "en": "Lesson 29 focuses on visible states." } },
-        { "id": "l29_q09", "question": { "zh": "“盘子脏了/脏着”是？", "en": "How do you say 'The plate is dirty'?" }, "options": [{ "text": { "jp": "皿が汚れています" }, "correct": true }, { "text": { "jp": "皿を汚れています" } }, { "text": { "jp": "皿が汚しています" } }, { "text": { "jp": "皿を汚れましたいます" } }], "explanation": { "zh": "「汚れます」是自动词。", "en": "Yogoremasu is intransitive." } },
-        { "id": "l29_q10", "question": { "zh": "“车停着”是？", "en": "How do you say 'The car is stopped/parked'?" }, "options": [{ "text": { "jp": "車が止まっています" }, "correct": true }, { "text": { "jp": "車を止まっています" } }, { "text": { "jp": "車が止めています" } }, { "text": { "jp": "車を止めてしまいます" } }], "explanation": { "zh": "状态用自动词「止まっています」。", "en": "Use intransitive tomatte imasu for the state." } }
+        {
+          "id": "l29_q01",
+          "question": {
+            "zh": "“门开着”正确的是？",
+            "en": "How do you say 'The door is open'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "ドアが開いています"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "ドアを開いています"
+              }
+            },
+            {
+              "text": {
+                "jp": "ドアが開けています"
+              }
+            },
+            {
+              "text": {
+                "jp": "ドアを開けていました"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "状态用自动词「開いています」。",
+            "en": "Use intransitive aite imasu for the state."
+          }
+        },
+        {
+          "id": "l29_q02",
+          "question": {
+            "zh": "“窗户关着”是？",
+            "en": "How do you say 'The window is closed'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "窓が閉まっています"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "窓を閉まっています"
+              }
+            },
+            {
+              "text": {
+                "jp": "窓が閉めています"
+              }
+            },
+            {
+              "text": {
+                "jp": "窓を閉めてしまいました"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "「閉まります」是自动词。",
+            "en": "Shimarimasu is intransitive."
+          }
+        },
+        {
+          "id": "l29_q03",
+          "question": {
+            "zh": "“灯亮着”是？",
+            "en": "How do you say 'The light is on'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "電気がついています"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "電気をついています"
+              }
+            },
+            {
+              "text": {
+                "jp": "電気がつけています"
+              }
+            },
+            {
+              "text": {
+                "jp": "電気をつけています"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "自动词「つきます」。",
+            "en": "Tsukimasu is intransitive."
+          }
+        },
+        {
+          "id": "l29_q04",
+          "question": {
+            "zh": "“电梯坏了”是？",
+            "en": "How do you say 'The elevator is broken'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "エレベーターが壊れています"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "エレベーターを壊れています"
+              }
+            },
+            {
+              "text": {
+                "jp": "エレベーターが壊しています"
+              }
+            },
+            {
+              "text": {
+                "jp": "エレベーターを壊しています"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "「壊れます」是自动词。",
+            "en": "Kowaremasu is intransitive."
+          }
+        },
+        {
+          "id": "l29_q05",
+          "question": {
+            "zh": "表达遗憾“把钱包弄丢了”是？",
+            "en": "How do you say 'I lost my wallet' with regret?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "財布をなくしてしまいました"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "財布がなくしてしまいました"
+              }
+            },
+            {
+              "text": {
+                "jp": "財布をなくなってしまいました"
+              }
+            },
+            {
+              "text": {
+                "jp": "財布がなくします"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "人为弄丢用他动词「なくします」的て形。",
+            "en": "Use the transitive nakushimasu in te-form."
+          }
+        },
+        {
+          "id": "l29_q06",
+          "question": {
+            "zh": "“作业做完了”可说？",
+            "en": "How can you say 'I finished my homework'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "宿題をしてしまいました"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "宿題がしてしまいました"
+              }
+            },
+            {
+              "text": {
+                "jp": "宿題をしています"
+              }
+            },
+            {
+              "text": {
+                "jp": "宿題がしてあります"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "てしまいました也可表示完成。",
+            "en": "Te shimaimashita can express completion."
+          }
+        },
+        {
+          "id": "l29_q07",
+          "question": {
+            "zh": "“包掉着/落在那里”是？",
+            "en": "How do you say 'A bag has fallen there'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "かばんが落ちています"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "かばんを落ちています"
+              }
+            },
+            {
+              "text": {
+                "jp": "かばんが落としています"
+              }
+            },
+            {
+              "text": {
+                "jp": "かばんを落とされています"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "自然掉落状态用「落ちています」。",
+            "en": "Use ochite imasu for a fallen state."
+          }
+        },
+        {
+          "id": "l29_q08",
+          "question": {
+            "zh": "自动词状态句通常关注什么？",
+            "en": "What does an intransitive state sentence focus on?"
+          },
+          "options": [
+            {
+              "text": {
+                "zh": "结果状态",
+                "en": "The resulting state"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "动作执行者"
+              }
+            },
+            {
+              "text": {
+                "zh": "命令对方做动作"
+              }
+            },
+            {
+              "text": {
+                "zh": "一定表示将来"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "第29课重点是眼前状态。",
+            "en": "Lesson 29 focuses on visible states."
+          }
+        },
+        {
+          "id": "l29_q09",
+          "question": {
+            "zh": "“盘子脏了/脏着”是？",
+            "en": "How do you say 'The plate is dirty'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "皿が汚れています"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "皿を汚れています"
+              }
+            },
+            {
+              "text": {
+                "jp": "皿が汚しています"
+              }
+            },
+            {
+              "text": {
+                "jp": "皿を汚れましたいます"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "「汚れます」是自动词。",
+            "en": "Yogoremasu is intransitive."
+          }
+        },
+        {
+          "id": "l29_q10",
+          "question": {
+            "zh": "“车停着”是？",
+            "en": "How do you say 'The car is stopped/parked'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "車が止まっています"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "車を止まっています"
+              }
+            },
+            {
+              "text": {
+                "jp": "車が止めています"
+              }
+            },
+            {
+              "text": {
+                "jp": "車を止めてしまいます"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "状态用自动词「止まっています」。",
+            "en": "Use intransitive tomatte imasu for the state."
+          }
+        }
       ]
     }
-  ]
+  ],
+  "conversationVideo": {
+    "sourcePageUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/index.html",
+    "lessonNo": 29,
+    "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P29_%E7%AC%AC29%E8%AA%B2.mp4",
+    "subtitleUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P29_%E7%AC%AC29%E8%AA%B2.json",
+    "sourceType": "official_video_resource",
+    "status": "linked_not_imported"
+  }
 }

@@ -83,6 +83,17 @@ export default function LessonConversationClient({ lessonNo, lang, items }: Prop
     if (idx + 1 < items.length) setIdx(idx + 1)
   }
 
+  function handleRestart() {
+    const lessonItemIds = new Set(items.map((item) => item.id))
+    const current = readFamiliarity()
+    for (const id of lessonItemIds) delete current[id]
+    writeFamiliarity(current)
+    setFamiliarity(current)
+    setDone({})
+    setIdx(0)
+    setRevealed(false)
+  }
+
   if (allDone) {
     const unfamiliarCount = Object.values(familiarity).filter((f) => f.status === 'unfamiliar').length
     return (
@@ -93,6 +104,11 @@ export default function LessonConversationClient({ lessonNo, lang, items }: Prop
             {lang === 'en'
               ? `Total ${items.length} sentences. ${unfamiliarCount} need more practice.`
               : `共 ${items.length} 句，${unfamiliarCount} 句需要继续练习。`}
+          </p>
+          <p style={{ marginTop: 16 }}>
+            <button className="btn" onClick={handleRestart} style={{ minWidth: 140 }}>
+              {lang === 'en' ? 'Restart Practice' : '重新练习'}
+            </button>
           </p>
         </section>
       </main>

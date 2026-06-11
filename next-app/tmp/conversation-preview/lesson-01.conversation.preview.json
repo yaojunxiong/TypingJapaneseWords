@@ -1,0 +1,108 @@
+{
+  "type": "conversation",
+  "sourceType": "official_video_subtitle",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P1_%E7%AC%AC1%E8%AA%B2.json",
+  "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P1_%E7%AC%AC1%E8%AA%B2.mp4",
+  "dialogTitle": "自我介绍",
+  "needsSpeakerReview": true,
+  "needsKanaReview": true,
+  "needsKeywordReview": true,
+  "notes": [
+    "字幕中无 speaker 字段，需人工确认每句说话人",
+    "部分句子含汉字，kana 未填充，需人工或 AI 补充假名注音",
+    "字幕中无 keyword 字段，需人工或 AI 提取本课关键词",
+    "字幕原始 9 条，预览未合并/拆分，需人工确认断句是否合理"
+  ],
+  "items": [
+    {
+      "id": "l01-conv-001",
+      "speaker": "",
+      "jp": "おはようございます",
+      "kana": "おはようございます",
+      "zh": "早上好",
+      "keyword": "",
+      "videoStart": "0:00.0",
+      "videoEnd": "0:27.3"
+    },
+    {
+      "id": "l01-conv-002",
+      "speaker": "",
+      "jp": "おはようございます",
+      "kana": "おはようございます",
+      "zh": "早上好",
+      "keyword": "",
+      "videoStart": "0:27.3",
+      "videoEnd": "0:28.4"
+    },
+    {
+      "id": "l01-conv-003",
+      "speaker": "",
+      "jp": "佐藤さん",
+      "kana": "",
+      "zh": "佐藤女士",
+      "keyword": "",
+      "videoStart": "0:28.4",
+      "videoEnd": "0:29.4"
+    },
+    {
+      "id": "l01-conv-004",
+      "speaker": "",
+      "jp": "こちらはマイクミラーさんです",
+      "kana": "こちらはマイクミラーさんです",
+      "zh": "这位是迈克·米勒先生",
+      "keyword": "",
+      "videoStart": "0:29.4",
+      "videoEnd": "0:31.9"
+    },
+    {
+      "id": "l01-conv-005",
+      "speaker": "",
+      "jp": "初めましてマイクミラーです",
+      "kana": "",
+      "zh": "初次见面，我是迈克·米勒",
+      "keyword": "",
+      "videoStart": "0:31.9",
+      "videoEnd": "0:34.9"
+    },
+    {
+      "id": "l01-conv-006",
+      "speaker": "",
+      "jp": "アメリカから来ました",
+      "kana": "",
+      "zh": "我从美国来",
+      "keyword": "",
+      "videoStart": "0:34.9",
+      "videoEnd": "0:36.6"
+    },
+    {
+      "id": "l01-conv-007",
+      "speaker": "",
+      "jp": "どうぞよろしく",
+      "kana": "どうぞよろしく",
+      "zh": "请多关照",
+      "keyword": "",
+      "videoStart": "0:36.6",
+      "videoEnd": "0:38.3"
+    },
+    {
+      "id": "l01-conv-008",
+      "speaker": "",
+      "jp": "佐藤恵子です",
+      "kana": "",
+      "zh": "我是佐藤惠子",
+      "keyword": "",
+      "videoStart": "0:38.3",
+      "videoEnd": "0:40.2"
+    },
+    {
+      "id": "l01-conv-009",
+      "speaker": "",
+      "jp": "どうぞよろしく",
+      "kana": "どうぞよろしく",
+      "zh": "请多关照",
+      "keyword": "",
+      "videoStart": "0:40.2",
+      "videoEnd": "0:41.5"
+    }
+  ]
+}

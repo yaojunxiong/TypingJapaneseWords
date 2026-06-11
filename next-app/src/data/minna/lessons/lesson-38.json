@@ -4,131 +4,1034 @@
   "status": "Mastery migrated",
   "lessonNo": 38,
   "lessonId": "minna_lesson_38",
-  "title": { "zh": "第38课", "en": "Lesson 38", "ja": "第38課" },
-  "subtitle": { "zh": "のは", "en": "Nominalization with no", "ja": "のは" },
-  "focus": { "zh": "用「の」把动词句名词化，表达“做某事是……”“喜欢/忘记/知道做某事”。", "en": "Use no to nominalize verb clauses: doing something is..., like/forget/know doing something.", "ja": "の名詞化で、するのは・するのが・するのをを学びます。" },
+  "title": {
+    "zh": "第38课",
+    "en": "Lesson 38",
+    "ja": "第38課"
+  },
+  "subtitle": {
+    "zh": "のは",
+    "en": "Nominalization with no",
+    "ja": "のは"
+  },
+  "focus": {
+    "zh": "用「の」把动词句名词化，表达“做某事是……”“喜欢/忘记/知道做某事”。",
+    "en": "Use no to nominalize verb clauses: doing something is..., like/forget/know doing something.",
+    "ja": "の名詞化で、するのは・するのが・するのをを学びます。"
+  },
   "sections": [
     {
       "type": "vocab",
       "id": "l38_vocab",
-      "title": { "zh": "核心词汇", "en": "Core Vocabulary", "ja": "基本語彙" },
+      "title": {
+        "zh": "核心词汇",
+        "en": "Core Vocabulary",
+        "ja": "基本語彙"
+      },
       "items": [
-        { "id": "l38_v01", "jp": "育てます", "kana": "そだてます", "zh": "培养；养育", "en": "to raise; grow", "tags": ["lesson38"] },
-        { "id": "l38_v02", "jp": "運びます", "kana": "はこびます", "zh": "搬运", "en": "to carry", "tags": ["lesson38"] },
-        { "id": "l38_v03", "jp": "亡くなります", "kana": "なくなります", "zh": "去世", "en": "to pass away", "tags": ["lesson38"] },
-        { "id": "l38_v04", "jp": "入院します", "kana": "にゅういんします", "zh": "住院", "en": "to be hospitalized", "tags": ["lesson38"] },
-        { "id": "l38_v05", "jp": "退院します", "kana": "たいいんします", "zh": "出院", "en": "to leave hospital", "tags": ["lesson38"] },
-        { "id": "l38_v06", "jp": "整理します", "kana": "せいりします", "zh": "整理", "en": "to organize", "tags": ["lesson38"] },
-        { "id": "l38_v07", "jp": "押します", "kana": "おします", "zh": "按；推", "en": "to press", "tags": ["lesson38"] },
-        { "id": "l38_v08", "jp": "気持ち", "kana": "きもち", "zh": "心情；感觉", "en": "feeling", "tags": ["lesson38"] },
-        { "id": "l38_v09", "jp": "楽しみ", "kana": "たのしみ", "zh": "期待；乐趣", "en": "pleasure; looking forward", "tags": ["lesson38"] },
-        { "id": "l38_v10", "jp": "習慣", "kana": "しゅうかん", "zh": "习惯", "en": "habit", "tags": ["lesson38"] }
+        {
+          "id": "l38_v01",
+          "jp": "育てます",
+          "kana": "そだてます",
+          "zh": "培养；养育",
+          "en": "to raise; grow",
+          "tags": [
+            "lesson38"
+          ]
+        },
+        {
+          "id": "l38_v02",
+          "jp": "運びます",
+          "kana": "はこびます",
+          "zh": "搬运",
+          "en": "to carry",
+          "tags": [
+            "lesson38"
+          ]
+        },
+        {
+          "id": "l38_v03",
+          "jp": "亡くなります",
+          "kana": "なくなります",
+          "zh": "去世",
+          "en": "to pass away",
+          "tags": [
+            "lesson38"
+          ]
+        },
+        {
+          "id": "l38_v04",
+          "jp": "入院します",
+          "kana": "にゅういんします",
+          "zh": "住院",
+          "en": "to be hospitalized",
+          "tags": [
+            "lesson38"
+          ]
+        },
+        {
+          "id": "l38_v05",
+          "jp": "退院します",
+          "kana": "たいいんします",
+          "zh": "出院",
+          "en": "to leave hospital",
+          "tags": [
+            "lesson38"
+          ]
+        },
+        {
+          "id": "l38_v06",
+          "jp": "整理します",
+          "kana": "せいりします",
+          "zh": "整理",
+          "en": "to organize",
+          "tags": [
+            "lesson38"
+          ]
+        },
+        {
+          "id": "l38_v07",
+          "jp": "押します",
+          "kana": "おします",
+          "zh": "按；推",
+          "en": "to press",
+          "tags": [
+            "lesson38"
+          ]
+        },
+        {
+          "id": "l38_v08",
+          "jp": "気持ち",
+          "kana": "きもち",
+          "zh": "心情；感觉",
+          "en": "feeling",
+          "tags": [
+            "lesson38"
+          ]
+        },
+        {
+          "id": "l38_v09",
+          "jp": "楽しみ",
+          "kana": "たのしみ",
+          "zh": "期待；乐趣",
+          "en": "pleasure; looking forward",
+          "tags": [
+            "lesson38"
+          ]
+        },
+        {
+          "id": "l38_v10",
+          "jp": "習慣",
+          "kana": "しゅうかん",
+          "zh": "习惯",
+          "en": "habit",
+          "tags": [
+            "lesson38"
+          ]
+        }
       ]
     },
     {
       "type": "grammar",
       "id": "l38_grammar",
-      "title": { "zh": "核心语法", "en": "Core Grammar", "ja": "基本文法" },
+      "title": {
+        "zh": "核心语法",
+        "en": "Core Grammar",
+        "ja": "基本文法"
+      },
       "items": [
         {
           "id": "l38_g01",
           "pattern": "动词辞书形 + のは + 形容词です",
-          "explanation": { "zh": "把“做某事”作为主题来评价。", "en": "Nominalizes an action as the topic and evaluates it." },
-          "examples": [{ "jp": "日本語を勉強するのは楽しいです。", "zh": "学习日语很开心。", "en": "Studying Japanese is fun." }],
-          "practice": [{ "id": "l38_g01_p01", "skill": "grammar", "question": { "zh": "“早起很难”是？", "en": "How do you say 'Getting up early is difficult'?" }, "options": [{ "text": { "jp": "早く起きるのは難しいです" }, "correct": true }, { "text": { "jp": "早く起きるのが難しいですを" } }, { "text": { "jp": "早く起きますのは難しいです" } }, { "text": { "jp": "早く起きては難しいです" } }], "explanation": { "zh": "动词辞书形+のは。", "en": "Dictionary form + no wa." } }]
+          "explanation": {
+            "zh": "把“做某事”作为主题来评价。",
+            "en": "Nominalizes an action as the topic and evaluates it."
+          },
+          "examples": [
+            {
+              "jp": "日本語を勉強するのは楽しいです。",
+              "zh": "学习日语很开心。",
+              "en": "Studying Japanese is fun."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l38_g01_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“早起很难”是？",
+                "en": "How do you say 'Getting up early is difficult'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "早く起きるのは難しいです"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "早く起きるのが難しいですを"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "早く起きますのは難しいです"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "早く起きては難しいです"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "动词辞书形+のは。",
+                "en": "Dictionary form + no wa."
+              }
+            }
+          ]
         },
         {
           "id": "l38_g02",
           "pattern": "动词辞书形 + のが + 好きです",
-          "explanation": { "zh": "表达喜欢/擅长/不擅长做某事，常用「のが」。", "en": "Use no ga with likes, skills, and preferences about actions." },
-          "examples": [{ "jp": "わたしは料理を作るのが好きです。", "zh": "我喜欢做饭。", "en": "I like cooking." }],
-          "practice": [{ "id": "l38_g02_p01", "skill": "grammar", "question": { "zh": "“我喜欢跑步”是？", "en": "How do you say 'I like running'?" }, "options": [{ "text": { "jp": "走るのが好きです" }, "correct": true }, { "text": { "jp": "走るのは好きですを" } }, { "text": { "jp": "走りますのが好きです" } }, { "text": { "jp": "走って好きです" } }], "explanation": { "zh": "喜欢做某事用「のが好き」。", "en": "Use no ga suki." } }]
+          "explanation": {
+            "zh": "表达喜欢/擅长/不擅长做某事，常用「のが」。",
+            "en": "Use no ga with likes, skills, and preferences about actions."
+          },
+          "examples": [
+            {
+              "jp": "わたしは料理を作るのが好きです。",
+              "zh": "我喜欢做饭。",
+              "en": "I like cooking."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l38_g02_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“我喜欢跑步”是？",
+                "en": "How do you say 'I like running'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "走るのが好きです"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "走るのは好きですを"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "走りますのが好きです"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "走って好きです"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "喜欢做某事用「のが好き」。",
+                "en": "Use no ga suki."
+              }
+            }
+          ]
         },
         {
           "id": "l38_g03",
           "pattern": "动词辞书形 + のが + 上手/下手です",
-          "explanation": { "zh": "说明擅长或不擅长做某事。", "en": "Describes being good or poor at doing an action." },
-          "examples": [{ "jp": "田中さんは歌うのが上手です。", "zh": "田中很会唱歌。", "en": "Tanaka is good at singing." }],
-          "practice": [{ "id": "l38_g03_p01", "skill": "grammar", "question": { "zh": "“不擅长说明”是？", "en": "How do you say 'not good at explaining'?" }, "options": [{ "text": { "jp": "説明するのが下手です" }, "correct": true }, { "text": { "jp": "説明しますのが下手です" } }, { "text": { "jp": "説明するのを下手です" } }, { "text": { "jp": "説明して下手です" } }], "explanation": { "zh": "上手/下手前也常用のが。", "en": "Use no ga with jouzu/heta." } }]
+          "explanation": {
+            "zh": "说明擅长或不擅长做某事。",
+            "en": "Describes being good or poor at doing an action."
+          },
+          "examples": [
+            {
+              "jp": "田中さんは歌うのが上手です。",
+              "zh": "田中很会唱歌。",
+              "en": "Tanaka is good at singing."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l38_g03_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“不擅长说明”是？",
+                "en": "How do you say 'not good at explaining'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "説明するのが下手です"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "説明しますのが下手です"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "説明するのを下手です"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "説明して下手です"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "上手/下手前也常用のが。",
+                "en": "Use no ga with jouzu/heta."
+              }
+            }
+          ]
         },
         {
           "id": "l38_g04",
           "pattern": "动词辞书形 + のを + 忘れました",
-          "explanation": { "zh": "表示忘记做某事。", "en": "Means forgot to do something." },
-          "examples": [{ "jp": "宿題を持って来るのを忘れました。", "zh": "忘记把作业带来了。", "en": "I forgot to bring my homework." }],
-          "practice": [{ "id": "l38_g04_p01", "skill": "grammar", "question": { "zh": "“忘记关灯了”是？", "en": "How do you say 'I forgot to turn off the light'?" }, "options": [{ "text": { "jp": "電気を消すのを忘れました" }, "correct": true }, { "text": { "jp": "電気を消すのが忘れました" } }, { "text": { "jp": "電気を消しますのを忘れました" } }, { "text": { "jp": "電気を消して忘れました" } }], "explanation": { "zh": "忘记做某事用「のを忘れました」。", "en": "Use no o wasuremashita." } }]
+          "explanation": {
+            "zh": "表示忘记做某事。",
+            "en": "Means forgot to do something."
+          },
+          "examples": [
+            {
+              "jp": "宿題を持って来るのを忘れました。",
+              "zh": "忘记把作业带来了。",
+              "en": "I forgot to bring my homework."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l38_g04_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“忘记关灯了”是？",
+                "en": "How do you say 'I forgot to turn off the light'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "電気を消すのを忘れました"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "電気を消すのが忘れました"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "電気を消しますのを忘れました"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "電気を消して忘れました"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "忘记做某事用「のを忘れました」。",
+                "en": "Use no o wasuremashita."
+              }
+            }
+          ]
         },
         {
           "id": "l38_g05",
           "pattern": "动词普通形 + のを + 知っています",
-          "explanation": { "zh": "表示知道某事或知道某人做某事。", "en": "Means know that something happens or someone does something." },
-          "examples": [{ "jp": "山田さんが入院したのを知っていますか。", "zh": "你知道山田住院了吗？", "en": "Do you know that Yamada was hospitalized?" }],
-          "practice": [{ "id": "l38_g05_p01", "skill": "grammar", "question": { "zh": "“知道会议取消了吗？”是？", "en": "How do you say 'Do you know the meeting was canceled?'" }, "options": [{ "text": { "jp": "会議が中止になったのを知っていますか" }, "correct": true }, { "text": { "jp": "会議が中止になったのが知っていますか" } }, { "text": { "jp": "会議が中止になりますのを知っていますか" } }, { "text": { "jp": "会議を中止になったのを知っていますか" } }], "explanation": { "zh": "知道某事用のを知っています。", "en": "Use no o shitte imasu." } }]
+          "explanation": {
+            "zh": "表示知道某事或知道某人做某事。",
+            "en": "Means know that something happens or someone does something."
+          },
+          "examples": [
+            {
+              "jp": "山田さんが入院したのを知っていますか。",
+              "zh": "你知道山田住院了吗？",
+              "en": "Do you know that Yamada was hospitalized?"
+            }
+          ],
+          "practice": [
+            {
+              "id": "l38_g05_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“知道会议取消了吗？”是？",
+                "en": "How do you say 'Do you know the meeting was canceled?'"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "会議が中止になったのを知っていますか"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "会議が中止になったのが知っていますか"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "会議が中止になりますのを知っていますか"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "会議を中止になったのを知っていますか"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "知道某事用のを知っています。",
+                "en": "Use no o shitte imasu."
+              }
+            }
+          ]
         },
         {
           "id": "l38_g06",
           "pattern": "动词普通形 + のは + 名词です",
-          "explanation": { "zh": "强调“做某事的人/时间/地点/原因是……”。", "en": "Emphasizes the person, time, place, or reason related to an action." },
-          "examples": [{ "jp": "初めて日本へ行ったのは去年です。", "zh": "第一次去日本是去年。", "en": "It was last year that I first went to Japan." }],
-          "practice": [{ "id": "l38_g06_p01", "skill": "grammar", "question": { "zh": "“见到老师的是昨天”是？", "en": "How do you say 'It was yesterday that I met the teacher'?" }, "options": [{ "text": { "jp": "先生に会ったのは昨日です" }, "correct": true }, { "text": { "jp": "先生に会ったのが昨日をです" } }, { "text": { "jp": "先生に会いましたのは昨日です" } }, { "text": { "jp": "先生に会ってのは昨日です" } }], "explanation": { "zh": "强调时间用のは。", "en": "Use no wa to emphasize time." } }]
+          "explanation": {
+            "zh": "强调“做某事的人/时间/地点/原因是……”。",
+            "en": "Emphasizes the person, time, place, or reason related to an action."
+          },
+          "examples": [
+            {
+              "jp": "初めて日本へ行ったのは去年です。",
+              "zh": "第一次去日本是去年。",
+              "en": "It was last year that I first went to Japan."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l38_g06_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“见到老师的是昨天”是？",
+                "en": "How do you say 'It was yesterday that I met the teacher'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "先生に会ったのは昨日です"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "先生に会ったのが昨日をです"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生に会いましたのは昨日です"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生に会ってのは昨日です"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "强调时间用のは。",
+                "en": "Use no wa to emphasize time."
+              }
+            }
+          ]
         },
         {
           "id": "l38_g07",
           "pattern": "の vs こと",
-          "explanation": { "zh": "初级阶段很多场合可先用「の」。感官、忘记、知道等本课句型优先记「の」。", "en": "At this stage, no is often used. With perception, forgetting, and knowing, remember no in these patterns." },
-          "examples": [{ "jp": "漢字を覚えるのは大変です。", "zh": "记汉字很辛苦。", "en": "Memorizing kanji is hard." }],
-          "practice": [{ "id": "l38_g07_p01", "skill": "grammar", "question": { "zh": "本课“忘记做某事”应优先用？", "en": "For 'forget to do' in this lesson, use:" }, "options": [{ "text": { "jp": "のを忘れました" }, "correct": true }, { "text": { "jp": "ことが忘れました" } }, { "text": { "jp": "ために忘れました" } }, { "text": { "jp": "ように忘れました" } }], "explanation": { "zh": "固定搭配：Vのを忘れました。", "en": "Fixed pattern: V no o wasuremashita." } }]
+          "explanation": {
+            "zh": "初级阶段很多场合可先用「の」。感官、忘记、知道等本课句型优先记「の」。",
+            "en": "At this stage, no is often used. With perception, forgetting, and knowing, remember no in these patterns."
+          },
+          "examples": [
+            {
+              "jp": "漢字を覚えるのは大変です。",
+              "zh": "记汉字很辛苦。",
+              "en": "Memorizing kanji is hard."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l38_g07_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "本课“忘记做某事”应优先用？",
+                "en": "For 'forget to do' in this lesson, use:"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "のを忘れました"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "ことが忘れました"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "ために忘れました"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "ように忘れました"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "固定搭配：Vのを忘れました。",
+                "en": "Fixed pattern: V no o wasuremashita."
+              }
+            }
+          ]
         },
         {
           "id": "l38_g08",
           "pattern": "普通形 + の",
-          "explanation": { "zh": "「の」前面接普通形；不要直接接ます形。", "en": "No follows the plain form, not the masu-form." },
-          "examples": [{ "jp": "毎日続けるのは大切です。", "zh": "每天坚持很重要。", "en": "Continuing every day is important." }],
-          "practice": [{ "id": "l38_g08_p01", "skill": "grammar", "question": { "zh": "选择正确句子。", "en": "Choose the correct sentence." }, "options": [{ "text": { "jp": "日本語を勉強するのは大切です" }, "correct": true }, { "text": { "jp": "日本語を勉強しますのは大切です" } }, { "text": { "jp": "日本語を勉強してのは大切です" } }, { "text": { "jp": "日本語を勉強のは大切です" } }], "explanation": { "zh": "动词普通形+の。", "en": "Plain verb + no." } }]
+          "explanation": {
+            "zh": "「の」前面接普通形；不要直接接ます形。",
+            "en": "No follows the plain form, not the masu-form."
+          },
+          "examples": [
+            {
+              "jp": "毎日続けるのは大切です。",
+              "zh": "每天坚持很重要。",
+              "en": "Continuing every day is important."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l38_g08_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "选择正确句子。",
+                "en": "Choose the correct sentence."
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "日本語を勉強するのは大切です"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "日本語を勉強しますのは大切です"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "日本語を勉強してのは大切です"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "日本語を勉強のは大切です"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "动词普通形+の。",
+                "en": "Plain verb + no."
+              }
+            }
+          ]
         }
       ]
     },
     {
       "type": "examples",
       "id": "l38_examples",
-      "title": { "zh": "核心例句", "en": "Core Examples", "ja": "基本例文" },
+      "title": {
+        "zh": "核心例句",
+        "en": "Core Examples",
+        "ja": "基本例文"
+      },
       "items": [
-        { "id": "l38_e01", "jp": "外国語を勉強するのはおもしろいです。", "zh": "学习外语很有趣。", "en": "Studying foreign languages is interesting.", "tags": ["no-wa"] },
-        { "id": "l38_e02", "jp": "朝早く起きるのは大変です。", "zh": "早起很辛苦。", "en": "Getting up early is hard.", "tags": ["no-wa"] },
-        { "id": "l38_e03", "jp": "わたしは写真を撮るのが好きです。", "zh": "我喜欢拍照。", "en": "I like taking photos.", "tags": ["no-ga"] },
-        { "id": "l38_e04", "jp": "弟は泳ぐのが下手です。", "zh": "弟弟不擅长游泳。", "en": "My younger brother is bad at swimming.", "tags": ["skill"] },
-        { "id": "l38_e05", "jp": "鍵をかけるのを忘れました。", "zh": "忘记锁门了。", "en": "I forgot to lock the door.", "tags": ["forget"] },
-        { "id": "l38_e06", "jp": "田中さんが退院したのを知っていますか。", "zh": "你知道田中出院了吗？", "en": "Do you know that Tanaka left the hospital?", "tags": ["know"] },
-        { "id": "l38_e07", "jp": "初めて一人で旅行したのは18歳の時です。", "zh": "第一次一个人旅行是18岁的时候。", "en": "It was when I was 18 that I first traveled alone.", "tags": ["emphasis"] },
-        { "id": "l38_e08", "jp": "毎日少しずつ続けるのは大切です。", "zh": "每天一点点坚持很重要。", "en": "Continuing little by little every day is important.", "tags": ["habit"] }
+        {
+          "id": "l38_e01",
+          "jp": "外国語を勉強するのはおもしろいです。",
+          "zh": "学习外语很有趣。",
+          "en": "Studying foreign languages is interesting.",
+          "tags": [
+            "no-wa"
+          ]
+        },
+        {
+          "id": "l38_e02",
+          "jp": "朝早く起きるのは大変です。",
+          "zh": "早起很辛苦。",
+          "en": "Getting up early is hard.",
+          "tags": [
+            "no-wa"
+          ]
+        },
+        {
+          "id": "l38_e03",
+          "jp": "わたしは写真を撮るのが好きです。",
+          "zh": "我喜欢拍照。",
+          "en": "I like taking photos.",
+          "tags": [
+            "no-ga"
+          ]
+        },
+        {
+          "id": "l38_e04",
+          "jp": "弟は泳ぐのが下手です。",
+          "zh": "弟弟不擅长游泳。",
+          "en": "My younger brother is bad at swimming.",
+          "tags": [
+            "skill"
+          ]
+        },
+        {
+          "id": "l38_e05",
+          "jp": "鍵をかけるのを忘れました。",
+          "zh": "忘记锁门了。",
+          "en": "I forgot to lock the door.",
+          "tags": [
+            "forget"
+          ]
+        },
+        {
+          "id": "l38_e06",
+          "jp": "田中さんが退院したのを知っていますか。",
+          "zh": "你知道田中出院了吗？",
+          "en": "Do you know that Tanaka left the hospital?",
+          "tags": [
+            "know"
+          ]
+        },
+        {
+          "id": "l38_e07",
+          "jp": "初めて一人で旅行したのは18歳の時です。",
+          "zh": "第一次一个人旅行是18岁的时候。",
+          "en": "It was when I was 18 that I first traveled alone.",
+          "tags": [
+            "emphasis"
+          ]
+        },
+        {
+          "id": "l38_e08",
+          "jp": "毎日少しずつ続けるのは大切です。",
+          "zh": "每天一点点坚持很重要。",
+          "en": "Continuing little by little every day is important.",
+          "tags": [
+            "habit"
+          ]
+        }
       ]
     },
     {
       "type": "mistakes",
       "id": "l38_mistakes",
-      "title": { "zh": "常见错误", "en": "Common Mistakes", "ja": "よくある間違い" },
+      "title": {
+        "zh": "常见错误",
+        "en": "Common Mistakes",
+        "ja": "よくある間違い"
+      },
       "items": [
-        { "id": "l38_m01", "wrong": "日本語を勉強しますのは楽しいです。", "correct": "日本語を勉強するのは楽しいです。", "zh": "の前面接普通形，不接ます形。", "en": "No follows the plain form, not masu-form." },
-        { "id": "l38_m02", "wrong": "電気を消すのが忘れました。", "correct": "電気を消すのを忘れました。", "zh": "忘记做某事用「のを忘れました」。", "en": "Use no o wasuremashita." },
-        { "id": "l38_m03", "wrong": "山田さんが入院したのが知っています。", "correct": "山田さんが入院したのを知っています。", "zh": "知道某事用「のを知っています」。", "en": "Use no o shitte imasu." }
+        {
+          "id": "l38_m01",
+          "wrong": "日本語を勉強しますのは楽しいです。",
+          "correct": "日本語を勉強するのは楽しいです。",
+          "zh": "の前面接普通形，不接ます形。",
+          "en": "No follows the plain form, not masu-form."
+        },
+        {
+          "id": "l38_m02",
+          "wrong": "電気を消すのが忘れました。",
+          "correct": "電気を消すのを忘れました。",
+          "zh": "忘记做某事用「のを忘れました」。",
+          "en": "Use no o wasuremashita."
+        },
+        {
+          "id": "l38_m03",
+          "wrong": "山田さんが入院したのが知っています。",
+          "correct": "山田さんが入院したのを知っています。",
+          "zh": "知道某事用「のを知っています」。",
+          "en": "Use no o shitte imasu."
+        }
       ]
     },
     {
       "type": "quiz",
       "id": "l38_quiz",
-      "title": { "zh": "综合测试", "en": "Final Test", "ja": "まとめテスト" },
+      "title": {
+        "zh": "综合测试",
+        "en": "Final Test",
+        "ja": "まとめテスト"
+      },
       "items": [
-        { "id": "l38_q01", "question": { "zh": "“学习日语很开心”是？", "en": "How do you say 'Studying Japanese is fun'?" }, "options": [{ "text": { "jp": "日本語を勉強するのは楽しいです" }, "correct": true }, { "text": { "jp": "日本語を勉強しますのは楽しいです" } }, { "text": { "jp": "日本語を勉強しては楽しいです" } }, { "text": { "jp": "日本語を勉強のは楽しいです" } }], "explanation": { "zh": "动词普通形+のは。", "en": "Plain verb + no wa." } },
-        { "id": "l38_q02", "question": { "zh": "“喜欢唱歌”是？", "en": "How do you say 'I like singing'?" }, "options": [{ "text": { "jp": "歌うのが好きです" }, "correct": true }, { "text": { "jp": "歌いますのが好きです" } }, { "text": { "jp": "歌うのを好きです" } }, { "text": { "jp": "歌って好きです" } }], "explanation": { "zh": "喜欢做某事用のが好き。", "en": "Use no ga suki." } },
-        { "id": "l38_q03", "question": { "zh": "“不擅长做饭”是？", "en": "How do you say 'I am bad at cooking'?" }, "options": [{ "text": { "jp": "料理するのが下手です" }, "correct": true }, { "text": { "jp": "料理するのを下手です" } }, { "text": { "jp": "料理しますのが下手です" } }, { "text": { "jp": "料理して下手です" } }], "explanation": { "zh": "下手前常用のが。", "en": "Use no ga before heta." } },
-        { "id": "l38_q04", "question": { "zh": "“忘记带钥匙”是？", "en": "How do you say 'I forgot to bring the key'?" }, "options": [{ "text": { "jp": "鍵を持って来るのを忘れました" }, "correct": true }, { "text": { "jp": "鍵を持って来るのが忘れました" } }, { "text": { "jp": "鍵を持って来ますのを忘れました" } }, { "text": { "jp": "鍵を持って来て忘れました" } }], "explanation": { "zh": "のを忘れました。", "en": "Use no o wasuremashita." } },
-        { "id": "l38_q05", "question": { "zh": "“知道他出院了吗？”是？", "en": "How do you ask 'Do you know he left the hospital?'" }, "options": [{ "text": { "jp": "彼が退院したのを知っていますか" }, "correct": true }, { "text": { "jp": "彼が退院したのが知っていますか" } }, { "text": { "jp": "彼が退院しますのを知っていますか" } }, { "text": { "jp": "彼を退院したのを知っていますか" } }], "explanation": { "zh": "知道某事用のを知っています。", "en": "Use no o shitte imasu." } },
-        { "id": "l38_q06", "question": { "zh": "“第一次来日本是去年”是？", "en": "How do you say 'It was last year that I first came to Japan'?" }, "options": [{ "text": { "jp": "初めて日本へ来たのは去年です" }, "correct": true }, { "text": { "jp": "初めて日本へ来たのが去年をです" } }, { "text": { "jp": "初めて日本へ来ましたのは去年です" } }, { "text": { "jp": "初めて日本へ来てのは去年です" } }], "explanation": { "zh": "强调时间用のは。", "en": "Use no wa to emphasize time." } },
-        { "id": "l38_q07", "question": { "zh": "「の」前面一般接？", "en": "What generally comes before no nominalization?" }, "options": [{ "text": { "zh": "普通形", "en": "Plain form" }, "correct": true }, { "text": { "zh": "ます形" } }, { "text": { "zh": "て形" } }, { "text": { "zh": "命令形" } }], "explanation": { "zh": "普通形+の。", "en": "Plain form + no." } },
-        { "id": "l38_q08", "question": { "zh": "“整理房间很费时间”是？", "en": "How do you say 'Organizing the room takes time'?" }, "options": [{ "text": { "jp": "部屋を整理するのは時間がかかります" }, "correct": true }, { "text": { "jp": "部屋を整理しますのは時間がかかります" } }, { "text": { "jp": "部屋を整理しては時間がかかります" } }, { "text": { "jp": "部屋を整理のは時間がかかります" } }], "explanation": { "zh": "整理するのは。", "en": "Seiri suru no wa." } },
-        { "id": "l38_q09", "question": { "zh": "“喜欢养花”是？", "en": "How do you say 'I like growing flowers'?" }, "options": [{ "text": { "jp": "花を育てるのが好きです" }, "correct": true }, { "text": { "jp": "花を育てるのを好きです" } }, { "text": { "jp": "花を育てますのが好きです" } }, { "text": { "jp": "花が育てるのは好きです" } }], "explanation": { "zh": "喜欢做某事用のが好き。", "en": "Use no ga suki." } },
-        { "id": "l38_q10", "question": { "zh": "“忘记按按钮”是？", "en": "How do you say 'I forgot to press the button'?" }, "options": [{ "text": { "jp": "ボタンを押すのを忘れました" }, "correct": true }, { "text": { "jp": "ボタンを押すのが忘れました" } }, { "text": { "jp": "ボタンを押しますのを忘れました" } }, { "text": { "jp": "ボタンを押して忘れました" } }], "explanation": { "zh": "のを忘れました。", "en": "No o wasuremashita." } }
+        {
+          "id": "l38_q01",
+          "question": {
+            "zh": "“学习日语很开心”是？",
+            "en": "How do you say 'Studying Japanese is fun'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "日本語を勉強するのは楽しいです"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "日本語を勉強しますのは楽しいです"
+              }
+            },
+            {
+              "text": {
+                "jp": "日本語を勉強しては楽しいです"
+              }
+            },
+            {
+              "text": {
+                "jp": "日本語を勉強のは楽しいです"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "动词普通形+のは。",
+            "en": "Plain verb + no wa."
+          }
+        },
+        {
+          "id": "l38_q02",
+          "question": {
+            "zh": "“喜欢唱歌”是？",
+            "en": "How do you say 'I like singing'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "歌うのが好きです"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "歌いますのが好きです"
+              }
+            },
+            {
+              "text": {
+                "jp": "歌うのを好きです"
+              }
+            },
+            {
+              "text": {
+                "jp": "歌って好きです"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "喜欢做某事用のが好き。",
+            "en": "Use no ga suki."
+          }
+        },
+        {
+          "id": "l38_q03",
+          "question": {
+            "zh": "“不擅长做饭”是？",
+            "en": "How do you say 'I am bad at cooking'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "料理するのが下手です"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "料理するのを下手です"
+              }
+            },
+            {
+              "text": {
+                "jp": "料理しますのが下手です"
+              }
+            },
+            {
+              "text": {
+                "jp": "料理して下手です"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "下手前常用のが。",
+            "en": "Use no ga before heta."
+          }
+        },
+        {
+          "id": "l38_q04",
+          "question": {
+            "zh": "“忘记带钥匙”是？",
+            "en": "How do you say 'I forgot to bring the key'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "鍵を持って来るのを忘れました"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "鍵を持って来るのが忘れました"
+              }
+            },
+            {
+              "text": {
+                "jp": "鍵を持って来ますのを忘れました"
+              }
+            },
+            {
+              "text": {
+                "jp": "鍵を持って来て忘れました"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "のを忘れました。",
+            "en": "Use no o wasuremashita."
+          }
+        },
+        {
+          "id": "l38_q05",
+          "question": {
+            "zh": "“知道他出院了吗？”是？",
+            "en": "How do you ask 'Do you know he left the hospital?'"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "彼が退院したのを知っていますか"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "彼が退院したのが知っていますか"
+              }
+            },
+            {
+              "text": {
+                "jp": "彼が退院しますのを知っていますか"
+              }
+            },
+            {
+              "text": {
+                "jp": "彼を退院したのを知っていますか"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "知道某事用のを知っています。",
+            "en": "Use no o shitte imasu."
+          }
+        },
+        {
+          "id": "l38_q06",
+          "question": {
+            "zh": "“第一次来日本是去年”是？",
+            "en": "How do you say 'It was last year that I first came to Japan'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "初めて日本へ来たのは去年です"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "初めて日本へ来たのが去年をです"
+              }
+            },
+            {
+              "text": {
+                "jp": "初めて日本へ来ましたのは去年です"
+              }
+            },
+            {
+              "text": {
+                "jp": "初めて日本へ来てのは去年です"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "强调时间用のは。",
+            "en": "Use no wa to emphasize time."
+          }
+        },
+        {
+          "id": "l38_q07",
+          "question": {
+            "zh": "「の」前面一般接？",
+            "en": "What generally comes before no nominalization?"
+          },
+          "options": [
+            {
+              "text": {
+                "zh": "普通形",
+                "en": "Plain form"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "ます形"
+              }
+            },
+            {
+              "text": {
+                "zh": "て形"
+              }
+            },
+            {
+              "text": {
+                "zh": "命令形"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "普通形+の。",
+            "en": "Plain form + no."
+          }
+        },
+        {
+          "id": "l38_q08",
+          "question": {
+            "zh": "“整理房间很费时间”是？",
+            "en": "How do you say 'Organizing the room takes time'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "部屋を整理するのは時間がかかります"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "部屋を整理しますのは時間がかかります"
+              }
+            },
+            {
+              "text": {
+                "jp": "部屋を整理しては時間がかかります"
+              }
+            },
+            {
+              "text": {
+                "jp": "部屋を整理のは時間がかかります"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "整理するのは。",
+            "en": "Seiri suru no wa."
+          }
+        },
+        {
+          "id": "l38_q09",
+          "question": {
+            "zh": "“喜欢养花”是？",
+            "en": "How do you say 'I like growing flowers'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "花を育てるのが好きです"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "花を育てるのを好きです"
+              }
+            },
+            {
+              "text": {
+                "jp": "花を育てますのが好きです"
+              }
+            },
+            {
+              "text": {
+                "jp": "花が育てるのは好きです"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "喜欢做某事用のが好き。",
+            "en": "Use no ga suki."
+          }
+        },
+        {
+          "id": "l38_q10",
+          "question": {
+            "zh": "“忘记按按钮”是？",
+            "en": "How do you say 'I forgot to press the button'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "ボタンを押すのを忘れました"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "ボタンを押すのが忘れました"
+              }
+            },
+            {
+              "text": {
+                "jp": "ボタンを押しますのを忘れました"
+              }
+            },
+            {
+              "text": {
+                "jp": "ボタンを押して忘れました"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "のを忘れました。",
+            "en": "No o wasuremashita."
+          }
+        }
       ]
     }
-  ]
+  ],
+  "conversationVideo": {
+    "sourcePageUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/index.html",
+    "lessonNo": 38,
+    "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P38_%E7%AC%AC38%E8%AA%B2.mp4",
+    "subtitleUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P38_%E7%AC%AC38%E8%AA%B2.json",
+    "sourceType": "official_video_resource",
+    "status": "linked_not_imported"
+  }
 }

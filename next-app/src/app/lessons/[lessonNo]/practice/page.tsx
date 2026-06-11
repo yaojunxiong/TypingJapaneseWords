@@ -73,9 +73,30 @@ export default async function LessonPracticePage({
       keyword: String((item as Record<string, unknown>).keyword || '')
     }))
 
+    const cv = (lesson as Record<string, unknown>).conversationVideo as Record<string, unknown> | undefined
+
     return (
       <main>
         <MinnaNav active="lessons" />
+        {cv ? (
+          <section className="card" style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
+            <span style={{ fontSize: 20 }}>🎬</span>
+            <div style={{ flex: 1 }}>
+              <strong>{lang === 'en' ? `Lesson ${no} Conversation Video` : `第 ${no} 课会话视频`}</strong>
+              <p className="small" style={{ margin: '2px 0 0' }}>
+                {lang === 'en' ? 'Source: Minna no Nihongo Subtitle Player' : '来源：大家的日本語字幕播放器'}
+              </p>
+            </div>
+            {String(cv.videoUrl || '') ? (
+              <a className="btn" href={String(cv.videoUrl)} target="_blank" rel="noopener noreferrer">
+                {lang === 'en' ? 'Play Video' : '播放视频'}
+              </a>
+            ) : null}
+            <a className="btn ghost" href={String(cv.sourcePageUrl || '')} target="_blank" rel="noopener noreferrer">
+              {lang === 'en' ? 'Resource Page' : '资源页'}
+            </a>
+          </section>
+        ) : null}
         <LessonConversationClient lessonNo={no} lang={lang} items={items} />
       </main>
     )

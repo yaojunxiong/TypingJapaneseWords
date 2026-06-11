@@ -4,131 +4,1034 @@
   "status": "Mastery migrated",
   "lessonNo": 36,
   "lessonId": "minna_lesson_36",
-  "title": { "zh": "第36课", "en": "Lesson 36", "ja": "第36課" },
-  "subtitle": { "zh": "ように", "en": "Goals and change with you ni", "ja": "ように" },
-  "focus": { "zh": "学习「ように」表示能力或状态目标，「ようになります」表示变化，「ようにしています」表示平时坚持。", "en": "Learn you ni for ability/state goals, you ni narimasu for change, and you ni shite imasu for regular effort.", "ja": "能力・状態の目標、変化、習慣的な努力を表すようにを学びます。" },
+  "title": {
+    "zh": "第36课",
+    "en": "Lesson 36",
+    "ja": "第36課"
+  },
+  "subtitle": {
+    "zh": "ように",
+    "en": "Goals and change with you ni",
+    "ja": "ように"
+  },
+  "focus": {
+    "zh": "学习「ように」表示能力或状态目标，「ようになります」表示变化，「ようにしています」表示平时坚持。",
+    "en": "Learn you ni for ability/state goals, you ni narimasu for change, and you ni shite imasu for regular effort.",
+    "ja": "能力・状態の目標、変化、習慣的な努力を表すようにを学びます。"
+  },
   "sections": [
     {
       "type": "vocab",
       "id": "l36_vocab",
-      "title": { "zh": "核心词汇", "en": "Core Vocabulary", "ja": "基本語彙" },
+      "title": {
+        "zh": "核心词汇",
+        "en": "Core Vocabulary",
+        "ja": "基本語彙"
+      },
       "items": [
-        { "id": "l36_v01", "jp": "届きます", "kana": "とどきます", "zh": "送达；够到", "en": "to reach; arrive", "tags": ["lesson36"] },
-        { "id": "l36_v02", "jp": "出ます", "kana": "でます", "zh": "参加；出现；出去", "en": "to appear; attend; go out", "tags": ["lesson36"] },
-        { "id": "l36_v03", "jp": "貯金します", "kana": "ちょきんします", "zh": "存钱", "en": "to save money", "tags": ["lesson36"] },
-        { "id": "l36_v04", "jp": "過ぎます", "kana": "すぎます", "zh": "经过；超过", "en": "to pass; exceed", "tags": ["lesson36"] },
-        { "id": "l36_v05", "jp": "慣れます", "kana": "なれます", "zh": "习惯", "en": "to get used to", "tags": ["lesson36"] },
-        { "id": "l36_v06", "jp": "腐ります", "kana": "くさります", "zh": "腐烂", "en": "to rot", "tags": ["lesson36"] },
-        { "id": "l36_v07", "jp": "健康", "kana": "けんこう", "zh": "健康", "en": "health", "tags": ["lesson36"] },
-        { "id": "l36_v08", "jp": "習慣", "kana": "しゅうかん", "zh": "习惯", "en": "habit", "tags": ["lesson36"] },
-        { "id": "l36_v09", "jp": "目標", "kana": "もくひょう", "zh": "目标", "en": "goal", "tags": ["lesson36"] },
-        { "id": "l36_v10", "jp": "試合", "kana": "しあい", "zh": "比赛", "en": "match; game", "tags": ["lesson36"] }
+        {
+          "id": "l36_v01",
+          "jp": "届きます",
+          "kana": "とどきます",
+          "zh": "送达；够到",
+          "en": "to reach; arrive",
+          "tags": [
+            "lesson36"
+          ]
+        },
+        {
+          "id": "l36_v02",
+          "jp": "出ます",
+          "kana": "でます",
+          "zh": "参加；出现；出去",
+          "en": "to appear; attend; go out",
+          "tags": [
+            "lesson36"
+          ]
+        },
+        {
+          "id": "l36_v03",
+          "jp": "貯金します",
+          "kana": "ちょきんします",
+          "zh": "存钱",
+          "en": "to save money",
+          "tags": [
+            "lesson36"
+          ]
+        },
+        {
+          "id": "l36_v04",
+          "jp": "過ぎます",
+          "kana": "すぎます",
+          "zh": "经过；超过",
+          "en": "to pass; exceed",
+          "tags": [
+            "lesson36"
+          ]
+        },
+        {
+          "id": "l36_v05",
+          "jp": "慣れます",
+          "kana": "なれます",
+          "zh": "习惯",
+          "en": "to get used to",
+          "tags": [
+            "lesson36"
+          ]
+        },
+        {
+          "id": "l36_v06",
+          "jp": "腐ります",
+          "kana": "くさります",
+          "zh": "腐烂",
+          "en": "to rot",
+          "tags": [
+            "lesson36"
+          ]
+        },
+        {
+          "id": "l36_v07",
+          "jp": "健康",
+          "kana": "けんこう",
+          "zh": "健康",
+          "en": "health",
+          "tags": [
+            "lesson36"
+          ]
+        },
+        {
+          "id": "l36_v08",
+          "jp": "習慣",
+          "kana": "しゅうかん",
+          "zh": "习惯",
+          "en": "habit",
+          "tags": [
+            "lesson36"
+          ]
+        },
+        {
+          "id": "l36_v09",
+          "jp": "目標",
+          "kana": "もくひょう",
+          "zh": "目标",
+          "en": "goal",
+          "tags": [
+            "lesson36"
+          ]
+        },
+        {
+          "id": "l36_v10",
+          "jp": "試合",
+          "kana": "しあい",
+          "zh": "比赛",
+          "en": "match; game",
+          "tags": [
+            "lesson36"
+          ]
+        }
       ]
     },
     {
       "type": "grammar",
       "id": "l36_grammar",
-      "title": { "zh": "核心语法", "en": "Core Grammar", "ja": "基本文法" },
+      "title": {
+        "zh": "核心语法",
+        "en": "Core Grammar",
+        "ja": "基本文法"
+      },
       "items": [
         {
           "id": "l36_g01",
           "pattern": "可能形 + ように",
-          "explanation": { "zh": "表示为了达到某种能力状态而努力。前项常是可能形。", "en": "Expresses effort toward an ability or state; the first verb is often potential form." },
-          "examples": [{ "jp": "日本語が話せるように、毎日練習します。", "zh": "为了能说日语，每天练习。", "en": "I practice every day so that I can speak Japanese." }],
-          "practice": [{ "id": "l36_g01_p01", "skill": "grammar", "question": { "zh": "“为了能读新闻”正确的是？", "en": "How do you say 'so that I can read newspapers'?" }, "options": [{ "text": { "jp": "新聞が読めるように" }, "correct": true }, { "text": { "jp": "新聞を読むためにできる" } }, { "text": { "jp": "新聞が読むように" } }, { "text": { "jp": "新聞を読めますように" } }], "explanation": { "zh": "能力目标用可能形 + ように。", "en": "Use potential form + you ni for ability goals." } }]
+          "explanation": {
+            "zh": "表示为了达到某种能力状态而努力。前项常是可能形。",
+            "en": "Expresses effort toward an ability or state; the first verb is often potential form."
+          },
+          "examples": [
+            {
+              "jp": "日本語が話せるように、毎日練習します。",
+              "zh": "为了能说日语，每天练习。",
+              "en": "I practice every day so that I can speak Japanese."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l36_g01_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“为了能读新闻”正确的是？",
+                "en": "How do you say 'so that I can read newspapers'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "新聞が読めるように"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "新聞を読むためにできる"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "新聞が読むように"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "新聞を読めますように"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "能力目标用可能形 + ように。",
+                "en": "Use potential form + you ni for ability goals."
+              }
+            }
+          ]
         },
         {
           "id": "l36_g02",
           "pattern": "ない形 + ように",
-          "explanation": { "zh": "表示为了避免某状态或动作发生：“为了不……”。", "en": "Expresses avoidance: so that something does not happen." },
-          "examples": [{ "jp": "忘れないように、メモします。", "zh": "为了不忘，做笔记。", "en": "I take notes so that I do not forget." }],
-          "practice": [{ "id": "l36_g02_p01", "skill": "grammar", "question": { "zh": "“为了不迟到”是？", "en": "How do you say 'so that I will not be late'?" }, "options": [{ "text": { "jp": "遅れないように" }, "correct": true }, { "text": { "jp": "遅れなくために" } }, { "text": { "jp": "遅れないためにように" } }, { "text": { "jp": "遅れませんように" } }], "explanation": { "zh": "避免目标用ない形+ように。", "en": "Use nai-form + you ni." } }]
+          "explanation": {
+            "zh": "表示为了避免某状态或动作发生：“为了不……”。",
+            "en": "Expresses avoidance: so that something does not happen."
+          },
+          "examples": [
+            {
+              "jp": "忘れないように、メモします。",
+              "zh": "为了不忘，做笔记。",
+              "en": "I take notes so that I do not forget."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l36_g02_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“为了不迟到”是？",
+                "en": "How do you say 'so that I will not be late'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "遅れないように"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "遅れなくために"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "遅れないためにように"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "遅れませんように"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "避免目标用ない形+ように。",
+                "en": "Use nai-form + you ni."
+              }
+            }
+          ]
         },
         {
           "id": "l36_g03",
           "pattern": "辞书形 / ない形 + ようになります",
-          "explanation": { "zh": "表示能力、习惯或状态逐渐发生变化。", "en": "Shows a change in ability, habit, or state." },
-          "examples": [{ "jp": "日本語の新聞が読めるようになりました。", "zh": "变得能读日语报纸了。", "en": "I became able to read Japanese newspapers." }],
-          "practice": [{ "id": "l36_g03_p01", "skill": "grammar", "question": { "zh": "“变得能游泳了”是？", "en": "How do you say 'I became able to swim'?" }, "options": [{ "text": { "jp": "泳げるようになりました" }, "correct": true }, { "text": { "jp": "泳ぐようになれました" } }, { "text": { "jp": "泳げますようになりました" } }, { "text": { "jp": "泳ぐためになりました" } }], "explanation": { "zh": "能力变化用可能形+ようになりました。", "en": "Ability change uses potential form + you ni narimashita." } }]
+          "explanation": {
+            "zh": "表示能力、习惯或状态逐渐发生变化。",
+            "en": "Shows a change in ability, habit, or state."
+          },
+          "examples": [
+            {
+              "jp": "日本語の新聞が読めるようになりました。",
+              "zh": "变得能读日语报纸了。",
+              "en": "I became able to read Japanese newspapers."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l36_g03_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“变得能游泳了”是？",
+                "en": "How do you say 'I became able to swim'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "泳げるようになりました"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "泳ぐようになれました"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "泳げますようになりました"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "泳ぐためになりました"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "能力变化用可能形+ようになりました。",
+                "en": "Ability change uses potential form + you ni narimashita."
+              }
+            }
+          ]
         },
         {
           "id": "l36_g04",
           "pattern": "辞书形 / ない形 + ようにしています",
-          "explanation": { "zh": "表示平时努力坚持做或不做某事。", "en": "Shows regular effort to do or avoid something." },
-          "examples": [{ "jp": "毎日運動するようにしています。", "zh": "我尽量每天运动。", "en": "I try to exercise every day." }],
-          "practice": [{ "id": "l36_g04_p01", "skill": "grammar", "question": { "zh": "“尽量不吃太多甜食”是？", "en": "How do you say 'I try not to eat too many sweets'?" }, "options": [{ "text": { "jp": "甘い物を食べすぎないようにしています" }, "correct": true }, { "text": { "jp": "甘い物を食べすぎなくしています" } }, { "text": { "jp": "甘い物を食べすぎないためにしています" } }, { "text": { "jp": "甘い物を食べすぎませんようにします" } }], "explanation": { "zh": "平时努力用ようにしています。", "en": "Use you ni shite imasu for regular effort." } }]
+          "explanation": {
+            "zh": "表示平时努力坚持做或不做某事。",
+            "en": "Shows regular effort to do or avoid something."
+          },
+          "examples": [
+            {
+              "jp": "毎日運動するようにしています。",
+              "zh": "我尽量每天运动。",
+              "en": "I try to exercise every day."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l36_g04_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“尽量不吃太多甜食”是？",
+                "en": "How do you say 'I try not to eat too many sweets'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "甘い物を食べすぎないようにしています"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "甘い物を食べすぎなくしています"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "甘い物を食べすぎないためにしています"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "甘い物を食べすぎませんようにします"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "平时努力用ようにしています。",
+                "en": "Use you ni shite imasu for regular effort."
+              }
+            }
+          ]
         },
         {
           "id": "l36_g05",
           "pattern": "辞书形 / ない形 + ようにしてください",
-          "explanation": { "zh": "委婉要求对方尽量保持某动作或避免某动作。", "en": "Politely asks someone to make an effort to do or avoid something." },
-          "examples": [{ "jp": "明日は遅れないようにしてください。", "zh": "明天请不要迟到。", "en": "Please make sure not to be late tomorrow." }],
-          "practice": [{ "id": "l36_g05_p01", "skill": "grammar", "question": { "zh": "“请每天复习”是？", "en": "How do you say 'Please review every day'?" }, "options": [{ "text": { "jp": "毎日復習するようにしてください" }, "correct": true }, { "text": { "jp": "毎日復習してようにしてください" } }, { "text": { "jp": "毎日復習しますようにしてください" } }, { "text": { "jp": "毎日復習するためにください" } }], "explanation": { "zh": "要求习惯用辞书形+ようにしてください。", "en": "Use dictionary form + you ni shite kudasai." } }]
+          "explanation": {
+            "zh": "委婉要求对方尽量保持某动作或避免某动作。",
+            "en": "Politely asks someone to make an effort to do or avoid something."
+          },
+          "examples": [
+            {
+              "jp": "明日は遅れないようにしてください。",
+              "zh": "明天请不要迟到。",
+              "en": "Please make sure not to be late tomorrow."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l36_g05_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“请每天复习”是？",
+                "en": "How do you say 'Please review every day'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "毎日復習するようにしてください"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "毎日復習してようにしてください"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "毎日復習しますようにしてください"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "毎日復習するためにください"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "要求习惯用辞书形+ようにしてください。",
+                "en": "Use dictionary form + you ni shite kudasai."
+              }
+            }
+          ]
         },
         {
           "id": "l36_g06",
           "pattern": "ために vs ように",
-          "explanation": { "zh": "意志动作目标多用「ために」；能力、状态、无意志变化多用「ように」。", "en": "Tame ni often marks intentional goals; you ni often marks ability, state, or non-volitional goals." },
-          "examples": [{ "jp": "日本語が話せるように、練習します。", "zh": "为了能说日语而练习。", "en": "I practice so that I can speak Japanese." }],
-          "practice": [{ "id": "l36_g06_p01", "skill": "grammar", "question": { "zh": "“为了能看懂电影”更自然的是？", "en": "Which is more natural for 'so I can understand movies'?" }, "options": [{ "text": { "jp": "映画がわかるように、勉強します" }, "correct": true }, { "text": { "jp": "映画がわかるために、勉強します" } }, { "text": { "jp": "映画をわかるために、勉強します" } }, { "text": { "jp": "映画がわかりますように、勉強します" } }], "explanation": { "zh": "能力/状态目标用ように。", "en": "Use you ni for ability/state goals." } }]
+          "explanation": {
+            "zh": "意志动作目标多用「ために」；能力、状态、无意志变化多用「ように」。",
+            "en": "Tame ni often marks intentional goals; you ni often marks ability, state, or non-volitional goals."
+          },
+          "examples": [
+            {
+              "jp": "日本語が話せるように、練習します。",
+              "zh": "为了能说日语而练习。",
+              "en": "I practice so that I can speak Japanese."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l36_g06_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“为了能看懂电影”更自然的是？",
+                "en": "Which is more natural for 'so I can understand movies'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "映画がわかるように、勉強します"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "映画がわかるために、勉強します"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "映画をわかるために、勉強します"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "映画がわかりますように、勉強します"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "能力/状态目标用ように。",
+                "en": "Use you ni for ability/state goals."
+              }
+            }
+          ]
         },
         {
           "id": "l36_g07",
           "pattern": "見える / 聞こえる + ように",
-          "explanation": { "zh": "无意志动词也常接「ように」，表示让某状态实现。", "en": "Non-volitional verbs like mieru/kikoeru often use you ni for state goals." },
-          "examples": [{ "jp": "後ろの人にも見えるように、大きく書いてください。", "zh": "请写大一点，让后面的人也看得见。", "en": "Please write large so that people in the back can see." }],
-          "practice": [{ "id": "l36_g07_p01", "skill": "grammar", "question": { "zh": "“为了大家听得见，请大声说”是？", "en": "How do you say 'Speak loudly so everyone can hear'?" }, "options": [{ "text": { "jp": "みんなに聞こえるように、大きな声で話してください" }, "correct": true }, { "text": { "jp": "みんなを聞こえるために、大きな声で話してください" } }, { "text": { "jp": "みんなに聞きますように、大きな声で話してください" } }, { "text": { "jp": "みんなが聞くために、大きな声で話してください" } }], "explanation": { "zh": "自然听得见用聞こえるように。", "en": "Use kikoeru you ni." } }]
+          "explanation": {
+            "zh": "无意志动词也常接「ように」，表示让某状态实现。",
+            "en": "Non-volitional verbs like mieru/kikoeru often use you ni for state goals."
+          },
+          "examples": [
+            {
+              "jp": "後ろの人にも見えるように、大きく書いてください。",
+              "zh": "请写大一点，让后面的人也看得见。",
+              "en": "Please write large so that people in the back can see."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l36_g07_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“为了大家听得见，请大声说”是？",
+                "en": "How do you say 'Speak loudly so everyone can hear'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "みんなに聞こえるように、大きな声で話してください"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "みんなを聞こえるために、大きな声で話してください"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "みんなに聞きますように、大きな声で話してください"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "みんなが聞くために、大きな声で話してください"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "自然听得见用聞こえるように。",
+                "en": "Use kikoeru you ni."
+              }
+            }
+          ]
         },
         {
           "id": "l36_g08",
           "pattern": "〜ようになりました：习惯变化",
-          "explanation": { "zh": "不仅能力，习惯变化也可用「ようになりました」。", "en": "You ni narimashita can describe a change in habit as well as ability." },
-          "examples": [{ "jp": "最近、朝早く起きるようになりました。", "zh": "最近变得早起了。", "en": "Recently I started getting up early." }],
-          "practice": [{ "id": "l36_g08_p01", "skill": "grammar", "question": { "zh": "“变得每天学习”是？", "en": "How do you say 'I came to study every day'?" }, "options": [{ "text": { "jp": "毎日勉強するようになりました" }, "correct": true }, { "text": { "jp": "毎日勉強してようになりました" } }, { "text": { "jp": "毎日勉強しますようになりました" } }, { "text": { "jp": "毎日勉強するためになりました" } }], "explanation": { "zh": "习惯变化用辞书形+ようになりました。", "en": "Habit change uses dictionary form + you ni narimashita." } }]
+          "explanation": {
+            "zh": "不仅能力，习惯变化也可用「ようになりました」。",
+            "en": "You ni narimashita can describe a change in habit as well as ability."
+          },
+          "examples": [
+            {
+              "jp": "最近、朝早く起きるようになりました。",
+              "zh": "最近变得早起了。",
+              "en": "Recently I started getting up early."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l36_g08_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“变得每天学习”是？",
+                "en": "How do you say 'I came to study every day'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "毎日勉強するようになりました"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "毎日勉強してようになりました"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "毎日勉強しますようになりました"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "毎日勉強するためになりました"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "习惯变化用辞书形+ようになりました。",
+                "en": "Habit change uses dictionary form + you ni narimashita."
+              }
+            }
+          ]
         }
       ]
     },
     {
       "type": "examples",
       "id": "l36_examples",
-      "title": { "zh": "核心例句", "en": "Core Examples", "ja": "基本例文" },
+      "title": {
+        "zh": "核心例句",
+        "en": "Core Examples",
+        "ja": "基本例文"
+      },
       "items": [
-        { "id": "l36_e01", "jp": "日本語が話せるように、毎日練習しています。", "zh": "为了能说日语，我每天练习。", "en": "I practice every day so that I can speak Japanese.", "tags": ["goal"] },
-        { "id": "l36_e02", "jp": "忘れないように、手帳に書いておきます。", "zh": "为了不忘，我先写在记事本上。", "en": "I write it in my planner so that I do not forget.", "tags": ["avoid"] },
-        { "id": "l36_e03", "jp": "漢字が読めるようになりました。", "zh": "变得能读汉字了。", "en": "I became able to read kanji.", "tags": ["change"] },
-        { "id": "l36_e04", "jp": "最近、野菜を食べるようにしています。", "zh": "最近我尽量吃蔬菜。", "en": "Recently I try to eat vegetables.", "tags": ["habit"] },
-        { "id": "l36_e05", "jp": "夜遅くまでスマホを見ないようにしています。", "zh": "我尽量不看手机到很晚。", "en": "I try not to look at my phone late at night.", "tags": ["habit"] },
-        { "id": "l36_e06", "jp": "明日は遅れないようにしてください。", "zh": "明天请不要迟到。", "en": "Please make sure not to be late tomorrow.", "tags": ["request"] },
-        { "id": "l36_e07", "jp": "後ろの人にも見えるように、前に立たないでください。", "zh": "为了后面的人也看得见，请不要站在前面。", "en": "Please do not stand in front so people behind can see.", "tags": ["state"] },
-        { "id": "l36_e08", "jp": "健康のために、毎日歩くようにしています。", "zh": "为了健康，我尽量每天走路。", "en": "For my health, I try to walk every day.", "tags": ["health"] }
+        {
+          "id": "l36_e01",
+          "jp": "日本語が話せるように、毎日練習しています。",
+          "zh": "为了能说日语，我每天练习。",
+          "en": "I practice every day so that I can speak Japanese.",
+          "tags": [
+            "goal"
+          ]
+        },
+        {
+          "id": "l36_e02",
+          "jp": "忘れないように、手帳に書いておきます。",
+          "zh": "为了不忘，我先写在记事本上。",
+          "en": "I write it in my planner so that I do not forget.",
+          "tags": [
+            "avoid"
+          ]
+        },
+        {
+          "id": "l36_e03",
+          "jp": "漢字が読めるようになりました。",
+          "zh": "变得能读汉字了。",
+          "en": "I became able to read kanji.",
+          "tags": [
+            "change"
+          ]
+        },
+        {
+          "id": "l36_e04",
+          "jp": "最近、野菜を食べるようにしています。",
+          "zh": "最近我尽量吃蔬菜。",
+          "en": "Recently I try to eat vegetables.",
+          "tags": [
+            "habit"
+          ]
+        },
+        {
+          "id": "l36_e05",
+          "jp": "夜遅くまでスマホを見ないようにしています。",
+          "zh": "我尽量不看手机到很晚。",
+          "en": "I try not to look at my phone late at night.",
+          "tags": [
+            "habit"
+          ]
+        },
+        {
+          "id": "l36_e06",
+          "jp": "明日は遅れないようにしてください。",
+          "zh": "明天请不要迟到。",
+          "en": "Please make sure not to be late tomorrow.",
+          "tags": [
+            "request"
+          ]
+        },
+        {
+          "id": "l36_e07",
+          "jp": "後ろの人にも見えるように、前に立たないでください。",
+          "zh": "为了后面的人也看得见，请不要站在前面。",
+          "en": "Please do not stand in front so people behind can see.",
+          "tags": [
+            "state"
+          ]
+        },
+        {
+          "id": "l36_e08",
+          "jp": "健康のために、毎日歩くようにしています。",
+          "zh": "为了健康，我尽量每天走路。",
+          "en": "For my health, I try to walk every day.",
+          "tags": [
+            "health"
+          ]
+        }
       ]
     },
     {
       "type": "mistakes",
       "id": "l36_mistakes",
-      "title": { "zh": "常见错误", "en": "Common Mistakes", "ja": "よくある間違い" },
+      "title": {
+        "zh": "常见错误",
+        "en": "Common Mistakes",
+        "ja": "よくある間違い"
+      },
       "items": [
-        { "id": "l36_m01", "wrong": "日本語を話すために、練習します。", "correct": "日本語が話せるように、練習します。", "zh": "能力目标更自然用可能形+ように。", "en": "Ability goals naturally use potential form + you ni." },
-        { "id": "l36_m02", "wrong": "忘れないために、メモします。", "correct": "忘れないように、メモします。", "zh": "避免忘记这类状态目标用ように更自然。", "en": "Avoidance/state goals naturally use you ni." },
-        { "id": "l36_m03", "wrong": "毎日運動するようになっています。", "correct": "毎日運動するようにしています。", "zh": "平时努力坚持用ようにしています。", "en": "Regular effort uses you ni shite imasu." }
+        {
+          "id": "l36_m01",
+          "wrong": "日本語を話すために、練習します。",
+          "correct": "日本語が話せるように、練習します。",
+          "zh": "能力目标更自然用可能形+ように。",
+          "en": "Ability goals naturally use potential form + you ni."
+        },
+        {
+          "id": "l36_m02",
+          "wrong": "忘れないために、メモします。",
+          "correct": "忘れないように、メモします。",
+          "zh": "避免忘记这类状态目标用ように更自然。",
+          "en": "Avoidance/state goals naturally use you ni."
+        },
+        {
+          "id": "l36_m03",
+          "wrong": "毎日運動するようになっています。",
+          "correct": "毎日運動するようにしています。",
+          "zh": "平时努力坚持用ようにしています。",
+          "en": "Regular effort uses you ni shite imasu."
+        }
       ]
     },
     {
       "type": "quiz",
       "id": "l36_quiz",
-      "title": { "zh": "综合测试", "en": "Final Test", "ja": "まとめテスト" },
+      "title": {
+        "zh": "综合测试",
+        "en": "Final Test",
+        "ja": "まとめテスト"
+      },
       "items": [
-        { "id": "l36_q01", "question": { "zh": "“为了能说日语”是？", "en": "How do you say 'so that I can speak Japanese'?" }, "options": [{ "text": { "jp": "日本語が話せるように" }, "correct": true }, { "text": { "jp": "日本語を話すためにできる" } }, { "text": { "jp": "日本語が話しますように" } }, { "text": { "jp": "日本語を話せるために" } }], "explanation": { "zh": "能力目标用可能形+ように。", "en": "Use potential form + you ni." } },
-        { "id": "l36_q02", "question": { "zh": "“为了不忘”是？", "en": "How do you say 'so that I do not forget'?" }, "options": [{ "text": { "jp": "忘れないように" }, "correct": true }, { "text": { "jp": "忘れなくために" } }, { "text": { "jp": "忘れませんように" } }, { "text": { "jp": "忘れないでように" } }], "explanation": { "zh": "ない形+ように。", "en": "Nai-form + you ni." } },
-        { "id": "l36_q03", "question": { "zh": "“变得能开车了”是？", "en": "How do you say 'I became able to drive'?" }, "options": [{ "text": { "jp": "運転できるようになりました" }, "correct": true }, { "text": { "jp": "運転するためになりました" } }, { "text": { "jp": "運転できますようになりました" } }, { "text": { "jp": "運転してようになりました" } }], "explanation": { "zh": "能力变化用可能形+ようになりました。", "en": "Ability change: potential + you ni narimashita." } },
-        { "id": "l36_q04", "question": { "zh": "“尽量每天运动”是？", "en": "How do you say 'I try to exercise every day'?" }, "options": [{ "text": { "jp": "毎日運動するようにしています" }, "correct": true }, { "text": { "jp": "毎日運動してようにしています" } }, { "text": { "jp": "毎日運動しますようにしています" } }, { "text": { "jp": "毎日運動するようになっています" } }], "explanation": { "zh": "平时努力用ようにしています。", "en": "Regular effort uses you ni shite imasu." } },
-        { "id": "l36_q05", "question": { "zh": "“请不要迟到”是？", "en": "How do you say 'Please make sure not to be late'?" }, "options": [{ "text": { "jp": "遅れないようにしてください" }, "correct": true }, { "text": { "jp": "遅れないためにしてください" } }, { "text": { "jp": "遅れませんようにしてください" } }, { "text": { "jp": "遅れないでくださいように" } }], "explanation": { "zh": "要求保持/避免用ようにしてください。", "en": "Use you ni shite kudasai." } },
-        { "id": "l36_q06", "question": { "zh": "“变得早起了”是？", "en": "How do you say 'I came to get up early'?" }, "options": [{ "text": { "jp": "早く起きるようになりました" }, "correct": true }, { "text": { "jp": "早く起きてようになりました" } }, { "text": { "jp": "早く起きますようになりました" } }, { "text": { "jp": "早く起きるためになりました" } }], "explanation": { "zh": "习惯变化用辞书形+ようになりました。", "en": "Habit change: dictionary form + you ni narimashita." } },
-        { "id": "l36_q07", "question": { "zh": "“为了大家看得见”是？", "en": "How do you say 'so everyone can see'?" }, "options": [{ "text": { "jp": "みんなに見えるように" }, "correct": true }, { "text": { "jp": "みんなを見えるために" } }, { "text": { "jp": "みんなが見ますように" } }, { "text": { "jp": "みんなに見るために" } }], "explanation": { "zh": "自然看得见用見えるように。", "en": "Use mieru you ni." } },
-        { "id": "l36_q08", "question": { "zh": "「ようにしています」表示什么？", "en": "What does you ni shite imasu express?" }, "options": [{ "text": { "zh": "平时尽量坚持做/不做", "en": "Regular effort to do or avoid something" }, "correct": true }, { "text": { "zh": "已经完成的结果" } }, { "text": { "zh": "被动动作" } }, { "text": { "zh": "命令形" } }], "explanation": { "zh": "它强调日常努力。", "en": "It emphasizes regular effort." } },
-        { "id": "l36_q09", "question": { "zh": "“为了健康”可说？", "en": "How can you say 'for health'?" }, "options": [{ "text": { "jp": "健康のために" }, "correct": true }, { "text": { "jp": "健康のように" } }, { "text": { "jp": "健康がために" } }, { "text": { "jp": "健康になるようにだけ" } }], "explanation": { "zh": "名词目的用Nのために。", "en": "Noun purpose uses N no tame ni." } },
-        { "id": "l36_q10", "question": { "zh": "“尽量不熬夜”是？", "en": "How do you say 'I try not to stay up late'?" }, "options": [{ "text": { "jp": "夜更かししないようにしています" }, "correct": true }, { "text": { "jp": "夜更かししなくしています" } }, { "text": { "jp": "夜更かししないためにしています" } }, { "text": { "jp": "夜更かししませんようにします" } }], "explanation": { "zh": "避免习惯用ない形+ようにしています。", "en": "Avoidance habit: nai-form + you ni shite imasu." } }
+        {
+          "id": "l36_q01",
+          "question": {
+            "zh": "“为了能说日语”是？",
+            "en": "How do you say 'so that I can speak Japanese'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "日本語が話せるように"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "日本語を話すためにできる"
+              }
+            },
+            {
+              "text": {
+                "jp": "日本語が話しますように"
+              }
+            },
+            {
+              "text": {
+                "jp": "日本語を話せるために"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "能力目标用可能形+ように。",
+            "en": "Use potential form + you ni."
+          }
+        },
+        {
+          "id": "l36_q02",
+          "question": {
+            "zh": "“为了不忘”是？",
+            "en": "How do you say 'so that I do not forget'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "忘れないように"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "忘れなくために"
+              }
+            },
+            {
+              "text": {
+                "jp": "忘れませんように"
+              }
+            },
+            {
+              "text": {
+                "jp": "忘れないでように"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "ない形+ように。",
+            "en": "Nai-form + you ni."
+          }
+        },
+        {
+          "id": "l36_q03",
+          "question": {
+            "zh": "“变得能开车了”是？",
+            "en": "How do you say 'I became able to drive'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "運転できるようになりました"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "運転するためになりました"
+              }
+            },
+            {
+              "text": {
+                "jp": "運転できますようになりました"
+              }
+            },
+            {
+              "text": {
+                "jp": "運転してようになりました"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "能力变化用可能形+ようになりました。",
+            "en": "Ability change: potential + you ni narimashita."
+          }
+        },
+        {
+          "id": "l36_q04",
+          "question": {
+            "zh": "“尽量每天运动”是？",
+            "en": "How do you say 'I try to exercise every day'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "毎日運動するようにしています"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "毎日運動してようにしています"
+              }
+            },
+            {
+              "text": {
+                "jp": "毎日運動しますようにしています"
+              }
+            },
+            {
+              "text": {
+                "jp": "毎日運動するようになっています"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "平时努力用ようにしています。",
+            "en": "Regular effort uses you ni shite imasu."
+          }
+        },
+        {
+          "id": "l36_q05",
+          "question": {
+            "zh": "“请不要迟到”是？",
+            "en": "How do you say 'Please make sure not to be late'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "遅れないようにしてください"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "遅れないためにしてください"
+              }
+            },
+            {
+              "text": {
+                "jp": "遅れませんようにしてください"
+              }
+            },
+            {
+              "text": {
+                "jp": "遅れないでくださいように"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "要求保持/避免用ようにしてください。",
+            "en": "Use you ni shite kudasai."
+          }
+        },
+        {
+          "id": "l36_q06",
+          "question": {
+            "zh": "“变得早起了”是？",
+            "en": "How do you say 'I came to get up early'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "早く起きるようになりました"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "早く起きてようになりました"
+              }
+            },
+            {
+              "text": {
+                "jp": "早く起きますようになりました"
+              }
+            },
+            {
+              "text": {
+                "jp": "早く起きるためになりました"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "习惯变化用辞书形+ようになりました。",
+            "en": "Habit change: dictionary form + you ni narimashita."
+          }
+        },
+        {
+          "id": "l36_q07",
+          "question": {
+            "zh": "“为了大家看得见”是？",
+            "en": "How do you say 'so everyone can see'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "みんなに見えるように"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "みんなを見えるために"
+              }
+            },
+            {
+              "text": {
+                "jp": "みんなが見ますように"
+              }
+            },
+            {
+              "text": {
+                "jp": "みんなに見るために"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "自然看得见用見えるように。",
+            "en": "Use mieru you ni."
+          }
+        },
+        {
+          "id": "l36_q08",
+          "question": {
+            "zh": "「ようにしています」表示什么？",
+            "en": "What does you ni shite imasu express?"
+          },
+          "options": [
+            {
+              "text": {
+                "zh": "平时尽量坚持做/不做",
+                "en": "Regular effort to do or avoid something"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "已经完成的结果"
+              }
+            },
+            {
+              "text": {
+                "zh": "被动动作"
+              }
+            },
+            {
+              "text": {
+                "zh": "命令形"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "它强调日常努力。",
+            "en": "It emphasizes regular effort."
+          }
+        },
+        {
+          "id": "l36_q09",
+          "question": {
+            "zh": "“为了健康”可说？",
+            "en": "How can you say 'for health'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "健康のために"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "健康のように"
+              }
+            },
+            {
+              "text": {
+                "jp": "健康がために"
+              }
+            },
+            {
+              "text": {
+                "jp": "健康になるようにだけ"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "名词目的用Nのために。",
+            "en": "Noun purpose uses N no tame ni."
+          }
+        },
+        {
+          "id": "l36_q10",
+          "question": {
+            "zh": "“尽量不熬夜”是？",
+            "en": "How do you say 'I try not to stay up late'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "夜更かししないようにしています"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "夜更かししなくしています"
+              }
+            },
+            {
+              "text": {
+                "jp": "夜更かししないためにしています"
+              }
+            },
+            {
+              "text": {
+                "jp": "夜更かししませんようにします"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "避免习惯用ない形+ようにしています。",
+            "en": "Avoidance habit: nai-form + you ni shite imasu."
+          }
+        }
       ]
     }
-  ]
+  ],
+  "conversationVideo": {
+    "sourcePageUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/index.html",
+    "lessonNo": 36,
+    "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P36_%E7%AC%AC36%E8%AA%B2.mp4",
+    "subtitleUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P36_%E7%AC%AC36%E8%AA%B2.json",
+    "sourceType": "official_video_resource",
+    "status": "linked_not_imported"
+  }
 }

@@ -4,131 +4,1035 @@
   "status": "Mastery migrated",
   "lessonNo": 33,
   "lessonId": "minna_lesson_33",
-  "title": { "zh": "第33课", "en": "Lesson 33", "ja": "第33課" },
-  "subtitle": { "zh": "命令・禁止", "en": "Commands and prohibitions", "ja": "命令・禁止" },
-  "focus": { "zh": "学习命令形、禁止形，并理解公告、标识、转述中的「と言っていました」。", "en": "Learn command and prohibition forms, plus quoted speech for signs, announcements, and messages.", "ja": "命令形・禁止形と引用表現を学びます。" },
+  "title": {
+    "zh": "第33课",
+    "en": "Lesson 33",
+    "ja": "第33課"
+  },
+  "subtitle": {
+    "zh": "命令・禁止",
+    "en": "Commands and prohibitions",
+    "ja": "命令・禁止"
+  },
+  "focus": {
+    "zh": "学习命令形、禁止形，并理解公告、标识、转述中的「と言っていました」。",
+    "en": "Learn command and prohibition forms, plus quoted speech for signs, announcements, and messages.",
+    "ja": "命令形・禁止形と引用表現を学びます。"
+  },
   "sections": [
     {
       "type": "vocab",
       "id": "l33_vocab",
-      "title": { "zh": "核心词汇", "en": "Core Vocabulary", "ja": "基本語彙" },
+      "title": {
+        "zh": "核心词汇",
+        "en": "Core Vocabulary",
+        "ja": "基本語彙"
+      },
       "items": [
-        { "id": "l33_v01", "jp": "逃げます", "kana": "にげます", "zh": "逃跑", "en": "to run away", "tags": ["lesson33"] },
-        { "id": "l33_v02", "jp": "騒ぎます", "kana": "さわぎます", "zh": "吵闹", "en": "to make noise", "tags": ["lesson33"] },
-        { "id": "l33_v03", "jp": "諦めます", "kana": "あきらめます", "zh": "放弃", "en": "to give up", "tags": ["lesson33"] },
-        { "id": "l33_v04", "jp": "守ります", "kana": "まもります", "zh": "遵守；保护", "en": "to obey; protect", "tags": ["lesson33"] },
-        { "id": "l33_v05", "jp": "投げます", "kana": "なげます", "zh": "扔；投", "en": "to throw", "tags": ["lesson33"] },
-        { "id": "l33_v06", "jp": "注意します", "kana": "ちゅういします", "zh": "注意；提醒", "en": "to warn; pay attention", "tags": ["lesson33"] },
-        { "id": "l33_v07", "jp": "規則", "kana": "きそく", "zh": "规则", "en": "rule", "tags": ["lesson33"] },
-        { "id": "l33_v08", "jp": "危険", "kana": "きけん", "zh": "危险", "en": "danger", "tags": ["lesson33"] },
-        { "id": "l33_v09", "jp": "使用禁止", "kana": "しようきんし", "zh": "禁止使用", "en": "use prohibited", "tags": ["lesson33"] },
-        { "id": "l33_v10", "jp": "立入禁止", "kana": "たちいりきんし", "zh": "禁止进入", "en": "no entry", "tags": ["lesson33"] }
+        {
+          "id": "l33_v01",
+          "jp": "逃げます",
+          "kana": "にげます",
+          "zh": "逃跑",
+          "en": "to run away",
+          "tags": [
+            "lesson33"
+          ]
+        },
+        {
+          "id": "l33_v02",
+          "jp": "騒ぎます",
+          "kana": "さわぎます",
+          "zh": "吵闹",
+          "en": "to make noise",
+          "tags": [
+            "lesson33"
+          ]
+        },
+        {
+          "id": "l33_v03",
+          "jp": "諦めます",
+          "kana": "あきらめます",
+          "zh": "放弃",
+          "en": "to give up",
+          "tags": [
+            "lesson33"
+          ]
+        },
+        {
+          "id": "l33_v04",
+          "jp": "守ります",
+          "kana": "まもります",
+          "zh": "遵守；保护",
+          "en": "to obey; protect",
+          "tags": [
+            "lesson33"
+          ]
+        },
+        {
+          "id": "l33_v05",
+          "jp": "投げます",
+          "kana": "なげます",
+          "zh": "扔；投",
+          "en": "to throw",
+          "tags": [
+            "lesson33"
+          ]
+        },
+        {
+          "id": "l33_v06",
+          "jp": "注意します",
+          "kana": "ちゅういします",
+          "zh": "注意；提醒",
+          "en": "to warn; pay attention",
+          "tags": [
+            "lesson33"
+          ]
+        },
+        {
+          "id": "l33_v07",
+          "jp": "規則",
+          "kana": "きそく",
+          "zh": "规则",
+          "en": "rule",
+          "tags": [
+            "lesson33"
+          ]
+        },
+        {
+          "id": "l33_v08",
+          "jp": "危険",
+          "kana": "きけん",
+          "zh": "危险",
+          "en": "danger",
+          "tags": [
+            "lesson33"
+          ]
+        },
+        {
+          "id": "l33_v09",
+          "jp": "使用禁止",
+          "kana": "しようきんし",
+          "zh": "禁止使用",
+          "en": "use prohibited",
+          "tags": [
+            "lesson33"
+          ]
+        },
+        {
+          "id": "l33_v10",
+          "jp": "立入禁止",
+          "kana": "たちいりきんし",
+          "zh": "禁止进入",
+          "en": "no entry",
+          "tags": [
+            "lesson33"
+          ]
+        }
       ]
     },
     {
       "type": "grammar",
       "id": "l33_grammar",
-      "title": { "zh": "核心语法", "en": "Core Grammar", "ja": "基本文法" },
+      "title": {
+        "zh": "核心语法",
+        "en": "Core Grammar",
+        "ja": "基本文法"
+      },
       "items": [
         {
           "id": "l33_g01",
           "pattern": "一类动词命令形：う段 → え段",
-          "explanation": { "zh": "行きます→行け、話します→話せ、飲みます→飲め。", "en": "Group 1 command form changes the final u-sound to e-sound: ike, hanase, nome." },
-          "examples": [{ "jp": "急げ。", "zh": "快点！", "en": "Hurry up!" }],
-          "practice": [{ "id": "l33_g01_p01", "skill": "grammar", "question": { "zh": "「行きます」的命令形是？", "en": "Command form of ikimasu?" }, "options": [{ "text": { "jp": "行け" }, "correct": true }, { "text": { "jp": "行ろ" } }, { "text": { "jp": "行きろ" } }, { "text": { "jp": "行こう" } }], "explanation": { "zh": "一类动词变え段。", "en": "Group 1 changes to e-sound." } }]
+          "explanation": {
+            "zh": "行きます→行け、話します→話せ、飲みます→飲め。",
+            "en": "Group 1 command form changes the final u-sound to e-sound: ike, hanase, nome."
+          },
+          "examples": [
+            {
+              "jp": "急げ。",
+              "zh": "快点！",
+              "en": "Hurry up!"
+            }
+          ],
+          "practice": [
+            {
+              "id": "l33_g01_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "「行きます」的命令形是？",
+                "en": "Command form of ikimasu?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "行け"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "行ろ"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "行きろ"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "行こう"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "一类动词变え段。",
+                "en": "Group 1 changes to e-sound."
+              }
+            }
+          ]
         },
         {
           "id": "l33_g02",
           "pattern": "二类动词命令形：ます形去ます + ろ",
-          "explanation": { "zh": "食べます→食べろ、見ます→見ろ。", "en": "Group 2 command form uses the masu-stem plus ro." },
-          "examples": [{ "jp": "早く寝ろ。", "zh": "快睡！", "en": "Go to bed!" }],
-          "practice": [{ "id": "l33_g02_p01", "skill": "grammar", "question": { "zh": "「食べます」的命令形是？", "en": "Command form of tabemasu?" }, "options": [{ "text": { "jp": "食べろ" }, "correct": true }, { "text": { "jp": "食べれ" } }, { "text": { "jp": "食べよう" } }, { "text": { "jp": "食べるな" } }], "explanation": { "zh": "二类动词去ます加ろ。", "en": "Group 2 uses masu-stem + ro." } }]
+          "explanation": {
+            "zh": "食べます→食べろ、見ます→見ろ。",
+            "en": "Group 2 command form uses the masu-stem plus ro."
+          },
+          "examples": [
+            {
+              "jp": "早く寝ろ。",
+              "zh": "快睡！",
+              "en": "Go to bed!"
+            }
+          ],
+          "practice": [
+            {
+              "id": "l33_g02_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "「食べます」的命令形是？",
+                "en": "Command form of tabemasu?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "食べろ"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "食べれ"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "食べよう"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "食べるな"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "二类动词去ます加ろ。",
+                "en": "Group 2 uses masu-stem + ro."
+              }
+            }
+          ]
         },
         {
           "id": "l33_g03",
           "pattern": "三类命令形：しろ / 来い",
-          "explanation": { "zh": "します→しろ、来ます→来い（こい）。", "en": "Irregular commands: shiro and koi." },
-          "examples": [{ "jp": "勉強しろ。", "zh": "学习！", "en": "Study!" }],
-          "practice": [{ "id": "l33_g03_p01", "skill": "grammar", "question": { "zh": "「します」的命令形是？", "en": "Command form of shimasu?" }, "options": [{ "text": { "jp": "しろ" }, "correct": true }, { "text": { "jp": "せよます" } }, { "text": { "jp": "するな" } }, { "text": { "jp": "しよう" } }], "explanation": { "zh": "常用命令形是「しろ」。", "en": "The common command form is shiro." } }]
+          "explanation": {
+            "zh": "します→しろ、来ます→来い（こい）。",
+            "en": "Irregular commands: shiro and koi."
+          },
+          "examples": [
+            {
+              "jp": "勉強しろ。",
+              "zh": "学习！",
+              "en": "Study!"
+            }
+          ],
+          "practice": [
+            {
+              "id": "l33_g03_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "「します」的命令形是？",
+                "en": "Command form of shimasu?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "しろ"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "せよます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "するな"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "しよう"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "常用命令形是「しろ」。",
+                "en": "The common command form is shiro."
+              }
+            }
+          ]
         },
         {
           "id": "l33_g04",
           "pattern": "辞书形 + な",
-          "explanation": { "zh": "表示禁止：“不要……”。语气强，多用于标识、口号、紧急场景。", "en": "Prohibition: do not... It is strong and often used on signs or in urgent situations." },
-          "examples": [{ "jp": "ここに入るな。", "zh": "不要进这里。", "en": "Do not enter here." }],
-          "practice": [{ "id": "l33_g04_p01", "skill": "grammar", "question": { "zh": "“不要跑”是？", "en": "How do you say 'Do not run'?" }, "options": [{ "text": { "jp": "走るな" }, "correct": true }, { "text": { "jp": "走りな" } }, { "text": { "jp": "走らないな" } }, { "text": { "jp": "走ってな" } }], "explanation": { "zh": "禁止形是辞书形+な。", "en": "Prohibition is dictionary form + na." } }]
+          "explanation": {
+            "zh": "表示禁止：“不要……”。语气强，多用于标识、口号、紧急场景。",
+            "en": "Prohibition: do not... It is strong and often used on signs or in urgent situations."
+          },
+          "examples": [
+            {
+              "jp": "ここに入るな。",
+              "zh": "不要进这里。",
+              "en": "Do not enter here."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l33_g04_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“不要跑”是？",
+                "en": "How do you say 'Do not run'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "走るな"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "走りな"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "走らないな"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "走ってな"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "禁止形是辞书形+な。",
+                "en": "Prohibition is dictionary form + na."
+              }
+            }
+          ]
         },
         {
           "id": "l33_g05",
           "pattern": "命令形 / 禁止形は強い",
-          "explanation": { "zh": "命令形和禁止形语气强，日常礼貌请求通常不用。", "en": "Command and prohibition forms are strong; they are not polite everyday requests." },
-          "examples": [{ "jp": "危ない！逃げろ。", "zh": "危险！快逃！", "en": "Danger! Run!" }],
-          "practice": [{ "id": "l33_g05_p01", "skill": "grammar", "question": { "zh": "哪个场景更适合用命令形？", "en": "Which situation fits command form better?" }, "options": [{ "text": { "zh": "紧急危险时", "en": "In urgent danger" }, "correct": true }, { "text": { "zh": "给老师发邮件" } }, { "text": { "zh": "餐厅点餐" } }, { "text": { "zh": "初次见面寒暄" } }], "explanation": { "zh": "命令形语气强。", "en": "Command form is strong." } }]
+          "explanation": {
+            "zh": "命令形和禁止形语气强，日常礼貌请求通常不用。",
+            "en": "Command and prohibition forms are strong; they are not polite everyday requests."
+          },
+          "examples": [
+            {
+              "jp": "危ない！逃げろ。",
+              "zh": "危险！快逃！",
+              "en": "Danger! Run!"
+            }
+          ],
+          "practice": [
+            {
+              "id": "l33_g05_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "哪个场景更适合用命令形？",
+                "en": "Which situation fits command form better?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "zh": "紧急危险时",
+                    "en": "In urgent danger"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "zh": "给老师发邮件"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "餐厅点餐"
+                  }
+                },
+                {
+                  "text": {
+                    "zh": "初次见面寒暄"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "命令形语气强。",
+                "en": "Command form is strong."
+              }
+            }
+          ]
         },
         {
           "id": "l33_g06",
           "pattern": "普通形 + と言っていました",
-          "explanation": { "zh": "转述别人说过的话：“他说……”。", "en": "Reports what someone said: said that..." },
-          "examples": [{ "jp": "先生は明日テストがあると言っていました。", "zh": "老师说过明天有考试。", "en": "The teacher said there is a test tomorrow." }],
-          "practice": [{ "id": "l33_g06_p01", "skill": "grammar", "question": { "zh": "“老师说要读书”正确的是？", "en": "How do you say 'The teacher said to read the book'?" }, "options": [{ "text": { "jp": "先生は本を読めと言っていました" }, "correct": true }, { "text": { "jp": "先生は本を読みろと言っていました" } }, { "text": { "jp": "先生は本を読むなと言っていました" } }, { "text": { "jp": "先生は本を読んでと言っていましたです" } }], "explanation": { "zh": "转述命令可用命令形+と言っていました。", "en": "A command can be quoted before to itte imashita." } }]
+          "explanation": {
+            "zh": "转述别人说过的话：“他说……”。",
+            "en": "Reports what someone said: said that..."
+          },
+          "examples": [
+            {
+              "jp": "先生は明日テストがあると言っていました。",
+              "zh": "老师说过明天有考试。",
+              "en": "The teacher said there is a test tomorrow."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l33_g06_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“老师说要读书”正确的是？",
+                "en": "How do you say 'The teacher said to read the book'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "先生は本を読めと言っていました"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "先生は本を読みろと言っていました"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生は本を読むなと言っていました"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "先生は本を読んでと言っていましたです"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "转述命令可用命令形+と言っていました。",
+                "en": "A command can be quoted before to itte imashita."
+              }
+            }
+          ]
         },
         {
           "id": "l33_g07",
           "pattern": "〜という意味です",
-          "explanation": { "zh": "说明标识或词语的意思：“是……的意思”。", "en": "Explains the meaning of a sign or word: means..." },
-          "examples": [{ "jp": "これは使用禁止という意味です。", "zh": "这是禁止使用的意思。", "en": "This means use is prohibited." }],
-          "practice": [{ "id": "l33_g07_p01", "skill": "grammar", "question": { "zh": "“禁止进入的意思”是？", "en": "How do you say 'It means no entry'?" }, "options": [{ "text": { "jp": "立入禁止という意味です" }, "correct": true }, { "text": { "jp": "立入禁止と読みます意味です" } }, { "text": { "jp": "立入禁止だと言って意味です" } }, { "text": { "jp": "立入禁止になります意味です" } }], "explanation": { "zh": "说明意思用「という意味です」。", "en": "Use to iu imi desu to explain meaning." } }]
+          "explanation": {
+            "zh": "说明标识或词语的意思：“是……的意思”。",
+            "en": "Explains the meaning of a sign or word: means..."
+          },
+          "examples": [
+            {
+              "jp": "これは使用禁止という意味です。",
+              "zh": "这是禁止使用的意思。",
+              "en": "This means use is prohibited."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l33_g07_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“禁止进入的意思”是？",
+                "en": "How do you say 'It means no entry'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "立入禁止という意味です"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "立入禁止と読みます意味です"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "立入禁止だと言って意味です"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "立入禁止になります意味です"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "说明意思用「という意味です」。",
+                "en": "Use to iu imi desu to explain meaning."
+              }
+            }
+          ]
         },
         {
           "id": "l33_g08",
           "pattern": "〜と読みます",
-          "explanation": { "zh": "说明读法：“读作……”。", "en": "Explains how something is read: is read as..." },
-          "examples": [{ "jp": "この漢字は『止まれ』と読みます。", "zh": "这个汉字读作“止まれ”。", "en": "This kanji is read as 'tomare'." }],
-          "practice": [{ "id": "l33_g08_p01", "skill": "grammar", "question": { "zh": "说明读法时用？", "en": "Which phrase explains how to read something?" }, "options": [{ "text": { "jp": "〜と読みます" }, "correct": true }, { "text": { "jp": "〜という意味です" } }, { "text": { "jp": "〜と言っていました" } }, { "text": { "jp": "〜な" } }], "explanation": { "zh": "读法用「と読みます」。", "en": "Use to yomimasu for reading." } }]
+          "explanation": {
+            "zh": "说明读法：“读作……”。",
+            "en": "Explains how something is read: is read as..."
+          },
+          "examples": [
+            {
+              "jp": "この漢字は『止まれ』と読みます。",
+              "zh": "这个汉字读作“止まれ”。",
+              "en": "This kanji is read as 'tomare'."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l33_g08_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "说明读法时用？",
+                "en": "Which phrase explains how to read something?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "〜と読みます"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "〜という意味です"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "〜と言っていました"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "〜な"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "读法用「と読みます」。",
+                "en": "Use to yomimasu for reading."
+              }
+            }
+          ]
         }
       ]
     },
     {
       "type": "examples",
       "id": "l33_examples",
-      "title": { "zh": "核心例句", "en": "Core Examples", "ja": "基本例文" },
+      "title": {
+        "zh": "核心例句",
+        "en": "Core Examples",
+        "ja": "基本例文"
+      },
       "items": [
-        { "id": "l33_e01", "jp": "危ない！逃げろ。", "zh": "危险！快逃！", "en": "Danger! Run away!", "tags": ["command"] },
-        { "id": "l33_e02", "jp": "ここで騒ぐな。", "zh": "不要在这里吵闹。", "en": "Do not make noise here.", "tags": ["prohibition"] },
-        { "id": "l33_e03", "jp": "規則を守れ。", "zh": "遵守规则！", "en": "Obey the rules!", "tags": ["command"] },
-        { "id": "l33_e04", "jp": "先生は諦めるなと言っていました。", "zh": "老师说不要放弃。", "en": "The teacher said not to give up.", "tags": ["quote"] },
-        { "id": "l33_e05", "jp": "父は早く帰れと言っていました。", "zh": "父亲说早点回来。", "en": "My father said to come home early.", "tags": ["quote"] },
-        { "id": "l33_e06", "jp": "このマークは使用禁止という意味です。", "zh": "这个标志是禁止使用的意思。", "en": "This mark means use is prohibited.", "tags": ["meaning"] },
-        { "id": "l33_e07", "jp": "この漢字は『危険』と読みます。", "zh": "这个汉字读作“危险”。", "en": "This kanji is read as kiken.", "tags": ["reading"] },
-        { "id": "l33_e08", "jp": "係の人はここに入るなと言っていました。", "zh": "工作人员说不要进入这里。", "en": "The staff said not to enter here.", "tags": ["quote"] }
+        {
+          "id": "l33_e01",
+          "jp": "危ない！逃げろ。",
+          "zh": "危险！快逃！",
+          "en": "Danger! Run away!",
+          "tags": [
+            "command"
+          ]
+        },
+        {
+          "id": "l33_e02",
+          "jp": "ここで騒ぐな。",
+          "zh": "不要在这里吵闹。",
+          "en": "Do not make noise here.",
+          "tags": [
+            "prohibition"
+          ]
+        },
+        {
+          "id": "l33_e03",
+          "jp": "規則を守れ。",
+          "zh": "遵守规则！",
+          "en": "Obey the rules!",
+          "tags": [
+            "command"
+          ]
+        },
+        {
+          "id": "l33_e04",
+          "jp": "先生は諦めるなと言っていました。",
+          "zh": "老师说不要放弃。",
+          "en": "The teacher said not to give up.",
+          "tags": [
+            "quote"
+          ]
+        },
+        {
+          "id": "l33_e05",
+          "jp": "父は早く帰れと言っていました。",
+          "zh": "父亲说早点回来。",
+          "en": "My father said to come home early.",
+          "tags": [
+            "quote"
+          ]
+        },
+        {
+          "id": "l33_e06",
+          "jp": "このマークは使用禁止という意味です。",
+          "zh": "这个标志是禁止使用的意思。",
+          "en": "This mark means use is prohibited.",
+          "tags": [
+            "meaning"
+          ]
+        },
+        {
+          "id": "l33_e07",
+          "jp": "この漢字は『危険』と読みます。",
+          "zh": "这个汉字读作“危险”。",
+          "en": "This kanji is read as kiken.",
+          "tags": [
+            "reading"
+          ]
+        },
+        {
+          "id": "l33_e08",
+          "jp": "係の人はここに入るなと言っていました。",
+          "zh": "工作人员说不要进入这里。",
+          "en": "The staff said not to enter here.",
+          "tags": [
+            "quote"
+          ]
+        }
       ]
     },
     {
       "type": "mistakes",
       "id": "l33_mistakes",
-      "title": { "zh": "常见错误", "en": "Common Mistakes", "ja": "よくある間違い" },
+      "title": {
+        "zh": "常见错误",
+        "en": "Common Mistakes",
+        "ja": "よくある間違い"
+      },
       "items": [
-        { "id": "l33_m01", "wrong": "行きろ。", "correct": "行け。", "zh": "一类动词命令形变え段。", "en": "Group 1 command changes to e-sound." },
-        { "id": "l33_m02", "wrong": "走らないな。", "correct": "走るな。", "zh": "禁止形用辞书形+な。", "en": "Prohibition uses dictionary form + na." },
-        { "id": "l33_m03", "wrong": "これは使用禁止と読みます意味です。", "correct": "これは使用禁止という意味です。", "zh": "说明意思用「という意味です」。", "en": "Use to iu imi desu for meaning." }
+        {
+          "id": "l33_m01",
+          "wrong": "行きろ。",
+          "correct": "行け。",
+          "zh": "一类动词命令形变え段。",
+          "en": "Group 1 command changes to e-sound."
+        },
+        {
+          "id": "l33_m02",
+          "wrong": "走らないな。",
+          "correct": "走るな。",
+          "zh": "禁止形用辞书形+な。",
+          "en": "Prohibition uses dictionary form + na."
+        },
+        {
+          "id": "l33_m03",
+          "wrong": "これは使用禁止と読みます意味です。",
+          "correct": "これは使用禁止という意味です。",
+          "zh": "说明意思用「という意味です」。",
+          "en": "Use to iu imi desu for meaning."
+        }
       ]
     },
     {
       "type": "quiz",
       "id": "l33_quiz",
-      "title": { "zh": "综合测试", "en": "Final Test", "ja": "まとめテスト" },
+      "title": {
+        "zh": "综合测试",
+        "en": "Final Test",
+        "ja": "まとめテスト"
+      },
       "items": [
-        { "id": "l33_q01", "question": { "zh": "「飲みます」的命令形是？", "en": "Command form of nomimasu?" }, "options": [{ "text": { "jp": "飲め" }, "correct": true }, { "text": { "jp": "飲みろ" } }, { "text": { "jp": "飲もう" } }, { "text": { "jp": "飲むな" } }], "explanation": { "zh": "一类动词み→め。", "en": "Group 1 mi changes to me." } },
-        { "id": "l33_q02", "question": { "zh": "「見ます」的命令形是？", "en": "Command form of mimasu?" }, "options": [{ "text": { "jp": "見ろ" }, "correct": true }, { "text": { "jp": "見れ" } }, { "text": { "jp": "見よう" } }, { "text": { "jp": "見るな" } }], "explanation": { "zh": "二类动词去ます加ろ。", "en": "Group 2 uses masu-stem + ro." } },
-        { "id": "l33_q03", "question": { "zh": "「来ます」的命令形是？", "en": "Command form of kimasu?" }, "options": [{ "text": { "jp": "来い" }, "correct": true }, { "text": { "jp": "来ろ" } }, { "text": { "jp": "来よう" } }, { "text": { "jp": "来るな" } }], "explanation": { "zh": "读作「こい」。", "en": "It is read koi." } },
-        { "id": "l33_q04", "question": { "zh": "“不要进入”是？", "en": "How do you say 'Do not enter'?" }, "options": [{ "text": { "jp": "入るな" }, "correct": true }, { "text": { "jp": "入りな" } }, { "text": { "jp": "入らないな" } }, { "text": { "jp": "入ってな" } }], "explanation": { "zh": "禁止形：辞书形+な。", "en": "Dictionary form + na." } },
-        { "id": "l33_q05", "question": { "zh": "“不要放弃”是？", "en": "How do you say 'Do not give up'?" }, "options": [{ "text": { "jp": "諦めるな" }, "correct": true }, { "text": { "jp": "諦めろな" } }, { "text": { "jp": "諦めないな" } }, { "text": { "jp": "諦めてな" } }], "explanation": { "zh": "二类动词也用辞书形+な表示禁止。", "en": "Even group 2 prohibitions use dictionary form + na." } },
-        { "id": "l33_q06", "question": { "zh": "转述“老师说快写”是？", "en": "How do you report 'The teacher said write quickly'?" }, "options": [{ "text": { "jp": "先生は早く書けと言っていました" }, "correct": true }, { "text": { "jp": "先生は早く書きろと言っていました" } }, { "text": { "jp": "先生は早く書くなと言っていました" } }, { "text": { "jp": "先生は早く書いてと言っていましたです" } }], "explanation": { "zh": "命令形可放在「と」前转述。", "en": "A command can be quoted before to." } },
-        { "id": "l33_q07", "question": { "zh": "说明“禁止使用”的意思用？", "en": "How do you say 'It means use prohibited'?" }, "options": [{ "text": { "jp": "使用禁止という意味です" }, "correct": true }, { "text": { "jp": "使用禁止と読みます意味です" } }, { "text": { "jp": "使用禁止と言って意味です" } }, { "text": { "jp": "使用禁止な意味読みます" } }], "explanation": { "zh": "说明意思用「という意味です」。", "en": "Use to iu imi desu." } },
-        { "id": "l33_q08", "question": { "zh": "说明读法用？", "en": "Which explains how something is read?" }, "options": [{ "text": { "jp": "〜と読みます" }, "correct": true }, { "text": { "jp": "〜という意味です" } }, { "text": { "jp": "〜と言っていました" } }, { "text": { "jp": "〜な" } }], "explanation": { "zh": "读法用「と読みます」。", "en": "Use to yomimasu." } },
-        { "id": "l33_q09", "question": { "zh": "命令形最适合哪里？", "en": "Where is command form most appropriate?" }, "options": [{ "text": { "zh": "紧急、口号、标识或强烈指示", "en": "Urgency, slogans, signs, or strong instructions" }, "correct": true }, { "text": { "zh": "普通商务邮件" } }, { "text": { "zh": "向老师寒暄" } }, { "text": { "zh": "感谢别人" } }], "explanation": { "zh": "命令/禁止语气强。", "en": "Command/prohibition forms are strong." } },
-        { "id": "l33_q10", "question": { "zh": "“工作人员说不要拍照”是？", "en": "How do you report 'The staff said do not take photos'?" }, "options": [{ "text": { "jp": "係の人は写真を撮るなと言っていました" }, "correct": true }, { "text": { "jp": "係の人は写真を撮らないなと言っていました" } }, { "text": { "jp": "係の人は写真を撮ってなと言っていました" } }, { "text": { "jp": "係の人は写真を撮れと言っていました" } }], "explanation": { "zh": "禁止：辞书形+な。", "en": "Prohibition: dictionary form + na." } }
+        {
+          "id": "l33_q01",
+          "question": {
+            "zh": "「飲みます」的命令形是？",
+            "en": "Command form of nomimasu?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "飲め"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "飲みろ"
+              }
+            },
+            {
+              "text": {
+                "jp": "飲もう"
+              }
+            },
+            {
+              "text": {
+                "jp": "飲むな"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "一类动词み→め。",
+            "en": "Group 1 mi changes to me."
+          }
+        },
+        {
+          "id": "l33_q02",
+          "question": {
+            "zh": "「見ます」的命令形是？",
+            "en": "Command form of mimasu?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "見ろ"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "見れ"
+              }
+            },
+            {
+              "text": {
+                "jp": "見よう"
+              }
+            },
+            {
+              "text": {
+                "jp": "見るな"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "二类动词去ます加ろ。",
+            "en": "Group 2 uses masu-stem + ro."
+          }
+        },
+        {
+          "id": "l33_q03",
+          "question": {
+            "zh": "「来ます」的命令形是？",
+            "en": "Command form of kimasu?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "来い"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "来ろ"
+              }
+            },
+            {
+              "text": {
+                "jp": "来よう"
+              }
+            },
+            {
+              "text": {
+                "jp": "来るな"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "读作「こい」。",
+            "en": "It is read koi."
+          }
+        },
+        {
+          "id": "l33_q04",
+          "question": {
+            "zh": "“不要进入”是？",
+            "en": "How do you say 'Do not enter'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "入るな"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "入りな"
+              }
+            },
+            {
+              "text": {
+                "jp": "入らないな"
+              }
+            },
+            {
+              "text": {
+                "jp": "入ってな"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "禁止形：辞书形+な。",
+            "en": "Dictionary form + na."
+          }
+        },
+        {
+          "id": "l33_q05",
+          "question": {
+            "zh": "“不要放弃”是？",
+            "en": "How do you say 'Do not give up'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "諦めるな"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "諦めろな"
+              }
+            },
+            {
+              "text": {
+                "jp": "諦めないな"
+              }
+            },
+            {
+              "text": {
+                "jp": "諦めてな"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "二类动词也用辞书形+な表示禁止。",
+            "en": "Even group 2 prohibitions use dictionary form + na."
+          }
+        },
+        {
+          "id": "l33_q06",
+          "question": {
+            "zh": "转述“老师说快写”是？",
+            "en": "How do you report 'The teacher said write quickly'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "先生は早く書けと言っていました"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "先生は早く書きろと言っていました"
+              }
+            },
+            {
+              "text": {
+                "jp": "先生は早く書くなと言っていました"
+              }
+            },
+            {
+              "text": {
+                "jp": "先生は早く書いてと言っていましたです"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "命令形可放在「と」前转述。",
+            "en": "A command can be quoted before to."
+          }
+        },
+        {
+          "id": "l33_q07",
+          "question": {
+            "zh": "说明“禁止使用”的意思用？",
+            "en": "How do you say 'It means use prohibited'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "使用禁止という意味です"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "使用禁止と読みます意味です"
+              }
+            },
+            {
+              "text": {
+                "jp": "使用禁止と言って意味です"
+              }
+            },
+            {
+              "text": {
+                "jp": "使用禁止な意味読みます"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "说明意思用「という意味です」。",
+            "en": "Use to iu imi desu."
+          }
+        },
+        {
+          "id": "l33_q08",
+          "question": {
+            "zh": "说明读法用？",
+            "en": "Which explains how something is read?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "〜と読みます"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "〜という意味です"
+              }
+            },
+            {
+              "text": {
+                "jp": "〜と言っていました"
+              }
+            },
+            {
+              "text": {
+                "jp": "〜な"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "读法用「と読みます」。",
+            "en": "Use to yomimasu."
+          }
+        },
+        {
+          "id": "l33_q09",
+          "question": {
+            "zh": "命令形最适合哪里？",
+            "en": "Where is command form most appropriate?"
+          },
+          "options": [
+            {
+              "text": {
+                "zh": "紧急、口号、标识或强烈指示",
+                "en": "Urgency, slogans, signs, or strong instructions"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "普通商务邮件"
+              }
+            },
+            {
+              "text": {
+                "zh": "向老师寒暄"
+              }
+            },
+            {
+              "text": {
+                "zh": "感谢别人"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "命令/禁止语气强。",
+            "en": "Command/prohibition forms are strong."
+          }
+        },
+        {
+          "id": "l33_q10",
+          "question": {
+            "zh": "“工作人员说不要拍照”是？",
+            "en": "How do you report 'The staff said do not take photos'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "係の人は写真を撮るなと言っていました"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "係の人は写真を撮らないなと言っていました"
+              }
+            },
+            {
+              "text": {
+                "jp": "係の人は写真を撮ってなと言っていました"
+              }
+            },
+            {
+              "text": {
+                "jp": "係の人は写真を撮れと言っていました"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "禁止：辞书形+な。",
+            "en": "Prohibition: dictionary form + na."
+          }
+        }
       ]
     }
-  ]
+  ],
+  "conversationVideo": {
+    "sourcePageUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/index.html",
+    "lessonNo": 33,
+    "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P33_%E7%AC%AC33%E8%AA%B2.mp4",
+    "subtitleUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P33_%E7%AC%AC33%E8%AA%B2.json",
+    "sourceType": "official_video_resource",
+    "status": "linked_not_imported"
+  }
 }

@@ -4,8 +4,16 @@
   "status": "Mastery migrated",
   "lessonNo": 27,
   "lessonId": "minna_lesson_27",
-  "title": { "zh": "第27课", "en": "Lesson 27", "ja": "第27課" },
-  "subtitle": { "zh": "可能形", "en": "Potential form", "ja": "可能形" },
+  "title": {
+    "zh": "第27课",
+    "en": "Lesson 27",
+    "ja": "第27課"
+  },
+  "subtitle": {
+    "zh": "可能形",
+    "en": "Potential form",
+    "ja": "可能形"
+  },
   "focus": {
     "zh": "学习动词可能形，区分「見えます・聞こえます」和主动动作，并掌握「しか〜ません」。",
     "en": "Learn the potential form, distinguish mieru/kikoeru from active seeing/listening, and use shika with negatives.",
@@ -15,124 +23,1014 @@
     {
       "type": "vocab",
       "id": "l27_vocab",
-      "title": { "zh": "核心词汇", "en": "Core Vocabulary", "ja": "基本語彙" },
+      "title": {
+        "zh": "核心词汇",
+        "en": "Core Vocabulary",
+        "ja": "基本語彙"
+      },
       "items": [
-        { "id": "l27_v01", "jp": "できます", "kana": "できます", "zh": "会；能够；建成", "en": "can do; be made", "tags": ["lesson27"] },
-        { "id": "l27_v02", "jp": "見えます", "kana": "みえます", "zh": "看得见", "en": "can be seen", "tags": ["lesson27"] },
-        { "id": "l27_v03", "jp": "聞こえます", "kana": "きこえます", "zh": "听得见", "en": "can be heard", "tags": ["lesson27"] },
-        { "id": "l27_v04", "jp": "飼います", "kana": "かいます", "zh": "饲养", "en": "to keep a pet", "tags": ["lesson27"] },
-        { "id": "l27_v05", "jp": "建てます", "kana": "たてます", "zh": "建造", "en": "to build", "tags": ["lesson27"] },
-        { "id": "l27_v06", "jp": "走ります", "kana": "はしります", "zh": "跑；行驶", "en": "to run", "tags": ["lesson27"] },
-        { "id": "l27_v07", "jp": "泳ぎます", "kana": "およぎます", "zh": "游泳", "en": "to swim", "tags": ["lesson27"] },
-        { "id": "l27_v08", "jp": "道具", "kana": "どうぐ", "zh": "工具；道具", "en": "tool", "tags": ["lesson27"] },
-        { "id": "l27_v09", "jp": "鳥", "kana": "とり", "zh": "鸟", "en": "bird", "tags": ["lesson27"] },
-        { "id": "l27_v10", "jp": "声", "kana": "こえ", "zh": "声音", "en": "voice", "tags": ["lesson27"] }
+        {
+          "id": "l27_v01",
+          "jp": "できます",
+          "kana": "できます",
+          "zh": "会；能够；建成",
+          "en": "can do; be made",
+          "tags": [
+            "lesson27"
+          ]
+        },
+        {
+          "id": "l27_v02",
+          "jp": "見えます",
+          "kana": "みえます",
+          "zh": "看得见",
+          "en": "can be seen",
+          "tags": [
+            "lesson27"
+          ]
+        },
+        {
+          "id": "l27_v03",
+          "jp": "聞こえます",
+          "kana": "きこえます",
+          "zh": "听得见",
+          "en": "can be heard",
+          "tags": [
+            "lesson27"
+          ]
+        },
+        {
+          "id": "l27_v04",
+          "jp": "飼います",
+          "kana": "かいます",
+          "zh": "饲养",
+          "en": "to keep a pet",
+          "tags": [
+            "lesson27"
+          ]
+        },
+        {
+          "id": "l27_v05",
+          "jp": "建てます",
+          "kana": "たてます",
+          "zh": "建造",
+          "en": "to build",
+          "tags": [
+            "lesson27"
+          ]
+        },
+        {
+          "id": "l27_v06",
+          "jp": "走ります",
+          "kana": "はしります",
+          "zh": "跑；行驶",
+          "en": "to run",
+          "tags": [
+            "lesson27"
+          ]
+        },
+        {
+          "id": "l27_v07",
+          "jp": "泳ぎます",
+          "kana": "およぎます",
+          "zh": "游泳",
+          "en": "to swim",
+          "tags": [
+            "lesson27"
+          ]
+        },
+        {
+          "id": "l27_v08",
+          "jp": "道具",
+          "kana": "どうぐ",
+          "zh": "工具；道具",
+          "en": "tool",
+          "tags": [
+            "lesson27"
+          ]
+        },
+        {
+          "id": "l27_v09",
+          "jp": "鳥",
+          "kana": "とり",
+          "zh": "鸟",
+          "en": "bird",
+          "tags": [
+            "lesson27"
+          ]
+        },
+        {
+          "id": "l27_v10",
+          "jp": "声",
+          "kana": "こえ",
+          "zh": "声音",
+          "en": "voice",
+          "tags": [
+            "lesson27"
+          ]
+        }
       ]
     },
     {
       "type": "grammar",
       "id": "l27_grammar",
-      "title": { "zh": "核心语法", "en": "Core Grammar", "ja": "基本文法" },
+      "title": {
+        "zh": "核心语法",
+        "en": "Core Grammar",
+        "ja": "基本文法"
+      },
       "items": [
         {
           "id": "l27_g01",
           "pattern": "一类动词可能形：う段 → え段 + ます",
-          "explanation": { "zh": "一类动词把ます形前的音变到え段：話します→話せます、泳ぎます→泳げます。", "en": "For group 1 verbs, change the final u-sound to the e-sound: hanashimasu to hanasemasu." },
-          "examples": [{ "jp": "日本語が話せます。", "zh": "会说日语。", "en": "I can speak Japanese." }],
-          "practice": [{ "id": "l27_g01_p01", "skill": "grammar", "question": { "zh": "「泳ぎます」的可能形是？", "en": "What is the potential form of oyogimasu?" }, "options": [{ "text": { "jp": "泳げます" }, "correct": true }, { "text": { "jp": "泳ぎられます" } }, { "text": { "jp": "泳がれます" } }, { "text": { "jp": "泳ぎできます" } }], "explanation": { "zh": "ぎ变成げ。", "en": "gi changes to ge." } }]
+          "explanation": {
+            "zh": "一类动词把ます形前的音变到え段：話します→話せます、泳ぎます→泳げます。",
+            "en": "For group 1 verbs, change the final u-sound to the e-sound: hanashimasu to hanasemasu."
+          },
+          "examples": [
+            {
+              "jp": "日本語が話せます。",
+              "zh": "会说日语。",
+              "en": "I can speak Japanese."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l27_g01_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "「泳ぎます」的可能形是？",
+                "en": "What is the potential form of oyogimasu?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "泳げます"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "泳ぎられます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "泳がれます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "泳ぎできます"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "ぎ变成げ。",
+                "en": "gi changes to ge."
+              }
+            }
+          ]
         },
         {
           "id": "l27_g02",
           "pattern": "二类动词可能形：ます形去ます + られます",
-          "explanation": { "zh": "二类动词如「食べます→食べられます」「見ます→見られます」。", "en": "Group 2 verbs add raremasu: tabemasu to taberaremasu." },
-          "examples": [{ "jp": "この映画は子どもも見られます。", "zh": "这部电影孩子也能看。", "en": "Children can also watch this movie." }],
-          "practice": [{ "id": "l27_g02_p01", "skill": "grammar", "question": { "zh": "「食べます」的可能形是？", "en": "What is the potential form of tabemasu?" }, "options": [{ "text": { "jp": "食べられます" }, "correct": true }, { "text": { "jp": "食べれます" } }, { "text": { "jp": "食べますできます" } }, { "text": { "jp": "食べされます" } }], "explanation": { "zh": "标准形是「食べられます」。", "en": "The standard form is taberaremasu." } }]
+          "explanation": {
+            "zh": "二类动词如「食べます→食べられます」「見ます→見られます」。",
+            "en": "Group 2 verbs add raremasu: tabemasu to taberaremasu."
+          },
+          "examples": [
+            {
+              "jp": "この映画は子どもも見られます。",
+              "zh": "这部电影孩子也能看。",
+              "en": "Children can also watch this movie."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l27_g02_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "「食べます」的可能形是？",
+                "en": "What is the potential form of tabemasu?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "食べられます"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "食べれます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "食べますできます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "食べされます"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "标准形是「食べられます」。",
+                "en": "The standard form is taberaremasu."
+              }
+            }
+          ]
         },
         {
           "id": "l27_g03",
           "pattern": "三类动词：します→できます、来ます→来られます",
-          "explanation": { "zh": "「します」的可能形不是「しられます」，而是「できます」。", "en": "The potential of shimasu is dekimasu; kimasu becomes koraremasu." },
-          "examples": [{ "jp": "漢字が勉強できます。", "zh": "能学习汉字。", "en": "I can study kanji." }],
-          "practice": [{ "id": "l27_g03_p01", "skill": "grammar", "question": { "zh": "「します」的可能形是？", "en": "What is the potential form of shimasu?" }, "options": [{ "text": { "jp": "できます" }, "correct": true }, { "text": { "jp": "しられます" } }, { "text": { "jp": "しますできます" } }, { "text": { "jp": "されます" } }], "explanation": { "zh": "三类动词特殊变化。", "en": "This is an irregular verb." } }]
+          "explanation": {
+            "zh": "「します」的可能形不是「しられます」，而是「できます」。",
+            "en": "The potential of shimasu is dekimasu; kimasu becomes koraremasu."
+          },
+          "examples": [
+            {
+              "jp": "漢字が勉強できます。",
+              "zh": "能学习汉字。",
+              "en": "I can study kanji."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l27_g03_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "「します」的可能形是？",
+                "en": "What is the potential form of shimasu?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "できます"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "しられます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "しますできます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "されます"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "三类动词特殊变化。",
+                "en": "This is an irregular verb."
+              }
+            }
+          ]
         },
         {
           "id": "l27_g04",
           "pattern": "对象常用 が",
-          "explanation": { "zh": "可能形里，原来「を」标记的对象常改用「が」。", "en": "With potential verbs, the object often changes from o to ga." },
-          "examples": [{ "jp": "漢字が読めます。", "zh": "能读汉字。", "en": "I can read kanji." }],
-          "practice": [{ "id": "l27_g04_p01", "skill": "grammar", "question": { "zh": "“会说英语”最自然的是？", "en": "Which naturally means 'I can speak English'?" }, "options": [{ "text": { "jp": "英語が話せます" }, "correct": true }, { "text": { "jp": "英語を話せます" } }, { "text": { "jp": "英語に話せます" } }, { "text": { "jp": "英語で話せます" } }], "explanation": { "zh": "可能形对象常用「が」。", "en": "The object of a potential verb often takes ga." } }]
+          "explanation": {
+            "zh": "可能形里，原来「を」标记的对象常改用「が」。",
+            "en": "With potential verbs, the object often changes from o to ga."
+          },
+          "examples": [
+            {
+              "jp": "漢字が読めます。",
+              "zh": "能读汉字。",
+              "en": "I can read kanji."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l27_g04_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“会说英语”最自然的是？",
+                "en": "Which naturally means 'I can speak English'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "英語が話せます"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "英語を話せます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "英語に話せます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "英語で話せます"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "可能形对象常用「が」。",
+                "en": "The object of a potential verb often takes ga."
+              }
+            }
+          ]
         },
         {
           "id": "l27_g05",
           "pattern": "〜が見えます",
-          "explanation": { "zh": "表示自然进入视野的“看得见”，不是主动看。", "en": "Miemasu means something is visible naturally, not actively watching." },
-          "examples": [{ "jp": "窓から海が見えます。", "zh": "从窗户看得见海。", "en": "The sea is visible from the window." }],
-          "practice": [{ "id": "l27_g05_p01", "skill": "grammar", "question": { "zh": "“看得见山”应说？", "en": "How do you say 'The mountain is visible'?" }, "options": [{ "text": { "jp": "山が見えます" }, "correct": true }, { "text": { "jp": "山を見ます" } }, { "text": { "jp": "山が見ます" } }, { "text": { "jp": "山を見えます" } }], "explanation": { "zh": "自然看得见用「が見えます」。", "en": "Use ga miemasu for natural visibility." } }]
+          "explanation": {
+            "zh": "表示自然进入视野的“看得见”，不是主动看。",
+            "en": "Miemasu means something is visible naturally, not actively watching."
+          },
+          "examples": [
+            {
+              "jp": "窓から海が見えます。",
+              "zh": "从窗户看得见海。",
+              "en": "The sea is visible from the window."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l27_g05_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“看得见山”应说？",
+                "en": "How do you say 'The mountain is visible'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "山が見えます"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "山を見ます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "山が見ます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "山を見えます"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "自然看得见用「が見えます」。",
+                "en": "Use ga miemasu for natural visibility."
+              }
+            }
+          ]
         },
         {
           "id": "l27_g06",
           "pattern": "〜が聞こえます",
-          "explanation": { "zh": "表示声音自然传来“听得见”，不是主动听。", "en": "Kikoemasu means a sound can be heard naturally." },
-          "examples": [{ "jp": "鳥の声が聞こえます。", "zh": "听得见鸟叫声。", "en": "I can hear birds." }],
-          "practice": [{ "id": "l27_g06_p01", "skill": "grammar", "question": { "zh": "“听得见声音”应说？", "en": "How do you say 'I can hear a voice'?" }, "options": [{ "text": { "jp": "声が聞こえます" }, "correct": true }, { "text": { "jp": "声を聞こえます" } }, { "text": { "jp": "声が聞きます" } }, { "text": { "jp": "声を聞けますです" } }], "explanation": { "zh": "自然听得见用「が聞こえます」。", "en": "Use ga kikoemasu for natural audibility." } }]
+          "explanation": {
+            "zh": "表示声音自然传来“听得见”，不是主动听。",
+            "en": "Kikoemasu means a sound can be heard naturally."
+          },
+          "examples": [
+            {
+              "jp": "鳥の声が聞こえます。",
+              "zh": "听得见鸟叫声。",
+              "en": "I can hear birds."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l27_g06_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“听得见声音”应说？",
+                "en": "How do you say 'I can hear a voice'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "声が聞こえます"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "声を聞こえます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "声が聞きます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "声を聞けますです"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "自然听得见用「が聞こえます」。",
+                "en": "Use ga kikoemasu for natural audibility."
+              }
+            }
+          ]
         },
         {
           "id": "l27_g07",
           "pattern": "〜ができます：建成；交到；做好",
-          "explanation": { "zh": "「できます」除了“能做”，也表示某物建成、事情完成或朋友交到。", "en": "Dekimasu can mean something is built, completed, or made, not only 'can do'." },
-          "examples": [{ "jp": "駅の前に新しいビルができました。", "zh": "车站前建好了新楼。", "en": "A new building was built in front of the station." }],
-          "practice": [{ "id": "l27_g07_p01", "skill": "grammar", "question": { "zh": "“交到了朋友”应说？", "en": "How do you say 'I made a friend'?" }, "options": [{ "text": { "jp": "友達ができました" }, "correct": true }, { "text": { "jp": "友達をできました" } }, { "text": { "jp": "友達にできました" } }, { "text": { "jp": "友達がしました" } }], "explanation": { "zh": "「友達ができます」表示交到朋友。", "en": "Tomodachi ga dekimasu means to make friends." } }]
+          "explanation": {
+            "zh": "「できます」除了“能做”，也表示某物建成、事情完成或朋友交到。",
+            "en": "Dekimasu can mean something is built, completed, or made, not only 'can do'."
+          },
+          "examples": [
+            {
+              "jp": "駅の前に新しいビルができました。",
+              "zh": "车站前建好了新楼。",
+              "en": "A new building was built in front of the station."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l27_g07_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "“交到了朋友”应说？",
+                "en": "How do you say 'I made a friend'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "友達ができました"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "友達をできました"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "友達にできました"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "友達がしました"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「友達ができます」表示交到朋友。",
+                "en": "Tomodachi ga dekimasu means to make friends."
+              }
+            }
+          ]
         },
         {
           "id": "l27_g08",
           "pattern": "〜しか〜ません",
-          "explanation": { "zh": "表示“只有……”，后面必须是否定。", "en": "Shika means 'only' and must be followed by a negative predicate." },
-          "examples": [{ "jp": "1000円しかありません。", "zh": "只有1000日元。", "en": "I only have 1000 yen." }],
-          "practice": [{ "id": "l27_g08_p01", "skill": "grammar", "question": { "zh": "「只会一点日语」正确的是？", "en": "Which means 'I can only speak a little Japanese'?" }, "options": [{ "text": { "jp": "日本語が少ししか話せません" }, "correct": true }, { "text": { "jp": "日本語が少ししか話せます" } }, { "text": { "jp": "日本語を少しだけ話せません" } }, { "text": { "jp": "日本語が少しだけ話せません" } }], "explanation": { "zh": "「しか」后面用否定。", "en": "Shika requires a negative form." } }]
+          "explanation": {
+            "zh": "表示“只有……”，后面必须是否定。",
+            "en": "Shika means 'only' and must be followed by a negative predicate."
+          },
+          "examples": [
+            {
+              "jp": "1000円しかありません。",
+              "zh": "只有1000日元。",
+              "en": "I only have 1000 yen."
+            }
+          ],
+          "practice": [
+            {
+              "id": "l27_g08_p01",
+              "skill": "grammar",
+              "question": {
+                "zh": "「只会一点日语」正确的是？",
+                "en": "Which means 'I can only speak a little Japanese'?"
+              },
+              "options": [
+                {
+                  "text": {
+                    "jp": "日本語が少ししか話せません"
+                  },
+                  "correct": true
+                },
+                {
+                  "text": {
+                    "jp": "日本語が少ししか話せます"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "日本語を少しだけ話せません"
+                  }
+                },
+                {
+                  "text": {
+                    "jp": "日本語が少しだけ話せません"
+                  }
+                }
+              ],
+              "explanation": {
+                "zh": "「しか」后面用否定。",
+                "en": "Shika requires a negative form."
+              }
+            }
+          ]
         }
       ]
     },
     {
       "type": "examples",
       "id": "l27_examples",
-      "title": { "zh": "核心例句", "en": "Core Examples", "ja": "基本例文" },
+      "title": {
+        "zh": "核心例句",
+        "en": "Core Examples",
+        "ja": "基本例文"
+      },
       "items": [
-        { "id": "l27_e01", "jp": "日本語が少し話せます。", "zh": "会说一点日语。", "en": "I can speak a little Japanese.", "tags": ["potential"] },
-        { "id": "l27_e02", "jp": "この漢字が読めません。", "zh": "这个汉字我不会读。", "en": "I cannot read this kanji.", "tags": ["potential"] },
-        { "id": "l27_e03", "jp": "ここから富士山が見えます。", "zh": "从这里看得见富士山。", "en": "Mt. Fuji is visible from here.", "tags": ["mieru"] },
-        { "id": "l27_e04", "jp": "隣の部屋から音楽が聞こえます。", "zh": "从隔壁房间听得见音乐。", "en": "Music can be heard from the next room.", "tags": ["kikoeru"] },
-        { "id": "l27_e05", "jp": "駅の近くに大きいスーパーができました。", "zh": "车站附近建了大超市。", "en": "A large supermarket was built near the station.", "tags": ["dekiru"] },
-        { "id": "l27_e06", "jp": "忙しくて、日曜日しか休めません。", "zh": "太忙了，只有星期天能休息。", "en": "I am busy, so I can only rest on Sundays.", "tags": ["shika"] },
-        { "id": "l27_e07", "jp": "この道具で野菜が切れます。", "zh": "用这个工具能切蔬菜。", "en": "You can cut vegetables with this tool.", "tags": ["tool"] },
-        { "id": "l27_e08", "jp": "電話の声がよく聞こえません。", "zh": "电话里的声音听不太清楚。", "en": "I cannot hear the voice on the phone well.", "tags": ["kikoeru"] }
+        {
+          "id": "l27_e01",
+          "jp": "日本語が少し話せます。",
+          "zh": "会说一点日语。",
+          "en": "I can speak a little Japanese.",
+          "tags": [
+            "potential"
+          ]
+        },
+        {
+          "id": "l27_e02",
+          "jp": "この漢字が読めません。",
+          "zh": "这个汉字我不会读。",
+          "en": "I cannot read this kanji.",
+          "tags": [
+            "potential"
+          ]
+        },
+        {
+          "id": "l27_e03",
+          "jp": "ここから富士山が見えます。",
+          "zh": "从这里看得见富士山。",
+          "en": "Mt. Fuji is visible from here.",
+          "tags": [
+            "mieru"
+          ]
+        },
+        {
+          "id": "l27_e04",
+          "jp": "隣の部屋から音楽が聞こえます。",
+          "zh": "从隔壁房间听得见音乐。",
+          "en": "Music can be heard from the next room.",
+          "tags": [
+            "kikoeru"
+          ]
+        },
+        {
+          "id": "l27_e05",
+          "jp": "駅の近くに大きいスーパーができました。",
+          "zh": "车站附近建了大超市。",
+          "en": "A large supermarket was built near the station.",
+          "tags": [
+            "dekiru"
+          ]
+        },
+        {
+          "id": "l27_e06",
+          "jp": "忙しくて、日曜日しか休めません。",
+          "zh": "太忙了，只有星期天能休息。",
+          "en": "I am busy, so I can only rest on Sundays.",
+          "tags": [
+            "shika"
+          ]
+        },
+        {
+          "id": "l27_e07",
+          "jp": "この道具で野菜が切れます。",
+          "zh": "用这个工具能切蔬菜。",
+          "en": "You can cut vegetables with this tool.",
+          "tags": [
+            "tool"
+          ]
+        },
+        {
+          "id": "l27_e08",
+          "jp": "電話の声がよく聞こえません。",
+          "zh": "电话里的声音听不太清楚。",
+          "en": "I cannot hear the voice on the phone well.",
+          "tags": [
+            "kikoeru"
+          ]
+        }
       ]
     },
     {
       "type": "mistakes",
       "id": "l27_mistakes",
-      "title": { "zh": "常见错误", "en": "Common Mistakes", "ja": "よくある間違い" },
+      "title": {
+        "zh": "常见错误",
+        "en": "Common Mistakes",
+        "ja": "よくある間違い"
+      },
       "items": [
-        { "id": "l27_m01", "wrong": "日本語を話せます。", "correct": "日本語が話せます。", "zh": "可能形的对象常用「が」。", "en": "The object of a potential verb often takes ga." },
-        { "id": "l27_m02", "wrong": "山を見えます。", "correct": "山が見えます。", "zh": "自然看得见用「が見えます」。", "en": "Use ga miemasu for natural visibility." },
-        { "id": "l27_m03", "wrong": "1000円しかあります。", "correct": "1000円しかありません。", "zh": "「しか」后面必须是否定。", "en": "Shika must be followed by a negative." }
+        {
+          "id": "l27_m01",
+          "wrong": "日本語を話せます。",
+          "correct": "日本語が話せます。",
+          "zh": "可能形的对象常用「が」。",
+          "en": "The object of a potential verb often takes ga."
+        },
+        {
+          "id": "l27_m02",
+          "wrong": "山を見えます。",
+          "correct": "山が見えます。",
+          "zh": "自然看得见用「が見えます」。",
+          "en": "Use ga miemasu for natural visibility."
+        },
+        {
+          "id": "l27_m03",
+          "wrong": "1000円しかあります。",
+          "correct": "1000円しかありません。",
+          "zh": "「しか」后面必须是否定。",
+          "en": "Shika must be followed by a negative."
+        }
       ]
     },
     {
       "type": "quiz",
       "id": "l27_quiz",
-      "title": { "zh": "综合测试", "en": "Final Test", "ja": "まとめテスト" },
+      "title": {
+        "zh": "综合测试",
+        "en": "Final Test",
+        "ja": "まとめテスト"
+      },
       "items": [
-        { "id": "l27_q01", "question": { "zh": "「話します」的可能形是？", "en": "Potential form of hanashimasu?" }, "options": [{ "text": { "jp": "話せます" }, "correct": true }, { "text": { "jp": "話しられます" } }, { "text": { "jp": "話されます" } }, { "text": { "jp": "話できます" } }], "explanation": { "zh": "一类动词 し→せ。", "en": "Group 1 shi changes to se." } },
-        { "id": "l27_q02", "question": { "zh": "「見ます」的可能形是？", "en": "Potential form of mimasu?" }, "options": [{ "text": { "jp": "見られます" }, "correct": true }, { "text": { "jp": "見れます" } }, { "text": { "jp": "見せます" } }, { "text": { "jp": "見できます" } }], "explanation": { "zh": "标准可能形是「見られます」。", "en": "The standard potential form is mirararemasu." } },
-        { "id": "l27_q03", "question": { "zh": "选择“会读汉字”。", "en": "Choose 'I can read kanji.'" }, "options": [{ "text": { "jp": "漢字が読めます" }, "correct": true }, { "text": { "jp": "漢字を読めますか" } }, { "text": { "jp": "漢字に読めます" } }, { "text": { "jp": "漢字が読みます" } }], "explanation": { "zh": "可能形对象常用「が」。", "en": "Use ga with potential verbs." } },
-        { "id": "l27_q04", "question": { "zh": "自然“看得见海”是？", "en": "How do you say 'The sea is visible'?" }, "options": [{ "text": { "jp": "海が見えます" }, "correct": true }, { "text": { "jp": "海を見えます" } }, { "text": { "jp": "海が見ます" } }, { "text": { "jp": "海を見られます" } }], "explanation": { "zh": "自然进入视野用「見えます」。", "en": "Use miemasu for natural visibility." } },
-        { "id": "l27_q05", "question": { "zh": "自然“听得见声音”是？", "en": "How do you say 'I can hear a sound'?" }, "options": [{ "text": { "jp": "音が聞こえます" }, "correct": true }, { "text": { "jp": "音を聞こえます" } }, { "text": { "jp": "音が聞きます" } }, { "text": { "jp": "音を聞けますです" } }], "explanation": { "zh": "自然听得见用「聞こえます」。", "en": "Use kikoemasu for natural audibility." } },
-        { "id": "l27_q06", "question": { "zh": "「只会一点」应使用？", "en": "Which pattern means 'only a little'?" }, "options": [{ "text": { "jp": "少ししか〜ません" }, "correct": true }, { "text": { "jp": "少ししか〜ます" } }, { "text": { "jp": "少しだけ〜ません" } }, { "text": { "jp": "少ししか〜でした" } }], "explanation": { "zh": "しか后面用否定。", "en": "Shika takes a negative predicate." } },
-        { "id": "l27_q07", "question": { "zh": "「建了新学校」是？", "en": "How do you say 'A new school was built'?" }, "options": [{ "text": { "jp": "新しい学校ができました" }, "correct": true }, { "text": { "jp": "新しい学校をできました" } }, { "text": { "jp": "新しい学校がしました" } }, { "text": { "jp": "新しい学校にできました" } }], "explanation": { "zh": "建成用「〜ができました」。", "en": "Use ga dekimashita for something being built." } },
-        { "id": "l27_q08", "question": { "zh": "「游泳」可能形是？", "en": "Potential form of oyogimasu?" }, "options": [{ "text": { "jp": "泳げます" }, "correct": true }, { "text": { "jp": "泳ぎます" } }, { "text": { "jp": "泳がれます" } }, { "text": { "jp": "泳ぎられます" } }], "explanation": { "zh": "泳ぎます→泳げます。", "en": "Oyogimasu becomes oyogemasu." } },
-        { "id": "l27_q09", "question": { "zh": "「来ます」的可能形是？", "en": "Potential form of kimasu?" }, "options": [{ "text": { "jp": "来られます" }, "correct": true }, { "text": { "jp": "来れます" } }, { "text": { "jp": "来できます" } }, { "text": { "jp": "来ますできます" } }], "explanation": { "zh": "标准形是「来られます」。", "en": "The standard form is koraremasu." } },
-        { "id": "l27_q10", "question": { "zh": "「电话听不清」自然表达是？", "en": "Which naturally says 'I cannot hear the phone well'?" }, "options": [{ "text": { "jp": "電話の声がよく聞こえません" }, "correct": true }, { "text": { "jp": "電話の声をよく聞こえません" } }, { "text": { "jp": "電話の声がよく聞きません" } }, { "text": { "jp": "電話の声をよく聞けませんです" } }], "explanation": { "zh": "声音自然听得见/听不见用「聞こえます」。", "en": "Use kikoemasu/kikoemasen for audibility." } }
+        {
+          "id": "l27_q01",
+          "question": {
+            "zh": "「話します」的可能形是？",
+            "en": "Potential form of hanashimasu?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "話せます"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "話しられます"
+              }
+            },
+            {
+              "text": {
+                "jp": "話されます"
+              }
+            },
+            {
+              "text": {
+                "jp": "話できます"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "一类动词 し→せ。",
+            "en": "Group 1 shi changes to se."
+          }
+        },
+        {
+          "id": "l27_q02",
+          "question": {
+            "zh": "「見ます」的可能形是？",
+            "en": "Potential form of mimasu?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "見られます"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "見れます"
+              }
+            },
+            {
+              "text": {
+                "jp": "見せます"
+              }
+            },
+            {
+              "text": {
+                "jp": "見できます"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "标准可能形是「見られます」。",
+            "en": "The standard potential form is mirararemasu."
+          }
+        },
+        {
+          "id": "l27_q03",
+          "question": {
+            "zh": "选择“会读汉字”。",
+            "en": "Choose 'I can read kanji.'"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "漢字が読めます"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "漢字を読めますか"
+              }
+            },
+            {
+              "text": {
+                "jp": "漢字に読めます"
+              }
+            },
+            {
+              "text": {
+                "jp": "漢字が読みます"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "可能形对象常用「が」。",
+            "en": "Use ga with potential verbs."
+          }
+        },
+        {
+          "id": "l27_q04",
+          "question": {
+            "zh": "自然“看得见海”是？",
+            "en": "How do you say 'The sea is visible'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "海が見えます"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "海を見えます"
+              }
+            },
+            {
+              "text": {
+                "jp": "海が見ます"
+              }
+            },
+            {
+              "text": {
+                "jp": "海を見られます"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "自然进入视野用「見えます」。",
+            "en": "Use miemasu for natural visibility."
+          }
+        },
+        {
+          "id": "l27_q05",
+          "question": {
+            "zh": "自然“听得见声音”是？",
+            "en": "How do you say 'I can hear a sound'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "音が聞こえます"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "音を聞こえます"
+              }
+            },
+            {
+              "text": {
+                "jp": "音が聞きます"
+              }
+            },
+            {
+              "text": {
+                "jp": "音を聞けますです"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "自然听得见用「聞こえます」。",
+            "en": "Use kikoemasu for natural audibility."
+          }
+        },
+        {
+          "id": "l27_q06",
+          "question": {
+            "zh": "「只会一点」应使用？",
+            "en": "Which pattern means 'only a little'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "少ししか〜ません"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "少ししか〜ます"
+              }
+            },
+            {
+              "text": {
+                "jp": "少しだけ〜ません"
+              }
+            },
+            {
+              "text": {
+                "jp": "少ししか〜でした"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "しか后面用否定。",
+            "en": "Shika takes a negative predicate."
+          }
+        },
+        {
+          "id": "l27_q07",
+          "question": {
+            "zh": "「建了新学校」是？",
+            "en": "How do you say 'A new school was built'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "新しい学校ができました"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "新しい学校をできました"
+              }
+            },
+            {
+              "text": {
+                "jp": "新しい学校がしました"
+              }
+            },
+            {
+              "text": {
+                "jp": "新しい学校にできました"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "建成用「〜ができました」。",
+            "en": "Use ga dekimashita for something being built."
+          }
+        },
+        {
+          "id": "l27_q08",
+          "question": {
+            "zh": "「游泳」可能形是？",
+            "en": "Potential form of oyogimasu?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "泳げます"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "泳ぎます"
+              }
+            },
+            {
+              "text": {
+                "jp": "泳がれます"
+              }
+            },
+            {
+              "text": {
+                "jp": "泳ぎられます"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "泳ぎます→泳げます。",
+            "en": "Oyogimasu becomes oyogemasu."
+          }
+        },
+        {
+          "id": "l27_q09",
+          "question": {
+            "zh": "「来ます」的可能形是？",
+            "en": "Potential form of kimasu?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "来られます"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "来れます"
+              }
+            },
+            {
+              "text": {
+                "jp": "来できます"
+              }
+            },
+            {
+              "text": {
+                "jp": "来ますできます"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "标准形是「来られます」。",
+            "en": "The standard form is koraremasu."
+          }
+        },
+        {
+          "id": "l27_q10",
+          "question": {
+            "zh": "「电话听不清」自然表达是？",
+            "en": "Which naturally says 'I cannot hear the phone well'?"
+          },
+          "options": [
+            {
+              "text": {
+                "jp": "電話の声がよく聞こえません"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "電話の声をよく聞こえません"
+              }
+            },
+            {
+              "text": {
+                "jp": "電話の声がよく聞きません"
+              }
+            },
+            {
+              "text": {
+                "jp": "電話の声をよく聞けませんです"
+              }
+            }
+          ],
+          "explanation": {
+            "zh": "声音自然听得见/听不见用「聞こえます」。",
+            "en": "Use kikoemasu/kikoemasen for audibility."
+          }
+        }
       ]
     }
-  ]
+  ],
+  "conversationVideo": {
+    "sourcePageUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/index.html",
+    "lessonNo": 27,
+    "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P27_%E7%AC%AC27%E8%AA%B2.mp4",
+    "subtitleUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P27_%E7%AC%AC27%E8%AA%B2.json",
+    "sourceType": "official_video_resource",
+    "status": "linked_not_imported"
+  }
 }

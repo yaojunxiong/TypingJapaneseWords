@@ -41,6 +41,14 @@ type LessonDoc = {
   subtitle?: LangText
   focus?: LangText
   sections?: LessonSection[]
+  conversationVideo?: {
+    sourcePageUrl?: string
+    lessonNo?: number
+    videoUrl?: string
+    subtitleUrl?: string
+    sourceType?: string
+    status?: string
+  }
 }
 
 export function generateStaticParams() {
@@ -115,6 +123,29 @@ export default async function LessonDetailPage({
         <Link className="homeNode" href={`/lessons/${no}/practice?stage=quiz`}>🏅<small>{tr(lang, '测验', 'Quiz')}</small></Link>
         <Link className="homeNode" href={`/lessons/${no}/practice?stage=conversation`}>🔤<small>{tr(lang, '会话', 'Conversation')}</small></Link>
       </section>
+
+      {lesson?.conversationVideo ? (
+        <section className="card" style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
+          <span style={{ fontSize: 24 }}>🎬</span>
+          <div style={{ flex: 1 }}>
+            <strong>{tr(lang, '会话视频', 'Conversation Video')}</strong>
+            <p className="small" style={{ margin: '2px 0 0' }}>
+              {tr(lang, '来源：大家的日本語字幕播放器', 'Source: Minna no Nihongo Subtitle Player')}
+              {lesson.conversationVideo.status === 'parsed_not_imported'
+                ? ` · ${tr(lang, '第1课字幕已解析', 'Lesson 1 subtitles parsed')}`
+                : ''}
+            </p>
+          </div>
+          {lesson.conversationVideo.videoUrl ? (
+            <a className="btn" href={lesson.conversationVideo.videoUrl} target="_blank" rel="noopener noreferrer">
+              {tr(lang, '播放视频', 'Play Video')}
+            </a>
+          ) : null}
+          <a className="btn ghost" href={lesson.conversationVideo.sourcePageUrl} target="_blank" rel="noopener noreferrer">
+            {tr(lang, '资源页', 'Resource Page')}
+          </a>
+        </section>
+      ) : null}
 
       {!lesson ? (
         <section className="card">

@@ -1,0 +1,855 @@
+{
+  "schema": "minna.lesson.mainline.reviewed.v1",
+  "lessonNo": 1,
+  "generatedAt": "2026-06-11T01:56:03.208Z",
+  "sourceDraftFile": "lesson-01.mainline.draft.json",
+  "reviewedAt": "2026-06-11T02:00:00.000Z",
+  "stats": {
+    "conversationItems": 8,
+    "vocabItems": 12,
+    "grammarItems": 7,
+    "exampleGroups": 4,
+    "exampleSentences": 13,
+    "quizItems": 12
+  },
+  "sections": [
+    {
+      "type": "conversation",
+      "id": "l01_conversation",
+      "sourceType": "official_video_subtitle",
+      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P1_%E7%AC%AC1%E8%AA%B2.json",
+      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P1_%E7%AC%AC1%E8%AA%B2.mp4",
+      "dialogTitle": "自我介绍",
+      "conversationGoal": {
+        "zh": "能用日语在早晨见面时打招呼、介绍他人、自我介绍（姓名、国籍）并说结束语",
+        "en": "Be able to greet in the morning, introduce others, introduce yourself (name, nationality), and say a closing phrase in Japanese"
+      },
+      "items": [
+        {
+          "id": "l01-conv-001",
+          "speaker": "佐藤",
+          "jp": "おはようございます",
+          "kana": "おはようございます",
+          "zh": "早上好",
+          "keyword": "おはようございます",
+          "videoStart": "0:00.0",
+          "videoEnd": "0:28.4",
+          "sourceType": "official_video_subtitle"
+        },
+        {
+          "id": "l01-conv-002",
+          "speaker": "ミラー",
+          "jp": "佐藤さん",
+          "kana": "さとうさん",
+          "zh": "佐藤女士",
+          "keyword": "〜さん",
+          "videoStart": "0:28.4",
+          "videoEnd": "0:29.4",
+          "sourceType": "official_video_subtitle",
+          "reviewNote": "片段过短（1.0s），请确认是否需要与相邻句子合并"
+        },
+        {
+          "id": "l01-conv-003",
+          "speaker": "佐藤",
+          "jp": "こちらはマイクミラーさんです",
+          "kana": "こちらはマイクミラーさんです",
+          "zh": "这位是迈克·米勒先生",
+          "keyword": "〜です",
+          "videoStart": "0:29.4",
+          "videoEnd": "0:31.9",
+          "sourceType": "official_video_subtitle"
+        },
+        {
+          "id": "l01-conv-004",
+          "speaker": "ミラー",
+          "jp": "初めましてマイクミラーです",
+          "kana": "はじめましてマイクミラーです",
+          "zh": "初次见面，我是迈克·米勒",
+          "keyword": "初めまして",
+          "videoStart": "0:31.9",
+          "videoEnd": "0:34.9",
+          "sourceType": "official_video_subtitle"
+        },
+        {
+          "id": "l01-conv-005",
+          "speaker": "ミラー",
+          "jp": "アメリカから来ました",
+          "kana": "あめりかからきました",
+          "zh": "我从美国来",
+          "keyword": "〜から来ました",
+          "videoStart": "0:34.9",
+          "videoEnd": "0:36.6",
+          "sourceType": "official_video_subtitle"
+        },
+        {
+          "id": "l01-conv-006",
+          "speaker": "ミラー",
+          "jp": "どうぞよろしく",
+          "kana": "どうぞよろしく",
+          "zh": "请多关照",
+          "keyword": "どうぞよろしく",
+          "videoStart": "0:36.6",
+          "videoEnd": "0:38.3",
+          "sourceType": "official_video_subtitle"
+        },
+        {
+          "id": "l01-conv-007",
+          "speaker": "佐藤",
+          "jp": "佐藤恵子です",
+          "kana": "さとうけいこです",
+          "zh": "我是佐藤惠子",
+          "keyword": "〜です",
+          "videoStart": "0:38.3",
+          "videoEnd": "0:40.2",
+          "sourceType": "official_video_subtitle"
+        },
+        {
+          "id": "l01-conv-008",
+          "speaker": "佐藤",
+          "jp": "どうぞよろしく",
+          "kana": "どうぞよろしく",
+          "zh": "请多关照",
+          "keyword": "どうぞよろしく",
+          "videoStart": "0:40.2",
+          "videoEnd": "0:41.5",
+          "sourceType": "official_video_subtitle",
+          "reviewNote": "片段过短（1.3s），请确认是否需要与相邻句子合并"
+        }
+      ]
+    },
+    {
+      "type": "conversation_vocab",
+      "id": "l01_conversation_vocab",
+      "sourceType": "ai_generated",
+      "title": {
+        "zh": "会话关键词汇",
+        "en": "Conversation Key Vocabulary"
+      },
+      "description": {
+        "zh": "以下词汇从第1课会话原文中提取，建议优先掌握。加星号（★）为核心必背词。",
+        "en": "The following vocabulary is extracted from the Lesson 1 conversation. Prioritize these. Marked ★ are core must-know words."
+      },
+      "items": [
+        {
+          "word": "おはようございます",
+          "kana": "おはようございます",
+          "zh": "早上好",
+          "fromConversationId": "l01-conv-001",
+          "importance": "core",
+          "needsReview": true
+        },
+        {
+          "word": "佐藤",
+          "kana": "さとう",
+          "zh": "佐藤（姓氏）",
+          "fromConversationId": "l01-conv-002",
+          "importance": "support",
+          "needsReview": true
+        },
+        {
+          "word": "さん",
+          "kana": "さん",
+          "zh": "…先生/…女士（敬称后缀）",
+          "fromConversationId": "l01-conv-002",
+          "importance": "core",
+          "needsReview": true
+        },
+        {
+          "word": "こちら",
+          "kana": "こちら",
+          "zh": "这位/这边",
+          "fromConversationId": "l01-conv-003",
+          "importance": "core",
+          "needsReview": true
+        },
+        {
+          "word": "マイク・ミラー",
+          "kana": "マイク・ミラー",
+          "zh": "迈克·米勒（人名）",
+          "fromConversationId": "l01-conv-003",
+          "importance": "support",
+          "needsReview": true
+        },
+        {
+          "word": "初めまして",
+          "kana": "はじめまして",
+          "zh": "初次见面",
+          "fromConversationId": "l01-conv-004",
+          "importance": "core",
+          "needsReview": true
+        },
+        {
+          "word": "アメリカ",
+          "kana": "アメリカ",
+          "zh": "美国",
+          "fromConversationId": "l01-conv-005",
+          "importance": "core",
+          "needsReview": true
+        },
+        {
+          "word": "から",
+          "kana": "から",
+          "zh": "从/来自（格助词）",
+          "fromConversationId": "l01-conv-005",
+          "importance": "core",
+          "needsReview": true
+        },
+        {
+          "word": "来ました",
+          "kana": "きました",
+          "zh": "来了（来ます的过去形）",
+          "fromConversationId": "l01-conv-005",
+          "importance": "core",
+          "needsReview": true
+        },
+        {
+          "word": "どうぞよろしく",
+          "kana": "どうぞよろしく",
+          "zh": "请多关照",
+          "fromConversationId": "l01-conv-006",
+          "importance": "core",
+          "needsReview": true
+        },
+        {
+          "word": "恵子",
+          "kana": "けいこ",
+          "zh": "惠子（人名）",
+          "fromConversationId": "l01-conv-007",
+          "importance": "support",
+          "needsReview": true
+        },
+        {
+          "word": "です",
+          "kana": "です",
+          "zh": "是（礼貌判断助动词）",
+          "fromConversationId": "l01-conv-007",
+          "importance": "core",
+          "needsReview": true
+        }
+      ]
+    },
+    {
+      "type": "conversation_grammar",
+      "id": "l01_conversation_grammar",
+      "sourceType": "ai_generated",
+      "title": {
+        "zh": "会话核心语法",
+        "en": "Conversation Core Grammar"
+      },
+      "description": {
+        "zh": "以下语法点从第1课会话原文中提取，掌握这些句型即可完成本课会话目标。",
+        "en": "The following grammar points are extracted from the Lesson 1 conversation. Mastering these patterns will help you achieve the lesson goal."
+      },
+      "items": [
+        {
+          "pattern": "おはようございます",
+          "meaning": {
+            "zh": "早上好（礼貌问候）",
+            "en": "Good morning (polite)"
+          },
+          "conversationExample": "おはようございます。",
+          "fromConversationId": "l01-conv-001",
+          "explanationZh": "「おはようございます」是日语中早晨见面时的礼貌问候语，可用于同事、邻居、长辈等。口语中也可省略为「おはよう」。",
+          "needsReview": true
+        },
+        {
+          "pattern": "Nさん",
+          "meaning": {
+            "zh": "…先生/…女士",
+            "en": "Mr./Ms. (honorific suffix)"
+          },
+          "conversationExample": "佐藤さん",
+          "fromConversationId": "l01-conv-002",
+          "explanationZh": "「さん」是最常用的敬称后缀，加在对方姓名后表示礼貌。不能用于自己。如：佐藤さん、ミラーさん。",
+          "needsReview": true
+        },
+        {
+          "pattern": "こちらはNさんです",
+          "meaning": {
+            "zh": "这位是…先生/女士（介绍他人）",
+            "en": "This is Mr./Ms. (introducing someone)"
+          },
+          "conversationExample": "こちらはマイクミラーさんです。",
+          "fromConversationId": "l01-conv-003",
+          "explanationZh": "「こちらは」用于向第三方介绍某人，比「この人は」更礼貌。句型：こちらは + 人名 + さん + です。",
+          "needsReview": true
+        },
+        {
+          "pattern": "初めまして、Nです",
+          "meaning": {
+            "zh": "初次见面，我是…（自我介绍开头）",
+            "en": "Nice to meet you, I am… (self-introduction opening)"
+          },
+          "conversationExample": "初めましてマイクミラーです。",
+          "fromConversationId": "l01-conv-004",
+          "explanationZh": "「初めまして」用于初次见面时的开场白。之后接「名前 + です」介绍自己。",
+          "needsReview": true
+        },
+        {
+          "pattern": "Nから来ました",
+          "meaning": {
+            "zh": "来自…/从…来",
+            "en": "I came from…"
+          },
+          "conversationExample": "アメリカから来ました。",
+          "fromConversationId": "l01-conv-005",
+          "explanationZh": "「から」表示起点/来源，「来ました」是「来ます」的礼貌过去形。自我介绍中常用「国名/地名 + から来ました」说明出身。",
+          "needsReview": true
+        },
+        {
+          "pattern": "どうぞよろしく",
+          "meaning": {
+            "zh": "请多关照（自我介绍结尾）",
+            "en": "Nice to meet you (self-introduction closing)"
+          },
+          "conversationExample": "どうぞよろしく。",
+          "fromConversationId": "l01-conv-006",
+          "explanationZh": "「どうぞよろしく」是自我介绍结尾时的礼貌用语，表示\"请多关照\"。更完整的说法是「どうぞよろしくお願いします」。",
+          "needsReview": true
+        },
+        {
+          "pattern": "Nです（判断句）",
+          "meaning": {
+            "zh": "是…（礼貌判断）",
+            "en": "is/am (polite copula)"
+          },
+          "conversationExample": "佐藤恵子です。",
+          "fromConversationId": "l01-conv-007",
+          "explanationZh": "「です」是日语的礼貌判断助动词，相当于中文的\"是\"。句型：名词 + です。如：マイクミラーです、佐藤恵子です。",
+          "needsReview": true
+        }
+      ]
+    },
+    {
+      "type": "conversation_examples",
+      "id": "l01_conversation_examples",
+      "sourceType": "ai_generated_from_official_conversation",
+      "title": {
+        "zh": "会话替换例句",
+        "en": "Conversation Replacement Examples"
+      },
+      "description": {
+        "zh": "以下例句基于会话原句生成，通过替换关键词帮助掌握句型结构。所有例句为 AI 辅助生成，需人工确认。",
+        "en": "The following examples are generated from the original conversation sentences. Replace keywords to practice the sentence patterns."
+      },
+      "items": [
+        {
+          "basedOnId": "l01-conv-003",
+          "pattern": "こちらはNさんです",
+          "origin": "こちらはマイクミラーさんです",
+          "examples": [
+            {
+              "jp": "こちらは佐藤さんです",
+              "kana": "こちらはさとうさんです",
+              "zh": "这位是佐藤女士"
+            },
+            {
+              "jp": "こちらは田中さんです",
+              "kana": "こちらはたなかさんです",
+              "zh": "这位是田中先生"
+            },
+            {
+              "jp": "こちらは山田さんです",
+              "kana": "こちらはやまださんです",
+              "zh": "这位是山田先生"
+            }
+          ],
+          "needsReview": true
+        },
+        {
+          "basedOnId": "l01-conv-004",
+          "pattern": "初めまして、Nです",
+          "origin": "初めましてマイクミラーです",
+          "examples": [
+            {
+              "jp": "初めまして、佐藤です",
+              "kana": "はじめまして、さとうです",
+              "zh": "初次见面，我是佐藤"
+            },
+            {
+              "jp": "初めまして、田中です",
+              "kana": "はじめまして、たなかです",
+              "zh": "初次见面，我是田中"
+            },
+            {
+              "jp": "初めまして、山田です",
+              "kana": "はじめまして、やまだです",
+              "zh": "初次见面，我是山田"
+            }
+          ],
+          "needsReview": true
+        },
+        {
+          "basedOnId": "l01-conv-005",
+          "pattern": "Nから来ました",
+          "origin": "アメリカから来ました",
+          "examples": [
+            {
+              "jp": "中国から来ました",
+              "kana": "ちゅうごくからきました",
+              "zh": "我从中国来"
+            },
+            {
+              "jp": "日本から来ました",
+              "kana": "にほんからきました",
+              "zh": "我从日本来"
+            },
+            {
+              "jp": "韓国から来ました",
+              "kana": "かんこくからきました",
+              "zh": "我从韩国来"
+            },
+            {
+              "jp": "イギリスから来ました",
+              "kana": "イギリスからきました",
+              "zh": "我从英国来"
+            }
+          ],
+          "needsReview": true
+        },
+        {
+          "basedOnId": "l01-conv-007",
+          "pattern": "Nです",
+          "origin": "佐藤恵子です",
+          "examples": [
+            {
+              "jp": "学生です",
+              "kana": "がくせいです",
+              "zh": "我是学生"
+            },
+            {
+              "jp": "会社員です",
+              "kana": "かいしゃいんです",
+              "zh": "我是公司职员"
+            },
+            {
+              "jp": "先生です",
+              "kana": "せんせいです",
+              "zh": "我是老师"
+            }
+          ],
+          "needsReview": true
+        }
+      ]
+    },
+    {
+      "type": "conversation_quiz",
+      "id": "l01_conversation_quiz",
+      "sourceType": "ai_generated_from_official_conversation",
+      "title": {
+        "zh": "会话专项测试",
+        "en": "Conversation Quiz"
+      },
+      "description": {
+        "zh": "以下测试题围绕第1课会话内容设计，全部服务于背会话。",
+        "en": "The following quiz questions are designed around the Lesson 1 conversation, all serving the goal of memorizing the conversation."
+      },
+      "items": [
+        {
+          "id": "l01-q-listen-001",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「おはようございます」是什么意思？",
+            "en": "What does おはようございます mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "早上好",
+                "en": "Good morning"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "晚上好",
+                "en": "Good evening"
+              }
+            },
+            {
+              "text": {
+                "zh": "谢谢",
+                "en": "Thank you"
+              }
+            },
+            {
+              "text": {
+                "zh": "再见",
+                "en": "Goodbye"
+              }
+            }
+          ],
+          "fromConversationId": "l01-conv-001",
+          "explanationZh": "「おはようございます」是早上见面时的问候语。",
+          "needsReview": true
+        },
+        {
+          "id": "l01-q-listen-002",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「初めまして」是什么意思？",
+            "en": "What does 初めまして mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "初次见面",
+                "en": "Nice to meet you"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我回来了",
+                "en": "I'm back"
+              }
+            },
+            {
+              "text": {
+                "zh": "对不起",
+                "en": "Sorry"
+              }
+            },
+            {
+              "text": {
+                "zh": "好久不见",
+                "en": "Long time no see"
+              }
+            }
+          ],
+          "fromConversationId": "l01-conv-004",
+          "explanationZh": "「初めまして」用于初次见面时。",
+          "needsReview": true
+        },
+        {
+          "id": "l01-q-listen-003",
+          "type": "listen_choose_meaning",
+          "prompt": {
+            "zh": "「どうぞよろしく」是什么意思？",
+            "en": "What does どうぞよろしく mean?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "请多关照",
+                "en": "Nice to meet you / Please treat me well"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "谢谢",
+                "en": "Thank you"
+              }
+            },
+            {
+              "text": {
+                "zh": "对不起",
+                "en": "I am sorry"
+              }
+            },
+            {
+              "text": {
+                "zh": "没关系",
+                "en": "It's okay"
+              }
+            }
+          ],
+          "fromConversationId": "l01-conv-006",
+          "explanationZh": "「どうぞよろしく」是自我介绍结尾时的常用语。",
+          "needsReview": true
+        },
+        {
+          "id": "l01-q-zh2jp-001",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「早上好」的日语说法。",
+            "en": "Select the Japanese for \"Good morning\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "おはようございます"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "こんにちは"
+              }
+            },
+            {
+              "text": {
+                "jp": "こんばんは"
+              }
+            },
+            {
+              "text": {
+                "jp": "さようなら"
+              }
+            }
+          ],
+          "fromConversationId": "l01-conv-001",
+          "explanationZh": "「早上好」=「おはようございます」。",
+          "needsReview": true
+        },
+        {
+          "id": "l01-q-zh2jp-002",
+          "type": "chinese_to_japanese",
+          "prompt": {
+            "zh": "请选择「我从美国来」的日语说法。",
+            "en": "Select the Japanese for \"I came from America\"."
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "アメリカから来ました"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "アメリカへ行きます"
+              }
+            },
+            {
+              "text": {
+                "jp": "アメリカにいます"
+              }
+            },
+            {
+              "text": {
+                "jp": "アメリカです"
+              }
+            }
+          ],
+          "fromConversationId": "l01-conv-005",
+          "explanationZh": "「美国」= アメリカ、「从…来」= から来ました。",
+          "needsReview": true
+        },
+        {
+          "id": "l01-q-fill-001",
+          "type": "keyword_fill",
+          "prompt": {
+            "zh": "补全句子：「___、マイクミラーです。」（初次见面）",
+            "en": "Fill in the blank: \"___、マイクミラーです。\" (Nice to meet you)"
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "初めまして"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "おはようございます"
+              }
+            },
+            {
+              "text": {
+                "jp": "どうぞよろしく"
+              }
+            },
+            {
+              "text": {
+                "jp": "こんにちは"
+              }
+            }
+          ],
+          "fromConversationId": "l01-conv-004",
+          "explanationZh": "自我介绍开头用「初めまして」（初次见面）。",
+          "needsReview": true
+        },
+        {
+          "id": "l01-q-fill-002",
+          "type": "keyword_fill",
+          "prompt": {
+            "zh": "补全句子：「アメリカ___来ました。」（从…来）",
+            "en": "Fill in the blank: \"アメリカ___来ました。\" (from…)"
+          },
+          "choices": [
+            {
+              "text": {
+                "jp": "から"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "jp": "へ"
+              }
+            },
+            {
+              "text": {
+                "jp": "を"
+              }
+            },
+            {
+              "text": {
+                "jp": "で"
+              }
+            }
+          ],
+          "fromConversationId": "l01-conv-005",
+          "explanationZh": "「から」表示来源或起点。",
+          "needsReview": true
+        },
+        {
+          "id": "l01-q-order-001",
+          "type": "sentence_order",
+          "prompt": {
+            "zh": "请排列词块组成正确句子：「这位是迈克·米勒先生。」",
+            "en": "Arrange the chunks to form: \"This is Mr. Mike Miller.\""
+          },
+          "parts": [
+            "こちらは",
+            "マイクミラーさん",
+            "です"
+          ],
+          "correctOrder": [
+            "こちらは",
+            "マイクミラーさん",
+            "です"
+          ],
+          "fromConversationId": "l01-conv-003",
+          "explanationZh": "介绍他人时用「こちらは + 人名さん + です」。",
+          "needsReview": true
+        },
+        {
+          "id": "l01-q-order-002",
+          "type": "sentence_order",
+          "prompt": {
+            "zh": "请排列词块组成正确句子：「请多关照。」",
+            "en": "Arrange the chunks to form: \"Nice to meet you.\""
+          },
+          "parts": [
+            "どうぞ",
+            "よろしく"
+          ],
+          "correctOrder": [
+            "どうぞ",
+            "よろしく"
+          ],
+          "fromConversationId": "l01-conv-006",
+          "explanationZh": "「どうぞ + よろしく = どうぞよろしく」，注意顺序。",
+          "needsReview": true
+        },
+        {
+          "id": "l01-q-role-001",
+          "type": "role_response",
+          "prompt": {
+            "zh": "A说：「初めまして、マイクミラーです。」B该回答什么？",
+            "en": "A says: \"初めまして、マイクミラーです。\" What should B reply?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "佐藤恵子です。どうぞよろしく。",
+                "en": "佐藤恵子です。どうぞよろしく。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "おはようございます。",
+                "en": "おはようございます。"
+              }
+            },
+            {
+              "text": {
+                "zh": "こちらはマイクミラーさんです。",
+                "en": "こちらはマイクミラーさんです。"
+              }
+            },
+            {
+              "text": {
+                "zh": "アメリカから来ました。",
+                "en": "アメリカから来ました。"
+              }
+            }
+          ],
+          "fromConversationId": "l01-conv-004",
+          "explanationZh": "初次见面相互自我介绍后，对方也应报姓名并说「どうぞよろしく」。",
+          "needsReview": true
+        },
+        {
+          "id": "l01-q-role-002",
+          "type": "role_response",
+          "prompt": {
+            "zh": "A把B介绍给C时说：「こちらはマイクミラーさんです。」A说完后，B该说什么？",
+            "en": "A introduces B to C: \"こちらはマイクミラーさんです。\" What should B say next?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "初めまして、マイクミラーです。アメリカから来ました。どうぞよろしく。",
+                "en": "初めまして、マイクミラーです。アメリカから来ました。どうぞよろしく。"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "おはようございます。",
+                "en": "おはようございます。"
+              }
+            },
+            {
+              "text": {
+                "zh": "こちらは佐藤さんです。",
+                "en": "こちらは佐藤さんです。"
+              }
+            },
+            {
+              "text": {
+                "zh": "さようなら。",
+                "en": "さようなら。"
+              }
+            }
+          ],
+          "fromConversationId": "l01-conv-004",
+          "explanationZh": "被介绍后应做自我介绍：姓名 + 国籍/出身 + 请多关照。",
+          "needsReview": true
+        },
+        {
+          "id": "l01-q-recall-001",
+          "type": "recall_check",
+          "prompt": {
+            "zh": "「佐藤恵子です」的中文意思是？",
+            "en": "What is the Chinese meaning of \"佐藤恵子です\"?"
+          },
+          "choices": [
+            {
+              "text": {
+                "zh": "我是佐藤惠子",
+                "en": "I am Sato Keiko"
+              },
+              "correct": true
+            },
+            {
+              "text": {
+                "zh": "我是佐藤先生",
+                "en": "I am Mr. Sato"
+              }
+            },
+            {
+              "text": {
+                "zh": "佐藤女士你好",
+                "en": "Hello Ms. Sato"
+              }
+            },
+            {
+              "text": {
+                "zh": "佐藤先生是谁",
+                "en": "Who is Mr. Sato"
+              }
+            }
+          ],
+          "fromConversationId": "l01-conv-007",
+          "explanationZh": "「佐藤恵子です」=「我是佐藤惠子」。",
+          "needsReview": true
+        }
+      ]
+    }
+  ]
+}
