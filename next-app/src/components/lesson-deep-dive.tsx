@@ -43,7 +43,7 @@ function LineUsageCard({ item }: { item: DeepDive['lineUsage'][0] }) {
         <span style={{ fontWeight: 600 }}>情感语气：</span>
         {item.emotionTone}
       </div>
-      <div style={{ fontSize: 13, background: '#f1f5f9', borderRadius: 6, padding: '8 10', marginTop: 4 }}>
+      <div style={{ fontSize: 13, background: '#f1f5f9', borderRadius: 6, padding: '8px 10px', marginTop: 4 }}>
         <span style={{ fontWeight: 600 }}>💡 记忆提示：</span>
         {item.memoryTip}
       </div>
@@ -53,16 +53,25 @@ function LineUsageCard({ item }: { item: DeepDive['lineUsage'][0] }) {
 
 export default function DeepDiveViewer({
   deepDive,
-  lang
+  lang,
+  lessonNo
 }: {
   deepDive: DeepDive | null | undefined
   lang: string
+  lessonNo?: number
 }) {
   const [retellCopied, setRetellCopied] = useState(false)
 
   if (!deepDive) {
     return (
       <main>
+        {lessonNo && (
+          <div style={{ marginBottom: 12 }}>
+            <a className="btn ghost" href={`/lessons/${lessonNo}`} style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+              ← {lang === 'en' ? `Back to Lesson ${lessonNo}` : `返回第 ${lessonNo} 课`}
+            </a>
+          </div>
+        )}
         <section className="card" style={{ textAlign: 'center', padding: 40 }}>
           <div style={{ fontSize: 48, marginBottom: 12 }}>🔍</div>
           <h3>{lang === 'en' ? 'Deep Dive Coming Soon' : '本课深度解剖内容准备中'}</h3>
@@ -78,6 +87,13 @@ export default function DeepDiveViewer({
 
   return (
     <main>
+      {lessonNo && (
+        <div style={{ marginBottom: 12 }}>
+          <a className="btn ghost" href={`/lessons/${lessonNo}`} style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+            ← {lang === 'en' ? `Back to Lesson ${lessonNo}` : `返回第 ${lessonNo} 课`}
+          </a>
+        </div>
+      )}
       <section className="card" style={{ textAlign: 'center' }}>
         <div style={{ fontSize: 32, marginBottom: 8 }}>🔍</div>
         <h2>{lang === 'en' ? 'Conversation Deep Dive' : '会话深度解剖'}</h2>

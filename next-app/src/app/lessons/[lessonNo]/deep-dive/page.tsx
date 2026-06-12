@@ -45,7 +45,7 @@ export default async function DeepDivePage({
       <MinnaNav active="lessons" />
       <TopLabelSync label={lang === 'en' ? `Lesson ${no} · Deep Dive` : `第 ${no} 课 · 深度解剖`} />
 
-      <DeepDiveViewer deepDive={deepDive} lang={lang} />
+      <DeepDiveViewer deepDive={deepDive} lang={lang} lessonNo={no} />
 
       <section className="card">
         <h3>{lang === 'en' ? 'Navigation' : '导航'}</h3>
