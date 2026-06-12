@@ -1,6 +1,8 @@
 'use client'
 
+import Link from 'next/link'
 import { useState } from 'react'
+import { LESSONS_1_50 } from '@/lib/minna-lessons'
 import type { DeepDive } from '@/types/deep-dive'
 
 function CollapsibleSection({ title, defaultOpen, children }: { title: string; defaultOpen?: boolean; children: React.ReactNode }) {
@@ -51,6 +53,14 @@ function LineUsageCard({ item }: { item: DeepDive['lineUsage'][0] }) {
   )
 }
 
+const STUDY_ORDER = [
+  { step: 1, zh: '看懂场景', en: 'Understand the scene' },
+  { step: 2, zh: '理解人物关系', en: 'Understand character relationships' },
+  { step: 3, zh: '逐句理解说话意图', en: 'Understand each line\'s intent' },
+  { step: 4, zh: '回到会话页跟读', en: 'Go back to conversation practice' },
+  { step: 5, zh: '今日打卡', en: 'Check in today' },
+]
+
 export default function DeepDiveViewer({
   deepDive,
   lang,
@@ -62,14 +72,16 @@ export default function DeepDiveViewer({
 }) {
   const [retellCopied, setRetellCopied] = useState(false)
 
+  const meta = lessonNo ? LESSONS_1_50.find(x => x.no === lessonNo) : undefined
+
   if (!deepDive) {
     return (
-      <main>
+      <main style={{ paddingBottom: 'calc(32px + env(safe-area-inset-bottom, 0px) + 120px)' }}>
         {lessonNo && (
           <div style={{ marginBottom: 12 }}>
-            <a className="btn ghost" href={`/lessons/${lessonNo}`} style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+            <Link className="btn ghost" href={`/lessons/${lessonNo}`} style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
               ← {lang === 'en' ? `Back to Lesson ${lessonNo}` : `返回第 ${lessonNo} 课`}
-            </a>
+            </Link>
           </div>
         )}
         <section className="card" style={{ textAlign: 'center', padding: 40 }}>
@@ -86,33 +98,61 @@ export default function DeepDiveViewer({
   }
 
   return (
-    <main>
-      {lessonNo && (
-        <div style={{ marginBottom: 12 }}>
-          <a className="btn ghost" href={`/lessons/${lessonNo}`} style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
-            ← {lang === 'en' ? `Back to Lesson ${lessonNo}` : `返回第 ${lessonNo} 课`}
-          </a>
-        </div>
-      )}
+    <main style={{ paddingBottom: 'calc(32px + env(safe-area-inset-bottom, 0px) + 120px)' }}>
+      {/* ── Top: back + lesson info ── */}
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12, flexWrap: 'wrap', gap: 8 }}>
+        <Link className="btn ghost" href={`/lessons/${lessonNo}`} style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+          ← {lang === 'en' ? `Lesson ${lessonNo}` : `第${lessonNo}课`}
+        </Link>
+        <span className="small" style={{ color: '#94a3b8' }}>
+          {lang === 'en' ? 'Module: Deep Dive' : '模块：会话深度解剖'}
+        </span>
+      </div>
+
+      {/* ── Header card ── */}
       <section className="card" style={{ textAlign: 'center' }}>
-        <div style={{ fontSize: 32, marginBottom: 8 }}>🔍</div>
-        <h2>{lang === 'en' ? 'Conversation Deep Dive' : '会话深度解剖'}</h2>
-        <p className="small" style={{ maxWidth: 400, margin: '6px auto 0' }}>
+        <div style={{ fontSize: 32, marginBottom: 6 }}>🔍</div>
+        {meta && (
+          <p className="small" style={{ margin: '0 0 4px', color: '#64748b' }}>
+            {lang === 'en' ? `Lesson ${lessonNo} · ${meta.title}` : `第${lessonNo}课 · ${meta.title}`}
+          </p>
+        )}
+        <h2 style={{ margin: '4px 0' }}>
+          {lang === 'en' ? 'Conversation Deep Dive' : '会话深度解剖'}
+        </h2>
+        <p className="small" style={{ maxWidth: 420, margin: '8px auto 0', color: '#475569' }}>
           {lang === 'en'
-            ? 'Understand the conversation in Chinese before you start memorising.'
-            : '在背诵之前，先用中文彻底理解这段会话在说什么。'}
+            ? 'Understand the conversation in Chinese first, then return to shadow and memorise.'
+            : '先用中文理解，再回到日文跟读和背诵。'}
         </p>
       </section>
 
+      {/* ── Scene overview ── */}
       <section className="card">
-        <h3>{lang === 'en' ? 'Scene Overview' : '本课场景一句话说明'}</h3>
-        <p style={{ fontSize: 15, margin: '8px 0 0' }}>{deepDive.sceneSummary}</p>
+        <h3 style={{ margin: 0, fontSize: 15 }}>{lang === 'en' ? 'Scene Overview' : '本课场景一句话说明'}</h3>
+        <p style={{ fontSize: 15, margin: '8px 0 0', lineHeight: 1.6 }}>{deepDive.sceneSummary}</p>
       </section>
 
+      {/* ── Study order for this page ── */}
+      <section className="card" style={{ background: '#f7f9fc', borderColor: '#dbeafe' }}>
+        <h3 style={{ margin: '0 0 8px', fontSize: 14, color: '#0369a1' }}>
+          📋 {lang === 'en' ? 'How to use this page' : '本页学习顺序'}
+        </h3>
+        <ol style={{ margin: 0, paddingLeft: 18 }}>
+          {STUDY_ORDER.map(f => (
+            <li key={f.step} style={{ marginBottom: 4, fontSize: 13, lineHeight: 1.5, color: '#334155' }}>
+              {lang === 'en' ? f.en : f.zh}
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      {/* ── Story explanation ── */}
       <CollapsibleSection title={lang === 'en' ? 'Story Explanation' : '会话剧情中文解说'} defaultOpen>
         <p style={{ lineHeight: 1.8, fontSize: 14, whiteSpace: 'pre-wrap' }}>{deepDive.storyExplanation}</p>
       </CollapsibleSection>
 
+      {/* ── Character analysis ── */}
       {deepDive.characters && deepDive.characters.length > 0 && (
         <CollapsibleSection title={lang === 'en' ? 'Character Analysis' : '人物关系分析'}>
           {deepDive.characters.map((char, i) => (
@@ -127,6 +167,7 @@ export default function DeepDiveViewer({
         </CollapsibleSection>
       )}
 
+      {/* ── Conversation flow ── */}
       {deepDive.conversationFlow && deepDive.conversationFlow.length > 0 && (
         <CollapsibleSection title={lang === 'en' ? 'Conversation Flow' : '会话流程图'}>
           {deepDive.conversationFlow.map((step) => (
@@ -143,12 +184,12 @@ export default function DeepDiveViewer({
               }}>
                 {step.step}
               </div>
-              <div style={{ flex: 1 }}>
+              <div style={{ flex: 1, minWidth: 0 }}>
                 <div style={{ fontWeight: 600, fontSize: 15, marginBottom: 4 }}>{step.title}</div>
-                <p style={{ fontSize: 13, lineHeight: 1.7, margin: 0 }}>{step.explanation}</p>
+                <p style={{ fontSize: 13, lineHeight: 1.7, margin: 0, wordBreak: 'break-word' }}>{step.explanation}</p>
                 {step.relatedLineIds.length > 0 && (
                   <div style={{ fontSize: 12, color: '#64748b', marginTop: 4 }}>
-                    {lang === 'en' ? 'Related sentences: ' : '涉及句子：'}
+                    {lang === 'en' ? 'Related: ' : '涉及句子：'}
                     {step.relatedLineIds.join(', ')}
                   </div>
                 )}
@@ -158,6 +199,7 @@ export default function DeepDiveViewer({
         </CollapsibleSection>
       )}
 
+      {/* ── Line usage ── */}
       {deepDive.lineUsage && deepDive.lineUsage.length > 0 && (
         <CollapsibleSection title={lang === 'en' ? 'Sentence Usage Guide' : '每句话的现实用途'}>
           {deepDive.lineUsage.map((item, i) => (
@@ -166,6 +208,7 @@ export default function DeepDiveViewer({
         </CollapsibleSection>
       )}
 
+      {/* ── Chinese retell ── */}
       <CollapsibleSection title={lang === 'en' ? 'Chinese Retell Challenge' : '中文复述挑战'}>
         <p style={{ fontSize: 14, lineHeight: 1.8, whiteSpace: 'pre-wrap', background: '#f1f5f9', borderRadius: 8, padding: 14 }}>
           {deepDive.chineseRetellPrompt}
@@ -183,6 +226,7 @@ export default function DeepDiveViewer({
         </button>
       </CollapsibleSection>
 
+      {/* ── Replacement practice ── */}
       {deepDive.realLifeReplacementPractice && deepDive.realLifeReplacementPractice.length > 0 && (
         <CollapsibleSection title={lang === 'en' ? 'Real-life Practice' : '生活场景替换练习'}>
           <ol style={{ margin: 0, paddingLeft: 20 }}>
@@ -194,6 +238,23 @@ export default function DeepDiveViewer({
           </ol>
         </CollapsibleSection>
       )}
+
+      {/* ── Bottom action buttons ── */}
+      <section className="card" style={{ textAlign: 'center' }}>
+        <div style={{ display: 'flex', gap: 10, flexDirection: 'column' }}>
+          <Link className="btn" href={`/lessons/${lessonNo}`} style={{ padding: '14px 20px', fontSize: 16 }}>
+            🎯 {lang === 'en' ? 'Go to Conversation Practice & Recite' : '去会话跟读 / 背诵'}
+          </Link>
+          <div style={{ display: 'flex', gap: 10, justifyContent: 'center' }}>
+            <Link className="btn ghost" href={`/lessons/${lessonNo}`} style={{ fontSize: 13 }}>
+              ← {lang === 'en' ? 'Back to Lesson' : '返回本课'}
+            </Link>
+            <Link className="btn ghost" href="/lessons" style={{ fontSize: 13 }}>
+              {lang === 'en' ? 'All Lessons' : '课程目录'}
+            </Link>
+          </div>
+        </div>
+      </section>
     </main>
   )
 }

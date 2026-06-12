@@ -1,6 +1,5 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
-import Link from 'next/link'
 import MinnaNav from '@/components/minna-nav'
 import TopLabelSync from '@/components/top-label-sync'
 import DeepDiveViewer from '@/components/lesson-deep-dive'
@@ -44,24 +43,7 @@ export default async function DeepDivePage({
     <div>
       <MinnaNav active="lessons" />
       <TopLabelSync label={lang === 'en' ? `Lesson ${no} · Deep Dive` : `第 ${no} 课 · 深度解剖`} />
-
       <DeepDiveViewer deepDive={deepDive} lang={lang} lessonNo={no} />
-
-      <section className="card">
-        <h3>{lang === 'en' ? 'Navigation' : '导航'}</h3>
-        <p>
-          {lang === 'en' ? (
-            <>
-              ← <Link href={`/lessons/${no}`}>Back to Lesson {no}</Link>
-            </>
-          ) : (
-            <>
-              ← <Link href={`/lessons/${no}`}>返回第 {no} 课</Link>
-            </>
-          )}
-        </p>
-        <p><Link href="/lessons">{lang === 'en' ? 'Back to lesson list' : '返回课程目录'}</Link></p>
-      </section>
     </div>
   )
 }
