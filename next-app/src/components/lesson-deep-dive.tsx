@@ -76,7 +76,7 @@ export default function DeepDiveViewer({
 
   if (!deepDive) {
     return (
-      <main style={{ paddingBottom: 'calc(32px + env(safe-area-inset-bottom, 0px) + 120px)' }}>
+    <main style={{ paddingBottom: 'calc(32px + env(safe-area-inset-bottom, 0px) + 160px)', overflowX: 'hidden' }}>
         {lessonNo && (
           <div style={{ marginBottom: 12 }}>
             <Link className="btn ghost" href={`/lessons/${lessonNo}`} style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
@@ -98,7 +98,7 @@ export default function DeepDiveViewer({
   }
 
   return (
-    <main style={{ paddingBottom: 'calc(32px + env(safe-area-inset-bottom, 0px) + 120px)' }}>
+    <main style={{ paddingBottom: 'calc(32px + env(safe-area-inset-bottom, 0px) + 160px)' }}>
       {/* ── Top: back + lesson info ── */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12, flexWrap: 'wrap', gap: 8 }}>
         <Link className="btn ghost" href={`/lessons/${lessonNo}`} style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>

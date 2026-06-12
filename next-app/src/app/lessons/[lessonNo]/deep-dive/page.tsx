@@ -40,7 +40,7 @@ export default async function DeepDivePage({
   const deepDive = await loadDeepDive(no)
 
   return (
-    <div>
+    <div style={{ overflowX: 'hidden', maxWidth: '100%' }}>
       <MinnaNav active="lessons" />
       <TopLabelSync label={lang === 'en' ? `Lesson ${no} · Deep Dive` : `第 ${no} 课 · 深度解剖`} />
       <DeepDiveViewer deepDive={deepDive} lang={lang} lessonNo={no} />
