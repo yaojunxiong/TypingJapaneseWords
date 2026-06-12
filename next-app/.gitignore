@@ -5,3 +5,5 @@ out
 .vercel
 *.tsbuildinfo
 .env*
+public/videos/*.mp4
+public/videos/**/*.mp4
