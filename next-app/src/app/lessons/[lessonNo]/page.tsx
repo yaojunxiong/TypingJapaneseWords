@@ -27,6 +27,7 @@ type LessonDoc = {
     grammarItemCount?: number
     quizItemCount?: number
   }
+  deepDive?: Record<string, unknown>
 }
 
 export function generateStaticParams() {
@@ -45,6 +46,7 @@ async function loadLessonDoc(lessonNo: number): Promise<LessonDoc | null> {
 }
 
 const MAINLINE_STEPS = [
+  { key: 'deep-dive', emoji: '🔍', zh: '中文理解', en: 'Deep Dive', stage: 'deep-dive' },
   { key: 'video', emoji: '🎬', zh: '会话视频', en: 'Conversation Video', stage: 'conversation' },
   { key: 'conversation', emoji: '💬', zh: '会话原文', en: 'Conversation Text', stage: 'conversation' },
   { key: 'vocab', emoji: '📖', zh: '会话关键词汇', en: 'Key Vocabulary', stage: 'conversation_vocab' },
@@ -86,9 +88,11 @@ export default async function LessonDetailPage({
 
       <section className="card" style={{ padding: 0, overflow: 'hidden' }}>
         {MAINLINE_STEPS.map((step, i) => {
-          const href = step.stage.includes('#')
-            ? `/lessons/${no}/practice?stage=conversation`
-            : `/lessons/${no}/practice?stage=${step.stage}`
+          const href = step.key === 'deep-dive'
+            ? `/lessons/${no}/deep-dive`
+            : step.stage.includes('#')
+              ? `/lessons/${no}/practice?stage=conversation`
+              : `/lessons/${no}/practice?stage=${step.stage}`
           return (
             <Link
               key={step.key}
@@ -113,13 +117,15 @@ export default async function LessonDetailPage({
                   {lang === 'en' ? step.en : step.zh}
                 </div>
                 <div className="small" style={{ fontSize: 12, marginTop: 1 }}>
-                  {step.stage.includes('#')
-                    ? tr(lang, '会话页面底部功能区', 'Bottom of conversation page')
-                    : step.key === 'video'
-                      ? tr(lang, '打开视频跟读', 'Open video to follow along')
-                      : step.key === 'conversation'
-                        ? tr(lang, '逐句背诵并录音', 'Recite and record each sentence')
-                        : tr(lang, '独立练习页', 'Dedicated practice page')
+                  {step.key === 'deep-dive'
+                    ? tr(lang, '先中文理解会话背景、人物和每句话的用途', 'Understand the setting, characters and usage of each sentence in Chinese')
+                    : step.stage.includes('#')
+                      ? tr(lang, '会话页面底部功能区', 'Bottom of conversation page')
+                      : step.key === 'video'
+                        ? tr(lang, '打开视频跟读', 'Open video to follow along')
+                        : step.key === 'conversation'
+                          ? tr(lang, '逐句背诵并录音', 'Recite and record each sentence')
+                          : tr(lang, '独立练习页', 'Dedicated practice page')
                   }
                 </div>
               </div>
