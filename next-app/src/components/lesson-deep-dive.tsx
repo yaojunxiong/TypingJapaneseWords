@@ -147,6 +147,33 @@ export default function DeepDiveViewer({
         </ol>
       </section>
 
+      {/* ── Teacher audio preview (lessons 1-3 only) ── */}
+      {lessonNo && lessonNo >= 1 && lessonNo <= 3 && (
+        <section className="card">
+          <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12 }}>
+            <span style={{ fontSize: 28, flexShrink: 0 }}>🎧</span>
+            <div style={{ flex: 1, minWidth: 0 }}>
+              <h3 style={{ margin: 0, fontSize: 16 }}>
+                {lang === 'en' ? 'Teacher Audio Guide' : '老师讲解'}
+              </h3>
+              <p className="small" style={{ margin: '4px 0 10px', color: '#64748b' }}>
+                {lang === 'en'
+                  ? 'Listen to the Chinese teacher explain the conversation before diving into details.'
+                  : '先听一遍中文老师讲解，再看逐句解剖和回到会话背诵。'}
+              </p>
+              <audio
+                controls
+                preload="metadata"
+                style={{ width: '100%', maxWidth: '100%', borderRadius: 8 }}
+                src={`/audio/deep-dive/lesson-${String(lessonNo).padStart(2, '0')}-zh.mp3`}
+              >
+                {lang === 'en' ? 'Your browser does not support audio.' : '您的浏览器不支持音频播放。'}
+              </audio>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* ── Story explanation ── */}
       <CollapsibleSection title={lang === 'en' ? 'Story Explanation' : '会话剧情中文解说'} defaultOpen>
         <p style={{ lineHeight: 1.8, fontSize: 14, whiteSpace: 'pre-wrap' }}>{deepDive.storyExplanation}</p>
