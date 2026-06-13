@@ -203,6 +203,33 @@ export default async function LessonDetailPage({
 
       <LessonStageCards lessonNo={no} lang={lang} />
 
+      {no === 1 ? (
+        <section className="card">
+          <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap', alignItems: 'center' }}>
+            <div>
+              <span className="homeTag">漫画视频</span>
+              <h3 style={{ marginTop: 8 }}>漫画版会话视频（预览）</h3>
+            </div>
+            <span className="small">Lesson 1</span>
+          </div>
+          <p className="small">
+            用于帮助先看懂场景，再回到原文跟读和背诵。
+          </p>
+          <video
+            controls
+            preload="metadata"
+            src="/videos/lesson01_anime_v1.mp4"
+            style={{
+              display: 'block',
+              width: '100%',
+              borderRadius: 12,
+              border: '1px solid #e2e8f0',
+              background: '#0f172a'
+            }}
+          />
+        </section>
+      ) : null}
+
       {hasChineseAnalysis ? (
         <section id="conversation-analysis-chinese" className="card">
           <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap', alignItems: 'center' }}>
