@@ -763,6 +763,7 @@ function LearningDashboard({ lang, lessonNo, weaknesses, recentEvents, todayStat
   recentEvents: LearningEvent[]
   todayStats: { eventCount: number; playCount: number; recordCount: number; sentenceCount: number; knownCount: number; streakDays: number } | null
 }) {
+  const [showRecent, setShowRecent] = useState(false)
   const summaryMsg = todayStats ? getCheckinSummaryMessage(todayStats) : ''
 
   return (
@@ -817,29 +818,46 @@ function LearningDashboard({ lang, lessonNo, weaknesses, recentEvents, todayStat
       ) : null}
 
       {recentEvents.length > 0 ? (
-        <section className="card">
-          <h3 style={{ margin: '0 0 8px', fontSize: 15 }}>
-            {t(lang, '📝 最近学习记录', '📝 Recent Activity')}
-          </h3>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 4, fontSize: 13 }}>
-            {recentEvents.slice(0, 10).map((e, i) => (
-              <div key={e.id ?? i} style={{ display: 'flex', gap: 6, padding: '3px 0', borderBottom: i < Math.min(recentEvents.length, 10) - 1 ? '1px solid #f1f5f9' : 'none' }}>
-                <span className="small" style={{ minWidth: 32, fontSize: 11, color: '#94a3b8' }}>
-                  {formatEventTime(e.createdAt)}
-                </span>
-                <span style={{ fontSize: 12, color: '#64748b', minWidth: 70 }}>
-                  {EVENT_TYPE_LABELS[e.eventType as keyof typeof EVENT_TYPE_LABELS]?.zh || e.eventType}
-                </span>
-                <span style={{ fontSize: 12, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', flex: 1 }}>
-                  {e.contentText || e.contentId}
-                </span>
-                {e.score != null && e.score > 0 ? (
-                  <span style={{ fontSize: 11, fontWeight: 600, color: scoreColor(e.score) }}>
-                    {e.score}
+        <section className="card" style={{ padding: 0, overflow: 'hidden' }}>
+          <button
+            onClick={() => setShowRecent(v => !v)}
+            style={{
+              display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+              width: '100%', padding: '14px 16px', border: 'none', background: 'none',
+              cursor: 'pointer', fontSize: 15, fontWeight: 600, color: '#0f172a',
+              textAlign: 'left', lineHeight: 1.4
+            }}
+          >
+            <span>{t(lang, '📜 最近学习记录', '📜 Recent Activity')}</span>
+            <span style={{ fontSize: 12, color: '#94a3b8', transition: 'transform 0.2s', transform: showRecent ? 'rotate(180deg)' : 'rotate(0deg)' }}>
+              ▼
+            </span>
+          </button>
+          <div style={{
+            maxHeight: showRecent ? 800 : 0,
+            overflow: 'hidden',
+            transition: 'max-height 0.3s ease',
+          }}>
+            <div style={{ padding: '0 16px 12px', display: 'flex', flexDirection: 'column', gap: 4, fontSize: 13 }}>
+              {recentEvents.slice(0, 10).map((e, i) => (
+                <div key={e.id ?? i} style={{ display: 'flex', gap: 6, padding: '3px 0', borderBottom: i < Math.min(recentEvents.length, 10) - 1 ? '1px solid #f1f5f9' : 'none' }}>
+                  <span className="small" style={{ minWidth: 32, fontSize: 11, color: '#94a3b8' }}>
+                    {formatEventTime(e.createdAt)}
                   </span>
-                ) : null}
-              </div>
-            ))}
+                  <span style={{ fontSize: 12, color: '#64748b', minWidth: 70 }}>
+                    {EVENT_TYPE_LABELS[e.eventType as keyof typeof EVENT_TYPE_LABELS]?.zh || e.eventType}
+                  </span>
+                  <span style={{ fontSize: 12, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', flex: 1 }}>
+                    {e.contentText || e.contentId}
+                  </span>
+                  {e.score != null && e.score > 0 ? (
+                    <span style={{ fontSize: 11, fontWeight: 600, color: scoreColor(e.score) }}>
+                      {e.score}
+                    </span>
+                  ) : null}
+                </div>
+              ))}
+            </div>
           </div>
         </section>
       ) : null}
