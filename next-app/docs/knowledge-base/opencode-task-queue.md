@@ -361,4 +361,14 @@ opencode-latest-report.md 更新要求：
 
 ## 已完成任务记录
 
-暂无。
+- Task 1：practice 页面移动端体验优化收尾
+  - 完成提交：`e50370b`
+  - 最终报告提交：`77de440`
+  - 状态：已完成，`npm run build` 与线上验证通过
+  - 验证页面：
+    - `/lessons/2/practice?stage=conversation`
+    - `/lessons/25/practice?stage=conversation`
+    - `/lessons/50/practice?stage=conversation_quiz`
+    - `/lessons/1`
+    - `/lessons/1/deep-dive`
+    - `/toolbox`

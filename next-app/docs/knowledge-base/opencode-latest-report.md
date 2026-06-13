@@ -2,17 +2,15 @@
 
 ## 1. 任务名称
 
-优化 practice 页面移动端体验
+文档收尾：标记 OpenCode Task 1 已完成
 
 ## 2. 任务目标
 
-轻量优化 practice 页面在移动端和窄屏下的可用性，重点处理长句横向溢出、答案按钮文字挤压，以及 conversation practice 内层容器导致的底部导航空间风险。不改变练习逻辑，不重构组件。
+在 `docs/knowledge-base/opencode-task-queue.md` 的“已完成任务记录”中追加 Task 1 完成记录，方便后续任务交接时明确 Task 1 已收尾。不修改任何功能代码。
 
 ## 3. 修改范围
 
-- `src/app/globals.css`
-- `src/components/lesson-conversation-client.tsx`
-- `docs/knowledge-base/_index_.md`
+- `docs/knowledge-base/opencode-task-queue.md`
 - `docs/knowledge-base/opencode-latest-report.md`
 
 ## 4. 禁止范围确认
@@ -25,50 +23,40 @@
 - package.json — 未改动
 - 打卡逻辑 — 未改动
 
+额外确认：未修改 `src/`、`src/data/`、`public/`、`scripts/`。
+
 ## 5. 主要改动
 
-- `.practiceQuestion`、`.practiceStageTitle`、`.practiceChoice` 增加 `overflow-wrap` / `word-break`，避免日语长句或长选项横向溢出。
-- 移动端降低答案按钮字号和高度，减少窄屏文字挤压。
-- 新增 `.breakWord` 工具类，并用于 conversation answer 日语长句。
-- `lesson-conversation-client.tsx` 内层 `<main>` 改为 `<div>`，避免 practice 外层主布局与内层主布局叠加造成底部导航空间风险。
+- 在 `opencode-task-queue.md` 的“已完成任务记录”中追加 Task 1：practice 页面移动端体验优化收尾。
+- 记录完成提交 `e50370b`、最终报告提交 `77de440`、状态、build/线上验证通过和验证页面列表。
+- 覆盖更新本报告文件，记录本次纯文档收尾结果。
 
 ## 6. 验证结果
 
-- **npm run build**：通过。
-- **本地验证页面**：全部 HTTP 200。
-  - `/lessons/2/practice?stage=conversation` — 200
-  - `/lessons/25/practice?stage=conversation` — 200
-  - `/lessons/50/practice?stage=conversation_quiz` — 200
-  - `/lessons/1` — 200
-  - `/lessons/1/deep-dive` — 200
-  - `/toolbox` — 200
-- **线上验证页面**：全部 HTTP 200（移动端 UA）。
-  - `/lessons/2/practice?stage=conversation` — 200
-  - `/lessons/25/practice?stage=conversation` — 200
-  - `/lessons/50/practice?stage=conversation_quiz` — 200
-  - `/lessons/1` — 200
-  - `/lessons/1/deep-dive` — 200
-  - `/toolbox` — 200
-- **关键文字/区域**：conversation practice 页面正常返回视频卡片和会话练习内容；quiz practice 页面正常返回练习页面内容。
+- **npm run build**：本次为纯文档收尾，未重新运行；Task 1 原任务已通过 `npm run build`。
+- **本地验证页面**：不涉及功能页面改动。
+- **线上验证页面**：`/admin/knowledge-base?file=opencode-task-queue.md` 待 push + 部署后验证。
+- **HTTP 状态**：待线上验证。
+- **关键文字是否出现**：待验证 `Task 1：practice 页面移动端体验优化收尾`。
 
 ## 7. Git 信息
 
-- **git status**：提交前仅包含允许范围文件。
-- **commit hash**：`e50370b`
-- **commit message**：`fix: improve mobile practice layout`
-- **是否 push**：是
-- **是否 Vercel 部署完成**：是（`https://study.jimmyyao.com`）
+- **git status**：任务开始前 clean。
+- **commit hash**：`ca0f777`
+- **commit message**：`docs: mark task 1 complete in opencode queue`
+- **是否 push**：待完成
+- **是否 Vercel 部署完成**：待完成
 
 ## 8. 知识库同步
 
-- `docs/knowledge-base/_index_.md` 已追加本次移动端 practice 优化记录。
-- `docs/knowledge-base/opencode-latest-report.md` 已更新为本次最新报告。
+- 已同步 `docs/knowledge-base/opencode-task-queue.md`。
+- 已同步 `docs/knowledge-base/opencode-latest-report.md`。
 
 ## 9. 风险和后续建议
 
-- 本次仅通过样式和语义容器微调改善移动端体验，未引入自动化视觉测试。
-- 真机 Safari/Chrome 上仍建议人工点一次“显示答案 / 我会了 / 不熟 / 开始跟读录音”，确认触达和录音权限弹窗体验。
+- 管理员知识库页面需要登录；未登录访问只会看到登录提示。
+- 后续新任务可从 Task 2 开始执行，Task 1 已归档。
 
 ## 10. 本次结论
 
-完成。build、本地验证、线上移动 UA 验证均通过，可继续下一步任务。
+纯文档收尾已完成待提交；不影响功能代码。
