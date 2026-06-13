@@ -2635,5 +2635,51 @@
     "scoringReady": "published",
     "publishedToStaging": "not_started",
     "verifiedOnline": "not_started"
+  },
+  "deepDive": {
+    "sceneSummary": "会议中，一个人迟到了。他解释原因：来的路上在十字路口发生了卡车与汽车相撞的事故，导致公交车晚点了。由于把手机忘在家里，他无法联系任何人。同事们表示理解并开始了会议。",
+    "storyExplanation": "这是一个典型的职场道歉场景，说话人使用了一系列原因表达方式来解释自己迟到的理由。\n\n首先用「実は来る途中で事故があって」（其实在来的路上出了事故）通过て形引出原因，再用「バスが遅れてしまったんです」（公交车因此晚点了）用「〜てしまう」表达遗憾的语气，最后用「携帯を家に忘れてしまって」（结果把手机忘在家里了）解释为什么没有联系。\n\n同事们则用「連絡がないのでみんな心配していたんですよ」（大家因为没收到联络，都很担心你呢）中的「〜ので」表达客观原因，语气比「から」更柔和。整个对话体现了日语中多种原因表达的实际运用。",
+    "characters": [
+      { "name": "迟到者", "role": "late arriver", "relationship": "与会者" },
+      { "name": "同事A", "role": "colleague", "relationship": "与会者/关心者" },
+      { "name": "同事B", "role": "colleague", "relationship": "会议主持人" }
+    ],
+    "conversationFlow": [
+      { "step": 1, "title": "开场道歉", "explanation": "迟到者首先道歉，引起注意。", "relatedLineIds": ["l39-conv-001", "l39-conv-002"] },
+      { "step": 2, "title": "询问情况", "explanation": "同事们询问发生了什么事。", "relatedLineIds": ["l39-conv-003"] },
+      { "step": 3, "title": "说明事故原因", "explanation": "迟到者用て形解释事故原因。", "relatedLineIds": ["l39-conv-004", "l39-conv-005"] },
+      { "step": 4, "title": "追问确认", "explanation": "同事追问是否公交事故。", "relatedLineIds": ["l39-conv-006"] },
+      { "step": 5, "title": "详细说明", "explanation": "迟到者进一步描述事故情况。", "relatedLineIds": ["l39-conv-007", "l39-conv-008"] },
+      { "step": 6, "title": "表示同情", "explanation": "同事表达同情和理解。", "relatedLineIds": ["l39-conv-009"] },
+      { "step": 7, "title": "解释担心", "explanation": "同事用ので说明担心的原因。", "relatedLineIds": ["l39-conv-010"] },
+      { "step": 8, "title": "解释未联系原因", "explanation": "迟到者用てしまう解释手机忘在家里。", "relatedLineIds": ["l39-conv-011", "l39-conv-012"] },
+      { "step": 9, "title": "再次道歉", "explanation": "迟到者再次郑重道歉。", "relatedLineIds": ["l39-conv-013"] },
+      { "step": 10, "title": "接受并开始会议", "explanation": "同事接受道歉并开始会议。", "relatedLineIds": ["l39-conv-014", "l39-conv-015"] }
+    ],
+    "lineUsage": [
+      { "lineId": "l39-conv-001", "japanese": "ん", "chineseMeaning": "嗯", "realLifeUse": "用于开场时发出声音引起注意，或表示在听。", "emotionTone": "随意", "memoryTip": "像中文的\"嗯\"一样自然。之后要说重要内容。" },
+      { "lineId": "l39-conv-002", "japanese": "遅れてすみません", "chineseMeaning": "不好意思来晚了", "realLifeUse": "迟到进入会议室或教室时的标准道歉用语。", "emotionTone": "礼貌·歉意", "memoryTip": "遅れて是て形表示原因，すみません是道歉。记住：先道歉再解释。" },
+      { "lineId": "l39-conv-003", "japanese": "みなさんどうしたんですか", "chineseMeaning": "大家怎么了？", "realLifeUse": "当你看到一群人表情异常或聚在一起时使用。", "emotionTone": "关心·疑惑", "memoryTip": "どうした是\"怎么了\"，んですか表示寻求解释。注意这里是对大家说的。" },
+      { "lineId": "l39-conv-004", "japanese": "実は来る途中で事故があって", "chineseMeaning": "其实在来的路上出了事故", "realLifeUse": "解釋迟到原因的标准开场，先铺垫事实再用て形连接后续。", "emotionTone": "说明·略带歉意", "memoryTip": "実は(其实)是铺垫，途中で是途中，事故があって是て形原因。" },
+      { "lineId": "l39-conv-005", "japanese": "バスが遅れてしまったんです", "chineseMeaning": "公交车因此晚点了", "realLifeUse": "用てしまう表达遗憾、无奈的心情，常用于解释不愉快的结果。", "emotionTone": "遗憾·无奈", "memoryTip": "遅れてしまった是\"迟到了(真糟糕)\"的意思，んです加强解释语气。" },
+      { "lineId": "l39-conv-006", "japanese": "バスの事故ですか", "chineseMeaning": "是公交车出事故了吗？", "realLifeUse": "用于确认信息，这里是把焦点放在公交车上。", "emotionTone": "确认·略带惊讶", "memoryTip": "の连接两个名词，这里是\"公交车的？\"的意思。" },
+      { "lineId": "l39-conv-007", "japanese": "いいえ 交差点でトラックと車がぶつかって", "chineseMeaning": "不是，是在十字路口卡车和汽车相撞了", "realLifeUse": "先否定再说明实际情势，て形连接后续结果。", "emotionTone": "说明·纠正", "memoryTip": "いいえ先否定，交差点で是地点，ぶつかって是て形原因。" },
+      { "lineId": "l39-conv-008", "japanese": "バスが動かなかったんです", "chineseMeaning": "公交车动不了了", "realLifeUse": "说明最终结果，用なかった(否定)+んです强调解释语气。", "emotionTone": "说明·客观", "memoryTip": "動かない是\"不动\"，なかった是过去否定，んです是解释语气。" },
+      { "lineId": "l39-conv-009", "japanese": "それは大変でしたね", "chineseMeaning": "那可真糟糕啊", "realLifeUse": "听到别人的不幸经历时常用的同情表达。", "emotionTone": "同情·礼貌", "memoryTip": "これは大変是\"这可不得了\"，でしたね是过去+确认语气。" },
+      { "lineId": "l39-conv-010", "japanese": "連絡がないのでみんな心配していたんですよ", "chineseMeaning": "大家因为没收到联络，都很担心你呢", "realLifeUse": "用ので表达客观原因，解释为什么大家都在担心。", "emotionTone": "关心·略带责备", "memoryTip": "連絡がない是\"没有联络\"，ので表示原因，心配していた是\"一直在担心\"。" },
+      { "lineId": "l39-conv-011", "japanese": "電話したかったんですが", "chineseMeaning": "我本来想打电话的", "realLifeUse": "用たかった(想做)和んですが(虽然但是)表示想做但没做到的遗憾。", "emotionTone": "遗憾·辩解", "memoryTip": "したかった是\"想做\"，んですが是转折铺垫，暗示后续有原因。" },
+      { "lineId": "l39-conv-012", "japanese": "携帯を家に忘れてしまって", "chineseMeaning": "结果把手机忘在家里了", "realLifeUse": "用てしまう表达遗憾的意外结果，解释为什么没联系。", "emotionTone": "自责·遗憾", "memoryTip": "忘れてしまって是\"不小心忘了\"，て形结尾表示留有余地。" },
+      { "lineId": "l39-conv-013", "japanese": "どうもすみませんでした", "chineseMeaning": "真的非常抱歉", "realLifeUse": "当事情比较严重或正式道歉时使用，比すみません更郑重。", "emotionTone": "郑重道歉", "memoryTip": "どうも强调，すみませんでした是过去式，表示对已发生事情的道歉。" },
+      { "lineId": "l39-conv-014", "japanese": "分かりました", "chineseMeaning": "我知道了", "realLifeUse": "表示理解对方的说明或接受了对方的道歉。", "emotionTone": "理解·接受", "memoryTip": "分かる是\"理解\"，ました是礼貌过去形，\"我明白了\"的意思。" },
+      { "lineId": "l39-conv-015", "japanese": "じゃあ会議を始めましょう", "chineseMeaning": "那我们开始开会吧", "realLifeUse": "话题结束后，主持人或负责人宣布进入下一个环节时使用。", "emotionTone": "积极·引导", "memoryTip": "じゃあ是\"那么\"，始めましょう是\"开始吧\"的礼貌提议形。" }
+    ],
+    "chineseRetellPrompt": "请用中文复述第39课的对话场景。\n\n「第39课讲的是一个人在会议中迟到了，他向同事们道歉并解释原因。在来的路上十字路口发生了卡车和汽车相撞的事故，导致公交车不能动了。他想打电话联系却把手机忘在家里了。同事们因为联系不上他而担心，但最后理解了他，然后开始开会。」\n\n试试看用自己的话把整个故事说一遍，重点包括：开场道歉、事故说明、手机忘带、同事担心、最终谅解。",
+    "realLifeReplacementPractice": [
+      "用「実は…て」解释今天上班/上学迟到的原因",
+      "用「〜てしまったんです」表达一件让你遗憾的事情",
+      "用「〜ので、〜んです」解释一个客观原因",
+      "用「〜たかったんですが、〜てしまって」表达想做但没做成的事",
+      "用「どうもすみませんでした」向某人郑重道歉"
+    ]
   }
 }

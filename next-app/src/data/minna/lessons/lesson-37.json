@@ -2710,5 +2710,44 @@
     "scoringReady": "published",
     "publishedToStaging": "not_started",
     "verifiedOnline": "not_started"
+  },
+  "deepDive": {
+    "sceneSummary": "导游带领游客参观京都金阁寺，介绍其14世纪建造历史、1950年烧毁后重建的事实，以及使用约20公斤黄金的金箔外墙。游客询问能否入内参观，被告知只能从外部观赏。",
+    "storyExplanation": "本课通过金阁寺观光场景，集中展示了物主語受身形（物作主语的被动形式）的用法。导游用「建てられました」「再建されました」「使われました」「言われています」等被动形式客观描述历史事实和文化信息。\n\n这是典型的受身形应用场景——在说明事物被建造、被发现、被使用等客观事实时，日语优先使用被动语态，而非主动语态。",
+    "characters": [
+      { "name": "导游", "role": "讲解金阁寺的历史和建筑信息", "relationship": "信息提供者" },
+      { "name": "游客", "role": "提出问题和表达感想", "relationship": "信息接收者" }
+    ],
+    "conversationFlow": [
+      { "step": 1, "title": "引出目的地", "explanation": "导游指向金阁寺，简要介绍其知名度。", "relatedLineIds": ["l37-conv-001"] },
+      { "step": 2, "title": "历史背景介绍", "explanation": "导游说明建造年代（14世纪）、被烧毁（1950年）及重建的历史。", "relatedLineIds": ["l37-conv-002", "l37-conv-003", "l37-conv-004"] },
+      { "step": 3, "title": "知名度补充", "explanation": "补充金阁寺在京都寺庙中的受欢迎程度。", "relatedLineIds": ["l37-conv-005"] },
+      { "step": 4, "title": "游客提问", "explanation": "游客被金色外墙吸引，询问是否为真金，并想入内参观。", "relatedLineIds": ["l37-conv-006", "l37-conv-007", "l37-conv-009"] },
+      { "step": 5, "title": "导游回答", "explanation": "确认使用真金（20kg），但说明不可入内，建议绕池观赏。", "relatedLineIds": ["l37-conv-008", "l37-conv-010", "l37-conv-011"] },
+      { "step": 6, "title": "季节美景", "explanation": "游客赞叹红叶，导游补充金阁寺的红叶和雪景最为美丽。", "relatedLineIds": ["l37-conv-012", "l37-conv-013"] }
+    ],
+    "lineUsage": [
+      { "lineId": "l37-conv-001", "japanese": "みなさん、あちらが有名な金閣寺です。", "chineseMeaning": "大家请看，那边就是著名的金阁寺。", "realLifeUse": "导游带团时指向景点做开场介绍的标准用语。", "emotionTone": "正式、礼貌的导游语气", "memoryTip": "「有名な」前接名词，记住「〜は〜です」的判断句式。" },
+      { "lineId": "l37-conv-002", "japanese": "金閣寺は14世紀に建てられました。", "chineseMeaning": "金阁寺建于14世纪。", "realLifeUse": "介绍建筑物或作品建造年代时用「〜に建てられました」。", "emotionTone": "客观陈述历史事实", "memoryTip": "「建てます」→「建てられます」的受身变化，物作主语。" },
+      { "lineId": "l37-conv-003", "japanese": "1950年に一度焼けてしまいましたが、", "chineseMeaning": "1950年曾经被烧毁一次，", "realLifeUse": "用「〜てしまいました」表达遗憾或意外的事件。", "emotionTone": "带遗憾语气的说明", "memoryTip": "「焼ける」是自动词，「焼けてしまう」表示彻底的烧毁。" },
+      { "lineId": "l37-conv-004", "japanese": "その後、元の通りに再建されました。", "chineseMeaning": "之后按照原样重建了。", "realLifeUse": "说明重建、修复情况时用「再建されました」。", "emotionTone": "客观事实陈述", "memoryTip": "「元の通りに」是和语表达，意思是\"按照原来的样子\"。" },
+      { "lineId": "l37-conv-005", "japanese": "京都で人気があるお寺の一つです。", "chineseMeaning": "它是京都最受欢迎的寺庙之一。", "realLifeUse": "用「〜の一つです」表达\"是……之一\"的句式。", "emotionTone": "推荐、强调的语气", "memoryTip": "「人気がある」是固定搭配，表示\"受欢迎\"。" },
+      { "lineId": "l37-conv-006", "japanese": "きれいですね。壁が金色ですが、", "chineseMeaning": "真漂亮呢，墙壁是金色的，", "realLifeUse": "看到美丽事物时的自然感叹，后用「〜ですが」引入疑问。", "emotionTone": "感叹、好奇", "memoryTip": "「〜ですね」是日语中最常用的感叹表达。" },
+      { "lineId": "l37-conv-007", "japanese": "本物の金ですか？", "chineseMeaning": "是真正的黄金吗？", "realLifeUse": "确认物品真实性时的疑问句。", "emotionTone": "惊讶、求证", "memoryTip": "「本物」= real/genuine，是日常非常实用的词。" },
+      { "lineId": "l37-conv-008", "japanese": "はい、金が20kgくらい使われました。", "chineseMeaning": "是的，使用了大约20公斤的黄金。", "realLifeUse": "用数量+くらい表达大约的数量。", "emotionTone": "平实客观的回答", "memoryTip": "「使われました」是「使います」的受身，说明\"被使用\"。" },
+      { "lineId": "l37-conv-009", "japanese": "そうですか。あの中に入れますか？", "chineseMeaning": "这样啊，那可以进去参观吗？", "realLifeUse": "「〜に入れますか」询问能否进入某处。", "emotionTone": "进一步追问、期待", "memoryTip": "「入れます」是「入る」的可能形（入る→入れる）。" },
+      { "lineId": "l37-conv-010", "japanese": "中には入れないんです。", "chineseMeaning": "寺内是不能进入的。", "realLifeUse": "「〜ないんです」用来说明理由或解释情况。", "emotionTone": "礼貌地说明限制", "memoryTip": "「〜んです」是「〜のです」的口语缩约形，用于说明和解释。" },
+      { "lineId": "l37-conv-011", "japanese": "池の周りを歩きながら見てください。", "chineseMeaning": "请一边绕着池塘走，一边欣赏。", "realLifeUse": "「〜ながら」表示\"一边……一边……\"，提出建议时用「〜てください」。", "emotionTone": "礼貌的提议", "memoryTip": "「歩きながら」是「歩く」的ます形去ます+ながら。" },
+      { "lineId": "l37-conv-012", "japanese": "紅葉がきれいですね。", "chineseMeaning": "枫叶好美啊。", "realLifeUse": "表达对季节景物的赞美。", "emotionTone": "感叹、欣赏", "memoryTip": "「紅葉」读作「こうよう」，秋季常见话题。" },
+      { "lineId": "l37-conv-013", "japanese": "金閣寺は紅葉と雪の季節が特に美しいと言われています。", "chineseMeaning": "据说金阁寺在枫叶和雪景的季节尤其美丽。", "realLifeUse": "「〜と言われています」是\"据说……\"的正式表达。", "emotionTone": "客观引述、文化知识的传递", "memoryTip": "「言われています」是「言います」的受身+持续体，表示\"被人们说\"。" }
+    ],
+    "chineseRetellPrompt": "请用中文复述第37课会话的内容。\n\n「第37课讲的是导游带领游客参观京都金阁寺的故事。导游先是指向金阁寺，告诉大家那就是著名的金阁寺，然后介绍它的历史——建于14世纪，1950年曾被烧毁一次，之后按原样重建。导游还说它是京都有名的寺庙之一。游客看到金色的墙壁非常惊讶，问是不是真的黄金。导游回答是的，用了大约20公斤的黄金。游客又问能不能进去参观，导游说不能，只能绕着池塘走一圈欣赏。游客看到红叶觉得真美，导游补充说金阁寺的红叶和雪景季节是最美的。」\n\n试试看用自己的话复述这段内容。",
+    "realLifeReplacementPractice": [
+      "请用「〜に建てられました」造句，介绍一个你熟悉的历史建筑。",
+      "用「〜てしまいました」表达一件让你遗憾的事。",
+      "用「〜と言われています」介绍一个你知道的民间说法或常识。",
+      "用「〜は〜の一つです」介绍一个你喜欢的景点或餐厅。",
+      "用「〜ながら〜てください」向朋友提出一个一边做A一边做B的建议。"
+    ]
   }
 }
