@@ -48,9 +48,9 @@
 ## 7. Git 信息
 
 - **git status**：提交前仅包含允许范围文件。
-- **commit hash**：`30f3a44`
+- **commit hash**：`e50370b`
 - **commit message**：`fix: improve mobile practice layout`
-- **是否 push**：待完成
+- **是否 push**：是
 - **是否 Vercel 部署完成**：待完成
 
 ## 8. 知识库同步
