@@ -42,7 +42,13 @@
   - `/lessons/1` — 200
   - `/lessons/1/deep-dive` — 200
   - `/toolbox` — 200
-- **线上验证页面**：等待 push + Vercel 部署后完成。
+- **线上验证页面**：全部 HTTP 200（移动端 UA）。
+  - `/lessons/2/practice?stage=conversation` — 200
+  - `/lessons/25/practice?stage=conversation` — 200
+  - `/lessons/50/practice?stage=conversation_quiz` — 200
+  - `/lessons/1` — 200
+  - `/lessons/1/deep-dive` — 200
+  - `/toolbox` — 200
 - **关键文字/区域**：conversation practice 页面正常返回视频卡片和会话练习内容；quiz practice 页面正常返回练习页面内容。
 
 ## 7. Git 信息
@@ -51,7 +57,7 @@
 - **commit hash**：`e50370b`
 - **commit message**：`fix: improve mobile practice layout`
 - **是否 push**：是
-- **是否 Vercel 部署完成**：待完成
+- **是否 Vercel 部署完成**：是（`https://study.jimmyyao.com`）
 
 ## 8. 知识库同步
 
@@ -65,4 +71,4 @@
 
 ## 10. 本次结论
 
-功能改动完成，build 和本地页面验证通过；待 push、Vercel 部署和线上最终验证。
+完成。build、本地验证、线上移动 UA 验证均通过，可继续下一步任务。
