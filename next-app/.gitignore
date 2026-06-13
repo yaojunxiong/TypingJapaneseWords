@@ -7,3 +7,4 @@ out
 .env*
 public/videos/*.mp4
 public/videos/**/*.mp4
+!public/videos/lesson01_anime_v1.mp4
