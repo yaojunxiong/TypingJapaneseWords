@@ -2924,5 +2924,14 @@
     "scoringReady": "published",
     "publishedToStaging": "not_started",
     "verifiedOnline": "not_started"
+  },
+  "deepDive": {
+    "sceneSummary": "…",
+    "storyExplanation": "…",
+    "characters": [ { "name": "…", "role": "…", "relationship": "…" } ],
+    "conversationFlow": [ { "step": 1, "title": "…", "explanation": "…", "relatedLineIds": ["l27-conv-002"] } ],
+    "lineUsage": [ { "lineId": "l27-conv-002", "japanese": "…", "chineseMeaning": "…", "realLifeUse": "…", "emotionTone": "…", "memoryTip": "…" } ],
+    "chineseRetellPrompt": "请用中文复述…\n\n「第27课讲的是……」\n\n试试看…",
+    "realLifeReplacementPractice": ["练习1","练习2","练习3","练习4","练习5"]
   }
 }

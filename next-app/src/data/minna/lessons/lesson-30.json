@@ -3419,5 +3419,49 @@
     "scoringReady": "published",
     "publishedToStaging": "not_started",
     "verifiedOnline": "not_started"
+  },
+  "deepDive": {
+    "sceneSummary": "客人拜访朋友家，注意到一个大背包放在那里，问主人是不是要去登山。主人解释说那是应急包（非常袋），里面装着即使停水停电也能维持三天生活的物资，比如水和食物、手电筒、收音机等。客人感叹自己也得准备，得知超市就有卖后决定去买一个。会话自然地展示了「〜てあります」「〜ておきます」「〜とか」的用法。",
+    "storyExplanation": "整段对话发生在朋友来访的场景中。客人一进门就看到一个显眼的大背包，好奇地问主人是否要去爬山。主人笑着否认，告诉客人那是「非常袋」——一个为灾害准备的应急包。客人第一次听说这个概念，非常感兴趣，追问里面装了什么。主人详细解释：里面放着水和食物等生活物资，并用「てある」说明这些物资已经提前准备好了（入れてある）。还用手电筒和收音机举例，使用了「〜とか」的列举表达。客人听后觉得很有必要，表示「我也得准备才行」（準備しておかないと），主人顺势说超市就有卖，客人于是决定去买一个（買っておきます）。整个对话自然地将本课三个核心语法点串联起来。",
+    "characters": [
+      { "name": "客人（访问者）", "role": "来访的朋友", "relationship": "主人的朋友" },
+      { "name": "主人（朋友）", "role": "接待客人的家主人", "relationship": "客人的朋友" }
+    ],
+    "conversationFlow": [
+      { "step": 1, "title": "问候与进门", "explanation": "客人到访，主人招呼「いらっしゃい」「さあ どうぞ」请客人进屋。", "relatedLineIds": ["l30-conv-002","l30-conv-003","l30-conv-004"] },
+      { "step": 2, "title": "发现大背包", "explanation": "客人注意到一个大背包放在那里（置いてあります），好奇地问主人是不是要去登山。「〜てあります」表示有人故意放置、结果还在。", "relatedLineIds": ["l30-conv-005","l30-conv-006"] },
+      { "step": 3, "title": "介绍应急包", "explanation": "主人否认登山，说明这是「非常袋」，是装紧急时用的东西的包（入れておく袋です），即使停电停气也能维持三天生活（入れてあるんです）。「入れておく」表示预先装好，「入れてある」强调准备好的状态。", "relatedLineIds": ["l30-conv-007","l30-conv-008","l30-conv-009","l30-conv-010","l30-conv-011","l30-conv-012"] },
+      { "step": 4, "title": "追问具体内容", "explanation": "客人追问是不是水和食物。主人肯定后列举了手电筒和收音机等，使用「〜とか」表示举例。", "relatedLineIds": ["l30-conv-013","l30-conv-014","l30-conv-015","l30-conv-016"] },
+      { "step": 5, "title": "决心准备", "explanation": "客人表示自己也得准备才行（準備しておかないと）。主人说超市也有卖，客人于是决定先买一个（買っておきます）。「〜ておく」表示提前做某事以备将来之需。", "relatedLineIds": ["l30-conv-017","l30-conv-018","l30-conv-019","l30-conv-020"] }
+    ],
+    "lineUsage": [
+      { "lineId": "l30-conv-002", "japanese": "こんにちは", "chineseMeaning": "你好", "realLifeUse": "一天中任何时候见到熟人都可以说的标准问候。", "emotionTone": "礼貌、友好", "memoryTip": "联想「今日は（こんにちは）」=「今天」的寒暄。" },
+      { "lineId": "l30-conv-003", "japanese": "いらっしゃい", "chineseMeaning": "欢迎光临", "realLifeUse": "欢迎客人来家里或店里时使用，比「ようこそ」更口语化。", "emotionTone": "热情、欢迎", "memoryTip": "联想「いらっしゃいます」（来る的敬语）的省略形。" },
+      { "lineId": "l30-conv-004", "japanese": "さあ どうぞ", "chineseMeaning": "来，请进", "realLifeUse": "请人进屋或让座时用「さあ どうぞ」，语气亲切。", "emotionTone": "亲切、邀请", "memoryTip": "「さあ」催促或引起注意 + 「どうぞ」请。" },
+      { "lineId": "l30-conv-005", "japanese": "大きいリュックが置いてありますね", "chineseMeaning": "有个大背包放在那里呢", "realLifeUse": "看到某物被特意放置时用「〜が置いてあります」。强调人为摆放的结果。", "emotionTone": "好奇、注意到", "memoryTip": "「置いてある」= 某人有目的地放好，结果还在。记住是「が」不是「を」。", "grammarFocus": "てあります" },
+      { "lineId": "l30-conv-006", "japanese": "山へ行くんですか?", "chineseMeaning": "你是要去登山吗？", "realLifeUse": "根据看到的现象推测对方意图时用「〜んですか」。", "emotionTone": "猜测、询问", "memoryTip": "「行くんですか」= 行く + の/ん + ですか，说明情况后寻求确认。" },
+      { "lineId": "l30-conv-007", "japanese": "いえ、非常袋ですよ", "chineseMeaning": "不是，是应急包哦", "realLifeUse": "先否定再给出正确答案，用「ですよ」提供新信息。", "emotionTone": "否认、解释", "memoryTip": "「いえ」比「いいえ」更口语化。句尾「よ」表示告知对方不知道的事。" },
+      { "lineId": "l30-conv-008", "japanese": "非常袋…", "chineseMeaning": "应急包……", "realLifeUse": "第一次听到新名词时重复一遍表示在思考/惊讶。", "emotionTone": "疑惑、思考中", "memoryTip": "「非常」= emergency + 「袋」= bag。联想防灾用品。" },
+      { "lineId": "l30-conv-009", "japanese": "何ですか?", "chineseMeaning": "那是什么？", "realLifeUse": "对不懂的东西直接提问，简单直接。", "emotionTone": "好奇、求知", "memoryTip": "「何ですか」= what is it? 注意语调上升。" },
+      { "lineId": "l30-conv-010", "japanese": "非常時に使うものを入れておく袋です", "chineseMeaning": "是用来装紧急时要用的东西的包。", "realLifeUse": "用「〜ておく」解释物品用途——事先装入以备后用。", "emotionTone": "说明、解释", "memoryTip": "「入れておく」= put in in advance。记住「ておく」是准备体。", "grammarFocus": "ておく" },
+      { "lineId": "l30-conv-011", "japanese": "電気やガスが止まっても", "chineseMeaning": "就算停电停气，", "realLifeUse": "用「ても」表示「即使…也…」，列举可能的灾害情况。", "emotionTone": "假设、说明", "memoryTip": "「や」列举典型例子（電気やガス）。「止まっても」= 止まる的て形 + も。" },
+      { "lineId": "l30-conv-012", "japanese": "3日ぐらい生活できるものが入れてあるんです", "chineseMeaning": "里面放的是可以生活三天左右的必需品。", "realLifeUse": "「〜てある」强调物资已经装好、准备就绪的状态。", "emotionTone": "自豪、确信", "memoryTip": "「入れてある」= 已经放好了（结果是人为的）。记住「ぐらい」表示大约。", "grammarFocus": "てある" },
+      { "lineId": "l30-conv-013", "japanese": "水や食べ物ですか?", "chineseMeaning": "比如水和食物吗？", "realLifeUse": "用「や」列举两个典型例子确认自己的理解。", "emotionTone": "确认、猜测", "memoryTip": "「や」表示不完全列举，暗示还有其他。" },
+      { "lineId": "l30-conv-014", "japanese": "ええ 他にもいろいろありますよ", "chineseMeaning": "嗯，还有其他各种东西哦。", "realLifeUse": "肯定对方之后补充说明还有很多其他东西。", "emotionTone": "肯定、补充", "memoryTip": "「他にも」= besides / other than that。「いろいろ」= various。" },
+      { "lineId": "l30-conv-015", "japanese": "懐中電灯とか", "chineseMeaning": "比如手电筒啦", "realLifeUse": "用「〜とか」举例，口语中常单独使用列举多项。", "emotionTone": "举例、随意", "memoryTip": "「とか」比「や」更随意，常用在列举事项后。", "grammarFocus": "とか" },
+      { "lineId": "l30-conv-016", "japanese": "ラジオとか", "chineseMeaning": "还有收音机之类的", "realLifeUse": "继续用「とか」列举下一个例子。", "emotionTone": "举例、补充", "memoryTip": "连续用「〜とか〜とか」列举多个例子。" },
+      { "lineId": "l30-conv-017", "japanese": "私も準備しておかないと", "chineseMeaning": "我也得准备一下才行呢", "realLifeUse": "「〜ておかないと」= 必须得事先做…不然不行。省略了「いけない」。", "emotionTone": "自省、决心", "memoryTip": "「準備しておかないと」= 準備する + ておく + ないと（如果不…的话不行）。", "grammarFocus": "ておく" },
+      { "lineId": "l30-conv-018", "japanese": "非常袋はスーパーでも売っていますよ", "chineseMeaning": "应急包在超市也能买到哦", "realLifeUse": "用「でも」表示「即使是在超市也…」，即超市就有卖。", "emotionTone": "提供信息、热心", "memoryTip": "「スーパーでも」= even at the supermarket。「でも」暗示没想到的地方也能买。" },
+      { "lineId": "l30-conv-019", "japanese": "そうですか?", "chineseMeaning": "是吗？", "realLifeUse": "听到新信息后表示惊讶或理解的口头反应。", "emotionTone": "惊讶、意外", "memoryTip": "「そうですか」= Is that so? 语调上升表疑问，下降表理解。" },
+      { "lineId": "l30-conv-020", "japanese": "じゃあ買っておきます", "chineseMeaning": "那我也先买一个吧", "realLifeUse": "得知信息后决定事先做某事，用「〜ておきます」。", "emotionTone": "决定、果断", "memoryTip": "「買っておきます」= 先买好。这是本课「ておく」的标志性用法。", "grammarFocus": "ておく" }
+    ],
+    "chineseRetellPrompt": "请用中文复述第30课的会话内容。\n\n「第30课讲的是客人去朋友家，看到一个大背包，好奇地询问。主人解释说这是应急包，里面准备了水和食物等物资。客人听完后觉得自己也需要准备一个。」\n\n试试看能不能把完整的对话过程复述出来，包括客人怎么问的、主人怎么解释的、以及最后客人决定买一个的经过。",
+    "realLifeReplacementPractice": [
+      "练习1：你看到朋友家墙上贴了一张海报，用「〜てあります」问对方「海报是为什么贴的？」",
+      "练习2：你要去旅行，用「〜ておきます」说「出发前我先订好酒店」。",
+      "练习3：用「〜とか」列举你应急包里会放的三个东西。",
+      "练习4：朋友说他也想买应急包，你用「スーパーでも売っていますよ」告诉他超市就有卖。",
+      "练习5：用「〜ておかないと」说「我得事先准备好地图才行」。"
+    ]
   }
 }

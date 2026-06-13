@@ -3427,5 +3427,51 @@
     "scoringReady": "published",
     "publishedToStaging": "not_started",
     "verifiedOnline": "not_started"
+  },
+  "deepDive": {
+    "sceneSummary": "小川さん请ミラーさん当她的英语会话老师。她8月要去澳大利亚寄宿家庭，现在和朋友一起学英语，但既没有老师也没有练习机会，一直学不好。她提出边喝茶边聊、有点心吃，还提到自己要考日语，试图说服ミラーさん帮忙。",
+    "storyExplanation": "这个场景展示了如何用日语礼貌地请求别人帮忙，同时列举理由说服对方。小川さん先说明背景（要去澳大利亚寄宿），再说明困境（没有老师、没有机会练习），然后用「〜ながら」（边喝茶边聊）、「〜し」（列举理由——有考试、有点心）等手段推进请求，最后用「〜ていただけませんか」的礼貌请求形式。这是典型的日语「お願い」对话结构。",
+    "characters": [
+      { "name": "ミラーさん", "role": "被请求者", "relationship": "同事或熟人" },
+      { "name": "小川さん", "role": "请求者", "relationship": "同事或熟人" }
+    ],
+    "conversationFlow": [
+      { "step": 1, "title": "开场白", "explanation": "小川さん先打招呼引起注意，说有一件事想拜托ミラーさん。", "relatedLineIds": ["l28-conv-005"] },
+      { "step": 2, "title": "说明背景", "explanation": "小川さん解释自己8月要去澳大利亚寄宿，所以需要练英语。", "relatedLineIds": ["l28-conv-007"] },
+      { "step": 3, "title": "诉说困难", "explanation": "小川さん说明现状：和朋友在学但没进步，没有老师也没有练习机会。", "relatedLineIds": ["l28-conv-009", "l28-conv-010", "l28-conv-011"] },
+      { "step": 4, "title": "正式请求", "explanation": "小川さん提出核心请求——请ミラーさん当英语会话老师。", "relatedLineIds": ["l28-conv-012"] },
+      { "step": 5, "title": "对方犹豫", "explanation": "ミラーさん有点为难，推说工作忙。", "relatedLineIds": ["l28-conv-013", "l28-conv-014"] },
+      { "step": 6, "title": "进一步说服", "explanation": "小川さん继续说服：可以边喝茶边聊、有点心吃，还提到自己也要考日语。", "relatedLineIds": ["l28-conv-015", "l28-conv-017", "l28-conv-018"] },
+      { "step": 7, "title": "收尾", "explanation": "ミラーさん表示理解，但回应并不积极，最后小川さん道歉。", "relatedLineIds": ["l28-conv-019", "l28-conv-020"] }
+    ],
+    "lineUsage": [
+      { "lineId": "l28-conv-002", "japanese": "すみません、お水ください", "chineseMeaning": "不好意思，请给我一杯水。", "realLifeUse": "在餐厅、咖啡厅等场所向服务员要水时使用。也可以说「お水をお願いします」。", "emotionTone": "礼貌、日常", "memoryTip": "「すみません」道歉开头+「ください」请求结尾，是最常见的请求句式。" },
+      { "lineId": "l28-conv-003", "japanese": "ミラーさん", "chineseMeaning": "米勒先生，", "realLifeUse": "日语中称呼对方姓氏+さん是最通用的礼貌称呼方式。可以在职场、学校等各种场合使用。", "emotionTone": "礼貌、中立", "memoryTip": "さん是日语最常用的敬称，不分男女。" },
+      { "lineId": "l28-conv-004", "japanese": "小川さん", "chineseMeaning": "小川小姐", "realLifeUse": "对话中对对方的称呼，提示对方接下来要说什么。", "emotionTone": "礼貌、中立", "memoryTip": "日语中称呼别人时通常只用姓+さん。" },
+      { "lineId": "l28-conv-005", "japanese": "ミラーさん、ちょっとお願いがあるんですが", "chineseMeaning": "米勒先生，我有个小请求。", "realLifeUse": "请求别人帮助时的经典开场白。「お願いがあるんですが」非常自然，后面引出具体请求内容。", "emotionTone": "礼貌、试探性", "memoryTip": "「お願いがある」=「有请求」，用「んですが」软化语气，表示接下来要说明情况。" },
+      { "lineId": "l28-conv-006", "japanese": "なんですか？", "chineseMeaning": "什么事呢？", "realLifeUse": "回应对方说有事时说「什么事？」。注意是问对方具体内容，不能用于问物品。", "emotionTone": "好奇、回应", "memoryTip": "「なんですか」是「何ですか」的口语形式，语调上扬时表示疑问。" },
+      { "lineId": "l28-conv-007", "japanese": "実は8月にオーストラリアへホームステイに行くんです", "chineseMeaning": "其实我八月份要去澳大利亚寄宿。", "realLifeUse": "用「実は」开头说明一个不太常见或比较重要的信息。「〜んです」用于解释说明。", "emotionTone": "说明、解释", "memoryTip": "「実は」=「其实」，「行くんです」用「ん」强调说明原因。" },
+      { "lineId": "l28-conv-008", "japanese": "ホームステイですか？いいですね", "chineseMeaning": "寄宿啊？听起来不错呢。", "realLifeUse": "重复对方的话+「ですか」表示惊讶或确认，后面加「いいですね」表示正面评价。", "emotionTone": "惊讶、正面", "memoryTip": "「〜ですか？いいですね」：先确认+然后给好评。" },
+      { "lineId": "l28-conv-009", "japanese": "ええ、それで今友達と英語を勉強しているんですが", "chineseMeaning": "是的，所以我现在正和朋友一起学英语，", "realLifeUse": "「それで」表示顺着前文逻辑继续说明原因。这个接续词很常用。", "emotionTone": "承接、说明", "memoryTip": "「それで」=「所以、于是」。后面的「〜んですが」为引出请求做铺垫。" },
+      { "lineId": "l28-conv-010", "japanese": "ええ、なかなか上手にならないんです", "chineseMeaning": "但总是学不好。", "realLifeUse": "「なかなか〜ない」表示期待的结果没能实现。「上手にならない」表示没有进步。", "emotionTone": "遗憾、无奈", "memoryTip": "「なかなか」+否定=「怎么也〜不了」。" },
+      { "lineId": "l28-conv-011", "japanese": "先生もいないし、英語で話すチャンスもないし", "chineseMeaning": "既没有老师，也没什么用英语说话的机会。", "realLifeUse": "用「〜し〜し」列举两个或以上的原因/理由。口语中非常常用。", "emotionTone": "诉苦、列举", "memoryTip": "「〜し〜し」=「既〜又〜」，列举多个理由暗示不止这些。" },
+      { "lineId": "l28-conv-012", "japanese": "ミラーさん、会話の先生になっていただけませんか？", "chineseMeaning": "米勒先生，您可以当我的英语会话老师吗？", "realLifeUse": "「〜ていただけませんか」是最高级别的礼貌请求之一，非常正式客气。", "emotionTone": "礼貌、请求", "memoryTip": "「いただく」是「もらう」的谦让语，「〜ていただけませんか」=「能请您〜吗？」" },
+      { "lineId": "l28-conv-013", "japanese": "えっ、先生に？", "chineseMeaning": "咦，要当老师？", "realLifeUse": "用「えっ」表示惊讶，省略句「先生に」是口语中常见的简洁反应。", "emotionTone": "惊讶、意外", "memoryTip": "省略句在日语口语中非常常见，用关键词+助词表达完整意思。" },
+      { "lineId": "l28-conv-014", "japanese": "ちょっと仕事が…", "chineseMeaning": "我有点工作要忙……", "realLifeUse": "委婉拒绝时用「ちょっと〜が…」句式，暗示有困难但不明说，是日语很典型的婉转表达。", "emotionTone": "犹豫、婉拒", "memoryTip": "「ちょっと」在此语境下≠一点点，而是委婉表达困难→「不太方便」。" },
+      { "lineId": "l28-conv-015", "japanese": "お暇な時、お茶でも飲みながら", "chineseMeaning": "有空的时候，一边喝茶一边聊也可以嘛。", "realLifeUse": "用「〜ながら」表示一边做某事一边做另一件事。注意两个动作由同一主语完成。", "emotionTone": "轻松、劝说", "memoryTip": "「でも」表示举例（不是真的喝茶，而是一个例子），「ながら」=「一边〜一边」。" },
+      { "lineId": "l28-conv-016", "japanese": "んー", "chineseMeaning": "嗯——", "realLifeUse": "思考时的语气词，表示正在考虑对方的提议。", "emotionTone": "犹豫、思考", "memoryTip": "「んー」拉长音表示在认真思考，是很自然的日语口头反应。" },
+      { "lineId": "l28-conv-017", "japanese": "お菓子もおいしいですよ", "chineseMeaning": "还有好吃的点心哦。", "realLifeUse": "用「〜も〜よ」追加好处，用「よ」强调信息让对方知道。追加理由说服对方。", "emotionTone": "吸引、劝说", "memoryTip": "「も」= 也（在之前列举的基础上追加），「よ」用降调表示告知。" },
+      { "lineId": "l28-conv-018", "japanese": "もうすぐ日本語の試験もあるし…", "chineseMeaning": "我也快要考日语了……", "realLifeUse": "用「〜し」列举理由，暗示还有其他原因。句尾的「…」表示话没说完。", "emotionTone": "示弱、博同情", "memoryTip": "「〜もあるし」是列举理由的常用句式，暗示「还有其他原因所以请帮我」。" },
+      { "lineId": "l28-conv-019", "japanese": "そうですか", "chineseMeaning": "是这样啊。", "realLifeUse": "「そうですか」可以表示理解/接受事实，但语调决定语气——降调表示理解、升调表示疑问。", "emotionTone": "理解、回应", "memoryTip": "「そうですか」=「是這樣啊」，语调下降表示理解信息。" },
+      { "lineId": "l28-conv-020", "japanese": "すみません", "chineseMeaning": "抱歉。", "realLifeUse": "在日语中「すみません」可用来道歉、感谢或者打招呼。这里是道歉的含义。", "emotionTone": "道歉、遗憾", "memoryTip": "「すみません」是日语最万能的一句话，道歉/感谢/搭话都可以用。" }
+    ],
+    "chineseRetellPrompt": "请用中文复述第28课的对话场景。\n\n「第28课讲的是小川さん请ミラーさん当英语老师的故事。小川さん8月要去澳大利亚寄宿家庭……」\n\n试试看，用3~5句中文把整个故事讲清楚。可以用以下关键词要点：请求——请当老师、理由——澳大利亚寄宿（学英语）、困难——没老师没机会、说服——边喝茶边聊/有点心/要考日语。",
+    "realLifeReplacementPractice": [
+      "练习1：用「お願いがあるんですが」开头，请同事帮你检查文件。",
+      "练习2：用「〜し、〜し」列举两个理由，说明你为什么想学日语。",
+      "练习3：用「〜ていただけませんか」礼貌请求店员给你推荐商品。",
+      "练习4：用「〜ながら」说「一边听音乐一边学习」。",
+      "练习5：用「ちょっと〜が…」委婉地拒绝朋友的邀请。"
+    ]
   }
 }
