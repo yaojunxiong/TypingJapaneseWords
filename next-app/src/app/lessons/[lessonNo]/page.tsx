@@ -3,6 +3,7 @@ import path from 'node:path'
 import Link from 'next/link'
 import MinnaNav from '@/components/minna-nav'
 import TopLabelSync from '@/components/top-label-sync'
+import LessonCheckinButton from '@/components/lesson-checkin-button'
 import { LESSONS_1_50 } from '@/lib/minna-lessons'
 import { getLang, type Lang, tr } from '@/lib/i18n'
 
@@ -155,6 +156,16 @@ export default async function LessonDetailPage({
             </Link>
           )
         })}
+      </section>
+
+      <section className="card" style={{ display: 'flex', alignItems: 'center', gap: 12, justifyContent: 'space-between' }}>
+        <div>
+          <strong>{tr(lang, '今日学习打卡', 'Today\'s Check-in')}</strong>
+          <p className="small" style={{ margin: '2px 0 0' }}>
+            {tr(lang, '学完本课后点击打卡，记录学习进度', 'Check in after studying to track your progress')}
+          </p>
+        </div>
+        <LessonCheckinButton lang={lang} />
       </section>
 
       {lesson?.conversationVideo?.videoUrl ? (
