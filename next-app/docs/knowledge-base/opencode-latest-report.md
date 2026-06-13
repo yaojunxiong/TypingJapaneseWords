@@ -2,14 +2,17 @@
 
 ## 1. 任务名称
 
-文档收尾：标记 OpenCode Task 1 已完成
+Task 2 npm run audit 学习主线自动体检脚本
 
 ## 2. 任务目标
 
-在 `docs/knowledge-base/opencode-task-queue.md` 的“已完成任务记录”中追加 Task 1 完成记录，方便后续任务交接时明确 Task 1 已收尾。不修改任何功能代码。
+新增一个可重复运行的本地只读学习系统体检命令，用于检查 1～50 课学习主线数据和老师讲解资源是否完整，方便以后修改后快速确认没有破坏系统。
 
 ## 3. 修改范围
 
+- `scripts/audit-learning-system.mjs`
+- `package.json`
+- `docs/knowledge-base/_index_.md`
 - `docs/knowledge-base/opencode-task-queue.md`
 - `docs/knowledge-base/opencode-latest-report.md`
 
@@ -20,43 +23,46 @@
 - public/audio — 未改动
 - public/videos — 未改动
 - public/images — 未改动
-- package.json — 未改动
+- package-lock.json — 未改动
 - 打卡逻辑 — 未改动
 
-额外确认：未修改 `src/`、`src/data/`、`public/`、`scripts/`。
+额外确认：未修改 `src/app/`、`src/components/`、deepDive 内容、原视频跟读功能。
 
 ## 5. 主要改动
 
-- 在 `opencode-task-queue.md` 的“已完成任务记录”中追加 Task 1：practice 页面移动端体验优化收尾。
-- 记录完成提交 `e50370b`、最终报告提交 `77de440`、状态、build/线上验证通过和验证页面列表。
-- 覆盖更新本报告文件，记录本次纯文档收尾结果。
+- 新增 `scripts/audit-learning-system.mjs`，只读检查本地文件，不访问外网、不自动修复。
+- 新增 `npm run audit` 命令。
+- 审计覆盖 1～50 课：lesson JSON parse、`conversationVideo.videoUrl`、时间轴、conversation 会话文本、deepDive、`public/audio/deep-dive/lesson-XX-zh.mp3`、`lesson-XX-zh.txt`。
+- 输出总体 PASS/FAIL、50 课覆盖表、缺失课号清单、P0/P1/P2 建议和检查时间。
 
 ## 6. 验证结果
 
-- **npm run build**：本次为纯文档收尾，未重新运行；Task 1 原任务已通过 `npm run build`。
-- **本地验证页面**：不涉及功能页面改动。
-- **线上验证页面**：`/admin/knowledge-base?file=opencode-task-queue.md` HTTP 200。
-- **HTTP 状态**：200。
-- **关键文字是否出现**：未登录 curl 返回登录提示，管理员登录后由知识库页读取 `docs/knowledge-base/opencode-task-queue.md` 显示。
+- **npm run audit**：PASS，50/50 全部 OK。
+- **npm run build**：通过。
+- **本地验证页面**：本任务主要验证命令；页面未改动。
+- **线上验证页面**：待 push + Vercel 部署后验证。
+- **HTTP 状态**：待验证。
+- **关键文字是否出现**：待验证知识库报告页面。
 
 ## 7. Git 信息
 
 - **git status**：任务开始前 clean。
-- **commit hash**：`72c7318`（Task 队列更新提交）
-- **commit message**：`docs: mark task 1 complete in opencode queue`
-- **是否 push**：是
-- **是否 Vercel 部署完成**：是（`https://study.jimmyyao.com`）
+- **commit hash**：待提交
+- **commit message**：`feat: add learning system audit script`
+- **是否 push**：待完成
+- **是否 Vercel 部署完成**：待完成
 
 ## 8. 知识库同步
 
-- 已同步 `docs/knowledge-base/opencode-task-queue.md`。
-- 已同步 `docs/knowledge-base/opencode-latest-report.md`。
+- `docs/knowledge-base/_index_.md` 已新增 `npm run audit` 变更记录。
+- `docs/knowledge-base/opencode-task-queue.md` 已追加 Task 2 完成记录。
+- `docs/knowledge-base/opencode-latest-report.md` 已更新为本次最新报告。
 
 ## 9. 风险和后续建议
 
-- 管理员知识库页面需要登录；未登录访问只会看到登录提示。
-- 后续新任务可从 Task 2 开始执行，Task 1 已归档。
+- audit 当前为结构和资源覆盖检查，不做语义质量判断。
+- 后续上线前建议固定运行 `npm run audit && npm run build`。
 
 ## 10. 本次结论
 
-完成。Task 1 已在队列文档归档，线上知识库路由 HTTP 200，不影响功能代码。
+功能实现和本地验证已完成，待提交、push、部署和线上知识库验证。

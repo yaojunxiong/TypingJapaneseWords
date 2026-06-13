@@ -96,3 +96,11 @@ tags:
 - **验证页面**：`/lessons/2/practice?stage=conversation`、`/lessons/25/practice?stage=conversation`、`/lessons/50/practice?stage=conversation_quiz`
 - **学习主线影响**：无。仅样式和语义容器微调。
 - **commit hash**：e50370b
+
+### 2026-06-14 — 新增 npm run audit 学习主线自动体检
+
+- **优化内容**：新增只读 `npm run audit`，检查 1～50 课 JSON、会话视频 URL、时间轴、会话文本、deepDive、老师讲解 MP3/TXT 覆盖情况。
+- **修改文件**：`scripts/audit-learning-system.mjs`、`package.json`
+- **验证命令**：`npm run audit` PASS（50/50）、`npm run build` PASS
+- **学习主线影响**：无。仅新增本地只读体检脚本。
+- **commit hash**：待提交
