@@ -44,17 +44,22 @@ Task 2 npm run audit 学习主线自动体检脚本
   - `/lessons/2` — 200
   - `/lessons/1/deep-dive` — 200
   - `/toolbox` — 200
-- **线上验证页面**：待 push + Vercel 部署后验证。
-- **HTTP 状态**：待验证。
-- **关键文字是否出现**：待验证知识库报告页面。
+- **线上验证页面**：全部 HTTP 200。
+  - `/admin/knowledge-base?file=opencode-latest-report.md` — 200（未登录显示登录提示，符合管理员页预期）
+  - `/lessons/1` — 200
+  - `/lessons/2` — 200
+  - `/lessons/1/deep-dive` — 200
+  - `/toolbox` — 200
+- **HTTP 状态**：全部 200。
+- **关键文字是否出现**：管理员知识库页需登录；未登录 curl 返回登录提示。
 
 ## 7. Git 信息
 
 - **git status**：任务开始前 clean。
 - **commit hash**：`fc0d1cc`
 - **commit message**：`feat: add learning system audit script`
-- **是否 push**：待完成
-- **是否 Vercel 部署完成**：待完成
+- **是否 push**：是
+- **是否 Vercel 部署完成**：是（`https://study.jimmyyao.com`）
 
 ## 8. 知识库同步
 
@@ -69,4 +74,4 @@ Task 2 npm run audit 学习主线自动体检脚本
 
 ## 10. 本次结论
 
-功能实现和本地验证已完成，待提交、push、部署和线上知识库验证。
+完成。`npm run audit`、`npm run build`、本地页面抽查、线上页面验证均通过。
