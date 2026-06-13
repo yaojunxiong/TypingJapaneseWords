@@ -42,7 +42,7 @@
 ## 7. Git 信息
 
 - **git status**：任务开始前 clean。
-- **commit hash**：`ca0f777`
+- **commit hash**：`72c7318`（Task 队列更新提交）
 - **commit message**：`docs: mark task 1 complete in opencode queue`
 - **是否 push**：待完成
 - **是否 Vercel 部署完成**：待完成
