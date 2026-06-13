@@ -3217,5 +3217,57 @@
     "scoringReady": "published",
     "publishedToStaging": "not_started",
     "verifiedOnline": "not_started"
+  },
+  "deepDive": {
+    "sceneSummary": "患者松本忠史因喉咙痛和发烧前往诊所就诊。医生诊断后建议休息，但患者表示第二天必须去东京出差。医生于是调整方案，嘱咐患者先吃药、早睡，并且当晚不要洗澡。",
+    "storyExplanation": "第17课的场景设定在诊所，展示了看病时典型的医患对话流程。\n\n对话从医生叫号开始（松本忠史さん），患者应答后进入诊察室。医生询问症状（どうしましたか），患者描述病情（喉咙痛、发烧）。医生通过检查（张嘴看喉咙）诊断为感冒，建议休息。\n\n转折点出现在患者提出第二天必须去东京出差（出張しなければなりません）。医生根据这一特殊情况调整建议：先吃药、早睡，并且特别叮嘱当晚不要洗澡（お風呂に入らないでくださいね）。最后患者感谢医生，互道珍重。\n\n本课重点语法「〜なければなりません」（必须）和「〜ないでください」（请不要）在对话中得到了自然体现。",
+    "characters": [
+      { "name": "松本忠史", "role": "患者", "relationship": "公司职员，因感冒前来就诊" },
+      { "name": "医生", "role": "主治医生", "relationship": "诊所医生，为松本先生诊疗" }
+    ],
+    "conversationFlow": [
+      { "step": 1, "title": "医生叫号", "explanation": "医生在候诊区叫患者松本忠史的名字，示意轮到他就诊。", "relatedLineIds": ["l17-conv-001"] },
+      { "step": 2, "title": "患者应答", "explanation": "患者听到名字后应答，表示自己在这里。", "relatedLineIds": ["l17-conv-002"] },
+      { "step": 3, "title": "进入诊室", "explanation": "医生请患者进入诊察室，正式开始诊疗。", "relatedLineIds": ["l17-conv-003"] },
+      { "step": 4, "title": "询问症状", "explanation": "医生用「どうしましたか」询问患者哪里不舒服，这是看病时的标准问法。", "relatedLineIds": ["l17-conv-004"] },
+      { "step": 5, "title": "描述病情", "explanation": "患者描述症状：从昨天开始喉咙痛，并且还有点发烧。使用「〜くて」连接两个症状。", "relatedLineIds": ["l17-conv-005", "l17-conv-006"] },
+      { "step": 6, "title": "初步诊断", "explanation": "医生听后表示理解，让患者张开嘴检查喉咙，然后诊断为感冒。", "relatedLineIds": ["l17-conv-007", "l17-conv-008", "l17-conv-009"] },
+      { "step": 7, "title": "医嘱休息", "explanation": "医生建议患者好好休息两三天，使用「〜てください」表示礼貌建议。", "relatedLineIds": ["l17-conv-010"] },
+      { "step": 8, "title": "患者说明情况", "explanation": "患者犹豫后说明自己第二天必须去东京出差，使用「〜なければなりません」表达必须做的事情。", "relatedLineIds": ["l17-conv-011", "l17-conv-012"] },
+      { "step": 9, "title": "医生调整方案", "explanation": "医生了解情况后调整建议：先吃药、早点休息。使用「〜て」（连用形）和「〜てください」。", "relatedLineIds": ["l17-conv-013", "l17-conv-014", "l17-conv-015"] },
+      { "step": 10, "title": "特别叮嘱", "explanation": "患者同意后，医生又补充叮嘱：今晚请不要洗澡。使用「〜ないでください」表示否定请求，加上「ね」使语气更柔和。", "relatedLineIds": ["l17-conv-016", "l17-conv-017", "l17-conv-018"] },
+      { "step": 11, "title": "结束诊疗", "explanation": "患者表示理解和感谢，医生用「お大事に」祝愿患者早日康复，对话自然结束。", "relatedLineIds": ["l17-conv-019", "l17-conv-020", "l17-conv-021"] }
+    ],
+    "lineUsage": [
+      { "lineId": "l17-conv-001", "japanese": "松本忠史さん", "chineseMeaning": "松本忠史先生。", "realLifeUse": "医院叫号时使用「姓+さん」的形式称呼患者，也可以用「様」更礼貌。", "emotionTone": "正式、礼貌", "memoryTip": "联想「さん」是敬称，用在各种正式场合称呼他人。" },
+      { "lineId": "l17-conv-002", "japanese": "はい", "chineseMeaning": "在。", "realLifeUse": "点名或呼叫时的标准应答，表示「我在这里」「到」。", "emotionTone": "干脆、简洁", "memoryTip": "与中文的「在」直接对应，是日语中最基本的应答词。" },
+      { "lineId": "l17-conv-003", "japanese": "診察室へどうぞ", "chineseMeaning": "请进诊察室。", "realLifeUse": "「〜へどうぞ」是引导对方进入某处的礼貌表达，类似中文「请进…」。", "emotionTone": "礼貌、客气", "memoryTip": "「どうぞ」表示请，搭配方向助词「へ」表示「请往…方向」。" },
+      { "lineId": "l17-conv-004", "japanese": "どうしましたか", "chineseMeaning": "您哪里不舒服？", "realLifeUse": "医院问诊的标准用语，也用于询问对方怎么了、发生了什么事。", "emotionTone": "关切、正式", "memoryTip": "「どうする」的意思是「怎么办」，「どうしましたか」字面是「发生什么了」。" },
+      { "lineId": "l17-conv-005", "japanese": "昨日から喉が痛くて", "chineseMeaning": "从昨天开始喉咙就很痛。", "realLifeUse": "使用「〜から」表示起点，「〜くて」连接原因理由，是描述症状的典型句式。", "emotionTone": "陈述、略带痛苦", "memoryTip": "「喉（のど）」是喉咙，「痛くて」是「痛い」的て形，表原因。" },
+      { "lineId": "l17-conv-006", "japanese": "熱も少しあります", "chineseMeaning": "还有点发烧。", "realLifeUse": "「も」表示「也」，补充说明还有发热症状。用「少し」缓和语气。", "emotionTone": "平静陈述", "memoryTip": "「熱（ねつ）」是发烧，「あります」是有，这里的「も」表示附加。" },
+      { "lineId": "l17-conv-007", "japanese": "そうですか", "chineseMeaning": "这样啊。", "realLifeUse": "听到对方说明后表示「原来如此」「这样啊」，是一种理解性回应。", "emotionTone": "理解、中性", "memoryTip": "「そう」是「那样」，「ですか」是疑问，但语气是确认而非提问。" },
+      { "lineId": "l17-conv-008", "japanese": "ちょっと口を開けてください", "chineseMeaning": "请张开嘴让我看看。", "realLifeUse": "医生检查时的指令，「ちょっと」缓和语气，「〜を開けてください」表示请打开某物。", "emotionTone": "温和指令", "memoryTip": "「口（くち）」是嘴，「開けてください」是「開ける」的て形+ください。" },
+      { "lineId": "l17-conv-009", "japanese": "風邪ですね", "chineseMeaning": "是感冒呢。", "realLifeUse": "医生宣布诊断结果时用「ですね」表达确认的语气。", "emotionTone": "肯定、告知", "memoryTip": "「風邪（かぜ）」是感冒，「ですね」表示「是吧」，带有确认语气。" },
+      { "lineId": "l17-conv-010", "japanese": "2、3日ゆっくり休んでください", "chineseMeaning": "请好好休息两三天。", "realLifeUse": "医生建议休息的常用表达，「ゆっくり」表示悠闲地、充分地。", "emotionTone": "建议、关怀", "memoryTip": "「休んでください」是「休む」的て形+ください，表示请做某事。" },
+      { "lineId": "l17-conv-011", "japanese": "あのー", "chineseMeaning": "那个……", "realLifeUse": "说话犹豫、想引起注意或委婉提出请求时的开场语。", "emotionTone": "犹豫、婉转", "memoryTip": "「あのー」拉长音表示犹豫，类似中文的「那个……」。" },
+      { "lineId": "l17-conv-012", "japanese": "明日から東京へ出張しなければなりません", "chineseMeaning": "我明天起要去东京出差。", "realLifeUse": "「〜なければなりません」表示必须做某事，是正式场合表达义务的常用语法。", "emotionTone": "为难、不得不", "memoryTip": "「出張（しゅっちょう）」是出差，「しなければなりません」是「する」的否定条件+必须。" },
+      { "lineId": "l17-conv-013", "japanese": "じゃあ", "chineseMeaning": "那样的话……", "realLifeUse": "听到新情况后转换思路或改变说法的过渡词。", "emotionTone": "思考、转折", "memoryTip": "「じゃあ」是「では」的口语简体形式，表示「那么」。" },
+      { "lineId": "l17-conv-014", "japanese": "今日は薬を飲んで", "chineseMeaning": "今天请先吃药，", "realLifeUse": "动词て形表示列举或顺序，这里暗示后续还有别的建议。", "emotionTone": "指示、温和", "memoryTip": "「薬（くすり）」是药，「飲んで」是「飲む」的て形，表示吃药这个动作。" },
+      { "lineId": "l17-conv-015", "japanese": "早く寝てください", "chineseMeaning": "早点休息吧。", "realLifeUse": "「早く」是「早い」的副词形，修饰动词，「寝てください」是请求对方睡觉。", "emotionTone": "建议、温暖", "memoryTip": "「早く（はやく）」是早，「寝て（ねて）」是睡觉，组合起来就是早点睡。" },
+      { "lineId": "l17-conv-016", "japanese": "はい", "chineseMeaning": "好的。", "realLifeUse": "表示同意的应答，接受医生的建议。", "emotionTone": "肯定、顺从", "memoryTip": "「はい」是日语中最基本的肯定应答词，表示「好的」。" },
+      { "lineId": "l17-conv-017", "japanese": "それから", "chineseMeaning": "还有，", "realLifeUse": "补充追加信息时的连接词，类似中文的「还有」「另外」。", "emotionTone": "追加、提醒", "memoryTip": "「それから」字面是「从那之后」，引申为「还有」。" },
+      { "lineId": "l17-conv-018", "japanese": "今晩はお風呂に入らないでくださいね", "chineseMeaning": "今晚请不要洗澡哦。", "realLifeUse": "「〜ないでください」表示请不要做某事，搭配「ね」使语气更亲切。感冒时不洗澡是日本常见的生活建议。", "emotionTone": "叮嘱、亲切", "memoryTip": "「入らないで」是「入る」的ない形+で，「風呂（ふろ）」是浴室/泡澡。" },
+      { "lineId": "l17-conv-019", "japanese": "はい、わかりました", "chineseMeaning": "好的，我知道了。", "realLifeUse": "理解并接受对方指示或建议时的标准回应。", "emotionTone": "理解、配合", "memoryTip": "「わかりました」是「わかる」的敬体过去式，表示「我理解了」。" },
+      { "lineId": "l17-conv-020", "japanese": "じゃあお大事に", "chineseMeaning": "那请多保重。", "realLifeUse": "对生病或受伤的人说的祝福语，相当于中文的「请多保重」「早日康复」。", "emotionTone": "祝福、温暖", "memoryTip": "「お大事に」是「大事（だいじ）」的礼貌形式，省略了后面的话。" },
+      { "lineId": "l17-conv-021", "japanese": "どうもありがとうございました", "chineseMeaning": "非常感谢您。", "realLifeUse": "最正式的感谢表达之一，用于接受服务后表达谢意。", "emotionTone": "正式、感激", "memoryTip": "「どうも」加强语气，「ありがとうございました」是过去式，表示对已发生的事的感谢。" }
+    ],
+    "chineseRetellPrompt": "请用中文复述第17课的会话内容。\n\n「第17课讲的是患者松本忠史去诊所看病的故事。他从昨天开始喉咙痛，还有些发烧。医生检查后诊断是感冒，建议他好好休息两三天。但是松本先生说明天必须去东京出差。于是医生调整了方案，让他先吃药、早点睡，还特别叮嘱今晚不要洗澡。最后松本先生感谢医生，医生祝他早日康复。」\n\n试试看用自己的话把这个故事完整讲一遍。",
+    "realLifeReplacementPractice": [
+      "练习1：如果你去看医生，医生问你「どうしましたか」，你怎么回答？用「昨日から…が痛くて、…もあります」的句式。",
+      "练习2：你的朋友感冒了，但明天必须上班。用「〜なければなりません」帮他说出这个情况。",
+      "练习3：你是医生，患者发烧了，请用「〜ないでください」告诉他今晚不要喝酒。",
+      "练习4：用「〜てください」造句，建议你的朋友多喝水。",
+      "练习5：如果你是医生，诊疗结束时会对患者说什么祝福语？"
+    ]
   }
 }

@@ -2216,5 +2216,37 @@
     "scoringReady": "published",
     "publishedToStaging": "not_started",
     "verifiedOnline": "not_started"
+  },
+  "deepDive": {
+    "sceneSummary": "有人问桑托斯先生的爱好是什么，桑托斯回答说是摄影，特别爱拍马的照片。对方感到有趣，又问来日本后有没有拍马的照片。桑托斯说在日本很难看到马。对方告诉他北海道有很多马，桑托斯很高兴，说暑假一定要去看看。",
+    "storyExplanation": "这段对话发生在工作或社交场合中，有人对桑托斯先生的爱好感兴趣而提问。桑托斯先生分享了自己对摄影和马的喜爱。对方顺势问是否在日本拍过马的照片，引出了桑托斯在日本难以见到马的遗憾。随后对方提供了北海道有很多马的信息，激发了桑托斯前往北海道的愿望。对话自然地运用了「趣味は〜です」「〜ことができます」「〜てから」「〜たいです」等本课语法点。",
+    "characters": [
+      { "name": "質問者", "role": "提问者", "relationship": "桑托斯的同事或朋友" },
+      { "name": "サントスさん", "role": "被提问者", "relationship": "一位喜欢摄影的外国人" }
+    ],
+    "conversationFlow": [
+      { "step": 1, "title": "询问爱好", "explanation": "提问者直接询问桑托斯的爱好，用「趣味は何ですか」这一标准句型。", "relatedLineIds": ["l18-conv-001"] },
+      { "step": 2, "title": "回答爱好", "explanation": "桑托斯简洁回答「写真です」，说明自己的爱好是摄影。", "relatedLineIds": ["l18-conv-002"] },
+      { "step": 3, "title": "追问细节", "explanation": "提问者进一步追问拍什么样的照片，表示对桑托斯爱好的兴趣。", "relatedLineIds": ["l18-conv-003"] },
+      { "step": 4, "title": "具体说明", "explanation": "桑托斯说明自己拍动物照片，并且特别提到喜欢马。", "relatedLineIds": ["l18-conv-004", "l18-conv-005"] },
+      { "step": 5, "title": "表达兴趣与追问", "explanation": "提问者表示觉得有趣，并追问来日本后是否拍过马的照片，使用了「〜てから」的语法。", "relatedLineIds": ["l18-conv-006", "l18-conv-007"] },
+      { "step": 6, "title": "表达困难", "explanation": "桑托斯说明在日本很难看到马，使用了「〜ことができません」的表达。", "relatedLineIds": ["l18-conv-008"] },
+      { "step": 7, "title": "提供信息与计划", "explanation": "提问者提供北海道有很多马的信息，桑托斯表示惊讶和高兴，并表达了想去北海道的愿望，使用了「〜たいです」。", "relatedLineIds": ["l18-conv-009", "l18-conv-010", "l18-conv-011"] }
+    ],
+    "lineUsage": [
+      { "lineId": "l18-conv-001", "japanese": "サントスさんの趣味は何ですか？", "chineseMeaning": "桑托斯先生的兴趣是什么？", "realLifeUse": "询问他人爱好时的标准问句，可以替换主语使用。", "emotionTone": "礼貌、好奇", "memoryTip": "趣味は + 何ですか = 问爱好" },
+      { "lineId": "l18-conv-002", "japanese": "写真です", "chineseMeaning": "是摄影。", "realLifeUse": "简洁回答爱好的说法，名词直接加です。", "emotionTone": "简洁、肯定", "memoryTip": "直接说爱好名词 + です" },
+      { "lineId": "l18-conv-003", "japanese": "どんな写真を撮りますか？", "chineseMeaning": "您拍什么样的照片呢？", "realLifeUse": "追问细节时用「どんな」提问，非常自然。", "emotionTone": "关心、感兴趣", "memoryTip": "どんな + 名词 + を + 动词ますか" },
+      { "lineId": "l18-conv-004", "japanese": "動物の写真です", "chineseMeaning": "动物的照片。", "realLifeUse": "说明具体类别时用名词 + の + 名词 + です。", "emotionTone": "说明性、中性", "memoryTip": "类别 + の + 写真です" },
+      { "lineId": "l18-conv-005", "japanese": "特にうまが好きです", "chineseMeaning": "我特别喜欢马。", "realLifeUse": "表达特别喜好时用「特に…が好きです」。", "emotionTone": "热情、分享", "memoryTip": "特に + 名词 + が好きです" },
+      { "lineId": "l18-conv-006", "japanese": "それは面白いですね", "chineseMeaning": "那真有趣啊。", "realLifeUse": "对他人的爱好或经历表示兴趣和赞同时使用。", "emotionTone": "感叹、认同", "memoryTip": "それは + 形容词 + ですね" },
+      { "lineId": "l18-conv-007", "japanese": "日本へ来てから馬の写真を撮りましたか？", "chineseMeaning": "来日本以后有拍马的照片吗？", "realLifeUse": "用「〜てから」询问某动作之后是否做了另一件事。", "emotionTone": "好奇、追问", "memoryTip": "动词て形 + から + 〜ましたか" },
+      { "lineId": "l18-conv-008", "japanese": "いいえ、日本ではなかなか馬を見ることができません", "chineseMeaning": "没有，在日本很难看到马。", "realLifeUse": "用「〜ことができません」表达无法做到某事，なかなか加强否定语气。", "emotionTone": "遗憾、解释", "memoryTip": "なかなか + 〜ことができません = 很难做到" },
+      { "lineId": "l18-conv-009", "japanese": "北海道に馬がたくさんいますよ", "chineseMeaning": "北海道有很多马哦。", "realLifeUse": "提供信息时用「〜に〜がたくさんいますよ」，よ表示告知新信息。", "emotionTone": "提供信息、友好提醒", "memoryTip": "地点に + 物/動物がたくさんいます" },
+      { "lineId": "l18-conv-010", "japanese": "本当ですか？", "chineseMeaning": "真的吗？", "realLifeUse": "对听到的新信息表示惊讶或确认的常用表达。", "emotionTone": "惊讶、兴奋", "memoryTip": "本当ですか = 真的吗？" },
+      { "lineId": "l18-conv-011", "japanese": "じゃあ、夏休みにぜひ行きたいです", "chineseMeaning": "那我暑假一定想去看看。", "realLifeUse": "用「〜たいです」表达愿望，ぜひ加强决心，じゃあ承接上文。", "emotionTone": "期待、决心", "memoryTip": "じゃあ + 時間 + にぜひ + 行きたいです" }
+    ],
+    "chineseRetellPrompt": "请用中文复述第18课的会话场景。\n\n「第18课讲的是……」\n\n试试看把整个对话的故事用自己的话说一遍。",
+    "realLifeReplacementPractice": ["把你的爱好套进「趣味は〜です」的句型说一遍", "用「〜ことができます」说一件你会做的事情", "用「〜てから」说说你来日本/某地之后做了什么事", "用「〜たいです」说说你暑假想去的地方", "用「〜まえに」说说你睡前或上班前做的事"]
   }
 }

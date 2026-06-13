@@ -2477,5 +2477,49 @@
     "scoringReady": "published",
     "publishedToStaging": "not_started",
     "verifiedOnline": "not_started"
+  },
+  "deepDive": {
+    "sceneSummary": "在一场聚餐/派对上，大家注意到玛丽亚吃得不多。她解释说从昨天开始减肥了。另一位朋友分享了自己过去减肥的经历（每天只吃苹果、大量喝水），并指出极端节食对身体不好。最后有人递上冰淇淋，玛丽亚决定\"减肥明天再开始\"。",
+    "storyExplanation": "第19课的会话围绕「ダイエット」（减肥）展开，场景设定在聚餐中。通过玛丽亚与朋友们的对话，自然地引出了本课的核心语法：〜たことがあります（曾有过某种经验）、〜たり〜たりします（列举动作）、〜になります（状态变化）等。会话从玛丽亚吃得少被注意到开始，到她决定\"明天再减肥\"结束，形成了一个完整有趣的小故事，同时也展现了日常生活中日本人表达关心、分享经验和自我调侃的方式。",
+    "characters": [
+      { "name": "玛丽亚（マリアさん）", "role": "正在减肥的朋友", "relationship": "聚餐参与者" },
+      { "name": "朋友A", "role": "注意到玛丽亚不吃东西并关心询问", "relationship": "玛丽亚的朋友/同事" },
+      { "name": "朋友B", "role": "分享自己的减肥经历，提出建议", "relationship": "玛丽亚的朋友/同事" },
+      { "name": "另一位朋友", "role": "以冰淇淋诱惑玛丽亚", "relationship": "聚会中的朋友" }
+    ],
+    "conversationFlow": [
+      { "step": 1, "title": "干杯开场", "explanation": "聚会开始，大家举杯庆祝。", "relatedLineIds": ["l19-conv-001"] },
+      { "step": 2, "title": "注意到玛丽亚吃得少", "explanation": "朋友发现玛丽亚没怎么吃东西，关心地询问。", "relatedLineIds": ["l19-conv-002"] },
+      { "step": 3, "title": "玛丽亚解释正在减肥", "explanation": "玛丽亚告诉大家她从昨天开始减肥。这里使用了「〜ています」表示动作的持续状态。", "relatedLineIds": ["l19-conv-003"] },
+      { "step": 4, "title": "朋友共鸣回应", "explanation": "朋友表示理解，同时也分享自己曾经减过肥的经历，使用「〜たことがあります」句型。", "relatedLineIds": ["l19-conv-004", "l19-conv-005"] },
+      { "step": 5, "title": "询问减肥方法", "explanation": "朋友好奇地问玛丽亚是怎么减肥的，引出核心对话。", "relatedLineIds": ["l19-conv-006"] },
+      { "step": 6, "title": "分享极端减肥经历", "explanation": "朋友分享了自己过去每天只吃苹果、大量喝水的减肥方法，使用了「〜たり〜たりします」列举动作的句型。", "relatedLineIds": ["l19-conv-007"] },
+      { "step": 7, "title": "评论极端减肥的危害", "explanation": "朋友指出过度节食对身体不好，使用了「〜は〜に良くない」的表达方式。玛丽亚表示同意。", "relatedLineIds": ["l19-conv-008", "l19-conv-009"] },
+      { "step": 8, "title": "冰淇淋的诱惑与放弃减肥", "explanation": "另一位朋友叫住玛丽亚，递上冰淇淋并说很好吃。玛丽亚犹豫后决定「减肥明天再开始」，使用了「〜から〜します」表示新的决定。", "relatedLineIds": ["l19-conv-010", "l19-conv-011", "l19-conv-012", "l19-conv-013", "l19-conv-014"] }
+    ],
+    "lineUsage": [
+      { "lineId": "l19-conv-001", "japanese": "カンパーイ", "chineseMeaning": "干杯～！", "realLifeUse": "日式聚餐或酒会开场时的常用祝酒词。", "emotionTone": "欢快、兴奋", "memoryTip": "来自英语「cheers」的音译，发音类似\"看怕一\"。" },
+      { "lineId": "l19-conv-002", "japanese": "マリアさんあまり食べませんね", "chineseMeaning": "玛丽亚小姐，你吃得不多啊。", "realLifeUse": "注意到对方吃得少时，可以用「あまり〜ませんね」的句式表达关心。", "emotionTone": "关心、疑惑", "memoryTip": "「あまり〜ません」是否定句，表示\"不怎么…\"。" },
+      { "lineId": "l19-conv-003", "japanese": "昨日からダイエットをしています", "chineseMeaning": "我从昨天开始减肥了。", "realLifeUse": "说明从某个时间点开始持续做某事时使用「〜から〜ています」。", "emotionTone": "解释、略带不好意思", "memoryTip": "「〜ています」表示动作的持续状态。" },
+      { "lineId": "l19-conv-004", "japanese": "そうですか", "chineseMeaning": "是吗？", "realLifeUse": "日常对话中表示听到新信息时的常用回应。语调不同可以表达惊讶、理解等不同情绪。", "emotionTone": "中性理解", "memoryTip": "经典日语回应句，相当于\"哦，是这样啊\"。" },
+      { "lineId": "l19-conv-005", "japanese": "私もダイエットをしたことがあります", "chineseMeaning": "我也减过肥呢。", "realLifeUse": "用「〜たことがあります」表达自己曾经有过某种经历，是分享经验时的常用句型。", "emotionTone": "共鸣、轻松", "memoryTip": "「たことがある」= 过去有过该动作的经历。" },
+      { "lineId": "l19-conv-006", "japanese": "どんなダイエットですか", "chineseMeaning": "你是怎么减的？", "realLifeUse": "用「どんな〜ですか」询问对方做某事的具体方式或内容。", "emotionTone": "好奇、感兴趣", "memoryTip": "「どんな」= \"什么样的\"，用于询问具体细节。" },
+      { "lineId": "l19-conv-007", "japanese": "毎日リンゴだけ食べたり水をたくさん飲んだりしました", "chineseMeaning": "我每天只吃苹果，还喝了很多水。", "realLifeUse": "「〜たり〜たりします」用于列举两个或多个代表性的动作或状态，常用于描述日常活动。", "emotionTone": "回忆、感慨", "memoryTip": "「〜たり〜たり」= \"做做这个、做做那个\"，列举代表性动作。" },
+      { "lineId": "l19-conv-008", "japanese": "でも無理なダイエットは体に良くないですね", "chineseMeaning": "不过，过度节食对身体不好呢。", "realLifeUse": "「〜は〜に良くない」表示\"……对……不好\"，常用于提出建议或警告。", "emotionTone": "关切、劝导", "memoryTip": "「体に良い」= 对身体好，「良くない」是其否定形式。" },
+      { "lineId": "l19-conv-009", "japanese": "そうですね", "chineseMeaning": "是啊。", "realLifeUse": "表示同意对方说的内容，是日语中最常用的附和语之一。", "emotionTone": "同意、附和", "memoryTip": "「そうですね」比「そうです」更柔和，带有思考后同意的语感。" },
+      { "lineId": "l19-conv-010", "japanese": "マリアさん", "chineseMeaning": "玛丽亚小姐，", "realLifeUse": "在对话中先叫对方名字以引起注意，是日语的常见交流习惯。", "emotionTone": "呼唤、提起注意", "memoryTip": "日语中称呼他人时通常加「さん」，表示礼貌。" },
+      { "lineId": "l19-conv-011", "japanese": "私もダイエットをしています", "chineseMeaning": "我也在减肥哦。", "realLifeUse": "这里另一位朋友也用「〜ています」说自己也在减肥，但随后拿出冰淇淋——幽默地自相矛盾。", "emotionTone": "调侃、幽默", "memoryTip": "与conv-003结构相同，但语境不同，带有幽默反差的意味。" },
+      { "lineId": "l19-conv-012", "japanese": "このアイスクリーム美味しいですよ", "chineseMeaning": "这个冰淇淋很好吃哦。", "realLifeUse": "「美味しいですよ」的「よ」用于向对方传达新信息或强调，常用于推荐食物。", "emotionTone": "诱惑、推荐", "memoryTip": "句尾的「よ」有提醒、告知或轻微强调的作用。" },
+      { "lineId": "l19-conv-013", "japanese": "そうですか", "chineseMeaning": "是吗？", "realLifeUse": "玛丽亚听到冰淇淋很好吃的回应，语调中可以感受到她内心的动摇和犹豫。", "emotionTone": "犹豫、动摇", "memoryTip": "这里与conv-004的「そうですか」呼应，但语气不同——从理解决策变为动摇。" },
+      { "lineId": "l19-conv-014", "japanese": "ダイエットはまた明日からします", "chineseMeaning": "减肥……还是明天再开始吧。", "realLifeUse": "经典的\"明天再开始减肥\"的自我解嘲表达，使用「〜から〜します」表示\"从……开始做……\"。", "emotionTone": "放弃抵抗、幽默自嘲", "memoryTip": "「また明日から」字面意思\"从明天开始\"，常用于拖延要做的事情。" }
+    ],
+    "chineseRetellPrompt": "请用中文复述第19课的会话故事，尽量使用自己的语言，不要直接翻译原文。\n\n「第19课讲的是大家在聚餐时，发现玛丽亚吃得很少……」\n\n试试看，把你理解的故事情节用自己的话说出来。",
+    "realLifeReplacementPractice": [
+      "和同学聚餐时，发现对方没怎么动筷子，用「あまり〜ませんね」关心一下。",
+      "朋友说自己曾经去过某个国家旅行，用「〜たことがあります」回应说自己也有类似经历。",
+      "有人问你的减肥/健身方法，用「〜たり〜たりします」列举两三个具体做法。",
+      "看到朋友做一些不健康的事情（比如熬夜），用「〜は体に良くないですね」委婉提醒。",
+      "当朋友用美食诱惑你时，用「明日から〜します」幽默地表示\"明天再开始\"。"
+    ]
   }
 }
