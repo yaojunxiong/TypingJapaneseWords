@@ -2491,5 +2491,48 @@
     "scoringReady": "published",
     "publishedToStaging": "not_started",
     "verifiedOnline": "not_started"
+  },
+  "deepDive": {
+    "sceneSummary": "桑托斯（サントスさん）和松本（松本さん）在路上偶遇。两人久违重逢，互相问候近况后，松本提议去喝一杯啤酒。聊天中松本提起今晚十点有日本对巴西的足球赛，问桑托斯觉得谁会赢。桑托斯毫不犹豫地说当然是巴西，松本也表示同意，但补充说最近日本队也变强了。桑托斯表示同意但欲言又止，随后意识到时间不早，提出该回去了，两人便一同离开。",
+    "storyExplanation": "这一课的对话展示了一场典型的日本人之间的偶遇寒暄。从「久しぶりですよね」（好久不见啊）开始，到「お元気ですか？」（您还好吗？）的问候，再到邀请「ビールでも飲みませんか？」（要不要喝点啤酒？），整个过程非常自然。\n\n对话的核心是围绕「〜と思います」（认为/觉得）的表达——松本问「どちらが勝つと思いますか？」（你觉得哪边会赢？），桑托斯回答「もちろんブラジルですよ」（当然是巴西啦）。这里注意「〜と思います」前面要用普通形（辞書形/た形/ない形等），而不是ます形。\n\n另外「私もそう思いますが…」（我也这么觉得，不过……）中的「が」表示委婉的转折或保留态度，常用于日语对话中避免直接否定对方。\n\n最后「もう帰らないと」（我该回去了）是「もう帰らないといけません」的省略形式，口语中非常常用。",
+    "characters": [
+      { "name": "サントスさん", "role": "巴西人或与巴西有关的人", "relationship": "松本的朋友/熟人" },
+      { "name": "松本さん", "role": "日本人", "relationship": "桑托斯的朋友/熟人" }
+    ],
+    "conversationFlow": [
+      { "step": 1, "title": "偶遇与惊讶", "explanation": "桑托斯先发出「あ」的感叹，表示突然看到熟人时的惊讶", "relatedLineIds": ["l21-conv-001"] },
+      { "step": 2, "title": "久别重逢的问候", "explanation": "桑托斯认出松本，说「久しぶりですよね」表达好久不见", "relatedLineIds": ["l21-conv-002"] },
+      { "step": 3, "title": "回应问候", "explanation": "松本回应并问候对方近况「お元気ですか？」", "relatedLineIds": ["l21-conv-003"] },
+      { "step": 4, "title": "提议去喝酒", "explanation": "松本用「〜でも飲みませんか？」的邀请句式提议喝啤酒，语气委婉", "relatedLineIds": ["l21-conv-004"] },
+      { "step": 5, "title": "欣然接受", "explanation": "桑托斯愉快地接受邀请，用「いいですねぇ」表达赞同", "relatedLineIds": ["l21-conv-005"] },
+      { "step": 6, "title": "提起足球赛", "explanation": "松本说起今晚十点的日本对巴西足球赛，引出话题", "relatedLineIds": ["l21-conv-006", "l21-conv-007"] },
+      { "step": 7, "title": "询问对方看法", "explanation": "松本用「〜と思いますか？」询问桑托斯的预测，这是本课的核心语法", "relatedLineIds": ["l21-conv-008"] },
+      { "step": 8, "title": "表达观点与保留意见", "explanation": "桑托斯自信地说巴西会赢，松本表示同意但补充日本也变强了，用「が」表达委婉转折", "relatedLineIds": ["l21-conv-009", "l21-conv-010", "l21-conv-011", "l21-conv-012"] },
+      { "step": 9, "title": "告别", "explanation": "桑托斯意识到该走了，用「もう帰らないと」的省略说法；松本回应「帰りましょう」", "relatedLineIds": ["l21-conv-013", "l21-conv-014"] }
+    ],
+    "lineUsage": [
+      { "lineId": "l21-conv-001", "japanese": "あ", "chineseMeaning": "啊。", "realLifeUse": "走在路上突然看到熟人时发出的自然感叹词", "emotionTone": "惊讶、意外", "memoryTip": "联想在路上偶遇朋友时发出的「啊！」" },
+      { "lineId": "l21-conv-002", "japanese": "あ、サントスさん、久しぶりですよね", "chineseMeaning": "啊，桑托斯先生，好久不见啊。", "realLifeUse": "久别重逢时最常用的寒暄，加上「ですよね」让语气更柔和", "emotionTone": "亲切、惊喜", "memoryTip": "「久しぶり」= 好久不见，记住「久」表示时间长的意思" },
+      { "lineId": "l21-conv-003", "japanese": "あ、松本さん、お元気ですか？", "chineseMeaning": "啊，松本先生，您还好吗？", "realLifeUse": "问候对方近况的标准礼貌说法", "emotionTone": "礼貌、关心", "memoryTip": "「元気」= 精神/健康，问候语标配" },
+      { "lineId": "l21-conv-004", "japanese": "ええ、ちょっとビールでも飲みませんか？", "chineseMeaning": "嗯，要不要喝点啤酒？", "realLifeUse": "「〜でも」表示「之类的」，让邀请更加委婉不强迫", "emotionTone": "友好、提议", "memoryTip": "「でも」= 之类的，让邀请听起来更随意" },
+      { "lineId": "l21-conv-005", "japanese": "あ、いいですねぇ", "chineseMeaning": "啊，好啊～", "realLifeUse": "欣然接受提议时的常用表达，语气上扬", "emotionTone": "愉快、期待", "memoryTip": "尾音「ねぇ」拖长表示更强烈的赞同" },
+      { "lineId": "l21-conv-006", "japanese": "今晩10時から日本とブラジルのサッカーの試合がありますね", "chineseMeaning": "今晚十点有日本对巴西的足球比赛呢。", "realLifeUse": "用已知信息引出话题，句尾「ね」表示「你知道吗」", "emotionTone": "闲聊、分享信息", "memoryTip": "「〜があります」表示存在，用于告知活动或事件" },
+      { "lineId": "l21-conv-007", "japanese": "あ、そうですね", "chineseMeaning": "啊，是啊。", "realLifeUse": "回应对方提供的信息，表示知道了", "emotionTone": "中性、附和", "memoryTip": "万能附和语，记住就好" },
+      { "lineId": "l21-conv-008", "japanese": "サントスさんはどちらが勝つと思いますか？", "chineseMeaning": "桑托斯先生觉得哪边会赢？", "realLifeUse": "用「〜と思いますか」礼貌地询问对方观点", "emotionTone": "好奇、征求意见", "memoryTip": "「思います」= 想/觉得，注意前面用普通形" },
+      { "lineId": "l21-conv-009", "japanese": "もちろんブラジルですよ", "chineseMeaning": "当然是巴西啦。", "realLifeUse": "表达强烈自信的观点，句尾「よ」强调自己的判断", "emotionTone": "自信、肯定", "memoryTip": "「もちろん」= 当然，加上「よ」语气更强" },
+      { "lineId": "l21-conv-010", "japanese": "そうですね", "chineseMeaning": "也是呢。", "realLifeUse": "简短附和对方观点，表示同意", "emotionTone": "同意、附和", "memoryTip": "和001的「そうですね」意思不同，这里表示「确实如此」" },
+      { "lineId": "l21-conv-011", "japanese": "でも、最近日本も強くなりましたよ", "chineseMeaning": "不过最近日本也变强了哦。", "realLifeUse": "「でも」表示转折，礼貌地提出不同角度的观点", "emotionTone": "补充、委婉反驳", "memoryTip": "「でも」= 但是，用于转折" },
+      { "lineId": "l21-conv-012", "japanese": "ええ、私もそう思いますが…", "chineseMeaning": "嗯，我也这么觉得，不过……", "realLifeUse": "先同意再委婉表达保留意见，句尾「が」表示话没说完", "emotionTone": "礼貌的保留", "memoryTip": "「〜が…」尾音下沉表示话中有话" },
+      { "lineId": "l21-conv-013", "japanese": "あ、もう帰らないと", "chineseMeaning": "啊，我该回去了。", "realLifeUse": "「〜ないと」是「〜ないといけない」的口语省略，日常非常常用", "emotionTone": "意识到时间、抱歉", "memoryTip": "「帰らないと」= 不回去不行 = 该回去了" },
+      { "lineId": "l21-conv-014", "japanese": "ええ、帰りましょう", "chineseMeaning": "嗯，我们走吧。", "realLifeUse": "「ましょう」表提议/劝诱，「我们……吧」", "emotionTone": "同意、一同行动", "memoryTip": "「帰りましょう」是「帰ります」的劝诱形" }
+    ],
+    "chineseRetellPrompt": "请用中文复述第21课会话的内容。\n\n「第21课讲的是桑托斯和松本在路上偶遇的故事。……」\n\n试试看把整个故事用自己的话说一遍，包括他们怎么打招呼、聊了什么、最后怎么分开的。",
+    "realLifeReplacementPractice": [
+      "练习1：把对话中的人名换成你和你的朋友，重新编一段对话。",
+      "练习2：把「ビール」换成「コーヒー」或「お茶」，改编邀请部分。",
+      "练习3：把足球赛换成其他话题（比如电影、音乐会），练习「〜と思います」。",
+      "练习4：把「ブラジル」换成你支持的运动队，练习表达观点。",
+      "练习5：用「もう帰らないと」和「帰りましょう」编一个更长的告别场景。"
+    ]
   }
 }

@@ -3058,5 +3058,56 @@
     "scoringReady": "published",
     "publishedToStaging": "not_started",
     "verifiedOnline": "not_started"
+  },
+  "deepDive": {
+    "sceneSummary": "顾客在房产中介公司找房子，中介询问需求后推荐了一套房源。顾客介绍了自己的条件（房租8万日元左右、离车站不要太远），中介介绍了一套步行10分钟、8万3千日元的带餐厨间和和室的房子。顾客注意到壁橱并询问其用途，中介解释是放被褥的地方。最后顾客决定今天就看房。",
+    "storyExplanation": "本课会话发生在一家房产中介（不動産屋）。故事以背景音乐开始，中介礼貌询问顾客需求（どんな部屋をお探しですか）。顾客思考后给出了具体条件：房租8万日元左右、离车站近。中介随即推荐了一套房源，详细介绍了位置（车站步行10分钟）、房租（8万3千日元）和户型（餐厨间+和室）。\n\n顾客注意到一个空间并询问（すみません、ここは何ですか），中介回答是壁橱（押し入れです），并进一步说明是用来放被褥的地方（布団を入れるところですよ）——这句话正体现了本课核心语法「动词普通形修饰名词」。顾客了解后决定今天就去看房，中介爽快答应，对话以感谢和结尾音乐结束。\n\n整段对话自然地展示了租房场景中的询问、描述和确认，同时密集使用了名词修饰语法点。",
+    "characters": [
+      { "name": "顾客", "role": "找房者", "relationship": "房产中介的客户" },
+      { "name": "中介", "role": "房屋中介", "relationship": "为顾客提供房源推荐和服务" }
+    ],
+    "conversationFlow": [
+      { "step": 1, "title": "开场音乐", "explanation": "以背景音乐开始，设定场景氛围（房产中介公司）。", "relatedLineIds": ["l22-conv-001"] },
+      { "step": 2, "title": "中介询问需求", "explanation": "中介用敬语「お探しですか」礼貌询问顾客想找什么样的房子。", "relatedLineIds": ["l22-conv-002"] },
+      { "step": 3, "title": "顾客描述条件", "explanation": "顾客用「そうですね」思考后提出两个条件：房租8万円左右、离车站不远。「駅から遠くないところ」使用了形容词否定形修饰名词。", "relatedLineIds": ["l22-conv-003", "l22-conv-004"] },
+      { "step": 4, "title": "音乐转场", "explanation": "短暂音乐过渡，中介准备推荐房源。", "relatedLineIds": ["l22-conv-005"] },
+      { "step": 5, "title": "中介推荐房源", "explanation": "中介用「こちらはいかがですか」推荐，介绍位置（步行10分钟）、房租（8万3千）和户型（餐厨间+和室）。", "relatedLineIds": ["l22-conv-006", "l22-conv-007", "l22-conv-008"] },
+      { "step": 6, "title": "音乐转场", "explanation": "音乐过渡，暗示顾客在思考或环顾房间。", "relatedLineIds": ["l22-conv-009"] },
+      { "step": 7, "title": "顾客询问壁橱", "explanation": "顾客用「すみません」引起注意后询问空间，中介回答「押し入れ」，并用「布団を入れるところですよ」解释用途——这是本课核心语法V辞書形修饰名词的典型例子。", "relatedLineIds": ["l22-conv-010", "l22-conv-011", "l22-conv-012", "l22-conv-013"] },
+      { "step": 8, "title": "音乐转场", "explanation": "短暂音乐过渡，顾客消化信息。", "relatedLineIds": ["l22-conv-014"] },
+      { "step": 9, "title": "顾客确认与看房请求", "explanation": "顾客回应「そうですか」表示理解，随后用「〜ことができますか」询问能否看房。", "relatedLineIds": ["l22-conv-015", "l22-conv-016"] },
+      { "step": 10, "title": "中介同意", "explanation": "中介用「今から行きましょうか」表达提议和邀请，展现服务业用语。", "relatedLineIds": ["l22-conv-017"] },
+      { "step": 11, "title": "顾客感谢", "explanation": "顾客用「はい、お願いします」礼貌接受。", "relatedLineIds": ["l22-conv-018"] },
+      { "step": 12, "title": "结尾音乐", "explanation": "结束音乐，会话到此结束。", "relatedLineIds": ["l22-conv-019"] }
+    ],
+    "lineUsage": [
+      { "lineId": "l22-conv-001", "japanese": "【音楽】", "chineseMeaning": "【音乐】", "realLifeUse": "视频中的背景音乐标注，用于段落切换或情绪渲染。", "emotionTone": "中性", "memoryTip": "音乐标记通常表示场景切换或时间推移。" },
+      { "lineId": "l22-conv-002", "japanese": "どんな部屋をお探しですか?", "chineseMeaning": "您在找什么样的房间呢？", "realLifeUse": "服务业中询问顾客需求的标准用语，お探し是「探す」的敬语形式。", "emotionTone": "礼貌、亲切", "memoryTip": "「お〜です」是敬语结构，常用于服务行业。" },
+      { "lineId": "l22-conv-003", "japanese": "そうですね", "chineseMeaning": "这个嘛……", "realLifeUse": "日常对话中非常常用的缓冲语，表示在思考、争取时间组织语言。", "emotionTone": "犹豫、思考中", "memoryTip": "相当于中文的「嗯…让我想想」。" },
+      { "lineId": "l22-conv-004", "japanese": "やちんは8万円ぐらいで、駅から遠くないところがいいです", "chineseMeaning": "房租在八万日元左右，最好离车站不要太远。", "realLifeUse": "租房或购物时表达需求的条件句。「駅から遠くないところ」是形容词否定形修饰名词的典型用法。", "emotionTone": "礼貌陈述、明确需求", "memoryTip": "「遠くない」=「遠い」否定形+「ところ」= 「不远的地方」。" },
+      { "lineId": "l22-conv-005", "japanese": "【音楽】", "chineseMeaning": "【音乐】", "realLifeUse": "背景音乐转场，暗示中介正在查找信息。", "emotionTone": "中性", "memoryTip": "此音乐标记表示中介在操作电脑或查找房源。" },
+      { "lineId": "l22-conv-006", "japanese": "では、こちらはいかがですか?", "chineseMeaning": "那么，您觉得这个怎么样？", "realLifeUse": "推荐商品时的常用句型，いかがですか比どうですか更礼貌。", "emotionTone": "礼貌推荐、积极", "memoryTip": "「では」承接上文，「こちら」指推荐物，「いかが」是「どう」的礼貌形。" },
+      { "lineId": "l22-conv-007", "japanese": "駅から10分で、やちんは8万3000円です", "chineseMeaning": "离车站步行10分钟，房租是8万3千日元。", "realLifeUse": "介绍房源基本信息的标准表达——先讲位置再讲价格。", "emotionTone": "客观介绍、信息性", "memoryTip": "「駅から10分」= 步行10分钟，日语省略「步行」直接说时间。" },
+      { "lineId": "l22-conv-008", "japanese": "ダイニングキッチンと、和室ですね", "chineseMeaning": "是带餐厨间和日式房间的户型。", "realLifeUse": "描述房屋户型时列举房间类型，「〜ですね」带有确认语气。", "emotionTone": "说明、确认", "memoryTip": "DK = 餐厨一体，和室 = 日式榻榻米房间。" },
+      { "lineId": "l22-conv-009", "japanese": "【音楽】", "chineseMeaning": "【音乐】", "realLifeUse": "音乐转场，暗示顾客在消化信息。", "emotionTone": "中性", "memoryTip": "此处音乐表示顾客在考虑或环顾四周。" },
+      { "lineId": "l22-conv-010", "japanese": "すみません", "chineseMeaning": "不好意思。", "realLifeUse": "超级常用万能表达，可用于道歉、引起注意、道谢等。这里用于引起中介注意提问。", "emotionTone": "礼貌、轻微歉意", "memoryTip": "「すみません」= excuse me / sorry，一个词应对多种社交场景。" },
+      { "lineId": "l22-conv-011", "japanese": "ここは何ですか?", "chineseMeaning": "这里是什么？", "realLifeUse": "询问某个地方或物品的基本句型，参观房屋时非常实用。", "emotionTone": "好奇、询问", "memoryTip": "「ここ」指近处的地方，搭配「は何ですか」构成「这是什么地方」。" },
+      { "lineId": "l22-conv-012", "japanese": "押し入れです", "chineseMeaning": "是壁橱。", "realLifeUse": "回答对方关于房间或物品的询问。押し入れ是日式传统壁橱，租房场景常见。", "emotionTone": "说明、简洁回答", "memoryTip": "押し入れ = 日式推拉门壁橱，不同于クローゼット（西式衣橱）。" },
+      { "lineId": "l22-conv-013", "japanese": "布団を入れるところですよ", "chineseMeaning": "是用来放被褥的地方哦。", "realLifeUse": "本课核心例句！V辞書形+ところ修饰名词，表示「做…的地方」。用于解释物品或场所的用途。", "emotionTone": "亲切解释、带语气助词「よ」", "memoryTip": "「布団を入れる」修饰「ところ」= 「放被褥的地方」，完美展示动词修饰名词。" },
+      { "lineId": "l22-conv-014", "japanese": "【音楽】", "chineseMeaning": "【音乐】", "realLifeUse": "音乐转场，表示顾客在消化新信息。", "emotionTone": "中性", "memoryTip": "此处音乐表示短暂的思考和停顿。" },
+      { "lineId": "l22-conv-015", "japanese": "そうですか?", "chineseMeaning": "是这样吗？", "realLifeUse": "听到新信息后的常见回应，表示理解和轻微惊讶。升调表示疑问，降调表示「原来如此」。", "emotionTone": "略带惊讶、感兴趣", "memoryTip": "「そうですか」升调 = 真的吗？降调 = 原来如此。" },
+      { "lineId": "l22-conv-016", "japanese": "この部屋、今日見ることができますか?", "chineseMeaning": "这个房间今天可以看吗？", "realLifeUse": "询问是否可以立即看房的实用句子。「〜ことができます」表达「能够做某事」。", "emotionTone": "礼貌请求、期待", "memoryTip": "「見る」→「見ることができます」= 「能看」。" },
+      { "lineId": "l22-conv-017", "japanese": "はい、今から行きましょうか", "chineseMeaning": "可以哦，现在就过去看看吗？", "realLifeUse": "「ましょうか」表达提议和邀请，服务业中表达「现在就去吧」的常用说法。", "emotionTone": "积极、爽快、提议", "memoryTip": "「行きましょうか」= 「现在去吗」，既是提议也是确认。" },
+      { "lineId": "l22-conv-018", "japanese": "はい、お願いします", "chineseMeaning": "好的，麻烦您了。", "realLifeUse": "接受好意或服务时的万能礼貌用语，点餐、请求帮助、接受提议等场景均可使用。", "emotionTone": "礼貌、感谢、接受", "memoryTip": "「お願いします」是最常用的礼貌请求/接受用语。" },
+      { "lineId": "l22-conv-019", "japanese": "【音楽】", "chineseMeaning": "【音乐】", "realLifeUse": "结尾音乐，标志对话结束。", "emotionTone": "中性", "memoryTip": "片尾音乐提示，会话到此结束。" }
+    ],
+    "chineseRetellPrompt": "请用中文复述第22课的会话内容。\n\n「第22课讲的是顾客去房产中介找房子的故事。中介问顾客想找什么样的房子，顾客说房租八万日元左右、离车站近一点。中介推荐了一套步行10分钟、八万三千日元的房子，带餐厨间和和室。顾客注意到壁橱问是什么，中介解释是放被褥的地方。最后顾客决定当天看房，中介说现在就过去。」\n\n试试看，用自己的话重新讲一遍这个故事！",
+    "realLifeReplacementPractice": [
+      "请把「駅から遠くないところ」换成「駅から近いところ」重新说句子。",
+      "请把「布団を入れるところ」换成「服をしまうところ」描述一个衣柜。",
+      "把「8万円ぐらい」改成你的预算（如10万円），并说出完整的需求句。",
+      "用「〜ことができますか」问一个你想做的事情（如「今から予約することができますか」）。",
+      "如果你是中介，请用「こちらはいかがですか」推荐一个你熟悉的东西（如餐厅、手机等）。"
+    ]
   }
 }
