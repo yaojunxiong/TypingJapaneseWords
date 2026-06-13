@@ -95,4 +95,4 @@ tags:
 - **修改文件**：`src/app/globals.css`、`src/components/lesson-conversation-client.tsx`
 - **验证页面**：`/lessons/2/practice?stage=conversation`、`/lessons/25/practice?stage=conversation`、`/lessons/50/practice?stage=conversation_quiz`
 - **学习主线影响**：无。仅样式和语义容器微调。
-- **commit hash**：待提交
+- **commit hash**：30f3a44
