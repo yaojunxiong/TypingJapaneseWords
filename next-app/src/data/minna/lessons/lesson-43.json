@@ -2878,5 +2878,279 @@
     "scoringReady": "published",
     "publishedToStaging": "not_started",
     "verifiedOnline": "not_started"
+  },
+  "deepDive": {
+    "sceneSummary": "在聊天中，一位父亲向朋友展示儿子的照片。朋友看到运动会照片，夸儿子有精神。父亲开心地说儿子已经适应日本小学、交到朋友、每天都很开心。随后朋友看到一位漂亮女性的照片，问是否是妻子。父亲确认后，朋友称赞太太很漂亮。父亲感谢并介绍妻子兴趣广泛、喜欢历史、有空就去老街散步。",
+    "storyExplanation": "会话从朋友的一句「これどなたの写真ですか?」自然开场，父亲先展示儿子的照片。朋友用「元気そうですね」表达外观判断（な形容词+そうです），父亲顺势详细说明儿子的近况，用了动词て形连接（慣れて、できて）和「楽しそうです」（い形容词去い+そうです）。\n\n接着朋友看到妻子的照片，用了礼貌表达「こちらの方は奥さんですか?」「綺麗な方ですね」来称赞。父亲先道谢，然后用「いろいろなことに興味があって」「一緒にいると面白いんですよ」描述妻子的性格，最后用「時間があれば古い街を歩いています」具体举例。整个对话自然展示了如何用そうです描述外观、用て形连接多个信息，以及如何礼貌地询问和称赞他人。",
+    "characters": [
+      {
+        "name": "父亲（ハンズ的爸爸）",
+        "role": "照片的主人，热情介绍儿子和妻子",
+        "relationship": "家人"
+      },
+      {
+        "name": "朋友/熟人",
+        "role": "看照片的人，礼貌询问并称赞",
+        "relationship": "朋友"
+      }
+    ],
+    "conversationFlow": [
+      {
+        "step": 1,
+        "title": "询问照片",
+        "explanation": "朋友问照片上是谁。",
+        "relatedLineIds": [
+          "l43-conv-001"
+        ]
+      },
+      {
+        "step": 2,
+        "title": "介绍儿子",
+        "explanation": "父亲介绍是儿子ハンズ，并说明是运动会时拍的。",
+        "relatedLineIds": [
+          "l43-conv-002",
+          "l43-conv-003"
+        ]
+      },
+      {
+        "step": 3,
+        "title": "外观评价",
+        "explanation": "朋友用「元気そうですね」评价。父亲补充儿子跑得快、适应学校、开心。",
+        "relatedLineIds": [
+          "l43-conv-004",
+          "l43-conv-005",
+          "l43-conv-006",
+          "l43-conv-007",
+          "l43-conv-008"
+        ]
+      },
+      {
+        "step": 4,
+        "title": "朋友的肯定",
+        "explanation": "朋友说「よかったですね」。",
+        "relatedLineIds": [
+          "l43-conv-009"
+        ]
+      },
+      {
+        "step": 5,
+        "title": "询问妻子",
+        "explanation": "朋友看到另一个人，礼貌问是否是妻子，并称赞漂亮。",
+        "relatedLineIds": [
+          "l43-conv-010",
+          "l43-conv-011"
+        ]
+      },
+      {
+        "step": 6,
+        "title": "介绍妻子",
+        "explanation": "父亲道谢，介绍妻子兴趣广泛、喜欢历史、常去老街散步。",
+        "relatedLineIds": [
+          "l43-conv-012",
+          "l43-conv-013",
+          "l43-conv-014",
+          "l43-conv-015",
+          "l43-conv-016",
+          "l43-conv-017"
+        ]
+      }
+    ],
+    "lineUsage": [
+      {
+        "lineId": "l43-conv-001",
+        "japanese": "これどなたの写真ですか?",
+        "chineseMeaning": "这是谁的照片？",
+        "realLifeUse": "聚会时看到别人手机里的照片，自然地问这是谁。",
+        "emotionTone": "礼貌好奇",
+        "memoryTip": "どなた是だれ的礼貌说法，记住\"哪位\"。",
+        "intention": "表达这是谁的照片？的意思",
+        "memorizationHint": "どなた是だれ的礼貌说法，记住\"哪位\"。",
+        "commonMistake": "注意「これどなたの写真ですか?」的使用语境和对象关系，避免在正式场合使用过于随意的表达"
+      },
+      {
+        "lineId": "l43-conv-002",
+        "japanese": "息子のハンズです",
+        "chineseMeaning": "是我儿子汉斯的。",
+        "realLifeUse": "被人问照片里是谁时，回答「〜です」即可。",
+        "emotionTone": "自然介绍",
+        "memoryTip": "儿子是息子（むすこ），注意和娘（むすめ）区分。",
+        "intention": "表达是我儿子汉斯的的意思",
+        "memorizationHint": "儿子是息子（むすこ），注意和娘（むすめ）区分。",
+        "commonMistake": "注意「息子のハンズです」的使用语境和对象关系，避免在正式场合使用过于随意的表达"
+      },
+      {
+        "lineId": "l43-conv-003",
+        "japanese": "運動会の時撮った写真です",
+        "chineseMeaning": "这是运动会时拍的照片。",
+        "realLifeUse": "补充照片的背景信息。",
+        "emotionTone": "补充说明",
+        "memoryTip": "運動会（うんどうかい）是日本学校常见的活动。",
+        "intention": "表达这是运动会时拍的照片的意思",
+        "memorizationHint": "運動会（うんどうかい）是日本学校常见的活动。",
+        "commonMistake": "注意「運動会の時撮った写真です」的使用语境和对象关系，避免在正式场合使用过于随意的表达"
+      },
+      {
+        "lineId": "l43-conv-004",
+        "japanese": "元気そうですね",
+        "chineseMeaning": "看起来很有精神呢。",
+        "realLifeUse": "看到别人的照片/近况，用外观そうです评价。",
+        "emotionTone": "积极评价",
+        "memoryTip": "元気（な形容詞）直接+そうです = 元気そうです。",
+        "intention": "表达看起来很有精神呢的意思",
+        "memorizationHint": "元気（な形容詞）直接+そうです = 元気そうです。",
+        "commonMistake": "「〜そうです」（样态）和「〜そうです」（传闻）容易混淆。样态是外观判断（看起来～），传闻是听说（据说～）。前者前接ます形/い形去い/な形+そう，后者前接普通形"
+      },
+      {
+        "lineId": "l43-conv-005",
+        "japanese": "ええ、ハンズは走るのが早いんですよ",
+        "chineseMeaning": "是啊，汉斯跑得很快哦。",
+        "realLifeUse": "别人夸你孩子时，自然地补充细节。",
+        "emotionTone": "自豪亲切",
+        "memoryTip": "〜んですよ用于补充说明或强调，语感亲切。",
+        "intention": "表达是啊汉斯跑得很快哦的意思",
+        "memorizationHint": "〜んですよ用于补充说明或强调，语感亲切。",
+        "commonMistake": "注意「ええ、ハンズは走るのが早いんで」的使用语境和对象关系，避免在正式场合使用过于随意的表达"
+      },
+      {
+        "lineId": "l43-conv-006",
+        "japanese": "日本の小学校にも慣れて",
+        "chineseMeaning": "他也已经习惯了日本的小学，",
+        "realLifeUse": "用て形连接多个句子，描述连续的情况。",
+        "emotionTone": "叙述",
+        "memoryTip": "〜に慣れる = get used to；て形中顿，不说完。",
+        "intention": "表达他也已经习惯了日本的的意思",
+        "memorizationHint": "〜に慣れる = get used to；て形中顿，不说完。",
+        "commonMistake": "注意「日本の小学校にも慣れて」的使用语境和对象关系，避免在正式场合使用过于随意的表达"
+      },
+      {
+        "lineId": "l43-conv-007",
+        "japanese": "友達もできて",
+        "chineseMeaning": "交到了朋友，",
+        "realLifeUse": "和朋友分享孩子的近况。",
+        "emotionTone": "积极叙述",
+        "memoryTip": "できる除了\"能\"还有\"产生/交到\"的意思。",
+        "intention": "表达交到了朋友的意思",
+        "memorizationHint": "できる除了\"能\"还有\"产生/交到\"的意思。",
+        "commonMistake": "注意「友達もできて」的使用语境和对象关系，避免在正式场合使用过于随意的表达"
+      },
+      {
+        "lineId": "l43-conv-008",
+        "japanese": "毎日楽しそうです",
+        "chineseMeaning": "每天看起来都很开心。",
+        "realLifeUse": "描述某人的状态看起来如何。",
+        "emotionTone": "欣慰积极",
+        "memoryTip": "楽しい去掉い变成楽しそうです。",
+        "intention": "表达每天看起来都很开心的意思",
+        "memorizationHint": "楽しい去掉い变成楽しそうです。",
+        "commonMistake": "「〜そうです」（样态）和「〜そうです」（传闻）容易混淆。样态是外观判断（看起来～），传闻是听说（据说～）。前者前接ます形/い形去い/な形+そう，后者前接普通形"
+      },
+      {
+        "lineId": "l43-conv-009",
+        "japanese": "よかったですね",
+        "chineseMeaning": "那太好了。",
+        "realLifeUse": "听到别人的好消息时的自然反应。",
+        "emotionTone": "欣慰祝福",
+        "memoryTip": "よかった是いい的过去式，表示\"太好了\"。",
+        "intention": "表达那太好了的意思",
+        "memorizationHint": "よかった是いい的过去式，表示\"太好了\"。",
+        "commonMistake": "注意「よかったですね」的使用语境和对象关系，避免在正式场合使用过于随意的表达"
+      },
+      {
+        "lineId": "l43-conv-010",
+        "japanese": "こちらの方は奥さんですか?",
+        "chineseMeaning": "这位是您太太吗？",
+        "realLifeUse": "礼貌地问对方身边的人是谁。",
+        "emotionTone": "礼貌询问",
+        "memoryTip": "方（かた）是人的礼貌说法；奥さん是\"太太\"。",
+        "intention": "表达这位是您太太吗？的意思",
+        "memorizationHint": "方（かた）是人的礼貌说法；奥さん是\"太太\"。",
+        "commonMistake": "「〜んですか」比「〜ますか」更有「寻求说明」的语气，不只是单纯提问"
+      },
+      {
+        "lineId": "l43-conv-011",
+        "japanese": "綺麗な方ですね",
+        "chineseMeaning": "真是位漂亮的女士啊。",
+        "realLifeUse": "当面或侧面称赞对方的家人。",
+        "emotionTone": "赞美礼貌",
+        "memoryTip": "綺麗（な形容詞）+ な +方，直接+ですね。",
+        "intention": "称赞对方的成果或能力",
+        "memorizationHint": "綺麗（な形容詞）+ な +方，直接+ですね。",
+        "commonMistake": "注意「綺麗な方ですね」的使用语境和对象关系，避免在正式场合使用过于随意的表达"
+      },
+      {
+        "lineId": "l43-conv-012",
+        "japanese": "ありがとうございます",
+        "chineseMeaning": "谢谢您。",
+        "realLifeUse": "收到称赞时的标准礼貌回应。",
+        "emotionTone": "致谢礼貌",
+        "memoryTip": "最基本的礼貌感谢句。",
+        "intention": "称赞对方的成果或能力",
+        "memorizationHint": "最基本的礼貌感谢句。",
+        "commonMistake": "注意「ありがとうございます」的使用语境和对象关系，避免在正式场合使用过于随意的表达"
+      },
+      {
+        "lineId": "l43-conv-013",
+        "japanese": "妻はいろいろなことに興味があって",
+        "chineseMeaning": "我妻子对各种事情都感兴趣，",
+        "realLifeUse": "介绍别人的兴趣爱好，〜に興味がある。",
+        "emotionTone": "客观描述",
+        "memoryTip": "興味がある = interested in；て形中顿。",
+        "intention": "表达我妻子对各种事情都感的意思",
+        "memorizationHint": "興味がある = interested in；て形中顿。",
+        "commonMistake": "注意「妻はいろいろなことに興味があっ」的使用语境和对象关系，避免在正式场合使用过于随意的表达"
+      },
+      {
+        "lineId": "l43-conv-014",
+        "japanese": "一緒にいると面白いんですよ",
+        "chineseMeaning": "跟她在一起很有意思。",
+        "realLifeUse": "用〜と条件句描述\"一……就……\"。",
+        "emotionTone": "温馨推荐",
+        "memoryTip": "条件と+面白い+んです = 解释说明的语气。",
+        "intention": "表达跟她在一起很有意思的意思",
+        "memorizationHint": "条件と+面白い+んです = 解释说明的语气。",
+        "commonMistake": "注意「一緒にいると面白いんですよ」的使用语境和对象关系，避免在正式场合使用过于随意的表达"
+      },
+      {
+        "lineId": "l43-conv-015",
+        "japanese": "そうですか",
+        "chineseMeaning": "是这样啊。",
+        "realLifeUse": "听到别人说明时表示理解的回应。",
+        "emotionTone": "倾听理解",
+        "memoryTip": "句尾语调下降表示理解，上升表示疑问。",
+        "intention": "说明情况或报告事实",
+        "memorizationHint": "句尾语调下降表示理解，上升表示疑问。",
+        "commonMistake": "「〜そうです」（样态）和「〜そうです」（传闻）容易混淆。样态是外观判断（看起来～），传闻是听说（据说～）。前者前接ます形/い形去い/な形+そう，后者前接普通形"
+      },
+      {
+        "lineId": "l43-conv-016",
+        "japanese": "特に歴史が好きで",
+        "chineseMeaning": "她特别喜欢历史，",
+        "realLifeUse": "进一步具体说明感兴趣的内容。",
+        "emotionTone": "具体说明",
+        "memoryTip": "特に = especially；好き（な形容詞）的て形是好きで。",
+        "intention": "说明情况或报告事实",
+        "memorizationHint": "特に = especially；好き（な形容詞）的て形是好きで。",
+        "commonMistake": "注意「特に歴史が好きで」的使用语境和对象关系，避免在正式场合使用过于随意的表达"
+      },
+      {
+        "lineId": "l43-conv-017",
+        "japanese": "時間があれば古い街を歩いています",
+        "chineseMeaning": "有时间就会去老街散步。",
+        "realLifeUse": "用〜ば条件句描述习惯性的活动。",
+        "emotionTone": "举例说明",
+        "memoryTip": "〜ば = if/when；古い街 = old town/老街。",
+        "intention": "表达有时间就会去老街散步的意思",
+        "memorizationHint": "〜ば = if/when；古い街 = old town/老街。",
+        "commonMistake": "注意「時間があれば古い街を歩いていま」的使用语境和对象关系，避免在正式场合使用过于随意的表达"
+      }
+    ],
+    "chineseRetellPrompt": "请用中文复述第43课的会话内容。\n\n「第43课讲的是一个人给朋友看照片的故事。先看了儿子的照片……」\n\n试试看你还能回忆出多少细节？注意会话中使用的そうです（外观）、て形连接、以及礼貌表达。",
+    "realLifeReplacementPractice": [
+      "练习1：找一张你手机里的照片（家人/朋友/旅行），练习用「これどなたの写真ですか?」问别人，用「〜です」回答。",
+      "练习2：用「元気そう」「楽しそう」「美味しそう」评价照片里的人或食物。",
+      "练习3：用て形连接三个句子描述一个人的近况（如：学校に通って、友達ができて、毎日楽しそうです）。",
+      "练习4：用「こちらの方は〜ですか?」「綺麗な方ですね」等礼貌句式练习向朋友询问其家人。",
+      "练习5：用「〜に興味があって」「時間があれば〜をしています」介绍一个人兴趣爱好。"
+    ]
   }
 }
