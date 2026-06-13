@@ -45,16 +45,21 @@ Task 3 Deep Dive 底部增加回到跟读/背诵按钮
   - `/lessons/50/deep-dive` — 200，按钮文案和两个链接出现
   - `/lessons/1` — 200
   - `/toolbox` — 200
-- **线上验证页面**：待 push + Vercel 部署后验证。
-- **HTTP 状态**：待验证。
+- **线上验证页面**：全部 HTTP 200。
+  - `/lessons/1/deep-dive` — 200，按钮文案和 conversation practice 链接出现
+  - `/lessons/25/deep-dive` — 200，按钮文案和 conversation practice 链接出现
+  - `/lessons/50/deep-dive` — 200，按钮文案和 conversation practice 链接出现
+  - `/lessons/1` — 200
+  - `/toolbox` — 200
+- **HTTP 状态**：全部 200。
 
 ## 7. Git 信息
 
 - **git status**：任务开始前 clean。
 - **commit hash**：`0900046`
 - **commit message**：`feat: add deep dive return action buttons`
-- **是否 push**：待完成
-- **是否 Vercel 部署完成**：待完成
+- **是否 push**：是
+- **是否 Vercel 部署完成**：是（`https://study.jimmyyao.com`）
 
 ## 8. 知识库同步
 
@@ -69,4 +74,4 @@ Task 3 Deep Dive 底部增加回到跟读/背诵按钮
 
 ## 10. 本次结论
 
-功能实现、audit、build 和本地验证已完成，待提交、push、部署和线上验证。
+完成。`npm run audit`、`npm run build`、本地验证、线上验证均通过。
