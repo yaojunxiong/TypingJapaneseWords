@@ -161,7 +161,8 @@ export default async function LessonPracticePage({
   if (s === 'conversation') {
     const convSection = sections.find((x) => String(x.type || '') === 'conversation')
     const sectionRecord = convSection as Record<string, unknown> | undefined
-    const videoUrl = String(sectionRecord?.videoUrl || '')
+    const cv = (lesson as Record<string, unknown>).conversationVideo as Record<string, unknown> | undefined
+    const videoUrl = String(cv?.videoUrl || sectionRecord?.videoUrl || '')
     const items = (Array.isArray(convSection?.items) ? convSection!.items! : []).map((item) => ({
       id: String(item.id || ''),
       speaker: String((item as Record<string, unknown>).speaker || ''),
@@ -172,8 +173,6 @@ export default async function LessonPracticePage({
       videoStart: (item as Record<string, unknown>).videoStart as string | number | undefined,
       videoEnd: (item as Record<string, unknown>).videoEnd as string | number | undefined,
     }))
-
-    const cv = (lesson as Record<string, unknown>).conversationVideo as Record<string, unknown> | undefined
 
     return (
       <main>
