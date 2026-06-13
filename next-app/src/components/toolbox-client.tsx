@@ -9,6 +9,7 @@ import {
   markDailyCheckinLocal,
   syncLearningCloudNow
 } from '@/lib/learning-cloud-sync'
+import LearningDashboard from '@/components/learning-dashboard'
 
 type Stats = {
   xp: number
@@ -205,6 +206,8 @@ export default function ToolboxClient({ lang }: Props) {
         <h3>{t(lang, '迁移状态', 'Migration Status')}</h3>
         <p className="small">{t(lang, '学习中心核心入口已迁移到 Next 站内版本。', 'Core learning center entries now stay inside the Next app.')}</p>
       </section>
+
+      <LearningDashboard lang={lang} />
     </>
   )
 }
