@@ -148,7 +148,7 @@ export default function DeepDiveViewer({
       </section>
 
       {/* ── Teacher audio preview (lessons 1-3 only) ── */}
-      {lessonNo && lessonNo >= 1 && lessonNo <= 3 && (
+      {lessonNo && lessonNo >= 1 && lessonNo <= 50 && (
         <section className="card">
           <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12 }}>
             <span style={{ fontSize: 28, flexShrink: 0 }}>🎧</span>
