@@ -9,11 +9,28 @@ import { getLang, type Lang, tr } from '@/lib/i18n'
 
 type LangText = { zh?: string; en?: string; ja?: string; jp?: string }
 
+type ConversationItem = {
+  id: string
+  speaker?: string
+  jp?: string
+  kana?: string
+  zh?: string
+  keyword?: string
+  videoStart?: string
+  videoEnd?: string
+  sourceType?: string
+}
+
+type LessonSection = {
+  type?: string
+  items?: ConversationItem[]
+}
+
 type LessonDoc = {
   lessonNo?: number
   title?: LangText
   subtitle?: LangText
-  sections?: Array<{ type?: string }>
+  sections?: LessonSection[]
   conversationVideo?: {
     sourcePageUrl?: string
     videoUrl?: string
@@ -87,26 +104,64 @@ export default async function LessonDetailPage({
         ) : null}
       </section>
 
-      {no === 1 ? (
-        <section className="card">
-          <h3>{tr(lang, '漫画版会话视频（预览）', 'Anime Conversation Video Preview')}</h3>
-          <p className="small">
-            {tr(lang, '先看懂场景，再回到原文跟读和背诵。', 'Understand the scene first, then return to the original text to shadow and recite.')}
-          </p>
-          <video
-            controls
-            preload="metadata"
-            src="/videos/lesson01_anime_v1.mp4"
-            style={{
-              display: 'block',
-              width: '100%',
-              maxWidth: '100%',
-              borderRadius: 12,
-              border: '1px solid #e2e8f0',
-              background: '#0f172a'
-            }}
-          />
-        </section>
+      {no === 1 && lesson?.conversationVideo?.videoUrl ? (
+        <>
+          <section className="card">
+            <h3>{tr(lang, '原视频跟读', 'Original Video Shadowing')}</h3>
+            <p className="small">
+              {tr(lang, '先听原视频发音，再看下方原文逐句跟读。', 'Listen to the original video first, then shadow each line below.')}
+            </p>
+            <video
+              controls
+              preload="metadata"
+              src={lesson.conversationVideo.videoUrl}
+              style={{
+                display: 'block',
+                width: '100%',
+                maxWidth: '100%',
+                borderRadius: 12,
+                border: '1px solid #e2e8f0',
+                background: '#0f172a'
+              }}
+            />
+          </section>
+          {(() => {
+            const convSection = lesson?.sections?.find(s => s.type === 'conversation')
+            const items = convSection?.items ?? []
+            return items.length > 0 ? (
+              <section className="card" style={{ overflow: 'hidden' }}>
+                <h3>{tr(lang, '会话原文', 'Conversation Transcript')}</h3>
+                <div>
+                  {items.map((item, i) => (
+                    <div key={item.id || i} style={{
+                      padding: '12px 0',
+                      borderBottom: i < items.length - 1 ? '1px solid #f1f5f9' : 'none'
+                    }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
+                        {item.speaker ? (
+                          <span style={{
+                            display: 'inline-block', padding: '2px 10px', borderRadius: 10,
+                            background: '#e0f2fe', color: '#0369a1', fontWeight: 600, fontSize: 12
+                          }}>
+                            {item.speaker}
+                          </span>
+                        ) : null}
+                        <span style={{ fontSize: 12, color: '#94a3b8' }}>#{i + 1}</span>
+                      </div>
+                      <div style={{ fontSize: 16, fontWeight: 500, lineHeight: 1.6 }}>{item.jp}</div>
+                      {item.kana && item.kana !== item.jp ? (
+                        <div style={{ fontSize: 13, color: '#64748b', marginTop: 2 }}>{item.kana}</div>
+                      ) : null}
+                      {item.zh ? (
+                        <div style={{ fontSize: 14, color: '#475569', marginTop: 2 }}>{item.zh}</div>
+                      ) : null}
+                    </div>
+                  ))}
+                </div>
+              </section>
+            ) : null
+          })()}
+        </>
       ) : null}
 
       <section className="card" style={{ padding: 0, overflow: 'hidden' }}>
