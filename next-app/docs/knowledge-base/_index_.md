@@ -104,3 +104,11 @@ tags:
 - **验证命令**：`npm run audit` PASS（50/50）、`npm run build` PASS
 - **学习主线影响**：无。仅新增本地只读体检脚本。
 - **commit hash**：fc0d1cc
+
+### 2026-06-14 — Deep Dive 底部增加学习回流按钮
+
+- **优化内容**：Deep Dive 页面底部新增“回到原视频跟读”和“去会话背诵”两个行动按钮，帮助用户听完讲解后回到主线练习。
+- **修改文件**：`src/components/lesson-deep-dive.tsx`
+- **验证页面**：`/lessons/1/deep-dive`、`/lessons/25/deep-dive`、`/lessons/50/deep-dive`、`/lessons/1`、`/toolbox`
+- **学习主线影响**：正向增强回流入口；不影响老师讲解播放器、lesson JSON 或 practice 逻辑。
+- **commit hash**：待提交

@@ -268,18 +268,21 @@ export default function DeepDiveViewer({
 
       {/* ── Bottom action buttons ── */}
       <section className="card" style={{ textAlign: 'center' }}>
-        <div style={{ display: 'flex', gap: 10, flexDirection: 'column' }}>
-          <Link className="btn" href={`/lessons/${lessonNo}`} style={{ padding: '14px 20px', fontSize: 16 }}>
-            🎯 {lang === 'en' ? 'Go to Conversation Practice & Recite' : '去会话跟读 / 背诵'}
+        <h3 style={{ margin: '0 0 6px', fontSize: 16 }}>
+          {lang === 'en' ? 'Ready to practice?' : '理解之后，回到主线练习'}
+        </h3>
+        <p className="small" style={{ margin: '0 0 12px', lineHeight: 1.5 }}>
+          {lang === 'en'
+            ? 'Go back to the source video, then recite the conversation sentence by sentence.'
+            : '先回原视频听原声跟读，再进入会话背诵。'}
+        </p>
+        <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
+          <Link className="btn" href={`/lessons/${lessonNo}`} style={{ padding: '12px 16px', fontSize: 15, minWidth: 160 }}>
+            🎬 {lang === 'en' ? 'Back to Source Video' : '回到原视频跟读'}
           </Link>
-          <div style={{ display: 'flex', gap: 10, justifyContent: 'center' }}>
-            <Link className="btn ghost" href={`/lessons/${lessonNo}`} style={{ fontSize: 13 }}>
-              ← {lang === 'en' ? 'Back to Lesson' : '返回本课'}
-            </Link>
-            <Link className="btn ghost" href="/lessons" style={{ fontSize: 13 }}>
-              {lang === 'en' ? 'All Lessons' : '课程目录'}
-            </Link>
-          </div>
+          <Link className="btn ghost" href={`/lessons/${lessonNo}/practice?stage=conversation`} style={{ padding: '12px 16px', fontSize: 15, minWidth: 160 }}>
+            🗣️ {lang === 'en' ? 'Recite Conversation' : '去会话背诵'}
+          </Link>
         </div>
       </section>
     </main>
