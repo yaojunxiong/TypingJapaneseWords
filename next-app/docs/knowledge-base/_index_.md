@@ -88,3 +88,11 @@ tags:
 - **验证页面**：`/toolbox`（SSR 加载中 → 客户端渲染后变空状态）、`/lessons/1/practice`
 - **学习主线影响**：无
 - **commit hash**：770fb86
+
+### 2026-06-14 — 优化 practice 移动端布局
+
+- **优化内容**：移动端长句和答案按钮增加断行保护，窄屏降低答案字号，移除 conversation practice 内层 `main` 避免底部导航空间叠加风险。
+- **修改文件**：`src/app/globals.css`、`src/components/lesson-conversation-client.tsx`
+- **验证页面**：`/lessons/2/practice?stage=conversation`、`/lessons/25/practice?stage=conversation`、`/lessons/50/practice?stage=conversation_quiz`
+- **学习主线影响**：无。仅样式和语义容器微调。
+- **commit hash**：待提交

@@ -305,18 +305,18 @@ export default function LessonConversationClient({ lessonNo, lang, items, videoU
 
   if (!items.length) {
     return (
-      <main>
+      <div>
         <section className="card">
           <p className="small">{t(lang, '本课暂无会话内容。', 'No conversation content for this lesson.')}</p>
         </section>
-      </main>
+      </div>
     )
   }
 
   if (allDone) {
     const unfamiliarCount = Object.values(familiarity).filter(f => f.status === 'unfamiliar').length
     return (
-      <main>
+      <div>
         <section className="heroCard card" style={{ textAlign: 'center' }}>
           <h2>{t(lang, '会话背诵完成！', 'Conversation Complete!')}</h2>
           <p className="small">
@@ -334,12 +334,12 @@ export default function LessonConversationClient({ lessonNo, lang, items, videoU
             ) : null}
           </div>
         </section>
-      </main>
+      </div>
     )
   }
 
   return (
-    <main>
+    <div>
       <section className="heroCard card">
         <h2>{t(lang, `第 ${lessonNo} 课 · 会话背诵`, `Lesson ${lessonNo} · Conversation`)}</h2>
         <p className="small">
@@ -400,7 +400,7 @@ export default function LessonConversationClient({ lessonNo, lang, items, videoU
           <p style={{ margin: 0, fontSize: 14, lineHeight: 1.6 }}>💬 {encouragement}</p>
         </section>
       ) : null}
-    </main>
+    </div>
   )
 }
 
@@ -454,7 +454,7 @@ function SentenceCard({
         </button>
       ) : (
         <>
-          <p style={{ fontSize: 22, fontWeight: 700, marginTop: 16, marginBottom: 4 }}>{item.jp}</p>
+          <p className="breakWord" style={{ fontSize: 22, fontWeight: 700, marginTop: 16, marginBottom: 4 }}>{item.jp}</p>
           {item.kana && item.kana !== item.jp ? (
             <p className="small" style={{ marginTop: 4 }}>{item.kana}</p>
           ) : null}

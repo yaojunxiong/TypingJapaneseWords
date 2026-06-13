@@ -354,12 +354,16 @@ a:hover { text-decoration: underline; }
   line-height: 1.2;
   font-weight: 900;
   margin: 6px 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 .practiceStageTitle {
   font-size: 48px;
   line-height: 1.2;
   font-weight: 900;
   margin: 6px 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 .practiceHint {
   color: #94a3b8;
@@ -434,6 +438,10 @@ a:hover { text-decoration: underline; }
   .practiceStageTitle {
     font-size: 28px;
   }
+  .practiceChoice {
+    font-size: 20px;
+    min-height: 48px;
+  }
 }
 .practiceChoices {
   display: grid;
@@ -448,6 +456,9 @@ a:hover { text-decoration: underline; }
   font-size: 28px;
   font-weight: 800;
   color: #111827;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  padding: 10px;
 }
 .practiceChoice.right {
   border-color: #22c55e;
@@ -664,6 +675,23 @@ a:hover { text-decoration: underline; }
     padding-right: 16px;
     padding-bottom: calc(28px + env(safe-area-inset-bottom, 0px) + 92px);
   }
+}
+
+/* Mobile word break for long Japanese text */
+@media (max-width: 600px) {
+  .practiceQuestion,
+  .practiceStageTitle {
+    font-size: 24px;
+  }
+  .practiceChoice {
+    font-size: 17px;
+    min-height: 44px;
+    padding: 8px;
+  }
+}
+.breakWord {
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 /* admin/knowledge-base */
