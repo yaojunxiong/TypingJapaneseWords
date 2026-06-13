@@ -105,11 +105,11 @@ export default async function LessonDetailPage({
         ) : null}
       </section>
 
-      {no === 1 && lesson?.conversationVideo?.videoUrl ? (
+      {lesson?.conversationVideo?.videoUrl ? (
         <section className="card">
           <h3>{tr(lang, '原视频跟读', 'Original Video Shadowing')}</h3>
           <p className="small">
-            {tr(lang, '先听原视频发音，看下方当前句双字幕，跟着一句一句开口。', 'Listen to the original video, watch the synced subtitle below, and shadow sentence by sentence.')}
+            {tr(lang, '先听原视频发音，看当前句双字幕，一句一句开口跟读。', 'Listen to the original video, watch the synced subtitle, and shadow sentence by sentence.')}
           </p>
           {(() => {
             const convSection = lesson?.sections?.find(s => s.type === 'conversation')
@@ -122,7 +122,14 @@ export default async function LessonDetailPage({
             )
           })()}
         </section>
-      ) : null}
+      ) : (
+        <section className="card">
+          <h3>{tr(lang, '原视频跟读', 'Original Video Shadowing')}</h3>
+          <p className="small">
+            {tr(lang, '本课原视频暂未配置', 'Original video not yet configured for this lesson')}
+          </p>
+        </section>
+      )}
 
       <section className="card" style={{ padding: 0, overflow: 'hidden' }}>
         {MAINLINE_STEPS.map((step, i) => {
