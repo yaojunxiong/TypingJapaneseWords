@@ -51,7 +51,7 @@ Task 3 Deep Dive 底部增加回到跟读/背诵按钮
 ## 7. Git 信息
 
 - **git status**：任务开始前 clean。
-- **commit hash**：待提交
+- **commit hash**：`0900046`
 - **commit message**：`feat: add deep dive return action buttons`
 - **是否 push**：待完成
 - **是否 Vercel 部署完成**：待完成

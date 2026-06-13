@@ -111,4 +111,4 @@ tags:
 - **修改文件**：`src/components/lesson-deep-dive.tsx`
 - **验证页面**：`/lessons/1/deep-dive`、`/lessons/25/deep-dive`、`/lessons/50/deep-dive`、`/lessons/1`、`/toolbox`
 - **学习主线影响**：正向增强回流入口；不影响老师讲解播放器、lesson JSON 或 practice 逻辑。
-- **commit hash**：待提交
+- **commit hash**：0900046

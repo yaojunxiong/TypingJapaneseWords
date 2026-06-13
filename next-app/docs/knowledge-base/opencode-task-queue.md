@@ -384,7 +384,7 @@ opencode-latest-report.md 更新要求：
     - `/toolbox`
 
 - Task 3：Deep Dive 学习回流按钮优化
-  - 完成提交：待提交
+  - 完成提交：`0900046`
   - 状态：已完成，`npm run audit` 与 `npm run build` 通过
   - 优化内容：Deep Dive 底部新增“回到原视频跟读”和“去会话背诵”按钮
   - 验证页面：
