@@ -86,6 +86,28 @@ export default async function LessonDetailPage({
         ) : null}
       </section>
 
+      {no === 1 ? (
+        <section className="card">
+          <h3>{tr(lang, '漫画版会话视频（预览）', 'Anime Conversation Video Preview')}</h3>
+          <p className="small">
+            {tr(lang, '先看懂场景，再回到原文跟读和背诵。', 'Understand the scene first, then return to the original text to shadow and recite.')}
+          </p>
+          <video
+            controls
+            preload="metadata"
+            src="/videos/lesson01_anime_v1.mp4"
+            style={{
+              display: 'block',
+              width: '100%',
+              maxWidth: '100%',
+              borderRadius: 12,
+              border: '1px solid #e2e8f0',
+              background: '#0f172a'
+            }}
+          />
+        </section>
+      ) : null}
+
       <section className="card" style={{ padding: 0, overflow: 'hidden' }}>
         {MAINLINE_STEPS.map((step, i) => {
           const href = step.key === 'deep-dive'
