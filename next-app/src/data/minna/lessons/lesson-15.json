@@ -2188,5 +2188,47 @@
     "scoringReady": "published",
     "publishedToStaging": "not_started",
     "verifiedOnline": "not_started"
+  },
+  "deepDive": {
+    "sceneSummary": "Miller和木村看完电影后走出影院，聊起电影感受，随后谈论各自的家人。Miller介绍了住在纽约附近的父母和在伦敦工作的姐姐，木村则介绍了父母的工作。",
+    "storyExplanation": "这段对话展示了日本人如何礼貌地询问和介绍家人情况。Miller先分享自己看电影联想到家人，木村顺势询问他家人的情况。两人用「〜ています」描述家人居住地和工作，体现了日语中描述持续性状态的自然表达。对话中使用了敬语表达（ご家族、いらっしゃいます），体现了同事间的礼貌距离。",
+    "characters": [
+      { "name": "ミラーさん", "role": "同事/朋友", "relationship": "与木村是同事或朋友关系" },
+      { "name": "木村さん", "role": "同事/朋友", "relationship": "与Miller是同事或朋友关系" }
+    ],
+    "conversationFlow": [
+      { "step": 1, "title": "看完电影的感受", "explanation": "Miller先感叹电影好看，用「いい映画でしたね」表达对电影的正面评价，语气词「ね」表示与对方分享感受。", "relatedLineIds": ["l15-conv-001"] },
+      { "step": 2, "title": "电影引发的联想", "explanation": "木村回应赞同，并说电影让她想起了家人。用「思い出しました」表达触景生情的感受。", "relatedLineIds": ["l15-conv-002"] },
+      { "step": 3, "title": "询问对方的家人情况", "explanation": "Miller用「そうですか」表示理解新信息，然后用「ミラーさんのご家族は?」询问木村的家人。注意使用敬语「ご家族」。", "relatedLineIds": ["l15-conv-003"] },
+      { "step": 4, "title": "介绍自己的家人构成", "explanation": "Miller介绍自己有父母和一个姐姐，用「〜がいます」表达存在。", "relatedLineIds": ["l15-conv-004"] },
+      { "step": 5, "title": "询问家人居住地", "explanation": "木村用敬语「どちらにいらっしゃいますか」询问Miller家人的居住地。", "relatedLineIds": ["l15-conv-005"] },
+      { "step": 6, "title": "介绍父母居住地", "explanation": "Miller用「住んでいます」描述父母住在纽约附近。", "relatedLineIds": ["l15-conv-006"] },
+      { "step": 7, "title": "介绍姐姐的工作地点", "explanation": "Miller用「働いています」描述姐姐在伦敦工作。", "relatedLineIds": ["l15-conv-007"] },
+      { "step": 8, "title": "反问对方家人", "explanation": "Miller反问木村的家人情况，用「木村さんのご家族は?」保持敬语。", "relatedLineIds": ["l15-conv-008"] },
+      { "step": 9, "title": "介绍家人构成", "explanation": "木村简洁回答「3人です」，日语中直接说数量即可表达家庭成员数。", "relatedLineIds": ["l15-conv-009"] },
+      { "step": 10, "title": "介绍父亲的工作", "explanation": "木村用「〜は〜です」句型介绍父亲是银行职员。", "relatedLineIds": ["l15-conv-010"] },
+      { "step": 11, "title": "介绍母亲的工作", "explanation": "木村用「教えています」描述母亲在高中教英语，使用〜ています形表示持续性工作。", "relatedLineIds": ["l15-conv-011"] }
+    ],
+    "lineUsage": [
+      { "lineId": "l15-conv-001", "japanese": "いい映画でしたね", "chineseMeaning": "真是一部好电影呢。", "realLifeUse": "看完电影、演出或展览后对同伴表达正面评价的常用句型。", "emotionTone": "感叹、分享", "memoryTip": "「いい」+「映画」+「でしたね」= 好电影呢，「ね」表示与对方分享感受" },
+      { "lineId": "l15-conv-002", "japanese": "ええ、私は家族を思い出しました", "chineseMeaning": "是啊，让我想起了我的家人。", "realLifeUse": "当某事物触发回忆时，用「〜を思い出しました」表达触景生情的感受。", "emotionTone": "感慨、温情", "memoryTip": "「思い出す」= 想起，「思い出しました」是过去式，表示被某事物触发的回忆" },
+      { "lineId": "l15-conv-003", "japanese": "そうですか、ミラーさんのご家族は?", "chineseMeaning": "是吗？米勒先生的家人是？", "realLifeUse": "「そうですか」表示接收新信息时的反应，「ご家族」是敬语，询问对方家人时必须使用敬称。", "emotionTone": "好奇、关心", "memoryTip": "「ご家族」中的「ご」是美化语/敬语前缀，对他人家人要用敬称" },
+      { "lineId": "l15-conv-004", "japanese": "両親と姉が一人います", "chineseMeaning": "有父母和一个姐姐。", "realLifeUse": "介绍家庭成员用「〜がいます」表达\"有〜\"，注意数量词的位置和读法。", "emotionTone": "陈述、自然", "memoryTip": "「両親」= 父母，「姉」= 姐姐，「一人」读作「ひとり」，「います」表示有生命的存在" },
+      { "lineId": "l15-conv-005", "japanese": "どちらにいらっしゃいますか?", "chineseMeaning": "他们住在哪里呢？", "realLifeUse": "「いらっしゃいます」是「います」的敬语，询问他人或家人所在地时要用敬语。", "emotionTone": "礼貌询问", "memoryTip": "「どちら」是「どこ」的礼貌说法，「いらっしゃいます」是「います」的敬语形式" },
+      { "lineId": "l15-conv-006", "japanese": "両親はニューヨークの近くに住んでいます", "chineseMeaning": "我父母住在纽约附近。", "realLifeUse": "用「〜に住んでいます」描述居住地，〜ています形表示持续性的居住状态。", "emotionTone": "陈述、日常", "memoryTip": "「住んでいます」是「住みます」的〜ています形，表示居住这一持续状态" },
+      { "lineId": "l15-conv-007", "japanese": "姉はロンドンで働いています", "chineseMeaning": "姐姐在伦敦工作。", "realLifeUse": "工作地点用「〜で」标记动作场所，「働いています」描述持续性工作状态。", "emotionTone": "陈述、日常", "memoryTip": "「ロンドンで」的「で」表示动作发生的场所，「働いています」是「働きます」的〜ています形" },
+      { "lineId": "l15-conv-008", "japanese": "木村さんのご家族は?", "chineseMeaning": "木村小姐的家人呢？", "realLifeUse": "反问对方时保持敬语，使用「ご家族」。此句省略了谓语，是日语常见的省略表达。", "emotionTone": "关心、反问", "memoryTip": "「〜は?」是省略问句，根据上下文可理解为「ご家族は何人ですか」或「ご家族はどうですか」" },
+      { "lineId": "l15-conv-009", "japanese": "3人です", "chineseMeaning": "我们家有三口人。", "realLifeUse": "日语中直接说数量即可简洁地表达家庭成员数。", "emotionTone": "简答、自然", "memoryTip": "「3人」读作「さんにん」，注意「一人（ひとり）」「二人（ふたり）」「三人（さんにん）」的特殊读法" },
+      { "lineId": "l15-conv-010", "japanese": "父は銀行員です", "chineseMeaning": "父亲是银行职员。", "realLifeUse": "介绍家人职业用「〜は〜です」的句型，「銀行員」表示职业身份。", "emotionTone": "陈述、日常", "memoryTip": "「父」是称呼自己父亲的词，「銀行員」= 银行职员，「員」表示职业身份" },
+      { "lineId": "l15-conv-011", "japanese": "母は高校で英語を教えています", "chineseMeaning": "母亲在高中教英语。", "realLifeUse": "用「〜で〜を教えています」描述教学工作的场所和教授内容，〜ています形表示持续性教学。", "emotionTone": "陈述、日常", "memoryTip": "「教えています」是「教えます」的〜ています形，表示持续性的教学工作" }
+    ],
+    "chineseRetellPrompt": "请用中文复述Miller和木村看完电影后的对话内容。先描述他们看完电影后说了什么（电影好看的感受），然后Miller如何介绍自己的家人（有父母和姐姐，父母住在纽约附近，姐姐在伦敦工作），最后木村如何介绍她的家人（三口人，父亲是银行职员，母亲在高中教英语）。",
+    "realLifeReplacementPractice": [
+      "这部电影让我想起了我的大学同学。",
+      "我父母住在北京附近。",
+      "我哥哥在上海工作。",
+      "我妈妈是医生。",
+      "你们家有几口人？"
+    ]
   }
 }

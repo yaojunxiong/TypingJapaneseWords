@@ -3333,5 +3333,47 @@
     "scoringReady": "published",
     "publishedToStaging": "not_started",
     "verifiedOnline": "not_started"
+  },
+  "deepDive": {
+    "sceneSummary": "Miller takes a taxi from his hotel to Midori-cho. He tells the driver the destination, gives step-by-step directions along the way (turn right at the traffic light, go straight, stop at the flower shop), confirms the route, and finally pays the fare of 1800 yen.",
+    "storyExplanation": "This conversation covers a complete taxi ride in Japanese, from telling the driver where to go (〜までお願いします) to giving directions using the てください pattern, confirming directions with ですね, and handling payment. It introduces practical vocabulary for directions (信号, 右, まっすぐ, 花屋) and taxi-specific phrases (お願いします, お預かりします). The repeated おかげで items (l14-conv-005 through l14-conv-012) are recording artifacts where the same phrase appears eight times — they may represent scene markers or transitions in the video rather than actual conversational lines.",
+    "characters": [
+      { "name": "Miller (passenger)", "role": "Passenger giving directions to the driver", "relationship": "Customer to service provider" },
+      { "name": "Taxi driver", "role": "Driver responding to requests and confirming", "relationship": "Service provider to customer" }
+    ],
+    "conversationFlow": [
+      { "step": 1, "title": "Hailing and stating destination", "explanation": "Miller tells the driver his destination using 〜までお願いします. The driver acknowledges with はい.", "relatedLineIds": ["l14-conv-001", "l14-conv-002"] },
+      { "step": 2, "title": "Getting attention and giving first direction", "explanation": "Miller says すみません to get the driver's attention, then asks to turn right at the traffic signal using あの信号を右へ曲がってください.", "relatedLineIds": ["l14-conv-003", "l14-conv-004"] },
+      { "step": 3, "title": "Scene transitions (recording artifacts)", "explanation": "Eight identical おかげで lines appear in the source video — these are likely editing markers or data artifacts rather than actual dialogue, but they serve as transitional phrases meaning 'thanks to you'.", "relatedLineIds": ["l14-conv-005", "l14-conv-006", "l14-conv-007", "l14-conv-008", "l14-conv-009", "l14-conv-010", "l14-conv-011", "l14-conv-012"] },
+      { "step": 4, "title": "Pointing and confirming direction", "explanation": "Miller uses 見てください ('please look') to draw attention, and the driver confirms with 右ですね ('right, isn't it?').", "relatedLineIds": ["l14-conv-013", "l14-conv-014"] },
+      { "step": 5, "title": "Going straight and final stop", "explanation": "Miller confirms they should go straight (まっすぐですか), the driver responds まっすぐいってください, then Miller asks to stop at the flower shop using あの花屋の前で止めてください.", "relatedLineIds": ["l14-conv-015", "l14-conv-016", "l14-conv-017", "l14-conv-018"] },
+      { "step": 6, "title": "Paying the fare", "explanation": "The driver announces the fare (1800円です), Miller hands over money (これでお願いします), the driver acknowledges receipt (3000円お預かりします), and both exchange thanks (ありがとうございました).", "relatedLineIds": ["l14-conv-019", "l14-conv-020", "l14-conv-021", "l14-conv-022", "l14-conv-023"] }
+    ],
+    "lineUsage": [
+      { "lineId": "l14-conv-001", "japanese": "ミドリ町までお願いします", "chineseMeaning": "请送我到绿町。", "realLifeUse": "Standard phrase for telling a taxi driver your destination. まで marks the endpoint, お願いします is a polite request formula.", "emotionTone": "Polite and neutral", "memoryTip": "Think: 'destination + まで + お願いします = please take me to~'" },
+      { "lineId": "l14-conv-002", "japanese": "はい", "chineseMeaning": "好的。", "realLifeUse": "Universal affirmative response in service encounters.", "emotionTone": "Neutral and professional", "memoryTip": "The most basic Japanese word — easy to remember!" },
+      { "lineId": "l14-conv-003", "japanese": "すみません", "chineseMeaning": "不好意思。", "realLifeUse": "Used to get someone's attention before making a request, like 'excuse me' in English.", "emotionTone": "Apologetic yet polite", "memoryTip": "すみません is the Swiss Army knife of Japanese — use it for sorry, excuse me, and thank you." },
+      { "lineId": "l14-conv-004", "japanese": "あの信号を右へ曲がってください", "chineseMeaning": "请在那个红绿灯处右转。", "realLifeUse": "Giving a turn-by-turn direction to a driver. あの signals a visible landmark, を marks the object, へ indicates direction.", "emotionTone": "Clear and instructional", "memoryTip": "Pattern: landmark + を + direction + へ + 曲がってください" },
+      { "lineId": "l14-conv-005", "japanese": "おかげで", "chineseMeaning": "多亏了你。", "realLifeUse": "This phrase means 'thanks to you' and is used to express gratitude for someone's help. These 8 repeated lines (l14-conv-005 through l14-conv-012) appear to be recording artifacts from the source video rather than distinct conversational lines.", "emotionTone": "Grateful (artifact repetition in video)", "memoryTip": "おかげで = thanks to you. These lines may be scene markers in the video rather than actual conversation. One entry covers all 8 identical items." },
+      { "lineId": "l14-conv-013", "japanese": "見てください", "chineseMeaning": "请看一下。", "realLifeUse": "Used to get someone to look at something, like pointing something out to the driver.", "emotionTone": "Directive yet polite", "memoryTip": "見て is the te-form of 見ます + ください = 'please look'" },
+      { "lineId": "l14-conv-014", "japanese": "右ですね", "chineseMeaning": "右边，对吧？", "realLifeUse": "Confirmation check using ですね, which seeks agreement. Common in conversation to verify understanding.", "emotionTone": "Seeking confirmation, friendly", "memoryTip": "Word + ですね = 'it's [word], right?'"},
+      { "lineId": "l14-conv-015", "japanese": "まっすぐですか", "chineseMeaning": "是直走吗？", "realLifeUse": "Asking for confirmation about going straight. ですか turns a noun/adverb into a polite question.", "emotionTone": "Uncertain, seeking clarification", "memoryTip": "まっすぐ = straight + ですか = question" },
+      { "lineId": "l14-conv-016", "japanese": "まっすぐいってください", "chineseMeaning": "请直走。", "realLifeUse": "Asking the driver to continue straight. いって is the te-form of 行きます (go).", "emotionTone": "Directive and polite", "memoryTip": "まっすぐ + いってください = 'please go straight'" },
+      { "lineId": "l14-conv-017", "japanese": "あの花屋の前で止めてください", "chineseMeaning": "请在那家花店前停一下。", "realLifeUse": "Asking the driver to stop at a specific location. あの = 'that over there', の前で = 'in front of', 止めて = te-form of 止めます.", "emotionTone": "Clear and specific", "memoryTip": "Landmark + の前で + 止めてください = 'please stop in front of [landmark]'" },
+      { "lineId": "l14-conv-018", "japanese": "はい", "chineseMeaning": "好的。", "realLifeUse": "Driver's acknowledgment of the request.", "emotionTone": "Neutral and cooperative", "memoryTip": "Same as l14-conv-002 — the universal 'okay'." },
+      { "lineId": "l14-conv-019", "japanese": "1800円です", "chineseMeaning": "是1800日元。", "realLifeUse": "Standard way to state a price. Number + 円 + です.", "emotionTone": "Neutral, factual", "memoryTip": "[number] + 円です = 'it's [number] yen'" },
+      { "lineId": "l14-conv-020", "japanese": "これでお願いします", "chineseMeaning": "我用这个付款。", "realLifeUse": "Handing over money or a payment method. これで = 'with this', お願いします = polite request.", "emotionTone": "Polite and transactional", "memoryTip": "これで + お願いします = 'with this, please'" },
+      { "lineId": "l14-conv-021", "japanese": "3000円お預かりします", "chineseMeaning": "收到3000日元。", "realLifeUse": "What a cashier says when receiving money. お預かりします is a humble form of 預かる (to keep/hold).", "emotionTone": "Formal and professional", "memoryTip": "お預かりします is polite service language (keigo) — used by cashiers and waitstaff." },
+      { "lineId": "l14-conv-022", "japanese": "ありがとうございました", "chineseMeaning": "谢谢您。", "realLifeUse": "Past-tense thank you, used after a service is completed.", "emotionTone": "Sincere and grateful", "memoryTip": "Use ありがとうございました (past tense) after the service, ありがとうございます (present) before/during." },
+      { "lineId": "l14-conv-023", "japanese": "ありがとうございました", "chineseMeaning": "谢谢您。", "realLifeUse": "Same as above — both driver and passenger exchange thanks at the end of the ride.", "emotionTone": "Sincere and grateful", "memoryTip": "Same as l14-conv-022. It's common for both parties to thank each other." }
+    ],
+    "chineseRetellPrompt": "请用中文复述这个故事：Miller乘坐出租车去绿町。他向司机说明目的地，在途中给出方向指示（在信号灯右转、直走、在花店前停车），确认路线，然后支付1800日元的车费。请尽量使用课文中学到的词汇和表达方式。",
+    "realLifeReplacementPractice": [
+      "駅までお願いします (Please take me to the station)",
+      "あの交差点を左へ曲がってください (Please turn left at that intersection)",
+      "コンビニの前で止めてください (Please stop in front of the convenience store)",
+      "5000円でお願いします (I'll pay with 5000 yen)",
+      "銀行までお願いします (Please take me to the bank)"
+    ]
   }
 }
