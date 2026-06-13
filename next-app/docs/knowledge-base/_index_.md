@@ -103,4 +103,4 @@ tags:
 - **修改文件**：`scripts/audit-learning-system.mjs`、`package.json`
 - **验证命令**：`npm run audit` PASS（50/50）、`npm run build` PASS
 - **学习主线影响**：无。仅新增本地只读体检脚本。
-- **commit hash**：待提交
+- **commit hash**：fc0d1cc

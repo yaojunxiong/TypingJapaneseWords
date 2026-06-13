@@ -374,7 +374,7 @@ opencode-latest-report.md 更新要求：
     - `/toolbox`
 
 - Task 2：npm run audit 学习主线自动体检脚本
-  - 完成提交：待提交
+  - 完成提交：`fc0d1cc`
   - 状态：已完成，`npm run audit` 与 `npm run build` 通过
   - audit 结果：PASS，50/50 课 JSON、会话视频、时间轴、会话文本、deepDive、MP3、TXT 均 OK
   - 验证页面：

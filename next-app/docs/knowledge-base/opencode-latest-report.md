@@ -39,7 +39,11 @@ Task 2 npm run audit 学习主线自动体检脚本
 
 - **npm run audit**：PASS，50/50 全部 OK。
 - **npm run build**：通过。
-- **本地验证页面**：本任务主要验证命令；页面未改动。
+- **本地验证页面**：全部 HTTP 200。
+  - `/lessons/1` — 200
+  - `/lessons/2` — 200
+  - `/lessons/1/deep-dive` — 200
+  - `/toolbox` — 200
 - **线上验证页面**：待 push + Vercel 部署后验证。
 - **HTTP 状态**：待验证。
 - **关键文字是否出现**：待验证知识库报告页面。
@@ -47,7 +51,7 @@ Task 2 npm run audit 学习主线自动体检脚本
 ## 7. Git 信息
 
 - **git status**：任务开始前 clean。
-- **commit hash**：待提交
+- **commit hash**：`fc0d1cc`
 - **commit message**：`feat: add learning system audit script`
 - **是否 push**：待完成
 - **是否 Vercel 部署完成**：待完成
