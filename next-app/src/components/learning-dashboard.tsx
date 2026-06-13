@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { getTopWeaknesses, getTodayStats, type LearningWeaknessItem } from '@/lib/learning-weakness-analyzer'
 import { getRecentLearningEvents, type LearningEvent } from '@/lib/learning-event-log'
@@ -49,34 +50,58 @@ export default function LearningDashboard({ lang }: { lang: Lang }) {
 
   return (
     <>
-      {todayStats ? (
-        <section className="card">
-          <h3 style={{ margin: '0 0 8px', fontSize: 15 }}>
-            {t(lang, '📊 今日学习', '📊 Today\'s Learning')}
-          </h3>
-          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', fontSize: 13 }}>
-            <span className="metaPill">{t(lang, `事件 ${todayStats.eventCount}`, `${todayStats.eventCount} events`)}</span>
-            <span className="metaPill">{t(lang, `播放原声 ${todayStats.playCount}`, `${todayStats.playCount} plays`)}</span>
-            <span className="metaPill">{t(lang, `录音 ${todayStats.recordCount}`, `${todayStats.recordCount} recs`)}</span>
-            <span className="metaPill">{t(lang, `对话句 ${todayStats.sentenceCount}`, `${todayStats.sentenceCount} sentences`)}</span>
-            <span className="metaPill">{t(lang, `掌握 ${todayStats.knownCount}`, `${todayStats.knownCount} known`)}</span>
-            {todayStats.streakDays >= 2 ? (
-              <span className="metaPill" style={{ background: '#fef3c7', color: '#92400e' }}>
-                🔥 {t(lang, `连续 ${todayStats.streakDays} 天`, `${todayStats.streakDays}-day streak`)}
-              </span>
-            ) : null}
+      <section className="card">
+        <h3 style={{ margin: '0 0 8px', fontSize: 15 }}>
+          {t(lang, '📊 今日学习', '📊 Today\'s Learning')}
+        </h3>
+        {todayStats === null ? (
+          <p className="small" style={{ color: '#94a3b8' }}>
+            {t(lang, '加载中...', 'Loading...')}
+          </p>
+        ) : todayStats.eventCount === 0 ? (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <p style={{ margin: 0, fontSize: 14, lineHeight: 1.6, color: '#64748b' }}>
+              {t(lang, '🌱 还没有学习记录。每天跟着原声开口模仿，日积月累，你的口语会越来越自然！', '🌱 No study records yet. Practice a little every day and your speaking will improve naturally!')}
+            </p>
+            <Link href="/lessons/1" className="btn" style={{ alignSelf: 'flex-start' }}>
+              {t(lang, '去第 1 课开始学习 →', 'Start Lesson 1 →')}
+            </Link>
           </div>
-          {summaryMsg ? (
-            <p style={{ margin: '8px 0 0', fontSize: 13, color: '#166534', lineHeight: 1.5 }}>💬 {summaryMsg}</p>
-          ) : null}
-        </section>
-      ) : null}
+        ) : (
+          <>
+            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', fontSize: 13 }}>
+              <span className="metaPill">{t(lang, `事件 ${todayStats.eventCount}`, `${todayStats.eventCount} events`)}</span>
+              <span className="metaPill">{t(lang, `播放原声 ${todayStats.playCount}`, `${todayStats.playCount} plays`)}</span>
+              <span className="metaPill">{t(lang, `录音 ${todayStats.recordCount}`, `${todayStats.recordCount} recs`)}</span>
+              <span className="metaPill">{t(lang, `对话句 ${todayStats.sentenceCount}`, `${todayStats.sentenceCount} sentences`)}</span>
+              <span className="metaPill">{t(lang, `掌握 ${todayStats.knownCount}`, `${todayStats.knownCount} known`)}</span>
+              {todayStats.streakDays >= 2 ? (
+                <span className="metaPill" style={{ background: '#fef3c7', color: '#92400e' }}>
+                  🔥 {t(lang, `连续 ${todayStats.streakDays} 天`, `${todayStats.streakDays}-day streak`)}
+                </span>
+              ) : null}
+            </div>
+            {summaryMsg ? (
+              <p style={{ margin: '8px 0 0', fontSize: 13, color: '#166534', lineHeight: 1.5 }}>💬 {summaryMsg}</p>
+            ) : null}
+          </>
+        )}
+      </section>
 
-      {weaknesses.length > 0 ? (
-        <section className="card">
-          <h3 style={{ margin: '0 0 8px', fontSize: 15 }}>
-            {t(lang, '🌟 今日成长任务', '🌟 Growth Tasks')}
-          </h3>
+      <section className="card">
+        <h3 style={{ margin: '0 0 8px', fontSize: 15 }}>
+          {t(lang, '🌟 今日成长任务', '🌟 Growth Tasks')}
+        </h3>
+        {weaknesses.length === 0 ? (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <p style={{ margin: 0, fontSize: 14, lineHeight: 1.6, color: '#64748b' }}>
+              {t(lang, '💡 完成几课的学习后，这里会根据你的薄弱点推荐练习任务，帮你更有针对性地巩固。', '💡 After a few lessons, this area will recommend practice tasks based on your weak points.')}
+            </p>
+            <Link href="/lessons/1" className="btn ghost" style={{ alignSelf: 'flex-start' }}>
+              {t(lang, '去第 1 课开始 →', 'Start at Lesson 1 →')}
+            </Link>
+          </div>
+        ) : (
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
             {weaknesses.slice(0, 5).map((w, i) => (
               <div key={w.contentId} style={{
@@ -95,30 +120,39 @@ export default function LearningDashboard({ lang }: { lang: Lang }) {
               </div>
             ))}
           </div>
-        </section>
-      ) : null}
+        )}
+      </section>
 
-      {recentEvents.length > 0 ? (
-        <section className="card" style={{ padding: 0, overflow: 'hidden' }}>
-          <button
-            onClick={() => setShowRecent(v => !v)}
-            style={{
-              display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-              width: '100%', padding: '14px 16px', border: 'none', background: 'none',
-              cursor: 'pointer', fontSize: 15, fontWeight: 600, color: '#0f172a',
-              textAlign: 'left', lineHeight: 1.4
-            }}
-          >
-            <span>{t(lang, '📜 最近学习记录', '📜 Recent Activity')}</span>
-            <span style={{ fontSize: 12, color: '#94a3b8', transition: 'transform 0.2s', transform: showRecent ? 'rotate(180deg)' : 'rotate(0deg)' }}>
-              ▼
-            </span>
-          </button>
-          <div style={{
-            maxHeight: showRecent ? 800 : 0,
-            overflow: 'hidden',
-            transition: 'max-height 0.3s ease',
-          }}>
+      <section className="card" style={{ padding: 0, overflow: 'hidden' }}>
+        <button
+          onClick={() => setShowRecent(v => !v)}
+          style={{
+            display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+            width: '100%', padding: '14px 16px', border: 'none', background: 'none',
+            cursor: 'pointer', fontSize: 15, fontWeight: 600, color: '#0f172a',
+            textAlign: 'left', lineHeight: 1.4
+          }}
+        >
+          <span>{t(lang, '📜 最近学习记录', '📜 Recent Activity')}</span>
+          <span style={{ fontSize: 12, color: '#94a3b8', transition: 'transform 0.2s', transform: showRecent ? 'rotate(180deg)' : 'rotate(0deg)' }}>
+            ▼
+          </span>
+        </button>
+        <div style={{
+          maxHeight: showRecent ? 800 : 0,
+          overflow: 'hidden',
+          transition: 'max-height 0.3s ease',
+        }}>
+          {recentEvents.length === 0 ? (
+            <div style={{ padding: '0 16px 12px', display: 'flex', flexDirection: 'column', gap: 8 }}>
+              <p style={{ margin: 0, fontSize: 13, color: '#94a3b8', lineHeight: 1.5 }}>
+                {t(lang, '完成对话跟读后，这里会记录你的学习足迹。', 'Your practice history will appear here after you start a lesson.')}
+              </p>
+              <Link href="/lessons/1" className="btn ghost" style={{ alignSelf: 'flex-start' }}>
+                {t(lang, '开始第 1 课 →', 'Start Lesson 1 →')}
+              </Link>
+            </div>
+          ) : (
             <div style={{ padding: '0 16px 12px', display: 'flex', flexDirection: 'column', gap: 4, fontSize: 13 }}>
               {recentEvents.slice(0, 10).map((e, i) => (
                 <div key={e.id ?? i} style={{ display: 'flex', gap: 6, padding: '3px 0', borderBottom: i < Math.min(recentEvents.length, 10) - 1 ? '1px solid #f1f5f9' : 'none' }}>
@@ -139,9 +173,9 @@ export default function LearningDashboard({ lang }: { lang: Lang }) {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-      ) : null}
+          )}
+        </div>
+      </section>
     </>
   )
 }

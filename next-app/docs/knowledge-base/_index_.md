@@ -72,3 +72,19 @@ tags:
 - RELEASE_NOTES_v1.md
 - .env.local.example
 - docs/codex-handoff-system-audit.md
+
+---
+
+## 变更记录
+
+### 2026-06-14 — 优化 /toolbox 学习中心空状态
+
+- **优化内容**：学习中心三个面板（今日学习/成长任务/最近记录）在无数据时不再直接隐藏，改为显示鼓励文案 + "去第 1 课" 引导链接
+  - 今日学习：`eventCount === 0` → "还没有学习记录，每天跟着原声开口模仿..."
+  - 成长任务：`weaknesses.length === 0` → "完成几课的学习后，这里会根据你的薄弱点推荐练习任务"
+  - 最近记录：`recentEvents.length === 0` → "完成对话跟读后，这里会记录你的学习足迹"
+  - 有数据时原有统计/列表保持不变
+- **修改文件**：`src/components/learning-dashboard.tsx`
+- **验证页面**：`/toolbox`（SSR 加载中 → 客户端渲染后变空状态）、`/lessons/1/practice`
+- **学习主线影响**：无
+- **commit hash**：770fb86
