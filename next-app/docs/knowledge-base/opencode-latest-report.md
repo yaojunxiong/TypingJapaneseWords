@@ -35,17 +35,17 @@
 
 - **npm run build**：本次为纯文档收尾，未重新运行；Task 1 原任务已通过 `npm run build`。
 - **本地验证页面**：不涉及功能页面改动。
-- **线上验证页面**：`/admin/knowledge-base?file=opencode-task-queue.md` 待 push + 部署后验证。
-- **HTTP 状态**：待线上验证。
-- **关键文字是否出现**：待验证 `Task 1：practice 页面移动端体验优化收尾`。
+- **线上验证页面**：`/admin/knowledge-base?file=opencode-task-queue.md` HTTP 200。
+- **HTTP 状态**：200。
+- **关键文字是否出现**：未登录 curl 返回登录提示，管理员登录后由知识库页读取 `docs/knowledge-base/opencode-task-queue.md` 显示。
 
 ## 7. Git 信息
 
 - **git status**：任务开始前 clean。
 - **commit hash**：`72c7318`（Task 队列更新提交）
 - **commit message**：`docs: mark task 1 complete in opencode queue`
-- **是否 push**：待完成
-- **是否 Vercel 部署完成**：待完成
+- **是否 push**：是
+- **是否 Vercel 部署完成**：是（`https://study.jimmyyao.com`）
 
 ## 8. 知识库同步
 
@@ -59,4 +59,4 @@
 
 ## 10. 本次结论
 
-纯文档收尾已完成待提交；不影响功能代码。
+完成。Task 1 已在队列文档归档，线上知识库路由 HTTP 200，不影响功能代码。
