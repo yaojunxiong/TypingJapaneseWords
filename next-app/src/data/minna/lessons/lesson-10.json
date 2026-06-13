@@ -2347,5 +2347,186 @@
     "scoringReady": "published",
     "publishedToStaging": "not_started",
     "verifiedOnline": "not_started"
+  },
+  "deepDive": {
+    "theme": {
+      "zh": "询问和确认物品的存在与位置",
+      "en": "Asking and confirming existence and location of items"
+    },
+    "scene": {
+      "zh": "会话分为两部分：第一部分（第1-7句）在街上问路，寻找亚洲商店；第二部分（第8-13句）在店内询问商品鱼露的位置。",
+      "en": "The conversation has two parts: Part 1 (lines 1-7) asking for directions to Asian Store on the street; Part 2 (lines 8-13) asking about fish sauce inside the store."
+    },
+    "conversationFlow": [
+      {
+        "id": "flow-1",
+        "zh": "场景标题：亚洲商店",
+        "lines": ["l10-conv-001"]
+      },
+      {
+        "id": "flow-2",
+        "zh": "在街上问路：不好意思，亚洲商店在哪里？",
+        "lines": ["l10-conv-002"]
+      },
+      {
+        "id": "flow-3",
+        "zh": "对方确认并指示：您是说亚洲商店吗？那边有一栋白色的大楼",
+        "lines": ["l10-conv-003", "l10-conv-004"]
+      },
+      {
+        "id": "flow-4",
+        "zh": "告知准确位置：就在那栋楼里",
+        "lines": ["l10-conv-005"]
+      },
+      {
+        "id": "flow-5",
+        "zh": "道谢与回应：是这样啊，真不好意思 / 不客气",
+        "lines": ["l10-conv-006", "l10-conv-007"]
+      },
+      {
+        "id": "flow-6",
+        "zh": "进入店内搭话：那个……",
+        "lines": ["l10-conv-008", "l10-conv-009"]
+      },
+      {
+        "id": "flow-7",
+        "zh": "询问商品：请问有鱼露吗？",
+        "lines": ["l10-conv-010"]
+      },
+      {
+        "id": "flow-8",
+        "zh": "店员回应：有的，那边有一个泰国菜专区",
+        "lines": ["l10-conv-011"]
+      },
+      {
+        "id": "flow-9",
+        "zh": "具体位置说明：鱼露在最下面一层",
+        "lines": ["l10-conv-012"]
+      },
+      {
+        "id": "flow-10",
+        "zh": "致谢：我知道了，谢谢",
+        "lines": ["l10-conv-013"]
+      }
+    ],
+    "lineUsage": [
+      {
+        "id": "l10-conv-001",
+        "speakers": {
+          "ja": "場面タイトル",
+          "zh": "场景标题"
+        },
+        "type": "statement",
+        "grammarFocus": []
+      },
+      {
+        "id": "l10-conv-002",
+        "speakers": {
+          "ja": "客A",
+          "zh": "顾客A"
+        },
+        "type": "question",
+        "grammarFocus": ["〜は〜ですか", "どこ"]
+      },
+      {
+        "id": "l10-conv-003",
+        "speakers": {
+          "ja": "人",
+          "zh": "路人"
+        },
+        "type": "question",
+        "grammarFocus": ["〜ですか"]
+      },
+      {
+        "id": "l10-conv-004",
+        "speakers": {
+          "ja": "人",
+          "zh": "路人"
+        },
+        "type": "statement",
+        "grammarFocus": ["あります", "に"]
+      },
+      {
+        "id": "l10-conv-005",
+        "speakers": {
+          "ja": "人",
+          "zh": "路人"
+        },
+        "type": "statement",
+        "grammarFocus": ["〜の中", "です"]
+      },
+      {
+        "id": "l10-conv-006",
+        "speakers": {
+          "ja": "客A",
+          "zh": "顾客A"
+        },
+        "type": "statement",
+        "grammarFocus": ["そうですか", "すみません"]
+      },
+      {
+        "id": "l10-conv-007",
+        "speakers": {
+          "ja": "人",
+          "zh": "路人"
+        },
+        "type": "statement",
+        "grammarFocus": ["いいえ"]
+      },
+      {
+        "id": "l10-conv-008",
+        "speakers": {
+          "ja": "場面タイトル",
+          "zh": "场景标题"
+        },
+        "type": "statement",
+        "grammarFocus": []
+      },
+      {
+        "id": "l10-conv-009",
+        "speakers": {
+          "ja": "客A",
+          "zh": "顾客A"
+        },
+        "type": "statement",
+        "grammarFocus": ["あの"]
+      },
+      {
+        "id": "l10-conv-010",
+        "speakers": {
+          "ja": "客A",
+          "zh": "顾客A"
+        },
+        "type": "question",
+        "grammarFocus": ["ありますか"]
+      },
+      {
+        "id": "l10-conv-011",
+        "speakers": {
+          "ja": "店員",
+          "zh": "店员"
+        },
+        "type": "statement",
+        "grammarFocus": ["あります", "に"]
+      },
+      {
+        "id": "l10-conv-012",
+        "speakers": {
+          "ja": "店員",
+          "zh": "店员"
+        },
+        "type": "statement",
+        "grammarFocus": ["〜は〜です", "一番下"]
+      },
+      {
+        "id": "l10-conv-013",
+        "speakers": {
+          "ja": "客A",
+          "zh": "顾客A"
+        },
+        "type": "statement",
+        "grammarFocus": ["わかりました", "どうも"]
+      }
+    ]
   }
 }

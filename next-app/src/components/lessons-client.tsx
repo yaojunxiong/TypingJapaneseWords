@@ -136,7 +136,13 @@ export default function LessonsClient({ bypassLessonLock, roleLabel, lang }: Pro
               <div className="lessonMeta2">
                 <span className={row.done ? 'metaPill done' : 'metaPill'}>👑 {row.crowns}/4</span>
                 <span className="metaPill">
-                  {row.locked ? t(lang, '未解锁', 'Locked') : row.done ? t(lang, '已完成', 'Done') : t(lang, '可学习', 'Ready')}
+                  {row.locked
+                    ? t(lang, '未解锁', 'Locked')
+                    : row.done
+                      ? t(lang, '已完成', 'Done')
+                      : bypassLessonLock && roleLabel === 'admin'
+                        ? t(lang, '管理员可访问', 'Admin Access')
+                        : t(lang, '可学习', 'Ready')}
                 </span>
               </div>
             </div>

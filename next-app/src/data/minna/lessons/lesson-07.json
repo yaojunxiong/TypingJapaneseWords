@@ -2090,5 +2090,136 @@
     "scoringReady": "published",
     "publishedToStaging": "not_started",
     "verifiedOnline": "not_started"
+  },
+  "deepDive": {
+    "conversationFlow": [
+      {
+        "step": 1,
+        "scene": "敲门回应",
+        "description": "桑托斯敲门后，主人回应「はい」。",
+        "items": ["l07-conv-001"]
+      },
+      {
+        "step": 2,
+        "scene": "报上姓名",
+        "description": "桑托斯在门口报上自己的名字。",
+        "items": ["l07-conv-002"]
+      },
+      {
+        "step": 3,
+        "scene": "欢迎入门",
+        "description": "主人热情请桑托斯进屋。",
+        "items": ["l07-conv-003"]
+      },
+      {
+        "step": 4,
+        "scene": "礼貌进门",
+        "description": "桑托斯进门时说「失礼します」。",
+        "items": ["l07-conv-004"]
+      },
+      {
+        "step": 5,
+        "scene": "主人询问饮品",
+        "description": "主人提议喝咖啡，桑托斯接受并道谢。",
+        "items": ["l07-conv-005", "l07-conv-006"]
+      },
+      {
+        "step": 6,
+        "scene": "递上咖啡",
+        "description": "主人端上咖啡请用，桑托斯饮用前致意。",
+        "items": ["l07-conv-007", "l07-conv-008"]
+      },
+      {
+        "step": 7,
+        "scene": "夸赞勺子",
+        "description": "桑托斯注意到勺子非常漂亮，表达赞叹。",
+        "items": ["l07-conv-009"]
+      },
+      {
+        "step": 8,
+        "scene": "说明礼物来源",
+        "description": "主人解释这把勺子是从公司同事收到的墨西哥纪念品。",
+        "items": ["l07-conv-010", "l07-conv-011"]
+      }
+    ],
+    "lineUsage": [
+      {
+        "id": "l07-conv-001",
+        "lineText": "はい",
+        "speakerLabel": "主人",
+        "usage": "听到敲门声后回应对方。",
+        "patterns": []
+      },
+      {
+        "id": "l07-conv-002",
+        "lineText": "はい サントスです",
+        "speakerLabel": "桑托斯",
+        "usage": "在门口报上姓名，表示自己是桑托斯。使用「です」礼貌结束句子。",
+        "patterns": ["〜です"]
+      },
+      {
+        "id": "l07-conv-003",
+        "lineText": "いらっしゃい どうぞおがりください",
+        "speakerLabel": "主人",
+        "usage": "欢迎客人到来并请对方进屋。",
+        "patterns": []
+      },
+      {
+        "id": "l07-conv-004",
+        "lineText": "失礼します",
+        "speakerLabel": "桑托斯",
+        "usage": "进入他人家门时使用的礼貌用语，意为「打扰了」。",
+        "patterns": ["〜ます"]
+      },
+      {
+        "id": "l07-conv-005",
+        "lineText": "コーヒーはいかがですか?",
+        "speakerLabel": "主人",
+        "usage": "礼貌询问对方是否想喝咖啡。",
+        "patterns": ["〜か"]
+      },
+      {
+        "id": "l07-conv-006",
+        "lineText": "ありがとうございます",
+        "speakerLabel": "桑托斯",
+        "usage": "接受邀请时表示感谢。",
+        "patterns": []
+      },
+      {
+        "id": "l07-conv-007",
+        "lineText": "どうぞ",
+        "speakerLabel": "主人",
+        "usage": "递上咖啡时示意对方请用。",
+        "patterns": []
+      },
+      {
+        "id": "l07-conv-008",
+        "lineText": "いただきます",
+        "speakerLabel": "桑托斯",
+        "usage": "日本人在用餐或饮用前说的礼貌用语，表示「我领受了」。",
+        "patterns": []
+      },
+      {
+        "id": "l07-conv-009",
+        "lineText": "このスプーン素敵ですね",
+        "speakerLabel": "桑托斯",
+        "usage": "注意到桌上有把漂亮的勺子，用「素敵ですね」表达赞叹。",
+        "patterns": ["〜ですね"]
+      },
+      {
+        "id": "l07-conv-010",
+        "lineText": "ええ、会社の人にもらいました",
+        "speakerLabel": "主人",
+        "usage": "说明勺子是从公司同事那里收到的礼物，使用授受动词「もらいました」。",
+        "patterns": ["〜に〜もらいました"]
+      },
+      {
+        "id": "l07-conv-011",
+        "lineText": "メキシコのお土産です",
+        "speakerLabel": "主人",
+        "usage": "补充说明这是同事从墨西哥带回来的纪念品。",
+        "patterns": ["〜です"]
+      }
+    ]
   }
 }

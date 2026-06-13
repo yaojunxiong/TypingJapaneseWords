@@ -15,7 +15,7 @@ type RoleRow = {
 function roleInfo(row: RoleRow | null, userEmail: string) {
   const now = Date.now()
   const accountEmail = String(row?.email || userEmail || '').toLowerCase()
-  const forcedAdmin = accountEmail === 'yaojunxiong@gmail.com'
+  const forcedAdmin = accountEmail === 'yaojunxiong@gmail.com' || accountEmail === 'yaojunxiong23@gmail.com'
   const rawRole = forcedAdmin ? 'admin' : String(row?.role || 'normal')
   const vipUntil = row?.vip_until ? String(row.vip_until) : ''
   const vipActive = rawRole === 'vip' && (!vipUntil || Date.parse(vipUntil) > now)
