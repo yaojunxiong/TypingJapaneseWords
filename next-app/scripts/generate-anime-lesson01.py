@@ -71,11 +71,6 @@ def get_font(size):
     return ImageFont.load_default()
 
 
-FONT_JP = get_font(52)
-FONT_ZH = get_font(42)
-FONT_CAPTION = get_font(30)
-
-
 # ── Placeholder image generator ────────────────────────────────────────
 def draw_placeholder(scene_key, speaker_label, facing_label, jp_preview=""):
     """Create a labelled placeholder when the real scene image is missing."""
@@ -127,8 +122,7 @@ def get_scene_image(scene_key, speaker="", facing="", jp_prev=""):
 
 # ── Frame generation ───────────────────────────────────────────────────
 def make_frame(t, dialogue_idx, speaker, jp_text, zh_text, facing):
-    """Generate one frame: scene image + subtitle overlay."""
-    # Determine which scene to use
+    """Generate one frame: scene image only, no subtitle overlay."""
     if dialogue_idx < 0:
         if t < 0.5:
             scene_key = "title"
@@ -139,43 +133,14 @@ def make_frame(t, dialogue_idx, speaker, jp_text, zh_text, facing):
     else:
         scene_key = DIALOGUE[dialogue_idx][2]
 
-    img = get_scene_image(scene_key, speaker, facing, jp_text)
-    draw = ImageDraw.Draw(img, "RGBA")
-
-    # Subtitles
-    bar_y = HEIGHT - 150
-    bar_h = 130
-    draw.rounded_rectangle(
-        [100, bar_y, WIDTH - 100, bar_y + bar_h],
-        radius=16, fill=(0, 0, 0, 180)
-    )
-
-    # Japanese
-    draw.text((WIDTH // 2, bar_y + 34), jp_text,
-              fill=(255, 255, 255), font=FONT_JP, anchor="mm")
-
-    # Chinese
-    draw.text((WIDTH // 2, bar_y + 92), zh_text,
-              fill=(255, 255, 200), font=FONT_ZH, anchor="mm")
-
-    # Top-left lesson label
-    draw.rounded_rectangle([20, 16, 350, 58], radius=10, fill=(0, 0, 0, 120))
-    draw.text((185, 37), "第1课 · 会话", fill=(255, 255, 255), font=FONT_CAPTION, anchor="mm")
-
-    # Top-right speaker indicator
-    if speaker:
-        draw.rounded_rectangle([WIDTH - 260, 16, WIDTH - 20, 58],
-                               radius=10, fill=(30, 100, 200, 180))
-        draw.text((WIDTH - 140, 37), speaker, fill=(255, 255, 255), font=FONT_CAPTION, anchor="mm")
-
-    return img
+    return get_scene_image(scene_key, speaker, facing, jp_text)
 
 
 # ── Main ────────────────────────────────────────────────────────────────
 def main():
     print("=" * 60)
     print("  Lesson 1 Anime Conversation Video Generator")
-    print("  Mode: image-driven + subtitle overlay")
+    print("  Mode: image-driven (no subtitle overlay)")
     print("=" * 60)
 
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)

@@ -66,11 +66,6 @@ def get_font(size):
     return ImageFont.load_default()
 
 
-FONT_JP = get_font(52)
-FONT_ZH = get_font(42)
-FONT_LABEL = get_font(36)
-
-
 # ── Placeholder ─────────────────────────────────────────────────────────
 def draw_placeholder(scene_key, speaker_label, facing_label, jp_prev=""):
     img = Image.new("RGB", (WIDTH, HEIGHT), (40, 44, 55))
@@ -105,7 +100,7 @@ def get_scene_image(scene_key, speaker="", facing="", jp_prev=""):
 
 # ── Frame generation ───────────────────────────────────────────────────
 def make_frame(t, dialogue_idx, speaker, jp_text, zh_text, facing):
-    # Scene selection
+    """Generate one frame: scene image only, no subtitle overlay."""
     if dialogue_idx < 0:
         if t < 0.5:
             scene_key = "title"
@@ -116,70 +111,14 @@ def make_frame(t, dialogue_idx, speaker, jp_text, zh_text, facing):
     else:
         scene_key = DIALOGUE[dialogue_idx][2]
 
-    img = get_scene_image(scene_key, speaker, facing, jp_text)
-    draw = ImageDraw.Draw(img, "RGBA")
-
-    # ── Subtitle area: 1400 → 1920 (520px) ──
-    bar_top = 1400
-    bar_h = 520
-    bar_pad = 40
-
-    # Semi-transparent background
-    draw.rounded_rectangle(
-        [bar_pad, bar_top, WIDTH - bar_pad, bar_top + bar_h],
-        radius=24, fill=(0, 0, 0, 170)
-    )
-
-    # Speaker label above subtitle
-    if speaker:
-        draw.rounded_rectangle(
-            [bar_pad + 10, bar_top - 52, bar_pad + 210, bar_top - 10],
-            radius=10, fill=(30, 100, 200, 200)
-        )
-        draw.text(
-            (bar_pad + 110, bar_top - 31), speaker,
-            fill=(255, 255, 255), font=FONT_LABEL, anchor="mm"
-        )
-
-    # Japanese line
-    draw.text(
-        (WIDTH // 2, bar_top + 140),
-        jp_text,
-        fill=(255, 255, 255),
-        font=FONT_JP,
-        anchor="mm",
-    )
-
-    # Chinese line
-    draw.text(
-        (WIDTH // 2, bar_top + 310),
-        zh_text,
-        fill=(255, 255, 200),
-        font=FONT_ZH,
-        anchor="mm",
-    )
-
-    # Hint text at bottom
-    draw.text(
-        (WIDTH // 2, bar_top + 440),
-        "👆 点击句子可听原音播放",
-        fill=(180, 180, 180),
-        font=get_font(24),
-        anchor="mm",
-    )
-
-    # Top-left lesson label
-    draw.rounded_rectangle([20, 24, 300, 72], radius=12, fill=(0, 0, 0, 120))
-    draw.text((160, 48), "第1课 · 会话", fill=(255, 255, 255), font=get_font(32), anchor="mm")
-
-    return img
+    return get_scene_image(scene_key, speaker, facing, jp_text)
 
 
 # ── Main ────────────────────────────────────────────────────────────────
 def main():
     print("=" * 60)
     print("  Lesson 1 Anime Conversation Video (Mobile)")
-    print("  Mode: image-driven + subtitle overlay")
+    print("  Mode: image-driven (no subtitle overlay)")
     print("  Size: 1080x1920 (9:16 portrait)")
     print("=" * 60)
 
