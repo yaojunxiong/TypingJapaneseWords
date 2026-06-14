@@ -7,6 +7,7 @@ import LessonConversationVocabClient from '@/components/lesson-conversation-voca
 import LessonConversationGrammarClient from '@/components/lesson-conversation-grammar-client'
 import LessonConversationExamplesClient from '@/components/lesson-conversation-examples-client'
 import LessonConversationQuizClient from '@/components/lesson-conversation-quiz-client'
+import LessonReturnNav from '@/components/lesson-return-nav'
 import { getLang, type Lang } from '@/lib/i18n'
 
 type LangText = { zh?: string; en?: string; ja?: string; jp?: string }
@@ -181,6 +182,7 @@ export default async function LessonPracticePage({
     return (
       <main>
         <MinnaNav active="lessons" />
+        <LessonReturnNav lessonNo={no} lang={lang} />
         {hasAnimeImage ? (
           <section className="card" style={{ padding: 0, overflow: 'hidden' }}>
             <div style={{ padding: '14px 18px 8px' }}>

@@ -80,7 +80,7 @@
 
 目标：
 
-新增一个轻量统一返回组件，例如 `LessonBackToCourseButton` 或 `LessonFlowActions` 的顶部模式，并优先接入 `/lessons/{lessonNo}/practice?stage=conversation`。让“会话视频 / 会话原文 / 跟读录音 / 不熟句复习”进入 conversation 页面后都能明显返回第 X 课。
+新增一个轻量统一返回组件，例如 `LessonBackToCourseButton` 或 `LessonFlowActions` 的顶部模式，并优先接入 `/lessons/{lessonNo}/practice?stage=conversation`。让"会话视频 / 会话原文 / 跟读录音 / 不熟句复习"进入 conversation 页面后都能明显返回第 X 课。
 
 允许修改文件：
 
@@ -109,7 +109,7 @@
 - `/lessons/2/practice?stage=conversation`
 - `/lessons/25/practice?stage=conversation`
 - `/lessons/1`
-- 验证 conversation 页面顶部有“返回第 X 课”，且不遮挡全局底部导航。
+- 验证 conversation 页面顶部有"返回第 X 课"，且不遮挡全局底部导航。
 
 npm run audit：
 
@@ -129,6 +129,21 @@ commit message：
 
 - 更新 `docs/knowledge-base/lesson-flow-loop-audit.md`，记录做了什么、修改文件、验证页面、是否影响学习主线、最新 commit hash。
 - 更新 `docs/knowledge-base/opencode-latest-report.md`，覆盖为本次任务最新报告。
+
+- Task A 完成记录（2026-06-14）
+  - 完成提交：待提交
+  - 状态：已完成，`npm run audit` 与 `npm run build` 通过
+  - 修改文件：
+    - 新增 `src/components/lesson-return-nav.tsx`
+    - 修改 `src/app/lessons/[lessonNo]/practice/page.tsx`（conversation stage 加入返回导航）
+  - 优化内容：conversation practice 页面顶部新增"← 返回第 X 课"，链接到 `/lessons/{lessonNo}`
+  - 验证页面：
+    - `/lessons/1/practice?stage=conversation` — 显示"返回第 1 课"
+    - `/lessons/2/practice?stage=conversation` — 显示"返回第 2 课"
+    - `/lessons/25/practice?stage=conversation` — 显示"返回第 25 课"
+    - `/lessons/50/practice?stage=conversation` — 显示"返回第 50 课"
+    - `/lessons/1` — 不受影响
+    - `/toolbox` — 不受影响
 
 ### Task B：给词汇、语法、例句、测试、录音、不熟句补充统一返回课程入口
 
