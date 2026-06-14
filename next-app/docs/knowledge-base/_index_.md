@@ -119,4 +119,4 @@ tags:
 - **修改文件**：`src/app/lessons/[lessonNo]/page.tsx`
 - **验证页面**：`/lessons/1`、`/lessons/2`、`/lessons/25`、`/lessons/50`、`/lessons/1/deep-dive`、`/lessons/2/practice?stage=conversation`、`/toolbox`
 - **学习主线影响**：正向增强入口层级；不影响 lesson JSON、视频播放器核心逻辑、practice 或打卡逻辑。
-- **commit hash**：待提交
+- **commit hash**：e552703

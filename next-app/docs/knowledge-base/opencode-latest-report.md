@@ -54,7 +54,7 @@ Task 4 课程页移动端入口层级微调
 ## 7. Git 信息
 
 - **git status**：任务开始前 clean。
-- **commit hash**：待提交
+- **commit hash**：`e552703`
 - **commit message**：`fix: refine mobile lesson page entry hierarchy`
 - **是否 push**：待完成
 - **是否 Vercel 部署完成**：待完成
