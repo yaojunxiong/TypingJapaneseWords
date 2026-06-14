@@ -360,7 +360,7 @@ opencode-latest-report.md 更新要求：
 - 记录任务名称、修改范围、build 结果、线上验证页面、commit hash、push 状态、最终 `git status`。
 
 - Task 5：今日打卡完成反馈与学习动力微调
-  - 完成提交：待提交
+  - 完成提交：`ec0ff99`
   - 状态：已完成，`npm run audit` 与 `npm run build` 通过
   - 优化内容：打卡后显示"今日已打卡·连续N天"+ 随机鼓励语 + 明日继续建议 + 快速链接到会话背诵；加大按钮移动端点击区域
   - 修改文件：`lesson-checkin-button.tsx`、`lesson page.tsx`

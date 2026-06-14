@@ -51,16 +51,21 @@ Task 5 今日打卡完成反馈与学习动力微调
   - `/lessons/25` — 200
   - `/lessons/50` — 200
   - `/toolbox` — 200，学习中心不受影响
-- **线上验证页面**：待 push + Vercel 部署后验证。
+- **线上验证页面**：全部 HTTP 200。
+  - `/lessons/1` — 200，"今日打卡" SSR 渲染，deep-dive/recite 入口正常
+  - `/lessons/2` — 200
+  - `/lessons/25` — 200
+  - `/lessons/50` — 200
+  - `/toolbox` — 200，学习中心不受影响
 - **HTTP 状态**：全部 200。
 
 ## 7. Git 信息
 
 - **git status**：任务开始前 clean。
-- **commit hash**：待提交
+- **commit hash**：`ec0ff99` + `94aef19`
 - **commit message**：`feat: improve daily checkin feedback`
-- **是否 push**：待完成
-- **是否 Vercel 部署完成**：待完成
+- **是否 push**：是
+- **是否 Vercel 部署完成**：是（`https://study.jimmyyao.com`）
 
 ## 8. 知识库同步
 
@@ -76,4 +81,4 @@ Task 5 今日打卡完成反馈与学习动力微调
 
 ## 10. 本次结论
 
-功能实现、audit、build 和本地验证已完成，待提交、push、部署和线上验证。
+完成。`npm run audit`、`npm run build`、本地验证、线上验证均通过。
