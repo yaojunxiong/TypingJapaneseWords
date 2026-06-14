@@ -127,4 +127,4 @@ tags:
 - **修改文件**：`lesson-checkin-button.tsx`、`lessons/[lessonNo]/page.tsx`
 - **验证页面**：`/lessons/1`、`/lessons/2`、`/lessons/25`、`/lessons/50`、`/toolbox`
 - **学习主线影响**：正向增强打卡反馈闭环；不改打卡存储逻辑、数据结构和学习记录底层。
-- **commit hash**：待提交
+- **commit hash**：ec0ff99
