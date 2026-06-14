@@ -11,7 +11,6 @@ import {
 
 type Props = {
   bypassLessonLock: boolean
-  roleLabel: string
   lang: 'zh' | 'en'
 }
 
@@ -43,7 +42,7 @@ function crownCount(crowns: Record<string, boolean>, lessonNo: number) {
   return STAGES.filter((s) => crowns[`lesson${lessonNo}.${s}`]).length
 }
 
-export default function LessonsClient({ bypassLessonLock, roleLabel, lang }: Props) {
+export default function LessonsClient({ bypassLessonLock, lang }: Props) {
   const supabaseReady = hasSupabasePublicEnv()
   const supabase = useMemo(() => createClient(), [])
   const [local, setLocal] = useState<LocalState>({
@@ -52,7 +51,6 @@ export default function LessonsClient({ bypassLessonLock, roleLabel, lang }: Pro
     streak: 1,
     checkinDays: 0
   })
-  const [syncText, setSyncText] = useState(t(lang, '读取本地进度...', 'Reading local progress...'))
 
   function loadLocalState() {
     const st = readJson<{ lastLesson?: number }>('minna.mobile.learning.state.v1', {})
@@ -68,25 +66,15 @@ export default function LessonsClient({ bypassLessonLock, roleLabel, lang }: Pro
 
   async function syncAndReload() {
     loadLocalState()
-    if (!supabaseReady) {
-      setSyncText(t(lang, '云端未配置，当前仅本地进度', 'Cloud is not configured. Using local progress.'))
-      return
-    }
+    if (!supabaseReady) return
     const { data } = await supabase.auth.getUser()
     const user = data.user
-    if (!user) {
-      setSyncText(t(lang, '未登录，当前仅本地进度', 'Not signed in. Using local progress.'))
-      return
-    }
-    setSyncText(t(lang, '同步云端进度中...', 'Syncing cloud progress...'))
-    const res = await syncLearningCloudNow({
+    if (!user) return
+    await syncLearningCloudNow({
       supabase,
       user: { id: user.id, email: user.email || '' }
     })
     loadLocalState()
-    setSyncText(res.ok
-      ? t(lang, '云端进度已同步', 'Cloud progress synced')
-      : (res.warning ? `${t(lang, '同步提示', 'Sync note')}：${res.warning}` : t(lang, '同步未完成', 'Sync incomplete')))
   }
 
   useEffect(() => {
@@ -113,11 +101,11 @@ export default function LessonsClient({ bypassLessonLock, roleLabel, lang }: Pro
       <section className="heroCard card">
         <div className="heroEmoji">🌳</div>
         <h2>{t(lang, '课程', 'Lessons')}</h2>
-        <p className="small">{t(lang, '第 1-50 课学习入口（迁移版）', 'Lesson 1-50 learning entrance')}</p>
+        <p className="small">{t(lang, '第 1-50 课学习入口，按顺序完成每一课', 'Lesson 1-50: complete every lesson in order')}</p>
         <p className="small">
-          {t(lang, '当前角色', 'Role')}：{roleLabel} · {t(lang, '当前课', 'Current lesson')}：{local.currentLesson} · {t(lang, '连续', 'Streak')} {local.streak} {t(lang, '天', 'days')}
+          {t(lang, `继续第 ${local.currentLesson} 课 · 已连续学习 ${local.streak} 天`, `Continue Lesson ${local.currentLesson} · ${local.streak}-day streak`)}
         </p>
-        <p className="small">{syncText} · {t(lang, '打卡', 'Check-ins')} {local.checkinDays} {t(lang, '天', 'days')}</p>
+        <p className="small">{t(lang, '今天可以先听一句、跟读一句', 'Start by listening and repeating a sentence today')}</p>
       </section>
 
       <section className="lessonList2">
@@ -140,9 +128,7 @@ export default function LessonsClient({ bypassLessonLock, roleLabel, lang }: Pro
                     ? t(lang, '未解锁', 'Locked')
                     : row.done
                       ? t(lang, '已完成', 'Done')
-                      : bypassLessonLock && roleLabel === 'admin'
-                        ? t(lang, '管理员可访问', 'Admin Access')
-                        : t(lang, '可学习', 'Ready')}
+                      : t(lang, '可学习', 'Ready')}
                 </span>
               </div>
             </div>
@@ -150,10 +136,6 @@ export default function LessonsClient({ bypassLessonLock, roleLabel, lang }: Pro
         ))}
       </section>
 
-      <section className="card">
-        <h3>{t(lang, '说明', 'Note')}</h3>
-        <p className="small">{t(lang, '本页已切换为站内课程跳转，学习页持续完善中。', 'Lesson navigation now stays inside the Next app. Learning pages are being improved continuously.')}</p>
-      </section>
     </>
   )
 }

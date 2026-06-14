@@ -69,7 +69,7 @@ admin 信息应该放哪里：
 
 目标：
 
-清理 `/lessons` 顶部“当前角色 / 当前课 / 连续天数 / 云端进度 / 打卡天数”等调试和统计信息，改成学习者友好的“继续学习”摘要。不要改变锁课、同步、打卡底层逻辑。
+清理 `/lessons` 顶部"当前角色 / 当前课 / 连续天数 / 云端进度 / 打卡天数"等调试和统计信息，改成学习者友好的"继续学习"摘要。不要改变锁课、同步、打卡底层逻辑。
 
 允许修改文件：
 
@@ -115,6 +115,21 @@ commit message：
 
 - 更新 `docs/knowledge-base/lesson-list-ux-audit.md` 或相关知识库，记录做了什么、修改文件、验证页面、是否影响学习主线、最新 commit hash。
 - 更新 `docs/knowledge-base/opencode-latest-report.md`，覆盖为本次任务最新报告。
+
+- Task A 完成记录（2026-06-14）
+  - 完成提交：待提交
+  - 状态：已完成，`npm run audit` 与 `npm run build` 通过
+  - 修改文件：`lessons-client.tsx`、`lessons/page.tsx`
+  - 优化内容：
+    - 顶部删除 roleLabel、syncText、checkinDays
+    - 新增"继续第 X 课 · 已连续学习 N 天"和"今天可以先听一句、跟读一句"
+    - 删除底部迁移说明区
+    - 课程卡片"管理员可访问"→"可学习"
+    - 删除 `roleLabel` prop、`syncText` 状态
+  - 验证页面：
+    - `/lessons`
+    - `/lessons/1`
+    - `/toolbox`
 
 ### Task B：优化课程卡片状态显示
 

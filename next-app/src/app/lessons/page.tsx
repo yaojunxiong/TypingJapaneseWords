@@ -29,7 +29,6 @@ function roleInfo(row: RoleRow | null, userEmail: string) {
 
 export default async function LessonsPage() {
   let bypassLessonLock = false
-  let roleLabel = 'normal'
   const lang = await getLang()
 
   if (hasSupabasePublicEnv()) {
@@ -48,7 +47,6 @@ export default async function LessonsPage() {
 
       const info = roleInfo(data || null, user.email || '')
       bypassLessonLock = info.bypassLessonLock
-      roleLabel = info.effectiveRole
     }
   }
 
@@ -56,7 +54,7 @@ export default async function LessonsPage() {
     <main>
       <MinnaNav active="lessons" />
       <TopLabelSync label={lang === 'en' ? 'Lessons' : '课程'} />
-      <LessonsClient bypassLessonLock={bypassLessonLock} roleLabel={roleLabel} lang={lang} />
+      <LessonsClient bypassLessonLock={bypassLessonLock} lang={lang} />
     </main>
   )
 }
