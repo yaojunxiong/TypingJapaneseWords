@@ -131,7 +131,40 @@ export default async function LessonDetailPage({
         </section>
       )}
 
+      <section className="card" style={{ background: '#f8fafc', borderColor: '#dbeafe' }}>
+        <h3 style={{ margin: '0 0 8px' }}>{tr(lang, '本课学习顺序', 'Study Flow')}</h3>
+        <p className="small" style={{ margin: '0 0 12px', lineHeight: 1.6 }}>
+          {tr(lang,
+            '先完成上方原视频跟读，再用中文理解会话，最后进入会话背诵。学完后记得今日打卡。',
+            'Start with the source video above, understand the conversation in Chinese, then recite it. Check in when finished.')}
+        </p>
+        <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+          <Link className="btn ghost" href={`/lessons/${no}/deep-dive`} style={{ padding: '12px 14px', minWidth: 150, textAlign: 'center' }}>
+            🔍 {tr(lang, '中文理解', 'Deep Dive')}
+          </Link>
+          <Link className="btn" href={`/lessons/${no}/practice?stage=conversation`} style={{ padding: '12px 14px', minWidth: 150, textAlign: 'center' }}>
+            🗣️ {tr(lang, '会话背诵', 'Conversation Recite')}
+          </Link>
+        </div>
+      </section>
+
+      <section className="card" style={{ display: 'flex', alignItems: 'center', gap: 12, justifyContent: 'space-between', flexWrap: 'wrap' }}>
+        <div style={{ minWidth: 180, flex: 1 }}>
+          <strong>{tr(lang, '今日学习打卡', 'Today\'s Check-in')}</strong>
+          <p className="small" style={{ margin: '2px 0 0' }}>
+            {tr(lang, '完成跟读和背诵后点击打卡，记录学习进度', 'Check in after shadowing and reciting to track your progress')}
+          </p>
+        </div>
+        <LessonCheckinButton lang={lang} />
+      </section>
+
       <section className="card" style={{ padding: 0, overflow: 'hidden' }}>
+        <div style={{ padding: '14px 18px', borderBottom: '1px solid #f1f5f9' }}>
+          <strong>{tr(lang, '详细练习入口', 'Detailed Practice Links')}</strong>
+          <p className="small" style={{ margin: '2px 0 0', fontSize: 12 }}>
+            {tr(lang, '需要专项练习时再进入下面的词汇、语法、例句和测试。', 'Use the links below when you want focused vocab, grammar, example, and quiz practice.')}
+          </p>
+        </div>
         {MAINLINE_STEPS.map((step, i) => {
           const href = step.key === 'deep-dive'
             ? `/lessons/${no}/deep-dive`
@@ -178,16 +211,6 @@ export default async function LessonDetailPage({
             </Link>
           )
         })}
-      </section>
-
-      <section className="card" style={{ display: 'flex', alignItems: 'center', gap: 12, justifyContent: 'space-between' }}>
-        <div>
-          <strong>{tr(lang, '今日学习打卡', 'Today\'s Check-in')}</strong>
-          <p className="small" style={{ margin: '2px 0 0' }}>
-            {tr(lang, '学完本课后点击打卡，记录学习进度', 'Check in after studying to track your progress')}
-          </p>
-        </div>
-        <LessonCheckinButton lang={lang} />
       </section>
 
       {lesson?.conversationVideo?.videoUrl ? (

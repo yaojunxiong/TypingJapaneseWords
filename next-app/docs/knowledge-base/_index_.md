@@ -112,3 +112,11 @@ tags:
 - **验证页面**：`/lessons/1/deep-dive`、`/lessons/25/deep-dive`、`/lessons/50/deep-dive`、`/lessons/1`、`/toolbox`
 - **学习主线影响**：正向增强回流入口；不影响老师讲解播放器、lesson JSON 或 practice 逻辑。
 - **commit hash**：0900046
+
+### 2026-06-14 — 优化课程页移动端入口层级
+
+- **优化内容**：课程页原视频后新增轻量“本课学习顺序”行动区，突出中文理解、会话背诵，并将今日打卡前移到详细练习列表前。
+- **修改文件**：`src/app/lessons/[lessonNo]/page.tsx`
+- **验证页面**：`/lessons/1`、`/lessons/2`、`/lessons/25`、`/lessons/50`、`/lessons/1/deep-dive`、`/lessons/2/practice?stage=conversation`、`/toolbox`
+- **学习主线影响**：正向增强入口层级；不影响 lesson JSON、视频播放器核心逻辑、practice 或打卡逻辑。
+- **commit hash**：待提交

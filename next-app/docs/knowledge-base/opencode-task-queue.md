@@ -393,3 +393,16 @@ opencode-latest-report.md 更新要求：
     - `/lessons/50/deep-dive`
     - `/lessons/1`
     - `/toolbox`
+
+- Task 4：课程页移动端入口层级微调
+  - 完成提交：待提交
+  - 状态：已完成，`npm run audit` 与 `npm run build` 通过
+  - 优化内容：原视频后新增“本课学习顺序”行动区，突出中文理解、会话背诵，并前移今日打卡
+  - 验证页面：
+    - `/lessons/1`
+    - `/lessons/2`
+    - `/lessons/25`
+    - `/lessons/50`
+    - `/lessons/1/deep-dive`
+    - `/lessons/2/practice?stage=conversation`
+    - `/toolbox`
