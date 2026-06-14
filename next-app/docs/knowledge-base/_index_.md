@@ -135,4 +135,4 @@ tags:
 - **修改文件**：`lessons-client.tsx`、`lessons/page.tsx`
 - **验证页面**：`/lessons`、`/lessons/1`、`/toolbox`
 - **学习主线影响**：正向增强课程入口体验；不改权限、锁课、同步或打卡底层逻辑。
-- **commit hash**：待提交
+- **commit hash**：0b20b00
