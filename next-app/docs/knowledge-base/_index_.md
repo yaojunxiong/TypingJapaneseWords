@@ -120,3 +120,11 @@ tags:
 - **验证页面**：`/lessons/1`、`/lessons/2`、`/lessons/25`、`/lessons/50`、`/lessons/1/deep-dive`、`/lessons/2/practice?stage=conversation`、`/toolbox`
 - **学习主线影响**：正向增强入口层级；不影响 lesson JSON、视频播放器核心逻辑、practice 或打卡逻辑。
 - **commit hash**：e552703
+
+### 2026-06-14 — 今日打卡完成反馈优化
+
+- **优化内容**：打卡后新增"今日已打卡·连续N天"状态 + 随机鼓励语 + "明天继续来听一句"建议 + "🗣️ 去会话背诵"快捷链接；按钮加大 padding/min-height 便于移动端点击。
+- **修改文件**：`lesson-checkin-button.tsx`、`lessons/[lessonNo]/page.tsx`
+- **验证页面**：`/lessons/1`、`/lessons/2`、`/lessons/25`、`/lessons/50`、`/toolbox`
+- **学习主线影响**：正向增强打卡反馈闭环；不改打卡存储逻辑、数据结构和学习记录底层。
+- **commit hash**：待提交

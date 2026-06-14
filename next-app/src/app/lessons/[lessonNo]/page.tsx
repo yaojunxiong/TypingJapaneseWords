@@ -155,7 +155,7 @@ export default async function LessonDetailPage({
             {tr(lang, '完成跟读和背诵后点击打卡，记录学习进度', 'Check in after shadowing and reciting to track your progress')}
           </p>
         </div>
-        <LessonCheckinButton lang={lang} />
+        <LessonCheckinButton lang={lang} lessonNo={no} />
       </section>
 
       <section className="card" style={{ padding: 0, overflow: 'hidden' }}>
