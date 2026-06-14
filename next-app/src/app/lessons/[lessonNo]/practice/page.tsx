@@ -8,6 +8,7 @@ import LessonConversationGrammarClient from '@/components/lesson-conversation-gr
 import LessonConversationExamplesClient from '@/components/lesson-conversation-examples-client'
 import LessonConversationQuizClient from '@/components/lesson-conversation-quiz-client'
 import LessonReturnNav from '@/components/lesson-return-nav'
+import LessonFlowActions from '@/components/lesson-flow-actions'
 import { getLang, type Lang } from '@/lib/i18n'
 
 type LangText = { zh?: string; en?: string; ja?: string; jp?: string }
@@ -83,6 +84,7 @@ export default async function LessonPracticePage({
         <MinnaNav active="lessons" />
         <LessonReturnNav lessonNo={no} lang={lang} />
         <LessonConversationVocabClient lessonNo={no} lang={lang} items={items} />
+        <LessonFlowActions lessonNo={no} lang={lang} stage={s} />
       </main>
     )
   }
@@ -104,6 +106,7 @@ export default async function LessonPracticePage({
         <MinnaNav active="lessons" />
         <LessonReturnNav lessonNo={no} lang={lang} />
         <LessonConversationGrammarClient lessonNo={no} lang={lang} items={items} />
+        <LessonFlowActions lessonNo={no} lang={lang} stage={s} />
       </main>
     )
   }
@@ -130,6 +133,7 @@ export default async function LessonPracticePage({
         <MinnaNav active="lessons" />
         <LessonReturnNav lessonNo={no} lang={lang} />
         <LessonConversationExamplesClient lessonNo={no} lang={lang} items={items} />
+        <LessonFlowActions lessonNo={no} lang={lang} stage={s} />
       </main>
     )
   }
@@ -159,6 +163,7 @@ export default async function LessonPracticePage({
         <MinnaNav active="lessons" />
         <LessonReturnNav lessonNo={no} lang={lang} />
         <LessonConversationQuizClient lessonNo={no} lang={lang} items={items} />
+        <LessonFlowActions lessonNo={no} lang={lang} stage={s} />
       </main>
     )
   }
@@ -219,6 +224,7 @@ export default async function LessonPracticePage({
           </section>
         ) : null}
         <LessonConversationClient lessonNo={no} lang={lang} items={items} videoUrl={videoUrl} />
+        <LessonFlowActions lessonNo={no} lang={lang} stage={s} />
       </main>
     )
   }
@@ -289,6 +295,7 @@ export default async function LessonPracticePage({
       <MinnaNav active="lessons" />
       <LessonReturnNav lessonNo={no} lang={lang} />
       <LessonPracticeClient lessonNo={no} lang={lang} stage={s} questions={questions} />
+      <LessonFlowActions lessonNo={no} lang={lang} stage={s} />
     </main>
   )
 }

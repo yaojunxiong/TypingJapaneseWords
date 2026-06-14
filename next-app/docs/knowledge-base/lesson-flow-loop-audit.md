@@ -285,6 +285,36 @@ commit message：
 - 更新 `docs/knowledge-base/lesson-flow-loop-audit.md`，记录每个入口的闭环补强结果、修改文件、验证页面、是否影响学习主线、最新 commit hash。
 - 更新 `docs/knowledge-base/opencode-latest-report.md`，覆盖为本次任务最新报告。
 
+
+- Task C 完成记录（2026-06-14）
+  - 完成提交：待提交
+  - 状态：已完成，`npm run audit` 与 `npm run build` 通过
+  - 修改文件：
+    - 新增 `src/components/lesson-flow-actions.tsx`
+    - 修改 `src/app/lessons/[lessonNo]/practice/page.tsx`（6 处 return 块加入下一步推荐）
+  - 优化内容：practice 各 stage 页面底部新增"下一步推荐"导航区
+    - conversation / conversation_vocab → 去会话核心语法 / 回到课程
+    - conversation_grammar → 去会话替换例句 / 回到课程
+    - conversation_examples → 去会话专项测试 / 回到课程
+    - conversation_quiz → 回到课程
+    - vocab → 去语法练习
+    - grammar → 去替换例句
+    - examples → 去专项测试
+    - quiz / review → 回到课程
+  - 验证页面：
+    - `/lessons/1/practice?stage=conversation`
+    - `/lessons/1/practice?stage=vocab`
+    - `/lessons/1/practice?stage=grammar`
+    - `/lessons/1/practice?stage=examples`
+    - `/lessons/1/practice?stage=quiz`
+    - `/lessons/1/practice?stage=conversation_vocab`
+    - `/lessons/1/practice?stage=conversation_grammar`
+    - `/lessons/1/practice?stage=conversation_examples`
+    - `/lessons/1/practice?stage=conversation_quiz`
+    - `/lessons/1`
+    - `/toolbox`
+    - `/lessons/1/deep-dive`
+
 ## 6. 本次操作声明
 
 本次只读审查。
