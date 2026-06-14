@@ -204,6 +204,25 @@ commit message：
 - 更新 `docs/knowledge-base/lesson-flow-loop-audit.md`，记录覆盖了哪些入口、修改文件、验证页面、是否影响学习主线、最新 commit hash。
 - 更新 `docs/knowledge-base/opencode-latest-report.md`，覆盖为本次任务最新报告。
 
+- Task B 完成记录（2026-06-14）
+  - 完成提交：待提交
+  - 状态：已完成，`npm run audit` 与 `npm run build` 通过
+  - 修改文件：
+    - 修改 `src/app/lessons/[lessonNo]/practice/page.tsx`（conversation_vocab / conversation_grammar / conversation_examples / conversation_quiz / 通用 fallback 均加入返回导航）
+  - 优化内容：vocab / grammar / examples / quiz / conversation_vocab / conversation_grammar / conversation_examples / conversation_quiz 等 stage 顶部新增"← 返回第 X 课"
+  - 验证页面：
+    - `/lessons/1/practice?stage=vocab` — "返回第 1 课"
+    - `/lessons/1/practice?stage=grammar` — "返回第 1 课"
+    - `/lessons/1/practice?stage=examples` — "返回第 1 课"
+    - `/lessons/1/practice?stage=quiz` — "返回第 1 课"
+    - `/lessons/1/practice?stage=conversation` — "返回第 1 课"（已有，未破坏）
+    - `/lessons/1/practice?stage=conversation_vocab` — "返回第 1 课"
+    - `/lessons/1/practice?stage=conversation_grammar` — "返回第 1 课"
+    - `/lessons/1/practice?stage=conversation_examples` — "返回第 1 课"
+    - `/lessons/1/practice?stage=conversation_quiz` — "返回第 1 课"
+    - `/lessons/25/practice?stage=vocab` — "返回第 25 课"
+    - `/lessons/50/practice?stage=quiz` — "返回第 50 课"
+
 ### Task C：给 9 个学习入口底部增加轻量“下一步推荐”
 
 目标：

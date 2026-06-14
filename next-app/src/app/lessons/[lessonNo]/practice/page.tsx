@@ -81,6 +81,7 @@ export default async function LessonPracticePage({
     return (
       <main>
         <MinnaNav active="lessons" />
+        <LessonReturnNav lessonNo={no} lang={lang} />
         <LessonConversationVocabClient lessonNo={no} lang={lang} items={items} />
       </main>
     )
@@ -101,6 +102,7 @@ export default async function LessonPracticePage({
     return (
       <main>
         <MinnaNav active="lessons" />
+        <LessonReturnNav lessonNo={no} lang={lang} />
         <LessonConversationGrammarClient lessonNo={no} lang={lang} items={items} />
       </main>
     )
@@ -126,6 +128,7 @@ export default async function LessonPracticePage({
     return (
       <main>
         <MinnaNav active="lessons" />
+        <LessonReturnNav lessonNo={no} lang={lang} />
         <LessonConversationExamplesClient lessonNo={no} lang={lang} items={items} />
       </main>
     )
@@ -154,6 +157,7 @@ export default async function LessonPracticePage({
     return (
       <main>
         <MinnaNav active="lessons" />
+        <LessonReturnNav lessonNo={no} lang={lang} />
         <LessonConversationQuizClient lessonNo={no} lang={lang} items={items} />
       </main>
     )
@@ -283,6 +287,7 @@ export default async function LessonPracticePage({
   return (
     <main>
       <MinnaNav active="lessons" />
+      <LessonReturnNav lessonNo={no} lang={lang} />
       <LessonPracticeClient lessonNo={no} lang={lang} stage={s} questions={questions} />
     </main>
   )
