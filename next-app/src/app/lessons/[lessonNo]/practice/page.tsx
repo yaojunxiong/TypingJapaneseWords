@@ -173,10 +173,26 @@ export default async function LessonPracticePage({
       videoStart: (item as Record<string, unknown>).videoStart as string | number | undefined,
       videoEnd: (item as Record<string, unknown>).videoEnd as string | number | undefined,
     }))
+    const fileNo = String(no).padStart(2, '0')
+    const animeImagePath = path.resolve(process.cwd(), 'public', 'minna', 'lessons', `lesson-${fileNo}`, 'conversation-anime-mobile.webp')
+    let hasAnimeImage = false
+    try { await fs.access(animeImagePath); hasAnimeImage = true } catch { /* ignore */ }
 
     return (
       <main>
         <MinnaNav active="lessons" />
+        {hasAnimeImage ? (
+          <section className="card" style={{ padding: 0, overflow: 'hidden' }}>
+            <div style={{ padding: '14px 18px 8px' }}>
+              <strong>{lang === 'en' ? `Lesson ${no} Conversation` : `第 ${no} 课 会话原文`}</strong>
+            </div>
+            <img
+              src={`/minna/lessons/lesson-${fileNo}/conversation-anime-mobile.webp`}
+              alt={lang === 'en' ? `Lesson ${no} conversation scene` : `第 ${no} 课 会话场景`}
+              style={{ width: '100%', display: 'block' }}
+            />
+          </section>
+        ) : null}
         {cv ? (
           <section className="card" style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
             <span style={{ fontSize: 20 }}>🎬</span>
