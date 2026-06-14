@@ -48,16 +48,23 @@ Task 4 课程页移动端入口层级微调
   - `/lessons/1/deep-dive` — 200
   - `/lessons/2/practice?stage=conversation` — 200
   - `/toolbox` — 200
-- **线上验证页面**：待 push + Vercel 部署后验证。
-- **HTTP 状态**：待验证。
+- **线上验证页面**：全部 HTTP 200。
+  - `/lessons/1` — 200，出现“本课学习顺序 / 中文理解 / 会话背诵 / 今日学习打卡”
+  - `/lessons/2` — 200，出现主线行动区和打卡入口
+  - `/lessons/25` — 200，出现主线行动区和打卡入口
+  - `/lessons/50` — 200，出现主线行动区和打卡入口
+  - `/lessons/1/deep-dive` — 200
+  - `/lessons/2/practice?stage=conversation` — 200
+  - `/toolbox` — 200
+- **HTTP 状态**：全部 200。
 
 ## 7. Git 信息
 
 - **git status**：任务开始前 clean。
 - **commit hash**：`e552703`
 - **commit message**：`fix: refine mobile lesson page entry hierarchy`
-- **是否 push**：待完成
-- **是否 Vercel 部署完成**：待完成
+- **是否 push**：是
+- **是否 Vercel 部署完成**：是（`https://study.jimmyyao.com`）
 
 ## 8. 知识库同步
 
@@ -72,4 +79,4 @@ Task 4 课程页移动端入口层级微调
 
 ## 10. 本次结论
 
-功能实现、audit、build 和本地验证已完成，待提交、push、部署和线上验证。
+完成。`npm run audit`、`npm run build`、本地验证、线上验证均通过。
