@@ -223,3 +223,10 @@ tags:
 - **验证页面**：`/toolbox`、`/lessons/1`、`/lessons/1/deep-dive`、`/lessons/1/practice?stage=conversation`、`/lessons/1/practice?stage=conversation_vocab`（均 200）
 - **学习主线影响**：不影响 0/4 算法、打卡逻辑、积分或数据结构。仅增强学习中心展示，区分浏览过和完成过。
 - **commit hash**：0976351
+
+### 2026-06-15 — 只读审查后台管理系统现状
+
+- **优化内容**：完全只读审查 `/admin` 后台管理系统现状。审查了 4 个路由、6 个 admin 组件、`admin-auth.ts`、`supabase/` 下 8 个 SQL 文件、所有角色/权限/RLS 相关代码。产出 `admin-system-current-state-audit.md` 详细报告，总结当前为只读审计后台，定义了后续 4 个恢复任务（A-D）。
+- **修改文件**：新增 `admin-system-current-state-audit.md`、更新 `opencode-latest-report.md`、`_index_.md`
+- **学习主线影响**：无。未修改任何功能代码。
+- **commit hash**：待提交
