@@ -2,12 +2,12 @@
 
 ## 1. 任务名称
 
-课程内 9 个学习入口闭环导航只读专项审查。
+全站学习激励、奖励、进度、课程完成度逻辑只读专项审查。
 
 ## 2. 任务类型
 
 - 只读专项审查
-- 产品学习闭环审查
+- 产品逻辑审查
 - OpenCode 提示词生成
 
 ## 3. 输入依据
@@ -19,33 +19,25 @@
 - `docs/knowledge-base/codex-latest-report.md`
 - `docs/knowledge-base/opencode-latest-report.md`
 - `docs/knowledge-base/lesson-list-ux-audit.md`
+- `docs/knowledge-base/lesson-flow-loop-audit.md`
 - `docs/knowledge-base/_index_.md`
-- `docs/knowledge-base/opencode-task-queue.md`
+- `src/app/lessons/page.tsx`
 - `src/app/lessons/[lessonNo]/page.tsx`
-- `src/app/lessons/[lessonNo]/deep-dive/page.tsx`
-- `src/app/lessons/[lessonNo]/practice/page.tsx`
-- `src/components/lesson-deep-dive.tsx`
-- `src/components/lesson-video-follow-player.tsx`
-- `src/components/lesson-conversation-client.tsx`
-- `src/components/lesson-conversation-vocab-client.tsx`
-- `src/components/lesson-conversation-grammar-client.tsx`
-- `src/components/lesson-conversation-examples-client.tsx`
-- `src/components/lesson-conversation-quiz-client.tsx`
-- `src/components/lesson-practice-client.tsx`
+- `src/components/home-progress-client.tsx`
+- `src/components/minna-top-stats-client.tsx`
 - `src/components/minna-nav.tsx`
-- `src/app/globals.css`
+- `src/components/lessons-client.tsx`
+- `src/components/lesson-checkin-button.tsx`
+- `src/components/lesson-practice-client.tsx`
+- `src/components/learning-dashboard.tsx`
+- `src/components/toolbox-client.tsx`
+- `src/lib/learning-cloud-sync.ts`
 
 ## 4. 核心结论
 
-课程主线仍可用，但 9 个课程内学习入口的闭环导航尚未全部完成。
+当前系统学习主线已经能跑通，但全站激励和进度口径仍然分散。顶部 `🔥 / 💎 / ❤️`、课程列表 `👑 0/4`、课程页打卡、practice 奖励、toolbox 统计分别来自不同逻辑，学习者不容易理解这些指标之间的关系。
 
-Deep Dive 的闭环最好：顶部可返回课程，底部可回到原视频跟读或去会话背诵。课程详情页本身也有原视频、学习顺序、今日打卡和底部导航。
-
-风险集中在 `/practice` 子页：会话原文、会话视频、词汇、语法、例句、测试、录音、不熟句复习缺少统一“返回第 X 课”和“下一步推荐”。其中录音和不熟句入口当前还丢失 `#recording` / `#weak` 的定位语义。
-
-完整审查报告已写入：
-
-- `docs/knowledge-base/lesson-flow-loop-audit.md`
+建议先用小任务统一展示语言，再逐步抽出 `src/lib/learning-progress.ts` 作为只读计算层，集中解释本课进度、连续学习、已完成课程、今日打卡和顶部状态。
 
 ## 5. 发现的问题
 
@@ -55,47 +47,47 @@ Deep Dive 的闭环最好：顶部可返回课程，底部可回到原视频跟�
 
 ### P1
 
-- 会话视频入口实际进入 `/lessons/{lessonNo}/practice?stage=conversation`，不是独立视频页，容易和“会话原文/背诵”混淆。
-- 会话原文 / 背诵页没有明确“返回第 X 课”按钮，完成页也没有“回课程打卡”。
-- 词汇、语法、例句、测试四个会话专项页没有返回课程、下一步推荐或打卡回路。
-- 跟读录音、不熟句复习入口都进入 conversation 页面，但当前链接没有保留锚点或模式，无法直接定位到录音区或不熟句模式。
-- 会话测试完成页只有“重新测试”，没有回课程、去会话背诵或打卡入口。
+- 顶部 `🔥 / 💎 / ❤️` 没有解释，且 `🔥` 在学习中心同时表示错题和连续学习。
+- 课程卡片 `👑 0/4` 来自旧 crown 逻辑，不能准确代表当前“原视频跟读 → 中文理解 → 会话背诵 → 今日打卡”主线。
+- `/toolbox` 中 `📚 课程` 由 crown 数推算，可能不等于真实已完成课程数。
+- practice 旧逻辑会写 XP、hearts、crowns，并可能自动触发打卡，和课程页显式打卡存在口径差异。
 
 ### P2
 
-- `LessonVideoFollowPlayer` 是纯播放器组件，导航职责需要外层统一提供。
-- practice 页面多个分支各自返回组件，缺少统一包裹层，导致闭环按钮不一致。
-- 如果新增底部按钮，需要注意全局底部导航 `.minnaNavCard` 的 safe-area 留白，避免移动端遮挡。
+- `❤️` 默认 5，但适用范围更像练习体力，不适合全站顶部常驻。
+- `Crown 收藏` 文案容易被误解为收藏夹。
+- 部分知识库报告仍保留“待提交/待 push”旧字段，后续可以清理。
 
 ## 6. 给 OpenCode 的任务提示词
 
-详见 `docs/knowledge-base/lesson-flow-loop-audit.md` 的 “OpenCode 小任务队列”。
+详见 `docs/knowledge-base/learning-reward-progress-audit.md` 的 “OpenCode 小任务队列”。
 
-本次生成 3 个小任务：
+建议按顺序执行：
 
-- Task A：新增统一返回课程组件，并优先接入会话视频/会话原文页面。
-- Task B：给词汇、语法、例句、测试、录音、不熟句补充统一返回课程入口。
-- Task C：给 9 个学习入口底部增加轻量“下一步推荐”，形成完整学习闭环。
+1. Task A：只改文案解释，先让奖励指标看得懂。
+2. Task B：统一课程卡片 `0/4` 为“本课进度 0/4”。
+3. Task C：梳理顶部状态栏，隐藏不明确指标。
+4. Task D：新增统一 `learning-progress` 只读工具函数。
+5. Task E：让学习中心使用同一套进度解释。
+
+每个任务都必须单独执行、单独验证、单独提交，不要合并成一次大改。
 
 ## 7. 风险提醒
 
-- 不要修改 lesson JSON。
-- 不要修改音频、视频、图片资源。
-- 不要改学习记录 localStorage key、云同步 schema 或打卡底层逻辑。
-- 不要把 9 个入口一次性大改；先加统一返回，再补专项页，再补下一步推荐。
-- 不要在每个页面复制一套不同按钮，优先抽成统一组件。
-- 新增底部动作时必须验证移动端不会被底部导航遮挡。
-- OpenCode 执行时不要 `git add -A`。
+- 不要修改 lesson JSON、音频、视频、图片。
+- 不要在第一步就迁移 localStorage 数据；先统一文案和解释口径。
+- 不要把 XP、crowns、checkin、event log 在一次任务里重写。
+- 不要让课程列表和学习中心都显示大量统计；课程列表负责“继续学哪课”，学习中心负责“学习记录和动力”。
 
 ## 8. 下一步建议
 
-1. 先执行 Task A，让 conversation practice 有明确“返回第 X 课”。
-2. 再执行 Task B，把词汇、语法、例句、测试和会话页内录音/不熟句都纳入统一返回。
-3. 最后执行 Task C，在各入口底部补“下一步推荐”，把理解、跟读、背诵、打卡串成闭环。
+1. 先执行 Task A，让学习者看懂 `🔥 / 💎 / ❤️ / 0/4`。
+2. 再执行 Task B，把课程卡片改成“本课进度 0/4”。
+3. 完成文案收敛后，再做 Task D 的统一进度计算层。
 
 ## 9. 本次操作声明
 
-- 本次修改文件：是，仅修改知识库报告文件。
-- 本次提交：是，commit message 为 `docs: add lesson flow loop audit`。
-- 本次 push：是，推送到 `origin/master`。
-- 本次是否只读：是；只读审查功能代码，未修改功能代码。
+- 本次修改文件：是，只更新知识库报告。
+- 是否提交：是。
+- 是否 push：是。
+- 是否只读：对功能代码只读，未修改任何功能代码。
