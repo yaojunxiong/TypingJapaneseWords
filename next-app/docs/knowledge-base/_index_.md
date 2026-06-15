@@ -238,4 +238,19 @@ tags:
   - `admin-legacy-branch-extraction-plan.md`：旧分支后台能力提取计划（含 7 个维度分析、5 个 Task 推荐顺序、5 类风险评估）
 - **修改文件**：新增 `admin-system-deep-trace-audit.md`、`admin-legacy-branch-extraction-plan.md`、更新 `opencode-latest-report.md`、`_index_.md`
 - **学习主线影响**：无。未修改任何功能代码。
+- **commit hash**：8de1a7c
+
+### 2026-06-15 — /admin 整理为后台管理中心入口页（Task A）
+
+- **优化内容**：重构 `/admin` 首页，新增：
+  - 🛠️ "Minna 后台管理中心" 英雄区，展示管理员身份
+  - 📦 "当前可用" 卡片区（权限状态、课程 Audit、知识库）
+  - ⏳ "待恢复后台能力" 卡片区（审批流程、用户管理、论坛审核、课程管理、邮件系统、部署检查），均标为待恢复/暂不开放
+  - ⚠️ "重要提示" 安全说明
+  - 📄 "知识库报告" 入口链接（3 份报告）
+  - 保留原有 Audit、检索、CSV 导出、课程列表、问题明细、最近访问功能
+  - 引入 `CapabilityCards` 复用组件，三种状态（可用/待恢复/暂不开放）不同配色
+- **修改文件**：`src/app/admin/page.tsx`、`docs/knowledge-base/opencode-latest-report.md`、`docs/knowledge-base/_index_.md`
+- **验证**：`npm run audit` PASS、`npm run build` PASS
+- **学习主线影响**：无。未修改课程数据、用户数据、API 路由或 Supabase schema。
 - **commit hash**：待提交

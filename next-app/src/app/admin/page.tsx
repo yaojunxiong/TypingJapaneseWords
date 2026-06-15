@@ -304,6 +304,58 @@ function tAudit(lang: Lang, text: string) {
   return text
 }
 
+type CapabilityCard = {
+  icon: string
+  label: string
+  description: string
+  status: 'available' | 'pending' | 'disabled'
+  href?: string
+}
+
+function CapabilityCards({ items }: { items: CapabilityCard[] }) {
+  return (
+    <div style={{ display: 'grid', gap: 12, gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))' }}>
+      {items.map((item) => {
+        const statusStyle = item.status === 'available'
+          ? { borderColor: '#86efac', background: '#f0fdf4' }
+          : item.status === 'pending'
+            ? { borderColor: '#fcd34d', background: '#fffbeb' }
+            : { borderColor: '#e2e8f0', background: '#f8fafc' }
+        const badgeStyle = item.status === 'available'
+          ? { background: '#dcfce7', color: '#166534' }
+          : item.status === 'pending'
+            ? { background: '#fef3c7', color: '#92400e' }
+            : { background: '#f1f5f9', color: '#64748b' }
+        const badgeText = item.status === 'available' ? '可用' : item.status === 'pending' ? '待恢复' : '暂不开放'
+        const content = (
+          <div
+            style={{
+              ...statusStyle,
+              border: '1px solid', borderRadius: 14, padding: 16,
+              display: 'flex', flexDirection: 'column', gap: 8,
+              cursor: item.href ? 'pointer' : 'default',
+              color: '#0f172a', textDecoration: 'none',
+            }}
+          >
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+              <span style={{ fontSize: 24 }}>{item.icon}</span>
+              <span style={{ ...badgeStyle, fontSize: 11, fontWeight: 800, borderRadius: 999, padding: '3px 10px' }}>{badgeText}</span>
+            </div>
+            <div>
+              <div style={{ fontWeight: 800, fontSize: 15 }}>{item.label}</div>
+              <div className="small" style={{ marginTop: 4 }}>{item.description}</div>
+            </div>
+          </div>
+        )
+        if (item.href) {
+          return <Link key={item.label} href={item.href} style={{ textDecoration: 'none' }}>{content}</Link>
+        }
+        return <div key={item.label}>{content}</div>
+      })}
+    </div>
+  )
+}
+
 export default async function AdminPage({
   searchParams
 }: {
@@ -378,18 +430,117 @@ export default async function AdminPage({
   const backParam = encodeURIComponent(`/admin${stateQuery ? `?${stateQuery}` : ''}`)
   const backHref = `/admin${stateQuery ? `?${stateQuery}` : ''}`
 
+  const availableCapabilities: CapabilityCard[] = [
+    {
+      icon: '🔑',
+      label: tr(lang, '权限状态', 'Access Status'),
+      description: `${adminCheck.userEmail || adminCheck.userId || '-'} · ${adminCheck.role}${adminCheck.bypassed ? ` (${tr(lang, '本地绕过', 'local bypass')})` : ''}`,
+      status: 'available',
+      href: '/admin',
+    },
+    {
+      icon: '📋',
+      label: tr(lang, '课程数据 Audit', 'Lesson Data Audit'),
+      description: tr(lang, '只读审计 1-50 课数据完整性与内容检索', 'Read-only audit of lessons 1-50 data integrity and content search'),
+      status: 'available',
+      href: '/admin?audit=1',
+    },
+    {
+      icon: '📚',
+      label: tr(lang, '知识库报告', 'Knowledge Base'),
+      description: tr(lang, '后台系统现状报告与深度追溯', 'Admin system audit and deep trace reports'),
+      status: 'available',
+      href: '/admin/knowledge-base',
+    },
+  ]
+
+  const pendingCapabilities: CapabilityCard[] = [
+    {
+      icon: '📜',
+      label: tr(lang, '审批流程管理', 'Approval Workflow'),
+      description: tr(lang, '旧分支存在，待只读移植 · 会员等级申请审批', 'Legacy branch has full approval, pending read-only extract'),
+      status: 'pending',
+    },
+    {
+      icon: '👥',
+      label: tr(lang, '用户管理', 'User Management'),
+      description: tr(lang, '旧分支存在，待确认安全字段后移植', 'Legacy branch has user list, pending security review'),
+      status: 'pending',
+    },
+    {
+      icon: '💬',
+      label: tr(lang, '论坛审核', 'Forum Moderation'),
+      description: tr(lang, '旧分支存在，待确认 forum_posts 表后移植', 'Legacy branch has forum review, pending table check'),
+      status: 'pending',
+    },
+    {
+      icon: '📝',
+      label: tr(lang, '课程内容管理', 'Course Content'),
+      description: tr(lang, '暂不开放编辑，后续只读查看优先', 'Editing disabled, read-only view planned'),
+      status: 'disabled',
+    },
+    {
+      icon: '📧',
+      label: tr(lang, '邮件/通知系统', 'Email & Notifications'),
+      description: tr(lang, '旧分支存在，待评估数据源后移植', 'Legacy branch has email, pending data source review'),
+      status: 'pending',
+    },
+    {
+      icon: '🔍',
+      label: tr(lang, '部署与系统检测', 'Deployment Check'),
+      description: tr(lang, '旧分支存在部署检查页，待恢复报告入口', 'Legacy branch has env check, pending port'),
+      status: 'pending',
+    },
+  ]
+
   return (
     <main>
       <MinnaNav active="me" />
-      <h1>{tr(lang, '管理员后台（只读）', 'Admin (Read-only)')}</h1>
+      <section className="heroCard card">
+        <div className="heroEmoji">🛠️</div>
+        <h2>{tr(lang, 'Minna 后台管理中心', 'Minna Admin Center')}</h2>
+        <p className="small">{adminCheck.userEmail || adminCheck.userId || '-'} · {adminCheck.role}{adminCheck.bypassed ? ` (${tr(lang, '本地绕过', 'local bypass')})` : ''}</p>
+        <p className="small">{tr(lang, '当前后台为只读安全模式，待恢复功能仅展示不开放', 'Read-only safe mode. Pending features are listed but not enabled.')}</p>
+      </section>
 
       <section className="card">
-        <h2>{tr(lang, '权限状态', 'Access')}</h2>
-        <p className="small">{tr(lang, '已登录账号', 'Signed-in account')}：{adminCheck.userEmail || adminCheck.userId || '-'}</p>
-        <p className="small">{tr(lang, '角色', 'Role')}：{adminCheck.role}{adminCheck.bypassed ? ` (${tr(lang, '本地绕过', 'local bypass')})` : ''}</p>
+        <h2>{tr(lang, '当前可用', 'Available')}</h2>
+        <CapabilityCards items={availableCapabilities} />
       </section>
 
       <AdminRecentLessonCard backHref={backHref} lang={lang} />
+
+      <section className="card">
+        <h2>{tr(lang, '待恢复后台能力', 'Pending Recovery')}</h2>
+        <p className="small">{tr(lang, '以下功能在旧分支中存在，待逐个只读移植到当前系统。', 'These features exist on the legacy branch and will be ported as read-only.')}</p>
+        <CapabilityCards items={pendingCapabilities} />
+      </section>
+
+      <section className="card">
+        <h2>{tr(lang, '重要提示', 'Important Notes')}</h2>
+        <ul style={{ margin: 0, paddingLeft: 18, lineHeight: 1.8 }}>
+          <li className="small">{tr(lang, '当前线上后台仍为只读安全模式', 'Current admin is read-only safe mode')}</li>
+          <li className="small">{tr(lang, '不开放课程 JSON 编辑', 'Course JSON editing is not available')}</li>
+          <li className="small">{tr(lang, '不开放审批写操作', 'Approval write operations are disabled')}</li>
+          <li className="small">{tr(lang, '不开放用户角色修改', 'User role modification is disabled')}</li>
+          <li className="small">{tr(lang, '旧功能将逐个只读恢复', 'Legacy features will be restored as read-only one by one')}</li>
+        </ul>
+      </section>
+
+      <section className="card">
+        <h2>{tr(lang, '知识库报告', 'Reports')}</h2>
+        <div style={{ display: 'grid', gap: 8 }}>
+          <Link href="/admin/knowledge-base?file=admin-legacy-branch-extraction-plan.md" className="pillLink" style={{ textDecoration: 'none', display: 'block' }}>
+            📄 {tr(lang, '旧分支后台能力提取计划', 'Legacy Admin Extraction Plan')}
+          </Link>
+          <Link href="/admin/knowledge-base?file=admin-system-deep-trace-audit.md" className="pillLink" style={{ textDecoration: 'none', display: 'block' }}>
+            📄 {tr(lang, '全项目后台能力深度追溯', 'Full Admin System Deep Trace')}
+          </Link>
+          <Link href="/admin/knowledge-base?file=admin-system-current-state-audit.md" className="pillLink" style={{ textDecoration: 'none', display: 'block' }}>
+            📄 {tr(lang, '后台管理系统现状审计', 'Admin Current State Audit')}
+          </Link>
+        </div>
+      </section>
 
       <section className="card">
         <h2>{tr(lang, '课程数据审计', 'Lesson Data Audit')}</h2>
