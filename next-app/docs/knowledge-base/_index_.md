@@ -222,4 +222,4 @@ tags:
 - **修改文件**：`learning-confirmations.ts`、`learning-dashboard.tsx`、`opencode-latest-report.md`、`_index_.md`
 - **验证页面**：`/toolbox`、`/lessons/1`、`/lessons/1/deep-dive`、`/lessons/1/practice?stage=conversation`、`/lessons/1/practice?stage=conversation_vocab`（均 200）
 - **学习主线影响**：不影响 0/4 算法、打卡逻辑、积分或数据结构。仅增强学习中心展示，区分浏览过和完成过。
-- **commit hash**：待提交
+- **commit hash**：0976351
