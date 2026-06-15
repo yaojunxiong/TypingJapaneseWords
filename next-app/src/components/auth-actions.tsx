@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
+import type { FormEvent } from 'react'
 import { createClient } from '@/utils/supabase/client'
 import {
   hasSupabasePublicEnv,
@@ -15,7 +16,7 @@ type Props = {
   lang: 'zh' | 'en'
 }
 
-const PROD_ORIGIN = 'https://next-app-kohl-one.vercel.app'
+const PROD_ORIGIN = 'https://study.jimmyyao.com'
 
 function pickOAuthOrigin() {
   const fromEnv = String(process.env.NEXT_PUBLIC_APP_ORIGIN || '').trim()
@@ -36,11 +37,8 @@ function t(lang: Props['lang'], zh: string, en: string) {
   return lang === 'en' ? en : zh
 }
 
-function getOAuthErrorMessage(lang: Props['lang'], provider: 'google' | 'apple', message: string) {
-  const lower = message.toLowerCase()
-  if (provider === 'apple' && (lower.includes('provider') || lower.includes('apple') || lower.includes('unsupported'))) {
-    return t(lang, 'Apple 登录暂未配置，请稍后再试或先使用 Google 登录。', 'Apple sign-in is not configured yet. Please try again later or use Google sign-in.')
-  }
+function getAuthErrorMessage(lang: Props['lang'], message: string) {
+  if (!message.trim()) return t(lang, '登录失败，请稍后再试。', 'Sign-in failed. Please try again later.')
   return message
 }
 
@@ -51,6 +49,9 @@ export default function AuthActions({ lang }: Props) {
   const [loading, setLoading] = useState(true)
   const [user, setUser] = useState<UserLite | null>(null)
   const [error, setError] = useState('')
+  const [email, setEmail] = useState('')
+  const [emailSending, setEmailSending] = useState(false)
+  const [emailSent, setEmailSent] = useState(false)
 
   useEffect(() => {
     if (!supabaseReady) {
@@ -77,7 +78,7 @@ export default function AuthActions({ lang }: Props) {
     }
   }, [supabase, supabaseReady])
 
-  async function loginWithProvider(provider: 'google' | 'apple') {
+  async function loginWithGoogle() {
     if (!supabaseReady) {
       setError(envMessage || t(lang, 'Supabase 环境变量未配置', 'Supabase env vars are not configured'))
       return
@@ -85,10 +86,37 @@ export default function AuthActions({ lang }: Props) {
     setError('')
     const origin = pickOAuthOrigin()
     const { error } = await supabase.auth.signInWithOAuth({
-      provider,
+      provider: 'google',
       options: { redirectTo: `${origin}/auth/callback?next=/lessons` }
     })
-    if (error) setError(getOAuthErrorMessage(lang, provider, error.message))
+    if (error) setError(getAuthErrorMessage(lang, error.message))
+  }
+
+  async function sendMagicLink(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    const trimmedEmail = email.trim()
+    if (!supabaseReady) {
+      setError(envMessage || t(lang, 'Supabase 环境变量未配置', 'Supabase env vars are not configured'))
+      return
+    }
+    if (!trimmedEmail) {
+      setError(t(lang, '请输入邮箱地址。', 'Please enter your email address.'))
+      return
+    }
+
+    setError('')
+    setEmailSent(false)
+    setEmailSending(true)
+    const { error } = await supabase.auth.signInWithOtp({
+      email: trimmedEmail,
+      options: { emailRedirectTo: `${PROD_ORIGIN}/auth/callback?next=/lessons` }
+    })
+    setEmailSending(false)
+    if (error) {
+      setError(getAuthErrorMessage(lang, error.message))
+      return
+    }
+    setEmailSent(true)
   }
 
   async function logout() {
@@ -113,10 +141,32 @@ export default function AuthActions({ lang }: Props) {
       {!loading && !user ? (
         <>
           <p className="small">{t(lang, '当前未登录', 'Not signed in')}</p>
+          <p>{t(lang, '登录后可同步学习进度、打卡和访问记录。', 'Sign in to sync learning progress, check-ins, and access history.')}</p>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-            <button className="btn" onClick={() => loginWithProvider('google')}>{t(lang, 'Google 登录', 'Sign in with Google')}</button>
-            <button className="btn" onClick={() => loginWithProvider('apple')}>{t(lang, 'Apple 登录', 'Sign in with Apple')}</button>
+            <button className="btn" onClick={loginWithGoogle}>{t(lang, 'Google 登录', 'Sign in with Google')}</button>
           </div>
+          <form onSubmit={sendMagicLink} style={{ display: 'grid', gap: 10, marginTop: 16 }}>
+            <div>
+              <label htmlFor="magic-email" style={{ display: 'block', fontWeight: 800, marginBottom: 6 }}>
+                {t(lang, '邮箱登录', 'Email sign-in')}
+              </label>
+              <p className="small" style={{ marginTop: 0 }}>{t(lang, '输入邮箱后，我们会发送一个安全登录链接到你的邮箱。', 'Enter your email and we will send a secure sign-in link to your inbox.')}</p>
+              <input
+                id="magic-email"
+                type="email"
+                inputMode="email"
+                autoComplete="email"
+                value={email}
+                onChange={(event) => setEmail(event.target.value)}
+                placeholder={t(lang, '你的邮箱', 'Your email')}
+                style={{ width: '100%', border: '1px solid #cbd5e1', borderRadius: 10, padding: '10px 12px', font: 'inherit' }}
+              />
+            </div>
+            <button className="btn" type="submit" disabled={emailSending}>
+              {emailSending ? t(lang, '发送中...', 'Sending...') : t(lang, '发送登录邮件', 'Send sign-in email')}
+            </button>
+          </form>
+          {emailSent ? <p className="small" style={{ color: '#047857' }}>{t(lang, '登录邮件已发送，请打开邮箱完成登录。', 'Sign-in email sent. Please open your inbox to finish signing in.')}</p> : null}
         </>
       ) : null}
       {error ? <p className="small" style={{ color: '#b91c1c' }}>{t(lang, '错误', 'Error')}：{error}</p> : null}

@@ -77,6 +77,14 @@ tags:
 
 ## 变更记录
 
+### 2026-06-15 — 新增 Email Magic Link 登录并隐藏 Apple
+
+- **优化内容**：`/login` 隐藏 Apple 登录入口，正式显示 Google 登录和 Email Magic Link 登录。新增邮箱输入框与“发送登录邮件”按钮，调用 Supabase `signInWithOtp()`，登录邮件回调默认返回 `/lessons`。发送成功后显示“登录邮件已发送，请打开邮箱完成登录。”
+- **修改文件**：`auth-actions.tsx`、`opencode-latest-report.md`、`_index_.md`
+- **验证页面**：`/login`、`/`、`/lessons/1`、`/toolbox`、`/admin`
+- **学习主线影响**：无。不修改课程数据、lesson 组件、toolbox、打卡逻辑、确认动作逻辑或 0/4 算法。
+- **commit hash**：提交后以 `git log -1` 为准
+
 ### 2026-06-15 — 修复顶部导航登录入口移动端可见性
 
 - **优化内容**：修复全站右上角登录入口在移动端不明显的问题。顶部栏改为积分区 + 右侧账号入口两列布局，取消账号入口绝对定位；未登录态按钮增大到 42px 并提高对比度，点击仍进入 `/login`，已登录仍显示头像或邮箱首字母。
