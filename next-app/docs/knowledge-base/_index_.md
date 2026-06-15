@@ -206,4 +206,4 @@ tags:
 - **修改文件**：`practice/page.tsx`、`opencode-latest-report.md`、`_index_.md`
 - **验证页面**：`/lessons/1/practice?stage=conversation_vocab`、`/lessons/1/practice?stage=conversation_grammar`、`/lessons/1/practice?stage=conversation_examples`、`/lessons/2/practice?stage=conversation_vocab`、`/lessons/1`、`/toolbox`（均 200）
 - **学习主线影响**：正向增强。用户可主动确认拆解完成，但不改变打卡、积分或 0/4。
-- **commit hash**：待提交
+- **commit hash**：de7aa03
