@@ -122,7 +122,7 @@ export default function LessonsClient({ bypassLessonLock, lang }: Props) {
               <h3>{t(lang, `第 ${row.no} 课 · ${row.title}`, `Lesson ${row.no}`)}</h3>
               <p className="small">{row.subtitle}</p>
               <div className="lessonMeta2">
-                <span className={row.done ? 'metaPill done' : 'metaPill'}>👑 {row.crowns}/4</span>
+                <span className={row.done ? 'metaPill done' : 'metaPill'}>📋 {t(lang, '本课进度', 'Progress')} {row.crowns}/4</span>
                 <span className="metaPill">
                   {row.locked
                     ? t(lang, '未解锁', 'Locked')

@@ -182,4 +182,12 @@ tags:
 - **修改文件**：`lesson-practice-client.tsx`、`opencode-latest-report.md`、`_index_.md`
 - **验证页面**：`/lessons/1/practice?stage=conversation`、`/lessons/1/practice?stage=vocab`、`/lessons/1`、`/toolbox`（均 200）
 - **学习主线影响**：正向修复。打卡不再随页面打开自动触发，需要用户主动完成学习后点击按钮。
+- **commit hash**：7911ca5
+
+### 2026-06-15 — 明确 0/4 为本课核心闭环进度（Task A）
+
+- **优化内容**：课程列表卡片 `👑 N/4` → `📋 本课进度 N/4`；课程详情页新增轻量 4 步进度卡片（看懂场景→听懂会话→拆解记忆→输出复盘），让学习者理解 0/4 不是菜单计数而是核心闭环进度。
+- **修改文件**：`lessons-client.tsx`、`lessons/[lessonNo]/page.tsx`、`opencode-latest-report.md`、`_index_.md`
+- **验证页面**：`/lessons`、`/lessons/1`、`/lessons/2`、`/lessons/25`、`/toolbox`（均 200）
+- **学习主线影响**：无。仅文案说明，未改任何算法或数据。
 - **commit hash**：待提交

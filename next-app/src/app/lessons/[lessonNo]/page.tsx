@@ -148,6 +148,22 @@ export default async function LessonDetailPage({
         </div>
       </section>
 
+      <section className="card" style={{ background: '#f0fdf4', borderColor: '#bbf7d0' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
+          <span style={{ fontSize: 18 }}>📋</span>
+          <strong>{tr(lang, '本课核心闭环进度 0/4', 'Lesson Core Progress 0/4')}</strong>
+        </div>
+        <p className="small" style={{ margin: '0 0 6px', lineHeight: 1.6, color: '#475569' }}>
+          {tr(lang, '4 步 = 背诵掌握主线 · 9 块工具 = 帮助完成 4 步', '4 steps = core mastery path · 9 tools help you complete them')}
+        </p>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px 20px', fontSize: 13, color: '#475569', lineHeight: 1.8 }}>
+          <span>① {tr(lang, '看懂场景', 'Scene')} → {tr(lang, '中文理解', 'Deep Dive')}</span>
+          <span>② {tr(lang, '听懂会话', 'Listen')} → {tr(lang, '视频/原文', 'Video/Text')}</span>
+          <span>③ {tr(lang, '拆解记忆', 'Study')} → {tr(lang, '词汇/语法/例句', 'Vocab/Grammar/Ex')}</span>
+          <span>④ {tr(lang, '输出复盘', 'Output')} → {tr(lang, '测试/录音/复习/打卡', 'Quiz/Record/Review/Check')}</span>
+        </div>
+      </section>
+
       <section className="card" style={{ display: 'flex', alignItems: 'center', gap: 12, justifyContent: 'space-between', flexWrap: 'wrap' }}>
         <div style={{ minWidth: 180, flex: 1 }}>
           <strong>{tr(lang, '今日学习打卡', 'Today\'s Check-in')}</strong>
