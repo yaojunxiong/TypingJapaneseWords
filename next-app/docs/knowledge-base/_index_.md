@@ -77,6 +77,15 @@ tags:
 
 ## 变更记录
 
+### 2026-06-15 — 全站访客浏览记录第一版
+
+- **优化内容**：新增 Supabase 表 `visitor_activity_events` migration；新增 `/api/activity/track` 服务端写入接口；新增 `VisitorActivityTracker` 挂在 root layout，页面访问自动记录安全 pathname；新增 `/admin/activity` 只读后台页显示最近 100 条访问记录；`/admin` 首页新增“访客浏览记录”入口。
+- **安全约束**：不记录密码、token、cookie、完整 IP 或输入框内容；URL query/hash 不入库；后台只读，不提供删除/修改按钮。
+- **修改文件**：`layout.tsx`、新增 `visitor-activity-tracker.tsx`、新增 `api/activity/track/route.ts`、新增 `admin/activity/page.tsx`、`admin/page.tsx`、新增 Supabase migration、`opencode-latest-report.md`、`_index_.md`
+- **验证页面**：`/`、`/login`、`/lessons`、`/lessons/1`、`/toolbox`、`/admin`、`/admin/activity`
+- **学习主线影响**：无。不修改课程数据、lesson 组件、toolbox、打卡逻辑、确认动作逻辑或 0/4 算法。
+- **commit hash**：提交后以 `git log -1` 为准
+
 ### 2026-06-15 — 优化账号入口与 /me 个人页
 
 - **优化内容**：右上角已登录头像/首字母继续进入 `/me`；`/me` 已登录时展示邮箱、用户 ID、登录方式，并新增退出登录按钮；未登录访问 `/me` 时显示请登录提示和 `/login` 按钮。

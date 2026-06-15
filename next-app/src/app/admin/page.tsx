@@ -480,6 +480,13 @@ export default async function AdminPage({
       status: 'available',
       href: '/admin/forum',
     },
+    {
+      icon: '👣',
+      label: tr(lang, '访客浏览记录', 'Visitor Activity'),
+      description: tr(lang, '当前可用：只读查看最近页面访问事件，不记录密码、token 或输入内容。', 'Read-only recent page view events. Passwords, tokens, and input content are not recorded.'),
+      status: 'available',
+      href: '/admin/activity',
+    },
   ]
 
   const pendingCapabilities: CapabilityCard[] = [
