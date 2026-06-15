@@ -77,6 +77,14 @@ tags:
 
 ## 变更记录
 
+### 2026-06-15 — 全站登录入口与 Apple 登录按钮
+
+- **优化内容**：新增全站右上角账号入口。未登录时显示登录图标并跳转 `/login`；已登录时显示头像或邮箱首字母并跳转 `/me`。`/login` 保留 Google 登录并新增 Apple 登录按钮，使用 Supabase OAuth provider `apple`。OAuth 登录成功默认回到 `/lessons`；Apple Provider 未配置时显示友好错误提示。
+- **修改文件**：新增 `user-auth-entry.tsx`、修改 `minna-nav.tsx`、`auth-actions.tsx`、`opencode-latest-report.md`、`_index_.md`
+- **验证页面**：`/`、`/login`、`/lessons`、`/lessons/1`、`/toolbox`、`/admin`
+- **学习主线影响**：无。不修改课程数据、lesson 组件、toolbox、打卡逻辑、确认动作逻辑或 0/4 算法。
+- **commit hash**：提交后以 `git log -1` 为准
+
 ### 2026-06-14 — 优化 /toolbox 学习中心空状态
 
 - **优化内容**：学习中心三个面板（今日学习/成长任务/最近记录）在无数据时不再直接隐藏，改为显示鼓励文案 + "去第 1 课" 引导链接

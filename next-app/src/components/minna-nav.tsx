@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { getLang, tr } from '@/lib/i18n'
 import MinnaTopStatsClient from '@/components/minna-top-stats-client'
+import UserAuthEntry from '@/components/user-auth-entry'
 
 type Props = {
   active: 'home' | 'login' | 'me' | 'toolbox' | 'lessons' | 'messages' | 'favorites' | 'chat' | 'settings'
@@ -28,6 +29,7 @@ export default async function MinnaNav({ active }: Props) {
     <>
       <header className="minnaTopClassic">
         <MinnaTopStatsClient lang={lang} active={active} />
+        <UserAuthEntry lang={lang} />
       </header>
       <nav className="card minnaNavCard">
         {PRIMARY_ITEMS.map((item) => (

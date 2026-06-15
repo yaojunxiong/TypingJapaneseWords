@@ -36,6 +36,14 @@ function t(lang: Props['lang'], zh: string, en: string) {
   return lang === 'en' ? en : zh
 }
 
+function getOAuthErrorMessage(lang: Props['lang'], provider: 'google' | 'apple', message: string) {
+  const lower = message.toLowerCase()
+  if (provider === 'apple' && (lower.includes('provider') || lower.includes('apple') || lower.includes('unsupported'))) {
+    return t(lang, 'Apple 登录暂未配置，请稍后再试或先使用 Google 登录。', 'Apple sign-in is not configured yet. Please try again later or use Google sign-in.')
+  }
+  return message
+}
+
 export default function AuthActions({ lang }: Props) {
   const supabaseReady = hasSupabasePublicEnv()
   const envMessage = getSupabaseMissingEnvMessage()
@@ -69,7 +77,7 @@ export default function AuthActions({ lang }: Props) {
     }
   }, [supabase, supabaseReady])
 
-  async function loginWithGoogle() {
+  async function loginWithProvider(provider: 'google' | 'apple') {
     if (!supabaseReady) {
       setError(envMessage || t(lang, 'Supabase 环境变量未配置', 'Supabase env vars are not configured'))
       return
@@ -77,10 +85,10 @@ export default function AuthActions({ lang }: Props) {
     setError('')
     const origin = pickOAuthOrigin()
     const { error } = await supabase.auth.signInWithOAuth({
-      provider: 'google',
-      options: { redirectTo: `${origin}/auth/callback?next=/me` }
+      provider,
+      options: { redirectTo: `${origin}/auth/callback?next=/lessons` }
     })
-    if (error) setError(error.message)
+    if (error) setError(getOAuthErrorMessage(lang, provider, error.message))
   }
 
   async function logout() {
@@ -105,7 +113,10 @@ export default function AuthActions({ lang }: Props) {
       {!loading && !user ? (
         <>
           <p className="small">{t(lang, '当前未登录', 'Not signed in')}</p>
-          <button className="btn" onClick={loginWithGoogle}>{t(lang, 'Google 登录', 'Sign in with Google')}</button>
+          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+            <button className="btn" onClick={() => loginWithProvider('google')}>{t(lang, 'Google 登录', 'Sign in with Google')}</button>
+            <button className="btn" onClick={() => loginWithProvider('apple')}>{t(lang, 'Apple 登录', 'Sign in with Apple')}</button>
+          </div>
         </>
       ) : null}
       {error ? <p className="small" style={{ color: '#b91c1c' }}>{t(lang, '错误', 'Error')}：{error}</p> : null}

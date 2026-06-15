@@ -1,0 +1,93 @@
+'use client'
+
+import Link from 'next/link'
+import { useEffect, useMemo, useState } from 'react'
+import { createClient } from '@/utils/supabase/client'
+import { hasSupabasePublicEnv } from '@/utils/supabase/config'
+
+type Props = {
+  lang: 'zh' | 'en'
+}
+
+type UserLite = {
+  email: string
+  avatarUrl: string
+}
+
+function t(lang: Props['lang'], zh: string, en: string) {
+  return lang === 'en' ? en : zh
+}
+
+function getInitial(email: string) {
+  const trimmed = email.trim()
+  return (trimmed[0] || '?').toUpperCase()
+}
+
+export default function UserAuthEntry({ lang }: Props) {
+  const supabaseReady = hasSupabasePublicEnv()
+  const supabase = useMemo(() => createClient(), [])
+  const [user, setUser] = useState<UserLite | null>(null)
+  const label = user ? t(lang, '我的账号', 'My account') : t(lang, '登录', 'Sign in')
+
+  useEffect(() => {
+    if (!supabaseReady) {
+      setUser(null)
+      return
+    }
+
+    let mounted = true
+    supabase.auth.getUser().then(({ data }) => {
+      if (!mounted) return
+      const rawUser = data.user
+      setUser(rawUser ? {
+        email: rawUser.email || '',
+        avatarUrl: String(rawUser.user_metadata?.avatar_url || rawUser.user_metadata?.picture || '')
+      } : null)
+    })
+
+    const { data: sub } = supabase.auth.onAuthStateChange((_event, session) => {
+      const rawUser = session?.user
+      setUser(rawUser ? {
+        email: rawUser.email || '',
+        avatarUrl: String(rawUser.user_metadata?.avatar_url || rawUser.user_metadata?.picture || '')
+      } : null)
+    })
+
+    return () => {
+      mounted = false
+      sub.subscription.unsubscribe()
+    }
+  }, [supabase, supabaseReady])
+
+  return (
+    <Link
+      href={user ? '/me' : '/login'}
+      aria-label={label}
+      title={user?.email || label}
+      style={{
+        position: 'absolute',
+        top: 10,
+        right: 16,
+        width: 34,
+        height: 34,
+        borderRadius: 999,
+        border: '1px solid #cbd5e1',
+        background: '#fff',
+        color: '#0f172a',
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        overflow: 'hidden',
+        textDecoration: 'none',
+        fontSize: 15,
+        fontWeight: 800,
+        boxShadow: '0 4px 12px rgba(15, 23, 42, 0.08)'
+      }}
+    >
+      {user?.avatarUrl ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img src={user.avatarUrl} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+      ) : user ? getInitial(user.email) : '🔐'}
+    </Link>
+  )
+}
