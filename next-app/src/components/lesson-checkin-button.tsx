@@ -1,76 +1,72 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 import Link from 'next/link'
 import { getLocalLearningSummary, markDailyCheckinLocal } from '@/lib/learning-cloud-sync'
-
-const ENCOURAGEMENTS_ZH = [
-  '很棒，今天又完成一步！',
-  '每一天的坚持，都在拉近你和流利日语的距离。',
-  '又完成一次打卡，你的学习轨迹越来越清晰了。',
-  '坚持就是最好的学习方法，你已经证明了这一点。',
-]
-
-const ENCOURAGEMENTS_EN = [
-  'Great, another step done today!',
-  'Every day counts. Keep up the great work!',
-  'Another check-in done — your learning path is getting clearer.',
-  'Consistency is the best learning method, and you\'re proving it.',
-]
-
-function pick<T>(arr: T[]): T {
-  return arr[Math.floor(Math.random() * arr.length)]
-}
+import { hasAnyConfirmation } from '@/lib/learning-confirmations'
 
 export default function LessonCheckinButton({ lang, lessonNo }: { lang: string; lessonNo?: number }) {
   const [checked, setChecked] = useState(false)
+  const [canCheckin, setCanCheckin] = useState(false)
   const [streak, setStreak] = useState(1)
   const [syncing, setSyncing] = useState(false)
-  const [encouragement, setEncouragement] = useState('')
-  const [nextStepText, setNextStepText] = useState('')
 
-  function refresh() {
+  const refresh = useCallback(() => {
     const s = getLocalLearningSummary()
     const today = new Date().toISOString().slice(0, 10)
-    setChecked(s.lastStudyDate === today)
+    const isChecked = s.lastStudyDate === today
+    setChecked(isChecked)
     setStreak(s.streak)
-  }
+    if (!isChecked) {
+      setCanCheckin(hasAnyConfirmation())
+    }
+  }, [])
 
-  useEffect(() => { refresh() }, [])
+  useEffect(() => {
+    refresh()
+    window.addEventListener('minna:stats-update', refresh)
+    return () => window.removeEventListener('minna:stats-update', refresh)
+  }, [refresh])
 
   function handleClick() {
-    if (checked || syncing) return
+    if (checked || syncing || !canCheckin) return
     setSyncing(true)
-    const next = markDailyCheckinLocal()
+    markDailyCheckinLocal()
     setChecked(true)
-    setStreak(next.streak)
-    setEncouragement(pick(lang === 'en' ? ENCOURAGEMENTS_EN : ENCOURAGEMENTS_ZH))
-    setNextStepText(lang === 'en'
-      ? 'Come back tomorrow to listen and repeat another sentence.'
-      : '明天继续来听一句、跟读一句吧。')
+    setCanCheckin(false)
     setSyncing(false)
   }
+
+  const noAction = !checked && !canCheckin
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 6 }}>
       <button
-        className={`btn ${checked ? 'ghost' : ''}`}
+        className={checked ? 'btn ghost' : 'btn'}
         onClick={handleClick}
-        disabled={checked || syncing}
+        disabled={checked || syncing || noAction}
         style={{
           display: 'inline-flex', alignItems: 'center', gap: 6,
           padding: '10px 18px', fontSize: 15, minHeight: 44,
         }}
       >
-        {checked ? '✅' : '📅'}
+        {checked ? '✅' : canCheckin ? '📅' : '☑️'}
         {checked
           ? (lang === 'en' ? `Checked in · ${streak}-day streak` : `今日已打卡 · 连续 ${streak} 天`)
-          : (lang === 'en' ? 'Check in today' : '今日打卡')}
+          : canCheckin
+            ? (lang === 'en' ? 'Check in today' : '今日可打卡')
+            : (lang === 'en' ? 'Complete a learning action first' : '先完成一个学习动作')}
       </button>
       {checked && (
         <div style={{ textAlign: 'right', fontSize: 13, color: '#64748b', lineHeight: 1.5, maxWidth: 240 }}>
-          <p style={{ margin: 0, fontWeight: 500 }}>{encouragement}</p>
-          <p style={{ margin: '2px 0 0' }}>{nextStepText}</p>
+          <p style={{ margin: 0, fontWeight: 500 }}>
+            {lang === 'en' ? 'Great, another step done today!' : '很棒，今天又完成一步！'}
+          </p>
+          <p style={{ margin: '2px 0 0' }}>
+            {lang === 'en'
+              ? 'Come back tomorrow to listen and repeat another sentence.'
+              : '明天继续来听一句、跟读一句吧。'}
+          </p>
           {lessonNo != null && (
             <Link
               href={`/lessons/${lessonNo}/practice?stage=conversation`}
@@ -79,6 +75,13 @@ export default function LessonCheckinButton({ lang, lessonNo }: { lang: string; 
               🗣️ {lang === 'en' ? 'Go to Conversation Recite' : '去会话背诵'}
             </Link>
           )}
+        </div>
+      )}
+      {noAction && (
+        <div style={{ textAlign: 'right', fontSize: 12, color: '#94a3b8', lineHeight: 1.4, maxWidth: 240 }}>
+          {lang === 'en'
+            ? 'For example: click "I\'ve understood" or "I\'ve listened" or "I can repeat"'
+            : '例如先点"我看懂了 / 我听完了 / 我能跟读一遍"'}
         </div>
       )}
     </div>

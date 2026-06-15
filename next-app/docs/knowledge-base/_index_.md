@@ -207,3 +207,11 @@ tags:
 - **验证页面**：`/lessons/1/practice?stage=conversation_vocab`、`/lessons/1/practice?stage=conversation_grammar`、`/lessons/1/practice?stage=conversation_examples`、`/lessons/2/practice?stage=conversation_vocab`、`/lessons/1`、`/toolbox`（均 200）
 - **学习主线影响**：正向增强。用户可主动确认拆解完成，但不改变打卡、积分或 0/4。
 - **commit hash**：de7aa03
+
+### 2026-06-15 — 今日打卡改为基于有效学习动作的主动打卡提示（Task D）
+
+- **优化内容**：课程页打卡按钮不再无条件显示"今日打卡"，改为三段式状态：无有效动作时显示"先完成一个学习动作"（灰色，附带提示"例如先点我看懂了/我听完了/我能跟读一遍"）、有确认动作后显示"今日可打卡"（可点击）、打卡后显示"今日已打卡·连续N天"。新增 `learning-confirmations.ts` 扫描 localStorage 中 `minna-confirmed-*` 前缀的 key 判断是否存在有效动作。监听 `minna:stats-update` 事件自动刷新状态。
+- **修改文件**：新增 `learning-confirmations.ts`、修改 `lesson-checkin-button.tsx`、`opencode-latest-report.md`、`_index_.md`
+- **验证页面**：`/lessons/1`、`/lessons/1/deep-dive`、`/lessons/1/practice?stage=conversation`、`/lessons/1/practice?stage=conversation_vocab`、`/lessons/2`、`/toolbox`（均 200）
+- **学习主线影响**：正向增强。打卡从无条件按钮变为基于有效学习动作的主动提示，确认前不显示可打卡状态。
+- **commit hash**：待提交
