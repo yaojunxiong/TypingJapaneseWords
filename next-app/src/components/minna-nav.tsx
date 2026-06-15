@@ -28,8 +28,12 @@ export default async function MinnaNav({ active }: Props) {
   return (
     <>
       <header className="minnaTopClassic">
-        <MinnaTopStatsClient lang={lang} active={active} />
-        <UserAuthEntry lang={lang} />
+        <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) auto', alignItems: 'center', gap: 10 }}>
+          <div style={{ minWidth: 0, overflow: 'hidden' }}>
+            <MinnaTopStatsClient lang={lang} active={active} />
+          </div>
+          <UserAuthEntry lang={lang} />
+        </div>
       </header>
       <nav className="card minnaNavCard">
         {PRIMARY_ITEMS.map((item) => (

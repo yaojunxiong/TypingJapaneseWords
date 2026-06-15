@@ -2,44 +2,37 @@
 
 ## 1. 任务名称
 
-全站登录入口与 Apple 登录按钮
+修复顶部导航登录入口移动端可见性
 
 ## 2. 任务目标
 
-第一阶段只新增全站右上角用户登录入口，并在 `/login` 保留 Google 登录的同时新增 Apple 登录按钮。
+修复全站右上角用户登录入口在 iPhone 14 Pro Max 等移动端宽度下不明显的问题，确保未登录图标和已登录头像/首字母入口清楚可见。
 
 ## 3. 前提发现
 
-- 当前全站页面主要通过 `src/components/minna-nav.tsx` 展示顶部状态栏和底部导航。
-- 登录页按钮逻辑集中在 `src/components/auth-actions.tsx`。
-- Supabase browser client 位于 `src/utils/supabase/client.ts`，本轮不修改 Supabase schema、RLS 或环境配置。
-- OAuth callback 已支持 `next` 参数，本轮将登录成功默认回到 `/lessons`。
+- 最近提交 `00e4763 feat: add global auth entry and apple login button` 已存在。
+- 登录入口已挂载在 `src/components/minna-nav.tsx` 顶部栏中。
+- 原实现使用绝对定位，移动端积分栏内容可能让右侧入口不明显。
+- 本轮只调整顶部导航布局，不修改登录逻辑、课程逻辑、打卡、确认动作或 0/4 算法。
 
 ## 4. 修改范围
 
-- `src/components/user-auth-entry.tsx`（新增）
+- `src/components/user-auth-entry.tsx`
 - `src/components/minna-nav.tsx`
-- `src/components/auth-actions.tsx`
 - `docs/knowledge-base/opencode-latest-report.md`
 - `docs/knowledge-base/_index_.md`
 
 ## 5. 修改内容
 
-### 新增全站右上角登录入口
+### 顶部导航布局修复
 
 | 区块 | 内容 |
 |------|------|
-| 未登录 | 右上角显示登录图标，点击进入 `/login` |
-| 已登录 | 右上角显示头像；无头像时显示邮箱首字母 |
-| 账号入口 | 已登录点击进入 `/me` |
-| 状态来源 | Supabase `auth.getUser()` + `onAuthStateChange()` |
-
-### 更新 /login 登录按钮
-
-- 保留 Google 登录。
-- 新增 Apple 登录按钮，使用 Supabase OAuth provider `apple`。
-- OAuth 登录成功默认回到 `/lessons`。
-- Apple Provider 未配置或 Supabase 返回 provider 相关错误时显示友好提示。
+| 左侧/主体 | 保留当前页面标题与积分状态 |
+| 右侧 | 固定显示用户登录入口图标 |
+| 未登录 | 显示高对比度登录图标，点击进入 `/login` |
+| 已登录 | 显示头像；无头像时显示邮箱首字母，点击进入 `/me` |
+| 移动端 | 取消绝对定位，使用两列 grid 防止被积分栏遮挡 |
 
 ### 安全约束
 
@@ -61,7 +54,7 @@
 
 - **git status**：任务开始前 clean。
 - **commit hash**：提交后以 `git log -1` 为准
-- **commit message**：`feat: add global auth entry and apple login button`
+- **commit message**：`fix: show auth entry in top navigation`
 - **是否 push**：待完成
 - **是否 Vercel 部署完成**：待部署
 
@@ -69,6 +62,11 @@
 
 - `npm run audit`：PASS
 - `npm run build`：PASS
+- `curl https://study.jimmyyao.com/`：200
+- `curl https://study.jimmyyao.com/login`：200
+- `curl https://study.jimmyyao.com/lessons/1`：200
+- `curl https://study.jimmyyao.com/toolbox`：200
+- `curl https://study.jimmyyao.com/admin`：200
 
 ## 8. 后续建议
 

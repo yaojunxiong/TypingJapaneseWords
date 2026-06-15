@@ -65,23 +65,21 @@ export default function UserAuthEntry({ lang }: Props) {
       aria-label={label}
       title={user?.email || label}
       style={{
-        position: 'absolute',
-        top: 10,
-        right: 16,
-        width: 34,
-        height: 34,
+        flex: '0 0 auto',
+        width: 42,
+        height: 42,
         borderRadius: 999,
-        border: '1px solid #cbd5e1',
-        background: '#fff',
-        color: '#0f172a',
+        border: '2px solid #bae6fd',
+        background: user ? '#fff' : '#0f172a',
+        color: user ? '#0f172a' : '#fff',
         display: 'inline-flex',
         alignItems: 'center',
         justifyContent: 'center',
         overflow: 'hidden',
         textDecoration: 'none',
-        fontSize: 15,
+        fontSize: 18,
         fontWeight: 800,
-        boxShadow: '0 4px 12px rgba(15, 23, 42, 0.08)'
+        boxShadow: '0 6px 16px rgba(15, 23, 42, 0.18)'
       }}
     >
       {user?.avatarUrl ? (
