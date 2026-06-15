@@ -473,15 +473,16 @@ export default async function AdminPage({
       status: 'available',
       href: '/admin/system',
     },
-  ]
-
-  const pendingCapabilities: CapabilityCard[] = [
     {
       icon: '💬',
       label: tr(lang, '论坛审核', 'Forum Moderation'),
-      description: tr(lang, '旧分支存在，待确认 forum_posts 表后移植', 'Legacy branch has forum review, pending table check'),
-      status: 'pending',
+      description: tr(lang, '当前可用：只读查看论坛帖子和审核状态，不支持审核/删除操作。', 'Read-only forum posts and moderation status. No approve/delete operations.'),
+      status: 'available',
+      href: '/admin/forum',
     },
+  ]
+
+  const pendingCapabilities: CapabilityCard[] = [
     {
       icon: '📝',
       label: tr(lang, '课程内容管理', 'Course Content'),

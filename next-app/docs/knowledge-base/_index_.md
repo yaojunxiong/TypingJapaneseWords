@@ -312,4 +312,18 @@ tags:
 - **修改文件**：新增 `admin/system/page.tsx`、修改 `admin/page.tsx`、更新 `opencode-latest-report.md`、`_index_.md`
 - **验证**：`npm run audit` PASS、`npm run build` PASS，7 个 admin 路由全部编译
 - **学习主线影响**：无。仅后台管理，不执行 shell 命令、不查询数据库。
+- **commit hash**：d657555
+
+### 2026-06-15 — 恢复论坛审核只读页（Task 1）
+
+- **优化内容**：
+  - 新增 `/admin/forum` 只读论坛审核页
+  - 查询 `forum_posts`，展示标题、作者/邮箱、分类、状态、回复数、创建时间、更新时间
+  - 表不存在或字段未接入时优雅降级，显示 `forum_posts` / `forum_comments` / `forum_likes` / `forum_bookmarks` 和关键字段清单
+  - 明确标记审核通过、隐藏帖子、删除帖子、置顶、封禁用户均未开放
+  - /admin 首页“论坛审核”从待恢复区移至当前可用区，链接到 `/admin/forum`
+  - 不导入旧分支写操作组件 `ForumPostReviewActions`，不新增 API route
+- **修改文件**：新增 `admin/forum/page.tsx`、修改 `admin/page.tsx`、更新 `opencode-latest-report.md`、`_index_.md`
+- **验证**：`npm run audit` PASS、`npm run build` PASS，`/admin/forum` 路由编译通过
+- **学习主线影响**：无。仅后台只读页面，不影响 `/lessons`、`/toolbox`、打卡、确认动作和 0/4 算法。
 - **commit hash**：待提交
