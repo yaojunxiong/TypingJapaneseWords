@@ -2,21 +2,20 @@
 
 ## 1. 任务名称
 
-今日打卡改为基于有效学习动作的主动打卡提示（Task D）
+学习中心区分浏览过和完成过（Task E）
 
 ## 2. 任务目标
 
-打卡不应该是"打开页面就自动打卡"或"无条件点击"，而应该是：
-1. 无有效学习动作 → **"先完成一个学习动作"**（灰色，不可点击）
-2. 有有效学习动作 → **"今日可打卡"**（可点击）
-3. 已打卡 → **"今日已打卡 · 连续 N 天"**（灰色，不可点击）
+优化 /toolbox 学习中心，让用户能看出今天哪些只是浏览记录，哪些是真正完成的学习动作：
 
-有效学习动作定义为：`minna-confirmed-{lessonNo}-{action}` 任意 localStorage key 存在一个（understanding / video / conversation / vocab / grammar / examples）。
+1. **新增"✅ 今日完成"面板**：读取 localStorage 中 `minna-confirmed-*` 确认 key 和今日打卡状态，显示用户已完成的有效学习动作列表
+2. **增强"📜 最近学习记录"面板**：用图标和颜色区分浏览（👁️ 灰色）、完成（✅ 绿色）、其他（📝）
+3. **空状态引导**：无完成动作时提示"先去课程里点一次'我看懂了/我听完了/我能跟读一遍'"
 
 ## 3. 修改范围
 
-- `src/lib/learning-confirmations.ts`（新增）
-- `src/components/lesson-checkin-button.tsx`（重写状态逻辑）
+- `src/lib/learning-confirmations.ts`（扩展：`parseConfirmedKey()`、`getConfirmedActions()`、`ConfirmedAction` 类型、`ACTION_LABELS`）
+- `src/components/learning-dashboard.tsx`（新增今日完成面板、增强最近记录区分）
 - `docs/knowledge-base/opencode-latest-report.md`
 - `docs/knowledge-base/_index_.md`
 
@@ -29,51 +28,51 @@
 - `package.json` / `package-lock.json` — 未改动
 - 0/4 crown 计算算法 — 未改动
 - 顶部积分逻辑 — 未改动
+- 打卡底层逻辑 — 未改动
 - 学习中心统计逻辑 — 未改动
 - 视频播放器核心逻辑 — 未改动
-- IndexedDB 学习记录结构 — 未改动
-- `home-progress-client.tsx` / `toolbox-client.tsx` 的打卡逻辑 — 未改动（后续阶段可对齐）
+- IndexedDB 数据结构 — 未改动
 
 ## 5. 主要改动
 
-### 5.1 新增 `src/lib/learning-confirmations.ts`
+### 5.1 扩展 `src/lib/learning-confirmations.ts`
 
-轻量工具函数，扫描 localStorage 中 `minna-confirmed-*` 前缀的 key：
-- `hasAnyConfirmation()` — 返回是否有任意一个确认 key 值为 `true`
-- `getConfirmedKeys()` — 返回所有已确认的 key 列表
+新增类型和函数：
+- `ConfirmedAction` 类型：`{ lessonNo, actionKey, labelZh, labelEn }`
+- `ACTION_LABELS`：6 种确认动作的中英文标签映射
+- `parseConfirmedKey(key)`：将 `minna-confirmed-{n}-{action}` 解析为 `ConfirmedAction`
+- `getConfirmedActions()`：返回所有已确认动作的结构化数组
 
-### 5.2 重写 `lesson-checkin-button.tsx`
+### 5.2 增强 `learning-dashboard.tsx`
 
-去掉随机鼓励语，三种状态替代原来两种：
+#### 新增 "✅ 今日完成" 面板
+- 绿色背景卡片，插入在"今日学习"与"成长任务"之间
+- 显示所有 `minna-confirmed-*` 已确认动作（带课程号和动作名）
+- 如已打卡则显示"📅 今日已打卡"（用虚线分隔）
+- 无确认+未打卡时显示空状态引导
+- 监听 `minna:stats-update` 事件自动刷新
 
-| 状态 | 条件 | 按钮文案 | 可点击 | 辅助提示 |
-|---|---|---|---|---|
-| `noAction` | 未打卡 + 无确认 | ☑️ 先完成一个学习动作 | ❌ | 例如先点"我看懂了 / 我听完了 / 我能跟读一遍" |
-| `canCheckin` | 未打卡 + 有确认 | 📅 今日可打卡 | ✅ | （无） |
-| `checked` | 已打卡 | ✅ 今日已打卡 · 连续 N 天 | ❌ | 鼓励语 + 明日建议 + 🗣️ 去会话背诵 |
-
-状态联动：
-- 监听 `minna:stats-update` 事件（`LessonConfirmAction` 点击时 dispatch）→ 自动刷新确认状态
-- `useCallback` 封装 `refresh()`，避免重复渲染
-- 打卡后 `canCheckin` 自动变 `false`
+#### 增强 "📜 最近学习记录"
+- 完成事件（stage_complete / review_complete / save_recording / speech_scored / quiz_answer）：✅ 绿色文字
+- 浏览事件（view_content / play_source_audio / reveal_answer）：👁️ 灰色半透明
+- 其他事件：📝 普通样式
 
 ## 6. 验证结果
 
 - **npm run audit**：PASS，50/50 全部 OK。
 - **npm run build**：通过。
 - **本地验证**：所有验证页面返回 200。
+  - `/toolbox` — 200（含新面板）
   - `/lessons/1` — 200
   - `/lessons/1/deep-dive` — 200
   - `/lessons/1/practice?stage=conversation` — 200
   - `/lessons/1/practice?stage=conversation_vocab` — 200
-  - `/lessons/2` — 200
-  - `/toolbox` — 200
 
 ## 7. Git 信息
 
 - **git status**：任务开始前 clean。
-- **commit hash**：4fef409
-- **commit message**：`feat: require learning action before lesson checkin`
+- **commit hash**：待提交
+- **commit message**：`ux: distinguish viewed and completed learning records`
 - **是否 push**：待完成
 - **是否 Vercel 部署完成**：待完成
 
@@ -84,10 +83,11 @@
 
 ## 9. 风险和后续建议
 
-- 本次只改了课程页（`/lessons/{n}`）的打卡按钮。首页（`/`）和工具箱（`/toolbox`）的打卡按钮仍是无条件打卡。后续应在 Task E 或独立任务中对齐。
-- 有效动作只检测 `minna-confirmed-*` localStorage key，不包括 quiz/recording/review 等其他潜在有效动作。后续可扩展 `hasAnyConfirmation()`。
-- 未改 0/4 算法、积分系统、学习中心统计。打卡和学习完成仍然是两个独立系统。
+- 今日完成面板只读取 `minna-confirmed-*` localStorage key，不包括 IndexedDB 中的 quiz_answer / save_recording 等事件。后续可考虑扩展 `getConfirmedActions()` 以包含这些。
+- 今日学习 stats 仍然展示全部事件数（包括浏览），未区分浏览/完成。后续可考虑拆分。
+- 0/4 算法和打卡触发规则未改动。
+- 首页（`/`）的进度展示未改动。
 
 ## 10. 本次结论
 
-完成。`npm run audit`、`npm run build`、本地验证均通过。课程页打卡按钮已改为"先完成一个学习动作 → 今日可打卡 → 今日已打卡"三段式状态。
+完成。`npm run audit`、`npm run build`、本地验证均通过。学习中心已开始区分浏览过和完成过。

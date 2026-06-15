@@ -6,6 +6,8 @@ import { getTopWeaknesses, getTodayStats, type LearningWeaknessItem } from '@/li
 import { getRecentLearningEvents, type LearningEvent } from '@/lib/learning-event-log'
 import { getCheckinSummaryMessage } from '@/lib/learning-encouragement'
 import { EVENT_TYPE_LABELS } from '@/lib/learning-content'
+import { getConfirmedActions, type ConfirmedAction } from '@/lib/learning-confirmations'
+import { getLocalLearningSummary } from '@/lib/learning-cloud-sync'
 
 type Lang = 'zh' | 'en'
 type TodayStats = {
@@ -35,6 +37,15 @@ export default function LearningDashboard({ lang }: { lang: Lang }) {
   const [weaknesses, setWeaknesses] = useState<LearningWeaknessItem[]>([])
   const [recentEvents, setRecentEvents] = useState<LearningEvent[]>([])
   const [showRecent, setShowRecent] = useState(false)
+  const [confirmedActions, setConfirmedActions] = useState<ConfirmedAction[]>([])
+  const [checkedIn, setCheckedIn] = useState(false)
+
+  function refreshConfirmed() {
+    setConfirmedActions(getConfirmedActions())
+    const s = getLocalLearningSummary()
+    const today = new Date().toISOString().slice(0, 10)
+    setCheckedIn(s.lastStudyDate === today)
+  }
 
   useEffect(() => {
     getTodayStats().then(setTodayStats).catch(() => {})
@@ -44,6 +55,9 @@ export default function LearningDashboard({ lang }: { lang: Lang }) {
       return s.lastLesson || 1
     } catch { return 1 } })()
     getTopWeaknesses(last, 5).then(setWeaknesses).catch(() => {})
+    refreshConfirmed()
+    window.addEventListener('minna:stats-update', refreshConfirmed)
+    return () => window.removeEventListener('minna:stats-update', refreshConfirmed)
   }, [])
 
   const summaryMsg = todayStats ? getCheckinSummaryMessage(todayStats) : ''
@@ -85,6 +99,55 @@ export default function LearningDashboard({ lang }: { lang: Lang }) {
               <p style={{ margin: '8px 0 0', fontSize: 13, color: '#166534', lineHeight: 1.5 }}>💬 {summaryMsg}</p>
             ) : null}
           </>
+        )}
+      </section>
+
+      <section className="card" style={{ background: '#f0fdf4', borderColor: '#bbf7d0' }}>
+        <h3 style={{ margin: '0 0 8px', fontSize: 15 }}>
+          {t(lang, '✅ 今日完成', '✅ Today\'s Completed')}
+        </h3>
+        {confirmedActions.length === 0 && !checkedIn ? (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <p style={{ margin: 0, fontSize: 13, lineHeight: 1.6, color: '#64748b' }}>
+              {t(lang,
+                '还没有完成的有效学习动作。先去课程里点一次"我看懂了 / 我听完了 / 我能跟读一遍"吧。',
+                'No completed actions yet. Try clicking "I\'ve understood" or "I\'ve listened" in a lesson first.')}
+            </p>
+            <Link href="/lessons/1" className="btn" style={{ alignSelf: 'flex-start', fontSize: 13, padding: '8px 14px' }}>
+              {t(lang, '去第 1 课 →', 'Go to Lesson 1 →')}
+            </Link>
+          </div>
+        ) : (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+            {confirmedActions.map((a) => (
+              <div key={`${a.lessonNo}-${a.actionKey}`} style={{
+                display: 'flex', alignItems: 'center', gap: 8, fontSize: 13,
+                padding: '4px 0',
+              }}>
+                <span style={{ color: '#16a34a', fontSize: 16 }}>✅</span>
+                <div>
+                  <span style={{ fontWeight: 600 }}>
+                    {t(lang, `${a.labelZh}`, `${a.labelEn}`)}
+                  </span>
+                  <span className="small" style={{ color: '#64748b', marginLeft: 6 }}>
+                    {t(lang, `第 ${a.lessonNo} 课`, `Lesson ${a.lessonNo}`)}
+                  </span>
+                </div>
+              </div>
+            ))}
+            {checkedIn ? (
+              <div style={{
+                display: 'flex', alignItems: 'center', gap: 8, fontSize: 13,
+                padding: '4px 0', borderTop: confirmedActions.length > 0 ? '1px dashed #d1d5db' : 'none',
+                marginTop: confirmedActions.length > 0 ? 4 : 0, paddingTop: confirmedActions.length > 0 ? 8 : 0,
+              }}>
+                <span style={{ color: '#16a34a', fontSize: 16 }}>📅</span>
+                <span style={{ fontWeight: 600 }}>
+                  {t(lang, `今日已打卡`, `Checked in today`)}
+                </span>
+              </div>
+            ) : null}
+          </div>
         )}
       </section>
 
@@ -154,24 +217,38 @@ export default function LearningDashboard({ lang }: { lang: Lang }) {
             </div>
           ) : (
             <div style={{ padding: '0 16px 12px', display: 'flex', flexDirection: 'column', gap: 4, fontSize: 13 }}>
-              {recentEvents.slice(0, 10).map((e, i) => (
-                <div key={e.id ?? i} style={{ display: 'flex', gap: 6, padding: '3px 0', borderBottom: i < Math.min(recentEvents.length, 10) - 1 ? '1px solid #f1f5f9' : 'none' }}>
-                  <span className="small" style={{ minWidth: 32, fontSize: 11, color: '#94a3b8' }}>
-                    {formatEventTime(e.createdAt)}
-                  </span>
-                  <span style={{ fontSize: 12, color: '#64748b', minWidth: 70 }}>
-                    {EVENT_TYPE_LABELS[e.eventType as keyof typeof EVENT_TYPE_LABELS]?.zh || e.eventType}
-                  </span>
-                  <span style={{ fontSize: 12, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', flex: 1 }}>
-                    {e.contentText || e.contentId}
-                  </span>
-                  {e.score != null && e.score > 0 ? (
-                    <span style={{ fontSize: 11, fontWeight: 600, color: scoreColor(e.score) }}>
-                      {e.score}
+              {recentEvents.slice(0, 10).map((e, i) => {
+                const isCompleted = ['stage_complete', 'review_complete', 'save_recording', 'speech_scored', 'quiz_answer'].includes(e.eventType)
+                const isView = ['view_content', 'play_source_audio', 'reveal_answer'].includes(e.eventType)
+                return (
+                  <div key={e.id ?? i} style={{
+                    display: 'flex', gap: 6, padding: '3px 0',
+                    borderBottom: i < Math.min(recentEvents.length, 10) - 1 ? '1px solid #f1f5f9' : 'none',
+                    opacity: isView ? 0.7 : 1,
+                  }}>
+                    <span style={{ fontSize: 14, minWidth: 20, textAlign: 'center' }}>
+                      {isCompleted ? '✅' : isView ? '👁️' : '📝'}
                     </span>
-                  ) : null}
-                </div>
-              ))}
+                    <span className="small" style={{ minWidth: 32, fontSize: 11, color: '#94a3b8' }}>
+                      {formatEventTime(e.createdAt)}
+                    </span>
+                    <span style={{
+                      fontSize: 12, color: isCompleted ? '#16a34a' : '#64748b', minWidth: 70,
+                      fontWeight: isCompleted ? 500 : 400,
+                    }}>
+                      {EVENT_TYPE_LABELS[e.eventType as keyof typeof EVENT_TYPE_LABELS]?.zh || e.eventType}
+                    </span>
+                    <span style={{ fontSize: 12, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', flex: 1, color: '#334155' }}>
+                      {e.contentText || e.contentId}
+                    </span>
+                    {e.score != null && e.score > 0 ? (
+                      <span style={{ fontSize: 11, fontWeight: 600, color: scoreColor(e.score) }}>
+                        {e.score}
+                      </span>
+                    ) : null}
+                  </div>
+                )
+              })}
             </div>
           )}
         </div>

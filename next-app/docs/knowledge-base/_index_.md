@@ -215,3 +215,11 @@ tags:
 - **验证页面**：`/lessons/1`、`/lessons/1/deep-dive`、`/lessons/1/practice?stage=conversation`、`/lessons/1/practice?stage=conversation_vocab`、`/lessons/2`、`/toolbox`（均 200）
 - **学习主线影响**：正向增强。打卡从无条件按钮变为基于有效学习动作的主动提示，确认前不显示可打卡状态。
 - **commit hash**：4fef409
+
+### 2026-06-15 — 学习中心区分浏览过和完成过（Task E）
+
+- **优化内容**：增强 /toolbox 学习中心展示。新增"✅ 今日完成"面板，读取 `minna-confirmed-*` localStorage key 显示已确认的动作列表（如中文理解、会话视频、关键词汇等），已打卡也显示在内。增强"📜 最近学习记录"面板，用图标和颜色区分：浏览事件 👁️ 灰色半透明、完成事件 ✅ 绿色加粗、其他事件 📝 普通。无完成动作时提示"先去课程里点一次我看懂了/我听完了/我能跟读一遍"。扩展 `learning-confirmations.ts` 新增 `getConfirmedActions()`、`parseConfirmedKey()` 和 `ACTION_LABELS`。
+- **修改文件**：`learning-confirmations.ts`、`learning-dashboard.tsx`、`opencode-latest-report.md`、`_index_.md`
+- **验证页面**：`/toolbox`、`/lessons/1`、`/lessons/1/deep-dive`、`/lessons/1/practice?stage=conversation`、`/lessons/1/practice?stage=conversation_vocab`（均 200）
+- **学习主线影响**：不影响 0/4 算法、打卡逻辑、积分或数据结构。仅增强学习中心展示，区分浏览过和完成过。
+- **commit hash**：待提交
