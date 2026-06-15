@@ -62,9 +62,9 @@ tags:
 | [[功能模块映射]] | 页面 ↔ 组件 ↔ 数据流关系 |
 | [[Supabase数据库与权限]] | 表结构、列、权限角色 |
 | [[管理员后台]] | 审计、检索、CSV 导出 |
+| [[旧分支后台能力提取计划]] | legacy 分支后台能力 + 提取计划 |
 | [[学习状态与云端同步]] | localStorage ↔ Supabase 双向同步机制 |
 | [[本地存储键值表]] | 所有 localStorage key 速查 |
-| [[管理员后台]] | 审计页面入口 |
 | [[会话背诵系统]] | 会话背诵流程与 UI |
 
 ## 外部参考
@@ -230,3 +230,12 @@ tags:
 - **修改文件**：新增 `admin-system-current-state-audit.md`、更新 `opencode-latest-report.md`、`_index_.md`
 - **学习主线影响**：无。未修改任何功能代码。
 - **commit hash**：5db0f43
+
+### 2026-06-15 — 旧分支后台能力深度追溯 + 提取计划
+
+- **优化内容**：完全只读审查 `remotes/origin/lesson1-comfyui-automation` 分支的后台系统。审查了 50+ 个文件（22+ admin 页面、19+ API 路由、10+ 组件、11+ lib 文件）。发现完整的审批/流程/论坛/草稿/邮件后台功能。产出两份报告：
+  - `admin-system-deep-trace-audit.md`：全项目后台能力深度追溯（含 master/旧分支/文档/SQL 对比）
+  - `admin-legacy-branch-extraction-plan.md`：旧分支后台能力提取计划（含 7 个维度分析、5 个 Task 推荐顺序、5 类风险评估）
+- **修改文件**：新增 `admin-system-deep-trace-audit.md`、`admin-legacy-branch-extraction-plan.md`、更新 `opencode-latest-report.md`、`_index_.md`
+- **学习主线影响**：无。未修改任何功能代码。
+- **commit hash**：待提交
