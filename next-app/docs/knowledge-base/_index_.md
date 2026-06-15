@@ -214,4 +214,4 @@ tags:
 - **修改文件**：新增 `learning-confirmations.ts`、修改 `lesson-checkin-button.tsx`、`opencode-latest-report.md`、`_index_.md`
 - **验证页面**：`/lessons/1`、`/lessons/1/deep-dive`、`/lessons/1/practice?stage=conversation`、`/lessons/1/practice?stage=conversation_vocab`、`/lessons/2`、`/toolbox`（均 200）
 - **学习主线影响**：正向增强。打卡从无条件按钮变为基于有效学习动作的主动提示，确认前不显示可打卡状态。
-- **commit hash**：待提交
+- **commit hash**：4fef409

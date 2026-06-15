@@ -72,7 +72,7 @@
 ## 7. Git 信息
 
 - **git status**：任务开始前 clean。
-- **commit hash**：待提交
+- **commit hash**：4fef409
 - **commit message**：`feat: require learning action before lesson checkin`
 - **是否 push**：待完成
 - **是否 Vercel 部署完成**：待完成
