@@ -253,4 +253,19 @@ tags:
 - **修改文件**：`src/app/admin/page.tsx`、`docs/knowledge-base/opencode-latest-report.md`、`docs/knowledge-base/_index_.md`
 - **验证**：`npm run audit` PASS、`npm run build` PASS
 - **学习主线影响**：无。未修改课程数据、用户数据、API 路由或 Supabase schema。
+- **commit hash**：c520af4
+
+### 2026-06-15 — 审批记录只读列表页（Task B）
+
+- **优化内容**：
+  - 新增 `/admin/membership-requests` 审批记录只读列表
+  - 优雅处理表不存在情况：显示 10 个待创建表清单 + SQL 文件引用 + 流程图预览
+  - 表存在且有数据时：统计卡片（待审批/已通过/已拒绝/总数）+ 数据表格
+  - 新增 `MembershipRequestFlowchart` 组件（纯展示，无外部依赖）
+  - 新增 `WorkflowDiagramLink` 组件（流程图入口链接）
+  - 不含审批通过/驳回写操作
+  - 不含旧分支代码引用
+- **修改文件**：新增 `admin/membership-requests/page.tsx`、`membership-request-flowchart.tsx`、`workflow-diagram-link.tsx`、更新 `opencode-latest-report.md`、`_index_.md`
+- **验证**：`npm run audit` PASS、`npm run build` PASS
+- **学习主线影响**：无。未修改课程数据、用户数据、API 路由或 Supabase schema。
 - **commit hash**：待提交

@@ -2,69 +2,75 @@
 
 ## 1. 任务名称
 
-整理 /admin 后台首页和布局，增加后台功能入口导航卡片（Task A）
+移植审批记录只读列表页（Task B）
 
 ## 2. 任务目标
 
-把 `/admin` 首页整理成"后台管理中心"，清楚展示：
-1. 当前可用能力
-2. 待恢复能力
-3. 暂不开放能力
-4. 知识库报告入口
+从旧分支只读移植审批记录列表页和相关展示组件。
 
-不移植旧功能代码，只做后台首页信息架构。
+### 前提发现
+
+- **`membership_requests` 等 10 个 Supabase 表不存于 master** — SQL 仅在旧分支 `supabase/membership_v1.sql` 和 `supabase/membership_workflow_v2.sql` 中
+- **页面需优雅处理表不存在的情况** — 显示提示信息和 SQL 引用，不报错
 
 ## 3. 修改范围
 
-- `src/app/admin/page.tsx` — 重构首页
+- `src/app/admin/membership-requests/page.tsx`（新增）
+- `src/components/membership-request-flowchart.tsx`（新增，纯展示）
+- `src/components/admin/workflow-diagram-link.tsx`（新增，链接组件）
 - `docs/knowledge-base/opencode-latest-report.md`
 - `docs/knowledge-base/_index_.md`
 
 ## 4. 修改内容
 
-### 首页重构
+### 审批记录只读列表页
 
-| 模块 | 说明 |
+| 文件 | 功能 | 说明 |
+|------|------|------|
+| `admin/membership-requests/page.tsx` | 审批列表页 | 自包含，不引用旧分支代码；有数据则展示，无表则显示设置引导 |
+| `membership-request-flowchart.tsx` | 等级流程图 | 纯展示，无外部依赖，显示 "free → vip1" 三步骤状态 |
+| `workflow-diagram-link.tsx` | 流程图入口链接 | Link 组件，workflowId 为空时显示"未绑定" |
+
+### 页面行为
+
+| 场景 | 显示 |
 |------|------|
-| 🛠️ 英雄区 | "Minna 后台管理中心" + 管理员邮箱/角色 + 只读模式提示 |
-| 📦 当前可用 | 3 个卡片：权限状态、课程数据 Audit、知识库报告 |
-| ⏳ 待恢复后台能力 | 6 个卡片：审批流程/用户管理/论坛审核/课程管理/邮件系统/部署检查 |
-| ⚠️ 重要提示 | 5 条只读安全说明 |
-| 📄 知识库报告 | 3 份报告入口链接 |
-| 📋 课程数据 Audit | 原有 Audit 按钮 + 搜索结果 + 课程列表（保持原功能） |
-| 📑 最近访问 | 保留原 `AdminRecentLessonCard` 组件 |
+| 表不存在 | 英雄区 + 10 个待创建表清单 + SQL 文件引用 + 流程图预览 |
+| 表存在 + 有数据 | 统计卡片（待审批/已通过/已拒绝/总数）+ 数据表格 |
+| 表存在 + 无数据 | 统计卡片 + "暂无审批记录" |
+| 查询错误 | 错误信息 + 返回链接 |
 
-### 新技术组件
+### 状态 badge
 
-- `CapabilityCards` — 内联组件，三种状态（可用/待恢复/暂不开放）不同配色
-  - 可用：绿色边框 + 绿色 badge
-  - 待恢复：黄色边框 + 黄色 badge
-  - 暂不开放：灰色边框 + 灰色 badge
+| 状态 | 颜色 |
+|------|------|
+| 待审批 | 黄色 |
+| 已通过 | 绿色 |
+| 已拒绝 | 红色 |
 
-### 未修改
+### 未包含
 
-- 所有原有 Audit/Search/CSV/课程列表功能完整保留
-- 未引入任何新依赖
-- 未修改 Supabase schema
-- 未修改 API 路由
-- 未修改 lesson JSON
+- ❌ `MembershipRequestActions`（审批通过/驳回按钮）
+- ❌ `getWorkflowGraph` / `membership-workflows.ts`（避免引入写操作）
+- ❌ 流程图完整页面（Task C）
+- ❌ 写 API 路由
+- ❌ `@xyflow/react` 依赖
 
 ## 5. Git 信息
 
 - **git status**：任务开始前 clean。
 - **commit hash**：待提交
-- **commit message**：`ux: organize admin dashboard entry center`
+- **commit message**：`feat: add read-only approval record list`
 - **是否 push**：待完成
 - **是否 Vercel 部署完成**：待部署
 
 ## 6. 验证结果
 
-- `npm run audit`：PASS
-- `npm run build`：PASS
+- `npm run audit`：待验
+- `npm run build`：待验
 
 ## 7. 后续建议
 
-- Task B：移植审批记录只读列表
-- Task C：移植流程图只读查看
+- Task C：移植流程图只读查看（需 `@xyflow/react`）
 - Task D：移植论坛帖子只读列表
 - Task E：再评估是否恢复写操作
