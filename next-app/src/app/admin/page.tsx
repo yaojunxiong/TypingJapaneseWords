@@ -459,15 +459,16 @@ export default async function AdminPage({
       status: 'available',
       href: '/admin/membership-requests',
     },
-  ]
-
-  const pendingCapabilities: CapabilityCard[] = [
     {
       icon: '👥',
       label: tr(lang, '用户管理', 'User Management'),
-      description: tr(lang, '旧分支存在，待确认安全字段后移植', 'Legacy branch has user list, pending security review'),
-      status: 'pending',
+      description: tr(lang, '当前可用：只读用户列表。查看用户角色和创建时间，不支持角色修改与删除。', 'Read-only user list. View roles and creation time. No role modification or deletion.'),
+      status: 'available',
+      href: '/admin/users',
     },
+  ]
+
+  const pendingCapabilities: CapabilityCard[] = [
     {
       icon: '💬',
       label: tr(lang, '论坛审核', 'Forum Moderation'),

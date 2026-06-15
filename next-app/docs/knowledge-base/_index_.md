@@ -281,4 +281,20 @@ tags:
 - **修改文件**：`src/app/admin/page.tsx`、`docs/knowledge-base/opencode-latest-report.md`、`docs/knowledge-base/_index_.md`
 - **验证**：`npm run audit` PASS、`npm run build` PASS
 - **学习主线影响**：无。仅首页文案和布局调整。
+- **commit hash**：6fabace
+
+### 2026-06-15 — 恢复用户管理只读列表（Task C）
+
+- **优化内容**：
+  - 新增 `/admin/users` 只读用户列表页
+  - 查询 `user_roles` 表，展示邮箱、角色（颜色 badge）、创建时间、更新时间
+  - `user_roles` 表不存在时优雅降级：显示需要创建的 SQL 定义 + 待恢复功能清单
+  - 受 `checkAdminAccess` 保护，非管理员不可访问
+  - 不含角色修改、删除、禁用按钮
+  - /admin 首页"用户管理"从"待恢复"区移至"当前可用"区
+  - 待恢复区保留：论坛审核、课程内容管理、邮件/通知系统、部署与系统检测
+- **修改文件**：新增 `admin/users/page.tsx`、修改 `admin/page.tsx`、更新 `opencode-latest-report.md`、`_index_.md`
+- **验证**：`npm run audit` PASS、`npm run build` PASS，6 个 admin 路由全部编译
+- **学习主线影响**：无。仅后台管理，不影响 `/lessons`、`/toolbox`、打卡、确认动作和 0/4 算法。
 - **commit hash**：待提交
+
