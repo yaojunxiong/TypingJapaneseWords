@@ -77,6 +77,14 @@ tags:
 
 ## 变更记录
 
+### 2026-06-15 — 优化账号入口与 /me 个人页
+
+- **优化内容**：右上角已登录头像/首字母继续进入 `/me`；`/me` 已登录时展示邮箱、用户 ID、登录方式，并新增退出登录按钮；未登录访问 `/me` 时显示请登录提示和 `/login` 按钮。
+- **修改文件**：新增 `account-sign-out-button.tsx`、修改 `me/page.tsx`、`opencode-latest-report.md`、`_index_.md`
+- **验证页面**：`/me`、`/login`、`/`、`/lessons/1`、`/toolbox`
+- **学习主线影响**：无。不修改课程数据、lesson 组件、toolbox、打卡逻辑、确认动作逻辑或 0/4 算法。
+- **commit hash**：提交后以 `git log -1` 为准
+
 ### 2026-06-15 — 新增 Email Magic Link 登录并隐藏 Apple
 
 - **优化内容**：`/login` 隐藏 Apple 登录入口，正式显示 Google 登录和 Email Magic Link 登录。新增邮箱输入框与“发送登录邮件”按钮，调用 Supabase `signInWithOtp()`，登录邮件回调默认返回 `/lessons`。发送成功后显示“登录邮件已发送，请打开邮箱完成登录。”

@@ -3,6 +3,7 @@ import { revalidatePath } from 'next/cache'
 import { cookies } from 'next/headers'
 import { createClient } from '@/utils/supabase/server'
 import MinnaNav from '@/components/minna-nav'
+import AccountSignOutButton from '@/components/account-sign-out-button'
 import {
   hasSupabasePublicEnv,
   getSupabaseMissingEnvMessage
@@ -30,6 +31,14 @@ type LearningStateRow = {
 
 type LearningMistakesRow = {
   mistakes: unknown[] | null
+}
+
+function getLoginMethod(user: { app_metadata?: { provider?: unknown; providers?: unknown } }) {
+  const provider = String(user.app_metadata?.provider || '').trim()
+  if (provider) return provider
+  const providers = user.app_metadata?.providers
+  if (Array.isArray(providers) && providers.length > 0) return providers.map((item) => String(item)).join(', ')
+  return 'email'
 }
 
 async function initProfile() {
@@ -69,7 +78,7 @@ export default async function MePage() {
         <h1>{tr(lang, '我的', 'Me')}</h1>
         <section className="card">
           <p className="small">{tr(lang, '云端账号未配置', 'Cloud account is not configured')}：{getSupabaseMissingEnvMessage()}</p>
-          <p><Link href="/login">{tr(lang, '去登录', 'Sign in')}</Link></p>
+          <p><Link className="btn" href="/login">{tr(lang, '去登录', 'Sign in')}</Link></p>
         </section>
       </main>
     )
@@ -87,7 +96,7 @@ export default async function MePage() {
         <h1>{tr(lang, '我的', 'Me')}</h1>
         <section className="card">
           <p className="small">{tr(lang, '你还没有登录，请先登录后查看云端资料。', 'You are not signed in yet. Sign in first to view cloud data.')}</p>
-          <p><Link href="/login">{tr(lang, '去登录', 'Sign in')}</Link></p>
+          <p><Link className="btn" href="/login">{tr(lang, '去登录', 'Sign in')}</Link></p>
         </section>
       </main>
     )
@@ -128,7 +137,9 @@ export default async function MePage() {
       <section className="card">
         <h2>{tr(lang, '账号信息', 'Account')}</h2>
         <p className="small">{tr(lang, '邮箱', 'Email')}：{user.email || tr(lang, '(无邮箱)', '(No email)')}</p>
-        <p className="small">UID：{user.id}</p>
+        <p className="small">{tr(lang, '用户 ID', 'User ID')}：<code className="code">{user.id}</code></p>
+        <p className="small">{tr(lang, '登录方式', 'Sign-in method')}：{getLoginMethod(user)}</p>
+        <AccountSignOutButton lang={lang} />
       </section>
 
       <section className="card">
