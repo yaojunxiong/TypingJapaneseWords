@@ -198,4 +198,12 @@ tags:
 - **修改文件**：新增 `lesson-confirm-action.tsx`、修改 `lesson-deep-dive.tsx`、`lessons/[lessonNo]/page.tsx`、`lesson-conversation-client.tsx`、`opencode-latest-report.md`、`_index_.md`
 - **验证页面**：`/lessons/1`、`/lessons/1/deep-dive`、`/lessons/1/practice?stage=conversation`、`/lessons/2`、`/toolbox`（均 200）
 - **学习主线影响**：正向增强。用户可主动确认完成，但确认不改变打卡、积分或 0/4。
+- **commit hash**：4c1e943
+
+### 2026-06-15 — 新增拆解记忆阶段确认按钮（Task C）
+
+- **优化内容**：在 conversation_vocab 增加"我记住关键词了"、conversation_grammar 增加"我理解句型了"、conversation_examples 增加"我会替换说一句了"。点击后使用 localStorage 记录确认状态，不自动打卡，不改变 0/4 数值。
+- **修改文件**：`practice/page.tsx`、`opencode-latest-report.md`、`_index_.md`
+- **验证页面**：`/lessons/1/practice?stage=conversation_vocab`、`/lessons/1/practice?stage=conversation_grammar`、`/lessons/1/practice?stage=conversation_examples`、`/lessons/2/practice?stage=conversation_vocab`、`/lessons/1`、`/toolbox`（均 200）
+- **学习主线影响**：正向增强。用户可主动确认拆解完成，但不改变打卡、积分或 0/4。
 - **commit hash**：待提交

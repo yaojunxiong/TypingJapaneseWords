@@ -9,6 +9,7 @@ import LessonConversationExamplesClient from '@/components/lesson-conversation-e
 import LessonConversationQuizClient from '@/components/lesson-conversation-quiz-client'
 import LessonReturnNav from '@/components/lesson-return-nav'
 import LessonFlowActions from '@/components/lesson-flow-actions'
+import LessonConfirmAction from '@/components/lesson-confirm-action'
 import { getLang, type Lang } from '@/lib/i18n'
 
 type LangText = { zh?: string; en?: string; ja?: string; jp?: string }
@@ -84,6 +85,14 @@ export default async function LessonPracticePage({
         <MinnaNav active="lessons" />
         <LessonReturnNav lessonNo={no} lang={lang} />
         <LessonConversationVocabClient lessonNo={no} lang={lang} items={items} />
+        <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: 8 }}>
+          <LessonConfirmAction
+            lessonNo={no}
+            actionKey="vocab"
+            buttonText={lang === 'en' ? 'I remember the keywords' : '我记住关键词了'}
+            confirmedText={lang === 'en' ? 'Keywords remembered' : '已记住关键词'}
+          />
+        </div>
         <LessonFlowActions lessonNo={no} lang={lang} stage={s} />
       </main>
     )
@@ -106,6 +115,14 @@ export default async function LessonPracticePage({
         <MinnaNav active="lessons" />
         <LessonReturnNav lessonNo={no} lang={lang} />
         <LessonConversationGrammarClient lessonNo={no} lang={lang} items={items} />
+        <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: 8 }}>
+          <LessonConfirmAction
+            lessonNo={no}
+            actionKey="grammar"
+            buttonText={lang === 'en' ? 'I understand the pattern' : '我理解句型了'}
+            confirmedText={lang === 'en' ? 'Pattern understood' : '已理解句型'}
+          />
+        </div>
         <LessonFlowActions lessonNo={no} lang={lang} stage={s} />
       </main>
     )
@@ -133,6 +150,14 @@ export default async function LessonPracticePage({
         <MinnaNav active="lessons" />
         <LessonReturnNav lessonNo={no} lang={lang} />
         <LessonConversationExamplesClient lessonNo={no} lang={lang} items={items} />
+        <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: 8 }}>
+          <LessonConfirmAction
+            lessonNo={no}
+            actionKey="examples"
+            buttonText={lang === 'en' ? 'I can substitute a sentence' : '我会替换说一句了'}
+            confirmedText={lang === 'en' ? 'Can substitute' : '已会替换'}
+          />
+        </div>
         <LessonFlowActions lessonNo={no} lang={lang} stage={s} />
       </main>
     )

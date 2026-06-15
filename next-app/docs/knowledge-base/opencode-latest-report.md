@@ -2,21 +2,18 @@
 
 ## 1. 任务名称
 
-给中文理解、会话视频、会话原文增加轻量确认按钮（Task B）
+给词汇、语法、替换例句增加"完成拆解"确认动作（Task C）
 
 ## 2. 任务目标
 
-为学习主线前三个入口增加主动确认动作，避免只浏览页面就被误认为完成：
-1. 中文理解 → "我看懂了"确认按钮
-2. 会话视频 → "我听完了"确认按钮
-3. 会话原文 → "我能跟读一遍"确认按钮
+为拆解记忆阶段（会话关键词汇、会话核心语法、会话替换例句）增加主动确认动作：
+1. 词汇 → "我记住关键词了" → "已记住关键词"
+2. 语法 → "我理解句型了" → "已理解句型"
+3. 例句 → "我会替换说一句了" → "已会替换"
 
 ## 3. 修改范围
 
-- `src/components/lesson-confirm-action.tsx`（新增）
-- `src/components/lesson-deep-dive.tsx`（嵌入 "我看懂了"）
-- `src/app/lessons/[lessonNo]/page.tsx`（嵌入 "我听完了"）
-- `src/components/lesson-conversation-client.tsx`（嵌入 "我能跟读一遍"）
+- `src/app/lessons/[lessonNo]/practice/page.tsx`
 - `docs/knowledge-base/opencode-latest-report.md`
 - `docs/knowledge-base/_index_.md`
 
@@ -30,40 +27,38 @@
 - 0/4 crown 计算算法 — 未改动
 - 顶部积分逻辑 — 未改动
 - 打卡底层逻辑 — 未改动
-- 视频播放器核心逻辑 — 未改动
 - 学习中心统计逻辑 — 未改动
-- IndexedDB / localStorage key（未修改现有 key）— 未改动
+- 视频播放器核心逻辑 — 未改动
 
 ## 5. 主要改动
 
-### 新增：`lesson-confirm-action.tsx`
-通用轻量确认按钮组件，接收 `lessonNo`、`actionKey`、`buttonText`、`confirmedText` 四个 props。使用 localStorage key `minna-confirmed-{lessonNo}-{actionKey}` 存储确认状态。点击后切换为 ✅ 已完成状态。不自动打卡，不改变 0/4 数值。
+在 `practice/page.tsx` 的三个 return 块中分别嵌入 `<LessonConfirmAction>`：
 
-### 中文理解：Deep Dive 页面
-在底部"理解之后，回到主线练习"卡片中新增"我看懂了"按钮。按钮位于导航链接上方。
+| stage | 按钮文案 | 已确认文案 | localStorage key |
+|---|---|---|---|
+| `conversation_vocab` | ☑️ 我记住关键词了 | ✅ 已记住关键词 | `minna-confirmed-{n}-vocab` |
+| `conversation_grammar` | ☑️ 我理解句型了 | ✅ 已理解句型 | `minna-confirmed-{n}-grammar` |
+| `conversation_examples` | ☑️ 我会替换说一句了 | ✅ 已会替换 | `minna-confirmed-{n}-examples` |
 
-### 会话视频：课程详情页
-在"原视频跟读"卡片内，视频播放器下方新增"我听完了"按钮，靠右对齐。
-
-### 会话原文：会话背诵页面
-在 completion 页面（所有句子标记完成后）的"重新练习全部"等按钮下方新增"我能跟读一遍"按钮。
+按钮位置：每个 stage 的客户端组件与底部 `<LessonFlowActions>` 之间，靠右对齐。复用已有的 `LessonConfirmAction` 组件。
 
 ## 6. 验证结果
 
 - **npm run audit**：PASS，50/50 全部 OK。
 - **npm run build**：通过。
 - **本地验证**：所有验证页面返回 200。
-  - `/lessons/1` — 200，页面包含"我听完了"/"已听完"
-  - `/lessons/1/deep-dive` — 200，页面包含"我看懂了"
-  - `/lessons/1/practice?stage=conversation` — 200
-  - `/lessons/2` — 200
+  - `/lessons/1/practice?stage=conversation_vocab` — 200
+  - `/lessons/1/practice?stage=conversation_grammar` — 200
+  - `/lessons/1/practice?stage=conversation_examples` — 200
+  - `/lessons/2/practice?stage=conversation_vocab` — 200
+  - `/lessons/1` — 200
   - `/toolbox` — 200
 
 ## 7. Git 信息
 
 - **git status**：任务开始前 clean。
 - **commit hash**：待提交
-- **commit message**：`feat: add confirmation actions for core lesson steps`
+- **commit message**：`feat: add confirmation actions for breakdown steps`
 - **是否 push**：待完成
 - **是否 Vercel 部署完成**：待完成
 
@@ -75,8 +70,8 @@
 ## 9. 风险和后续建议
 
 - 本次只新增确认按钮，未接入 0/4 算法、打卡逻辑或积分系统。
-- 后续可按顺序执行 Task C（拆解记忆确认按钮）、Task D（打卡触发条件改为有效动作）、Task E（学习中心区分浏览/完成）。
+- 后续可按顺序执行 Task D（打卡触发条件改为有效动作）、Task E（学习中心区分浏览/完成）。
 
 ## 10. 本次结论
 
-完成。`npm run audit`、`npm run build`、本地验证均通过。前三个主线入口已增加主动确认动作，但未接入 0/4 算法。
+完成。`npm run audit`、`npm run build`、本地验证均通过。拆解记忆阶段已增加主动确认动作，但未接入 0/4 算法。
