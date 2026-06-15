@@ -229,4 +229,4 @@ tags:
 - **优化内容**：完全只读审查 `/admin` 后台管理系统现状。审查了 4 个路由、6 个 admin 组件、`admin-auth.ts`、`supabase/` 下 8 个 SQL 文件、所有角色/权限/RLS 相关代码。产出 `admin-system-current-state-audit.md` 详细报告，总结当前为只读审计后台，定义了后续 4 个恢复任务（A-D）。
 - **修改文件**：新增 `admin-system-current-state-audit.md`、更新 `opencode-latest-report.md`、`_index_.md`
 - **学习主线影响**：无。未修改任何功能代码。
-- **commit hash**：待提交
+- **commit hash**：5db0f43
