@@ -466,6 +466,13 @@ export default async function AdminPage({
       status: 'available',
       href: '/admin/users',
     },
+    {
+      icon: '🔍',
+      label: tr(lang, '系统检测与部署', 'System & Deployment'),
+      description: tr(lang, '当前可用：只读查看系统状态、已恢复模块和检测清单。', 'Read-only system status, restored modules, and checklist.'),
+      status: 'available',
+      href: '/admin/system',
+    },
   ]
 
   const pendingCapabilities: CapabilityCard[] = [
@@ -485,12 +492,6 @@ export default async function AdminPage({
       icon: '📧',
       label: tr(lang, '邮件/通知系统', 'Email & Notifications'),
       description: tr(lang, '旧分支存在，待评估数据源后移植', 'Legacy branch has email, pending data source review'),
-      status: 'pending',
-    },
-    {
-      icon: '🔍',
-      label: tr(lang, '部署与系统检测', 'Deployment Check'),
-      description: tr(lang, '旧分支存在部署检查页，待恢复报告入口', 'Legacy branch has env check, pending port'),
       status: 'pending',
     },
   ]

@@ -296,5 +296,20 @@ tags:
 - **修改文件**：新增 `admin/users/page.tsx`、修改 `admin/page.tsx`、更新 `opencode-latest-report.md`、`_index_.md`
 - **验证**：`npm run audit` PASS、`npm run build` PASS，6 个 admin 路由全部编译
 - **学习主线影响**：无。仅后台管理，不影响 `/lessons`、`/toolbox`、打卡、确认动作和 0/4 算法。
-- **commit hash**：待提交
+- **commit hash**：69c83ac
 
+### 2026-06-15 — 恢复系统检测与部署状态只读页（Task F）
+
+- **优化内容**：
+  - 新增 `/admin/system` 只读系统检测与部署状态页
+  - 展示当前系统状态（环境、域名、后台模式、Vercel Project）
+  - 当前后台可用路由列表（7 条）+ 最近恢复模块清单
+  - 检测清单（npm run audit / build / deploy / git status / 知识库报告）
+  - 知识库报告入口（5 份报告链接）
+  - 后续待恢复卡片区（论坛审核、课程管理、邮件系统、流程图查看）
+  - /admin 首页"系统检测与部署"从待恢复区移至当前可用区
+  - 留有待恢复区：论坛审核、课程内容管理、邮件/通知系统、流程图只读查看
+- **修改文件**：新增 `admin/system/page.tsx`、修改 `admin/page.tsx`、更新 `opencode-latest-report.md`、`_index_.md`
+- **验证**：`npm run audit` PASS、`npm run build` PASS，7 个 admin 路由全部编译
+- **学习主线影响**：无。仅后台管理，不执行 shell 命令、不查询数据库。
+- **commit hash**：待提交
