@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
-import { LEARNING_KEYS, markDailyCheckinLocal } from '@/lib/learning-cloud-sync'
+import { LEARNING_KEYS } from '@/lib/learning-cloud-sync'
 
 type Lang = 'zh' | 'en'
 
@@ -186,7 +186,6 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
   const [sfxOn, setSfxOn] = useState(true)
   const [combo, setCombo] = useState(0)
   const [burstText, setBurstText] = useState('')
-  const [checkedInOnce, setCheckedInOnce] = useState(false)
 
   const total = runtimeQuestions.length
   const current = runtimeQuestions[idx]
@@ -229,13 +228,9 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
       const h = Number(localStorage.getItem('minna.hearts.v1') || '')
       if (Number.isFinite(h)) setHearts(Math.max(0, h))
       else localStorage.setItem('minna.hearts.v1', '5')
-      if (!checkedInOnce) {
-        markDailyCheckinLocal()
-        setCheckedInOnce(true)
-      }
       window.dispatchEvent(new Event('minna:stats-update'))
     } catch {}
-  }, [lessonNo, checkedInOnce])
+  }, [lessonNo])
 
   useEffect(() => {
     try {

@@ -175,3 +175,11 @@ tags:
 - **修改文件**：新增 `learning-progress-confirmation-design.md`、更新 `opencode-latest-report.md`、更新 `_index_.md`
 - **验证页面**：不涉及功能代码修改。
 - **学习主线影响**：无。只读审查，未改任何功能代码。
+
+### 2026-06-15 — 取消 practice 页面自动打卡
+
+- **优化内容**：移除 `lesson-practice-client.tsx` 挂载时自动调用 `markDailyCheckinLocal()` 的行为。用户打开 practice 页面不再自动打卡；打卡恢复为用户主动动作（通过 `lesson-checkin-button.tsx`、`toolbox` 或 `home` 页面的按钮）。
+- **修改文件**：`lesson-practice-client.tsx`、`opencode-latest-report.md`、`_index_.md`
+- **验证页面**：`/lessons/1/practice?stage=conversation`、`/lessons/1/practice?stage=vocab`、`/lessons/1`、`/toolbox`（均 200）
+- **学习主线影响**：正向修复。打卡不再随页面打开自动触发，需要用户主动完成学习后点击按钮。
+- **commit hash**：待提交
