@@ -136,3 +136,42 @@ tags:
 - **验证页面**：`/lessons`、`/lessons/1`、`/toolbox`
 - **学习主线影响**：正向增强课程入口体验；不改权限、锁课、同步或打卡底层逻辑。
 - **commit hash**：0b20b00
+
+### 2026-06-14 — 新增会话动漫场景图
+
+- **优化内容**：为 lesson-01 到 lesson-30 添加动漫场景图（`conversation-anime-mobile.webp`），在 `/practice?stage=conversation` 页面通过 `fs.access` 检查后显示。lesson 31-50 因无原图而优雅跳过。
+- **修改文件**：`practice/page.tsx`、`public/minna/lessons/lesson-{01..30}/conversation-anime-mobile.webp`
+- **验证页面**：`/lessons/1/practice?stage=conversation`、`/lessons/31/practice?stage=conversation`
+- **学习主线影响**：无。有图显示、无图不报错。
+- **commit hash**：4f34ce1
+
+### 2026-06-14 — 新增学习入口返回导航（Task A）
+
+- **优化内容**：在 conversation practice 页面顶部新增 `<LessonReturnNav>`，显示"← 返回第 X 课"，链接到 `/lessons/{lessonNo}`。
+- **修改文件**：新增 `lesson-return-nav.tsx`、修改 `practice/page.tsx`
+- **验证页面**：`/lessons/1/practice?stage=conversation`、`/lessons/25/practice?stage=conversation`、`/lessons/50/practice?stage=conversation`
+- **学习主线影响**：正向增强闭环，不影响原有内容。
+- **commit hash**：631cf78
+
+### 2026-06-15 — 扩展返回导航到所有练习入口（Task B）
+
+- **优化内容**：将 `<LessonReturnNav>` 扩展到 conversation_vocab / conversation_grammar / conversation_examples / conversation_quiz 以及通用旧练习（vocab / grammar / examples / quiz / review）。
+- **修改文件**：`practice/page.tsx`
+- **验证页面**：9 个 stage 均有"返回第 X 课"
+- **学习主线影响**：正向增强闭环。
+- **commit hash**：1cff310
+
+### 2026-06-15 — 新增底部下一步推荐（Task C）
+
+- **优化内容**：新增 `<LessonFlowActions>` 组件，在 9 个练习入口底部显示"下一步推荐"导航（如 conversation→去会话核心语法、vocab→去语法练习、quiz→回到课程等）。
+- **修改文件**：新增 `lesson-flow-actions.tsx`、修改 `practice/page.tsx`
+- **验证页面**：9 个 stage 均有"下一步推荐"+"返回第 X 课"
+- **学习主线影响**：正向增强闭环，不影响原有内容。
+- **commit hash**：280cdac
+
+### 2026-06-15 — 全站学习进度判定设计报告
+
+- **优化内容**：只读产品设计审查，产出 `learning-progress-confirmation-design.md`，定义四层学习判定（浏览/完成/掌握/打卡）、四步核心闭环（理解→输入→拆解→输出）、9 个入口进度贡献表、打卡触发规则、顶部状态栏重设计、数据模型建议和 5 个可执行小任务。
+- **修改文件**：新增 `learning-progress-confirmation-design.md`、更新 `opencode-latest-report.md`、更新 `_index_.md`
+- **验证页面**：不涉及功能代码修改。
+- **学习主线影响**：无。只读审查，未改任何功能代码。
