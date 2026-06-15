@@ -9,6 +9,7 @@ import {
 import { parseTimeToSeconds } from '@/lib/parse-time'
 import { recordLearningEvent } from '@/lib/learning-event-log'
 import { getEncouragementMessage, getLessonCompletionMessage } from '@/lib/learning-encouragement'
+import LessonConfirmAction from '@/components/lesson-confirm-action'
 
 type ConversationItem = {
   id: string
@@ -332,6 +333,14 @@ export default function LessonConversationClient({ lessonNo, lang, items, videoU
                 {t(lang, `只练不熟 (${unfamiliarCount})`, `Practice Weak (${unfamiliarCount})`)}
               </button>
             ) : null}
+          </div>
+          <div style={{ marginTop: 12 }}>
+            <LessonConfirmAction
+              lessonNo={lessonNo}
+              actionKey="conversation"
+              buttonText={t(lang, '我能跟读一遍', 'I can shadow')}
+              confirmedText={t(lang, '已能跟读', 'Can shadow')}
+            />
           </div>
         </section>
       </div>

@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { LESSONS_1_50 } from '@/lib/minna-lessons'
 import type { DeepDive } from '@/types/deep-dive'
+import LessonConfirmAction from '@/components/lesson-confirm-action'
 
 function CollapsibleSection({ title, defaultOpen, children }: { title: string; defaultOpen?: boolean; children: React.ReactNode }) {
   const [open, setOpen] = useState(defaultOpen ?? false)
@@ -276,6 +277,16 @@ export default function DeepDiveViewer({
             ? 'Go back to the source video, then recite the conversation sentence by sentence.'
             : '先回原视频听原声跟读，再进入会话背诵。'}
         </p>
+        <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 14 }}>
+          {lessonNo != null && (
+            <LessonConfirmAction
+              lessonNo={lessonNo}
+              actionKey="understanding"
+              buttonText={lang === 'en' ? 'I understand' : '我看懂了'}
+              confirmedText={lang === 'en' ? 'Understood' : '已看懂'}
+            />
+          )}
+        </div>
         <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
           <Link className="btn" href={`/lessons/${lessonNo}`} style={{ padding: '12px 16px', fontSize: 15, minWidth: 160 }}>
             🎬 {lang === 'en' ? 'Back to Source Video' : '回到原视频跟读'}

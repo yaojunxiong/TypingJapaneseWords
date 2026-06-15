@@ -190,4 +190,12 @@ tags:
 - **修改文件**：`lessons-client.tsx`、`lessons/[lessonNo]/page.tsx`、`opencode-latest-report.md`、`_index_.md`
 - **验证页面**：`/lessons`、`/lessons/1`、`/lessons/2`、`/lessons/25`、`/toolbox`（均 200）
 - **学习主线影响**：无。仅文案说明，未改任何算法或数据。
+- **commit hash**：244a5b0
+
+### 2026-06-15 — 新增前三个主线入口确认按钮（Task B）
+
+- **优化内容**：新增通用 `lesson-confirm-action.tsx` 组件；中文理解页增加"我看懂了"、课程页视频区增加"我听完了"、会话原文 completion 页增加"我能跟读一遍"。点击后使用 localStorage 记录确认状态，不自动打卡，不改变 0/4 数值。
+- **修改文件**：新增 `lesson-confirm-action.tsx`、修改 `lesson-deep-dive.tsx`、`lessons/[lessonNo]/page.tsx`、`lesson-conversation-client.tsx`、`opencode-latest-report.md`、`_index_.md`
+- **验证页面**：`/lessons/1`、`/lessons/1/deep-dive`、`/lessons/1/practice?stage=conversation`、`/lessons/2`、`/toolbox`（均 200）
+- **学习主线影响**：正向增强。用户可主动确认完成，但确认不改变打卡、积分或 0/4。
 - **commit hash**：待提交

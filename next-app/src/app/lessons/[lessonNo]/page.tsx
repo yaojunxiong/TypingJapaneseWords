@@ -5,6 +5,7 @@ import MinnaNav from '@/components/minna-nav'
 import TopLabelSync from '@/components/top-label-sync'
 import LessonCheckinButton from '@/components/lesson-checkin-button'
 import LessonVideoFollowPlayer from '@/components/lesson-video-follow-player'
+import LessonConfirmAction from '@/components/lesson-confirm-action'
 import { LESSONS_1_50 } from '@/lib/minna-lessons'
 import { getLang, type Lang, tr } from '@/lib/i18n'
 
@@ -121,6 +122,14 @@ export default async function LessonDetailPage({
               />
             )
           })()}
+          <div style={{ marginTop: 12, display: 'flex', justifyContent: 'flex-end' }}>
+            <LessonConfirmAction
+              lessonNo={no}
+              actionKey="video"
+              buttonText={tr(lang, '我听完了', 'I\'ve listened')}
+              confirmedText={tr(lang, '已听完', 'Listened')}
+            />
+          </div>
         </section>
       ) : (
         <section className="card">
