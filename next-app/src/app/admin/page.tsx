@@ -452,16 +452,16 @@ export default async function AdminPage({
       status: 'available',
       href: '/admin/knowledge-base',
     },
-  ]
-
-  const pendingCapabilities: CapabilityCard[] = [
     {
       icon: '📜',
       label: tr(lang, '审批流程管理', 'Approval Workflow'),
-      description: tr(lang, '旧分支存在，待只读移植 · 会员等级申请审批', 'Legacy branch has full approval, pending read-only extract'),
+      description: tr(lang, '当前可用：只读审批记录。查看会员等级申请审批记录，不支持通过/驳回操作。', 'Read-only approval records. View membership upgrade requests. No approve/reject operations.'),
+      status: 'available',
       href: '/admin/membership-requests',
-      status: 'pending',
     },
+  ]
+
+  const pendingCapabilities: CapabilityCard[] = [
     {
       icon: '👥',
       label: tr(lang, '用户管理', 'User Management'),
@@ -495,7 +495,7 @@ export default async function AdminPage({
   ]
 
   return (
-    <main>
+    <main style={{ paddingBottom: 80 }}>
       <MinnaNav active="me" />
       <section className="heroCard card">
         <div className="heroEmoji">🛠️</div>

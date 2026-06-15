@@ -268,4 +268,17 @@ tags:
 - **修改文件**：新增 `admin/membership-requests/page.tsx`、`membership-request-flowchart.tsx`、`workflow-diagram-link.tsx`、更新 `opencode-latest-report.md`、`_index_.md`
 - **验证**：`npm run audit` PASS、`npm run build` PASS
 - **学习主线影响**：无。未修改课程数据、用户数据、API 路由或 Supabase schema。
+- **commit hash**：2a8aa0f
+
+### 2026-06-15 — /admin 首页审批流程状态更新 + 移动端间距
+
+- **优化内容**：
+  - "审批流程管理"从"待恢复"区移至"当前可用"区，状态改为 `available`
+  - 卡片描述更新为"当前可用：只读审批记录。查看会员等级申请审批记录，不支持通过/驳回操作。"
+  - 保留原有链接 `/admin/membership-requests`
+  - 在 `<main>` 上增加 `paddingBottom: 80`，防止移动端底部导航遮挡最后内容
+  - 待恢复区调整为：用户管理、论坛审核、课程内容管理、邮件/通知系统、部署与系统检测
+- **修改文件**：`src/app/admin/page.tsx`、`docs/knowledge-base/opencode-latest-report.md`、`docs/knowledge-base/_index_.md`
+- **验证**：`npm run audit` PASS、`npm run build` PASS
+- **学习主线影响**：无。仅首页文案和布局调整。
 - **commit hash**：待提交
