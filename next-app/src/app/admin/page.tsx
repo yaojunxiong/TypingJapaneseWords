@@ -459,6 +459,7 @@ export default async function AdminPage({
       icon: '📜',
       label: tr(lang, '审批流程管理', 'Approval Workflow'),
       description: tr(lang, '旧分支存在，待只读移植 · 会员等级申请审批', 'Legacy branch has full approval, pending read-only extract'),
+      href: '/admin/membership-requests',
       status: 'pending',
     },
     {
