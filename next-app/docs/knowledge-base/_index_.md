@@ -24,6 +24,7 @@ tags:
 - 1～50 课老师讲解音频完成并上线
 - 1～50 课课程页原视频跟读完成
 - 1～50 课动态双字幕（随视频时间同步切换）完成
+- 1～50 课会话动漫场景图 `conversation-anime-mobile.webp` 已覆盖
 - 练习页已移除今日学习/最近学习记录
 - 学习中心已集成学习统计面板
 - 管理员可访问全部课程
@@ -76,6 +77,21 @@ tags:
 ---
 
 ## 变更记录
+
+### 2026-06-15 — Supabase 访客记录 migration 已执行到云端
+
+- **优化内容**：`supabase/migrations/20260615153000_create_visitor_activity_events.sql` 已手动执行到 Supabase 云端 DB，`/admin/activity` 已看到真实 `visitor_activity_events` 记录，包括匿名访问和已登录用户访问路径。
+- **验证状态**：线上 `/admin/activity` 可读取最近访问记录，说明表、RLS 和只读后台链路已接通。
+- **安全约束**：继续不记录密码、token、cookie、完整 query、输入内容或完整 IP。
+- **学习主线影响**：无。不影响 50 课学习、打卡、确认动作或 0/4 算法。
+
+### 2026-06-15 — 近 10 小时功能开放索引
+
+- **学习闭环**：practice stage 返回课程入口、返回第 X 课、下一步推荐、0/4 重新定义、确认按钮、主动打卡、toolbox 今日完成/最近学习记录均已记录在本索引，专题文档见 `learning-progress-confirmation-design.md`、`lesson-flow-loop-audit.md`、`learning-reward-progress-audit.md`。
+- **课程素材**：只读核对确认 1～50 课均存在 `public/minna/lessons/lesson-{01..50}/conversation-anime-mobile.webp`。
+- **后台只读恢复**：后台管理中心、审批记录、用户管理、系统检测、论坛审核、访客浏览记录均已开放只读入口。
+- **登录与账号**：右上角登录入口、Google 登录、Email Magic Link、隐藏 Apple、`/me` 我的页、退出登录均已上线。
+- **访客记录**：`visitor_activity_events` 云端表、`/api/activity/track`、`VisitorActivityTracker`、`/admin/activity` 已上线并可看到真实记录。
 
 ### 2026-06-15 — 全站访客浏览记录第一版
 
@@ -180,9 +196,10 @@ tags:
 
 ### 2026-06-14 — 新增会话动漫场景图
 
-- **优化内容**：为 lesson-01 到 lesson-30 添加动漫场景图（`conversation-anime-mobile.webp`），在 `/practice?stage=conversation` 页面通过 `fs.access` 检查后显示。lesson 31-50 因无原图而优雅跳过。
-- **修改文件**：`practice/page.tsx`、`public/minna/lessons/lesson-{01..30}/conversation-anime-mobile.webp`
-- **验证页面**：`/lessons/1/practice?stage=conversation`、`/lessons/31/practice?stage=conversation`
+- **当前核对**：截至 2026-06-15，只读检查确认 lesson-01 到 lesson-50 均存在 `conversation-anime-mobile.webp`。
+- **优化内容**：为课程会话练习添加动漫场景图，在 `/practice?stage=conversation` 页面通过 `fs.access` 检查后显示。
+- **修改文件**：`practice/page.tsx`、`public/minna/lessons/lesson-{01..50}/conversation-anime-mobile.webp`
+- **验证页面**：`/lessons/1/practice?stage=conversation`、`/lessons/31/practice?stage=conversation`、`/lessons/50/practice?stage=conversation`
 - **学习主线影响**：无。有图显示、无图不报错。
 - **commit hash**：4f34ce1
 

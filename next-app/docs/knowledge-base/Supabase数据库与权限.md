@@ -7,7 +7,7 @@ tags:
 
 # Supabase 数据库与权限
 
-> **注意**：当前仓库（`next-app/`）不包含 `.sql`、migration、Prisma 或 Supabase 生成的类型文件。以下信息通过应用代码反推。
+> **注意**：当前仓库（`next-app/`）已有部分手写 Supabase migration，例如 `supabase/migrations/20260615153000_create_visitor_activity_events.sql`。仍未生成 `database.types.ts`，多数历史表结构仍通过应用代码反推。
 
 ## 表清单
 
@@ -71,6 +71,52 @@ tags:
 | `minna_chat_reads` | 已读状态 |
 | `minna_chat_thread_prefs` | 会话偏好 |
 
+### 访客浏览记录表
+
+| 表名 | 使用位置 | 用途 |
+|------|----------|------|
+| `visitor_activity_events` | `/api/activity/track`、`/admin/activity` | 记录全站页面访问事件，并在后台只读查看最近访问记录 |
+
+Migration：`supabase/migrations/20260615153000_create_visitor_activity_events.sql`
+
+字段：
+
+| 字段 | 类型 | 说明 |
+|------|------|------|
+| `id` | uuid | 主键，默认 `gen_random_uuid()` |
+| `user_id` | uuid null | 已登录用户 ID，未登录为空 |
+| `email` | text null | 已登录用户邮箱，未登录为空 |
+| `path` | text | 安全 pathname，不包含 query/hash |
+| `page_type` | text null | 页面类型，如 `home`、`login`、`lesson`、`admin` |
+| `lesson_no` | integer null | 课程页课号，非课程页为空 |
+| `referrer` | text null | 安全 referrer，仅保留同源 path 或外部 origin |
+| `user_agent` | text null | 浏览器 UA，限制长度 |
+| `created_at` | timestamptz | 创建时间，默认 `now()` |
+
+写入规则：
+
+- 已登录用户访问页面时，服务端补充 `user_id` 和 `email`。
+- 未登录用户访问页面时，允许匿名写入，`user_id` / `email` 为空，仅记录安全 `path`。
+- 客户端只发送 `path`、`referrer`、`userAgent`，不发送 cookie、token、输入内容或表单内容。
+- 服务端会移除 URL query/hash，避免保存 OAuth code、Magic Link 参数或其他敏感参数。
+
+安全原则：
+
+- 不记录密码。
+- 不记录 token。
+- 不记录 cookie。
+- 不记录完整 query。
+- 不记录输入框内容。
+- 不记录完整 IP。
+
+RLS / 权限策略：
+
+- `visitor_activity_events` 已启用 RLS。
+- `anon` 与 `authenticated` 仅允许 `insert` 安全字段，且 `path` 不得包含 `?` 或 `#`。
+- `authenticated` 的 `user_id` 只能为空或等于 `auth.uid()`。
+- `select` 仅允许 `user_roles.role = 'admin'` 的管理员读取。
+- 后台 `/admin/activity` 仅提供只读最近 100 条记录，不提供删除或修改按钮。
+
 ## 权限角色
 
 通过 `user_roles` 表控制：
@@ -86,9 +132,9 @@ tags:
 
 ## 当前存在的问题
 
-1. **缺 SQL 文件**：数据库结构、索引、RLS policy 均不在版本控制中。
+1. **迁移覆盖不完整**：已有 `visitor_activity_events` migration，但历史表并未全部纳入 migration 管理。
 2. **缺类型文件**：没有 `database.types.ts`，所有表结构在代码中手动声明。
-3. **缺迁移历史**：无法追踪数据库变更。
+3. **历史迁移不完整**：部分既有数据库变更仍无法从仓库追踪。
 
 ## 建议
 
