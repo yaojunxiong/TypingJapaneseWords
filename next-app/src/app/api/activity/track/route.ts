@@ -106,16 +106,18 @@ export async function POST(request: NextRequest) {
   const ip = extractIp(request)
   const userAgent = cleanText(payload.userAgent, 500)
 
-  createStudyVisitorWorkflow(supabase, {
-    visitorRecordId: record.id,
-    userId: user?.id || null,
-    pagePath: path,
-    ip,
-    userAgent: userAgent || null,
-    visitedAt: record.created_at || new Date().toISOString(),
-  }).catch((err) => {
+  try {
+    await createStudyVisitorWorkflow(supabase, {
+      visitorRecordId: record.id,
+      userId: user?.id || null,
+      pagePath: path,
+      ip,
+      userAgent: userAgent || null,
+      visitedAt: record.created_at || new Date().toISOString(),
+    })
+  } catch (err) {
     console.error('[track] createStudyVisitorWorkflow error:', err)
-  })
+  }
 
   return NextResponse.json({ ok: true })
 }

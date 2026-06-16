@@ -141,7 +141,7 @@ export async function createStudyVisitorWorkflow(
     return { created: false, workflowInstanceId: null, reason: instanceError?.message }
   }
 
-  const { error: taskError } = await supabase
+  const { data: task, error: taskError } = await supabase
     .from('workflow_tasks')
     .insert({
       workflow_instance_id: instance.id,
@@ -152,9 +152,12 @@ export async function createStudyVisitorWorkflow(
       assignee_value: approvalNode.assignee_value,
       status: 'pending',
     })
+    .select('id')
+    .single()
 
-  if (taskError) {
+  if (taskError || !task) {
     console.error('[workflow] Failed to create workflow_task:', taskError)
+    return { created: true, workflowInstanceId: instance.id, reason: taskError?.message || 'pending task not created' }
   }
 
   const { error: actionError } = await supabase
@@ -177,9 +180,12 @@ export async function createStudyVisitorWorkflow(
       instanceId: instance.id,
       createdAt: params.visitedAt,
       metadata: {
+        '访客 ID': params.userId || params.visitorRecordId,
         '访客记录 ID': params.visitorRecordId,
+        '当前状态': 'pending',
         '访问时间': params.visitedAt,
         '访问页面': params.pagePath,
+        '管理后台': '/admin/workflows/study-visitor',
         'IP 地址': params.ip,
         'User Agent': params.userAgent,
       },

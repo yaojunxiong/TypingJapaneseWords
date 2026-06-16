@@ -126,7 +126,9 @@ export async function sendWorkflowPendingNotification(params: {
   metadata?: Record<string, string | null | undefined>
 }): Promise<SendEmailResult> {
   const typeLabel = params.workflowType === 'study_visitor' ? '学习网站新访客' : params.workflowType
-  const subject = `[Minna] ${typeLabel}需要确认`
+  const subject = params.workflowType === 'study_visitor'
+    ? '学习网站新访客待确认'
+    : `[Minna] ${typeLabel}需要确认`
 
   const lines: string[] = [
     `<h2>新的${typeLabel}已提交</h2>`,
@@ -146,7 +148,7 @@ export async function sendWorkflowPendingNotification(params: {
   }
 
   lines.push('</table>')
-  lines.push(`<p style="margin-top:20px"><a href="https://study.jimmyyao.com/admin" style="display:inline-block;padding:10px 20px;background:#2563eb;color:#fff;text-decoration:none;border-radius:8px">前往后台处理</a></p>`)
+  lines.push(`<p style="margin-top:20px"><a href="https://study.jimmyyao.com/admin/workflows/study-visitor" style="display:inline-block;padding:10px 20px;background:#2563eb;color:#fff;text-decoration:none;border-radius:8px">前往访客确认后台处理</a></p>`)
 
   return sendAdminNotification(subject, lines.join('\n'))
 }
