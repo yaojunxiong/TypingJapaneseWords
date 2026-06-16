@@ -78,6 +78,13 @@ tags:
 
 ## 变更记录
 
+### 2026-06-16 — 修复 /admin/activity 时间显示为 JST
+
+- **优化内容**：`/admin/activity` 最近访问记录的 `created_at` 改为按 `Asia/Tokyo` 展示，格式为 `YYYY/MM/DD HH:mm:ss JST`。
+- **修改范围**：仅修改 `/admin/activity` 展示层时间格式，不修改 `visitor_activity_events` 字段、写入 API、tracker、排序逻辑或其他后台页面。
+- **验证页面**：`/admin/activity`
+- **学习主线影响**：无。不影响课程、打卡、确认动作或 0/4 算法。
+
 ### 2026-06-15 — Supabase 访客记录 migration 已执行到云端
 
 - **优化内容**：`supabase/migrations/20260615153000_create_visitor_activity_events.sql` 已手动执行到 Supabase 云端 DB，`/admin/activity` 已看到真实 `visitor_activity_events` 记录，包括匿名访问和已登录用户访问路径。
