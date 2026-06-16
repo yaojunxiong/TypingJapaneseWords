@@ -74,7 +74,7 @@ updated_at timestamptz
 
 ### 4.3 不需要改动
 
-- `email-service.ts` — 邮件发送逻辑不变
+- `email-service.ts` — 2026-06-16 已从 Resend 改为 **Brevo SMTP**（nodemailer），对外接口不变
 - `visitor-activity-tracker.tsx` — 客户端跟踪不变
 - `study-visitor-flowchart.tsx` — 纯展示组件不变
 

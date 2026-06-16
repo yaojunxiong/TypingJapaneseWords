@@ -425,7 +425,24 @@ export async function createStudyVisitorWorkflow(
 
 **⚠️ 2026-06-16 修正：生产库已有旧分支 workflow 表结构。** 之前创建的 `workflow-notifications.ts` 使用了错误的字段名（`business_type`/`business_id`），实际字段为 `reference_type`/`reference_id`。同时必须提供 `workflow_version_id`（FK → `workflow_versions(id)`）。需适配代码到旧结构后再上线。
 
-### 12.5 后续可优化方向
+### 12.5 2026-06-16 — 迁移至 Brevo SMTP（废弃 Resend）
+
+邮件服务从 Resend API 改为 **Brevo SMTP**（nodemailer）：
+
+| 变更 | 改前 | 改后 |
+|------|:----:|:----:|
+| Provider | Resend API | Brevo SMTP |
+| 依赖 | `fetch`（内置） | `nodemailer` |
+| 环境变量 | `RESEND_API_KEY`, `EMAIL_FROM`, `ADMIN_EMAIL` | `BREVO_SMTP_HOST/USER/PASS/PORT`, `EMAIL_FROM`（可选）, `ADMIN_NOTIFICATION_EMAIL`（可选） |
+| Vercel 配置 | 需创建 Resend API key | ✅ **已配置**（BREVO_SMTP_* 系列已在 Vercel） |
+| 发件人 fallback | 硬编码 `noreply@jimmyyao.com` | `EMAIL_FROM` → `BREVO_SMTP_USER` → warning |
+| 管理员邮箱 fallback | 仅 `ADMIN_EMAIL` | `ADMIN_NOTIFICATION_EMAIL` → `ADMIN_EMAIL` → warning |
+
+保持不变的接口：
+- `sendEmail()` / `sendAdminNotification()` / `sendWorkflowPendingNotification()` — 签名和错误处理逻辑不变
+- 后台 `/admin/system` EmailConfigCard 仍显示配置状态，但改为 Brevo SMTP
+
+### 12.6 后续可优化方向
 
 - 移植旧分支 `email_templates` 表实现模板化管理
 - 移植旧分支 `email_logs` 表实现发送记录追踪

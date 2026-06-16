@@ -1,6 +1,11 @@
+import nodemailer from 'nodemailer'
+
 type EmailConfig = {
-  resendApiKey: string | null
-  fromEmail: string
+  host: string
+  port: number
+  user: string
+  pass: string
+  from: string
   adminEmail: string | null
 }
 
@@ -9,57 +14,62 @@ type SendEmailResult = {
   error?: string
 }
 
-function getEmailConfig(): EmailConfig {
-  return {
-    resendApiKey: String(process.env.RESEND_API_KEY || '').trim() || null,
-    fromEmail: String(process.env.EMAIL_FROM || 'noreply@jimmyyao.com').trim(),
-    adminEmail: String(process.env.ADMIN_EMAIL || '').trim() || null,
+const DEFAULT_PORT = 587
+
+function getEmailConfig(): EmailConfig | null {
+  const host = String(process.env.BREVO_SMTP_HOST || '').trim()
+  const port = Number(process.env.BREVO_SMTP_PORT || DEFAULT_PORT)
+  const user = String(process.env.BREVO_SMTP_USER || '').trim()
+  const pass = String(process.env.BREVO_SMTP_PASS || '').trim()
+  const from = String(process.env.EMAIL_FROM || '').trim() || user
+  const adminEmail = String(process.env.ADMIN_NOTIFICATION_EMAIL || process.env.ADMIN_EMAIL || '').trim() || null
+
+  if (!host || !user || !pass) {
+    return null
   }
+
+  return { host, port, user, pass, from, adminEmail }
 }
 
 export function getEmailConfigStatus() {
   const config = getEmailConfig()
   return {
-    resendConfigured: !!config.resendApiKey,
-    fromEmailConfigured: !!config.fromEmail,
-    adminEmailConfigured: !!config.adminEmail,
-    allConfigured: !!config.resendApiKey && !!config.fromEmail && !!config.adminEmail,
-    fromEmail: config.fromEmail,
-    adminEmail: config.adminEmail || null,
+    brevoConfigured: !!config,
+    fromEmailConfigured: config ? !!config.from : false,
+    adminEmailConfigured: config ? !!config.adminEmail : false,
+    allConfigured: config ? !!config.from && !!config.adminEmail : false,
+    fromEmail: config?.from || null,
+    adminEmail: config?.adminEmail || null,
   }
 }
 
 export function isEmailConfigured(): boolean {
-  const config = getEmailConfig()
-  return !!config.resendApiKey && !!config.fromEmail
+  return getEmailConfig() !== null
 }
 
 async function sendEmail(to: string, subject: string, html: string): Promise<SendEmailResult> {
   const config = getEmailConfig()
 
-  if (!config.resendApiKey) {
-    console.warn('[email] RESEND_API_KEY not configured, skipping email')
-    return { ok: false, error: 'RESEND_API_KEY not configured' }
-  }
-  if (!config.fromEmail) {
-    console.warn('[email] EMAIL_FROM not configured, skipping email')
-    return { ok: false, error: 'EMAIL_FROM not configured' }
+  if (!config) {
+    console.warn('[email] Brevo SMTP not configured, skipping email')
+    return { ok: false, error: 'Brevo SMTP not configured' }
   }
 
   try {
-    const res = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${config.resendApiKey}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ from: config.fromEmail, to: [to], subject, html }),
+    const transport = nodemailer.createTransport({
+      host: config.host,
+      port: config.port,
+      secure: config.port === 465,
+      auth: { user: config.user, pass: config.pass },
     })
-    if (!res.ok) {
-      const body = await res.text()
-      console.error('[email] Resend API error:', res.status, body)
-      return { ok: false, error: `Resend API error ${res.status}` }
-    }
+
+    await transport.sendMail({
+      from: config.from,
+      to,
+      subject,
+      html,
+    })
+
     return { ok: true }
   } catch (error) {
     const message = error instanceof Error ? error.message : 'unknown email error'
@@ -70,9 +80,13 @@ async function sendEmail(to: string, subject: string, html: string): Promise<Sen
 
 export async function sendAdminNotification(subject: string, html: string): Promise<SendEmailResult> {
   const config = getEmailConfig()
+  if (!config) {
+    console.warn('[email] Brevo SMTP not configured, skipping admin notification')
+    return { ok: false, error: 'Brevo SMTP not configured' }
+  }
   if (!config.adminEmail) {
-    console.warn('[email] ADMIN_EMAIL not configured, skipping admin notification')
-    return { ok: false, error: 'ADMIN_EMAIL not configured' }
+    console.warn('[email] ADMIN_NOTIFICATION_EMAIL not configured, skipping admin notification')
+    return { ok: false, error: 'ADMIN_NOTIFICATION_EMAIL not configured' }
   }
   return sendEmail(config.adminEmail, subject, html)
 }
@@ -83,7 +97,6 @@ export async function sendWorkflowPendingNotification(params: {
   createdAt: string
   metadata?: Record<string, string | null | undefined>
 }): Promise<SendEmailResult> {
-  const config = getEmailConfig()
   const typeLabel = params.workflowType === 'study_visitor' ? '学习网站新访客' : params.workflowType
   const subject = `[Minna] ${typeLabel}需要确认`
 
@@ -105,7 +118,7 @@ export async function sendWorkflowPendingNotification(params: {
   }
 
   lines.push('</table>')
-  lines.push(`<p style="margin-top:20px"><a href="${config.adminEmail ? `https://study.jimmyyao.com/admin` : '/'}" style="display:inline-block;padding:10px 20px;background:#2563eb;color:#fff;text-decoration:none;border-radius:8px">前往后台处理</a></p>`)
+  lines.push(`<p style="margin-top:20px"><a href="https://study.jimmyyao.com/admin" style="display:inline-block;padding:10px 20px;background:#2563eb;color:#fff;text-decoration:none;border-radius:8px">前往后台处理</a></p>`)
 
   return sendAdminNotification(subject, lines.join('\n'))
 }

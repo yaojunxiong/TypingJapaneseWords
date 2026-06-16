@@ -411,8 +411,10 @@ PATCH /api/admin/membership-requests/[id]
 **已接入的 workflow 邮件通知场景：**
 | 场景 | 状态 |
 |------|:----:|
-| study_visitor 待处理 | 🔧 需适配到旧 workflow 表结构 |
+| study_visitor 待处理 | ✅ 已适配（Brevo SMTP，Vercel 已配置） |
 | VIP 申请/审批 | ⏳ 待未来接入 |
+
+**邮件 provider：** 2026-06-16 从 Resend API 改为 **Brevo SMTP**（nodemailer）。Vercel 已有 `BREVO_SMTP_*` 环境变量，无需额外配置 key。仅需确认 `ADMIN_NOTIFICATION_EMAIL` 已设置。
 
 **不接入邮件通知时不影响流程正常运行。** 邮件始终是可选的辅助通知手段。
 

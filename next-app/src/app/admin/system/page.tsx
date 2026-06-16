@@ -198,8 +198,8 @@ function EmailConfigCard({ lang }: { lang: 'zh' | 'en' }) {
       <table className="table" style={{ minWidth: 360 }}>
         <tbody>
           <tr>
-            <td className="small" style={{ fontWeight: 700, width: 180 }}>Resend API</td>
-            <td>{status.resendConfigured
+            <td className="small" style={{ fontWeight: 700, width: 180 }}>Brevo SMTP</td>
+            <td>{status.brevoConfigured
               ? <span style={{ color: '#166534' }}>✅ {tr(lang, '已配置', 'Configured')}</span>
               : <span style={{ color: '#92400e' }}>⚠️ {tr(lang, '未配置', 'Not configured')}</span>
             }</td>
@@ -212,7 +212,7 @@ function EmailConfigCard({ lang }: { lang: 'zh' | 'en' }) {
             }</td>
           </tr>
           <tr>
-            <td className="small" style={{ fontWeight: 700 }}>ADMIN_EMAIL</td>
+            <td className="small" style={{ fontWeight: 700 }}>{tr(lang, '管理员邮箱', 'Admin Email')}</td>
             <td>{status.adminEmailConfigured
               ? <span style={{ color: '#166534' }}>✅ {status.adminEmail}</span>
               : <span style={{ color: '#92400e' }}>⚠️ {tr(lang, '未配置', 'Not configured')}</span>
@@ -228,7 +228,7 @@ function EmailConfigCard({ lang }: { lang: 'zh' | 'en' }) {
         </tbody>
       </table>
       <p className="small" style={{ marginTop: 8 }}>
-        {tr(lang, '需要配置 RESEND_API_KEY、EMAIL_FROM 和 ADMIN_EMAIL 环境变量。', 'Set RESEND_API_KEY, EMAIL_FROM, and ADMIN_EMAIL env vars.')}
+        {tr(lang, '需要配置 BREVO_SMTP_HOST/USER/PASS 和 ADMIN_NOTIFICATION_EMAIL。', 'Set BREVO_SMTP_HOST/USER/PASS and ADMIN_NOTIFICATION_EMAIL.')}
         <br />
         {tr(lang, '邮件发送失败不会影响流程状态，仅记录错误日志。', 'Email failures do not affect workflow state. Errors are logged.')}
       </p>
