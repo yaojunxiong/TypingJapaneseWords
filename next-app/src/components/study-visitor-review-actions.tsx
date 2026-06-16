@@ -13,7 +13,8 @@ export default function StudyVisitorReviewActions({ instanceId, currentStatus, o
   const [message, setMessage] = useState('')
 
   if (currentStatus !== 'running') {
-    return <span className="small" style={{ color: '#64748b' }}>{currentStatus === 'completed' ? '已确认' : '已拒绝'}</span>
+    const label = (currentStatus === 'approved' || currentStatus === 'completed') ? '已确认' : '已拒绝'
+    return <span className="small" style={{ color: '#64748b' }}>{label}</span>
   }
 
   async function handleReview(action: 'approve' | 'reject') {

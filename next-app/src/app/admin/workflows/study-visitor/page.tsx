@@ -70,17 +70,26 @@ export default async function AdminStudyVisitorPage() {
     )
   }
 
-  const supabase = createClient(cookieStore)
-  const { data, error } = await supabase
-    .from('workflow_instances')
-    .select('id,reference_id,status,current_node_key,created_at')
-    .eq('reference_type', 'study_visitor')
-    .order('created_at', { ascending: false })
+  let data: unknown[] | null = null
+  let queryError: { message: string } | null = null
+  try {
+    const supabase = createClient(cookieStore)
+    const result = await supabase
+      .from('workflow_instances')
+      .select('id,reference_id,status,current_node_key,created_at')
+      .eq('reference_type', 'study_visitor')
+      .order('created_at', { ascending: false })
+    data = result.data
+    queryError = result.error
+  } catch (err) {
+    const message = err instanceof Error ? err.message : 'unknown error'
+    queryError = { message }
+  }
 
-  const tableMissing = error && (
-    error.message.includes('relation') ||
-    error.message.includes('does not exist') ||
-    error.message.includes('42P01')
+  const tableMissing = queryError && (
+    queryError.message.includes('relation') ||
+    queryError.message.includes('does not exist') ||
+    queryError.message.includes('42P01')
   )
 
   if (tableMissing) {
@@ -90,28 +99,22 @@ export default async function AdminStudyVisitorPage() {
         <section className="heroCard card">
           <div className="heroEmoji">🗂️</div>
           <h2>{tr(lang, '学习网站访客确认', 'Visitor Confirmation')}</h2>
-          <p className="small">{tr(lang, '数据库表尚未创建，请先执行 migration。', 'Database tables not created yet. Run migration first.')}</p>
+          <p className="small">{tr(lang, '数据库表尚未创建，请先执行 seed SQL。', 'Database tables not ready yet. Run seed SQL first.')}</p>
         </section>
         <section className="card">
-          <p className="small">{tr(lang, '需要创建以下表：', 'Create these tables:')}</p>
-          <ul style={{ margin: '8px 0', paddingLeft: 18, lineHeight: 1.8 }}>
-            <li className="small"><code className="code">workflow_instances</code></li>
-            <li className="small"><code className="code">workflow_tasks</code></li>
-            <li className="small"><code className="code">workflow_actions</code></li>
-          </ul>
-          <p className="small">{tr(lang, 'SQL 文件位置：', 'SQL location:')} <code className="code">supabase/seed-study-visitor-workflow.sql</code></p>
+          <p className="small">{tr(lang, '请在 Supabase SQL Editor 执行：', 'Run in Supabase SQL Editor:')} <code className="code">supabase/seed-study-visitor-workflow.sql</code></p>
           <p><Link className="btn ghost" href="/admin">{tr(lang, '返回后台首页', 'Back to Admin')}</Link></p>
         </section>
       </main>
     )
   }
 
-  if (error) {
+  if (queryError) {
     return (
       <main>
         <MinnaNav active="me" />
         <section className="card">
-          <p>{tr(lang, '读取失败', 'Read error')}：{error.message}</p>
+          <p>{tr(lang, '读取失败', 'Read error')}：{queryError.message}</p>
           <p><Link href="/admin">{tr(lang, '返回后台首页', 'Back')}</Link></p>
         </section>
       </main>

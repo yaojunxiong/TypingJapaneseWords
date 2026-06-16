@@ -42,35 +42,46 @@ export async function checkAdminAccess(
     }
   }
 
-  const supabase = createClient(cookieStore)
-  const { data: userData } = await supabase.auth.getUser()
-  const user = userData.user
+  try {
+    const supabase = createClient(cookieStore)
+    const { data: userData } = await supabase.auth.getUser()
+    const user = userData.user
 
-  if (!user) {
+    if (!user) {
+      return {
+        isAdmin: false,
+        role: 'none',
+        bypassed: false,
+        userAuthed: false,
+        userEmail: undefined,
+        userId: undefined
+      }
+    }
+
+    const { data: roleRaw } = await supabase
+      .from('user_roles')
+      .select('role')
+      .eq('user_id', user.id)
+      .maybeSingle()
+
+    const role = String((roleRaw as RoleRow | null)?.role || 'normal')
+
+    return {
+      isAdmin: role === 'admin',
+      role,
+      bypassed: false,
+      userAuthed: true,
+      userEmail: user.email || undefined,
+      userId: user.id
+    }
+  } catch {
     return {
       isAdmin: false,
-      role: 'none',
+      role: 'error',
       bypassed: false,
       userAuthed: false,
       userEmail: undefined,
       userId: undefined
     }
-  }
-
-  const { data: roleRaw } = await supabase
-    .from('user_roles')
-    .select('role')
-    .eq('user_id', user.id)
-    .maybeSingle()
-
-  const role = String((roleRaw as RoleRow | null)?.role || 'normal')
-
-  return {
-    isAdmin: role === 'admin',
-    role,
-    bypassed: false,
-    userAuthed: true,
-    userEmail: user.email || undefined,
-    userId: user.id
   }
 }
