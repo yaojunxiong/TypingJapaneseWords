@@ -78,6 +78,14 @@ tags:
 
 ## 变更记录
 
+### 2026-06-16 — 增强 /admin/activity 搜索筛选排序
+
+- **优化内容**：`/admin/activity` 读取最近 300 条访客浏览记录，新增搜索框、用户筛选、时间范围筛选、page_type 筛选、课号筛选、排序选择和表头排序链接。
+- **统计卡片**：显示当前筛选结果数量、已登录访问数、匿名访问数、涉及用户数。
+- **后台入口**：`/admin` 当前可用区域将“访客浏览记录”前移并强化说明：查看最近页面访问事件、登录/匿名访问情况，支持只读搜索、筛选和排序。
+- **只读约束**：不修改 `visitor_activity_events` 字段，不修改 `/api/activity/track`，不修改 `VisitorActivityTracker`，不新增删除、修改或导出操作。
+- **学习主线影响**：无。不影响课程、打卡、确认动作或 0/4 算法。
+
 ### 2026-06-16 — 修复 /admin/activity 时间显示为 JST
 
 - **优化内容**：`/admin/activity` 最近访问记录的 `created_at` 改为按 `Asia/Tokyo` 展示，格式为 `YYYY/MM/DD HH:mm:ss JST`。

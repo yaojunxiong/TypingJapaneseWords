@@ -439,6 +439,13 @@ export default async function AdminPage({
       href: '/admin',
     },
     {
+      icon: '👣',
+      label: tr(lang, '访客浏览记录', 'Visitor Activity'),
+      description: tr(lang, '查看最近页面访问事件、登录/匿名访问情况。支持只读搜索、筛选和排序。', 'View recent page visits plus signed-in and anonymous activity. Read-only search, filters, and sorting.'),
+      status: 'available',
+      href: '/admin/activity',
+    },
+    {
       icon: '📋',
       label: tr(lang, '课程数据 Audit', 'Lesson Data Audit'),
       description: tr(lang, '只读审计 1-50 课数据完整性与内容检索', 'Read-only audit of lessons 1-50 data integrity and content search'),
@@ -479,13 +486,6 @@ export default async function AdminPage({
       description: tr(lang, '当前可用：只读查看论坛帖子和审核状态，不支持审核/删除操作。', 'Read-only forum posts and moderation status. No approve/delete operations.'),
       status: 'available',
       href: '/admin/forum',
-    },
-    {
-      icon: '👣',
-      label: tr(lang, '访客浏览记录', 'Visitor Activity'),
-      description: tr(lang, '当前可用：只读查看最近页面访问事件，不记录密码、token 或输入内容。', 'Read-only recent page view events. Passwords, tokens, and input content are not recorded.'),
-      status: 'available',
-      href: '/admin/activity',
     },
   ]
 
