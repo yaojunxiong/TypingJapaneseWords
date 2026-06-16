@@ -42,6 +42,8 @@ tags:
 | 学习中心面板 | `src/components/learning-dashboard.tsx` |
 | 老师讲解音频 | `public/audio/deep-dive/lesson-{01..50}-zh.mp3` |
 | 音频生成脚本 | `scripts/generate-deep-dive-audio.py` |
+| Workflow/VIP 申请现状知识库 | `docs/knowledge-base/workflow-current-state.md` |
+| 旧分支后台能力提取计划 | `docs/knowledge-base/admin-legacy-branch-extraction-plan.md` |
 
 ## 开发原则
 
@@ -400,3 +402,20 @@ tags:
 - **验证**：`npm run audit` PASS、`npm run build` PASS，`/admin/forum` 路由编译通过
 - **学习主线影响**：无。仅后台只读页面，不影响 `/lessons`、`/toolbox`、打卡、确认动作和 0/4 算法。
 - **commit hash**：待提交
+
+### 2026-06-16 — 新增 Workflow / VIP 申请流程现状知识库
+
+- **优化内容**：
+  - 全面搜索梳理当前项目 workflow/approval/VIP 申请相关功能
+  - 确认整套系统仅存在于旧分支 `origin/lesson1-comfyui-automation`
+  - 确认当前 master 只有只读展示页，数据库表未创建，后端 API 未移植
+  - 梳理数据库表结构、后端接口、前端页面、菜单入口现状
+  - 分析 VIP 申请流程链路断裂点
+  - 明确前端入口找不到的原因
+  - 给出可复用能力分析、最小恢复方案、后续扩展建议
+  - 新增 `docs/knowledge-base/workflow-current-state.md` 知识库文档
+  - 更新 `docs/knowledge-base/_index_.md` 索引，加入文档引用
+- **修改文件**：新增 `docs/knowledge-base/workflow-current-state.md`、修改 `docs/knowledge-base/_index_.md`
+- **验证**：`npm run build` PASS
+- **学习主线影响**：无。纯文档，未修改任何代码。
+- **commit hash**：d17f6c3
