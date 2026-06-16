@@ -91,6 +91,34 @@ export async function sendAdminNotification(subject: string, html: string): Prom
   return sendEmail(config.adminEmail, subject, html)
 }
 
+export async function sendTestEmail(): Promise<SendEmailResult> {
+  const config = getEmailConfig()
+  if (!config) {
+    console.warn('[email] Brevo SMTP not configured, skipping test email')
+    return { ok: false, error: 'Brevo SMTP not configured' }
+  }
+  if (!config.adminEmail) {
+    console.warn('[email] ADMIN_NOTIFICATION_EMAIL not configured, skipping test email')
+    return { ok: false, error: 'ADMIN_NOTIFICATION_EMAIL not configured' }
+  }
+
+  const now = new Date().toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })
+  const env = process.env.VERCEL_ENV || process.env.NODE_ENV || 'unknown'
+  const html = [
+    '<h2>学习系统邮件测试</h2>',
+    '<table style="border-collapse:collapse;width:100%">',
+    `<tr><td style="padding:8px 12px;font-weight:700;border:1px solid #ddd">当前时间</td><td style="padding:8px 12px;border:1px solid #ddd">${now}</td></tr>`,
+    `<tr><td style="padding:8px 12px;font-weight:700;border:1px solid #ddd">当前环境</td><td style="padding:8px 12px;border:1px solid #ddd">${env}</td></tr>`,
+    `<tr><td style="padding:8px 12px;font-weight:700;border:1px solid #ddd">Brevo SMTP</td><td style="padding:8px 12px;border:1px solid #ddd;color:#166534">已配置</td></tr>`,
+    `<tr><td style="padding:8px 12px;font-weight:700;border:1px solid #ddd">发件地址</td><td style="padding:8px 12px;border:1px solid #ddd">${config.from}</td></tr>`,
+    `<tr><td style="padding:8px 12px;font-weight:700;border:1px solid #ddd">SMTP Host</td><td style="padding:8px 12px;border:1px solid #ddd">${config.host}:${config.port}</td></tr>`,
+    '</table>',
+    '<p style="margin-top:16px">如果你收到这封邮件，说明 Brevo SMTP 配置正确，可以正常发送通知邮件。</p>',
+  ].join('\n')
+
+  return sendAdminNotification('学习系统邮件测试', html)
+}
+
 export async function sendWorkflowPendingNotification(params: {
   workflowType: string
   instanceId: string

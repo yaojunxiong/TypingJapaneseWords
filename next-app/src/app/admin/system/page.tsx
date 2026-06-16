@@ -4,6 +4,7 @@ import MinnaNav from '@/components/minna-nav'
 import { getLang, tr } from '@/lib/i18n'
 import { checkAdminAccess } from '@/lib/admin-auth'
 import { getEmailConfigStatus } from '@/lib/email-service'
+import SystemEmailTestButton from '@/components/admin/system-email-test-button'
 
 const routes = [
   { path: '/admin', label: '后台管理中心' },
@@ -227,6 +228,13 @@ function EmailConfigCard({ lang }: { lang: 'zh' | 'en' }) {
           </tr>
         </tbody>
       </table>
+      {status.allConfigured ? (
+        <SystemEmailTestButton />
+      ) : (
+        <p className="small" style={{ marginTop: 8, color: '#92400e', fontWeight: 600 }}>
+          {tr(lang, '请先配置 BREVO_SMTP 和 ADMIN_NOTIFICATION_EMAIL 后，再发送测试邮件。', 'Configure Brevo SMTP and ADMIN_NOTIFICATION_EMAIL first.')}
+        </p>
+      )}
       <p className="small" style={{ marginTop: 8 }}>
         {tr(lang, '需要配置 BREVO_SMTP_HOST/USER/PASS 和 ADMIN_NOTIFICATION_EMAIL。', 'Set BREVO_SMTP_HOST/USER/PASS and ADMIN_NOTIFICATION_EMAIL.')}
         <br />
