@@ -2,9 +2,21 @@
 
 ## 1. 当前结论摘要
 
-**当前 master 分支无任何业务邮件发送能力。** 项目中唯一工作的邮件功能是 Supabase Auth 托管的 Magic Link 登录邮件，完全由 Supabase 服务端控制，应用代码无法调用。
+**当前 master 分支已实现业务邮件通知 V1（基于 Resend）。** 项目中唯一工作的邮件功能是 Supabase Auth 托管的 Magic Link 登录邮件，完全由 Supabase 服务端控制，应用代码无法调用。
 
-旧分支 `origin/lesson1-comfyui-automation` 存在完整的邮件系统（`email-service.ts`，418 行），支持多 provider（Resend/Brevo/Gmail GAS/Mailtrap/Nodemailer SMTP），但尚未移植到 master。
+旧分支 `origin/lesson1-comfyui-automation` 存在完整的邮件系统（`email-service.ts`，418 行），支持多 provider（Resend/Brevo/Gmail GAS/Mailtrap/Nodemailer SMTP）。
+
+当前已迁移的核心能力：
+- `src/lib/email-service.ts` — 基于 Resend 的轻量邮件发送模块
+- `sendAdminNotification()` — 发送管理员通知邮件
+- `sendWorkflowPendingNotification()` — 发送 workflow 待处理通知（支持 study_visitor 等类型）
+- 后台 `/admin/system` 页面 — 展示邮件配置状态
+
+尚未迁移的旧分支功能：
+- 邮件 provider 配置页面（`email-settings/page.tsx`）
+- 邮件模板管理页面（`email-templates/page.tsx`）
+- 邮件日志查看页面（`email-logs/page.tsx`）
+- 多 provider 支持（Resend/Brevo/Gmail GAS/Mailtrap/Nodemailer）
 
 ---
 
@@ -318,8 +330,107 @@ workflow 流程完成/状态变更
             → getEmailSettings() → email_settings 表
             → 根据 provider 发送
               → 方案 A: Resend API
-            → 写入 email_logs 表
+             → 写入 email_logs 表
 ```
+
+---
+
+## 12. V1 实现记录
+
+### 12.1 2026-06-16 — 实现 workflow 邮件通知 V1
+
+**实现内容：**
+
+1. **新建 `src/lib/email-service.ts`** — 基于 Resend API 的轻量邮件发送模块
+   - `getEmailConfig()` — 读取环境变量配置
+   - `getEmailConfigStatus()` — 返回配置状态（用于后台展示）
+   - `isEmailConfigured()` — 检查是否可发送
+   - `sendEmail()` — 调用 Resend API 发送邮件
+   - `sendAdminNotification()` — 发送管理员通知
+   - `sendWorkflowPendingNotification()` — 发送 workflow 待处理通知，包含流程类型、实例 ID、提交时间、自定义 metadata
+
+2. **环境变量配置**
+   - `RESEND_API_KEY` — Resend API key
+   - `EMAIL_FROM` — 发件人地址（默认 `noreply@jimmyyao.com`）
+   - `ADMIN_EMAIL` — 管理员收件地址
+   - 支持优雅降级：环境变量缺失时不阻塞流程，只记录 warning
+
+3. **后台配置状态展示**
+   - `/admin/system` 页面新增 `EmailConfigCard` 组件
+   - 展示 Resend API / EMAIL_FROM / ADMIN_EMAIL 配置状态
+   - 展示整体邮件可用性状态
+
+### 12.2 调用方式
+
+```typescript
+// 管理员通知
+import { sendAdminNotification } from '@/lib/email-service'
+await sendAdminNotification('主题', '<html>...</html>')
+
+// Workflow 待处理通知
+import { sendWorkflowPendingNotification } from '@/lib/email-service'
+await sendWorkflowPendingNotification({
+  workflowType: 'study_visitor',
+  instanceId: workflowInstanceId,
+  createdAt: new Date().toISOString(),
+  metadata: {
+    '访问时间': visitTime,
+    '访问页面': pagePath,
+    'IP': visitorIp,
+    'User Agent': userAgent,
+  }
+})
+```
+
+### 12.3 不接入邮件通知时的行为
+
+- 不阻断 workflow 流程创建
+- 不阻断 workflow_tasks
+- 不抛出异常
+- 只记录 `console.warn` / `console.error`
+- 后台显示"邮件未配置"
+
+### 12.4 V2 升级 — 真实 workflow 数据库集成（2026-06-16）
+
+**不再使用伪 ID。** `workflow-notifications.ts` 重构为 `createStudyVisitorWorkflow()`，直接写入真实 `workflow_instances` 表并使用数据库生成的 UUID。
+
+```typescript
+// src/lib/workflow-notifications.ts (V2)
+export async function createStudyVisitorWorkflow(
+  supabase: SupabaseClient,
+  params: CreateStudyVisitorParams
+): Promise<{
+  created: boolean
+  workflowInstanceId: string | null  // 真实 workflow_instances.id
+  reason?: string
+}>
+```
+
+变更要点：
+
+| 项 | V1 (之前) | V2 (当前) |
+|---|----------|----------|
+| workflow_instance_id | `crypto.randomUUID()` 伪 ID | `gen_random_uuid()` 真实 DB UUID |
+| 数据库写入 | 无 | `workflow_instances` + `workflow_tasks` |
+| 调用方式 | `notifyStudyVisitorPending()` | `createStudyVisitorWorkflow(supabase, params)` |
+| 触发时机 | 手动 API 调用 | `/api/activity/track` 自动触发 |
+| 唯一性检查 | 无 | `business_type + business_id + status IN (running, pending)` |
+
+新增数据库表：
+- `workflow_instances` — 流程实例
+- `workflow_tasks` — 审核任务
+- `workflow_actions` — 操作日志
+
+详见 `docs/knowledge-base/workflow-current-state.md §12`
+
+**⚠️ 2026-06-16 修正：生产库已有旧分支 workflow 表结构。** 之前创建的 `workflow-notifications.ts` 使用了错误的字段名（`business_type`/`business_id`），实际字段为 `reference_type`/`reference_id`。同时必须提供 `workflow_version_id`（FK → `workflow_versions(id)`）。需适配代码到旧结构后再上线。
+
+### 12.5 后续可优化方向
+
+- 移植旧分支 `email_templates` 表实现模板化管理
+- 移植旧分支 `email_logs` 表实现发送记录追踪
+- 移植旧分支 `email_settings` 表实现后台配置页面
+- 添加更多 workflow 类型通知（VIP 申请、论坛审核等）
 
 ---
 

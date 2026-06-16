@@ -3,6 +3,7 @@ import { cookies } from 'next/headers'
 import MinnaNav from '@/components/minna-nav'
 import { getLang, tr } from '@/lib/i18n'
 import { checkAdminAccess } from '@/lib/admin-auth'
+import { getEmailConfigStatus } from '@/lib/email-service'
 
 const routes = [
   { path: '/admin', label: '后台管理中心' },
@@ -12,6 +13,7 @@ const routes = [
   { path: '/admin/lessons/1', label: '课程只读查看' },
   { path: '/admin/export.csv', label: 'CSV 导出' },
   { path: '/admin/system', label: '系统检测与部署状态（本页）' },
+  { path: '/admin/workflows/study-visitor', label: '访客确认流程管理' },
 ]
 
 const restoredModules = [
@@ -19,12 +21,14 @@ const restoredModules = [
   '审批记录只读页',
   '用户管理只读页',
   '系统检测与部署状态（本页）',
+  '邮件通知服务（Resend）',
+  'workflow_instances / workflow_tasks / workflow_actions 数据库表',
+  '学习网站访客确认流程管理',
 ]
 
 const pendingModules = [
   { icon: '💬', label: '论坛审核', desc: '旧分支存在，待确认 forum_posts 表后移植' },
   { icon: '📝', label: '课程内容管理', desc: '暂不开放编辑，后续只读查看优先' },
-  { icon: '📧', label: '邮件/通知系统', desc: '旧分支存在，待评估数据源后移植' },
   { icon: '🗺️', label: '流程图只读查看', desc: '旧分支有 React Flow 流程图，待确认 @xyflow/react 依赖' },
 ]
 
@@ -34,6 +38,7 @@ const knowledgeLinks = [
   { file: 'admin-legacy-branch-extraction-plan.md', label: '旧分支后台能力提取计划' },
   { file: 'admin-system-deep-trace-audit.md', label: '全项目后台能力深度追溯' },
   { file: 'learning-progress-confirmation-design.md', label: '学习进度判定设计报告' },
+  { file: 'email-current-state.md', label: '邮件发送能力评估' },
 ]
 
 const checks = [
@@ -97,6 +102,8 @@ export default async function AdminSystemPage() {
           </tbody>
         </table>
       </section>
+
+      <EmailConfigCard lang={lang} />
 
       <section className="card">
         <h2>{tr(lang, '当前后台可用路由', 'Available Admin Routes')}</h2>
@@ -180,5 +187,51 @@ export default async function AdminSystemPage() {
         </div>
       </section>
     </main>
+  )
+}
+
+function EmailConfigCard({ lang }: { lang: 'zh' | 'en' }) {
+  const status = getEmailConfigStatus()
+  return (
+    <section className="card">
+      <h2>{tr(lang, '邮件通知配置', 'Email Notification Config')}</h2>
+      <table className="table" style={{ minWidth: 360 }}>
+        <tbody>
+          <tr>
+            <td className="small" style={{ fontWeight: 700, width: 180 }}>Resend API</td>
+            <td>{status.resendConfigured
+              ? <span style={{ color: '#166534' }}>✅ {tr(lang, '已配置', 'Configured')}</span>
+              : <span style={{ color: '#92400e' }}>⚠️ {tr(lang, '未配置', 'Not configured')}</span>
+            }</td>
+          </tr>
+          <tr>
+            <td className="small" style={{ fontWeight: 700 }}>EMAIL_FROM</td>
+            <td>{status.fromEmailConfigured
+              ? <span style={{ color: '#166534' }}>✅ {status.fromEmail}</span>
+              : <span style={{ color: '#92400e' }}>⚠️ {tr(lang, '未配置', 'Not configured')}</span>
+            }</td>
+          </tr>
+          <tr>
+            <td className="small" style={{ fontWeight: 700 }}>ADMIN_EMAIL</td>
+            <td>{status.adminEmailConfigured
+              ? <span style={{ color: '#166534' }}>✅ {status.adminEmail}</span>
+              : <span style={{ color: '#92400e' }}>⚠️ {tr(lang, '未配置', 'Not configured')}</span>
+            }</td>
+          </tr>
+          <tr>
+            <td className="small" style={{ fontWeight: 700 }}>{tr(lang, '整体状态', 'Overall')}</td>
+            <td>{status.allConfigured
+              ? <span style={{ color: '#166534' }}>✅ {tr(lang, '可以发送通知邮件', 'Ready to send notifications')}</span>
+              : <span style={{ color: '#92400e' }}>⚠️ {tr(lang, '邮件发送不可用，但不影响流程', 'Email unavailable, workflow unaffected')}</span>
+            }</td>
+          </tr>
+        </tbody>
+      </table>
+      <p className="small" style={{ marginTop: 8 }}>
+        {tr(lang, '需要配置 RESEND_API_KEY、EMAIL_FROM 和 ADMIN_EMAIL 环境变量。', 'Set RESEND_API_KEY, EMAIL_FROM, and ADMIN_EMAIL env vars.')}
+        <br />
+        {tr(lang, '邮件发送失败不会影响流程状态，仅记录错误日志。', 'Email failures do not affect workflow state. Errors are logged.')}
+      </p>
+    </section>
   )
 }

@@ -42,9 +42,17 @@ tags:
 | 学习中心面板 | `src/components/learning-dashboard.tsx` |
 | 老师讲解音频 | `public/audio/deep-dive/lesson-{01..50}-zh.mp3` |
 | 音频生成脚本 | `scripts/generate-deep-dive-audio.py` |
+| 业务邮件服务（Resend） | `src/lib/email-service.ts` |
+| Workflow 通知触发 + 数据库操作 | `src/lib/workflow-notifications.ts` |
 | Workflow/VIP 申请现状知识库 | `docs/knowledge-base/workflow-current-state.md` |
-| 邮件发送能力评估 | `docs/knowledge-base/email-current-state.md` |
+| 邮件发送能力评估与 V1 实现 | `docs/knowledge-base/email-current-state.md` |
+| 学习网站新访客确认流程 | `docs/knowledge-base/study-visitor-workflow.md` |
 | 旧分支后台能力提取计划 | `docs/knowledge-base/admin-legacy-branch-extraction-plan.md` |
+| workflow_instances/tasks/actions migration | `supabase/migrations/20260616150000_create_workflow_tables.sql` |
+| 访客确认后台管理页 | `src/app/admin/workflows/study-visitor/page.tsx` |
+| 访客确认 API（admin review） | `src/app/api/admin/workflows/study-visitor/[instanceId]/review/route.ts` |
+| 访客确认流程图组件 | `src/components/study-visitor-flowchart.tsx` |
+| 访客确认操作按钮组件 | `src/components/study-visitor-review-actions.tsx` |
 
 ## 开发原则
 
@@ -435,3 +443,33 @@ tags:
 - **修改文件**：新增 `docs/knowledge-base/email-current-state.md`、修改 `docs/knowledge-base/workflow-current-state.md`、`docs/knowledge-base/_index_.md`
 - **验证**：`npm run build` PASS
 - **学习主线影响**：无。纯文档，未修改任何代码。
+
+### 2026-06-16 — 实现 workflow 邮件通知 V1（Resend）
+
+- **优化内容**：
+  - 新建 `src/lib/email-service.ts` — 基于 Resend API 的轻量业务邮件模块
+  - `sendAdminNotification()` — 管理员通知
+  - `sendWorkflowPendingNotification()` — workflow 待处理通知（支持 study_visitor 等类型）
+  - 环境变量缺失时不阻断流程，仅记录 warning/error
+  - 后台 `/admin/system` 增加邮件配置状态展示（EmailConfigCard）
+  - 更新 `.env.local.example` 文档化 `RESEND_API_KEY`、`EMAIL_FROM`、`ADMIN_EMAIL`
+  - 新增 `docs/knowledge-base/study-visitor-workflow.md` 知识库文档
+  - 更新 `docs/knowledge-base/email-current-state.md` 增加 §12 V1 实现记录
+  - 更新 `docs/knowledge-base/workflow-current-state.md` §10.7 更新为已完成
+  - 更新 `docs/knowledge-base/_index_.md` 索引
+- **修改文件**：新增 `src/lib/email-service.ts`、`docs/knowledge-base/study-visitor-workflow.md`、修改 `src/app/admin/system/page.tsx`、`.env.local.example`、`docs/knowledge-base/email-current-state.md`、`docs/knowledge-base/workflow-current-state.md`、`docs/knowledge-base/_index_.md`
+- **验证**：`npm run build` PASS
+- **学习主线影响**：无。纯后台能力，不影响 `/lessons`、`/toolbox`、打卡、确认动作和 0/4 算法。
+
+### 2026-06-16 — ⚠️ 发现生产库已有旧 workflow 表结构，需要适配而非新建
+
+- **错误修正**：
+  - 之前假设 workflow_instances/tasks/actions 不存在，新建了一套 migration（`20260616150000_create_workflow_tables.sql`）
+  - **实际生产库已有旧分支的完整 workflow 表结构**，字段完全不同
+  - **不要执行新建 migration**，应适配现有结构
+- **真实字段差异**：
+  - `workflow_instances` 使用 `reference_type`/`reference_id`（非 `business_type`/`business_id`）
+  - 所有三张表必须引用 `workflow_version_id`（FK → `workflow_versions(id)`）
+  - `workflow_actions` 使用 `actor_user_id`、`from_node_key`、`to_node_key`
+- **后续任务**：适配已有代码到旧 workflow 结构，而非新建表
+- **验证**：`npm run build` PASS

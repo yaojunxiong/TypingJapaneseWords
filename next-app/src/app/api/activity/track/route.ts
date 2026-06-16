@@ -2,6 +2,7 @@ import { cookies } from 'next/headers'
 import { NextResponse, type NextRequest } from 'next/server'
 import { createClient } from '@/utils/supabase/server'
 import { hasSupabasePublicEnv } from '@/utils/supabase/config'
+import { createStudyVisitorWorkflow } from '@/lib/workflow-notifications'
 
 export const dynamic = 'force-dynamic'
 
@@ -56,6 +57,14 @@ function sameOriginReferrer(value: unknown, request: NextRequest) {
   }
 }
 
+function extractIp(request: NextRequest): string | null {
+  const xff = request.headers.get('x-forwarded-for')
+  if (xff) return xff.split(',')[0].trim()
+  const xri = request.headers.get('x-real-ip')
+  if (xri) return xri.trim()
+  return null
+}
+
 export async function POST(request: NextRequest) {
   if (!hasSupabasePublicEnv()) {
     return NextResponse.json({ ok: false, skipped: true }, { status: 200 })
@@ -76,19 +85,37 @@ export async function POST(request: NextRequest) {
   const { data: userData } = await supabase.auth.getUser()
   const user = userData.user
 
-  const { error } = await supabase.from('visitor_activity_events').insert({
-    user_id: user?.id || null,
-    email: user?.email || null,
-    path,
-    page_type: inferPageType(path),
-    lesson_no: inferLessonNo(path),
-    referrer: sameOriginReferrer(payload.referrer, request),
-    user_agent: cleanText(payload.userAgent, 500),
-  })
+  const { data: record, error } = await supabase
+    .from('visitor_activity_events')
+    .insert({
+      user_id: user?.id || null,
+      email: user?.email || null,
+      path,
+      page_type: inferPageType(path),
+      lesson_no: inferLessonNo(path),
+      referrer: sameOriginReferrer(payload.referrer, request),
+      user_agent: cleanText(payload.userAgent, 500),
+    })
+    .select('id, created_at')
+    .single()
 
   if (error) {
     return NextResponse.json({ ok: false, message: error.message }, { status: 200 })
   }
+
+  const ip = extractIp(request)
+  const userAgent = cleanText(payload.userAgent, 500)
+
+  createStudyVisitorWorkflow(supabase, {
+    visitorRecordId: record.id,
+    userId: user?.id || null,
+    pagePath: path,
+    ip,
+    userAgent: userAgent || null,
+    visitedAt: record.created_at || new Date().toISOString(),
+  }).catch((err) => {
+    console.error('[track] createStudyVisitorWorkflow error:', err)
+  })
 
   return NextResponse.json({ ok: true })
 }

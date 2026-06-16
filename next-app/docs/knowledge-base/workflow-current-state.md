@@ -2,76 +2,123 @@
 
 ## 1. 当前结论摘要
 
-**核心发现：当前 master 分支上的 workflow / VIP 申请流程基本缺失。**
+**核心发现：旧 workflow / VIP 申请系统的数据库表已存在于生产 Supabase 中。应用层（后端 API、前端页面、service 函数）仍主要在旧分支。**
 
-整个 workflow / 审批 / VIP 申请系统**只存在于旧分支 `origin/lesson1-comfyui-automation`**，尚未移植到当前 master 分支。当前 master 分支仅包含：
+旧分支 `origin/lesson1-comfyui-automation` 有完整的 workflow / 审批 / VIP 申请系统。当前 master 分支仅包含只读展示页。
 
-- 一个**只读的审批记录展示页** (`/admin/membership-requests`)
-- 两个**纯展示组件**（流程图展示、流程图入口链接）
-- 后台首页的**入口卡片**（指向 `/admin/membership-requests`）
+**关键差异：生产库已有旧 workflow 表，但我错误地假设表不存在并新建了一套不同结构的表。需要适配到旧结构。**
 
-**当前状态：已断裂。** 用户无法提交 VIP 申请，管理员无法审批，数据库表未创建，后端 API 和服务函数未移植。
+⚠️ **不要执行 `supabase/migrations/20260616150000_create_workflow_tables.sql`。** 这是基于错误假设生成的，与生产库旧结构不兼容。
 
 详细提取计划见：`docs/knowledge-base/admin-legacy-branch-extraction-plan.md`
 
 ---
 
-## 2. 相关数据库表
+## 2. 相关数据库表（生产库真实结构）
 
-### 2.1 当前已存在的表（与本系统相关的）
+### 2.1 已存在的表（生产库确认）
 
-| 表名 | 位置（SQL 定义） | 用途 | RLS | 有 Seed 数据？ |
-|------|-----------------|------|-----|:---:|
-| `user_roles` | `supabase/user_roles_rls_fix.sql` | 用户角色（normal/member/vip/admin）+ vip_until | 4 条 policy | ✅ 管理员 seed |
-| `minna_admins` | `supabase/minna_admin_access.sql` | 管理员白名单（用于 RLS 而非前端） | 2 条 policy | ✅ owner seed |
+| 表名 | 源 SQL | 用途 | 说明 |
+|------|--------|------|------|
+| `user_roles` | `supabase/user_roles_rls_fix.sql` | 用户角色 | 含 `is_admin_user()` 函数，被 workflow RLS 引用 |
+| `membership_levels` | `membership_v1.sql` (旧分支) | 会员等级 | free/vip1/vip2/vip3 |
+| `user_memberships` | `membership_v1.sql` (旧分支) | 用户会员绑定 | user_id PK, level text |
+| `membership_requests` | `membership_v1.sql` (旧分支) | 会员升级申请 | 含 `workflow_version_id` + `workflow_instance_id` FK |
+| `workflow_definitions` | `membership_workflow_v2.sql` (旧分支) | 流程模板定义 | definition_key UNIQUE |
+| `workflow_versions` | `membership_workflow_v2.sql` (旧分支) | 流程版本 | FK → definitions |
+| `workflow_nodes` | `membership_workflow_v2.sql` (旧分支) | 流程节点 | FK → versions |
+| `workflow_transitions` | `membership_workflow_v2.sql` (旧分支) | 节点间转换 | FK → versions |
+| `workflow_instances` | `membership_workflow_v2.sql` (旧分支) | 流程实例 | FK → versions |
+| `workflow_tasks` | `membership_workflow_v2.sql` (旧分支) | 流程任务 | FK → instances + versions |
+| `workflow_actions` | `membership_workflow_v2.sql` (旧分支) | 操作日志 | FK → instances + versions |
 
-### 2.2 旧分支存在但当前未创建的表（需要创建才能恢复系统）
+### 2.2 真实表结构（来自旧分支 SQL 定义 + 生产库确认）
 
-| 表名 | SQL 文件（旧分支） | 用途 | 字段说明 |
-|------|-------------------|------|---------|
-| `membership_levels` | `supabase/membership_v1.sql` | 会员等级定义 | level_id, name, min_xp, ... |
-| `user_memberships` | `supabase/membership_v1.sql` | 用户与会员等级绑定 | user_id, level_id, granted_at, ... |
-| `membership_requests` | `supabase/membership_v1.sql` | 会员等级升降申请 | id, user_id, current_level, requested_level, reason, status, reviewed_at, review_note, reject_reason, workflow_version_id, workflow_instance_id |
-| `workflow_definitions` | `supabase/membership_workflow_v2.sql` | 工作流模板定义 | id, name, description, ... |
-| `workflow_versions` | `supabase/membership_workflow_v2.sql` | 工作流版本 | id, definition_id, version, nodes, edges, ... |
-| `workflow_nodes` | `supabase/membership_workflow_v2.sql` | 工作流节点 | id, version_id, node_type, config, ... |
-| `workflow_transitions` | `supabase/membership_workflow_v2.sql` | 节点间转换关系 | id, version_id, from_node_id, to_node_id, condition, ... |
-| `workflow_instances` | `supabase/membership_workflow_v2.sql` | 运行中的工作流实例 | id, version_id, status, context, business_type, business_id, ... |
-| `workflow_tasks` | `supabase/membership_workflow_v2.sql` | 工作流任务 | id, instance_id, node_id, assignee, status, ... |
-| `workflow_actions` | `supabase/membership_workflow_v2.sql` | 工作流操作日志 | id, instance_id, node_id, actor, action, comment, ... |
+#### workflow_instances
 
-### 2.3 表之间关系
+| 字段 | 类型 | 约束 | 说明 |
+|------|------|------|------|
+| `id` | `uuid` | PK, default `gen_random_uuid()` | 实例 ID |
+| `workflow_version_id` | `uuid` | NOT NULL, FK → `workflow_versions(id)` | 必须关联流程版本 |
+| `reference_type` | `text` | NOT NULL | 业务类型（如 `'membership_request'`, `'study_visitor'`） |
+| `reference_id` | `uuid` | NOT NULL | 业务记录 ID（如 `user_id`, `membership_request.id`） |
+| `current_node_key` | `text` | nullable | 当前所处节点 key |
+| `status` | `text` | NOT NULL, DEFAULT `'running'` | `running` / `approved` / `rejected` |
+| `created_at` | `timestamptz` | NOT NULL, DEFAULT `now()` | |
+| `updated_at` | `timestamptz` | NOT NULL, DEFAULT `now()` | |
+
+#### workflow_tasks
+
+| 字段 | 类型 | 约束 | 说明 |
+|------|------|------|------|
+| `id` | `uuid` | PK, default `gen_random_uuid()` | |
+| `workflow_instance_id` | `uuid` | NOT NULL, FK → `workflow_instances(id)` ON DELETE CASCADE | |
+| `workflow_version_id` | `uuid` | NOT NULL, FK → `workflow_versions(id)` | |
+| `node_key` | `text` | NOT NULL | 节点 key（如 `'admin_approval'`） |
+| `node_name` | `text` | NOT NULL | 节点显示名（如 `'管理员审批'`） |
+| `assignee_type` | `text` | nullable | `'role'` |
+| `assignee_value` | `text` | nullable | `'admin'` |
+| `status` | `text` | NOT NULL, DEFAULT `'pending'` | `pending` / `completed` |
+| `created_at` | `timestamptz` | NOT NULL, DEFAULT `now()` | |
+| `completed_at` | `timestamptz` | nullable | |
+| `completed_by` | `uuid` | nullable, FK → `auth.users(id)` ON DELETE SET NULL | |
+
+#### workflow_actions
+
+| 字段 | 类型 | 约束 | 说明 |
+|------|------|------|------|
+| `id` | `uuid` | PK, default `gen_random_uuid()` | |
+| `workflow_instance_id` | `uuid` | NOT NULL, FK → `workflow_instances(id)` ON DELETE CASCADE | |
+| `workflow_version_id` | `uuid` | NOT NULL, FK → `workflow_versions(id)` | |
+| `actor_user_id` | `uuid` | nullable, FK → `auth.users(id)` ON DELETE SET NULL | 操作人 |
+| `action` | `text` | NOT NULL | `'submit'` / `'approve'` / `'reject'` |
+| `from_node_key` | `text` | nullable | 来源节点 |
+| `to_node_key` | `text` | nullable | 目标节点 |
+| `comment` | `text` | nullable | 备注 |
+| `created_at` | `timestamptz` | NOT NULL, DEFAULT `now()` | |
+
+### 2.3 表关系图
 
 ```
-membership_levels ──< user_memberships >── user_roles
-                            │
-                            ▼
-                   membership_requests
-                            │
-                            ▼
-                   workflow_instances >── workflow_versions >── workflow_definitions
-                            │                        │
-                            ▼                        ▼
-                   workflow_tasks              workflow_nodes
-                            │                        │
-                            ▼                        ▼
-                   workflow_actions            workflow_transitions
-```
+workflow_definitions
+  └── workflow_versions (definition_id)
+        ├── workflow_nodes (workflow_version_id)
+        ├── workflow_transitions (workflow_version_id)
+        └── workflow_instances (workflow_version_id)
+              ├── workflow_tasks (workflow_instance_id + workflow_version_id)
+              └── workflow_actions (workflow_instance_id + workflow_version_id)
+
+membership_requests
+  ├── workflow_version_id → workflow_versions(id)
+  └── workflow_instance_id → workflow_instances(id)
+``` |
 
 ### 2.4 哪些表可作为通用流程能力复用
 
 | 表 | 是否通用 | 当前强绑定 VIP | 备注 |
 |---|:-------:|:-------------:|------|
-| `workflow_definitions` | ✅ 通用 | ❌ | 可通过 `flow_key` 区分不同流程类型 |
-| `workflow_versions` | ✅ 通用 | ❌ | 同一套版本管理机制 |
-| `workflow_nodes` | ✅ 通用 | ❌ | 节点定义本身无业务绑定 |
+| `workflow_definitions` | ✅ 通用 | ❌ | `definition_key` 区分不同流程 |
+| `workflow_versions` | ✅ 通用 | ❌ | 同一套版本管理 |
+| `workflow_nodes` | ✅ 通用 | ❌ | 节点定义无业务绑定 |
 | `workflow_transitions` | ✅ 通用 | ❌ | 转换条件可抽象 |
-| `workflow_instances` | ✅ 通用 | ⚠️ 字段有 business_type/business_id | 已设计为通用，business_type 可传 "vip_application"、"study_visitor" 等 |
-| `workflow_tasks` | ✅ 通用 | ❌ | 通用的待办任务模型 |
-| `workflow_actions` | ✅ 通用 | ❌ | 通用的操作日志 |
-| `membership_requests` | ❌ 专用 | ✅ 强绑定 | 专为会员申请设计 |
-| `user_memberships` | ❌ 专用 | ✅ 强绑定 | 会员等级专用 |
+| `workflow_instances` | ✅ 通用 | ❌ | `reference_type` + `reference_id` 已设计为通用 |
+| `workflow_tasks` | ✅ 通用 | ❌ | 通用待办任务模型 |
+| `workflow_actions` | ✅ 通用 | ❌ | 通用操作日志 |
+| `membership_requests` | ❌ 专用 | ✅ 强绑定 | 专为会员申请 |
+| `user_memberships` | ❌ 专用 | ✅ 强绑定 | 会员等级 |
 | `membership_levels` | ❌ 专用 | ✅ 强绑定 | 会员等级定义 |
+
+### 2.5 关键发现：业务绑定字段
+
+旧版 workflow 实例使用 **`reference_type` + `reference_id`**（而非我最初假设的 `business_type` + `business_id`）：
+
+```sql
+-- 旧分支 SQL 定义（生产库已有）
+reference_type text not null,   -- 如 'membership_request', 'study_visitor'
+reference_id uuid not null,     -- 如 membership_requests.id, auth.users.id
+```
+
+这意味着 study_visitor 可以直接使用 `reference_type = 'study_visitor'`, `reference_id = <user_id>`，**不需要加新字段**。
 
 ---
 
@@ -146,42 +193,51 @@ membership_levels ──< user_memberships >── user_roles
 
 ---
 
-## 5. 当前 VIP 申请流程链路
+## 5. VIP 申请流程真实调用链（来自旧分支）
 
-### 5.1 期望的完整链路
-
-```
-用户提交 VIP 申请
-  → 创建 membership_requests 记录（status='pending'）
-  → 创建 workflow_instance（绑定 membership_requests.id）
-  → 创建 workflow_task（管理员待审批）
-  → 管理员登录后台查看待审批
-  → 管理员审批（通过/驳回）
-  → 写入 workflow_action 操作日志
-  → 更新 workflow_instance 状态
-  → 更新 membership_requests.status
-  → 如果通过：更新 user_roles.role = 'vip'、设置 vip_until
-  → 流程结束
-```
-
-### 5.2 当前实际链路状态
+### 5.1 createWorkflowInstanceForMembership() — 创建流程实例
 
 ```
-用户提交 VIP 申请 → ❌ 断裂（无申请入口、无 API 路由）
-  → 创建 membership_requests → ❌ 断裂（数据库表不存在）
-  → 创建 workflow_instance → ❌ 断裂（数据库表不存在、无服务函数）
-  → 创建 task → ❌ 断裂
-  → 后台显示待审批 → ⚠️ 页面存在但无数据
-  → 管理员审批 → ❌ 断裂（无 API、无组件、无写操作）
-  → 更新状态/角色 → ❌ 断裂
+POST /api/membership-requests
+  → 验证用户登录、请求等级、去重检查
+  → ensureUserMembership(user.id) 确保 user_memberships 记录存在
+  → getActiveMembershipWorkflowVersion() 获取 membership_application 最新 active 版本
+  → INSERT membership_requests (user_id, current_level, requested_level, reason, status='pending', workflow_version_id)
+  → createWorkflowInstanceForMembership():
+      → getWorkflowGraph(versionId) 获取节点+转换
+      → 找到 start 节点 + submit 转换 + 第一个审批节点
+      → INSERT workflow_instances (workflow_version_id, reference_type='membership_request', reference_id=membership_request.id, current_node_key=审批节点, status='running')
+      → INSERT workflow_tasks (workflow_instance_id, workflow_version_id, node_key=审批节点, node_name, assignee_type='role', assignee_value='admin', status='pending')
+      → INSERT workflow_actions (workflow_instance_id, workflow_version_id, action='submit', from_node_key=start, to_node_key=审批节点)
+  → UPDATE membership_requests SET workflow_instance_id = ?
 ```
 
-**当前链路诊断：已断裂。** 整条链路从起点（用户申请）到终点（完成审批）每一环都是断裂的。
+### 5.2 管理员审批链路
 
-### 5.3 当前页面表现
+```
+PATCH /api/admin/membership-requests/[id]
+  → requireAdmin() 验证管理员身份
+  → 查询 membership_requests + workflow_instances + graph
+  → 验证状态 (status='pending', instance.status='running')
+  → 找到转换: from=current_node_key, action=(approve/reject), to=next_node
+  → UPDATE workflow_tasks SET status='completed' WHERE node_key=current AND status='pending'
+  → INSERT workflow_actions (workflow_instance_id, workflow_version_id, actor_user_id, action, from_node_key, to_node_key, comment)
+  → 如果 next_node 不是 end 类型:
+      → UPDATE workflow_instances SET current_node_key=next, status='running'
+      → INSERT workflow_tasks (node_key=next, status='pending')
+  → 如果 next_node 是 end 类型:
+      → UPDATE workflow_instances SET current_node_key=next, status='approved'|'rejected'
+      → UPDATE membership_requests SET status='approved'|'rejected', reviewed_by, reviewed_at, review_note
+      → 如果通过: UPDATE user_memberships SET level=requested_level
+      → 如果通过且用户无 member 角色: INSERT INTO user_roles (user_id, role='member')
+```
 
-- 访问 `/admin/membership-requests` 时，检测到 `membership_requests` 表不存在，显示"需要先创建数据库表"提示
-- 即使表存在，当前页面也只读展示记录，无审批操作按钮
+### 5.3 关键观察
+
+- `workflow_versions` 是必需字段（instances / tasks / actions 都要引用）
+- 业务绑定通过 `reference_type` + `reference_id` 实现
+- RLS 通过 `membership_requests` 表关联到 workflow 实例来判断用户所有权
+- `is_admin_user()` 函数引用 `user_roles` 表
 
 ---
 
@@ -343,29 +399,117 @@ membership_levels ──< user_memberships >── user_roles
 └── 审批操作（通过/驳回 + 备注）
 ```
 
-### 10.7 邮件通知能力评估（2026-06-16）
+### 10.7 邮件通知能力（2026-06-16）
 
 详见独立知识库文档：`docs/knowledge-base/email-current-state.md`
 
-**当前状态：当前 master 无业务邮件发送能力。** Supabase Auth 的 Magic Link 邮件由 Supabase 服务端托管，应用代码无法调用。旧分支存在完整的邮件服务（`email-service.ts`，418 行），尚未移植。
+**当前状态：基础邮件服务就绪，但 workflow 集成尚未适配到旧分支结构。**
 
-**推荐方案：**
-- 移植旧分支 `email-service.ts` + Resend API
-- workflow 流程的关键节点（提交申请、审批通过、审批驳回）接入邮件通知
-- 新建 `email_settings`、`email_templates`、`email_logs` 表
-- 邮件通知作为可选增强能力，不阻塞流程核心逻辑
+- `src/lib/email-service.ts` — 可用 `sendWorkflowPendingNotification()` 发送管理员通知
+- ⚠️ 当前代码中的 `createStudyVisitorWorkflow()` 使用了错误表结构（`business_type`/`business_id`），**需要适配到旧结构的 `reference_type`/`reference_id`**
 
-**workflow 邮件通知接入场景：**
-
-| 场景 | 触发时机 | template_key | 收件人 |
-|------|---------|-------------|:-----:|
-| 用户提交 VIP 申请 | `membership_requests` INSERT 后 | `vip_pending_admin` | 管理员 |
-| 管理员审批通过 | workflow 完成节点 | `vip_approved_user` | 申请人 |
-| 管理员审批驳回 | workflow 完成节点 | `vip_rejected_user` | 申请人 |
-| 新访客提交确认申请 | `study_visitor_requests` INSERT 后 | `visitor_pending_admin` | 管理员 |
-| 新访客确认通过 | workflow 完成节点 | `visitor_approved_user` | 申请人 |
+**已接入的 workflow 邮件通知场景：**
+| 场景 | 状态 |
+|------|:----:|
+| study_visitor 待处理 | 🔧 需适配到旧 workflow 表结构 |
+| VIP 申请/审批 | ⏳ 待未来接入 |
 
 **不接入邮件通知时不影响流程正常运行。** 邮件始终是可选的辅助通知手段。
+
+## 12. study_visitor 适配方案（2026-06-16 调查结论）
+
+### 12.1 核心发现
+
+生产库已存在旧分支的 workflow 表（`workflow_instances`、`workflow_tasks`、`workflow_actions`），字段与 legacy SQL 一致。**不应新建一套表。**
+
+### 12.2 推荐方案：结论 A — 完全复用现有旧结构
+
+**不需要新增任何表或字段。** study_visitor 直接使用 `reference_type = 'study_visitor'` 和 `reference_id = auth.uid()` 绑定业务。
+
+#### 需要做的改动：
+
+**A. 在 Supabase 中插入 study_visitor 流程定义**（安全 SQL 补丁，不 drop 旧表）：
+
+```sql
+-- 1. 注册流程定义
+insert into public.workflow_definitions (definition_key, name)
+values ('study_visitor', '学习网站新访客确认')
+on conflict (definition_key) do nothing;
+
+-- 2. 创建版本 1 (active) + 节点 + 转换
+do $$ ... end $$;
+```
+
+具体 SQL 草案见附录。
+
+**B. 修改 `workflow-notifications.ts`**：
+- 不再用 `business_type`/`business_id`，改用 `reference_type`/`reference_id`
+- 必须传入 `workflow_version_id`（从 `workflow_versions` 表查询 active 版本）
+- 参照 `createWorkflowInstanceForMembership()` 的模式：
+  ```typescript
+  // 获取流程版本
+  const version = await getActiveStudyVisitorWorkflowVersion()
+  // 创建实例
+  INSERT workflow_instances (workflow_version_id, reference_type='study_visitor', reference_id=user_id, current_node_key='admin_approval', status='running')
+  // 创建任务
+  INSERT workflow_tasks (workflow_instance_id, workflow_version_id, node_key='admin_approval', node_name='管理员确认', assignee_type='role', assignee_value='admin', status='pending')
+  // 记录操作
+  INSERT workflow_actions (workflow_instance_id, workflow_version_id, action='submit', from_node_key='start_visit', to_node_key='admin_approval')
+  // 发送邮件
+  await sendWorkflowPendingNotification({ ... })
+  ```
+
+**C. 修改管理员确认 API**：
+- 参照 `PATCH /api/admin/membership-requests/[id]/route.ts` 的 review 模式
+- 使用 `workflow_instances` 的 `current_node_key` 确定当前节点
+- 通过 `workflow_transitions` 查找目标节点
+- 更新 `workflow_tasks` + 插入 `workflow_actions` + 更新 `workflow_instances.status`
+
+**D. RLS 策略更新**：
+当前 `workflow_instances`/`workflow_tasks`/`workflow_actions` 的 SELECT 策略通过 `membership_requests` 表检查所有权。study_visitor 没有 `membership_requests` 记录，需要扩展 RLS：
+
+```sql
+drop policy if exists workflow_instances_admin_or_owner_read on public.workflow_instances;
+create policy workflow_instances_admin_or_owner_read on public.workflow_instances for select using (
+  public.is_admin_user()
+  or exists (
+    select 1 from public.membership_requests mr
+    where mr.workflow_instance_id = workflow_instances.id and mr.user_id = auth.uid()
+  )
+  or (reference_type = 'study_visitor' and reference_id = auth.uid())
+);
+```
+
+同样更新 `workflow_tasks` 和 `workflow_actions` 的 RLS。
+
+### 12.3 关键差异总结：我之前的错误 vs 真实结构
+
+| 项 | 我之前写的 migration | 生产库真实结构 |
+|---|:-----------------:|:------------:|
+| 业务绑定字段 | `business_type text` + `business_id text` | `reference_type text` + `reference_id uuid` |
+| workflow_version_id | ❌ 无 | ✅ 必需 FK |
+| started_by | ✅ 有 | ❌ 无 |
+| started_at | ✅ 有 | ❌ 无（用 created_at） |
+| completed_at | ✅ 在 instances 表 | ❌ 在 tasks 表有，instances 用 status |
+| task.node_key | ❌ 无 | ✅ 必填 |
+| task.workflow_version_id | ❌ 无 | ✅ 必填 |
+| task.completed_by | ❌ 无 | ✅ 有 |
+| action.actor_user_id | ❌ 叫 actor_id | ✅ actor_user_id |
+| action.from_node_key / to_node_key | ❌ 无 | ✅ 有 |
+| action.workflow_version_id | ❌ 无 | ✅ 必填 |
+| workflow_definitions/versions/nodes/transitions | ❌ 未创建 | ✅ 完整存在 |
+| RLS 所有权检查 | 自建 `business_id = auth.uid()` | 通过 `membership_requests` 表关联 |
+
+### 12.4 结论
+
+**推荐方案 A**：study_visitor 完全复用现有 workflow 旧结构，不需要新增字段或表。
+
+改动范围：
+1. 安全的 SQL 补丁（INSERT 新 definition + version + nodes + transitions + 更新 RLS）
+2. 修改 `workflow-notifications.ts` 使用 `reference_type/reference_id`
+3. 修改管理员 review API 适配旧结构的 review 逻辑
+4. 修改 `isEmailConfigured` 等状态检查不受影响
+5. 删除错误的新建 migration 文件
 
 ---
 
@@ -405,9 +549,10 @@ membership_levels ──< user_memberships >── user_roles
 
 8. **当前已知限制：**
    - `@xyflow/react` 依赖未安装（流程图需要）
-   - `workflow_*` 表未创建
+   - `workflow_*` 表未在 Supabase 云端执行（migration 文件已就绪，需手动在 SQL Editor 执行）
    - 无统一审批中心页面
    - `minna-nav.tsx` 无管理员菜单入口
+   - 管理员确认后页面不自动刷新（需手动重载）
 
 9. **不要做的操作：**
    - 不要修改 `membership_requests` 表结构（已有旧分支定义）
