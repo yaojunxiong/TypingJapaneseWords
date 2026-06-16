@@ -183,7 +183,6 @@ export default async function AdminStudyVisitorPage() {
                       <StudyVisitorReviewActions
                         instanceId={inst.id}
                         currentStatus={inst.status}
-                        onDone={() => {}}
                       />
                     </td>
                   </tr>

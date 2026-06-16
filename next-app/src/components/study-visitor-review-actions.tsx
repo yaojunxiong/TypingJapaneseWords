@@ -1,14 +1,15 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 
 type Props = {
   instanceId: string
   currentStatus: string
-  onDone: () => void
 }
 
-export default function StudyVisitorReviewActions({ instanceId, currentStatus, onDone }: Props) {
+export default function StudyVisitorReviewActions({ instanceId, currentStatus }: Props) {
+  const router = useRouter()
   const [busy, setBusy] = useState(false)
   const [message, setMessage] = useState('')
 
@@ -29,7 +30,7 @@ export default function StudyVisitorReviewActions({ instanceId, currentStatus, o
       const data = await res.json()
       if (data.ok) {
         setMessage(action === 'approve' ? '已确认通过' : '已拒绝')
-        onDone()
+        router.refresh()
       } else {
         setMessage(data.error || '操作失败')
       }
