@@ -343,6 +343,30 @@ membership_levels ──< user_memberships >── user_roles
 └── 审批操作（通过/驳回 + 备注）
 ```
 
+### 10.7 邮件通知能力评估（2026-06-16）
+
+详见独立知识库文档：`docs/knowledge-base/email-current-state.md`
+
+**当前状态：当前 master 无业务邮件发送能力。** Supabase Auth 的 Magic Link 邮件由 Supabase 服务端托管，应用代码无法调用。旧分支存在完整的邮件服务（`email-service.ts`，418 行），尚未移植。
+
+**推荐方案：**
+- 移植旧分支 `email-service.ts` + Resend API
+- workflow 流程的关键节点（提交申请、审批通过、审批驳回）接入邮件通知
+- 新建 `email_settings`、`email_templates`、`email_logs` 表
+- 邮件通知作为可选增强能力，不阻塞流程核心逻辑
+
+**workflow 邮件通知接入场景：**
+
+| 场景 | 触发时机 | template_key | 收件人 |
+|------|---------|-------------|:-----:|
+| 用户提交 VIP 申请 | `membership_requests` INSERT 后 | `vip_pending_admin` | 管理员 |
+| 管理员审批通过 | workflow 完成节点 | `vip_approved_user` | 申请人 |
+| 管理员审批驳回 | workflow 完成节点 | `vip_rejected_user` | 申请人 |
+| 新访客提交确认申请 | `study_visitor_requests` INSERT 后 | `visitor_pending_admin` | 管理员 |
+| 新访客确认通过 | workflow 完成节点 | `visitor_approved_user` | 申请人 |
+
+**不接入邮件通知时不影响流程正常运行。** 邮件始终是可选的辅助通知手段。
+
 ---
 
 ## 11. 给未来 AI 编程助手的注意事项

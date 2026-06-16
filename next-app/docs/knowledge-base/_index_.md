@@ -43,6 +43,7 @@ tags:
 | 老师讲解音频 | `public/audio/deep-dive/lesson-{01..50}-zh.mp3` |
 | 音频生成脚本 | `scripts/generate-deep-dive-audio.py` |
 | Workflow/VIP 申请现状知识库 | `docs/knowledge-base/workflow-current-state.md` |
+| 邮件发送能力评估 | `docs/knowledge-base/email-current-state.md` |
 | 旧分支后台能力提取计划 | `docs/knowledge-base/admin-legacy-branch-extraction-plan.md` |
 
 ## 开发原则
@@ -419,3 +420,18 @@ tags:
 - **验证**：`npm run build` PASS
 - **学习主线影响**：无。纯文档，未修改任何代码。
 - **commit hash**：d17f6c3
+
+### 2026-06-16 — 新增邮件发送能力评估，更新 workflow 知识库邮件通知评估
+
+- **优化内容**：
+  - 全面调查当前 master 分支邮件发送能力
+  - 确认当前无业务邮件发送能力，仅 Supabase Auth 托管 Magic Link 邮件
+  - 确认旧分支存在完整邮件系统（`email-service.ts`，418 行），尚未移植
+  - 明确 workflow 邮件通知不能复用 Supabase Auth 邮件
+  - 推荐移植旧分支 `email-service.ts` + Resend API
+  - 新增 `docs/knowledge-base/email-current-state.md` 知识库文档
+  - 更新 `docs/knowledge-base/workflow-current-state.md` 增加 §10.7 邮件通知评估
+  - 更新 `docs/knowledge-base/_index_.md` 索引
+- **修改文件**：新增 `docs/knowledge-base/email-current-state.md`、修改 `docs/knowledge-base/workflow-current-state.md`、`docs/knowledge-base/_index_.md`
+- **验证**：`npm run build` PASS
+- **学习主线影响**：无。纯文档，未修改任何代码。
