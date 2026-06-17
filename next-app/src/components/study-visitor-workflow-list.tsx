@@ -15,6 +15,7 @@ type VisitorActivity = {
 
 export type StudyVisitorWorkflowRow = {
   id: string
+  workflow_version_id: string
   reference_type: string
   reference_id: string
   status: string
@@ -158,7 +159,7 @@ export default function StudyVisitorWorkflowList({ rows }: Props) {
                     <div style={{ display: 'grid', gap: 8 }}>
                       <StudyVisitorReviewActions instanceId={row.id} currentStatus={row.status} />
                       <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-                        <Link className="btn ghost" href={`/admin/workflows/study-visitor/${row.id}/flowchart`}>流程图</Link>
+                        <Link className="btn ghost" href={`/admin/workflows/${row.workflow_version_id}/diagram?instanceId=${encodeURIComponent(row.id)}`}>流程图</Link>
                         <button type="button" className="btn ghost" onClick={() => setExpanded((prev) => ({ ...prev, [row.id]: !prev[row.id] }))}>{expanded[row.id] ? '收起' : '详情'}</button>
                       </div>
                       {expanded[row.id] ? (

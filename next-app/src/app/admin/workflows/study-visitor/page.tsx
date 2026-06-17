@@ -10,6 +10,7 @@ export const dynamic = 'force-dynamic'
 
 type InstanceRow = {
   id: string
+  workflow_version_id: string
   reference_type: string
   reference_id: string
   status: string
@@ -76,7 +77,7 @@ export default async function AdminStudyVisitorPage() {
     const supabase = createClient(cookieStore)
     const result = await supabase
       .from('workflow_instances')
-      .select('id,reference_type,reference_id,status,current_node_key,created_at,updated_at')
+      .select('id,workflow_version_id,reference_type,reference_id,status,current_node_key,created_at,updated_at')
       .eq('reference_type', 'study_visitor')
       .order('created_at', { ascending: false })
     data = result.data
@@ -143,6 +144,7 @@ export default async function AdminStudyVisitorPage() {
     const activity = nearestActivityForInstance(instance, activities)
     return {
       id: instance.id,
+      workflow_version_id: instance.workflow_version_id,
       reference_type: instance.reference_type,
       reference_id: instance.reference_id,
       status: instance.status,
