@@ -4,6 +4,7 @@ import MinnaNav from '@/components/minna-nav'
 import { getLang, tr } from '@/lib/i18n'
 import { checkAdminAccess } from '@/lib/admin-auth'
 import { getEmailConfigStatus } from '@/lib/email-service'
+import { getStudyVisitorWorkflowConfig } from '@/lib/study-visitor-workflow-config'
 import SystemEmailTestButton from '@/components/admin/system-email-test-button'
 
 const routes = [
@@ -105,6 +106,7 @@ export default async function AdminSystemPage() {
       </section>
 
       <EmailConfigCard lang={lang} />
+      <StudyVisitorWorkflowConfigCard lang={lang} />
 
       <section className="card">
         <h2>{tr(lang, '当前后台可用路由', 'Available Admin Routes')}</h2>
@@ -188,6 +190,34 @@ export default async function AdminSystemPage() {
         </div>
       </section>
     </main>
+  )
+}
+
+function StudyVisitorWorkflowConfigCard({ lang }: { lang: 'zh' | 'en' }) {
+  const config = getStudyVisitorWorkflowConfig()
+  return (
+    <section className="card">
+      <h2>{tr(lang, '访客确认流程配置', 'Visitor Workflow Config')}</h2>
+      <table className="table" style={{ minWidth: 360 }}>
+        <tbody>
+          <tr>
+            <td className="small" style={{ fontWeight: 700, width: 180 }}>{tr(lang, '访客确认流程', 'Visitor workflow')}</td>
+            <td>{config.enabled ? tr(lang, '已开启', 'Enabled') : tr(lang, '已关闭', 'Disabled')}</td>
+          </tr>
+          <tr>
+            <td className="small" style={{ fontWeight: 700 }}>{tr(lang, '忽略后台路径', 'Ignore admin paths')}</td>
+            <td>{config.ignoreAdminPaths ? tr(lang, '是', 'Yes') : tr(lang, '否', 'No')}</td>
+          </tr>
+          <tr>
+            <td className="small" style={{ fontWeight: 700 }}>{tr(lang, '忽略管理员访问', 'Ignore admin visits')}</td>
+            <td>{config.ignoreAdminUsers ? tr(lang, '是', 'Yes') : tr(lang, '否', 'No')}</td>
+          </tr>
+        </tbody>
+      </table>
+      <p className="small" style={{ marginTop: 8 }}>
+        {tr(lang, '这些值来自 Vercel 环境变量；默认保持当前线上触发行为。', 'These values come from Vercel environment variables. Defaults preserve current production behavior.')}
+      </p>
+    </section>
   )
 }
 

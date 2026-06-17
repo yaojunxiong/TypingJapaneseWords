@@ -566,3 +566,17 @@ create policy workflow_instances_admin_or_owner_read on public.workflow_instance
     - `npm run build` 确保编译通过
     - 访问 `/admin/membership-requests` 确认页面不报错
     - 数据库表创建后在 Supabase 中验证 RLS policy
+
+---
+
+## 11. study_visitor 触发开关（2026-06-17）
+
+`study_visitor` 工作流由 `/api/activity/track` 在记录访客活动后触发。当前触发范围通过环境变量控制，默认值保持当前线上行为不变。
+
+| 环境变量 | 默认值 | 作用 |
+|---------|:------:|------|
+| `STUDY_VISITOR_WORKFLOW_ENABLED` | `true` | 设为 `false` 时完全不创建 `study_visitor` workflow，也不发送管理员通知邮件 |
+| `STUDY_VISITOR_IGNORE_ADMIN_PATHS` | `false` | 设为 `true` 时，`/admin`、`/admin/*`、`/api`、`/api/*` 不触发 `study_visitor` workflow |
+| `STUDY_VISITOR_IGNORE_ADMIN_USERS` | `false` | 设为 `true` 时，当前登录用户是管理员则不触发 `study_visitor` workflow |
+
+这些开关只影响是否触发 `study_visitor` workflow，不修改数据库结构，不影响 Brevo SMTP 或邮件发送实现。

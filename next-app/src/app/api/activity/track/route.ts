@@ -3,6 +3,8 @@ import { NextResponse, type NextRequest } from 'next/server'
 import { createClient } from '@/utils/supabase/server'
 import { hasSupabasePublicEnv } from '@/utils/supabase/config'
 import { createStudyVisitorWorkflow } from '@/lib/workflow-notifications'
+import { checkAdminAccess } from '@/lib/admin-auth'
+import { getStudyVisitorWorkflowConfig, isAdminPath } from '@/lib/study-visitor-workflow-config'
 
 export const dynamic = 'force-dynamic'
 
@@ -105,6 +107,22 @@ export async function POST(request: NextRequest) {
 
   const ip = extractIp(request)
   const userAgent = cleanText(payload.userAgent, 500)
+  const workflowConfig = getStudyVisitorWorkflowConfig()
+
+  if (!workflowConfig.enabled) {
+    return NextResponse.json({ ok: true })
+  }
+
+  if (workflowConfig.ignoreAdminPaths && isAdminPath(path)) {
+    return NextResponse.json({ ok: true })
+  }
+
+  if (workflowConfig.ignoreAdminUsers) {
+    const adminCheck = await checkAdminAccess(cookieStore)
+    if (adminCheck.isAdmin) {
+      return NextResponse.json({ ok: true })
+    }
+  }
 
   try {
     await createStudyVisitorWorkflow(supabase, {

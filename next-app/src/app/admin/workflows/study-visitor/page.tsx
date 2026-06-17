@@ -3,30 +3,39 @@ import { cookies } from 'next/headers'
 import { createClient } from '@/utils/supabase/server'
 import { getLang, tr } from '@/lib/i18n'
 import { checkAdminAccess } from '@/lib/admin-auth'
-import { formatTokyoDateTime } from '@/lib/date-format'
 import MinnaNav from '@/components/minna-nav'
-import StudyVisitorFlowchart from '@/components/study-visitor-flowchart'
-import StudyVisitorReviewActions from '@/components/study-visitor-review-actions'
+import StudyVisitorWorkflowList, { type StudyVisitorWorkflowRow } from '@/components/study-visitor-workflow-list'
 
 export const dynamic = 'force-dynamic'
 
 type InstanceRow = {
   id: string
+  reference_type: string
   reference_id: string
   status: string
   current_node_key: string | null
   created_at: string | null
+  updated_at: string | null
 }
 
-function shortId(value: string | null | undefined) {
-  if (!value) return '-'
-  return value.slice(0, 8)
+type ActivityRow = {
+  id: string
+  user_id: string | null
+  path: string | null
+  user_agent: string | null
+  created_at: string | null
 }
 
-function statusBadge(status: string) {
-  if (status === 'approved' || status === 'completed') return { color: '#166534', background: '#dcfce7', border: '1px solid #86efac', label: '已确认' }
-  if (status === 'rejected') return { color: '#991b1b', background: '#fee2e2', border: '1px solid #fca5a5', label: '已拒绝' }
-  return { color: '#92400e', background: '#fef3c7', border: '1px solid #fcd34d', label: '待确认' }
+function nearestActivityForInstance(instance: InstanceRow, activities: ActivityRow[]) {
+  const instanceTime = instance.created_at ? new Date(instance.created_at).getTime() : 0
+  const candidates = activities.filter((activity) => activity.user_id === instance.reference_id)
+  if (!candidates.length) return null
+  return candidates.reduce((best, activity) => {
+    if (!instanceTime) return best
+    const bestTime = best.created_at ? Math.abs(new Date(best.created_at).getTime() - instanceTime) : Number.MAX_SAFE_INTEGER
+    const activityTime = activity.created_at ? Math.abs(new Date(activity.created_at).getTime() - instanceTime) : Number.MAX_SAFE_INTEGER
+    return activityTime < bestTime ? activity : best
+  }, candidates[0])
 }
 
 export default async function AdminStudyVisitorPage() {
@@ -67,7 +76,7 @@ export default async function AdminStudyVisitorPage() {
     const supabase = createClient(cookieStore)
     const result = await supabase
       .from('workflow_instances')
-      .select('id,reference_id,status,current_node_key,created_at')
+      .select('id,reference_type,reference_id,status,current_node_key,created_at,updated_at')
       .eq('reference_type', 'study_visitor')
       .order('created_at', { ascending: false })
     data = result.data
@@ -113,6 +122,41 @@ export default async function AdminStudyVisitorPage() {
   }
 
   const instances = (data || []) as InstanceRow[]
+  let activities: ActivityRow[] = []
+  if (instances.length > 0) {
+    try {
+      const supabase = createClient(cookieStore)
+      const userIds = [...new Set(instances.map((instance) => instance.reference_id).filter(Boolean))]
+      const { data: activityData } = await supabase
+        .from('visitor_activity_events')
+        .select('id,user_id,path,user_agent,created_at')
+        .in('user_id', userIds)
+        .order('created_at', { ascending: false })
+        .limit(1000)
+      activities = (activityData || []) as ActivityRow[]
+    } catch (err) {
+      console.warn('[study-visitor] visitor activity lookup failed:', err)
+    }
+  }
+
+  const rows: StudyVisitorWorkflowRow[] = instances.map((instance) => {
+    const activity = nearestActivityForInstance(instance, activities)
+    return {
+      id: instance.id,
+      reference_type: instance.reference_type,
+      reference_id: instance.reference_id,
+      status: instance.status,
+      current_node_key: instance.current_node_key,
+      created_at: instance.created_at,
+      updated_at: instance.updated_at,
+      visitorActivity: activity ? {
+        id: activity.id,
+        path: activity.path,
+        user_agent: activity.user_agent,
+        created_at: activity.created_at,
+      } : null,
+    }
+  })
   const pendingCount = instances.filter((r) => r.status === 'running').length
   const totalCount = instances.length
 
@@ -136,52 +180,18 @@ export default async function AdminStudyVisitorPage() {
         </div>
       </section>
 
-      <section className="card" style={{ overflowX: 'auto' }}>
-        {instances.length === 0 ? (
-          <p className="small" style={{ textAlign: 'center', padding: 12 }}>
-            {tr(lang, '暂无访客确认记录。', 'No visitor confirmation records yet.')}
-          </p>
+      <>
+        {rows.length === 0 ? (
+          <section className="card">
+            <p className="small" style={{ textAlign: 'center', padding: 12 }}>
+              {tr(lang, '暂无访客确认记录。', 'No visitor confirmation records yet.')}
+            </p>
+          </section>
         ) : (
-          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.82rem' }}>
-            <thead>
-              <tr style={{ borderBottom: '2px solid #ddd' }}>
-                <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '创建时间', 'Created')}</th>
-                <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '访客 ID', 'Visitor')}</th>
-                <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '状态', 'Status')}</th>
-                <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '流程', 'Progress')}</th>
-                <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '操作', 'Actions')}</th>
-              </tr>
-            </thead>
-            <tbody>
-              {instances.map((inst) => {
-                const badge = statusBadge(inst.status)
-                return (
-                  <tr key={inst.id} style={{ borderBottom: '1px solid #eee', verticalAlign: 'middle' }}>
-                    <td style={{ padding: 6, whiteSpace: 'nowrap' }}>{formatTokyoDateTime(inst.created_at)}</td>
-                    <td style={{ padding: 6, fontFamily: 'monospace', fontSize: '0.75rem' }}>
-                      {shortId(inst.reference_id)}
-                      <div className="small" style={{ marginTop: 2, color: '#64748b' }}>实例: {shortId(inst.id)}</div>
-                    </td>
-                    <td style={{ padding: 6 }}>
-                      <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, borderRadius: 999, padding: '4px 10px', fontWeight: 700, ...badge }}>
-                        {badge.label}
-                      </span>
-                    </td>
-                    <td style={{ padding: 6 }}>
-                      <StudyVisitorFlowchart status={(inst.status === 'approved' ? 'completed' : inst.status) as 'running' | 'pending' | 'completed' | 'rejected'} />
-                    </td>
-                    <td style={{ padding: 6 }}>
-                      <StudyVisitorReviewActions
-                        instanceId={inst.id}
-                        currentStatus={inst.status}
-                      />
-                    </td>
-                  </tr>
-                )
-              })}
-            </tbody>
-          </table>
+          <StudyVisitorWorkflowList rows={rows} />
         )}
+      </>
+      <section className="card">
         <p className="small" style={{ marginTop: 12 }}>
           <Link href="/admin">{tr(lang, '← 返回后台首页', '← Back to Admin')}</Link>
         </p>
