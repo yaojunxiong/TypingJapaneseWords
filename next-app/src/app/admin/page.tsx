@@ -504,6 +504,12 @@ export default async function AdminPage({
       href: '/admin',
     },
     {
+      icon: '📊',
+      label: tr(lang, '系统监控', 'System Monitor'),
+      description: tr(lang, '查看访问量、人员数量、流程状态和通知健康度', 'Visit trends, user growth, workflow status, and notification health.'),
+      href: '/admin/monitor',
+    },
+    {
       icon: '👣',
       label: tr(lang, '访客浏览记录', 'Visitor Activity'),
       description: tr(lang, '查看最近页面访问事件，支持搜索筛选排序', 'Recent page visits with search, filter & sort.'),
@@ -544,6 +550,13 @@ export default async function AdminPage({
       description: `${adminCheck.userEmail || adminCheck.userId || '-'} · ${adminCheck.role}${adminCheck.bypassed ? ` (${tr(lang, '本地绕过', 'local bypass')})` : ''}`,
       status: 'available',
       href: '/admin',
+    },
+    {
+      icon: '📊',
+      label: tr(lang, '系统监控', 'System Monitor'),
+      description: tr(lang, '查看访问趋势、用户增长、流程状态和通知健康度', 'View visit trends, user growth, workflow status, and notification health metrics.'),
+      status: 'available',
+      href: '/admin/monitor',
     },
     {
       icon: '👣',
@@ -624,7 +637,7 @@ export default async function AdminPage({
   return (
     <>
       <style>{'.modCard:hover { border-color: #0284c7 !important; box-shadow: 0 1px 5px rgba(2,132,199,0.1) !important; } .modCard:active { box-shadow: none !important; }'}</style>
-      <main style={{ background: '#f8fafc' }}>
+      <main style={{ background: '#f8fafc', paddingBottom: 'calc(140px + env(safe-area-inset-bottom, 0px))' }}>
         <MinnaNav active="me" />
 
         {/* ── Header ── */}
