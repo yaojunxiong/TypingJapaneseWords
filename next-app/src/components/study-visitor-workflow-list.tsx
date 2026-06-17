@@ -132,7 +132,7 @@ export default function StudyVisitorWorkflowList({ rows }: Props) {
               <th style={{ padding: 6, textAlign: 'left' }}><button type="button" style={sortButtonStyle} onClick={() => toggleSort('visitor_id')}>访客 ID{sortLabel('visitor_id')}</button></th>
               <th style={{ padding: 6, textAlign: 'left' }}>实例 ID</th>
               <th style={{ padding: 6, textAlign: 'left' }}>访客记录 ID</th>
-              <th style={{ padding: 6, textAlign: 'left' }}><button type="button" style={sortButtonStyle} onClick={() => toggleSort('path')}>访问页面{sortLabel('path')}</button></th>
+              <th style={{ padding: 6, textAlign: 'left', width: 220 }}><button type="button" style={sortButtonStyle} onClick={() => toggleSort('path')}>访问页面{sortLabel('path')}</button></th>
               <th style={{ padding: 6, textAlign: 'left' }}>IP 地址</th>
               <th style={{ padding: 6, textAlign: 'left' }}><button type="button" style={sortButtonStyle} onClick={() => toggleSort('status')}>状态{sortLabel('status')}</button></th>
               <th style={{ padding: 6, textAlign: 'left' }}>流程进度</th>
@@ -149,7 +149,7 @@ export default function StudyVisitorWorkflowList({ rows }: Props) {
                   <td style={{ padding: 6, fontFamily: 'monospace', fontSize: '0.75rem' }} title={row.reference_id}>{shortId(row.reference_id)}</td>
                   <td style={{ padding: 6, fontFamily: 'monospace', fontSize: '0.75rem' }} title={row.id}>{shortId(row.id)}</td>
                   <td style={{ padding: 6, fontFamily: 'monospace', fontSize: '0.75rem' }} title={row.visitorActivity?.id || ''}>{shortId(row.visitorActivity?.id)}</td>
-                  <td style={{ padding: 6, maxWidth: 220, overflowWrap: 'anywhere' }} title={row.visitorActivity?.user_agent || undefined}>{row.visitorActivity?.path || '-'}</td>
+                  <td style={{ padding: 6, width: 220, minWidth: 160, maxWidth: 240, whiteSpace: 'normal', overflowWrap: 'anywhere', wordBreak: 'break-word', lineHeight: 1.35 }} title={row.visitorActivity?.path || undefined}>{row.visitorActivity?.path || '-'}</td>
                   <td style={{ padding: 6 }}>-</td>
                   <td style={{ padding: 6 }}>
                     <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, borderRadius: 999, padding: '4px 10px', fontWeight: 700, ...badge }}>{badge.label}</span>
