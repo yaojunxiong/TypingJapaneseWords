@@ -1,4 +1,5 @@
 import nodemailer from 'nodemailer'
+import { formatTokyoDateTime } from './date-format'
 
 type EmailConfig = {
   host: string
@@ -135,7 +136,7 @@ export async function sendWorkflowPendingNotification(params: {
     `<table style="border-collapse:collapse;width:100%">`,
     `<tr><td style="padding:8px 12px;font-weight:700;border:1px solid #ddd">流程类型</td><td style="padding:8px 12px;border:1px solid #ddd">${params.workflowType}</td></tr>`,
     `<tr><td style="padding:8px 12px;font-weight:700;border:1px solid #ddd">实例 ID</td><td style="padding:8px 12px;border:1px solid #ddd;font-family:monospace">${params.instanceId}</td></tr>`,
-    `<tr><td style="padding:8px 12px;font-weight:700;border:1px solid #ddd">提交时间</td><td style="padding:8px 12px;border:1px solid #ddd">${params.createdAt}</td></tr>`,
+    `<tr><td style="padding:8px 12px;font-weight:700;border:1px solid #ddd">提交时间</td><td style="padding:8px 12px;border:1px solid #ddd">${formatTokyoDateTime(params.createdAt)}</td></tr>`,
   ]
 
   if (params.metadata) {

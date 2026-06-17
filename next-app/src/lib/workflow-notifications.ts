@@ -1,5 +1,6 @@
 import type { SupabaseClient } from '@supabase/supabase-js'
 import { sendWorkflowPendingNotification } from './email-service'
+import { formatTokyoDateTime } from './date-format'
 
 const DEFINITION_KEY = 'study_visitor'
 
@@ -183,7 +184,7 @@ export async function createStudyVisitorWorkflow(
         '访客 ID': params.userId || params.visitorRecordId,
         '访客记录 ID': params.visitorRecordId,
         '当前状态': 'pending',
-        '访问时间': params.visitedAt,
+        '访问时间': formatTokyoDateTime(params.visitedAt),
         '访问页面': params.pagePath,
         '管理后台': '/admin/workflows/study-visitor',
         'IP 地址': params.ip,

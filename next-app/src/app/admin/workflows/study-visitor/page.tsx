@@ -3,6 +3,7 @@ import { cookies } from 'next/headers'
 import { createClient } from '@/utils/supabase/server'
 import { getLang, tr } from '@/lib/i18n'
 import { checkAdminAccess } from '@/lib/admin-auth'
+import { formatTokyoDateTime } from '@/lib/date-format'
 import MinnaNav from '@/components/minna-nav'
 import StudyVisitorFlowchart from '@/components/study-visitor-flowchart'
 import StudyVisitorReviewActions from '@/components/study-visitor-review-actions'
@@ -20,16 +21,6 @@ type InstanceRow = {
 function shortId(value: string | null | undefined) {
   if (!value) return '-'
   return value.slice(0, 8)
-}
-
-function formatDateTime(value: string | null) {
-  if (!value) return '-'
-  const d = new Date(value)
-  if (Number.isNaN(d.getTime())) return '-'
-  return new Intl.DateTimeFormat('sv-SE', {
-    year: 'numeric', month: '2-digit', day: '2-digit',
-    hour: '2-digit', minute: '2-digit', hour12: false,
-  }).format(d)
 }
 
 function statusBadge(status: string) {
@@ -166,7 +157,7 @@ export default async function AdminStudyVisitorPage() {
                 const badge = statusBadge(inst.status)
                 return (
                   <tr key={inst.id} style={{ borderBottom: '1px solid #eee', verticalAlign: 'middle' }}>
-                    <td style={{ padding: 6, whiteSpace: 'nowrap' }}>{formatDateTime(inst.created_at)}</td>
+                    <td style={{ padding: 6, whiteSpace: 'nowrap' }}>{formatTokyoDateTime(inst.created_at)}</td>
                     <td style={{ padding: 6, fontFamily: 'monospace', fontSize: '0.75rem' }}>
                       {shortId(inst.reference_id)}
                       <div className="small" style={{ marginTop: 2, color: '#64748b' }}>实例: {shortId(inst.id)}</div>
