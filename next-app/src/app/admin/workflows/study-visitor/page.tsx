@@ -24,6 +24,7 @@ type ActivityRow = {
   user_id: string | null
   path: string | null
   user_agent: string | null
+  ip: string | null
   created_at: string | null
 }
 
@@ -130,7 +131,7 @@ export default async function AdminStudyVisitorPage() {
       const userIds = [...new Set(instances.map((instance) => instance.reference_id).filter(Boolean))]
       const { data: activityData } = await supabase
         .from('visitor_activity_events')
-        .select('id,user_id,path,user_agent,created_at')
+        .select('id,user_id,path,user_agent,ip,created_at')
         .in('user_id', userIds)
         .order('created_at', { ascending: false })
         .limit(1000)
@@ -155,6 +156,7 @@ export default async function AdminStudyVisitorPage() {
         id: activity.id,
         path: activity.path,
         user_agent: activity.user_agent,
+        ip: activity.ip,
         created_at: activity.created_at,
       } : null,
     }

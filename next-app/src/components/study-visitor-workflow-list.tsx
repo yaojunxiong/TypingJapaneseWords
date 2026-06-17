@@ -10,6 +10,7 @@ type VisitorActivity = {
   id: string
   path: string | null
   user_agent: string | null
+  ip: string | null
   created_at: string | null
 }
 
@@ -63,6 +64,7 @@ function rowSearchText(row: StudyVisitorWorkflowRow) {
     row.visitorActivity?.id,
     row.visitorActivity?.path,
     row.visitorActivity?.user_agent,
+    row.visitorActivity?.ip,
   ].filter(Boolean).join(' ').toLowerCase()
 }
 
@@ -119,7 +121,7 @@ export default function StudyVisitorWorkflowList({ rows }: Props) {
           />
         </label>
         <p className="small" style={{ margin: 0 }}>显示 {filteredRows.length} / {rows.length} 条记录</p>
-        <p className="small" style={{ margin: 0, color: '#64748b' }}>IP 地址当前未在访客活动表中持久化，列表显示为 -。</p>
+        <p className="small" style={{ margin: 0, color: '#64748b' }}>IP 来自访客活动记录。</p>
       </div>
 
       {filteredRows.length === 0 ? (
@@ -150,7 +152,7 @@ export default function StudyVisitorWorkflowList({ rows }: Props) {
                   <td style={{ padding: 6, fontFamily: 'monospace', fontSize: '0.75rem' }} title={row.id}>{shortId(row.id)}</td>
                   <td style={{ padding: 6, fontFamily: 'monospace', fontSize: '0.75rem' }} title={row.visitorActivity?.id || ''}>{shortId(row.visitorActivity?.id)}</td>
                   <td style={{ padding: 6, width: 220, minWidth: 160, maxWidth: 240, whiteSpace: 'normal', overflowWrap: 'anywhere', wordBreak: 'break-word', lineHeight: 1.35 }} title={row.visitorActivity?.path || undefined}>{row.visitorActivity?.path || '-'}</td>
-                  <td style={{ padding: 6 }}>-</td>
+                  <td style={{ padding: 6, fontFamily: 'monospace', fontSize: '0.75rem' }} title={row.visitorActivity?.ip || ''}>{row.visitorActivity?.ip || '-'}</td>
                   <td style={{ padding: 6 }}>
                     <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, borderRadius: 999, padding: '4px 10px', fontWeight: 700, ...badge }}>{badge.label}</span>
                   </td>
@@ -172,6 +174,7 @@ export default function StudyVisitorWorkflowList({ rows }: Props) {
                           <div>created_at：{formatTokyoDateTime(row.created_at)}</div>
                           <div>updated_at：{formatTokyoDateTime(row.updated_at)}</div>
                           <div>User Agent：{row.visitorActivity?.user_agent || '-'}</div>
+                          <div>IP 地址：{row.visitorActivity?.ip || '-'}</div>
                           <div>邮件通知状态：未单独存储</div>
                         </div>
                       ) : null}

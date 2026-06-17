@@ -87,6 +87,9 @@ export async function POST(request: NextRequest) {
   const { data: userData } = await supabase.auth.getUser()
   const user = userData.user
 
+  const ip = extractIp(request)
+  const userAgent = cleanText(payload.userAgent, 500)
+
   const { data: record, error } = await supabase
     .from('visitor_activity_events')
     .insert({
@@ -96,7 +99,8 @@ export async function POST(request: NextRequest) {
       page_type: inferPageType(path),
       lesson_no: inferLessonNo(path),
       referrer: sameOriginReferrer(payload.referrer, request),
-      user_agent: cleanText(payload.userAgent, 500),
+      user_agent: userAgent,
+      ip,
     })
     .select('id, created_at')
     .single()
@@ -104,9 +108,6 @@ export async function POST(request: NextRequest) {
   if (error) {
     return NextResponse.json({ ok: false, message: error.message }, { status: 200 })
   }
-
-  const ip = extractIp(request)
-  const userAgent = cleanText(payload.userAgent, 500)
   const workflowConfig = getStudyVisitorWorkflowConfig()
 
   if (!workflowConfig.enabled) {
