@@ -7,6 +7,7 @@ import AdminRecentLessonCard from '@/components/admin-recent-lesson-card'
 import { createClient } from '@/utils/supabase/server'
 import { getLang, tr, type Lang } from '@/lib/i18n'
 import { checkAdminAccess } from '@/lib/admin-auth'
+import { getEmailConfigStatus } from '@/lib/email-service'
 
 type LangText = { zh?: string; en?: string; ja?: string; jp?: string }
 
@@ -304,6 +305,44 @@ function tAudit(lang: Lang, text: string) {
   return text
 }
 
+function StatCard({ icon, label, value, accent }: { icon: string; label: string; value: string; accent?: string }) {
+  return (
+    <div className="card" style={{ margin: 0, display: 'grid', gap: 4 }}>
+      <span style={{ fontSize: 20, lineHeight: 1 }}>{icon}</span>
+      <div className="small" style={{ fontWeight: 600, fontSize: 12 }}>{label}</div>
+      <b style={{ fontSize: 22, fontWeight: 800, color: accent || '#0f172a' }}>{value}</b>
+    </div>
+  )
+}
+
+type QuickModule = {
+  icon: string
+  label: string
+  description: string
+  href: string
+}
+
+function QuickModuleCard({ m, lang }: { m: QuickModule; lang: 'zh' | 'en' }) {
+  return (
+    <Link
+      href={m.href}
+      className="modCard"
+      style={{
+        display: 'flex', alignItems: 'center', gap: 12,
+        border: '1px solid #e2e8f0', borderRadius: 12, padding: '14px 16px',
+        background: '#fff', color: '#0f172a', textDecoration: 'none',
+        transition: 'border-color 0.15s, box-shadow 0.15s',
+      }}
+    >
+      <span style={{ fontSize: 22, width: 34, textAlign: 'center', flexShrink: 0 }}>{m.icon}</span>
+      <div style={{ minWidth: 0 }}>
+        <div style={{ fontWeight: 700, fontSize: 14, marginBottom: 2 }}>{m.label}</div>
+        <div className="small" style={{ color: '#64748b', fontSize: 12, lineHeight: 1.4 }}>{m.description}</div>
+      </div>
+    </Link>
+  )
+}
+
 type CapabilityCard = {
   icon: string
   label: string
@@ -406,6 +445,32 @@ export default async function AdminPage({
     )
   }
 
+  // ── Lightweight stat queries ──
+  let todayVisitCount: number | null = null
+  let pendingVisitorCount: number | null = null
+  const emailConfigStatus = getEmailConfigStatus()
+
+  try {
+    const supabase = createClient(cookieStore)
+    const todayStart = new Date()
+    todayStart.setHours(0, 0, 0, 0)
+    const { count: vCount } = await supabase
+      .from('visitor_activity_events')
+      .select('*', { count: 'exact', head: true })
+      .gte('created_at', todayStart.toISOString())
+    if (vCount !== null) todayVisitCount = vCount
+  } catch {}
+
+  try {
+    const supabase = createClient(cookieStore)
+    const { count: pCount } = await supabase
+      .from('workflow_instances')
+      .select('*', { count: 'exact', head: true })
+      .eq('reference_type', 'study_visitor')
+      .eq('status', 'running')
+    if (pCount !== null) pendingVisitorCount = pCount
+  } catch {}
+
   const rows = runAudit ? await buildAuditRows() : []
   const totalItems = rows.reduce((sum, r) => sum + r.items, 0)
   const totalPractice = rows.reduce((sum, r) => sum + r.practiceQuestions, 0)
@@ -429,6 +494,48 @@ export default async function AdminPage({
   })
   const backParam = encodeURIComponent(`/admin${stateQuery ? `?${stateQuery}` : ''}`)
   const backHref = `/admin${stateQuery ? `?${stateQuery}` : ''}`
+
+  // ── Module definitions ──
+  const quickModules: QuickModule[] = [
+    {
+      icon: '🔑',
+      label: tr(lang, '权限状态', 'Access Status'),
+      description: `${adminCheck.userEmail || '-'} · ${tr(lang, '角色', 'Role')}: ${adminCheck.role}`,
+      href: '/admin',
+    },
+    {
+      icon: '👣',
+      label: tr(lang, '访客浏览记录', 'Visitor Activity'),
+      description: tr(lang, '查看最近页面访问事件，支持搜索筛选排序', 'Recent page visits with search, filter & sort.'),
+      href: '/admin/activity',
+    },
+    {
+      icon: '👤',
+      label: tr(lang, '访客确认流程', 'Visitor Workflow'),
+      description: tr(lang, '管理新访客确认流程，确认/拒绝，查看流程图', 'Manage visitor confirmation, approve/reject, view diagram.'),
+      href: '/admin/workflows/study-visitor',
+    },
+    {
+      icon: '📋',
+      label: tr(lang, '课程数据审计', 'Course Audit'),
+      description: tr(lang, '只读审计 1-50 课数据完整性与内容检索', 'Audit lessons 1-50 data integrity and content search.'),
+      href: '/admin?audit=1',
+    },
+    {
+      icon: '📧',
+      label: tr(lang, '邮件/通知系统', 'Email & Notifications'),
+      description: emailConfigStatus.allConfigured
+        ? tr(lang, 'Brevo SMTP 已配置，可发送通知', 'Brevo SMTP configured, notifications active.')
+        : tr(lang, '邮件未配置，不影响流程', 'Email not configured, workflow unaffected.'),
+      href: '/admin/system',
+    },
+    {
+      icon: '🔍',
+      label: tr(lang, '系统状态', 'System Status'),
+      description: tr(lang, '环境变量、部署状态、访客流程开关', 'Environment, deployment status, visitor workflow toggles.'),
+      href: '/admin/system',
+    },
+  ]
 
   const availableCapabilities: CapabilityCard[] = [
     {
@@ -504,208 +611,311 @@ export default async function AdminPage({
     },
   ]
 
+  const isLocalDev = !process.env.VERCEL_ENV && process.env.NODE_ENV !== 'production'
+  const statusBadgeColor = emailConfigStatus.allConfigured ? '#166534' : '#92400e'
+  const statusBadgeBg = emailConfigStatus.allConfigured ? '#dcfce7' : '#fef3c7'
+  const statusBadgeText = emailConfigStatus.allConfigured
+    ? tr(lang, '正常', 'Active')
+    : isLocalDev
+      ? tr(lang, '本地未配置', 'Not set locally')
+      : tr(lang, '未配置', 'Not configured')
+  const moduleCount = availableCapabilities.length + pendingCapabilities.length
+
   return (
-    <main style={{ paddingBottom: 80 }}>
-      <MinnaNav active="me" />
-      <section className="heroCard card">
-        <div className="heroEmoji">🛠️</div>
-        <h2>{tr(lang, 'Minna 后台管理中心', 'Minna Admin Center')}</h2>
-        <p className="small">{adminCheck.userEmail || adminCheck.userId || '-'} · {adminCheck.role}{adminCheck.bypassed ? ` (${tr(lang, '本地绕过', 'local bypass')})` : ''}</p>
-        <p className="small">{tr(lang, '当前后台为只读安全模式，待恢复功能仅展示不开放', 'Read-only safe mode. Pending features are listed but not enabled.')}</p>
-      </section>
+    <>
+      <style>{'.modCard:hover { border-color: #0284c7 !important; box-shadow: 0 1px 5px rgba(2,132,199,0.1) !important; } .modCard:active { box-shadow: none !important; }'}</style>
+      <main style={{ background: '#f8fafc' }}>
+        <MinnaNav active="me" />
 
-      <section className="card">
-        <h2>{tr(lang, '当前可用', 'Available')}</h2>
-        <CapabilityCards items={availableCapabilities} />
-      </section>
-
-      <AdminRecentLessonCard backHref={backHref} lang={lang} />
-
-      <section className="card">
-        <h2>{tr(lang, '待恢复后台能力', 'Pending Recovery')}</h2>
-        <p className="small">{tr(lang, '以下功能在旧分支中存在，待逐个只读移植到当前系统。', 'These features exist on the legacy branch and will be ported as read-only.')}</p>
-        <CapabilityCards items={pendingCapabilities} />
-      </section>
-
-      <section className="card">
-        <h2>{tr(lang, '重要提示', 'Important Notes')}</h2>
-        <ul style={{ margin: 0, paddingLeft: 18, lineHeight: 1.8 }}>
-          <li className="small">{tr(lang, '当前线上后台仍为只读安全模式', 'Current admin is read-only safe mode')}</li>
-          <li className="small">{tr(lang, '不开放课程 JSON 编辑', 'Course JSON editing is not available')}</li>
-          <li className="small">{tr(lang, '不开放审批写操作', 'Approval write operations are disabled')}</li>
-          <li className="small">{tr(lang, '不开放用户角色修改', 'User role modification is disabled')}</li>
-          <li className="small">{tr(lang, '旧功能将逐个只读恢复', 'Legacy features will be restored as read-only one by one')}</li>
-        </ul>
-      </section>
-
-      <section className="card">
-        <h2>{tr(lang, '知识库报告', 'Reports')}</h2>
-        <div style={{ display: 'grid', gap: 8 }}>
-          <Link href="/admin/knowledge-base?file=admin-legacy-branch-extraction-plan.md" className="pillLink" style={{ textDecoration: 'none', display: 'block' }}>
-            📄 {tr(lang, '旧分支后台能力提取计划', 'Legacy Admin Extraction Plan')}
-          </Link>
-          <Link href="/admin/knowledge-base?file=admin-system-deep-trace-audit.md" className="pillLink" style={{ textDecoration: 'none', display: 'block' }}>
-            📄 {tr(lang, '全项目后台能力深度追溯', 'Full Admin System Deep Trace')}
-          </Link>
-          <Link href="/admin/knowledge-base?file=admin-system-current-state-audit.md" className="pillLink" style={{ textDecoration: 'none', display: 'block' }}>
-            📄 {tr(lang, '后台管理系统现状审计', 'Admin Current State Audit')}
-          </Link>
-        </div>
-      </section>
-
-      <section className="card">
-        <h2>{tr(lang, '课程数据审计', 'Lesson Data Audit')}</h2>
-        <p className="small">{tr(lang, '先提供只读列表与一键 audit，暂不开放编辑发布。', 'Read-only list and one-click audit only. Editing/publishing is not enabled yet.')}</p>
-        <p>
-          <Link className="btn" href="/admin?audit=1">{tr(lang, '一键运行 Audit', 'Run One-Click Audit')}</Link>
-        </p>
-        {!runAudit ? <p className="small">{tr(lang, '点击按钮后将扫描 1-50 课的词汇、例句、练习题与结构问题。', 'Click the button to scan lessons 1-50 for vocab, examples, practice, and structural issues.')}</p> : null}
-      </section>
-
-      {runAudit ? (
-        <section className="card">
-          <h3>{tr(lang, '数据检索', 'Data Search')}</h3>
-          <form method="get" style={{ display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center' }}>
-            <input type="hidden" name="audit" value="1" />
-            <input
-              className="favInput"
-              style={{ minWidth: 240, flex: 1 }}
-              name="q"
-              defaultValue={query}
-              placeholder={tr(lang, '关键词：单词/例句/题干', 'Keyword: vocab/example/question')}
-            />
-            <select name="section" defaultValue={sectionFilter} className="btn ghost">
-              <option value="all">{tr(lang, '全部分区', 'All sections')}</option>
-              <option value="vocab">vocab</option>
-              <option value="grammar">grammar</option>
-              <option value="examples">examples</option>
-              <option value="quiz">quiz</option>
-            </select>
-            <input
-              className="favInput"
-              style={{ width: 120 }}
-              name="lesson"
-              defaultValue={lessonFilter ? String(lessonFilter) : ''}
-              placeholder={tr(lang, '课号(1-50)', 'Lesson (1-50)')}
-            />
-            <button className="btn" type="submit">{tr(lang, '检索', 'Search')}</button>
-            <Link className="btn ghost" href="/admin?audit=1">{tr(lang, '重置', 'Reset')}</Link>
-            <select name="sort" defaultValue={sortBy} className="btn ghost">
-              <option value="lesson">{tr(lang, '按课号排序', 'Sort by lesson')}</option>
-              <option value="match">{tr(lang, '按命中类型排序', 'Sort by match type')}</option>
-            </select>
-            {query ? (
-              <Link
-                className="btn ghost"
-                href={`/admin/export.csv?q=${encodeURIComponent(query)}&section=${encodeURIComponent(sectionFilter)}${lessonFilter ? `&lesson=${lessonFilter}` : ''}&sort=${sortBy}`}
-              >
-                {tr(lang, '导出 CSV', 'Export CSV')}
-              </Link>
-            ) : null}
-          </form>
-          {query ? <p className="small">{tr(lang, '命中条目', 'Hits')}：{searchHits.length}</p> : <p className="small">{tr(lang, '输入关键词后可检索词汇、例句和练习题内容。', 'Enter a keyword to search vocabulary, examples, and practice content.')}</p>}
-        </section>
-      ) : null}
-
-      {runAudit ? (
-        <>
-          <section className="card">
-            <h3>{tr(lang, '审计汇总', 'Audit Summary')}</h3>
-            <p className="small">{tr(lang, '课程数', 'Lessons')}：50</p>
-            <p className="small">{tr(lang, '学习条目', 'Learning items')}：{totalItems}</p>
-            <p className="small">{tr(lang, '例句总数', 'Example sentences')}：{totalExamples}</p>
-            <p className="small">{tr(lang, '选择题总数', 'Choice practice questions')}：{totalPractice}</p>
-            <p className="small">{tr(lang, '问题课程数', 'Lessons with issues')}：{issueRows.length}</p>
-          </section>
-
-          <section className="card" style={{ overflowX: 'auto' }}>
-            <h3>{tr(lang, '课程只读列表', 'Read-only Lesson List')}</h3>
-            <table className="table" style={{ minWidth: 860 }}>
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>{tr(lang, '节', 'Sections')}</th>
-                  <th>V</th>
-                  <th>G</th>
-                  <th>E</th>
-                  <th>Q</th>
-                  <th>{tr(lang, '条目', 'Items')}</th>
-                  <th>{tr(lang, '例句', 'Examples')}</th>
-                  <th>{tr(lang, '练习', 'Practice')}</th>
-                  <th>{tr(lang, '状态', 'Status')}</th>
-                </tr>
-              </thead>
-              <tbody>
-                {rows.map((row) => (
-                  <tr key={row.no}>
-                    <td>
-                      <Link href={`/admin/lessons/${row.no}?back=${backParam}`}>{String(row.no).padStart(2, '0')}</Link>
-                    </td>
-                    <td>{row.sections}</td>
-                    <td>{row.vocab}</td>
-                    <td>{row.grammar}</td>
-                    <td>{row.examples}</td>
-                    <td>{row.quiz}</td>
-                    <td>{row.items}</td>
-                    <td>{row.exampleSentences}</td>
-                    <td>{row.practiceQuestions}</td>
-                    <td>{row.issues.length ? tr(lang, '有问题', 'Issues') : 'OK'}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </section>
-
-          <section className="card">
-            <h3>{tr(lang, '问题明细', 'Issue Details')}</h3>
-            {!issueRows.length ? (
-              <p className="small">{tr(lang, '全部课程通过审计。', 'All lessons passed audit.')}</p>
+        {/* ── Header ── */}
+        <div style={{ maxWidth: 960, margin: '0 auto 16px', padding: '0 4px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap', marginBottom: 4 }}>
+            <span style={{ fontSize: 22, lineHeight: 1 }}>🛠️</span>
+            <h1 style={{ margin: 0, fontSize: 20, fontWeight: 800, color: '#0f172a' }}>
+              {tr(lang, '后台管理中心', 'Dashboard')}
+            </h1>
+            {adminCheck.bypassed ? (
+              <span style={{ fontSize: 11, fontWeight: 700, background: '#fef3c7', color: '#92400e', borderRadius: 999, padding: '3px 10px' }}>
+                {tr(lang, '本地开发', 'Local Dev')}
+              </span>
             ) : (
-              issueRows.map((row) => (
-                <div key={`issue-${row.no}`} style={{ marginBottom: 10 }}>
-                  <b>{tr(lang, '第', 'Lesson ')}{row.no}{tr(lang, '课', '')}</b>
-                  <p className="small">{row.issues.map((it) => tAudit(lang, it)).join('; ')}</p>
-                </div>
-              ))
+              <span style={{ fontSize: 11, fontWeight: 700, background: '#dcfce7', color: '#166534', borderRadius: 999, padding: '3px 10px' }}>
+                Production
+              </span>
             )}
-          </section>
+            <span style={{ fontSize: 11, fontWeight: 700, background: '#dbeafe', color: '#1d4ed8', borderRadius: 999, padding: '3px 10px' }}>
+              {tr(lang, '只读安全恢复中', 'Read-only')}
+            </span>
+          </div>
+          <div className="small" style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginBottom: 2, color: '#64748b', fontSize: 12 }}>
+            <span>🔗 <a href="https://study.jimmyyao.com" target="_blank" rel="noopener noreferrer" style={{ color: '#64748b' }}>study.jimmyyao.com</a></span>
+            <span>👤 {adminCheck.userEmail || '-'}</span>
+            <span>🔑 {adminCheck.role}</span>
+          </div>
+        </div>
 
-          {query ? (
-            <section className="card">
-              <h3>{tr(lang, '检索结果', 'Search Results')}</h3>
-              {!searchHits.length ? (
-                <p className="small">{tr(lang, '没有匹配结果。', 'No matches found.')}</p>
+        {/* ── Stat Cards ── */}
+        <div style={{ display: 'grid', gap: 12, gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', maxWidth: 960, margin: '0 auto 20px' }}>
+          <StatCard
+            icon="👣"
+            label={tr(lang, '今日访问量', 'Today Visits')}
+            value={todayVisitCount !== null ? String(todayVisitCount) : '—'}
+          />
+          <StatCard
+            icon="⏳"
+            label={tr(lang, '待确认访客', 'Pending Visitors')}
+            value={pendingVisitorCount !== null ? String(pendingVisitorCount) : '—'}
+            accent={pendingVisitorCount !== null && pendingVisitorCount > 0 ? '#92400e' : undefined}
+          />
+          <StatCard
+            icon="📧"
+            label={tr(lang, '邮件通知', 'Email Status')}
+            value={statusBadgeText}
+            accent={statusBadgeColor}
+          />
+          <StatCard
+            icon="📦"
+            label={tr(lang, '可用模块', 'Modules')}
+            value={`${availableCapabilities.length} / ${moduleCount}`}
+          />
+        </div>
+
+        {/* ── Quick Start Modules ── */}
+        <section className="card" style={{ maxWidth: 960, margin: '0 auto 14px' }}>
+          <h2 style={{ margin: '0 0 14px', fontSize: 16, fontWeight: 800 }}>
+            {tr(lang, '快捷功能入口', 'Quick Start')}
+          </h2>
+          <div style={{ display: 'grid', gap: 10, gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))' }}>
+            {quickModules.map((m) => (
+              <QuickModuleCard key={m.label} m={m} lang={lang} />
+            ))}
+          </div>
+        </section>
+
+        {/* ── Full Module List (hidden in audit mode) ── */}
+        {!runAudit ? (
+          <>
+            <section className="card" style={{ maxWidth: 960, margin: '0 auto 14px' }}>
+              <h2 style={{ margin: '0 0 14px', fontSize: 16, fontWeight: 800 }}>
+                {tr(lang, '当前可用模块', 'Available Modules')}
+              </h2>
+              <CapabilityCards items={availableCapabilities} />
+            </section>
+
+            <AdminRecentLessonCard backHref={backHref} lang={lang} />
+
+            <section className="card" style={{ maxWidth: 960, margin: '0 auto 14px' }}>
+              <h2 style={{ margin: '0 0 14px', fontSize: 16, fontWeight: 800 }}>
+                {tr(lang, '待恢复后台能力', 'Pending Recovery')}
+              </h2>
+              <p className="small">{tr(lang, '以下功能在旧分支中存在，待逐个只读移植到当前系统。', 'These features exist on the legacy branch and will be ported as read-only.')}</p>
+              <CapabilityCards items={pendingCapabilities} />
+            </section>
+
+            {/* ── Recent Activity Placeholder ── */}
+            <section className="card" style={{ maxWidth: 960, margin: '0 auto 14px' }}>
+              <h2 style={{ margin: '0 0 14px', fontSize: 16, fontWeight: 800 }}>
+                {tr(lang, '最近系统动态', 'Recent Activity')}
+              </h2>
+              <p className="small" style={{ color: '#94a3b8', textAlign: 'center', padding: '24px 0', margin: 0 }}>
+                {tr(lang, '后续接入访客访问、流程动作、邮件日志。', 'Visitor activity, workflow actions, and email logs will appear here.')}
+              </p>
+            </section>
+
+            <section className="card" style={{ maxWidth: 960, margin: '0 auto 14px' }}>
+              <h2 style={{ margin: '0 0 14px', fontSize: 16, fontWeight: 800 }}>
+                {tr(lang, '重要提示', 'Important Notes')}
+              </h2>
+              <ul style={{ margin: 0, paddingLeft: 18, lineHeight: 1.8 }}>
+                <li className="small">{tr(lang, '当前线上后台仍为只读安全模式', 'Current admin is read-only safe mode')}</li>
+                <li className="small">{tr(lang, '不开放课程 JSON 编辑', 'Course JSON editing is not available')}</li>
+                <li className="small">{tr(lang, '不开放审批写操作', 'Approval write operations are disabled')}</li>
+                <li className="small">{tr(lang, '不开放用户角色修改', 'User role modification is disabled')}</li>
+                <li className="small">{tr(lang, '旧功能将逐个只读恢复', 'Legacy features will be restored as read-only one by one')}</li>
+              </ul>
+            </section>
+
+            <section className="card" style={{ maxWidth: 960, margin: '0 auto 14px' }}>
+              <h2 style={{ margin: '0 0 14px', fontSize: 16, fontWeight: 800 }}>
+                {tr(lang, '知识库报告', 'Knowledge Base Reports')}
+              </h2>
+              <div style={{ display: 'grid', gap: 8 }}>
+                <Link href="/admin/knowledge-base?file=admin-legacy-branch-extraction-plan.md" className="pillLink" style={{ textDecoration: 'none', display: 'block' }}>
+                  📄 {tr(lang, '旧分支后台能力提取计划', 'Legacy Admin Extraction Plan')}
+                </Link>
+                <Link href="/admin/knowledge-base?file=admin-system-deep-trace-audit.md" className="pillLink" style={{ textDecoration: 'none', display: 'block' }}>
+                  📄 {tr(lang, '全项目后台能力深度追溯', 'Full Admin System Deep Trace')}
+                </Link>
+                <Link href="/admin/knowledge-base?file=admin-system-current-state-audit.md" className="pillLink" style={{ textDecoration: 'none', display: 'block' }}>
+                  📄 {tr(lang, '后台管理系统现状审计', 'Admin Current State Audit')}
+                </Link>
+              </div>
+            </section>
+
+            <section className="card" style={{ maxWidth: 960, margin: '0 auto 14px' }}>
+              <h2 style={{ margin: '0 0 14px', fontSize: 16, fontWeight: 800 }}>
+                {tr(lang, '课程数据审计', 'Lesson Data Audit')}
+              </h2>
+              <p className="small">{tr(lang, '先提供只读列表与一键 audit，暂不开放编辑发布。', 'Read-only list and one-click audit only. Editing/publishing is not enabled yet.')}</p>
+              <p>
+                <Link className="btn" href="/admin?audit=1">{tr(lang, '一键运行 Audit', 'Run One-Click Audit')}</Link>
+              </p>
+              <p className="small">{tr(lang, '点击按钮后将扫描 1-50 课的词汇、例句、练习题与结构问题。', 'Click the button to scan lessons 1-50 for vocab, examples, practice, and structural issues.')}</p>
+            </section>
+          </>
+        ) : null}
+
+        {/* ── Lesson Audit Section (only when ?audit=1) ── */}
+        {runAudit ? (
+          <div style={{ maxWidth: 960, margin: '0 auto' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 14 }}>
+              <Link className="btn ghost" href="/admin">{tr(lang, '← 返回仪表盘', '← Back to Dashboard')}</Link>
+              <h2 style={{ margin: 0, fontSize: 18, fontWeight: 800 }}>
+                {tr(lang, '课程数据审计', 'Lesson Data Audit')}
+              </h2>
+            </div>
+
+            <section className="card" style={{ maxWidth: 960, margin: '0 auto 14px' }}>
+              <h3 style={{ margin: '0 0 12px', fontSize: 15, fontWeight: 700 }}>{tr(lang, '数据检索', 'Data Search')}</h3>
+              <form method="get" style={{ display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center' }}>
+                <input type="hidden" name="audit" value="1" />
+                <input
+                  className="favInput"
+                  style={{ minWidth: 240, flex: 1 }}
+                  name="q"
+                  defaultValue={query}
+                  placeholder={tr(lang, '关键词：单词/例句/题干', 'Keyword: vocab/example/question')}
+                />
+                <select name="section" defaultValue={sectionFilter} className="btn ghost">
+                  <option value="all">{tr(lang, '全部分区', 'All sections')}</option>
+                  <option value="vocab">vocab</option>
+                  <option value="grammar">grammar</option>
+                  <option value="examples">examples</option>
+                  <option value="quiz">quiz</option>
+                </select>
+                <input
+                  className="favInput"
+                  style={{ width: 120 }}
+                  name="lesson"
+                  defaultValue={lessonFilter ? String(lessonFilter) : ''}
+                  placeholder={tr(lang, '课号(1-50)', 'Lesson (1-50)')}
+                />
+                <button className="btn" type="submit">{tr(lang, '检索', 'Search')}</button>
+                <Link className="btn ghost" href="/admin?audit=1">{tr(lang, '重置', 'Reset')}</Link>
+                <select name="sort" defaultValue={sortBy} className="btn ghost">
+                  <option value="lesson">{tr(lang, '按课号排序', 'Sort by lesson')}</option>
+                  <option value="match">{tr(lang, '按命中类型排序', 'Sort by match type')}</option>
+                </select>
+                {query ? (
+                  <Link
+                    className="btn ghost"
+                    href={`/admin/export.csv?q=${encodeURIComponent(query)}&section=${encodeURIComponent(sectionFilter)}${lessonFilter ? `&lesson=${lessonFilter}` : ''}&sort=${sortBy}`}
+                  >
+                    {tr(lang, '导出 CSV', 'Export CSV')}
+                  </Link>
+                ) : null}
+              </form>
+              {query ? <p className="small">{tr(lang, '命中条目', 'Hits')}：{searchHits.length}</p> : <p className="small">{tr(lang, '输入关键词后可检索词汇、例句和练习题内容。', 'Enter a keyword to search vocabulary, examples, and practice content.')}</p>}
+            </section>
+
+            <section className="card" style={{ maxWidth: 960, margin: '0 auto 14px' }}>
+              <h3 style={{ margin: '0 0 12px', fontSize: 15, fontWeight: 700 }}>{tr(lang, '审计汇总', 'Audit Summary')}</h3>
+              <p className="small">{tr(lang, '课程数', 'Lessons')}：50</p>
+              <p className="small">{tr(lang, '学习条目', 'Learning items')}：{totalItems}</p>
+              <p className="small">{tr(lang, '例句总数', 'Example sentences')}：{totalExamples}</p>
+              <p className="small">{tr(lang, '选择题总数', 'Choice practice questions')}：{totalPractice}</p>
+              <p className="small">{tr(lang, '问题课程数', 'Lessons with issues')}：{issueRows.length}</p>
+            </section>
+
+            <section className="card" style={{ overflowX: 'auto', maxWidth: 960, margin: '0 auto 14px' }}>
+              <h3 style={{ margin: '0 0 12px', fontSize: 15, fontWeight: 700 }}>{tr(lang, '课程只读列表', 'Read-only Lesson List')}</h3>
+              <table className="table" style={{ minWidth: 860 }}>
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>{tr(lang, '节', 'Sections')}</th>
+                    <th>V</th>
+                    <th>G</th>
+                    <th>E</th>
+                    <th>Q</th>
+                    <th>{tr(lang, '条目', 'Items')}</th>
+                    <th>{tr(lang, '例句', 'Examples')}</th>
+                    <th>{tr(lang, '练习', 'Practice')}</th>
+                    <th>{tr(lang, '状态', 'Status')}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {rows.map((row) => (
+                    <tr key={row.no}>
+                      <td>
+                        <Link href={`/admin/lessons/${row.no}?back=${backParam}`}>{String(row.no).padStart(2, '0')}</Link>
+                      </td>
+                      <td>{row.sections}</td>
+                      <td>{row.vocab}</td>
+                      <td>{row.grammar}</td>
+                      <td>{row.examples}</td>
+                      <td>{row.quiz}</td>
+                      <td>{row.items}</td>
+                      <td>{row.exampleSentences}</td>
+                      <td>{row.practiceQuestions}</td>
+                      <td>{row.issues.length ? tr(lang, '有问题', 'Issues') : 'OK'}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </section>
+
+            <section className="card" style={{ maxWidth: 960, margin: '0 auto 14px' }}>
+              <h3 style={{ margin: '0 0 12px', fontSize: 15, fontWeight: 700 }}>{tr(lang, '问题明细', 'Issue Details')}</h3>
+              {!issueRows.length ? (
+                <p className="small">{tr(lang, '全部课程通过审计。', 'All lessons passed audit.')}</p>
               ) : (
-                pagedHits.map((hit, idx) => (
-                  <div key={`${hit.lessonNo}-${hit.itemId}-${idx}`} style={{ marginBottom: 10 }}>
-                    <b>
-                      <Link href={`/admin/lessons/${hit.lessonNo}?back=${backParam}#${anchorIdForItem(hit.itemId)}`}>{tr(lang, '第', 'Lesson ')}{hit.lessonNo}{tr(lang, '课', '')}</Link>
-                    </b>
-                    <p className="small">section: {hit.section} · item: {hit.itemId} · match: {hit.matchedIn}</p>
-                    <p className="small">{highlightText(hit.jp || '-', query)} {hit.kana ? `(` : ''}{hit.kana ? highlightText(hit.kana, query) : ''}{hit.kana ? ')' : ''} · {highlightText(hit.meaning || '-', query)}</p>
-                    <p className="small">snippet: {highlightText(makeSnippet(hit.snippet || '', query), query)}</p>
+                issueRows.map((row) => (
+                  <div key={`issue-${row.no}`} style={{ marginBottom: 10 }}>
+                    <b>{tr(lang, '第', 'Lesson ')}{row.no}{tr(lang, '课', '')}</b>
+                    <p className="small">{row.issues.map((it) => tAudit(lang, it)).join('; ')}</p>
                   </div>
                 ))
               )}
-              {searchHits.length > SEARCH_PAGE_SIZE ? (
-                <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginTop: 8 }}>
-                  {safePage > 1 ? (
-                    <Link className="btn ghost" href={`/admin?audit=1&q=${encodeURIComponent(query)}&section=${encodeURIComponent(sectionFilter)}${lessonFilter ? `&lesson=${lessonFilter}` : ''}&sort=${sortBy}&page=${safePage - 1}`}>
-                      {tr(lang, '上一页', 'Prev')}
-                    </Link>
-                  ) : null}
-                  <span className="small">{tr(lang, '第', 'Page ')} {safePage} / {totalHitPages}</span>
-                  {safePage < totalHitPages ? (
-                    <Link className="btn ghost" href={`/admin?audit=1&q=${encodeURIComponent(query)}&section=${encodeURIComponent(sectionFilter)}${lessonFilter ? `&lesson=${lessonFilter}` : ''}&sort=${sortBy}&page=${safePage + 1}`}>
-                      {tr(lang, '下一页', 'Next')}
-                    </Link>
-                  ) : null}
-                </div>
-              ) : null}
             </section>
-          ) : null}
-        </>
-      ) : null}
-    </main>
+
+            {query ? (
+              <section className="card" style={{ maxWidth: 960, margin: '0 auto 14px' }}>
+                <h3 style={{ margin: '0 0 12px', fontSize: 15, fontWeight: 700 }}>{tr(lang, '检索结果', 'Search Results')}</h3>
+                {!searchHits.length ? (
+                  <p className="small">{tr(lang, '没有匹配结果。', 'No matches found.')}</p>
+                ) : (
+                  pagedHits.map((hit, idx) => (
+                    <div key={`${hit.lessonNo}-${hit.itemId}-${idx}`} style={{ marginBottom: 10 }}>
+                      <b>
+                        <Link href={`/admin/lessons/${hit.lessonNo}?back=${backParam}#${anchorIdForItem(hit.itemId)}`}>{tr(lang, '第', 'Lesson ')}{hit.lessonNo}{tr(lang, '课', '')}</Link>
+                      </b>
+                      <p className="small">section: {hit.section} · item: {hit.itemId} · match: {hit.matchedIn}</p>
+                      <p className="small">{highlightText(hit.jp || '-', query)} {hit.kana ? `(` : ''}{hit.kana ? highlightText(hit.kana, query) : ''}{hit.kana ? ')' : ''} · {highlightText(hit.meaning || '-', query)}</p>
+                      <p className="small">snippet: {highlightText(makeSnippet(hit.snippet || '', query), query)}</p>
+                    </div>
+                  ))
+                )}
+                {searchHits.length > SEARCH_PAGE_SIZE ? (
+                  <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginTop: 8 }}>
+                    {safePage > 1 ? (
+                      <Link className="btn ghost" href={`/admin?audit=1&q=${encodeURIComponent(query)}&section=${encodeURIComponent(sectionFilter)}${lessonFilter ? `&lesson=${lessonFilter}` : ''}&sort=${sortBy}&page=${safePage - 1}`}>
+                        {tr(lang, '上一页', 'Prev')}
+                      </Link>
+                    ) : null}
+                    <span className="small">{tr(lang, '第', 'Page ')} {safePage} / {totalHitPages}</span>
+                    {safePage < totalHitPages ? (
+                      <Link className="btn ghost" href={`/admin?audit=1&q=${encodeURIComponent(query)}&section=${encodeURIComponent(sectionFilter)}${lessonFilter ? `&lesson=${lessonFilter}` : ''}&sort=${sortBy}&page=${safePage + 1}`}>
+                        {tr(lang, '下一页', 'Next')}
+                      </Link>
+                    ) : null}
+                  </div>
+                ) : null}
+              </section>
+            ) : null}
+          </div>
+        ) : null}
+      </main>
+    </>
   )
 }
