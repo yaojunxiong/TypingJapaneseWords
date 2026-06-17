@@ -103,7 +103,7 @@ export async function sendTestEmail(): Promise<SendEmailResult> {
     return { ok: false, error: 'ADMIN_NOTIFICATION_EMAIL not configured' }
   }
 
-  const now = new Date().toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })
+  const now = formatTokyoDateTime(new Date())
   const env = process.env.VERCEL_ENV || process.env.NODE_ENV || 'unknown'
   const html = [
     '<h2>学习系统邮件测试</h2>',
