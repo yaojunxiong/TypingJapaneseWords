@@ -3,8 +3,7 @@ import { NextResponse, type NextRequest } from 'next/server'
 import { createClient } from '@/utils/supabase/server'
 import { hasSupabasePublicEnv } from '@/utils/supabase/config'
 import { createStudyVisitorWorkflow } from '@/lib/workflow-notifications'
-import { checkAdminAccess } from '@/lib/admin-auth'
-import { getStudyVisitorWorkflowConfig, isAdminPath } from '@/lib/study-visitor-workflow-config'
+import { getStudyVisitorWorkflowEligibility } from '@/lib/study-visitor-workflow-config'
 
 export const dynamic = 'force-dynamic'
 
@@ -90,17 +89,58 @@ export async function POST(request: NextRequest) {
   const ip = extractIp(request)
   const userAgent = cleanText(payload.userAgent, 500)
 
+  // Determine if the current user is an admin
+  let isAdmin = false
+  if (user) {
+    try {
+      const { data: roleRow } = await supabase
+        .from('user_roles')
+        .select('role')
+        .eq('user_id', user.id)
+        .maybeSingle()
+      if (roleRow?.role === 'admin') isAdmin = true
+    } catch {
+      // non-admin by default on error
+    }
+  }
+
+  // Step 1: Write the access log
+  // Anonymous users — insert only (no .select to avoid RLS on SELECT)
+  if (!user) {
+    const { error } = await supabase
+      .from('visitor_activity_events')
+      .insert({
+        user_id: null,
+        email: null,
+        path,
+        page_type: inferPageType(path),
+        lesson_no: inferLessonNo(path),
+        referrer: sameOriginReferrer(payload.referrer, request),
+        user_agent: userAgent,
+        ip,
+        is_admin: false,
+      })
+
+    if (error) {
+      return NextResponse.json({ ok: false, message: error.message }, { status: 200 })
+    }
+
+    return NextResponse.json({ ok: true })
+  }
+
+  // Authenticated users — insert + select for workflow
   const { data: record, error } = await supabase
     .from('visitor_activity_events')
     .insert({
-      user_id: user?.id || null,
-      email: user?.email || null,
+      user_id: user.id,
+      email: user.email,
       path,
       page_type: inferPageType(path),
       lesson_no: inferLessonNo(path),
       referrer: sameOriginReferrer(payload.referrer, request),
       user_agent: userAgent,
       ip,
+      is_admin: isAdmin,
     })
     .select('id, created_at')
     .single()
@@ -108,34 +148,37 @@ export async function POST(request: NextRequest) {
   if (error) {
     return NextResponse.json({ ok: false, message: error.message }, { status: 200 })
   }
-  const workflowConfig = getStudyVisitorWorkflowConfig()
 
-  if (!workflowConfig.enabled) {
-    return NextResponse.json({ ok: true })
+  // Step 2: Check workflow eligibility (authenticated users only)
+  const eligibility = await getStudyVisitorWorkflowEligibility(supabase, {
+    userId: user.id,
+    path,
+    isAdmin,
+  })
+
+  // Record skip reason on the event for audit trail
+  if (!eligibility.eligible) {
+    await supabase
+      .from('visitor_activity_events')
+      .update({ workflow_skip_reason: eligibility.reason })
+      .eq('id', record.id)
+      .maybeSingle()
   }
 
-  if (workflowConfig.ignoreAdminPaths && isAdminPath(path)) {
-    return NextResponse.json({ ok: true })
-  }
-
-  if (workflowConfig.ignoreAdminUsers) {
-    const adminCheck = await checkAdminAccess(cookieStore)
-    if (adminCheck.isAdmin) {
-      return NextResponse.json({ ok: true })
+  // Step 3: Create workflow only if eligible
+  if (eligibility.eligible) {
+    try {
+      await createStudyVisitorWorkflow(supabase, {
+        visitorRecordId: record.id,
+        userId: user.id,
+        pagePath: path,
+        ip,
+        userAgent: userAgent || null,
+        visitedAt: record.created_at || new Date().toISOString(),
+      })
+    } catch (err) {
+      console.error('[track] createStudyVisitorWorkflow error:', err)
     }
-  }
-
-  try {
-    await createStudyVisitorWorkflow(supabase, {
-      visitorRecordId: record.id,
-      userId: user?.id || null,
-      pagePath: path,
-      ip,
-      userAgent: userAgent || null,
-      visitedAt: record.created_at || new Date().toISOString(),
-    })
-  } catch (err) {
-    console.error('[track] createStudyVisitorWorkflow error:', err)
   }
 
   return NextResponse.json({ ok: true })
