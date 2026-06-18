@@ -105,7 +105,7 @@ export async function POST(request: NextRequest) {
   }
 
   // Step 1: Write the access log
-  // Anonymous users — insert only (no .select to avoid RLS on SELECT)
+  // ── Anonymous visitors: insert only, no select, no workflow ──
   if (!user) {
     const { error } = await supabase
       .from('visitor_activity_events')
@@ -127,7 +127,29 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ ok: true })
   }
 
-  // Authenticated users — insert + select for workflow
+  // ── Authenticated non-admin users: insert with user_id + email, no select, no workflow ──
+  if (!isAdmin) {
+    const { error } = await supabase
+      .from('visitor_activity_events')
+      .insert({
+        user_id: user.id,
+        email: user.email,
+        path,
+        page_type: inferPageType(path),
+        lesson_no: inferLessonNo(path),
+        referrer: sameOriginReferrer(payload.referrer, request),
+        user_agent: userAgent,
+        ip,
+      })
+
+    if (error) {
+      return NextResponse.json({ ok: false, message: error.message }, { status: 200 })
+    }
+
+    return NextResponse.json({ ok: true })
+  }
+
+  // ── Admin users: insert + select + workflow ──
   const { data: record, error } = await supabase
     .from('visitor_activity_events')
     .insert({
@@ -147,7 +169,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ ok: false, message: error.message }, { status: 200 })
   }
 
-  // Step 2: Check workflow eligibility (authenticated users only)
+  // Step 2: Check workflow eligibility (admin users only)
   const eligibility = await getStudyVisitorWorkflowEligibility(supabase, {
     userId: user.id,
     path,
