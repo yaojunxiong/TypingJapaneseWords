@@ -10,6 +10,8 @@ export const dynamic = 'force-dynamic'
 
 const PAGE_SIZE = 50
 
+const VISITOR_SELECT = 'id,email,path,referrer,user_agent,ip,is_admin,created_at'
+
 type VisitorParams = {
   q?: string
   user?: string
@@ -125,8 +127,11 @@ export default async function AdminVisitorsPage({
   const supabase = createClient(cookieStore)
 
   // ── Build query ──
-  let query = supabase.from('visitor_activity_events').select('*', { count: 'exact' })
+  let query = supabase
+    .from('visitor_activity_events')
+    .select(VISITOR_SELECT, { count: 'exact' })
 
+  // Date range
   const rangeStart = getRangeStart(range, from)
   if (rangeStart) query = query.gte('created_at', rangeStart)
   if (range === 'custom' && to) {
@@ -137,22 +142,36 @@ export default async function AdminVisitorsPage({
     }
   }
 
+  // User type filter
   if (user === 'signed-in') query = query.not('email', 'is', null)
   else if (user === 'anonymous') query = query.is('email', null)
   else if (user === 'admin') query = query.eq('is_admin', true)
 
+  // Text search — server-side ilike across all searchable fields
+  if (q) {
+    const escapedQ = q.replace(/[%_\\]/g, '\\$&')
+    const ilikeClauses = [
+      `email.ilike.%${escapedQ}%`,
+      `path.ilike.%${escapedQ}%`,
+      `referrer.ilike.%${escapedQ}%`,
+      `user_agent.ilike.%${escapedQ}%`,
+      `ip.ilike.%${escapedQ}%`,
+    ]
+    query = query.or(ilikeClauses.join(','))
+  }
+
+  // Sort
   const sortCol = sort.startsWith('created') ? 'created_at' : sort.startsWith('email') ? 'email' : 'path'
   const sortDir = sort.endsWith('_asc') ? true : false
   query = query.order(sortCol, { ascending: sortDir })
 
+  // Pagination — applied AFTER all filters including search
   const fromRow = (page - 1) * PAGE_SIZE
   const toRow = fromRow + PAGE_SIZE - 1
 
-  // ── Execute ──
   let totalCount = 0
   let events: Array<{
     id: string
-    user_id: string | null
     email: string | null
     path: string | null
     referrer: string | null
@@ -168,16 +187,6 @@ export default async function AdminVisitorsPage({
     if (count !== null) totalCount = count
   } catch {
     // query failed, show empty
-  }
-
-  // ── Client-side text filter on loaded page ──
-  if (q && events.length > 0) {
-    const lowerQ = q.toLowerCase()
-    events = events.filter((e) =>
-      [e.email, e.path, e.ip, e.user_agent, e.referrer].some((v) =>
-        String(v || '').toLowerCase().includes(lowerQ),
-      ),
-    )
   }
 
   const totalPages = Math.max(1, Math.ceil(totalCount / PAGE_SIZE))

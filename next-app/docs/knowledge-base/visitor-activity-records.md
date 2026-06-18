@@ -54,13 +54,13 @@ RLS 策略：
 
 - **访问控制**: 使用 `checkAdminAccess()`，未登录显示"请先登录"，非管理员显示"没有管理员权限"
 - **功能**:
-  - 搜索：按 email / path / IP / UA 进行文本过滤
-  - 排序：按时间、邮箱、路径排序
-  - 分页：每页 50 条，服务端分页
-  - 日期筛选：最近 1 小时 / 24 小时 / 7 天 / 30 天 / 自定义范围
-  - 用户筛选：全部 / 已登录 / 匿名 / 管理员
+  - 搜索：按 email / path / referrer / user_agent / IP 在服务端完成 `ilike` 查询（非仅过滤当前页）
+  - 排序：按时间、邮箱、路径排序，服务端 `order()`
+  - 分页：每页 50 条，服务端 `range()` 分页（搜索+筛选后才分页）
+  - 日期筛选：最近 1 小时 / 24 小时 / 7 天 / 30 天 / 自定义范围，服务端 `gte/lt`
+  - 用户筛选：全部 / 已登录 / 匿名 / 管理员，服务端 `eq/is/not`
 - **字段展示**：访问时间（Asia/Tokyo）、用户 email、登录状态（Admin/Signed-in/Guest）、访问页面 URL、来源 referrer、IP、UA
-- **数据源**：`visitor_activity_events` 表，服务端查询
+- **数据源**：`visitor_activity_events` 表，仅查询 `id,email,path,referrer,user_agent,ip,is_admin,created_at` 显式列
 
 ### /admin/activity — 系统访问审计日志
 
