@@ -1,0 +1,93 @@
+# 访客活动记录
+
+## 数据表
+
+### visitor_activity_events
+
+当用户访问任何页面时，由 `POST /api/activity/track` 写入该表。
+
+| 列名 | 类型 | 说明 |
+|------|------|------|
+| `id` | `uuid PK` | `gen_random_uuid()` |
+| `user_id` | `uuid?` | Supabase Auth user ID |
+| `email` | `text?` | 用户登录邮箱（访问时的快照） |
+| `path` | `text NOT NULL` | 标准化请求路径 |
+| `page_type` | `text?` | 页面类型：`home`, `login`, `lessons`, `lesson`, `admin`, `toolbox`, `me`, `other` |
+| `lesson_no` | `int?` | 从 `/lessons/{no}` 解析出的课号 |
+| `referrer` | `text?` | 同站 referrer |
+| `user_agent` | `text?` | 浏览器 UA 字符串 |
+| `ip` | `text?` | 从 `X-Forwarded-For` / `X-Real-IP` 提取 |
+| `is_admin` | `boolean` | `default false`，该访问是否来自管理员 |
+| `workflow_skip_reason` | `text?` | 如未创建学习访客流程，记录原因 |
+| `created_at` | `timestamptz` | `default now()` |
+
+RLS 策略：
+- `INSERT`: 允许 anon + authenticated（客户端跟踪脚本）
+- `SELECT`: 仅 admin（通过 Supabase 服务端）
+
+## 写入逻辑
+
+### 客户端触发
+
+`src/components/visitor-activity-tracker.tsx` 在 `src/app/layout.tsx` 中渲染，每次路由变化时：
+
+1. 检查 `sessionStorage` 中 30 秒内是否已发送过相同 path
+2. 若否，发送 `POST /api/activity/track` 请求，body 为 `{ path, referrer, userAgent }`
+
+### 服务端写入
+
+`src/app/api/activity/track/route.ts`：
+
+1. 验证并标准化 path
+2. 获取当前登录用户（如存在）
+3. 检查用户角色（admin / normal）
+4. 从请求头提取 IP
+5. **Step 1**：写入 `visitor_activity_events`
+6. **Step 2**：检查学习访客流程 eligibility（是否已启用、路径是否忽略、用户是否 admin、是否已有运行中流程等）
+7. **Step 3**：如 eligible，创建 `workflow_instances`（`reference_type = 'study_visitor'`）
+
+## 管理后台页面
+
+### /admin/visitors — 访客记录
+
+**文件**: `src/app/admin/visitors/page.tsx`
+
+- **访问控制**: 使用 `checkAdminAccess()`，未登录显示"请先登录"，非管理员显示"没有管理员权限"
+- **功能**:
+  - 搜索：按 email / path / IP / UA 进行文本过滤
+  - 排序：按时间、邮箱、路径排序
+  - 分页：每页 50 条，服务端分页
+  - 日期筛选：最近 1 小时 / 24 小时 / 7 天 / 30 天 / 自定义范围
+  - 用户筛选：全部 / 已登录 / 匿名 / 管理员
+- **字段展示**：访问时间（Asia/Tokyo）、用户 email、登录状态（Admin/Signed-in/Guest）、访问页面 URL、来源 referrer、IP、UA
+- **数据源**：`visitor_activity_events` 表，服务端查询
+
+### /admin/activity — 系统访问审计日志
+
+**文件**: `src/app/admin/activity/page.tsx`
+
+- 与 `/admin/visitors` 类似，但加载最近 300 条到客户端后做筛选/排序/统计
+- 额外展示工作流跳过原因（`workflow_skip_reason`）
+- 用于审计和排查
+
+## 权限控制
+
+所有访客记录页面统一使用 `src/lib/admin-auth.ts` 的 `checkAdminAccess()`：
+
+```
+未经身份验证 → 显示"请先登录"
+已登录但非 admin → 显示"没有管理员权限"
+已登录且 admin → 正常展示数据
+```
+
+数据表通过 Supabase RLS 策略限制 SELECT 权限：
+- `visitor_activity_events` 的 SELECT 仅允许通过服务端客户端访问（行级安全策略中 admin 角色）
+- 前端不会直接查询该表
+
+## 导航入口
+
+访客记录入口已在以下位置添加：
+
+1. **后台首页** (`/admin`) — 快捷功能模块"访客记录"卡片 + 可用模块列表
+2. **系统检测页** (`/admin/system`) — 路由列表中的"访客记录列表"
+3. **快捷入口** — 每个后台页面底部的"返回后台首页"链接

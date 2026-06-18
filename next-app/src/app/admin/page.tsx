@@ -523,6 +523,12 @@ export default async function AdminPage({
     },
     {
       icon: '📋',
+      label: tr(lang, '访客记录', 'Visitor Records'),
+      description: tr(lang, '查看全站所有访问记录，支持搜索、排序、分页和日期筛选', 'View all page visits with search, sort, pagination, and date filtering.'),
+      href: '/admin/visitors',
+    },
+    {
+      icon: '📋',
       label: tr(lang, '课程数据审计', 'Course Audit'),
       description: tr(lang, '只读审计 1-50 课数据完整性与内容检索', 'Audit lessons 1-50 data integrity and content search.'),
       href: '/admin?audit=1',
@@ -564,6 +570,13 @@ export default async function AdminPage({
       description: tr(lang, '查看最近页面访问事件、登录/匿名访问情况。支持只读搜索、筛选和排序。', 'View recent page visits plus signed-in and anonymous activity. Read-only search, filters, and sorting.'),
       status: 'available',
       href: '/admin/activity',
+    },
+    {
+      icon: '📋',
+      label: tr(lang, '访客记录', 'Visitor Records'),
+      description: tr(lang, '查看全站所有访问记录，支持搜索、排序、分页和日期筛选', 'View all page visits with search, sort, pagination, and date filtering.'),
+      status: 'available',
+      href: '/admin/visitors',
     },
     {
       icon: '📋',
