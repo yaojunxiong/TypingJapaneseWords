@@ -180,13 +180,15 @@ export default async function AdminVisitorsPage({
     is_admin: boolean | null
     created_at: string | null
   }> = []
+  let queryError: string | null = null
 
   try {
     const { data, count } = await query.range(fromRow, toRow)
     if (data) events = data as typeof events
     if (count !== null) totalCount = count
-  } catch {
-    // query failed, show empty
+  } catch (e) {
+    console.error('Failed to query visitor records:', e)
+    queryError = '访客记录加载失败，请稍后重试'
   }
 
   const totalPages = Math.max(1, Math.ceil(totalCount / PAGE_SIZE))
@@ -283,7 +285,11 @@ export default async function AdminVisitorsPage({
 
       {/* ── Visitors Table ── */}
       <section className="card" style={{ overflowX: 'auto' }}>
-        {events.length === 0 ? (
+        {queryError ? (
+          <p className="small" style={{ textAlign: 'center', padding: '32px 0', color: '#dc2626' }}>
+            {tr(lang, queryError, 'Visitor records failed to load. Please try again.')}
+          </p>
+        ) : events.length === 0 ? (
           <p className="small" style={{ textAlign: 'center', padding: '32px 0', color: '#94a3b8' }}>
             {tr(lang, '暂无访客记录。', 'No visitor records yet.')}
           </p>
