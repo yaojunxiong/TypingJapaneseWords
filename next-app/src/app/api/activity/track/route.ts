@@ -118,7 +118,6 @@ export async function POST(request: NextRequest) {
         referrer: sameOriginReferrer(payload.referrer, request),
         user_agent: userAgent,
         ip,
-        is_admin: false,
       })
 
     if (error) {
@@ -140,7 +139,6 @@ export async function POST(request: NextRequest) {
       referrer: sameOriginReferrer(payload.referrer, request),
       user_agent: userAgent,
       ip,
-      is_admin: isAdmin,
     })
     .select('id, created_at')
     .single()
