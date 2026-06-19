@@ -93,6 +93,13 @@ export async function POST(request: NextRequest) {
 
   // ── Resolve user: try cookie session first, fall back to client-provided token ──
   let user: import('@supabase/supabase-js').User | null = null
+  let cookieSessionEmail: string | null = null
+  let tokenGetUserError: string | null = null
+
+  const log = console.log.bind(console, '[track]')
+  const uaHeadless = (userAgent || '').includes('HeadlessChrome')
+  const accessTokenPrefix = clientAccessToken ? clientAccessToken.slice(0, 8) + '...' : 'none'
+  log(`path=${path} hasAccessTokenInBody=${!!clientAccessToken} accessTokenPrefix=${accessTokenPrefix} uaHeadless=${uaHeadless}`)
 
   // Method 1: cookie-based server session
   try {
@@ -101,15 +108,18 @@ export async function POST(request: NextRequest) {
   } catch {
     // fall through to token-based fallback
   }
+  if (user) cookieSessionEmail = user.email ?? null
+  log(`path=${path} hasCookieSession=${!!user} cookieSessionEmail=${cookieSessionEmail}`)
 
   // Method 2: client-provided access token
   if (!user && clientAccessToken) {
     try {
       const { data } = await supabase.auth.getUser(clientAccessToken)
       if (data.user) user = data.user
-    } catch {
-      // treat as anonymous
+    } catch (err) {
+      tokenGetUserError = String(err)
     }
+    log(`path=${path} tokenGetUserSuccess=${!!user} tokenGetUserEmail=${user?.email || null} tokenGetUserError=${tokenGetUserError}`)
   }
 
   // Determine admin status for authenticated users
@@ -184,7 +194,11 @@ export async function POST(request: NextRequest) {
     userAgent,
   })
 
+  let workflowSkipReason: string | null = null
+  let workflowInstanceId: string | null = null
+
   if (!eligibility.eligible) {
+    workflowSkipReason = eligibility.reason
     await supabase
       .from('visitor_activity_events')
       .update({ workflow_skip_reason: eligibility.reason })
@@ -203,17 +217,20 @@ export async function POST(request: NextRequest) {
         visitedAt: record.created_at || new Date().toISOString(),
       })
       if (workflowResult.created && workflowResult.workflowInstanceId) {
+        workflowInstanceId = workflowResult.workflowInstanceId
         await supabase
           .from('visitor_activity_events')
           .update({ workflow_instance_id: workflowResult.workflowInstanceId })
           .eq('id', record.id)
       } else if (!workflowResult.created) {
+        workflowSkipReason = workflowResult.reason || 'workflow_not_created'
         await supabase
           .from('visitor_activity_events')
           .update({ workflow_skip_reason: workflowResult.reason || 'workflow_not_created' })
           .eq('id', record.id)
       }
     } catch (err) {
+      workflowSkipReason = 'workflow_create_failed'
       console.error('[track] createLoggedInFirstVisitWorkflow error:', err)
       await supabase
         .from('visitor_activity_events')
@@ -221,6 +238,8 @@ export async function POST(request: NextRequest) {
         .eq('id', record.id)
     }
   }
+
+  log(`path=${path} finalEmail=${user.email ?? null} finalUserId=${user.id} workflowSkipReason=${workflowSkipReason} workflowInstanceId=${workflowInstanceId}`)
 
   return NextResponse.json({ ok: true })
 }

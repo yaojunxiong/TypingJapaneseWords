@@ -14,6 +14,8 @@ type TrackPayload = {
   accessToken?: string
 }
 
+const diag = console.debug.bind(console, '[track/client]')
+
 function readLast() {
   try {
     const raw = sessionStorage.getItem(RECENT_KEY)
@@ -31,20 +33,40 @@ function writeLast(path: string) {
   } catch {}
 }
 
-function send(payload: TrackPayload) {
+async function send(payload: TrackPayload) {
   const body = JSON.stringify(payload)
+  let usedBeacon = false
+  let usedFetch = false
+  let responseStatus: number | null = null
+  const hasToken = !!payload.accessToken
+  const tokenPrefix = hasToken ? (payload.accessToken!.slice(0, 8) + '...') : 'none'
+
+  const ua = payload.userAgent || ''
+  const isHeadless = ua.includes('HeadlessChrome')
+
   try {
     if (navigator.sendBeacon) {
       const blob = new Blob([body], { type: 'application/json' })
-      if (navigator.sendBeacon('/api/activity/track', blob)) return
+      const queued = navigator.sendBeacon('/api/activity/track', blob)
+      usedBeacon = true
+      if (queued) {
+        diag({ path: payload.path, hasSession: hasToken, hasAccessToken: hasToken, accessTokenPrefix: tokenPrefix, sendBeacon: true, fetchFallback: false, responseStatus: null, uaHeadless: isHeadless })
+        return
+      }
     }
-    fetch('/api/activity/track', {
+    const res = await fetch('/api/activity/track', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body,
       keepalive: true,
-    }).catch(() => {})
-  } catch {}
+    })
+    usedFetch = true
+    responseStatus = res.status
+    diag({ path: payload.path, hasSession: hasToken, hasAccessToken: hasToken, accessTokenPrefix: tokenPrefix, sendBeacon: usedBeacon, fetchFallback: true, responseStatus, uaHeadless: isHeadless })
+  } catch (err) {
+    responseStatus = -1
+    diag({ path: payload.path, hasSession: hasToken, hasAccessToken: hasToken, accessTokenPrefix: tokenPrefix, sendBeacon: usedBeacon, fetchFallback: usedFetch, responseStatus, error: String(err), uaHeadless: isHeadless })
+  }
 }
 
 export default function VisitorActivityTracker() {
@@ -53,7 +75,10 @@ export default function VisitorActivityTracker() {
   useEffect(() => {
     const path = pathname || '/'
     const last = readLast()
-    if (last?.path === path && Date.now() - Number(last.at || 0) < DEDUPE_MS) return
+    if (last?.path === path && Date.now() - Number(last.at || 0) < DEDUPE_MS) {
+      diag({ path, deduped: true })
+      return
+    }
 
     writeLast(path)
 
@@ -65,11 +90,13 @@ export default function VisitorActivityTracker() {
 
     const supabase = createClient()
     supabase.auth.getSession().then(({ data: { session } }) => {
+      diag({ path, hasSession: !!session, sessionUserEmail: session?.user?.email || null, hasAccessToken: !!session?.access_token })
       if (session?.access_token) {
         base.accessToken = session.access_token
       }
       send(base)
-    }).catch(() => {
+    }).catch((err) => {
+      diag({ path, getSessionError: String(err) })
       send(base)
     })
   }, [pathname])
