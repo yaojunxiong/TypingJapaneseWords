@@ -142,6 +142,17 @@ async function handleTrack(request: NextRequest, log: (...args: unknown[]) => vo
 
   log(JSON.stringify({ step: 'auth-result', path, authSource, finalEmail: user?.email ?? null, finalUserId: user?.id ?? null }))
 
+  // If user was resolved via token (not cookie), set the session on the supabase client
+  // so that INSERT / SELECT / UPDATE use the token user's auth (not anon).
+  if (authSource === 'token' && clientAccessToken) {
+    try {
+      await supabase.auth.setSession({ access_token: clientAccessToken, refresh_token: '' })
+      log(JSON.stringify({ step: 'session-set', path, success: true }))
+    } catch (err) {
+      log(JSON.stringify({ step: 'session-set', path, success: false, error: String(err) }))
+    }
+  }
+
   // Determine admin status for authenticated users
   let isAdmin = false
   let roleQueryError: string | null = null
@@ -193,10 +204,10 @@ async function handleTrack(request: NextRequest, log: (...args: unknown[]) => vo
   const recordPayload = {
     ...insertPayload,
     user_id: user.id,
-    email: user.email,
+    email: user.email ?? null,
   }
 
-  log(JSON.stringify({ step: 'insert-payload', path, finalEmail: user.email ?? null, finalUserId: user.id, emailInPayload: recordPayload.email, userIdInPayload: recordPayload.user_id }))
+  log(JSON.stringify({ step: 'insert-payload', path, page_type: inferPageType(path), hasEmail: !!user.email, hasUserId: !!user.id, isAdmin, authSource }))
 
   const { data: record, error: insertError } = await supabase
     .from('visitor_activity_events')
