@@ -274,6 +274,8 @@ export default async function AdminActivityPage({
   const cookieStore = await cookies()
   const adminCheck = await checkAdminAccess(cookieStore)
 
+  console.log('[AdminActivity] checkAdminAccess result:', JSON.stringify(adminCheck))
+
   if (!adminCheck.userAuthed) {
     return (
       <main>
@@ -303,6 +305,7 @@ export default async function AdminActivityPage({
 
   let events: ActivityRow[] = []
   let dataSourceMessage: string | null = null
+  let queryDebugInfo: string | null = null
 
   try {
     const supabase = createClient(cookieStore)
@@ -312,10 +315,18 @@ export default async function AdminActivityPage({
       .order('created_at', { ascending: false })
       .limit(300)
 
-    if (error) dataSourceMessage = error.message
-    else events = (data || []) as ActivityRow[]
+    if (error) {
+      dataSourceMessage = error.message
+      queryDebugInfo = `Supabase 查询错误: ${error.message} (code: ${error.code || 'N/A'}, hint: ${error.hint || 'N/A'})`
+    } else {
+      events = (data || []) as ActivityRow[]
+      if (events.length === 0) {
+        queryDebugInfo = `查询成功但返回 0 条记录。管理员邮箱: ${adminCheck.userEmail || '未知'}, 角色: ${adminCheck.role}, userId: ${adminCheck.userId || '未知'}`
+      }
+    }
   } catch (e) {
     dataSourceMessage = String(e)
+    queryDebugInfo = `异常: ${String(e)}`
   }
 
   const filteredEvents = sortEvents(filterEvents(events, filters), filters.sort)
@@ -413,7 +424,25 @@ export default async function AdminActivityPage({
           <section className="card" style={{ overflowX: 'auto' }}>
             <h2>{tr(lang, '最近访问记录', 'Recent Activity')} ({filteredEvents.length}/{events.length})</h2>
             {!filteredEvents.length ? (
-            <p className="small">{tr(lang, '暂无访问记录。', 'No activity records yet.')}</p>
+            <div>
+              <p className="small">{tr(lang, '暂无访问记录。', 'No activity records yet.')}</p>
+              <p className="small" style={{ marginTop: 8, color: '#94a3b8', fontFamily: 'monospace', fontSize: 11, wordBreak: 'break-all' }}>
+                DB 返回 {events.length} 条 | 筛选后 {filteredEvents.length} 条 | 范围: {filters.range} | 用户: {filters.user} | 搜索: "{filters.q}"
+              </p>
+              <p className="small" style={{ color: '#94a3b8', fontFamily: 'monospace', fontSize: 11, wordBreak: 'break-all' }}>
+                Admin: {adminCheck.userEmail} | userId: {adminCheck.userId} | role: {adminCheck.role}
+              </p>
+              {queryDebugInfo ? (
+                <p className="small" style={{ color: '#dc2626', fontFamily: 'monospace', fontSize: 11, wordBreak: 'break-all' }}>
+                  {queryDebugInfo}
+                </p>
+              ) : null}
+              <p style={{ marginTop: 12 }}>
+                <Link className="btn ghost" href="/admin/activity">
+                  {tr(lang, '清除筛选条件', 'Clear filters')}
+                </Link>
+              </p>
+            </div>
           ) : (
             <table className="table" style={{ minWidth: 1200 }}>
               <thead>

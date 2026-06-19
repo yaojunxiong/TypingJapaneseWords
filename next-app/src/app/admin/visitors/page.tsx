@@ -147,6 +147,8 @@ export default async function AdminVisitorsPage({
   const cookieStore = await cookies()
   const adminCheck = await checkAdminAccess(cookieStore)
 
+  console.log('[AdminVisitors] checkAdminAccess result:', JSON.stringify(adminCheck))
+
   if (!adminCheck.userAuthed) {
     return (
       <main>
@@ -243,14 +245,20 @@ export default async function AdminVisitorsPage({
     created_at: string | null
   }> = []
   let queryError: string | null = null
+  let supabaseError: string | null = null
 
   try {
-    const { data, count } = await query.range(fromRow, toRow)
-    if (data) events = data as typeof events
-    if (count !== null) totalCount = count
+    const { data, count, error } = await query.range(fromRow, toRow)
+    if (error) {
+      supabaseError = error.message
+      queryError = `访客记录加载失败: ${error.message}`
+    } else {
+      if (data) events = data as typeof events
+      if (count !== null) totalCount = count
+    }
   } catch (e) {
-    console.error('Failed to query visitor records:', e)
-    queryError = '访客记录加载失败，请稍后重试'
+    supabaseError = String(e)
+    queryError = `访客记录加载失败: ${String(e)}`
   }
 
   const totalPages = Math.max(1, Math.ceil(totalCount / PAGE_SIZE))
@@ -348,13 +356,31 @@ export default async function AdminVisitorsPage({
       {/* ── Visitors Table ── */}
       <section className="card" style={{ overflowX: 'auto' }}>
         {queryError ? (
-          <p className="small" style={{ textAlign: 'center', padding: '32px 0', color: '#dc2626' }}>
-            {tr(lang, queryError, 'Visitor records failed to load. Please try again.')}
+          <p className="small" style={{ textAlign: 'center', padding: '16px 0', color: '#dc2626' }}>
+            {queryError}
           </p>
         ) : events.length === 0 ? (
-          <p className="small" style={{ textAlign: 'center', padding: '32px 0', color: '#94a3b8' }}>
-            {tr(lang, '暂无访客记录。', 'No visitor records yet.')}
-          </p>
+          <div style={{ textAlign: 'center', padding: '16px 0' }}>
+            <p className="small" style={{ color: '#94a3b8' }}>
+              {tr(lang, '暂无访客记录。', 'No visitor records yet.')}
+            </p>
+            <p className="small" style={{ marginTop: 8, color: '#94a3b8', fontFamily: 'monospace', fontSize: 11, wordBreak: 'break-all' }}>
+              DB 返回 0 条 | 范围: {range} | 用户: {user} | 搜索: "{q}" | 页: {page}
+            </p>
+            <p className="small" style={{ color: '#94a3b8', fontFamily: 'monospace', fontSize: 11, wordBreak: 'break-all' }}>
+              Admin: {adminCheck.userEmail} | userId: {adminCheck.userId} | role: {adminCheck.role}
+            </p>
+            {supabaseError ? (
+              <p className="small" style={{ color: '#dc2626', fontFamily: 'monospace', fontSize: 11, wordBreak: 'break-all', marginTop: 4 }}>
+                {supabaseError}
+              </p>
+            ) : null}
+            <p style={{ marginTop: 12 }}>
+              <Link className="btn ghost" href="/admin/visitors">
+                {tr(lang, '清除筛选条件', 'Clear filters')}
+              </Link>
+            </p>
+          </div>
         ) : (
           <table className="table" style={{ minWidth: 1120 }}>
             <thead>
