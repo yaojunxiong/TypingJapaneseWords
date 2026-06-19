@@ -84,6 +84,40 @@ RLS 策略：
 - `visitor_activity_events` 的 SELECT 仅允许通过服务端客户端访问（行级安全策略中 admin 角色）
 - 前端不会直接查询该表
 
+## 访客流程屏蔽规则
+
+### 数据表
+
+`visitor_flow_block_rules` — 管理访客流程触发的屏蔽规则。当访客的 email/user_id/visitor_id/IP/path/UA 匹配某条启用规则的规则值时，流程触发将被跳过。
+
+| 列名 | 类型 | 说明 |
+|------|------|------|
+| `id` | `uuid PK` | `gen_random_uuid()` |
+| `flow_type` | `text NOT NULL` | 流程类型：`anonymous_visitor`, `logged_in_first_visit`, `all` |
+| `rule_type` | `text NOT NULL` | 规则类型：`email`, `user_id`, `visitor_id`, `ip`, `path`, `user_agent` |
+| `rule_value` | `text NOT NULL` | 规则值（精确匹配，最多 500 字符） |
+| `reason` | `text?` | 屏蔽原因说明（最多 500 字符） |
+| `enabled` | `boolean` | `default true`，是否启用 |
+| `created_at` | `timestamptz` | `default now()` |
+| `updated_at` | `timestamptz` | `default now()` |
+
+RLS 策略：
+- `INSERT/UPDATE/DELETE/SELECT`: 仅 admin（通过 `auth.uid()` 检查 `user_roles` 表）
+
+### 管理后台页面
+
+**文件**: `src/app/admin/visitor-flow-rules/page.tsx`
+**API**: `src/app/api/admin/visitor-flow-rules/route.ts`
+
+- **访问控制**: 使用 `checkAdminAccess()` + API 端服务端身份验证
+- **功能**: 规则列表展示、新增规则、编辑规则、启用/停用切换、删除规则
+- **字段验证**: flow_type/rule_type 枚举检查、rule_value 必填且不超过 500 字符、reason 不超过 500 字符
+
+### 导航入口
+
+1. **后台首页** (`/admin`) — 快捷功能模块"访客流程规则"卡片 + 可用模块列表
+2. **系统检测页** (`/admin/system`) — 路由列表中的"访客流程屏蔽规则管理"
+
 ## 导航入口
 
 访客记录入口已在以下位置添加：
@@ -113,3 +147,16 @@ RLS 策略：
 - 如需精准筛选管理员访问，`track/route.ts` 后续可显式写入 `is_admin`
 - migration 文件需要保持版本管理
 - 如页面未来展示 `workflow_skip_reason`，需同步扩展文档和 select 字段
+
+### v1.1 — 2026-06-20（进行中）
+
+**Phase 1 — 访客流程屏蔽规则：**
+- `visitor_flow_block_rules` 表及 RLS（admin-only）已创建
+- `/admin/visitor-flow-rules` 页面已实现（规则列表、新增、编辑、启用/停用切换、删除）
+- `POST /api/admin/visitor-flow-rules`（新增）、`PUT`（更新）、`DELETE`（删除）、`GET`（列表）
+- 后台首页快捷卡片 + 系统页路由列表已更新
+- 本页面文档已扩展
+
+**Phase 2（待实施）：**
+- 在 `track/route.ts` 中读取 `visitor_flow_block_rules`，匹配时跳过流程触发
+- 在规则匹配逻辑中处理 flow_type（anonymous_visitor 只对匿名访客生效等）

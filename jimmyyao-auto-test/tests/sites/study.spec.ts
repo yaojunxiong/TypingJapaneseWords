@@ -53,6 +53,11 @@ test.describe('Study system tests @study', () => {
 
   for (const path of adminPaths) {
     test(`${path} blocks unauthenticated users @study`, async ({ page }) => {
+      test.info().annotations.push({
+        type: 'info',
+        description: '已上线并返回访客记录页面。未登录/非管理员会被正确拦截。',
+      })
+
       console.log(`\n=== Study test: ${path} ===`)
 
       const response = await page.goto(`${base}${path}`, { waitUntil: 'domcontentloaded' })
@@ -66,15 +71,6 @@ test.describe('Study system tests @study', () => {
 
       const text = await body.innerText()
       console.log(`Body preview (first 300 chars): ${text.slice(0, 300).replace(/\n/g, '\\n')}`)
-
-      // /admin/visitors route does not exist yet — annotate and pass
-      if (path === '/admin/visitors') {
-        if (status === 404 || /not found/i.test(text) || /could not be found/.test(text)) {
-          console.log('⚠ /admin/visitors: route does not exist (404). If visitor log backend is needed in the future, add the route.')
-          expect(status).toBe(404)
-          return
-        }
-      }
 
       // Case A: URL redirected to /login
       if (page.url().includes('/login')) {

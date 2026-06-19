@@ -16,6 +16,7 @@ const routes = [
   { path: '/admin/export.csv', label: 'CSV 导出' },
   { path: '/admin/system', label: '系统检测与部署状态（本页）' },
   { path: '/admin/visitors', label: '访客记录列表' },
+  { path: '/admin/visitor-flow-rules', label: '访客流程屏蔽规则管理' },
   { path: '/admin/workflows/study-visitor', label: '访客确认流程管理' },
 ]
 

@@ -528,6 +528,12 @@ export default async function AdminPage({
       href: '/admin/visitors',
     },
     {
+      icon: '🛡️',
+      label: tr(lang, '访客流程规则', 'Visitor Flow Rules'),
+      description: tr(lang, '管理访客流程触发屏蔽规则', 'Manage block rules for visitor workflow triggers.'),
+      href: '/admin/visitor-flow-rules',
+    },
+    {
       icon: '📋',
       label: tr(lang, '课程数据审计', 'Course Audit'),
       description: tr(lang, '只读审计 1-50 课数据完整性与内容检索', 'Audit lessons 1-50 data integrity and content search.'),
@@ -577,6 +583,13 @@ export default async function AdminPage({
       description: tr(lang, '查看全站所有访问记录，支持搜索、排序、分页和日期筛选', 'View all page visits with search, sort, pagination, and date filtering.'),
       status: 'available',
       href: '/admin/visitors',
+    },
+    {
+      icon: '🛡️',
+      label: tr(lang, '访客流程规则', 'Visitor Flow Rules'),
+      description: tr(lang, '管理访客流程触发屏蔽规则', 'Manage block rules for visitor workflow triggers.'),
+      status: 'available',
+      href: '/admin/visitor-flow-rules',
     },
     {
       icon: '📋',

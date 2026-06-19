@@ -16,6 +16,9 @@ type ActivityRow = {
   lesson_no: number | null
   referrer: string | null
   user_agent: string | null
+  ip: string | null
+  is_admin: boolean | null
+  workflow_skip_reason: string | null
   created_at: string | null
 }
 
@@ -28,9 +31,9 @@ type ActivitySearchParams = {
   sort?: string
 }
 
-const activitySelect = 'id,user_id,email,path,page_type,lesson_no,referrer,user_agent,created_at'
+const activitySelect = 'id,user_id,email,path,page_type,lesson_no,referrer,user_agent,ip,is_admin,workflow_skip_reason,created_at'
 const PAGE_TYPES = ['all', 'home', 'login', 'lessons', 'lesson', 'admin', 'toolbox', 'me', 'other'] as const
-const USER_FILTERS = ['all', 'signed-in', 'anonymous'] as const
+const USER_FILTERS = ['all', 'signed-in', 'anonymous', 'admin'] as const
 const TIME_RANGES = ['1h', '24h', '7d', 'all'] as const
 const SORT_OPTIONS = [
   'created_desc',
@@ -44,6 +47,21 @@ const SORT_OPTIONS = [
   'lesson_asc',
   'lesson_desc',
 ] as const
+
+const SKIP_REASON_LABELS: Record<string, { zh: string; en: string }> = {
+  workflow_disabled: { zh: '流程未启用', en: 'Workflow disabled' },
+  admin_path_ignored: { zh: '管理后台路径', en: 'Admin path' },
+  admin_user_ignored: { zh: '管理员访问', en: 'Admin user' },
+  anonymous_visitor: { zh: '匿名访客', en: 'Anonymous' },
+  workflow_already_exists: { zh: '已有流程', en: 'Workflow exists' },
+}
+
+function skipReasonLabel(reason: string | null, lang: Lang): string {
+  if (!reason) return ''
+  const entry = SKIP_REASON_LABELS[reason]
+  if (!entry) return reason
+  return lang === 'en' ? entry.en : entry.zh
+}
 
 function formatDate(value: string | null | undefined) {
   if (!value) return '-'
@@ -110,6 +128,7 @@ function filterEvents(events: ActivityRow[], filters: ReturnType<typeof getSearc
   return events.filter((event) => {
     if (filters.user === 'signed-in' && !event.email) return false
     if (filters.user === 'anonymous' && event.email) return false
+    if (filters.user === 'admin' && !event.is_admin) return false
     if (filters.type !== 'all' && normalizeType(event.page_type) !== filters.type) return false
     if (filters.lesson && event.lesson_no !== filters.lesson) return false
     if (rangeStart) {
@@ -117,7 +136,7 @@ function filterEvents(events: ActivityRow[], filters: ReturnType<typeof getSearc
       if (!Number.isFinite(created) || created < rangeStart) return false
     }
     if (!q) return true
-    return [event.email, event.path, event.page_type, event.user_agent]
+    return [event.email, event.path, event.page_type, event.user_agent, event.ip]
       .some((value) => String(value || '').toLowerCase().includes(q))
   })
 }
@@ -171,6 +190,23 @@ function StatCard({ label, value }: { label: string; value: number }) {
   )
 }
 
+function AdminBadge() {
+  return (
+    <span style={{ display: 'inline-flex', alignItems: 'center', gap: 3, background: '#dcfce7', color: '#166534', fontSize: 10, fontWeight: 700, borderRadius: 999, padding: '1px 6px', whiteSpace: 'nowrap' }}>
+      Admin
+    </span>
+  )
+}
+
+function WorkflowSkipBadge({ reason, lang }: { reason: string | null; lang: Lang }) {
+  if (!reason) return null
+  return (
+    <span style={{ display: 'inline-flex', alignItems: 'center', gap: 3, background: '#f1f5f9', color: '#475569', fontSize: 10, fontWeight: 700, borderRadius: 999, padding: '1px 6px', whiteSpace: 'nowrap' }}>
+      {skipReasonLabel(reason, lang)}
+    </span>
+  )
+}
+
 function MissingActivitySource({ lang, message }: { lang: Lang; message: string | null }) {
   return (
     <>
@@ -186,7 +222,7 @@ function MissingActivitySource({ lang, message }: { lang: Lang; message: string 
       <section className="card">
         <h2>{tr(lang, '关键字段', 'Fields')}</h2>
         <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-          {['id', 'user_id', 'email', 'path', 'page_type', 'lesson_no', 'referrer', 'user_agent', 'created_at'].map((field) => (
+          {['id', 'user_id', 'email', 'path', 'page_type', 'lesson_no', 'referrer', 'user_agent', 'ip', 'is_admin', 'workflow_skip_reason', 'created_at'].map((field) => (
             <code key={field} className="pillLink">{field}</code>
           ))}
         </div>
@@ -209,7 +245,7 @@ export default async function AdminActivityPage({
     return (
       <main>
         <MinnaNav active="me" />
-        <h1>{tr(lang, '访客浏览记录', 'Visitor Activity')}</h1>
+        <h1>{tr(lang, '系统访问审计日志', 'Access Audit Log')}</h1>
         <section className="card">
           <p className="small">{tr(lang, '请先登录后访问管理员页面。', 'Please sign in before opening Admin.')}</p>
           <p><Link href="/login">{tr(lang, '去登录', 'Sign in')}</Link></p>
@@ -222,7 +258,7 @@ export default async function AdminActivityPage({
     return (
       <main>
         <MinnaNav active="me" />
-        <h1>{tr(lang, '访客浏览记录', 'Visitor Activity')}</h1>
+        <h1>{tr(lang, '系统访问审计日志', 'Access Audit Log')}</h1>
         <section className="card">
           <p className="small">{tr(lang, '你没有管理员权限。', 'You do not have admin access.')}</p>
           <p className="small">{tr(lang, '当前角色', 'Current role')}：{adminCheck.role}</p>
@@ -252,6 +288,7 @@ export default async function AdminActivityPage({
   const filteredEvents = sortEvents(filterEvents(events, filters), filters.sort)
   const signedInCount = filteredEvents.filter((event) => !!event.email).length
   const anonymousCount = filteredEvents.length - signedInCount
+  const adminCount = filteredEvents.filter((event) => event.is_admin).length
   const uniqueUsers = new Set(filteredEvents.filter((event) => !!event.email).map((event) => event.email)).size
 
   return (
@@ -259,17 +296,8 @@ export default async function AdminActivityPage({
       <MinnaNav active="me" />
       <section className="heroCard card">
         <div className="heroEmoji">👣</div>
-        <h2>{tr(lang, '访客浏览记录（只读）', 'Visitor Activity (Read-only)')}</h2>
-        <p className="small">{tr(lang, '读取最近 300 条页面访问事件，并提供只读搜索、筛选和排序。仅记录安全路径和基础浏览器信息，不记录密码、token、cookie 或输入内容。', 'Reads the latest 300 page view events and provides read-only search, filtering, and sorting. Records only safe paths and basic browser info, not passwords, tokens, cookies, or input content.')}</p>
-      </section>
-
-      <section className="card">
-        <h2>{tr(lang, '当前状态', 'Current Status')}</h2>
-        <ul style={{ margin: 0, paddingLeft: 18, lineHeight: 1.8 }}>
-          <li className="small">{tr(lang, '只读查看，不提供删除或修改按钮', 'Read-only view. Delete and edit actions are not available')}</li>
-          <li className="small">{tr(lang, 'URL query 与 hash 不会保存', 'URL query and hash are not stored')}</li>
-          <li className="small">{tr(lang, '已登录记录 user_id/email，未登录记录匿名 path', 'Signed-in users include user_id/email; anonymous users store path only')}</li>
-        </ul>
+        <h2>{tr(lang, '系统访问审计日志（只读）', 'Access Audit Log (Read-only)')}</h2>
+        <p className="small">{tr(lang, '读取最近 300 条页面访问记录。系统全量记录所有访问（管理员、后台路径、匿名、登录用户），不记录密码、token、cookie 或输入内容。', 'Reads the latest 300 page visit records. All visits are logged (admin, admin paths, anonymous, signed-in). No passwords, tokens, cookies, or input content are recorded.')}</p>
       </section>
 
       {dataSourceMessage ? (
@@ -280,6 +308,7 @@ export default async function AdminActivityPage({
             <StatCard label={tr(lang, '筛选结果', 'Filtered results')} value={filteredEvents.length} />
             <StatCard label={tr(lang, '已登录访问', 'Signed-in visits')} value={signedInCount} />
             <StatCard label={tr(lang, '匿名访问', 'Anonymous visits')} value={anonymousCount} />
+            <StatCard label={tr(lang, '管理员访问', 'Admin visits')} value={adminCount} />
             <StatCard label={tr(lang, '涉及用户', 'Unique users')} value={uniqueUsers} />
           </section>
 
@@ -287,15 +316,16 @@ export default async function AdminActivityPage({
             <h2>{tr(lang, '查询与筛选', 'Search and filters')}</h2>
             <form method="get" style={{ display: 'grid', gap: 12, gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', alignItems: 'end' }}>
               <label style={{ display: 'grid', gap: 6 }}>
-                <span className="small">{tr(lang, '搜索 email / path / type / UA', 'Search email / path / type / UA')}</span>
+                <span className="small">{tr(lang, '搜索 email / path / type / UA / IP', 'Search email / path / type / UA / IP')}</span>
                 <input name="q" defaultValue={filters.q} placeholder="/lessons" style={{ border: '1px solid #cbd5e1', borderRadius: 10, padding: '9px 10px', font: 'inherit' }} />
               </label>
               <label style={{ display: 'grid', gap: 6 }}>
                 <span className="small">{tr(lang, '用户', 'User')}</span>
                 <select name="user" defaultValue={filters.user} style={{ border: '1px solid #cbd5e1', borderRadius: 10, padding: '9px 10px', font: 'inherit' }}>
                   <option value="all">{tr(lang, '全部', 'All')}</option>
-                  <option value="signed-in">{tr(lang, '只看已登录用户', 'Signed-in only')}</option>
-                  <option value="anonymous">{tr(lang, '只看匿名用户', 'Anonymous only')}</option>
+                  <option value="signed-in">{tr(lang, '已登录用户', 'Signed-in')}</option>
+                  <option value="anonymous">{tr(lang, '匿名用户', 'Anonymous')}</option>
+                  <option value="admin">{tr(lang, '管理员', 'Admin')}</option>
                 </select>
               </label>
               <label style={{ display: 'grid', gap: 6 }}>
@@ -352,28 +382,38 @@ export default async function AdminActivityPage({
             {!filteredEvents.length ? (
             <p className="small">{tr(lang, '暂无访问记录。', 'No activity records yet.')}</p>
           ) : (
-            <table className="table" style={{ minWidth: 980 }}>
+            <table className="table" style={{ minWidth: 1100 }}>
               <thead>
                 <tr>
                   <th><Link href={buildActivityHref(filters, { sort: nextSort(filters.sort, 'created_asc', 'created_desc') })}>{sortLinkLabel(filters.sort, 'created_asc', 'created_desc', tr(lang, '时间', 'Time'))}</Link></th>
                   <th><Link href={buildActivityHref(filters, { sort: nextSort(filters.sort, 'email_asc', 'email_desc') })}>{sortLinkLabel(filters.sort, 'email_asc', 'email_desc', tr(lang, '用户', 'User'))}</Link></th>
+                  <th>{tr(lang, '身份', 'Auth')}</th>
                   <th><Link href={buildActivityHref(filters, { sort: nextSort(filters.sort, 'path_asc', 'path_desc') })}>{sortLinkLabel(filters.sort, 'path_asc', 'path_desc', 'Path')}</Link></th>
                   <th><Link href={buildActivityHref(filters, { sort: nextSort(filters.sort, 'type_asc', 'type_desc') })}>{sortLinkLabel(filters.sort, 'type_asc', 'type_desc', tr(lang, '类型', 'Type'))}</Link></th>
                   <th><Link href={buildActivityHref(filters, { sort: nextSort(filters.sort, 'lesson_asc', 'lesson_desc') })}>{sortLinkLabel(filters.sort, 'lesson_asc', 'lesson_desc', tr(lang, '课号', 'Lesson'))}</Link></th>
-                  <th>Referrer</th>
-                  <th>User Agent</th>
+                  <th>IP</th>
+                  <th>{tr(lang, '流程状态', 'Workflow')}</th>
+                  <th>UA</th>
                 </tr>
               </thead>
               <tbody>
                 {filteredEvents.map((event) => (
                   <tr key={event.id}>
-                    <td className="small">{formatDate(event.created_at)}</td>
-                    <td>{event.email || <span className="small">{tr(lang, '匿名', 'Anonymous')}</span>}</td>
-                    <td><code>{event.path || '-'}</code></td>
-                    <td>{event.page_type || '-'}</td>
+                    <td className="small" style={{ whiteSpace: 'nowrap' }}>{formatDate(event.created_at)}</td>
+                    <td style={{ maxWidth: 160, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                      {event.email || <span className="small">{tr(lang, '匿名', 'Anonymous')}</span>}
+                    </td>
+                    <td style={{ whiteSpace: 'nowrap' }}>
+                      {event.is_admin ? <AdminBadge /> : event.email ? <span style={{ fontSize: 10, color: '#64748b' }}>{tr(lang, '已登录', 'User')}</span> : <span style={{ fontSize: 10, color: '#94a3b8' }}>{tr(lang, '未登录', 'Guest')}</span>}
+                    </td>
+                    <td><code style={{ fontSize: 11 }}>{event.path || '-'}</code></td>
+                    <td style={{ fontSize: 11 }}>{event.page_type || '-'}</td>
                     <td>{event.lesson_no || '-'}</td>
-                    <td className="small">{shorten(event.referrer, 44)}</td>
-                    <td className="small">{shorten(event.user_agent)}</td>
+                    <td className="small" style={{ fontFamily: 'monospace', fontSize: 11 }}>{shorten(event.ip, 15) || '-'}</td>
+                    <td style={{ whiteSpace: 'nowrap' }}>
+                      <WorkflowSkipBadge reason={event.workflow_skip_reason} lang={lang} />
+                    </td>
+                    <td className="small" style={{ maxWidth: 120, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{shorten(event.user_agent, 24)}</td>
                   </tr>
                 ))}
               </tbody>
