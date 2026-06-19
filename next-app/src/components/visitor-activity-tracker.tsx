@@ -33,39 +33,86 @@ function writeLast(path: string) {
   } catch {}
 }
 
-async function send(payload: TrackPayload) {
-  const body = JSON.stringify(payload)
-  let usedBeacon = false
-  let usedFetch = false
-  let responseStatus: number | null = null
-  const hasToken = !!payload.accessToken
-  const tokenPrefix = hasToken ? (payload.accessToken!.slice(0, 8) + '...') : 'none'
+function getAccessTokenFromCookie(): string | null {
+  try {
+    for (const part of document.cookie.split(';')) {
+      const eq = part.indexOf('=')
+      if (eq === -1) continue
+      const name = part.slice(0, eq).trim()
+      if (name.startsWith('sb-') && name.endsWith('-auth-token')) {
+        const raw = part.slice(eq + 1).trim()
+        const parsed = JSON.parse(raw)
+        return typeof parsed.access_token === 'string' ? parsed.access_token : null
+      }
+    }
+  } catch {}
+  return null
+}
 
+async function resolveAccessToken(path: string): Promise<string | null> {
+  // Method A: browser Supabase client
+  try {
+    const supabase = createClient()
+    const { data: { session } } = await supabase.auth.getSession()
+    if (session?.access_token) {
+      diag({ path, method: 'getSession', hasSession: true, sessionUserEmail: session.user?.email ?? null, hasAccessToken: true })
+      return session.access_token
+    }
+    diag({ path, method: 'getSession', hasSession: false, sessionUserEmail: null, hasAccessToken: false })
+  } catch (err) {
+    diag({ path, method: 'getSession', error: String(err) })
+  }
+
+  // Method B: direct cookie read (fallback when getSession fails)
+  const cookieToken = getAccessTokenFromCookie()
+  diag({ path, method: 'cookie', hasAccessToken: !!cookieToken })
+  return cookieToken
+}
+
+async function sendAuthenticated(payload: TrackPayload) {
+  const body = JSON.stringify(payload)
+  const tokenPrefix = payload.accessToken ? payload.accessToken.slice(0, 8) + '...' : 'none'
   const ua = payload.userAgent || ''
   const isHeadless = ua.includes('HeadlessChrome')
 
   try {
-    if (navigator.sendBeacon) {
-      const blob = new Blob([body], { type: 'application/json' })
-      const queued = navigator.sendBeacon('/api/activity/track', blob)
-      usedBeacon = true
-      if (queued) {
-        diag({ path: payload.path, hasSession: hasToken, hasAccessToken: hasToken, accessTokenPrefix: tokenPrefix, sendBeacon: true, fetchFallback: false, responseStatus: null, uaHeadless: isHeadless })
-        return
-      }
-    }
     const res = await fetch('/api/activity/track', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body,
       keepalive: true,
     })
-    usedFetch = true
-    responseStatus = res.status
-    diag({ path: payload.path, hasSession: hasToken, hasAccessToken: hasToken, accessTokenPrefix: tokenPrefix, sendBeacon: usedBeacon, fetchFallback: true, responseStatus, uaHeadless: isHeadless })
+    diag({ path: payload.path, hasSession: true, hasAccessToken: true, accessTokenPrefix: tokenPrefix, transport: 'fetch', responseStatus: res.status, uaHeadless: isHeadless })
   } catch (err) {
-    responseStatus = -1
-    diag({ path: payload.path, hasSession: hasToken, hasAccessToken: hasToken, accessTokenPrefix: tokenPrefix, sendBeacon: usedBeacon, fetchFallback: usedFetch, responseStatus, error: String(err), uaHeadless: isHeadless })
+    diag({ path: payload.path, hasSession: true, hasAccessToken: true, accessTokenPrefix: tokenPrefix, transport: 'fetch', responseStatus: -1, error: String(err), uaHeadless: isHeadless })
+  }
+}
+
+function sendAnonymous(payload: TrackPayload) {
+  const body = JSON.stringify(payload)
+  const ua = payload.userAgent || ''
+  const isHeadless = ua.includes('HeadlessChrome')
+
+  try {
+    if (navigator.sendBeacon) {
+      const blob = new Blob([body], { type: 'application/json' })
+      if (navigator.sendBeacon('/api/activity/track', blob)) {
+        diag({ path: payload.path, hasSession: false, hasAccessToken: false, transport: 'sendBeacon', uaHeadless: isHeadless })
+        return
+      }
+    }
+    fetch('/api/activity/track', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body,
+      keepalive: true,
+    }).then((res) => {
+      diag({ path: payload.path, hasSession: false, hasAccessToken: false, transport: 'fetch', responseStatus: res.status, uaHeadless: isHeadless })
+    }).catch((err) => {
+      diag({ path: payload.path, hasSession: false, hasAccessToken: false, transport: 'fetch', responseStatus: -1, error: String(err), uaHeadless: isHeadless })
+    })
+  } catch (err) {
+    diag({ path: payload.path, hasSession: false, hasAccessToken: false, transport: 'error', responseStatus: -1, error: String(err), uaHeadless: isHeadless })
   }
 }
 
@@ -82,22 +129,19 @@ export default function VisitorActivityTracker() {
 
     writeLast(path)
 
-    const base: TrackPayload = {
+    const payload: TrackPayload = {
       path,
       referrer: document.referrer || '',
       userAgent: navigator.userAgent || '',
     }
 
-    const supabase = createClient()
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      diag({ path, hasSession: !!session, sessionUserEmail: session?.user?.email || null, hasAccessToken: !!session?.access_token })
-      if (session?.access_token) {
-        base.accessToken = session.access_token
+    resolveAccessToken(path).then((token) => {
+      if (token) {
+        payload.accessToken = token
+        sendAuthenticated(payload)
+      } else {
+        sendAnonymous(payload)
       }
-      send(base)
-    }).catch((err) => {
-      diag({ path, getSessionError: String(err) })
-      send(base)
     })
   }, [pathname])
 
