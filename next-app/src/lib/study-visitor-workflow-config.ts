@@ -25,7 +25,8 @@ export type WorkflowEligibilityResult = {
   reason: string
 }
 
-export const LOGGED_IN_FIRST_VISIT_DEFINITION_KEY = 'study_visitor'
+export const STUDY_VISITOR_DEFINITION_KEY = 'study_visitor'
+export const LOGGED_IN_FIRST_VISIT_DEFINITION_KEY = 'logged_in_first_visit'
 
 const UNRESOLVED_STATUSES = ['running']
 
@@ -102,8 +103,8 @@ export async function checkVisitorFlowBlockRules(
 }
 
 /**
- * Check if there is an unresolved "study_visitor" workflow for the given
- * user that was created within the last 24 hours.
+ * Check if there is an unresolved "logged_in_first_visit" workflow for the
+ * given user that was created within the last 24 hours.
  */
 export async function checkLoggedInFirstVisitDedup24h(
   supabase: SupabaseClient,
@@ -137,7 +138,7 @@ export async function checkLoggedInFirstVisitDedup24h(
  * 1. workflow enabled
  * 2. admin path check
  * 3. admin user check
- * 4. block rules check
+ * 4. block rules check (targetFlowType = logged_in_first_visit)
  * 5. 24h dedup check
  */
 export async function getLoggedInFirstVisitEligibility(

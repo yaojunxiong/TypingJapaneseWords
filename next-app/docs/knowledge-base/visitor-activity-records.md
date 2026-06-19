@@ -50,9 +50,10 @@ RLS 策略：
    b. `admin_path` — 是否 /admin/* 路径
    c. `admin_user` — 是否管理员账号
    d. `blocked_by_*_rule` — 是否命中 `visitor_flow_block_rules` 启用规则
-      - 按 `flow_type` 匹配：`all` 对所有流程生效，`logged_in_first_visit` 仅对登录用户首次访问生效
-   e. `pending_logged_in_first_visit_within_24h` — 24 小时内是否有未确认流程
-7. **Step 3**：如全部通过，创建 `workflow_instances`（`reference_type = 'study_visitor'`）
+      - 按 `flow_type` 匹配：`all` 对所有流程生效，`logged_in_first_visit` 仅对登录用户首次访问生效，
+        `anonymous_visitor` 仅对匿名访客流程生效
+   e. `pending_logged_in_first_visit_within_24h` — 24 小时内是否有未确认的 `logged_in_first_visit` 流程
+7. **Step 3**：如全部通过，创建 `workflow_instances`（`reference_type = 'logged_in_first_visit'`）
 8. 如未通过，将 `workflow_skip_reason` 写入对应 `visitor_activity_events` 记录
 
 ## 管理后台页面
@@ -168,26 +169,42 @@ RLS 策略：
 
 ### v1.2 — 2026-06-20
 
-**Phase 2 — 登录用户首次访问确认流程去重（已实施）：**
-- 已在 `track/route.ts` 中实现完整的触发前检查链：
-  1. 写入 `visitor_activity_events`
-  2. 检查管理员账号 → `admin_user`
-  3. 检查 /admin/* 路径 → `admin_path`
-  4. 检查 `visitor_flow_block_rules`（已启用规则，按 flow_type 匹配）→ `blocked_by_*_rule`
-  5. 检查 24 小时内是否有未确认"学习网站登录用户首次访问确认"流程 → `pending_logged_in_first_visit_within_24h`
-  6. 如全部通过，创建 workflow instance
-- `flow_type` 匹配规则：
-  - `all`：对两种流程（匿名访客 + 登录用户首次访问）都生效
-  - `anonymous_visitor`：仅对匿名访客流程生效
-  - `logged_in_first_visit`：仅对登录用户首次访问确认流程生效
-- 登录用户首次访问去重条件：
-  - `reference_type = 'study_visitor'`
-  - `reference_id = user_id`
-  - `created_at >= now() - interval '24 hours'`
-  - `status` 属于未确认状态（`running`）
+**Phase 2a — 登录用户首次访问确认流程（已实施）：**
+
+**新增 workflow definition：**
+
+| definition_key | name | 适用对象 |
+|---|---|---|
+| `study_visitor` | 学习网站新访客待确认 | 匿名 / 未登录访客（当前尚未接入触发） |
+| `logged_in_first_visit` | 学习网站登录用户首次访问确认 | 已登录非管理员用户（已接入触发） |
+
+两个 flow 共享相同的节点结构：`start_visit → admin_approval → end_confirmed/end_rejected`，但在 `workflow_definitions` 中独立存在，各自的 `workflow_instances` 通过 `reference_type` 区分。
+
+**触发路由：**
+- 匿名访客：不触发流程（`study_visitor` 待后续接入）
+- 已登录非管理员：触发 `logged_in_first_visit`
+- 管理员：两个流程均不触发
+
+**`track/route.ts` 触发前检查链（已登录用户）：**
+1. `workflow_disabled` — 流程全局未启用
+2. `admin_path` — 是否 /admin/* 路径
+3. `admin_user` — 是否管理员账号
+4. `visitor_flow_block_rules`（已启用规则，按 `flow_type` 匹配）
+5. 24 小时内是否有未确认 `logged_in_first_visit` 流程 → `pending_logged_in_first_visit_within_24h`
+6. 如全部通过，创建 `reference_type = 'logged_in_first_visit'` 的 workflow instance
+
+**`flow_type` 匹配规则：**
+- `all`：对两种流程都生效
+- `anonymous_visitor`：仅对 `study_visitor`（匿名访客）生效
+- `logged_in_first_visit`：仅对 `logged_in_first_visit`（登录用户首次访问）生效
+
+**`logged_in_first_visit` 去重条件：**
+- `reference_type = 'logged_in_first_visit'`
+- `reference_id = user_id`
+- `created_at >= now() - interval '24 hours'`
+- `status` 属于未确认状态（`running`）
 - 已确认/已结束（`approved`/`rejected`）的流程：后续访问可以再次触发
 - 超过 24 小时仍未确认：保持不重复触发，避免堆积
-- 匿名访客流程不受影响，仍按原逻辑
 
 **`workflow_skip_reason` 取值含义：**
 
@@ -202,9 +219,9 @@ RLS 策略：
 | `blocked_by_ip_rule` | 命中 IP 屏蔽规则 |
 | `blocked_by_path_rule` | 命中 path 屏蔽规则 |
 | `blocked_by_user_agent_rule` | 命中 user_agent 屏蔽规则 |
-| `pending_logged_in_first_visit_within_24h` | 24 小时内已有未确认流程 |
-| `anonymous_visitor` | 匿名访客（当前不触发匿名流程） |
+| `pending_logged_in_first_visit_within_24h` | 24 小时内已有未确认 `logged_in_first_visit` 流程 |
 
 **数据表变更：**
 - `visitor_activity_events` 新增 RLS 策略：允许认证用户读取自己的记录（`user_id = auth.uid()`），用于 insert 后获取 ID
 - 不再区分 admin / non-admin 写入路径：所有认证用户统一走 `insert().select('id, created_at')`
+- `workflow_instances` / `workflow_tasks` / `workflow_actions` RLS 策略扩展到支持 `reference_type in ('study_visitor', 'logged_in_first_visit')`

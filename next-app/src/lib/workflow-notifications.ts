@@ -1,19 +1,19 @@
 import type { SupabaseClient } from '@supabase/supabase-js'
 import { sendWorkflowPendingNotification } from './email-service'
 import { formatTokyoDateTime } from './date-format'
+import { STUDY_VISITOR_DEFINITION_KEY, LOGGED_IN_FIRST_VISIT_DEFINITION_KEY } from './study-visitor-workflow-config'
 
-const DEFINITION_KEY = 'study_visitor'
-
-export type CreateStudyVisitorParams = {
+export type CreateWorkflowParams = {
   visitorRecordId: string
   userId: string | null
   pagePath: string
   ip: string | null
   userAgent: string | null
   visitedAt: string
+  definitionKey: 'study_visitor' | 'logged_in_first_visit'
 }
 
-export type CreateStudyVisitorResult = {
+export type CreateWorkflowResult = {
   created: boolean
   workflowInstanceId: string | null
   reason?: string
@@ -33,24 +33,28 @@ type Transition = {
   action: string
 }
 
-let _cachedVersionId: string | null = null
-let _cachedGraph: { nodes: Node[]; transitions: Transition[] } | null = null
+const _versionIdCache = new Map<string, string | null>()
+const _graphCache = new Map<string, { nodes: Node[]; transitions: Transition[] }>()
 
 function resetCache() {
-  _cachedVersionId = null
-  _cachedGraph = null
+  _versionIdCache.clear()
+  _graphCache.clear()
 }
 
-async function getActiveVersionId(supabase: SupabaseClient): Promise<string | null> {
-  if (_cachedVersionId) return _cachedVersionId
+async function getActiveVersionId(supabase: SupabaseClient, definitionKey: string): Promise<string | null> {
+  const cached = _versionIdCache.get(definitionKey)
+  if (cached !== undefined) return cached
 
   const { data: def } = await supabase
     .from('workflow_definitions')
     .select('id')
-    .eq('definition_key', DEFINITION_KEY)
+    .eq('definition_key', definitionKey)
     .single()
 
-  if (!def) return null
+  if (!def) {
+    _versionIdCache.set(definitionKey, null)
+    return null
+  }
 
   const { data: ver } = await supabase
     .from('workflow_versions')
@@ -61,41 +65,58 @@ async function getActiveVersionId(supabase: SupabaseClient): Promise<string | nu
     .limit(1)
     .maybeSingle()
 
-  if (ver) _cachedVersionId = ver.id
-  return ver?.id || null
+  const versionId = ver?.id || null
+  _versionIdCache.set(definitionKey, versionId)
+  return versionId
 }
 
 async function getGraph(supabase: SupabaseClient, versionId: string) {
-  if (_cachedGraph) return _cachedGraph
+  const cached = _graphCache.get(versionId)
+  if (cached) return cached
 
   const [nodesRes, transRes] = await Promise.all([
     supabase.from('workflow_nodes').select('*').eq('workflow_version_id', versionId).order('order_index'),
     supabase.from('workflow_transitions').select('*').eq('workflow_version_id', versionId),
   ])
 
-  if (nodesRes.data && transRes.data) {
-    _cachedGraph = { nodes: nodesRes.data as Node[], transitions: transRes.data as Transition[] }
-  }
-  return _cachedGraph || { nodes: [], transitions: [] }
+  const graph = { nodes: (nodesRes.data || []) as Node[], transitions: (transRes.data || []) as Transition[] }
+  _graphCache.set(versionId, graph)
+  return graph
 }
 
 export function clearWorkflowCache() {
   resetCache()
 }
 
-export async function createStudyVisitorWorkflow(
+const DEFINITION_META: Record<string, { workflowType: string; adminPath: string }> = {
+  [STUDY_VISITOR_DEFINITION_KEY]: {
+    workflowType: 'study_visitor',
+    adminPath: '/admin/workflows/study-visitor',
+  },
+  [LOGGED_IN_FIRST_VISIT_DEFINITION_KEY]: {
+    workflowType: 'logged_in_first_visit',
+    adminPath: '/admin/workflows/study-visitor',
+  },
+}
+
+export async function createWorkflow(
   supabase: SupabaseClient,
-  params: CreateStudyVisitorParams
-): Promise<CreateStudyVisitorResult> {
+  params: CreateWorkflowParams
+): Promise<CreateWorkflowResult> {
   const userId = params.userId
   if (!userId) {
     return { created: false, workflowInstanceId: null, reason: 'anonymous visitor' }
   }
 
+  const meta = DEFINITION_META[params.definitionKey]
+  if (!meta) {
+    return { created: false, workflowInstanceId: null, reason: `unknown definition: ${params.definitionKey}` }
+  }
+
   const { data: existing } = await supabase
     .from('workflow_instances')
     .select('id')
-    .eq('reference_type', 'study_visitor')
+    .eq('reference_type', params.definitionKey)
     .eq('reference_id', userId)
     .in('status', ['running'])
     .maybeSingle()
@@ -104,7 +125,7 @@ export async function createStudyVisitorWorkflow(
     return { created: false, workflowInstanceId: existing.id, reason: 'workflow already exists' }
   }
 
-  const versionId = await getActiveVersionId(supabase)
+  const versionId = await getActiveVersionId(supabase, params.definitionKey)
   if (!versionId) {
     return { created: false, workflowInstanceId: null, reason: 'workflow definition not found' }
   }
@@ -129,7 +150,7 @@ export async function createStudyVisitorWorkflow(
     .from('workflow_instances')
     .insert({
       workflow_version_id: versionId,
-      reference_type: 'study_visitor',
+      reference_type: params.definitionKey,
       reference_id: userId,
       current_node_key: approvalNode.node_key,
       status: 'running',
@@ -177,7 +198,7 @@ export async function createStudyVisitorWorkflow(
 
   try {
     const emailResult = await sendWorkflowPendingNotification({
-      workflowType: 'study_visitor',
+      workflowType: meta.workflowType,
       instanceId: instance.id,
       createdAt: params.visitedAt,
       metadata: {
@@ -186,7 +207,7 @@ export async function createStudyVisitorWorkflow(
         '当前状态': 'pending',
         '访问时间': formatTokyoDateTime(params.visitedAt),
         '访问页面': params.pagePath,
-        '管理后台': '/admin/workflows/study-visitor',
+        '管理后台': meta.adminPath,
         'IP 地址': params.ip,
         'User Agent': params.userAgent,
       },
@@ -200,4 +221,20 @@ export async function createStudyVisitorWorkflow(
   }
 
   return { created: true, workflowInstanceId: instance.id }
+}
+
+/** Convenience wrapper for study_visitor (anonymous visitor) workflow */
+export async function createStudyVisitorWorkflow(
+  supabase: SupabaseClient,
+  params: Omit<CreateWorkflowParams, 'definitionKey'>
+): Promise<CreateWorkflowResult> {
+  return createWorkflow(supabase, { ...params, definitionKey: STUDY_VISITOR_DEFINITION_KEY })
+}
+
+/** Convenience wrapper for logged_in_first_visit workflow */
+export async function createLoggedInFirstVisitWorkflow(
+  supabase: SupabaseClient,
+  params: Omit<CreateWorkflowParams, 'definitionKey'>
+): Promise<CreateWorkflowResult> {
+  return createWorkflow(supabase, { ...params, definitionKey: LOGGED_IN_FIRST_VISIT_DEFINITION_KEY })
 }

@@ -2,7 +2,7 @@ import { cookies } from 'next/headers'
 import { NextResponse, type NextRequest } from 'next/server'
 import { createClient } from '@/utils/supabase/server'
 import { hasSupabasePublicEnv } from '@/utils/supabase/config'
-import { createStudyVisitorWorkflow } from '@/lib/workflow-notifications'
+import { createLoggedInFirstVisitWorkflow } from '@/lib/workflow-notifications'
 import { getLoggedInFirstVisitEligibility } from '@/lib/study-visitor-workflow-config'
 
 export const dynamic = 'force-dynamic'
@@ -148,9 +148,10 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ ok: false, message: insertError.message }, { status: 200 })
   }
 
-  // ── Eligibility check & workflow trigger (both admin + non-admin) ──
+  // ── Eligibility check & workflow trigger (logged-in first visit) ──
+  // Only applies to non-admin, non-admin-path users.
+  // Admin users / admin paths are filtered out by getLoggedInFirstVisitEligibility.
 
-  // Step 1: Full eligibility check with block rules + 24h dedup
   const eligibility = await getLoggedInFirstVisitEligibility(supabase, {
     userId: user.id,
     email: user.email ?? null,
@@ -160,7 +161,6 @@ export async function POST(request: NextRequest) {
     userAgent,
   })
 
-  // Step 2: Record skip reason on the event
   if (!eligibility.eligible) {
     await supabase
       .from('visitor_activity_events')
@@ -169,10 +169,9 @@ export async function POST(request: NextRequest) {
       .maybeSingle()
   }
 
-  // Step 3: Create workflow only if eligible
   if (eligibility.eligible) {
     try {
-      await createStudyVisitorWorkflow(supabase, {
+      await createLoggedInFirstVisitWorkflow(supabase, {
         visitorRecordId: record.id,
         userId: user.id,
         pagePath: path,
@@ -181,7 +180,7 @@ export async function POST(request: NextRequest) {
         visitedAt: record.created_at || new Date().toISOString(),
       })
     } catch (err) {
-      console.error('[track] createStudyVisitorWorkflow error:', err)
+      console.error('[track] createLoggedInFirstVisitWorkflow error:', err)
     }
   }
 
