@@ -160,9 +160,11 @@ export async function POST(request: NextRequest) {
       })
 
     if (error) {
+      log(JSON.stringify({ step: 'insert-error', path, anonymous: true, error: error.message, code: error.code }))
       return NextResponse.json({ ok: false, message: error.message }, { status: 200 })
     }
 
+    log(JSON.stringify({ step: 'insert-result', path, anonymous: true }))
     return NextResponse.json({ ok: true })
   }
 
@@ -173,6 +175,8 @@ export async function POST(request: NextRequest) {
     email: user.email,
   }
 
+  log(JSON.stringify({ step: 'insert-payload', path, finalEmail: user.email ?? null, finalUserId: user.id, emailInPayload: recordPayload.email, userIdInPayload: recordPayload.user_id }))
+
   const { data: record, error: insertError } = await supabase
     .from('visitor_activity_events')
     .insert(recordPayload)
@@ -180,8 +184,11 @@ export async function POST(request: NextRequest) {
     .single()
 
   if (insertError) {
+    log(JSON.stringify({ step: 'insert-error', path, error: insertError.message, code: insertError.code, details: insertError.details, hint: insertError.hint }))
     return NextResponse.json({ ok: false, message: insertError.message }, { status: 200 })
   }
+
+  log(JSON.stringify({ step: 'insert-result', path, insertedId: record.id, insertedEmail: user.email ?? null, insertedUserId: user.id }))
 
   // ── Eligibility check & workflow trigger (logged-in first visit) ──
   // Only applies to non-admin, non-admin-path users.
