@@ -68,7 +68,19 @@ function extractIp(request: NextRequest): string | null {
 }
 
 export async function POST(request: NextRequest) {
+  const log = (...args: unknown[]) => console.error('[track]', ...args)
+
+  try {
+    return await handleTrack(request, log)
+  } catch (err) {
+    log(JSON.stringify({ step: 'early-return', reason: 'unhandled-exception', error: String(err) }))
+    return NextResponse.json({ ok: false, message: 'Internal error' }, { status: 500 })
+  }
+}
+
+async function handleTrack(request: NextRequest, log: (...args: unknown[]) => void) {
   if (!hasSupabasePublicEnv()) {
+    log(JSON.stringify({ step: 'early-return', reason: 'no-supabase-env' }))
     return NextResponse.json({ ok: false, skipped: true }, { status: 200 })
   }
 
@@ -76,11 +88,15 @@ export async function POST(request: NextRequest) {
   try {
     payload = await request.json()
   } catch {
+    log(JSON.stringify({ step: 'early-return', reason: 'json-parse-error' }))
     return NextResponse.json({ ok: false }, { status: 400 })
   }
 
   const path = safePath(payload.path)
-  if (!path) return NextResponse.json({ ok: false }, { status: 400 })
+  if (!path) {
+    log(JSON.stringify({ step: 'early-return', reason: 'invalid-path' }))
+    return NextResponse.json({ ok: false }, { status: 400 })
+  }
 
   const cookieStore = await cookies()
   const supabase = createClient(cookieStore)
@@ -96,8 +112,8 @@ export async function POST(request: NextRequest) {
   let user: import('@supabase/supabase-js').User | null = null
   let cookieSessionEmail: string | null = null
   let tokenGetUserError: string | null = null
+  let authSource: string = 'none'
 
-  const log = (...args: unknown[]) => console.error('[track]', ...args)
   const uaHeadless = (userAgent || '').includes('HeadlessChrome')
   const accessTokenPrefix = clientAccessToken ? clientAccessToken.slice(0, 8) + '...' : 'none'
 
@@ -106,7 +122,7 @@ export async function POST(request: NextRequest) {
   // Method 1: cookie-based server session
   try {
     const { data } = await supabase.auth.getUser()
-    if (data.user) user = data.user
+    if (data.user) { user = data.user; authSource = 'cookie' }
   } catch {
     // fall through to token-based fallback
   }
@@ -117,26 +133,31 @@ export async function POST(request: NextRequest) {
   if (!user && clientAccessToken) {
     try {
       const { data } = await supabase.auth.getUser(clientAccessToken)
-      if (data.user) user = data.user
+      if (data.user) { user = data.user; authSource = 'token' }
     } catch (err) {
       tokenGetUserError = String(err)
     }
-    log(JSON.stringify({ step: 'token', path, hasAccessTokenInBody: !!clientAccessToken, accessTokenPrefix, tokenGetUserSuccess: !!user, tokenGetUserEmail: user?.email ?? null, tokenGetUserError }))
+    log(JSON.stringify({ step: 'token', path, accessTokenPrefix, tokenGetUserSuccess: !!user, tokenGetUserEmail: user?.email ?? null, tokenGetUserError }))
   }
+
+  log(JSON.stringify({ step: 'auth-result', path, authSource, finalEmail: user?.email ?? null, finalUserId: user?.id ?? null }))
 
   // Determine admin status for authenticated users
   let isAdmin = false
+  let roleQueryError: string | null = null
   if (user) {
     try {
-      const { data: roleRow } = await supabase
+      const { data: roleRow, error: roleErr } = await supabase
         .from('user_roles')
         .select('role')
         .eq('user_id', user.id)
         .maybeSingle()
+      if (roleErr) roleQueryError = roleErr.message
       if (roleRow?.role === 'admin') isAdmin = true
-    } catch {
-      // non-admin by default on error
+    } catch (err) {
+      roleQueryError = String(err)
     }
+    log(JSON.stringify({ step: 'role-check', path, isAdmin, roleQueryError }))
   }
 
   // ── Base insert payload ──────────────────────────────────────
