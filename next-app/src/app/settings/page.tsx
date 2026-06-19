@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import MinnaNav from '@/components/minna-nav'
-import { getLang, tr } from '@/lib/i18n'
+import { getLang, tr } from '@/lib/i18n-server'
 import SettingsPracticeControls from '@/components/settings-practice-controls'
 
 export default async function SettingsPage() {

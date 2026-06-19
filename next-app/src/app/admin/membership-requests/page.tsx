@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { cookies } from 'next/headers'
 import { createClient } from '@/utils/supabase/server'
-import { getLang, tr } from '@/lib/i18n'
+import { getLang, tr } from '@/lib/i18n-server'
 import { checkAdminAccess } from '@/lib/admin-auth'
 import MinnaNav from '@/components/minna-nav'
 import MembershipRequestFlowchart from '@/components/membership-request-flowchart'

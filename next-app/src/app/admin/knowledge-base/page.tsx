@@ -3,7 +3,7 @@ import path from 'node:path'
 import { cookies } from 'next/headers'
 import Link from 'next/link'
 import MinnaNav from '@/components/minna-nav'
-import { getLang, tr } from '@/lib/i18n'
+import { getLang, tr } from '@/lib/i18n-server'
 import { mdToHtml } from '@/lib/markdown'
 import { checkAdminAccess } from '@/lib/admin-auth'
 

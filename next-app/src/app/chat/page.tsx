@@ -1,7 +1,7 @@
 import { Suspense } from 'react'
 import MinnaNav from '@/components/minna-nav'
 import ChatClient from '@/components/chat-client'
-import { getLang, tr } from '@/lib/i18n'
+import { getLang, tr } from '@/lib/i18n-server'
 
 export default async function ChatPage() {
   const lang = await getLang()

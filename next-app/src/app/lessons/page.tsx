@@ -4,7 +4,7 @@ import TopLabelSync from '@/components/top-label-sync'
 import LessonsClient from '@/components/lessons-client'
 import { createClient } from '@/utils/supabase/server'
 import { hasSupabasePublicEnv } from '@/utils/supabase/config'
-import { getLang } from '@/lib/i18n'
+import { getLang } from '@/lib/i18n-server'
 
 type RoleRow = {
   role: string | null

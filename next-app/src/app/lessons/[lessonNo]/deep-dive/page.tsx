@@ -3,7 +3,7 @@ import path from 'node:path'
 import MinnaNav from '@/components/minna-nav'
 import TopLabelSync from '@/components/top-label-sync'
 import DeepDiveViewer from '@/components/lesson-deep-dive'
-import { getLang } from '@/lib/i18n'
+import { getLang } from '@/lib/i18n-server'
 import type { DeepDive } from '@/types/deep-dive'
 
 export function generateStaticParams() {

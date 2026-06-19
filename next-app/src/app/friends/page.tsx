@@ -4,7 +4,7 @@ import { cookies } from 'next/headers'
 import MinnaNav from '@/components/minna-nav'
 import { createClient } from '@/utils/supabase/server'
 import { hasSupabasePublicEnv, getSupabaseMissingEnvMessage } from '@/utils/supabase/config'
-import { getLang, tr } from '@/lib/i18n'
+import { getLang, tr } from '@/lib/i18n-server'
 
 type FriendRow = {
   id: number

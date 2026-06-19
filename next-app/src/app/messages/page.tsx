@@ -7,7 +7,7 @@ import {
   hasSupabasePublicEnv,
   getSupabaseMissingEnvMessage
 } from '@/utils/supabase/config'
-import { getLang, tr } from '@/lib/i18n'
+import { getLang, tr } from '@/lib/i18n-server'
 
 type FriendRequestRow = {
   id: number

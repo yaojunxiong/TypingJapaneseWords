@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { cookies } from 'next/headers'
 import MinnaNav from '@/components/minna-nav'
-import { getLang, tr } from '@/lib/i18n'
+import { getLang, tr } from '@/lib/i18n-server'
 import { checkAdminAccess } from '@/lib/admin-auth'
 import { getEmailConfigStatus } from '@/lib/email-service'
 import { getStudyVisitorWorkflowConfig } from '@/lib/study-visitor-workflow-config'

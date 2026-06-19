@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { getLang } from '@/lib/i18n'
+import { getLang } from '@/lib/i18n-server'
 import VisitorActivityTracker from '@/components/visitor-activity-tracker'
 
 export const metadata: Metadata = {

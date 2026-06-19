@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { cookies } from 'next/headers'
 import MinnaNav from '@/components/minna-nav'
 import { createClient } from '@/utils/supabase/server'
-import { getLang, tr, type Lang } from '@/lib/i18n'
+import { getLang, tr, type Lang } from '@/lib/i18n-server'
 import { checkAdminAccess } from '@/lib/admin-auth'
 
 function RoleBadge({ role }: { role: string }) {

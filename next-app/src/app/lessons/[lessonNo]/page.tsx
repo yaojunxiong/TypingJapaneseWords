@@ -7,7 +7,7 @@ import LessonCheckinButton from '@/components/lesson-checkin-button'
 import LessonVideoFollowPlayer from '@/components/lesson-video-follow-player'
 import LessonConfirmAction from '@/components/lesson-confirm-action'
 import { LESSONS_1_50 } from '@/lib/minna-lessons'
-import { getLang, type Lang, tr } from '@/lib/i18n'
+import { getLang, type Lang, tr } from '@/lib/i18n-server'
 
 type LangText = { zh?: string; en?: string; ja?: string; jp?: string }
 

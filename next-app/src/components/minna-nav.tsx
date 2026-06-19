@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { getLang, tr } from '@/lib/i18n'
+import { getLang, tr } from '@/lib/i18n-server'
 import MinnaTopStatsClient from '@/components/minna-top-stats-client'
 import UserAuthEntry from '@/components/user-auth-entry'
 

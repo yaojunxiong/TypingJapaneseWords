@@ -10,7 +10,7 @@ import LessonConversationQuizClient from '@/components/lesson-conversation-quiz-
 import LessonReturnNav from '@/components/lesson-return-nav'
 import LessonFlowActions from '@/components/lesson-flow-actions'
 import LessonConfirmAction from '@/components/lesson-confirm-action'
-import { getLang, type Lang } from '@/lib/i18n'
+import { getLang, type Lang } from '@/lib/i18n-server'
 
 type LangText = { zh?: string; en?: string; ja?: string; jp?: string }
 type LessonPractice = {

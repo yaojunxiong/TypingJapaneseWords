@@ -8,7 +8,7 @@ import AdminCollapsibleSection from '@/components/admin-collapsible-section'
 import AdminSectionExpandControls from '@/components/admin-section-expand-controls'
 import AdminSectionTypeFilter from '@/components/admin-section-type-filter'
 import AdminRecentLessonWriter from '@/components/admin-recent-lesson-writer'
-import { getLang, tr, type Lang } from '@/lib/i18n'
+import { getLang, tr, type Lang } from '@/lib/i18n-server'
 import { checkAdminAccess } from '@/lib/admin-auth'
 type LangText = { zh?: string; en?: string; ja?: string; jp?: string }
 type LessonPractice = {

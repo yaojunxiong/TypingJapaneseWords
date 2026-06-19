@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import AuthActions from '@/components/auth-actions'
 import MinnaNav from '@/components/minna-nav'
-import { getLang, tr } from '@/lib/i18n'
+import { getLang, tr } from '@/lib/i18n-server'
 
 export default async function LoginPage() {
   const lang = await getLang()

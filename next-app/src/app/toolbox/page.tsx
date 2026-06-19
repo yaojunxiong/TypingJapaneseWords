@@ -1,6 +1,6 @@
 import MinnaNav from '@/components/minna-nav'
 import ToolboxClient from '@/components/toolbox-client'
-import { getLang } from '@/lib/i18n'
+import { getLang } from '@/lib/i18n-server'
 
 export default async function ToolboxPage() {
   const lang = await getLang()

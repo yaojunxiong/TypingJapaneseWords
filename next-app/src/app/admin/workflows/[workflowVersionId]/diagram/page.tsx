@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { cookies } from 'next/headers'
 import { createClient } from '@/utils/supabase/server'
 import { checkAdminAccess } from '@/lib/admin-auth'
-import { getLang, tr } from '@/lib/i18n'
+import { getLang, tr } from '@/lib/i18n-server'
 import { formatTokyoDateTime } from '@/lib/date-format'
 import MinnaNav from '@/components/minna-nav'
 

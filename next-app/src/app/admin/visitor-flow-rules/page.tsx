@@ -2,7 +2,6 @@
 
 import { useCallback, useEffect, useState } from 'react'
 import Link from 'next/link'
-import MinnaNav from '@/components/minna-nav'
 
 type FlowRule = {
   id: string
@@ -125,7 +124,11 @@ export default function AdminVisitorFlowRulesPage() {
 
   return (
     <main style={{ paddingBottom: 'calc(100px + env(safe-area-inset-bottom, 0px))' }}>
-      <MinnaNav active="me" />
+      <header className="minnaTopClassic">
+        <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) auto', alignItems: 'center', gap: 10 }}>
+          <b className="small" style={{ color: '#64748b' }}>Admin</b>
+        </div>
+      </header>
 
       <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap', marginBottom: 8 }}>
         <span style={{ fontSize: 22, lineHeight: 1 }}>🛡️</span>
