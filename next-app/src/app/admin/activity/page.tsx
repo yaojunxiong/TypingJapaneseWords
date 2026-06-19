@@ -51,15 +51,17 @@ const SORT_OPTIONS = [
 
 const SKIP_REASON_LABELS: Record<string, { zh: string; en: string }> = {
   workflow_disabled: { zh: '流程未启用', en: 'Workflow disabled' },
-  admin_path_ignored: { zh: '管理后台路径', en: 'Admin path' },
   admin_path: { zh: '管理后台路径', en: 'Admin path' },
-  admin_user_ignored: { zh: '管理员访问', en: 'Admin user' },
   admin_user: { zh: '管理员访问', en: 'Admin user' },
-  anonymous_visitor: { zh: '匿名访客', en: 'Anonymous' },
-  workflow_already_exists: { zh: '已有流程', en: 'Workflow exists' },
+  blocked_by_email_rule: { zh: '命中邮箱屏蔽规则', en: 'Blocked by email rule' },
+  blocked_by_user_id_rule: { zh: '命中用户 ID 屏蔽规则', en: 'Blocked by user ID rule' },
+  blocked_by_ip_rule: { zh: '命中 IP 屏蔽规则', en: 'Blocked by IP rule' },
+  blocked_by_path_rule: { zh: '命中路径屏蔽规则', en: 'Blocked by path rule' },
+  blocked_by_user_agent_rule: { zh: '命中 UA 屏蔽规则', en: 'Blocked by UA rule' },
   pending_logged_in_first_visit_within_24h: { zh: '24 小时内已有待确认流程', en: 'Pending workflow in 24h' },
   workflow_not_created: { zh: '流程未创建', en: 'Workflow not created' },
   workflow_create_failed: { zh: '流程创建失败', en: 'Workflow create failed' },
+  anonymous_visitor: { zh: '匿名访客', en: 'Anonymous' },
 }
 
 function skipReasonLabel(reason: string | null, lang: Lang): string {
