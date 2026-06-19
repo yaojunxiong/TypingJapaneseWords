@@ -519,7 +519,7 @@ export default async function AdminPage({
       icon: '👤',
       label: tr(lang, '访客确认流程', 'Visitor Workflow'),
       description: tr(lang, '管理新访客确认流程，确认/拒绝，查看流程图', 'Manage visitor confirmation, approve/reject, view diagram.'),
-      href: '/admin/workflows/study-visitor',
+      href: '/admin/workflows',
     },
     {
       icon: '📋',

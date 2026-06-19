@@ -404,7 +404,7 @@ export default async function WorkflowDiagramPage({ params, searchParams }: Prop
       </section>
 
       <section className="card">
-        <p className="small"><Link href="/admin/workflows/study-visitor">{tr(lang, '← 返回访客确认列表', '← Back to visitor workflows')}</Link></p>
+        <p className="small"><Link href="/admin/workflows">{tr(lang, '← 返回流程管理', '← Back to workflow management')}</Link></p>
       </section>
     </main>
   )

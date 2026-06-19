@@ -91,11 +91,11 @@ export function clearWorkflowCache() {
 const DEFINITION_META: Record<string, { workflowType: string; adminPath: string }> = {
   [STUDY_VISITOR_DEFINITION_KEY]: {
     workflowType: 'study_visitor',
-    adminPath: '/admin/workflows/study-visitor',
+    adminPath: '/admin/workflows?definition_key=study_visitor',
   },
   [LOGGED_IN_FIRST_VISIT_DEFINITION_KEY]: {
     workflowType: 'logged_in_first_visit',
-    adminPath: '/admin/workflows/study-visitor',
+    adminPath: '/admin/workflows?definition_key=logged_in_first_visit',
   },
 }
 

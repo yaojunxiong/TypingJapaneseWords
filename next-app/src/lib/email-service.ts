@@ -149,7 +149,7 @@ export async function sendWorkflowPendingNotification(params: {
   }
 
   lines.push('</table>')
-  lines.push(`<p style="margin-top:20px"><a href="https://study.jimmyyao.com/admin/workflows/study-visitor" style="display:inline-block;padding:10px 20px;background:#2563eb;color:#fff;text-decoration:none;border-radius:8px">前往访客确认后台处理</a></p>`)
+  lines.push(`<p style="margin-top:20px"><a href="https://study.jimmyyao.com/admin/workflows" style="display:inline-block;padding:10px 20px;background:#2563eb;color:#fff;text-decoration:none;border-radius:8px">前往访客确认后台处理</a></p>`)
 
   return sendAdminNotification(subject, lines.join('\n'))
 }
