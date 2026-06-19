@@ -3,7 +3,7 @@ import { NextResponse, type NextRequest } from 'next/server'
 import { createClient } from '@/utils/supabase/server'
 import { hasSupabasePublicEnv } from '@/utils/supabase/config'
 import { createStudyVisitorWorkflow } from '@/lib/workflow-notifications'
-import { getStudyVisitorWorkflowEligibility } from '@/lib/study-visitor-workflow-config'
+import { getLoggedInFirstVisitEligibility } from '@/lib/study-visitor-workflow-config'
 
 export const dynamic = 'force-dynamic'
 
@@ -89,7 +89,7 @@ export async function POST(request: NextRequest) {
   const ip = extractIp(request)
   const userAgent = cleanText(payload.userAgent, 500)
 
-  // Determine if the current user is an admin
+  // Determine admin status for authenticated users
   let isAdmin = false
   if (user) {
     try {
@@ -104,20 +104,24 @@ export async function POST(request: NextRequest) {
     }
   }
 
-  // Step 1: Write the access log
-  // ── Anonymous visitors: insert only, no select, no workflow ──
+  // ── Base insert payload ──────────────────────────────────────
+  const insertPayload = {
+    path,
+    page_type: inferPageType(path),
+    lesson_no: inferLessonNo(path),
+    referrer: sameOriginReferrer(payload.referrer, request),
+    user_agent: userAgent,
+    ip,
+  }
+
+  // ── Anonymous visitors: insert only, no workflow ──
   if (!user) {
     const { error } = await supabase
       .from('visitor_activity_events')
       .insert({
+        ...insertPayload,
         user_id: null,
         email: null,
-        path,
-        page_type: inferPageType(path),
-        lesson_no: inferLessonNo(path),
-        referrer: sameOriginReferrer(payload.referrer, request),
-        user_agent: userAgent,
-        ip,
       })
 
     if (error) {
@@ -127,56 +131,36 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ ok: true })
   }
 
-  // ── Authenticated non-admin users: insert with user_id + email, no select, no workflow ──
-  if (!isAdmin) {
-    const { error } = await supabase
-      .from('visitor_activity_events')
-      .insert({
-        user_id: user.id,
-        email: user.email,
-        path,
-        page_type: inferPageType(path),
-        lesson_no: inferLessonNo(path),
-        referrer: sameOriginReferrer(payload.referrer, request),
-        user_agent: userAgent,
-        ip,
-      })
-
-    if (error) {
-      return NextResponse.json({ ok: false, message: error.message }, { status: 200 })
-    }
-
-    return NextResponse.json({ ok: true })
+  // ── Authenticated users (admin + non-admin): insert with select ──
+  const recordPayload = {
+    ...insertPayload,
+    user_id: user.id,
+    email: user.email,
   }
 
-  // ── Admin users: insert + select + workflow ──
-  const { data: record, error } = await supabase
+  const { data: record, error: insertError } = await supabase
     .from('visitor_activity_events')
-    .insert({
-      user_id: user.id,
-      email: user.email,
-      path,
-      page_type: inferPageType(path),
-      lesson_no: inferLessonNo(path),
-      referrer: sameOriginReferrer(payload.referrer, request),
-      user_agent: userAgent,
-      ip,
-    })
+    .insert(recordPayload)
     .select('id, created_at')
     .single()
 
-  if (error) {
-    return NextResponse.json({ ok: false, message: error.message }, { status: 200 })
+  if (insertError) {
+    return NextResponse.json({ ok: false, message: insertError.message }, { status: 200 })
   }
 
-  // Step 2: Check workflow eligibility (admin users only)
-  const eligibility = await getStudyVisitorWorkflowEligibility(supabase, {
+  // ── Eligibility check & workflow trigger (both admin + non-admin) ──
+
+  // Step 1: Full eligibility check with block rules + 24h dedup
+  const eligibility = await getLoggedInFirstVisitEligibility(supabase, {
     userId: user.id,
+    email: user.email ?? null,
     path,
     isAdmin,
+    ip,
+    userAgent,
   })
 
-  // Record skip reason on the event for audit trail
+  // Step 2: Record skip reason on the event
   if (!eligibility.eligible) {
     await supabase
       .from('visitor_activity_events')

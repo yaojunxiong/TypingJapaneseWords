@@ -43,8 +43,17 @@ RLS 策略：
 3. 检查用户角色（admin / normal）
 4. 从请求头提取 IP
 5. **Step 1**：写入 `visitor_activity_events`
-6. **Step 2**：检查学习访客流程 eligibility（是否已启用、路径是否忽略、用户是否 admin、是否已有运行中流程等）
-7. **Step 3**：如 eligible，创建 `workflow_instances`（`reference_type = 'study_visitor'`）
+   - 匿名访客：仅 insert，不 select，不创建 workflow
+   - 认证用户（admin + non-admin）：insert + select（利用 RLS 自读策略获取 ID）
+6. **Step 2**：认证用户执行触发前检查链（顺序不可变）：
+   a. `workflow_disabled` — 流程是否全局启用
+   b. `admin_path` — 是否 /admin/* 路径
+   c. `admin_user` — 是否管理员账号
+   d. `blocked_by_*_rule` — 是否命中 `visitor_flow_block_rules` 启用规则
+      - 按 `flow_type` 匹配：`all` 对所有流程生效，`logged_in_first_visit` 仅对登录用户首次访问生效
+   e. `pending_logged_in_first_visit_within_24h` — 24 小时内是否有未确认流程
+7. **Step 3**：如全部通过，创建 `workflow_instances`（`reference_type = 'study_visitor'`）
+8. 如未通过，将 `workflow_skip_reason` 写入对应 `visitor_activity_events` 记录
 
 ## 管理后台页面
 
@@ -148,15 +157,54 @@ RLS 策略：
 - migration 文件需要保持版本管理
 - 如页面未来展示 `workflow_skip_reason`，需同步扩展文档和 select 字段
 
-### v1.1 — 2026-06-20（进行中）
+### v1.1 — 2026-06-20
 
-**Phase 1 — 访客流程屏蔽规则：**
+**Phase 1 — 访客流程屏蔽规则（已实施）：**
 - `visitor_flow_block_rules` 表及 RLS（admin-only）已创建
 - `/admin/visitor-flow-rules` 页面已实现（规则列表、新增、编辑、启用/停用切换、删除）
 - `POST /api/admin/visitor-flow-rules`（新增）、`PUT`（更新）、`DELETE`（删除）、`GET`（列表）
 - 后台首页快捷卡片 + 系统页路由列表已更新
 - 本页面文档已扩展
 
-**Phase 2（待实施）：**
-- 在 `track/route.ts` 中读取 `visitor_flow_block_rules`，匹配时跳过流程触发
-- 在规则匹配逻辑中处理 flow_type（anonymous_visitor 只对匿名访客生效等）
+### v1.2 — 2026-06-20
+
+**Phase 2 — 登录用户首次访问确认流程去重（已实施）：**
+- 已在 `track/route.ts` 中实现完整的触发前检查链：
+  1. 写入 `visitor_activity_events`
+  2. 检查管理员账号 → `admin_user`
+  3. 检查 /admin/* 路径 → `admin_path`
+  4. 检查 `visitor_flow_block_rules`（已启用规则，按 flow_type 匹配）→ `blocked_by_*_rule`
+  5. 检查 24 小时内是否有未确认"学习网站登录用户首次访问确认"流程 → `pending_logged_in_first_visit_within_24h`
+  6. 如全部通过，创建 workflow instance
+- `flow_type` 匹配规则：
+  - `all`：对两种流程（匿名访客 + 登录用户首次访问）都生效
+  - `anonymous_visitor`：仅对匿名访客流程生效
+  - `logged_in_first_visit`：仅对登录用户首次访问确认流程生效
+- 登录用户首次访问去重条件：
+  - `reference_type = 'study_visitor'`
+  - `reference_id = user_id`
+  - `created_at >= now() - interval '24 hours'`
+  - `status` 属于未确认状态（`running`）
+- 已确认/已结束（`approved`/`rejected`）的流程：后续访问可以再次触发
+- 超过 24 小时仍未确认：保持不重复触发，避免堆积
+- 匿名访客流程不受影响，仍按原逻辑
+
+**`workflow_skip_reason` 取值含义：**
+
+| reason | 含义 |
+|--------|------|
+| `workflow_disabled` | 流程全局未启用 |
+| `admin_user` | 管理员账号不触发 |
+| `admin_path` | 管理员路径不触发 |
+| `blocked_by_email_rule` | 命中 email 屏蔽规则 |
+| `blocked_by_user_id_rule` | 命中 user_id 屏蔽规则 |
+| `blocked_by_visitor_id_rule` | 命中 visitor_id 屏蔽规则 |
+| `blocked_by_ip_rule` | 命中 IP 屏蔽规则 |
+| `blocked_by_path_rule` | 命中 path 屏蔽规则 |
+| `blocked_by_user_agent_rule` | 命中 user_agent 屏蔽规则 |
+| `pending_logged_in_first_visit_within_24h` | 24 小时内已有未确认流程 |
+| `anonymous_visitor` | 匿名访客（当前不触发匿名流程） |
+
+**数据表变更：**
+- `visitor_activity_events` 新增 RLS 策略：允许认证用户读取自己的记录（`user_id = auth.uid()`），用于 insert 后获取 ID
+- 不再区分 admin / non-admin 写入路径：所有认证用户统一走 `insert().select('id, created_at')`
