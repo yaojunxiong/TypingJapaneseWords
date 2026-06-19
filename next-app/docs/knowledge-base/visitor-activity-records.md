@@ -18,12 +18,14 @@
 | `user_agent` | `text?` | 浏览器 UA 字符串 |
 | `ip` | `text?` | 从 `X-Forwarded-For` / `X-Real-IP` 提取 |
 | `is_admin` | `boolean` | `default false`，该访问是否来自管理员 |
-| `workflow_skip_reason` | `text?` | 如未创建学习访客流程，记录原因 |
+| `workflow_skip_reason` | `text?` | 流程未触发时的原因，参见下方 `workflow_skip_reason` 取值含义 |
+| `workflow_instance_id` | `uuid? REFERENCES workflow_instances(id)` | 关联的 workflow instance ID（流程创建成功时写入） |
 | `created_at` | `timestamptz` | `default now()` |
 
 RLS 策略：
 - `INSERT`: 允许 anon + authenticated（客户端跟踪脚本）
-- `SELECT`: 仅 admin（通过 Supabase 服务端）
+- `SELECT`: 允许 admin + 自己读取自己的记录（`user_id = auth.uid()`）
+  - ⚠️ 该自读策略是必须的：服务端在 `insert().select()` 时需要利用 RLS 返回刚插入的行；如果没有该策略，anon key 的 SELECT 会被拦截，`RETURNING` 返回空
 
 ## 写入逻辑
 
@@ -39,7 +41,10 @@ RLS 策略：
 `src/app/api/activity/track/route.ts`：
 
 1. 验证并标准化 path
-2. 获取当前登录用户（如存在）
+2. **用户认证（双通道降级）：**
+   - Method 1（cookie）：`createClient(cookieStore)` → `supabase.auth.getUser()`，适用于 ssr 场景
+   - Method 2（token fallback）：从 `POST body.accessToken` 提取 → `supabase.auth.getUser(accessToken)`，适用于客户端脚本手动传入 token 的场景
+   - ⚠️ **关键修复**：当 Method 1 失败但 Method 2 成功时，必须调用 `supabase.auth.setSession({ access_token, refresh_token: '' })`，否则底层 supabase client 仍为 anon key，后续 `insert().select()` 会因 RLS 的 `user_id = auth.uid()` 条件失败（`auth.uid()` 为 null 时 SELECT 被拒绝）
 3. 检查用户角色（admin / normal）
 4. 从请求头提取 IP
 5. **Step 1**：写入 `visitor_activity_events`
@@ -54,7 +59,10 @@ RLS 策略：
         `anonymous_visitor` 仅对匿名访客流程生效
    e. `pending_logged_in_first_visit_within_24h` — 24 小时内是否有未确认的 `logged_in_first_visit` 流程
 7. **Step 3**：如全部通过，创建 `workflow_instances`（`reference_type = 'logged_in_first_visit'`）
+   - 调用 `workflow-notifications.ts:createLoggedInFirstVisitWorkflow()` → `createWorkflow()`
+   - 该函数内部查询 `workflow_definitions` / `workflow_versions` / `workflow_nodes` / `workflow_transitions`（需 RLS 放行）
 8. 如未通过，将 `workflow_skip_reason` 写入对应 `visitor_activity_events` 记录
+9. 如流程创建成功，将 `workflow_instance_id` 写入对应 `visitor_activity_events` 记录
 
 ## 管理后台页面
 
@@ -91,8 +99,24 @@ RLS 策略：
 ```
 
 数据表通过 Supabase RLS 策略限制 SELECT 权限：
-- `visitor_activity_events` 的 SELECT 仅允许通过服务端客户端访问（行级安全策略中 admin 角色）
-- 前端不会直接查询该表
+
+**visitor_activity_events：**
+- `INSERT`: anon + authenticated
+- `SELECT`: admin + `user_id = auth.uid()`（自读，用于 insert 后获取 ID）
+
+**workflow_definitions / workflow_versions / workflow_nodes / workflow_transitions：**
+- `SELECT`: admin + authenticated（限制为 `definition_key in ('study_visitor', 'logged_in_first_visit')` 且 `status = 'active'`）
+- 不开放 insert/update/delete 给非 admin
+- ⚠️ **缺失这些策略的后果**：`workflow-notifications.ts` 的 `getActiveVersionId` / `getGraph` 查询返回 0 行，代码误判为 "workflow definition not found"（实际数据存在，只是 RLS 拦截了 SELECT）
+
+**workflow_instances / workflow_tasks / workflow_actions：**
+- `SELECT`: admin + `reference_type in ('study_visitor', 'logged_in_first_visit') and reference_id = auth.uid()`
+- `INSERT`: authenticated with check `reference_type in ('study_visitor', 'logged_in_first_visit')`
+
+**visitor_flow_block_rules：**
+- `SELECT` / `INSERT` / `UPDATE` / `DELETE`: 仅 admin
+
+前端不会直接查询这些表。
 
 ## 访客流程屏蔽规则
 
@@ -135,6 +159,18 @@ RLS 策略：
 1. **后台首页** (`/admin`) — 快捷功能模块"访客记录"卡片 + 可用模块列表
 2. **系统检测页** (`/admin/system`) — 路由列表中的"访客记录列表"
 3. **快捷入口** — 每个后台页面底部的"返回后台首页"链接
+
+## 邮件通知
+
+当 `logged_in_first_visit` 或 `study_visitor` workflow 成功创建后，系统自动发送通知邮件给管理员。
+
+**实现：** `src/lib/email-service.ts` 的 `sendWorkflowPendingNotification()`
+- 在 `workflow-notifications.ts` 的 `createWorkflow()` 中调用
+- 发送至 `ADMIN_NOTIFY_EMAIL`（环境变量）
+- 内容：访客 ID、访客记录 ID、当前状态、访问时间、访问页面、管理后台链接、IP、User Agent
+- 发送失败仅记录 warn 日志，不阻塞流程创建
+
+已验证：Auto Test #27 中管理员邮箱已收到 pending 通知邮件。
 
 ## 发布记录
 
@@ -198,6 +234,48 @@ RLS 策略：
 - `anonymous_visitor`：仅对 `study_visitor`（匿名访客）生效
 - `logged_in_first_visit`：仅对 `logged_in_first_visit`（登录用户首次访问）生效
 
+### v1.3 — 2026-06-20
+
+**闭环验证通过（Auto Test #27）：**
+
+```
+Smoke test  : ✅ success
+Regression  : ✅ success
+  ├ @study              : ✅ passed
+  ├ @admin-auth         : ✅ passed
+  └ @normal-user-e2e    : ✅ passed
+```
+
+**验证结果：**
+
+| 检查项 | 结果 |
+|--------|------|
+| 普通用户写入 `visitor_activity_events` | ✅ `auto-test-user@jimmyyao.com` 的 `/` 和 `/lessons` 均写入成功（`insertedEmail`、`insertedUserId` 非空） |
+| `logged_in_first_visit` 流程触发 | ✅ 首次 24h 内正确跳过：`workflowSkipReason="pending_logged_in_first_visit_within_24h"` |
+| `admin_path` / `admin_user` 跳过 | ✅ 管理员访问 `/admin/*` 路径全部 `skipReason="admin_path"`，`/me` 为 `admin_user` |
+| `workflow definition not found` | ✅ 不再出现。原因为 RLS 拦截 authenticated SELECT（已修复） |
+| 管理员页面访问 | ✅ `/admin/activity`、`/admin/visitors`、`/admin/workflows` 均 200，`checkAdminAccess` 返回 `isAdmin:true` |
+| 邮件通知 | ✅ 管理员已验证收到 pending 通知邮件 |
+
+**本次关键修复：**
+
+1. **`workflow_definitions` / `workflow_versions` / `workflow_nodes` / `workflow_transitions` RLS 策略**
+   - 新增 `workflow definitions/versions/nodes/transitions visitor read` policy
+   - 限制 authenticated 用户仅能 SELECT `definition_key in ('study_visitor', 'logged_in_first_visit')` 且 `status = 'active'`
+   - 保留原有 admin 读写策略，不放宽 insert/update/delete
+   - Migration: `20260620220000_allow_authenticated_read_visitor_workflows.sql`
+   - 生产库通过 `supabase db push --linked` 应用（先 `migration repair` 标记旧迁移，再推送新迁移）
+
+2. **Token fallback 后 `supabase.auth.setSession()`**
+   - 当 cookie session 为 null 但 body access_token 校验成功时，调用 `setSession({ access_token, refresh_token: '' })`
+   - 目的：将底层 supabase client 从 anon key 升级为 token 用户的 auth，使后续 `insert().select()` 的 RETURNING SELECT 能通过 `user_id = auth.uid()` RLS 检查
+   - Commit: `80a5597`
+
+3. **`workflow-notifications.ts` 增强日志**
+   - `getActiveVersionId` 的 definition 和 version 查询均记录 `code` / `message` / `details` / `hint`
+   - 便于区分真正 definition missing、RLS permission denied、active version missing
+   - Commit: `7362cb1`
+
 **`logged_in_first_visit` 去重条件：**
 - `reference_type = 'logged_in_first_visit'`
 - `reference_id = user_id`
@@ -220,6 +298,12 @@ RLS 策略：
 | `blocked_by_path_rule` | 命中 path 屏蔽规则 |
 | `blocked_by_user_agent_rule` | 命中 user_agent 屏蔽规则 |
 | `pending_logged_in_first_visit_within_24h` | 24 小时内已有未确认 `logged_in_first_visit` 流程 |
+| `workflow definition not found` | ⚠️ 已修复：原因为 RLS 阻止 SELECT `workflow_definitions`，authenticated 用户无法读取 definition 数据 |
+| `anonymous visitor` | 匿名访客不触发流程 |
+| `unknown definition: {key}` | definition_key 不在 `DEFINITION_META` 中 |
+| `workflow already exists` | 已有 running 状态的 workflow instance（重复触发保护） |
+| `start node not found` | active version 缺少 `node_type = 'start'` 的节点 |
+| `submit transition not found` | start node 没有 outgoing transition |
 
 **数据表变更：**
 - `visitor_activity_events` 新增 RLS 策略：允许认证用户读取自己的记录（`user_id = auth.uid()`），用于 insert 后获取 ID
