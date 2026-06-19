@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { cookies } from 'next/headers'
 import MinnaNav from '@/components/minna-nav'
 import { createClient } from '@/utils/supabase/server'
-import { getLang, tr } from '@/lib/i18n-server'
+import { getLang, tr, type Lang } from '@/lib/i18n-server'
 import { checkAdminAccess } from '@/lib/admin-auth'
 import { formatTokyoDateTime } from '@/lib/date-format'
 
@@ -10,7 +10,7 @@ export const dynamic = 'force-dynamic'
 
 const PAGE_SIZE = 50
 
-const VISITOR_SELECT = 'id,email,path,referrer,user_agent,ip,is_admin,created_at'
+const VISITOR_SELECT = 'id,email,path,referrer,user_agent,ip,is_admin,workflow_skip_reason,workflow_instance_id,created_at'
 
 type VisitorParams = {
   q?: string
@@ -31,6 +31,32 @@ function shorten(value: string | null | undefined, maxLength = 72) {
   if (!text) return '-'
   if (text.length <= maxLength) return text
   return `${text.slice(0, maxLength - 3)}...`
+}
+
+function shortId(value: string | null | undefined) {
+  const text = String(value || '').trim()
+  if (!text) return '-'
+  return text.length <= 8 ? text : text.slice(0, 8)
+}
+
+const SKIP_REASON_LABELS: Record<string, { zh: string; en: string }> = {
+  workflow_disabled: { zh: '流程未启用', en: 'Workflow disabled' },
+  admin_path_ignored: { zh: '管理后台路径', en: 'Admin path' },
+  admin_path: { zh: '管理后台路径', en: 'Admin path' },
+  admin_user_ignored: { zh: '管理员访问', en: 'Admin user' },
+  admin_user: { zh: '管理员访问', en: 'Admin user' },
+  anonymous_visitor: { zh: '匿名访客', en: 'Anonymous' },
+  workflow_already_exists: { zh: '已有流程', en: 'Workflow exists' },
+  pending_logged_in_first_visit_within_24h: { zh: '24 小时内已有待确认流程', en: 'Pending workflow in 24h' },
+  workflow_not_created: { zh: '流程未创建', en: 'Workflow not created' },
+  workflow_create_failed: { zh: '流程创建失败', en: 'Workflow create failed' },
+}
+
+function skipReasonLabel(reason: string | null, lang: Lang): string {
+  if (!reason) return ''
+  const entry = SKIP_REASON_LABELS[reason]
+  if (!entry) return reason
+  return lang === 'en' ? entry.en : entry.zh
 }
 
 function getRangeStart(range: string, from?: string) {
@@ -76,6 +102,37 @@ function AdminBadge() {
       Admin
     </span>
   )
+}
+
+function WorkflowStatusCell({
+  workflowInstanceId,
+  workflowSkipReason,
+  lang,
+}: {
+  workflowInstanceId: string | null
+  workflowSkipReason: string | null
+  lang: Lang
+}) {
+  if (workflowInstanceId) {
+    return (
+      <Link
+        href={`/admin/workflows/study-visitor/${workflowInstanceId}/flowchart`}
+        className="pillLink"
+        style={{ fontFamily: 'monospace', fontSize: 11 }}
+        title={workflowInstanceId}
+      >
+        {shortId(workflowInstanceId)}
+      </Link>
+    )
+  }
+  if (workflowSkipReason) {
+    return (
+      <span style={{ display: 'inline-flex', alignItems: 'center', gap: 3, background: '#f1f5f9', color: '#475569', fontSize: 10, fontWeight: 700, borderRadius: 999, padding: '1px 6px', whiteSpace: 'nowrap' }}>
+        {skipReasonLabel(workflowSkipReason, lang)}
+      </span>
+    )
+  }
+  return <span className="small" style={{ color: '#94a3b8' }}>{tr(lang, '未触发', 'Not triggered')}</span>
 }
 
 export default async function AdminVisitorsPage({
@@ -156,6 +213,7 @@ export default async function AdminVisitorsPage({
       `referrer.ilike.%${escapedQ}%`,
       `user_agent.ilike.%${escapedQ}%`,
       `ip.ilike.%${escapedQ}%`,
+      `workflow_skip_reason.ilike.%${escapedQ}%`,
     ]
     query = query.or(ilikeClauses.join(','))
   }
@@ -178,6 +236,8 @@ export default async function AdminVisitorsPage({
     user_agent: string | null
     ip: string | null
     is_admin: boolean | null
+    workflow_skip_reason: string | null
+    workflow_instance_id: string | null
     created_at: string | null
   }> = []
   let queryError: string | null = null
@@ -294,7 +354,7 @@ export default async function AdminVisitorsPage({
             {tr(lang, '暂无访客记录。', 'No visitor records yet.')}
           </p>
         ) : (
-          <table className="table" style={{ minWidth: 1000 }}>
+          <table className="table" style={{ minWidth: 1120 }}>
             <thead>
               <tr>
                 <th>
@@ -315,6 +375,7 @@ export default async function AdminVisitorsPage({
                 </th>
                 <th>{tr(lang, '来源', 'Referrer')}</th>
                 <th>IP</th>
+                <th>{tr(lang, '流程', 'Workflow')}</th>
                 <th>UA</th>
               </tr>
             </thead>
@@ -341,6 +402,13 @@ export default async function AdminVisitorsPage({
                     {shorten(event.referrer, 30)}
                   </td>
                   <td className="small" style={{ fontFamily: 'monospace', fontSize: 11 }}>{shorten(event.ip, 15)}</td>
+                  <td style={{ whiteSpace: 'nowrap' }}>
+                    <WorkflowStatusCell
+                      workflowInstanceId={event.workflow_instance_id}
+                      workflowSkipReason={event.workflow_skip_reason}
+                      lang={lang}
+                    />
+                  </td>
                   <td className="small" style={{ maxWidth: 120, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', color: '#64748b' }}>
                     {shorten(event.user_agent, 24)}
                   </td>

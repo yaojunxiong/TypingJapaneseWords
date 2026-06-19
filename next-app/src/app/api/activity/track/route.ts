@@ -171,7 +171,7 @@ export async function POST(request: NextRequest) {
 
   if (eligibility.eligible) {
     try {
-      await createLoggedInFirstVisitWorkflow(supabase, {
+      const workflowResult = await createLoggedInFirstVisitWorkflow(supabase, {
         visitorRecordId: record.id,
         userId: user.id,
         pagePath: path,
@@ -179,8 +179,23 @@ export async function POST(request: NextRequest) {
         userAgent: userAgent || null,
         visitedAt: record.created_at || new Date().toISOString(),
       })
+      if (workflowResult.created && workflowResult.workflowInstanceId) {
+        await supabase
+          .from('visitor_activity_events')
+          .update({ workflow_instance_id: workflowResult.workflowInstanceId })
+          .eq('id', record.id)
+      } else if (!workflowResult.created) {
+        await supabase
+          .from('visitor_activity_events')
+          .update({ workflow_skip_reason: workflowResult.reason || 'workflow_not_created' })
+          .eq('id', record.id)
+      }
     } catch (err) {
       console.error('[track] createLoggedInFirstVisitWorkflow error:', err)
+      await supabase
+        .from('visitor_activity_events')
+        .update({ workflow_skip_reason: 'workflow_create_failed' })
+        .eq('id', record.id)
     }
   }
 

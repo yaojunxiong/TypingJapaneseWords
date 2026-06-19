@@ -23,7 +23,7 @@ export default async function StudyVisitorFlowchartPage({
     .from('workflow_instances')
     .select('id,workflow_version_id')
     .eq('id', instanceId)
-    .eq('reference_type', 'study_visitor')
+    .in('reference_type', ['study_visitor', 'logged_in_first_visit'])
     .maybeSingle()
 
   if (!data?.workflow_version_id) {

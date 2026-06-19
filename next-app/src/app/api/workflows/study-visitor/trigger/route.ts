@@ -43,5 +43,17 @@ export async function POST(request: NextRequest) {
     visitedAt: visitTime,
   })
 
+  if (result.created && result.workflowInstanceId) {
+    await supabase
+      .from('visitor_activity_events')
+      .update({ workflow_instance_id: result.workflowInstanceId })
+      .eq('id', visitorRecordId)
+  } else if (!result.created) {
+    await supabase
+      .from('visitor_activity_events')
+      .update({ workflow_skip_reason: result.reason || 'workflow_not_created' })
+      .eq('id', visitorRecordId)
+  }
+
   return NextResponse.json(result)
 }

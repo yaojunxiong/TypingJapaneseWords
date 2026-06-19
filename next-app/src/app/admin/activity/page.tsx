@@ -19,6 +19,7 @@ type ActivityRow = {
   ip: string | null
   is_admin: boolean | null
   workflow_skip_reason: string | null
+  workflow_instance_id: string | null
   created_at: string | null
 }
 
@@ -31,7 +32,7 @@ type ActivitySearchParams = {
   sort?: string
 }
 
-const activitySelect = 'id,user_id,email,path,page_type,lesson_no,referrer,user_agent,ip,is_admin,workflow_skip_reason,created_at'
+const activitySelect = 'id,user_id,email,path,page_type,lesson_no,referrer,user_agent,ip,is_admin,workflow_skip_reason,workflow_instance_id,created_at'
 const PAGE_TYPES = ['all', 'home', 'login', 'lessons', 'lesson', 'admin', 'toolbox', 'me', 'other'] as const
 const USER_FILTERS = ['all', 'signed-in', 'anonymous', 'admin'] as const
 const TIME_RANGES = ['1h', '24h', '7d', 'all'] as const
@@ -51,9 +52,14 @@ const SORT_OPTIONS = [
 const SKIP_REASON_LABELS: Record<string, { zh: string; en: string }> = {
   workflow_disabled: { zh: '流程未启用', en: 'Workflow disabled' },
   admin_path_ignored: { zh: '管理后台路径', en: 'Admin path' },
+  admin_path: { zh: '管理后台路径', en: 'Admin path' },
   admin_user_ignored: { zh: '管理员访问', en: 'Admin user' },
+  admin_user: { zh: '管理员访问', en: 'Admin user' },
   anonymous_visitor: { zh: '匿名访客', en: 'Anonymous' },
   workflow_already_exists: { zh: '已有流程', en: 'Workflow exists' },
+  pending_logged_in_first_visit_within_24h: { zh: '24 小时内已有待确认流程', en: 'Pending workflow in 24h' },
+  workflow_not_created: { zh: '流程未创建', en: 'Workflow not created' },
+  workflow_create_failed: { zh: '流程创建失败', en: 'Workflow create failed' },
 }
 
 function skipReasonLabel(reason: string | null, lang: Lang): string {
@@ -85,6 +91,12 @@ function shorten(value: string | null | undefined, maxLength = 72) {
   if (!text) return '-'
   if (text.length <= maxLength) return text
   return `${text.slice(0, maxLength - 3)}...`
+}
+
+function shortId(value: string | null | undefined) {
+  const text = String(value || '').trim()
+  if (!text) return '-'
+  return text.length <= 8 ? text : text.slice(0, 8)
 }
 
 function getSearchParams(params: ActivitySearchParams) {
@@ -136,7 +148,7 @@ function filterEvents(events: ActivityRow[], filters: ReturnType<typeof getSearc
       if (!Number.isFinite(created) || created < rangeStart) return false
     }
     if (!q) return true
-    return [event.email, event.path, event.page_type, event.user_agent, event.ip]
+    return [event.email, event.path, event.page_type, event.user_agent, event.ip, event.workflow_skip_reason, event.workflow_instance_id]
       .some((value) => String(value || '').toLowerCase().includes(q))
   })
 }
@@ -207,6 +219,25 @@ function WorkflowSkipBadge({ reason, lang }: { reason: string | null; lang: Lang
   )
 }
 
+function WorkflowStatusCell({ event, lang }: { event: ActivityRow; lang: Lang }) {
+  if (event.workflow_instance_id) {
+    return (
+      <Link
+        href={`/admin/workflows/study-visitor/${event.workflow_instance_id}/flowchart`}
+        className="pillLink"
+        style={{ fontFamily: 'monospace', fontSize: 11 }}
+        title={event.workflow_instance_id}
+      >
+        {shortId(event.workflow_instance_id)}
+      </Link>
+    )
+  }
+  if (event.workflow_skip_reason) {
+    return <WorkflowSkipBadge reason={event.workflow_skip_reason} lang={lang} />
+  }
+  return <span className="small" style={{ color: '#94a3b8' }}>{tr(lang, '未触发', 'Not triggered')}</span>
+}
+
 function MissingActivitySource({ lang, message }: { lang: Lang; message: string | null }) {
   return (
     <>
@@ -222,7 +253,7 @@ function MissingActivitySource({ lang, message }: { lang: Lang; message: string 
       <section className="card">
         <h2>{tr(lang, '关键字段', 'Fields')}</h2>
         <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-          {['id', 'user_id', 'email', 'path', 'page_type', 'lesson_no', 'referrer', 'user_agent', 'ip', 'is_admin', 'workflow_skip_reason', 'created_at'].map((field) => (
+          {['id', 'user_id', 'email', 'path', 'page_type', 'lesson_no', 'referrer', 'user_agent', 'ip', 'is_admin', 'workflow_skip_reason', 'workflow_instance_id', 'created_at'].map((field) => (
             <code key={field} className="pillLink">{field}</code>
           ))}
         </div>
@@ -382,7 +413,7 @@ export default async function AdminActivityPage({
             {!filteredEvents.length ? (
             <p className="small">{tr(lang, '暂无访问记录。', 'No activity records yet.')}</p>
           ) : (
-            <table className="table" style={{ minWidth: 1100 }}>
+            <table className="table" style={{ minWidth: 1200 }}>
               <thead>
                 <tr>
                   <th><Link href={buildActivityHref(filters, { sort: nextSort(filters.sort, 'created_asc', 'created_desc') })}>{sortLinkLabel(filters.sort, 'created_asc', 'created_desc', tr(lang, '时间', 'Time'))}</Link></th>
@@ -410,9 +441,7 @@ export default async function AdminActivityPage({
                     <td style={{ fontSize: 11 }}>{event.page_type || '-'}</td>
                     <td>{event.lesson_no || '-'}</td>
                     <td className="small" style={{ fontFamily: 'monospace', fontSize: 11 }}>{shorten(event.ip, 15) || '-'}</td>
-                    <td style={{ whiteSpace: 'nowrap' }}>
-                      <WorkflowSkipBadge reason={event.workflow_skip_reason} lang={lang} />
-                    </td>
+                    <td style={{ whiteSpace: 'nowrap' }}><WorkflowStatusCell event={event} lang={lang} /></td>
                     <td className="small" style={{ maxWidth: 120, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{shorten(event.user_agent, 24)}</td>
                   </tr>
                 ))}
