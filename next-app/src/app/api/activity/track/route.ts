@@ -90,16 +90,18 @@ export async function POST(request: NextRequest) {
 
   const ip = extractIp(request)
   const userAgent = cleanText(payload.userAgent, 500)
+  const referrer = sameOriginReferrer(payload.referrer, request)
 
   // ── Resolve user: try cookie session first, fall back to client-provided token ──
   let user: import('@supabase/supabase-js').User | null = null
   let cookieSessionEmail: string | null = null
   let tokenGetUserError: string | null = null
 
-  const log = console.log.bind(console, '[track]')
+  const log = (...args: unknown[]) => console.error('[track]', ...args)
   const uaHeadless = (userAgent || '').includes('HeadlessChrome')
   const accessTokenPrefix = clientAccessToken ? clientAccessToken.slice(0, 8) + '...' : 'none'
-  log(`path=${path} hasAccessTokenInBody=${!!clientAccessToken} accessTokenPrefix=${accessTokenPrefix} uaHeadless=${uaHeadless}`)
+
+  log(JSON.stringify({ step: 'start', path, referrer, hasAccessTokenInBody: !!clientAccessToken, accessTokenPrefix, uaHeadless }))
 
   // Method 1: cookie-based server session
   try {
@@ -109,7 +111,7 @@ export async function POST(request: NextRequest) {
     // fall through to token-based fallback
   }
   if (user) cookieSessionEmail = user.email ?? null
-  log(`path=${path} hasCookieSession=${!!user} cookieSessionEmail=${cookieSessionEmail}`)
+  log(JSON.stringify({ step: 'cookie', path, hasCookieSession: !!user, cookieSessionEmail }))
 
   // Method 2: client-provided access token
   if (!user && clientAccessToken) {
@@ -119,7 +121,7 @@ export async function POST(request: NextRequest) {
     } catch (err) {
       tokenGetUserError = String(err)
     }
-    log(`path=${path} tokenGetUserSuccess=${!!user} tokenGetUserEmail=${user?.email || null} tokenGetUserError=${tokenGetUserError}`)
+    log(JSON.stringify({ step: 'token', path, hasAccessTokenInBody: !!clientAccessToken, accessTokenPrefix, tokenGetUserSuccess: !!user, tokenGetUserEmail: user?.email ?? null, tokenGetUserError }))
   }
 
   // Determine admin status for authenticated users
@@ -142,7 +144,7 @@ export async function POST(request: NextRequest) {
     path,
     page_type: inferPageType(path),
     lesson_no: inferLessonNo(path),
-    referrer: sameOriginReferrer(payload.referrer, request),
+    referrer,
     user_agent: userAgent,
     ip,
   }
@@ -239,7 +241,7 @@ export async function POST(request: NextRequest) {
     }
   }
 
-  log(`path=${path} finalEmail=${user.email ?? null} finalUserId=${user.id} workflowSkipReason=${workflowSkipReason} workflowInstanceId=${workflowInstanceId}`)
+  log(JSON.stringify({ step: 'end', path, referrer, finalEmail: user.email ?? null, finalUserId: user.id, finalIsAdmin: isAdmin, workflowSkipReason, workflowInstanceId, uaHeadless }))
 
   return NextResponse.json({ ok: true })
 }
