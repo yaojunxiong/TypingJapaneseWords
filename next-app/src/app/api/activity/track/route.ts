@@ -11,6 +11,7 @@ type ActivityPayload = {
   path?: unknown
   referrer?: unknown
   userAgent?: unknown
+  accessToken?: unknown
 }
 
 function cleanText(value: unknown, maxLength: number) {
@@ -83,11 +84,33 @@ export async function POST(request: NextRequest) {
 
   const cookieStore = await cookies()
   const supabase = createClient(cookieStore)
-  const { data: userData } = await supabase.auth.getUser()
-  const user = userData.user
+  const clientAccessToken = typeof payload.accessToken === 'string' && payload.accessToken.length > 0
+    ? payload.accessToken
+    : null
 
   const ip = extractIp(request)
   const userAgent = cleanText(payload.userAgent, 500)
+
+  // ── Resolve user: try cookie session first, fall back to client-provided token ──
+  let user: import('@supabase/supabase-js').User | null = null
+
+  // Method 1: cookie-based server session
+  try {
+    const { data } = await supabase.auth.getUser()
+    if (data.user) user = data.user
+  } catch {
+    // fall through to token-based fallback
+  }
+
+  // Method 2: client-provided access token
+  if (!user && clientAccessToken) {
+    try {
+      const { data } = await supabase.auth.getUser(clientAccessToken)
+      if (data.user) user = data.user
+    } catch {
+      // treat as anonymous
+    }
+  }
 
   // Determine admin status for authenticated users
   let isAdmin = false
