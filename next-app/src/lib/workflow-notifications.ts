@@ -45,18 +45,27 @@ async function getActiveVersionId(supabase: SupabaseClient, definitionKey: strin
   const cached = _versionIdCache.get(definitionKey)
   if (cached !== undefined) return cached
 
-  const { data: def } = await supabase
+  const { data: def, error: defError } = await supabase
     .from('workflow_definitions')
     .select('id')
     .eq('definition_key', definitionKey)
     .single()
 
+  if (defError) {
+    console.error('[workflow] getActiveVersionId definition query error:', {
+      code: defError.code,
+      message: defError.message,
+      details: defError.details,
+      hint: defError.hint,
+      definitionKey,
+    })
+  }
   if (!def) {
     _versionIdCache.set(definitionKey, null)
     return null
   }
 
-  const { data: ver } = await supabase
+  const { data: ver, error: verError } = await supabase
     .from('workflow_versions')
     .select('id')
     .eq('definition_id', def.id)
@@ -64,6 +73,16 @@ async function getActiveVersionId(supabase: SupabaseClient, definitionKey: strin
     .order('version_number', { ascending: false })
     .limit(1)
     .maybeSingle()
+
+  if (verError) {
+    console.error('[workflow] getActiveVersionId version query error:', {
+      code: verError.code,
+      message: verError.message,
+      details: verError.details,
+      hint: verError.hint,
+      definitionKey,
+    })
+  }
 
   const versionId = ver?.id || null
   _versionIdCache.set(definitionKey, versionId)
