@@ -451,6 +451,8 @@ export default async function AdminPage({
   let pendingStudyVisitor = 0
   let pendingLoggedInVisit = 0
   let pendingMembership = 0
+  let recentEmailLogCount = 0
+  let failedEmailLogCount = 0
   const emailConfigStatus = getEmailConfigStatus()
 
   try {
@@ -488,6 +490,22 @@ export default async function AdminPage({
       }
     } catch {}
   }
+
+  try {
+    const supabase = createClient(cookieStore)
+    const threeDaysAgo = new Date(Date.now() - 3 * 24 * 60 * 60 * 1000).toISOString()
+    const { count: recentCount } = await supabase
+      .from('email_logs')
+      .select('*', { count: 'exact', head: true })
+      .gte('created_at', threeDaysAgo)
+    if (recentCount !== null) recentEmailLogCount = recentCount
+
+    const { count: failedCount } = await supabase
+      .from('email_logs')
+      .select('*', { count: 'exact', head: true })
+      .eq('status', 'failed')
+    if (failedCount !== null) failedEmailLogCount = failedCount
+  } catch {}
 
   const rows = runAudit ? await buildAuditRows() : []
   const totalItems = rows.reduce((sum, r) => sum + r.items, 0)
@@ -558,6 +576,14 @@ export default async function AdminPage({
       label: tr(lang, '课程数据审计', 'Course Audit'),
       description: tr(lang, '只读审计 1-50 课数据完整性与内容检索', 'Audit lessons 1-50 data integrity and content search.'),
       href: '/admin?audit=1',
+    },
+    {
+      icon: '📩',
+      label: tr(lang, '邮件发送记录', 'Email Logs'),
+      description: recentEmailLogCount > 0
+        ? `${recentEmailLogCount} ${tr(lang, '条近3天记录，', 'recent records, ')}${failedEmailLogCount > 0 ? `${failedEmailLogCount} ${tr(lang, '条失败', 'failed')}` : tr(lang, '无失败', 'all sent')}`
+        : tr(lang, '查看审批流程邮件发送记录', 'View workflow email logs'),
+      href: '/admin/email-logs',
     },
     {
       icon: '📧',
@@ -752,8 +778,23 @@ export default async function AdminPage({
               accent={pendingMembership > 0 ? '#92400e' : undefined}
             />
           </Link>
+          <Link href="/admin/email-logs" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <StatCard
+              icon="📧"
+              label={tr(lang, '3天邮件数', 'Emails (3d)' )}
+              value={String(recentEmailLogCount)}
+            />
+          </Link>
+          <Link href="/admin/email-logs?status=failed" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <StatCard
+              icon="❌"
+              label={tr(lang, '发送失败', 'Failed Emails')}
+              value={String(failedEmailLogCount)}
+              accent={failedEmailLogCount > 0 ? '#dc2626' : '#166534'}
+            />
+          </Link>
           <StatCard
-            icon="📧"
+            icon="⚙️"
             label={tr(lang, '邮件通知', 'Email Status')}
             value={statusBadgeText}
             accent={statusBadgeColor}

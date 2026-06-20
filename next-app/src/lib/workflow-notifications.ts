@@ -230,6 +230,16 @@ export async function createWorkflow(
       subject: emailSubject,
       provider: 'brevo_smtp',
       status: 'pending',
+      metadata: {
+        definition_key: params.definitionKey,
+        reference_type: params.definitionKey,
+        reference_id: params.userId,
+        user_id: params.userId,
+        visitor_record_id: params.visitorRecordId,
+        page_path: params.pagePath,
+        visited_at: params.visitedAt,
+        review_url: `https://study.jimmyyao.com/admin/workflows?definition_key=${params.definitionKey}&instanceId=${instance.id}`,
+      },
     })
 
   if (logInsertError) {

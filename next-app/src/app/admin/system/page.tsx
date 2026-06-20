@@ -21,6 +21,7 @@ const routes = [
   { path: '/admin/visitors', label: '访客记录列表' },
   { path: '/admin/visitor-flow-rules', label: '访客流程屏蔽规则管理' },
   { path: '/admin/workflows', label: '访客确认流程管理' },
+  { path: '/admin/email-logs', label: '邮件日志' },
 ]
 
 const restoredModules = [
@@ -36,6 +37,7 @@ const restoredModules = [
   '审批流程统计卡片与筛选',
   '邮件通知增强（definition_key、直接审批链接）',
   '会员申请审批同步 membership_requests 状态',
+  '邮件发送日志可视化（/admin/email-logs）',
 ]
 
 const pendingModules = [

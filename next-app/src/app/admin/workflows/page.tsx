@@ -58,11 +58,12 @@ function StatCard({ icon, label, count, accent }: { icon: string; label: string;
 export default async function AdminWorkflowsPage({
   searchParams,
 }: {
-  searchParams: Promise<{ definition_key?: string }>
+  searchParams: Promise<{ definition_key?: string; instanceId?: string }>
 }) {
   const lang = await getLang()
   const resolvedParams = await searchParams
   const definitionKey = resolvedParams.definition_key
+  const instanceIdFilter = resolvedParams.instanceId
   const cookieStore = await cookies()
   const adminCheck = await checkAdminAccess(cookieStore)
 
@@ -135,6 +136,10 @@ export default async function AdminWorkflowsPage({
     query = query.eq('reference_type', validKey)
   }
 
+  if (instanceIdFilter) {
+    query = query.eq('id', instanceIdFilter)
+  }
+
   const { data, error } = await query
   const instances = (data || []) as WorkflowInstanceRow[]
 
@@ -142,6 +147,7 @@ export default async function AdminWorkflowsPage({
   const instanceIds = instances.map(i => i.id)
   const emailMap = new Map<string, string>()
   const membershipMap = new Map<string, { userId: string; requestedLevel: string }>()
+  const emailStatusMap = new Map<string, { status: string; id: string }>()
 
   if (instanceIds.length > 0) {
     const { data: events } = await supabase
@@ -166,6 +172,25 @@ export default async function AdminWorkflowsPage({
         if (m.workflow_instance_id) {
           membershipMap.set(m.workflow_instance_id, { userId: m.user_id, requestedLevel: m.requested_level })
         }
+      }
+    }
+
+    const { data: emailLogs } = await supabase
+      .from('email_logs')
+      .select('workflow_instance_id, status, id')
+      .in('workflow_instance_id', instanceIds)
+      .not('workflow_instance_id', 'is', null)
+
+    // Get the latest email_log per instance (ordered by created_at desc)
+    if (emailLogs) {
+      const byInstance = new Map<string, { status: string; id: string }>()
+      for (const el of emailLogs) {
+        if (el.workflow_instance_id && !byInstance.has(el.workflow_instance_id)) {
+          byInstance.set(el.workflow_instance_id, { status: el.status, id: el.id })
+        }
+      }
+      for (const [k, v] of byInstance) {
+        emailStatusMap.set(k, v)
       }
     }
   }
@@ -233,6 +258,7 @@ export default async function AdminWorkflowsPage({
                 <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '关联 ID', 'Ref ID')}</th>
                 <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '用户邮箱', 'Email')}</th>
                 <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '状态', 'Status')}</th>
+                <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '邮件', 'Email')}</th>
                 <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '创建时间', 'Created')}</th>
                 <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '操作', 'Actions')}</th>
               </tr>
@@ -252,6 +278,26 @@ export default async function AdminWorkflowsPage({
                     <td style={{ padding: 6, fontSize: 11, fontFamily: 'monospace' }}>{email || '-'}</td>
                     <td style={{ padding: 6 }}>
                       <span style={{ display: 'inline-flex', borderRadius: 999, padding: '4px 10px', fontWeight: 700, ...badge }}>{badge.label}</span>
+                    </td>
+                    <td style={{ padding: 6 }}>
+                      {(() => {
+                        const es = emailStatusMap.get(instance.id)
+                        if (!es) return <span style={{ fontSize: '0.75rem', color: '#94a3b8' }}>-</span>
+                        const colors: Record<string, { color: string; bg: string }> = {
+                          sent: { color: '#166534', bg: '#dcfce7' },
+                          failed: { color: '#991b1b', bg: '#fee2e2' },
+                          pending: { color: '#92400e', bg: '#fef3c7' },
+                        }
+                        const c = colors[es.status] || { color: '#64748b', bg: '#f1f5f9' }
+                        return (
+                          <Link
+                            href={`/admin/email-logs?q=${es.id}`}
+                            style={{ fontSize: '0.7rem', fontFamily: 'monospace', borderRadius: 999, padding: '2px 8px', fontWeight: 700, color: c.color, background: c.bg, textDecoration: 'none' }}
+                          >
+                            {es.status}
+                          </Link>
+                        )
+                      })()}
                     </td>
                     <td style={{ padding: 6, whiteSpace: 'nowrap', fontSize: 11 }}>{formatTokyoDateTime(instance.created_at)}</td>
                     <td style={{ padding: 6 }}>
