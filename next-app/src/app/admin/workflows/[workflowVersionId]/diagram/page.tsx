@@ -5,6 +5,7 @@ import { checkAdminAccess } from '@/lib/admin-auth'
 import { getLang, tr } from '@/lib/i18n-server'
 import { formatTokyoDateTime } from '@/lib/date-format'
 import MinnaNav from '@/components/minna-nav'
+import WorkflowInstanceActionButtons from '@/components/workflow-instance-action-buttons'
 
 export const dynamic = 'force-dynamic'
 
@@ -368,6 +369,9 @@ export default async function WorkflowDiagramPage({ params, searchParams }: Prop
               <tr><td className="small" style={{ fontWeight: 700 }}>updated_at</td><td>{formatTokyoDateTime(instance.updated_at)}</td></tr>
             </tbody>
           </table>
+          <div style={{ marginTop: 14 }}>
+            <WorkflowInstanceActionButtons instanceId={instance.id} workflowVersionId={instance.workflow_version_id} status={instance.status} />
+          </div>
         </section>
       ) : null}
 

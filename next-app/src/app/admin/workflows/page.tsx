@@ -5,6 +5,7 @@ import { getLang, tr, type Lang } from '@/lib/i18n-server'
 import { checkAdminAccess } from '@/lib/admin-auth'
 import MinnaNav from '@/components/minna-nav'
 import { formatTokyoDateTime } from '@/lib/date-format'
+import WorkflowInstanceActionButtons from '@/components/workflow-instance-action-buttons'
 
 export const dynamic = 'force-dynamic'
 
@@ -187,9 +188,7 @@ export default async function AdminWorkflowsPage({
                     </td>
                     <td style={{ padding: 6, whiteSpace: 'nowrap', fontSize: 11 }}>{formatTokyoDateTime(instance.created_at)}</td>
                     <td style={{ padding: 6 }}>
-                      <Link className="btn ghost" href={`/admin/workflows/${instance.workflow_version_id}/diagram?instanceId=${encodeURIComponent(instance.id)}`}>
-                        {tr(lang, '查看', 'View')}
-                      </Link>
+                      <WorkflowInstanceActionButtons instanceId={instance.id} workflowVersionId={instance.workflow_version_id} status={instance.status} />
                     </td>
                   </tr>
                 )
