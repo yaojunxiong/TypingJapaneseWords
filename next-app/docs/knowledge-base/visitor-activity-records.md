@@ -437,20 +437,29 @@ Vercel Logs 验证关键字段：
 - 测试断言：`/admin/workflows` 页面标题从「访客流程管理」更新为「审批流程管理」；
 - 新增 `membership_application` definition_key 存在性检查（commit `e9a52c1` on jimmyyao-auto-test）
 
-#### Auto Test #30
+#### Auto Test #33（v1.5 生产验证最终闭环）
 
-| 维度 | 结果 | 说明 |
-|------|------|------|
-| Smoke test | ⏳ 触发中 | — |
-| Regression test | ❌ 1 failed | 旧断言 `访客流程管理` vs 生产已部署的 `审批流程管理`；修复已合入 `e9a52c1`，#31 应全绿 |
-| 失败用例 | `admin-workflows shows study_visitor...` line 152 | 页面实际内容确认包含 `审批流程管理` + `study_visitor` + `logged_in_first_visit` + `membership_application`，断言已修复 |
+| 维度 | 结果 |
+|------|------|
+| Smoke test | ✅ Success |
+| Regression test | ✅ Success |
+| **验证内容** | |
+| `/admin/workflows` 页面标题「审批流程管理」 | ✅ |
+| `study_visitor` definition_key | ✅ 表格列与筛选均可见 |
+| `logged_in_first_visit` definition_key | ✅ 表格列与筛选均可见 |
+| `会员申请` definition label（原 `membership_application`） | ✅ 统计卡片 + 筛选下拉菜单可见 |
+| 待确认实例：确认/驳回/流程图按钮 | ✅ |
+| 已确认/已拒绝实例：仅流程图按钮 | ✅ |
+| 首页待审批流程统计卡片（4 类） | ✅ |
+| `/admin/system` 审批流程状态卡片 | ✅ |
 
-生产页面抓取确认（来自 CI 日志）：
-```
-⚙️审批流程管理
-study_visitor  ✔   logged_in_first_visit  ✔   membership_application  ✔
-待确认实例: 确认驳回按钮可见  ✔   已确认/已拒绝实例: 仅流程图可见  ✔
-```
+#### 两次断言修复（jimmyyao-auto-test）
+
+| Commit | 修复内容 |
+|--------|----------|
+| `e9a52c1` | `admin-auth.spec.ts`: `访客流程管理` → `审批流程管理` |
+| `0593044` | `admin-auth.spec.ts`: `membership_application` → `会员申请`（页面只展示中文 label） |
+| `8deb9c9` | `normal-user-e2e.spec.ts`: `访客流程管理` → `审批流程管理` |
 
 #### v1.5 关键提交
 
@@ -458,3 +467,7 @@ study_visitor  ✔   logged_in_first_visit  ✔   membership_application  ✔
 |--------|------|------|
 | `1dc0d8f` | next-app | v1.5 统一审批 API + 页面改造 + 邮件增强 |
 | `e9a52c1` | jimmyyao-auto-test | 修复 `/admin/workflows` 断言 + 新增 `membership_application` 检查 |
+| `0593044` | jimmyyao-auto-test | `membership_application` → `会员申请`（页面只展示中文 label） |
+| `8deb9c9` | jimmyyao-auto-test | `normal-user-e2e` `访客流程管理` → `审批流程管理` |
+
+**v1.5 状态：访客记录写入、logged_in_first_visit、membership_application 审批入口、邮件增强、自动测试闭环完成。**
