@@ -19,9 +19,9 @@ export default function WorkflowInstanceActionButtons({ instanceId, workflowVers
 
   if (!workflowVersionId || !showActions) {
     return (
-      <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center' }}>
+      <div className="workflow-actions" style={{ display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center' }}>
         {workflowVersionId ? (
-          <Link className="btn ghost" href={`/admin/workflows/${workflowVersionId}/diagram?instanceId=${encodeURIComponent(instanceId)}`}>
+          <Link className="btn-flowchart" href={`/admin/workflows/${workflowVersionId}/diagram?instanceId=${encodeURIComponent(instanceId)}`}>
             流程图
           </Link>
         ) : null}
@@ -53,23 +53,21 @@ export default function WorkflowInstanceActionButtons({ instanceId, workflowVers
   }
 
   return (
-    <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center' }}>
-      <Link className="btn ghost" href={`/admin/workflows/${workflowVersionId}/diagram?instanceId=${encodeURIComponent(instanceId)}`}>
+    <div className="workflow-actions" style={{ display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center' }}>
+      <Link className="btn-flowchart" href={`/admin/workflows/${workflowVersionId}/diagram?instanceId=${encodeURIComponent(instanceId)}`}>
         流程图
       </Link>
       <button
-        className="btn"
+        className="btn-approve"
         disabled={busy}
         onClick={() => handleReview('approve')}
-        style={{ background: '#166534', color: '#fff', border: 'none', padding: '6px 14px', borderRadius: 8, cursor: busy ? 'not-allowed' : 'pointer', fontWeight: 700, fontSize: '0.82rem' }}
       >
         {busy ? '处理中...' : '确认'}
       </button>
       <button
-        className="btn"
+        className="btn-reject"
         disabled={busy}
         onClick={() => handleReview('reject')}
-        style={{ background: '#991b1b', color: '#fff', border: 'none', padding: '6px 14px', borderRadius: 8, cursor: busy ? 'not-allowed' : 'pointer', fontWeight: 700, fontSize: '0.82rem' }}
       >
         {busy ? '处理中...' : '驳回'}
       </button>

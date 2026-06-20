@@ -239,8 +239,8 @@ export default async function AdminWorkflowsPage({
         </form>
       </section>
 
-      {/* ── Instance table ── */}
-      <section className="card" style={{ overflowX: 'auto' }}>
+      {/* ── Instance table (desktop) / cards (mobile) ── */}
+      <section className="card workflow-table-wrap" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
         {error ? (
           <p className="small" style={{ color: '#dc2626' }}>查询错误：{error.message}</p>
         ) : instances.length === 0 ? (
@@ -248,7 +248,7 @@ export default async function AdminWorkflowsPage({
             {tr(lang, '暂无流程实例。', 'No workflow instances.')}
           </p>
         ) : (
-          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.82rem', minWidth: 1000 }}>
+          <table className="workflow-table" style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.82rem', minWidth: 1000 }}>
             <thead>
               <tr style={{ borderBottom: '2px solid #ddd' }}>
                 <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '实例 ID', 'Instance ID')}</th>
@@ -258,7 +258,7 @@ export default async function AdminWorkflowsPage({
                 <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '关联 ID', 'Ref ID')}</th>
                 <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '用户邮箱', 'Email')}</th>
                 <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '状态', 'Status')}</th>
-                <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '邮件', 'Email')}</th>
+                <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '邮件状态', 'Email')}</th>
                 <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '创建时间', 'Created')}</th>
                 <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '操作', 'Actions')}</th>
               </tr>
@@ -269,17 +269,17 @@ export default async function AdminWorkflowsPage({
                 const email = emailMap.get(instance.id)
                   || (membershipMap.has(instance.id) ? `user: ${shortId(membershipMap.get(instance.id)!.userId)}` : '')
                 return (
-                  <tr key={instance.id} style={{ borderBottom: '1px solid #eee', verticalAlign: 'top' }}>
-                    <td style={{ padding: 6, fontFamily: 'monospace', fontSize: '0.75rem' }} title={instance.id}>{shortId(instance.id)}</td>
-                    <td style={{ padding: 6, fontFamily: 'monospace', fontSize: '0.75rem' }}>{instance.reference_type}</td>
-                    <td style={{ padding: 6 }}>{DEFINITION_NAMES[instance.reference_type] || '-'}</td>
-                    <td style={{ padding: 6, fontSize: 11 }}>{instance.reference_type || '-'}</td>
-                    <td style={{ padding: 6, fontFamily: 'monospace', fontSize: '0.75rem' }} title={instance.reference_id}>{shortId(instance.reference_id)}</td>
-                    <td style={{ padding: 6, fontSize: 11, fontFamily: 'monospace' }}>{email || '-'}</td>
-                    <td style={{ padding: 6 }}>
+                  <tr key={instance.id} className="workflow-row" style={{ borderBottom: '1px solid #eee', verticalAlign: 'top' }}>
+                    <td data-label="实例 ID" data-label-hidden="true" style={{ padding: 6, fontFamily: 'monospace', fontSize: '0.75rem' }} title={instance.id}>{shortId(instance.id)}</td>
+                    <td data-label="流程定义" style={{ padding: 6, fontFamily: 'monospace', fontSize: '0.75rem' }}>{instance.reference_type}</td>
+                    <td data-label="流程名称" style={{ padding: 6 }}>{DEFINITION_NAMES[instance.reference_type] || '-'}</td>
+                    <td data-label="关联类型" data-label-hidden="true" style={{ padding: 6, fontSize: 11 }}>{instance.reference_type || '-'}</td>
+                    <td data-label="关联 ID" data-label-hidden="true" style={{ padding: 6, fontFamily: 'monospace', fontSize: '0.75rem' }} title={instance.reference_id}>{shortId(instance.reference_id)}</td>
+                    <td data-label="用户邮箱" style={{ padding: 6, fontSize: 11, fontFamily: 'monospace', overflow: 'hidden', textOverflow: 'ellipsis' }}>{email || '-'}</td>
+                    <td data-label="状态" style={{ padding: 6 }}>
                       <span style={{ display: 'inline-flex', borderRadius: 999, padding: '4px 10px', fontWeight: 700, ...badge }}>{badge.label}</span>
                     </td>
-                    <td style={{ padding: 6 }}>
+                    <td data-label="邮件状态" data-label-hidden="true" style={{ padding: 6 }}>
                       {(() => {
                         const es = emailStatusMap.get(instance.id)
                         if (!es) return <span style={{ fontSize: '0.75rem', color: '#94a3b8' }}>-</span>
@@ -299,8 +299,8 @@ export default async function AdminWorkflowsPage({
                         )
                       })()}
                     </td>
-                    <td style={{ padding: 6, whiteSpace: 'nowrap', fontSize: 11 }}>{formatTokyoDateTime(instance.created_at)}</td>
-                    <td style={{ padding: 6 }}>
+                    <td data-label="创建时间" style={{ padding: 6, whiteSpace: 'nowrap', fontSize: 11 }}>{formatTokyoDateTime(instance.created_at)}</td>
+                    <td data-label="操作" className="workflow-actions-cell" style={{ padding: 6 }}>
                       <WorkflowInstanceActionButtons instanceId={instance.id} workflowVersionId={instance.workflow_version_id} status={instance.status} />
                     </td>
                   </tr>

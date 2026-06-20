@@ -822,3 +822,123 @@ a:hover { text-decoration: underline; }
     position: static;
   }
 }
+
+/* ===== Workflow table → card layout on mobile ===== */
+@media (max-width: 767px) {
+  .workflow-table-wrap {
+    overflow-x: visible !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+  .workflow-table {
+    min-width: 0 !important;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+    width: 100% !important;
+  }
+  .workflow-table thead {
+    display: none;
+  }
+  .workflow-table tbody,
+  .workflow-table tr.workflow-row {
+    display: block;
+  }
+  .workflow-table tr.workflow-row {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 14px;
+    margin-bottom: 0;
+  }
+  .workflow-table tr.workflow-row td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 0 !important;
+    border-bottom: 1px solid #f1f5f9;
+    gap: 12px;
+    text-align: right !important;
+    font-size: 0.82rem !important;
+    white-space: normal !important;
+    overflow: visible !important;
+  }
+  .workflow-table tr.workflow-row td:last-child {
+    border-bottom: none;
+  }
+  .workflow-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #64748b;
+    font-size: 0.75rem;
+    text-align: left;
+    flex-shrink: 0;
+  }
+  .workflow-table td[data-label-hidden="true"] {
+    display: none;
+  }
+  .workflow-table td.workflow-actions-cell {
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 10px !important;
+    gap: 8px;
+  }
+  .workflow-table td.workflow-actions-cell::before {
+    content: "操作";
+  }
+  .workflow-table td.workflow-actions-cell > div {
+    width: 100%;
+  }
+}
+
+/* ===== Button variants for workflow actions ===== */
+.btn-flowchart {
+  background: #fff;
+  color: #075985;
+  border: 1px solid #bae6fd;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.82rem;
+  display: inline-block;
+  text-decoration: none;
+}
+.btn-flowchart:hover {
+  background: #f0f9ff;
+  text-decoration: none;
+}
+.btn-approve {
+  background: #166534;
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.82rem;
+}
+.btn-approve:hover {
+  background: #14532d;
+}
+.btn-approve:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.btn-reject {
+  background: #991b1b;
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.82rem;
+}
+.btn-reject:hover {
+  background: #7f1d1d;
+}
+.btn-reject:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
