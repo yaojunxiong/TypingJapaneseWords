@@ -15,7 +15,9 @@ export default function WorkflowInstanceActionButtons({ instanceId, workflowVers
   const [busy, setBusy] = useState(false)
   const [message, setMessage] = useState('')
 
-  if (!workflowVersionId || status !== 'running') {
+  const showActions = (status === 'running' || status === 'pending')
+
+  if (!workflowVersionId || !showActions) {
     return (
       <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center' }}>
         {workflowVersionId ? (
@@ -31,7 +33,7 @@ export default function WorkflowInstanceActionButtons({ instanceId, workflowVers
     setBusy(true)
     setMessage('')
     try {
-      const res = await fetch(`/api/admin/workflows/study-visitor/${encodeURIComponent(instanceId)}/review`, {
+      const res = await fetch(`/api/admin/workflows/${encodeURIComponent(instanceId)}/review`, {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({ action }),

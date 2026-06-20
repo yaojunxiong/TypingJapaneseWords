@@ -237,17 +237,20 @@ export async function createWorkflow(
   }
 
   try {
+    const directLink = `https://study.jimmyyao.com/admin/workflows?definition_key=${params.definitionKey}&instanceId=${instance.id}`
     const emailResult = await sendWorkflowPendingNotification({
       workflowType: meta.workflowType,
+      definitionKey: params.definitionKey,
       instanceId: instance.id,
       createdAt: params.visitedAt,
       metadata: {
-        '访客 ID': params.userId || params.visitorRecordId,
+        '流程定义': params.definitionKey,
+        '用户 ID': params.userId,
         '访客记录 ID': params.visitorRecordId,
         '当前状态': 'pending',
         '访问时间': formatTokyoDateTime(params.visitedAt),
         '访问页面': params.pagePath,
-        '管理后台': meta.adminPath,
+        '处理链接': directLink,
         'IP 地址': params.ip,
         'User Agent': params.userAgent,
       },

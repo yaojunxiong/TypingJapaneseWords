@@ -122,6 +122,7 @@ export async function sendTestEmail(): Promise<SendEmailResult> {
 
 export async function sendWorkflowPendingNotification(params: {
   workflowType: string
+  definitionKey?: string
   instanceId: string
   createdAt: string
   metadata?: Record<string, string | null | undefined>
@@ -135,6 +136,7 @@ export async function sendWorkflowPendingNotification(params: {
     `<h2>新的${typeLabel}已提交</h2>`,
     `<table style="border-collapse:collapse;width:100%">`,
     `<tr><td style="padding:8px 12px;font-weight:700;border:1px solid #ddd">流程类型</td><td style="padding:8px 12px;border:1px solid #ddd">${params.workflowType}</td></tr>`,
+    params.definitionKey ? `<tr><td style="padding:8px 12px;font-weight:700;border:1px solid #ddd">流程定义</td><td style="padding:8px 12px;border:1px solid #ddd;font-family:monospace">${params.definitionKey}</td></tr>` : '',
     `<tr><td style="padding:8px 12px;font-weight:700;border:1px solid #ddd">实例 ID</td><td style="padding:8px 12px;border:1px solid #ddd;font-family:monospace">${params.instanceId}</td></tr>`,
     `<tr><td style="padding:8px 12px;font-weight:700;border:1px solid #ddd">提交时间</td><td style="padding:8px 12px;border:1px solid #ddd">${formatTokyoDateTime(params.createdAt)}</td></tr>`,
   ]
@@ -149,7 +151,9 @@ export async function sendWorkflowPendingNotification(params: {
   }
 
   lines.push('</table>')
-  lines.push(`<p style="margin-top:20px"><a href="https://study.jimmyyao.com/admin/workflows" style="display:inline-block;padding:10px 20px;background:#2563eb;color:#fff;text-decoration:none;border-radius:8px">前往访客确认后台处理</a></p>`)
+  const directUrl = params.metadata?.['处理链接'] || `https://study.jimmyyao.com/admin/workflows?definition_key=${params.definitionKey || ''}&instanceId=${params.instanceId}`
+  lines.push(`<p style="margin-top:20px"><a href="${directUrl}" style="display:inline-block;padding:10px 20px;background:#2563eb;color:#fff;text-decoration:none;border-radius:8px">前往后台处理</a></p>`)
+  lines.push(`<p class="small" style="margin-top:8px;color:#64748b">或复制以下链接到浏览器打开：<br><code style="font-size:12px">${directUrl}</code></p>`)
 
   return sendAdminNotification(subject, lines.join('\n'))
 }

@@ -1,11 +1,14 @@
 import Link from 'next/link'
 import { cookies } from 'next/headers'
 import MinnaNav from '@/components/minna-nav'
+import { createClient } from '@/utils/supabase/server'
 import { getLang, tr } from '@/lib/i18n-server'
 import { checkAdminAccess } from '@/lib/admin-auth'
 import { getEmailConfigStatus } from '@/lib/email-service'
 import { getStudyVisitorWorkflowConfig } from '@/lib/study-visitor-workflow-config'
 import SystemEmailTestButton from '@/components/admin/system-email-test-button'
+
+const DEFINITIONS = ['study_visitor', 'logged_in_first_visit', 'membership_application'] as const
 
 const routes = [
   { path: '/admin', label: '后台管理中心' },
@@ -28,6 +31,11 @@ const restoredModules = [
   '邮件通知服务（Resend）',
   'workflow_instances / workflow_tasks / workflow_actions 数据库表',
   '学习网站访客确认流程管理',
+  '审批流程管理（新访客 + 登录用户首次访问 + 会员申请）',
+  '审批 API 统一（approve/reject）',
+  '审批流程统计卡片与筛选',
+  '邮件通知增强（definition_key、直接审批链接）',
+  '会员申请审批同步 membership_requests 状态',
 ]
 
 const pendingModules = [
@@ -109,6 +117,7 @@ export default async function AdminSystemPage() {
 
       <EmailConfigCard lang={lang} />
       <StudyVisitorWorkflowConfigCard lang={lang} />
+      <WorkflowStatusCard lang={lang} cookieStore={cookieStore} />
 
       <section className="card">
         <h2>{tr(lang, '当前后台可用路由', 'Available Admin Routes')}</h2>
@@ -192,6 +201,61 @@ export default async function AdminSystemPage() {
         </div>
       </section>
     </main>
+  )
+}
+
+async function WorkflowStatusCard({ lang, cookieStore }: { lang: 'zh' | 'en'; cookieStore: Awaited<ReturnType<typeof cookies>> }) {
+  const supabase = createClient(cookieStore)
+  const counts: Record<string, number> = { study_visitor: 0, logged_in_first_visit: 0, membership_application: 0 }
+  let totalPending = 0
+
+  for (const key of DEFINITIONS) {
+    try {
+      const { count } = await supabase
+        .from('workflow_instances')
+        .select('*', { count: 'exact', head: true })
+        .eq('reference_type', key)
+        .in('status', ['running', 'pending'])
+      if (count !== null) { counts[key] = count; totalPending += count }
+    } catch {}
+  }
+
+  return (
+    <section className="card">
+      <h2>{tr(lang, '审批流程状态', 'Approval Workflow Status')}</h2>
+      <table className="table" style={{ minWidth: 360 }}>
+        <tbody>
+          {DEFINITIONS.map((key) => {
+            const labels: Record<string, string> = { study_visitor: '学习网站新访客', logged_in_first_visit: '登录用户首次访问', membership_application: '会员申请' }
+            return (
+              <tr key={key}>
+                <td className="small" style={{ fontWeight: 700, width: 200 }}>{labels[key] || key}</td>
+                <td><code>{key}</code></td>
+                <td>{counts[key] > 0
+                  ? <span style={{ color: '#92400e', fontWeight: 700 }}>{counts[key]} 待审批</span>
+                  : <span style={{ color: '#166534' }}>0 待审批</span>
+                }</td>
+                <td>
+                  <Link href={`/admin/workflows?definition_key=${key}`} style={{ fontSize: 12 }}>{tr(lang, '查看', 'View')}</Link>
+                </td>
+              </tr>
+            )
+          })}
+          <tr>
+            <td className="small" style={{ fontWeight: 700 }}>{tr(lang, '全部待审批', 'Total Pending')}</td>
+            <td>-</td>
+            <td style={{ fontWeight: 700 }}>{totalPending > 0
+              ? <span style={{ color: '#92400e' }}>{totalPending}</span>
+              : '0'
+            }</td>
+            <td><Link href="/admin/workflows" style={{ fontSize: 12 }}>{tr(lang, '查看', 'View')}</Link></td>
+          </tr>
+        </tbody>
+      </table>
+      <p className="small" style={{ marginTop: 8 }}>
+        <Link href="/admin/workflows">{tr(lang, '前往审批流程管理', 'Go to Approval Workflow Management')}</Link>
+      </p>
+    </section>
   )
 }
 

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { cookies } from 'next/headers'
 import { createClient } from '@/utils/supabase/server'
-import { getLang, tr, type Lang } from '@/lib/i18n-server'
+import { getLang, tr } from '@/lib/i18n-server'
 import { checkAdminAccess } from '@/lib/admin-auth'
 import MinnaNav from '@/components/minna-nav'
 import { formatTokyoDateTime } from '@/lib/date-format'
@@ -10,9 +10,9 @@ import WorkflowInstanceActionButtons from '@/components/workflow-instance-action
 export const dynamic = 'force-dynamic'
 
 const DEFINITIONS = [
-  { key: 'study_visitor', name: '学习网站新访客待确认' as const },
-  { key: 'logged_in_first_visit', name: '学习网站登录用户首次访问确认' as const },
-  { key: 'membership_application', name: '会员申请' as const },
+  { key: 'study_visitor', name: '学习网站新访客待确认' },
+  { key: 'logged_in_first_visit', name: '学习网站登录用户首次访问确认' },
+  { key: 'membership_application', name: '会员申请' },
 ] as const
 
 type WorkflowInstanceRow = {
@@ -43,6 +43,16 @@ function statusBadge(status: string) {
 function shortId(value: string | null | undefined) {
   if (!value) return '-'
   return value.length > 8 ? value.slice(0, 8) + '...' : value
+}
+
+function StatCard({ icon, label, count, accent }: { icon: string; label: string; count: number; accent?: string }) {
+  return (
+    <div className="card" style={{ margin: 0, display: 'grid', gap: 4 }}>
+      <span style={{ fontSize: 20, lineHeight: 1 }}>{icon}</span>
+      <div className="small" style={{ fontWeight: 600, fontSize: 12 }}>{label}</div>
+      <b style={{ fontSize: 22, fontWeight: 800, color: accent || (count > 0 ? '#92400e' : '#0f172a') }}>{count}</b>
+    </div>
+  )
 }
 
 export default async function AdminWorkflowsPage({
@@ -86,6 +96,35 @@ export default async function AdminWorkflowsPage({
   const validKey = definitionKey && DEFINITION_NAMES[definitionKey] ? definitionKey : null
 
   const supabase = createClient(cookieStore)
+
+  // ── Instance counts per definition_key ──
+  let totalPending = 0
+  let studyVisitorPending = 0
+  let loggedInPending = 0
+  let membershipPending = 0
+
+  try {
+    const { count: total } = await supabase
+      .from('workflow_instances')
+      .select('*', { count: 'exact', head: true })
+      .in('status', ['running', 'pending'])
+    totalPending = total ?? 0
+  } catch {}
+
+  for (const def of DEFINITIONS) {
+    try {
+      const { count } = await supabase
+        .from('workflow_instances')
+        .select('*', { count: 'exact', head: true })
+        .eq('reference_type', def.key)
+        .in('status', ['running', 'pending'])
+      if (def.key === 'study_visitor') studyVisitorPending = count ?? 0
+      else if (def.key === 'logged_in_first_visit') loggedInPending = count ?? 0
+      else if (def.key === 'membership_application') membershipPending = count ?? 0
+    } catch {}
+  }
+
+  // ── Instance list ──
   let query = supabase
     .from('workflow_instances')
     .select('id,workflow_version_id,reference_type,reference_id,status,current_node_key,created_at,updated_at')
@@ -99,37 +138,60 @@ export default async function AdminWorkflowsPage({
   const { data, error } = await query
   const instances = (data || []) as WorkflowInstanceRow[]
 
+  // ── Batch-fetch emails from visitor_activity_events and membership_requests ──
+  const instanceIds = instances.map(i => i.id)
+  const emailMap = new Map<string, string>()
+  const membershipMap = new Map<string, { userId: string; requestedLevel: string }>()
+
+  if (instanceIds.length > 0) {
+    const { data: events } = await supabase
+      .from('visitor_activity_events')
+      .select('workflow_instance_id, email')
+      .in('workflow_instance_id', instanceIds)
+      .not('workflow_instance_id', 'is', null)
+    if (events) {
+      for (const e of events) {
+        if (e.workflow_instance_id && e.email) {
+          emailMap.set(e.workflow_instance_id, e.email)
+        }
+      }
+    }
+
+    const { data: memberships } = await supabase
+      .from('membership_requests')
+      .select('workflow_instance_id, user_id, requested_level')
+      .in('workflow_instance_id', instanceIds)
+    if (memberships) {
+      for (const m of memberships) {
+        if (m.workflow_instance_id) {
+          membershipMap.set(m.workflow_instance_id, { userId: m.user_id, requestedLevel: m.requested_level })
+        }
+      }
+    }
+  }
+
   return (
     <main style={{ paddingBottom: 'calc(140px + env(safe-area-inset-bottom, 0px))' }}>
       <MinnaNav active="me" />
       <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap', marginBottom: 8 }}>
         <span style={{ fontSize: 22, lineHeight: 1 }}>⚙️</span>
         <h1 style={{ margin: 0, fontSize: 20, fontWeight: 800 }}>
-          {tr(lang, '访客流程管理', 'Workflow Management')}
+          {tr(lang, '审批流程管理', 'Workflow Management')}
         </h1>
       </div>
       <p className="small" style={{ margin: '0 0 14px', color: '#64748b' }}>
-        {tr(lang, '管理系统中定义的访客确认流程。', 'Manage visitor confirmation workflows.')}
+        {tr(lang, '管理系统中定义的审批流程。', 'Manage approval workflows.')}
       </p>
 
-      {DEFINITIONS.map((def) => (
-        <section className="card" key={def.key} style={{ marginBottom: 12 }}>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8 }}>
-            <div>
-              <h2 style={{ margin: 0, fontSize: 16 }}>{tr(lang, def.name, def.name)}</h2>
-              <code style={{ fontSize: 11, marginTop: 4, display: 'inline-block' }}>{def.key}</code>
-            </div>
-            <div>
-              <Link className="btn" href={`/admin/workflows?definition_key=${encodeURIComponent(def.key)}`}>
-                {tr(lang, '查看实例', 'View instances')}
-              </Link>
-            </div>
-          </div>
-        </section>
-      ))}
+      {/* ── Pending stats cards ── */}
+      <div style={{ display: 'grid', gap: 12, gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', marginBottom: 16 }}>
+        <StatCard icon="⏳" label={tr(lang, '全部待审批', 'All Pending')} count={totalPending} />
+        <StatCard icon="👤" label={tr(lang, '新访客待确认', 'Study Visitor')} count={studyVisitorPending} />
+        <StatCard icon="🔑" label={tr(lang, '首次访问确认', 'Logged-in Visit')} count={loggedInPending} />
+        <StatCard icon="📋" label={tr(lang, '会员申请', 'Membership')} count={membershipPending} />
+      </div>
 
-      <hr style={{ margin: '20px 0', border: 'none', borderTop: '1px solid #e2e8f0' }} />
-
+      {/* ── Definition filter ── */}
       <section className="card" style={{ marginBottom: 12 }}>
         <form method="get" style={{ display: 'flex', gap: 8, alignItems: 'flex-end', flexWrap: 'wrap' }}>
           <label style={{ display: 'grid', gap: 4 }}>
@@ -152,6 +214,7 @@ export default async function AdminWorkflowsPage({
         </form>
       </section>
 
+      {/* ── Instance table ── */}
       <section className="card" style={{ overflowX: 'auto' }}>
         {error ? (
           <p className="small" style={{ color: '#dc2626' }}>查询错误：{error.message}</p>
@@ -160,7 +223,7 @@ export default async function AdminWorkflowsPage({
             {tr(lang, '暂无流程实例。', 'No workflow instances.')}
           </p>
         ) : (
-          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.82rem', minWidth: 900 }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.82rem', minWidth: 1000 }}>
             <thead>
               <tr style={{ borderBottom: '2px solid #ddd' }}>
                 <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '实例 ID', 'Instance ID')}</th>
@@ -168,14 +231,17 @@ export default async function AdminWorkflowsPage({
                 <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '流程名称', 'Name')}</th>
                 <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '关联类型', 'Ref Type')}</th>
                 <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '关联 ID', 'Ref ID')}</th>
+                <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '用户邮箱', 'Email')}</th>
                 <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '状态', 'Status')}</th>
                 <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '创建时间', 'Created')}</th>
-                <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '流程图', 'Diagram')}</th>
+                <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '操作', 'Actions')}</th>
               </tr>
             </thead>
             <tbody>
               {instances.map((instance) => {
                 const badge = statusBadge(instance.status)
+                const email = emailMap.get(instance.id)
+                  || (membershipMap.has(instance.id) ? `user: ${shortId(membershipMap.get(instance.id)!.userId)}` : '')
                 return (
                   <tr key={instance.id} style={{ borderBottom: '1px solid #eee', verticalAlign: 'top' }}>
                     <td style={{ padding: 6, fontFamily: 'monospace', fontSize: '0.75rem' }} title={instance.id}>{shortId(instance.id)}</td>
@@ -183,6 +249,7 @@ export default async function AdminWorkflowsPage({
                     <td style={{ padding: 6 }}>{DEFINITION_NAMES[instance.reference_type] || '-'}</td>
                     <td style={{ padding: 6, fontSize: 11 }}>{instance.reference_type || '-'}</td>
                     <td style={{ padding: 6, fontFamily: 'monospace', fontSize: '0.75rem' }} title={instance.reference_id}>{shortId(instance.reference_id)}</td>
+                    <td style={{ padding: 6, fontSize: 11, fontFamily: 'monospace' }}>{email || '-'}</td>
                     <td style={{ padding: 6 }}>
                       <span style={{ display: 'inline-flex', borderRadius: 999, padding: '4px 10px', fontWeight: 700, ...badge }}>{badge.label}</span>
                     </td>

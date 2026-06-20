@@ -398,3 +398,20 @@ Vercel Logs 验证关键字段：
 | `0057787` | docs: 知识库更新 |
 | `170aabd` | feat: `email_logs` 表 + 工作流通知落库；fix: 管理后台底部导航遮挡 |
 | `34593e2` | feat: 工作流实例审批操作入口（确认/驳回/流程图）|
+| `d691559` | chore: 调试日志 gated 在 `DEBUG_VISITOR_TRACKING=true` 后；移除 `accessTokenPrefix` |
+
+#### Auto Test #29（v1.4 生产验证最终闭环）
+
+| 维度 | 结果 |
+|------|------|
+| Smoke test | ✅ Success |
+| Regression test | ✅ Success |
+| GitHub Actions artifacts | `smoke-test-results/report`、`regression-test-results/report` 已保留 |
+| **验证内容** | |
+| 普通用户访问记录写入 | ✅ `visitor_activity_events` 含 `email`/`user_id` |
+| `logged_in_first_visit` 首次触发 | ✅ 自动创建 running workflow instance |
+| 24h 去重 | ✅ `workflowSkipReason="pending_logged_in_first_visit_within_24h"` |
+| 管理员页面访问 | ✅ 200 + `isAdmin=true` |
+| 审批入口（确认/驳回） | ✅ `/admin/workflows` + 流程图页按钮可操作 |
+
+**结论：** 访客记录 + 登录用户首次访问审批流程 v1.4 生产验证完成，全线闭环。后续维护性变更（日志增强、监控告警）建议升版至 v1.5。

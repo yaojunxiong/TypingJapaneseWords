@@ -447,7 +447,10 @@ export default async function AdminPage({
 
   // ── Lightweight stat queries ──
   let todayVisitCount: number | null = null
-  let pendingVisitorCount: number | null = null
+  let pendingWorkflowTotal = 0
+  let pendingStudyVisitor = 0
+  let pendingLoggedInVisit = 0
+  let pendingMembership = 0
   const emailConfigStatus = getEmailConfigStatus()
 
   try {
@@ -463,13 +466,28 @@ export default async function AdminPage({
 
   try {
     const supabase = createClient(cookieStore)
-    const { count: pCount } = await supabase
+    const { count: total } = await supabase
       .from('workflow_instances')
       .select('*', { count: 'exact', head: true })
-      .eq('reference_type', 'study_visitor')
-      .eq('status', 'running')
-    if (pCount !== null) pendingVisitorCount = pCount
+      .in('status', ['running', 'pending'])
+    if (total !== null) pendingWorkflowTotal = total
   } catch {}
+
+  for (const defKey of ['study_visitor', 'logged_in_first_visit', 'membership_application']) {
+    try {
+      const supabase = createClient(cookieStore)
+      const { count } = await supabase
+        .from('workflow_instances')
+        .select('*', { count: 'exact', head: true })
+        .eq('reference_type', defKey)
+        .in('status', ['running', 'pending'])
+      if (count !== null) {
+        if (defKey === 'study_visitor') pendingStudyVisitor = count
+        else if (defKey === 'logged_in_first_visit') pendingLoggedInVisit = count
+        else if (defKey === 'membership_application') pendingMembership = count
+      }
+    } catch {}
+  }
 
   const rows = runAudit ? await buildAuditRows() : []
   const totalItems = rows.reduce((sum, r) => sum + r.items, 0)
@@ -516,9 +534,11 @@ export default async function AdminPage({
       href: '/admin/activity',
     },
     {
-      icon: '👤',
-      label: tr(lang, '访客确认流程', 'Visitor Workflow'),
-      description: tr(lang, '管理新访客确认流程，确认/拒绝，查看流程图', 'Manage visitor confirmation, approve/reject, view diagram.'),
+      icon: pendingWorkflowTotal > 0 ? '⏳' : '👤',
+      label: tr(lang, '审批流程管理', 'Approval Workflows'),
+      description: pendingWorkflowTotal > 0
+        ? `${pendingWorkflowTotal} 个待审批流程 (新访客 ${pendingStudyVisitor} · 登录 ${pendingLoggedInVisit} · 会员 ${pendingMembership})`
+        : tr(lang, '管理审批流程，确认/拒绝，查看流程图', 'Manage approval workflows, approve/reject, view diagram.'),
       href: '/admin/workflows',
     },
     {
@@ -700,12 +720,38 @@ export default async function AdminPage({
             label={tr(lang, '今日访问量', 'Today Visits')}
             value={todayVisitCount !== null ? String(todayVisitCount) : '—'}
           />
-          <StatCard
-            icon="⏳"
-            label={tr(lang, '待确认访客', 'Pending Visitors')}
-            value={pendingVisitorCount !== null ? String(pendingVisitorCount) : '—'}
-            accent={pendingVisitorCount !== null && pendingVisitorCount > 0 ? '#92400e' : undefined}
-          />
+          <Link href="/admin/workflows" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <StatCard
+              icon="⏳"
+              label={tr(lang, '待审批流程', 'Pending Workflows')}
+              value={String(pendingWorkflowTotal)}
+              accent={pendingWorkflowTotal > 0 ? '#92400e' : undefined}
+            />
+          </Link>
+          <Link href="/admin/workflows?definition_key=study_visitor" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <StatCard
+              icon="👤"
+              label={tr(lang, '新访客待确认', 'Pending Visitors')}
+              value={String(pendingStudyVisitor)}
+              accent={pendingStudyVisitor > 0 ? '#92400e' : undefined}
+            />
+          </Link>
+          <Link href="/admin/workflows?definition_key=logged_in_first_visit" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <StatCard
+              icon="🔑"
+              label={tr(lang, '首次访问确认', 'Pending Logged-in')}
+              value={String(pendingLoggedInVisit)}
+              accent={pendingLoggedInVisit > 0 ? '#92400e' : undefined}
+            />
+          </Link>
+          <Link href="/admin/workflows?definition_key=membership_application" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <StatCard
+              icon="📋"
+              label={tr(lang, '会员申请', 'Pending Membership')}
+              value={String(pendingMembership)}
+              accent={pendingMembership > 0 ? '#92400e' : undefined}
+            />
+          </Link>
           <StatCard
             icon="📧"
             label={tr(lang, '邮件通知', 'Email Status')}
