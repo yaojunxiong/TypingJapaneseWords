@@ -3,6 +3,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/utils/supabase/server'
 import { checkAdminAccess } from '@/lib/admin-auth'
 import { clearWorkflowCache } from '@/lib/workflow-notifications'
+import { sendWorkflowPendingNotification } from '@/lib/email-service'
 
 export const dynamic = 'force-dynamic'
 
@@ -180,6 +181,22 @@ export async function POST(
     if (membershipError) {
       console.error('[review] Failed to sync membership_request:', membershipError)
     }
+
+    // ── Send email notification for membership_application review ──
+    const reviewUrl = `https://study.jimmyyao.com/admin/workflows?definition_key=membership_application&instanceId=${instanceId}`
+    await sendWorkflowPendingNotification({
+      supabase,
+      workflowType: 'membership_application',
+      definitionKey: 'membership_application',
+      instanceId,
+      referenceType: 'membership_application',
+      referenceId: instance.reference_id,
+      userEmail: null,
+      pagePath: '',
+      reviewUrl,
+      createdAt: now,
+      action: action === 'approve' ? 'approved' : 'rejected',
+    })
   }
 
   clearWorkflowCache()

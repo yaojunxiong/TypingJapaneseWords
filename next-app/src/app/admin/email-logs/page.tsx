@@ -175,7 +175,7 @@ export default async function AdminEmailLogsPage({
             {tr(lang, '暂无邮件日志。', 'No email logs.')}
           </p>
         ) : (
-          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.82rem', minWidth: 900 }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.82rem', minWidth: 1100 }}>
             <thead>
               <tr style={{ borderBottom: '2px solid #ddd' }}>
                 <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '日志 ID', 'Log ID')}</th>
@@ -184,6 +184,8 @@ export default async function AdminEmailLogsPage({
                 <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '主题', 'Subject')}</th>
                 <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '状态', 'Status')}</th>
                 <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '关联实例', 'Instance')}</th>
+                <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '流程定义', 'Definition')}</th>
+                <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '审批链接', 'Review')}</th>
                 <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '创建时间', 'Created')}</th>
                 <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '错误信息', 'Error')}</th>
               </tr>
@@ -206,6 +208,20 @@ export default async function AdminEmailLogsPage({
                           {shortId(log.workflow_instance_id)}
                         </Link>
                       ) : <span style={{ fontSize: '0.75rem', color: '#94a3b8' }}>-</span>}
+                    </td>
+                    <td style={{ padding: 6, fontSize: '0.75rem', fontFamily: 'monospace' }}>
+                      {(log.metadata as Record<string, unknown> | null)?.definitionKey
+                        ? String((log.metadata as Record<string, unknown>).definitionKey)
+                        : <span style={{ color: '#94a3b8' }}>-</span>}
+                    </td>
+                    <td style={{ padding: 6, fontSize: '0.75rem' }}>
+                      {(() => {
+                        const url = (log.metadata as Record<string, unknown> | null)?.reviewUrl
+                        if (url && typeof url === 'string') {
+                          return <Link href={url} target="_blank" style={{ color: '#2563eb' }}>{tr(lang, '审批链接', 'Review')}</Link>
+                        }
+                        return <span style={{ color: '#94a3b8' }}>-</span>
+                      })()}
                     </td>
                     <td style={{ padding: 6, whiteSpace: 'nowrap', fontSize: 11 }}>{formatTokyoDateTime(log.created_at)}</td>
                     <td style={{ padding: 6, fontSize: 11, maxWidth: 200, overflow: 'hidden', textOverflow: 'ellipsis', color: log.error_message ? '#dc2626' : '#94a3b8' }} title={log.error_message || ''}>

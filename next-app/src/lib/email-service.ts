@@ -1,4 +1,6 @@
+import { randomUUID } from 'crypto'
 import nodemailer from 'nodemailer'
+import type { SupabaseClient } from '@supabase/supabase-js'
 import { formatTokyoDateTime } from './date-format'
 
 type EmailConfig = {
@@ -10,9 +12,23 @@ type EmailConfig = {
   adminEmail: string | null
 }
 
-type SendEmailResult = {
+export type SendEmailResult = {
   ok: boolean
   error?: string
+  emailLogId?: string
+}
+
+export type WorkflowNotificationLog = {
+  notificationType: string
+  recipientEmail: string
+  subject: string
+  instanceId: string
+  definitionKey: string
+  referenceType: string
+  referenceId: string
+  userEmail: string | null
+  pagePath: string
+  reviewUrl: string
 }
 
 const DEFAULT_PORT = 587
@@ -120,40 +136,123 @@ export async function sendTestEmail(): Promise<SendEmailResult> {
   return sendAdminNotification('学习系统邮件测试', html)
 }
 
+async function insertEmailLog(
+  supabase: SupabaseClient,
+  log: WorkflowNotificationLog & { status: string; errorMessage?: string }
+) {
+  const id = randomUUID()
+  const base = {
+    id,
+    workflow_instance_id: log.instanceId,
+    notification_type: log.notificationType,
+    recipient_email: log.recipientEmail,
+    subject: log.subject,
+    provider: 'brevo_smtp',
+    metadata: {
+      definitionKey: log.definitionKey,
+      instanceId: log.instanceId,
+      referenceType: log.referenceType,
+      referenceId: log.referenceId,
+      userEmail: log.userEmail,
+      path: log.pagePath,
+      reviewUrl: log.reviewUrl,
+    },
+  }
+  if (log.status === 'pending') {
+    await supabase.from('email_logs').insert({ ...base, status: 'pending' })
+  } else if (log.status === 'sent') {
+    await supabase.from('email_logs').insert({ ...base, status: 'sent', sent_at: new Date().toISOString() })
+  } else if (log.status === 'failed') {
+    await supabase.from('email_logs').insert({ ...base, status: 'failed', failed_at: new Date().toISOString(), error_message: log.errorMessage || null })
+  }
+  return id
+}
+
 export async function sendWorkflowPendingNotification(params: {
+  supabase: SupabaseClient
   workflowType: string
-  definitionKey?: string
+  definitionKey: string
   instanceId: string
+  referenceType: string
+  referenceId: string
+  userEmail: string | null
+  pagePath: string
+  reviewUrl: string
   createdAt: string
-  metadata?: Record<string, string | null | undefined>
+  action?: 'pending' | 'approved' | 'rejected'
 }): Promise<SendEmailResult> {
-  const typeLabel = params.workflowType === 'study_visitor' ? '学习网站新访客' : params.workflowType
-  const subject = params.workflowType === 'study_visitor'
-    ? '学习网站新访客待确认'
-    : `[Minna] ${typeLabel}需要确认`
+  const action = params.action || 'pending'
+  const config = getEmailConfig()
+  const recipientEmail = config?.adminEmail || ''
+  const subject = workflowTypeLabel(params.workflowType, action)
+  const notificationType = `${params.workflowType}_${action}`
 
-  const lines: string[] = [
-    `<h2>新的${typeLabel}已提交</h2>`,
-    `<table style="border-collapse:collapse;width:100%">`,
-    `<tr><td style="padding:8px 12px;font-weight:700;border:1px solid #ddd">流程类型</td><td style="padding:8px 12px;border:1px solid #ddd">${params.workflowType}</td></tr>`,
-    params.definitionKey ? `<tr><td style="padding:8px 12px;font-weight:700;border:1px solid #ddd">流程定义</td><td style="padding:8px 12px;border:1px solid #ddd;font-family:monospace">${params.definitionKey}</td></tr>` : '',
-    `<tr><td style="padding:8px 12px;font-weight:700;border:1px solid #ddd">实例 ID</td><td style="padding:8px 12px;border:1px solid #ddd;font-family:monospace">${params.instanceId}</td></tr>`,
-    `<tr><td style="padding:8px 12px;font-weight:700;border:1px solid #ddd">提交时间</td><td style="padding:8px 12px;border:1px solid #ddd">${formatTokyoDateTime(params.createdAt)}</td></tr>`,
-  ]
-
-  if (params.metadata) {
-    for (const [key, value] of Object.entries(params.metadata)) {
-      if (value) {
-        const label = key.replace(/_/g, ' ')
-        lines.push(`<tr><td style="padding:8px 12px;font-weight:700;border:1px solid #ddd">${label}</td><td style="padding:8px 12px;border:1px solid #ddd">${value}</td></tr>`)
-      }
-    }
+  const logBase: WorkflowNotificationLog = {
+    notificationType,
+    recipientEmail,
+    subject,
+    instanceId: params.instanceId,
+    definitionKey: params.definitionKey,
+    referenceType: params.referenceType,
+    referenceId: params.referenceId,
+    userEmail: params.userEmail,
+    pagePath: params.pagePath,
+    reviewUrl: params.reviewUrl,
   }
 
-  lines.push('</table>')
-  const directUrl = params.metadata?.['处理链接'] || `https://study.jimmyyao.com/admin/workflows?definition_key=${params.definitionKey || ''}&instanceId=${params.instanceId}`
-  lines.push(`<p style="margin-top:20px"><a href="${directUrl}" style="display:inline-block;padding:10px 20px;background:#2563eb;color:#fff;text-decoration:none;border-radius:8px">前往后台处理</a></p>`)
-  lines.push(`<p class="small" style="margin-top:8px;color:#64748b">或复制以下链接到浏览器打开：<br><code style="font-size:12px">${directUrl}</code></p>`)
+  const supabase = params.supabase
+  const emailLogId = await insertEmailLog(supabase, { ...logBase, status: 'pending' })
 
-  return sendAdminNotification(subject, lines.join('\n'))
+  if (!config || !config.adminEmail) {
+    const errorMsg = !config ? 'Brevo SMTP not configured' : 'ADMIN_NOTIFICATION_EMAIL not configured'
+    console.warn(`[email] ${errorMsg}, skipping email`)
+    await supabase
+      .from('email_logs')
+      .update({ status: 'failed', failed_at: new Date().toISOString(), error_message: errorMsg })
+      .eq('id', emailLogId)
+    return { ok: false, error: errorMsg, emailLogId }
+  }
+
+  const typeLabel = workflowTypeLabel(params.workflowType, action)
+  const lines = [
+    `<h2>${typeLabel}</h2>`,
+    `<table style="border-collapse:collapse;width:100%">`,
+    `<tr><td style="padding:8px 12px;font-weight:700;border:1px solid #ddd">流程定义</td><td style="padding:8px 12px;border:1px solid #ddd;font-family:monospace">${params.definitionKey}</td></tr>`,
+    `<tr><td style="padding:8px 12px;font-weight:700;border:1px solid #ddd">实例 ID</td><td style="padding:8px 12px;border:1px solid #ddd;font-family:monospace">${params.instanceId}</td></tr>`,
+    `<tr><td style="padding:8px 12px;font-weight:700;border:1px solid #ddd">关联类型</td><td style="padding:8px 12px;border:1px solid #ddd">${params.referenceType}</td></tr>`,
+    `<tr><td style="padding:8px 12px;font-weight:700;border:1px solid #ddd">关联 ID</td><td style="padding:8px 12px;border:1px solid #ddd;font-family:monospace">${params.referenceId}</td></tr>`,
+    params.userEmail ? `<tr><td style="padding:8px 12px;font-weight:700;border:1px solid #ddd">用户邮箱</td><td style="padding:8px 12px;border:1px solid #ddd">${params.userEmail}</td></tr>` : '',
+    params.pagePath ? `<tr><td style="padding:8px 12px;font-weight:700;border:1px solid #ddd">来源页面</td><td style="padding:8px 12px;border:1px solid #ddd">${params.pagePath}</td></tr>` : '',
+    `<tr><td style="padding:8px 12px;font-weight:700;border:1px solid #ddd">提交时间</td><td style="padding:8px 12px;border:1px solid #ddd">${formatTokyoDateTime(params.createdAt)}</td></tr>`,
+    `</table>`,
+    `<p style="margin-top:20px"><a href="${params.reviewUrl}" style="display:inline-block;padding:10px 20px;background:#2563eb;color:#fff;text-decoration:none;border-radius:8px">${action === 'pending' ? '前往后台处理' : '查看详情'}</a></p>`,
+    `<p class="small" style="margin-top:8px;color:#64748b">或复制以下链接到浏览器打开：<br><code style="font-size:12px">${params.reviewUrl}</code></p>`,
+  ].join('\n')
+
+  const result = await sendAdminNotification(subject, lines)
+  if (result.ok) {
+    await supabase
+      .from('email_logs')
+      .update({ status: 'sent', sent_at: new Date().toISOString() })
+      .eq('id', emailLogId)
+  } else {
+    await supabase
+      .from('email_logs')
+      .update({ status: 'failed', failed_at: new Date().toISOString(), error_message: result.error || 'unknown' })
+      .eq('id', emailLogId)
+  }
+  return { ...result, emailLogId }
+}
+
+function workflowTypeLabel(workflowType: string, action: string): string {
+  const labels: Record<string, string> = {
+    study_visitor: '学习网站新访客',
+    logged_in_first_visit: '登录用户首次访问',
+    membership_application: '会员申请',
+  }
+  const base = labels[workflowType] || workflowType
+  if (action === 'pending') return `新的${base}已提交`
+  if (action === 'approved') return `${base}已通过`
+  if (action === 'rejected') return `${base}已驳回`
+  return base
 }

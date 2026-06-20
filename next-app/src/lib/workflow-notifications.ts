@@ -1,4 +1,3 @@
-import { randomUUID } from 'crypto'
 import type { SupabaseClient } from '@supabase/supabase-js'
 import { sendWorkflowPendingNotification } from './email-service'
 import { formatTokyoDateTime } from './date-format'
@@ -216,76 +215,18 @@ export async function createWorkflow(
     console.error('[workflow] Failed to log workflow_action:', actionError)
   }
 
-  const emailLogId = randomUUID()
-  const adminNotifyEmail = String(process.env.ADMIN_NOTIFICATION_EMAIL || process.env.ADMIN_EMAIL || '').trim()
-  const emailSubject = `[Minna] ${meta.workflowType}需要确认`
-
-  const { error: logInsertError } = await supabase
-    .from('email_logs')
-    .insert({
-      id: emailLogId,
-      workflow_instance_id: instance.id,
-      notification_type: `${meta.workflowType}_pending`,
-      recipient_email: adminNotifyEmail,
-      subject: emailSubject,
-      provider: 'brevo_smtp',
-      status: 'pending',
-      metadata: {
-        definition_key: params.definitionKey,
-        reference_type: params.definitionKey,
-        reference_id: params.userId,
-        user_id: params.userId,
-        visitor_record_id: params.visitorRecordId,
-        page_path: params.pagePath,
-        visited_at: params.visitedAt,
-        review_url: `https://study.jimmyyao.com/admin/workflows?definition_key=${params.definitionKey}&instanceId=${instance.id}`,
-      },
-    })
-
-  if (logInsertError) {
-    console.error('[workflow] Failed to create email_log:', logInsertError)
-  }
-
-  try {
-    const directLink = `https://study.jimmyyao.com/admin/workflows?definition_key=${params.definitionKey}&instanceId=${instance.id}`
-    const emailResult = await sendWorkflowPendingNotification({
-      workflowType: meta.workflowType,
-      definitionKey: params.definitionKey,
-      instanceId: instance.id,
-      createdAt: params.visitedAt,
-      metadata: {
-        '流程定义': params.definitionKey,
-        '用户 ID': params.userId,
-        '访客记录 ID': params.visitorRecordId,
-        '当前状态': 'pending',
-        '访问时间': formatTokyoDateTime(params.visitedAt),
-        '访问页面': params.pagePath,
-        '处理链接': directLink,
-        'IP 地址': params.ip,
-        'User Agent': params.userAgent,
-      },
-    })
-
-    if (emailResult.ok) {
-      await supabase
-        .from('email_logs')
-        .update({ status: 'sent', sent_at: new Date().toISOString() })
-        .eq('id', emailLogId)
-    } else {
-      await supabase
-        .from('email_logs')
-        .update({ status: 'failed', error_message: emailResult.error, failed_at: new Date().toISOString() })
-        .eq('id', emailLogId)
-      console.warn('[workflow] Email notification issue:', emailResult.error)
-    }
-  } catch (error) {
-    const message = error instanceof Error ? error.message : 'unknown error'
-    await supabase
-      .from('email_logs')
-      .update({ status: 'failed', error_message: message, failed_at: new Date().toISOString() })
-      .eq('id', emailLogId)
-    console.error('[workflow] Email notification error:', message)
-  }
+  await sendWorkflowPendingNotification({
+    supabase,
+    workflowType: meta.workflowType,
+    definitionKey: params.definitionKey,
+    instanceId: instance.id,
+    referenceType: params.definitionKey,
+    referenceId: params.userId || '',
+    userEmail: null,
+    pagePath: params.pagePath,
+    reviewUrl: `https://study.jimmyyao.com/admin/workflows?definition_key=${params.definitionKey}&instanceId=${instance.id}`,
+    createdAt: params.visitedAt,
+  })
 
   return { created: true, workflowInstanceId: instance.id }
 }
