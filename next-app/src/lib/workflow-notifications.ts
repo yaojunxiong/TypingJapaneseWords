@@ -1,3 +1,4 @@
+import { randomUUID } from 'crypto'
 import type { SupabaseClient } from '@supabase/supabase-js'
 import { sendWorkflowPendingNotification } from './email-service'
 import { formatTokyoDateTime } from './date-format'
@@ -215,6 +216,26 @@ export async function createWorkflow(
     console.error('[workflow] Failed to log workflow_action:', actionError)
   }
 
+  const emailLogId = randomUUID()
+  const adminNotifyEmail = String(process.env.ADMIN_NOTIFICATION_EMAIL || process.env.ADMIN_EMAIL || '').trim()
+  const emailSubject = `[Minna] ${meta.workflowType}需要确认`
+
+  const { error: logInsertError } = await supabase
+    .from('email_logs')
+    .insert({
+      id: emailLogId,
+      workflow_instance_id: instance.id,
+      notification_type: `${meta.workflowType}_pending`,
+      recipient_email: adminNotifyEmail,
+      subject: emailSubject,
+      provider: 'brevo_smtp',
+      status: 'pending',
+    })
+
+  if (logInsertError) {
+    console.error('[workflow] Failed to create email_log:', logInsertError)
+  }
+
   try {
     const emailResult = await sendWorkflowPendingNotification({
       workflowType: meta.workflowType,
@@ -231,11 +252,25 @@ export async function createWorkflow(
         'User Agent': params.userAgent,
       },
     })
-    if (!emailResult.ok) {
+
+    if (emailResult.ok) {
+      await supabase
+        .from('email_logs')
+        .update({ status: 'sent', sent_at: new Date().toISOString() })
+        .eq('id', emailLogId)
+    } else {
+      await supabase
+        .from('email_logs')
+        .update({ status: 'failed', error_message: emailResult.error, failed_at: new Date().toISOString() })
+        .eq('id', emailLogId)
       console.warn('[workflow] Email notification issue:', emailResult.error)
     }
   } catch (error) {
     const message = error instanceof Error ? error.message : 'unknown error'
+    await supabase
+      .from('email_logs')
+      .update({ status: 'failed', error_message: message, failed_at: new Date().toISOString() })
+      .eq('id', emailLogId)
     console.error('[workflow] Email notification error:', message)
   }
 

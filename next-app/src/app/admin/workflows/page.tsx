@@ -99,7 +99,7 @@ export default async function AdminWorkflowsPage({
   const instances = (data || []) as WorkflowInstanceRow[]
 
   return (
-    <main>
+    <main style={{ paddingBottom: 'calc(140px + env(safe-area-inset-bottom, 0px))' }}>
       <MinnaNav active="me" />
       <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap', marginBottom: 8 }}>
         <span style={{ fontSize: 22, lineHeight: 1 }}>⚙️</span>

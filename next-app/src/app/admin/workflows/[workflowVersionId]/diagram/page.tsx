@@ -323,7 +323,7 @@ export default async function WorkflowDiagramPage({ params, searchParams }: Prop
   const { nodeStatuses, edgeStatuses } = computeStatuses({ nodes, transitions, instance, tasks, actions })
 
   return (
-    <main>
+    <main style={{ paddingBottom: 'calc(140px + env(safe-area-inset-bottom, 0px))' }}>
       <MinnaNav active="me" />
       <section className="heroCard card">
         <div className="heroEmoji">🗺️</div>

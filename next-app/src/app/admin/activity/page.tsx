@@ -336,7 +336,7 @@ export default async function AdminActivityPage({
   const uniqueUsers = new Set(filteredEvents.filter((event) => !!event.email).map((event) => event.email)).size
 
   return (
-    <main>
+    <main style={{ paddingBottom: 'calc(140px + env(safe-area-inset-bottom, 0px))' }}>
       <MinnaNav active="me" />
       <section className="heroCard card">
         <div className="heroEmoji">👣</div>
