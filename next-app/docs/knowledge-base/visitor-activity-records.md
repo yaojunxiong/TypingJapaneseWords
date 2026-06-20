@@ -415,3 +415,46 @@ Vercel Logs 验证关键字段：
 | 审批入口（确认/驳回） | ✅ `/admin/workflows` + 流程图页按钮可操作 |
 
 **结论：** 访客记录 + 登录用户首次访问审批流程 v1.4 生产验证完成，全线闭环。后续维护性变更（日志增强、监控告警）建议升版至 v1.5。
+
+### v1.5 — 2026-06-20
+
+**审批流程统一管理 + 会员申请审批同步 + 邮件增强。**
+
+#### 核心变更
+
+| 模块 | 变更 |
+|------|------|
+| 统一审批 API | 新增 `POST /api/admin/workflows/[instanceId]/review`，支持 study_visitor / logged_in_first_visit / membership_application 三类流程 approve/reject |
+| membership_requests 同步 | 审批 membership_application 时同步更新 `membership_requests.status` / `reviewed_by` / `reviewed_at` / `reject_reason` |
+| `/admin/workflows` 页面 | 4 张统计卡片（全部待审批 / 新访客 / 首次访问 / 会员申请）；definition_key 筛选；表格增加用户邮箱列；操作列按状态显示确认/驳回/流程图 |
+| 首页统计卡片 | `/admin` 首页 4 张可点击待审批卡片，直达对应筛选 |
+| `/admin/system` 页面 | 新增 `WorkflowStatusCard`，展示三类流程待审批数及查看链接 |
+| 动作按钮 | `WorkflowInstanceActionButtons` 使用统一 API 端点；running/pending 状态显示确认/驳回，其他仅流程图 |
+| 邮件通知 | 邮件内容增加 definition_key 行、用户 ID、直接审批链接 `/admin/workflows?definition_key=...&instanceId=...` |
+
+#### 修复
+
+- 测试断言：`/admin/workflows` 页面标题从「访客流程管理」更新为「审批流程管理」；
+- 新增 `membership_application` definition_key 存在性检查（commit `e9a52c1` on jimmyyao-auto-test）
+
+#### Auto Test #30
+
+| 维度 | 结果 | 说明 |
+|------|------|------|
+| Smoke test | ⏳ 触发中 | — |
+| Regression test | ❌ 1 failed | 旧断言 `访客流程管理` vs 生产已部署的 `审批流程管理`；修复已合入 `e9a52c1`，#31 应全绿 |
+| 失败用例 | `admin-workflows shows study_visitor...` line 152 | 页面实际内容确认包含 `审批流程管理` + `study_visitor` + `logged_in_first_visit` + `membership_application`，断言已修复 |
+
+生产页面抓取确认（来自 CI 日志）：
+```
+⚙️审批流程管理
+study_visitor  ✔   logged_in_first_visit  ✔   membership_application  ✔
+待确认实例: 确认驳回按钮可见  ✔   已确认/已拒绝实例: 仅流程图可见  ✔
+```
+
+#### v1.5 关键提交
+
+| Commit | Repo | 说明 |
+|--------|------|------|
+| `1dc0d8f` | next-app | v1.5 统一审批 API + 页面改造 + 邮件增强 |
+| `e9a52c1` | jimmyyao-auto-test | 修复 `/admin/workflows` 断言 + 新增 `membership_application` 检查 |
