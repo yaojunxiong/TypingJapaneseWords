@@ -309,3 +309,92 @@ Regression  : ✅ success
 - `visitor_activity_events` 新增 RLS 策略：允许认证用户读取自己的记录（`user_id = auth.uid()`），用于 insert 后获取 ID
 - 不再区分 admin / non-admin 写入路径：所有认证用户统一走 `insert().select('id, created_at')`
 - `workflow_instances` / `workflow_tasks` / `workflow_actions` RLS 策略扩展到支持 `reference_type in ('study_visitor', 'logged_in_first_visit')`
+
+### v1.4 — 2026-06-20
+
+**访客活动记录 + logged_in_first_visit 审批链路全线闭环（生产环境已验证）。**
+
+#### 完整数据流
+
+```
+普通登录用户访问 / 或 /lessons
+  → VisitorActivityTracker 发送 POST /api/activity/track
+  → cookie auth 成功，写入 visitor_activity_events（含 email / user_id）
+  → 触发前检查链（admin_path / admin_user / blocked_*_rule / pending_24h）
+  → 全部通过 → createLoggedInFirstVisitWorkflow()
+    → getActiveVersionId() 查询 workflow_definitions + workflow_versions
+    → getGraph() 查询 workflow_nodes + workflow_transitions
+    → INSERT workflow_instances (status='running')
+    → INSERT workflow_tasks (status='pending')
+    → INSERT workflow_actions (action='submit')
+    → INSERT email_logs (status='pending')
+    → sendWorkflowPendingNotification() → Brevo SMTP → 管理员收到邮件
+    → UPDATE email_logs (status='sent', sent_at)
+  → 24h 内重复访问 → 检查到已有 running 实例 → workflowSkipReason='pending_logged_in_first_visit_within_24h'
+  → 管理员登录 /admin/workflows → 看到 running 实例
+  → 点击「确认」→ POST /api/admin/workflows/study-visitor/{id}/review { action: 'approve' }
+    → INSERT workflow_actions (action='approve', actor_user_id)
+    → UPDATE workflow_instances SET status='approved', current_node_key='end_confirmed'
+    → UPDATE workflow_tasks SET status='completed'
+    → router.refresh() → 状态变为「已确认」
+  → 点击「驳回」→ 同上，status='rejected', current_node_key='end_rejected'
+```
+
+#### 审批操作入口
+
+| 页面 | 入口 | 适用角色 |
+|------|------|----------|
+| `/admin/workflows` | 实例列表「确认」「驳回」「流程图」按钮 | admin |
+| `/admin/workflows/{versionId}/diagram?instanceId={id}` | 实例详情卡片底部操作区 | admin |
+| `/admin/activity?q={email}` | 查看 workflow_skip_reason 定位未创建原因 | admin |
+
+审批按钮使用 `src/components/workflow-instance-action-buttons.tsx` 客户端组件，调用 `POST /api/admin/workflows/study-visitor/{instanceId}/review`，该端点：
+- 校验 admin 身份（`checkAdminAccess`）
+- 校验 instance 状态为 `running`
+- 查找 workflow_transitions 中可用的 `approve` / `reject` 转换路径
+- 写入 `workflow_actions`（含 `actor_user_id`、`comment`）
+- 乐观锁更新 `workflow_instances`（`eq('status', 'running')`）
+- 完成当前 `workflow_tasks` + 创建下一个 task
+- 返回新状态，页面调用 `router.refresh()` 刷新
+
+#### 最终 Auto Test #27 结果
+
+```
+smoke-test: ✅ success
+regression-test: ✅ success
+  ├ @study               : ✅ passed（未认证 admin 路径返回 200 + 登录提示）
+  ├ @admin-auth          : ✅ passed（管理员页面全部正常渲染）
+  └ @normal-user-e2e     : ✅ passed（普通用户写入、admin 检索、审批页均通过）
+```
+
+Vercel Logs 验证关键字段：
+- `step=insert-result` → `insertedEmail="auto-test-user@jimmyyao.com"` ✅
+- `step=end` → `workflowSkipReason="pending_logged_in_first_visit_within_24h"` ✅（不再出现 `workflow definition not found`）
+- `step=end` → `finalIsAdmin=true`, `workflowSkipReason="admin_path"` ✅
+- `workflowInstanceId` 在首次访问时返回非空 UUID ✅
+
+#### 生产 Supabase 状态
+
+| 对象 | 状态 |
+|------|------|
+| `workflow_definitions` | `study_visitor` + `logged_in_first_visit` 两条定义，各含 1 个 active version |
+| `workflow_versions` | 各 1 条 `status='active'` |
+| `workflow_nodes` | 各 4 节点（start → approval → end_confirmed / end_rejected） |
+| `workflow_transitions` | 各 3 条（submit / approve / reject） |
+| `visitor_activity_events` RLS | INSERT(anon+auth) + SELECT(admin+self) |
+| `workflow_definitions` RLS | SELECT(admin+auth，限制 visitor keys) |
+| `workflow_versions` RLS | SELECT(admin+auth，active + visitor keys) |
+| `workflow_nodes` RLS | SELECT(admin+auth，active version + visitor keys) |
+| `workflow_transitions` RLS | SELECT(admin+auth，active version + visitor keys) |
+| `email_logs` | 表已创建，含 `workflow_instance_id` 外键、RLS(insert/update auth, select admin) |
+| `workflow_instances` RLS | SELECT(admin+owner via reference_id) + INSERT(auth with check) |
+
+#### 关键提交
+
+| Commit | 说明 |
+|--------|------|
+| `80a5597` | fix: `/api/activity/track` token fallback 后 `setSession()`，解决 anon key 无法 SELECT RETURNING |
+| `7362cb1` | fix: workflow metadata 表 authenticated SELECT 策略 + 增强日志 |
+| `0057787` | docs: 知识库更新 |
+| `170aabd` | feat: `email_logs` 表 + 工作流通知落库；fix: 管理后台底部导航遮挡 |
+| `34593e2` | feat: 工作流实例审批操作入口（确认/驳回/流程图）|

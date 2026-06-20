@@ -68,12 +68,13 @@ function extractIp(request: NextRequest): string | null {
 }
 
 export async function POST(request: NextRequest) {
-  const log = (...args: unknown[]) => console.error('[track]', ...args)
+  const DEBUG = process.env.DEBUG_VISITOR_TRACKING === 'true'
+  const log = DEBUG ? (...args: unknown[]) => console.info('[track]', ...args) : () => {}
 
   try {
     return await handleTrack(request, log)
   } catch (err) {
-    log(JSON.stringify({ step: 'early-return', reason: 'unhandled-exception', error: String(err) }))
+    console.error('[track/error]', JSON.stringify({ step: 'early-return', reason: 'unhandled-exception', error: String(err) }))
     return NextResponse.json({ ok: false, message: 'Internal error' }, { status: 500 })
   }
 }
@@ -88,7 +89,7 @@ async function handleTrack(request: NextRequest, log: (...args: unknown[]) => vo
   try {
     payload = await request.json()
   } catch {
-    log(JSON.stringify({ step: 'early-return', reason: 'json-parse-error' }))
+    console.error('[track/error]', JSON.stringify({ step: 'early-return', reason: 'json-parse-error' }))
     return NextResponse.json({ ok: false }, { status: 400 })
   }
 
@@ -115,9 +116,8 @@ async function handleTrack(request: NextRequest, log: (...args: unknown[]) => vo
   let authSource: string = 'none'
 
   const uaHeadless = (userAgent || '').includes('HeadlessChrome')
-  const accessTokenPrefix = clientAccessToken ? clientAccessToken.slice(0, 8) + '...' : 'none'
 
-  log(JSON.stringify({ step: 'start', path, referrer, hasAccessTokenInBody: !!clientAccessToken, accessTokenPrefix, uaHeadless }))
+  log(JSON.stringify({ step: 'start', path, referrer, hasAccessTokenInBody: !!clientAccessToken, uaHeadless }))
 
   // Method 1: cookie-based server session
   try {
@@ -137,7 +137,7 @@ async function handleTrack(request: NextRequest, log: (...args: unknown[]) => vo
     } catch (err) {
       tokenGetUserError = String(err)
     }
-    log(JSON.stringify({ step: 'token', path, accessTokenPrefix, tokenGetUserSuccess: !!user, tokenGetUserEmail: user?.email ?? null, tokenGetUserError }))
+    log(JSON.stringify({ step: 'token', path, tokenGetUserSuccess: !!user, tokenGetUserEmail: user?.email ?? null, tokenGetUserError }))
   }
 
   log(JSON.stringify({ step: 'auth-result', path, authSource, finalEmail: user?.email ?? null, finalUserId: user?.id ?? null }))
@@ -192,7 +192,7 @@ async function handleTrack(request: NextRequest, log: (...args: unknown[]) => vo
       })
 
     if (error) {
-      log(JSON.stringify({ step: 'insert-error', path, anonymous: true, error: error.message, code: error.code }))
+      console.error('[track/error]', JSON.stringify({ step: 'insert-error', path, anonymous: true, error: error.message, code: error.code }))
       return NextResponse.json({ ok: false, message: error.message }, { status: 200 })
     }
 
@@ -216,7 +216,7 @@ async function handleTrack(request: NextRequest, log: (...args: unknown[]) => vo
     .single()
 
   if (insertError) {
-    log(JSON.stringify({ step: 'insert-error', path, error: insertError.message, code: insertError.code, details: insertError.details, hint: insertError.hint }))
+    console.error('[track/error]', JSON.stringify({ step: 'insert-error', path, error: insertError.message, code: insertError.code, details: insertError.details, hint: insertError.hint }))
     return NextResponse.json({ ok: false, message: insertError.message }, { status: 200 })
   }
 

@@ -71,7 +71,6 @@ async function resolveAccessToken(path: string): Promise<string | null> {
 
 async function sendAuthenticated(payload: TrackPayload) {
   const body = JSON.stringify(payload)
-  const tokenPrefix = payload.accessToken ? payload.accessToken.slice(0, 8) + '...' : 'none'
   const ua = payload.userAgent || ''
   const isHeadless = ua.includes('HeadlessChrome')
 
@@ -82,9 +81,9 @@ async function sendAuthenticated(payload: TrackPayload) {
       body,
       keepalive: true,
     })
-    diag({ path: payload.path, hasSession: true, hasAccessToken: true, accessTokenPrefix: tokenPrefix, transport: 'fetch', responseStatus: res.status, uaHeadless: isHeadless })
+    diag({ path: payload.path, hasSession: true, hasAccessToken: true, transport: 'fetch', responseStatus: res.status, uaHeadless: isHeadless })
   } catch (err) {
-    diag({ path: payload.path, hasSession: true, hasAccessToken: true, accessTokenPrefix: tokenPrefix, transport: 'fetch', responseStatus: -1, error: String(err), uaHeadless: isHeadless })
+    diag({ path: payload.path, hasSession: true, hasAccessToken: true, transport: 'fetch', responseStatus: -1, error: String(err), uaHeadless: isHeadless })
   }
 }
 
