@@ -84,6 +84,8 @@ tags:
 - RELEASE_NOTES_v1.md
 - .env.local.example
 - docs/codex-handoff-system-audit.md
+- [[Auto Deploy & Test]] — 自动部署与测试流水线
+- `.github/workflows/deploy-and-test.yml`
 
 ---
 
