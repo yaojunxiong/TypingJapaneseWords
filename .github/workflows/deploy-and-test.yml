@@ -19,9 +19,6 @@ on:
 jobs:
   deploy-and-test:
     runs-on: ubuntu-latest
-    permissions:
-      deployments: read
-      contents: read
     steps:
       - uses: actions/checkout@v6
 
