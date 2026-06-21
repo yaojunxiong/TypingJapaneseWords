@@ -1,0 +1,13 @@
+name: Auto Deploy & Test
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'next-app/src/**'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello from deploy workflow"
