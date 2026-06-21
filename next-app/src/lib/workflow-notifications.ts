@@ -134,8 +134,7 @@ export async function createWorkflow(
     return { created: false, workflowInstanceId: null, reason: `unknown definition: ${params.definitionKey}` }
   }
 
-  // For anonymous visitors, use ip as the reference_id for dedup
-  const referenceId = userId || params.ip || `anon:${params.visitorRecordId}`
+  const referenceId = userId || params.visitorRecordId
   const { data: existing } = await supabase
     .from('workflow_instances')
     .select('id')
@@ -225,7 +224,7 @@ export async function createWorkflow(
     definitionKey: params.definitionKey,
     instanceId: instance.id,
     referenceType: params.definitionKey,
-    referenceId: params.userId || '',
+    referenceId: params.userId || params.visitorRecordId,
     userEmail: null,
     pagePath: params.pagePath,
     reviewUrl: `https://study.jimmyyao.com/admin/workflows?definition_key=${params.definitionKey}&instanceId=${instance.id}`,

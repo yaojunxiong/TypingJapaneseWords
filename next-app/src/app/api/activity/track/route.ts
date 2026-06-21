@@ -208,11 +208,15 @@ async function handleTrack(request: NextRequest, log: (...args: unknown[]) => vo
     })
 
     if (!anonEligibility.eligible) {
+      const updatePayload: Record<string, string | null> = { workflow_skip_reason: anonEligibility.reason }
+      if (anonEligibility.pendingInstanceId) {
+        updatePayload.workflow_instance_id = anonEligibility.pendingInstanceId
+      }
       await supabase
         .from('visitor_activity_events')
-        .update({ workflow_skip_reason: anonEligibility.reason })
+        .update(updatePayload)
         .eq('id', anonRecord.id)
-      log(JSON.stringify({ step: 'anon-eligibility', path, eligible: false, reason: anonEligibility.reason }))
+      log(JSON.stringify({ step: 'anon-eligibility', path, eligible: false, reason: anonEligibility.reason, pendingInstanceId: anonEligibility.pendingInstanceId }))
     }
 
     if (anonEligibility.eligible) {
@@ -291,9 +295,14 @@ async function handleTrack(request: NextRequest, log: (...args: unknown[]) => vo
 
   if (!eligibility.eligible) {
     workflowSkipReason = eligibility.reason
+    const updatePayload: Record<string, string | null> = { workflow_skip_reason: eligibility.reason }
+    if (eligibility.pendingInstanceId) {
+      updatePayload.workflow_instance_id = eligibility.pendingInstanceId
+      workflowInstanceId = eligibility.pendingInstanceId
+    }
     await supabase
       .from('visitor_activity_events')
-      .update({ workflow_skip_reason: eligibility.reason })
+      .update(updatePayload)
       .eq('id', record.id)
       .maybeSingle()
   }
