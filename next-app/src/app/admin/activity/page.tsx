@@ -59,6 +59,7 @@ const SKIP_REASON_LABELS: Record<string, { zh: string; en: string }> = {
   blocked_by_path_rule: { zh: '命中路径屏蔽规则', en: 'Blocked by path rule' },
   blocked_by_user_agent_rule: { zh: '命中 UA 屏蔽规则', en: 'Blocked by UA rule' },
   pending_logged_in_first_visit_within_24h: { zh: '24 小时内已有待确认流程', en: 'Pending workflow in 24h' },
+  pending_study_visitor_within_24h: { zh: '24 小时内已有匿名访客流程', en: 'Pending anonymous visitor workflow in 24h' },
   workflow_not_created: { zh: '流程未创建', en: 'Workflow not created' },
   workflow_create_failed: { zh: '流程创建失败', en: 'Workflow create failed' },
   anonymous_visitor: { zh: '匿名访客', en: 'Anonymous' },

@@ -133,6 +133,94 @@ export async function checkLoggedInFirstVisitDedup24h(
 }
 
 /**
+ * Check if there is a running study_visitor workflow for the same IP
+ * that was created within the last 24 hours (anonymous visitor dedup).
+ */
+export async function checkAnonymousVisitorDedup24h(
+  supabase: SupabaseClient,
+  ip: string | null
+): Promise<{ hasPending: boolean; existingInstanceId: string | null; reason: string | null }> {
+  if (!ip) {
+    return { hasPending: false, existingInstanceId: null, reason: null }
+  }
+
+  const twentyFourHoursAgo = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString()
+
+  // Find visitor_activity_events with the same IP that have a running
+  // study_visitor workflow_instance within the last 24h.
+  const { data: match } = await supabase
+    .from('visitor_activity_events')
+    .select('workflow_instance_id, workflow_instances!inner(status)')
+    .eq('ip', ip)
+    .not('workflow_instance_id', 'is', null)
+    .gte('created_at', twentyFourHoursAgo)
+    .limit(1)
+    .maybeSingle()
+
+  if (match?.workflow_instance_id) {
+    return {
+      hasPending: true,
+      existingInstanceId: match.workflow_instance_id,
+      reason: 'pending_study_visitor_within_24h',
+    }
+  }
+
+  return { hasPending: false, existingInstanceId: null, reason: null }
+}
+
+/**
+ * Full eligibility check for anonymous visitor → study_visitor workflow.
+ * Order:
+ * 1. workflow enabled
+ * 2. admin path check
+ * 3. block rules check (targetFlowType = anonymous_visitor)
+ * 4. IP-based 24h dedup check
+ */
+export async function getAnonymousVisitorEligibility(
+  supabase: SupabaseClient,
+  params: {
+    path: string
+    ip: string | null
+    userAgent: string | null
+  }
+): Promise<WorkflowEligibilityResult & { pendingInstanceId?: string | null }> {
+  const config = getStudyVisitorWorkflowConfig()
+
+  if (!config.enabled) {
+    return { eligible: false, reason: 'workflow_disabled' }
+  }
+
+  if (isAdminPath(params.path)) {
+    return { eligible: false, reason: 'admin_path' }
+  }
+
+  const blockCheck = await checkVisitorFlowBlockRules(supabase, {
+    email: null,
+    userId: null,
+    visitorId: null,
+    ip: params.ip,
+    path: params.path,
+    userAgent: params.userAgent,
+  }, 'anonymous_visitor')
+
+  if (blockCheck.matched) {
+    return { eligible: false, reason: blockCheck.reason! }
+  }
+
+  const dedupCheck = await checkAnonymousVisitorDedup24h(supabase, params.ip)
+
+  if (dedupCheck.hasPending) {
+    return {
+      eligible: false,
+      reason: dedupCheck.reason!,
+      pendingInstanceId: dedupCheck.existingInstanceId,
+    }
+  }
+
+  return { eligible: true, reason: 'eligible' }
+}
+
+/**
  * Full eligibility check for the logged-in first visit workflow.
  * Order:
  * 1. workflow enabled

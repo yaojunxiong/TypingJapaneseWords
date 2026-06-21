@@ -2,8 +2,8 @@ import { cookies } from 'next/headers'
 import { NextResponse, type NextRequest } from 'next/server'
 import { createClient } from '@/utils/supabase/server'
 import { hasSupabasePublicEnv } from '@/utils/supabase/config'
-import { createLoggedInFirstVisitWorkflow } from '@/lib/workflow-notifications'
-import { getLoggedInFirstVisitEligibility } from '@/lib/study-visitor-workflow-config'
+import { createLoggedInFirstVisitWorkflow, createStudyVisitorWorkflow } from '@/lib/workflow-notifications'
+import { getLoggedInFirstVisitEligibility, getAnonymousVisitorEligibility } from '@/lib/study-visitor-workflow-config'
 
 export const dynamic = 'force-dynamic'
 
@@ -181,22 +181,73 @@ async function handleTrack(request: NextRequest, log: (...args: unknown[]) => vo
     ip,
   }
 
-  // ── Anonymous visitors: insert only, no workflow ──
+  // ── Anonymous visitors: insert + study_visitor workflow check ──
   if (!user) {
-    const { error } = await supabase
+    const { data: anonRecord, error: anonError } = await supabase
       .from('visitor_activity_events')
       .insert({
         ...insertPayload,
         user_id: null,
         email: null,
       })
+      .select('id, created_at')
+      .single()
 
-    if (error) {
-      console.error('[track/error]', JSON.stringify({ step: 'insert-error', path, anonymous: true, error: error.message, code: error.code }))
-      return NextResponse.json({ ok: false, message: error.message }, { status: 200 })
+    if (anonError) {
+      console.error('[track/error]', JSON.stringify({ step: 'insert-error', path, anonymous: true, error: anonError.message, code: anonError.code }))
+      return NextResponse.json({ ok: false, message: anonError.message }, { status: 200 })
     }
 
-    log(JSON.stringify({ step: 'insert-result', path, anonymous: true }))
+    log(JSON.stringify({ step: 'insert-result', path, anonymous: true, insertedId: anonRecord.id }))
+
+    // ── Study_visitor eligibility & workflow trigger ──
+    const anonEligibility = await getAnonymousVisitorEligibility(supabase, {
+      path,
+      ip,
+      userAgent,
+    })
+
+    if (!anonEligibility.eligible) {
+      await supabase
+        .from('visitor_activity_events')
+        .update({ workflow_skip_reason: anonEligibility.reason })
+        .eq('id', anonRecord.id)
+      log(JSON.stringify({ step: 'anon-eligibility', path, eligible: false, reason: anonEligibility.reason }))
+    }
+
+    if (anonEligibility.eligible) {
+      try {
+        const workflowResult = await createStudyVisitorWorkflow(supabase, {
+          visitorRecordId: anonRecord.id,
+          userId: null,
+          pagePath: path,
+          ip,
+          userAgent: userAgent || null,
+          visitedAt: anonRecord.created_at || new Date().toISOString(),
+        })
+        if (workflowResult.created && workflowResult.workflowInstanceId) {
+          await supabase
+            .from('visitor_activity_events')
+            .update({ workflow_instance_id: workflowResult.workflowInstanceId })
+            .eq('id', anonRecord.id)
+          log(JSON.stringify({ step: 'anon-workflow', path, created: true, instanceId: workflowResult.workflowInstanceId }))
+        } else if (!workflowResult.created) {
+          const reason = workflowResult.reason || 'workflow_not_created'
+          await supabase
+            .from('visitor_activity_events')
+            .update({ workflow_skip_reason: reason })
+            .eq('id', anonRecord.id)
+          log(JSON.stringify({ step: 'anon-workflow', path, created: false, reason }))
+        }
+      } catch (err) {
+        console.error('[track] createStudyVisitorWorkflow error:', err)
+        await supabase
+          .from('visitor_activity_events')
+          .update({ workflow_skip_reason: 'workflow_create_failed' })
+          .eq('id', anonRecord.id)
+      }
+    }
+
     return NextResponse.json({ ok: true })
   }
 

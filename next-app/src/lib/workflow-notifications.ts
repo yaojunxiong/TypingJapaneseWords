@@ -123,7 +123,9 @@ export async function createWorkflow(
   params: CreateWorkflowParams
 ): Promise<CreateWorkflowResult> {
   const userId = params.userId
-  if (!userId) {
+
+  // Anonymous visitors are allowed only for study_visitor workflow
+  if (!userId && params.definitionKey !== 'study_visitor') {
     return { created: false, workflowInstanceId: null, reason: 'anonymous visitor' }
   }
 
@@ -132,11 +134,13 @@ export async function createWorkflow(
     return { created: false, workflowInstanceId: null, reason: `unknown definition: ${params.definitionKey}` }
   }
 
+  // For anonymous visitors, use ip as the reference_id for dedup
+  const referenceId = userId || params.ip || `anon:${params.visitorRecordId}`
   const { data: existing } = await supabase
     .from('workflow_instances')
     .select('id')
     .eq('reference_type', params.definitionKey)
-    .eq('reference_id', userId)
+    .eq('reference_id', referenceId)
     .in('status', ['running'])
     .maybeSingle()
 
@@ -170,7 +174,7 @@ export async function createWorkflow(
     .insert({
       workflow_version_id: versionId,
       reference_type: params.definitionKey,
-      reference_id: userId,
+      reference_id: referenceId,
       current_node_key: approvalNode.node_key,
       status: 'running',
     })
