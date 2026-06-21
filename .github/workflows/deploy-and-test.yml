@@ -4,17 +4,9 @@ on:
   push:
     branches: [master]
     paths:
-      - 'next-app/src/**'
-      - 'next-app/public/**'
-      - 'next-app/package.json'
-      - 'next-app/package-lock.json'
-      - 'next-app/next.config.ts'
-      - 'next-app/tsconfig.json'
-      - 'next-app/supabase/**'
-    paths-ignore:
-      - 'next-app/docs/**'
-      - 'next-app/*.md'
-      - 'next-app/RELEASE_NOTES*'
+      - 'next-app/**'
+      - '.github/workflows/deploy-and-test.yml'
+  workflow_dispatch:
 
 jobs:
   deploy-and-test:
