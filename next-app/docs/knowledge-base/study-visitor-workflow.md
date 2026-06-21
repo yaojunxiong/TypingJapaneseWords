@@ -2,11 +2,15 @@
 
 ## 1. 流程概述
 
-新访客确认流程用于处理首次访问学习网站的用户身份确认。当已登录用户首次访问时，自动创建 workflow 实例，管理员在后台审核确认。
+新访客确认流程用于处理首次访问学习网站的用户身份确认。支持两种触发场景：
+- 匿名访客（未登录）→ `study_visitor` 流程
+- 已登录用户首次访问 → `logged_in_first_visit` 流程
+
+管理员在后台 `/admin/workflows` 审核确认。
 
 ## 2. 当前状态
 
-**2026-06-16 更新：生产库已存在旧分支 workflow 表结构，需适配而非新建。**
+**2026-06-21 更新：匿名 study_visitor 流程触发已闭环（P0-2）。已登录用户首次访问流程（logged_in_first_visit）已于 v1.4 闭环。**
 
 ### 2.1 数据库表（生产库已有）
 
@@ -22,13 +26,13 @@
 
 ### 2.2 当前代码状态
 
-- `src/lib/email-service.ts` — 邮件服务（保留）
-- `src/lib/workflow-notifications.ts` — ⚠️ 使用了错误表结构（`business_type`/`business_id`），需适配到 `reference_type`/`reference_id`
-- `src/app/api/workflows/study-visitor/trigger/route.ts` — ⚠️ 同上，需适配
-- `src/app/api/admin/workflows/study-visitor/[instanceId]/review/route.ts` — ⚠️ 同上，需适配
-- `src/app/admin/workflows/study-visitor/page.tsx` — ⚠️ 读取了错误的字段，需适配
-- `src/components/study-visitor-flowchart.tsx` — ✅ 可保留
-- `src/components/study-visitor-review-actions.tsx` — ⚠️ 适配新 API 路径
+- `src/lib/email-service.ts` — ✅ 邮件服务（稳定运行）
+- `src/lib/workflow-notifications.ts` — ✅ `createWorkflow()` 使用 `reference_type`/`reference_id`，支持 `userId=\|visitorRecordId` 作 `referenceId`
+- `src/lib/study-visitor-workflow-config.ts` — ✅ 匿名/已登录访客资格检查、24h 去重、block rules
+- `src/app/api/activity/track/route.ts` — ✅ 匿名访客写入 + study_visitor 流程触发；已登录用户写入 + logged_in_first_visit 流程触发
+- `src/app/api/admin/workflows/[instanceId]/review/route.ts` — ✅ 统一审批 API
+- `src/components/workflow-instance-action-buttons.tsx` — ✅ 确认/驳回/流程图按钮
+- `src/app/admin/workflows/page.tsx` — ✅ 审批流程管理页
 
 ## 3. 真实数据结构（旧分支通用 workflow）
 
@@ -78,11 +82,11 @@ updated_at timestamptz
 - `visitor-activity-tracker.tsx` — 客户端跟踪不变
 - `study-visitor-flowchart.tsx` — 纯展示组件不变
 
-## 5. 待完成事项
+## 5. 闭环状态
 
-- [ ] 执行 SQL 补丁（新建 definition + version + nodes + transitions + RLS）
-- [ ] 修改 `workflow-notifications.ts` — 适配旧结构
-- [ ] 修改 admin review API — 适配旧结构的审核流程
-- [ ] 修改 admin page — 适配正确字段名
-- [ ] 删除 `supabase/migrations/20260616150000_create_workflow_tables.sql`
-- [ ] `npm run build` 验证
+### ✅ P0-1: Vercel 双项目误部署风险 — 已关闭
+### ✅ P0-2: 匿名 study_visitor 流程触发 — 已关闭 (Auto Test #52)
+
+## 6. 下一步建议
+
+- P0-3: RLS / 普通用户负向权限测试

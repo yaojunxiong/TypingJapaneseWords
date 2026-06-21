@@ -471,3 +471,74 @@ Vercel Logs 验证关键字段：
 | `8deb9c9` | jimmyyao-auto-test | `normal-user-e2e` `访客流程管理` → `审批流程管理` |
 
 **v1.5 状态：访客记录写入、logged_in_first_visit、membership_application 审批入口、邮件增强、自动测试闭环完成。**
+
+### v1.6 — 2026-06-21
+
+**P0-2 匿名 study_visitor 流程触发闭环完成。**
+
+#### 背景
+
+- Auto Test #48 失败原因：`visitor_activity_events` 匿名 insert 被 RLS 拦截。
+- Codex 已修复数据库/RLS：anon insert 成功、anon SELECT 被拒绝（符合预期）、admin SELECT 正常。
+- `workflow_instances.reference_id` 是 `uuid` 类型，但应用传入 `anon:<ip>` 字符串，导致类型风险。
+
+#### 核心变更
+
+| 模块 | 变更 |
+|------|------|
+| `workflow-notifications.ts` | `referenceId` 从 `userId \|\| ip \|\| anon:...` 改为 `userId \|\| visitorRecordId`（即 `visitor_activity_events.id` UUID） |
+| `track/route.ts` | 匿名访问先插入 `visitor_activity_events`，用该记录 id（UUID）作为 workflow `reference_id`；24h 去重命中时回写 `workflow_instance_id` + `workflow_skip_reason` |
+| `p0-core.spec.ts` | 新增 P0-5 匿名 `visit → study_visitor` 工作流测试 |
+
+#### 匿名 study_visitor 触发流程
+
+```
+匿名用户访问 /lessons/1
+  → VisitorActivityTracker 发送 POST /api/activity/track (no accessToken)
+  → authSource='none'，走匿名路径
+  → INSERT visitor_activity_events (user_id=null, email=null) → 获取 anonRecord.id (UUID)
+  → getAnonymousVisitorEligibility() 触发前检查链：
+    a. workflow_disabled — 流程全局未启用
+    b. admin_path — 是否 /admin/* 路径
+    c. visitor_flow_block_rules（flow_type='anonymous_visitor'）
+    d. pending_study_visitor_within_24h — 同 IP 24 小时内是否有未确认 study_visitor 流程
+        → 查询方式：visitor_activity_events.ip 匹配 + 关联 workflow_instances.status IN ('running')
+        → 命中时 workflow_skip_reason='pending_study_visitor_within_24h'，回写 workflow_instance_id（已有）
+  → 全部通过 → createStudyVisitorWorkflow()
+    → reference_type='study_visitor'，reference_id=visitor_activity_events.id (UUID)
+    → 成功创建 workflow_instances / workflow_tasks / workflow_actions
+    → visitor_activity_events.workflow_instance_id 回写
+```
+
+#### `workflow_skip_reason` 新增值
+
+| reason | 含义 |
+|--------|------|
+| `pending_study_visitor_within_24h` | 24 小时内已有未确认 `study_visitor` 流程（同 IP 去重） |
+
+#### Auto Test #52（P0-2 生产验证最终闭环）
+
+```
+Smoke test     : ✅ PASSED
+Unauthenticated: ✅ PASSED
+@admin-auth    : ✅ PASSED
+@normal-user   : ✅ PASSED
+P0 core (@p0)  : ✅ PASSED (P0-1~P0-5)
+  └ P0-5 anonymous visit → study_visitor workflow : ✅ PASSED
+```
+
+| 检查项 | 结果 |
+|--------|------|
+| 匿名访问写入 `visitor_activity_events` | ✅ Track API 返回 `{"ok":true}` |
+| 匿名活动页面渲染 | ✅ `/admin/activity?user=anonymous` 显示匿名 badge |
+| `study_visitor` workflow 实例创建 | ✅ 或明确显示 skip reason |
+| `reference_id` UUID 类型匹配 | ✅ 不再出现 `invalid input syntax for type uuid` |
+| RLS violation | ✅ 未出现 |
+
+#### 关键提交
+
+| Commit | Repo | 说明 |
+|--------|------|------|
+| `8608173` | next-app | 修复 `reference_id` UUID 类型不匹配 |
+| `5ef1896` | jimmyyao-auto-test | 修复 P0-5 活动页面关键词断言 |
+| `d7350e9` | jimmyyao-auto-test | 修复 report 生成 JSON 提取（平衡花括号）|

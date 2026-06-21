@@ -47,3 +47,21 @@ push 到 `master` 分支，且变更涉及 `next-app/` 目录下的以下文件�
 1. 在 GitHub Actions 页面找到失败的运行
 2. 点击右上角 "Re-run jobs" → "Re-run all jobs"
 3. 确认 Vercel 部署和测试均通过
+
+## 最新通过记录
+
+### Auto Test #52（P0-2 匿名 study_visitor 生产闭环验证）
+
+| 维度 | 结果 |
+|------|------|
+| **next-app commit** | `8608173` |
+| **jimmyyao-auto-test commit** | `d7350e9` |
+| Smoke test | ✅ PASSED |
+| Study tests (unauthenticated) | ✅ PASSED |
+| @admin-auth | ✅ PASSED |
+| @normal-user-e2e | ✅ PASSED |
+| P0 core (@p0) | ✅ PASSED (P0-1~P0-5) |
+| P0-5 anonymous → study_visitor | ✅ PASSED |
+| report.md | ✅ 已生成，P0 显示 PASSED |
+| RLS violation | ❌ 未出现 |
+| `invalid input syntax for type uuid` | ❌ 未出现 |
