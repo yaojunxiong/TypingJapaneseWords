@@ -5,9 +5,87 @@ on:
     branches: [master]
     paths:
       - 'next-app/src/**'
+      - 'next-app/public/**'
+      - 'next-app/package.json'
+      - 'next-app/package-lock.json'
+      - 'next-app/next.config.ts'
+      - 'next-app/tsconfig.json'
+      - 'next-app/supabase/**'
+    paths-ignore:
+      - 'next-app/docs/**'
+      - 'next-app/*.md'
+      - 'next-app/RELEASE_NOTES*'
 
 jobs:
-  test:
+  deploy-and-test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello from deploy workflow"
+      - uses: actions/checkout@v6
+
+      - name: Wait for Vercel Production Deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          VERCEL_ENV="Production – next-app"
+          SHA="${{ github.sha }}"
+          REPO="${{ github.repository }}"
+          echo "Waiting for Vercel deployment ($VERCEL_ENV) for commit ${SHA:0:8}..."
+
+          for i in $(seq 1 60); do
+            DEPLOY_ID=$(gh api "repos/${REPO}/deployments" \
+              --jq "[.[] | select(.sha == \"$SHA\" and .environment == \"$VERCEL_ENV\")][0].id")
+
+            if [ -n "$DEPLOY_ID" ] && [ "$DEPLOY_ID" != "null" ]; then
+              STATE=$(gh api "repos/${REPO}/deployments/${DEPLOY_ID}/statuses" \
+                --jq "[.[] | select(.environment == \"$VERCEL_ENV\")][0].state")
+
+              if [ -n "$STATE" ] && [ "$STATE" != "null" ]; then
+                echo "Attempt $i/60: state=$STATE"
+
+                if [ "$STATE" = "success" ]; then
+                  echo "Vercel production deployment completed!"
+                  exit 0
+                fi
+
+                if [ "$STATE" = "failure" ] || [ "$STATE" = "error" ]; then
+                  echo "Vercel deployment failed (state=$STATE)"
+                  exit 1
+                fi
+              fi
+            else
+              echo "Attempt $i/60: deployment not yet created by Vercel..."
+            fi
+
+            sleep 15
+          done
+
+          echo "Timeout waiting for Vercel deployment"
+          exit 1
+
+      - name: Health check Production URL
+        run: |
+          URL="https://study.jimmyyao.com"
+          echo "Health checking $URL..."
+          for i in $(seq 1 12); do
+            HTTP_CODE=$(curl -s -o /dev/null -w '%{http_code}' "$URL" 2>/dev/null || echo "fail")
+            echo "Attempt $i: HTTP $HTTP_CODE"
+            if [ "$HTTP_CODE" = "200" ]; then
+              echo "URL responded with 200"
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "Health check failed"
+          exit 1
+
+      - name: Trigger Auto Test
+        env:
+          GH_TOKEN: ${{ secrets.AUTO_TEST_PAT }}
+        run: |
+          echo "Triggering auto-test on yaojunxiong/jimmyyao-auto-test..."
+          gh workflow run test.yml \
+            --repo yaojunxiong/jimmyyao-auto-test \
+            --ref main 2>&1
+          echo ""
+          echo "Auto test triggered!"
+          echo "https://github.com/yaojunxiong/jimmyyao-auto-test/actions"
