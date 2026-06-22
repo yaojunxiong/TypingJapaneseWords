@@ -114,6 +114,42 @@ export default async function AdminEmailLogsPage({
   return (
     <main style={{ paddingBottom: 'calc(140px + env(safe-area-inset-bottom, 0px))' }}>
       <MinnaNav active="me" />
+      <style>{`
+@media (max-width: 767px) {
+  .el-table-wrap table,
+  .el-table-wrap tbody,
+  .el-table-wrap tr,
+  .el-table-wrap td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .el-table-wrap thead {
+    display: none;
+  }
+  .el-table-wrap tr {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    padding: 8px;
+  }
+  .el-table-wrap td {
+    border: none !important;
+    padding: 4px 6px !important;
+    maxWidth: none !important;
+    white-space: normal !important;
+    text-align: left;
+  }
+  .el-table-wrap td::before {
+    content: attr(data-label);
+    display: inline-block;
+    font-weight: 600;
+    width: 80px;
+    color: #64748b;
+    font-size: 0.75rem;
+  }
+}
+`}</style>
       <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap', marginBottom: 8 }}>
         <span style={{ fontSize: 22, lineHeight: 1 }}>📧</span>
         <h1 style={{ margin: 0, fontSize: 20, fontWeight: 800 }}>
@@ -164,7 +200,7 @@ export default async function AdminEmailLogsPage({
         </form>
       </section>
 
-      <section className="card" style={{ overflowX: 'auto' }}>
+      <section className="card el-table-wrap" style={{ overflowX: 'auto' }}>
         <p className="small" style={{ marginBottom: 8, color: '#64748b' }}>
           {tr(lang, '共', 'Total')} {totalCount} {tr(lang, '条记录', 'records')}
         </p>
@@ -187,6 +223,7 @@ export default async function AdminEmailLogsPage({
                 <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '流程定义', 'Definition')}</th>
                 <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '审批链接', 'Review')}</th>
                 <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '创建时间', 'Created')}</th>
+                <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '发送时间', 'Sent At')}</th>
                 <th style={{ padding: 6, textAlign: 'left' }}>{tr(lang, '错误信息', 'Error')}</th>
               </tr>
             </thead>
@@ -195,26 +232,28 @@ export default async function AdminEmailLogsPage({
                 const badge = statusBadge(log.status)
                 return (
                   <tr key={log.id} style={{ borderBottom: '1px solid #eee', verticalAlign: 'top' }}>
-                    <td style={{ padding: 6, fontFamily: 'monospace', fontSize: '0.75rem' }} title={log.id}>{shortId(log.id)}</td>
-                    <td style={{ padding: 6, fontFamily: 'monospace', fontSize: '0.75rem' }}>{log.notification_type}</td>
-                    <td style={{ padding: 6, fontSize: 11, fontFamily: 'monospace' }}>{log.recipient_email}</td>
-                    <td style={{ padding: 6, fontSize: 11, maxWidth: 200, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} title={log.subject}>{log.subject}</td>
-                    <td style={{ padding: 6 }}>
+                    <td style={{ padding: 6, fontFamily: 'monospace', fontSize: '0.75rem' }} data-label="日志 ID" title={log.id}>{shortId(log.id)}</td>
+                    <td style={{ padding: 6, fontFamily: 'monospace', fontSize: '0.75rem' }} data-label="通知类型">{log.notification_type}</td>
+                    <td style={{ padding: 6, fontSize: 11, fontFamily: 'monospace' }} data-label="收件人">{log.recipient_email}</td>
+                    <td style={{ padding: 6, fontSize: 11, maxWidth: 200, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} data-label="主题" title={log.subject}>{log.subject}</td>
+                    <td style={{ padding: 6 }} data-label="状态">
                       <span style={{ display: 'inline-flex', borderRadius: 999, padding: '4px 10px', fontWeight: 700, ...badge }}>{badge.label}</span>
                     </td>
-                    <td style={{ padding: 6 }}>
+                    <td style={{ padding: 6 }} data-label="关联实例">
                       {log.workflow_instance_id ? (
                         <Link href={`/admin/workflows?instanceId=${log.workflow_instance_id}`} style={{ fontFamily: 'monospace', fontSize: '0.75rem' }}>
                           {shortId(log.workflow_instance_id)}
                         </Link>
                       ) : <span style={{ fontSize: '0.75rem', color: '#94a3b8' }}>-</span>}
                     </td>
-                    <td style={{ padding: 6, fontSize: '0.75rem', fontFamily: 'monospace' }}>
+                    <td style={{ padding: 6, fontSize: '0.75rem', fontFamily: 'monospace' }} data-label="流程定义">
                       {(log.metadata as Record<string, unknown> | null)?.definitionKey
-                        ? String((log.metadata as Record<string, unknown>).definitionKey)
+                        ? <Link href={`/admin/workflows?definition_key=${String((log.metadata as Record<string, unknown>).definitionKey)}`} style={{ color: '#2563eb' }}>
+                            {String((log.metadata as Record<string, unknown>).definitionKey)}
+                          </Link>
                         : <span style={{ color: '#94a3b8' }}>-</span>}
                     </td>
-                    <td style={{ padding: 6, fontSize: '0.75rem' }}>
+                    <td style={{ padding: 6, fontSize: '0.75rem' }} data-label="审批链接">
                       {(() => {
                         const url = (log.metadata as Record<string, unknown> | null)?.reviewUrl
                         if (url && typeof url === 'string') {
@@ -223,9 +262,10 @@ export default async function AdminEmailLogsPage({
                         return <span style={{ color: '#94a3b8' }}>-</span>
                       })()}
                     </td>
-                    <td style={{ padding: 6, whiteSpace: 'nowrap', fontSize: 11 }}>{formatTokyoDateTime(log.created_at)}</td>
-                    <td style={{ padding: 6, fontSize: 11, maxWidth: 200, overflow: 'hidden', textOverflow: 'ellipsis', color: log.error_message ? '#dc2626' : '#94a3b8' }} title={log.error_message || ''}>
-                      {log.error_message || '-'}
+                    <td style={{ padding: 6, whiteSpace: 'nowrap', fontSize: 11 }} data-label="创建时间">{formatTokyoDateTime(log.created_at)}</td>
+                    <td style={{ padding: 6, whiteSpace: 'nowrap', fontSize: 11 }} data-label="发送时间">{log.sent_at ? formatTokyoDateTime(log.sent_at) : <span style={{ color: '#94a3b8' }}>—</span>}</td>
+                    <td style={{ padding: 6, fontSize: 11, maxWidth: 200, overflow: 'hidden', textOverflow: 'ellipsis', color: log.error_message ? '#dc2626' : '#94a3b8' }} data-label="错误信息" title={log.error_message || ''}>
+                      {log.status === 'failed' && !log.error_message ? tr(lang, '无错误信息', 'No error info') : log.error_message || '-'}
                     </td>
                   </tr>
                 )
