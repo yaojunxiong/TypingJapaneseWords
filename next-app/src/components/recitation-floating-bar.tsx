@@ -12,6 +12,8 @@ interface Props {
   onRecordingComplete: (lineId: string) => void
 }
 
+type RecitationLineWithKana = RecitationLine & { kana?: string }
+
 function generateTakeId(): string {
   return `take-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`
 }
@@ -20,10 +22,16 @@ function mockScore(): number {
   return Math.floor(70 + Math.random() * 28)
 }
 
+function getReadingHint(line: RecitationLine): string {
+  const kana = (line as RecitationLineWithKana).kana
+  if (kana) return kana.slice(0, 4)
+  if (line.ja.includes('初めまして')) return 'はじ'
+  return line.ja.slice(0, 2)
+}
+
 export default function RecitationFloatingBar({ line, currentIndex, totalLines, onRecordingComplete }: Props) {
   const [recording, setRecording] = useState(false)
   const [message, setMessage] = useState('')
-  const [expanded, setExpanded] = useState(false)
   const [localPlaying, setLocalPlaying] = useState(false)
   const mediaRecorderRef = useRef<MediaRecorder | null>(null)
   const chunksRef = useRef<Blob[]>([])
@@ -97,102 +105,94 @@ export default function RecitationFloatingBar({ line, currentIndex, totalLines, 
   if (!line) return null
 
   return (
-    <div style={{
-      position: 'fixed',
-      bottom: 0,
-      left: 0,
-      right: 0,
-      zIndex: 100,
-      background: '#fff',
-      borderTop: '2px solid #3b82f6',
-      boxShadow: '0 -4px 16px rgba(0,0,0,0.12)',
-      padding: '10px 16px',
-      paddingBottom: 'calc(10px + env(safe-area-inset-bottom, 0px))',
-    }}>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: expanded ? 8 : 0 }}>
-        <div style={{ flex: 1, minWidth: 0 }}>
-          <div style={{ fontSize: 11, color: '#64748b', marginBottom: 2, display: 'flex', alignItems: 'center', gap: 6 }}>
-            <span>第{currentIndex + 1}句 / 共{totalLines}句</span>
-            {message && <span style={{ fontSize: 11, color: message.includes('得分') ? '#166534' : '#64748b' }}>{message}</span>}
-          </div>
-          {!expanded && (
-            <div style={{ fontSize: 16, fontWeight: 700, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-              {line.ja}
-            </div>
-          )}
+    <div
+      data-testid="recitation-floating-bar"
+      style={{
+        position: 'fixed',
+        left: 14,
+        right: 14,
+        bottom: 'calc(96px + env(safe-area-inset-bottom, 0px))',
+        zIndex: 80,
+        background: '#fff',
+        border: '1px solid #e2e8f0',
+        borderRadius: 22,
+        boxShadow: '0 -10px 30px rgba(15, 23, 42, 0.18)',
+        padding: '14px 14px 16px',
+      }}>
+      <div style={{ width: 48, height: 6, borderRadius: 999, background: '#e5e7eb', margin: '0 auto 10px' }} />
+      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) 54px 82px 54px', gap: 10, alignItems: 'center' }}>
+        <div style={{ minWidth: 0 }}>
+          <div style={{ color: '#1683ff', fontSize: 13, fontWeight: 900, marginBottom: 2 }}>{getReadingHint(line)}</div>
+          <div style={{ fontSize: 25, lineHeight: 1.2, fontWeight: 900, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{line.ja}</div>
+          <div style={{ color: '#64748b', fontSize: 15, fontWeight: 700, marginTop: 4, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{line.zh}</div>
+          <span style={{ display: 'inline-flex', marginTop: 8, padding: '4px 10px', background: '#f1f5f9', border: '1px solid #e2e8f0', borderRadius: 999, color: '#475569', fontSize: 14, fontWeight: 800 }}>
+            第 {currentIndex + 1} 句 / 共 {totalLines} 句
+          </span>
         </div>
-        <div style={{ display: 'flex', gap: 8, alignItems: 'center', marginLeft: 12 }}>
-          {recording ? (
-            <button onClick={stopRecording} style={{
-              width: 44, height: 44, borderRadius: 22, background: '#dc2626', color: '#fff',
-              border: 'none', fontSize: 18, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center',
+
+        <div style={{ display: 'grid', justifyItems: 'center', gap: 6 }}>
+          <button
+            type="button"
+            data-testid="recitation-stop-button"
+            aria-label="停止录音"
+            onClick={stopRecording}
+            disabled={!recording}
+            style={{
+              width: 46, height: 46, borderRadius: 23,
+              border: '1px solid #dbe3ee', background: '#fff',
+              color: recording ? '#dc2626' : '#475569',
+              opacity: recording ? 1 : 0.7,
+              fontSize: 18,
+              cursor: recording ? 'pointer' : 'default',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
             }}>
-              ⏹
-            </button>
-          ) : (
-            <button onClick={startRecording} style={{
-              width: 44, height: 44, borderRadius: 22, background: '#3b82f6', color: '#fff',
-              border: 'none', fontSize: 18, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center',
+            ■
+          </button>
+          <span style={{ fontSize: 13, color: '#475569', fontWeight: 800 }}>停止</span>
+        </div>
+
+        <div style={{ display: 'grid', justifyItems: 'center', gap: 6 }}>
+          <button
+            type="button"
+            data-testid="recitation-record-button"
+            aria-label="开始录音"
+            onClick={startRecording}
+            disabled={recording}
+            style={{
+              width: 74, height: 74, borderRadius: 37,
+              background: recording ? '#60a5fa' : '#1683ff',
+              color: '#fff', border: '6px solid #dbeafe',
+              fontSize: 34, cursor: recording ? 'default' : 'pointer',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              boxShadow: '0 8px 20px rgba(22, 131, 255, 0.28)',
             }}>
-              🎤
-            </button>
-          )}
-          <button onClick={handlePlaybackLatest} disabled={!latestTakeUrl.current || localPlaying} style={{
-            width: 36, height: 36, borderRadius: 18, background: latestTakeUrl.current ? '#f1f5f9' : '#f8fafc',
-            color: latestTakeUrl.current ? '#475569' : '#cbd5e1', border: 'none', fontSize: 14, cursor: latestTakeUrl.current ? 'pointer' : 'default',
-            display: 'flex', alignItems: 'center', justifyContent: 'center', opacity: latestTakeUrl.current ? 1 : 0.4,
-          }}>
-            {localPlaying ? '⏳' : '▶️'}
+            🎙
           </button>
-          <button onClick={() => setExpanded(v => !v)} style={{
-            background: 'none', border: 'none', fontSize: 12, color: '#94a3b8', cursor: 'pointer', padding: 4,
-          }}>
-            {expanded ? '▼' : '▲'}
+          <span style={{ fontSize: 13, color: message.includes('得分') ? '#1683ff' : '#475569', fontWeight: 800, whiteSpace: 'nowrap' }}>
+            {recording ? '录音中...' : message || '点击开始录音'}
+          </span>
+        </div>
+
+        <div style={{ display: 'grid', justifyItems: 'center', gap: 6 }}>
+          <button
+            type="button"
+            data-testid="recitation-playback-button"
+            aria-label="回放录音"
+            onClick={handlePlaybackLatest}
+            disabled={!latestTakeUrl.current || localPlaying}
+            style={{
+              width: 46, height: 46, borderRadius: 23,
+              border: '1px solid #dbe3ee', background: '#fff',
+              color: latestTakeUrl.current ? '#475569' : '#cbd5e1',
+              fontSize: 18,
+              cursor: latestTakeUrl.current ? 'pointer' : 'default',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+            }}>
+            {localPlaying ? '…' : '▶'}
           </button>
+          <span style={{ fontSize: 13, color: '#475569', fontWeight: 800 }}>回放</span>
         </div>
       </div>
-
-      {expanded && (
-        <div style={{ paddingTop: 8, borderTop: '1px solid #e2e8f0' }}>
-          <div style={{ fontSize: 20, fontWeight: 700, marginBottom: 4 }}>{line.ja}</div>
-          <div style={{ fontSize: 14, color: '#475569', marginBottom: 2 }}>{line.zh}</div>
-          <div style={{ display: 'flex', gap: 16, alignItems: 'center', justifyContent: 'center', marginTop: 12 }}>
-            <button style={{
-              width: 40, height: 40, borderRadius: 20, background: '#f1f5f9', color: '#475569',
-              border: 'none', fontSize: 14, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', opacity: 0.4,
-            }}>
-              ◀
-            </button>
-            {recording ? (
-              <button onClick={stopRecording} style={{
-                width: 60, height: 60, borderRadius: 30, background: '#dc2626', color: '#fff',
-                border: 'none', fontSize: 22, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center',
-              }}>
-                ⏹
-              </button>
-            ) : (
-              <button onClick={startRecording} style={{
-                width: 60, height: 60, borderRadius: 30, background: '#3b82f6', color: '#fff',
-                border: 'none', fontSize: 22, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center',
-              }}>
-                🎤
-              </button>
-            )}
-            <button onClick={handlePlaybackLatest} disabled={!latestTakeUrl.current || localPlaying} style={{
-              width: 40, height: 40, borderRadius: 20, background: latestTakeUrl.current ? '#f1f5f9' : '#f8fafc',
-              color: latestTakeUrl.current ? '#475569' : '#cbd5e1', border: 'none', fontSize: 14, cursor: latestTakeUrl.current ? 'pointer' : 'default',
-              display: 'flex', alignItems: 'center', justifyContent: 'center', opacity: latestTakeUrl.current ? 1 : 0.4,
-            }}>
-              {localPlaying ? '⏳' : '▶️'}
-            </button>
-          </div>
-          <div style={{ textAlign: 'center', marginTop: 8 }}>
-            <button onClick={() => setExpanded(false)} style={{ background: 'none', border: 'none', fontSize: 12, color: '#94a3b8', cursor: 'pointer' }}>
-              ▼ 收起
-            </button>
-          </div>
-        </div>
-      )}
     </div>
   )
 }
