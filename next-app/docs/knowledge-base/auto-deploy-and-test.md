@@ -51,6 +51,29 @@ push 到 `master` 分支，且变更涉及 `next-app/` 目录下的以下文件�
 
 ## 最新通过记录
 
+### Auto Test #59（P1-4 email_logs 体验优化）
+
+| 维度 | 结果 |
+|------|------|
+| **next-app commit** | `95b8d5e` |
+| **jimmyyao-auto-test commit** | `eb1e0a7` |
+| **Smoke test** | ✅ PASSED (4/4) |
+| **@study** | ✅ PASSED (3/8) |
+| **@admin-auth** | ✅ PASSED (14/14) |
+| **@normal-user-e2e** | ✅ PASSED (5/5) |
+| **P0 core (@p0)** | ✅ PASSED (18/18) |
+| **P1-4a 页面字段检查** | ✅ PASSED — 包含状态筛选、definitionKey、发送时间、错误信息 |
+| **P1-4b status=failed 筛选** | ✅ PASSED — 返回 200，含发送失败或空状态 |
+| **report.md** | ✅ 包含 P1-4a/b 明细 |
+| **regression test** | ✅ 全绿 |
+| **修改文件** | `next-app/src/app/admin/email-logs/page.tsx` |
+
+**变更内容**：
+- definitionKey 可点击 → `/admin/workflows?definition_key=...`
+- 增加 `sent_at` 列（发送时间）
+- failed 无错误信息时显示"无错误信息"
+- 移动端 card 布局（data-label + @media < 768px）
+
 ### P1-3 路由清理审查（2026-06-22）
 
 审计 `/learn`, `/courses`, `/course`, `/study` 旧路由：
