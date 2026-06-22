@@ -10,6 +10,7 @@ interface Props {
   currentIndex: number
   totalLines: number
   onRecordingComplete: (lineId: string) => void
+  onRecordingStateChange?: (recording: boolean) => void
 }
 
 type RecitationLineWithKana = RecitationLine & { kana?: string }
@@ -29,7 +30,7 @@ function getReadingHint(line: RecitationLine): string {
   return line.ja.slice(0, 2)
 }
 
-export default function RecitationFloatingBar({ line, currentIndex, totalLines, onRecordingComplete }: Props) {
+export default function RecitationFloatingBar({ line, currentIndex, totalLines, onRecordingComplete, onRecordingStateChange }: Props) {
   const [recording, setRecording] = useState(false)
   const [message, setMessage] = useState('')
   const [localPlaying, setLocalPlaying] = useState(false)
@@ -43,6 +44,10 @@ export default function RecitationFloatingBar({ line, currentIndex, totalLines, 
     setLocalPlaying(false)
     latestTakeUrl.current = null
   }, [line?.lineId])
+
+  useEffect(() => {
+    onRecordingStateChange?.(recording)
+  }, [recording, onRecordingStateChange])
 
   const startRecording = useCallback(async () => {
     if (!line) return

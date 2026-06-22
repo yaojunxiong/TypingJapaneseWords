@@ -6,6 +6,10 @@ export interface RecitationLine {
   ja: string
   zh: string
   originalAudioUrl?: string
+  ttsAudioUrl?: string
+  audioType?: 'voicevox-fallback'
+  ttsVoiceType?: 'female' | 'male' | 'neutral'
+  ttsSpeakerLabel?: string
   explanationLinks?: string[]
   vocabularyLinks?: string[]
   grammarLinks?: string[]

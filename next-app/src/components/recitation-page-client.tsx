@@ -50,12 +50,12 @@ function Waveform({ seed, active = false }: { seed: string; active?: boolean }) 
 }
 
 function CompactLineItem({
-  line, lessonNo, isActive, onActivate, takesRefreshKey, onBestTakeChange,
+  line, lessonNo, isActive, onPlayOriginal, takesRefreshKey, onBestTakeChange,
 }: {
   line: RecitationLine
   lessonNo: number
   isActive: boolean
-  onActivate: (lineId: string) => void
+  onPlayOriginal: (line: RecitationLine) => void
   takesRefreshKey: number
   onBestTakeChange: (lineId: string, takeId: string | null) => void
 }) {
@@ -87,20 +87,15 @@ function CompactLineItem({
     })
   }, [line.lineId, takesRefreshKey, onBestTakeChange])
 
-  const playOriginal = useCallback(() => {
-    if (!line.originalAudioUrl) return
-    const audio = new Audio(line.originalAudioUrl)
-    audio.play().catch(() => {})
-  }, [line.originalAudioUrl])
-
   const isCompleted = takes.length > 0 && selectedBestId !== null
   const hasOriginalAudio = Boolean(line.originalAudioUrl)
+  const hasPlayableAudio = Boolean(line.originalAudioUrl || line.ttsAudioUrl)
 
   return (
     <div
       data-testid="recitation-line-row"
       data-line-order={line.order}
-      onClick={() => onActivate(line.lineId)}
+      onClick={() => onPlayOriginal(line)}
       style={{
         borderBottom: '1px solid #e5e7eb',
         background: isActive ? 'linear-gradient(90deg, #e8f6ff, #f5fbff)' : '#fff',
@@ -125,16 +120,15 @@ function CompactLineItem({
         <button
           type="button"
           data-testid="recitation-original-audio-button"
-          aria-label="播放原音"
-          disabled={!hasOriginalAudio}
-          onClick={(e) => { e.stopPropagation(); playOriginal() }}
+          aria-label={hasOriginalAudio ? '播放原音' : '播放合成练习音'}
+          onClick={(e) => { e.stopPropagation(); onPlayOriginal(line) }}
           style={{
             width: 28, height: 28, borderRadius: 14,
             border: `1px solid ${isActive ? '#1683ff' : '#cbd5e1'}`,
             background: '#fff', color: isActive ? '#1683ff' : '#475569',
-            opacity: hasOriginalAudio ? 1 : 0.75,
+            opacity: hasPlayableAudio ? 1 : 0.75,
             display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-            fontSize: 14, cursor: hasOriginalAudio ? 'pointer' : 'default',
+            fontSize: 14, cursor: 'pointer',
           }}>
           🔊
         </button>
@@ -146,7 +140,7 @@ function CompactLineItem({
             <button className="btn ghost small" onClick={(e) => { e.stopPropagation(); setShowZh(v => !v) }} style={{ background: '#fff', color: '#0f172a', border: '1px solid #dbe3ee', borderRadius: 10, padding: '8px 3px', fontSize: 12, whiteSpace: 'nowrap' }}>
               中文提示
             </button>
-            <button className="btn ghost small" disabled={!hasOriginalAudio} onClick={(e) => { e.stopPropagation(); playOriginal() }} style={{ background: '#fff', color: '#0f172a', border: '1px solid #dbe3ee', borderRadius: 10, padding: '8px 3px', fontSize: 12, whiteSpace: 'nowrap', opacity: hasOriginalAudio ? 1 : 0.65 }}>
+            <button className="btn ghost small" onClick={(e) => { e.stopPropagation(); onPlayOriginal(line) }} style={{ background: '#fff', color: '#0f172a', border: '1px solid #dbe3ee', borderRadius: 10, padding: '8px 3px', fontSize: 12, whiteSpace: 'nowrap', opacity: hasPlayableAudio ? 1 : 0.65 }}>
               原音
             </button>
             <button className="btn ghost small" onClick={(e) => { e.stopPropagation(); setShowExplanation(v => !v) }} style={{ background: '#fff', color: '#0f172a', border: '1px solid #dbe3ee', borderRadius: 10, padding: '8px 3px', fontSize: 12, whiteSpace: 'nowrap' }}>
@@ -369,6 +363,10 @@ export default function RecitationPageClient({ lessonNo }: Props) {
   const [overallMessage, setOverallMessage] = useState('')
   const [activeLineId, setActiveLineId] = useState<string | null>(null)
   const [takesRefreshKey, setTakesRefreshKey] = useState(0)
+  const [isRecording, setIsRecording] = useState(false)
+  const [notice, setNotice] = useState('')
+  const originalAudioRef = useRef<HTMLAudioElement | null>(null)
+  const noticeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   useEffect(() => {
     loadRecitationLesson(lessonNo).then((data) => {
@@ -400,6 +398,55 @@ export default function RecitationPageClient({ lessonNo }: Props) {
       return next
     })
   }, [])
+
+  const showNotice = useCallback((message: string) => {
+    setNotice(message)
+    if (noticeTimerRef.current) clearTimeout(noticeTimerRef.current)
+    noticeTimerRef.current = setTimeout(() => setNotice(''), 1800)
+  }, [])
+
+  const stopOriginalAudio = useCallback(() => {
+    if (!originalAudioRef.current) return
+    originalAudioRef.current.pause()
+    originalAudioRef.current.currentTime = 0
+    originalAudioRef.current = null
+  }, [])
+
+  const handlePlayOriginal = useCallback((line: RecitationLine) => {
+    if (isRecording) {
+      showNotice('当前正在录音，请先停止或完成本句')
+      return
+    }
+
+    stopOriginalAudio()
+    setActiveLineId(line.lineId)
+
+    const audioUrl = line.originalAudioUrl || line.ttsAudioUrl
+    if (!audioUrl) {
+      showNotice('暂无原音')
+      return
+    }
+
+    if (!line.originalAudioUrl && line.ttsAudioUrl) {
+      showNotice('正在播放合成练习音')
+    }
+
+    const audio = new Audio(audioUrl)
+    originalAudioRef.current = audio
+    audio.onended = () => {
+      if (originalAudioRef.current === audio) originalAudioRef.current = null
+    }
+    audio.play().catch(() => {
+      if (originalAudioRef.current === audio) originalAudioRef.current = null
+    })
+  }, [isRecording, showNotice, stopOriginalAudio])
+
+  useEffect(() => {
+    return () => {
+      stopOriginalAudio()
+      if (noticeTimerRef.current) clearTimeout(noticeTimerRef.current)
+    }
+  }, [stopOriginalAudio])
 
   const allCompleted = lesson !== null && lesson.lines.length > 0 && lesson.lines.every(l => bestTakes.has(l.lineId))
 
@@ -464,6 +511,12 @@ export default function RecitationPageClient({ lessonNo }: Props) {
         </div>
       </section>
 
+      {notice && (
+        <div role="status" aria-live="polite" style={{ position: 'fixed', left: '50%', top: 16, transform: 'translateX(-50%)', zIndex: 120, padding: '8px 14px', borderRadius: 999, background: '#0f172a', color: '#fff', fontSize: 13, fontWeight: 800, boxShadow: '0 10px 24px rgba(15, 23, 42, 0.18)' }}>
+          {notice}
+        </div>
+      )}
+
       <section data-testid="recitation-conversation-list" style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 18, overflow: 'hidden', boxShadow: '0 10px 28px rgba(15, 23, 42, 0.05)' }}>
         <div style={{ padding: '14px 16px', borderBottom: '1px solid #e5e7eb', fontSize: 18, fontWeight: 900 }}>
           逐句背诵 · 第 {activeIndex + 1} 句 / 共 {lesson.lines.length} 句
@@ -474,7 +527,7 @@ export default function RecitationPageClient({ lessonNo }: Props) {
             line={line}
             lessonNo={lessonNo}
             isActive={activeLineId === line.lineId}
-            onActivate={setActiveLineId}
+            onPlayOriginal={handlePlayOriginal}
             takesRefreshKey={takesRefreshKey}
             onBestTakeChange={handleBestTakeChange}
           />
@@ -510,6 +563,7 @@ export default function RecitationPageClient({ lessonNo }: Props) {
         currentIndex={activeIndex}
         totalLines={lesson.lines.length}
         onRecordingComplete={handleRecordingComplete}
+        onRecordingStateChange={setIsRecording}
       />
       <RecitationBottomNav />
     </div>
