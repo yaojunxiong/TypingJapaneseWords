@@ -106,4 +106,4 @@ updated_at timestamptz
 ### P1 候选任务
 
 1. ~~**/learn /courses 路由清理** — 确认过期/无效路由已移除或重定向~~ ✅ P1-3 已关闭，无需修改
-2. **email_logs 快速筛选与失败详情** — 按状态/收件人筛选，失败记录展示错误原因
+2. ~~**email_logs 快速筛选与失败详情** — 按状态/收件人筛选，失败记录展示错误原因~~ ✅ P1-4 已关闭（definitionKey 可点击、sent_at、error 展示、移动端优化）

@@ -170,3 +170,14 @@ push 到 `master` 分支，且变更涉及 `next-app/` 目录下的以下文件�
 | report.md | ✅ 已生成，P0 显示 PASSED |
 | RLS violation | ❌ 未出现 |
 | `invalid input syntax for type uuid` | ❌ 未出现 |
+
+---
+
+## P1 关闭状态
+
+| 任务 | 状态 | 说明 |
+|------|------|------|
+| P1-1 移动端截图基线 | ✅ 已关闭 | Auto Test #56, commit `c37791b` |
+| P1-2 状态文案语义检查 | ✅ 已关闭 | Auto Test #57, commit `83d2ae8` |
+| P1-3 /learn /courses 路由清理 | ✅ 已关闭 | 审查确认无需修改代码 |
+| P1-4 email_logs 体验优化 | ✅ 已关闭 | Auto Test #59, commit `95b8d5e` / `eb1e0a7` |
