@@ -24,7 +24,8 @@ push 到 `master` 分支，且变更涉及 `next-app/` 目录下的以下文件�
 
 3. **触发集成测试**
    - 通过 `workflow_dispatch` 触发 `yaojunxiong/jimmyyao-auto-test` 的 `test.yml`
-   - 执行 `@smoke` / `@study` / `@admin-auth` / `@normal-user-e2e` 全量回归
+   - 执行 `@smoke` / `@study` / `@admin-auth` / `@normal-user-e2e` / `@p0` / `@mobile-visual` 全量回归
+   - P0 包含 16 项测试（P0-1~P0-6i + P1-2a/b）
 
 ## 所需 Secrets
 
@@ -49,6 +50,23 @@ push 到 `master` 分支，且变更涉及 `next-app/` 目录下的以下文件�
 3. 确认 Vercel 部署和测试均通过
 
 ## 最新通过记录
+
+### Auto Test #57（P1-2 状态文案语义检查）
+
+| 维度 | 结果 |
+|------|------|
+| **pipeline commit** | —（未触发 auto-deploy，仅 auto-test 推送） |
+| **jimmyyao-auto-test commit** | `83d2ae8` |
+| **Smoke test** | ✅ PASSED (4/4) |
+| **@study** | ✅ PASSED (3/8) |
+| **@admin-auth** | ✅ PASSED (14/14) |
+| **@normal-user-e2e** | ✅ PASSED (5/5) |
+| **P0 core (@p0)** | ✅ PASSED (16/16) |
+| **P1-2a workflow 标签** | ✅ PASSED — workflow 页面不含 `待发送`，含有 `待确认/已确认/已驳回/已完成` |
+| **P1-2b email 标签** | ✅ PASSED — email 页面不含 `待确认`，含有 `待发送/已发送/发送失败` |
+| **report.md** | ✅ 包含 P1-2a/b 明细 |
+| **regression test** | ✅ 全绿 |
+| **artifacts** | ✅ `regression-report`、`pw-json`、`regression-test-artifacts` |
 
 ### Auto Test #56（P1-1 移动端截图基线）
 
