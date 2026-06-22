@@ -181,3 +181,42 @@ push 到 `master` 分支，且变更涉及 `next-app/` 目录下的以下文件�
 | P1-2 状态文案语义检查 | ✅ 已关闭 | Auto Test #57, commit `83d2ae8` |
 | P1-3 /learn /courses 路由清理 | ✅ 已关闭 | 审查确认无需修改代码 |
 | P1-4 email_logs 体验优化 | ✅ 已关闭 | Auto Test #59, commit `95b8d5e` / `eb1e0a7` |
+
+---
+
+## P2 进行中
+
+| 任务 | 状态 | 说明 |
+|------|------|------|
+| P2-1 会话背诵 V2 | 🔄 开发中（代码完成，待 CI 验证） | 见下方 |
+
+### P2-1 会话背诵 V2
+
+**目标**：构建独立的新版背诵模块 `/lessons/[lessonNo]/recitation`，逐句录音 → 多版本管理 → 最佳选择 → 完整音频生成。
+
+**实现方式**：
+- 新路由 `/lessons/[lessonNo]/recitation`，入口卡在课程页（`NEXT_PUBLIC_RECITATION_V2_ENABLED=true` 时显示）
+- 数据：`src/data/minna/recitation/lesson-01.json`（Lesson 1 会话数据）
+- 类型：`src/types/recitation.ts`（RecitationLine/RecitationTake/RecitationSession）
+- 存储：`src/lib/recitation-storage.ts` — IndexedDB 存储录音版本
+- 组件：
+  - `RecitationLineCard` — 单句录音卡（录音/停止/播放/选择最佳/删除）
+  - `RecitationPageClient` — 整页容器（进度监控 + 完整音频生成按钮）
+  - `RecitationV2Entry` — 课程页入口卡（admin only 隐藏）
+- 评分：mock（70-97 随机分），后续集成真实语音评分
+
+**自动测试（P2-1a~h）**：
+| 测试 | 验证内容 |
+|------|----------|
+| P2-1a | 课程页入口卡可见 |
+| P2-1b | recitation 页加载正常，按钮可见 |
+| P2-1c | fake mic 录音、停止、评分展示 |
+| P2-1d | 多次录音 → 显示多个版本 |
+| P2-1e | 手动选择最佳版本 |
+| P2-1f | 删除录音版本 |
+| P2-1g | 完成部分句子后界面正常 |
+| P2-1h | feature flag 控制可见性 |
+
+**部署**：
+- feature flag `NEXT_PUBLIC_RECITATION_V2_ENABLED` 需在 Vercel 环境变量中设为 `true`
+- fixture: `tests/fixtures/audio/lesson1/l1-line*-good.wav`（VOICEVOX 风格，Python 生成）

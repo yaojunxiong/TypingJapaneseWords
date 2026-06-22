@@ -6,6 +6,7 @@ import TopLabelSync from '@/components/top-label-sync'
 import LessonCheckinButton from '@/components/lesson-checkin-button'
 import LessonVideoFollowPlayer from '@/components/lesson-video-follow-player'
 import LessonConfirmAction from '@/components/lesson-confirm-action'
+import RecitationV2Entry from '@/components/recitation-v2-entry'
 import { LESSONS_1_50 } from '@/lib/minna-lessons'
 import { getLang, type Lang, tr } from '@/lib/i18n-server'
 
@@ -236,7 +237,9 @@ export default async function LessonDetailPage({
             </Link>
           )
         })}
-      </section>
+        </section>
+
+      <RecitationV2Entry lessonNo={no} lang={lang} />
 
       {lesson?.conversationVideo?.videoUrl ? (
         <section className="card" style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
