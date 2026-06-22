@@ -86,7 +86,18 @@ updated_at timestamptz
 
 ### ✅ P0-1: Vercel 双项目误部署风险 — 已关闭
 ### ✅ P0-2: 匿名 study_visitor 流程触发 — 已关闭 (Auto Test #52)
+### ✅ P0-3: RLS / 普通用户负向权限测试 — 已关闭 (Auto Test #55, commit `024bcea`)
+
+修改范围：仅 `jimmyyao-auto-test/tests/sites/p0-core.spec.ts`（+234 行）
+- P0-6a~d: 匿名用户不能访问 4 个 admin 页面
+- P0-6e~h: 普通用户不能访问 4 个 admin 页面（无确认/驳回按钮、无 admin email、无真实数据）
+- P0-6i: 匿名 API 调用被拦截（404/401）
 
 ## 6. 下一步建议
 
-- P0-3: RLS / 普通用户负向权限测试
+### P1 候选任务
+
+1. **移动端截图/底部导航遮挡视觉基线** — 确认 iPhone / Android 下底部导航不遮挡内容区域
+2. **pending / sent / failed 文案语义统一** — 审核状态、邮件状态、流程状态文案一致性检查
+3. **/learn /courses 路由清理** — 确认过期/无效路由已移除或重定向
+4. **email_logs 快速筛选与失败详情** — 按状态/收件人筛选，失败记录展示错误原因

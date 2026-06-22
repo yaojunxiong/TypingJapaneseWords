@@ -50,6 +50,29 @@ push 到 `master` 分支，且变更涉及 `next-app/` 目录下的以下文件�
 
 ## 最新通过记录
 
+### Auto Test #55（P0-3 RLS / 普通用户负向权限测试）
+
+| 维度 | 结果 |
+|------|------|
+| **next-app commit** | `22c3fff`（docs-only） |
+| **jimmyyao-auto-test commit** | `024bcea` |
+| Smoke test | ✅ PASSED |
+| Study tests (unauthenticated) | ✅ PASSED (3/8) |
+| @admin-auth | ✅ PASSED (14/14) |
+| @normal-user-e2e | ✅ PASSED (5/5) |
+| P0 core (@p0) | ✅ PASSED (14/14) |
+| P0-6a 匿名→/admin/activity | ✅ PASSED |
+| P0-6b 匿名→/admin/visitors | ✅ PASSED |
+| P0-6c 匿名→/admin/workflows | ✅ PASSED |
+| P0-6d 匿名→/admin/email-logs | ✅ PASSED |
+| P0-6e 普通用户→/admin/activity | ✅ PASSED |
+| P0-6f 普通用户→/admin/visitors | ✅ PASSED |
+| P0-6g 普通用户→/admin/workflows | ✅ PASSED |
+| P0-6h 普通用户→/admin/email-logs | ✅ PASSED |
+| P0-6i 匿名 API 拦截 | ✅ PASSED |
+| report.md | ✅ 包含 P0-6 完整明细 |
+| regression test | ✅ 全绿 |
+
 ### Auto Test #52（P0-2 匿名 study_visitor 生产闭环验证）
 
 | 维度 | 结果 |
