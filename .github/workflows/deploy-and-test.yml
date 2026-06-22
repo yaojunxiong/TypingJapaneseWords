@@ -18,36 +18,39 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          VERCEL_ENV="Production – next-app"
           SHA="${{ github.sha }}"
           REPO="${{ github.repository }}"
-          echo "Waiting for Vercel deployment ($VERCEL_ENV) for commit ${SHA:0:8}..."
+          # Vercel environment names have changed over time; try all known candidates
+          ENV_NAMES=("Production" "Production – next-app" "Production – typing-japanese-words")
+          echo "Waiting for Vercel deployment for commit ${SHA:0:8}..."
+          echo "Candidate environments: ${ENV_NAMES[*]}"
 
           for i in $(seq 1 60); do
-            DEPLOY_ID=$(gh api "repos/${REPO}/deployments" \
-              --jq "[.[] | select(.sha == \"$SHA\" and .environment == \"$VERCEL_ENV\")][0].id")
+            for VERCEL_ENV in "${ENV_NAMES[@]}"; do
+              DEPLOY_ID=$(gh api "repos/${REPO}/deployments" \
+                --jq "[.[] | select(.sha == \"$SHA\" and .environment == \"$VERCEL_ENV\")][0].id")
 
-            if [ -n "$DEPLOY_ID" ] && [ "$DEPLOY_ID" != "null" ]; then
-              STATE=$(gh api "repos/${REPO}/deployments/${DEPLOY_ID}/statuses" \
-                --jq "[.[] | select(.environment == \"$VERCEL_ENV\")][0].state")
+              if [ -n "$DEPLOY_ID" ] && [ "$DEPLOY_ID" != "null" ]; then
+                STATE=$(gh api "repos/${REPO}/deployments/${DEPLOY_ID}/statuses" \
+                  --jq "[.[] | select(.environment == \"$VERCEL_ENV\")][0].state")
 
-              if [ -n "$STATE" ] && [ "$STATE" != "null" ]; then
-                echo "Attempt $i/60: state=$STATE"
+                if [ -n "$STATE" ] && [ "$STATE" != "null" ]; then
+                  echo "Attempt $i/60: env=$VERCEL_ENV state=$STATE"
 
-                if [ "$STATE" = "success" ]; then
-                  echo "Vercel production deployment completed!"
-                  exit 0
-                fi
+                  if [ "$STATE" = "success" ]; then
+                    echo "Vercel production deployment completed!"
+                    exit 0
+                  fi
 
-                if [ "$STATE" = "failure" ] || [ "$STATE" = "error" ]; then
-                  echo "Vercel deployment failed (state=$STATE)"
-                  exit 1
+                  if [ "$STATE" = "failure" ] || [ "$STATE" = "error" ]; then
+                    echo "Vercel deployment failed (env=$VERCEL_ENV state=$STATE)"
+                    exit 1
+                  fi
                 fi
               fi
-            else
-              echo "Attempt $i/60: deployment not yet created by Vercel..."
-            fi
+            done
 
+            echo "Attempt $i/60: deployment not yet created by Vercel..."
             sleep 15
           done
 
