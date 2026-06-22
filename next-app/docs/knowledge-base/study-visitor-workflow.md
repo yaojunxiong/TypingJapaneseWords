@@ -95,9 +95,16 @@ updated_at timestamptz
 
 ## 6. 下一步建议
 
+### ✅ P1-1: 移动端截图基线 — 已关闭 (Auto Test #56, commit `c37791b`)
+
+修改范围：`jimmyyao-auto-test/tests/sites/mobile-visual-baseline.spec.ts` + `.github/workflows/test.yml`
+- 7 个页面的 iPhone 14 (390×844) 截图
+- 检查 404、内容可见、底部导航遮挡、表格溢出
+- warning 不自动 fail，仅 console.log 记录 + 保存截图
+- 截图保存在 `regression-test-artifacts/test-results/screenshots/mobile/*.png`
+
 ### P1 候选任务
 
-1. **移动端截图/底部导航遮挡视觉基线** — 确认 iPhone / Android 下底部导航不遮挡内容区域
-2. **pending / sent / failed 文案语义统一** — 审核状态、邮件状态、流程状态文案一致性检查
-3. **/learn /courses 路由清理** — 确认过期/无效路由已移除或重定向
-4. **email_logs 快速筛选与失败详情** — 按状态/收件人筛选，失败记录展示错误原因
+1. **pending / sent / failed 文案语义统一** — 审核状态、邮件状态、流程状态文案一致性检查
+2. **/learn /courses 路由清理** — 确认过期/无效路由已移除或重定向
+3. **email_logs 快速筛选与失败详情** — 按状态/收件人筛选，失败记录展示错误原因

@@ -50,6 +50,32 @@ push 到 `master` 分支，且变更涉及 `next-app/` 目录下的以下文件�
 
 ## 最新通过记录
 
+### Auto Test #56（P1-1 移动端截图基线）
+
+| 维度 | 结果 |
+|------|------|
+| **pipeline commit** | `c37791b` |
+| **Smoke test** | ✅ PASSED (4/4) |
+| **@study** | ✅ PASSED (3/8) |
+| **@admin-auth** | ✅ PASSED (14/14) |
+| **@normal-user-e2e** | ✅ PASSED (5/5) |
+| **P0 core (@p0)** | ✅ PASSED (14/14) |
+| **P1-1 Mobile visual baseline (@mobile-visual)** | ✅ PASSED (7/7) |
+| **report.md** | ✅ 包含 P1-1 明细 |
+| **regression test** | ✅ 全绿 |
+| **artifacts** | ✅ `regression-test-artifacts`（含 mobile 截图）、`pw-json`、`regression-report` |
+
+覆盖页面（390×844 iPhone 14 视口）：
+- `/lessons`、`/lessons/1`、`/toolbox`（公开页）
+- `/admin/workflows`、`/admin/activity`、`/admin/visitors`、`/admin/email-logs`（admin 页）
+
+检查项：
+- 页面不是 404 ✅
+- 主要内容可见 ✅
+- 底部导航不遮挡主要操作 ✅
+- 无表格横向严重溢出 ✅
+- warning 不自动 fail，仅 console.log 记录
+
 ### Auto Test #55（P0-3 RLS / 普通用户负向权限测试）
 
 | 维度 | 结果 |
