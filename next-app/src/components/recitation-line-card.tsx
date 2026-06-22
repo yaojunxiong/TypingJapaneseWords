@@ -8,6 +8,10 @@ import { getBestTake } from '@/lib/recitation-lesson'
 interface Props {
   line: RecitationLine
   lessonNo: number
+  isActive?: boolean
+  onActivate?: (lineId: string) => void
+  showInlineControls?: boolean
+  takesRefreshKey?: number
   onBestTakeChange: (lineId: string, takeId: string | null) => void
 }
 
@@ -19,7 +23,9 @@ function mockScore(): number {
   return Math.floor(70 + Math.random() * 28)
 }
 
-export default function RecitationLineCard({ line, lessonNo, onBestTakeChange }: Props) {
+export default function RecitationLineCard({
+  line, lessonNo, isActive, onActivate, showInlineControls = true, takesRefreshKey = 0, onBestTakeChange,
+}: Props) {
   const [showZh, setShowZh] = useState(false)
   const [showAnswer, setShowAnswer] = useState(false)
   const [showExplanation, setShowExplanation] = useState(false)
@@ -33,7 +39,7 @@ export default function RecitationLineCard({ line, lessonNo, onBestTakeChange }:
 
   useEffect(() => {
     getTakesByLine(line.lineId).then(setTakes)
-  }, [line.lineId])
+  }, [line.lineId, takesRefreshKey])
 
   const loadTakes = useCallback(async () => {
     const ts = await getTakesByLine(line.lineId)
@@ -129,17 +135,20 @@ export default function RecitationLineCard({ line, lessonNo, onBestTakeChange }:
   const isCompleted = takes.length > 0 && selectedBestId !== null
 
   return (
-    <div style={{
-      border: `1px solid ${isCompleted ? '#86efac' : '#e2e8f0'}`,
-      borderRadius: 12,
-      padding: 14,
-      marginBottom: 10,
-      background: isCompleted ? '#f0fdf4' : '#fff',
-      transition: 'all 0.2s',
-    }}>
+    <div
+      onClick={() => onActivate?.(line.lineId)}
+      style={{
+        border: `2px solid ${isActive ? '#3b82f6' : isCompleted ? '#86efac' : '#e2e8f0'}`,
+        borderRadius: 12,
+        padding: 14,
+        marginBottom: 10,
+        background: isActive ? '#eff6ff' : isCompleted ? '#f0fdf4' : '#fff',
+        cursor: onActivate ? 'pointer' : 'default',
+        transition: 'all 0.2s',
+      }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 6 }}>
         <div>
-          <span style={{ fontWeight: 600, fontSize: 13, color: '#64748b' }}>{line.order}. {line.speaker}</span>
+          <span style={{ fontWeight: 600, fontSize: 13, color: isActive ? '#2563eb' : '#64748b' }}>{line.order}. {line.speaker}</span>
           <p style={{ margin: '4px 0 0', fontSize: 16, fontWeight: 700 }}>{line.ja}</p>
         </div>
         <div style={{ display: 'flex', gap: 4, flexWrap: 'wrap', justifyContent: 'flex-end' }}>
@@ -179,20 +188,24 @@ export default function RecitationLineCard({ line, lessonNo, onBestTakeChange }:
         </div>
       )}
 
-      <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginTop: 8 }}>
-        {recording ? (
-          <button className="btn" onClick={stopRecording} style={{ background: '#dc2626', color: '#fff' }}>
-            ⏹ 停止录音
-          </button>
-        ) : (
-          <button className="btn" onClick={startRecording}>
-            🎤 开始录音
-          </button>
-        )}
-      </div>
+      {showInlineControls && (
+        <>
+          <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginTop: 8 }}>
+            {recording ? (
+              <button className="btn" onClick={stopRecording} style={{ background: '#dc2626', color: '#fff' }}>
+                ⏹ 停止录音
+              </button>
+            ) : (
+              <button className="btn" onClick={startRecording}>
+                🎤 开始录音
+              </button>
+            )}
+          </div>
 
-      {message && (
-        <div style={{ fontSize: 12, color: '#64748b', marginTop: 6 }}>{message}</div>
+          {message && (
+            <div style={{ fontSize: 12, color: '#64748b', marginTop: 6 }}>{message}</div>
+          )}
+        </>
       )}
 
       {takes.length > 0 && (

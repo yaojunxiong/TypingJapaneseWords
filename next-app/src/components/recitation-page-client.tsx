@@ -2,12 +2,24 @@
 
 import { useCallback, useEffect, useState } from 'react'
 import type { RecitationLesson } from '@/types/recitation'
-import { loadRecitationLesson, getRecitationEnabled } from '@/lib/recitation-lesson'
+import { loadRecitationLesson } from '@/lib/recitation-lesson'
 import RecitationLineCard from '@/components/recitation-line-card'
+import RecitationFloatingBar from '@/components/recitation-floating-bar'
 import Link from 'next/link'
 
 interface Props {
   lessonNo: number
+}
+
+function useMobileDetect(): boolean {
+  const [isMobile, setIsMobile] = useState(false)
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768)
+    check()
+    window.addEventListener('resize', check)
+    return () => window.removeEventListener('resize', check)
+  }, [])
+  return isMobile
 }
 
 export default function RecitationPageClient({ lessonNo }: Props) {
@@ -16,11 +28,17 @@ export default function RecitationPageClient({ lessonNo }: Props) {
   const [bestTakes, setBestTakes] = useState<Map<string, string | null>>(new Map())
   const [overallMessage, setOverallMessage] = useState('')
   const [showMonitor, setShowMonitor] = useState(false)
+  const [activeLineId, setActiveLineId] = useState<string | null>(null)
+  const [takesRefreshKey, setTakesRefreshKey] = useState(0)
+  const isMobile = useMobileDetect()
 
   useEffect(() => {
     loadRecitationLesson(lessonNo).then((data) => {
       setLesson(data)
       setLoading(false)
+      if (data?.lines?.[0]) {
+        setActiveLineId(data.lines[0].lineId)
+      }
     })
   }, [lessonNo])
 
@@ -36,12 +54,24 @@ export default function RecitationPageClient({ lessonNo }: Props) {
     })
   }, [])
 
+  const handleRecordingComplete = useCallback((lineId: string) => {
+    setTakesRefreshKey(k => k + 1)
+    setBestTakes(prev => {
+      const next = new Map(prev)
+      next.set(lineId, 'pending')
+      return next
+    })
+  }, [])
+
   const allCompleted = lesson !== null && lesson.lines.length > 0 && lesson.lines.every(l => bestTakes.has(l.lineId))
 
   const handleGenerateFull = useCallback(() => {
     if (!lesson) return
     setOverallMessage('完整音频已生成（演示功能）')
   }, [lesson])
+
+  const activeLine = lesson?.lines.find(l => l.lineId === activeLineId) || null
+  const activeIndex = lesson?.lines.findIndex(l => l.lineId === activeLineId) ?? -1
 
   if (loading) {
     return (
@@ -64,7 +94,11 @@ export default function RecitationPageClient({ lessonNo }: Props) {
   }
 
   return (
-    <div className="page-container" style={{ maxWidth: 820, margin: '0 auto', padding: '20px 16px' }}>
+    <div className="page-container" style={{
+      maxWidth: 820, margin: '0 auto',
+      padding: '20px 16px',
+      paddingBottom: isMobile ? '80px' : '20px',
+    }}>
       <div style={{ marginBottom: 20 }}>
         <Link href={`/lessons/${lessonNo}`} style={{ color: '#2563eb', fontSize: 14 }}>
           ← 返回 {lesson.conversationTitle}
@@ -103,6 +137,10 @@ export default function RecitationPageClient({ lessonNo }: Props) {
             key={line.lineId}
             line={line}
             lessonNo={lessonNo}
+            isActive={activeLineId === line.lineId}
+            onActivate={setActiveLineId}
+            showInlineControls={!isMobile}
+            takesRefreshKey={takesRefreshKey}
             onBestTakeChange={handleBestTakeChange}
           />
         ))}
@@ -135,6 +173,15 @@ export default function RecitationPageClient({ lessonNo }: Props) {
           <li>完成所有句子后生成完整会话音频</li>
         </ul>
       </div>
+
+      {isMobile && (
+        <RecitationFloatingBar
+          line={activeLine}
+          currentIndex={activeIndex}
+          totalLines={lesson.lines.length}
+          onRecordingComplete={handleRecordingComplete}
+        />
+      )}
     </div>
   )
 }
