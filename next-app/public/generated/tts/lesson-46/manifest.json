@@ -1,0 +1,145 @@
+[
+  {
+    "lineId": "l46-conv-001",
+    "order": 1,
+    "speaker": "係員（オペレーター）",
+    "ja": "ガッサービスセンターでございます",
+    "zh": "这是一个GAC服务中心",
+    "file": "l46-01.mp3",
+    "voice": "operator_male / ja-JP-KeitaNeural / rate +0%",
+    "duration": 1.035,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l46-conv-002",
+    "order": 2,
+    "speaker": "お客様",
+    "ja": "あのーガッスレンジの調子がおかしいんですが",
+    "zh": "那个煤气范围很疯狂",
+    "file": "l46-02.mp3",
+    "voice": "customer_male / ja-JP-KeitaNeural / rate +0%",
+    "duration": 1.233,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l46-conv-003",
+    "order": 3,
+    "speaker": "係員（オペレーター）",
+    "ja": "どんな具合ですか",
+    "zh": "如何？",
+    "file": "l46-03.mp3",
+    "voice": "operator_male / ja-JP-KeitaNeural / rate +0%",
+    "duration": 0.765,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l46-conv-004",
+    "order": 4,
+    "speaker": "お客様",
+    "ja": "先週直してもらったばかりなのに",
+    "zh": "我上周刚刚修复了",
+    "file": "l46-04.mp3",
+    "voice": "customer_male / ja-JP-KeitaNeural / rate +0%",
+    "duration": 1.116,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l46-conv-005",
+    "order": 5,
+    "speaker": "お客様",
+    "ja": "また日が消えてしまうんです",
+    "zh": "太阳会再次消失",
+    "file": "l46-05.mp3",
+    "voice": "customer_male / ja-JP-KeitaNeural / rate +0%",
+    "duration": 0.972,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l46-conv-006",
+    "order": 6,
+    "speaker": "お客様",
+    "ja": "危ないのですぐ見に来てくれ",
+    "zh": "这很危险，所以马上来见我",
+    "file": "l46-06.mp3",
+    "voice": "customer_male / ja-JP-KeitaNeural / rate +0%",
+    "duration": 0.99,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l46-conv-007",
+    "order": 7,
+    "speaker": "お客様",
+    "ja": "なのか",
+    "zh": "是这样吗？",
+    "file": "l46-07.mp3",
+    "voice": "customer_male / ja-JP-KeitaNeural / rate +0%",
+    "duration": 0.54,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l46-conv-038",
+    "order": 8,
+    "speaker": "係員（オペレーター）",
+    "ja": "少々お待ちください",
+    "zh": "请等待片刻",
+    "file": "l46-08.mp3",
+    "voice": "operator_male / ja-JP-KeitaNeural / rate +0%",
+    "duration": 0.846,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l46-conv-039",
+    "order": 9,
+    "speaker": "係員（オペレーター）",
+    "ja": "かかりに連絡しますから",
+    "zh": "我在这一点上与您联系",
+    "file": "l46-09.mp3",
+    "voice": "operator_male / ja-JP-KeitaNeural / rate +0%",
+    "duration": 0.9,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l46-conv-040",
+    "order": 10,
+    "speaker": "係員（オペレーター）",
+    "ja": "お待たせしました",
+    "zh": "抱歉让您等待",
+    "file": "l46-10.mp3",
+    "voice": "operator_male / ja-JP-KeitaNeural / rate +0%",
+    "duration": 0.72,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l46-conv-041",
+    "order": 11,
+    "speaker": "係員（オペレーター）",
+    "ja": "今そちらに向かっているところです",
+    "zh": "我现在正朝那个",
+    "file": "l46-11.mp3",
+    "voice": "operator_male / ja-JP-KeitaNeural / rate +0%",
+    "duration": 1.098,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l46-conv-042",
+    "order": 12,
+    "speaker": "係員（オペレーター）",
+    "ja": "あと10分ほどお待ちください",
+    "zh": "请再等10分钟",
+    "file": "l46-12.mp3",
+    "voice": "operator_male / ja-JP-KeitaNeural / rate +0%",
+    "duration": 1.026,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l46-conv-043",
+    "order": 13,
+    "speaker": "係員（オペレーター）",
+    "ja": "お待ちください",
+    "zh": "请稍等",
+    "file": "l46-13.mp3",
+    "voice": "operator_male / ja-JP-KeitaNeural / rate +0%",
+    "duration": 0.666,
+    "audioType": "tts-practice"
+  }
+]

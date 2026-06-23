@@ -1,0 +1,112 @@
+[
+  {
+    "lineId": "l04-conv-002",
+    "order": 1,
+    "speaker": "询问者A",
+    "ja": "すみません アスカの電話番号は何番ですか?",
+    "zh": "不好意思，请问Asuka的电话号码是多少？",
+    "file": "l4-01.mp3",
+    "voice": "inquirer_a_male / ja-JP-KeitaNeural / rate +0%",
+    "duration": 1.431,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l04-conv-003",
+    "order": 2,
+    "speaker": "知情人B",
+    "ja": "アスカですか?",
+    "zh": "您是说Asuka吗？",
+    "file": "l4-02.mp3",
+    "voice": "informant_b_female / ja-JP-NanamiNeural / rate +0%",
+    "duration": 0.693,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l04-conv-004",
+    "order": 3,
+    "speaker": "知情人B",
+    "ja": "5275-2725です",
+    "zh": "是5275-2725",
+    "file": "l4-03.mp3",
+    "voice": "informant_b_female / ja-JP-NanamiNeural / rate +0%",
+    "duration": 1.746,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l04-conv-005",
+    "order": 4,
+    "speaker": "询问者A",
+    "ja": "どうもありがとうございます",
+    "zh": "非常感谢您",
+    "file": "l4-04.mp3",
+    "voice": "inquirer_a_male / ja-JP-KeitaNeural / rate +0%",
+    "duration": 0.954,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l04-conv-006",
+    "order": 5,
+    "speaker": "Asuka",
+    "ja": "はい アスカです",
+    "zh": "您好，这里是Asuka",
+    "file": "l4-05.mp3",
+    "voice": "asuka_female / ja-JP-NanamiNeural / rate +0%",
+    "duration": 0.774,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l04-conv-007",
+    "order": 6,
+    "speaker": "询问者A",
+    "ja": "すみません そちらは何時までですか?",
+    "zh": "不好意思，请问你们营业到几点？",
+    "file": "l4-06.mp3",
+    "voice": "inquirer_a_male / ja-JP-KeitaNeural / rate +0%",
+    "duration": 1.134,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l04-conv-008",
+    "order": 7,
+    "speaker": "Asuka",
+    "ja": "10時までです",
+    "zh": "营业到10点",
+    "file": "l4-07.mp3",
+    "voice": "asuka_female / ja-JP-NanamiNeural / rate +0%",
+    "duration": 0.765,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l04-conv-009",
+    "order": 8,
+    "speaker": "询问者A",
+    "ja": "休みは何曜日ですか?",
+    "zh": "你们星期几休息？",
+    "file": "l4-08.mp3",
+    "voice": "inquirer_a_male / ja-JP-KeitaNeural / rate +0%",
+    "duration": 0.9,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l04-conv-010",
+    "order": 9,
+    "speaker": "Asuka",
+    "ja": "日曜日です",
+    "zh": "星期天休息",
+    "file": "l4-09.mp3",
+    "voice": "asuka_female / ja-JP-NanamiNeural / rate +0%",
+    "duration": 0.765,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l04-conv-012",
+    "order": 10,
+    "speaker": "询问者A",
+    "ja": "そうですか どうも",
+    "zh": "是这样啊，谢谢",
+    "file": "l4-10.mp3",
+    "voice": "inquirer_a_male / ja-JP-KeitaNeural / rate +0%",
+    "duration": 0.729,
+    "audioType": "tts-practice"
+  }
+]

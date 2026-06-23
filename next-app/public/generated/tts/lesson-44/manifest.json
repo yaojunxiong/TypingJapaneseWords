@@ -1,0 +1,123 @@
+[
+  {
+    "lineId": "l44-conv-002",
+    "order": 1,
+    "speaker": "发型师",
+    "ja": "いらっしゃいませ。今日はどうなさいますか?",
+    "zh": "欢迎光临。今天您想做什么造型？",
+    "file": "l44-01.mp3",
+    "voice": "发型师_male / ja-JP-KeitaNeural / rate +0%",
+    "duration": 1.503,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l44-conv-003",
+    "order": 2,
+    "speaker": "顾客",
+    "ja": "カットをお願いします。",
+    "zh": "请帮我剪个头发。",
+    "file": "l44-02.mp3",
+    "voice": "顾客_male / ja-JP-KeitaNeural / rate +0%",
+    "duration": 0.846,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l44-conv-004",
+    "order": 3,
+    "speaker": "发型师",
+    "ja": "じゃあ、シャンプーをしますから。",
+    "zh": "那我先帮您洗头吧。",
+    "file": "l44-03.mp3",
+    "voice": "发型师_male / ja-JP-KeitaNeural / rate +0%",
+    "duration": 1.089,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l44-conv-005",
+    "order": 4,
+    "speaker": "发型师",
+    "ja": "こちらへどうぞ。",
+    "zh": "这边请。",
+    "file": "l44-04.mp3",
+    "voice": "发型师_male / ja-JP-KeitaNeural / rate +0%",
+    "duration": 0.693,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l44-conv-006",
+    "order": 5,
+    "speaker": "发型师",
+    "ja": "カットはどういうふうになさいますか?",
+    "zh": "您想剪成什么样的发型？",
+    "file": "l44-05.mp3",
+    "voice": "发型师_male / ja-JP-KeitaNeural / rate +0%",
+    "duration": 1.071,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l44-conv-007",
+    "order": 6,
+    "speaker": "顾客",
+    "ja": "ショートにしたいんですけど、この写真みたいにしてください。",
+    "zh": "我想剪短，请剪成像这张照片这样的发型。",
+    "file": "l44-06.mp3",
+    "voice": "顾客_male / ja-JP-KeitaNeural / rate +0%",
+    "duration": 1.602,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l44-conv-008",
+    "order": 7,
+    "speaker": "发型师",
+    "ja": "あー、素敵ですね。",
+    "zh": "啊，这发型真不错。",
+    "file": "l44-07.mp3",
+    "voice": "发型师_male / ja-JP-KeitaNeural / rate +0%",
+    "duration": 0.909,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l44-conv-009",
+    "order": 8,
+    "speaker": "发型师",
+    "ja": "前の長さはこれでよろしいでしょうか?",
+    "zh": "前面的长度这样可以吗？",
+    "file": "l44-08.mp3",
+    "voice": "发型师_male / ja-JP-KeitaNeural / rate +0%",
+    "duration": 1.17,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l44-conv-010",
+    "order": 9,
+    "speaker": "顾客",
+    "ja": "そうですね、もう少し短くしてください。",
+    "zh": "嗯……请再剪短一点。",
+    "file": "l44-09.mp3",
+    "voice": "顾客_male / ja-JP-KeitaNeural / rate +0%",
+    "duration": 1.395,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l44-conv-011",
+    "order": 10,
+    "speaker": "顾客",
+    "ja": "どうもお疲れ様でした。",
+    "zh": "辛苦您了。",
+    "file": "l44-10.mp3",
+    "voice": "顾客_male / ja-JP-KeitaNeural / rate +0%",
+    "duration": 0.873,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l44-conv-012",
+    "order": 11,
+    "speaker": "顾客",
+    "ja": "ありがとうございました。",
+    "zh": "非常感谢。",
+    "file": "l44-11.mp3",
+    "voice": "顾客_male / ja-JP-KeitaNeural / rate +0%",
+    "duration": 0.828,
+    "audioType": "tts-practice"
+  }
+]
