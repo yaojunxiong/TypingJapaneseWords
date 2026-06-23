@@ -7,7 +7,7 @@ export interface RecitationLine {
   zh: string
   originalAudioUrl?: string
   ttsAudioUrl?: string
-  audioType?: 'voicevox-fallback'
+  audioType?: 'voicevox-fallback' | 'tts-practice'
   ttsVoiceType?: 'female' | 'male' | 'neutral'
   ttsSpeakerLabel?: string
   explanationLinks?: string[]

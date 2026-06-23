@@ -1,0 +1,101 @@
+[
+  {
+    "lineId": "l1-01",
+    "order": 1,
+    "speaker": "佐藤",
+    "ja": "おはようございます。",
+    "zh": "早上好。",
+    "file": "l1-01.mp3",
+    "voice": "sato_female / ja-JP-NanamiNeural / rate +0%",
+    "duration": 2.232,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l1-02",
+    "order": 2,
+    "speaker": "山田",
+    "ja": "おはようございます。",
+    "zh": "早上好。",
+    "file": "l1-02.mp3",
+    "voice": "yamada_male / ja-JP-KeitaNeural / rate +0%",
+    "duration": 2.112,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l1-03",
+    "order": 3,
+    "speaker": "山田",
+    "ja": "佐藤さん、こちらはマイク・ミラーさんです。",
+    "zh": "佐藤小姐，这位是迈克·米勒。",
+    "file": "l1-03.mp3",
+    "voice": "yamada_male / ja-JP-KeitaNeural / rate +0%",
+    "duration": 3.696,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l1-04",
+    "order": 4,
+    "speaker": "ミラー",
+    "ja": "初めまして。",
+    "zh": "初次见面。",
+    "file": "l1-04.mp3",
+    "voice": "miller_male / ja-JP-KeitaNeural / rate -15%",
+    "duration": 2.04,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l1-05",
+    "order": 5,
+    "speaker": "ミラー",
+    "ja": "マイク・ミラーです。",
+    "zh": "我是迈克·米勒。",
+    "file": "l1-05.mp3",
+    "voice": "miller_male / ja-JP-KeitaNeural / rate -15%",
+    "duration": 2.376,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l1-06",
+    "order": 6,
+    "speaker": "ミラー",
+    "ja": "アメリカから来ました。",
+    "zh": "我从美国来。",
+    "file": "l1-06.mp3",
+    "voice": "miller_male / ja-JP-KeitaNeural / rate -15%",
+    "duration": 2.496,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l1-07",
+    "order": 7,
+    "speaker": "ミラー",
+    "ja": "どうぞよろしく。",
+    "zh": "请多关照。",
+    "file": "l1-07.mp3",
+    "voice": "miller_male / ja-JP-KeitaNeural / rate -15%",
+    "duration": 2.184,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l1-08",
+    "order": 8,
+    "speaker": "佐藤",
+    "ja": "佐藤けい子です。",
+    "zh": "我是佐藤惠子。",
+    "file": "l1-08.mp3",
+    "voice": "sato_female / ja-JP-NanamiNeural / rate +0%",
+    "duration": 2.232,
+    "audioType": "tts-practice"
+  },
+  {
+    "lineId": "l1-09",
+    "order": 9,
+    "speaker": "佐藤",
+    "ja": "どうぞよろしく。",
+    "zh": "请多关照。",
+    "file": "l1-09.mp3",
+    "voice": "sato_female / ja-JP-NanamiNeural / rate +0%",
+    "duration": 2.088,
+    "audioType": "tts-practice"
+  }
+]
