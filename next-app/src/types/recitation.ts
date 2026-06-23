@@ -14,6 +14,8 @@ export interface RecitationLine {
   end?: number
   ttsVoiceType?: 'female' | 'male' | 'neutral'
   ttsSpeakerLabel?: string
+  confidence?: 'high' | 'medium' | 'low'
+  requiresManualReview?: boolean
   explanationLinks?: string[]
   vocabularyLinks?: string[]
   grammarLinks?: string[]

@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "verify:lessons": "node scripts/verify-lessons.mjs",
+    "verify:recitation": "node scripts/verify-recitation.mjs",
     "audit": "node scripts/audit-learning-system.mjs"
   },
   "dependencies": {
