@@ -5,6 +5,9 @@ import type { RecitationLesson, RecitationLine, RecitationTake } from '@/types/r
 import { loadRecitationLesson, getBestTake } from '@/lib/recitation-lesson'
 import { getTakesByLine, deleteTake } from '@/lib/recitation-storage'
 import RecitationFloatingBar from '@/components/recitation-floating-bar'
+import MinnaTopStatsClient from '@/components/minna-top-stats-client'
+import UserAuthEntry from '@/components/user-auth-entry'
+import type { Lang } from '@/lib/i18n'
 import Link from 'next/link'
 
 type RecitationLineWithKana = RecitationLine & { kana?: string }
@@ -354,9 +357,10 @@ function RecitationBottomNav() {
 
 interface Props {
   lessonNo: number
+  lang: Lang
 }
 
-export default function RecitationPageClient({ lessonNo }: Props) {
+export default function RecitationPageClient({ lessonNo, lang }: Props) {
   const [lesson, setLesson] = useState<RecitationLesson | null>(null)
   const [loading, setLoading] = useState(true)
   const [bestTakes, setBestTakes] = useState<Map<string, string | null>>(new Map())
@@ -364,6 +368,7 @@ export default function RecitationPageClient({ lessonNo }: Props) {
   const [activeLineId, setActiveLineId] = useState<string | null>(null)
   const [takesRefreshKey, setTakesRefreshKey] = useState(0)
   const [isRecording, setIsRecording] = useState(false)
+  const [focusMode, setFocusMode] = useState(false)
   const [notice, setNotice] = useState('')
   const originalAudioRef = useRef<HTMLAudioElement | null>(null)
   const noticeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -457,6 +462,12 @@ export default function RecitationPageClient({ lessonNo }: Props) {
 
   const activeLine = lesson?.lines.find(l => l.lineId === activeLineId) || null
   const activeIndex = lesson?.lines.findIndex(l => l.lineId === activeLineId) ?? -1
+  const floatingBottomOffset = focusMode
+    ? 'calc(14px + env(safe-area-inset-bottom, 0px))'
+    : 'calc(96px + env(safe-area-inset-bottom, 0px))'
+  const pageBottomPadding = focusMode
+    ? 'calc(236px + env(safe-area-inset-bottom, 0px))'
+    : 'calc(320px + env(safe-area-inset-bottom, 0px))'
 
   if (loading) {
     return (
@@ -485,16 +496,49 @@ export default function RecitationPageClient({ lessonNo }: Props) {
       maxWidth: 820,
       margin: '0 auto',
       padding: '16px 14px',
-      paddingBottom: 'calc(320px + env(safe-area-inset-bottom, 0px))',
+      paddingBottom: pageBottomPadding,
     }}>
+      {!focusMode && (
+        <header className="minnaTopClassic" data-testid="recitation-top-stats" style={{ margin: '-16px -14px 12px', padding: '12px 14px 10px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) auto', alignItems: 'center', gap: 10 }}>
+            <div style={{ minWidth: 0, overflow: 'hidden' }}>
+              <MinnaTopStatsClient lang={lang} active="home" />
+            </div>
+            <UserAuthEntry lang={lang} />
+          </div>
+        </header>
+      )}
+
       <section data-testid="recitation-top-card" style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 18, padding: 16, marginBottom: 12, boxShadow: '0 10px 28px rgba(15, 23, 42, 0.05)' }}>
         <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12, marginBottom: 18 }}>
           <div>
             <div style={{ color: '#475569', fontSize: 16, fontWeight: 800, marginBottom: 4 }}>第 {lessonNo} 课 · 会话背诵</div>
             <h1 style={{ margin: 0, fontSize: 30, lineHeight: 1.1, fontWeight: 900 }}>{lesson.conversationTitle}</h1>
           </div>
-          <div style={{ width: 76, height: 76, borderRadius: 38, border: '6px solid #e5e7eb', borderRightColor: '#1683ff', borderTopColor: '#1683ff', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-            <span style={{ fontSize: 18, fontWeight: 900 }}>{completedCount}/{lesson.lines.length} 句</span>
+          <div style={{ display: 'grid', justifyItems: 'end', gap: 8, flexShrink: 0 }}>
+            <button
+              type="button"
+              data-testid="recitation-focus-toggle"
+              aria-pressed={focusMode}
+              onClick={() => setFocusMode(v => !v)}
+              style={{
+                border: '1px solid #bfdbfe',
+                borderRadius: 999,
+                background: focusMode ? '#0f172a' : '#eff6ff',
+                color: focusMode ? '#fff' : '#1683ff',
+                fontSize: 13,
+                fontWeight: 900,
+                padding: '7px 12px',
+                cursor: 'pointer',
+                whiteSpace: 'nowrap',
+                boxShadow: '0 6px 16px rgba(15, 23, 42, 0.08)',
+              }}
+            >
+              {focusMode ? '退出专注' : '专注模式'}
+            </button>
+            <div style={{ width: 76, height: 76, borderRadius: 38, border: '6px solid #e5e7eb', borderRightColor: '#1683ff', borderTopColor: '#1683ff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <span style={{ fontSize: 18, fontWeight: 900 }}>{completedCount}/{lesson.lines.length} 句</span>
+            </div>
           </div>
         </div>
 
@@ -564,8 +608,9 @@ export default function RecitationPageClient({ lessonNo }: Props) {
         totalLines={lesson.lines.length}
         onRecordingComplete={handleRecordingComplete}
         onRecordingStateChange={setIsRecording}
+        bottomOffset={floatingBottomOffset}
       />
-      <RecitationBottomNav />
+      {!focusMode && <RecitationBottomNav />}
     </div>
   )
 }
