@@ -18,6 +18,11 @@ type ConversationItem = {
   kana: string
   zh: string
   keyword: string
+  originalAudioUrl?: string
+  ttsAudioUrl?: string
+  audioType?: string
+  start?: string | number
+  end?: string | number
   videoStart?: string | number
   videoEnd?: string | number
 }
@@ -487,6 +492,11 @@ function SentenceCard({
             {t(lang, '🔊 原声练习', '🔊 Source Audio')}
           </h4>
           <SentenceSourceAudioPlayer
+            originalAudioUrl={item.originalAudioUrl}
+            ttsAudioUrl={item.ttsAudioUrl}
+            audioType={item.audioType}
+            start={item.start}
+            end={item.end}
             videoUrl={videoUrl}
             videoStart={item.videoStart}
             videoEnd={item.videoEnd}
@@ -580,55 +590,87 @@ function SentenceCard({
   )
 }
 
-function SentenceSourceAudioPlayer({ videoUrl, videoStart, videoEnd, lang, onPlay }: {
+function SentenceSourceAudioPlayer({ originalAudioUrl, ttsAudioUrl, audioType, start, end, videoUrl, videoStart, videoEnd, lang, onPlay }: {
+  originalAudioUrl?: string
+  ttsAudioUrl?: string
+  audioType?: string
+  start?: string | number
+  end?: string | number
   videoUrl: string
   videoStart?: string | number
   videoEnd?: string | number
   lang: 'zh' | 'en'
   onPlay?: () => void
 }) {
-  const startSec = parseTimeToSeconds(videoStart)
-  const endSec = parseTimeToSeconds(videoEnd)
+  const audioStartSec = parseTimeToSeconds(start)
+  const audioEndSec = parseTimeToSeconds(end)
+  const videoStartSec = parseTimeToSeconds(videoStart)
+  const videoEndSec = parseTimeToSeconds(videoEnd)
 
-  const videoRef = useRef<HTMLVideoElement | null>(null)
+  const mediaRef = useRef<HTMLMediaElement | null>(null)
   const [playing, setPlaying] = useState(false)
+  const [status, setStatus] = useState('')
 
-  const hasTimes = videoUrl && startSec >= 0 && endSec > startSec
+  const hasOriginalAudio = Boolean(originalAudioUrl)
+  const hasOriginalSegment = hasOriginalAudio && audioStartSec >= 0 && audioEndSec > audioStartSec
+  const hasTtsAudio = Boolean(ttsAudioUrl)
+  const hasVideoTimes = Boolean(videoUrl) && videoStartSec >= 0 && videoEndSec > videoStartSec
+  const canPlay = hasOriginalAudio || hasTtsAudio || hasVideoTimes
 
   function handlePlay() {
-    if (!hasTimes) return
-    let video = videoRef.current
-    if (!video) {
-      video = document.createElement('video')
-      video.crossOrigin = 'anonymous'
-      video.preload = 'auto'
-      video.style.display = 'none'
-      document.body.appendChild(video)
-      videoRef.current = video
+    if (!canPlay) return
+
+    const playbackUrl = hasOriginalAudio ? originalAudioUrl! : hasTtsAudio ? ttsAudioUrl! : videoUrl
+    const startSec = hasOriginalSegment ? audioStartSec : hasVideoTimes && !hasOriginalAudio && !hasTtsAudio ? videoStartSec : 0
+    const endSec = hasOriginalSegment ? audioEndSec : hasVideoTimes && !hasOriginalAudio && !hasTtsAudio ? videoEndSec : 0
+    const shouldStopAtEnd = hasOriginalSegment || (!hasOriginalAudio && !hasTtsAudio && hasVideoTimes)
+
+    let media = mediaRef.current
+    if (!media || (hasOriginalAudio || hasTtsAudio) !== (media.tagName === 'AUDIO')) {
+      media?.pause()
+      media = hasOriginalAudio || hasTtsAudio ? document.createElement('audio') : document.createElement('video')
+      media.preload = 'auto'
+      media.style.display = 'none'
+      if (media.tagName === 'VIDEO') media.crossOrigin = 'anonymous'
+      document.body.appendChild(media)
+      mediaRef.current = media
     }
 
-    video.src = videoUrl
-    video.currentTime = startSec
+    media.ontimeupdate = null
+    media.onended = null
+    media.onpause = null
+    media.src = playbackUrl
+    media.currentTime = startSec
     setPlaying(true)
+    setStatus(hasOriginalAudio
+      ? t(lang, '正在播放教材会话原声', 'Playing textbook conversation audio')
+      : hasTtsAudio
+        ? t(lang, '正在播放合成练习音', 'Playing synthetic practice audio')
+        : t(lang, '正在播放视频原声', 'Playing source video audio'))
 
-    const onTimeUpdate = () => {
-      if (video && video.currentTime >= endSec) {
-        video.pause()
-        setPlaying(false)
-        video.removeEventListener('timeupdate', onTimeUpdate)
+    if (shouldStopAtEnd) {
+      media.ontimeupdate = () => {
+        if (media && media.currentTime >= endSec) {
+          media.pause()
+          media.ontimeupdate = null
+          setPlaying(false)
+        }
       }
     }
-    video.addEventListener('timeupdate', onTimeUpdate)
-    video.addEventListener('ended', () => setPlaying(false), { once: true })
-    video.addEventListener('pause', () => setPlaying(false), { once: true })
+    media.onended = () => setPlaying(false)
+    media.onpause = () => {
+      if (!media || !shouldStopAtEnd || media.currentTime < endSec) {
+        setPlaying(false)
+      }
+    }
 
-    video.play().catch(() => setPlaying(false))
+    media.play().catch(() => setPlaying(false))
     onPlay?.()
   }
 
   return (
     <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center' }}>
-      {hasTimes ? (
+      {canPlay ? (
         <button className="btn" onClick={handlePlay} disabled={playing}
           style={{ padding: '6px 12px', fontSize: 13, opacity: playing ? 0.7 : 1 }}>
           {playing
@@ -645,6 +687,9 @@ function SentenceSourceAudioPlayer({ videoUrl, videoStart, videoEnd, lang, onPla
           style={{ padding: '6px 12px', fontSize: 13 }}>
           {t(lang, '播放视频', 'Play Video')}
         </a>
+      ) : null}
+      {status ? (
+        <span className="small" style={{ fontSize: 12, color: audioType === 'conversation-original' ? '#0369a1' : '#64748b' }}>{status}</span>
       ) : null}
     </div>
   )

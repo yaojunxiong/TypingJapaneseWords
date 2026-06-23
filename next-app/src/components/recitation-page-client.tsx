@@ -412,6 +412,8 @@ export default function RecitationPageClient({ lessonNo, lang }: Props) {
 
   const stopOriginalAudio = useCallback(() => {
     if (!originalAudioRef.current) return
+    originalAudioRef.current.ontimeupdate = null
+    originalAudioRef.current.onended = null
     originalAudioRef.current.pause()
     originalAudioRef.current.currentTime = 0
     originalAudioRef.current = null
@@ -432,11 +434,26 @@ export default function RecitationPageClient({ lessonNo, lang }: Props) {
       return
     }
 
-    if (!line.originalAudioUrl && line.ttsAudioUrl) {
+    if (line.originalAudioUrl) {
+      showNotice(line.uiLabelZh || '正在播放教材会话原声')
+    } else if (line.ttsAudioUrl) {
       showNotice('正在播放合成练习音')
     }
 
     const audio = new Audio(audioUrl)
+    const startSec = Number(line.start)
+    const endSec = Number(line.end)
+    const shouldPlaySegment = Boolean(line.originalAudioUrl) && Number.isFinite(startSec) && Number.isFinite(endSec) && endSec > startSec
+    if (shouldPlaySegment) {
+      audio.currentTime = startSec
+      audio.ontimeupdate = () => {
+        if (audio.currentTime >= endSec) {
+          audio.pause()
+          audio.ontimeupdate = null
+          if (originalAudioRef.current === audio) originalAudioRef.current = null
+        }
+      }
+    }
     originalAudioRef.current = audio
     audio.onended = () => {
       if (originalAudioRef.current === audio) originalAudioRef.current = null

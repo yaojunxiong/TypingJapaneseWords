@@ -7,7 +7,11 @@ export interface RecitationLine {
   zh: string
   originalAudioUrl?: string
   ttsAudioUrl?: string
-  audioType?: 'voicevox-fallback' | 'tts-practice'
+  audioType?: 'voicevox-fallback' | 'tts-practice' | 'conversation-original'
+  audioSource?: 'official-textbook'
+  uiLabelZh?: string
+  start?: number
+  end?: number
   ttsVoiceType?: 'female' | 'male' | 'neutral'
   ttsSpeakerLabel?: string
   explanationLinks?: string[]
@@ -21,6 +25,12 @@ export interface RecitationLesson {
   conversationTitle: string
   videoUrl: string
   conversationImageUrl: string
+  conversationAudio?: {
+    originalAudioUrl: string
+    audioType: 'conversation-original'
+    audioSource: 'official-textbook'
+    uiLabelZh: string
+  }
   lines: RecitationLine[]
 }
 

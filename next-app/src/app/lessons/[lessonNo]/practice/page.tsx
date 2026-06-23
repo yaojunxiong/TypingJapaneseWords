@@ -30,6 +30,13 @@ type LessonItem = {
   kana?: string
   zh?: string
   en?: string
+  originalAudioUrl?: string
+  ttsAudioUrl?: string
+  audioType?: string
+  start?: string | number
+  end?: string | number
+  videoStart?: string | number
+  videoEnd?: string | number
   practice?: LessonPractice[]
 }
 type LessonSection = { type?: string; items?: LessonItem[] }
@@ -205,6 +212,11 @@ export default async function LessonPracticePage({
       kana: String(item.kana || ''),
       zh: String(item.zh || ''),
       keyword: String((item as Record<string, unknown>).keyword || ''),
+      originalAudioUrl: String((item as Record<string, unknown>).originalAudioUrl || ''),
+      ttsAudioUrl: String((item as Record<string, unknown>).ttsAudioUrl || ''),
+      audioType: String((item as Record<string, unknown>).audioType || ''),
+      start: (item as Record<string, unknown>).start as string | number | undefined,
+      end: (item as Record<string, unknown>).end as string | number | undefined,
       videoStart: (item as Record<string, unknown>).videoStart as string | number | undefined,
       videoEnd: (item as Record<string, unknown>).videoEnd as string | number | undefined,
     }))
