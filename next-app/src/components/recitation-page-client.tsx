@@ -5,8 +5,7 @@ import type { RecitationLesson, RecitationLine, RecitationTake } from '@/types/r
 import { loadRecitationLesson, getBestTake } from '@/lib/recitation-lesson'
 import { getTakesByLine, deleteTake } from '@/lib/recitation-storage'
 import RecitationFloatingBar from '@/components/recitation-floating-bar'
-import MinnaTopStatsClient from '@/components/minna-top-stats-client'
-import UserAuthEntry from '@/components/user-auth-entry'
+import StudyMobileChrome from '@/components/study-mobile-chrome'
 import type { Lang } from '@/lib/i18n'
 import Link from 'next/link'
 
@@ -27,6 +26,13 @@ function getReadingHint(line: RecitationLine): string {
   if (kana) return kana.slice(0, 4)
   if (line.ja.includes('初めまして')) return 'はじ'
   return line.ja.slice(0, 2)
+}
+
+function getSpeakerAvatar(speaker: string) {
+  if (speaker.includes('佐藤')) return '佐'
+  if (speaker.includes('山田')) return '山'
+  if (speaker.includes('ミラー')) return 'M'
+  return speaker.trim().slice(0, 1) || '?'
 }
 
 function Waveform({ seed, active = false }: { seed: string; active?: boolean }) {
@@ -104,7 +110,7 @@ function CompactLineItem({
         background: isActive ? 'linear-gradient(90deg, #e8f6ff, #f5fbff)' : '#fff',
         cursor: 'pointer',
       }}>
-      <div style={{ display: 'grid', gridTemplateColumns: '34px 82px minmax(0, 1fr) 34px', alignItems: 'center', gap: 8, minHeight: 52, padding: '0 12px' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: '34px 110px minmax(0, 1fr) 34px', alignItems: 'center', gap: 8, minHeight: 52, padding: '0 12px' }}>
         <span style={{
           width: 26, height: 26, borderRadius: 13,
           background: isActive ? '#1683ff' : '#f1f5f9',
@@ -114,8 +120,28 @@ function CompactLineItem({
         }}>
           {line.order}
         </span>
-        <span style={{ fontSize: 15, fontWeight: 800, color: isActive ? '#0875f5' : '#475569', whiteSpace: 'nowrap' }}>
-          {line.speaker}:
+        <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, minWidth: 0, fontSize: 15, fontWeight: 800, color: isActive ? '#0875f5' : '#475569', whiteSpace: 'nowrap' }}>
+          <span
+            aria-hidden="true"
+            style={{
+              width: 24,
+              height: 24,
+              borderRadius: 12,
+              background: isActive ? '#dbeafe' : '#f1f5f9',
+              border: `1px solid ${isActive ? '#93c5fd' : '#e2e8f0'}`,
+              color: isActive ? '#075985' : '#475569',
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              flexShrink: 0,
+              fontSize: 12,
+              fontWeight: 900,
+              lineHeight: 1,
+            }}
+          >
+            {getSpeakerAvatar(line.speaker)}
+          </span>
+          <span style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>{line.speaker}:</span>
         </span>
         <span style={{ fontSize: 17, fontWeight: 800, color: '#0f172a', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
           {line.ja}
@@ -301,60 +327,6 @@ function MyRecordingsPanel({
   )
 }
 
-function RecitationBottomNav() {
-  const items = [
-    { href: '/', icon: '🏠', label: '首页', active: true },
-    { href: '/lessons', icon: '🌳', label: '课程' },
-    { href: '/toolbox', icon: '🧰', label: '学习' },
-    { href: '/favorites', icon: '💗', label: '收藏' },
-    { href: '/messages', icon: '🐟', label: '消息' },
-    { href: '/settings', icon: '⚙️', label: '设置' },
-  ]
-
-  return (
-    <nav
-      data-testid="recitation-bottom-nav"
-      style={{
-        position: 'fixed',
-        left: 14,
-        right: 14,
-        bottom: 'calc(10px + env(safe-area-inset-bottom, 0px))',
-        zIndex: 70,
-        display: 'grid',
-        gridTemplateColumns: 'repeat(6, minmax(0, 1fr))',
-        gap: 8,
-        padding: 8,
-        background: 'rgba(255, 255, 255, 0.96)',
-        border: '1px solid #e2e8f0',
-        borderRadius: 18,
-        boxShadow: '0 8px 24px rgba(15, 23, 42, 0.08)',
-        backdropFilter: 'blur(10px)',
-      }}>
-      {items.map(item => (
-        <Link
-          key={item.href}
-          href={item.href}
-          style={{
-            minHeight: 56,
-            borderRadius: 14,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: 2,
-            background: item.active ? '#eff6ff' : '#fff',
-            color: item.active ? '#1683ff' : '#0f172a',
-            fontSize: 12,
-            fontWeight: 900,
-          }}>
-          <span style={{ fontSize: 22, lineHeight: 1 }}>{item.icon}</span>
-          <span>{item.label}</span>
-        </Link>
-      ))}
-    </nav>
-  )
-}
-
 interface Props {
   lessonNo: number
   lang: Lang
@@ -477,14 +449,16 @@ export default function RecitationPageClient({ lessonNo, lang }: Props) {
     setOverallMessage('完整音频已生成（演示功能）')
   }, [lesson])
 
+  const showTopBar = !focusMode
+  const showBottomNav = !focusMode
   const activeLine = lesson?.lines.find(l => l.lineId === activeLineId) || null
   const activeIndex = lesson?.lines.findIndex(l => l.lineId === activeLineId) ?? -1
-  const floatingBottomOffset = focusMode
-    ? 'calc(14px + env(safe-area-inset-bottom, 0px))'
-    : 'calc(96px + env(safe-area-inset-bottom, 0px))'
-  const pageBottomPadding = focusMode
-    ? 'calc(236px + env(safe-area-inset-bottom, 0px))'
-    : 'calc(320px + env(safe-area-inset-bottom, 0px))'
+  const floatingBottomOffset = showBottomNav
+    ? 'calc(96px + env(safe-area-inset-bottom, 0px))'
+    : 'calc(14px + env(safe-area-inset-bottom, 0px))'
+  const pageBottomPadding = showBottomNav
+    ? 'calc(320px + env(safe-area-inset-bottom, 0px))'
+    : 'calc(236px + env(safe-area-inset-bottom, 0px))'
 
   if (loading) {
     return (
@@ -515,16 +489,14 @@ export default function RecitationPageClient({ lessonNo, lang }: Props) {
       padding: '16px 14px',
       paddingBottom: pageBottomPadding,
     }}>
-      {!focusMode && (
-        <header className="minnaTopClassic" data-testid="recitation-top-stats" style={{ margin: '-16px -14px 12px', padding: '12px 14px 10px' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) auto', alignItems: 'center', gap: 10 }}>
-            <div style={{ minWidth: 0, overflow: 'hidden' }}>
-              <MinnaTopStatsClient lang={lang} active="home" />
-            </div>
-            <UserAuthEntry lang={lang} />
-          </div>
-        </header>
-      )}
+      <StudyMobileChrome
+        lang={lang}
+        showTopBar={showTopBar}
+        showBottomNav={showBottomNav}
+        topBarTestId="recitation-top-stats"
+        bottomNavTestId="recitation-bottom-nav"
+        topBarStyle={{ margin: '-16px -14px 12px', padding: '12px 14px 10px' }}
+      />
 
       <section data-testid="recitation-top-card" style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 18, padding: 16, marginBottom: 12, boxShadow: '0 10px 28px rgba(15, 23, 42, 0.05)' }}>
         <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12, marginBottom: 18 }}>
@@ -627,7 +599,6 @@ export default function RecitationPageClient({ lessonNo, lang }: Props) {
         onRecordingStateChange={setIsRecording}
         bottomOffset={floatingBottomOffset}
       />
-      {!focusMode && <RecitationBottomNav />}
     </div>
   )
 }
