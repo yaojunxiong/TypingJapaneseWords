@@ -1,0 +1,104 @@
+{
+  "lessonNo": 3,
+  "conversationTitle": "これをください",
+  "source": "conversation_image",
+  "status": "draft",
+  "lines": [
+    {
+      "lineNo": 1,
+      "speakerName": "商场工作人员",
+      "jaText": "おはようございます。",
+      "confidence": "high",
+      "requiresManualReview": false,
+      "notes": ""
+    },
+    {
+      "lineNo": 2,
+      "speakerName": "顾客",
+      "jaText": "すみません。ワインオリーバーはどこですか?",
+      "confidence": "high",
+      "requiresManualReview": false,
+      "notes": "draft speaker \"Wine Olive店员\" → corrected \"顾客\""
+    },
+    {
+      "lineNo": 3,
+      "speakerName": "商场工作人员",
+      "jaText": "地下1階です。",
+      "confidence": "high",
+      "requiresManualReview": false,
+      "notes": ""
+    },
+    {
+      "lineNo": 4,
+      "speakerName": "顾客",
+      "jaText": "どうも。",
+      "confidence": "high",
+      "requiresManualReview": false,
+      "notes": ""
+    },
+    {
+      "lineNo": 5,
+      "speakerName": "顾客",
+      "jaText": "おはようございます。",
+      "confidence": "high",
+      "requiresManualReview": false,
+      "notes": ""
+    },
+    {
+      "lineNo": 6,
+      "speakerName": "顾客",
+      "jaText": "すみません。そのワインを見せてください。",
+      "confidence": "high",
+      "requiresManualReview": false,
+      "notes": ""
+    },
+    {
+      "lineNo": 7,
+      "speakerName": "Wine Olive店员",
+      "jaText": "はい、どうぞ。",
+      "confidence": "high",
+      "requiresManualReview": false,
+      "notes": "draft speaker \"顾客\" → corrected \"Wine Olive店员\""
+    },
+    {
+      "lineNo": 8,
+      "speakerName": "顾客",
+      "jaText": "これはどこのワインですか?",
+      "confidence": "high",
+      "requiresManualReview": false,
+      "notes": ""
+    },
+    {
+      "lineNo": 9,
+      "speakerName": "顾客",
+      "jaText": "日本のです。",
+      "confidence": "high",
+      "requiresManualReview": false,
+      "notes": ""
+    },
+    {
+      "lineNo": 10,
+      "speakerName": "顾客",
+      "jaText": "いくらですか?",
+      "confidence": "high",
+      "requiresManualReview": false,
+      "notes": ""
+    },
+    {
+      "lineNo": 11,
+      "speakerName": "顾客",
+      "jaText": "2500円です。",
+      "confidence": "high",
+      "requiresManualReview": false,
+      "notes": ""
+    },
+    {
+      "lineNo": 12,
+      "speakerName": "顾客",
+      "jaText": "じゃあ、これをください。",
+      "confidence": "high",
+      "requiresManualReview": false,
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "lessonNo": 23,
+  "conversationTitle": "どうやって行きますか",
+  "source": "conversation_image",
+  "status": "draft",
+  "lines": [
+    {
+      "lineNo": 1,
+      "speakerName": "工作人员",
+      "jaText": "はい、緑図書館です",
+      "confidence": "medium",
+      "requiresManualReview": false,
+      "notes": ""
+    },
+    {
+      "lineNo": 2,
+      "speakerName": "打电话的人",
+      "jaText": "あの、そちらまでどうやって行きますか？",
+      "confidence": "medium",
+      "requiresManualReview": false,
+      "notes": ""
+    },
+    {
+      "lineNo": 3,
+      "speakerName": "工作人员",
+      "jaText": "本町駅から12番のバスに乗って、",
+      "confidence": "medium",
+      "requiresManualReview": false,
+      "notes": ""
+    },
+    {
+      "lineNo": 4,
+      "speakerName": "工作人员",
+      "jaText": "図書館前で降りてください",
+      "confidence": "medium",
+      "requiresManualReview": false,
+      "notes": ""
+    },
+    {
+      "lineNo": 5,
+      "speakerName": "工作人员",
+      "jaText": "3つ目です",
+      "confidence": "medium",
+      "requiresManualReview": false,
+      "notes": ""
+    },
+    {
+      "lineNo": 6,
+      "speakerName": "打电话的人",
+      "jaText": "3つ目ですね",
+      "confidence": "high",
+      "requiresManualReview": false,
+      "notes": ""
+    },
+    {
+      "lineNo": 7,
+      "speakerName": "工作人员",
+      "jaText": "ええ、降りると前に公園があります",
+      "confidence": "medium",
+      "requiresManualReview": false,
+      "notes": ""
+    },
+    {
+      "lineNo": 8,
+      "speakerName": "工作人员",
+      "jaText": "図書館は公園の中の白い建物です",
+      "confidence": "medium",
+      "requiresManualReview": false,
+      "notes": ""
+    },
+    {
+      "lineNo": 9,
+      "speakerName": "打电话的人",
+      "jaText": "わかりました",
+      "confidence": "high",
+      "requiresManualReview": false,
+      "notes": ""
+    },
+    {
+      "lineNo": 10,
+      "speakerName": "打电话的人",
+      "jaText": "それから本を借りるとき、何かいりますか？",
+      "confidence": "high",
+      "requiresManualReview": false,
+      "notes": ""
+    },
+    {
+      "lineNo": 11,
+      "speakerName": "工作人员",
+      "jaText": "お名前と住所がわかるものを持ってきてください",
+      "confidence": "high",
+      "requiresManualReview": false,
+      "notes": "draft speaker \"打电话的人\" → corrected \"工作人员\""
+    },
+    {
+      "lineNo": 12,
+      "speakerName": "打电话的人",
+      "jaText": "はい、どうもありがとうございました",
+      "confidence": "high",
+      "requiresManualReview": false,
+      "notes": ""
+    }
+  ]
+}
