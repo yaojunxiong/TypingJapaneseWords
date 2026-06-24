@@ -572,6 +572,12 @@ export default async function AdminPage({
       href: '/admin/visitor-flow-rules',
     },
     {
+      icon: '🎙️',
+      label: tr(lang, '录音管理', 'Recording Takes'),
+      description: tr(lang, '查看学生背诵录音，支持播放与删除', 'View students\' recitation recordings with playback and delete.'),
+      href: '/admin/recordings',
+    },
+    {
       icon: '📋',
       label: tr(lang, '课程数据审计', 'Course Audit'),
       description: tr(lang, '只读审计 1-50 课数据完整性与内容检索', 'Audit lessons 1-50 data integrity and content search.'),
@@ -678,6 +684,13 @@ export default async function AdminPage({
       description: tr(lang, '当前可用：只读查看论坛帖子和审核状态，不支持审核/删除操作。', 'Read-only forum posts and moderation status. No approve/delete operations.'),
       status: 'available',
       href: '/admin/forum',
+    },
+    {
+      icon: '🎙️',
+      label: tr(lang, '录音管理', 'Recording Takes'),
+      description: tr(lang, '查看所有学生背诵录音记录，支持筛选、播放与删除。', 'View all students\' recitation recordings with filtering, playback, and delete.'),
+      status: 'available',
+      href: '/admin/recordings',
     },
   ]
 
