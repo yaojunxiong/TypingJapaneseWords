@@ -120,6 +120,8 @@ export default function RecitationFloatingBar({ line, currentIndex, totalLines, 
             }
             await updateTake(takeId, { uploadStatus: 'failed' })
           }
+          // Notify parent to refresh recordings panel after upload completes
+          onRecordingComplete(line!.lineId)
         }
         setUploading(false)
       }
