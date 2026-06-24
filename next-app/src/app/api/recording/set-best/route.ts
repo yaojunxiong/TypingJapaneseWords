@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/utils/supabase/server'
+import { checkAdminAccess } from '@/lib/admin-auth'
 import { cookies } from 'next/headers'
 
 export async function POST(request: NextRequest) {
@@ -22,7 +23,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: '缺少 take id' }, { status: 400 })
   }
 
-  // Fetch the take to verify ownership and get lesson/line
+  // Fetch the take to verify existence and get lesson/line
   const { data: take, error: fetchError } = await supabase
     .from('recording_takes')
     .select('id, user_id, lesson_no, line_no')
@@ -34,15 +35,20 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: '录音不存在' }, { status: 404 })
   }
 
-  if (take.user_id !== user.id) {
+  // Admins can set best for any recording; normal users only their own
+  const adminCheck = await checkAdminAccess(cookieStore)
+  if (!adminCheck.isAdmin && take.user_id !== user.id) {
     return NextResponse.json({ error: '无权操作他人录音' }, { status: 403 })
   }
+
+  // Use the take's owner for clearing/setting best
+  const ownerId = take.user_id
 
   // Clear old best for this line, then set new best
   const { error: clearError } = await supabase
     .from('recording_takes')
     .update({ is_best: false })
-    .eq('user_id', user.id)
+    .eq('user_id', ownerId)
     .eq('lesson_no', take.lesson_no)
     .eq('line_no', take.line_no)
     .is('deleted_at', null)

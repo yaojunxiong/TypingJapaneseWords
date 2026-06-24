@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/utils/supabase/server'
+import { checkAdminAccess } from '@/lib/admin-auth'
 import { cookies } from 'next/headers'
 
 export async function DELETE(
@@ -28,7 +29,9 @@ export async function DELETE(
     return NextResponse.json({ error: '录音不存在' }, { status: 404 })
   }
 
-  if (take.user_id !== user.id) {
+  // Admins can delete any recording; normal users only their own
+  const adminCheck = await checkAdminAccess(cookieStore)
+  if (!adminCheck.isAdmin && take.user_id !== user.id) {
     return NextResponse.json({ error: '无权删除他人录音' }, { status: 403 })
   }
 

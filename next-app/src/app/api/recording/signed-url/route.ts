@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/utils/supabase/server'
+import { checkAdminAccess } from '@/lib/admin-auth'
 import { cookies } from 'next/headers'
 
 export async function GET(request: NextRequest) {
@@ -18,7 +19,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: '缺少 id 参数' }, { status: 400 })
   }
 
-  // Fetch take to verify ownership
+  // Fetch take to verify existence
   const { data: take, error: fetchError } = await supabase
     .from('recording_takes')
     .select('id, user_id, storage_path')
@@ -30,8 +31,9 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: '录音不存在' }, { status: 404 })
   }
 
-  if (take.user_id !== user.id) {
-    // TODO: Allow admin access in future phase
+  // Admins can generate signed URL for any recording; normal users only for their own
+  const adminCheck = await checkAdminAccess(cookieStore)
+  if (!adminCheck.isAdmin && take.user_id !== user.id) {
     return NextResponse.json({ error: '无权播放他人录音' }, { status: 403 })
   }
 
