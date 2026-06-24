@@ -11,20 +11,12 @@ import Link from 'next/link'
 import { resolveSpeakerAvatar } from '@/data/minna/speaker-registry'
 
 type RecitationLineWithKana = RecitationLine & { kana?: string }
-type RecitationLineWithAvatar = RecitationLine & {
-  speakerAvatarUrl?: string
-  speakerAvatarLabel?: string
-  speakerColor?: string
-}
-
 type SpeakerAvatar = {
-  label: string
+  emoji: string
   background: string
   border: string
-  color: string
   activeBackground: string
   activeBorder: string
-  activeColor: string
 }
 
 function formatTakeTime(createdAt: string): string {
@@ -45,16 +37,13 @@ function getReadingHint(line: RecitationLine): string {
 }
 
 function getSpeakerAvatar(line: RecitationLine): SpeakerAvatar {
-  const avatarLine = line as RecitationLineWithAvatar
   const resolved = resolveSpeakerAvatar(line.speaker)
   return {
-    label: avatarLine.speakerAvatarLabel || resolved.label,
-    background: avatarLine.speakerColor || resolved.background,
+    emoji: resolved.emoji,
+    background: resolved.background,
     border: resolved.border,
-    color: resolved.color,
     activeBackground: resolved.activeBackground,
     activeBorder: resolved.activeBorder,
-    activeColor: resolved.activeColor,
   }
 }
 
@@ -149,22 +138,20 @@ function CompactLineItem({
             data-testid="recitation-speaker-avatar"
             aria-hidden="true"
             style={{
-              width: 24,
-              height: 24,
+              width: 28,
+              height: 28,
               borderRadius: 9999,
               background: isActive ? speakerAvatar.activeBackground : speakerAvatar.background,
               border: `1px solid ${isActive ? speakerAvatar.activeBorder : speakerAvatar.border}`,
-              color: isActive ? speakerAvatar.activeColor : speakerAvatar.color,
               display: 'inline-flex',
               alignItems: 'center',
               justifyContent: 'center',
               flexShrink: 0,
-              fontSize: 12,
-              fontWeight: 900,
+              fontSize: 16,
               lineHeight: 1,
             }}
           >
-            {speakerAvatar.label}
+            {speakerAvatar.emoji}
           </span>
           <span style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>{line.speaker}:</span>
         </span>
