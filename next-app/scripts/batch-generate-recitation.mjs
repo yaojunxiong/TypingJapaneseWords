@@ -104,7 +104,7 @@ function generate(lessonNo) {
     return null;
   }
 
-  const dialogTitle = convSection.dialogTitle?.zh || `第${lessonNo}课会话`;
+  const dialogTitle = convSection.dialogTitle?.zh || 'missing_title';
   const videoUrl = convSection.videoUrl || '';
   const lessonId = `lesson-${String(lessonNo).padStart(2, '0')}`;
   const conversationImageUrl = `/minna/lessons/${lessonId}/conversation-anime-mobile.webp`;

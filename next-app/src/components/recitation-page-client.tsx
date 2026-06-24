@@ -8,8 +8,24 @@ import RecitationFloatingBar from '@/components/recitation-floating-bar'
 import StudyMobileChrome from '@/components/study-mobile-chrome'
 import type { Lang } from '@/lib/i18n'
 import Link from 'next/link'
+import { resolveSpeakerAvatar } from '@/data/minna/speaker-registry'
 
 type RecitationLineWithKana = RecitationLine & { kana?: string }
+type RecitationLineWithAvatar = RecitationLine & {
+  speakerAvatarUrl?: string
+  speakerAvatarLabel?: string
+  speakerColor?: string
+}
+
+type SpeakerAvatar = {
+  label: string
+  background: string
+  border: string
+  color: string
+  activeBackground: string
+  activeBorder: string
+  activeColor: string
+}
 
 function formatTakeTime(createdAt: string): string {
   const date = new Date(createdAt)
@@ -28,11 +44,18 @@ function getReadingHint(line: RecitationLine): string {
   return line.ja.slice(0, 2)
 }
 
-function getSpeakerAvatar(speaker: string) {
-  if (speaker.includes('佐藤')) return '佐'
-  if (speaker.includes('山田')) return '山'
-  if (speaker.includes('ミラー')) return 'M'
-  return speaker.trim().slice(0, 1) || '?'
+function getSpeakerAvatar(line: RecitationLine): SpeakerAvatar {
+  const avatarLine = line as RecitationLineWithAvatar
+  const resolved = resolveSpeakerAvatar(line.speaker)
+  return {
+    label: avatarLine.speakerAvatarLabel || resolved.label,
+    background: avatarLine.speakerColor || resolved.background,
+    border: resolved.border,
+    color: resolved.color,
+    activeBackground: resolved.activeBackground,
+    activeBorder: resolved.activeBorder,
+    activeColor: resolved.activeColor,
+  }
 }
 
 function Waveform({ seed, active = false }: { seed: string; active?: boolean }) {
@@ -99,6 +122,7 @@ function CompactLineItem({
   const isCompleted = takes.length > 0 && selectedBestId !== null
   const hasOriginalAudio = Boolean(line.originalAudioUrl)
   const hasPlayableAudio = Boolean(line.originalAudioUrl || line.ttsAudioUrl)
+  const speakerAvatar = getSpeakerAvatar(line)
 
   return (
     <div
@@ -122,14 +146,15 @@ function CompactLineItem({
         </span>
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, minWidth: 0, fontSize: 15, fontWeight: 800, color: isActive ? '#0875f5' : '#475569', whiteSpace: 'nowrap' }}>
           <span
+            data-testid="recitation-speaker-avatar"
             aria-hidden="true"
             style={{
               width: 24,
               height: 24,
-              borderRadius: 12,
-              background: isActive ? '#dbeafe' : '#f1f5f9',
-              border: `1px solid ${isActive ? '#93c5fd' : '#e2e8f0'}`,
-              color: isActive ? '#075985' : '#475569',
+              borderRadius: 9999,
+              background: isActive ? speakerAvatar.activeBackground : speakerAvatar.background,
+              border: `1px solid ${isActive ? speakerAvatar.activeBorder : speakerAvatar.border}`,
+              color: isActive ? speakerAvatar.activeColor : speakerAvatar.color,
               display: 'inline-flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -139,7 +164,7 @@ function CompactLineItem({
               lineHeight: 1,
             }}
           >
-            {getSpeakerAvatar(line.speaker)}
+            {speakerAvatar.label}
           </span>
           <span style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>{line.speaker}:</span>
         </span>
