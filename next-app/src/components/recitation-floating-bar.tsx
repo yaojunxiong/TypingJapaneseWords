@@ -34,6 +34,14 @@ function getReadingHint(line: RecitationLine): string {
 
 function getSupportedMimeType(): string | null {
   if (typeof MediaRecorder === 'undefined') return null
+  if (typeof navigator !== 'undefined' && /iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+    // iOS Safari has limited MediaRecorder support — try mp4 first
+    const iosTypes = ['audio/mp4', 'audio/mp4;codecs=mp4a', 'audio/webm;codecs=opus', 'audio/webm']
+    for (const type of iosTypes) {
+      if (MediaRecorder.isTypeSupported(type)) return type
+    }
+    return null
+  }
   const types = ['audio/webm;codecs=opus', 'audio/webm', 'audio/mp4', 'audio/mp4;codecs=mp4a']
   for (const type of types) {
     if (MediaRecorder.isTypeSupported(type)) return type
