@@ -9,7 +9,29 @@ on:
   workflow_dispatch:
 
 jobs:
+  build-and-verify:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: next-app
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: 'npm'
+          cache-dependency-path: next-app/package-lock.json
+      - name: Install dependencies
+        run: npm ci
+      - name: Verify recitation data
+        run: npm run verify:recitation
+      - name: Type check
+        run: npx tsc --noEmit
+      - name: Build
+        run: npm run build
+
   deploy-and-test:
+    needs: build-and-verify
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
