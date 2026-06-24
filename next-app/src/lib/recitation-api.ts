@@ -67,10 +67,14 @@ export async function deleteCloudTake(takeId: string): Promise<void> {
   if (!res.ok) throw new UploadError('删除录音失败', res.status, false)
 }
 
-export async function getSignedUrl(takeId: string): Promise<string> {
+export interface SignedUrlResult {
+  signedUrl: string
+  expiresIn: number
+}
+
+export async function getSignedUrl(takeId: string): Promise<SignedUrlResult> {
   const res = await fetch(`${BASE}/signed-url?id=${encodeURIComponent(takeId)}`)
   if (res.status === 401) throw new UploadError('请先登录', 401, false)
   if (!res.ok) throw new UploadError('获取播放地址失败', res.status, false)
-  const data = await res.json()
-  return data.signedUrl
+  return res.json()
 }

@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import type { RecitationLesson, RecitationLine, RecitationTake, RecordingTakeDTO } from '@/types/recitation'
 import { loadRecitationLesson, getBestTake } from '@/lib/recitation-lesson'
 import { getTakesByLine, deleteTake as deleteLocalTake, updateTake } from '@/lib/recitation-storage'
-import { listTakes, setBestTake as apiSetBest, deleteCloudTake, getSignedUrl } from '@/lib/recitation-api'
+import { listTakes, setBestTake as apiSetBest, deleteCloudTake, getSignedUrl, type SignedUrlResult } from '@/lib/recitation-api'
 import RecitationFloatingBar from '@/components/recitation-floating-bar'
 import StudyMobileChrome from '@/components/study-mobile-chrome'
 import type { Lang } from '@/lib/i18n'
@@ -81,6 +81,7 @@ interface MergedTake {
   localBlob?: Blob
   storagePath?: string
   uploadStatus?: string
+  audioMimeType?: string
 }
 
 function mergeTakes(local: RecitationTake[], cloud: RecordingTakeDTO[]): MergedTake[] {
@@ -99,6 +100,7 @@ function mergeTakes(local: RecitationTake[], cloud: RecordingTakeDTO[]): MergedT
       storagePath: ct.storagePath,
       uploadStatus: ct.uploadStatus,
       localBlob: localMatch?.audioBlob,
+      audioMimeType: ct.audioMimeType,
     })
   }
 
@@ -274,17 +276,19 @@ function CompactLineItem({
 }
 
 function MyRecordingsPanel({
-  line, lessonNo, takesRefreshKey, onBestTakeChange,
+  line, lessonNo, takesRefreshKey, onBestTakeChange, showNotice,
 }: {
   line: RecitationLine | null
   lessonNo: number
   takesRefreshKey: number
   onBestTakeChange: (lineId: string, takeId: string | null) => void
+  showNotice: (message: string) => void
 }) {
   const [mergedTakes, setMergedTakes] = useState<MergedTake[]>([])
   const [selectedBestId, setSelectedBestId] = useState<string | null>(null)
   const [playingId, setPlayingId] = useState<string | null>(null)
-  const [signedUrlCache, setSignedUrlCache] = useState<Map<string, string>>(new Map())
+  const [signedUrlCache, setSignedUrlCache] = useState<Map<string, { url: string; expiresAt: number }>>(new Map())
+  const audioRef = useRef<HTMLAudioElement | null>(null)
   const selectedBestIdRef = useRef(selectedBestId)
   selectedBestIdRef.current = selectedBestId
 
@@ -320,17 +324,18 @@ function MyRecordingsPanel({
     loadMerged()
   }, [loadMerged, takesRefreshKey])
 
-  const getPlaybackUrl = useCallback(async (take: MergedTake): Promise<string> => {
+  const getPlaybackUrl = useCallback(async (take: MergedTake, forceRefresh = false): Promise<string> => {
     if (take.localBlob) {
       return URL.createObjectURL(take.localBlob)
     }
     if (take.storagePath) {
-      const cached = signedUrlCache.get(take.takeId)
-      if (cached) return cached
+      const cached = !forceRefresh ? signedUrlCache.get(take.takeId) : undefined
+      if (cached && Date.now() < cached.expiresAt) return cached.url
       try {
-        const url = await getSignedUrl(take.takeId)
-        setSignedUrlCache(prev => new Map(prev).set(take.takeId, url))
-        return url
+        const result = await getSignedUrl(take.takeId)
+        const item = { url: result.signedUrl, expiresAt: Date.now() + result.expiresIn * 1000 }
+        setSignedUrlCache(prev => new Map(prev).set(take.takeId, item))
+        return result.signedUrl
       } catch {
         return ''
       }
@@ -363,12 +368,32 @@ function MyRecordingsPanel({
     setPlayingId(takeId)
     const take = mergedTakes.find(t => t.takeId === takeId)
     if (!take) { setPlayingId(null); return }
-    const url = await getPlaybackUrl(take)
-    if (!url) { setPlayingId(null); return }
-    const audio = new Audio(url)
-    audio.onended = () => { setPlayingId(null); URL.revokeObjectURL(url) }
-    audio.play().catch(() => { setPlayingId(null); URL.revokeObjectURL(url) })
-  }, [mergedTakes, getPlaybackUrl])
+    const tryPlayOnce = async (forceRefresh: boolean): Promise<boolean> => {
+      const url = await getPlaybackUrl(take, forceRefresh)
+      if (!url) return false
+      try {
+        const audio = new Audio(url)
+        audioRef.current = audio
+        await new Promise<void>((resolve, reject) => {
+          audio.onended = () => resolve()
+          audio.onerror = () => reject(new Error('playback error'))
+          audio.play().catch(reject)
+        })
+        return true
+      } catch {
+        return false
+      }
+    }
+    const ok = await tryPlayOnce(false)
+    if (!ok) {
+      const ok2 = await tryPlayOnce(true)
+      if (!ok2) {
+        showNotice('录音链接已过期，请稍后重试')
+      }
+    }
+    audioRef.current = null
+    setPlayingId(null)
+  }, [mergedTakes, getPlaybackUrl, showNotice])
 
   const handleDelete = useCallback(async (takeId: string) => {
     if (!line) return
@@ -396,8 +421,8 @@ function MyRecordingsPanel({
     if (!take?.localBlob) return
     const lineNo = line.order
     try {
-      await import('@/lib/recitation-api').then(m => m.uploadTake(take.localBlob!, lessonNo, lineNo))
-      await updateTake(takeId, { uploadStatus: 'uploaded' })
+      const dto = await import('@/lib/recitation-api').then(m => m.uploadTake(take.localBlob!, lessonNo, lineNo))
+      await updateTake(takeId, { uploadStatus: 'uploaded', storagePath: dto.storagePath })
       loadMerged()
     } catch {
       // Retry failed, keep pending
@@ -630,7 +655,8 @@ export default function RecitationPageClient({ lessonNo, lang }: Props) {
       const cloudTake = cloud.find(t => t.id === bestTakeId)
       if (cloudTake?.storagePath) {
         try {
-          url = await getSignedUrl(bestTakeId)
+          const result = await getSignedUrl(bestTakeId)
+          url = result.signedUrl
         } catch { /* fall through */ }
       }
       if (!url) {
@@ -816,6 +842,7 @@ export default function RecitationPageClient({ lessonNo, lang }: Props) {
         lessonNo={lessonNo}
         takesRefreshKey={takesRefreshKey}
         onBestTakeChange={handleBestTakeChange}
+        showNotice={showNotice}
       />
 
       <div style={{ marginTop: 16, textAlign: 'center' }}>

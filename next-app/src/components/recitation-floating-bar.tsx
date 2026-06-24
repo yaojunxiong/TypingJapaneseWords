@@ -32,21 +32,36 @@ function getReadingHint(line: RecitationLine): string {
   return line.ja.slice(0, 2)
 }
 
+function getSupportedMimeType(): string | null {
+  if (typeof MediaRecorder === 'undefined') return null
+  const types = ['audio/webm;codecs=opus', 'audio/webm', 'audio/mp4', 'audio/mp4;codecs=mp4a']
+  for (const type of types) {
+    if (MediaRecorder.isTypeSupported(type)) return type
+  }
+  return null
+}
+
 export default function RecitationFloatingBar({ line, currentIndex, totalLines, onRecordingComplete, onRecordingStateChange, bottomOffset = 'calc(96px + env(safe-area-inset-bottom, 0px))' }: Props) {
   const [recording, setRecording] = useState(false)
   const [message, setMessage] = useState('')
   const [localPlaying, setLocalPlaying] = useState(false)
   const [uploading, setUploading] = useState(false)
+  const [unsupported, setUnsupported] = useState(false)
   const mediaRecorderRef = useRef<MediaRecorder | null>(null)
   const chunksRef = useRef<Blob[]>([])
   const latestTakeUrl = useRef<string | null>(null)
   const latestTakeId = useRef<string | null>(null)
 
   useEffect(() => {
+    setUnsupported(getSupportedMimeType() === null)
+  }, [])
+
+  useEffect(() => {
     setRecording(false)
     setMessage('')
     setLocalPlaying(false)
     setUploading(false)
+    setUnsupported(false)
     latestTakeUrl.current = null
     latestTakeId.current = null
   }, [line?.lineId])
@@ -70,9 +85,15 @@ export default function RecitationFloatingBar({ line, currentIndex, totalLines, 
 
   const startRecording = useCallback(async () => {
     if (!line) return
+    const mimeType = getSupportedMimeType()
+    if (!mimeType) {
+      setMessage('当前浏览器不支持录音，请使用最新版 Safari/Chrome，或更换设备。')
+      setUnsupported(true)
+      return
+    }
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true })
-      const recorder = new MediaRecorder(stream, { mimeType: 'audio/webm;codecs=opus' })
+      const recorder = new MediaRecorder(stream, { mimeType })
       chunksRef.current = []
       mediaRecorderRef.current = recorder
 
@@ -82,7 +103,8 @@ export default function RecitationFloatingBar({ line, currentIndex, totalLines, 
 
       recorder.onstop = async () => {
         stream.getTracks().forEach(t => t.stop())
-        const blob = new Blob(chunksRef.current, { type: 'audio/webm' })
+        const mimeType = recorder.mimeType || 'audio/webm'
+        const blob = new Blob(chunksRef.current, { type: mimeType })
         const score = mockScore()
         const takeId = generateTakeId()
         latestTakeId.current = takeId
@@ -109,14 +131,14 @@ export default function RecitationFloatingBar({ line, currentIndex, totalLines, 
         const parsed = parseLessonLine(line!.lineId)
         if (parsed) {
           try {
-            await uploadTake(blob, parsed.lessonNo, parsed.lineNo)
-            await updateTake(takeId, { uploadStatus: 'uploaded' })
+            const dto = await uploadTake(blob, parsed.lessonNo, parsed.lineNo)
+            await updateTake(takeId, { uploadStatus: 'uploaded', storagePath: dto.storagePath })
           } catch (err) {
             const uploadErr = err instanceof UploadError ? err : new UploadError('上传异常', 0, true)
             if (uploadErr.status === 401) {
               setMessage('请登录后保存录音')
             } else {
-              setMessage('上传失败，稍后重试')
+              setMessage('上传失败，点击重试')
             }
             await updateTake(takeId, { uploadStatus: 'failed' })
             // Refresh recordings panel so it shows the failure status + retry button
@@ -210,11 +232,11 @@ export default function RecitationFloatingBar({ line, currentIndex, totalLines, 
             data-testid="recitation-record-button"
             aria-label="开始录音"
             onClick={startRecording}
-            disabled={recording || uploading}
+            disabled={recording || uploading || unsupported}
             style={{
               width: 74, height: 74, borderRadius: 37,
-              background: recording ? '#60a5fa' : uploading ? '#94a3b8' : '#1683ff',
-              color: '#fff', border: `6px solid ${uploading ? '#e2e8f0' : '#dbeafe'}`,
+              background: recording ? '#60a5fa' : uploading || unsupported ? '#94a3b8' : '#1683ff',
+              color: '#fff', border: `6px solid ${uploading || unsupported ? '#e2e8f0' : '#dbeafe'}`,
               fontSize: 34, cursor: (recording || uploading) ? 'default' : 'pointer',
               display: 'flex', alignItems: 'center', justifyContent: 'center',
               boxShadow: uploading ? 'none' : '0 8px 20px rgba(22, 131, 255, 0.28)',
