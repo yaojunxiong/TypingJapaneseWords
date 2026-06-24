@@ -119,9 +119,9 @@ export default function RecitationFloatingBar({ line, currentIndex, totalLines, 
               setMessage('上传失败，稍后重试')
             }
             await updateTake(takeId, { uploadStatus: 'failed' })
+            // Refresh recordings panel so it shows the failure status + retry button
+            onRecordingComplete(line!.lineId)
           }
-          // Notify parent to refresh recordings panel after upload completes
-          onRecordingComplete(line!.lineId)
         }
         setUploading(false)
       }
