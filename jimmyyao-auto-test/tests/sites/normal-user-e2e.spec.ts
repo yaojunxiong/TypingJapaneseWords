@@ -271,4 +271,16 @@ test.describe('Normal user e2e @normal-user-e2e', () => {
     await expect(body).toContainText(/审批流程管理|Workflow/)
     console.log('✓ logged_in_first_visit workflows page: accessible')
   })
+
+  test('Normal user cannot access /admin/checkins', async () => {
+    test.skip(!normalUserCtx, '普通用户登录失败或未配置 TEST_USER_EMAIL')
+    const page = await visit(normalUserCtx!, '/admin/checkins')
+    await waitForLoadComplete(page, 'normal-user-checkins')
+    await saveScreenshot(page, 'normal-user-checkins')
+
+    const bodyText = await page.locator('body').innerText()
+    const denied = bodyText.includes('没有管理员权限') || bodyText.includes('请先登录') || bodyText.includes('unauthorized')
+    expect(denied).toBe(true)
+    console.log('✓ Normal user: /admin/checkins access denied')
+  })
 })

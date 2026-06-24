@@ -270,6 +270,61 @@ test.describe('Admin authenticated tests @admin-auth', () => {
     }
   })
 
+  test('/admin/checkins renders', async ({ browser }) => {
+    skipIfNoSetup()
+    skipIfNoStorage()
+
+    const ctx = await browser.newContext({ storageState: storageState! })
+    try {
+      const page = await visit(ctx, '/admin/checkins')
+      await waitForLoadComplete(page, 'auth-admin-checkins')
+      await saveScreenshot(page, 'auth-admin-checkins')
+
+      const body = page.locator('body')
+      await expect(body).toContainText(/打卡总览|Check-in Overview/)
+      console.log('✓ Checkins: title present')
+
+      const bodyText = await body.innerText()
+      const hasStatsCards = /今日练习学生|Students/.test(bodyText)
+        && /今日录音次数|Recordings/.test(bodyText)
+        && /今日最佳录音|Best Takes/.test(bodyText)
+        && /今日涉及课程|Lessons/.test(bodyText)
+        && /低分录音|Low Score/.test(bodyText)
+        && /失败|Failed/.test(bodyText)
+      expect(hasStatsCards).toBe(true)
+      console.log('✓ Checkins: stats cards present')
+
+      const hasFilters = /开始日期|From/.test(bodyText)
+        && /结束日期|To/.test(bodyText)
+        && /学生 ID|User ID/.test(bodyText)
+        && /课号|Lesson/.test(bodyText)
+        && /只看今天|Today/.test(bodyText)
+        && /筛选|Filter/.test(bodyText)
+      expect(hasFilters).toBe(true)
+      console.log('✓ Checkins: filters present')
+    } finally {
+      await ctx.close()
+    }
+  })
+
+  test('/admin shows 打卡总览 entry', async ({ browser }) => {
+    skipIfNoSetup()
+    skipIfNoStorage()
+
+    const ctx = await browser.newContext({ storageState: storageState! })
+    try {
+      const page = await visit(ctx, '/admin')
+      await waitForLoadComplete(page, 'auth-admin-dashboard')
+      await saveScreenshot(page, 'auth-admin-dashboard')
+
+      const body = page.locator('body')
+      await expect(body).toContainText(/打卡总览|Check-in Overview/)
+      console.log('✓ Admin dashboard: 打卡总览 entry present')
+    } finally {
+      await ctx.close()
+    }
+  })
+
   // ── 404 checks (separate test for each admin page) ──
 
   const allAdminPaths = [
@@ -280,6 +335,7 @@ test.describe('Admin authenticated tests @admin-auth', () => {
     '/admin/workflows',
     '/admin/visitor-flow-rules',
     '/admin/email-logs',
+    '/admin/checkins',
   ]
 
   for (const path of allAdminPaths) {

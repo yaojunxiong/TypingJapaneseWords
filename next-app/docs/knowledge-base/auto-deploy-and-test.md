@@ -188,7 +188,7 @@ push 到 `master` 分支，且变更涉及 `next-app/` 目录下的以下文件�
 
 | 任务 | 状态 | 说明 |
 |------|------|------|
-| P2-1 会话背诵 V2 | 🔄 开发中（代码完成，待 CI 验证） | 见下方 |
+| P2-1 会话背诵 V2 | ✅ 已部署并通过测试 | Lesson 1 当前采用 TTS 练习音频版本，教材原声后续再接入 |
 
 ### P2-1 会话背诵 V2
 
@@ -220,3 +220,15 @@ push 到 `master` 分支，且变更涉及 `next-app/` 目录下的以下文件�
 **部署**：
 - feature flag `NEXT_PUBLIC_RECITATION_V2_ENABLED` 需在 Vercel 环境变量中设为 `true`
 - fixture: `tests/fixtures/audio/lesson1/l1-line*-good.wav`（VOICEVOX 风格，Python 生成）
+
+**当前生产状态（2026-06-23）**：
+- P2-1 会话背诵 V2 Lesson 1 当前采用 TTS 练习音频版本，教材原声后续再接入。
+- Lesson 1 的 9 条背诵句使用 `ttsAudioUrl` 指向 `/generated/tts/lesson-01/l1-01.mp3` 至 `l1-09.mp3`。
+- `audioType` 使用 `tts-practice`，页面提示为“正在播放合成练习音”，不标记为教材原音。
+- `originalAudioUrl` 保持为空；播放优先级保持 `originalAudioUrl > ttsAudioUrl > 暂无原音`。
+- 原声相关需求（教材原声获取、切分、对齐）记录为后续优化，不进入当前版本。
+- 生产部署 commit：`a5a5f06`。
+- Vercel Production 部署：success，`https://study.jimmyyao.com` health check 返回 `200`。
+- Auto Test run：`https://github.com/yaojunxiong/jimmyyao-auto-test/actions/runs/27993600670`。
+- Smoke：✅ passed `4/4`。
+- Regression：✅ passed；P2-1a~h：✅ passed `8/8`。

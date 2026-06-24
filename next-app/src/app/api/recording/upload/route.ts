@@ -52,7 +52,7 @@ export async function POST(request: NextRequest) {
     .maybeSingle()
 
   const takeNo = (maxRow?.take_no ?? 0) + 1
-  const storagePath = `user-${user.id}/lesson-${lessonNo}/line-${lineNo}/take-${takeNo}.webm`
+  const storagePath = `${user.id}/lesson-${lessonNo}/line-${lineNo}/take-${takeNo}.webm`
 
   // Upload to Supabase Storage
   const { error: uploadError } = await supabase.storage

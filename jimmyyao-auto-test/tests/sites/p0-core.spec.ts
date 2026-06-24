@@ -716,6 +716,37 @@ test.describe('P0 core business tests @p0', () => {
       const takeRows = await page.getByTestId('recitation-take-row').count()
       expect(takeRows).toBeGreaterThanOrEqual(1)
       console.log('[p2-1c] Recording completed and take saved')
+
+      // ── Cloud verification ──
+      // Poll list API until upload completes
+      let cloudVerified = false
+      for (let attempt = 0; attempt < 10; attempt++) {
+        await page.waitForTimeout(2000)
+        const resp = await page.request.get(`${base}/api/recording/list?lessonNo=1&lineNo=1`)
+        if (!resp.ok()) continue
+        const takes = await resp.json() as Array<Record<string, unknown>>
+        const uploaded = takes.filter(t => t.uploadStatus === 'uploaded')
+        if (uploaded.length < 1) continue
+        for (const t of uploaded) {
+          expect(t.storagePath).toBeTruthy()
+          expect(String(t.storagePath)).toMatch(/^[0-9a-f-]+\/lesson-/)
+          // Verify signed URL returns HTTP 200
+          const sr = await page.request.get(`${base}/api/recording/signed-url?id=${t.id}`)
+          expect(sr.ok()).toBe(true)
+          const srBody = await sr.json() as Record<string, unknown>
+          expect(srBody.signedUrl).toBeTruthy()
+          // Verify set-best returns HTTP 200
+          const sbr = await page.request.post(`${base}/api/recording/set-best`, {
+            headers: { 'Content-Type': 'application/json' },
+            data: { id: t.id },
+          })
+          expect(sbr.ok()).toBe(true)
+        }
+        cloudVerified = true
+        break
+      }
+      expect(cloudVerified).toBe(true)
+      console.log('[p2-1c] Cloud upload verified: storage_path, signed URL, set-best')
     } finally {
       await ctx.close()
       await testBrowser.close()
@@ -745,6 +776,30 @@ test.describe('P0 core business tests @p0', () => {
       const takeCount = await page.getByTestId('recitation-take-row').count()
       expect(takeCount).toBeGreaterThanOrEqual(2)
       console.log(`[p2-1d] ${takeCount} take versions found`)
+
+      // ── Cloud verification ──
+      let cloudVerified = false
+      for (let attempt = 0; attempt < 10; attempt++) {
+        await page.waitForTimeout(2000)
+        const resp = await page.request.get(`${base}/api/recording/list?lessonNo=1&lineNo=1`)
+        if (!resp.ok()) continue
+        const takes = await resp.json() as Array<Record<string, unknown>>
+        const uploaded = takes.filter(t => t.uploadStatus === 'uploaded')
+        if (uploaded.length < 2) continue
+        for (const t of uploaded) {
+          expect(t.storagePath).toBeTruthy()
+          expect(String(t.storagePath)).toMatch(/^[0-9a-f-]+\/lesson-/)
+          // Verify signed URL
+          const sr = await page.request.get(`${base}/api/recording/signed-url?id=${t.id}`)
+          expect(sr.ok()).toBe(true)
+          const srBody = await sr.json() as Record<string, unknown>
+          expect(srBody.signedUrl).toBeTruthy()
+        }
+        cloudVerified = true
+        break
+      }
+      expect(cloudVerified).toBe(true)
+      console.log('[p2-1d] Cloud upload verified: 2+ takes uploaded')
     } finally {
       await ctx.close()
       await testBrowser.close()

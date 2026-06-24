@@ -288,6 +288,8 @@ function MyRecordingsPanel({
   const [selectedBestId, setSelectedBestId] = useState<string | null>(null)
   const [playingId, setPlayingId] = useState<string | null>(null)
   const [signedUrlCache, setSignedUrlCache] = useState<Map<string, { url: string; expiresAt: number }>>(new Map())
+  const autoRetriedRef = useRef<Set<string>>(new Set())
+  const autoRetryLineRef = useRef<string | null>(null)
   const audioRef = useRef<HTMLAudioElement | null>(null)
   const selectedBestIdRef = useRef(selectedBestId)
   selectedBestIdRef.current = selectedBestId
@@ -324,6 +326,7 @@ function MyRecordingsPanel({
     loadMerged()
   }, [loadMerged, takesRefreshKey])
 
+  // Auto-retry pending takes on page load (once per line)
   const getPlaybackUrl = useCallback(async (take: MergedTake, forceRefresh = false): Promise<string> => {
     if (take.localBlob) {
       return URL.createObjectURL(take.localBlob)
@@ -428,6 +431,20 @@ function MyRecordingsPanel({
       // Retry failed, keep pending
     }
   }, [line, lessonNo, mergedTakes, loadMerged])
+
+  // Auto-retry pending takes on mount / line change (once per take)
+  useEffect(() => {
+    if (line?.lineId !== autoRetryLineRef.current) {
+      autoRetriedRef.current.clear()
+      autoRetryLineRef.current = line?.lineId ?? null
+    }
+    for (const take of mergedTakes) {
+      if (take.uploadStatus === 'pending' && take.localBlob && !autoRetriedRef.current.has(take.takeId)) {
+        autoRetriedRef.current.add(take.takeId)
+        handleRetryUpload(take.takeId)
+      }
+    }
+  }, [mergedTakes, line?.lineId, handleRetryUpload])
 
   return (
     <section data-testid="recitation-recordings-panel" style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 18, marginTop: 12, overflow: 'hidden', boxShadow: '0 10px 28px rgba(15, 23, 42, 0.05)' }}>
