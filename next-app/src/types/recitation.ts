@@ -47,6 +47,27 @@ export interface RecitationTake {
   createdAt: string
   isSystemRecommended: boolean
   isUserSelected: boolean
+  uploadStatus?: 'pending' | 'uploaded' | 'failed'
+  storagePath?: string
+  isBest?: boolean
+}
+
+export interface RecordingTakeDTO {
+  id: string
+  userId: string
+  lessonNo: number
+  lineNo: number
+  takeNo: number
+  storagePath: string
+  audioMimeType: string
+  durationMs: number
+  score: number | null
+  isBest: boolean
+  isSystemRecommended: boolean
+  uploadStatus: string
+  createdAt: string
+  updatedAt: string
+  playbackUrl?: string
 }
 
 export interface RecitationLineState {

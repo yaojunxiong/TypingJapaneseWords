@@ -3,7 +3,7 @@ import type { RecitationTake } from '@/types/recitation'
 const DB_NAME = 'recitation-v2'
 const STORE_TAKES = 'takes'
 const STORE_SESSIONS = 'sessions'
-const DB_VERSION = 1
+const DB_VERSION = 2
 
 function openDB(): Promise<IDBDatabase> {
   return new Promise((resolve, reject) => {
@@ -26,10 +26,34 @@ function openDB(): Promise<IDBDatabase> {
 
 export async function saveTake(take: RecitationTake): Promise<void> {
   const db = await openDB()
-  const stored = { ...take, audioUrl: '' }
+  const stored: Record<string, unknown> = { ...take, audioUrl: '' }
   return new Promise((resolve, reject) => {
     const tx = db.transaction(STORE_TAKES, 'readwrite')
     tx.objectStore(STORE_TAKES).put(stored)
+    tx.oncomplete = () => resolve()
+    tx.onerror = () => reject(tx.error)
+  })
+}
+
+export async function updateTake(
+  takeId: string,
+  updates: Partial<RecitationTake>
+): Promise<void> {
+  const db = await openDB()
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction(STORE_TAKES, 'readwrite')
+    const store = tx.objectStore(STORE_TAKES)
+    const getReq = store.get(takeId)
+    getReq.onsuccess = () => {
+      const existing = getReq.result as Record<string, unknown> | undefined
+      if (existing) {
+        Object.assign(existing, updates)
+        if ('audioUrl' in updates) {
+          existing.audioUrl = ''
+        }
+        store.put(existing)
+      }
+    }
     tx.oncomplete = () => resolve()
     tx.onerror = () => reject(tx.error)
   })

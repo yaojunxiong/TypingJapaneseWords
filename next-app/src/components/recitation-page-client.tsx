@@ -1,9 +1,10 @@
 'use client'
 
 import { useCallback, useEffect, useRef, useState } from 'react'
-import type { RecitationLesson, RecitationLine, RecitationTake } from '@/types/recitation'
+import type { RecitationLesson, RecitationLine, RecitationTake, RecordingTakeDTO } from '@/types/recitation'
 import { loadRecitationLesson, getBestTake } from '@/lib/recitation-lesson'
-import { getTakesByLine, deleteTake } from '@/lib/recitation-storage'
+import { getTakesByLine, deleteTake as deleteLocalTake, updateTake } from '@/lib/recitation-storage'
+import { listTakes, setBestTake as apiSetBest, deleteCloudTake, getSignedUrl } from '@/lib/recitation-api'
 import RecitationFloatingBar from '@/components/recitation-floating-bar'
 import StudyMobileChrome from '@/components/study-mobile-chrome'
 import type { Lang } from '@/lib/i18n'
@@ -71,6 +72,54 @@ function Waveform({ seed, active = false }: { seed: string; active?: boolean }) 
   )
 }
 
+// Merge local takes with cloud DTOs for unified display
+interface MergedTake {
+  takeId: string
+  createdAt: string
+  score: number
+  isBest: boolean
+  localBlob?: Blob
+  storagePath?: string
+  uploadStatus?: string
+}
+
+function mergeTakes(local: RecitationTake[], cloud: RecordingTakeDTO[]): MergedTake[] {
+  const seen = new Set<string>()
+  const result: MergedTake[] = []
+
+  // Cloud takes first (authoritative)
+  for (const ct of cloud) {
+    const localMatch = local.find(t => t.takeId === ct.id)
+    seen.add(ct.id)
+    result.push({
+      takeId: ct.id,
+      createdAt: ct.createdAt,
+      score: ct.score ?? 0,
+      isBest: ct.isBest,
+      storagePath: ct.storagePath,
+      uploadStatus: ct.uploadStatus,
+      localBlob: localMatch?.audioBlob,
+    })
+  }
+
+  // Local-only takes (pending/failed uploads)
+  for (const lt of local) {
+    if (!seen.has(lt.takeId)) {
+      result.push({
+        takeId: lt.takeId,
+        createdAt: lt.createdAt,
+        score: lt.score,
+        isBest: lt.isUserSelected || false,
+        localBlob: lt.audioBlob,
+        uploadStatus: lt.uploadStatus || 'pending',
+      })
+    }
+  }
+
+  result.sort((a, b) => b.createdAt.localeCompare(a.createdAt))
+  return result
+}
+
 function CompactLineItem({
   line, lessonNo, isActive, onPlayOriginal, takesRefreshKey, onBestTakeChange,
 }: {
@@ -84,32 +133,35 @@ function CompactLineItem({
   const [showZh, setShowZh] = useState(false)
   const [showAnswer, setShowAnswer] = useState(false)
   const [showExplanation, setShowExplanation] = useState(false)
-  const [takes, setTakes] = useState<RecitationTake[]>([])
+  const [mergedTakes, setMergedTakes] = useState<MergedTake[]>([])
   const [selectedBestId, setSelectedBestId] = useState<string | null>(null)
   const selectedBestIdRef = useRef(selectedBestId)
   selectedBestIdRef.current = selectedBestId
 
   useEffect(() => {
-    getTakesByLine(line.lineId).then(ts => {
-      setTakes(ts)
-      if (ts.length > 0) {
+    const lineNo = line.order
+    Promise.all([
+      getTakesByLine(line.lineId),
+      listTakes(lessonNo, lineNo).catch(() => [] as RecordingTakeDTO[]),
+    ]).then(([local, cloud]) => {
+      const merged = mergeTakes(local, cloud)
+      setMergedTakes(merged)
+      if (merged.length > 0) {
         const currentId = selectedBestIdRef.current
-        const hasSelected = currentId && ts.some(t => t.takeId === currentId)
+        const hasSelected = currentId && merged.some(t => t.takeId === currentId)
         if (!hasSelected) {
-          const best = getBestTake(ts, null)
-          if (best) {
-            setSelectedBestId(best.takeId)
-            onBestTakeChange(line.lineId, best.takeId)
-          }
+          const best = merged.find(t => t.isBest) || merged[0]
+          setSelectedBestId(best.takeId)
+          onBestTakeChange(line.lineId, best.takeId)
         }
       } else {
         setSelectedBestId(null)
         onBestTakeChange(line.lineId, null)
       }
     })
-  }, [line.lineId, takesRefreshKey, onBestTakeChange])
+  }, [line.lineId, lessonNo, line.order, takesRefreshKey, onBestTakeChange])
 
-  const isCompleted = takes.length > 0 && selectedBestId !== null
+  const isCompleted = mergedTakes.length > 0 && selectedBestId !== null
   const hasOriginalAudio = Boolean(line.originalAudioUrl)
   const hasPlayableAudio = Boolean(line.originalAudioUrl || line.ttsAudioUrl)
   const speakerAvatar = getSpeakerAvatar(line)
@@ -222,74 +274,38 @@ function CompactLineItem({
 }
 
 function MyRecordingsPanel({
-  line, takesRefreshKey, onBestTakeChange,
+  line, lessonNo, takesRefreshKey, onBestTakeChange,
 }: {
   line: RecitationLine | null
+  lessonNo: number
   takesRefreshKey: number
   onBestTakeChange: (lineId: string, takeId: string | null) => void
 }) {
-  const [takes, setTakes] = useState<RecitationTake[]>([])
+  const [mergedTakes, setMergedTakes] = useState<MergedTake[]>([])
   const [selectedBestId, setSelectedBestId] = useState<string | null>(null)
   const [playingId, setPlayingId] = useState<string | null>(null)
+  const [signedUrlCache, setSignedUrlCache] = useState<Map<string, string>>(new Map())
   const selectedBestIdRef = useRef(selectedBestId)
   selectedBestIdRef.current = selectedBestId
 
-  useEffect(() => {
+  const loadMerged = useCallback(async () => {
     if (!line) {
-      setTakes([])
+      setMergedTakes([])
       setSelectedBestId(null)
-      return
+      return []
     }
-    getTakesByLine(line.lineId).then(ts => {
-      setTakes(ts)
-      if (ts.length > 0) {
-        const currentId = selectedBestIdRef.current
-        const hasSelected = currentId && ts.some(t => t.takeId === currentId)
-        if (!hasSelected) {
-          const best = getBestTake(ts, null)
-          if (best) {
-            setSelectedBestId(best.takeId)
-            onBestTakeChange(line.lineId, best.takeId)
-          }
-        }
-      } else {
-        setSelectedBestId(null)
-        onBestTakeChange(line.lineId, null)
-      }
-    })
-  }, [line, takesRefreshKey, onBestTakeChange])
-
-  const loadTakes = useCallback(async () => {
-    if (!line) return []
-    const ts = await getTakesByLine(line.lineId)
-    setTakes(ts)
-    return ts
-  }, [line])
-
-  const handleSelectBest = useCallback(async (takeId: string) => {
-    if (!line) return
-    setSelectedBestId(takeId)
-    onBestTakeChange(line.lineId, takeId)
-    const ts = await getTakesByLine(line.lineId)
-    setTakes(ts.map(t => ({ ...t, isUserSelected: t.takeId === takeId })))
-  }, [line, onBestTakeChange])
-
-  const handlePlay = useCallback((takeId: string) => {
-    setPlayingId(takeId)
-    const take = takes.find(t => t.takeId === takeId)
-    if (!take) return
-    const audio = new Audio(take.audioUrl)
-    audio.onended = () => setPlayingId(null)
-    audio.play().catch(() => setPlayingId(null))
-  }, [takes])
-
-  const handleDelete = useCallback(async (takeId: string) => {
-    if (!line) return
-    await deleteTake(takeId)
-    const ts = await loadTakes()
-    if (ts.length > 0) {
-      const best = getBestTake(ts, selectedBestId === takeId ? null : selectedBestId)
-      if (best) {
+    const lineNo = line.order
+    const [local, cloud] = await Promise.all([
+      getTakesByLine(line.lineId),
+      listTakes(lessonNo, lineNo).catch(() => [] as RecordingTakeDTO[]),
+    ])
+    const merged = mergeTakes(local, cloud)
+    setMergedTakes(merged)
+    if (merged.length > 0) {
+      const currentId = selectedBestIdRef.current
+      const hasSelected = currentId && merged.some(t => t.takeId === currentId)
+      if (!hasSelected) {
+        const best = merged.find(t => t.isBest) || merged[0]
         setSelectedBestId(best.takeId)
         onBestTakeChange(line.lineId, best.takeId)
       }
@@ -297,23 +313,112 @@ function MyRecordingsPanel({
       setSelectedBestId(null)
       onBestTakeChange(line.lineId, null)
     }
-  }, [line, loadTakes, onBestTakeChange, selectedBestId])
+    return merged
+  }, [line, lessonNo, onBestTakeChange])
 
-  const sortedTakes = [...takes].sort((a, b) => b.createdAt.localeCompare(a.createdAt))
+  useEffect(() => {
+    loadMerged()
+  }, [loadMerged, takesRefreshKey])
+
+  const getPlaybackUrl = useCallback(async (take: MergedTake): Promise<string> => {
+    if (take.localBlob) {
+      return URL.createObjectURL(take.localBlob)
+    }
+    if (take.storagePath) {
+      const cached = signedUrlCache.get(take.takeId)
+      if (cached) return cached
+      try {
+        const url = await getSignedUrl(take.takeId)
+        setSignedUrlCache(prev => new Map(prev).set(take.takeId, url))
+        return url
+      } catch {
+        return ''
+      }
+    }
+    return ''
+  }, [signedUrlCache])
+
+  const handleSelectBest = useCallback(async (takeId: string) => {
+    if (!line) return
+    setSelectedBestId(takeId)
+    onBestTakeChange(line.lineId, takeId)
+    setMergedTakes(prev => prev.map(t => ({
+      ...t,
+      isBest: t.takeId === takeId,
+    })))
+    // Try cloud API, silently fall back to local-only
+    try {
+      await apiSetBest(takeId)
+      const mt = mergedTakes.find(t => t.takeId === takeId)
+      if (mt?.uploadStatus === 'uploaded') {
+        await updateTake(takeId, { isUserSelected: true, uploadStatus: 'uploaded' })
+      }
+    } catch {
+      // Local-only or failed upload
+      await updateTake(takeId, { isUserSelected: true })
+    }
+  }, [line, onBestTakeChange, mergedTakes])
+
+  const handlePlay = useCallback(async (takeId: string) => {
+    setPlayingId(takeId)
+    const take = mergedTakes.find(t => t.takeId === takeId)
+    if (!take) { setPlayingId(null); return }
+    const url = await getPlaybackUrl(take)
+    if (!url) { setPlayingId(null); return }
+    const audio = new Audio(url)
+    audio.onended = () => { setPlayingId(null); URL.revokeObjectURL(url) }
+    audio.play().catch(() => { setPlayingId(null); URL.revokeObjectURL(url) })
+  }, [mergedTakes, getPlaybackUrl])
+
+  const handleDelete = useCallback(async (takeId: string) => {
+    if (!line) return
+    // Try cloud delete
+    try {
+      await deleteCloudTake(takeId)
+    } catch {
+      // Local-only take, no cloud delete needed
+    }
+    await deleteLocalTake(takeId)
+    const merged = await loadMerged()
+    if (merged.length > 0) {
+      const best = merged.find(t => t.isBest) || merged[0]
+      setSelectedBestId(best.takeId)
+      onBestTakeChange(line.lineId, best.takeId)
+    } else {
+      setSelectedBestId(null)
+      onBestTakeChange(line.lineId, null)
+    }
+  }, [line, loadMerged, onBestTakeChange])
+
+  const handleRetryUpload = useCallback(async (takeId: string) => {
+    if (!line) return
+    const take = mergedTakes.find(t => t.takeId === takeId)
+    if (!take?.localBlob) return
+    const lineNo = line.order
+    try {
+      await import('@/lib/recitation-api').then(m => m.uploadTake(take.localBlob!, lessonNo, lineNo))
+      await updateTake(takeId, { uploadStatus: 'uploaded' })
+      loadMerged()
+    } catch {
+      // Retry failed, keep pending
+    }
+  }, [line, lessonNo, mergedTakes, loadMerged])
 
   return (
     <section data-testid="recitation-recordings-panel" style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 18, marginTop: 12, overflow: 'hidden', boxShadow: '0 10px 28px rgba(15, 23, 42, 0.05)' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '14px 16px 8px' }}>
-        <strong style={{ fontSize: 17 }}>我的录音（共 {takes.length} 条）</strong>
+        <strong style={{ fontSize: 17 }}>我的录音（共 {mergedTakes.length} 条）</strong>
         <span style={{ fontSize: 24, color: '#64748b', lineHeight: 1 }}>›</span>
       </div>
 
-      {sortedTakes.length === 0 ? (
+      {mergedTakes.length === 0 ? (
         <div style={{ padding: '8px 16px 18px', color: '#64748b', fontSize: 13 }}>当前句还没有录音。</div>
       ) : (
         <div style={{ padding: '0 12px 14px' }}>
-          {sortedTakes.map((take, index) => {
+          {mergedTakes.map((take, index) => {
             const isBest = take.takeId === selectedBestId
+            const isPending = take.uploadStatus === 'pending'
+            const isFailed = take.uploadStatus === 'failed'
             return (
               <div key={take.takeId} data-testid="recitation-take-row" style={{ display: 'grid', gridTemplateColumns: '30px 86px minmax(0, 1fr) 46px', gap: '4px 8px', alignItems: 'center', minHeight: 54, padding: '2px 0' }}>
                 <span style={{ width: 26, height: 26, borderRadius: 13, background: isBest ? '#eff6ff' : '#f1f5f9', color: isBest ? '#1683ff' : '#0f172a', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: 13, fontWeight: 800 }}>
@@ -323,8 +428,16 @@ function MyRecordingsPanel({
                 <Waveform seed={take.takeId} active={isBest} />
                 <span style={{ color: isBest ? '#1683ff' : '#475569', fontSize: 14, fontWeight: 800, textAlign: 'right' }}>{take.score}分</span>
                 <span style={{ gridColumn: '3 / 5', display: 'flex', justifyContent: 'flex-end', alignItems: 'center', gap: 4 }}>
+                  {(isPending || isFailed) && (
+                    <span style={{ border: '1px solid #f59e0b', color: '#d97706', borderRadius: 999, padding: '3px 10px', fontSize: 11, fontWeight: 800, whiteSpace: 'nowrap' }}>
+                      {isFailed ? '上传失败' : '等待上传'}
+                    </span>
+                  )}
+                  {isFailed && take.localBlob && (
+                    <button type="button" className="btn ghost small" onClick={() => handleRetryUpload(take.takeId)} style={{ background: '#fff', border: '1px solid #dbe3ee', color: '#d97706', borderRadius: 999, padding: '3px 10px', fontSize: 12, whiteSpace: 'nowrap' }}>重试</button>
+                  )}
                   {isBest ? (
-                    <span style={{ border: '1px solid #1683ff', color: '#1683ff', borderRadius: 999, padding: '3px 10px', fontSize: 12, fontWeight: 800, whiteSpace: 'nowrap' }}>系统推荐</span>
+                    <span style={{ border: '1px solid #1683ff', color: '#1683ff', borderRadius: 999, padding: '3px 10px', fontSize: 12, fontWeight: 800, whiteSpace: 'nowrap' }}>最佳</span>
                   ) : (
                     <button type="button" className="btn ghost small" onClick={() => handleSelectBest(take.takeId)} style={{ background: '#fff', border: '1px solid #dbe3ee', color: '#1683ff', borderRadius: 999, padding: '3px 10px', fontSize: 12, whiteSpace: 'nowrap' }}>选为最佳</button>
                   )}
@@ -586,6 +699,7 @@ export default function RecitationPageClient({ lessonNo, lang }: Props) {
 
       <MyRecordingsPanel
         line={activeLine}
+        lessonNo={lessonNo}
         takesRefreshKey={takesRefreshKey}
         onBestTakeChange={handleBestTakeChange}
       />
