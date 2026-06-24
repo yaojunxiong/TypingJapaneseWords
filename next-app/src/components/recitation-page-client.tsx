@@ -462,14 +462,22 @@ export default function RecitationPageClient({ lessonNo, lang }: Props) {
   const [lesson, setLesson] = useState<RecitationLesson | null>(null)
   const [loading, setLoading] = useState(true)
   const [bestTakes, setBestTakes] = useState<Map<string, string | null>>(new Map())
-  const [overallMessage, setOverallMessage] = useState('')
   const [activeLineId, setActiveLineId] = useState<string | null>(null)
   const [takesRefreshKey, setTakesRefreshKey] = useState(0)
   const [isRecording, setIsRecording] = useState(false)
   const [focusMode, setFocusMode] = useState(false)
   const [notice, setNotice] = useState('')
+  const [continuousPlayback, setContinuousPlayback] = useState<{
+    status: 'idle' | 'loading' | 'playing' | 'paused'
+    currentIndex: number
+    totalLines: number
+  }>({ status: 'idle', currentIndex: 0, totalLines: 0 })
   const originalAudioRef = useRef<HTMLAudioElement | null>(null)
   const noticeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const playbackAudioRef = useRef<HTMLAudioElement | null>(null)
+  const playbackQueueRef = useRef<string[]>([])
+  const stopPlaybackRef = useRef(false)
+  const pauseDelayTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   useEffect(() => {
     loadRecitationLesson(lessonNo).then((data) => {
@@ -561,19 +569,125 @@ export default function RecitationPageClient({ lessonNo, lang }: Props) {
     })
   }, [isRecording, showNotice, stopOriginalAudio])
 
+  const missingCount = lesson !== null
+    ? lesson.lines.filter(l => !bestTakes.has(l.lineId)).length
+    : 0
+
+  const allCompleted = missingCount === 0 && lesson !== null && lesson.lines.length > 0
+
+  const stopContinuousPlayback = useCallback(() => {
+    stopPlaybackRef.current = true
+    if (pauseDelayTimerRef.current) {
+      clearTimeout(pauseDelayTimerRef.current)
+      pauseDelayTimerRef.current = null
+    }
+    if (playbackAudioRef.current) {
+      playbackAudioRef.current.pause()
+      playbackAudioRef.current = null
+    }
+    playbackQueueRef.current.forEach(url => {
+      if (url.startsWith('blob:')) URL.revokeObjectURL(url)
+    })
+    playbackQueueRef.current = []
+    setContinuousPlayback({ status: 'idle', currentIndex: 0, totalLines: 0 })
+  }, [])
+
   useEffect(() => {
     return () => {
       stopOriginalAudio()
+      stopContinuousPlayback()
       if (noticeTimerRef.current) clearTimeout(noticeTimerRef.current)
     }
-  }, [stopOriginalAudio])
+  }, [stopOriginalAudio, stopContinuousPlayback])
 
-  const allCompleted = lesson !== null && lesson.lines.length > 0 && lesson.lines.every(l => bestTakes.has(l.lineId))
-
-  const handleGenerateFull = useCallback(() => {
+  const handleStartContinuousPlayback = useCallback(async () => {
     if (!lesson) return
-    setOverallMessage('完整音频已生成（演示功能）')
-  }, [lesson])
+
+    stopContinuousPlayback()
+
+    stopPlaybackRef.current = false
+
+    const sortedLines = [...lesson.lines].sort((a, b) => a.order - b.order)
+    const total = sortedLines.length
+    const urls: string[] = []
+
+    setContinuousPlayback({ status: 'loading', currentIndex: 0, totalLines: total })
+
+    for (const line of sortedLines) {
+      const bestTakeId = bestTakes.get(line.lineId)
+      if (!bestTakeId) {
+        showNotice('数据异常，请重新选择最佳录音')
+        setContinuousPlayback({ status: 'idle', currentIndex: 0, totalLines: 0 })
+        return
+      }
+
+      const [local, cloud] = await Promise.all([
+        getTakesByLine(line.lineId),
+        listTakes(lessonNo, line.order).catch(() => [] as RecordingTakeDTO[]),
+      ])
+
+      let url = ''
+      const cloudTake = cloud.find(t => t.id === bestTakeId)
+      if (cloudTake?.storagePath) {
+        try {
+          url = await getSignedUrl(bestTakeId)
+        } catch { /* fall through */ }
+      }
+      if (!url) {
+        const localTake = local.find(t => t.takeId === bestTakeId)
+        if (localTake?.audioBlob) {
+          url = URL.createObjectURL(localTake.audioBlob)
+        }
+      }
+      if (!url) {
+        showNotice(`第 ${line.order} 句最佳录音无法播放`)
+        setContinuousPlayback({ status: 'idle', currentIndex: 0, totalLines: 0 })
+        return
+      }
+      urls.push(url)
+    }
+
+    playbackQueueRef.current = urls
+
+    const playNext = (idx: number) => {
+      if (stopPlaybackRef.current || idx >= urls.length) {
+        if (urls.length > 0 && idx >= urls.length) {
+          showNotice('完整背诵试听完成')
+        }
+        stopPlaybackRef.current = true
+        setContinuousPlayback({ status: 'idle', currentIndex: 0, totalLines: 0 })
+        return
+      }
+
+      setContinuousPlayback({ status: 'playing', currentIndex: idx, totalLines: urls.length })
+      const audio = new Audio(urls[idx])
+      playbackAudioRef.current = audio
+
+      audio.onended = () => {
+        playbackAudioRef.current = null
+        const delay = 300 + Math.random() * 300
+        pauseDelayTimerRef.current = setTimeout(() => playNext(idx + 1), delay)
+      }
+
+      audio.play().catch(() => {
+        showNotice('播放失败')
+        stopContinuousPlayback()
+      })
+    }
+
+    playNext(0)
+  }, [lesson, bestTakes, lessonNo, showNotice, stopContinuousPlayback])
+
+  const togglePauseContinuousPlayback = useCallback(() => {
+    if (!playbackAudioRef.current) return
+    if (continuousPlayback.status === 'playing') {
+      playbackAudioRef.current.pause()
+      setContinuousPlayback(prev => ({ ...prev, status: 'paused' }))
+    } else if (continuousPlayback.status === 'paused') {
+      playbackAudioRef.current.play().catch(() => {})
+      setContinuousPlayback(prev => ({ ...prev, status: 'playing' }))
+    }
+  }, [continuousPlayback.status])
 
   const showTopBar = !focusMode
   const showBottomNav = !focusMode
@@ -705,22 +819,46 @@ export default function RecitationPageClient({ lessonNo, lang }: Props) {
       />
 
       <div style={{ marginTop: 16, textAlign: 'center' }}>
-        {allCompleted ? (
-          <button className="btn" onClick={handleGenerateFull} style={{ background: '#166534', color: '#fff', padding: '12px 32px', fontSize: 15 }}>
-            生成完整背诵音频
-          </button>
+        {continuousPlayback.status !== 'idle' ? (
+          <div>
+            <p style={{ fontSize: 14, fontWeight: 700, color: '#0f172a', marginBottom: 12 }}>
+              {continuousPlayback.status === 'loading'
+                ? '正在准备试听...'
+                : `正在试听完整背诵：第 ${continuousPlayback.currentIndex + 1} / ${continuousPlayback.totalLines} 句`}
+            </p>
+            <div style={{ display: 'flex', justifyContent: 'center', gap: 12 }}>
+              {continuousPlayback.status === 'playing' || continuousPlayback.status === 'paused' ? (
+                <>
+                  <button className="btn" onClick={togglePauseContinuousPlayback} style={{ background: '#0f172a', color: '#fff', padding: '10px 24px', fontSize: 14 }}>
+                    {continuousPlayback.status === 'paused' ? '继续' : '暂停'}
+                  </button>
+                  <button className="btn" onClick={stopContinuousPlayback} style={{ background: '#dc2626', color: '#fff', padding: '10px 24px', fontSize: 14 }}>
+                    停止
+                  </button>
+                </>
+              ) : null}
+            </div>
+          </div>
+        ) : allCompleted ? (
+          <div>
+            <button className="btn" onClick={handleStartContinuousPlayback} style={{ background: '#166534', color: '#fff', padding: '12px 32px', fontSize: 15 }}>
+              试听完整背诵
+            </button>
+            <p style={{ marginTop: 8, fontSize: 12, color: '#94a3b8' }}>
+              按顺序连续播放每一句的最佳录音，用来检查整课背诵效果。
+            </p>
+          </div>
         ) : (
-          <button className="btn" disabled style={{ opacity: 0.5, padding: '12px 32px', fontSize: 15 }}>
-            请先完成所有句子的录音
-          </button>
+          <div>
+            <button className="btn" disabled style={{ opacity: 0.5, padding: '12px 32px', fontSize: 15 }}>
+              试听完整背诵
+            </button>
+            <p style={{ marginTop: 8, fontSize: 13, color: '#64748b' }}>
+              还差 {missingCount} 句。录完每一句并选择最佳版本后，可以试听完整背诵。
+            </p>
+          </div>
         )}
       </div>
-
-      {overallMessage && (
-        <div style={{ marginTop: 16, padding: 12, background: '#f0fdf4', border: '1px solid #86efac', borderRadius: 10, textAlign: 'center', fontSize: 14, color: '#166534' }}>
-          {overallMessage}
-        </div>
-      )}
 
       <RecitationFloatingBar
         line={activeLine}
