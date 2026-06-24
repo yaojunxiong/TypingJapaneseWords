@@ -579,6 +579,12 @@ export default async function AdminPage({
     },
     {
       icon: '📋',
+      label: tr(lang, '打卡总览', 'Check-in Overview'),
+      description: tr(lang, '查看学生录音打卡统计，支持日期筛选与完成率分析', 'View student recording check-in stats with date filtering and completion analysis.'),
+      href: '/admin/checkins',
+    },
+    {
+      icon: '📋',
       label: tr(lang, '课程数据审计', 'Course Audit'),
       description: tr(lang, '只读审计 1-50 课数据完整性与内容检索', 'Audit lessons 1-50 data integrity and content search.'),
       href: '/admin?audit=1',
@@ -684,6 +690,13 @@ export default async function AdminPage({
       description: tr(lang, '当前可用：只读查看论坛帖子和审核状态，不支持审核/删除操作。', 'Read-only forum posts and moderation status. No approve/delete operations.'),
       status: 'available',
       href: '/admin/forum',
+    },
+    {
+      icon: '📋',
+      label: tr(lang, '打卡总览', 'Check-in Overview'),
+      description: tr(lang, '查看学生录音打卡统计，按学生与课程聚合，支持筛选与完成率分析。', 'View student recording check-in stats, grouped by student and lesson with filtering and completion analysis.'),
+      status: 'available',
+      href: '/admin/checkins',
     },
     {
       icon: '🎙️',
