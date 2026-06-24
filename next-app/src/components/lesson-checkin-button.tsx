@@ -69,7 +69,7 @@ export default function LessonCheckinButton({ lang, lessonNo }: { lang: string; 
           </p>
           {lessonNo != null && (
             <Link
-              href={`/lessons/${lessonNo}/practice?stage=conversation`}
+              href={`/lessons/${lessonNo}/recitation`}
               style={{ display: 'inline-block', marginTop: 4, fontSize: 13 }}
             >
               🗣️ {lang === 'en' ? 'Go to Conversation Recite' : '去会话背诵'}

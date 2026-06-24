@@ -10,6 +10,7 @@ import {
   markDailyCheckinLocal,
   syncLearningCloudNow
 } from '@/lib/learning-cloud-sync'
+import conversationTitles from '@/data/minna/conversation-titles.json'
 
 type Props = {
   lang: 'zh' | 'en'
@@ -48,21 +49,21 @@ function toStats(): HomeStats {
   }
 }
 
+function getConversationTitle(no: number): string {
+  const ct = conversationTitles[String(no) as keyof typeof conversationTitles]
+  return ct?.conversationTitle || ''
+}
+
 const MAIN_ENTRIES = [
+  {
+    key: 'recitation', emoji: '🎙️', zh: '会话背诵', en: 'Recitation',
+    descZh: '逐句录音 → 系统评分 → 自动选最佳 → 生成完整会话音频', descEn: 'Record per sentence → scored → best take → full audio',
+    href: (no: number) => `/lessons/${no}/recitation`
+  },
   {
     key: 'deep-dive', emoji: '🔍', zh: '中文理解', en: 'Deep Dive',
     descZh: '先看懂会话背景、人物关系和每句话的用途', descEn: 'Understand the setting, characters and usage',
     href: (no: number) => `/lessons/${no}/deep-dive`
-  },
-  {
-    key: 'conversation', emoji: '💬', zh: '会话原文', en: 'Conversation',
-    descZh: '听原音、跟读，逐句掌握日文会话', descEn: 'Listen, repeat and master each sentence',
-    href: (no: number) => `/lessons/${no}/practice?stage=conversation`
-  },
-  {
-    key: 'recording', emoji: '🎤', zh: '跟读录音', en: 'Recording',
-    descZh: '模仿发音，录下自己的声音对比纠正', descEn: 'Record yourself and compare with native audio',
-    href: (no: number) => `/lessons/${no}/practice?stage=conversation#recording`
   },
   {
     key: 'vocab', emoji: '📖', zh: '关键词汇', en: 'Key Vocab',
@@ -86,11 +87,24 @@ const MAIN_ENTRIES = [
   },
 ]
 
+const HIDDEN_ENTRIES = [
+  {
+    key: 'conversation', emoji: '💬', zh: '会话原文', en: 'Conversation',
+    descZh: '听原音、跟读，逐句掌握日文会话', descEn: 'Listen, repeat and master each sentence',
+    href: (no: number) => `/lessons/${no}/practice?stage=conversation`
+  },
+  {
+    key: 'recording', emoji: '🎤', zh: '跟读录音', en: 'Recording',
+    descZh: '模仿发音，录下自己的声音对比纠正', descEn: 'Record yourself and compare with native audio',
+    href: (no: number) => `/lessons/${no}/practice?stage=conversation#recording`
+  },
+]
+
 const STUDY_FLOW = [
-  { step: 1, zh: '先看中文解剖，理解会话在说什么', en: 'Start with Deep Dive to understand the conversation' },
-  { step: 2, zh: '听原文会话，熟悉语调和节奏', en: 'Listen to the original conversation audio' },
-  { step: 3, zh: '逐句跟读，模仿发音', en: 'Repeat sentence by sentence' },
-  { step: 4, zh: '遮中文背诵，检查记忆效果', en: 'Cover Chinese and test your recall' },
+  { step: 1, zh: '看中文理解，读懂会话背景和用法', en: 'Deep Dive: understand the conversation context' },
+  { step: 2, zh: '进入会话背诵，逐句听原音/合成练习音', en: 'Recitation: listen to original/TTS audio per sentence' },
+  { step: 3, zh: '每句录音，系统评分，选最佳版本', en: 'Record each sentence, get scored, pick the best take' },
+  { step: 4, zh: '辅助练习词汇/语法/例句，巩固记忆', en: 'Practice vocab/grammar/examples to reinforce' },
   { step: 5, zh: '完成今日打卡，记录学习进度', en: 'Check in and track your progress' },
 ]
 
@@ -164,19 +178,30 @@ export default function HomeProgressClient({ lang }: Props) {
 
   return (
     <>
-      {/* ── Top: check-in + current lesson ── */}
-      <section className="card" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>
-        <div style={{ flex: 1 }}>
-          <p className="small" style={{ margin: '0 0 2px', color: '#64748b' }}>
-            {checkedToday
-              ? t(lang, `今日已打卡 · 连续 ${stats.streak} 天`, `Checked in · ${stats.streak}-day streak`)
-              : t(lang, `今日未打卡 · 已累计 ${stats.checkinDays} 天`, `Not checked in · ${stats.checkinDays} days`)}
-          </p>
-          <h2 style={{ margin: 0, fontSize: 20 }}>
-            {t(lang, `第 ${lessonNo} 课 · ${lesson.title}`, `Lesson ${lessonNo}`)}
-          </h2>
+      {/* ── Top: check-in + current lesson + recitation CTA ── */}
+      <section className="card" style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>
+          <div style={{ flex: 1 }}>
+            <p className="small" style={{ margin: '0 0 2px', color: '#64748b' }}>
+              {checkedToday
+                ? t(lang, `今日已打卡 · 连续 ${stats.streak} 天`, `Checked in · ${stats.streak}-day streak`)
+                : t(lang, `今日未打卡 · 已累计 ${stats.checkinDays} 天`, `Not checked in · ${stats.checkinDays} days`)}
+            </p>
+            <h2 style={{ margin: 0, fontSize: 20 }}>
+              {t(lang, `第 ${lessonNo} 课 · ${lesson.title}`, `Lesson ${lessonNo}`)}
+            </h2>
+            {(() => {
+              const ct = getConversationTitle(lessonNo)
+              return ct ? (
+                <p style={{ margin: '4px 0 0', fontSize: 18, fontWeight: 900, color: '#0f172a' }}>{ct}</p>
+              ) : null
+            })()}
+          </div>
+          <span style={{ fontSize: 32 }}>{checkedToday ? '✅' : '📅'}</span>
         </div>
-        <span style={{ fontSize: 32 }}>{checkedToday ? '✅' : '📅'}</span>
+        <Link className="btn" href={`/lessons/${lessonNo}/recitation`} style={{ padding: '14px 20px', fontSize: 17, textAlign: 'center', display: 'block' }}>
+          🎙️ {t(lang, '开始会话背诵', 'Start Recitation')} →
+        </Link>
       </section>
 
       {/* ── Learning entries ── */}
@@ -208,8 +233,8 @@ export default function HomeProgressClient({ lang }: Props) {
       {/* ── Continue + Check-in ── */}
       <section className="card">
         <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-          <Link className="btn" href={`/lessons/${lessonNo}`} style={{ flex: 1, textAlign: 'center' }}>
-            {t(lang, '继续学习', 'Continue Learning')} →
+          <Link className="btn ghost" href="/lessons" style={{ flex: 1, textAlign: 'center' }}>
+            {t(lang, '课程列表', 'All Lessons')}
           </Link>
           <button className="btn ghost" onClick={onCheckin} disabled={syncing || checkedToday} style={{ flex: 1 }}>
             {checkedToday ? t(lang, '今日已打卡 ✅', 'Checked in ✅') : t(lang, '今日打卡', 'Check in')}

@@ -9,6 +9,7 @@ import LessonConfirmAction from '@/components/lesson-confirm-action'
 import RecitationV2Entry from '@/components/recitation-v2-entry'
 import { LESSONS_1_50 } from '@/lib/minna-lessons'
 import { getLang, type Lang, tr } from '@/lib/i18n-server'
+import conversationTitles from '@/data/minna/conversation-titles.json'
 
 type LangText = { zh?: string; en?: string; ja?: string; jp?: string }
 
@@ -68,12 +69,15 @@ async function loadLessonDoc(lessonNo: number): Promise<LessonDoc | null> {
 
 const MAINLINE_STEPS = [
   { key: 'deep-dive', emoji: '🔍', zh: '中文理解', en: 'Deep Dive', stage: 'deep-dive' },
-  { key: 'video', emoji: '🎬', zh: '会话视频', en: 'Conversation Video', stage: 'conversation' },
-  { key: 'conversation', emoji: '💬', zh: '会话原文', en: 'Conversation Text', stage: 'conversation' },
   { key: 'vocab', emoji: '📖', zh: '会话关键词汇', en: 'Key Vocabulary', stage: 'conversation_vocab' },
   { key: 'grammar', emoji: '🔷', zh: '会话核心语法', en: 'Core Grammar', stage: 'conversation_grammar' },
   { key: 'examples', emoji: '💡', zh: '会话替换例句', en: 'Example Sentences', stage: 'conversation_examples' },
   { key: 'quiz', emoji: '🏆', zh: '会话专项测试', en: 'Conversation Quiz', stage: 'conversation_quiz' },
+]
+
+const HIDDEN_STEPS = [
+  { key: 'video', emoji: '🎬', zh: '会话视频', en: 'Conversation Video', stage: 'conversation' },
+  { key: 'conversation', emoji: '💬', zh: '会话原文', en: 'Conversation Text', stage: 'conversation' },
   { key: 'recording', emoji: '🎤', zh: '跟读录音', en: 'Recording', stage: 'conversation#recording' },
   { key: 'weak', emoji: '🔄', zh: '不熟句复习', en: 'Weak Review', stage: 'conversation#weak' },
 ]
@@ -94,17 +98,23 @@ export default async function LessonDetailPage({
       <TopLabelSync label={lang === 'en' ? `Lesson ${no}` : `第 ${no} 课`} />
 
       <section className="heroCard card">
-        <h2>{lang === 'en' ? `Lesson ${no} · Conversation Mainline` : `第 ${no} 课 · 会话主线学习`}</h2>
-        <p className="small">
+        <h2>{lang === 'en' ? `Lesson ${no}` : `第 ${no} 课`}</h2>
+        {(() => {
+          const ct = conversationTitles[String(no) as keyof typeof conversationTitles]
+          const title = ct?.conversationTitle
+          return title ? (
+            <p style={{ fontSize: 24, fontWeight: 900, margin: '4px 0 0', color: '#0f172a' }}>{title}</p>
+          ) : (
+            <p className="small" style={{ margin: '4px 0 0' }}>
+              {tr(lang, `第 ${no} 课 · 会话背诵`, `Lesson ${no} · Recitation`)}
+            </p>
+          )
+        })()}
+        <p className="small" style={{ marginTop: 8 }}>
           {tr(lang,
-            '看视频、学会话词汇和语法，通过例句和测试练习，最后完成跟读录音和背诵。',
-            'Watch the video, learn conversation vocab & grammar, practice with examples & quiz, then record and recite.')}
+            '听原文、逐句背诵录音，系统评分并自动选最佳版本。',
+            'Listen to the original audio, recite and record sentence by sentence, get scored and auto-select the best take.')}
         </p>
-        {lesson?.conversationMainlineStatus ? (
-          <p className="small" style={{ marginTop: 4 }}>
-            {tr(lang, `会话主线内容已就绪，待人工审核。`, `Conversation mainline content ready, needs review.`)}
-          </p>
-        ) : null}
       </section>
 
       {lesson?.conversationVideo?.videoUrl ? (
@@ -145,15 +155,15 @@ export default async function LessonDetailPage({
         <h3 style={{ margin: '0 0 8px' }}>{tr(lang, '本课学习顺序', 'Study Flow')}</h3>
         <p className="small" style={{ margin: '0 0 12px', lineHeight: 1.6 }}>
           {tr(lang,
-            '先完成上方原视频跟读，再用中文理解会话，最后进入会话背诵。学完后记得今日打卡。',
-            'Start with the source video above, understand the conversation in Chinese, then recite it. Check in when finished.')}
+            '通过逐句录音 → 系统评分 → 自动选最佳 → 生成完整会话音频。学完后记得今日打卡。',
+            'Record per sentence → scored automatically → best take selected → full conversation audio. Check in when finished.')}
         </p>
         <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+          <Link className="btn" href={`/lessons/${no}/recitation`} style={{ padding: '12px 14px', minWidth: 150, textAlign: 'center' }}>
+            🎙️ {tr(lang, '开始会话背诵', 'Start Recitation')}
+          </Link>
           <Link className="btn ghost" href={`/lessons/${no}/deep-dive`} style={{ padding: '12px 14px', minWidth: 150, textAlign: 'center' }}>
             🔍 {tr(lang, '中文理解', 'Deep Dive')}
-          </Link>
-          <Link className="btn" href={`/lessons/${no}/practice?stage=conversation`} style={{ padding: '12px 14px', minWidth: 150, textAlign: 'center' }}>
-            🗣️ {tr(lang, '会话背诵', 'Conversation Recite')}
           </Link>
         </div>
       </section>
@@ -161,16 +171,16 @@ export default async function LessonDetailPage({
       <section className="card" style={{ background: '#f0fdf4', borderColor: '#bbf7d0' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
           <span style={{ fontSize: 18 }}>📋</span>
-          <strong>{tr(lang, '本课核心闭环进度 0/4', 'Lesson Core Progress 0/4')}</strong>
+          <strong>{tr(lang, '会话背诵四步法', 'Recitation 4-Step Method')}</strong>
         </div>
         <p className="small" style={{ margin: '0 0 6px', lineHeight: 1.6, color: '#475569' }}>
-          {tr(lang, '4 步 = 背诵掌握主线 · 9 块工具 = 帮助完成 4 步', '4 steps = core mastery path · 9 tools help you complete them')}
+          {tr(lang, '4 步掌握一篇会话背诵 · 辅助工具帮助完成', '4 steps to master conversation recitation')}
         </p>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px 20px', fontSize: 13, color: '#475569', lineHeight: 1.8 }}>
-          <span>① {tr(lang, '看懂场景', 'Scene')} → {tr(lang, '中文理解', 'Deep Dive')}</span>
-          <span>② {tr(lang, '听懂会话', 'Listen')} → {tr(lang, '视频/原文', 'Video/Text')}</span>
-          <span>③ {tr(lang, '拆解记忆', 'Study')} → {tr(lang, '词汇/语法/例句', 'Vocab/Grammar/Ex')}</span>
-          <span>④ {tr(lang, '输出复盘', 'Output')} → {tr(lang, '测试/录音/复习/打卡', 'Quiz/Record/Review/Check')}</span>
+          <span>① {tr(lang, '中文理解', 'Deep Dive')} → {tr(lang, '看懂场景和用法', 'Understand scene & usage')}</span>
+          <span>② {tr(lang, '逐句背诵录音', 'Recite & Record')} → {tr(lang, '每句录音评分选最佳', 'Score & pick best take')}</span>
+          <span>③ {tr(lang, '词汇/语法/例句', 'Vocab/Grammar/Ex')} → {tr(lang, '辅助拆解记忆', 'Aid memorization')}</span>
+          <span>④ {tr(lang, '测试打卡', 'Quiz & Check-in')} → {tr(lang, '检验效果记录进度', 'Test & track progress')}</span>
         </div>
       </section>
 
@@ -186,17 +196,15 @@ export default async function LessonDetailPage({
 
       <section className="card" style={{ padding: 0, overflow: 'hidden' }}>
         <div style={{ padding: '14px 18px', borderBottom: '1px solid #f1f5f9' }}>
-          <strong>{tr(lang, '详细练习入口', 'Detailed Practice Links')}</strong>
+          <strong>{tr(lang, '辅助学习工具', 'Supplementary Learning Tools')}</strong>
           <p className="small" style={{ margin: '2px 0 0', fontSize: 12 }}>
-            {tr(lang, '需要专项练习时再进入下面的词汇、语法、例句和测试。', 'Use the links below when you want focused vocab, grammar, example, and quiz practice.')}
+            {tr(lang, '专项练习词汇、语法、例句和测试。', 'Focused vocab, grammar, example, and quiz practice.')}
           </p>
         </div>
         {MAINLINE_STEPS.map((step, i) => {
           const href = step.key === 'deep-dive'
             ? `/lessons/${no}/deep-dive`
-            : step.stage.includes('#')
-              ? `/lessons/${no}/practice?stage=conversation`
-              : `/lessons/${no}/practice?stage=${step.stage}`
+            : `/lessons/${no}/practice?stage=${step.stage}`
           return (
             <Link
               key={step.key}
@@ -223,14 +231,7 @@ export default async function LessonDetailPage({
                 <div className="small" style={{ fontSize: 12, marginTop: 1 }}>
                   {step.key === 'deep-dive'
                     ? tr(lang, '先中文理解会话背景、人物和每句话的用途', 'Understand the setting, characters and usage of each sentence in Chinese')
-                    : step.stage.includes('#')
-                      ? tr(lang, '会话页面底部功能区', 'Bottom of conversation page')
-                      : step.key === 'video'
-                        ? tr(lang, '打开视频跟读', 'Open video to follow along')
-                        : step.key === 'conversation'
-                          ? tr(lang, '逐句背诵并录音', 'Recite and record each sentence')
-                          : tr(lang, '独立练习页', 'Dedicated practice page')
-                  }
+                    : tr(lang, '独立练习页', 'Dedicated practice page')}
                 </div>
               </div>
               <span style={{ marginLeft: 'auto', color: '#94a3b8', fontSize: 18 }}>→</span>

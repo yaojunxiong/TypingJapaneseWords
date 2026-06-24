@@ -37,6 +37,10 @@ function getNextSteps(lessonNo: number, lang: string, stage: Stage): { label: st
 
   switch (stage) {
     case 'conversation':
+      return [
+        { label: t('去会话核心语法', 'Go to Grammar'), href: `/lessons/${lessonNo}/practice?stage=conversation_grammar` },
+        { label: t('回到课程', 'Back to Lesson'), href: `/lessons/${lessonNo}` },
+      ]
     case 'conversation_vocab':
       return [
         { label: t('去会话核心语法', 'Go to Grammar'), href: `/lessons/${lessonNo}/practice?stage=conversation_grammar` },

@@ -8,6 +8,7 @@ import {
   getLocalLearningSummary,
   syncLearningCloudNow
 } from '@/lib/learning-cloud-sync'
+import conversationTitles from '@/data/minna/conversation-titles.json'
 
 type Props = {
   bypassLessonLock: boolean
@@ -81,6 +82,11 @@ export default function LessonsClient({ bypassLessonLock, lang }: Props) {
     void syncAndReload()
   }, [])
 
+function getConversationTitle(no: number): string {
+  const ct = conversationTitles[String(no) as keyof typeof conversationTitles]
+  return ct?.conversationTitle || ''
+}
+
   const rows = useMemo(() => {
     return LESSONS_1_50.map((lesson) => {
       const crowns = crownCount(local.crowns, lesson.no)
@@ -109,31 +115,48 @@ export default function LessonsClient({ bypassLessonLock, lang }: Props) {
       </section>
 
       <section className="lessonList2">
-        {rows.map((row) => (
-          <a
-            key={row.no}
-            href={row.href}
-            className={row.locked ? 'lessonCard2 locked' : 'lessonCard2'}
-          >
-            <div className={row.done ? 'lessonNo done' : row.locked ? 'lessonNo muted' : 'lessonNo'}>
-              {row.done ? '✓' : row.no}
+        {rows.map((row) => {
+          const ct = getConversationTitle(row.no)
+          return (
+            <div
+              key={row.no}
+              className={row.locked ? 'lessonCard2 locked' : 'lessonCard2'}
+            >
+              <a href={row.href} style={{ display: 'flex', gap: 12, alignItems: 'center', flex: 1, color: 'inherit', textDecoration: 'none', minWidth: 0 }}>
+                <div className={row.done ? 'lessonNo done' : row.locked ? 'lessonNo muted' : 'lessonNo'}>
+                  {row.done ? '✓' : row.no}
+                </div>
+                <div className="lessonText2">
+                  <h3>{t(lang, `第 ${row.no} 课 · ${row.title}`, `Lesson ${row.no}`)}</h3>
+                  {ct ? (
+                    <p className="small" style={{ fontWeight: 700, color: '#0f172a', margin: '0 0 2px' }}>{ct}</p>
+                  ) : (
+                    <p className="small" style={{ margin: '0 0 2px' }}>{t(lang, `第 ${row.no} 课 · 会话背诵`, `Lesson ${row.no} Recitation`)}</p>
+                  )}
+                  <div className="lessonMeta2">
+                    <span className={row.done ? 'metaPill done' : 'metaPill'}>📋 {t(lang, '本课进度', 'Progress')} {row.crowns}/4</span>
+                    <span className="metaPill">
+                      {row.locked
+                        ? t(lang, '未解锁', 'Locked')
+                        : row.done
+                          ? t(lang, '已完成', 'Done')
+                          : t(lang, '可学习', 'Ready')}
+                    </span>
+                  </div>
+                </div>
+              </a>
+              {!row.locked && (
+                <a
+                  href={`/lessons/${row.no}/recitation`}
+                  className="btn"
+                  style={{ flexShrink: 0, fontSize: 13, padding: '8px 12px', whiteSpace: 'nowrap' }}
+                >
+                  🎙️ {t(lang, '会话背诵', 'Recite')}
+                </a>
+              )}
             </div>
-            <div className="lessonText2">
-              <h3>{t(lang, `第 ${row.no} 课 · ${row.title}`, `Lesson ${row.no}`)}</h3>
-              <p className="small">{row.subtitle}</p>
-              <div className="lessonMeta2">
-                <span className={row.done ? 'metaPill done' : 'metaPill'}>📋 {t(lang, '本课进度', 'Progress')} {row.crowns}/4</span>
-                <span className="metaPill">
-                  {row.locked
-                    ? t(lang, '未解锁', 'Locked')
-                    : row.done
-                      ? t(lang, '已完成', 'Done')
-                      : t(lang, '可学习', 'Ready')}
-                </span>
-              </div>
-            </div>
-          </a>
-        ))}
+          )
+        })}
       </section>
 
     </>

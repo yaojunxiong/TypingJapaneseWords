@@ -291,7 +291,7 @@ export default function DeepDiveViewer({
           <Link className="btn" href={`/lessons/${lessonNo}`} style={{ padding: '12px 16px', fontSize: 15, minWidth: 160 }}>
             🎬 {lang === 'en' ? 'Back to Source Video' : '回到原视频跟读'}
           </Link>
-          <Link className="btn ghost" href={`/lessons/${lessonNo}/practice?stage=conversation`} style={{ padding: '12px 16px', fontSize: 15, minWidth: 160 }}>
+          <Link className="btn ghost" href={`/lessons/${lessonNo}/recitation`} style={{ padding: '12px 16px', fontSize: 15, minWidth: 160 }}>
             🗣️ {lang === 'en' ? 'Recite Conversation' : '去会话背诵'}
           </Link>
         </div>

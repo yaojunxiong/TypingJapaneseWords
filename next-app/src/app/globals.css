@@ -284,6 +284,7 @@ a:hover { text-decoration: underline; }
 }
 .lessonCard2:hover { text-decoration: none; border-color: #0284c7; }
 .lessonCard2.locked { opacity: .7; cursor: default; }
+.lessonCard2 .btn:hover { text-decoration: none; }
 
 .lessonNo {
   width: 46px;
