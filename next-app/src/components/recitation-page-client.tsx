@@ -527,7 +527,9 @@ export default function RecitationPageClient({ lessonNo, lang }: Props) {
         <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12, marginBottom: 18 }}>
           <div>
             <div style={{ color: '#475569', fontSize: 16, fontWeight: 800, marginBottom: 4 }}>第 {lessonNo} 课 · 会话背诵</div>
-            <h1 style={{ margin: 0, fontSize: 30, lineHeight: 1.1, fontWeight: 900 }}>{lesson.conversationTitle}</h1>
+            {lesson.conversationTitle !== 'missing_title' && (
+              <h1 style={{ margin: 0, fontSize: 30, lineHeight: 1.1, fontWeight: 900 }}>{lesson.conversationTitle}</h1>
+            )}
           </div>
           <div style={{ display: 'grid', justifyItems: 'end', gap: 8, flexShrink: 0 }}>
             <button
