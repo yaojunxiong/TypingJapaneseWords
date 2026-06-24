@@ -224,6 +224,7 @@ register('玛丽亚', { avatarEmoji: '👩', voiceType: 'female', ttsSpeakerLabe
 register('桑托斯', { avatarEmoji: '👱', voiceType: 'male', ttsSpeakerLabel: 'santos_cn_male', requiresManualReview: true, notes: '和サントス可能是同一人（中文名）' }, 3)
 register('路人（人）', { avatarEmoji: '🧑', voiceType: 'male', ttsSpeakerLabel: 'passerby_male', roleBased: true }, 6)
 register('全员', { avatarEmoji: '👥', voiceType: 'male', ttsSpeakerLabel: 'everyone_male', roleBased: true }, 7)
+register('管理人', { avatarEmoji: '🧑‍💼', voiceType: 'female', ttsSpeakerLabel: 'manager_female', roleBased: true }, 0)
 
 // ---- Aliases for same-person detection ----
 alias('ミラー', 'ミラーさん', 'ミラーさん（米勒先生）', '米勒先生（ミラーさん）', 'Miller', 'Miller (passenger)')
