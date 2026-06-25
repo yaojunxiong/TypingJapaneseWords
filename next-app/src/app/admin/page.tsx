@@ -584,6 +584,12 @@ export default async function AdminPage({
       href: '/admin/checkins',
     },
     {
+      icon: '🏥',
+      label: tr(lang, '录音健康检查', 'Recording Health'),
+      description: tr(lang, '检查录音存储状态：上传统计、Storage 匹配、异常记录', 'Check recording storage health: upload stats, Storage matching, anomaly records.'),
+      href: '/admin/recording-health',
+    },
+    {
       icon: '📋',
       label: tr(lang, '课程数据审计', 'Course Audit'),
       description: tr(lang, '只读审计 1-50 课数据完整性与内容检索', 'Audit lessons 1-50 data integrity and content search.'),
@@ -704,6 +710,13 @@ export default async function AdminPage({
       description: tr(lang, '查看所有学生背诵录音记录，支持筛选、播放与删除。', 'View all students\' recitation recordings with filtering, playback, and delete.'),
       status: 'available',
       href: '/admin/recordings',
+    },
+    {
+      icon: '🏥',
+      label: tr(lang, '录音健康检查', 'Recording Health'),
+      description: tr(lang, '检查录音云存储健康状态：上传统计、Storage 文件匹配、异常记录。', 'Check recording cloud storage health: upload stats, Storage file matching, anomaly records.'),
+      status: 'available',
+      href: '/admin/recording-health',
     },
   ]
 
