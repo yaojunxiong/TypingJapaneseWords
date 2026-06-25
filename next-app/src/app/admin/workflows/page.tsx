@@ -104,6 +104,7 @@ export default async function AdminWorkflowsPage({
   let loggedInPending = 0
   let membershipPending = 0
   let instances: WorkflowInstanceRow[] = []
+  let queryErrorMessage = ''
   const emailMap = new Map<string, string>()
   const membershipMap = new Map<string, { userId: string; requestedLevel: string }>()
   const emailStatusMap = new Map<string, { status: string; id: string }>()
@@ -145,6 +146,7 @@ export default async function AdminWorkflowsPage({
     }
 
     const { data, error } = await query
+    if (error) queryErrorMessage = error.message
     instances = (data || []) as WorkflowInstanceRow[]
 
     const instanceIds = instances.map(i => i.id)
@@ -241,8 +243,8 @@ export default async function AdminWorkflowsPage({
 
       {/* ── Instance table (desktop) / cards (mobile) ── */}
       <section className="card workflow-table-wrap" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
-        {error ? (
-          <p className="small" style={{ color: '#dc2626' }}>查询错误：{error.message}</p>
+        {queryErrorMessage ? (
+          <p className="small" style={{ color: '#dc2626' }}>查询错误：{queryErrorMessage}</p>
         ) : instances.length === 0 ? (
           <p className="small" style={{ textAlign: 'center', padding: 12 }}>
             {tr(lang, '暂无流程实例。', 'No workflow instances.')}

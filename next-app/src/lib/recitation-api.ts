@@ -2,6 +2,50 @@ import type { RecordingTakeDTO } from '@/types/recitation'
 
 const BASE = '/api/recording'
 
+type RecordingTakeApiRow = Partial<RecordingTakeDTO> & {
+  user_id?: string | null
+  lesson_no?: number | string | null
+  line_no?: number | string | null
+  take_no?: number | string | null
+  storage_path?: string | null
+  audio_mime_type?: string | null
+  duration_ms?: number | string | null
+  is_best?: boolean | null
+  is_system_recommended?: boolean | null
+  upload_status?: string | null
+  created_at?: string | null
+  updated_at?: string | null
+}
+
+function toNumber(value: unknown): number {
+  const num = Number(value)
+  return Number.isFinite(num) ? num : 0
+}
+
+function toBoolean(value: unknown): boolean {
+  return value === true || value === 'true' || value === 1 || value === '1'
+}
+
+function normalizeRecordingTake(row: RecordingTakeApiRow): RecordingTakeDTO {
+  return {
+    id: String(row.id ?? ''),
+    userId: String(row.userId ?? row.user_id ?? ''),
+    lessonNo: toNumber(row.lessonNo ?? row.lesson_no),
+    lineNo: toNumber(row.lineNo ?? row.line_no),
+    takeNo: toNumber(row.takeNo ?? row.take_no),
+    storagePath: String(row.storagePath ?? row.storage_path ?? ''),
+    audioMimeType: String(row.audioMimeType ?? row.audio_mime_type ?? ''),
+    durationMs: toNumber(row.durationMs ?? row.duration_ms),
+    score: row.score == null ? null : toNumber(row.score),
+    isBest: toBoolean(row.isBest ?? row.is_best),
+    isSystemRecommended: toBoolean(row.isSystemRecommended ?? row.is_system_recommended),
+    uploadStatus: String(row.uploadStatus ?? row.upload_status ?? ''),
+    createdAt: String(row.createdAt ?? row.created_at ?? ''),
+    updatedAt: String(row.updatedAt ?? row.updated_at ?? ''),
+    playbackUrl: row.playbackUrl,
+  }
+}
+
 export class UploadError extends Error {
   constructor(
     message: string,
@@ -35,7 +79,7 @@ export async function uploadTake(
       res.status >= 500,
     )
   }
-  return res.json()
+  return normalizeRecordingTake(await res.json())
 }
 
 export async function listTakes(
@@ -48,7 +92,8 @@ export async function listTakes(
   const res = await fetch(`${BASE}/list?${params}`)
   if (res.status === 401) return []
   if (!res.ok) throw new UploadError('获取录音列表失败', res.status, false)
-  return res.json()
+  const rows = await res.json()
+  return Array.isArray(rows) ? rows.map(normalizeRecordingTake) : []
 }
 
 export async function setBestTake(takeId: string): Promise<void> {

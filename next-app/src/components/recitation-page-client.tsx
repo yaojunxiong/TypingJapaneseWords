@@ -85,13 +85,13 @@ interface MergedTake {
 }
 
 function mergeTakes(local: RecitationTake[], cloud: RecordingTakeDTO[]): MergedTake[] {
-  const seen = new Set<string>()
+  const seenLocal = new Set<string>()
   const result: MergedTake[] = []
 
   // Cloud takes first (authoritative)
   for (const ct of cloud) {
-    const localMatch = local.find(t => t.takeId === ct.id)
-    seen.add(ct.id)
+    const localMatch = local.find(t => t.takeId === ct.id || (ct.storagePath && t.storagePath === ct.storagePath))
+    if (localMatch) seenLocal.add(localMatch.takeId)
     result.push({
       takeId: ct.id,
       createdAt: ct.createdAt,
@@ -106,7 +106,7 @@ function mergeTakes(local: RecitationTake[], cloud: RecordingTakeDTO[]): MergedT
 
   // Local-only takes (pending/failed uploads)
   for (const lt of local) {
-    if (!seen.has(lt.takeId)) {
+    if (!seenLocal.has(lt.takeId)) {
       result.push({
         takeId: lt.takeId,
         createdAt: lt.createdAt,
@@ -118,7 +118,7 @@ function mergeTakes(local: RecitationTake[], cloud: RecordingTakeDTO[]): MergedT
     }
   }
 
-  result.sort((a, b) => b.createdAt.localeCompare(a.createdAt))
+  result.sort((a, b) => String(b.createdAt ?? '').localeCompare(String(a.createdAt ?? '')))
   return result
 }
 
@@ -425,7 +425,7 @@ function MyRecordingsPanel({
     if (!ok) {
       const ok2 = await tryPlayOnce(true)
       if (!ok2) {
-        showNotice('录音链接已过期，请稍后重试')
+        showNotice('录音链接刷新失败，请稍后重试')
       }
     }
     audioRef.current = null
@@ -496,7 +496,7 @@ function MyRecordingsPanel({
             const isPending = take.uploadStatus === 'pending'
             const isFailed = take.uploadStatus === 'failed'
             return (
-              <div key={take.takeId} data-testid="recitation-take-row" style={{ display: 'grid', gridTemplateColumns: '30px 86px minmax(0, 1fr) 46px', gap: '4px 8px', alignItems: 'center', minHeight: 54, padding: '2px 0' }}>
+              <div key={take.takeId} data-testid="recitation-take-row" data-take-id={take.takeId} style={{ display: 'grid', gridTemplateColumns: '30px 86px minmax(0, 1fr) 46px', gap: '4px 8px', alignItems: 'center', minHeight: 54, padding: '2px 0' }}>
                 <span style={{ width: 26, height: 26, borderRadius: 13, background: isBest ? '#eff6ff' : '#f1f5f9', color: isBest ? '#1683ff' : '#0f172a', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: 13, fontWeight: 800 }}>
                   {index + 1}
                 </span>
