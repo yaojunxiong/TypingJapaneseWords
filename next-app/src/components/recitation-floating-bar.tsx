@@ -8,6 +8,7 @@ import { uploadTake, UploadError } from '@/lib/recitation-api'
 
 interface Props {
   line: RecitationLine | null
+  lessonNo: number
   currentIndex: number
   totalLines: number
   onRecordingComplete: (lineId: string) => void
@@ -49,7 +50,7 @@ function getSupportedMimeType(): string | null {
   return null
 }
 
-export default function RecitationFloatingBar({ line, currentIndex, totalLines, onRecordingComplete, onRecordingStateChange, bottomOffset = 'calc(96px + env(safe-area-inset-bottom, 0px))' }: Props) {
+export default function RecitationFloatingBar({ line, lessonNo, currentIndex, totalLines, onRecordingComplete, onRecordingStateChange, bottomOffset = 'calc(96px + env(safe-area-inset-bottom, 0px))' }: Props) {
   const [recording, setRecording] = useState(false)
   const [message, setMessage] = useState('')
   const [localPlaying, setLocalPlaying] = useState(false)
@@ -78,21 +79,9 @@ export default function RecitationFloatingBar({ line, currentIndex, totalLines, 
     onRecordingStateChange?.(recording)
   }, [recording, onRecordingStateChange])
 
-  const parseLessonLine = useCallback((lineId: string): { lessonNo: number; lineNo: number } | null => {
-    const match = lineId.match(/^l(\d+)-conv-(\d+)$/)
-    if (match) {
-      return { lessonNo: parseInt(match[1], 10), lineNo: parseInt(match[2], 10) }
-    }
-    // Also try format like l1-01
-    const match2 = lineId.match(/^l(\d+)-(\d+)$/)
-    if (match2) {
-      return { lessonNo: parseInt(match2[1], 10), lineNo: parseInt(match2[2], 10) }
-    }
-    return null
-  }, [])
-
   const startRecording = useCallback(async () => {
     if (!line) return
+    const activeLine = line
     const mimeType = getSupportedMimeType()
     if (!mimeType) {
       setMessage('当前浏览器不支持录音，请使用最新版 Safari/Chrome，或更换设备。')
@@ -118,8 +107,8 @@ export default function RecitationFloatingBar({ line, currentIndex, totalLines, 
         latestTakeId.current = takeId
         const take: RecitationTake = {
           takeId,
-          lineId: line!.lineId,
-          lessonId: line!.lessonId,
+          lineId: activeLine.lineId,
+          lessonId: activeLine.lessonId,
           audioBlob: blob,
           audioUrl: URL.createObjectURL(blob),
           score,
@@ -132,26 +121,24 @@ export default function RecitationFloatingBar({ line, currentIndex, totalLines, 
         await saveTake(take)
         latestTakeUrl.current = take.audioUrl
         setMessage(`得分 ${score}`)
-        onRecordingComplete(line!.lineId)
+        onRecordingComplete(activeLine.lineId)
 
         // Upload to cloud
         setUploading(true)
-        const parsed = parseLessonLine(line!.lineId)
-        if (parsed) {
-          try {
-            const dto = await uploadTake(blob, parsed.lessonNo, parsed.lineNo)
-            await updateTake(takeId, { uploadStatus: 'uploaded', storagePath: dto.storagePath })
-          } catch (err) {
-            const uploadErr = err instanceof UploadError ? err : new UploadError('上传异常', 0, true)
-            if (uploadErr.status === 401) {
-              setMessage('请登录后保存录音')
-            } else {
-              setMessage('上传失败，点击重试')
-            }
-            await updateTake(takeId, { uploadStatus: 'failed' })
-            // Refresh recordings panel so it shows the failure status + retry button
-            onRecordingComplete(line!.lineId)
+        try {
+          const dto = await uploadTake(blob, lessonNo, activeLine.order)
+          await updateTake(takeId, { uploadStatus: 'uploaded', storagePath: dto.storagePath })
+          onRecordingComplete(activeLine.lineId)
+        } catch (err) {
+          const uploadErr = err instanceof UploadError ? err : new UploadError('上传异常', 0, true)
+          if (uploadErr.status === 401) {
+            setMessage('请登录后保存录音')
+          } else {
+            setMessage('上传失败，点击重试')
           }
+          await updateTake(takeId, { uploadStatus: 'failed' })
+          // Refresh recordings panel so it shows the failure status + retry button
+          onRecordingComplete(activeLine.lineId)
         }
         setUploading(false)
       }
@@ -162,7 +149,7 @@ export default function RecitationFloatingBar({ line, currentIndex, totalLines, 
     } catch {
       setMessage('无法访问麦克风')
     }
-  }, [line, onRecordingComplete, parseLessonLine])
+  }, [line, lessonNo, onRecordingComplete])
 
   const stopRecording = useCallback(() => {
     if (mediaRecorderRef.current && mediaRecorderRef.current.state !== 'inactive') {

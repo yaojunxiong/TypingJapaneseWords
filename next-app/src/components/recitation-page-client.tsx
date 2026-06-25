@@ -21,6 +21,8 @@ type SpeakerAvatar = {
   activeBorder: string
 }
 
+const PENDING_AUTO_RETRY_DELAY_MS = 120_000
+
 function formatTakeTime(createdAt: string): string {
   const date = new Date(createdAt)
   if (Number.isNaN(date.getTime())) return '-- --:--'
@@ -123,6 +125,10 @@ function mergeTakes(local: RecitationTake[], cloud: RecordingTakeDTO[]): MergedT
   return result
 }
 
+function filterCloudTakesForLine(takes: RecordingTakeDTO[], lessonNo: number, lineNo: number): RecordingTakeDTO[] {
+  return takes.filter(t => t.lessonNo === lessonNo && t.lineNo === lineNo)
+}
+
 function CompactLineItem({
   line, lessonNo, isActive, onPlayOriginal, takesRefreshKey, onBestTakeChange,
 }: {
@@ -162,7 +168,11 @@ function CompactLineItem({
       }
 
       // 2. Load cloud data in background
-      const cloud = await listTakes(lessonNo, lineNo).catch(() => [] as RecordingTakeDTO[])
+      const cloud = filterCloudTakesForLine(
+        await listTakes(lessonNo, lineNo).catch(() => [] as RecordingTakeDTO[]),
+        lessonNo,
+        lineNo,
+      )
       const freshLocal = await getTakesByLine(line.lineId)
       merged = mergeTakes(freshLocal, cloud)
       setMergedTakes(merged)
@@ -342,7 +352,11 @@ function MyRecordingsPanel({
     }
 
     // Load cloud data for the current line. Local empty state must not override cloud data.
-    const cloud = await listTakes(lessonNo, lineNo).catch(() => [] as RecordingTakeDTO[])
+    const cloud = filterCloudTakesForLine(
+      await listTakes(lessonNo, lineNo).catch(() => [] as RecordingTakeDTO[]),
+      lessonNo,
+      lineNo,
+    )
     const freshLocal = await getTakesByLine(line.lineId)
     merged = mergeTakes(freshLocal, cloud)
     setMergedTakes(merged)
@@ -473,7 +487,8 @@ function MyRecordingsPanel({
     }
   }, [line, lessonNo, mergedTakes, loadMerged])
 
-  // Auto-retry pending takes on mount / line change (once per take)
+  // Auto-retry failed takes and stale pending takes on mount / line change (once per take).
+  // Fresh pending takes are uploaded by the recorder itself; retrying them immediately can duplicate uploads.
   useEffect(() => {
     if (loadedLineId !== line?.lineId) return
     if (line?.lineId !== autoRetryLineRef.current) {
@@ -481,7 +496,12 @@ function MyRecordingsPanel({
       autoRetryLineRef.current = line?.lineId ?? null
     }
     for (const take of mergedTakes) {
-      if (take.uploadStatus === 'pending' && take.localBlob && !autoRetriedRef.current.has(take.takeId)) {
+      const createdAtMs = Date.parse(take.createdAt)
+      const isStalePending = take.uploadStatus === 'pending'
+        && Number.isFinite(createdAtMs)
+        && Date.now() - createdAtMs >= PENDING_AUTO_RETRY_DELAY_MS
+      const shouldRetry = take.uploadStatus === 'failed' || isStalePending
+      if (shouldRetry && take.localBlob && !autoRetriedRef.current.has(take.takeId)) {
         autoRetriedRef.current.add(take.takeId)
         handleRetryUpload(take.takeId)
       }
@@ -729,7 +749,9 @@ export default function RecitationPageClient({ lessonNo, lang }: Props) {
 
       const [local, cloud] = await Promise.all([
         getTakesByLine(line.lineId),
-        listTakes(lessonNo, line.order).catch(() => [] as RecordingTakeDTO[]),
+        listTakes(lessonNo, line.order)
+          .then(takes => filterCloudTakesForLine(takes, lessonNo, line.order))
+          .catch(() => [] as RecordingTakeDTO[]),
       ])
 
       let url = ''
@@ -971,6 +993,7 @@ export default function RecitationPageClient({ lessonNo, lang }: Props) {
 
       <RecitationFloatingBar
         line={activeLine}
+        lessonNo={lessonNo}
         currentIndex={activeIndex}
         totalLines={lesson.lines.length}
         onRecordingComplete={handleRecordingComplete}
