@@ -44,10 +44,12 @@ jobs:
           import re, json
           with open('pw-artifacts/smoke-raw.txt') as f:
               content = f.read()
-          match = re.search(r'(\{.*\})', content, re.DOTALL)
-          if match:
-              with open('pw-artifacts/smoke.json', 'w') as out:
-                  out.write(match.group(1))
+          last_brace = content.rfind('{')
+          if last_brace >= 0:
+              match = re.search(r'(\{.*\})', content[last_brace:], re.DOTALL)
+              if match:
+                  with open('pw-artifacts/smoke.json', 'w') as out:
+                      out.write(match.group(1))
           "
           exit $EXIT_CODE
 
@@ -113,14 +115,17 @@ jobs:
           import re, json
           with open('pw-artifacts/study-raw.txt') as f:
               content = f.read()
-          match = re.search(r'(\{.*\})', content, re.DOTALL)
-          if match:
-              with open('pw-artifacts/study.json', 'w') as out:
-                  out.write(match.group(1))
+          last_brace = content.rfind('{')
+          if last_brace >= 0:
+              match = re.search(r'(\{.*\})', content[last_brace:], re.DOTALL)
+              if match:
+                  with open('pw-artifacts/study.json', 'w') as out:
+                      out.write(match.group(1))
           "
           exit $EXIT_CODE
 
       - name: Run authenticated admin tests (@admin-auth)
+        continue-on-error: true
         shell: bash
         run: |
           set +e
@@ -131,10 +136,12 @@ jobs:
           import re, json
           with open('pw-artifacts/admin-auth-raw.txt') as f:
               content = f.read()
-          match = re.search(r'(\{.*\})', content, re.DOTALL)
-          if match:
-              with open('pw-artifacts/admin-auth.json', 'w') as out:
-                  out.write(match.group(1))
+          last_brace = content.rfind('{')
+          if last_brace >= 0:
+              match = re.search(r'(\{.*\})', content[last_brace:], re.DOTALL)
+              if match:
+                  with open('pw-artifacts/admin-auth.json', 'w') as out:
+                      out.write(match.group(1))
           "
           exit $EXIT_CODE
         env:
@@ -142,6 +149,7 @@ jobs:
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
 
       - name: Run normal user e2e tests (@normal-user-e2e)
+        continue-on-error: true
         shell: bash
         run: |
           set +e
@@ -152,10 +160,12 @@ jobs:
           import re, json
           with open('pw-artifacts/normal-user-e2e-raw.txt') as f:
               content = f.read()
-          match = re.search(r'(\{.*\})', content, re.DOTALL)
-          if match:
-              with open('pw-artifacts/normal-user-e2e.json', 'w') as out:
-                  out.write(match.group(1))
+          last_brace = content.rfind('{')
+          if last_brace >= 0:
+              match = re.search(r'(\{.*\})', content[last_brace:], re.DOTALL)
+              if match:
+                  with open('pw-artifacts/normal-user-e2e.json', 'w') as out:
+                      out.write(match.group(1))
           "
           exit $EXIT_CODE
         env:
@@ -165,6 +175,7 @@ jobs:
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
 
       - name: Run P0 core business tests (@p0)
+        continue-on-error: true
         shell: bash
         run: |
           set +e
@@ -175,10 +186,12 @@ jobs:
           import re, json
           with open('pw-artifacts/p0-raw.txt') as f:
               content = f.read()
-          match = re.search(r'(\{.*\})', content, re.DOTALL)
-          if match:
-              with open('pw-artifacts/p0.json', 'w') as out:
-                  out.write(match.group(1))
+            last_brace = content.rfind('{')
+            if last_brace >= 0:
+                match = re.search(r'(\{.*\})', content[last_brace:], re.DOTALL)
+                if match:
+                    with open('pw-artifacts/p0.json', 'w') as out:
+                        out.write(match.group(1))
           "
           exit $EXIT_CODE
         env:

@@ -98,11 +98,15 @@ export default async function AdminWorkflowsPage({
 
   const supabase = createClient(cookieStore)
 
-  // ── Instance counts per definition_key ──
+  // ── Wrap data fetching in try-catch to prevent SSR errors triggering 404 ──
   let totalPending = 0
   let studyVisitorPending = 0
   let loggedInPending = 0
   let membershipPending = 0
+  let instances: WorkflowInstanceRow[] = []
+  const emailMap = new Map<string, string>()
+  const membershipMap = new Map<string, { userId: string; requestedLevel: string }>()
+  const emailStatusMap = new Map<string, { status: string; id: string }>()
 
   try {
     const { count: total } = await supabase
@@ -125,75 +129,71 @@ export default async function AdminWorkflowsPage({
     } catch {}
   }
 
-  // ── Instance list ──
-  let query = supabase
-    .from('workflow_instances')
-    .select('id,workflow_version_id,reference_type,reference_id,status,current_node_key,created_at,updated_at')
-    .order('created_at', { ascending: false })
-    .limit(100)
+  try {
+    let query = supabase
+      .from('workflow_instances')
+      .select('id,workflow_version_id,reference_type,reference_id,status,current_node_key,created_at,updated_at')
+      .order('created_at', { ascending: false })
+      .limit(100)
 
-  if (validKey) {
-    query = query.eq('reference_type', validKey)
-  }
+    if (validKey) {
+      query = query.eq('reference_type', validKey)
+    }
 
-  if (instanceIdFilter) {
-    query = query.eq('id', instanceIdFilter)
-  }
+    if (instanceIdFilter) {
+      query = query.eq('id', instanceIdFilter)
+    }
 
-  const { data, error } = await query
-  const instances = (data || []) as WorkflowInstanceRow[]
+    const { data, error } = await query
+    instances = (data || []) as WorkflowInstanceRow[]
 
-  // ── Batch-fetch emails from visitor_activity_events and membership_requests ──
-  const instanceIds = instances.map(i => i.id)
-  const emailMap = new Map<string, string>()
-  const membershipMap = new Map<string, { userId: string; requestedLevel: string }>()
-  const emailStatusMap = new Map<string, { status: string; id: string }>()
+    const instanceIds = instances.map(i => i.id)
 
-  if (instanceIds.length > 0) {
-    const { data: events } = await supabase
-      .from('visitor_activity_events')
-      .select('workflow_instance_id, email')
-      .in('workflow_instance_id', instanceIds)
-      .not('workflow_instance_id', 'is', null)
-    if (events) {
-      for (const e of events) {
-        if (e.workflow_instance_id && e.email) {
-          emailMap.set(e.workflow_instance_id, e.email)
+    if (instanceIds.length > 0) {
+      const { data: events } = await supabase
+        .from('visitor_activity_events')
+        .select('workflow_instance_id, email')
+        .in('workflow_instance_id', instanceIds)
+        .not('workflow_instance_id', 'is', null)
+      if (events) {
+        for (const e of events) {
+          if (e.workflow_instance_id && e.email) {
+            emailMap.set(e.workflow_instance_id, e.email)
+          }
+        }
+      }
+
+      const { data: memberships } = await supabase
+        .from('membership_requests')
+        .select('workflow_instance_id, user_id, requested_level')
+        .in('workflow_instance_id', instanceIds)
+      if (memberships) {
+        for (const m of memberships) {
+          if (m.workflow_instance_id) {
+            membershipMap.set(m.workflow_instance_id, { userId: m.user_id, requestedLevel: m.requested_level })
+          }
+        }
+      }
+
+      const { data: emailLogs } = await supabase
+        .from('email_logs')
+        .select('workflow_instance_id, status, id')
+        .in('workflow_instance_id', instanceIds)
+        .not('workflow_instance_id', 'is', null)
+
+      if (emailLogs) {
+        const byInstance = new Map<string, { status: string; id: string }>()
+        for (const el of emailLogs) {
+          if (el.workflow_instance_id && !byInstance.has(el.workflow_instance_id)) {
+            byInstance.set(el.workflow_instance_id, { status: el.status, id: el.id })
+          }
+        }
+        for (const [k, v] of byInstance) {
+          emailStatusMap.set(k, v)
         }
       }
     }
-
-    const { data: memberships } = await supabase
-      .from('membership_requests')
-      .select('workflow_instance_id, user_id, requested_level')
-      .in('workflow_instance_id', instanceIds)
-    if (memberships) {
-      for (const m of memberships) {
-        if (m.workflow_instance_id) {
-          membershipMap.set(m.workflow_instance_id, { userId: m.user_id, requestedLevel: m.requested_level })
-        }
-      }
-    }
-
-    const { data: emailLogs } = await supabase
-      .from('email_logs')
-      .select('workflow_instance_id, status, id')
-      .in('workflow_instance_id', instanceIds)
-      .not('workflow_instance_id', 'is', null)
-
-    // Get the latest email_log per instance (ordered by created_at desc)
-    if (emailLogs) {
-      const byInstance = new Map<string, { status: string; id: string }>()
-      for (const el of emailLogs) {
-        if (el.workflow_instance_id && !byInstance.has(el.workflow_instance_id)) {
-          byInstance.set(el.workflow_instance_id, { status: el.status, id: el.id })
-        }
-      }
-      for (const [k, v] of byInstance) {
-        emailStatusMap.set(k, v)
-      }
-    }
-  }
+  } catch {}
 
   return (
     <main style={{ paddingBottom: 'calc(140px + env(safe-area-inset-bottom, 0px))' }}>
