@@ -1,9 +1,7 @@
 import Link from 'next/link'
 import { cookies } from 'next/headers'
-import { createServerClient } from '@supabase/ssr'
 import MinnaNav from '@/components/minna-nav'
 import { createClient } from '@/utils/supabase/server'
-import { getSafeSupabasePublicConfig } from '@/utils/supabase/config'
 import { getLang, tr } from '@/lib/i18n-server'
 import { checkAdminAccess } from '@/lib/admin-auth'
 import { formatTokyoDateTime } from '@/lib/date-format'
@@ -115,20 +113,28 @@ function shortId(value: string | null | undefined) {
   return value.length > 12 ? value.slice(0, 12) + '...' : value
 }
 
-function createStorageClient(cookieStore: Awaited<ReturnType<typeof cookies>>) {
-  const { url, key } = getSafeSupabasePublicConfig()
-  return createServerClient(url, key, {
-    db: { schema: 'storage' },
-    cookies: {
-      getAll: () => cookieStore.getAll(),
-      setAll: () => {},
-    },
-  })
+async function getExistingStoragePaths(
+  supabase: ReturnType<typeof createClient>,
+  paths: string[],
+): Promise<Set<string>> {
+  const existing = new Set<string>()
+  const uniquePaths = Array.from(new Set(paths.filter(Boolean)))
+
+  for (let i = 0; i < uniquePaths.length; i += 20) {
+    const batch = uniquePaths.slice(i, i + 20)
+    await Promise.all(batch.map(async (path) => {
+      const { data, error } = await supabase.storage
+        .from('recordings')
+        .createSignedUrl(path, 60)
+      if (!error && data?.signedUrl) existing.add(path)
+    }))
+  }
+
+  return existing
 }
 
 async function queryHealthStats(
   supabase: ReturnType<typeof createClient>,
-  storageSupabase: ReturnType<typeof createServerClient>,
   userIdFilter: string,
   lessonFilter: number | null,
   recent24h: boolean,
@@ -149,26 +155,27 @@ async function queryHealthStats(
   }
 
   try {
-    const baseQuery = supabase.from('recording_takes').select('*', { count: 'exact', head: true }).is('deleted_at', null)
+    const createCountQuery = () => {
+      let query = supabase.from('recording_takes').select('*', { count: 'exact', head: true }).is('deleted_at', null)
+      if (userIdFilter) query = query.eq('user_id', userIdFilter)
+      if (lessonFilter) query = query.eq('lesson_no', lessonFilter)
+      if (recent24h) query = query.gte('created_at', new Date(Date.now() - 86400000).toISOString())
+      return query
+    }
     const isFiltered = userIdFilter || lessonFilter || recent24h
 
-    let filteredCount = baseQuery
-    if (userIdFilter) filteredCount = filteredCount.eq('user_id', userIdFilter)
-    if (lessonFilter) filteredCount = filteredCount.eq('lesson_no', lessonFilter)
-    if (recent24h) filteredCount = filteredCount.gte('created_at', new Date(Date.now() - 86400000).toISOString())
-
-    const runCount = async (q: typeof baseQuery) => {
+    const runCount = async (q: ReturnType<typeof createCountQuery>) => {
       const { count } = await q
       return count ?? 0
     }
 
-    const totalTakes = await runCount(filteredCount)
-    const uploadedTakes = await runCount(filteredCount.eq('upload_status', 'uploaded'))
-    const pendingTakes = await runCount(filteredCount.eq('upload_status', 'pending'))
-    const failedTakes = await runCount(filteredCount.eq('upload_status', 'failed'))
-    const missingStoragePath = await runCount(filteredCount.is('storage_path', null))
-    const badUserPrefixPath = await runCount(filteredCount.like('storage_path', 'user-%'))
-    const okUuidPrefixPath = await runCount(filteredCount.not('storage_path', 'is', null).not('storage_path', 'like', 'user-%'))
+    const totalTakes = await runCount(createCountQuery())
+    const uploadedTakes = await runCount(createCountQuery().eq('upload_status', 'uploaded'))
+    const pendingTakes = await runCount(createCountQuery().eq('upload_status', 'pending'))
+    const failedTakes = await runCount(createCountQuery().eq('upload_status', 'failed'))
+    const missingStoragePath = await runCount(createCountQuery().is('storage_path', null))
+    const badUserPrefixPath = await runCount(createCountQuery().like('storage_path', 'user-%'))
+    const okUuidPrefixPath = await runCount(createCountQuery().not('storage_path', 'is', null).not('storage_path', 'like', 'user-%'))
 
     const latestQuery = supabase.from('recording_takes').select('created_at').is('deleted_at', null).order('created_at', { ascending: false }).limit(1)
     let finalLatestQuery = latestQuery
@@ -184,24 +191,15 @@ async function queryHealthStats(
     let missingStorageFiles = 0
 
     if (!isFiltered) {
-      // Query all storage_path from recording_takes for matching
       const allTakesQuery = supabase.from('recording_takes').select('storage_path').is('deleted_at', null).not('storage_path', 'is', null).eq('upload_status', 'uploaded')
       const { data: pathData } = await allTakesQuery
       storageTakePaths = (pathData ?? []).map((r: Record<string, unknown>) => String(r.storage_path ?? '')).filter(Boolean)
 
-      // Query storage.objects (storage schema)
-      const { count: sCount } = await storageSupabase.from('objects').select('*', { count: 'exact', head: true }).eq('bucket_id', 'recordings')
-      storageFileCount = sCount ?? 0
-
       if (storageTakePaths.length > 0) {
-        const { data: matchedData } = await storageSupabase
-          .from('objects')
-          .select('name')
-          .eq('bucket_id', 'recordings')
-          .in('name', storageTakePaths)
-        const matchedNames = new Set((matchedData ?? []).map((r: Record<string, unknown>) => String(r.name ?? '')))
-        matchedStorageFiles = matchedNames.size
-        missingStorageFiles = storageTakePaths.filter(p => !matchedNames.has(p)).length
+        const existingStoragePaths = await getExistingStoragePaths(supabase, storageTakePaths)
+        matchedStorageFiles = existingStoragePaths.size
+        storageFileCount = existingStoragePaths.size
+        missingStorageFiles = storageTakePaths.filter(p => !existingStoragePaths.has(p)).length
       }
     }
 
@@ -226,7 +224,6 @@ async function queryHealthStats(
 
 async function queryAnomalyTakes(
   supabase: ReturnType<typeof createClient>,
-  storageSupabase: ReturnType<typeof createServerClient>,
   userIdFilter: string,
   lessonFilter: number | null,
   recent24h: boolean,
@@ -251,19 +248,7 @@ async function queryAnomalyTakes(
       .map(r => r.storage_path)
       .filter((p): p is string => p !== null && p.length > 0)
 
-    const storageExists = new Set<string>()
-    if (pathsToCheck.length > 0) {
-      const { data: storageData } = await storageSupabase
-        .from('objects')
-        .select('name')
-        .eq('bucket_id', 'recordings')
-        .in('name', pathsToCheck)
-      if (storageData) {
-        for (const s of storageData) {
-          storageExists.add(String(s.name ?? ''))
-        }
-      }
-    }
+    const storageExists = await getExistingStoragePaths(supabase, pathsToCheck)
 
     return rows.map(row => ({
       ...row,
@@ -318,11 +303,10 @@ export default async function AdminRecordingHealthPage({
   }
 
   const supabase = createClient(cookieStore)
-  const storageSupabase = createStorageClient(cookieStore)
 
   const [stats, anomalyTakes] = await Promise.all([
-    queryHealthStats(supabase, storageSupabase, userIdFilter, lessonFilter, recent24h),
-    queryAnomalyTakes(supabase, storageSupabase, userIdFilter, lessonFilter, recent24h),
+    queryHealthStats(supabase, userIdFilter, lessonFilter, recent24h),
+    queryAnomalyTakes(supabase, userIdFilter, lessonFilter, recent24h),
   ])
 
   const hasAnomaly = stats.failedTakes > 0 || stats.missingStoragePath > 0 || stats.badUserPrefixPath > 0 || stats.missingStorageFiles > 0
@@ -413,7 +397,7 @@ export default async function AdminRecordingHealthPage({
             </div>
           )}
           <p className="small" style={{ marginTop: 8, color: '#64748b' }}>
-            匹配规则：recording_takes.storage_path = storage.objects.name (bucket_id = 'recordings')，仅统计 upload_status = 'uploaded' 且有 storage_path 的记录。
+            匹配规则：对 upload_status = 'uploaded' 且有 storage_path 的记录，在 recordings bucket 中生成短时 signed URL；成功即视为 Storage 文件存在。
           </p>
         </section>
 

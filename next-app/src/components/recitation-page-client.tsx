@@ -88,8 +88,8 @@ function mergeTakes(local: RecitationTake[], cloud: RecordingTakeDTO[]): MergedT
   const seenLocal = new Set<string>()
   const result: MergedTake[] = []
 
-  // Cloud takes first (authoritative)
-  for (const ct of cloud) {
+  // Uploaded cloud takes are the authoritative cross-device source.
+  for (const ct of cloud.filter(t => t.uploadStatus === 'uploaded')) {
     const localMatch = local.find(t => t.takeId === ct.id || (ct.storagePath && t.storagePath === ct.storagePath))
     if (localMatch) seenLocal.add(localMatch.takeId)
     result.push({
@@ -104,16 +104,17 @@ function mergeTakes(local: RecitationTake[], cloud: RecordingTakeDTO[]): MergedT
     })
   }
 
-  // Local-only takes (pending/failed uploads)
+  // IndexedDB is only for pending/failed local retries.
   for (const lt of local) {
-    if (!seenLocal.has(lt.takeId)) {
+    const localStatus = lt.uploadStatus || 'pending'
+    if (!seenLocal.has(lt.takeId) && (localStatus === 'pending' || localStatus === 'failed')) {
       result.push({
         takeId: lt.takeId,
         createdAt: lt.createdAt,
         score: lt.score,
         isBest: lt.isUserSelected || false,
         localBlob: lt.audioBlob,
-        uploadStatus: lt.uploadStatus || 'pending',
+        uploadStatus: localStatus,
       })
     }
   }
@@ -293,15 +294,18 @@ function CompactLineItem({
 }
 
 function MyRecordingsPanel({
-  line, lessonNo, takesRefreshKey, onBestTakeChange, showNotice,
+  line, lessonNo, takesRefreshKey, lessonTakeCount, onBestTakeChange, showNotice,
 }: {
   line: RecitationLine | null
   lessonNo: number
   takesRefreshKey: number
+  lessonTakeCount: number
   onBestTakeChange: (lineId: string, takeId: string | null) => void
   showNotice: (message: string) => void
 }) {
   const [mergedTakes, setMergedTakes] = useState<MergedTake[]>([])
+  const [loadedLineId, setLoadedLineId] = useState<string | null>(null)
+  const [isLoadingCloud, setIsLoadingCloud] = useState(false)
   const [selectedBestId, setSelectedBestId] = useState<string | null>(null)
   const [playingId, setPlayingId] = useState<string | null>(null)
   const [signedUrlCache, setSignedUrlCache] = useState<Map<string, { url: string; expiresAt: number }>>(new Map())
@@ -314,16 +318,20 @@ function MyRecordingsPanel({
   const loadMerged = useCallback(async () => {
     if (!line) {
       setMergedTakes([])
+      setLoadedLineId(null)
       setSelectedBestId(null)
+      setIsLoadingCloud(false)
       return []
     }
     const lineNo = line.order
+    setIsLoadingCloud(true)
 
-    // 1. Show local takes immediately (fast, from IndexedDB)
+    // Show local retryable takes immediately; uploaded cloud takes remain authoritative.
     const local = await getTakesByLine(line.lineId)
     let merged = mergeTakes(local, [])
-    setMergedTakes(merged)
     if (merged.length > 0) {
+      setMergedTakes(merged)
+      setLoadedLineId(line.lineId)
       const currentId = selectedBestIdRef.current
       const hasSelected = currentId && merged.some(t => t.takeId === currentId)
       if (!hasSelected) {
@@ -331,16 +339,15 @@ function MyRecordingsPanel({
         setSelectedBestId(best.takeId)
         onBestTakeChange(line.lineId, best.takeId)
       }
-    } else {
-      setSelectedBestId(null)
-      onBestTakeChange(line.lineId, null)
     }
 
-    // 2. Load cloud data in background (authoritative merge)
+    // Load cloud data for the current line. Local empty state must not override cloud data.
     const cloud = await listTakes(lessonNo, lineNo).catch(() => [] as RecordingTakeDTO[])
     const freshLocal = await getTakesByLine(line.lineId)
     merged = mergeTakes(freshLocal, cloud)
     setMergedTakes(merged)
+    setLoadedLineId(line.lineId)
+    setIsLoadingCloud(false)
     if (merged.length > 0) {
       const currentId = selectedBestIdRef.current
       const hasSelected = currentId && merged.some(t => t.takeId === currentId)
@@ -468,6 +475,7 @@ function MyRecordingsPanel({
 
   // Auto-retry pending takes on mount / line change (once per take)
   useEffect(() => {
+    if (loadedLineId !== line?.lineId) return
     if (line?.lineId !== autoRetryLineRef.current) {
       autoRetriedRef.current.clear()
       autoRetryLineRef.current = line?.lineId ?? null
@@ -478,20 +486,27 @@ function MyRecordingsPanel({
         handleRetryUpload(take.takeId)
       }
     }
-  }, [mergedTakes, line?.lineId, handleRetryUpload])
+  }, [mergedTakes, line?.lineId, loadedLineId, handleRetryUpload])
+
+  const displayedTakes = loadedLineId === line?.lineId ? mergedTakes : []
 
   return (
     <section data-testid="recitation-recordings-panel" style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 18, marginTop: 12, overflow: 'hidden', boxShadow: '0 10px 28px rgba(15, 23, 42, 0.05)' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '14px 16px 8px' }}>
-        <strong style={{ fontSize: 17 }}>我的录音（共 {mergedTakes.length} 条）</strong>
+        <strong style={{ fontSize: 17 }}>我的录音（共 {displayedTakes.length} 条）</strong>
         <span style={{ fontSize: 24, color: '#64748b', lineHeight: 1 }}>›</span>
       </div>
 
-      {mergedTakes.length === 0 ? (
-        <div style={{ padding: '8px 16px 18px', color: '#64748b', fontSize: 13 }}>当前句还没有录音。</div>
+      {displayedTakes.length === 0 ? (
+        <div style={{ padding: '8px 16px 18px', color: '#64748b', fontSize: 13 }}>
+          {isLoadingCloud ? '正在读取云端录音...' : '当前句暂无录音。'}
+          {!isLoadingCloud && lessonTakeCount > 0 ? (
+            <div style={{ marginTop: 6 }}>本课已有 {lessonTakeCount} 条录音，切换到对应句子可查看。</div>
+          ) : null}
+        </div>
       ) : (
         <div style={{ padding: '0 12px 14px' }}>
-          {mergedTakes.map((take, index) => {
+          {displayedTakes.map((take, index) => {
             const isBest = take.takeId === selectedBestId
             const isPending = take.uploadStatus === 'pending'
             const isFailed = take.uploadStatus === 'failed'
@@ -540,6 +555,7 @@ export default function RecitationPageClient({ lessonNo, lang }: Props) {
   const [bestTakes, setBestTakes] = useState<Map<string, string | null>>(new Map())
   const [activeLineId, setActiveLineId] = useState<string | null>(null)
   const [takesRefreshKey, setTakesRefreshKey] = useState(0)
+  const [lessonTakeCount, setLessonTakeCount] = useState(0)
   const [isRecording, setIsRecording] = useState(false)
   const [focusMode, setFocusMode] = useState(false)
   const [notice, setNotice] = useState('')
@@ -564,6 +580,20 @@ export default function RecitationPageClient({ lessonNo, lang }: Props) {
       }
     })
   }, [lessonNo])
+
+  useEffect(() => {
+    let cancelled = false
+    listTakes(lessonNo)
+      .then(takes => {
+        if (!cancelled) setLessonTakeCount(takes.filter(t => t.uploadStatus === 'uploaded').length)
+      })
+      .catch(() => {
+        if (!cancelled) setLessonTakeCount(0)
+      })
+    return () => {
+      cancelled = true
+    }
+  }, [lessonNo, takesRefreshKey])
 
   const handleBestTakeChange = useCallback((lineId: string, takeId: string | null) => {
     setBestTakes(prev => {
@@ -892,6 +922,7 @@ export default function RecitationPageClient({ lessonNo, lang }: Props) {
         line={activeLine}
         lessonNo={lessonNo}
         takesRefreshKey={takesRefreshKey}
+        lessonTakeCount={lessonTakeCount}
         onBestTakeChange={handleBestTakeChange}
         showNotice={showNotice}
       />

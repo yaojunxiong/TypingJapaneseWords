@@ -27,28 +27,15 @@ export async function GET(request: NextRequest) {
   const adminCheck = await checkAdminAccess(cookieStore)
   const isAdmin = adminCheck.isAdmin
 
-  // Admins can query by userId or see all; normal users only see their own
+  if (targetUserId && !isAdmin) {
+    return NextResponse.json({ error: '无权查询他人录音' }, { status: 403 })
+  }
+
+  // Student pages must always default to the current user's own takes.
+  // Admins may query another user only when userId is explicitly provided.
   let queryUserId: string
   if (isAdmin && targetUserId) {
     queryUserId = targetUserId
-  } else if (isAdmin && !targetUserId) {
-    // Admin querying all users — no user_id filter
-    let query = supabase
-      .from('recording_takes')
-      .select('*')
-      .eq('lesson_no', lessonNo)
-      .is('deleted_at', null)
-      .order('created_at', { ascending: false })
-
-    if (lineNo !== undefined && !Number.isNaN(lineNo)) {
-      query = query.eq('line_no', lineNo)
-    }
-
-    const { data, error } = await query
-    if (error) {
-      return NextResponse.json({ error: error.message }, { status: 500 })
-    }
-    return NextResponse.json(data || [])
   } else {
     queryUserId = user.id
   }
