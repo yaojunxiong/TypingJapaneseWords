@@ -142,11 +142,10 @@ function CompactLineItem({
 
   useEffect(() => {
     const lineNo = line.order
-    Promise.all([
-      getTakesByLine(line.lineId),
-      listTakes(lessonNo, lineNo).catch(() => [] as RecordingTakeDTO[]),
-    ]).then(([local, cloud]) => {
-      const merged = mergeTakes(local, cloud)
+    ;(async () => {
+      // 1. Show local takes immediately
+      const local = await getTakesByLine(line.lineId)
+      let merged = mergeTakes(local, [])
       setMergedTakes(merged)
       if (merged.length > 0) {
         const currentId = selectedBestIdRef.current
@@ -160,7 +159,25 @@ function CompactLineItem({
         setSelectedBestId(null)
         onBestTakeChange(line.lineId, null)
       }
-    })
+
+      // 2. Load cloud data in background
+      const cloud = await listTakes(lessonNo, lineNo).catch(() => [] as RecordingTakeDTO[])
+      const freshLocal = await getTakesByLine(line.lineId)
+      merged = mergeTakes(freshLocal, cloud)
+      setMergedTakes(merged)
+      if (merged.length > 0) {
+        const currentId = selectedBestIdRef.current
+        const hasSelected = currentId && merged.some(t => t.takeId === currentId)
+        if (!hasSelected) {
+          const best = merged.find(t => t.isBest) || merged[0]
+          setSelectedBestId(best.takeId)
+          onBestTakeChange(line.lineId, best.takeId)
+        }
+      } else {
+        setSelectedBestId(null)
+        onBestTakeChange(line.lineId, null)
+      }
+    })()
   }, [line.lineId, lessonNo, line.order, takesRefreshKey, onBestTakeChange])
 
   const isCompleted = mergedTakes.length > 0 && selectedBestId !== null
@@ -301,11 +318,28 @@ function MyRecordingsPanel({
       return []
     }
     const lineNo = line.order
-    const [local, cloud] = await Promise.all([
-      getTakesByLine(line.lineId),
-      listTakes(lessonNo, lineNo).catch(() => [] as RecordingTakeDTO[]),
-    ])
-    const merged = mergeTakes(local, cloud)
+
+    // 1. Show local takes immediately (fast, from IndexedDB)
+    const local = await getTakesByLine(line.lineId)
+    let merged = mergeTakes(local, [])
+    setMergedTakes(merged)
+    if (merged.length > 0) {
+      const currentId = selectedBestIdRef.current
+      const hasSelected = currentId && merged.some(t => t.takeId === currentId)
+      if (!hasSelected) {
+        const best = merged.find(t => t.isBest) || merged[0]
+        setSelectedBestId(best.takeId)
+        onBestTakeChange(line.lineId, best.takeId)
+      }
+    } else {
+      setSelectedBestId(null)
+      onBestTakeChange(line.lineId, null)
+    }
+
+    // 2. Load cloud data in background (authoritative merge)
+    const cloud = await listTakes(lessonNo, lineNo).catch(() => [] as RecordingTakeDTO[])
+    const freshLocal = await getTakesByLine(line.lineId)
+    merged = mergeTakes(freshLocal, cloud)
     setMergedTakes(merged)
     if (merged.length > 0) {
       const currentId = selectedBestIdRef.current
