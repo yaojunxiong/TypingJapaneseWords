@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { getLocalLearningSummary } from '@/lib/learning-cloud-sync'
 
 type Props = {
   lang: 'zh' | 'en'
@@ -9,40 +8,31 @@ type Props = {
 }
 
 type TopStats = {
-  lesson: number
-  streak: number
-  xp: number
-  hearts: number
-  lessonLabel: string
+  checkInDays: number
+  completedLessons: number
+  recordingCount: number
 }
 
 function t(lang: Props['lang'], zh: string, en: string) {
   return lang === 'en' ? en : zh
 }
 
-function readJson<T>(key: string, fallback: T): T {
-  try {
-    const raw = localStorage.getItem(key)
-    if (!raw) return fallback
-    const parsed = JSON.parse(raw)
-    return parsed == null ? fallback : (parsed as T)
-  } catch {
-    return fallback
-  }
-}
-
 export default function MinnaTopStatsClient({ lang, active = 'home' }: Props) {
-  const [stats, setStats] = useState<TopStats>({ lesson: 1, streak: 0, xp: 0, hearts: 5, lessonLabel: '' })
+  const [stats, setStats] = useState<TopStats>({ checkInDays: 0, completedLessons: 0, recordingCount: 0 })
 
-  function sync() {
-    const summary = getLocalLearningSummary()
-    const lesson = Math.max(1, Number(summary.lastLesson || 1))
-    const streak = Math.max(1, Number(summary.streak || 1))
-    const xp = Math.max(0, Number(summary.xp || 0))
-    const heartsRaw = Number(localStorage.getItem('minna.hearts.v1') || '')
-    const hearts = Number.isFinite(heartsRaw) ? Math.max(0, heartsRaw) : 5
-    const lessonLabel = String(localStorage.getItem('minna.top.lesson_label.v1') || '').trim()
-    setStats({ lesson, streak, xp, hearts, lessonLabel })
+  async function sync() {
+    try {
+      const res = await fetch('/api/minna/stats', { cache: 'no-store' })
+      if (!res.ok) throw new Error('failed to load stats')
+      const data = await res.json() as Partial<TopStats>
+      setStats({
+        checkInDays: Math.max(0, Number(data.checkInDays || 0)),
+        completedLessons: Math.max(0, Number(data.completedLessons || 0)),
+        recordingCount: Math.max(0, Number(data.recordingCount || 0)),
+      })
+    } catch {
+      setStats({ checkInDays: 0, completedLessons: 0, recordingCount: 0 })
+    }
   }
 
   useEffect(() => {
@@ -70,10 +60,10 @@ export default function MinnaTopStatsClient({ lang, active = 'home' }: Props) {
 
   return (
     <div className="minnaTopStats">
-      <span>🇯🇵 {stats.lessonLabel || activeLabel}</span>
-      <span>🔥 {stats.streak}</span>
-      <span>💎 {stats.xp}</span>
-      <span>❤️ {stats.hearts}</span>
+      <span>🇯🇵 {activeLabel}</span>
+      <span>🔥 {stats.checkInDays}</span>
+      <span>💎 {stats.completedLessons}</span>
+      <span>❤️ {stats.recordingCount}</span>
     </div>
   )
 }

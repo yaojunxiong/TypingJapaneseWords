@@ -3,10 +3,9 @@ import { checkAdminAccess } from '@/lib/admin-auth'
 import { isLessonUnlocked, type AccessContext, type LessonAccessResult } from '@/lib/learning-access'
 import { createClient } from '@/utils/supabase/server'
 import { hasSupabasePublicEnv } from '@/utils/supabase/config'
-import { loadRecitationLesson } from '@/lib/recitation-lesson'
+import { getSequentialRecordingCompletionState } from '@/lib/recording-completion'
 
 type CookieStore = Awaited<ReturnType<typeof cookies>>
-type BestTakeRow = { lesson_no: number | string | null; line_no: number | string | null }
 
 export type ServerLessonAccess = {
   access: LessonAccessResult
@@ -21,57 +20,6 @@ export type ServerLessonListAccess = Omit<ServerLessonAccess, 'access'> & {
 }
 
 const MAX_LESSON = 50
-
-async function getRecitationLineOrders(lessonNo: number): Promise<number[]> {
-  const lesson = await loadRecitationLesson(lessonNo)
-  return (lesson?.lines || [])
-    .map(line => Number(line.order))
-    .filter(order => Number.isFinite(order) && order > 0)
-}
-
-function lessonComplete(lineOrders: number[], bestLineNos: Set<number>) {
-  return lineOrders.length > 0 && lineOrders.every(lineNo => bestLineNos.has(lineNo))
-}
-
-async function getRecordingCompletionState(params: {
-  supabase: ReturnType<typeof createClient>
-  userId: string
-}) {
-  const { data, error } = await params.supabase
-    .from('recording_takes')
-    .select('lesson_no,line_no')
-    .eq('user_id', params.userId)
-    .gte('lesson_no', 1)
-    .lte('lesson_no', MAX_LESSON - 1)
-    .eq('upload_status', 'uploaded')
-    .eq('is_best', true)
-    .is('deleted_at', null)
-
-  if (error) return { unlockedLesson: 1, completedLessons: [] as number[] }
-
-  const byLesson = new Map<number, Set<number>>()
-  for (const row of (data || []) as BestTakeRow[]) {
-    const lessonNo = Number(row.lesson_no)
-    const lineNo = Number(row.line_no)
-    if (!Number.isFinite(lessonNo) || !Number.isFinite(lineNo)) continue
-    if (!byLesson.has(lessonNo)) byLesson.set(lessonNo, new Set())
-    byLesson.get(lessonNo)!.add(lineNo)
-  }
-
-  const completedLessons: number[] = []
-  let unlockedLesson = 1
-  for (let lessonNo = 1; lessonNo < MAX_LESSON; lessonNo += 1) {
-    const lineOrders = await getRecitationLineOrders(lessonNo)
-    if (lessonComplete(lineOrders, byLesson.get(lessonNo) || new Set())) {
-      completedLessons.push(lessonNo)
-      unlockedLesson = lessonNo + 1
-    } else {
-      break
-    }
-  }
-
-  return { unlockedLesson, completedLessons }
-}
 
 async function getServerAccessBase(cookieStore: CookieStore) {
   if (!hasSupabasePublicEnv()) {
@@ -98,7 +46,7 @@ async function getServerAccessBase(cookieStore: CookieStore) {
   }
 
   const supabase = createClient(cookieStore)
-  const completion = await getRecordingCompletionState({ supabase, userId: user.id })
+  const completion = await getSequentialRecordingCompletionState({ supabase, userId: user.id, maxLesson: MAX_LESSON })
   return { role: adminCheck.role, user, ...completion, admin: false }
 }
 
