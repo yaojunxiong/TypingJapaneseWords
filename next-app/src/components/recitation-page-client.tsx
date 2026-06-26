@@ -559,16 +559,18 @@ function MyRecordingsPanel({
   }, [mergedTakes, line?.lineId, loadedLineId, handleRetryUpload])
 
   const displayedTakes = loadedLineId === line?.lineId ? mergedTakes : []
+  const MAX_TAKES = 10
+  const limitedTakes = displayedTakes.slice(0, MAX_TAKES)
 
   return (
     <>
     <section data-testid="recitation-recordings-panel" style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 18, marginTop: 12, overflow: 'hidden', boxShadow: '0 10px 28px rgba(15, 23, 42, 0.05)' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '14px 16px 8px' }}>
-        <strong style={{ fontSize: 17 }}>我的录音（共 {displayedTakes.length} 条）</strong>
+        <strong style={{ fontSize: 17 }}>{displayedTakes.length > MAX_TAKES ? `我的录音（最近 ${MAX_TAKES} 条）` : `我的录音（共 ${displayedTakes.length} 条）`}</strong>
         <span style={{ fontSize: 24, color: '#64748b', lineHeight: 1 }}>›</span>
       </div>
 
-      {displayedTakes.length === 0 ? (
+      {limitedTakes.length === 0 ? (
         <div style={{ padding: '8px 16px 18px', color: '#64748b', fontSize: 13 }}>
           {isLoadingCloud ? '正在读取云端录音...' : '当前句暂无录音。'}
           {!isLoadingCloud && lessonTakeCount > 0 ? (
@@ -577,7 +579,7 @@ function MyRecordingsPanel({
         </div>
       ) : (
         <div style={{ padding: '0 12px 14px' }}>
-          {displayedTakes.map((take, index) => {
+          {limitedTakes.map((take, index) => {
             const isBest = take.takeId === selectedBestId
             const isPending = take.uploadStatus === 'pending'
             const isFailed = take.uploadStatus === 'failed'
@@ -607,7 +609,6 @@ function MyRecordingsPanel({
                     <button type="button" className="btn ghost small" onClick={() => handleSelectBest(take.takeId)} style={{ background: '#fff', border: '1px solid #dbe3ee', color: '#1683ff', borderRadius: 999, padding: '3px 10px', fontSize: 12, whiteSpace: 'nowrap' }}>选为最佳</button>
                   )}
                   <button type="button" data-testid="recitation-take-play-button" className="btn ghost small" onClick={() => handlePlay(take.takeId)} disabled={playingId === take.takeId} style={{ padding: '3px 7px', background: '#fff', color: '#475569' }}>{playingId === take.takeId ? '⏳' : '▶'}</button>
-                  <button type="button" data-testid="recitation-take-delete-button" className="btn ghost small" onClick={() => handleDelete(take.takeId)} style={{ padding: '3px 7px', background: '#fff', color: '#dc2626' }}>✕</button>
                 </span>
               </div>
             )
