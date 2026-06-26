@@ -480,7 +480,7 @@ function MyRecordingsPanel({
     if (!line) return
     const take = mergedTakes.find(t => t.takeId === takeId)
     if (!take) return
-    if (!take.localBlob) {
+    if (!take.localBlob || take.localBlob.size === 0) {
       showNotice('本地录音已失效，请删除后重新录音')
       return
     }
@@ -491,15 +491,8 @@ function MyRecordingsPanel({
       await updateTake(takeId, { uploadStatus: 'uploaded', storagePath: dto.storagePath })
       loadMerged()
     } catch (err) {
-      const uploadErr = err as { status?: number }
-      const status = uploadErr.status ?? 0
-      if (status === 401) {
-        showNotice('登录已过期，请刷新页面后重新登录')
-      } else if (status === 500) {
-        showNotice('服务器上传失败，请稍后重试')
-      } else {
-        showNotice('上传失败，请稍后重试')
-      }
+      const msg = err instanceof Error ? err.message : '上传失败'
+      showNotice(msg)
     }
   }, [line, lessonNo, mergedTakes, loadMerged, showNotice])
 
