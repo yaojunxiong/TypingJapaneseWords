@@ -25,6 +25,7 @@ export type LessonAccessResult = {
   reason: LessonAccessReason
   lessonNo: number
   unlockedLesson: number
+  completed?: boolean
   requiredLesson?: number
   message?: string
 }
@@ -47,6 +48,7 @@ export function getUserLearningRole(params: {
 
 export function getUnlockedLesson(params: {
   role: LearningRole
+  unlockedLesson?: number | null
   lastLesson?: number | null
   guestDefaultLesson?: number
   maxLesson?: number
@@ -54,6 +56,7 @@ export function getUnlockedLesson(params: {
   const maxLesson = params.maxLesson || DEFAULT_MAX_LESSON
   if (params.role === 'admin') return maxLesson
   if (params.role === 'guest') return clampLessonNo(params.guestDefaultLesson || 1, maxLesson)
+  if (params.unlockedLesson != null) return clampLessonNo(Number(params.unlockedLesson || 1), maxLesson)
   return clampLessonNo(Number(params.lastLesson || 1), maxLesson)
 }
 
@@ -68,6 +71,8 @@ export function isLessonUnlocked(params: {
   user: LearningUser
   role?: string | null
   lessonNo: number
+  unlockedLesson?: number | null
+  completed?: boolean
   lastLesson?: number | null
   accessContext: AccessContext
   maxLesson?: number
@@ -75,14 +80,15 @@ export function isLessonUnlocked(params: {
   const maxLesson = params.maxLesson || DEFAULT_MAX_LESSON
   const lessonNo = clampLessonNo(params.lessonNo, maxLesson)
   const role = getUserLearningRole({ user: params.user, role: params.role })
-  const unlockedLesson = getUnlockedLesson({ role, lastLesson: params.lastLesson, maxLesson })
+  const unlockedLesson = getUnlockedLesson({ role, unlockedLesson: params.unlockedLesson, lastLesson: params.lastLesson, maxLesson })
+  const completed = !!params.completed
 
   if (role === 'admin') {
-    return { allowed: true, role, reason: 'admin', lessonNo, unlockedLesson }
+    return { allowed: true, role, reason: 'admin', lessonNo, unlockedLesson, completed }
   }
 
   if (hasSpecialLessonAccess({ user: params.user, lessonNo })) {
-    return { allowed: true, role, reason: 'special-approved', lessonNo, unlockedLesson }
+    return { allowed: true, role, reason: 'special-approved', lessonNo, unlockedLesson, completed }
   }
 
   if (role === 'guest' && lessonNo > unlockedLesson) {
@@ -92,13 +98,14 @@ export function isLessonUnlocked(params: {
       reason: 'guest-limited',
       lessonNo,
       unlockedLesson,
+      completed,
       requiredLesson: lessonNo - 1,
       message: `请先登录并完成第 ${lessonNo - 1} 课会话背诵后再学习本课`,
     }
   }
 
   if (lessonNo <= unlockedLesson) {
-    return { allowed: true, role, reason: 'unlocked', lessonNo, unlockedLesson }
+    return { allowed: true, role, reason: 'unlocked', lessonNo, unlockedLesson, completed }
   }
 
   return {
@@ -107,6 +114,7 @@ export function isLessonUnlocked(params: {
     reason: 'locked',
     lessonNo,
     unlockedLesson,
+    completed,
     requiredLesson: lessonNo - 1,
     message: `请先完成第 ${lessonNo - 1} 课会话背诵后再学习本课`,
   }

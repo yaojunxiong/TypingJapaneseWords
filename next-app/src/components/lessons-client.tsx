@@ -2,85 +2,41 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import { LESSONS_1_50 } from '@/lib/minna-lessons'
-import { createClient } from '@/utils/supabase/client'
-import { hasSupabasePublicEnv } from '@/utils/supabase/config'
-import {
-  getLocalLearningSummary,
-  syncLearningCloudNow
-} from '@/lib/learning-cloud-sync'
-import { isLessonUnlocked, type LearningRole } from '@/lib/learning-access'
+import { getLocalLearningSummary } from '@/lib/learning-cloud-sync'
+import type { LessonAccessResult } from '@/lib/learning-access'
 import conversationTitles from '@/data/minna/conversation-titles.json'
 
 type Props = {
-  learningRole: LearningRole
+  accesses: LessonAccessResult[]
+  unlockedLesson: number
   lang: 'zh' | 'en'
 }
 
 type LocalState = {
-  currentLesson: number
-  crowns: Record<string, boolean>
   streak: number
   checkinDays: number
 }
-
-const STAGES = ['vocab', 'grammar', 'examples', 'review']
 
 function t(lang: Props['lang'], zh: string, en: string) {
   return lang === 'en' ? en : zh
 }
 
-function readJson<T>(key: string, fallback: T): T {
-  try {
-    const raw = localStorage.getItem(key)
-    if (!raw) return fallback
-    const parsed = JSON.parse(raw)
-    return parsed == null ? fallback : (parsed as T)
-  } catch {
-    return fallback
-  }
-}
-
-function crownCount(crowns: Record<string, boolean>, lessonNo: number) {
-  return STAGES.filter((s) => crowns[`lesson${lessonNo}.${s}`]).length
-}
-
-export default function LessonsClient({ learningRole, lang }: Props) {
-  const supabaseReady = hasSupabasePublicEnv()
-  const supabase = useMemo(() => createClient(), [])
+export default function LessonsClient({ accesses, unlockedLesson, lang }: Props) {
   const [local, setLocal] = useState<LocalState>({
-    currentLesson: 1,
-    crowns: {},
     streak: 1,
     checkinDays: 0
   })
 
   function loadLocalState() {
-    const st = readJson<{ lastLesson?: number }>('minna.mobile.learning.state.v1', {})
-    const crowns = readJson<Record<string, boolean>>('minna.crowns.v1', {})
     const summary = getLocalLearningSummary()
     setLocal({
-      currentLesson: Math.max(1, Number(st.lastLesson || summary.lastLesson || 1)),
-      crowns,
       streak: summary.streak,
       checkinDays: summary.checkinDays
     })
   }
 
-  async function syncAndReload() {
-    loadLocalState()
-    if (!supabaseReady) return
-    const { data } = await supabase.auth.getUser()
-    const user = data.user
-    if (!user) return
-    await syncLearningCloudNow({
-      supabase,
-      user: { id: user.id, email: user.email || '' }
-    })
-    loadLocalState()
-  }
-
   useEffect(() => {
-    void syncAndReload()
+    loadLocalState()
   }, [])
 
 function getConversationTitle(no: number): string {
@@ -90,27 +46,19 @@ function getConversationTitle(no: number): string {
 
   const rows = useMemo(() => {
     return LESSONS_1_50.map((lesson) => {
-      const crowns = crownCount(local.crowns, lesson.no)
-      const done = crowns >= 4
-      const access = isLessonUnlocked({
-        user: learningRole === 'guest' ? null : { id: 'current-user' },
-        role: learningRole,
-        lessonNo: lesson.no,
-        lastLesson: local.currentLesson,
-        accessContext: 'list'
-      })
-      const locked = !access.allowed
+      const access = accesses.find(item => item.lessonNo === lesson.no)
+      const locked = access ? !access.allowed : lesson.no > 1
+      const done = !!access?.completed
       return {
         ...lesson,
-        crowns,
         done,
         locked,
-        accessReason: access.reason,
-        requiredLesson: access.requiredLesson,
+        accessReason: access?.reason || 'locked',
+        requiredLesson: access?.requiredLesson,
         href: locked ? '#' : `/lessons/${lesson.no}`
       }
     })
-  }, [local, learningRole])
+  }, [accesses])
 
   return (
     <>
@@ -119,7 +67,7 @@ function getConversationTitle(no: number): string {
         <h2>{t(lang, '课程', 'Lessons')}</h2>
         <p className="small">{t(lang, '第 1-50 课学习入口，按顺序完成每一课', 'Lesson 1-50: complete every lesson in order')}</p>
         <p className="small">
-          {t(lang, `继续第 ${local.currentLesson} 课 · 已连续学习 ${local.streak} 天`, `Continue Lesson ${local.currentLesson} · ${local.streak}-day streak`)}
+          {t(lang, `继续第 ${unlockedLesson} 课 · 已连续学习 ${local.streak} 天`, `Continue Lesson ${unlockedLesson} · ${local.streak}-day streak`)}
         </p>
         <p className="small">{t(lang, '今天可以先听一句、跟读一句', 'Start by listening and repeating a sentence today')}</p>
       </section>
@@ -144,7 +92,6 @@ function getConversationTitle(no: number): string {
                     <p className="small" style={{ margin: '0 0 2px' }}>{t(lang, `第 ${row.no} 课 · 会话背诵`, `Lesson ${row.no} Recitation`)}</p>
                   )}
                   <div className="lessonMeta2">
-                    <span className={row.done ? 'metaPill done' : 'metaPill'}>📋 {t(lang, '本课进度', 'Progress')} {row.crowns}/4</span>
                     <span className="metaPill">
                       {row.locked
                         ? t(lang, `完成第 ${row.requiredLesson || row.no - 1} 课后解锁`, `Complete Lesson ${row.requiredLesson || row.no - 1} to unlock`)
