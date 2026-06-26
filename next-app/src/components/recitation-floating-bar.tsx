@@ -109,6 +109,8 @@ export default function RecitationFloatingBar({ line, lessonNo, currentIndex, to
           takeId,
           lineId: activeLine.lineId,
           lessonId: activeLine.lessonId,
+          lessonNo,
+          lineNo: activeLine.order,
           audioBlob: blob,
           audioUrl: URL.createObjectURL(blob),
           score,
@@ -131,12 +133,9 @@ export default function RecitationFloatingBar({ line, lessonNo, currentIndex, to
           onRecordingComplete(activeLine.lineId)
         } catch (err) {
           const uploadErr = err instanceof UploadError ? err : new UploadError('上传异常', 0, true)
-          if (uploadErr.status === 401) {
-            setMessage('请登录后保存录音')
-          } else {
-            setMessage('上传失败，点击重试')
-          }
-          await updateTake(takeId, { uploadStatus: 'failed' })
+          const errMsg = uploadErr.status === 401 ? '请登录后再保存录音' : uploadErr.message
+          setMessage(errMsg)
+          await updateTake(takeId, { uploadStatus: 'failed', errorMessage: errMsg, retryCount: 0 })
           // Refresh recordings panel so it shows the failure status + retry button
           onRecordingComplete(activeLine.lineId)
         }

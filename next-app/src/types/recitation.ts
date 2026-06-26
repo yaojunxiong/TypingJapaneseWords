@@ -50,6 +50,10 @@ export interface RecitationTake {
   uploadStatus?: 'pending' | 'uploaded' | 'failed'
   storagePath?: string
   isBest?: boolean
+  lessonNo?: number
+  lineNo?: number
+  retryCount?: number
+  errorMessage?: string
 }
 
 export interface RecordingTakeDTO {

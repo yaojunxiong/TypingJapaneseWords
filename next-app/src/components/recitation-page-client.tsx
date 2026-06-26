@@ -84,6 +84,8 @@ interface MergedTake {
   storagePath?: string
   uploadStatus?: string
   audioMimeType?: string
+  lessonNo?: number
+  lineNo?: number
 }
 
 function mergeTakes(local: RecitationTake[], cloud: RecordingTakeDTO[]): MergedTake[] {
@@ -117,6 +119,8 @@ function mergeTakes(local: RecitationTake[], cloud: RecordingTakeDTO[]): MergedT
         isBest: lt.isUserSelected || false,
         localBlob: lt.audioBlob,
         uploadStatus: localStatus,
+        lessonNo: lt.lessonNo,
+        lineNo: lt.lineNo,
       })
     }
   }
@@ -484,14 +488,16 @@ function MyRecordingsPanel({
       showNotice('本地录音已失效，请删除后重新录音')
       return
     }
-    const lineNo = line.order
+    const targetLessonNo = take.lessonNo ?? lessonNo
+    const targetLineNo = take.lineNo ?? line.order
     try {
       const { uploadTake } = await import('@/lib/recitation-api')
-      const dto = await uploadTake(take.localBlob, lessonNo, lineNo)
+      const dto = await uploadTake(take.localBlob, targetLessonNo, targetLineNo)
       await updateTake(takeId, { uploadStatus: 'uploaded', storagePath: dto.storagePath })
       loadMerged()
     } catch (err) {
       const msg = err instanceof Error ? err.message : '上传失败'
+      await updateTake(takeId, { errorMessage: msg, retryCount: (take as { retryCount?: number }).retryCount ?? 0 + 1 }).catch(() => {})
       showNotice(msg)
     }
   }, [line, lessonNo, mergedTakes, loadMerged, showNotice])

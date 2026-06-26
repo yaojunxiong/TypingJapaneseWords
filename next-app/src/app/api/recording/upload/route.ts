@@ -39,8 +39,12 @@ export async function POST(request: NextRequest) {
   const arrayBuffer = await audioFile.arrayBuffer()
   const blob = new Blob([arrayBuffer], { type: audioFile.type || 'audio/webm' })
 
+  if (blob.size === 0) {
+    return NextResponse.json({ error: '音频文件为空，请重新录音' }, { status: 400 })
+  }
+
   // Generate takeNo
-  const { data: maxRow } = await supabase
+  const { data: maxRow, error: takeNoError } = await supabase
     .from('recording_takes')
     .select('take_no')
     .eq('user_id', user.id)
@@ -51,8 +55,9 @@ export async function POST(request: NextRequest) {
     .limit(1)
     .maybeSingle()
 
-  const takeNo = (maxRow?.take_no ?? 0) + 1
-  const storagePath = `${user.id}/lesson-${lessonNo}/line-${lineNo}/take-${takeNo}.webm`
+  const takeNo = (takeNoError ? 0 : (maxRow?.take_no ?? 0)) + 1
+  const timestamp = Date.now()
+  const storagePath = `${user.id}/lesson-${lessonNo}/line-${lineNo}/take-${takeNo}-${timestamp}.webm`
 
   // Upload to Supabase Storage
   const { error: uploadError } = await supabase.storage
