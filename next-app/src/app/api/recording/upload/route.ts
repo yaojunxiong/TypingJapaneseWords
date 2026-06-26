@@ -7,6 +7,19 @@ function errJson(error: string, errorCode: string, stage: string, ctx: Record<st
   return NextResponse.json({ error, errorCode, stage, ...ctx }, { status: 500 })
 }
 
+async function getNextTakeNo(supabase: ReturnType<typeof createClient>, userId: string, lessonNo: number, lineNo: number): Promise<number> {
+  const { data: maxRow } = await supabase
+    .from('recording_takes')
+    .select('take_no')
+    .eq('user_id', userId)
+    .eq('lesson_no', lessonNo)
+    .eq('line_no', lineNo)
+    .order('take_no', { ascending: false })
+    .limit(1)
+    .maybeSingle()
+  return (maxRow?.take_no ?? 0) + 1
+}
+
 export async function POST(request: NextRequest) {
   const cookieStore = await cookies()
   const supabase = createClient(cookieStore)
@@ -77,52 +90,49 @@ export async function POST(request: NextRequest) {
     })
   }
 
-  // Step E: Generate takeNo for DB record
-  const { data: maxRow, error: takeNoError } = await supabase
-    .from('recording_takes')
-    .select('take_no')
-    .eq('user_id', user.id)
-    .eq('lesson_no', lessonNo)
-    .eq('line_no', lineNo)
-    .is('deleted_at', null)
-    .order('take_no', { ascending: false })
-    .limit(1)
-    .maybeSingle()
-
-  if (takeNoError) {
-    // Storage already succeeded; cleanup with admin client
-    await storageClient.storage.from('recordings').remove([storagePath])
-    return errJson(`获取句号序号失败: ${takeNoError.message}`, 'TAKE_NO_QUERY_FAILED', 'takeNo', {
-      lessonNo, lineNo, storagePath, blobSize, mimeType, takeNoQueryError: takeNoError.message,
-    })
-  }
-
-  const takeNo = (maxRow?.take_no ?? 0) + 1
+  // Step E: Generate takeNo — count ALL rows regardless of deleted_at
+  let takeNo = await getNextTakeNo(supabase, user.id, lessonNo, lineNo)
 
   // Step F: Insert DB record (use regular client — session RLS)
-  const { data: record, error: insertError } = await supabase
+  const insertPayload = {
+    user_id: user.id,
+    lesson_no: lessonNo,
+    line_no: lineNo,
+    take_no: takeNo,
+    storage_path: storagePath,
+    audio_mime_type: mimeType,
+    duration_ms: 0,
+    score: null,
+    is_best: false,
+    is_system_recommended: false,
+    upload_status: 'uploaded',
+  }
+
+  let { data: record, error: insertError } = await supabase
     .from('recording_takes')
-    .insert({
-      user_id: user.id,
-      lesson_no: lessonNo,
-      line_no: lineNo,
-      take_no: takeNo,
-      storage_path: storagePath,
-      audio_mime_type: mimeType,
-      duration_ms: 0,
-      score: null,
-      is_best: false,
-      is_system_recommended: false,
-      upload_status: 'uploaded',
-    })
+    .insert(insertPayload)
     .select()
     .single()
 
+  // Retry once on duplicate key (concurrent insert race)
+  if (insertError && insertError.message?.includes('duplicate key')) {
+    takeNo = await getNextTakeNo(supabase, user.id, lessonNo, lineNo)
+    const retry = await supabase
+      .from('recording_takes')
+      .insert({ ...insertPayload, take_no: takeNo })
+      .select()
+      .single()
+    record = retry.data
+    insertError = retry.error
+  }
+
   if (insertError) {
-    // Clean up storage on insert failure (use admin client)
     await storageClient.storage.from('recordings').remove([storagePath])
     return errJson(`数据库写入失败: ${insertError.message}`, 'DB_INSERT_FAILED', 'db_insert', {
-      lessonNo, lineNo, storagePath, blobSize, mimeType, dbError: insertError.message,
+      lessonNo, lineNo, storagePath, blobSize, mimeType,
+      dbError: insertError.message,
+      constraint: (insertError as any)?.constraint || null,
+      insertPayload,
     })
   }
 
