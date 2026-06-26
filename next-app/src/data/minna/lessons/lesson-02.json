@@ -861,22 +861,6 @@
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l02-conv-007",
-          "speaker": "",
-          "jp": "あのー、サントスさんのお店はどこですか?",
-          "kana": "",
-          "zh": "那个，桑托斯先生的店在哪里？",
-          "keyword": "",
-          "videoStart": "0:28.60",
-          "videoEnd": "0:30.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
           "id": "l02-conv-008",
           "speaker": "",
           "jp": "あのー、これコーヒーです",
@@ -1032,19 +1016,8 @@
           "kana": "",
           "zh": "",
           "importance": "core",
-          "fromConversationId": "l02-conv-007",
-          "sourceSentence": "あのー、サントスさんのお店はどこですか?",
-          "sourceType": "extracted_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "word": "サントスさんのお店はどこですか",
-          "kana": "",
-          "zh": "",
-          "importance": "core",
-          "fromConversationId": "l02-conv-007",
-          "sourceSentence": "あのー、サントスさんのお店はどこですか?",
+          "fromConversationId": "l02-conv-008",
+          "sourceSentence": "あのー、これコーヒーです",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
@@ -1269,16 +1242,6 @@
           "originalSentence": "こちらこそよろしくお願いします",
           "fromConversationId": "l02-conv-006",
           "sourceSentence": "こちらこそよろしくお願いします",
-          "sourceType": "ai_generated_from_official_conversation",
-          "replacements": [],
-          "needsReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "pattern": "跟读练习",
-          "originalSentence": "あのー、サントスさんのお店はどこですか?",
-          "fromConversationId": "l02-conv-007",
-          "sourceSentence": "あのー、サントスさんのお店はどこですか?",
           "sourceType": "ai_generated_from_official_conversation",
           "replacements": [],
           "needsReview": true,
@@ -1772,77 +1735,6 @@
           "reviewStatus": "needs_review"
         },
         {
-          "id": "l02-q-007-listen-001",
-          "type": "listen_choose_meaning",
-          "prompt": {
-            "zh": "「あのー、サントスさんのお店はどこですか?」是什么意思？",
-            "en": "What does \"あのー、サントスさんのお店はどこですか?\" mean?"
-          },
-          "choices": [
-            {
-              "text": {
-                "zh": "那个，桑托斯先生的店在哪里？",
-                "en": "那个，桑托斯先生的店在哪里？"
-              },
-              "correct": true
-            },
-            {
-              "text": {
-                "zh": "我不确定",
-                "en": "I'm not sure"
-              }
-            }
-          ],
-          "sourceSentence": "あのー、サントスさんのお店はどこですか?",
-          "fromConversationId": "l02-conv-007",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l02-q-007-zh2jp-001",
-          "type": "chinese_to_japanese",
-          "prompt": {
-            "zh": "请选择「那个，桑托斯先生的店在哪里？」的日语说法。",
-            "en": "Select Japanese for \"那个，桑托斯先生的店在哪里？\"."
-          },
-          "choices": [
-            {
-              "text": {
-                "jp": "あのー、サントスさんのお店はどこですか?"
-              },
-              "correct": true
-            }
-          ],
-          "sourceSentence": "あのー、サントスさんのお店はどこですか?",
-          "fromConversationId": "l02-conv-007",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l02-q-007-recall-001",
-          "type": "recall_check",
-          "prompt": {
-            "zh": "「あのー、サントスさんのお店はどこですか?」的中文意思是？",
-            "en": "What does \"あのー、サントスさんのお店はどこですか?\" mean?"
-          },
-          "choices": [
-            {
-              "text": {
-                "zh": "那个，桑托斯先生的店在哪里？",
-                "en": "那个，桑托斯先生的店在哪里？"
-              },
-              "correct": true
-            }
-          ],
-          "sourceSentence": "あのー、サントスさんのお店はどこですか?",
-          "fromConversationId": "l02-conv-007",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
           "id": "l02-q-008-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
@@ -2130,18 +2022,12 @@
       },
       {
         "step": 6,
-        "title": "闲聊询问",
-        "explanation": "邻居问'あのー、サントスさんのお店はどこですか？'——'あのー'是犹豫/引起注意的用语，相当于'那个……'。'お店'用敬语前缀'お'表示礼貌。这句话展示了如何用'どこですか'询问地点。",
-        "relatedLineIds": ["l02-conv-007"]
-      },
-      {
-        "step": 7,
         "title": "赠送礼物",
         "explanation": "桑托斯拿出咖啡说'あのー、これコーヒーです'。'これ'是这课的核心语法——指示代词'这个'，指代手中拿着的物品。'コーヒー'是咖啡。这句话展示了如何用'これ〜です'介绍自己手中的物品，在赠送礼物时非常常用。注意这里省略了助词'は'，是口语中比较自然的说法。",
         "relatedLineIds": ["l02-conv-008"]
       },
       {
-        "step": 8,
+        "step": 7,
         "title": "接收与感谢",
         "explanation": "邻居接过礼物说'どうぞ'（请/请给我），然后桑托斯说'どうもありがとうございます'（非常感谢）。'どうぞ'在这里是接受对方好意时的回应，相当于'好的，谢谢'。'どうもありがとうございます'比'ありがとう'更郑重，适合正式场合。",
         "relatedLineIds": ["l02-conv-009", "l02-conv-010"]
@@ -2195,14 +2081,6 @@
         "realLifeUse": "当对方先说了'よろしくお願いします'，用'こちらこそ'回应表示谦逊。'こちら'是'这边/我方'，'こちらこそ'意思是'（应该说请多关照的）是我这边才对'。这种互相谦让的对话模式是日本社交文化的重要特征。",
         "emotionTone": "谦逊、礼貌、平等互敬。既回应了对方的友好，又保持了礼貌的姿态。",
         "memoryTip": "こちらこそ = 我才是。对方说'请多关照'，你回'我才应该请你多关照'。记住这个对话对：A说'よろしく'，B回'こちらこそ'。"
-      },
-      {
-        "lineId": "l02-conv-007",
-        "japanese": "あのー、サントスさんのお店はどこですか?",
-        "chineseMeaning": "那个，桑托斯先生的店在哪里？",
-        "realLifeUse": "询问地点的句型：'〜はどこですか？'。'あのー'是说话前犹豫或引起注意的填充词，相当于中文的'那个……'。'お店'中的'お'是美化前缀，表示礼貌。'お店はどこですか'是询问'店在哪里'的标准说法。",
-        "emotionTone": "礼貌、略带犹豫的好奇。あのー 让语气显得不那么直接生硬。",
-        "memoryTip": "骨架：〜はどこですか = 〜在哪里？。记住这个问路/问位置的万能句型。あのー是聊天中的缓冲语，让对话更自然。"
       },
       {
         "lineId": "l02-conv-008",

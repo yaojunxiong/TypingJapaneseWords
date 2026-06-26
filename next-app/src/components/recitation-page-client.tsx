@@ -22,6 +22,8 @@ type SpeakerAvatar = {
 }
 
 const PENDING_AUTO_RETRY_DELAY_MS = 120_000
+const LEARNING_STATE_KEY = 'minna.mobile.learning.state.v1'
+const LEARNING_CLOUD_DIRTY_KEY = 'minna.cloud.state.dirty_at.v1'
 
 function formatTakeTime(createdAt: string): string {
   const date = new Date(createdAt)
@@ -131,6 +133,48 @@ function mergeTakes(local: RecitationTake[], cloud: RecordingTakeDTO[]): MergedT
 
 function filterCloudTakesForLine(takes: RecordingTakeDTO[], lessonNo: number, lineNo: number): RecordingTakeDTO[] {
   return takes.filter(t => t.lessonNo === lessonNo && t.lineNo === lineNo)
+}
+
+function markRecitationLessonCompleted(lessonNo: number): boolean {
+  try {
+    const completedKey = `minna.recitation.completed.lesson.${lessonNo}`
+    if (localStorage.getItem(completedKey) === 'true') return false
+
+    const raw = localStorage.getItem(LEARNING_STATE_KEY)
+    const state = raw ? JSON.parse(raw) as Record<string, unknown> : {}
+    const current = Number(state.lastLesson || 1)
+    state.lastLesson = Math.max(Number.isFinite(current) ? current : 1, lessonNo + 1)
+    state.updatedAt = new Date().toISOString()
+    localStorage.setItem(LEARNING_STATE_KEY, JSON.stringify(state))
+    localStorage.setItem(completedKey, 'true')
+    localStorage.setItem(LEARNING_CLOUD_DIRTY_KEY, String(Date.now()))
+    window.dispatchEvent(new Event('minna:stats-update'))
+    return true
+  } catch {
+    return false
+  }
+}
+
+async function syncLearningStateBestEffort() {
+  try {
+    const [{ createClient }, { hasSupabasePublicEnv }, { syncLearningCloudNow }] = await Promise.all([
+      import('@/utils/supabase/client'),
+      import('@/utils/supabase/config'),
+      import('@/lib/learning-cloud-sync'),
+    ])
+    if (!hasSupabasePublicEnv()) return
+    const supabase = createClient()
+    const { data } = await supabase.auth.getUser()
+    const user = data.user
+    if (!user) return
+    await syncLearningCloudNow({
+      supabase,
+      user: { id: user.id, email: user.email || '' },
+      forceUpload: true,
+    })
+  } catch {
+    // Dirty marker remains for the next normal learning sync.
+  }
 }
 
 function CompactLineItem({
@@ -669,6 +713,7 @@ export default function RecitationPageClient({ lessonNo, lang }: Props) {
   const pauseDelayTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const continuousSignedUrlCacheRef = useRef<Map<string, { url: string; expiresAt: number }>>(new Map())
   const playbackFailedCountRef = useRef(0)
+  const completionCheckInFlightRef = useRef(false)
 
   useEffect(() => {
     loadRecitationLesson(lessonNo).then((data) => {
@@ -720,6 +765,49 @@ export default function RecitationPageClient({ lessonNo, lang }: Props) {
     if (noticeTimerRef.current) clearTimeout(noticeTimerRef.current)
     noticeTimerRef.current = setTimeout(() => setNotice(''), 1800)
   }, [])
+
+  useEffect(() => {
+    if (!lesson || lesson.lines.length === 0) return
+    const completedKey = `minna.recitation.completed.lesson.${lessonNo}`
+    try {
+      if (localStorage.getItem(completedKey) === 'true') return
+    } catch {}
+    if (completionCheckInFlightRef.current) return
+
+    const hasCandidateForEveryLine = lesson.lines.every(line => {
+      const v = bestTakes.get(line.lineId)
+      return Boolean(v && v !== 'pending')
+    })
+    if (!hasCandidateForEveryLine) return
+
+    let cancelled = false
+    completionCheckInFlightRef.current = true
+    ;(async () => {
+      try {
+        const takes = await listTakes(lessonNo)
+        if (cancelled) return
+        const complete = lesson.lines.every(line => {
+          return takes.some(t =>
+            t.lessonNo === lessonNo &&
+            t.lineNo === line.order &&
+            t.uploadStatus === 'uploaded' &&
+            t.isBest
+          )
+        })
+        if (!complete) return
+        if (markRecitationLessonCompleted(lessonNo)) {
+          showNotice(`第 ${lessonNo} 课会话背诵完成，已解锁第 ${lessonNo + 1} 课`)
+          void syncLearningStateBestEffort()
+        }
+      } finally {
+        completionCheckInFlightRef.current = false
+      }
+    })()
+
+    return () => {
+      cancelled = true
+    }
+  }, [lesson, lessonNo, bestTakes, showNotice])
 
   const stopOriginalAudio = useCallback(() => {
     if (!originalAudioRef.current) return
