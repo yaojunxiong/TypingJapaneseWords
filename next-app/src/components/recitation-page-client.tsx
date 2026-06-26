@@ -447,13 +447,44 @@ function MyRecordingsPanel({
     loadMerged()
   }, [loadMerged, takesRefreshKey])
 
-  const handleUploadComplete = useCallback((lineId: string, localTakeId: string, cloudTake: RecordingTakeDTO) => {
-    if (line?.lineId !== lineId) return
-    cloudDtoRef.current = [...cloudDtoRef.current, cloudTake]
+  const ensureBestAfterUpload = useCallback(async (cloudTake: RecordingTakeDTO) => {
+    if (!line) return { cloudTake, cloud: [cloudTake], autoSelected: false }
     const lineNo = line.order
-    const relevantCloud = cloudDtoRef.current.filter(t => t.lessonNo === lessonNo && t.lineNo === lineNo)
-    loadMerged(relevantCloud)
-  }, [line, lessonNo, loadMerged])
+    const currentCloud = filterCloudTakesForLine(
+      await listTakes(lessonNo, lineNo).catch(() => [] as RecordingTakeDTO[]),
+      lessonNo,
+      lineNo,
+    )
+    const hasBest = currentCloud.some(t => t.uploadStatus === 'uploaded' && t.isBest)
+    if (hasBest) return { cloudTake, cloud: currentCloud, autoSelected: false }
+
+    await apiSetBest(cloudTake.id)
+    const nextCloudTake = { ...cloudTake, isBest: true }
+    const nextCloud = currentCloud.map(t => t.id === nextCloudTake.id ? nextCloudTake : { ...t, isBest: false })
+    if (!nextCloud.some(t => t.id === nextCloudTake.id)) nextCloud.push(nextCloudTake)
+    return { cloudTake: nextCloudTake, cloud: nextCloud, autoSelected: true }
+  }, [line, lessonNo])
+
+  const handleUploadComplete = useCallback(async (lineId: string, localTakeId: string, cloudTake: RecordingTakeDTO) => {
+    if (line?.lineId !== lineId) return
+    try {
+      const { cloudTake: nextCloudTake, cloud, autoSelected } = await ensureBestAfterUpload(cloudTake)
+      const lineNo = line.order
+      cloudDtoRef.current = [
+        ...cloudDtoRef.current.filter(t => t.lineNo !== lineNo || t.lessonNo !== lessonNo),
+        ...cloud,
+      ]
+      await loadMerged(cloud)
+      if (autoSelected) showNotice('已自动设为最佳')
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : '自动设为最佳失败'
+      showNotice(`上传成功，但${msg}`)
+      const lineNo = line.order
+      cloudDtoRef.current = [...cloudDtoRef.current, cloudTake]
+      const relevantCloud = cloudDtoRef.current.filter(t => t.lessonNo === lessonNo && t.lineNo === lineNo)
+      await loadMerged(relevantCloud)
+    }
+  }, [line, lessonNo, loadMerged, ensureBestAfterUpload, showNotice])
 
   const handleUploadFailed = useCallback((lineId: string, localTakeId: string, errorMsg: string) => {
     if (line?.lineId !== lineId) return
@@ -572,14 +603,16 @@ function MyRecordingsPanel({
     try {
       const { uploadTake } = await import('@/lib/recitation-api')
       const dto = await uploadTake(take.localBlob, targetLessonNo, targetLineNo)
-      await updateTake(takeId, { uploadStatus: 'uploaded', storagePath: dto.storagePath })
-      loadMerged()
+      const { cloudTake: nextDto, cloud, autoSelected } = await ensureBestAfterUpload(dto)
+      await updateTake(takeId, { uploadStatus: 'uploaded', storagePath: nextDto.storagePath })
+      await loadMerged(cloud)
+      if (autoSelected) showNotice('已自动设为最佳')
     } catch (err) {
       const msg = err instanceof Error ? err.message : '上传失败'
       await updateTake(takeId, { errorMessage: msg, retryCount: (take as { retryCount?: number }).retryCount ?? 0 + 1 }).catch(() => {})
       showNotice(msg)
     }
-  }, [line, lessonNo, mergedTakes, loadMerged, showNotice])
+  }, [line, lessonNo, mergedTakes, loadMerged, showNotice, ensureBestAfterUpload])
 
   // Auto-retry failed takes and stale pending takes on mount / line change (once per take).
   // Fresh pending takes are uploaded by the recorder itself; retrying them immediately can duplicate uploads.
