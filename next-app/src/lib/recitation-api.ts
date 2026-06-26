@@ -82,18 +82,33 @@ export async function uploadTake(
   return normalizeRecordingTake(await res.json())
 }
 
+const listTakesCache = new Map<string, Promise<RecordingTakeDTO[]>>()
+
 export async function listTakes(
   lessonNo: number,
   lineNo?: number,
 ): Promise<RecordingTakeDTO[]> {
+  const key = `${lessonNo}:${lineNo ?? ''}`
+  const existing = listTakesCache.get(key)
+  if (existing) return existing
+
   const params = new URLSearchParams({ lessonNo: String(lessonNo) })
   if (lineNo !== undefined) params.set('lineNo', String(lineNo))
 
-  const res = await fetch(`${BASE}/list?${params}`)
-  if (res.status === 401) return []
-  if (!res.ok) throw new UploadError('获取录音列表失败', res.status, false)
-  const rows = await res.json()
-  return Array.isArray(rows) ? rows.map(normalizeRecordingTake) : []
+  const promise = (async () => {
+    try {
+      const res = await fetch(`${BASE}/list?${params}`)
+      if (res.status === 401) return []
+      if (!res.ok) throw new UploadError('获取录音列表失败', res.status, false)
+      const rows = await res.json()
+      return Array.isArray(rows) ? rows.map(normalizeRecordingTake) : []
+    } finally {
+      listTakesCache.delete(key)
+    }
+  })()
+
+  listTakesCache.set(key, promise)
+  return promise
 }
 
 export async function setBestTake(takeId: string): Promise<void> {

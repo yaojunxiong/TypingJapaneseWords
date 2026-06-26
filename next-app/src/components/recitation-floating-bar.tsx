@@ -1,8 +1,8 @@
 'use client'
 
 import { useCallback, useEffect, useRef, useState } from 'react'
-import type { RecitationLine } from '@/types/recitation'
-import type { RecitationTake } from '@/types/recitation'
+import type { RecitationLine, RecitationTake } from '@/types/recitation'
+import type { RecordingTakeDTO } from '@/types/recitation'
 import { saveTake, updateTake } from '@/lib/recitation-storage'
 import { uploadTake, UploadError } from '@/lib/recitation-api'
 
@@ -13,6 +13,8 @@ interface Props {
   totalLines: number
   onRecordingComplete: (lineId: string) => void
   onRecordingStateChange?: (recording: boolean) => void
+  onUploadComplete?: (lineId: string, localTakeId: string, cloudTake: RecordingTakeDTO) => void
+  onUploadFailed?: (lineId: string, localTakeId: string, errorMsg: string) => void
   bottomOffset?: string
 }
 
@@ -50,7 +52,7 @@ function getSupportedMimeType(): string | null {
   return null
 }
 
-export default function RecitationFloatingBar({ line, lessonNo, currentIndex, totalLines, onRecordingComplete, onRecordingStateChange, bottomOffset = 'calc(96px + env(safe-area-inset-bottom, 0px))' }: Props) {
+export default function RecitationFloatingBar({ line, lessonNo, currentIndex, totalLines, onRecordingComplete, onRecordingStateChange, onUploadComplete, onUploadFailed, bottomOffset = 'calc(96px + env(safe-area-inset-bottom, 0px))' }: Props) {
   const [recording, setRecording] = useState(false)
   const [message, setMessage] = useState('')
   const [localPlaying, setLocalPlaying] = useState(false)
@@ -100,6 +102,7 @@ export default function RecitationFloatingBar({ line, lessonNo, currentIndex, to
 
       recorder.onstop = async () => {
         stream.getTracks().forEach(t => t.stop())
+        const tBlobReady = performance.now()
         const mimeType = recorder.mimeType || 'audio/webm'
         const blob = new Blob(chunksRef.current, { type: mimeType })
         const score = mockScore()
@@ -120,7 +123,9 @@ export default function RecitationFloatingBar({ line, lessonNo, currentIndex, to
           isUserSelected: false,
           uploadStatus: 'pending',
         }
+        const tBeforeSave = performance.now()
         await saveTake(take)
+        const tAfterSave = performance.now()
         latestTakeUrl.current = take.audioUrl
         setMessage(`得分 ${score}`)
         onRecordingComplete(activeLine.lineId)
@@ -128,16 +133,21 @@ export default function RecitationFloatingBar({ line, lessonNo, currentIndex, to
         // Upload to cloud
         setUploading(true)
         try {
+          const tBeforeUpload = performance.now()
           const dto = await uploadTake(blob, lessonNo, activeLine.order)
+          const tAfterUpload = performance.now()
           await updateTake(takeId, { uploadStatus: 'uploaded', storagePath: dto.storagePath })
-          onRecordingComplete(activeLine.lineId)
+          onUploadComplete?.(activeLine.lineId, takeId, dto)
+          const tDone = performance.now()
+          if (process.env.NODE_ENV === 'development') {
+            console.log(`[perf] blobReady->save: ${tBeforeSave - tBlobReady}ms, save: ${tAfterSave - tBeforeSave}ms, upload: ${tAfterUpload - tBeforeUpload}ms, postProcess: ${tDone - tAfterUpload}ms, total: ${tDone - tBlobReady}ms`)
+          }
         } catch (err) {
           const uploadErr = err instanceof UploadError ? err : new UploadError('上传异常', 0, true)
           const errMsg = uploadErr.status === 401 ? '请登录后再保存录音' : uploadErr.message
           setMessage(errMsg)
           await updateTake(takeId, { uploadStatus: 'failed', errorMessage: errMsg, retryCount: 0 })
-          // Refresh recordings panel so it shows the failure status + retry button
-          onRecordingComplete(activeLine.lineId)
+          onUploadFailed?.(activeLine.lineId, takeId, errMsg)
         }
         setUploading(false)
       }
@@ -148,7 +158,7 @@ export default function RecitationFloatingBar({ line, lessonNo, currentIndex, to
     } catch {
       setMessage('无法访问麦克风')
     }
-  }, [line, lessonNo, onRecordingComplete])
+  }, [line, lessonNo, onRecordingComplete, onUploadComplete, onUploadFailed])
 
   const stopRecording = useCallback(() => {
     if (mediaRecorderRef.current && mediaRecorderRef.current.state !== 'inactive') {

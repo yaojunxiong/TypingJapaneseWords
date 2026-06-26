@@ -309,6 +309,7 @@ function CompactLineItem({
 
 function MyRecordingsPanel({
   line, lessonNo, takesRefreshKey, lessonTakeCount, onBestTakeChange, showNotice,
+  onRecordingComplete, onRecordingStateChange, bottomOffset, currentIndex, totalLines,
 }: {
   line: RecitationLine | null
   lessonNo: number
@@ -316,20 +317,26 @@ function MyRecordingsPanel({
   lessonTakeCount: number
   onBestTakeChange: (lineId: string, takeId: string | null) => void
   showNotice: (message: string) => void
+  onRecordingComplete: (lineId: string) => void
+  onRecordingStateChange?: (recording: boolean) => void
+  bottomOffset?: string
+  currentIndex: number
+  totalLines: number
 }) {
   const [mergedTakes, setMergedTakes] = useState<MergedTake[]>([])
   const [loadedLineId, setLoadedLineId] = useState<string | null>(null)
   const [isLoadingCloud, setIsLoadingCloud] = useState(false)
   const [selectedBestId, setSelectedBestId] = useState<string | null>(null)
   const [playingId, setPlayingId] = useState<string | null>(null)
-  const [signedUrlCache, setSignedUrlCache] = useState<Map<string, { url: string; expiresAt: number }>>(new Map())
+  const signedUrlCacheRef = useRef<Map<string, { url: string; expiresAt: number }>>(new Map())
+  const cloudDtoRef = useRef<RecordingTakeDTO[]>([])
   const autoRetriedRef = useRef<Set<string>>(new Set())
   const autoRetryLineRef = useRef<string | null>(null)
   const audioRef = useRef<HTMLAudioElement | null>(null)
   const selectedBestIdRef = useRef(selectedBestId)
   selectedBestIdRef.current = selectedBestId
 
-  const loadMerged = useCallback(async () => {
+  const loadMerged = useCallback(async (cloudOverride?: RecordingTakeDTO[]) => {
     if (!line) {
       setMergedTakes([])
       setLoadedLineId(null)
@@ -341,8 +348,10 @@ function MyRecordingsPanel({
     setIsLoadingCloud(true)
 
     // Show local retryable takes immediately; uploaded cloud takes remain authoritative.
+    const tLocalStart = performance.now()
     const local = await getTakesByLine(line.lineId)
     let merged = mergeTakes(local, [])
+    if (process.env.NODE_ENV === 'development') console.log(`[perf] loadMerged local: ${Math.round(performance.now() - tLocalStart)}ms`)
     if (merged.length > 0) {
       setMergedTakes(merged)
       setLoadedLineId(line.lineId)
@@ -356,11 +365,20 @@ function MyRecordingsPanel({
     }
 
     // Load cloud data for the current line. Local empty state must not override cloud data.
-    const cloud = filterCloudTakesForLine(
-      await listTakes(lessonNo, lineNo).catch(() => [] as RecordingTakeDTO[]),
-      lessonNo,
-      lineNo,
-    )
+    let cloud: RecordingTakeDTO[]
+    if (cloudOverride) {
+      cloud = cloudOverride
+    } else {
+      const tCloudStart = performance.now()
+      cloud = filterCloudTakesForLine(
+        await listTakes(lessonNo, lineNo).catch(() => [] as RecordingTakeDTO[]),
+        lessonNo,
+        lineNo,
+      )
+      if (process.env.NODE_ENV === 'development') console.log(`[perf] loadMerged cloud: ${Math.round(performance.now() - tCloudStart)}ms`)
+      // Cache cloud DTOs so upload-complete can inject without re-fetching
+      cloudDtoRef.current = cloud
+    }
     const freshLocal = await getTakesByLine(line.lineId)
     merged = mergeTakes(freshLocal, cloud)
     setMergedTakes(merged)
@@ -385,25 +403,42 @@ function MyRecordingsPanel({
     loadMerged()
   }, [loadMerged, takesRefreshKey])
 
+  const handleUploadComplete = useCallback((lineId: string, localTakeId: string, cloudTake: RecordingTakeDTO) => {
+    if (line?.lineId !== lineId) return
+    cloudDtoRef.current = [...cloudDtoRef.current, cloudTake]
+    const lineNo = line.order
+    const relevantCloud = cloudDtoRef.current.filter(t => t.lessonNo === lessonNo && t.lineNo === lineNo)
+    loadMerged(relevantCloud)
+  }, [line, lessonNo, loadMerged])
+
+  const handleUploadFailed = useCallback((lineId: string, localTakeId: string, errorMsg: string) => {
+    if (line?.lineId !== lineId) return
+    setMergedTakes(prev => prev.map(t =>
+      t.takeId === localTakeId ? { ...t, uploadStatus: 'failed' as const } : t
+    ))
+  }, [line])
+
   // Auto-retry pending takes on page load (once per line)
   const getPlaybackUrl = useCallback(async (take: MergedTake, forceRefresh = false): Promise<string> => {
     if (take.localBlob) {
       return URL.createObjectURL(take.localBlob)
     }
     if (take.storagePath) {
-      const cached = !forceRefresh ? signedUrlCache.get(take.takeId) : undefined
+      const cache = signedUrlCacheRef.current
+      const cached = !forceRefresh ? cache.get(take.takeId) : undefined
       if (cached && Date.now() < cached.expiresAt) return cached.url
       try {
+        const t0 = performance.now()
         const result = await getSignedUrl(take.takeId)
-        const item = { url: result.signedUrl, expiresAt: Date.now() + result.expiresIn * 1000 }
-        setSignedUrlCache(prev => new Map(prev).set(take.takeId, item))
+        if (process.env.NODE_ENV === 'development') console.log(`[perf] getSignedUrl: ${Math.round(performance.now() - t0)}ms`)
+        cache.set(take.takeId, { url: result.signedUrl, expiresAt: Date.now() + result.expiresIn * 1000 })
         return result.signedUrl
       } catch {
         return ''
       }
     }
     return ''
-  }, [signedUrlCache])
+  }, [])
 
   const handleSelectBest = useCallback(async (takeId: string) => {
     if (!line) return
@@ -526,6 +561,7 @@ function MyRecordingsPanel({
   const displayedTakes = loadedLineId === line?.lineId ? mergedTakes : []
 
   return (
+    <>
     <section data-testid="recitation-recordings-panel" style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 18, marginTop: 12, overflow: 'hidden', boxShadow: '0 10px 28px rgba(15, 23, 42, 0.05)' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '14px 16px 8px' }}>
         <strong style={{ fontSize: 17 }}>我的录音（共 {displayedTakes.length} 条）</strong>
@@ -579,6 +615,18 @@ function MyRecordingsPanel({
         </div>
       )}
     </section>
+    <RecitationFloatingBar
+      line={line}
+      lessonNo={lessonNo}
+      currentIndex={currentIndex}
+      totalLines={totalLines}
+      onRecordingComplete={onRecordingComplete}
+      onRecordingStateChange={onRecordingStateChange}
+      onUploadComplete={handleUploadComplete}
+      onUploadFailed={handleUploadFailed}
+      bottomOffset={bottomOffset}
+    />
+    </>
   )
 }
 
@@ -965,6 +1013,11 @@ export default function RecitationPageClient({ lessonNo, lang }: Props) {
         lessonTakeCount={lessonTakeCount}
         onBestTakeChange={handleBestTakeChange}
         showNotice={showNotice}
+        onRecordingComplete={handleRecordingComplete}
+        onRecordingStateChange={setIsRecording}
+        bottomOffset={floatingBottomOffset}
+        currentIndex={activeIndex}
+        totalLines={lesson.lines.length}
       />
 
       <div style={{ marginTop: 16, textAlign: 'center' }}>
@@ -1008,16 +1061,6 @@ export default function RecitationPageClient({ lessonNo, lang }: Props) {
           </div>
         )}
       </div>
-
-      <RecitationFloatingBar
-        line={activeLine}
-        lessonNo={lessonNo}
-        currentIndex={activeIndex}
-        totalLines={lesson.lines.length}
-        onRecordingComplete={handleRecordingComplete}
-        onRecordingStateChange={setIsRecording}
-        bottomOffset={floatingBottomOffset}
-      />
     </div>
   )
 }
