@@ -2,20 +2,24 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/utils/supabase/server'
 import { cookies } from 'next/headers'
 
+function errJson(error: string, errorCode: string, stage: string, ctx: Record<string, unknown>) {
+  return NextResponse.json({ error, errorCode, stage, ...ctx }, { status: 500 })
+}
+
 export async function POST(request: NextRequest) {
   const cookieStore = await cookies()
   const supabase = createClient(cookieStore)
 
   const { data: { user }, error: authError } = await supabase.auth.getUser()
   if (authError || !user) {
-    return NextResponse.json({ error: '请先登录' }, { status: 401 })
+    return NextResponse.json({ error: '请先登录', errorCode: 'AUTH_FAILED', stage: 'auth' }, { status: 401 })
   }
 
   let formData: FormData
   try {
     formData = await request.formData()
   } catch {
-    return NextResponse.json({ error: '无效的请求格式' }, { status: 400 })
+    return NextResponse.json({ error: '无效的请求格式', errorCode: 'INVALID_FORMAT', stage: 'parse' }, { status: 400 })
   }
 
   const audioFile = formData.get('audio') as File | null
@@ -23,24 +27,26 @@ export async function POST(request: NextRequest) {
   const lineNoRaw = formData.get('lineNo')
 
   if (!audioFile || !lessonNoRaw || !lineNoRaw) {
-    return NextResponse.json({ error: '缺少必要参数' }, { status: 400 })
+    return NextResponse.json({ error: '缺少必要参数', errorCode: 'MISSING_PARAM', stage: 'params' }, { status: 400 })
   }
 
   const lessonNo = parseInt(String(lessonNoRaw), 10)
   const lineNo = parseInt(String(lineNoRaw), 10)
 
   if (Number.isNaN(lessonNo) || lessonNo < 1 || lessonNo > 50) {
-    return NextResponse.json({ error: '无效的课号' }, { status: 400 })
+    return NextResponse.json({ error: '无效的课号', errorCode: 'INVALID_LESSON_NO', stage: 'params', lessonNo }, { status: 400 })
   }
   if (Number.isNaN(lineNo) || lineNo < 1) {
-    return NextResponse.json({ error: '无效的句号' }, { status: 400 })
+    return NextResponse.json({ error: '无效的句号', errorCode: 'INVALID_LINE_NO', stage: 'params', lessonNo, lineNo }, { status: 400 })
   }
 
   const arrayBuffer = await audioFile.arrayBuffer()
   const blob = new Blob([arrayBuffer], { type: audioFile.type || 'audio/webm' })
+  const mimeType = audioFile.type || 'audio/webm'
+  const blobSize = blob.size
 
-  if (blob.size === 0) {
-    return NextResponse.json({ error: '音频文件为空，请重新录音' }, { status: 400 })
+  if (blobSize === 0) {
+    return errJson('音频文件为空，请重新录音', 'EMPTY_BLOB', 'blob', { lessonNo, lineNo, blobSize, mimeType })
   }
 
   // Generate takeNo
@@ -55,7 +61,11 @@ export async function POST(request: NextRequest) {
     .limit(1)
     .maybeSingle()
 
-  const takeNo = (takeNoError ? 0 : (maxRow?.take_no ?? 0)) + 1
+  if (takeNoError) {
+    return errJson(`获取句号序号失败: ${takeNoError.message}`, 'TAKE_NO_QUERY_FAILED', 'takeNo', { lessonNo, lineNo, blobSize, mimeType, takeNoQueryError: takeNoError.message })
+  }
+
+  const takeNo = (maxRow?.take_no ?? 0) + 1
   const timestamp = Date.now()
   const storagePath = `${user.id}/lesson-${lessonNo}/line-${lineNo}/take-${takeNo}-${timestamp}.webm`
 
@@ -63,15 +73,14 @@ export async function POST(request: NextRequest) {
   const { error: uploadError } = await supabase.storage
     .from('recordings')
     .upload(storagePath, blob, {
-      contentType: audioFile.type || 'audio/webm',
+      contentType: mimeType,
       upsert: false,
     })
 
   if (uploadError) {
-    return NextResponse.json(
-      { error: `存储上传失败: ${uploadError.message}` },
-      { status: 500 },
-    )
+    return errJson(`存储上传失败: ${uploadError.message}`, 'STORAGE_UPLOAD_FAILED', 'storage_upload', {
+      lessonNo, lineNo, storagePath, blobSize, mimeType, storageError: uploadError.message,
+    })
   }
 
   // Insert recording_takes record
@@ -83,7 +92,7 @@ export async function POST(request: NextRequest) {
       line_no: lineNo,
       take_no: takeNo,
       storage_path: storagePath,
-      audio_mime_type: audioFile.type || 'audio/webm',
+      audio_mime_type: mimeType,
       duration_ms: 0,
       score: null,
       is_best: false,
@@ -96,10 +105,9 @@ export async function POST(request: NextRequest) {
   if (insertError) {
     // Clean up storage on insert failure
     await supabase.storage.from('recordings').remove([storagePath])
-    return NextResponse.json(
-      { error: `数据库写入失败: ${insertError.message}` },
-      { status: 500 },
-    )
+    return errJson(`数据库写入失败: ${insertError.message}`, 'DB_INSERT_FAILED', 'db_insert', {
+      lessonNo, lineNo, storagePath, blobSize, mimeType, dbError: insertError.message,
+    })
   }
 
   return NextResponse.json(record, { status: 201 })
