@@ -631,6 +631,15 @@ function MyRecordingsPanel({
   )
 }
 
+interface PlaybackQueueItem {
+  lineNo: number
+  lineId: string
+  lineText: string
+  takeId: string
+  signedUrl: string
+  status: 'ready' | 'failed'
+}
+
 interface Props {
   lessonNo: number
   lang: Lang
@@ -650,13 +659,16 @@ export default function RecitationPageClient({ lessonNo, lang }: Props) {
     status: 'idle' | 'loading' | 'playing' | 'paused'
     currentIndex: number
     totalLines: number
-  }>({ status: 'idle', currentIndex: 0, totalLines: 0 })
+    failedCount: number
+  }>({ status: 'idle', currentIndex: 0, totalLines: 0, failedCount: 0 })
   const originalAudioRef = useRef<HTMLAudioElement | null>(null)
   const noticeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const playbackAudioRef = useRef<HTMLAudioElement | null>(null)
-  const playbackQueueRef = useRef<string[]>([])
+  const playbackQueueRef = useRef<PlaybackQueueItem[]>([])
   const stopPlaybackRef = useRef(false)
   const pauseDelayTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const continuousSignedUrlCacheRef = useRef<Map<string, { url: string; expiresAt: number }>>(new Map())
+  const playbackFailedCountRef = useRef(0)
 
   useEffect(() => {
     loadRecitationLesson(lessonNo).then((data) => {
@@ -765,8 +777,10 @@ export default function RecitationPageClient({ lessonNo, lang }: Props) {
   const missingCount = lesson !== null
     ? lesson.lines.filter(l => !bestTakes.has(l.lineId)).length
     : 0
-
-  const allCompleted = missingCount === 0 && lesson !== null && lesson.lines.length > 0
+  const hasBestTakeCount = lesson !== null
+    ? lesson.lines.filter(l => { const v = bestTakes.get(l.lineId); return v && v !== 'pending' }).length
+    : 0
+  const totalLessonLines = lesson?.lines.length ?? 0
 
   const stopContinuousPlayback = useCallback(() => {
     stopPlaybackRef.current = true
@@ -778,11 +792,8 @@ export default function RecitationPageClient({ lessonNo, lang }: Props) {
       playbackAudioRef.current.pause()
       playbackAudioRef.current = null
     }
-    playbackQueueRef.current.forEach(url => {
-      if (url.startsWith('blob:')) URL.revokeObjectURL(url)
-    })
     playbackQueueRef.current = []
-    setContinuousPlayback({ status: 'idle', currentIndex: 0, totalLines: 0 })
+    setContinuousPlayback({ status: 'idle', currentIndex: 0, totalLines: 0, failedCount: 0 })
   }, [])
 
   useEffect(() => {
@@ -797,66 +808,111 @@ export default function RecitationPageClient({ lessonNo, lang }: Props) {
     if (!lesson) return
 
     stopContinuousPlayback()
-
     stopPlaybackRef.current = false
+    playbackFailedCountRef.current = 0
 
     const sortedLines = [...lesson.lines].sort((a, b) => a.order - b.order)
     const total = sortedLines.length
-    const urls: string[] = []
+    setContinuousPlayback({ status: 'loading', currentIndex: 0, totalLines: total, failedCount: 0 })
 
-    setContinuousPlayback({ status: 'loading', currentIndex: 0, totalLines: total })
-
+    // Collect lines that have a real bestTakeId (not 'pending')
+    const candidates: { line: RecitationLine; bestTakeId: string }[] = []
     for (const line of sortedLines) {
-      const bestTakeId = bestTakes.get(line.lineId)
-      if (!bestTakeId) {
-        showNotice('数据异常，请重新选择最佳录音')
-        setContinuousPlayback({ status: 'idle', currentIndex: 0, totalLines: 0 })
-        return
-      }
-
-      const [local, cloud] = await Promise.all([
-        getTakesByLine(line.lineId),
-        listTakes(lessonNo, line.order)
-          .then(takes => filterCloudTakesForLine(takes, lessonNo, line.order))
-          .catch(() => [] as RecordingTakeDTO[]),
-      ])
-
-      let url = ''
-      const cloudTake = cloud.find(t => t.id === bestTakeId)
-      if (cloudTake?.storagePath) {
-        try {
-          const result = await getSignedUrl(bestTakeId)
-          url = result.signedUrl
-        } catch { /* fall through */ }
-      }
-      if (!url) {
-        const localTake = local.find(t => t.takeId === bestTakeId)
-        if (localTake?.audioBlob) {
-          url = URL.createObjectURL(localTake.audioBlob)
-        }
-      }
-      if (!url) {
-        showNotice(`第 ${line.order} 句最佳录音无法播放`)
-        setContinuousPlayback({ status: 'idle', currentIndex: 0, totalLines: 0 })
-        return
-      }
-      urls.push(url)
+      const v = bestTakes.get(line.lineId)
+      if (v && v !== 'pending') candidates.push({ line, bestTakeId: v })
     }
 
-    playbackQueueRef.current = urls
+    if (candidates.length === 0) {
+      setContinuousPlayback({ status: 'idle', currentIndex: 0, totalLines: 0, failedCount: 0 })
+      return
+    }
 
+    // Build queue items: first check local blob (fast, no API call)
+    const items: PlaybackQueueItem[] = []
+    const needSignedUrl: { idx: number; takeId: string }[] = []
+
+    for (let i = 0; i < candidates.length; i++) {
+      const { line, bestTakeId } = candidates[i]
+      // Check local blob first
+      const local = await getTakesByLine(line.lineId)
+      const localTake = local.find(t => t.takeId === bestTakeId)
+      if (localTake?.audioBlob) {
+        items.push({
+          lineNo: line.order,
+          lineId: line.lineId,
+          lineText: line.ja,
+          takeId: bestTakeId,
+          signedUrl: URL.createObjectURL(localTake.audioBlob),
+          status: 'ready',
+        })
+      } else {
+        // Will get signed URL in parallel batch
+        items.push({
+          lineNo: line.order,
+          lineId: line.lineId,
+          lineText: line.ja,
+          takeId: bestTakeId,
+          signedUrl: '',
+          status: 'failed',
+        })
+        needSignedUrl.push({ idx: i, takeId: bestTakeId })
+      }
+    }
+
+    // Batch-fetch signed URLs in parallel
+    let initialFailedCount = 0
+    if (needSignedUrl.length > 0) {
+      const cache = continuousSignedUrlCacheRef.current
+      const results = await Promise.allSettled(
+        needSignedUrl.map(async ({ idx, takeId }) => {
+          // Check cache first
+          const cached = cache.get(takeId)
+          if (cached && Date.now() < cached.expiresAt) {
+            items[idx].signedUrl = cached.url
+            items[idx].status = 'ready'
+            return
+          }
+          const result = await getSignedUrl(takeId)
+          cache.set(takeId, { url: result.signedUrl, expiresAt: Date.now() + result.expiresIn * 1000 })
+          items[idx].signedUrl = result.signedUrl
+          items[idx].status = 'ready'
+        })
+      )
+      for (const r of results) {
+        if (r.status === 'rejected') initialFailedCount++
+      }
+      playbackFailedCountRef.current = initialFailedCount
+    }
+
+    // Filter to ready items only
+    const queue = items.filter(i => i.status === 'ready')
+    playbackQueueRef.current = queue
+
+    if (queue.length === 0) {
+      setContinuousPlayback({ status: 'idle', currentIndex: 0, totalLines: 0, failedCount: initialFailedCount })
+      return
+    }
+
+    // Playback driver
     const playNext = (idx: number) => {
-      if (stopPlaybackRef.current || idx >= urls.length) {
-        if (urls.length > 0 && idx >= urls.length) {
-          showNotice('完整背诵试听完成')
+      if (stopPlaybackRef.current || idx >= queue.length) {
+        if (queue.length > 0 && idx >= queue.length) {
+          const fc = playbackFailedCountRef.current
+          if (fc > 0) {
+            showNotice(`完整背诵试听完成，${fc} 句录音加载失败，已自动跳过`)
+          } else {
+            showNotice('完整背诵试听完成')
+          }
         }
         stopPlaybackRef.current = true
-        setContinuousPlayback({ status: 'idle', currentIndex: 0, totalLines: 0 })
+        setContinuousPlayback({ status: 'idle', currentIndex: 0, totalLines: 0, failedCount: 0 })
         return
       }
 
-      setContinuousPlayback({ status: 'playing', currentIndex: idx, totalLines: urls.length })
-      const audio = new Audio(urls[idx])
+      const item = queue[idx]
+      setActiveLineId(item.lineId)
+      setContinuousPlayback({ status: 'playing', currentIndex: idx, totalLines: queue.length, failedCount: playbackFailedCountRef.current })
+      const audio = new Audio(item.signedUrl)
       playbackAudioRef.current = audio
 
       audio.onended = () => {
@@ -865,9 +921,23 @@ export default function RecitationPageClient({ lessonNo, lang }: Props) {
         pauseDelayTimerRef.current = setTimeout(() => playNext(idx + 1), delay)
       }
 
-      audio.play().catch(() => {
-        showNotice('播放失败')
-        stopContinuousPlayback()
+      audio.play().catch(async () => {
+        // Retry: refresh signed URL once
+        try {
+          const cache = continuousSignedUrlCacheRef.current
+          cache.delete(item.takeId)
+          const result = await getSignedUrl(item.takeId)
+          cache.set(item.takeId, { url: result.signedUrl, expiresAt: Date.now() + result.expiresIn * 1000 })
+          item.signedUrl = result.signedUrl
+          audio.src = result.signedUrl
+          await audio.play()
+          return
+        } catch {
+          // Retry failed too — skip this line
+          playbackFailedCountRef.current++
+          setContinuousPlayback(prev => ({ ...prev, failedCount: playbackFailedCountRef.current }))
+          playNext(idx + 1)
+        }
       })
     }
 
@@ -1022,34 +1092,41 @@ export default function RecitationPageClient({ lessonNo, lang }: Props) {
       />
 
       <div style={{ marginTop: 16, textAlign: 'center' }}>
-        {continuousPlayback.status !== 'idle' ? (
+        {continuousPlayback.status === 'loading' ? (
           <div>
             <p style={{ fontSize: 14, fontWeight: 700, color: '#0f172a', marginBottom: 12 }}>
-              {continuousPlayback.status === 'loading'
-                ? '正在准备试听...'
-                : `正在试听完整背诵：第 ${continuousPlayback.currentIndex + 1} / ${continuousPlayback.totalLines} 句`}
+              正在准备录音 {hasBestTakeCount}/{totalLessonLines}
+            </p>
+          </div>
+        ) : continuousPlayback.status === 'playing' || continuousPlayback.status === 'paused' ? (
+          <div>
+            <p style={{ fontSize: 14, fontWeight: 700, color: '#0f172a', marginBottom: 12 }}>
+              正在试听完整背诵：第 {continuousPlayback.currentIndex + 1} / {continuousPlayback.totalLines} 句
             </p>
             <div style={{ display: 'flex', justifyContent: 'center', gap: 12 }}>
-              {continuousPlayback.status === 'playing' || continuousPlayback.status === 'paused' ? (
-                <>
-                  <button className="btn" onClick={togglePauseContinuousPlayback} style={{ background: '#0f172a', color: '#fff', padding: '10px 24px', fontSize: 14 }}>
-                    {continuousPlayback.status === 'paused' ? '继续' : '暂停'}
-                  </button>
-                  <button className="btn" onClick={stopContinuousPlayback} style={{ background: '#dc2626', color: '#fff', padding: '10px 24px', fontSize: 14 }}>
-                    停止
-                  </button>
-                </>
-              ) : null}
+              <button className="btn" onClick={togglePauseContinuousPlayback} style={{ background: '#0f172a', color: '#fff', padding: '10px 24px', fontSize: 14 }}>
+                {continuousPlayback.status === 'paused' ? '继续' : '暂停'}
+              </button>
+              <button className="btn" onClick={stopContinuousPlayback} style={{ background: '#dc2626', color: '#fff', padding: '10px 24px', fontSize: 14 }}>
+                停止
+              </button>
             </div>
           </div>
-        ) : allCompleted ? (
+        ) : hasBestTakeCount > 0 ? (
           <div>
             <button className="btn" onClick={handleStartContinuousPlayback} style={{ background: '#166534', color: '#fff', padding: '12px 32px', fontSize: 15 }}>
               试听完整背诵
             </button>
-            <p style={{ marginTop: 8, fontSize: 12, color: '#94a3b8' }}>
-              按顺序连续播放每一句的最佳录音，用来检查整课背诵效果。
-            </p>
+            {missingCount > 0 && (
+              <p style={{ marginTop: 8, fontSize: 13, color: '#64748b' }}>
+                已准备 {hasBestTakeCount}/{totalLessonLines} 句，缺少 {missingCount} 句最佳录音
+              </p>
+            )}
+            {missingCount === 0 && (
+              <p style={{ marginTop: 8, fontSize: 12, color: '#94a3b8' }}>
+                按顺序连续播放每一句的最佳录音，用来检查整课背诵效果。
+              </p>
+            )}
           </div>
         ) : (
           <div>
@@ -1057,7 +1134,7 @@ export default function RecitationPageClient({ lessonNo, lang }: Props) {
               试听完整背诵
             </button>
             <p style={{ marginTop: 8, fontSize: 13, color: '#64748b' }}>
-              还差 {missingCount} 句。录完每一句并选择最佳版本后，可以试听完整背诵。
+              暂无可试听录音，请先为每句选择最佳录音
             </p>
           </div>
         )}
