@@ -40,7 +40,13 @@ export async function GET(request: NextRequest) {
 
   // Use admin client (service role) for createSignedUrl to bypass Storage RLS
   // so normal users can generate signed URLs for their own recordings.
-  const storageClient = createAdminClient() || supabase
+  const storageClient = createAdminClient()
+  if (!storageClient) {
+    return NextResponse.json(
+      { error: 'Server storage signing is not configured' },
+      { status: 500 },
+    )
+  }
   const { data: signedData, error: signedError } = await storageClient.storage
     .from('recordings')
     .createSignedUrl(take.storage_path, 3600)

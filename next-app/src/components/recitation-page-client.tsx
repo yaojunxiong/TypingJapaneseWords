@@ -455,11 +455,14 @@ function MyRecordingsPanel({
 
   const handleDelete = useCallback(async (takeId: string) => {
     if (!line) return
-    // Try cloud delete
-    try {
-      await deleteCloudTake(takeId)
-    } catch {
-      // Local-only take, no cloud delete needed
+    const take = mergedTakes.find(t => t.takeId === takeId)
+    const isLocalOnly = take && take.uploadStatus !== 'uploaded'
+    if (!isLocalOnly) {
+      try {
+        await deleteCloudTake(takeId)
+      } catch {
+        // Ignore cloud delete errors
+      }
     }
     await deleteLocalTake(takeId)
     const merged = await loadMerged()
@@ -565,7 +568,7 @@ function MyRecordingsPanel({
                   )}
                   {isBest ? (
                     <span style={{ border: '1px solid #1683ff', color: '#1683ff', borderRadius: 999, padding: '3px 10px', fontSize: 12, fontWeight: 800, whiteSpace: 'nowrap' }}>最佳</span>
-                  ) : (
+                  ) : isPending || isFailed ? null : (
                     <button type="button" className="btn ghost small" onClick={() => handleSelectBest(take.takeId)} style={{ background: '#fff', border: '1px solid #dbe3ee', color: '#1683ff', borderRadius: 999, padding: '3px 10px', fontSize: 12, whiteSpace: 'nowrap' }}>选为最佳</button>
                   )}
                   <button type="button" data-testid="recitation-take-play-button" className="btn ghost small" onClick={() => handlePlay(take.takeId)} disabled={playingId === take.takeId} style={{ padding: '3px 7px', background: '#fff', color: '#475569' }}>{playingId === take.takeId ? '⏳' : '▶'}</button>
