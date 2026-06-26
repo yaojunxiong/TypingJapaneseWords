@@ -48,6 +48,7 @@ tags:
 | 邮件发送能力评估与 V1 实现 | `docs/knowledge-base/email-current-state.md` |
 | 学习网站新访客确认流程 | `docs/knowledge-base/study-visitor-workflow.md` |
 | 旧分支后台能力提取计划 | `docs/knowledge-base/admin-legacy-branch-extraction-plan.md` |
+| 论坛系统现状审计与独立化迁移建议 | `docs/knowledge-base/forum-system-audit.md` |
 | workflow_instances/tasks/actions migration | `supabase/migrations/20260616150000_create_workflow_tables.sql` |
 | 访客确认后台管理页 | `src/app/admin/workflows/study-visitor/page.tsx` |
 | 访客确认 API（admin review） | `src/app/api/admin/workflows/study-visitor/[instanceId]/review/route.ts` |
@@ -90,6 +91,14 @@ tags:
 ---
 
 ## 变更记录
+
+### 2026-06-26 — 论坛系统现状审计与独立化迁移建议
+
+- **优化内容**：只读审计当前 `master`、本地/远程 `main`、`origin/lesson1-comfyui-automation` 和历史提交中的论坛系统，确认当前 `master` 仅有 `/admin/forum` 只读页，完整半成品论坛仅存在于旧分支。
+- **审计范围**：用户端 `/messages/forum`、后台 `/admin/forum`、`ForumPostReviewActions`、PATCH API、`src/lib/forum.ts`、论坛 SQL/migration、RLS、触发器、邮件通知、登录/权限/用户资料/积分/通知依赖。
+- **产出**：新增 `forum-system-audit.md`，记录迁移到 `forum.jimmyyao.com` 的复用清单、重构点、同 Supabase 方案、跨子域登录方案、阶段计划和风险清单。
+- **修改文件**：新增 `docs/knowledge-base/forum-system-audit.md`、更新 `docs/knowledge-base/_index_.md`
+- **学习主线影响**：无。纯文档审计，未修改应用代码，未执行数据库写操作。
 
 ### 2026-06-16 — 增强 /admin/activity 搜索筛选排序
 
