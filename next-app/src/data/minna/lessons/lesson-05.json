@@ -709,22 +709,6 @@
       },
       "items": [
         {
-          "id": "l05-conv-001",
-          "speaker": "",
-          "jp": "3.3億円のコンサート",
-          "kana": "",
-          "zh": "33亿日元的演唱会",
-          "keyword": "3億円",
-          "videoStart": "0:00.00",
-          "videoEnd": "0:07.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
           "id": "l05-conv-002",
           "speaker": "",
           "jp": "すみません。甲子園までいくらですか?",
@@ -899,17 +883,6 @@
         "en": "Vocabulary from the conversation."
       },
       "items": [
-        {
-          "word": "億円のコンサート",
-          "kana": "",
-          "zh": "",
-          "importance": "core",
-          "fromConversationId": "l05-conv-001",
-          "sourceSentence": "3.3億円のコンサート",
-          "sourceType": "extracted_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
-        },
         {
           "word": "すみません",
           "kana": "すみません",
@@ -1165,16 +1138,6 @@
       },
       "items": [
         {
-          "pattern": "3億円",
-          "originalSentence": "3.3億円のコンサート",
-          "fromConversationId": "l05-conv-001",
-          "sourceSentence": "3.3億円のコンサート",
-          "sourceType": "ai_generated_from_official_conversation",
-          "replacements": [],
-          "needsReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
           "pattern": "甲子園",
           "originalSentence": "すみません。甲子園までいくらですか?",
           "fromConversationId": "l05-conv-002",
@@ -1321,77 +1284,6 @@
         "en": "Quiz based on the conversation."
       },
       "items": [
-        {
-          "id": "l05-q-001-listen-001",
-          "type": "listen_choose_meaning",
-          "prompt": {
-            "zh": "「3.3億円のコンサート」是什么意思？",
-            "en": "What does \"3.3億円のコンサート\" mean?"
-          },
-          "choices": [
-            {
-              "text": {
-                "zh": "33亿日元的演唱会",
-                "en": "33亿日元的演唱会"
-              },
-              "correct": true
-            },
-            {
-              "text": {
-                "zh": "我不确定",
-                "en": "I'm not sure"
-              }
-            }
-          ],
-          "sourceSentence": "3.3億円のコンサート",
-          "fromConversationId": "l05-conv-001",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l05-q-001-zh2jp-001",
-          "type": "chinese_to_japanese",
-          "prompt": {
-            "zh": "请选择「33亿日元的演唱会」的日语说法。",
-            "en": "Select Japanese for \"33亿日元的演唱会\"."
-          },
-          "choices": [
-            {
-              "text": {
-                "jp": "3.3億円のコンサート"
-              },
-              "correct": true
-            }
-          ],
-          "sourceSentence": "3.3億円のコンサート",
-          "fromConversationId": "l05-conv-001",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l05-q-001-recall-001",
-          "type": "recall_check",
-          "prompt": {
-            "zh": "「3.3億円のコンサート」的中文意思是？",
-            "en": "What does \"3.3億円のコンサート\" mean?"
-          },
-          "choices": [
-            {
-              "text": {
-                "zh": "33亿日元的演唱会",
-                "en": "33亿日元的演唱会"
-              },
-              "correct": true
-            }
-          ],
-          "sourceSentence": "3.3億円のコンサート",
-          "fromConversationId": "l05-conv-001",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
-        },
         {
           "id": "l05-q-002-listen-001",
           "type": "listen_choose_meaning",
@@ -2152,74 +2044,60 @@
     "conversationFlow": [
       {
         "step": 1,
-        "title": "显示目的地标题",
-        "explanation": "画面显示'3.3億円のコンサート'，表示乘客要去观看一场33亿日元制作的演唱会。这不是台词，而是场景说明——解释了乘客为什么要去甲子园。",
-        "relatedLineIds": ["l05-conv-001"]
-      },
-      {
-        "step": 2,
         "title": "询问到目的地的票价",
         "explanation": "乘客问'すみません。甲子園までいくらですか'——'到甲子园多少钱？'。这里用'まで'表示终点（到〜为止），'いくら'问价格。'〜までいくらですか'是询问交通费用的标准句型。",
         "relatedLineIds": ["l05-conv-002"]
       },
       {
-        "step": 3,
+        "step": 2,
         "title": "告知票价",
         "explanation": "工作人员回答'350円です'。这是到甲子园的单程票价。在日本的轨道交通中，票价通常较低，短途约130-300日元。",
         "relatedLineIds": ["l05-conv-003"]
       },
       {
-        "step": 4,
+        "step": 3,
         "title": "确认并道谢",
         "explanation": "乘客复述'350円ですね'确认信息。'〜ですね'表示确认'是〜啊'，是日语中常用的确认表达。然后说'ありがとうございました'——使用过去式'ございました'比'ございます'更礼貌，在对话结束时使用。",
         "relatedLineIds": ["l05-conv-004"]
       },
       {
-        "step": 5,
+        "step": 4,
         "title": "对方回应不客气",
         "explanation": "工作人员说'どういたしまして'——'不客气'。这是回答别人感谢时的标准表达。与中文一样，当别人说谢谢时要给予礼貌的回应。",
         "relatedLineIds": ["l05-conv-005"]
       },
       {
-        "step": 6,
+        "step": 5,
         "title": "询问站台",
         "explanation": "乘客接着问'甲子園は何番線ですか'——'甲子园是几号站台？'。'何番線'是问'几号线/几号站台'，在火车站台问路时非常常用。",
         "relatedLineIds": ["l05-conv-006"]
       },
       {
-        "step": 7,
+        "step": 6,
         "title": "告知站台和道谢",
         "explanation": "工作人员回答'5番線です'。乘客简短道谢'どうも'。这里简洁地完成了第二个问题——先问到站台号，然后道谢。",
         "relatedLineIds": ["l05-conv-007", "l05-conv-008"]
       },
       {
-        "step": 8,
+        "step": 7,
         "title": "确认电车是否到达目的地",
         "explanation": "在站台上，乘客问工作人员（或另一位工作人员）'あの、この電車は甲子園へ行きますか'——'请问，这班电车去甲子园吗？'。'あの'是犹豫/引起注意的语气词。'この電車'是'这班电车'。'〜へ行きますか'是'去〜吗'的询问句型。",
         "relatedLineIds": ["l05-conv-009"]
       },
       {
-        "step": 9,
+        "step": 8,
         "title": "告知不是这班",
         "explanation": "工作人员回答'いえ、次の普通ですよ'，意思是'不，下一班普通车才去'。'いえ'比'いいえ'更口语化。'次の普通'是'下一班普通列车'。句尾的'よ'是提示性助词，表示'告诉你哦'。",
         "relatedLineIds": ["l05-conv-010"]
       },
       {
-        "step": 10,
+        "step": 9,
         "title": "理解并感谢",
         "explanation": "乘客说'そうですか。どうも。'——'这样啊，谢谢。'表示理解了对方提供的信息并道谢。在得到信息后，用'そうですか'确认理解是最自然的回应。",
         "relatedLineIds": ["l05-conv-011"]
       }
     ],
     "lineUsage": [
-      {
-        "lineId": "l05-conv-001",
-        "japanese": "3.3億円のコンサート",
-        "chineseMeaning": "33亿日元的演唱会。",
-        "realLifeUse": "这是视频画面中的文字标题，说明乘客的理由——去看一场大型演唱会。注意日语的数字表达：3.3億（さんてんさんおくえん）。在谈论金额、预算时常用'億'（おく）大单位。",
-        "emotionTone": "画面提示，不是口头对话。",
-        "memoryTip": "亿的说法：1億=いちおく。日语数字每四位换一个单位：万（まん）、億（おく）。33亿=33×1亿，即さんじゅうさんおく。"
-      },
       {
         "lineId": "l05-conv-002",
         "japanese": "すみません。甲子園までいくらですか?",

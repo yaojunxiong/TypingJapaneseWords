@@ -53,6 +53,10 @@ function getSpeakerAvatar(line: RecitationLine): SpeakerAvatar {
   }
 }
 
+function getLineDisplayOrder(line: RecitationLine): number {
+  return Number.isFinite(line.displayOrder) ? Number(line.displayOrder) : line.order
+}
+
 function Waveform({ seed, active = false }: { seed: string; active?: boolean }) {
   const hashBase = seed.split('').reduce((sum, ch) => sum + ch.charCodeAt(0), 0)
   return (
@@ -262,7 +266,7 @@ function CompactLineItem({
           display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
           fontSize: 13, fontWeight: 800,
         }}>
-          {line.order}
+          {getLineDisplayOrder(line)}
         </span>
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, minWidth: 0, fontSize: 15, fontWeight: 800, color: isActive ? '#0875f5' : '#475569', whiteSpace: 'nowrap' }}>
           <span

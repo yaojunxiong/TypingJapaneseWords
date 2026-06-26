@@ -2,6 +2,7 @@ export interface RecitationLine {
   lineId: string
   lessonId: string
   order: number
+  displayOrder?: number
   speaker: string
   ja: string
   zh: string
