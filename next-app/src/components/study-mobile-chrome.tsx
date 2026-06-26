@@ -63,7 +63,18 @@ export function StudyTopStatusBar({ lang, active = 'home', show = true, testId, 
         <div style={{ minWidth: 0, overflow: 'hidden' }}>
           <MinnaTopStatsClient lang={lang} active={active} />
         </div>
-        <UserAuthEntry lang={lang} />
+        <div className="minnaTopActions">
+          <a
+            className="minnaMainSiteLink"
+            href="https://www.jimmyyao.com"
+            title={tr(lang, '返回主站', 'Back to main site')}
+            aria-label={tr(lang, '返回主站', 'Back to main site')}
+          >
+            <span className="minnaMainSiteMark">JY</span>
+            <span className="minnaMainSiteText">{tr(lang, '主站', 'Main')}</span>
+          </a>
+          <UserAuthEntry lang={lang} />
+        </div>
       </div>
     </header>
   )

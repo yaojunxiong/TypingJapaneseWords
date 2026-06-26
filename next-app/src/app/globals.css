@@ -68,6 +68,36 @@ a:hover { text-decoration: underline; }
   font-weight: 800;
   font-size: 14px;
 }
+.minnaTopActions {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.minnaMainSiteLink {
+  flex: 0 0 auto;
+  min-height: 36px;
+  border: 1px solid #bae6fd;
+  border-radius: 999px;
+  background: #f0f9ff;
+  color: #075985;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 11px;
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1;
+  text-decoration: none;
+  box-shadow: 0 5px 14px rgba(14, 165, 233, 0.12);
+}
+.minnaMainSiteLink:hover {
+  border-color: #38bdf8;
+  background: #e0f2fe;
+  text-decoration: none;
+}
+.minnaMainSiteMark {
+  letter-spacing: -0.03em;
+}
 .minnaNavCard {
   position: fixed;
   left: 12px;
@@ -660,6 +690,14 @@ a:hover { text-decoration: underline; }
     margin: -32px -16px 10px;
     padding: 12px 16px 10px;
   }
+  .minnaTopActions { gap: 6px; }
+  .minnaMainSiteLink {
+    min-width: 36px;
+    min-height: 34px;
+    justify-content: center;
+    padding: 7px 8px;
+  }
+  .minnaMainSiteText { display: none; }
   .homeStageCard h2 { font-size: 30px; }
   .homeLevelCard h2 { font-size: 36px; }
   .minnaNavCard {
