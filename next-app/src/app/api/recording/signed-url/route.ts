@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/utils/supabase/server'
+import { createAdminClient } from '@/utils/supabase/admin'
 import { checkAdminAccess } from '@/lib/admin-auth'
 import { cookies } from 'next/headers'
 
@@ -37,7 +38,10 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: '无权播放他人录音' }, { status: 403 })
   }
 
-  const { data: signedData, error: signedError } = await supabase.storage
+  // Use admin client (service role) for createSignedUrl to bypass Storage RLS
+  // so normal users can generate signed URLs for their own recordings.
+  const storageClient = createAdminClient() || supabase
+  const { data: signedData, error: signedError } = await storageClient.storage
     .from('recordings')
     .createSignedUrl(take.storage_path, 3600)
 

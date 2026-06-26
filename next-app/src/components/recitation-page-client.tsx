@@ -476,16 +476,29 @@ function MyRecordingsPanel({
   const handleRetryUpload = useCallback(async (takeId: string) => {
     if (!line) return
     const take = mergedTakes.find(t => t.takeId === takeId)
-    if (!take?.localBlob) return
+    if (!take) return
+    if (!take.localBlob) {
+      showNotice('本地录音已失效，请删除后重新录音')
+      return
+    }
     const lineNo = line.order
     try {
-      const dto = await import('@/lib/recitation-api').then(m => m.uploadTake(take.localBlob!, lessonNo, lineNo))
+      const { uploadTake } = await import('@/lib/recitation-api')
+      const dto = await uploadTake(take.localBlob, lessonNo, lineNo)
       await updateTake(takeId, { uploadStatus: 'uploaded', storagePath: dto.storagePath })
       loadMerged()
-    } catch {
-      // Retry failed, keep pending
+    } catch (err) {
+      const uploadErr = err as { status?: number }
+      const status = uploadErr.status ?? 0
+      if (status === 401) {
+        showNotice('登录已过期，请刷新页面后重新登录')
+      } else if (status === 500) {
+        showNotice('服务器上传失败，请稍后重试')
+      } else {
+        showNotice('上传失败，请稍后重试')
+      }
     }
-  }, [line, lessonNo, mergedTakes, loadMerged])
+  }, [line, lessonNo, mergedTakes, loadMerged, showNotice])
 
   // Auto-retry failed takes and stale pending takes on mount / line change (once per take).
   // Fresh pending takes are uploaded by the recorder itself; retrying them immediately can duplicate uploads.
@@ -541,11 +554,14 @@ function MyRecordingsPanel({
                 <span style={{ gridColumn: '3 / 5', display: 'flex', justifyContent: 'flex-end', alignItems: 'center', gap: 4 }}>
                   {(isPending || isFailed) && (
                     <span style={{ border: '1px solid #f59e0b', color: '#d97706', borderRadius: 999, padding: '3px 10px', fontSize: 11, fontWeight: 800, whiteSpace: 'nowrap' }}>
-                      {isFailed ? '上传失败' : '等待上传'}
+                      {isFailed ? (take.localBlob ? '上传失败' : '本地录音已失效') : '等待上传'}
                     </span>
                   )}
                   {isFailed && take.localBlob && (
                     <button type="button" className="btn ghost small" onClick={() => handleRetryUpload(take.takeId)} style={{ background: '#fff', border: '1px solid #dbe3ee', color: '#d97706', borderRadius: 999, padding: '3px 10px', fontSize: 12, whiteSpace: 'nowrap' }}>重试</button>
+                  )}
+                  {isFailed && !take.localBlob && (
+                    <span style={{ color: '#94a3b8', fontSize: 11, whiteSpace: 'nowrap' }}>请删除后重新录音</span>
                   )}
                   {isBest ? (
                     <span style={{ border: '1px solid #1683ff', color: '#1683ff', borderRadius: 999, padding: '3px 10px', fontSize: 12, fontWeight: 800, whiteSpace: 'nowrap' }}>最佳</span>
