@@ -1,14 +1,17 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import Link from 'next/link'
+import { cookies } from 'next/headers'
 import MinnaNav from '@/components/minna-nav'
 import TopLabelSync from '@/components/top-label-sync'
 import LessonCheckinButton from '@/components/lesson-checkin-button'
 import LessonVideoFollowPlayer from '@/components/lesson-video-follow-player'
 import LessonConfirmAction from '@/components/lesson-confirm-action'
 import RecitationV2Entry from '@/components/recitation-v2-entry'
+import LessonAccessBlocked from '@/components/lesson-access-blocked'
 import { LESSONS_1_50 } from '@/lib/minna-lessons'
 import { getLang, type Lang, tr } from '@/lib/i18n-server'
+import { getServerLessonAccess } from '@/lib/learning-access-server'
 import conversationTitles from '@/data/minna/conversation-titles.json'
 
 type LangText = { zh?: string; en?: string; ja?: string; jp?: string }
@@ -52,9 +55,7 @@ type LessonDoc = {
   deepDive?: Record<string, unknown>
 }
 
-export function generateStaticParams() {
-  return Array.from({ length: 50 }, (_, i) => ({ lessonNo: String(i + 1) }))
-}
+export const dynamic = 'force-dynamic'
 
 async function loadLessonDoc(lessonNo: number): Promise<LessonDoc | null> {
   const fileNo = String(lessonNo).padStart(2, '0')
@@ -90,6 +91,23 @@ export default async function LessonDetailPage({
   const { lessonNo } = await params
   const no = Math.max(1, Math.min(50, Number(lessonNo) || 1))
   const lang = await getLang()
+  const cookieStore = await cookies()
+  const { access } = await getServerLessonAccess({
+    cookieStore,
+    lessonNo: no,
+    accessContext: 'lesson-detail',
+  })
+
+  if (!access.allowed) {
+    return (
+      <main>
+        <MinnaNav active="lessons" />
+        <TopLabelSync label={lang === 'en' ? `Lesson ${no} · Locked` : `第 ${no} 课 · 未解锁`} />
+        <LessonAccessBlocked access={access} lang={lang} />
+      </main>
+    )
+  }
+
   const meta = LESSONS_1_50.find((x) => x.no === no) || LESSONS_1_50[0]
   const lesson = await loadLessonDoc(no)
   return (

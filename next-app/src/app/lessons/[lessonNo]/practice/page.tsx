@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
+import { cookies } from 'next/headers'
 import MinnaNav from '@/components/minna-nav'
 import LessonPracticeClient from '@/components/lesson-practice-client'
 import LessonConversationClient from '@/components/lesson-conversation-client'
@@ -10,7 +11,10 @@ import LessonConversationQuizClient from '@/components/lesson-conversation-quiz-
 import LessonReturnNav from '@/components/lesson-return-nav'
 import LessonFlowActions from '@/components/lesson-flow-actions'
 import LessonConfirmAction from '@/components/lesson-confirm-action'
+import TopLabelSync from '@/components/top-label-sync'
+import LessonAccessBlocked from '@/components/lesson-access-blocked'
 import { getLang, type Lang } from '@/lib/i18n-server'
+import { getServerLessonAccess } from '@/lib/learning-access-server'
 
 type LangText = { zh?: string; en?: string; ja?: string; jp?: string }
 type LessonPractice = {
@@ -42,6 +46,8 @@ type LessonItem = {
 type LessonSection = { type?: string; items?: LessonItem[] }
 type LessonDoc = { sections?: LessonSection[] }
 
+export const dynamic = 'force-dynamic'
+
 function pick(text: LangText | undefined, lang: Lang) {
   if (!text) return ''
   if (lang === 'en') return text.en || text.zh || text.ja || text.jp || ''
@@ -70,6 +76,23 @@ export default async function LessonPracticePage({
   const { stage } = await searchParams
   const no = Math.max(1, Math.min(50, Number(lessonNo) || 1))
   const lang = await getLang()
+  const cookieStore = await cookies()
+  const { access } = await getServerLessonAccess({
+    cookieStore,
+    lessonNo: no,
+    accessContext: 'practice',
+  })
+
+  if (!access.allowed) {
+    return (
+      <main>
+        <MinnaNav active="lessons" />
+        <TopLabelSync label={lang === 'en' ? `Lesson ${no} · Locked` : `第 ${no} 课 · 未解锁`} />
+        <LessonAccessBlocked access={access} lang={lang} />
+      </main>
+    )
+  }
+
   const s = ['vocab', 'grammar', 'examples', 'quiz', 'review', 'conversation', 'conversation_vocab', 'conversation_grammar', 'conversation_examples', 'conversation_quiz'].includes(String(stage || ''))
     ? String(stage) as 'vocab' | 'grammar' | 'examples' | 'quiz' | 'review' | 'conversation' | 'conversation_vocab' | 'conversation_grammar' | 'conversation_examples' | 'conversation_quiz'
     : 'vocab'
@@ -331,7 +354,7 @@ export default async function LessonPracticePage({
     <main>
       <MinnaNav active="lessons" />
       <LessonReturnNav lessonNo={no} lang={lang} />
-      <LessonPracticeClient lessonNo={no} lang={lang} stage={s} questions={questions} />
+      <LessonPracticeClient lessonNo={no} lang={lang} stage={s} questions={questions} trackLearningProgress={access.reason !== 'admin'} />
       <LessonFlowActions lessonNo={no} lang={lang} stage={s} />
     </main>
   )

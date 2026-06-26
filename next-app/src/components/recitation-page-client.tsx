@@ -687,9 +687,10 @@ interface PlaybackQueueItem {
 interface Props {
   lessonNo: number
   lang: Lang
+  trackLearningUnlock?: boolean
 }
 
-export default function RecitationPageClient({ lessonNo, lang }: Props) {
+export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlock = true }: Props) {
   const [lesson, setLesson] = useState<RecitationLesson | null>(null)
   const [loading, setLoading] = useState(true)
   const [bestTakes, setBestTakes] = useState<Map<string, string | null>>(new Map())
@@ -767,6 +768,7 @@ export default function RecitationPageClient({ lessonNo, lang }: Props) {
   }, [])
 
   useEffect(() => {
+    if (!trackLearningUnlock) return
     if (!lesson || lesson.lines.length === 0) return
     const completedKey = `minna.recitation.completed.lesson.${lessonNo}`
     try {
@@ -807,7 +809,7 @@ export default function RecitationPageClient({ lessonNo, lang }: Props) {
     return () => {
       cancelled = true
     }
-  }, [lesson, lessonNo, bestTakes, showNotice])
+  }, [lesson, lessonNo, bestTakes, showNotice, trackLearningUnlock])
 
   const stopOriginalAudio = useCallback(() => {
     if (!originalAudioRef.current) return

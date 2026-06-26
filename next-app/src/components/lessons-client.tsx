@@ -8,10 +8,11 @@ import {
   getLocalLearningSummary,
   syncLearningCloudNow
 } from '@/lib/learning-cloud-sync'
+import { isLessonUnlocked, type LearningRole } from '@/lib/learning-access'
 import conversationTitles from '@/data/minna/conversation-titles.json'
 
 type Props = {
-  bypassLessonLock: boolean
+  learningRole: LearningRole
   lang: 'zh' | 'en'
 }
 
@@ -43,7 +44,7 @@ function crownCount(crowns: Record<string, boolean>, lessonNo: number) {
   return STAGES.filter((s) => crowns[`lesson${lessonNo}.${s}`]).length
 }
 
-export default function LessonsClient({ bypassLessonLock, lang }: Props) {
+export default function LessonsClient({ learningRole, lang }: Props) {
   const supabaseReady = hasSupabasePublicEnv()
   const supabase = useMemo(() => createClient(), [])
   const [local, setLocal] = useState<LocalState>({
@@ -91,16 +92,25 @@ function getConversationTitle(no: number): string {
     return LESSONS_1_50.map((lesson) => {
       const crowns = crownCount(local.crowns, lesson.no)
       const done = crowns >= 4
-      const locked = !bypassLessonLock && lesson.no > local.currentLesson && crowns === 0
+      const access = isLessonUnlocked({
+        user: learningRole === 'guest' ? null : { id: 'current-user' },
+        role: learningRole,
+        lessonNo: lesson.no,
+        lastLesson: local.currentLesson,
+        accessContext: 'list'
+      })
+      const locked = !access.allowed
       return {
         ...lesson,
         crowns,
         done,
         locked,
+        accessReason: access.reason,
+        requiredLesson: access.requiredLesson,
         href: locked ? '#' : `/lessons/${lesson.no}`
       }
     })
-  }, [local, bypassLessonLock])
+  }, [local, learningRole])
 
   return (
     <>
@@ -137,7 +147,9 @@ function getConversationTitle(no: number): string {
                     <span className={row.done ? 'metaPill done' : 'metaPill'}>📋 {t(lang, '本课进度', 'Progress')} {row.crowns}/4</span>
                     <span className="metaPill">
                       {row.locked
-                        ? t(lang, '未解锁', 'Locked')
+                        ? t(lang, `完成第 ${row.requiredLesson || row.no - 1} 课后解锁`, `Complete Lesson ${row.requiredLesson || row.no - 1} to unlock`)
+                        : row.accessReason === 'admin'
+                          ? t(lang, '管理员可访问', 'Admin access')
                         : row.done
                           ? t(lang, '已完成', 'Done')
                           : t(lang, '可学习', 'Ready')}

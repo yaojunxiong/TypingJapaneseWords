@@ -36,6 +36,7 @@ type Props = {
   lang: Lang
   stage: 'vocab' | 'grammar' | 'examples' | 'quiz' | 'review' | 'conversation_vocab' | 'conversation_grammar' | 'conversation_examples' | 'conversation_quiz'
   questions: PracticeQuestion[]
+  trackLearningProgress?: boolean
 }
 
 const MISTAKES_KEY = 'minna.mistakes.v1'
@@ -159,7 +160,7 @@ function playCorrectCombo(combo: number) {
   } catch {}
 }
 
-export default function LessonPracticeClient({ lessonNo, lang, stage, questions }: Props) {
+export default function LessonPracticeClient({ lessonNo, lang, stage, questions, trackLearningProgress = true }: Props) {
   const reviewMode = stage === 'review'
   const runtimeQuestions = useMemo(() => {
     if (!reviewMode) return questions
@@ -221,16 +222,18 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
       const s = localStorage.getItem('minna.practice.sfx.v1')
       if (v === '0') setVoiceOn(false)
       if (s === '0') setSfxOn(false)
-      const stateRaw = localStorage.getItem('minna.mobile.learning.state.v1')
-      const state = stateRaw ? JSON.parse(stateRaw) : {}
-      state.lastLesson = Math.max(1, lessonNo)
-      localStorage.setItem('minna.mobile.learning.state.v1', JSON.stringify(state))
+      if (trackLearningProgress) {
+        const stateRaw = localStorage.getItem('minna.mobile.learning.state.v1')
+        const state = stateRaw ? JSON.parse(stateRaw) : {}
+        state.lastLesson = Math.max(1, lessonNo)
+        localStorage.setItem('minna.mobile.learning.state.v1', JSON.stringify(state))
+      }
       const h = Number(localStorage.getItem('minna.hearts.v1') || '')
       if (Number.isFinite(h)) setHearts(Math.max(0, h))
       else localStorage.setItem('minna.hearts.v1', '5')
       window.dispatchEvent(new Event('minna:stats-update'))
     } catch {}
-  }, [lessonNo])
+  }, [lessonNo, trackLearningProgress])
 
   useEffect(() => {
     try {
@@ -320,7 +323,7 @@ export default function LessonPracticeClient({ lessonNo, lang, stage, questions 
     if (picked === null) return
     if (sfxOn) playTone(720, 80, 'square')
     if (idx >= total - 1 || hearts <= 0) {
-      if (score > 0 || (picked !== null && current.options[picked]?.correct)) {
+      if (trackLearningProgress && (score > 0 || (picked !== null && current.options[picked]?.correct))) {
         markLessonProgress(lessonNo, stage)
       }
       setFinished(true)
