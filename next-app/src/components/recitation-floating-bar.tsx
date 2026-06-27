@@ -199,11 +199,11 @@ export default function RecitationFloatingBar({ line, lessonNo, currentIndex, to
           正在保存录音...
         </div>
       )}
-      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) 54px 82px 54px', gap: 10, alignItems: 'center' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) 54px 82px 54px', gap: 10, alignItems: 'start' }}>
         <div style={{ minWidth: 0 }}>
           <div style={{ color: '#1683ff', fontSize: 13, fontWeight: 900, marginBottom: 2 }}>{getReadingHint(line)}</div>
-          <div style={{ fontSize: 25, lineHeight: 1.2, fontWeight: 900, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{line.ja}</div>
-          <div style={{ color: '#64748b', fontSize: 15, fontWeight: 700, marginTop: 4, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{line.zh}</div>
+          <div style={{ fontSize: 25, lineHeight: 1.2, fontWeight: 900, wordBreak: 'break-word', overflowWrap: 'break-word' }}>{line.ja}</div>
+          <div style={{ color: '#64748b', fontSize: 15, fontWeight: 700, marginTop: 4, wordBreak: 'break-word', overflowWrap: 'break-word' }}>{line.zh}</div>
           <span style={{ display: 'inline-flex', marginTop: 8, padding: '4px 10px', background: '#f1f5f9', border: '1px solid #e2e8f0', borderRadius: 999, color: '#475569', fontSize: 14, fontWeight: 800 }}>
             第 {currentIndex + 1} 句 / 共 {totalLines} 句
           </span>

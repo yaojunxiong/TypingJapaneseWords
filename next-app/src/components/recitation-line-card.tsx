@@ -147,9 +147,9 @@ export default function RecitationLineCard({
         transition: 'all 0.2s',
       }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 6 }}>
-        <div>
+        <div style={{ minWidth: 0 }}>
           <span style={{ fontWeight: 600, fontSize: 13, color: isActive ? '#2563eb' : '#64748b' }}>{line.order}. {line.speaker}</span>
-          <p style={{ margin: '4px 0 0', fontSize: 16, fontWeight: 700 }}>{line.ja}</p>
+          <p style={{ margin: '4px 0 0', fontSize: 16, fontWeight: 700, wordBreak: 'break-word', overflowWrap: 'break-word' }}>{line.ja}</p>
         </div>
         <div style={{ display: 'flex', gap: 4, flexWrap: 'wrap', justifyContent: 'flex-end' }}>
           <button className="btn ghost small" onClick={() => setShowZh(v => !v)} title="中文提示">
@@ -165,13 +165,13 @@ export default function RecitationLineCard({
       </div>
 
       {showZh && (
-        <div style={{ fontSize: 13, color: '#475569', marginBottom: 6, padding: 6, background: '#f1f5f9', borderRadius: 8 }}>
+        <div style={{ fontSize: 13, color: '#475569', marginBottom: 6, padding: 6, background: '#f1f5f9', borderRadius: 8, wordBreak: 'break-word', overflowWrap: 'break-word' }}>
           {line.zh}
         </div>
       )}
 
       {showAnswer && (
-        <div style={{ fontSize: 14, color: '#166534', marginBottom: 6, padding: 6, background: '#f0fdf4', borderRadius: 8, fontFamily: 'monospace' }}>
+        <div style={{ fontSize: 14, color: '#166534', marginBottom: 6, padding: 6, background: '#f0fdf4', borderRadius: 8, fontFamily: 'monospace', wordBreak: 'break-word', overflowWrap: 'break-word' }}>
           {line.ja}
         </div>
       )}
