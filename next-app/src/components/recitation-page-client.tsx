@@ -1392,12 +1392,25 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
             </button>
           </div>
 
-          <div style={{ flex: 1, overflow: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 12px 200px' }}>
-            <div style={{ position: 'relative', maxWidth: '100%', borderRadius: 12, overflow: 'hidden' }}>
+          <div style={{
+            flex: 1, overflow: 'auto', display: 'flex',
+            alignItems: 'center', justifyContent: 'center',
+            padding: '0 12px', minHeight: 0,
+          }}>
+            <div style={{
+              position: 'relative', maxWidth: '100%',
+              maxHeight: 'calc(100dvh - 110px)',
+              borderRadius: 12, overflow: 'hidden',
+            }}>
               <img
                 src={lesson.conversationImageUrl}
                 alt="会话场景图"
-                style={{ width: '100%', display: 'block', borderRadius: 12 }}
+                style={{
+                  maxWidth: '100%', maxHeight: 'calc(100dvh - 110px)',
+                  width: 'auto', height: 'auto',
+                  objectFit: 'contain', display: 'block', margin: '0 auto',
+                  borderRadius: 12,
+                }}
               />
               <div style={{
                 position: 'absolute', bottom: 0, left: 0, right: 0,
