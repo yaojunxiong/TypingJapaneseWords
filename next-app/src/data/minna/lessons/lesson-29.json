@@ -1046,301 +1046,253 @@
         "en": "Conversation Practice"
       },
       "dialogTitle": {
-        "zh": "第29课会话",
-        "en": "第29课会话"
+        "zh": "把东西忘在车上了",
+        "en": "忘れ物をしてしまったんです"
       },
       "conversationGoal": {
-        "zh": "第29课会话练习",
-        "en": "Lesson 29 Conversation Practice"
+        "zh": "会话图确认内容",
+        "en": "Conversation image confirmed"
       },
       "items": [
         {
           "id": "l29-conv-001",
-          "speaker": "",
-          "jp": "【音楽】",
-          "kana": "",
-          "zh": "【音乐】",
-          "keyword": "音楽",
-          "videoStart": "0:00.00",
-          "videoEnd": "0:30.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "イー",
+          "jp": "すみません。今の電車に忘れ物をしてしまったんですが……。",
+          "kana": "すみません。いまのでんしゃにわすれものをしてしまったんですが……。",
+          "zh": "不好意思，我把东西忘在刚才的电车上了……",
+          "keyword": "すみません今",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l29-conv-002",
-          "speaker": "",
-          "jp": "2月10日、今の電車の中で拾得物がありました。アイフォンです。",
-          "kana": "",
-          "zh": "2月10日，目前在电车上发现了一个遗失物品，是一部 iPhone。",
-          "keyword": "拾得物",
-          "videoStart": "0:30.00",
-          "videoEnd": "0:30.04",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "駅員",
+          "jp": "何を忘れたんですか。",
+          "kana": "なにをわすれたんですか。",
+          "zh": "您忘了什么？",
+          "keyword": "何を忘れたん",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l29-conv-003",
-          "speaker": "",
-          "jp": "すみません　今の電車に忘れ物をしてしまったんですが。。。",
-          "kana": "",
-          "zh": "不好意思，我刚刚在电车上落下东西了……",
-          "keyword": "電車",
-          "videoStart": "0:40.00",
-          "videoEnd": "0:46.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "イー",
+          "jp": "青いかばんです。このくらいの……。",
+          "kana": "あおいかばんです。このくらいの……。",
+          "zh": "蓝色的包，大约这么大……",
+          "keyword": "青いかばんで",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l29-conv-004",
-          "speaker": "",
-          "jp": "青い鞄です。このぐらいの。。。　外側に大きいポケットが付いています",
-          "kana": "",
-          "zh": "是一个蓝色的包，大概这么大……外面有个大口袋。",
-          "keyword": "外側",
-          "videoStart": "0:46.00",
-          "videoEnd": "0:50.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "イー",
+          "jp": "外側に大きいポケットが付いています。",
+          "kana": "そとがわにおおきいポケットがついています。",
+          "zh": "外侧有一个大口袋。",
+          "keyword": "外側に大きい",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l29-conv-005",
-          "speaker": "",
-          "jp": "どの辺に置きましたか",
-          "kana": "",
-          "zh": "您放在了车上的哪个位置？",
-          "keyword": "",
-          "videoStart": "0:50.00",
-          "videoEnd": "0:54.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "駅員",
+          "jp": "どの辺に置きましたか。",
+          "kana": "どのへんにおきましたか。",
+          "zh": "放在什么位置？",
+          "keyword": "どの辺に置き",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l29-conv-006",
-          "speaker": "",
-          "jp": "よく覚えていません　でも、網棚の上に置きました",
-          "kana": "",
-          "zh": "记不太清了，但好像是放在了行李架上。",
-          "keyword": "網棚",
-          "videoStart": "0:54.00",
-          "videoEnd": "1:00.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "イー",
+          "jp": "よく覚えていません。でも、網棚の上に置きました。",
+          "kana": "よくおぼえていません。でも、あみだなのうえにおきました。",
+          "zh": "不太记得了，不过放在行李架上。",
+          "keyword": "よく覚えてい",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l29-conv-007",
-          "speaker": "",
-          "jp": "中に何が入っていますか？",
-          "kana": "",
-          "zh": "里面装了些什么？",
-          "keyword": "",
-          "videoStart": "1:00.00",
-          "videoEnd": "1:02.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "駅員",
+          "jp": "中に何が入っていますか。",
+          "kana": "なかになにがはいっていますか。",
+          "zh": "里面装着什么？",
+          "keyword": "中に何が入っ",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l29-conv-008",
-          "speaker": "",
-          "jp": "えーと、確か……",
-          "kana": "",
-          "zh": "嗯，应该是……",
-          "keyword": "",
-          "videoStart": "1:03.00",
-          "videoEnd": "1:05.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "イー",
+          "jp": "えーと、鍵か、本と傘が入っています。",
+          "kana": "えーと、かぎか、ほんとかさがはいっています。",
+          "zh": "这个，有钥匙、书和伞。",
+          "keyword": "えーと鍵か本",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l29-conv-009",
-          "speaker": "",
-          "jp": "本と傘が入っています。",
-          "kana": "",
-          "zh": "有一本书和一把伞。",
-          "keyword": "",
-          "videoStart": "1:05.00",
-          "videoEnd": "1:07.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "駅員",
+          "jp": "じゃ、調べますから、ちょっと待っていてください。",
+          "kana": "じゃ、しらべますから、ちょっとまっていてください。",
+          "zh": "那么我查一下，请稍等。",
+          "keyword": "じゃ調べます",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l29-conv-010",
-          "speaker": "",
-          "jp": "じゃあ調べますから、ちょっと待っていてください。",
-          "kana": "",
-          "zh": "那我查一下，请稍等一下。",
-          "keyword": "",
-          "videoStart": "1:08.00",
-          "videoEnd": "1:11.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l29-conv-011",
-          "speaker": "",
+          "speaker": "駅員",
           "jp": "ありましたよ。",
           "kana": "ありましたよ。",
           "zh": "找到了。",
-          "keyword": "",
-          "videoStart": "1:18.00",
-          "videoEnd": "1:19.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "keyword": "ありましたよ",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
+        },
+        {
+          "id": "l29-conv-011",
+          "speaker": "イー",
+          "jp": "ああ、よかった。",
+          "kana": "ああ、よかった。",
+          "zh": "啊，太好了。",
+          "keyword": "ああよかった",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l29-conv-012",
-          "speaker": "",
-          "jp": "よかったー。",
-          "kana": "よかったー。",
-          "zh": "太好了。",
-          "keyword": "",
-          "videoStart": "1:21.00",
-          "videoEnd": "1:23.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "speaker": "駅員",
+          "jp": "今、新宿駅にありますが、どうしますか。",
+          "kana": "いま、しんじゅくえきにありますが、どうしますか。",
+          "zh": "现在在新宿站，您怎么办？",
+          "keyword": "今新宿駅にあ",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l29-conv-013",
-          "speaker": "",
-          "jp": "今、新宿駅にありますが……",
-          "kana": "",
-          "zh": "现在东西在新宿车站……",
-          "keyword": "新宿駅",
-          "videoStart": "1:24.00",
-          "videoEnd": "1:26.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "イー",
+          "jp": "すぐ取りに行きます。",
+          "kana": "すぐとりにいきます。",
+          "zh": "我马上去取。",
+          "keyword": "すぐ取りに行",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l29-conv-014",
-          "speaker": "",
-          "jp": "どうしますか？",
-          "kana": "どうしますか？",
-          "zh": "您打算怎么办？",
-          "keyword": "",
-          "videoStart": "1:27.00",
-          "videoEnd": "1:28.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "speaker": "駅員",
+          "jp": "じゃ、新宿駅の事務所に行ってください。",
+          "kana": "じゃ、しんじゅくえきのじむしょにいってください。",
+          "zh": "那么请去新宿站办公室。",
+          "keyword": "じゃ新宿駅の",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l29-conv-015",
-          "speaker": "",
-          "jp": "すぐ取りに行きます。",
-          "kana": "",
-          "zh": "我马上过去取。",
-          "keyword": "",
-          "videoStart": "1:28.00",
-          "videoEnd": "1:30.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l29-conv-016",
-          "speaker": "",
-          "jp": "じゃあ、新宿駅の事務所に行ってください。",
-          "kana": "",
-          "zh": "那请您前往新宿车站的事务所。",
-          "keyword": "事務所",
-          "videoStart": "1:30.00",
-          "videoEnd": "1:35.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l29-conv-017",
-          "speaker": "",
-          "jp": "はい。",
-          "kana": "はい。",
-          "zh": "好的。",
-          "keyword": "",
-          "videoStart": "1:36.00",
-          "videoEnd": "1:37.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "speaker": "イー",
+          "jp": "はい、どうもありがとうございました。",
+          "kana": "はい、どうもありがとうございました。",
+          "zh": "好的，非常感谢。",
+          "keyword": "はいどうもあ",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l29-conv-018",
-          "speaker": "",
-          "jp": "どうもありがとうございました。",
-          "kana": "どうもありがとうございました。",
-          "zh": "非常感谢您。",
-          "keyword": "",
-          "videoStart": "1:37.00",
-          "videoEnd": "1:39.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         }
       ]
     },
@@ -1654,7 +1606,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_grammar",
@@ -1781,7 +1734,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_examples",
@@ -1992,7 +1946,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_quiz",
@@ -3285,7 +3240,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     }
   ],
   "conversationVideo": {
@@ -3316,37 +3272,229 @@
     "sceneSummary": "车站遗失物品认领处。乘客在电车上落了一个蓝色包，向站员描述特征（尺寸、外侧有大口袋、置于网架上），站员核实包内物品（书本和伞）后确认找到，通知包已送至新宿车站，乘客决定马上去取。",
     "storyExplanation": "第29课聚焦自动词与他动词的区别，以及「てしまう／てしまいました」表示遗憾或意外完成的用法。本对话以「忘れ物」场景串联语法点：乘客用「忘れ物をしてしまった」表达遗落物品的遗憾；站员用「付いています」「入っています」等状态自动词询问和确认包的特征与内容，展示自动词描述眼前状态的自然用法。最终遗失物在网架上被找到的环节，更凸显了期待与安心的情绪转折。",
     "characters": [
-      { "name": "乘客", "role": "失主", "relationship": "物品遗失者，向站员求助并取回失物" },
-      { "name": "站员", "role": "车站遗失物处理人员", "relationship": "负责接待失主、核实信息并在新宿站找到失物" }
+      {
+        "name": "乘客",
+        "role": "失主",
+        "relationship": "物品遗失者，向站员求助并取回失物"
+      },
+      {
+        "name": "站员",
+        "role": "车站遗失物处理人员",
+        "relationship": "负责接待失主、核实信息并在新宿站找到失物"
+      }
     ],
     "conversationFlow": [
-      { "step": 1, "title": "广播通知遗失物", "explanation": "站员先告知刚才在电车上发现了遗失物（iPhone），建立『遗失物处理』场景。", "relatedLineIds": ["l29-conv-002"] },
-      { "step": 2, "title": "乘客求助", "explanation": "乘客表示在电车上遗落了东西，用「忘れ物をしてしまった」表达遗憾和意外。", "relatedLineIds": ["l29-conv-003"] },
-      { "step": 3, "title": "描述物品特征", "explanation": "乘客描述包的特征（蓝色、大小、外侧有大口袋），站员追问放置位置。", "relatedLineIds": ["l29-conv-004","l29-conv-005"] },
-      { "step": 4, "title": "确认位置", "explanation": "乘客记不清具体位置，推测放在网架上。", "relatedLineIds": ["l29-conv-006"] },
-      { "step": 5, "title": "核实内容物", "explanation": "站员问包里有什么，乘客回想后回答有书本和伞。用「入っています」展示自动词状态。", "relatedLineIds": ["l29-conv-007","l29-conv-008","l29-conv-009"] },
-      { "step": 6, "title": "查找与找到", "explanation": "站员查找后告知已找到，乘客喜出望外。", "relatedLineIds": ["l29-conv-010","l29-conv-011","l29-conv-012"] },
-      { "step": 7, "title": "取物安排", "explanation": "站员说明物品在新宿站，乘客决定马上去取，站员指示去事务所。", "relatedLineIds": ["l29-conv-013","l29-conv-014","l29-conv-015","l29-conv-016","l29-conv-017"] },
-      { "step": 8, "title": "致谢收尾", "explanation": "乘客感谢站员帮助。", "relatedLineIds": ["l29-conv-018"] }
+      {
+        "step": 1,
+        "title": "广播通知遗失物",
+        "explanation": "站员先告知刚才在电车上发现了遗失物（iPhone），建立『遗失物处理』场景。",
+        "relatedLineIds": [
+          "l29-conv-002"
+        ]
+      },
+      {
+        "step": 2,
+        "title": "乘客求助",
+        "explanation": "乘客表示在电车上遗落了东西，用「忘れ物をしてしまった」表达遗憾和意外。",
+        "relatedLineIds": [
+          "l29-conv-003"
+        ]
+      },
+      {
+        "step": 3,
+        "title": "描述物品特征",
+        "explanation": "乘客描述包的特征（蓝色、大小、外侧有大口袋），站员追问放置位置。",
+        "relatedLineIds": [
+          "l29-conv-004",
+          "l29-conv-005"
+        ]
+      },
+      {
+        "step": 4,
+        "title": "确认位置",
+        "explanation": "乘客记不清具体位置，推测放在网架上。",
+        "relatedLineIds": [
+          "l29-conv-006"
+        ]
+      },
+      {
+        "step": 5,
+        "title": "核实内容物",
+        "explanation": "站员问包里有什么，乘客回想后回答有书本和伞。用「入っています」展示自动词状态。",
+        "relatedLineIds": [
+          "l29-conv-007",
+          "l29-conv-008",
+          "l29-conv-009"
+        ]
+      },
+      {
+        "step": 6,
+        "title": "查找与找到",
+        "explanation": "站员查找后告知已找到，乘客喜出望外。",
+        "relatedLineIds": [
+          "l29-conv-010",
+          "l29-conv-011",
+          "l29-conv-012"
+        ]
+      },
+      {
+        "step": 7,
+        "title": "取物安排",
+        "explanation": "站员说明物品在新宿站，乘客决定马上去取，站员指示去事务所。",
+        "relatedLineIds": [
+          "l29-conv-013",
+          "l29-conv-014",
+          "l29-conv-015",
+          "l29-conv-016",
+          "l29-conv-017"
+        ]
+      },
+      {
+        "step": 8,
+        "title": "致谢收尾",
+        "explanation": "乘客感谢站员帮助。",
+        "relatedLineIds": [
+          "l29-conv-018"
+        ]
+      }
     ],
     "lineUsage": [
-      { "lineId": "l29-conv-002", "japanese": "2月10日、今の電車の中で拾得物がありました。アイフォンです。", "chineseMeaning": "2月10日，目前在电车上发现了一个遗失物品，是一部iPhone。", "realLifeUse": "车站、商场等公共场所失物招领的标准广播句式。", "emotionTone": "中性、公务式，陈述事实。", "memoryTip": "「拾得物」= 捡到的东西；对比「忘れ物」= 忘的东西。" },
-      { "lineId": "l29-conv-003", "japanese": "すみません　今の電車に忘れ物をしてしまったんですが。。。", "chineseMeaning": "不好意思，我刚刚在电车上落下东西了……", "realLifeUse": "向服务台或工作人员求助时的地道表达，包含道歉、说明状況和遗憾语气。", "emotionTone": "抱歉且焦急，省略号传达犹豫和担心。", "memoryTip": "「〜てしまった」= 意図せずやってしまった（不知不觉做了）→ 忘れ物に最適。" },
-      { "lineId": "l29-conv-004", "japanese": "青い鞄です。このぐらいの。。。　外側に大きいポケットが付いています", "chineseMeaning": "是一个蓝色的包，大概这么大……外面有个大口袋。", "realLifeUse": "描述物品大小时用手比划+「このぐらい」；「付いています」描述物品的特征（状态自动词）。", "emotionTone": "尽力回忆细节，手势辅助说明。", "memoryTip": "「付いています」是自動詞，表示『附着着的状态』。他動詞「付けます」是『把～贴上』。" },
-      { "lineId": "l29-conv-005", "japanese": "どの辺に置きましたか", "chineseMeaning": "您放在了车上的哪个位置？", "realLifeUse": "服务人员确认具体位置的标准问法。", "emotionTone": "中性，引导性提问。", "memoryTip": "「置きます」是他動詞，需要宾语和动作主体。" },
-      { "lineId": "l29-conv-006", "japanese": "よく覚えていません　でも、網棚の上に置きました", "chineseMeaning": "记不太清了，但好像是放在了行李架上。", "realLifeUse": "记不清时的诚実表达；先否定再推测补充。", "emotionTone": "不太确定，努力回想。", "memoryTip": "「よく覚えていません」是委婉否定，比「覚えていない」更礼貌。" },
-      { "lineId": "l29-conv-007", "japanese": "中に何が入っていますか？", "chineseMeaning": "里面装了些什么？", "realLifeUse": "核实物品身份的经典问法——通过内容物确认是否匹配。", "emotionTone": "核实性提问，中性偏关切。", "memoryTip": "「入っています」= 自動詞，表示『装着～的状态』。他動詞「入れます」= 把～放进去。" },
-      { "lineId": "l29-conv-008", "japanese": "えーと、確か……", "chineseMeaning": "嗯，应该是……", "realLifeUse": "回想时常用的填充词，表示正在回忆。", "emotionTone": "犹豫、努力回想。", "memoryTip": "「確か」在句中=『如果没记错的话』，句尾用「確かだ」。" },
-      { "lineId": "l29-conv-009", "japanese": "本と傘が入っています。", "chineseMeaning": "有一本书和一把伞。", "realLifeUse": "列举包内物品的简洁句式。", "emotionTone": "终于想起，语气稍肯定。", "memoryTip": "「本と傘」→ と 连接两个名词。" },
-      { "lineId": "l29-conv-010", "japanese": "じゃあ調べますから、ちょっと待っていてください。", "chineseMeaning": "那我查一下，请稍等一下。", "realLifeUse": "服务人员让顾客等候的标准用语。", "emotionTone": "礼貌且专业。", "memoryTip": "「〜から」表原因/理由，这里=『因为要查，所以请等』。" },
-      { "lineId": "l29-conv-011", "japanese": "ありましたよ。", "chineseMeaning": "找到了。", "realLifeUse": "找到失物时的简单宣告。", "emotionTone": "惊喜、如释重负，句尾「よ」传达告知与安心。", "memoryTip": "「ある」的过去式「あった」+「よ」= 告知对方的好消息。" },
-      { "lineId": "l29-conv-012", "japanese": "よかったー。", "chineseMeaning": "太好了。", "realLifeUse": "听到好消息时的自然反應。", "emotionTone": "松一口气、喜悦。", "memoryTip": "「よかった」是「いい」的过去式，用于庆幸事情顺利。拖长音「ー」表感叹。" },
-      { "lineId": "l29-conv-013", "japanese": "今、新宿駅にありますが……", "chineseMeaning": "现在东西在新宿车站……", "realLifeUse": "告知物品当前所在地点。", "emotionTone": "说明情况，略带转折（因为不在本站）。", "memoryTip": "「〜にあります」表物品存在于某处。" },
-      { "lineId": "l29-conv-014", "japanese": "どうしますか？", "chineseMeaning": "您打算怎么办？", "realLifeUse": "询问对方意向的简洁问法。", "emotionTone": "中性，把决定权交给对方。", "memoryTip": "「どうしますか」= What will you do? 区别于「どうですか」= How is it?" },
-      { "lineId": "l29-conv-015", "japanese": "すぐ取りに行きます。", "chineseMeaning": "我马上过去取。", "realLifeUse": "表达立即行动的标准句式。", "emotionTone": "果断、急切。", "memoryTip": "「取りに行く」= 去取，Vます形去掉ます+に行く= 去做某事。" },
-      { "lineId": "l29-conv-016", "japanese": "じゃあ、新宿駅の事務所に行ってください。", "chineseMeaning": "那请您前往新宿车站的事务所。", "realLifeUse": "指示地点的礼貌命令句。", "emotionTone": "指引性、礼貌。", "memoryTip": "「〜てください」= 请做～（礼貌请求/指示）。" },
-      { "lineId": "l29-conv-017", "japanese": "はい。", "chineseMeaning": "好的。", "realLifeUse": "表示收到指示并确认。", "emotionTone": "简短确认。", "memoryTip": "最简单的肯定回应。" },
-      { "lineId": "l29-conv-018", "japanese": "どうもありがとうございました。", "chineseMeaning": "非常感谢您。", "realLifeUse": "接受帮助后的礼貌道谢。", "emotionTone": "真诚感谢。", "memoryTip": "「どうも」加强语气，「ありがとうございました」用过去式表已完成的事。" }
+      {
+        "lineId": "l29-conv-002",
+        "japanese": "2月10日、今の電車の中で拾得物がありました。アイフォンです。",
+        "chineseMeaning": "2月10日，目前在电车上发现了一个遗失物品，是一部iPhone。",
+        "realLifeUse": "车站、商场等公共场所失物招领的标准广播句式。",
+        "emotionTone": "中性、公务式，陈述事实。",
+        "memoryTip": "「拾得物」= 捡到的东西；对比「忘れ物」= 忘的东西。"
+      },
+      {
+        "lineId": "l29-conv-003",
+        "japanese": "すみません　今の電車に忘れ物をしてしまったんですが。。。",
+        "chineseMeaning": "不好意思，我刚刚在电车上落下东西了……",
+        "realLifeUse": "向服务台或工作人员求助时的地道表达，包含道歉、说明状況和遗憾语气。",
+        "emotionTone": "抱歉且焦急，省略号传达犹豫和担心。",
+        "memoryTip": "「〜てしまった」= 意図せずやってしまった（不知不觉做了）→ 忘れ物に最適。"
+      },
+      {
+        "lineId": "l29-conv-004",
+        "japanese": "青い鞄です。このぐらいの。。。　外側に大きいポケットが付いています",
+        "chineseMeaning": "是一个蓝色的包，大概这么大……外面有个大口袋。",
+        "realLifeUse": "描述物品大小时用手比划+「このぐらい」；「付いています」描述物品的特征（状态自动词）。",
+        "emotionTone": "尽力回忆细节，手势辅助说明。",
+        "memoryTip": "「付いています」是自動詞，表示『附着着的状态』。他動詞「付けます」是『把～贴上』。"
+      },
+      {
+        "lineId": "l29-conv-005",
+        "japanese": "どの辺に置きましたか",
+        "chineseMeaning": "您放在了车上的哪个位置？",
+        "realLifeUse": "服务人员确认具体位置的标准问法。",
+        "emotionTone": "中性，引导性提问。",
+        "memoryTip": "「置きます」是他動詞，需要宾语和动作主体。"
+      },
+      {
+        "lineId": "l29-conv-006",
+        "japanese": "よく覚えていません　でも、網棚の上に置きました",
+        "chineseMeaning": "记不太清了，但好像是放在了行李架上。",
+        "realLifeUse": "记不清时的诚実表达；先否定再推测补充。",
+        "emotionTone": "不太确定，努力回想。",
+        "memoryTip": "「よく覚えていません」是委婉否定，比「覚えていない」更礼貌。"
+      },
+      {
+        "lineId": "l29-conv-007",
+        "japanese": "中に何が入っていますか？",
+        "chineseMeaning": "里面装了些什么？",
+        "realLifeUse": "核实物品身份的经典问法——通过内容物确认是否匹配。",
+        "emotionTone": "核实性提问，中性偏关切。",
+        "memoryTip": "「入っています」= 自動詞，表示『装着～的状态』。他動詞「入れます」= 把～放进去。"
+      },
+      {
+        "lineId": "l29-conv-008",
+        "japanese": "えーと、確か……",
+        "chineseMeaning": "嗯，应该是……",
+        "realLifeUse": "回想时常用的填充词，表示正在回忆。",
+        "emotionTone": "犹豫、努力回想。",
+        "memoryTip": "「確か」在句中=『如果没记错的话』，句尾用「確かだ」。"
+      },
+      {
+        "lineId": "l29-conv-009",
+        "japanese": "本と傘が入っています。",
+        "chineseMeaning": "有一本书和一把伞。",
+        "realLifeUse": "列举包内物品的简洁句式。",
+        "emotionTone": "终于想起，语气稍肯定。",
+        "memoryTip": "「本と傘」→ と 连接两个名词。"
+      },
+      {
+        "lineId": "l29-conv-010",
+        "japanese": "じゃあ調べますから、ちょっと待っていてください。",
+        "chineseMeaning": "那我查一下，请稍等一下。",
+        "realLifeUse": "服务人员让顾客等候的标准用语。",
+        "emotionTone": "礼貌且专业。",
+        "memoryTip": "「〜から」表原因/理由，这里=『因为要查，所以请等』。"
+      },
+      {
+        "lineId": "l29-conv-011",
+        "japanese": "ありましたよ。",
+        "chineseMeaning": "找到了。",
+        "realLifeUse": "找到失物时的简单宣告。",
+        "emotionTone": "惊喜、如释重负，句尾「よ」传达告知与安心。",
+        "memoryTip": "「ある」的过去式「あった」+「よ」= 告知对方的好消息。"
+      },
+      {
+        "lineId": "l29-conv-012",
+        "japanese": "よかったー。",
+        "chineseMeaning": "太好了。",
+        "realLifeUse": "听到好消息时的自然反應。",
+        "emotionTone": "松一口气、喜悦。",
+        "memoryTip": "「よかった」是「いい」的过去式，用于庆幸事情顺利。拖长音「ー」表感叹。"
+      },
+      {
+        "lineId": "l29-conv-013",
+        "japanese": "今、新宿駅にありますが……",
+        "chineseMeaning": "现在东西在新宿车站……",
+        "realLifeUse": "告知物品当前所在地点。",
+        "emotionTone": "说明情况，略带转折（因为不在本站）。",
+        "memoryTip": "「〜にあります」表物品存在于某处。"
+      },
+      {
+        "lineId": "l29-conv-014",
+        "japanese": "どうしますか？",
+        "chineseMeaning": "您打算怎么办？",
+        "realLifeUse": "询问对方意向的简洁问法。",
+        "emotionTone": "中性，把决定权交给对方。",
+        "memoryTip": "「どうしますか」= What will you do? 区别于「どうですか」= How is it?"
+      },
+      {
+        "lineId": "l29-conv-015",
+        "japanese": "すぐ取りに行きます。",
+        "chineseMeaning": "我马上过去取。",
+        "realLifeUse": "表达立即行动的标准句式。",
+        "emotionTone": "果断、急切。",
+        "memoryTip": "「取りに行く」= 去取，Vます形去掉ます+に行く= 去做某事。"
+      },
+      {
+        "lineId": "l29-conv-016",
+        "japanese": "じゃあ、新宿駅の事務所に行ってください。",
+        "chineseMeaning": "那请您前往新宿车站的事务所。",
+        "realLifeUse": "指示地点的礼貌命令句。",
+        "emotionTone": "指引性、礼貌。",
+        "memoryTip": "「〜てください」= 请做～（礼貌请求/指示）。"
+      },
+      {
+        "lineId": "l29-conv-017",
+        "japanese": "はい。",
+        "chineseMeaning": "好的。",
+        "realLifeUse": "表示收到指示并确认。",
+        "emotionTone": "简短确认。",
+        "memoryTip": "最简单的肯定回应。"
+      },
+      {
+        "lineId": "l29-conv-018",
+        "japanese": "どうもありがとうございました。",
+        "chineseMeaning": "非常感谢您。",
+        "realLifeUse": "接受帮助后的礼貌道谢。",
+        "emotionTone": "真诚感谢。",
+        "memoryTip": "「どうも」加强语气，「ありがとうございました」用过去式表已完成的事。"
+      }
     ],
     "chineseRetellPrompt": "请用中文复述第29课的对话内容。\n\n开头可以参考：「第29课讲的是一个乘客在电车上丢了包，到车站失物招领处求助的故事。」\n\n试着用自己的话把事情的经过完整说一遍，包括：丢了什么、怎么描述的、站员问了什么、最后去哪里取。",
     "realLifeReplacementPractice": [

@@ -1036,285 +1036,237 @@
         "en": "Conversation Practice"
       },
       "dialogTitle": {
-        "zh": "第34课会话",
-        "en": "第34课会话"
+        "zh": "请照我做的那样做",
+        "en": "わたしがしたとおりに、してください"
       },
       "conversationGoal": {
-        "zh": "第34课会话练习",
-        "en": "Lesson 34 Conversation Practice"
+        "zh": "会话图确认内容",
+        "en": "Conversation image confirmed"
       },
       "items": [
         {
           "id": "l34-conv-001",
-          "speaker": "",
-          "jp": "一度、茶道が見たいんですが…",
-          "kana": "",
-          "zh": "我想亲眼看一次茶道表演……",
-          "keyword": "茶道",
-          "videoStart": "0:00.00",
-          "videoEnd": "0:10.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "クララ",
+          "jp": "一度茶道が見たいんですが……。",
+          "kana": "いちどさどうがみたいんですが……。",
+          "zh": "我想看一次茶道……",
+          "keyword": "一度茶道が見",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l34-conv-002",
-          "speaker": "",
-          "jp": "じゃあ、来週の土曜日一緒に行きませんか？",
-          "kana": "",
-          "zh": "那下周六要不要一起去看看？",
-          "keyword": "土曜日一緒",
-          "videoStart": "0:10.00",
-          "videoEnd": "0:14.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "渡辺",
+          "jp": "じゃ、来週の土曜日いっしょに行きませんか。",
+          "kana": "じゃ、らいしゅうのどようびいっしょにいきませんか。",
+          "zh": "那么下周六一起去吗？",
+          "keyword": "じゃ来週の土",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l34-conv-003",
-          "speaker": "",
-          "jp": "渡辺さん、お茶を立ててください。",
-          "kana": "",
-          "zh": "渡边先生，请为大家泡茶吧。",
-          "keyword": "渡辺",
-          "videoStart": "0:25.00",
-          "videoEnd": "0:29.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "お茶の先生",
+          "jp": "渡辺さん、お茶をたててください。",
+          "kana": "わたなべさん、おちゃをたててください。",
+          "zh": "渡边，请点茶。",
+          "keyword": "渡辺さんお茶",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l34-conv-004",
-          "speaker": "",
-          "jp": "クララさん、お菓子をどうぞ。",
-          "kana": "",
-          "zh": "克拉拉，请用点和果子。",
-          "keyword": "菓子",
-          "videoStart": "0:29.00",
-          "videoEnd": "0:32.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l34-conv-005",
-          "speaker": "",
-          "jp": "えっ、先にお菓子を食べるんですか？",
-          "kana": "",
-          "zh": "诶，是先吃点心的吗？",
-          "keyword": "菓子",
-          "videoStart": "0:32.00",
-          "videoEnd": "0:35.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l34-conv-006",
-          "speaker": "",
-          "jp": "ええ、甘いお菓子を食べた後でお茶を飲むとおいしいんですよ。",
-          "kana": "",
-          "zh": "是的，先吃点甜点再喝茶，会更美味哦。",
-          "keyword": "菓子",
-          "videoStart": "0:35.00",
-          "videoEnd": "0:41.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l34-conv-007",
-          "speaker": "",
-          "jp": "そうですか。",
-          "kana": "そうですか。",
-          "zh": "是这样啊。",
-          "keyword": "",
-          "videoStart": "0:41.00",
-          "videoEnd": "0:43.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l34-conv-008",
-          "speaker": "",
-          "jp": "では、お茶を飲みましょう。",
-          "kana": "",
-          "zh": "那么，开始品茶吧。",
-          "keyword": "",
-          "videoStart": "1:16.00",
-          "videoEnd": "1:19.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l34-conv-009",
-          "speaker": "",
-          "jp": "まず、右手でお茶碗を持ちます。",
-          "kana": "",
-          "zh": "首先，用右手拿起茶碗。",
-          "keyword": "茶碗",
-          "videoStart": "1:19.00",
-          "videoEnd": "1:24.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l34-conv-010",
-          "speaker": "",
-          "jp": "次に、お茶碗を二回まわして、",
-          "kana": "",
-          "zh": "然后把茶碗转两圈，",
-          "keyword": "二回",
-          "videoStart": "1:25.00",
-          "videoEnd": "1:31.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l34-conv-011",
-          "speaker": "",
-          "jp": "それから飲みます。",
-          "kana": "",
-          "zh": "接着再喝茶。",
-          "keyword": "",
-          "videoStart": "1:31.00",
-          "videoEnd": "1:34.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l34-conv-012",
-          "speaker": "",
+          "speaker": "渡辺",
           "jp": "はい。",
           "kana": "はい。",
           "zh": "好的。",
-          "keyword": "",
-          "videoStart": "1:34.00",
-          "videoEnd": "1:36.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "keyword": "はい",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
+        },
+        {
+          "id": "l34-conv-005",
+          "speaker": "お茶の先生",
+          "jp": "クララさん、お菓子をどうぞ。",
+          "kana": "クララさん、おかしをどうぞ。",
+          "zh": "克拉拉，请吃点心。",
+          "keyword": "クララさんお",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
+        },
+        {
+          "id": "l34-conv-006",
+          "speaker": "クララ",
+          "jp": "えっ、先にお菓子を食べるんですか。",
+          "kana": "えっ、さきにおかしをたべるんですか。",
+          "zh": "咦，先吃点心吗？",
+          "keyword": "えっ先にお菓",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
+        },
+        {
+          "id": "l34-conv-007",
+          "speaker": "お茶の先生",
+          "jp": "ええ。甘いお菓子を食べたあとで、お茶を飲むと、おいしいんですよ。",
+          "kana": "ええ。あまいおかしをたべたあとで、おちゃをのむと、おいしいんですよ。",
+          "zh": "是的，吃过甜点后喝茶会很好喝。",
+          "keyword": "ええ甘いお菓",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
+        },
+        {
+          "id": "l34-conv-008",
+          "speaker": "クララ",
+          "jp": "そうですか。",
+          "kana": "そうですか。",
+          "zh": "是吗？",
+          "keyword": "そうですか",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
+        },
+        {
+          "id": "l34-conv-009",
+          "speaker": "お茶の先生",
+          "jp": "では、お茶を飲みましょう。まず、右手でおちゃわんを取って、左手に載せます。次におちゃわんを2回回して、それから飲みます。",
+          "kana": "では、おちゃをのみましょう。まず、みぎてでおちゃわんをとって、ひだりてにのせます。つぎにおちゃわんをにかいまわして、それからのみます。",
+          "zh": "那么喝茶吧。先用右手拿起茶碗，放在左手上。接着把茶碗转两圈，然后喝。",
+          "keyword": "ではお茶を飲",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
+        },
+        {
+          "id": "l34-conv-010",
+          "speaker": "クララ",
+          "jp": "はい。",
+          "kana": "はい。",
+          "zh": "好的。",
+          "keyword": "はい",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
+        },
+        {
+          "id": "l34-conv-011",
+          "speaker": "お茶の先生",
+          "jp": "じゃ、わたしがしたとおりに、してください。",
+          "kana": "じゃ、わたしがしたとおりに、してください。",
+          "zh": "那么请照我做的那样做。",
+          "keyword": "じゃわたしが",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
+        },
+        {
+          "id": "l34-conv-012",
+          "speaker": "クララ",
+          "jp": "これでいいですか。",
+          "kana": "これでいいですか。",
+          "zh": "这样可以吗？",
+          "keyword": "これでいいで",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l34-conv-013",
-          "speaker": "",
-          "jp": "じゃあ、私がした通りにしてください。",
-          "kana": "",
-          "zh": "那请按我刚才做的来试试吧。",
-          "keyword": "",
-          "videoStart": "1:40.00",
-          "videoEnd": "1:44.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "お茶の先生",
+          "jp": "はい。いかがですか。",
+          "kana": "はい。いかがですか。",
+          "zh": "可以，味道怎么样？",
+          "keyword": "はいいかがで",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l34-conv-014",
-          "speaker": "",
-          "jp": "これでいいですか？",
-          "kana": "これでいいですか？",
-          "zh": "这样做可以吗？",
-          "keyword": "",
-          "videoStart": "1:55.00",
-          "videoEnd": "1:58.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l34-conv-015",
-          "speaker": "",
-          "jp": "はい。",
-          "kana": "はい。",
-          "zh": "可以的。",
-          "keyword": "",
-          "videoStart": "1:58.00",
-          "videoEnd": "2:00.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l34-conv-016",
-          "speaker": "",
-          "jp": "いかがですか？",
-          "kana": "いかがですか？",
-          "zh": "觉得怎么样？",
-          "keyword": "",
-          "videoStart": "2:06.00",
-          "videoEnd": "2:08.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l34-conv-017",
-          "speaker": "",
+          "speaker": "クララ",
           "jp": "少し苦いですが、おいしいです。",
-          "kana": "",
-          "zh": "虽然有点苦，但很好喝。",
-          "keyword": "",
-          "videoStart": "2:08.00",
-          "videoEnd": "2:11.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "kana": "すこしにがいですが、おいしいです。",
+          "zh": "有点苦，不过很好喝。",
+          "keyword": "少し苦いです",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         }
       ]
     },
@@ -1617,7 +1569,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_grammar",
@@ -1730,7 +1683,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_examples",
@@ -1915,7 +1869,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_quiz",
@@ -3137,7 +3092,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     }
   ],
   "conversationVideo": {
@@ -3168,46 +3124,292 @@
     "sceneSummary": "克拉拉想亲眼看看茶道表演。渡边先生带她去体验了一次茶道。一开始，克拉拉惊讶地发现要先吃和果子再喝茶。渡边先生示范了正确的品茶步骤：先用右手拿茶碗，再转两圈，然后喝。接着，克拉拉按照渡边先生的示范尝试自己做了一遍。她问这样做可以吗，得到肯定后品尝，表示虽然有点苦，但很好喝。",
     "storyExplanation": "茶道是日本传统文化之一，讲究仪式感和顺序。本课对话的语法核心在于〜とおりに（按照……的样子）、〜たあとで（……之后）以及〜て／〜ないで（带着/不带着某状态做动作）。克拉拉从好奇到体验再到自己尝试，整个过程正好体现了先生がしたとおりにする（按照老师做的去做）这一语法点。",
     "characters": [
-      { "name": "クララ", "role": "日语学习者", "relationship": "想体验茶道的外国学生" },
-      { "name": "渡辺さん", "role": "茶道演示者", "relationship": "为克拉拉展示茶道的人" }
+      {
+        "name": "クララ",
+        "role": "日语学习者",
+        "relationship": "想体验茶道的外国学生"
+      },
+      {
+        "name": "渡辺さん",
+        "role": "茶道演示者",
+        "relationship": "为克拉拉展示茶道的人"
+      }
     ],
     "conversationFlow": [
-      { "step": 1, "title": "表达愿望", "explanation": "克拉拉说自己想看茶道表演，使用了〜たいんですが的婉转表达愿望。", "relatedLineIds": ["l34-conv-001"] },
-      { "step": 2, "title": "邀请同行", "explanation": "对方邀请克拉拉下周六一起去，使用〜ませんか的邀请句式。", "relatedLineIds": ["l34-conv-002"] },
-      { "step": 3, "title": "茶道开始 - 泡茶", "explanation": "请渡边先生为大家泡茶，使用了〜てください的请求表达。", "relatedLineIds": ["l34-conv-003"] },
-      { "step": 4, "title": "招待点心", "explanation": "先请克拉拉吃和果子，这是茶道的礼仪顺序。", "relatedLineIds": ["l34-conv-004"] },
-      { "step": 5, "title": "惊讶发现", "explanation": "克拉拉对先吃点心再喝茶感到惊讶，使用〜んですか寻求确认。", "relatedLineIds": ["l34-conv-005"] },
-      { "step": 6, "title": "解释理由", "explanation": "对方解释先吃甜点再喝茶更好喝，使用了〜たあとで〜と〜的语法结构。", "relatedLineIds": ["l34-conv-006"] },
-      { "step": 7, "title": "接受理解", "explanation": "克拉拉表示理解。", "relatedLineIds": ["l34-conv-007"] },
-      { "step": 8, "title": "开始品茶", "explanation": "正式开始喝茶，使用〜ましょう的提议形式。", "relatedLineIds": ["l34-conv-008"] },
-      { "step": 9, "title": "步骤示范 - 拿茶碗", "explanation": "示范第一步：用右手拿茶碗。", "relatedLineIds": ["l34-conv-009"] },
-      { "step": 10, "title": "步骤示范 - 转茶碗", "explanation": "示范第二步：将茶碗转两圈，使用了て形连接。", "relatedLineIds": ["l34-conv-010"] },
-      { "step": 11, "title": "步骤示范 - 喝茶", "explanation": "示范第三步：喝茶。", "relatedLineIds": ["l34-conv-011"] },
-      { "step": 12, "title": "确认理解", "explanation": "克拉拉回应表示听懂了。", "relatedLineIds": ["l34-conv-012"] },
-      { "step": 13, "title": "请按示范做", "explanation": "请克拉拉按照老师刚才做的样子尝试，使用了〜たとおりに的语法。", "relatedLineIds": ["l34-conv-013"] },
-      { "step": 14, "title": "确认正确", "explanation": "克拉拉问自己做得是否正确，使用これでいいですか。", "relatedLineIds": ["l34-conv-014"] },
-      { "step": 15, "title": "肯定回答", "explanation": "对方肯定。", "relatedLineIds": ["l34-conv-015"] },
-      { "step": 16, "title": "询问感受", "explanation": "对方问克拉拉觉得茶的味道如何。", "relatedLineIds": ["l34-conv-016"] },
-      { "step": 17, "title": "表达感想", "explanation": "克拉拉说虽然有点苦，但很好喝，使用了〜が表示转折。", "relatedLineIds": ["l34-conv-017"] }
+      {
+        "step": 1,
+        "title": "表达愿望",
+        "explanation": "克拉拉说自己想看茶道表演，使用了〜たいんですが的婉转表达愿望。",
+        "relatedLineIds": [
+          "l34-conv-001"
+        ]
+      },
+      {
+        "step": 2,
+        "title": "邀请同行",
+        "explanation": "对方邀请克拉拉下周六一起去，使用〜ませんか的邀请句式。",
+        "relatedLineIds": [
+          "l34-conv-002"
+        ]
+      },
+      {
+        "step": 3,
+        "title": "茶道开始 - 泡茶",
+        "explanation": "请渡边先生为大家泡茶，使用了〜てください的请求表达。",
+        "relatedLineIds": [
+          "l34-conv-003"
+        ]
+      },
+      {
+        "step": 4,
+        "title": "招待点心",
+        "explanation": "先请克拉拉吃和果子，这是茶道的礼仪顺序。",
+        "relatedLineIds": [
+          "l34-conv-004"
+        ]
+      },
+      {
+        "step": 5,
+        "title": "惊讶发现",
+        "explanation": "克拉拉对先吃点心再喝茶感到惊讶，使用〜んですか寻求确认。",
+        "relatedLineIds": [
+          "l34-conv-005"
+        ]
+      },
+      {
+        "step": 6,
+        "title": "解释理由",
+        "explanation": "对方解释先吃甜点再喝茶更好喝，使用了〜たあとで〜と〜的语法结构。",
+        "relatedLineIds": [
+          "l34-conv-006"
+        ]
+      },
+      {
+        "step": 7,
+        "title": "接受理解",
+        "explanation": "克拉拉表示理解。",
+        "relatedLineIds": [
+          "l34-conv-007"
+        ]
+      },
+      {
+        "step": 8,
+        "title": "开始品茶",
+        "explanation": "正式开始喝茶，使用〜ましょう的提议形式。",
+        "relatedLineIds": [
+          "l34-conv-008"
+        ]
+      },
+      {
+        "step": 9,
+        "title": "步骤示范 - 拿茶碗",
+        "explanation": "示范第一步：用右手拿茶碗。",
+        "relatedLineIds": [
+          "l34-conv-009"
+        ]
+      },
+      {
+        "step": 10,
+        "title": "步骤示范 - 转茶碗",
+        "explanation": "示范第二步：将茶碗转两圈，使用了て形连接。",
+        "relatedLineIds": [
+          "l34-conv-010"
+        ]
+      },
+      {
+        "step": 11,
+        "title": "步骤示范 - 喝茶",
+        "explanation": "示范第三步：喝茶。",
+        "relatedLineIds": [
+          "l34-conv-011"
+        ]
+      },
+      {
+        "step": 12,
+        "title": "确认理解",
+        "explanation": "克拉拉回应表示听懂了。",
+        "relatedLineIds": [
+          "l34-conv-012"
+        ]
+      },
+      {
+        "step": 13,
+        "title": "请按示范做",
+        "explanation": "请克拉拉按照老师刚才做的样子尝试，使用了〜たとおりに的语法。",
+        "relatedLineIds": [
+          "l34-conv-013"
+        ]
+      },
+      {
+        "step": 14,
+        "title": "确认正确",
+        "explanation": "克拉拉问自己做得是否正确，使用これでいいですか。",
+        "relatedLineIds": [
+          "l34-conv-014"
+        ]
+      },
+      {
+        "step": 15,
+        "title": "肯定回答",
+        "explanation": "对方肯定。",
+        "relatedLineIds": [
+          "l34-conv-015"
+        ]
+      },
+      {
+        "step": 16,
+        "title": "询问感受",
+        "explanation": "对方问克拉拉觉得茶的味道如何。",
+        "relatedLineIds": [
+          "l34-conv-016"
+        ]
+      },
+      {
+        "step": 17,
+        "title": "表达感想",
+        "explanation": "克拉拉说虽然有点苦，但很好喝，使用了〜が表示转折。",
+        "relatedLineIds": [
+          "l34-conv-017"
+        ]
+      }
     ],
     "lineUsage": [
-      { "lineId": "l34-conv-001", "japanese": "一度、茶道が見たいんですが…", "chineseMeaning": "我想亲眼看一次茶道表演……", "realLifeUse": "用〜たいんですが婉转表达愿望，可用于向他人请教或求助时。", "emotionTone": "期待中带着含蓄的请求语气。", "memoryTip": "联想：你说想看茶道时尾音拖长（…），就像在试探对方。" },
-      { "lineId": "l34-conv-002", "japanese": "じゃあ、来週の土曜日一緒に行きませんか？", "chineseMeaning": "那下周六要不要一起去看看？", "realLifeUse": "〜ませんか是邀请的礼貌形式，适合朋友、同事之间。", "emotionTone": "友好、主动的邀请。", "memoryTip": "注意：否定疑问表邀请是日语特色——问不去吗其实是一起去吧。" },
-      { "lineId": "l34-conv-003", "japanese": "渡辺さん、お茶を立ててください。", "chineseMeaning": "渡边先生，请为大家泡茶吧。", "realLifeUse": "〜てください是日常请求的标准表达，但注意对上司需更敬语化。", "emotionTone": "礼貌的请求。", "memoryTip": "お茶を立てる是茶道专用动词，一般泡茶用お茶を入れる。区分记。" },
-      { "lineId": "l34-conv-004", "japanese": "クララさん、お菓子をどうぞ。", "chineseMeaning": "克拉拉，请用点和果子。", "realLifeUse": "招待别人吃东西时说どうぞ即可，简单自然。", "emotionTone": "亲切的招待。", "memoryTip": "联想：主人递点心时说请的场景。" },
-      { "lineId": "l34-conv-005", "japanese": "えっ、先にお菓子を食べるんですか？", "chineseMeaning": "诶，是先吃点心的吗？", "realLifeUse": "〜んですか用于就所见所闻向对方确认或寻求解释。", "emotionTone": "惊讶、意外。", "memoryTip": "えっ表惊讶，相当于哎？。んですか = 解释说明的疑问。" },
-      { "lineId": "l34-conv-006", "japanese": "ええ、甘いお菓子を食べた後でお茶を飲むとおいしいんですよ。", "chineseMeaning": "是的，先吃点甜点再喝茶，会更美味哦。", "realLifeUse": "〜た後で〜と〜表达做完A之后做B就会…，常用于说明理由或好处。", "emotionTone": "耐心解释，略带分享的语气。", "memoryTip": "た後で = A之后；〜と〜 = 一做……就……。串联：吃完甜点→喝茶→好喝。" },
-      { "lineId": "l34-conv-007", "japanese": "そうですか。", "chineseMeaning": "是这样啊。", "realLifeUse": "听到新信息时的标准回应，可表理解或接受。", "emotionTone": "恍然大悟、接受。", "memoryTip": "降调表原来如此，升调表疑问。此处是降调。" },
-      { "lineId": "l34-conv-008", "japanese": "では、お茶を飲みましょう。", "chineseMeaning": "那么，开始品茶吧。", "realLifeUse": "〜ましょう表示提议或邀请大家一起做某事。", "emotionTone": "正式、提议式。", "memoryTip": "では = 那么，常用于转换话题或开始下一步。" },
-      { "lineId": "l34-conv-009", "japanese": "まず、右手でお茶碗を持ちます。", "chineseMeaning": "首先，用右手拿起茶碗。", "realLifeUse": "说明步骤时用まず开头，清晰有序。", "emotionTone": "教导、示范的口吻。", "memoryTip": "まず = first，次に = next，成对记忆。" },
-      { "lineId": "l34-conv-010", "japanese": "次に、お茶碗を二回まわして、", "chineseMeaning": "然后把茶碗转两圈，", "realLifeUse": "用て形连接前后动作，表示做完A，然后做B。", "emotionTone": "逐步指导。", "memoryTip": "〜まわして、用て形中断，暗示还有后续动作。" },
-      { "lineId": "l34-conv-011", "japanese": "それから飲みます。", "chineseMeaning": "接着再喝茶。", "realLifeUse": "それから表示顺序上的然后。", "emotionTone": "继续说明。", "memoryTip": "三步曲：まず→次に→それから。" },
-      { "lineId": "l34-conv-012", "japanese": "はい。", "chineseMeaning": "好的。", "realLifeUse": "简单回应，表示已理解或同意。", "emotionTone": "简洁明了。", "memoryTip": "最基础的肯定回应。" },
-      { "lineId": "l34-conv-013", "japanese": "じゃあ、私がした通りにしてください。", "chineseMeaning": "那请按我刚才做的来试试吧。", "realLifeUse": "〜たとおりに意思是按照……所做过的那样，是Lesson 34的核心语法。", "emotionTone": "鼓励尝试、示范后的引导。", "memoryTip": "した通りに = 按照（我）做过的样子。老师做→学生跟→这就是とおりに。" },
-      { "lineId": "l34-conv-014", "japanese": "これでいいですか？", "chineseMeaning": "这样做可以吗？", "realLifeUse": "做完某事之后向对方确认是否正确或是否满意。", "emotionTone": "不确定、请求确认。", "memoryTip": "これで = 这样就，常与いいですか搭配表确认。" },
-      { "lineId": "l34-conv-015", "japanese": "はい。", "chineseMeaning": "可以的。", "realLifeUse": "肯定的确认回答。", "emotionTone": "肯定、认可。", "memoryTip": "与前一句搭配：这样做可以吗？→可以。" },
-      { "lineId": "l34-conv-016", "japanese": "いかがですか？", "chineseMeaning": "觉得怎么样？", "realLifeUse": "いかが是どう的礼貌形，用于询问对方的感受或意见。", "emotionTone": "关心、询问体验感受。", "memoryTip": "いかが比どう更礼貌。在茶道这种正式场合使用更贴切。" },
-      { "lineId": "l34-conv-017", "japanese": "少し苦いですが、おいしいです。", "chineseMeaning": "虽然有点苦，但很好喝。", "realLifeUse": "〜が表转折，先承认负面，再给出正面评价，是日语中常见的委婉表达。", "emotionTone": "诚实但礼貌的评价。", "memoryTip": "少し苦い先退一步，おいしいです再肯定——日式先抑后扬。" }
+      {
+        "lineId": "l34-conv-001",
+        "japanese": "一度、茶道が見たいんですが…",
+        "chineseMeaning": "我想亲眼看一次茶道表演……",
+        "realLifeUse": "用〜たいんですが婉转表达愿望，可用于向他人请教或求助时。",
+        "emotionTone": "期待中带着含蓄的请求语气。",
+        "memoryTip": "联想：你说想看茶道时尾音拖长（…），就像在试探对方。"
+      },
+      {
+        "lineId": "l34-conv-002",
+        "japanese": "じゃあ、来週の土曜日一緒に行きませんか？",
+        "chineseMeaning": "那下周六要不要一起去看看？",
+        "realLifeUse": "〜ませんか是邀请的礼貌形式，适合朋友、同事之间。",
+        "emotionTone": "友好、主动的邀请。",
+        "memoryTip": "注意：否定疑问表邀请是日语特色——问不去吗其实是一起去吧。"
+      },
+      {
+        "lineId": "l34-conv-003",
+        "japanese": "渡辺さん、お茶を立ててください。",
+        "chineseMeaning": "渡边先生，请为大家泡茶吧。",
+        "realLifeUse": "〜てください是日常请求的标准表达，但注意对上司需更敬语化。",
+        "emotionTone": "礼貌的请求。",
+        "memoryTip": "お茶を立てる是茶道专用动词，一般泡茶用お茶を入れる。区分记。"
+      },
+      {
+        "lineId": "l34-conv-004",
+        "japanese": "クララさん、お菓子をどうぞ。",
+        "chineseMeaning": "克拉拉，请用点和果子。",
+        "realLifeUse": "招待别人吃东西时说どうぞ即可，简单自然。",
+        "emotionTone": "亲切的招待。",
+        "memoryTip": "联想：主人递点心时说请的场景。"
+      },
+      {
+        "lineId": "l34-conv-005",
+        "japanese": "えっ、先にお菓子を食べるんですか？",
+        "chineseMeaning": "诶，是先吃点心的吗？",
+        "realLifeUse": "〜んですか用于就所见所闻向对方确认或寻求解释。",
+        "emotionTone": "惊讶、意外。",
+        "memoryTip": "えっ表惊讶，相当于哎？。んですか = 解释说明的疑问。"
+      },
+      {
+        "lineId": "l34-conv-006",
+        "japanese": "ええ、甘いお菓子を食べた後でお茶を飲むとおいしいんですよ。",
+        "chineseMeaning": "是的，先吃点甜点再喝茶，会更美味哦。",
+        "realLifeUse": "〜た後で〜と〜表达做完A之后做B就会…，常用于说明理由或好处。",
+        "emotionTone": "耐心解释，略带分享的语气。",
+        "memoryTip": "た後で = A之后；〜と〜 = 一做……就……。串联：吃完甜点→喝茶→好喝。"
+      },
+      {
+        "lineId": "l34-conv-007",
+        "japanese": "そうですか。",
+        "chineseMeaning": "是这样啊。",
+        "realLifeUse": "听到新信息时的标准回应，可表理解或接受。",
+        "emotionTone": "恍然大悟、接受。",
+        "memoryTip": "降调表原来如此，升调表疑问。此处是降调。"
+      },
+      {
+        "lineId": "l34-conv-008",
+        "japanese": "では、お茶を飲みましょう。",
+        "chineseMeaning": "那么，开始品茶吧。",
+        "realLifeUse": "〜ましょう表示提议或邀请大家一起做某事。",
+        "emotionTone": "正式、提议式。",
+        "memoryTip": "では = 那么，常用于转换话题或开始下一步。"
+      },
+      {
+        "lineId": "l34-conv-009",
+        "japanese": "まず、右手でお茶碗を持ちます。",
+        "chineseMeaning": "首先，用右手拿起茶碗。",
+        "realLifeUse": "说明步骤时用まず开头，清晰有序。",
+        "emotionTone": "教导、示范的口吻。",
+        "memoryTip": "まず = first，次に = next，成对记忆。"
+      },
+      {
+        "lineId": "l34-conv-010",
+        "japanese": "次に、お茶碗を二回まわして、",
+        "chineseMeaning": "然后把茶碗转两圈，",
+        "realLifeUse": "用て形连接前后动作，表示做完A，然后做B。",
+        "emotionTone": "逐步指导。",
+        "memoryTip": "〜まわして、用て形中断，暗示还有后续动作。"
+      },
+      {
+        "lineId": "l34-conv-011",
+        "japanese": "それから飲みます。",
+        "chineseMeaning": "接着再喝茶。",
+        "realLifeUse": "それから表示顺序上的然后。",
+        "emotionTone": "继续说明。",
+        "memoryTip": "三步曲：まず→次に→それから。"
+      },
+      {
+        "lineId": "l34-conv-012",
+        "japanese": "はい。",
+        "chineseMeaning": "好的。",
+        "realLifeUse": "简单回应，表示已理解或同意。",
+        "emotionTone": "简洁明了。",
+        "memoryTip": "最基础的肯定回应。"
+      },
+      {
+        "lineId": "l34-conv-013",
+        "japanese": "じゃあ、私がした通りにしてください。",
+        "chineseMeaning": "那请按我刚才做的来试试吧。",
+        "realLifeUse": "〜たとおりに意思是按照……所做过的那样，是Lesson 34的核心语法。",
+        "emotionTone": "鼓励尝试、示范后的引导。",
+        "memoryTip": "した通りに = 按照（我）做过的样子。老师做→学生跟→这就是とおりに。"
+      },
+      {
+        "lineId": "l34-conv-014",
+        "japanese": "これでいいですか？",
+        "chineseMeaning": "这样做可以吗？",
+        "realLifeUse": "做完某事之后向对方确认是否正确或是否满意。",
+        "emotionTone": "不确定、请求确认。",
+        "memoryTip": "これで = 这样就，常与いいですか搭配表确认。"
+      },
+      {
+        "lineId": "l34-conv-015",
+        "japanese": "はい。",
+        "chineseMeaning": "可以的。",
+        "realLifeUse": "肯定的确认回答。",
+        "emotionTone": "肯定、认可。",
+        "memoryTip": "与前一句搭配：这样做可以吗？→可以。"
+      },
+      {
+        "lineId": "l34-conv-016",
+        "japanese": "いかがですか？",
+        "chineseMeaning": "觉得怎么样？",
+        "realLifeUse": "いかが是どう的礼貌形，用于询问对方的感受或意见。",
+        "emotionTone": "关心、询问体验感受。",
+        "memoryTip": "いかが比どう更礼貌。在茶道这种正式场合使用更贴切。"
+      },
+      {
+        "lineId": "l34-conv-017",
+        "japanese": "少し苦いですが、おいしいです。",
+        "chineseMeaning": "虽然有点苦，但很好喝。",
+        "realLifeUse": "〜が表转折，先承认负面，再给出正面评价，是日语中常见的委婉表达。",
+        "emotionTone": "诚实但礼貌的评价。",
+        "memoryTip": "少し苦い先退一步，おいしいです再肯定——日式先抑后扬。"
+      }
     ],
     "chineseRetellPrompt": "请用中文复述第34课会话的内容。\n\n「第34课讲的是克拉拉想去看茶道，渡边先生带她去体验的故事。一开始……然后……最后……」\n\n试试看能不能不用看原文，回忆出整个故事的来龙去脉。",
     "realLifeReplacementPractice": [

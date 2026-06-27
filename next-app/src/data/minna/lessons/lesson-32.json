@@ -1035,141 +1035,173 @@
         "en": "Conversation Practice"
       },
       "dialogTitle": {
-        "zh": "第32课会话",
-        "en": "第32课会话"
+        "zh": "最好不要勉强自己",
+        "en": "無理をしないほうがいいですよ"
       },
       "conversationGoal": {
-        "zh": "第32课会话练习",
-        "en": "Lesson 32 Conversation Practice"
+        "zh": "会话图确认内容",
+        "en": "Conversation image confirmed"
       },
       "items": [
         {
           "id": "l32-conv-001",
-          "speaker": "",
-          "jp": "【音楽】",
-          "kana": "",
-          "zh": "【音乐】",
-          "keyword": "音楽",
-          "videoStart": "0:00.00",
-          "videoEnd": "0:08.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "小川",
+          "jp": "シュミットさん、元気がありませんね。",
+          "kana": "シュミットさん、げんきがありませんね。",
+          "zh": "休米特先生，看起来没精神啊。",
+          "keyword": "シュミットさ",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l32-conv-002",
-          "speaker": "",
-          "jp": "シュミッドさん、元気がありませんね。どうしたんですか?",
-          "kana": "",
-          "zh": "施密特先生，您看起来没什么精神啊。怎么了？",
-          "keyword": "元気",
-          "videoStart": "0:09.00",
-          "videoEnd": "0:13.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "小川",
+          "jp": "どうしたんですか。",
+          "kana": "どうしたんですか。",
+          "zh": "怎么了？",
+          "keyword": "どうしたんで",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l32-conv-003",
-          "speaker": "",
-          "jp": "最近、上司とうまくいっていないんです。時々、頭が痛くなるんですよ。",
-          "kana": "",
-          "zh": "最近和上司关系不太好。有时候还会头痛。",
-          "keyword": "上司",
-          "videoStart": "0:13.00",
-          "videoEnd": "0:22.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "シュミット",
+          "jp": "最近、体の調子がよくないんです。時々頭や胃が痛くなるんですよ。",
+          "kana": "さいきん、からだのちょうしがよくないんです。ときどきあたまやいがいたくなるんですよ。",
+          "zh": "最近身体状况不好，有时头和胃会疼。",
+          "keyword": "最近体の調子",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l32-conv-004",
-          "speaker": "",
-          "jp": "それはいけませんね。仕事も忙しいんですか？",
-          "kana": "",
-          "zh": "那可不行啊。工作是不是也很忙？",
-          "keyword": "仕事",
-          "videoStart": "0:22.00",
-          "videoEnd": "0:28.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "小川",
+          "jp": "それはいけませんね。仕事が忙しいんですか。",
+          "kana": "それはいけませんね。しごとがいそがしいんですか。",
+          "zh": "那可不行。工作很忙吗？",
+          "keyword": "それはいけま",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l32-conv-005",
-          "speaker": "",
-          "jp": "残業が多いんです。ストレスかもしれませんね。一度病院で見てもらった方がいいですよ。",
-          "kana": "",
-          "zh": "经常加班，可能是压力太大了。建议你去医院检查一下比较好。",
-          "keyword": "一度病院",
-          "videoStart": "0:28.00",
-          "videoEnd": "0:38.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "シュミット",
+          "jp": "ええ。残業が多いんです。",
+          "kana": "ええ。ざんぎょうがおおいんです。",
+          "zh": "是的，加班很多。",
+          "keyword": "ええ残業が多",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l32-conv-006",
-          "speaker": "",
-          "jp": "そうですね。無理をしない方がいいですよ。",
-          "kana": "",
-          "zh": "是啊，还是不要太勉强自己。",
-          "keyword": "無理",
-          "videoStart": "0:38.00",
-          "videoEnd": "0:44.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "小川",
+          "jp": "ストレスかもしれませんね。一度病院で診てもらったほうがいいですよ。",
+          "kana": "ストレスかもしれませんね。いちどびょういんでみてもらったほうがいいですよ。",
+          "zh": "也许是压力。最好去医院检查一次。",
+          "keyword": "ストレスかも",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l32-conv-007",
-          "speaker": "",
-          "jp": "今の仕事が終わったら、少し休みを取ろうと思っています。",
-          "kana": "",
-          "zh": "等现在的工作一结束，我打算休息一段时间。",
-          "keyword": "仕事",
-          "videoStart": "0:44.00",
-          "videoEnd": "0:50.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "シュミット",
+          "jp": "ええ、そうですね。",
+          "kana": "ええ、そうですね。",
+          "zh": "嗯，是啊。",
+          "keyword": "ええそうです",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l32-conv-008",
-          "speaker": "",
-          "jp": "それがいいですね。",
-          "kana": "それがいいですね。",
-          "zh": "那样很好。",
-          "keyword": "",
-          "videoStart": "0:50.00",
-          "videoEnd": "0:53.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "speaker": "小川",
+          "jp": "無理をしないほうがいいですよ。",
+          "kana": "むりをしないほうがいいですよ。",
+          "zh": "最好不要勉强自己。",
+          "keyword": "無理をしない",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
+        },
+        {
+          "id": "l32-conv-009",
+          "speaker": "シュミット",
+          "jp": "ええ、今の仕事が終わったら、休みを取ろうと思っています。",
+          "kana": "ええ、いまのしごとがおわったら、やすみをとろうとおもっています。",
+          "zh": "嗯，现在的工作结束后，我打算休假。",
+          "keyword": "ええ今の仕事",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
+        },
+        {
+          "id": "l32-conv-010",
+          "speaker": "小川",
+          "jp": "それはいいですね。",
+          "kana": "それはいいですね。",
+          "zh": "那很好。",
+          "keyword": "それはいいで",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         }
       ]
     },
@@ -1373,7 +1405,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_grammar",
@@ -1458,7 +1491,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_examples",
@@ -1553,7 +1587,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_quiz",
@@ -2136,7 +2171,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     }
   ],
   "conversationVideo": {
@@ -2183,43 +2219,57 @@
         "step": 1,
         "title": "观察状态 + 关心询问",
         "explanation": "说话者注意到シュミッド「元気がありませんね」，并用「どうしたんですか」引导对方说出原因。这是日语中关心他人的常见开场白。",
-        "relatedLineIds": ["l32-conv-002"]
+        "relatedLineIds": [
+          "l32-conv-002"
+        ]
       },
       {
         "step": 2,
         "title": "倾诉困境",
         "explanation": "シュミッド说明原因：跟上司关系不顺利（上司とうまくいっていない）、有时头痛（頭が痛くなる）。用「〜んです」解释说明语气，使叙述更有代入感。",
-        "relatedLineIds": ["l32-conv-003"]
+        "relatedLineIds": [
+          "l32-conv-003"
+        ]
       },
       {
         "step": 3,
         "title": "共情 + 追问",
         "explanation": "说话者用「それはいけませんね」表示同情，再用「仕事も忙しいんですか」进一步追问，引导对方说出更多信息，为后面的建议做铺垫。",
-        "relatedLineIds": ["l32-conv-004"]
+        "relatedLineIds": [
+          "l32-conv-004"
+        ]
       },
       {
         "step": 4,
         "title": "解释原因 + 推断 + 建议",
         "explanation": "シュミッド说出「残業が多いんです」；对方用「ストレスかもしれませんね」做出推测，接着用「一度病院で見てもらった方がいいですよ」给出建议。这里融合了课文的「〜かもしれません」「〜たほうがいい」两个核心语法。",
-        "relatedLineIds": ["l32-conv-005"]
+        "relatedLineIds": [
+          "l32-conv-005"
+        ]
       },
       {
         "step": 5,
         "title": "同意 + 追加建议",
         "explanation": "シュミッド回应「そうですね」（表示同意对方的推断），朋友追加建议「無理をしない方がいいですよ」，使用「〜ないほうがいい」建议不要做某事。",
-        "relatedLineIds": ["l32-conv-006"]
+        "relatedLineIds": [
+          "l32-conv-006"
+        ]
       },
       {
         "step": 6,
         "title": "表达自己的计划",
         "explanation": "シュミッド说出自己的打算「今の仕事が終わったら、少し休みを取ろうと思っています」，使用了「〜と思っています」表达意愿/计划。",
-        "relatedLineIds": ["l32-conv-007"]
+        "relatedLineIds": [
+          "l32-conv-007"
+        ]
       },
       {
         "step": 7,
         "title": "肯定对方的计划",
         "explanation": "说话者用「それがいいですね」对シュミッド的计划表示肯定和赞同，自然地结束对话。",
-        "relatedLineIds": ["l32-conv-008"]
+        "relatedLineIds": [
+          "l32-conv-008"
+        ]
       }
     ],
     "lineUsage": [

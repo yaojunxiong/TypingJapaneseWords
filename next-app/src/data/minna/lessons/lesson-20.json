@@ -768,173 +768,189 @@
         "en": "Conversation Practice"
       },
       "dialogTitle": {
-        "zh": "第20课会话",
-        "en": "第20课会话"
+        "zh": "一起去吗？",
+        "en": "いっしょに行かない？"
       },
       "conversationGoal": {
-        "zh": "第20课会话练习",
-        "en": "Lesson 20 Conversation Practice"
+        "zh": "会话图确认内容",
+        "en": "Conversation image confirmed"
       },
       "items": [
         {
           "id": "l20-conv-001",
-          "speaker": "",
-          "jp": "【音楽】",
-          "kana": "",
-          "zh": "【音乐】",
-          "keyword": "音楽",
-          "videoStart": "0:00.00",
-          "videoEnd": "0:07.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "小林",
+          "jp": "夏休みは国へ帰る？",
+          "kana": "なつやすみはくにへかえる？",
+          "zh": "暑假回国吗？",
+          "keyword": "夏休みは国へ",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l20-conv-002",
-          "speaker": "",
-          "jp": "夏休みは国へ帰る?",
-          "kana": "",
-          "zh": "暑假要回国吗？",
-          "keyword": "夏休",
-          "videoStart": "0:10.00",
-          "videoEnd": "0:12.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "タワポン",
+          "jp": "ううん。帰りたいけど、……。",
+          "kana": "ううん。かえりたいけど、……。",
+          "zh": "嗯，不回。想回去，不过……",
+          "keyword": "ううん帰りた",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l20-conv-003",
-          "speaker": "",
-          "jp": "うん、帰りたいけど",
-          "kana": "",
-          "zh": "嗯，我是想回去啦……",
-          "keyword": "",
-          "videoStart": "0:13.00",
-          "videoEnd": "0:15.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "小林",
+          "jp": "そう。",
+          "kana": "そう。",
+          "zh": "这样啊。",
+          "keyword": "そう",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l20-conv-004",
-          "speaker": "",
-          "jp": "そう、ターコン君、富士山に登ったことある?",
-          "kana": "",
-          "zh": "对了，Tākon君，你爬过富士山吗？",
-          "keyword": "富士山",
-          "videoStart": "0:16.00",
-          "videoEnd": "0:20.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "小林",
+          "jp": "タワポン君、富士山に登ったことある？",
+          "kana": "タワポンくん、ふじさんにのぼったことある？",
+          "zh": "塔瓦蓬，你登过富士山吗？",
+          "keyword": "タワポン君富",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l20-conv-005",
-          "speaker": "",
-          "jp": "うん、ない",
-          "kana": "うん、ない",
-          "zh": "嗯，还没有。",
-          "keyword": "",
-          "videoStart": "0:24.00",
-          "videoEnd": "0:26.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "speaker": "タワポン",
+          "jp": "ううん、ない。",
+          "kana": "ううん、ない。",
+          "zh": "没有，没登过。",
+          "keyword": "ううんない",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l20-conv-006",
-          "speaker": "",
-          "jp": "じゃあよかったら、一緒に行かない?",
-          "kana": "",
-          "zh": "那，要不要一起去啊？",
-          "keyword": "一緒",
-          "videoStart": "0:27.00",
-          "videoEnd": "0:29.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "小林",
+          "jp": "じゃ、よかったら、いっしょに行かない？",
+          "kana": "じゃ、よかったら、いっしょにいかない？",
+          "zh": "那么，如果你愿意，要不要一起去？",
+          "keyword": "じゃよかった",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l20-conv-007",
-          "speaker": "",
-          "jp": "いつ頃?",
-          "kana": "",
-          "zh": "大概什么时候？",
-          "keyword": "",
-          "videoStart": "0:30.00",
-          "videoEnd": "0:31.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "タワポン",
+          "jp": "うん。いつごろ？",
+          "kana": "うん。いつごろ？",
+          "zh": "好啊。大约什么时候？",
+          "keyword": "うんいつごろ",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l20-conv-008",
-          "speaker": "",
-          "jp": "8月の初め頃はどう?",
-          "kana": "",
+          "speaker": "小林",
+          "jp": "8月の初めごろはどう？",
+          "kana": "はちがつのはじめごろはどう？",
           "zh": "八月初怎么样？",
-          "keyword": "8月",
-          "videoStart": "0:32.00",
-          "videoEnd": "0:34.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "keyword": "8月の初めご",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l20-conv-009",
-          "speaker": "",
-          "jp": "じゃあいろいろ調べて、また電話するよ",
-          "kana": "",
-          "zh": "那我查一查，再打电话给你。",
-          "keyword": "電話",
-          "videoStart": "0:35.00",
-          "videoEnd": "0:38.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "タワポン",
+          "jp": "いいよ。",
+          "kana": "いいよ。",
+          "zh": "可以啊。",
+          "keyword": "いいよ",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l20-conv-010",
-          "speaker": "",
-          "jp": "ありがとう、待ってるよ",
-          "kana": "",
-          "zh": "谢谢你，我等你电话哦。",
-          "keyword": "",
-          "videoStart": "0:39.00",
-          "videoEnd": "0:41.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "小林",
+          "jp": "じゃ、いろいろ調べて、また電話するよ。",
+          "kana": "じゃ、いろいろしらべて、またでんわするよ。",
+          "zh": "那么，我先查一查，再给你打电话。",
+          "keyword": "じゃいろいろ",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
+        },
+        {
+          "id": "l20-conv-011",
+          "speaker": "タワポン",
+          "jp": "ありがとう。待ってるよ。",
+          "kana": "ありがとう。まってるよ。",
+          "zh": "谢谢。我等你的消息。",
+          "keyword": "ありがとう待",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         }
       ]
     },
@@ -1127,7 +1143,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_grammar",
@@ -1170,7 +1187,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_examples",
@@ -1285,7 +1303,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_quiz",
@@ -2010,7 +2029,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     }
   ],
   "conversationVideo": {
@@ -2041,31 +2061,167 @@
     "sceneSummary": "两位朋友在聊暑假计划——一人问对方是否回国，接着提议一起去爬富士山，最终约定查好信息再联系。",
     "storyExplanation": "这段会话发生在朋友之间，全程使用普通形（plain form）而非です/ます体。开头是背景音乐，随后A问B暑假要不要回国。B表示想回去但语气犹豫（帰りたいけど）。A顺势转话题问B有没有爬过富士山，B回答没有（うん、ない）。A趁机邀请B一起去（一緒に行かない？），B询问时间，A提议八月初，B表示会查一查再联系（調べて、また電話するよ），A愉快地答应等待。整个对话体现了朋友间自然亲密的语气，使用普通形、省略助词、句尾加よ/けど等口语特征。",
     "characters": [
-      { "name": "A（提议者）", "role": "主动邀约的朋友", "relationship": "朋友" },
-      { "name": "ターコン君（B）", "role": "被邀请的朋友", "relationship": "朋友" }
+      {
+        "name": "A（提议者）",
+        "role": "主动邀约的朋友",
+        "relationship": "朋友"
+      },
+      {
+        "name": "ターコン君（B）",
+        "role": "被邀请的朋友",
+        "relationship": "朋友"
+      }
     ],
     "conversationFlow": [
-      { "step": 1, "title": "开场音乐", "explanation": "【音楽】标记背景音乐的播放，为会话营造气氛。", "relatedLineIds": ["l20-conv-001"] },
-      { "step": 2, "title": "询问暑假计划", "explanation": "A用普通形「帰る？」（而非帰りますか）直接问B暑假是否回国，体现朋友间的随意语气。", "relatedLineIds": ["l20-conv-002"] },
-      { "step": 3, "title": "犹豫的回答", "explanation": "B用「うん」肯定开头，但用「帰りたいけど」表达想去却又犹豫——「けど」表转折，是口语中常见的委婉表达。吃掉了です/ます体。", "relatedLineIds": ["l20-conv-003"] },
-      { "step": 4, "title": "转话题与经验询问", "explanation": "A用「そう」自然转换话题，问B是否爬过富士山（登ったことある？）。「たことある」是普通形过去经验，对比敬体「たことがありますか」。", "relatedLineIds": ["l20-conv-004"] },
-      { "step": 5, "title": "否定回答与邀请", "explanation": "B简短回答「ない」（=ありません），A顺势用「行かない？」发出邀请。普通形否定+问号是朋友间最自然的邀约方式，对比敬体「行きませんか」。", "relatedLineIds": ["l20-conv-005", "l20-conv-006"] },
-      { "step": 6, "title": "确认时间", "explanation": "B问「いつ頃？」确认时间，A提议「8月の初め頃はどう？」。双方全程使用普通形，简洁直接。", "relatedLineIds": ["l20-conv-007", "l20-conv-008"] },
-      { "step": 7, "title": "约定与收尾", "explanation": "B说会查一查再打电话（電話するよ），A回答「待ってるよ」。「〜するよ」是普通形+よ表告知，「待ってる」是「待っている」的口语缩约形（对比待っています）。", "relatedLineIds": ["l20-conv-009", "l20-conv-010"] }
+      {
+        "step": 1,
+        "title": "开场音乐",
+        "explanation": "【音楽】标记背景音乐的播放，为会话营造气氛。",
+        "relatedLineIds": [
+          "l20-conv-001"
+        ]
+      },
+      {
+        "step": 2,
+        "title": "询问暑假计划",
+        "explanation": "A用普通形「帰る？」（而非帰りますか）直接问B暑假是否回国，体现朋友间的随意语气。",
+        "relatedLineIds": [
+          "l20-conv-002"
+        ]
+      },
+      {
+        "step": 3,
+        "title": "犹豫的回答",
+        "explanation": "B用「うん」肯定开头，但用「帰りたいけど」表达想去却又犹豫——「けど」表转折，是口语中常见的委婉表达。吃掉了です/ます体。",
+        "relatedLineIds": [
+          "l20-conv-003"
+        ]
+      },
+      {
+        "step": 4,
+        "title": "转话题与经验询问",
+        "explanation": "A用「そう」自然转换话题，问B是否爬过富士山（登ったことある？）。「たことある」是普通形过去经验，对比敬体「たことがありますか」。",
+        "relatedLineIds": [
+          "l20-conv-004"
+        ]
+      },
+      {
+        "step": 5,
+        "title": "否定回答与邀请",
+        "explanation": "B简短回答「ない」（=ありません），A顺势用「行かない？」发出邀请。普通形否定+问号是朋友间最自然的邀约方式，对比敬体「行きませんか」。",
+        "relatedLineIds": [
+          "l20-conv-005",
+          "l20-conv-006"
+        ]
+      },
+      {
+        "step": 6,
+        "title": "确认时间",
+        "explanation": "B问「いつ頃？」确认时间，A提议「8月の初め頃はどう？」。双方全程使用普通形，简洁直接。",
+        "relatedLineIds": [
+          "l20-conv-007",
+          "l20-conv-008"
+        ]
+      },
+      {
+        "step": 7,
+        "title": "约定与收尾",
+        "explanation": "B说会查一查再打电话（電話するよ），A回答「待ってるよ」。「〜するよ」是普通形+よ表告知，「待ってる」是「待っている」的口语缩约形（对比待っています）。",
+        "relatedLineIds": [
+          "l20-conv-009",
+          "l20-conv-010"
+        ]
+      }
     ],
     "lineUsage": [
-      { "lineId": "l20-conv-001", "japanese": "【音楽】", "chineseMeaning": "【音乐】", "realLifeUse": "在教材或视频对话中，【音楽】标记场景的背景音乐播放，不会实际说出来。", "emotionTone": "中性/背景提示", "memoryTip": "方括号内标注的是场景音效，不需要朗读。" },
-      { "lineId": "l20-conv-002", "japanese": "夏休みは国へ帰る？", "chineseMeaning": "暑假要回国吗？", "realLifeUse": "朋友之间直接问计划用普通形+问号，比「帰りますか」更自然亲切。日常中常省略助词如「夏休みは」。", "emotionTone": "随意、关心", "memoryTip": "对比敬体「帰りますか」——普通形只用「帰る？」即可。" },
-      { "lineId": "l20-conv-003", "japanese": "うん、帰りたいけど", "chineseMeaning": "嗯，我是想回去啦……", "realLifeUse": "「けど」放在句尾表示欲言又止、委婉转折，是口语经典用法。对比敬体「帰りたいですが」更柔和自然。", "emotionTone": "犹豫、略带歉意", "memoryTip": "「けど」= 口语版「が」，表达转折或铺垫。" },
-      { "lineId": "l20-conv-004", "japanese": "そう、ターコン君、富士山に登ったことある？", "chineseMeaning": "对了，Tākon君，你爬过富士山吗？", "realLifeUse": "「そう」用于转换话题；「〜たことある？」是问经历的口语说法（敬体为〜たことがありますか）。", "emotionTone": "轻松、兴起", "memoryTip": "「たことある」= 简体过去经验，记住去掉「が」和「ます」。" },
-      { "lineId": "l20-conv-005", "japanese": "うん、ない", "chineseMeaning": "嗯，还没有。", "realLifeUse": "极为简短的口语回答：用「ない」（=ありません）一个字就够了。朋友之间不需要完整句子。", "emotionTone": "轻松、直接", "memoryTip": "「ない」直接替代「ありません」，一个词搞定。" },
-      { "lineId": "l20-conv-006", "japanese": "じゃあよかったら、一緒に行かない？", "chineseMeaning": "那，要不要一起去啊？", "realLifeUse": "「よかったら」（if you'd like）是委婉提议的常用表达；「行かない？」是普通形否定疑问表邀请，对比敬体「行きませんか」。", "emotionTone": "热情、提议", "memoryTip": "「行かない？」= 朋友版「行きませんか」。注意语调上扬。" },
-      { "lineId": "l20-conv-007", "japanese": "いつ頃？", "chineseMeaning": "大概什么时候？", "realLifeUse": "「いつ頃」比「いつ」更模糊柔和，适合询问大致时间。朋友间直接一个词加问号即可。", "emotionTone": "好奇、确认", "memoryTip": "「頃」（ごろ/ころ）= around，加在时间词后表示大概。" },
-      { "lineId": "l20-conv-008", "japanese": "8月の初め頃はどう？", "chineseMeaning": "八月初怎么样？", "realLifeUse": "用「はどう？」提出建议征求对方意见，是口语中最常见的提议方式。对比敬体「いかがですか」。", "emotionTone": "建议、期待", "memoryTip": "「どう？」= 简体版「いかがですか」。简单直接。" },
-      { "lineId": "l20-conv-009", "japanese": "じゃあいろいろ調べて、また電話するよ", "chineseMeaning": "那我查一查，再打电话给你。", "realLifeUse": "「調べて」（て形连接动作顺序）后加「電話するよ」表态。「〜するよ」的「よ」表告知/保证语气，对比敬体「電話します」。", "emotionTone": "积极、承诺", "memoryTip": "「電話するよ」= 口语版「電話します」，用「よ」增加承诺感。" },
-      { "lineId": "l20-conv-010", "japanese": "ありがとう、待ってるよ", "chineseMeaning": "谢谢你，我等你电话哦。", "realLifeUse": "「待ってる」是「待っている」的口语缩约（省略い），朋友间非常常见。对比敬体「待っています」。", "emotionTone": "开心、期待", "memoryTip": "「待ってる」= 口语缩约（待っている→待ってる），自然语流。" }
+      {
+        "lineId": "l20-conv-001",
+        "japanese": "【音楽】",
+        "chineseMeaning": "【音乐】",
+        "realLifeUse": "在教材或视频对话中，【音楽】标记场景的背景音乐播放，不会实际说出来。",
+        "emotionTone": "中性/背景提示",
+        "memoryTip": "方括号内标注的是场景音效，不需要朗读。"
+      },
+      {
+        "lineId": "l20-conv-002",
+        "japanese": "夏休みは国へ帰る？",
+        "chineseMeaning": "暑假要回国吗？",
+        "realLifeUse": "朋友之间直接问计划用普通形+问号，比「帰りますか」更自然亲切。日常中常省略助词如「夏休みは」。",
+        "emotionTone": "随意、关心",
+        "memoryTip": "对比敬体「帰りますか」——普通形只用「帰る？」即可。"
+      },
+      {
+        "lineId": "l20-conv-003",
+        "japanese": "うん、帰りたいけど",
+        "chineseMeaning": "嗯，我是想回去啦……",
+        "realLifeUse": "「けど」放在句尾表示欲言又止、委婉转折，是口语经典用法。对比敬体「帰りたいですが」更柔和自然。",
+        "emotionTone": "犹豫、略带歉意",
+        "memoryTip": "「けど」= 口语版「が」，表达转折或铺垫。"
+      },
+      {
+        "lineId": "l20-conv-004",
+        "japanese": "そう、ターコン君、富士山に登ったことある？",
+        "chineseMeaning": "对了，Tākon君，你爬过富士山吗？",
+        "realLifeUse": "「そう」用于转换话题；「〜たことある？」是问经历的口语说法（敬体为〜たことがありますか）。",
+        "emotionTone": "轻松、兴起",
+        "memoryTip": "「たことある」= 简体过去经验，记住去掉「が」和「ます」。"
+      },
+      {
+        "lineId": "l20-conv-005",
+        "japanese": "うん、ない",
+        "chineseMeaning": "嗯，还没有。",
+        "realLifeUse": "极为简短的口语回答：用「ない」（=ありません）一个字就够了。朋友之间不需要完整句子。",
+        "emotionTone": "轻松、直接",
+        "memoryTip": "「ない」直接替代「ありません」，一个词搞定。"
+      },
+      {
+        "lineId": "l20-conv-006",
+        "japanese": "じゃあよかったら、一緒に行かない？",
+        "chineseMeaning": "那，要不要一起去啊？",
+        "realLifeUse": "「よかったら」（if you'd like）是委婉提议的常用表达；「行かない？」是普通形否定疑问表邀请，对比敬体「行きませんか」。",
+        "emotionTone": "热情、提议",
+        "memoryTip": "「行かない？」= 朋友版「行きませんか」。注意语调上扬。"
+      },
+      {
+        "lineId": "l20-conv-007",
+        "japanese": "いつ頃？",
+        "chineseMeaning": "大概什么时候？",
+        "realLifeUse": "「いつ頃」比「いつ」更模糊柔和，适合询问大致时间。朋友间直接一个词加问号即可。",
+        "emotionTone": "好奇、确认",
+        "memoryTip": "「頃」（ごろ/ころ）= around，加在时间词后表示大概。"
+      },
+      {
+        "lineId": "l20-conv-008",
+        "japanese": "8月の初め頃はどう？",
+        "chineseMeaning": "八月初怎么样？",
+        "realLifeUse": "用「はどう？」提出建议征求对方意见，是口语中最常见的提议方式。对比敬体「いかがですか」。",
+        "emotionTone": "建议、期待",
+        "memoryTip": "「どう？」= 简体版「いかがですか」。简单直接。"
+      },
+      {
+        "lineId": "l20-conv-009",
+        "japanese": "じゃあいろいろ調べて、また電話するよ",
+        "chineseMeaning": "那我查一查，再打电话给你。",
+        "realLifeUse": "「調べて」（て形连接动作顺序）后加「電話するよ」表态。「〜するよ」的「よ」表告知/保证语气，对比敬体「電話します」。",
+        "emotionTone": "积极、承诺",
+        "memoryTip": "「電話するよ」= 口语版「電話します」，用「よ」增加承诺感。"
+      },
+      {
+        "lineId": "l20-conv-010",
+        "japanese": "ありがとう、待ってるよ",
+        "chineseMeaning": "谢谢你，我等你电话哦。",
+        "realLifeUse": "「待ってる」是「待っている」的口语缩约（省略い），朋友间非常常见。对比敬体「待っています」。",
+        "emotionTone": "开心、期待",
+        "memoryTip": "「待ってる」= 口语缩约（待っている→待ってる），自然语流。"
+      }
     ],
     "chineseRetellPrompt": "请用中文复述下面这个对话的场景故事。要求：用自己的话流畅叙述，包含人物、发生了什么、用了什么语气。\n\n「第20课讲的是……」\n\n试试看把这段对话讲成一个完整的小故事吧！",
-    "realLifeReplacementPractice": ["想象你在跟朋友聊天，把「夏休みは国へ帰る？」改成问「周末要去哪儿？」（普通形）", "用「〜たことある？」问你朋友是否吃过寿司（普通形）", "用「〜ない？」的方式邀请朋友一起去喝咖啡", "用「けど」句尾表达你想去但没时间", "用「〜るよ」告诉朋友你明天会打电话给他"]
+    "realLifeReplacementPractice": [
+      "想象你在跟朋友聊天，把「夏休みは国へ帰る？」改成问「周末要去哪儿？」（普通形）",
+      "用「〜たことある？」问你朋友是否吃过寿司（普通形）",
+      "用「〜ない？」的方式邀请朋友一起去喝咖啡",
+      "用「けど」句尾表达你想去但没时间",
+      "用「〜るよ」告诉朋友你明天会打电话给他"
+    ]
   }
 }

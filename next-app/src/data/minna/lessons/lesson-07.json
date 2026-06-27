@@ -871,10 +871,10 @@
         {
           "id": "l07-conv-011",
           "speaker": "",
-          "jp": "メキシコのお見上げです",
-          "kana": "",
-          "zh": "是从墨西哥带回来的纪念品。",
-          "keyword": "見上",
+          "jp": "メキシコのお土産です",
+          "kana": "メキシコの おみやげです",
+          "zh": "是墨西哥的特产/礼物。",
+          "keyword": "お土産",
           "videoStart": "1:18.00",
           "videoEnd": "1:21.00",
           "sourceType": "official_video_subtitle",
@@ -1032,12 +1032,12 @@
           "reviewStatus": "needs_review"
         },
         {
-          "word": "メキシコのお見上げです",
-          "kana": "",
-          "zh": "",
+          "word": "メキシコのお土産です",
+          "kana": "メキシコの おみやげです",
+          "zh": "是墨西哥的特产/礼物。",
           "importance": "core",
           "fromConversationId": "l07-conv-011",
-          "sourceSentence": "メキシコのお見上げです",
+          "sourceSentence": "メキシコのお土産です",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
@@ -1259,10 +1259,10 @@
           "reviewStatus": "needs_review"
         },
         {
-          "pattern": "見上",
-          "originalSentence": "メキシコのお見上げです",
+          "pattern": "お土産",
+          "originalSentence": "メキシコのお土産です",
           "fromConversationId": "l07-conv-011",
-          "sourceSentence": "メキシコのお見上げです",
+          "sourceSentence": "メキシコのお土産です",
           "sourceType": "ai_generated_from_official_conversation",
           "replacements": [],
           "needsReview": true,
@@ -1997,14 +1997,14 @@
           "id": "l07-q-011-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
-            "zh": "「メキシコのお見上げです」是什么意思？",
-            "en": "What does \"メキシコのお見上げです\" mean?"
+            "zh": "「メキシコのお土産です」是什么意思？",
+            "en": "What does \"メキシコのお土産です\" mean?"
           },
           "choices": [
             {
               "text": {
-                "zh": "是从墨西哥带回来的纪念品。",
-                "en": "是从墨西哥带回来的纪念品。"
+                "zh": "是墨西哥的特产/礼物。",
+                "en": "It is a Mexican souvenir/gift."
               },
               "correct": true
             },
@@ -2015,7 +2015,7 @@
               }
             }
           ],
-          "sourceSentence": "メキシコのお見上げです",
+          "sourceSentence": "メキシコのお土産です",
           "fromConversationId": "l07-conv-011",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
@@ -2025,18 +2025,18 @@
           "id": "l07-q-011-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
-            "zh": "请选择「是从墨西哥带回来的纪念品。」的日语说法。",
-            "en": "Select Japanese for \"是从墨西哥带回来的纪念品。\"."
+            "zh": "请选择「是墨西哥的特产/礼物。」的日语说法。",
+            "en": "Select Japanese for \"It is a Mexican souvenir/gift.\"."
           },
           "choices": [
             {
               "text": {
-                "jp": "メキシコのお見上げです"
+                "jp": "メキシコのお土産です"
               },
               "correct": true
             }
           ],
-          "sourceSentence": "メキシコのお見上げです",
+          "sourceSentence": "メキシコのお土産です",
           "fromConversationId": "l07-conv-011",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
@@ -2046,19 +2046,19 @@
           "id": "l07-q-011-recall-001",
           "type": "recall_check",
           "prompt": {
-            "zh": "「メキシコのお見上げです」的中文意思是？",
-            "en": "What does \"メキシコのお見上げです\" mean?"
+            "zh": "「メキシコのお土産です」的中文意思是？",
+            "en": "What does \"メキシコのお土産です\" mean?"
           },
           "choices": [
             {
               "text": {
-                "zh": "是从墨西哥带回来的纪念品。",
-                "en": "是从墨西哥带回来的纪念品。"
+                "zh": "是墨西哥的特产/礼物。",
+                "en": "It is a Mexican souvenir/gift."
               },
               "correct": true
             }
           ],
-          "sourceSentence": "メキシコのお見上げです",
+          "sourceSentence": "メキシコのお土産です",
           "fromConversationId": "l07-conv-011",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,

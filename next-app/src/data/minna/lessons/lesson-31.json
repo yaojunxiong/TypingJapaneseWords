@@ -1035,317 +1035,221 @@
         "en": "Conversation Practice"
       },
       "dialogTitle": {
-        "zh": "第31课会话",
-        "en": "第31课会话"
+        "zh": "我打算学习做菜",
+        "en": "料理を習おうと思っています"
       },
       "conversationGoal": {
-        "zh": "第31课会话练习",
-        "en": "Lesson 31 Conversation Practice"
+        "zh": "会话图确认内容",
+        "en": "Conversation image confirmed"
       },
       "items": [
         {
           "id": "l31-conv-001",
-          "speaker": "",
-          "jp": "【音楽】",
-          "kana": "",
-          "zh": "【音乐】",
-          "keyword": "音楽",
-          "videoStart": "0:00.00",
-          "videoEnd": "0:20.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "小川",
+          "jp": "来月から独身です。",
+          "kana": "らいげつからどくしんです。",
+          "zh": "从下个月起我要一个人生活。",
+          "keyword": "来月から独身",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l31-conv-002",
-          "speaker": "",
-          "jp": "来月から単身です",
-          "kana": "",
-          "zh": "从下个月开始我要单身赴任了",
-          "keyword": "単身です",
-          "videoStart": "0:20.00",
-          "videoEnd": "0:22.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l31-conv-003",
-          "speaker": "",
+          "speaker": "ミラー",
           "jp": "えっ？",
           "kana": "えっ？",
           "zh": "咦？",
-          "keyword": "",
-          "videoStart": "0:22.00",
-          "videoEnd": "0:23.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "keyword": "えっ",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
+        },
+        {
+          "id": "l31-conv-003",
+          "speaker": "小川",
+          "jp": "実は大阪の本社に転勤なんです。",
+          "kana": "じつはおおさかのほんしゃにてんきんなんです。",
+          "zh": "其实我要调到大阪总公司。",
+          "keyword": "実は大阪の本",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l31-conv-004",
-          "speaker": "",
-          "jp": "いや、実は大阪の本社に転勤なんです",
-          "kana": "",
-          "zh": "其实是调到大阪总部工作",
-          "keyword": "転勤",
-          "videoStart": "0:23.00",
-          "videoEnd": "0:29.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "ミラー",
+          "jp": "本社ですか。それはおめでとうございます。",
+          "kana": "ほんしゃですか。それはおめでとうございます。",
+          "zh": "总公司吗？那恭喜您。",
+          "keyword": "本社ですかそ",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l31-conv-005",
-          "speaker": "",
-          "jp": "本社ですか？",
-          "kana": "",
-          "zh": "总部啊？",
-          "keyword": "本社です",
-          "videoStart": "0:29.00",
-          "videoEnd": "0:31.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "ミラー",
+          "jp": "でも、どうして独身になるんですか。",
+          "kana": "でも、どうしてどくしんになるんですか。",
+          "zh": "可是为什么会变成一个人生活呢？",
+          "keyword": "でもどうして",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l31-conv-006",
-          "speaker": "",
-          "jp": "それはおめでとうございます",
-          "kana": "それはおめでとうございます",
-          "zh": "那真是恭喜你了",
-          "keyword": "",
-          "videoStart": "0:31.00",
-          "videoEnd": "0:33.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "speaker": "小川",
+          "jp": "妻と子どもは東京に残るんです。",
+          "kana": "つまとこどもはとうきょうにのこるんです。",
+          "zh": "妻子和孩子留在东京。",
+          "keyword": "妻と子どもは",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l31-conv-007",
-          "speaker": "",
-          "jp": "でも、どうして単身になるんですか？",
-          "kana": "",
-          "zh": "不过，为什么会是单身赴任呢？",
-          "keyword": "単身",
-          "videoStart": "0:33.00",
-          "videoEnd": "0:37.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "ミラー",
+          "jp": "えっ、いっしょに行かないんですか。",
+          "kana": "えっ、いっしょにいかないんですか。",
+          "zh": "咦，他们不一起去吗？",
+          "keyword": "えっいっしょ",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l31-conv-008",
-          "speaker": "",
-          "jp": "妻と子供は東京に残るんです",
-          "kana": "",
-          "zh": "妻子和孩子会留在东京",
-          "keyword": "東京",
-          "videoStart": "0:37.00",
-          "videoEnd": "0:41.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "小川",
+          "jp": "ええ。息子は来年大学の入学試験があるから、東京に残ると言うし、妻も今の会社をやめたくないと言うんです。",
+          "kana": "ええ。むすこはらいねんだいがくのにゅうがくしけんがあるから、とうきょうにのこるというし、つまもいまのかいしゃをやめたくないというんです。",
+          "zh": "是的，儿子说明年有大学入学考试要留在东京，妻子也说不想辞掉现在的工作。",
+          "keyword": "ええ息子は来",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l31-conv-009",
-          "speaker": "",
-          "jp": "えっ？一緒に行かないんですか？",
-          "kana": "",
-          "zh": "咦？他们不一起去吗？",
-          "keyword": "一緒",
-          "videoStart": "0:41.00",
-          "videoEnd": "0:44.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "ミラー",
+          "jp": "それで、別々に住むんですね。",
+          "kana": "それで、べつべつにすむんですね。",
+          "zh": "所以要分开住啊。",
+          "keyword": "それで別々に",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l31-conv-010",
-          "speaker": "",
-          "jp": "ええ…",
-          "kana": "ええ…",
-          "zh": "嗯……",
-          "keyword": "",
-          "videoStart": "0:44.00",
-          "videoEnd": "0:46.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "speaker": "小川",
+          "jp": "ええ。でも、月に2、3回週末に帰るつもりです。",
+          "kana": "ええ。でも、つきにに、さんかいしゅうまつにかえるつもりです。",
+          "zh": "是的，不过我打算每月周末回来两三次。",
+          "keyword": "ええでも月に",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l31-conv-011",
-          "speaker": "",
-          "jp": "息子は、来年大学の入学試験があるから東京に残るというし",
-          "kana": "",
-          "zh": "儿子说明年要考大学，所以想留在东京",
-          "keyword": "東京",
-          "videoStart": "0:46.00",
-          "videoEnd": "0:53.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "ミラー",
+          "jp": "大変ですね。",
+          "kana": "たいへんですね。",
+          "zh": "真不容易。",
+          "keyword": "大変ですね",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l31-conv-012",
-          "speaker": "",
-          "jp": "妻も今の会社をやめたくないというんです",
-          "kana": "",
-          "zh": "妻子也不想辞掉现在的工作",
-          "keyword": "会社",
-          "videoStart": "0:53.00",
-          "videoEnd": "0:57.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "小川",
+          "jp": "でも、いいチャンスですから、料理を習おうと思っています。",
+          "kana": "でも、いいチャンスですから、りょうりをならおうとおもっています。",
+          "zh": "不过这是个好机会，所以我打算学习做菜。",
+          "keyword": "でもいいチャ",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l31-conv-013",
-          "speaker": "",
-          "jp": "それで、別々に住むんですね",
-          "kana": "",
-          "zh": "所以你们就分开住了啊",
-          "keyword": "",
-          "videoStart": "1:00.00",
-          "videoEnd": "1:05.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l31-conv-014",
-          "speaker": "",
-          "jp": "ええ",
-          "kana": "ええ",
-          "zh": "是啊",
-          "keyword": "",
-          "videoStart": "1:05.00",
-          "videoEnd": "1:07.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "speaker": "ミラー",
+          "jp": "それはいいですね。",
+          "kana": "それはいいですね。",
+          "zh": "那很好啊。",
+          "keyword": "それはいいで",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l31-conv-015",
-          "speaker": "",
-          "jp": "でも、月に二、三回週末に帰るつもりです",
-          "kana": "",
-          "zh": "不过我打算每个月回去两三次，周末见面",
-          "keyword": "三回週末",
-          "videoStart": "1:07.00",
-          "videoEnd": "1:13.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l31-conv-016",
-          "speaker": "",
-          "jp": "大変ですね",
-          "kana": "",
-          "zh": "真不容易啊",
-          "keyword": "大変です",
-          "videoStart": "1:13.00",
-          "videoEnd": "1:15.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l31-conv-017",
-          "speaker": "",
-          "jp": "でも、いいチャンスですから",
-          "kana": "でも、いいチャンスですから",
-          "zh": "不过这是个好机会",
-          "keyword": "",
-          "videoStart": "1:15.00",
-          "videoEnd": "1:19.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l31-conv-018",
-          "speaker": "",
-          "jp": "料理を習おうと思っています",
-          "kana": "",
-          "zh": "我打算学做饭",
-          "keyword": "料理",
-          "videoStart": "1:19.00",
-          "videoEnd": "1:21.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l31-conv-019",
-          "speaker": "",
-          "jp": "それはいいですね",
-          "kana": "それはいいですね",
-          "zh": "那挺不错的",
-          "keyword": "",
-          "videoStart": "1:21.00",
-          "videoEnd": "1:23.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         }
       ]
     },
@@ -1615,7 +1519,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_grammar",
@@ -1714,7 +1619,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_examples",
@@ -1935,7 +1841,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_quiz",
@@ -3299,7 +3206,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     }
   ],
   "conversationVideo": {
@@ -3330,15 +3238,71 @@
     "sceneSummary": "一位上班族告诉朋友自己下个月要调到大阪工作，但家人（妻子和儿子）将留在东京——儿子因为要考大学，妻子不想辞职。朋友表示理解与同情，而他则乐观地把这次单身赴任当作一个学做饭的机会。",
     "storyExplanation": "会话围绕「单身赴任」展开：说话者宣布从下个月开始要单身去大阪，朋友惊讶后得知是调到大阪总部。\n\n朋友恭喜他，同时追问为什么是单身赴任。说话者解释：妻子和孩子留在东京——儿子明年要考大学，所以不想转学；妻子也不愿辞掉现在的工作。\n\n朋友感叹「那你们就分开住了啊」。说话者确认后补充说，打算每个月周末回去两三次。\n\n最后，朋友说「真不容易」。但说话者很积极，表示这是个好机会，打算学做饭。朋友也赞同「那挺好的」。",
     "characters": [
-      { "name": "说话者（転勤する人）", "role": "被调到大阪的上班族，乐观积极", "relationship": "对话的主角，向朋友传递消息" },
-      { "name": "朋友/同事", "role": "倾听并反应，表达惊讶、恭喜、理解", "relationship": "说话者的朋友或同事" }
+      {
+        "name": "说话者（転勤する人）",
+        "role": "被调到大阪的上班族，乐观积极",
+        "relationship": "对话的主角，向朋友传递消息"
+      },
+      {
+        "name": "朋友/同事",
+        "role": "倾听并反应，表达惊讶、恭喜、理解",
+        "relationship": "说话者的朋友或同事"
+      }
     ],
     "conversationFlow": [
-      { "step": 1, "title": "宣布消息", "explanation": "说话者直接告诉朋友从下个月开始要单身赴任。", "relatedLineIds": ["l31-conv-002"] },
-      { "step": 2, "title": "朋友惊讶与追问", "explanation": "朋友先是惊讶，然后得知是调到大阪总部，恭喜他，又问为什么是单身赴任。", "relatedLineIds": ["l31-conv-003","l31-conv-004","l31-conv-005","l31-conv-006","l31-conv-007"] },
-      { "step": 3, "title": "解释原因", "explanation": "说话者解释妻子和孩子留在东京，并引用儿子要考大学、妻子不想辞职的理由。", "relatedLineIds": ["l31-conv-008","l31-conv-009","l31-conv-010","l31-conv-011","l31-conv-012"] },
-      { "step": 4, "title": "理解与计划", "explanation": "朋友总结说所以你们分开住，说话者确认，并说打算每个月周末回去。", "relatedLineIds": ["l31-conv-013","l31-conv-014","l31-conv-015"] },
-      { "step": 5, "title": "乐观收尾", "explanation": "朋友说真不容易，但说话者认为这是好机会，打算学做饭。朋友表示赞同。", "relatedLineIds": ["l31-conv-016","l31-conv-017","l31-conv-018","l31-conv-019"] }
+      {
+        "step": 1,
+        "title": "宣布消息",
+        "explanation": "说话者直接告诉朋友从下个月开始要单身赴任。",
+        "relatedLineIds": [
+          "l31-conv-002"
+        ]
+      },
+      {
+        "step": 2,
+        "title": "朋友惊讶与追问",
+        "explanation": "朋友先是惊讶，然后得知是调到大阪总部，恭喜他，又问为什么是单身赴任。",
+        "relatedLineIds": [
+          "l31-conv-003",
+          "l31-conv-004",
+          "l31-conv-005",
+          "l31-conv-006",
+          "l31-conv-007"
+        ]
+      },
+      {
+        "step": 3,
+        "title": "解释原因",
+        "explanation": "说话者解释妻子和孩子留在东京，并引用儿子要考大学、妻子不想辞职的理由。",
+        "relatedLineIds": [
+          "l31-conv-008",
+          "l31-conv-009",
+          "l31-conv-010",
+          "l31-conv-011",
+          "l31-conv-012"
+        ]
+      },
+      {
+        "step": 4,
+        "title": "理解与计划",
+        "explanation": "朋友总结说所以你们分开住，说话者确认，并说打算每个月周末回去。",
+        "relatedLineIds": [
+          "l31-conv-013",
+          "l31-conv-014",
+          "l31-conv-015"
+        ]
+      },
+      {
+        "step": 5,
+        "title": "乐观收尾",
+        "explanation": "朋友说真不容易，但说话者认为这是好机会，打算学做饭。朋友表示赞同。",
+        "relatedLineIds": [
+          "l31-conv-016",
+          "l31-conv-017",
+          "l31-conv-018",
+          "l31-conv-019"
+        ]
+      }
     ],
     "lineUsage": [
       {

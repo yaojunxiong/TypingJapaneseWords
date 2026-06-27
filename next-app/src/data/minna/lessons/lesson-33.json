@@ -1037,301 +1037,157 @@
         "en": "Conversation Practice"
       },
       "dialogTitle": {
-        "zh": "第33课会话",
-        "en": "第33课会话"
+        "zh": "这是什么意思？",
+        "en": "これはどういう意味ですか"
       },
       "conversationGoal": {
-        "zh": "第33课会话练习",
-        "en": "Lesson 33 Conversation Practice"
+        "zh": "会话图确认内容",
+        "en": "Conversation image confirmed"
       },
       "items": [
         {
           "id": "l33-conv-001",
-          "speaker": "",
-          "jp": "どうぞ",
-          "kana": "どうぞ",
-          "zh": "请进。",
-          "keyword": "",
-          "videoStart": "0:30.00",
-          "videoEnd": "0:34.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "speaker": "ワット",
+          "jp": "すみません。わたしの車にこんな紙がはあったんですが、この漢字は何と読むんですか。",
+          "kana": "すみません。わたしのくるまにこんなかみがはあったんですが、このかんじはなんとよむんですか。",
+          "zh": "不好意思，我车上有这样一张纸，这个汉字怎么读？",
+          "keyword": "すみませんわ",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l33-conv-002",
-          "speaker": "",
-          "jp": "失礼します",
-          "kana": "",
-          "zh": "打扰了。",
-          "keyword": "失礼",
-          "videoStart": "0:34.00",
-          "videoEnd": "0:37.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "大学職員",
+          "jp": "「ちゅうしゃいはん」です。",
+          "kana": "「ちゅうしゃいはん」です。",
+          "zh": "读作“停车违章”。",
+          "keyword": "ちゅうしゃい",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l33-conv-003",
-          "speaker": "",
-          "jp": "すみません",
-          "kana": "すみません",
-          "zh": "不好意思。",
-          "keyword": "",
-          "videoStart": "0:37.00",
-          "videoEnd": "0:41.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "speaker": "ワット",
+          "jp": "ちゅうしゃいはん……。どういう意味ですか。",
+          "kana": "ちゅうしゃいはん……。どういういみですか。",
+          "zh": "停车违章……是什么意思？",
+          "keyword": "ちゅうしゃい",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l33-conv-004",
-          "speaker": "",
-          "jp": "私の車にこんな紙が張ってあったんですが…",
-          "kana": "",
-          "zh": "我的车上被贴了这样一张纸……",
-          "keyword": "",
-          "videoStart": "0:41.00",
-          "videoEnd": "0:45.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "大学職員",
+          "jp": "止めてはいけない場所に車を止めたという意味です。どこに止めたんですか。",
+          "kana": "とめてはいけないばしょにくるまをとめたといういみです。どこにとめたんですか。",
+          "zh": "意思是把车停在禁止停车的地方。停在哪里了？",
+          "keyword": "止めてはいけ",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l33-conv-005",
-          "speaker": "",
-          "jp": "この漢字は何と言うのですか？",
-          "kana": "",
-          "zh": "这个汉字是什么意思？",
-          "keyword": "漢字",
-          "videoStart": "0:45.00",
-          "videoEnd": "0:48.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "ワット",
+          "jp": "駅の前です。雑誌を買いに行って、10分だけ……。",
+          "kana": "えきのまえです。ざっしをかいにいって、じゅっぷんだけ……。",
+          "zh": "车站前。我去买杂志，只停了十分钟……",
+          "keyword": "駅の前です雑",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l33-conv-006",
-          "speaker": "",
-          "jp": "駐車違反です。",
-          "kana": "",
-          "zh": "是“违章停车”。",
-          "keyword": "駐車違反です",
-          "videoStart": "0:48.00",
-          "videoEnd": "0:50.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "大学職員",
+          "jp": "駅の前だったら、10分でもだめですよ。",
+          "kana": "えきのまえだったら、じゅっぷんでもだめですよ。",
+          "zh": "如果是车站前，即使十分钟也不行。",
+          "keyword": "駅の前だった",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l33-conv-007",
-          "speaker": "",
-          "jp": "駐車違反？",
-          "kana": "",
-          "zh": "违章停车？",
-          "keyword": "駐車違反",
-          "videoStart": "0:50.00",
-          "videoEnd": "0:53.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "ワット",
+          "jp": "そうですか。罰金を払わなければなりませんか。",
+          "kana": "そうですか。ばっきんをはらわなければなりませんか。",
+          "zh": "是吗？必须交罚款吗？",
+          "keyword": "そうですか罰",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l33-conv-008",
-          "speaker": "",
-          "jp": "どういう意味ですか？",
-          "kana": "",
-          "zh": "是什么意思？",
-          "keyword": "意味です",
-          "videoStart": "0:53.00",
-          "videoEnd": "0:56.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "大学職員",
+          "jp": "ええ、15,000円払わないといけません。",
+          "kana": "ええ、いちまんごせんえんはらわないといけません。",
+          "zh": "是的，必须交一万五千日元。",
+          "keyword": "ええ15,0",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l33-conv-009",
-          "speaker": "",
-          "jp": "止めてはいけない場所に車を止めたという意味です。",
-          "kana": "",
-          "zh": "意思是您把车停在了禁止停车的地方。",
-          "keyword": "意味です",
-          "videoStart": "0:57.00",
-          "videoEnd": "1:02.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l33-conv-010",
-          "speaker": "",
-          "jp": "どこに止めたんですか？",
-          "kana": "",
-          "zh": "我是停在哪里了呢？",
-          "keyword": "",
-          "videoStart": "1:02.00",
-          "videoEnd": "1:04.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l33-conv-011",
-          "speaker": "",
-          "jp": "駅の前です。",
-          "kana": "",
-          "zh": "在车站前面。",
-          "keyword": "",
-          "videoStart": "1:04.00",
-          "videoEnd": "1:06.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l33-conv-012",
-          "speaker": "",
-          "jp": "雑誌を買いに行って、10分だけだったんですが…",
-          "kana": "",
-          "zh": "我只是去买本杂志，就10分钟而已……",
-          "keyword": "10分",
-          "videoStart": "1:06.00",
-          "videoEnd": "1:15.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l33-conv-013",
-          "speaker": "",
-          "jp": "駅の前だったら10分でもダメですよ。",
-          "kana": "",
-          "zh": "在车站前面，即使只有10分钟也不行哦。",
-          "keyword": "10分",
-          "videoStart": "1:15.00",
-          "videoEnd": "1:20.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l33-conv-014",
-          "speaker": "",
-          "jp": "そうですか…",
-          "kana": "そうですか…",
-          "zh": "是这样啊……",
-          "keyword": "",
-          "videoStart": "1:20.00",
-          "videoEnd": "1:22.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "speaker": "ワット",
+          "jp": "えっ。15,000円ですか。雑誌は300円だったんですけど……。",
+          "kana": "えっ。いちまんごせんえんですか。ざっしはさんびゃくえんだったんですけど……。",
+          "zh": "咦，一万五千日元？杂志才三百日元……",
+          "keyword": "えっ15,0",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l33-conv-015",
-          "speaker": "",
-          "jp": "罰金を払わなければなりませんか？",
-          "kana": "",
-          "zh": "我需要交罚款吗？",
-          "keyword": "罰金",
-          "videoStart": "1:22.00",
-          "videoEnd": "1:25.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l33-conv-016",
-          "speaker": "",
-          "jp": "ええ、15000円払わないといけません。",
-          "kana": "",
-          "zh": "是的，需要缴纳15000日元。",
-          "keyword": "15000円払",
-          "videoStart": "1:25.00",
-          "videoEnd": "1:30.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l33-conv-017",
-          "speaker": "",
-          "jp": "えっ、15000円ですか？！",
-          "kana": "",
-          "zh": "什么，15000日元？！",
-          "keyword": "15000円です",
-          "videoStart": "1:30.00",
-          "videoEnd": "1:34.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l33-conv-018",
-          "speaker": "",
-          "jp": "雑誌は300円だったんですけど……",
-          "kana": "",
-          "zh": "可那本杂志才300日元啊……",
-          "keyword": "300円",
-          "videoStart": "1:34.00",
-          "videoEnd": "1:38.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         }
       ]
     },
@@ -1601,7 +1457,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_grammar",
@@ -1700,7 +1557,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_examples",
@@ -1943,7 +1801,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_quiz",
@@ -3236,7 +3095,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     }
   ],
   "conversationVideo": {
@@ -3267,40 +3127,252 @@
     "sceneSummary": "一位司机拿着被贴在车上的罚单来到派出所。他看不懂纸上的汉字，向警察询问。警察解释这是违章停车罚单，司机把车停在了车站前面。司机辩解自己只是去买杂志，只停了10分钟。但警察说车站前面即使10分钟也不行。司机得知要交15000日元罚款后大吃一惊，因为那本杂志才300日元。",
     "storyExplanation": "这段会话展示了日常生活中遇到不认识的汉字标识时如何询问含义（この漢字は何と言うのですか？）、对方如何解释意思（〜という意味です）、以及如何为自己辩解（〜たんですが…）。同时体现了〜てはいけない（禁止）和〜なければなりません（必须）这两个重要语法点的实际应用场景。对话中司机从困惑（看不懂汉字）到惊讶（得知罚款金额）的情绪变化，也使会话更加生动自然。",
     "characters": [
-      { "name": "司机", "role": "被贴罚单的驾驶者", "relationship": "违章停车当事人" },
-      { "name": "警察", "role": "值班警察/派出所工作人员", "relationship": "处理违章的执法人员" }
+      {
+        "name": "司机",
+        "role": "被贴罚单的驾驶者",
+        "relationship": "违章停车当事人"
+      },
+      {
+        "name": "警察",
+        "role": "值班警察/派出所工作人员",
+        "relationship": "处理违章的执法人员"
+      }
     ],
     "conversationFlow": [
-      { "step": 1, "title": "进入派出所", "explanation": "警察请司机进来（どうぞ），司机礼貌地打招呼（失礼します）。", "relatedLineIds": ["l33-conv-001", "l33-conv-002"] },
-      { "step": 2, "title": "说明来意", "explanation": "司机先道歉（すみません），然后拿出罚单说明车上被贴了这张纸。", "relatedLineIds": ["l33-conv-003", "l33-conv-004"] },
-      { "step": 3, "title": "询问汉字意思", "explanation": "司机问上面汉字的意思（この漢字は何と言うのですか？），警察回答这是'驻车违反'即违章停车。", "relatedLineIds": ["l33-conv-005", "l33-conv-006"] },
-      { "step": 4, "title": "确认含义", "explanation": "司机重复确认（駐車違反？），并追问具体意思（どういう意味ですか？）。", "relatedLineIds": ["l33-conv-007", "l33-conv-008"] },
-      { "step": 5, "title": "警察解释规则", "explanation": "警察解释意思是把车停在了禁止停车的地方（止めてはいけない場所）。", "relatedLineIds": ["l33-conv-009"] },
-      { "step": 6, "title": "确认停车位置", "explanation": "司机反问自己停在了哪里，警察说在车站前面。", "relatedLineIds": ["l33-conv-010", "l33-conv-011"] },
-      { "step": 7, "title": "司机辩解", "explanation": "司机辩解只是去买杂志，只停了10分钟而已（10分だけだったんですが…）。", "relatedLineIds": ["l33-conv-012"] },
-      { "step": 8, "title": "警察说明规定", "explanation": "警察强调车站前面即使10分钟也不行（10分でもダメですよ）。", "relatedLineIds": ["l33-conv-013"] },
-      { "step": 9, "title": "询问罚款", "explanation": "司机无奈接受（そうですか…），询问是否需要交罚款。", "relatedLineIds": ["l33-conv-014", "l33-conv-015"] },
-      { "step": 10, "title": "得知金额", "explanation": "警察说需要交15000日元，司机惊呼金额比杂志贵太多。", "relatedLineIds": ["l33-conv-016", "l33-conv-017", "l33-conv-018"] }
+      {
+        "step": 1,
+        "title": "进入派出所",
+        "explanation": "警察请司机进来（どうぞ），司机礼貌地打招呼（失礼します）。",
+        "relatedLineIds": [
+          "l33-conv-001",
+          "l33-conv-002"
+        ]
+      },
+      {
+        "step": 2,
+        "title": "说明来意",
+        "explanation": "司机先道歉（すみません），然后拿出罚单说明车上被贴了这张纸。",
+        "relatedLineIds": [
+          "l33-conv-003",
+          "l33-conv-004"
+        ]
+      },
+      {
+        "step": 3,
+        "title": "询问汉字意思",
+        "explanation": "司机问上面汉字的意思（この漢字は何と言うのですか？），警察回答这是'驻车违反'即违章停车。",
+        "relatedLineIds": [
+          "l33-conv-005",
+          "l33-conv-006"
+        ]
+      },
+      {
+        "step": 4,
+        "title": "确认含义",
+        "explanation": "司机重复确认（駐車違反？），并追问具体意思（どういう意味ですか？）。",
+        "relatedLineIds": [
+          "l33-conv-007",
+          "l33-conv-008"
+        ]
+      },
+      {
+        "step": 5,
+        "title": "警察解释规则",
+        "explanation": "警察解释意思是把车停在了禁止停车的地方（止めてはいけない場所）。",
+        "relatedLineIds": [
+          "l33-conv-009"
+        ]
+      },
+      {
+        "step": 6,
+        "title": "确认停车位置",
+        "explanation": "司机反问自己停在了哪里，警察说在车站前面。",
+        "relatedLineIds": [
+          "l33-conv-010",
+          "l33-conv-011"
+        ]
+      },
+      {
+        "step": 7,
+        "title": "司机辩解",
+        "explanation": "司机辩解只是去买杂志，只停了10分钟而已（10分だけだったんですが…）。",
+        "relatedLineIds": [
+          "l33-conv-012"
+        ]
+      },
+      {
+        "step": 8,
+        "title": "警察说明规定",
+        "explanation": "警察强调车站前面即使10分钟也不行（10分でもダメですよ）。",
+        "relatedLineIds": [
+          "l33-conv-013"
+        ]
+      },
+      {
+        "step": 9,
+        "title": "询问罚款",
+        "explanation": "司机无奈接受（そうですか…），询问是否需要交罚款。",
+        "relatedLineIds": [
+          "l33-conv-014",
+          "l33-conv-015"
+        ]
+      },
+      {
+        "step": 10,
+        "title": "得知金额",
+        "explanation": "警察说需要交15000日元，司机惊呼金额比杂志贵太多。",
+        "relatedLineIds": [
+          "l33-conv-016",
+          "l33-conv-017",
+          "l33-conv-018"
+        ]
+      }
     ],
     "lineUsage": [
-      { "lineId": "l33-conv-001", "japanese": "どうぞ", "chineseMeaning": "请进。", "realLifeUse": "让对方进入房间时使用，如请客人进屋、请进办公室等。", "emotionTone": "礼貌、客气的邀请语气", "memoryTip": "想想'do zo'→'做哦'（请做/请进）" },
-      { "lineId": "l33-conv-002", "japanese": "失礼します", "chineseMeaning": "打扰了。", "realLifeUse": "进入别人房间、离开座位、挂电话前都可以用。", "emotionTone": "礼貌、略带歉意的正式语气", "memoryTip": "'失礼'（shitsurei）是失礼/抱歉的意思，加上'します'就是'我要失礼了'" },
-      { "lineId": "l33-conv-003", "japanese": "すみません", "chineseMeaning": "不好意思。", "realLifeUse": "道歉、搭话、求助时万能用语，语气比'失礼します'更日常。", "emotionTone": "歉意、打扰对方的语气", "memoryTip": "和'済みません'同源，本意是'无法结束/无法释怀'的歉意" },
-      { "lineId": "l33-conv-004", "japanese": "私の車にこんな紙が張ってあったんですが…", "chineseMeaning": "我的车上被贴了这样一张纸……", "realLifeUse": "向警察或相关人员出示罚单、通知等物品时的说明句式。", "emotionTone": "困惑、不知所措的语气", "memoryTip": "'〜たんですが'是'〜たのですが'的口语形式，用于铺垫说明情况" },
-      { "lineId": "l33-conv-005", "japanese": "この漢字は何と言うのですか？", "chineseMeaning": "这个汉字是什么意思？", "realLifeUse": "看不懂汉字或标识时的标准提问方式，非常实用。", "emotionTone": "求知、疑惑的语气", "memoryTip": "'何と言う'（なんという）是'怎么说/叫什么'的意思，注意不是'なに'而是'なん'" },
-      { "lineId": "l33-conv-006", "japanese": "駐車違反です。", "chineseMeaning": "是「违章停车」。", "realLifeUse": "警察或相关人员宣告违规事实时的简练表达。", "emotionTone": "告知事实、语气肯定的官方口吻", "memoryTip": "'駐車'（ちゅうしゃ）停车 + '違反'（いはん）违反 = 违章停车" },
-      { "lineId": "l33-conv-007", "japanese": "駐車違反？", "chineseMeaning": "违章停车？", "realLifeUse": "听到不熟悉词汇时用升调重复表示疑问确认。", "emotionTone": "惊讶、难以置信的疑问语气", "memoryTip": "升调的重复疑问句——简单高效的确认方式" },
-      { "lineId": "l33-conv-008", "japanese": "どういう意味ですか？", "chineseMeaning": "是什么意思？", "realLifeUse": "询问词汇或表述的具体含义，比'何ですか'更精确。", "emotionTone": "好奇、追问的语气", "memoryTip": "'どういう'比'どんな'更强调'具体怎样'的含义" },
-      { "lineId": "l33-conv-009", "japanese": "止めてはいけない場所に車を止めたという意味です。", "chineseMeaning": "意思是您把车停在了禁止停车的地方。", "realLifeUse": "用'〜という意味です'来解释某个说法或标识的含义。", "emotionTone": "耐心解释、说明规则的语气", "memoryTip": "'止めてはいけない'是'止める'的て形+はいけない（禁止形），意为'不能停'" },
-      { "lineId": "l33-conv-010", "japanese": "どこに止めたんですか？", "chineseMeaning": "我是停在哪里了呢？", "realLifeUse": "自言自语或反问时用'〜たんですか'表达思考或反问。", "emotionTone": "自言自语式的疑惑语气", "memoryTip": "这里的'んですか'不是普通的疑问，而是带着'我搞不清楚了'的语气" },
-      { "lineId": "l33-conv-011", "japanese": "駅の前です。", "chineseMeaning": "在车站前面。", "realLifeUse": "简洁回答地点时用'〜です'即可。", "emotionTone": "陈述事实的平淡语气", "memoryTip": "'駅の前'（えきのまえ）是最常用的方位表达之一" },
-      { "lineId": "l33-conv-012", "japanese": "雑誌を買いに行って、10分だけだったんですが…", "chineseMeaning": "我只是去买本杂志，就10分钟而已……", "realLifeUse": "为自己辩解时用'〜たんですが'来说明理由和情况。", "emotionTone": "辩解、委屈、试图争取理解的语气", "memoryTip": "'だけ'强调'仅仅'，'〜たんですが'带出辩解的理由" },
-      { "lineId": "l33-conv-013", "japanese": "駅の前だったら10分でもダメですよ。", "chineseMeaning": "在车站前面，即使只有10分钟也不行哦。", "realLifeUse": "用'〜でも'表示'即使……也……'的让步语气。", "emotionTone": "语气坚定但有礼貌地说明规则", "memoryTip": "'だったら'是'如果是……的话'，'10分でも'是'即使是10分钟'，'ダメですよ'是'不行哦'" },
-      { "lineId": "l33-conv-014", "japanese": "そうですか…", "chineseMeaning": "是这样啊……", "realLifeUse": "表示理解了对方的话，略感无奈或失望。", "emotionTone": "无奈、接受现实的失落语气", "memoryTip": "读的时候拖长音（そうですか…）表示语气低落、无奈接受" },
-      { "lineId": "l33-conv-015", "japanese": "罰金を払わなければなりませんか？", "chineseMeaning": "我需要交罚款吗？", "realLifeUse": "用'〜なければなりませんか'询问是否必须做某事。", "emotionTone": "担心、试探性询问的语气", "memoryTip": "'罰金'（ばっきん）罚款 + '払わなければなりません'（はらわなければなりません）不付不行 = 必须付罚款" },
-      { "lineId": "l33-conv-016", "japanese": "ええ、15000円払わないといけません。", "chineseMeaning": "是的，需要缴纳15000日元。", "realLifeUse": "用'〜ないといけません'（口语形式）表示义务。", "emotionTone": "肯定的告知语气", "memoryTip": "'払わないといけません'是'払わなければなりません'的口语缩略形式" },
-      { "lineId": "l33-conv-017", "japanese": "えっ、15000円ですか？！", "chineseMeaning": "什么，15000日元？！", "realLifeUse": "听到高价时惊讶的反应，'えっ'表示吃惊。", "emotionTone": "极度惊讶、难以置信的语气", "memoryTip": "'えっ'（短促的'e'音）是日语中最常用的惊讶感叹词" },
-      { "lineId": "l33-conv-018", "japanese": "雑誌は300円だったんですけど……", "chineseMeaning": "可那本杂志才300日元啊……", "realLifeUse": "用'〜たんですけど'表达对比和无奈的抱怨。", "emotionTone": "哭笑不得、自嘲对比的语气", "memoryTip": "'300円'（さんびゃくえん）和'15000円'（いちまんごせんえん）形成强烈对比，突出幽默效果" }
+      {
+        "lineId": "l33-conv-001",
+        "japanese": "どうぞ",
+        "chineseMeaning": "请进。",
+        "realLifeUse": "让对方进入房间时使用，如请客人进屋、请进办公室等。",
+        "emotionTone": "礼貌、客气的邀请语气",
+        "memoryTip": "想想'do zo'→'做哦'（请做/请进）"
+      },
+      {
+        "lineId": "l33-conv-002",
+        "japanese": "失礼します",
+        "chineseMeaning": "打扰了。",
+        "realLifeUse": "进入别人房间、离开座位、挂电话前都可以用。",
+        "emotionTone": "礼貌、略带歉意的正式语气",
+        "memoryTip": "'失礼'（shitsurei）是失礼/抱歉的意思，加上'します'就是'我要失礼了'"
+      },
+      {
+        "lineId": "l33-conv-003",
+        "japanese": "すみません",
+        "chineseMeaning": "不好意思。",
+        "realLifeUse": "道歉、搭话、求助时万能用语，语气比'失礼します'更日常。",
+        "emotionTone": "歉意、打扰对方的语气",
+        "memoryTip": "和'済みません'同源，本意是'无法结束/无法释怀'的歉意"
+      },
+      {
+        "lineId": "l33-conv-004",
+        "japanese": "私の車にこんな紙が張ってあったんですが…",
+        "chineseMeaning": "我的车上被贴了这样一张纸……",
+        "realLifeUse": "向警察或相关人员出示罚单、通知等物品时的说明句式。",
+        "emotionTone": "困惑、不知所措的语气",
+        "memoryTip": "'〜たんですが'是'〜たのですが'的口语形式，用于铺垫说明情况"
+      },
+      {
+        "lineId": "l33-conv-005",
+        "japanese": "この漢字は何と言うのですか？",
+        "chineseMeaning": "这个汉字是什么意思？",
+        "realLifeUse": "看不懂汉字或标识时的标准提问方式，非常实用。",
+        "emotionTone": "求知、疑惑的语气",
+        "memoryTip": "'何と言う'（なんという）是'怎么说/叫什么'的意思，注意不是'なに'而是'なん'"
+      },
+      {
+        "lineId": "l33-conv-006",
+        "japanese": "駐車違反です。",
+        "chineseMeaning": "是「违章停车」。",
+        "realLifeUse": "警察或相关人员宣告违规事实时的简练表达。",
+        "emotionTone": "告知事实、语气肯定的官方口吻",
+        "memoryTip": "'駐車'（ちゅうしゃ）停车 + '違反'（いはん）违反 = 违章停车"
+      },
+      {
+        "lineId": "l33-conv-007",
+        "japanese": "駐車違反？",
+        "chineseMeaning": "违章停车？",
+        "realLifeUse": "听到不熟悉词汇时用升调重复表示疑问确认。",
+        "emotionTone": "惊讶、难以置信的疑问语气",
+        "memoryTip": "升调的重复疑问句——简单高效的确认方式"
+      },
+      {
+        "lineId": "l33-conv-008",
+        "japanese": "どういう意味ですか？",
+        "chineseMeaning": "是什么意思？",
+        "realLifeUse": "询问词汇或表述的具体含义，比'何ですか'更精确。",
+        "emotionTone": "好奇、追问的语气",
+        "memoryTip": "'どういう'比'どんな'更强调'具体怎样'的含义"
+      },
+      {
+        "lineId": "l33-conv-009",
+        "japanese": "止めてはいけない場所に車を止めたという意味です。",
+        "chineseMeaning": "意思是您把车停在了禁止停车的地方。",
+        "realLifeUse": "用'〜という意味です'来解释某个说法或标识的含义。",
+        "emotionTone": "耐心解释、说明规则的语气",
+        "memoryTip": "'止めてはいけない'是'止める'的て形+はいけない（禁止形），意为'不能停'"
+      },
+      {
+        "lineId": "l33-conv-010",
+        "japanese": "どこに止めたんですか？",
+        "chineseMeaning": "我是停在哪里了呢？",
+        "realLifeUse": "自言自语或反问时用'〜たんですか'表达思考或反问。",
+        "emotionTone": "自言自语式的疑惑语气",
+        "memoryTip": "这里的'んですか'不是普通的疑问，而是带着'我搞不清楚了'的语气"
+      },
+      {
+        "lineId": "l33-conv-011",
+        "japanese": "駅の前です。",
+        "chineseMeaning": "在车站前面。",
+        "realLifeUse": "简洁回答地点时用'〜です'即可。",
+        "emotionTone": "陈述事实的平淡语气",
+        "memoryTip": "'駅の前'（えきのまえ）是最常用的方位表达之一"
+      },
+      {
+        "lineId": "l33-conv-012",
+        "japanese": "雑誌を買いに行って、10分だけだったんですが…",
+        "chineseMeaning": "我只是去买本杂志，就10分钟而已……",
+        "realLifeUse": "为自己辩解时用'〜たんですが'来说明理由和情况。",
+        "emotionTone": "辩解、委屈、试图争取理解的语气",
+        "memoryTip": "'だけ'强调'仅仅'，'〜たんですが'带出辩解的理由"
+      },
+      {
+        "lineId": "l33-conv-013",
+        "japanese": "駅の前だったら10分でもダメですよ。",
+        "chineseMeaning": "在车站前面，即使只有10分钟也不行哦。",
+        "realLifeUse": "用'〜でも'表示'即使……也……'的让步语气。",
+        "emotionTone": "语气坚定但有礼貌地说明规则",
+        "memoryTip": "'だったら'是'如果是……的话'，'10分でも'是'即使是10分钟'，'ダメですよ'是'不行哦'"
+      },
+      {
+        "lineId": "l33-conv-014",
+        "japanese": "そうですか…",
+        "chineseMeaning": "是这样啊……",
+        "realLifeUse": "表示理解了对方的话，略感无奈或失望。",
+        "emotionTone": "无奈、接受现实的失落语气",
+        "memoryTip": "读的时候拖长音（そうですか…）表示语气低落、无奈接受"
+      },
+      {
+        "lineId": "l33-conv-015",
+        "japanese": "罰金を払わなければなりませんか？",
+        "chineseMeaning": "我需要交罚款吗？",
+        "realLifeUse": "用'〜なければなりませんか'询问是否必须做某事。",
+        "emotionTone": "担心、试探性询问的语气",
+        "memoryTip": "'罰金'（ばっきん）罚款 + '払わなければなりません'（はらわなければなりません）不付不行 = 必须付罚款"
+      },
+      {
+        "lineId": "l33-conv-016",
+        "japanese": "ええ、15000円払わないといけません。",
+        "chineseMeaning": "是的，需要缴纳15000日元。",
+        "realLifeUse": "用'〜ないといけません'（口语形式）表示义务。",
+        "emotionTone": "肯定的告知语气",
+        "memoryTip": "'払わないといけません'是'払わなければなりません'的口语缩略形式"
+      },
+      {
+        "lineId": "l33-conv-017",
+        "japanese": "えっ、15000円ですか？！",
+        "chineseMeaning": "什么，15000日元？！",
+        "realLifeUse": "听到高价时惊讶的反应，'えっ'表示吃惊。",
+        "emotionTone": "极度惊讶、难以置信的语气",
+        "memoryTip": "'えっ'（短促的'e'音）是日语中最常用的惊讶感叹词"
+      },
+      {
+        "lineId": "l33-conv-018",
+        "japanese": "雑誌は300円だったんですけど……",
+        "chineseMeaning": "可那本杂志才300日元啊……",
+        "realLifeUse": "用'〜たんですけど'表达对比和无奈的抱怨。",
+        "emotionTone": "哭笑不得、自嘲对比的语气",
+        "memoryTip": "'300円'（さんびゃくえん）和'15000円'（いちまんごせんえん）形成强烈对比，突出幽默效果"
+      }
     ],
     "chineseRetellPrompt": "请用中文复述第33课会话的内容。\n\n「第33课讲的是一个人因为看不懂罚单上的汉字而去派出所询问的故事。」\n\n试试看用你自己的话把整个故事说一遍。",
     "realLifeReplacementPractice": [

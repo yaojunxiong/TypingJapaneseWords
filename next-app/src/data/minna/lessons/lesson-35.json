@@ -1035,173 +1035,189 @@
         "en": "Conversation Practice"
       },
       "dialogTitle": {
-        "zh": "第35课会话",
-        "en": "第35课会话"
+        "zh": "有没有什么好地方？",
+        "en": "どこかいい所、ありませんか"
       },
       "conversationGoal": {
-        "zh": "第35课会话练习",
-        "en": "Lesson 35 Conversation Practice"
+        "zh": "会话图确认内容",
+        "en": "Conversation image confirmed"
       },
       "items": [
         {
           "id": "l35-conv-001",
-          "speaker": "",
-          "jp": "スズキさん、冬休みに友達とスキーに行きたいんですが、どこかいいところありませんか？",
-          "kana": "",
-          "zh": "铃木先生，我寒假想和朋友去滑雪，有什么推荐的地方吗？",
-          "keyword": "友達",
-          "videoStart": "0:00.00",
-          "videoEnd": "0:15.44",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "タワポン",
+          "jp": "鈴木さん、冬休みに友達とスキーに行きたいんですが、どこかいい所、ありませんか。",
+          "kana": "すずきさん、ふゆやすみにともだちとスキーにいきたいんですが、どこかいいところ、ありませんか。",
+          "zh": "铃木先生，寒假我想和朋友去滑雪，有没有什么好地方？",
+          "keyword": "鈴木さん冬休",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l35-conv-002",
-          "speaker": "",
-          "jp": "何日ぐらいの予定ですか？",
-          "kana": "",
-          "zh": "打算去几天呢？",
-          "keyword": "予定です",
-          "videoStart": "0:15.44",
-          "videoEnd": "0:18.08",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "鈴木",
+          "jp": "何日ぐらいの予定ですか。",
+          "kana": "なんにちぐらいのよていですか。",
+          "zh": "计划去几天？",
+          "keyword": "何日ぐらいの",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l35-conv-003",
-          "speaker": "",
-          "jp": "三日ぐらいです。それなら草津か志賀高原がいいと思いますよ。温泉もありますし。",
-          "kana": "",
-          "zh": "大概三天左右的话，我觉得草津或者志贺高原不错哦，还有温泉。",
-          "keyword": "温泉",
-          "videoStart": "0:18.08",
-          "videoEnd": "0:26.72",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "タワポン",
+          "jp": "3日ぐらいです。",
+          "kana": "みっかぐらいです。",
+          "zh": "大约三天。",
+          "keyword": "3日ぐらいで",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l35-conv-004",
-          "speaker": "",
-          "jp": "どうやって行くんですか？",
-          "kana": "",
-          "zh": "要怎么去呢？",
-          "keyword": "",
-          "videoStart": "0:26.72",
-          "videoEnd": "0:30.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "鈴木",
+          "jp": "それなら、草津か志賀高原がいいと思いますよ。温泉もあるし……。",
+          "kana": "それなら、くさつかしがこうげんがいいとおもいますよ。おんせんもあるし……。",
+          "zh": "那样的话，我觉得草津或志贺高原不错，还有温泉……",
+          "keyword": "それなら草津",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l35-conv-005",
-          "speaker": "",
-          "jp": "JRでも行けますが、夜行バスなら朝に着きますから便利ですよ。",
-          "kana": "",
-          "zh": "可以坐JR，也可以搭夜间巴士，早上就能到，很方便。",
-          "keyword": "便利です",
-          "videoStart": "0:30.00",
-          "videoEnd": "0:36.48",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "タワポン",
+          "jp": "どうやって行くんですか。",
+          "kana": "どうやっていくんですか。",
+          "zh": "怎么去？",
+          "keyword": "どうやって行",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l35-conv-006",
-          "speaker": "",
-          "jp": "そうですか。どちらが安いんですか？",
-          "kana": "",
-          "zh": "这样啊，哪种方式比较便宜？",
-          "keyword": "",
-          "videoStart": "0:36.48",
-          "videoEnd": "0:41.64",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "鈴木",
+          "jp": "JRでも行けますが、夜行バスなら、朝着きますから、便利ですよ。",
+          "kana": "ジェイアールでもいけますが、やこうバスなら、あさつきますから、べんりですよ。",
+          "zh": "也可以乘JR，不过夜行巴士早上到，很方便。",
+          "keyword": "JRでも行け",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l35-conv-007",
-          "speaker": "",
-          "jp": "さあ、旅行社に行けばもっと詳しいことがわかりますよ。",
-          "kana": "",
-          "zh": "这个嘛，去旅行社问问会更清楚。",
-          "keyword": "旅行社",
-          "videoStart": "0:41.64",
-          "videoEnd": "0:48.88",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "タワポン",
+          "jp": "そうですか。どちらが安いんですか。",
+          "kana": "そうですか。どちらがやすいんですか。",
+          "zh": "是吗？哪一种便宜？",
+          "keyword": "そうですかど",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l35-conv-008",
-          "speaker": "",
-          "jp": "それからスキーの道具や服は何も持っていないんですが…",
-          "kana": "",
-          "zh": "还有，我什么滑雪装备和服装都没有……",
-          "keyword": "道具",
-          "videoStart": "0:49.84",
-          "videoEnd": "0:56.80",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "鈴木",
+          "jp": "さあ……。旅行社へ行けばもっと詳しいことがわかりますよ。",
+          "kana": "さあ……。りょこうしゃへいけばもっとくわしいことがわかりますよ。",
+          "zh": "这个嘛……去旅行社就能了解更详细的情况。",
+          "keyword": "さあ旅行社へ",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l35-conv-009",
-          "speaker": "",
-          "jp": "全部スキー場で借りられますよ。心配なら旅行社で予約もできますし。",
-          "kana": "",
-          "zh": "这些都可以在滑雪场租借。如果不放心，也可以在旅行社提前预订。",
-          "keyword": "予約",
-          "videoStart": "0:56.80",
-          "videoEnd": "1:04.48",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "タワポン",
+          "jp": "それから、スキーの道具や服は何も持っていないんですが……。",
+          "kana": "それから、スキーのどうぐやふくはなにももっていないんですが……。",
+          "zh": "另外，滑雪用具和衣服我什么都没有……",
+          "keyword": "それからスキ",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l35-conv-010",
-          "speaker": "",
+          "speaker": "鈴木",
+          "jp": "全部スキー場で借りられますよ。心配なら、旅行社で予約もできますし……。",
+          "kana": "ぜんぶスキーじょうでかりられますよ。しんぱいなら、りょこうしゃでよやくもできますし……。",
+          "zh": "全部都可以在滑雪场租。如果担心，也可以在旅行社预约……",
+          "keyword": "全部スキー場",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
+        },
+        {
+          "id": "l35-conv-011",
+          "speaker": "タワポン",
           "jp": "そうですか。どうもありがとうございました。",
           "kana": "そうですか。どうもありがとうございました。",
-          "zh": "这样啊，非常感谢您。",
-          "keyword": "",
-          "videoStart": "1:04.48",
-          "videoEnd": "1:10.32",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "zh": "是吗？非常感谢。",
+          "keyword": "そうですかど",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         }
       ]
     },
@@ -1416,7 +1432,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_grammar",
@@ -1529,7 +1546,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_examples",
@@ -1644,7 +1662,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_quiz",
@@ -2369,7 +2388,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     }
   ],
   "conversationVideo": {
@@ -2400,28 +2420,152 @@
     "sceneSummary": "冬休みに友達とスキーに行きたい人がスズキさんに相談する。スズキさんは草津や志賀高原を勧め、交通手段や道具のレンタルについてアドバイスする。",
     "storyExplanation": "この会話は、スキー旅行の計画を立てるためにアドバイスを求める場面です。スズキさんは経験者として、行き先、交通手段、費用、道具のレンタルなど、旅行に必要な情報を順番に教えています。条件形「〜ば」や「〜なら」を使って、様々な選択肢とその利点を説明するのが特徴です。",
     "characters": [
-      { "name": "スズキさん", "role": "アドバイスをする先輩", "relationship": "スキー旅行に詳しい同僚・先輩" },
-      { "name": "質問者", "role": "スキー旅行を計画している人", "relationship": "スズキさんの後輩・同僚" }
+      {
+        "name": "スズキさん",
+        "role": "アドバイスをする先輩",
+        "relationship": "スキー旅行に詳しい同僚・先輩"
+      },
+      {
+        "name": "質問者",
+        "role": "スキー旅行を計画している人",
+        "relationship": "スズキさんの後輩・同僚"
+      }
     ],
     "conversationFlow": [
-      { "step": 1, "title": "相談の切り出し", "explanation": "質問者が冬休みにスキーに行きたいとスズキさんに相談する。", "relatedLineIds": ["l35-conv-001"] },
-      { "step": 2, "title": "日程の確認", "explanation": "スズキさんが何日ぐらいの予定か尋ね、適切な行き先を提案する。", "relatedLineIds": ["l35-conv-002", "l35-conv-003"] },
-      { "step": 3, "title": "交通手段の説明", "explanation": "JRと夜行バスの選択肢を提示し、それぞれの利点を説明する。", "relatedLineIds": ["l35-conv-004", "l35-conv-005"] },
-      { "step": 4, "title": "費用の確認", "explanation": "質問者が費用の安さを気にし、スズキさんが旅行社を勧める。", "relatedLineIds": ["l35-conv-006", "l35-conv-007"] },
-      { "step": 5, "title": "道具のレンタル", "explanation": "スキー道具がないことに不安を感じる質問者に、スキー場でのレンタルを勧める。", "relatedLineIds": ["l35-conv-008", "l35-conv-009"] },
-      { "step": 6, "title": "感謝", "explanation": "質問者がスズキさんのアドバイスに感謝する。", "relatedLineIds": ["l35-conv-010"] }
+      {
+        "step": 1,
+        "title": "相談の切り出し",
+        "explanation": "質問者が冬休みにスキーに行きたいとスズキさんに相談する。",
+        "relatedLineIds": [
+          "l35-conv-001"
+        ]
+      },
+      {
+        "step": 2,
+        "title": "日程の確認",
+        "explanation": "スズキさんが何日ぐらいの予定か尋ね、適切な行き先を提案する。",
+        "relatedLineIds": [
+          "l35-conv-002",
+          "l35-conv-003"
+        ]
+      },
+      {
+        "step": 3,
+        "title": "交通手段の説明",
+        "explanation": "JRと夜行バスの選択肢を提示し、それぞれの利点を説明する。",
+        "relatedLineIds": [
+          "l35-conv-004",
+          "l35-conv-005"
+        ]
+      },
+      {
+        "step": 4,
+        "title": "費用の確認",
+        "explanation": "質問者が費用の安さを気にし、スズキさんが旅行社を勧める。",
+        "relatedLineIds": [
+          "l35-conv-006",
+          "l35-conv-007"
+        ]
+      },
+      {
+        "step": 5,
+        "title": "道具のレンタル",
+        "explanation": "スキー道具がないことに不安を感じる質問者に、スキー場でのレンタルを勧める。",
+        "relatedLineIds": [
+          "l35-conv-008",
+          "l35-conv-009"
+        ]
+      },
+      {
+        "step": 6,
+        "title": "感謝",
+        "explanation": "質問者がスズキさんのアドバイスに感謝する。",
+        "relatedLineIds": [
+          "l35-conv-010"
+        ]
+      }
     ],
     "lineUsage": [
-      { "lineId": "l35-conv-001", "japanese": "スズキさん、冬休みに友達とスキーに行きたいんですが、どこかいいところありませんか？", "chineseMeaning": "铃木先生，我寒假想和朋友去滑雪，有什么推荐的地方吗？", "realLifeUse": "旅行や遊びの計画を誰かに相談するときの定番フレーズ。相手の経験や知識を尊重した聞き方。", "emotionTone": "丁寧でやや控えめな依頼。相手の都合を気にしつつ助言を求めるニュートラルな口調。", "memoryTip": "「〜んですが」は状況説明＋依頼のセット。「どこかいいところありませんか」のパターンで覚える。" },
-      { "lineId": "l35-conv-002", "japanese": "何日ぐらいの予定ですか？", "chineseMeaning": "打算去几天呢？", "realLifeUse": "相手の予定を聞くことで、適切なアドバイスをするための前提情報を引き出す自然な質問。", "emotionTone": "中立的で相手に配慮した確認。フレンドリーかつビジネスライク。", "memoryTip": "「〜ぐらい」でおおよその範囲を聞くやわらかい疑問文。日程確認の基本形。" },
-      { "lineId": "l35-conv-003", "japanese": "三日ぐらいです。それなら草津か志賀高原がいいと思いますよ。温泉もありますし。", "chineseMeaning": "大概三天左右的话，我觉得草津或者志贺高原不错哦，还有温泉。", "realLifeUse": "「〜なら」を使って相手の条件に合わせた提案をする。追加情報を「〜し」で軽く添える。", "emotionTone": "自信を持って勧めるが押し付けがましくない。温泉という嬉しい情報で会話を盛り上げる。", "memoryTip": "「それなら」＝「if that's the case」で条件を受けて提案。語尾の「し」で追加理由をカジュアルに述べる。" },
-      { "lineId": "l35-conv-004", "japanese": "どうやって行くんですか？", "chineseMeaning": "要怎么去呢？", "realLifeUse": "目的地が決まった後に自然に出る質問。交通手段を尋ねる日常表現。", "emotionTone": "興味を持って次の情報を求めている、前向きな質問。", "memoryTip": "「どうやって」＝「how（手段）」。場所の話になったらセットで出てくる便利な疑問詞。" },
-      { "lineId": "l35-conv-005", "japanese": "JRでも行けますが、夜行バスなら朝に着きますから便利ですよ。", "chineseMeaning": "可以坐JR，也可以搭夜间巴士，早上就能到，很方便。", "realLifeUse": "複数の選択肢を比較して提案するときに使う。「〜ば」で条件の利点を示す。", "emotionTone": "比較検討を促す客観的で役立つアドバイスの口調。", "memoryTip": "「〜ば」の条件形：「行けます」→「行けば」、「着きます」→「着けば」。「なら」は相手の状況に合わせた条件。" },
-      { "lineId": "l35-conv-006", "japanese": "そうですか。どちらが安いんですか？", "chineseMeaning": "这样啊，哪种方式比较便宜？", "realLifeUse": "コストを気にする実際的な質問。選択肢があるときに価格を比較する自然な流れ。", "emotionTone": "素直に納得しつつも、実用的な興味からさらに掘り下げる。", "memoryTip": "「どちらが〜」は二者比較。「安いんですか」は現状への関心を表す「〜んですか」。" },
-      { "lineId": "l35-conv-007", "japanese": "さあ、旅行社に行けばもっと詳しいことがわかりますよ。", "chineseMeaning": "这个嘛，去旅行社问问会更清楚。", "realLifeUse": "自分が詳しくないことを認めつつ、代わりの情報源を教える誠実な対応。", "emotionTone": "「さあ」で軽い迷いを示し、正直なアドバイスをする誠実な口調。", "memoryTip": "「〜ば〜わかります」＝「if you do X, you'll find out」。条件形の結果を表す典型的な文型。" },
-      { "lineId": "l35-conv-008", "japanese": "それからスキーの道具や服は何も持っていないんですが…", "chineseMeaning": "还有，我什么滑雪装备和服装都没有……", "realLifeUse": "新しい懸念事項を追加で伝えるときの「それから」。困っている状況を丁寧に伝える。", "emotionTone": "少し不安や心配を含んだ口調。語尾を濁して遠慮がちに相談する。", "memoryTip": "「〜んですが」で状況説明＋助言を求める。語尾の「…」で遠慮や不安を表現。" },
-      { "lineId": "l35-conv-009", "japanese": "全部スキー場で借りられますよ。心配なら旅行社で予約もできますし。", "chineseMeaning": "这些都可以在滑雪场租借。如果不放心，也可以在旅行社提前预订。", "realLifeUse": "相手の不安を解消するための二段構えのアドバイス。「〜られます（可能形）」と「〜できます」で可能表現。", "emotionTone": "相手を安心させる優しい励ましの口調。追加の安心材料を「〜し」で添える。", "memoryTip": "可能形「借りられます」をマスター。「心配なら」は「if you're worried」という条件形。二重の安心オプションがポイント。" },
-      { "lineId": "l35-conv-010", "japanese": "そうですか。どうもありがとうございました。", "chineseMeaning": "这样啊，非常感谢您。", "realLifeUse": "相談の締めくくりとして自然な感謝の表現。会話の終了を示す定番フレーズ。", "emotionTone": "満足して感謝する、丁寧で温かい口調。", "memoryTip": "「そうですか」で理解や納得を示し、「どうもありがとうございました」で締める。会話終了の黄金パターン。" }
+      {
+        "lineId": "l35-conv-001",
+        "japanese": "スズキさん、冬休みに友達とスキーに行きたいんですが、どこかいいところありませんか？",
+        "chineseMeaning": "铃木先生，我寒假想和朋友去滑雪，有什么推荐的地方吗？",
+        "realLifeUse": "旅行や遊びの計画を誰かに相談するときの定番フレーズ。相手の経験や知識を尊重した聞き方。",
+        "emotionTone": "丁寧でやや控えめな依頼。相手の都合を気にしつつ助言を求めるニュートラルな口調。",
+        "memoryTip": "「〜んですが」は状況説明＋依頼のセット。「どこかいいところありませんか」のパターンで覚える。"
+      },
+      {
+        "lineId": "l35-conv-002",
+        "japanese": "何日ぐらいの予定ですか？",
+        "chineseMeaning": "打算去几天呢？",
+        "realLifeUse": "相手の予定を聞くことで、適切なアドバイスをするための前提情報を引き出す自然な質問。",
+        "emotionTone": "中立的で相手に配慮した確認。フレンドリーかつビジネスライク。",
+        "memoryTip": "「〜ぐらい」でおおよその範囲を聞くやわらかい疑問文。日程確認の基本形。"
+      },
+      {
+        "lineId": "l35-conv-003",
+        "japanese": "三日ぐらいです。それなら草津か志賀高原がいいと思いますよ。温泉もありますし。",
+        "chineseMeaning": "大概三天左右的话，我觉得草津或者志贺高原不错哦，还有温泉。",
+        "realLifeUse": "「〜なら」を使って相手の条件に合わせた提案をする。追加情報を「〜し」で軽く添える。",
+        "emotionTone": "自信を持って勧めるが押し付けがましくない。温泉という嬉しい情報で会話を盛り上げる。",
+        "memoryTip": "「それなら」＝「if that's the case」で条件を受けて提案。語尾の「し」で追加理由をカジュアルに述べる。"
+      },
+      {
+        "lineId": "l35-conv-004",
+        "japanese": "どうやって行くんですか？",
+        "chineseMeaning": "要怎么去呢？",
+        "realLifeUse": "目的地が決まった後に自然に出る質問。交通手段を尋ねる日常表現。",
+        "emotionTone": "興味を持って次の情報を求めている、前向きな質問。",
+        "memoryTip": "「どうやって」＝「how（手段）」。場所の話になったらセットで出てくる便利な疑問詞。"
+      },
+      {
+        "lineId": "l35-conv-005",
+        "japanese": "JRでも行けますが、夜行バスなら朝に着きますから便利ですよ。",
+        "chineseMeaning": "可以坐JR，也可以搭夜间巴士，早上就能到，很方便。",
+        "realLifeUse": "複数の選択肢を比較して提案するときに使う。「〜ば」で条件の利点を示す。",
+        "emotionTone": "比較検討を促す客観的で役立つアドバイスの口調。",
+        "memoryTip": "「〜ば」の条件形：「行けます」→「行けば」、「着きます」→「着けば」。「なら」は相手の状況に合わせた条件。"
+      },
+      {
+        "lineId": "l35-conv-006",
+        "japanese": "そうですか。どちらが安いんですか？",
+        "chineseMeaning": "这样啊，哪种方式比较便宜？",
+        "realLifeUse": "コストを気にする実際的な質問。選択肢があるときに価格を比較する自然な流れ。",
+        "emotionTone": "素直に納得しつつも、実用的な興味からさらに掘り下げる。",
+        "memoryTip": "「どちらが〜」は二者比較。「安いんですか」は現状への関心を表す「〜んですか」。"
+      },
+      {
+        "lineId": "l35-conv-007",
+        "japanese": "さあ、旅行社に行けばもっと詳しいことがわかりますよ。",
+        "chineseMeaning": "这个嘛，去旅行社问问会更清楚。",
+        "realLifeUse": "自分が詳しくないことを認めつつ、代わりの情報源を教える誠実な対応。",
+        "emotionTone": "「さあ」で軽い迷いを示し、正直なアドバイスをする誠実な口調。",
+        "memoryTip": "「〜ば〜わかります」＝「if you do X, you'll find out」。条件形の結果を表す典型的な文型。"
+      },
+      {
+        "lineId": "l35-conv-008",
+        "japanese": "それからスキーの道具や服は何も持っていないんですが…",
+        "chineseMeaning": "还有，我什么滑雪装备和服装都没有……",
+        "realLifeUse": "新しい懸念事項を追加で伝えるときの「それから」。困っている状況を丁寧に伝える。",
+        "emotionTone": "少し不安や心配を含んだ口調。語尾を濁して遠慮がちに相談する。",
+        "memoryTip": "「〜んですが」で状況説明＋助言を求める。語尾の「…」で遠慮や不安を表現。"
+      },
+      {
+        "lineId": "l35-conv-009",
+        "japanese": "全部スキー場で借りられますよ。心配なら旅行社で予約もできますし。",
+        "chineseMeaning": "这些都可以在滑雪场租借。如果不放心，也可以在旅行社提前预订。",
+        "realLifeUse": "相手の不安を解消するための二段構えのアドバイス。「〜られます（可能形）」と「〜できます」で可能表現。",
+        "emotionTone": "相手を安心させる優しい励ましの口調。追加の安心材料を「〜し」で添える。",
+        "memoryTip": "可能形「借りられます」をマスター。「心配なら」は「if you're worried」という条件形。二重の安心オプションがポイント。"
+      },
+      {
+        "lineId": "l35-conv-010",
+        "japanese": "そうですか。どうもありがとうございました。",
+        "chineseMeaning": "这样啊，非常感谢您。",
+        "realLifeUse": "相談の締めくくりとして自然な感謝の表現。会話の終了を示す定番フレーズ。",
+        "emotionTone": "満足して感謝する、丁寧で温かい口調。",
+        "memoryTip": "「そうですか」で理解や納得を示し、「どうもありがとうございました」で締める。会話終了の黄金パターン。"
+      }
     ],
     "chineseRetellPrompt": "请用中文复述第35课的对话内容。\n\n假设你是那个向铃木请教滑雪推荐的人，请用中文复述整个对话的过程：你问了什么，铃木先生建议了哪些地方，怎么去，交通费用，以及滑雪用具怎么办。\n\n「第35课讲的是我向铃木先生请教寒假滑雪推荐……」\n\n试试看，尽量用上「〜ば」「〜なら」「可能形」「〜し」这些语法点对应的中文表达方式。",
     "realLifeReplacementPractice": [

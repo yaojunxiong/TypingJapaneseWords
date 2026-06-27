@@ -824,8 +824,8 @@
           "id": "l06-conv-008",
           "speaker": "",
           "jp": "何時に行きますか",
-          "kana": "",
-          "zh": "你什么时候去？",
+          "kana": "なんじに いきますか",
+          "zh": "几点去？",
           "keyword": "何時",
           "videoStart": "0:38.40",
           "videoEnd": "0:41.16",
@@ -839,9 +839,9 @@
         {
           "id": "l06-conv-009",
           "speaker": "",
-          "jp": "ジュージニ大阪駅で会いましょう",
-          "kana": "",
-          "zh": "在大阪武士馆见面",
+          "jp": "10時に大阪駅で会いましょう",
+          "kana": "じゅうじに おおさかえきで あいましょう",
+          "zh": "10点在大阪站见吧。",
           "keyword": "大阪駅",
           "videoStart": "0:41.16",
           "videoEnd": "0:47.04",
@@ -989,8 +989,8 @@
         },
         {
           "word": "何時に行きますか",
-          "kana": "",
-          "zh": "",
+          "kana": "なんじに いきますか",
+          "zh": "几点去？",
           "importance": "core",
           "fromConversationId": "l06-conv-008",
           "sourceSentence": "何時に行きますか",
@@ -999,12 +999,12 @@
           "reviewStatus": "needs_review"
         },
         {
-          "word": "ジュージニ大阪駅で会いましょう",
-          "kana": "",
-          "zh": "",
+          "word": "10時に大阪駅で会いましょう",
+          "kana": "じゅうじに おおさかえきで あいましょう",
+          "zh": "10点在大阪站见吧。",
           "importance": "core",
           "fromConversationId": "l06-conv-009",
-          "sourceSentence": "ジュージニ大阪駅で会いましょう",
+          "sourceSentence": "10時に大阪駅で会いましょう",
           "sourceType": "extracted_from_official_video_subtitle",
           "needsReview": true,
           "reviewStatus": "needs_review"
@@ -1257,9 +1257,9 @@
         },
         {
           "pattern": "大阪駅",
-          "originalSentence": "ジュージニ大阪駅で会いましょう",
+          "originalSentence": "10時に大阪駅で会いましょう",
           "fromConversationId": "l06-conv-009",
-          "sourceSentence": "ジュージニ大阪駅で会いましょう",
+          "sourceSentence": "10時に大阪駅で会いましょう",
           "sourceType": "ai_generated_from_official_conversation",
           "replacements": [],
           "needsReview": true,
@@ -1807,8 +1807,8 @@
           "choices": [
             {
               "text": {
-                "zh": "你什么时候去？",
-                "en": "你什么时候去？"
+                "zh": "几点去？",
+                "en": "What time are you going?"
               },
               "correct": true
             },
@@ -1829,8 +1829,8 @@
           "id": "l06-q-008-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
-            "zh": "请选择「你什么时候去？」的日语说法。",
-            "en": "Select Japanese for \"你什么时候去？\"."
+            "zh": "请选择「几点去？」的日语说法。",
+            "en": "Select Japanese for \"What time are you going?\"."
           },
           "choices": [
             {
@@ -1856,8 +1856,8 @@
           "choices": [
             {
               "text": {
-                "zh": "你什么时候去？",
-                "en": "你什么时候去？"
+                "zh": "几点去？",
+                "en": "What time are you going?"
               },
               "correct": true
             }
@@ -1872,14 +1872,14 @@
           "id": "l06-q-009-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
-            "zh": "「ジュージニ大阪駅で会いましょう」是什么意思？",
-            "en": "What does \"ジュージニ大阪駅で会いましょう\" mean?"
+            "zh": "「10時に大阪駅で会いましょう」是什么意思？",
+            "en": "What does \"10時に大阪駅で会いましょう\" mean?"
           },
           "choices": [
             {
               "text": {
-                "zh": "在大阪武士馆见面",
-                "en": "在大阪武士馆见面"
+                "zh": "10点在大阪站见吧。",
+                "en": "Let's meet at Osaka Station at 10."
               },
               "correct": true
             },
@@ -1890,7 +1890,7 @@
               }
             }
           ],
-          "sourceSentence": "ジュージニ大阪駅で会いましょう",
+          "sourceSentence": "10時に大阪駅で会いましょう",
           "fromConversationId": "l06-conv-009",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
@@ -1900,18 +1900,18 @@
           "id": "l06-q-009-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
-            "zh": "请选择「在大阪武士馆见面」的日语说法。",
-            "en": "Select Japanese for \"在大阪武士馆见面\"."
+            "zh": "请选择「10点在大阪站见吧。」的日语说法。",
+            "en": "Select Japanese for \"Let's meet at Osaka Station at 10.\"."
           },
           "choices": [
             {
               "text": {
-                "jp": "ジュージニ大阪駅で会いましょう"
+                "jp": "10時に大阪駅で会いましょう"
               },
               "correct": true
             }
           ],
-          "sourceSentence": "ジュージニ大阪駅で会いましょう",
+          "sourceSentence": "10時に大阪駅で会いましょう",
           "fromConversationId": "l06-conv-009",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
@@ -1921,19 +1921,19 @@
           "id": "l06-q-009-recall-001",
           "type": "recall_check",
           "prompt": {
-            "zh": "「ジュージニ大阪駅で会いましょう」的中文意思是？",
-            "en": "What does \"ジュージニ大阪駅で会いましょう\" mean?"
+            "zh": "「10時に大阪駅で会いましょう」的中文意思是？",
+            "en": "What does \"10時に大阪駅で会いましょう\" mean?"
           },
           "choices": [
             {
               "text": {
-                "zh": "在大阪武士馆见面",
-                "en": "在大阪武士馆见面"
+                "zh": "10点在大阪站见吧。",
+                "en": "Let's meet at Osaka Station at 10."
               },
               "correct": true
             }
           ],
-          "sourceSentence": "ジュージニ大阪駅で会いましょう",
+          "sourceSentence": "10時に大阪駅で会いましょう",
           "fromConversationId": "l06-conv-009",
           "sourceType": "generated_from_official_video_subtitle",
           "needsReview": true,
@@ -2109,8 +2109,8 @@
     "verifiedOnline": "not_started"
   },
   "deepDive": {
-    "sceneSummary": "同事邀请米勒先生明天一起去赏花（花見）。米勒先生接受了邀请，询问去哪里和几点集合，两人约定在大阪站十二点见面，最后互道明天见。",
-    "storyExplanation": "这是《大家的日语》第6课的会话场景。一位同事叫住米勒先生，对方回应后同事说明天要和朋友去赏花（お花見），并邀请米勒先生一起去（〜ませんか）。米勒先生表示「いいですね」接受邀请，然后询问「どこへ行きますか」（去哪里）和「何時に行きますか」（几点去）。同事回答去大阪城（大阪城），并提议「十二時に大阪駅で会いましょう」（十二点在大阪站见面）。米勒先生同意后，两人互道「じゃあまた明日」（明天见）。本课覆盖了动词ます形、〜ませんか（邀请）、〜ましょう（提议）、助詞「を」（宾语）、「で」（地点/手段）、「と」（共同做动作的伙伴）、「に」（时间点）等核心语法。",
+    "sceneSummary": "同事邀请米勒先生明天一起去赏花（花見）。米勒先生接受了邀请，询问去哪里和几点集合，两人约定在大阪站10点见面，最后互道明天见。",
+    "storyExplanation": "这是《大家的日语》第6课的会话场景。一位同事叫住米勒先生，对方回应后同事说明天要和朋友去赏花（お花見），并邀请米勒先生一起去（〜ませんか）。米勒先生表示「いいですね」接受邀请，然后询问「どこへ行きますか」（去哪里）和「何時に行きますか」（几点去）。同事回答去大阪城（大阪城），并提议「10時に大阪駅で会いましょう」（10点在大阪站见面）。米勒先生同意后，两人互道「じゃあまた明日」（明天见）。本课覆盖了动词ます形、〜ませんか（邀请）、〜ましょう（提议）、助詞「を」（宾语）、「で」（地点/手段）、「と」（共同做动作的伙伴）、「に」（时间点）等核心语法。",
     "characters": [
       {
         "name": "同事",
@@ -2175,7 +2175,7 @@
       {
         "step": 9,
         "title": "提议具体时间地点",
-        "explanation": "同事说「十二時に大阪駅で会いましょう」——「十二点在大阪站见面吧」。这里使用了〜ましょう形表示提议——「让我们〜吧」。「で」是动作发生的地点助词。整句包含了时间（十二時に）、地点（大阪駅で）、动作（会いましょう）三个要素，是约定见面的万能句型。",
+        "explanation": "同事说「10時に大阪駅で会いましょう」——「10点在大阪站见面吧」。这里使用了〜ましょう形表示提议——「让我们〜吧」。「で」是动作发生的地点助词。整句包含了时间（10時に）、地点（大阪駅で）、动作（会いましょう）三个要素，是约定见面的万能句型。",
         "relatedLineIds": ["l06-conv-009"]
       },
       {
@@ -2252,8 +2252,8 @@
       },
       {
         "lineId": "l06-conv-009",
-        "japanese": "十二時に大阪駅で会いましょう",
-        "chineseMeaning": "十二点在大阪站见面吧。",
+        "japanese": "10時に大阪駅で会いましょう",
+        "chineseMeaning": "10点在大阪站见吧。",
         "realLifeUse": "提议见面时间和地点的标准表达。关键语法：「〜ましょう」表示提议（「让我们〜吧」）、「に」表示时间点、「で」表示动作发生的地点。句子结构：时间+に、地点+で、动作+ましょう。这是约定见面时的万能句型。",
         "emotionTone": "提议性的、友善的——同事在提出明确的约定方案。",
         "memoryTip": "骨架：「时间に地点で动词ましょう」。时间用に，地点用で，动作用ましょう形。记住这三个要素的组合。"
@@ -2275,7 +2275,7 @@
         "memoryTip": "道别搭配：「じゃあまた＋时间」。明日=あした，後で=あとで，来週=らいしゅう。记住「じゃあまた」的节奏。"
       }
     ],
-    "chineseRetellPrompt": "请用中文复述这段会话的场景和内容。你可以这样说：\n\n「第6课讲的是同事邀请米勒先生明天去赏花……\n同事叫了一声「米勒先生！」……\n米勒先生问「什么事？」……\n同事说「明天和朋友去赏花」……\n然后邀请说「米勒先生也一起去吗？」……\n米勒先生高兴地说「好啊」……\n接着问「去哪里？」……\n同事说「是大阪城」……\n米勒先生又问「几点去？」……\n同事说「十二点在大阪站见面吧」……\n米勒先生说「好的」……\n然后说「那明天见」……\n\n试试看，用自己的话把这个场景说出来。",
+    "chineseRetellPrompt": "请用中文复述这段会话的场景和内容。你可以这样说：\n\n「第6课讲的是同事邀请米勒先生明天去赏花……\n同事叫了一声「米勒先生！」……\n米勒先生问「什么事？」……\n同事说「明天和朋友去赏花」……\n然后邀请说「米勒先生也一起去吗？」……\n米勒先生高兴地说「好啊」……\n接着问「去哪里？」……\n同事说「是大阪城」……\n米勒先生又问「几点去？」……\n同事说「10点在大阪站见吧」……\n米勒先生说「好的」……\n然后说「那明天见」……\n\n试试看，用自己的话把这个场景说出来。",
     "realLifeReplacementPractice": [
       "用「〜ませんか」邀请同事或朋友做一件事，比如「一緒に昼ご飯を食べませんか」（一起吃午饭吗？）。",
       "接受邀请时练习说「いいですね」或「はい、いいですよ」（好呀）。",

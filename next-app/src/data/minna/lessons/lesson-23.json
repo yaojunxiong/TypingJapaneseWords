@@ -768,253 +768,141 @@
         "en": "Conversation Practice"
       },
       "dialogTitle": {
-        "zh": "第23课会话",
-        "en": "第23课会话"
+        "zh": "怎么去？",
+        "en": "どうやって行きますか"
       },
       "conversationGoal": {
-        "zh": "第23课会话练习",
-        "en": "Lesson 23 Conversation Practice"
+        "zh": "会话图确认内容",
+        "en": "Conversation image confirmed"
       },
       "items": [
         {
           "id": "l23-conv-001",
-          "speaker": "",
-          "jp": "3",
-          "kana": "3",
-          "zh": "3",
-          "keyword": "",
-          "videoStart": "0:00.00",
-          "videoEnd": "0:06.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "speaker": "図書館の人",
+          "jp": "はい、みどり図書館です。",
+          "kana": "はい、みどりとしょかんです。",
+          "zh": "您好，这里是绿图书馆。",
+          "keyword": "はいみどり図",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l23-conv-002",
-          "speaker": "",
-          "jp": "ん",
-          "kana": "ん",
-          "zh": "嗯。",
-          "keyword": "",
-          "videoStart": "0:06.00",
-          "videoEnd": "0:10.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "speaker": "カリナ",
+          "jp": "あのう、そちらまでどうやって行きますか。",
+          "kana": "あのう、そちらまでどうやっていきますか。",
+          "zh": "请问，怎么去你们那里？",
+          "keyword": "あのうそちら",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l23-conv-003",
-          "speaker": "",
-          "jp": "ん",
-          "kana": "ん",
-          "zh": "嗯。",
-          "keyword": "",
-          "videoStart": "0:10.00",
-          "videoEnd": "0:14.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "speaker": "図書館の人",
+          "jp": "本田駅から12番のバスに乗って、図書館前で降りてください。3つ目ですよ。",
+          "kana": "ほんだえきからじゅうにばんのバスにのって、としょかんまえでおりてください。みっつめですよ。",
+          "zh": "从本田站乘12路公交，在图书馆前下车，是第三站。",
+          "keyword": "本田駅から1",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l23-conv-004",
-          "speaker": "",
-          "jp": "はい、緑図書館です",
-          "kana": "",
-          "zh": "您好，这里是绿图书馆。",
-          "keyword": "緑図書館です",
-          "videoStart": "0:14.00",
-          "videoEnd": "0:16.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "カリナ",
+          "jp": "3つ目ですか。",
+          "kana": "みっつめですか。",
+          "zh": "第三站吗？",
+          "keyword": "3つ目ですか",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l23-conv-005",
-          "speaker": "",
-          "jp": "あの、そちらまでどうやって行きますか？",
-          "kana": "",
-          "zh": "请问要怎么去你们那儿？",
-          "keyword": "",
-          "videoStart": "0:16.00",
-          "videoEnd": "0:20.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "図書館の人",
+          "jp": "ええ。降りると、前に公園があります。図書館は公園の中の白い建物です。",
+          "kana": "ええ。おりると、まえにこうえんがあります。としょかんはこうえんのなかのしろいたてものです。",
+          "zh": "是的。下车后前面有公园，图书馆是公园里的白色建筑。",
+          "keyword": "ええ降りると",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l23-conv-006",
-          "speaker": "",
-          "jp": "本町駅から12番のバスに乗って、",
-          "kana": "",
-          "zh": "请从本町站搭乘12号巴士，",
-          "keyword": "12番",
-          "videoStart": "0:20.00",
-          "videoEnd": "0:24.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "カリナ",
+          "jp": "わかりました。それから本を借りるとき、何か要りますか。",
+          "kana": "わかりました。それからほんをかりるとき、なにかいりますか。",
+          "zh": "明白了。另外借书时需要什么吗？",
+          "keyword": "わかりました",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l23-conv-007",
-          "speaker": "",
-          "jp": "図書館前で降りてください",
-          "kana": "",
-          "zh": "在图书馆前下车。",
-          "keyword": "図書館前",
-          "videoStart": "0:24.00",
-          "videoEnd": "0:26.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "図書館の人",
+          "jp": "お名前とご住所がわかる物を持って来てください。",
+          "kana": "おなまえとごじゅうしょがわかるものをもってきてください。",
+          "zh": "请带能证明姓名和住址的东西。",
+          "keyword": "お名前とご住",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l23-conv-008",
-          "speaker": "",
-          "jp": "3つ目です",
-          "kana": "",
-          "zh": "是第3站。",
-          "keyword": "",
-          "videoStart": "0:26.00",
-          "videoEnd": "0:28.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l23-conv-009",
-          "speaker": "",
-          "jp": "3つ目ですね",
-          "kana": "",
-          "zh": "是第3站对吧。",
-          "keyword": "",
-          "videoStart": "0:28.00",
-          "videoEnd": "0:30.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l23-conv-010",
-          "speaker": "",
-          "jp": "ええ、降りると前に公園があります",
-          "kana": "",
-          "zh": "对，下车后前面就是一个公园。",
-          "keyword": "公園",
-          "videoStart": "0:30.00",
-          "videoEnd": "0:34.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l23-conv-011",
-          "speaker": "",
-          "jp": "図書館は公園の中の白い建物です",
-          "kana": "",
-          "zh": "图书馆是公园里的一栋白色建筑。",
-          "keyword": "建物です",
-          "videoStart": "0:34.00",
-          "videoEnd": "0:38.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l23-conv-012",
-          "speaker": "",
-          "jp": "わかりました",
-          "kana": "わかりました",
-          "zh": "明白了。",
-          "keyword": "",
-          "videoStart": "0:38.00",
-          "videoEnd": "0:40.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "speaker": "カリナ",
+          "jp": "はい。どうもありがとうございました。",
+          "kana": "はい。どうもありがとうございました。",
+          "zh": "好的，非常感谢。",
+          "keyword": "はいどうもあ",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l23-conv-013",
-          "speaker": "",
-          "jp": "それから本を借りるとき、何かいりますか？",
-          "kana": "",
-          "zh": "另外，借书时需要带什么吗？",
-          "keyword": "",
-          "videoStart": "0:40.00",
-          "videoEnd": "0:45.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l23-conv-014",
-          "speaker": "",
-          "jp": "お名前と住所がわかるものを持ってきてください",
-          "kana": "",
-          "zh": "请带可以确认姓名和住址的证件。",
-          "keyword": "住所",
-          "videoStart": "0:45.00",
-          "videoEnd": "0:49.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l23-conv-015",
-          "speaker": "",
-          "jp": "はい、どうもありがとうございました",
-          "kana": "はい、どうもありがとうございました",
-          "zh": "好的，非常感谢您。",
-          "keyword": "",
-          "videoStart": "0:49.00",
-          "videoEnd": "0:53.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         }
       ]
     },
@@ -1218,7 +1106,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_grammar",
@@ -1331,7 +1220,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_examples",
@@ -1544,7 +1434,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_quiz",
@@ -2624,7 +2515,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     }
   ],
   "conversationVideo": {
@@ -2655,35 +2547,211 @@
     "sceneSummary": "打电话给图书馆问路。馆员耐心说明：从本町站坐12路巴士，在第3站图书馆前下车。随后打电话者又询问借书时需要带什么，馆员告知需要带能确认姓名和住址的证件。",
     "storyExplanation": "这段对话是典型的生活场景：电话问路+办事咨询。前半段侧重交通路线（用「乗って」「降りて」的て形连接动作，用「〜と」表示下车后的自然结果），后半段转向借书手续（用「〜とき」表示\"借书时\"这个时间点）。\n\n对话自然体现了日本服务业礼貌周到的特点——馆员不仅告诉对方坐几路车，还详细描述了下车后的地标（公园、白色建筑）。",
     "characters": [
-      { "name": "打电话的人", "role": "来访者/咨询者", "relationship": "打电话到图书馆询问怎么去的人" },
-      { "name": "图书馆馆员", "role": "工作人员", "relationship": "接电话并耐心回答问路和借书问题的图书馆职员" }
+      {
+        "name": "打电话的人",
+        "role": "来访者/咨询者",
+        "relationship": "打电话到图书馆询问怎么去的人"
+      },
+      {
+        "name": "图书馆馆员",
+        "role": "工作人员",
+        "relationship": "接电话并耐心回答问路和借书问题的图书馆职员"
+      }
     ],
     "conversationFlow": [
-      { "step": 1, "title": "电话接通与数字提示", "explanation": "开头出现数字「3」，可能是电话接通后的语音提示或转接信号。随后两声「ん」表示对方在等待或确认。", "relatedLineIds": ["l23-conv-001", "l23-conv-002", "l23-conv-003"] },
-      { "step": 2, "title": "图书馆接听电话", "explanation": "馆员礼貌接听：\n「はい、緑図書館です」——这是日本接电话的标准用语，先「はい」再报机构名。", "relatedLineIds": ["l23-conv-004"] },
-      { "step": 3, "title": "来访者询问路线", "explanation": "「あの、そちらまでどうやって行きますか？」\n「あの」是委婉开启话题的感叹词，「どうやって行きますか」是询问\"怎么去\"的常用表达。", "relatedLineIds": ["l23-conv-005"] },
-      { "step": 4, "title": "馆员说明乘车方案", "explanation": "「本町駅から12番のバスに乗って、」——て形连接两个动作，先「乗って」（乘坐），再说明后续。", "relatedLineIds": ["l23-conv-006"] },
-      { "step": 5, "title": "告知下车地点", "explanation": "「図書館前で降りてください」「3つ目です」——告诉对方在图书馆前下车，是第3站。数字+「つ目」是日语的序数表达（第几个）。", "relatedLineIds": ["l23-conv-007", "l23-conv-008"] },
-      { "step": 6, "title": "确认信息", "explanation": "「3つ目ですね」——来访者用「ね」确认信息，表示\"是第3站对吧\"。馆员回答「ええ」表示肯定。", "relatedLineIds": ["l23-conv-009"] },
-      { "step": 7, "title": "补充地标说明", "explanation": "「降りると前に公園があります」——用「〜と」表示\"下车后自然就会看到\"。然后补充图书馆是公园里的白色建筑，方便寻找。", "relatedLineIds": ["l23-conv-010", "l23-conv-011"] },
-      { "step": 8, "title": "表示理解与询问借书事宜", "explanation": "来访者先说「わかりました」表示明白，然后用「それから」切换话题，用「本を借りるとき」询问借书时需要带什么。馆员告知需要带能确认姓名和住址的证件。最后来访者礼貌致谢。", "relatedLineIds": ["l23-conv-012", "l23-conv-013", "l23-conv-014", "l23-conv-015"] }
+      {
+        "step": 1,
+        "title": "电话接通与数字提示",
+        "explanation": "开头出现数字「3」，可能是电话接通后的语音提示或转接信号。随后两声「ん」表示对方在等待或确认。",
+        "relatedLineIds": [
+          "l23-conv-001",
+          "l23-conv-002",
+          "l23-conv-003"
+        ]
+      },
+      {
+        "step": 2,
+        "title": "图书馆接听电话",
+        "explanation": "馆员礼貌接听：\n「はい、緑図書館です」——这是日本接电话的标准用语，先「はい」再报机构名。",
+        "relatedLineIds": [
+          "l23-conv-004"
+        ]
+      },
+      {
+        "step": 3,
+        "title": "来访者询问路线",
+        "explanation": "「あの、そちらまでどうやって行きますか？」\n「あの」是委婉开启话题的感叹词，「どうやって行きますか」是询问\"怎么去\"的常用表达。",
+        "relatedLineIds": [
+          "l23-conv-005"
+        ]
+      },
+      {
+        "step": 4,
+        "title": "馆员说明乘车方案",
+        "explanation": "「本町駅から12番のバスに乗って、」——て形连接两个动作，先「乗って」（乘坐），再说明后续。",
+        "relatedLineIds": [
+          "l23-conv-006"
+        ]
+      },
+      {
+        "step": 5,
+        "title": "告知下车地点",
+        "explanation": "「図書館前で降りてください」「3つ目です」——告诉对方在图书馆前下车，是第3站。数字+「つ目」是日语的序数表达（第几个）。",
+        "relatedLineIds": [
+          "l23-conv-007",
+          "l23-conv-008"
+        ]
+      },
+      {
+        "step": 6,
+        "title": "确认信息",
+        "explanation": "「3つ目ですね」——来访者用「ね」确认信息，表示\"是第3站对吧\"。馆员回答「ええ」表示肯定。",
+        "relatedLineIds": [
+          "l23-conv-009"
+        ]
+      },
+      {
+        "step": 7,
+        "title": "补充地标说明",
+        "explanation": "「降りると前に公園があります」——用「〜と」表示\"下车后自然就会看到\"。然后补充图书馆是公园里的白色建筑，方便寻找。",
+        "relatedLineIds": [
+          "l23-conv-010",
+          "l23-conv-011"
+        ]
+      },
+      {
+        "step": 8,
+        "title": "表示理解与询问借书事宜",
+        "explanation": "来访者先说「わかりました」表示明白，然后用「それから」切换话题，用「本を借りるとき」询问借书时需要带什么。馆员告知需要带能确认姓名和住址的证件。最后来访者礼貌致谢。",
+        "relatedLineIds": [
+          "l23-conv-012",
+          "l23-conv-013",
+          "l23-conv-014",
+          "l23-conv-015"
+        ]
+      }
     ],
     "lineUsage": [
-      { "lineId": "l23-conv-001", "japanese": "3", "chineseMeaning": "3", "realLifeUse": "电话接通后可能出现的语音提示数字（如分机号或转接提示）。实际生活中电话自动语音常说「1を押してください」等。", "emotionTone": "中性/机器语音", "memoryTip": "联系打电话场景——听到数字3表示通话刚接通" },
-      { "lineId": "l23-conv-002", "japanese": "ん", "chineseMeaning": "嗯。", "realLifeUse": "「ん」是日语中常见的回应语，表示\"嗯/我在听\"。比「はい」更随意，但这里可能是等待时的迟疑回应。", "emotionTone": "迟疑/等待中", "memoryTip": "短促的「ん」表示在等对方说话" },
-      { "lineId": "l23-conv-003", "japanese": "ん", "chineseMeaning": "嗯。", "realLifeUse": "与上一句相同，连续两次「ん」表示一直在等待对方先开口。", "emotionTone": "迟疑/等待中", "memoryTip": "同样是等待回应" },
-      { "lineId": "l23-conv-004", "japanese": "はい、緑図書館です", "chineseMeaning": "您好，这里是绿图书馆。", "realLifeUse": "日本接电话的标准句式：\n「はい」+ 机构/店铺名 +「です」。无论公司、餐厅还是政府机构都适用。", "emotionTone": "礼貌/正式", "memoryTip": "记公式：はい + XXです = 接电话开场白" },
-      { "lineId": "l23-conv-005", "japanese": "あの、そちらまでどうやって行きますか？", "chineseMeaning": "请问要怎么去你们那儿？", "realLifeUse": "问路的万能句式：\n「あの、」+ 目的地まで +「どうやって行きますか」。\n「そちら」是\"您那边\"的礼貌说法。", "emotionTone": "礼貌/有距离感", "memoryTip": "「どうやって」= how，「行きますか」= go" },
-      { "lineId": "l23-conv-006", "japanese": "本町駅から12番のバスに乗って、", "chineseMeaning": "请从本町站搭乘12号巴士，", "realLifeUse": "指路时先说起点（から），再说交通工具（に乗って）。て形表示动作还未结束，后面还有后续说明。", "emotionTone": "说明/指引", "memoryTip": "XX駅から + YY番のバスに乗って = 坐车路线" },
-      { "lineId": "l23-conv-007", "japanese": "図書館前で降りてください", "chineseMeaning": "在图书馆前下车。", "realLifeUse": "「XXで降りてください」是指示下车地点的固定表达。「〜てください」是礼貌的请求/指示形式。", "emotionTone": "礼貌指示", "memoryTip": "XXで降りる = 在XX下车" },
-      { "lineId": "l23-conv-008", "japanese": "3つ目です", "chineseMeaning": "是第3站。", "realLifeUse": "「数字+つ目」表示序数\"第几个\"。公交车上可以说「次のバス停」「2つ目」「3つ目」等。", "emotionTone": "告知/中性", "memoryTip": "ひとつ目、ふたつ目、みっつ目 = 第1站、第2站、第3站" },
-      { "lineId": "l23-conv-009", "japanese": "3つ目ですね", "chineseMeaning": "是第3站对吧。", "realLifeUse": "用「〜ですね」重复对方的话表示确认。日常对话中经常用这种\"回响式确认\"来确保信息正确。", "emotionTone": "确认/略带不确定", "memoryTip": "XXですね = 是XX吧？——用于确认信息" },
-      { "lineId": "l23-conv-010", "japanese": "ええ、降りると前に公園があります", "chineseMeaning": "对，下车后前面就是一个公园。", "realLifeUse": "「降りると」= \"一下车就…\"，用「〜と」表示\"前项发生后自然发生后项\"。这里是告诉对方下车后自然能看到公园。", "emotionTone": "肯定/说明", "memoryTip": "「降りると」表示\"只要下车，（自然）就…\"" },
-      { "lineId": "l23-conv-011", "japanese": "図書館は公園の中の白い建物です", "chineseMeaning": "图书馆是公园里的一栋白色建筑。", "realLifeUse": "描述建筑物位置的句型：\n「XXは〜の中の〜です」。颜色+建物是常见的组合（白い建物、赤いビル等）。", "emotionTone": "说明/描述", "memoryTip": "XXの中のYY = XX里面的YY" },
-      { "lineId": "l23-conv-012", "japanese": "わかりました", "chineseMeaning": "明白了。", "realLifeUse": "「わかりました」是日语中使用频率极高的表达，表示\"我明白了/知道了\"。比「はい」更明确地表示理解。", "emotionTone": "理解/顺从", "memoryTip": "仕事で一番使う言葉の一つ！" },
-      { "lineId": "l23-conv-013", "japanese": "それから本を借りるとき、何かいりますか？", "chineseMeaning": "另外，借书时需要带什么吗？", "realLifeUse": "「それから」= 此外/还有，用于追加问题。\n「本を借りるとき」= \"借书的时候\"（〜とき表示时间点）。\n「何かいりますか」= \"需要什么吗\"（要る=需要）。", "emotionTone": "追加询问/礼貌", "memoryTip": "XXとき = 做XX的时候（辞書形+とき表示\"做的时候\"）" },
-      { "lineId": "l23-conv-014", "japanese": "お名前と住所がわかるものを持ってきてください", "chineseMeaning": "请带可以确认姓名和住址的证件。", "realLifeUse": "「〜がわかるもの」= \"能确认…的东西\"，在办理手续时常出现（身分証明書等）。「持ってきてください」= 请带来。", "emotionTone": "说明要求/礼貌", "memoryTip": "「がわかるもの」= 能确认XX的东西" },
-      { "lineId": "l23-conv-015", "japanese": "はい、どうもありがとうございました", "chineseMeaning": "好的，非常感谢您。", "realLifeUse": "电话结束时的标准致谢语。\n「どうもありがとうございました」用过去式表示\"刚才非常感谢\"。有时也说「お忙しいところありがとうございました」等。", "emotionTone": "感谢/正式告别", "memoryTip": "电话挂断前一定要说的礼貌用语" }
+      {
+        "lineId": "l23-conv-001",
+        "japanese": "3",
+        "chineseMeaning": "3",
+        "realLifeUse": "电话接通后可能出现的语音提示数字（如分机号或转接提示）。实际生活中电话自动语音常说「1を押してください」等。",
+        "emotionTone": "中性/机器语音",
+        "memoryTip": "联系打电话场景——听到数字3表示通话刚接通"
+      },
+      {
+        "lineId": "l23-conv-002",
+        "japanese": "ん",
+        "chineseMeaning": "嗯。",
+        "realLifeUse": "「ん」是日语中常见的回应语，表示\"嗯/我在听\"。比「はい」更随意，但这里可能是等待时的迟疑回应。",
+        "emotionTone": "迟疑/等待中",
+        "memoryTip": "短促的「ん」表示在等对方说话"
+      },
+      {
+        "lineId": "l23-conv-003",
+        "japanese": "ん",
+        "chineseMeaning": "嗯。",
+        "realLifeUse": "与上一句相同，连续两次「ん」表示一直在等待对方先开口。",
+        "emotionTone": "迟疑/等待中",
+        "memoryTip": "同样是等待回应"
+      },
+      {
+        "lineId": "l23-conv-004",
+        "japanese": "はい、緑図書館です",
+        "chineseMeaning": "您好，这里是绿图书馆。",
+        "realLifeUse": "日本接电话的标准句式：\n「はい」+ 机构/店铺名 +「です」。无论公司、餐厅还是政府机构都适用。",
+        "emotionTone": "礼貌/正式",
+        "memoryTip": "记公式：はい + XXです = 接电话开场白"
+      },
+      {
+        "lineId": "l23-conv-005",
+        "japanese": "あの、そちらまでどうやって行きますか？",
+        "chineseMeaning": "请问要怎么去你们那儿？",
+        "realLifeUse": "问路的万能句式：\n「あの、」+ 目的地まで +「どうやって行きますか」。\n「そちら」是\"您那边\"的礼貌说法。",
+        "emotionTone": "礼貌/有距离感",
+        "memoryTip": "「どうやって」= how，「行きますか」= go"
+      },
+      {
+        "lineId": "l23-conv-006",
+        "japanese": "本町駅から12番のバスに乗って、",
+        "chineseMeaning": "请从本町站搭乘12号巴士，",
+        "realLifeUse": "指路时先说起点（から），再说交通工具（に乗って）。て形表示动作还未结束，后面还有后续说明。",
+        "emotionTone": "说明/指引",
+        "memoryTip": "XX駅から + YY番のバスに乗って = 坐车路线"
+      },
+      {
+        "lineId": "l23-conv-007",
+        "japanese": "図書館前で降りてください",
+        "chineseMeaning": "在图书馆前下车。",
+        "realLifeUse": "「XXで降りてください」是指示下车地点的固定表达。「〜てください」是礼貌的请求/指示形式。",
+        "emotionTone": "礼貌指示",
+        "memoryTip": "XXで降りる = 在XX下车"
+      },
+      {
+        "lineId": "l23-conv-008",
+        "japanese": "3つ目です",
+        "chineseMeaning": "是第3站。",
+        "realLifeUse": "「数字+つ目」表示序数\"第几个\"。公交车上可以说「次のバス停」「2つ目」「3つ目」等。",
+        "emotionTone": "告知/中性",
+        "memoryTip": "ひとつ目、ふたつ目、みっつ目 = 第1站、第2站、第3站"
+      },
+      {
+        "lineId": "l23-conv-009",
+        "japanese": "3つ目ですね",
+        "chineseMeaning": "是第3站对吧。",
+        "realLifeUse": "用「〜ですね」重复对方的话表示确认。日常对话中经常用这种\"回响式确认\"来确保信息正确。",
+        "emotionTone": "确认/略带不确定",
+        "memoryTip": "XXですね = 是XX吧？——用于确认信息"
+      },
+      {
+        "lineId": "l23-conv-010",
+        "japanese": "ええ、降りると前に公園があります",
+        "chineseMeaning": "对，下车后前面就是一个公园。",
+        "realLifeUse": "「降りると」= \"一下车就…\"，用「〜と」表示\"前项发生后自然发生后项\"。这里是告诉对方下车后自然能看到公园。",
+        "emotionTone": "肯定/说明",
+        "memoryTip": "「降りると」表示\"只要下车，（自然）就…\""
+      },
+      {
+        "lineId": "l23-conv-011",
+        "japanese": "図書館は公園の中の白い建物です",
+        "chineseMeaning": "图书馆是公园里的一栋白色建筑。",
+        "realLifeUse": "描述建筑物位置的句型：\n「XXは〜の中の〜です」。颜色+建物是常见的组合（白い建物、赤いビル等）。",
+        "emotionTone": "说明/描述",
+        "memoryTip": "XXの中のYY = XX里面的YY"
+      },
+      {
+        "lineId": "l23-conv-012",
+        "japanese": "わかりました",
+        "chineseMeaning": "明白了。",
+        "realLifeUse": "「わかりました」是日语中使用频率极高的表达，表示\"我明白了/知道了\"。比「はい」更明确地表示理解。",
+        "emotionTone": "理解/顺从",
+        "memoryTip": "仕事で一番使う言葉の一つ！"
+      },
+      {
+        "lineId": "l23-conv-013",
+        "japanese": "それから本を借りるとき、何かいりますか？",
+        "chineseMeaning": "另外，借书时需要带什么吗？",
+        "realLifeUse": "「それから」= 此外/还有，用于追加问题。\n「本を借りるとき」= \"借书的时候\"（〜とき表示时间点）。\n「何かいりますか」= \"需要什么吗\"（要る=需要）。",
+        "emotionTone": "追加询问/礼貌",
+        "memoryTip": "XXとき = 做XX的时候（辞書形+とき表示\"做的时候\"）"
+      },
+      {
+        "lineId": "l23-conv-014",
+        "japanese": "お名前と住所がわかるものを持ってきてください",
+        "chineseMeaning": "请带可以确认姓名和住址的证件。",
+        "realLifeUse": "「〜がわかるもの」= \"能确认…的东西\"，在办理手续时常出现（身分証明書等）。「持ってきてください」= 请带来。",
+        "emotionTone": "说明要求/礼貌",
+        "memoryTip": "「がわかるもの」= 能确认XX的东西"
+      },
+      {
+        "lineId": "l23-conv-015",
+        "japanese": "はい、どうもありがとうございました",
+        "chineseMeaning": "好的，非常感谢您。",
+        "realLifeUse": "电话结束时的标准致谢语。\n「どうもありがとうございました」用过去式表示\"刚才非常感谢\"。有时也说「お忙しいところありがとうございました」等。",
+        "emotionTone": "感谢/正式告别",
+        "memoryTip": "电话挂断前一定要说的礼貌用语"
+      }
     ],
     "chineseRetellPrompt": "请用中文复述第23课的对话内容，尽量详细。\n\n「第23课讲的是一个人打电话到绿图书馆问路的故事……」\n\n试试看能不能把馆员说的乘车路线、地标描述，以及后来借书需要的证件，都完整说出来。",
     "realLifeReplacementPractice": [

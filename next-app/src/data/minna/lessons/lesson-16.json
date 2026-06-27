@@ -768,253 +768,189 @@
         "en": "Conversation Practice"
       },
       "dialogTitle": {
-        "zh": "第16课会话",
-        "en": "第16课会话"
+        "zh": "请告诉我使用方法",
+        "en": "使い方を教えてください"
       },
       "conversationGoal": {
-        "zh": "第16课会话练习",
-        "en": "Lesson 16 Conversation Practice"
+        "zh": "会话图确认内容",
+        "en": "Conversation image confirmed"
       },
       "items": [
         {
           "id": "l16-conv-001",
-          "speaker": "",
-          "jp": "【音楽】",
-          "kana": "",
-          "zh": "【音乐】",
-          "keyword": "音楽",
-          "videoStart": "0:00.00",
-          "videoEnd": "0:07.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "マリア",
+          "jp": "すみませんが、ちょっと使い方を教えてください。",
+          "kana": "すみませんが、ちょっとつかいかたをおしえてください。",
+          "zh": "不好意思，请教我一下使用方法。",
+          "keyword": "すみませんが",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l16-conv-002",
-          "speaker": "",
-          "jp": "すみませんが、ちょっと使い方を教えてください",
-          "kana": "",
-          "zh": "不好意思，可以请您教我一下使用方法吗？",
-          "keyword": "",
-          "videoStart": "0:12.00",
-          "videoEnd": "0:15.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "銀行員",
+          "jp": "お引き出しですか。",
+          "kana": "おひきだしですか。",
+          "zh": "您要取款吗？",
+          "keyword": "お引き出しで",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l16-conv-003",
-          "speaker": "",
-          "jp": "お引き出しですか？",
-          "kana": "",
-          "zh": "您是要取款吗？",
-          "keyword": "",
-          "videoStart": "0:15.00",
-          "videoEnd": "0:16.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "マリア",
+          "jp": "そうです。",
+          "kana": "そうです。",
+          "zh": "是的。",
+          "keyword": "そうです",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l16-conv-004",
-          "speaker": "",
-          "jp": "そうです",
-          "kana": "そうです",
-          "zh": "是的。",
-          "keyword": "",
-          "videoStart": "0:16.00",
-          "videoEnd": "0:17.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "speaker": "銀行員",
+          "jp": "じゃ、まずここを押してください。",
+          "kana": "じゃ、まずここをおしてください。",
+          "zh": "那么，请先按这里。",
+          "keyword": "じゃまずここ",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l16-conv-005",
-          "speaker": "",
-          "jp": "じゃあ、まずここを押してください",
-          "kana": "",
-          "zh": "那么，首先请按这里。",
-          "keyword": "",
-          "videoStart": "0:17.00",
-          "videoEnd": "0:20.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "マリア",
+          "jp": "はい。",
+          "kana": "はい。",
+          "zh": "好的。",
+          "keyword": "はい",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l16-conv-006",
-          "speaker": "",
-          "jp": "はい",
-          "kana": "はい",
-          "zh": "好的。",
-          "keyword": "",
-          "videoStart": "0:20.00",
-          "videoEnd": "0:22.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "speaker": "銀行員",
+          "jp": "次にキャッシュカードをここに入れて、暗証番号を押してください。",
+          "kana": "つぎにキャッシュカードをここにいれて、あんしょうばんごうをおしてください。",
+          "zh": "接着把银行卡插到这里，再输入密码。",
+          "keyword": "次にキャッシ",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l16-conv-007",
-          "speaker": "",
-          "jp": "次にキャッシュカードをここに入れて",
-          "kana": "",
-          "zh": "接下来，请把银行卡插入这里。",
-          "keyword": "",
-          "videoStart": "0:24.00",
-          "videoEnd": "0:27.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "マリア",
+          "jp": "はい。押しました。",
+          "kana": "はい。おしました。",
+          "zh": "好的。按好了。",
+          "keyword": "はい押しまし",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l16-conv-008",
-          "speaker": "",
-          "jp": "暗証番号を押してください",
-          "kana": "",
-          "zh": "请输入密码。",
-          "keyword": "暗証番号",
-          "videoStart": "0:27.00",
-          "videoEnd": "0:29.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "銀行員",
+          "jp": "じゃ、金額を押してください。",
+          "kana": "じゃ、きんがくをおしてください。",
+          "zh": "那么，请输入金额。",
+          "keyword": "じゃ金額を押",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l16-conv-009",
-          "speaker": "",
-          "jp": "はい、押しました",
-          "kana": "",
-          "zh": "好的，我按了。",
-          "keyword": "",
-          "videoStart": "0:37.00",
-          "videoEnd": "0:38.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "マリア",
+          "jp": "5万円ですが、5……。",
+          "kana": "ごまんえんですが、ご……。",
+          "zh": "我要取五万日元，是按5……",
+          "keyword": "5万円ですが",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l16-conv-010",
-          "speaker": "",
-          "jp": "じゃあ、金額を押してください",
-          "kana": "",
-          "zh": "那么，请输入金额。",
-          "keyword": "金額",
-          "videoStart": "0:38.00",
-          "videoEnd": "0:40.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "銀行員",
+          "jp": "この「万円」のを押します。それからこの「確認」ボタンを押してください。",
+          "kana": "この「まんえん」のをおします。それからこの「かくにん」ボタンをおしてください。",
+          "zh": "按这个“万日元”的键。然后请按这个“确认”按钮。",
+          "keyword": "この万円のを",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l16-conv-011",
-          "speaker": "",
-          "jp": "5万円ですか？",
-          "kana": "",
-          "zh": "是五万日元吗？",
-          "keyword": "5万円です",
-          "videoStart": "0:41.00",
-          "videoEnd": "0:43.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l16-conv-012",
-          "speaker": "",
-          "jp": "この5万円を押します",
-          "kana": "",
-          "zh": "我按这个五万日元。",
-          "keyword": "5万円",
-          "videoStart": "0:44.00",
-          "videoEnd": "0:47.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l16-conv-013",
-          "speaker": "",
-          "jp": "それからこの確認ボタンを押してください",
-          "kana": "",
-          "zh": "然后请按这个确认按钮。",
-          "keyword": "確認",
-          "videoStart": "0:48.00",
-          "videoEnd": "0:51.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l16-conv-014",
-          "speaker": "",
-          "jp": "はい、どうもありがとうございました",
-          "kana": "はい、どうもありがとうございました",
-          "zh": "好的，非常感谢您。",
-          "keyword": "",
-          "videoStart": "0:54.00",
-          "videoEnd": "0:56.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "speaker": "マリア",
+          "jp": "はい。どうもありがとうございました。",
+          "kana": "はい。どうもありがとうございました。",
+          "zh": "好的。非常感谢。",
+          "keyword": "はいどうもあ",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l16-conv-015",
-          "speaker": "",
-          "jp": "【音楽】",
-          "kana": "",
-          "zh": "【音乐】",
-          "keyword": "音楽",
-          "videoStart": "0:57.00",
-          "videoEnd": "1:01.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         }
       ]
     },
@@ -1218,7 +1154,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_grammar",
@@ -1345,7 +1282,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_examples",
@@ -1510,7 +1448,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_quiz",
@@ -2590,7 +2529,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     }
   ],
   "conversationVideo": {
@@ -2621,37 +2561,219 @@
     "sceneSummary": "顾客在银行向工作人员请教ATM机的使用方法，工作人员一步步指导顾客完成取款操作。",
     "storyExplanation": "第16课的会话场景设定在银行。一位顾客想要使用ATM取款，但不熟悉操作方法，于是向银行工作人员求助。工作人员非常礼貌地用「〜てください」句型一步步指导顾客完成操作。\n\n这段会话不仅展示了礼貌请求的表达方式，更重要的是通过「まず」「次に」「それから」等顺序词，以及动词て形的连接来体现操作步骤的前后顺序。从按下第一个按钮开始，到插入银行卡、输入密码、输入金额、确认金额，最后按确认按钮完成取款，整个过程清晰展现了日语中表达顺序动作的典型模式。\n\n会话结尾顾客表示感谢，体现了日本日常生活中礼貌往来的习惯。",
     "characters": [
-      { "name": "顾客", "role": "求助者", "relationship": "需要帮助使用ATM的银行顾客" },
-      { "name": "工作人员", "role": "指导者", "relationship": "提供ATM操作指导的银行职员" }
+      {
+        "name": "顾客",
+        "role": "求助者",
+        "relationship": "需要帮助使用ATM的银行顾客"
+      },
+      {
+        "name": "工作人员",
+        "role": "指导者",
+        "relationship": "提供ATM操作指导的银行职员"
+      }
     ],
     "conversationFlow": [
-      { "step": 1, "title": "开场音乐", "explanation": "会话以背景音乐开始，营造场景氛围。", "relatedLineIds": ["l16-conv-001"] },
-      { "step": 2, "title": "顾客请求帮助", "explanation": "顾客礼貌地向工作人员打招呼，使用「すみませんが」引起注意，并用「〜を教えてください」请求对方教自己使用方法。这是日语中请求帮助的典型表达。", "relatedLineIds": ["l16-conv-002"] },
-      { "step": 3, "title": "工作人员确认需求", "explanation": "工作人员确认顾客是要取款（お引き出し），顾客简短回答「そうです」。一问一答确认目的后开始指导。", "relatedLineIds": ["l16-conv-003", "l16-conv-004"] },
-      { "step": 4, "title": "第一步操作：按按钮", "explanation": "工作人员用「まず」表示第一步，配合「ここを押してください」指导顾客按指定位置。顾客回应「はい」表示已操作完成。", "relatedLineIds": ["l16-conv-005", "l16-conv-006"] },
-      { "step": 5, "title": "第二步操作：插入银行卡", "explanation": "工作人员用「次に」表示下一步操作，指导顾客将银行卡插入卡槽。注意这里用て形「入れて」来连接前后动作，体现了て形的顺序用法。", "relatedLineIds": ["l16-conv-007"] },
-      { "step": 6, "title": "输入密码", "explanation": "工作人员指导顾客输入密码（暗証番号），顾客完成后告知「押しました」，使用过去形表示操作已完成。", "relatedLineIds": ["l16-conv-008", "l16-conv-009"] },
-      { "step": 7, "title": "输入金额并确认", "explanation": "工作人员指导输入金额，顾客按下5万円的按钮并回答「この5万円を押します」。工作人员确认金额后，用「それから」指导按确认按钮。", "relatedLineIds": ["l16-conv-010", "l16-conv-011", "l16-conv-012", "l16-conv-013"] },
-      { "step": 8, "title": "感谢与结束音乐", "explanation": "顾客完成操作后向工作人员表示感谢，使用「どうもありがとうございました」表达谢意。会话以背景音乐结束。", "relatedLineIds": ["l16-conv-014", "l16-conv-015"] }
+      {
+        "step": 1,
+        "title": "开场音乐",
+        "explanation": "会话以背景音乐开始，营造场景氛围。",
+        "relatedLineIds": [
+          "l16-conv-001"
+        ]
+      },
+      {
+        "step": 2,
+        "title": "顾客请求帮助",
+        "explanation": "顾客礼貌地向工作人员打招呼，使用「すみませんが」引起注意，并用「〜を教えてください」请求对方教自己使用方法。这是日语中请求帮助的典型表达。",
+        "relatedLineIds": [
+          "l16-conv-002"
+        ]
+      },
+      {
+        "step": 3,
+        "title": "工作人员确认需求",
+        "explanation": "工作人员确认顾客是要取款（お引き出し），顾客简短回答「そうです」。一问一答确认目的后开始指导。",
+        "relatedLineIds": [
+          "l16-conv-003",
+          "l16-conv-004"
+        ]
+      },
+      {
+        "step": 4,
+        "title": "第一步操作：按按钮",
+        "explanation": "工作人员用「まず」表示第一步，配合「ここを押してください」指导顾客按指定位置。顾客回应「はい」表示已操作完成。",
+        "relatedLineIds": [
+          "l16-conv-005",
+          "l16-conv-006"
+        ]
+      },
+      {
+        "step": 5,
+        "title": "第二步操作：插入银行卡",
+        "explanation": "工作人员用「次に」表示下一步操作，指导顾客将银行卡插入卡槽。注意这里用て形「入れて」来连接前后动作，体现了て形的顺序用法。",
+        "relatedLineIds": [
+          "l16-conv-007"
+        ]
+      },
+      {
+        "step": 6,
+        "title": "输入密码",
+        "explanation": "工作人员指导顾客输入密码（暗証番号），顾客完成后告知「押しました」，使用过去形表示操作已完成。",
+        "relatedLineIds": [
+          "l16-conv-008",
+          "l16-conv-009"
+        ]
+      },
+      {
+        "step": 7,
+        "title": "输入金额并确认",
+        "explanation": "工作人员指导输入金额，顾客按下5万円的按钮并回答「この5万円を押します」。工作人员确认金额后，用「それから」指导按确认按钮。",
+        "relatedLineIds": [
+          "l16-conv-010",
+          "l16-conv-011",
+          "l16-conv-012",
+          "l16-conv-013"
+        ]
+      },
+      {
+        "step": 8,
+        "title": "感谢与结束音乐",
+        "explanation": "顾客完成操作后向工作人员表示感谢，使用「どうもありがとうございました」表达谢意。会话以背景音乐结束。",
+        "relatedLineIds": [
+          "l16-conv-014",
+          "l16-conv-015"
+        ]
+      }
     ],
     "lineUsage": [
-      { "lineId": "l16-conv-001", "japanese": "【音楽】", "chineseMeaning": "【音乐】", "realLifeUse": "场景过渡的背景音乐，不代表实际对话，但提示场景切换", "emotionTone": "中性，场景提示音", "memoryTip": "注意区分音乐标记和实际对话" },
-      { "lineId": "l16-conv-002", "japanese": "すみませんが、ちょっと使い方を教えてください", "chineseMeaning": "不好意思，可以请您教我一下使用方法吗？", "realLifeUse": "请求帮助的万能句型，「すみませんが」用于礼貌地引起注意，「〜てください」是请求的核心", "emotionTone": "礼貌、客气、稍带犹豫", "memoryTip": "联想在便利店或银行向店员求助的场景" },
-      { "lineId": "l16-conv-003", "japanese": "お引き出しですか？", "chineseMeaning": "您是要取款吗？", "realLifeUse": "确认对方意图的礼貌问法，将动词名词化（お引き出し）表示服务项目", "emotionTone": "专业、礼貌、确认式语气", "memoryTip": "「お〜ですか」是服务行业常用确认句型" },
-      { "lineId": "l16-conv-004", "japanese": "そうです", "chineseMeaning": "是的。", "realLifeUse": "简洁肯定回答，用于日常对话中确认对方的问题", "emotionTone": "肯定、简洁", "memoryTip": "常与「はい、そうです」形式使用，更礼貌" },
-      { "lineId": "l16-conv-005", "japanese": "じゃあ、まずここを押してください", "chineseMeaning": "那么，首先请按这里。", "realLifeUse": "顺序指示的表达，「まず」表示第一步，「ここを押してください」是直接的操作指示", "emotionTone": "耐心、指导性、清晰", "memoryTip": "「まず」是顺序词，常用于说明步骤" },
-      { "lineId": "l16-conv-006", "japanese": "はい", "chineseMeaning": "好的。", "realLifeUse": "表示收到指示并确认执行，是听者配合的常见回应", "emotionTone": "顺从、配合", "memoryTip": "简短回应是日语对话中的常见礼貌" },
-      { "lineId": "l16-conv-007", "japanese": "次にキャッシュカードをここに入れて", "chineseMeaning": "接下来，请把银行卡插入这里。", "realLifeUse": "顺序词「次に」引出下一步，动词て形「入れて」表示动作的连续和操作指引", "emotionTone": "耐心指导，语气自然流畅", "memoryTip": "注意「入れて」是「入れます」的て形，表示\"插入\"" },
-      { "lineId": "l16-conv-008", "japanese": "暗証番号を押してください", "chineseMeaning": "请输入密码。", "realLifeUse": "直接的操作指示，在ATM、手机等场景中非常常用", "emotionTone": "清晰、直接、礼貌", "memoryTip": "「暗証番号」是\"密码\"的正式说法" },
-      { "lineId": "l16-conv-009", "japanese": "はい、押しました", "chineseMeaning": "好的，我按了。", "realLifeUse": "用过去形「押しました」报告操作已完成的表达方式", "emotionTone": "确认、已完成", "memoryTip": "注意「押しました」是「押します」的过去形" },
-      { "lineId": "l16-conv-010", "japanese": "じゃあ、金額を押してください", "chineseMeaning": "那么，请输入金额。", "realLifeUse": "继续下达操作指令，用「じゃあ」自然衔接", "emotionTone": "继续指导、自然过渡", "memoryTip": "「金額」是\"金额\"的意思" },
-      { "lineId": "l16-conv-011", "japanese": "5万円ですか？", "chineseMeaning": "是五万日元吗？", "realLifeUse": "确认对方操作的金额，用「ですか？」表示确认式疑问", "emotionTone": "确认、略带惊讶（金额较大）", "memoryTip": "金额确认在购物或取款时很常见" },
-      { "lineId": "l16-conv-012", "japanese": "この5万円を押します", "chineseMeaning": "我按这个五万日元。", "realLifeUse": "说明自己的操作动作，用「この」指代ATM屏幕上的选项", "emotionTone": "肯定、说明性", "memoryTip": "「この＋名词」用于指代眼前的事物" },
-      { "lineId": "l16-conv-013", "japanese": "それからこの確認ボタンを押してください", "chineseMeaning": "然后请按这个确认按钮。", "realLifeUse": "用「それから」表示下一步，完整呈现操作流程中的顺序表达", "emotionTone": "耐心、引导性", "memoryTip": "「それから」相当于\"然后\"，是顺序表达的重要连接词" },
-      { "lineId": "l16-conv-014", "japanese": "はい、どうもありがとうございました", "chineseMeaning": "好的，非常感谢您。", "realLifeUse": "服务完成后表达感谢的标准用语，使用过去形「ありがとうございました」", "emotionTone": "真诚感谢、礼貌", "memoryTip": "完成后用过去形感谢，进行中用现在形" },
-      { "lineId": "l16-conv-015", "japanese": "【音楽】", "chineseMeaning": "【音乐】", "realLifeUse": "结束音乐，标志会话结束", "emotionTone": "中性，场景结束提示", "memoryTip": "注意区分音乐标记和实际对话" }
+      {
+        "lineId": "l16-conv-001",
+        "japanese": "【音楽】",
+        "chineseMeaning": "【音乐】",
+        "realLifeUse": "场景过渡的背景音乐，不代表实际对话，但提示场景切换",
+        "emotionTone": "中性，场景提示音",
+        "memoryTip": "注意区分音乐标记和实际对话"
+      },
+      {
+        "lineId": "l16-conv-002",
+        "japanese": "すみませんが、ちょっと使い方を教えてください",
+        "chineseMeaning": "不好意思，可以请您教我一下使用方法吗？",
+        "realLifeUse": "请求帮助的万能句型，「すみませんが」用于礼貌地引起注意，「〜てください」是请求的核心",
+        "emotionTone": "礼貌、客气、稍带犹豫",
+        "memoryTip": "联想在便利店或银行向店员求助的场景"
+      },
+      {
+        "lineId": "l16-conv-003",
+        "japanese": "お引き出しですか？",
+        "chineseMeaning": "您是要取款吗？",
+        "realLifeUse": "确认对方意图的礼貌问法，将动词名词化（お引き出し）表示服务项目",
+        "emotionTone": "专业、礼貌、确认式语气",
+        "memoryTip": "「お〜ですか」是服务行业常用确认句型"
+      },
+      {
+        "lineId": "l16-conv-004",
+        "japanese": "そうです",
+        "chineseMeaning": "是的。",
+        "realLifeUse": "简洁肯定回答，用于日常对话中确认对方的问题",
+        "emotionTone": "肯定、简洁",
+        "memoryTip": "常与「はい、そうです」形式使用，更礼貌"
+      },
+      {
+        "lineId": "l16-conv-005",
+        "japanese": "じゃあ、まずここを押してください",
+        "chineseMeaning": "那么，首先请按这里。",
+        "realLifeUse": "顺序指示的表达，「まず」表示第一步，「ここを押してください」是直接的操作指示",
+        "emotionTone": "耐心、指导性、清晰",
+        "memoryTip": "「まず」是顺序词，常用于说明步骤"
+      },
+      {
+        "lineId": "l16-conv-006",
+        "japanese": "はい",
+        "chineseMeaning": "好的。",
+        "realLifeUse": "表示收到指示并确认执行，是听者配合的常见回应",
+        "emotionTone": "顺从、配合",
+        "memoryTip": "简短回应是日语对话中的常见礼貌"
+      },
+      {
+        "lineId": "l16-conv-007",
+        "japanese": "次にキャッシュカードをここに入れて",
+        "chineseMeaning": "接下来，请把银行卡插入这里。",
+        "realLifeUse": "顺序词「次に」引出下一步，动词て形「入れて」表示动作的连续和操作指引",
+        "emotionTone": "耐心指导，语气自然流畅",
+        "memoryTip": "注意「入れて」是「入れます」的て形，表示\"插入\""
+      },
+      {
+        "lineId": "l16-conv-008",
+        "japanese": "暗証番号を押してください",
+        "chineseMeaning": "请输入密码。",
+        "realLifeUse": "直接的操作指示，在ATM、手机等场景中非常常用",
+        "emotionTone": "清晰、直接、礼貌",
+        "memoryTip": "「暗証番号」是\"密码\"的正式说法"
+      },
+      {
+        "lineId": "l16-conv-009",
+        "japanese": "はい、押しました",
+        "chineseMeaning": "好的，我按了。",
+        "realLifeUse": "用过去形「押しました」报告操作已完成的表达方式",
+        "emotionTone": "确认、已完成",
+        "memoryTip": "注意「押しました」是「押します」的过去形"
+      },
+      {
+        "lineId": "l16-conv-010",
+        "japanese": "じゃあ、金額を押してください",
+        "chineseMeaning": "那么，请输入金额。",
+        "realLifeUse": "继续下达操作指令，用「じゃあ」自然衔接",
+        "emotionTone": "继续指导、自然过渡",
+        "memoryTip": "「金額」是\"金额\"的意思"
+      },
+      {
+        "lineId": "l16-conv-011",
+        "japanese": "5万円ですか？",
+        "chineseMeaning": "是五万日元吗？",
+        "realLifeUse": "确认对方操作的金额，用「ですか？」表示确认式疑问",
+        "emotionTone": "确认、略带惊讶（金额较大）",
+        "memoryTip": "金额确认在购物或取款时很常见"
+      },
+      {
+        "lineId": "l16-conv-012",
+        "japanese": "この5万円を押します",
+        "chineseMeaning": "我按这个五万日元。",
+        "realLifeUse": "说明自己的操作动作，用「この」指代ATM屏幕上的选项",
+        "emotionTone": "肯定、说明性",
+        "memoryTip": "「この＋名词」用于指代眼前的事物"
+      },
+      {
+        "lineId": "l16-conv-013",
+        "japanese": "それからこの確認ボタンを押してください",
+        "chineseMeaning": "然后请按这个确认按钮。",
+        "realLifeUse": "用「それから」表示下一步，完整呈现操作流程中的顺序表达",
+        "emotionTone": "耐心、引导性",
+        "memoryTip": "「それから」相当于\"然后\"，是顺序表达的重要连接词"
+      },
+      {
+        "lineId": "l16-conv-014",
+        "japanese": "はい、どうもありがとうございました",
+        "chineseMeaning": "好的，非常感谢您。",
+        "realLifeUse": "服务完成后表达感谢的标准用语，使用过去形「ありがとうございました」",
+        "emotionTone": "真诚感谢、礼貌",
+        "memoryTip": "完成后用过去形感谢，进行中用现在形"
+      },
+      {
+        "lineId": "l16-conv-015",
+        "japanese": "【音楽】",
+        "chineseMeaning": "【音乐】",
+        "realLifeUse": "结束音乐，标志会话结束",
+        "emotionTone": "中性，场景结束提示",
+        "memoryTip": "注意区分音乐标记和实际对话"
+      }
     ],
     "chineseRetellPrompt": "请用中文复述第16课的ATM使用场景。\n\n「第16课讲的是一位顾客在银行向工作人员请教ATM使用方法的故事。一开始……」\n\n试试看把对话中的每一步操作都用中文描述出来。",
-    "realLifeReplacementPractice": ["在便利店请店员教自己使用复印机", "在车站向站务员询问自动售票机的使用方法", "在邮局请工作人员教自己寄国际包裹", "在机场向地勤人员询问自助值机操作", "在超市请店员教自己使用自助结账机"]
+    "realLifeReplacementPractice": [
+      "在便利店请店员教自己使用复印机",
+      "在车站向站务员询问自动售票机的使用方法",
+      "在邮局请工作人员教自己寄国际包裹",
+      "在机场向地勤人员询问自助值机操作",
+      "在超市请店员教自己使用自助结账机"
+    ]
   }
 }

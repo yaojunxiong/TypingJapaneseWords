@@ -768,196 +768,180 @@
         "en": "Conversation Practice"
       },
       "dialogTitle": {
-        "zh": "第15课会话",
-        "en": "第15课会话"
+        "zh": "您的家人呢？",
+        "en": "ご家族は？"
       },
       "conversationGoal": {
-        "zh": "第15课会话练习",
-        "en": "Lesson 15 Conversation Practice"
+        "zh": "会话图确认内容",
+        "en": "Conversation image confirmed"
       },
       "items": [
         {
           "id": "l15-conv-001",
-          "speaker": "",
-          "jp": "いい映画でしたね",
-          "kana": "",
-          "zh": "真是一部好电影呢。",
-          "keyword": "映画",
-          "videoStart": "0:00.00",
-          "videoEnd": "0:13.80",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "木村",
+          "jp": "いい映画でしたね。",
+          "kana": "いいえいがでしたね。",
+          "zh": "真是一部好电影啊。",
+          "keyword": "いい映画でし",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l15-conv-002",
-          "speaker": "",
-          "jp": "ええ、私は家族を思い出しました",
-          "kana": "",
-          "zh": "是啊，让我想起了我的家人。",
-          "keyword": "家族",
-          "videoStart": "0:13.80",
-          "videoEnd": "0:16.80",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "ミラー",
+          "jp": "ええ。わたしは家族を思い出しました。",
+          "kana": "ええ。わたしはかぞくをおもいだしました。",
+          "zh": "是啊。我想起了家人。",
+          "keyword": "ええわたしは",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l15-conv-003",
-          "speaker": "",
-          "jp": "そうですか、ミラーさんのご家族は?",
-          "kana": "",
-          "zh": "是吗？米勒先生的家人是？",
-          "keyword": "家族",
-          "videoStart": "0:16.80",
-          "videoEnd": "0:20.30",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "木村",
+          "jp": "そうですか。ミラーさんのご家族は？",
+          "kana": "そうですか。ミラーさんのごかぞくは？",
+          "zh": "是吗？米勒先生的家人呢？",
+          "keyword": "そうですかミ",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l15-conv-004",
-          "speaker": "",
-          "jp": "両親と姉が一人います",
-          "kana": "",
-          "zh": "有父母和一个姐姐。",
-          "keyword": "一人",
-          "videoStart": "0:21.40",
-          "videoEnd": "0:24.70",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "ミラー",
+          "jp": "両親と姉が1人います。",
+          "kana": "りょうしんとあねがひとりいます。",
+          "zh": "我有父母和一个姐姐。",
+          "keyword": "両親と姉が1",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l15-conv-005",
-          "speaker": "",
-          "jp": "どちらにいらっしゃいますか?",
-          "kana": "どちらにいらっしゃいますか?",
-          "zh": "他们住在哪里呢？",
-          "keyword": "",
-          "videoStart": "0:24.70",
-          "videoEnd": "0:26.90",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "speaker": "木村",
+          "jp": "どちらにいらっしゃいますか。",
+          "kana": "どちらにいらっしゃいますか。",
+          "zh": "他们住在哪里？",
+          "keyword": "どちらにいら",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l15-conv-006",
-          "speaker": "",
-          "jp": "両親はニューヨークの近くに住んでいます",
-          "kana": "",
+          "speaker": "ミラー",
+          "jp": "両親はニューヨークの近くに住んでいます。",
+          "kana": "りょうしんはニューヨークのちかくにすんでいます。",
           "zh": "我父母住在纽约附近。",
-          "keyword": "両親",
-          "videoStart": "0:26.90",
-          "videoEnd": "0:30.90",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "keyword": "両親はニュー",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l15-conv-007",
-          "speaker": "",
-          "jp": "姉はロンドンで働いています",
-          "kana": "",
-          "zh": "姐姐在伦敦工作。",
-          "keyword": "",
-          "videoStart": "0:30.90",
-          "videoEnd": "0:34.10",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "ミラー",
+          "jp": "姉はロンドンで働いています。",
+          "kana": "あねはロンドンではたらいています。",
+          "zh": "我姐姐在伦敦工作。",
+          "keyword": "姉はロンドン",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l15-conv-008",
-          "speaker": "",
-          "jp": "木村さんのご家族は?",
-          "kana": "",
-          "zh": "木村小姐的家人呢？",
-          "keyword": "家族",
-          "videoStart": "0:34.10",
-          "videoEnd": "0:36.40",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "ミラー",
+          "jp": "木村さんのご家族は？",
+          "kana": "きむらさんのごかぞくは？",
+          "zh": "木村先生的家人呢？",
+          "keyword": "木村さんのご",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l15-conv-009",
-          "speaker": "",
-          "jp": "3人です",
-          "kana": "",
-          "zh": "我们家有三口人。",
-          "keyword": "3人です",
-          "videoStart": "0:38.40",
-          "videoEnd": "0:39.30",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "木村",
+          "jp": "3人です。父は銀行員です。",
+          "kana": "さんにんです。ちちはぎんこういんです。",
+          "zh": "有三个人。父亲是银行职员。",
+          "keyword": "3人です父は",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l15-conv-010",
-          "speaker": "",
-          "jp": "父は銀行員です",
-          "kana": "",
-          "zh": "父亲是银行职员。",
-          "keyword": "銀行員です",
-          "videoStart": "0:39.30",
-          "videoEnd": "0:43.10",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l15-conv-011",
-          "speaker": "",
-          "jp": "母は高校で英語を教えています",
-          "kana": "",
+          "speaker": "木村",
+          "jp": "母は高校で英語を教えています。",
+          "kana": "はははこうこうでえいごをおしえています。",
           "zh": "母亲在高中教英语。",
-          "keyword": "英語",
-          "videoStart": "0:43.10",
-          "videoEnd": "0:46.10",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "keyword": "母は高校で英",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         }
       ]
     },
     {
       "type": "conversation_vocab",
       "id": "l15_conversation_vocab",
-      "sourceType": "extracted_from_official_video_subtitle",
+      "sourceType": "conversation_image_human_confirmed",
       "title": {
         "zh": "会话关键词汇",
         "en": "Conversation Key Vocabulary"
@@ -969,148 +953,116 @@
       "items": [
         {
           "word": "いい映画でしたね",
-          "kana": "",
-          "zh": "",
+          "kana": "いい えいがでしたね",
+          "zh": "是一部好电影啊。",
           "importance": "core",
           "fromConversationId": "l15-conv-001",
-          "sourceSentence": "いい映画でしたね",
-          "sourceType": "extracted_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceSentence": "いい映画でしたね。",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
-          "word": "ええ",
-          "kana": "ええ",
-          "zh": "",
+          "word": "ええ。わたしは家族を思い出しました",
+          "kana": "ええ。わたしは かぞくを おもいだしました",
+          "zh": "是啊。我想起了我的家人。",
           "importance": "core",
           "fromConversationId": "l15-conv-002",
-          "sourceSentence": "ええ、私は家族を思い出しました",
-          "sourceType": "extracted_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceSentence": "ええ。わたしは家族を思い出しました。",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
-          "word": "私は家族を思い出しました",
-          "kana": "",
-          "zh": "",
-          "importance": "core",
-          "fromConversationId": "l15-conv-002",
-          "sourceSentence": "ええ、私は家族を思い出しました",
-          "sourceType": "extracted_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "word": "そうですか",
-          "kana": "そうですか",
-          "zh": "",
+          "word": "そうですか。ミラーさんのご家族は",
+          "kana": "そうですか。ミラーさんの ごかぞくは",
+          "zh": "是吗？米勒先生的家人呢？",
           "importance": "core",
           "fromConversationId": "l15-conv-003",
-          "sourceSentence": "そうですか、ミラーさんのご家族は?",
-          "sourceType": "extracted_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceSentence": "そうですか。ミラーさんのご家族は？",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
-          "word": "ミラーさんのご家族は",
-          "kana": "",
-          "zh": "",
-          "importance": "core",
-          "fromConversationId": "l15-conv-003",
-          "sourceSentence": "そうですか、ミラーさんのご家族は?",
-          "sourceType": "extracted_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "word": "両親と姉が一人います",
-          "kana": "",
-          "zh": "",
+          "word": "両親と姉が1人います",
+          "kana": "りょうしんと あねが ひとり います",
+          "zh": "有父母和一个姐姐。",
           "importance": "core",
           "fromConversationId": "l15-conv-004",
-          "sourceSentence": "両親と姉が一人います",
-          "sourceType": "extracted_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceSentence": "両親と姉が1人います。",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "word": "どちらにいらっしゃいますか",
-          "kana": "どちらにいらっしゃいますか",
-          "zh": "",
+          "kana": "どちらに いらっしゃいますか",
+          "zh": "他们在哪儿？",
           "importance": "core",
           "fromConversationId": "l15-conv-005",
-          "sourceSentence": "どちらにいらっしゃいますか?",
-          "sourceType": "extracted_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceSentence": "どちらにいらっしゃいますか。",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "word": "両親はニューヨークの近くに住んでいます",
-          "kana": "",
-          "zh": "",
+          "kana": "りょうしんは ニューヨークの ちかくに すんでいます",
+          "zh": "父母住在纽约附近。",
           "importance": "core",
           "fromConversationId": "l15-conv-006",
-          "sourceSentence": "両親はニューヨークの近くに住んでいます",
-          "sourceType": "extracted_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceSentence": "両親はニューヨークの近くに住んでいます。",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "word": "姉はロンドンで働いています",
-          "kana": "",
-          "zh": "",
+          "kana": "あねは ロンドンで はたらいています",
+          "zh": "姐姐在伦敦工作。",
           "importance": "core",
           "fromConversationId": "l15-conv-007",
-          "sourceSentence": "姉はロンドンで働いています",
-          "sourceType": "extracted_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceSentence": "姉はロンドンで働いています。",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "word": "木村さんのご家族は",
-          "kana": "",
-          "zh": "",
+          "kana": "きむらさんの ごかぞくは",
+          "zh": "木村先生的家人呢？",
           "importance": "core",
           "fromConversationId": "l15-conv-008",
-          "sourceSentence": "木村さんのご家族は?",
-          "sourceType": "extracted_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceSentence": "木村さんのご家族は？",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
-          "word": "人です",
-          "kana": "",
-          "zh": "",
+          "word": "3人です。父は銀行員です",
+          "kana": "さんにんです。ちちは ぎんこういんです",
+          "zh": "三个人。父亲是银行职员。",
           "importance": "core",
           "fromConversationId": "l15-conv-009",
-          "sourceSentence": "3人です",
-          "sourceType": "extracted_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "word": "父は銀行員です",
-          "kana": "",
-          "zh": "",
-          "importance": "core",
-          "fromConversationId": "l15-conv-010",
-          "sourceSentence": "父は銀行員です",
-          "sourceType": "extracted_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceSentence": "3人です。父は銀行員です。",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "word": "母は高校で英語を教えています",
-          "kana": "",
-          "zh": "",
+          "kana": "ははは こうこうで えいごを おしえています",
+          "zh": "母亲在高中教英语。",
           "importance": "core",
-          "fromConversationId": "l15-conv-011",
-          "sourceSentence": "母は高校で英語を教えています",
-          "sourceType": "extracted_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "fromConversationId": "l15-conv-010",
+          "sourceSentence": "母は高校で英語を教えています。",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_grammar",
@@ -1134,7 +1086,7 @@
           "conversationExample": "ええ、私は家族を思い出しました",
           "fromConversationId": "l15-conv-002",
           "sourceSentence": "ええ、私は家族を思い出しました",
-          "sourceType": "extracted_from_official_video_subtitle",
+          "sourceType": "conversation_image_human_confirmed",
           "explanationZh": "「を」标记动作的对象。",
           "needsReview": true,
           "reviewStatus": "needs_review"
@@ -1148,7 +1100,7 @@
           "conversationExample": "ええ、私は家族を思い出しました",
           "fromConversationId": "l15-conv-002",
           "sourceSentence": "ええ、私は家族を思い出しました",
-          "sourceType": "extracted_from_official_video_subtitle",
+          "sourceType": "conversation_image_human_confirmed",
           "explanationZh": "「ました」是「ます」的过去形。",
           "needsReview": true,
           "reviewStatus": "needs_review"
@@ -1162,7 +1114,7 @@
           "conversationExample": "そうですか、ミラーさんのご家族は?",
           "fromConversationId": "l15-conv-003",
           "sourceSentence": "そうですか、ミラーさんのご家族は?",
-          "sourceType": "extracted_from_official_video_subtitle",
+          "sourceType": "conversation_image_human_confirmed",
           "explanationZh": "「です」是日语礼貌判断助动词，相当于中文的\"是\"。",
           "needsReview": true,
           "reviewStatus": "needs_review"
@@ -1176,7 +1128,7 @@
           "conversationExample": "そうですか、ミラーさんのご家族は?",
           "fromConversationId": "l15-conv-003",
           "sourceSentence": "そうですか、ミラーさんのご家族は?",
-          "sourceType": "extracted_from_official_video_subtitle",
+          "sourceType": "conversation_image_human_confirmed",
           "explanationZh": "句尾加「か」构成疑问句。",
           "needsReview": true,
           "reviewStatus": "needs_review"
@@ -1190,7 +1142,7 @@
           "conversationExample": "両親と姉が一人います",
           "fromConversationId": "l15-conv-004",
           "sourceSentence": "両親と姉が一人います",
-          "sourceType": "extracted_from_official_video_subtitle",
+          "sourceType": "conversation_image_human_confirmed",
           "explanationZh": "「ます」是动词的敬体形式。",
           "needsReview": true,
           "reviewStatus": "needs_review"
@@ -1204,17 +1156,18 @@
           "conversationExample": "どちらにいらっしゃいますか?",
           "fromConversationId": "l15-conv-005",
           "sourceSentence": "どちらにいらっしゃいますか?",
-          "sourceType": "extracted_from_official_video_subtitle",
+          "sourceType": "conversation_image_human_confirmed",
           "explanationZh": "「に」表示时间、地点或方向。",
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_examples",
       "id": "l15_conversation_examples",
-      "sourceType": "ai_generated_from_official_conversation",
+      "sourceType": "conversation_image_human_confirmed",
       "title": {
         "zh": "会话替换例句",
         "en": "Conversation Replacement Examples"
@@ -1225,153 +1178,122 @@
       },
       "items": [
         {
-          "pattern": "映画",
-          "originalSentence": "いい映画でしたね",
+          "jp": "いい映画でしたね。",
+          "kana": "いい えいがでしたね。",
+          "zh": "是一部好电影啊。",
+          "en": "是一部好电影啊。",
           "fromConversationId": "l15-conv-001",
-          "sourceSentence": "いい映画でしたね",
-          "sourceType": "ai_generated_from_official_conversation",
-          "replacements": [],
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceSentence": "いい映画でしたね。",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
-          "pattern": "家族",
-          "originalSentence": "ええ、私は家族を思い出しました",
+          "jp": "ええ。わたしは家族を思い出しました。",
+          "kana": "ええ。わたしは かぞくを おもいだしました。",
+          "zh": "是啊。我想起了我的家人。",
+          "en": "是啊。我想起了我的家人。",
           "fromConversationId": "l15-conv-002",
-          "sourceSentence": "ええ、私は家族を思い出しました",
-          "sourceType": "ai_generated_from_official_conversation",
-          "replacements": [],
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceSentence": "ええ。わたしは家族を思い出しました。",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
-          "pattern": "家族",
-          "originalSentence": "そうですか、ミラーさんのご家族は?",
+          "jp": "そうですか。ミラーさんのご家族は？",
+          "kana": "そうですか。ミラーさんの ごかぞくは？",
+          "zh": "是吗？米勒先生的家人呢？",
+          "en": "是吗？米勒先生的家人呢？",
           "fromConversationId": "l15-conv-003",
-          "sourceSentence": "そうですか、ミラーさんのご家族は?",
-          "sourceType": "ai_generated_from_official_conversation",
-          "replacements": [],
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceSentence": "そうですか。ミラーさんのご家族は？",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
-          "pattern": "一人",
-          "originalSentence": "両親と姉が一人います",
+          "jp": "両親と姉が1人います。",
+          "kana": "りょうしんと あねが ひとり います。",
+          "zh": "有父母和一个姐姐。",
+          "en": "有父母和一个姐姐。",
           "fromConversationId": "l15-conv-004",
-          "sourceSentence": "両親と姉が一人います",
-          "sourceType": "ai_generated_from_official_conversation",
-          "replacements": [],
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceSentence": "両親と姉が1人います。",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
-          "pattern": "跟读练习",
-          "originalSentence": "どちらにいらっしゃいますか?",
+          "jp": "どちらにいらっしゃいますか。",
+          "kana": "どちらに いらっしゃいますか。",
+          "zh": "他们在哪儿？",
+          "en": "他们在哪儿？",
           "fromConversationId": "l15-conv-005",
-          "sourceSentence": "どちらにいらっしゃいますか?",
-          "sourceType": "ai_generated_from_official_conversation",
-          "replacements": [],
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceSentence": "どちらにいらっしゃいますか。",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
-          "pattern": "両親",
-          "originalSentence": "両親はニューヨークの近くに住んでいます",
+          "jp": "両親はニューヨークの近くに住んでいます。",
+          "kana": "りょうしんは ニューヨークの ちかくに すんでいます。",
+          "zh": "父母住在纽约附近。",
+          "en": "父母住在纽约附近。",
           "fromConversationId": "l15-conv-006",
-          "sourceSentence": "両親はニューヨークの近くに住んでいます",
-          "sourceType": "ai_generated_from_official_conversation",
-          "replacements": [],
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceSentence": "両親はニューヨークの近くに住んでいます。",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
-          "pattern": "跟读练习",
-          "originalSentence": "姉はロンドンで働いています",
+          "jp": "姉はロンドンで働いています。",
+          "kana": "あねは ロンドンで はたらいています。",
+          "zh": "姐姐在伦敦工作。",
+          "en": "姐姐在伦敦工作。",
           "fromConversationId": "l15-conv-007",
-          "sourceSentence": "姉はロンドンで働いています",
-          "sourceType": "ai_generated_from_official_conversation",
-          "replacements": [],
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceSentence": "姉はロンドンで働いています。",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
-          "pattern": "家族",
-          "originalSentence": "木村さんのご家族は?",
+          "jp": "木村さんのご家族は？",
+          "kana": "きむらさんの ごかぞくは？",
+          "zh": "木村先生的家人呢？",
+          "en": "木村先生的家人呢？",
           "fromConversationId": "l15-conv-008",
-          "sourceSentence": "木村さんのご家族は?",
-          "sourceType": "ai_generated_from_official_conversation",
-          "replacements": [],
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceSentence": "木村さんのご家族は？",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
-          "pattern": "3人です",
-          "originalSentence": "3人です",
+          "jp": "3人です。父は銀行員です。",
+          "kana": "さんにんです。ちちは ぎんこういんです。",
+          "zh": "三个人。父亲是银行职员。",
+          "en": "三个人。父亲是银行职员。",
           "fromConversationId": "l15-conv-009",
-          "sourceSentence": "3人です",
-          "sourceType": "ai_generated_from_official_conversation",
-          "replacements": [
-            {
-              "jp": "佐藤です",
-              "kana": "",
-              "zh": ""
-            },
-            {
-              "jp": "田中です",
-              "kana": "",
-              "zh": ""
-            },
-            {
-              "jp": "山田です",
-              "kana": "",
-              "zh": ""
-            }
-          ],
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceSentence": "3人です。父は銀行員です。",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
-          "pattern": "銀行員です",
-          "originalSentence": "父は銀行員です",
+          "jp": "母は高校で英語を教えています。",
+          "kana": "ははは こうこうで えいごを おしえています。",
+          "zh": "母亲在高中教英语。",
+          "en": "母亲在高中教英语。",
           "fromConversationId": "l15-conv-010",
-          "sourceSentence": "父は銀行員です",
-          "sourceType": "ai_generated_from_official_conversation",
-          "replacements": [
-            {
-              "jp": "父は佐藤です",
-              "kana": "",
-              "zh": ""
-            },
-            {
-              "jp": "父は田中です",
-              "kana": "",
-              "zh": ""
-            },
-            {
-              "jp": "父は山田です",
-              "kana": "",
-              "zh": ""
-            }
-          ],
-          "needsReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "pattern": "英語",
-          "originalSentence": "母は高校で英語を教えています",
-          "fromConversationId": "l15-conv-011",
-          "sourceSentence": "母は高校で英語を教えています",
-          "sourceType": "ai_generated_from_official_conversation",
-          "replacements": [],
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceSentence": "母は高校で英語を教えています。",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_quiz",
       "id": "l15_conversation_quiz",
-      "sourceType": "generated_from_official_video_subtitle",
+      "sourceType": "conversation_image_human_confirmed",
       "title": {
         "zh": "会话专项测试",
         "en": "Conversation Quiz"
@@ -1385,14 +1307,14 @@
           "id": "l15-q-001-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
-            "zh": "「いい映画でしたね」是什么意思？",
-            "en": "What does \"いい映画でしたね\" mean?"
+            "zh": "「いい映画でしたね。」是什么意思？",
+            "en": "What does \"いい映画でしたね。\" mean?"
           },
           "choices": [
             {
               "text": {
-                "zh": "真是一部好电影呢。",
-                "en": "真是一部好电影呢。"
+                "zh": "是一部好电影啊。",
+                "en": "是一部好电影啊。"
               },
               "correct": true
             },
@@ -1403,67 +1325,67 @@
               }
             }
           ],
-          "sourceSentence": "いい映画でしたね",
+          "sourceSentence": "いい映画でしたね。",
           "fromConversationId": "l15-conv-001",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l15-q-001-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
-            "zh": "请选择「真是一部好电影呢。」的日语说法。",
-            "en": "Select Japanese for \"真是一部好电影呢。\"."
+            "zh": "请选择「是一部好电影啊。」的日语说法。",
+            "en": "Select Japanese for \"是一部好电影啊。\"."
           },
           "choices": [
             {
               "text": {
-                "jp": "いい映画でしたね"
+                "jp": "いい映画でしたね。"
               },
               "correct": true
             }
           ],
-          "sourceSentence": "いい映画でしたね",
+          "sourceSentence": "いい映画でしたね。",
           "fromConversationId": "l15-conv-001",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l15-q-001-recall-001",
           "type": "recall_check",
           "prompt": {
-            "zh": "「いい映画でしたね」的中文意思是？",
-            "en": "What does \"いい映画でしたね\" mean?"
+            "zh": "「いい映画でしたね。」的中文意思是？",
+            "en": "What does \"いい映画でしたね。\" mean?"
           },
           "choices": [
             {
               "text": {
-                "zh": "真是一部好电影呢。",
-                "en": "真是一部好电影呢。"
+                "zh": "是一部好电影啊。",
+                "en": "是一部好电影啊。"
               },
               "correct": true
             }
           ],
-          "sourceSentence": "いい映画でしたね",
+          "sourceSentence": "いい映画でしたね。",
           "fromConversationId": "l15-conv-001",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l15-q-002-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
-            "zh": "「ええ、私は家族を思い出しました」是什么意思？",
-            "en": "What does \"ええ、私は家族を思い出しました\" mean?"
+            "zh": "「ええ。わたしは家族を思い出しました。」是什么意思？",
+            "en": "What does \"ええ。わたしは家族を思い出しました。\" mean?"
           },
           "choices": [
             {
               "text": {
-                "zh": "是啊，让我想起了我的家人。",
-                "en": "是啊，让我想起了我的家人。"
+                "zh": "是啊。我想起了我的家人。",
+                "en": "是啊。我想起了我的家人。"
               },
               "correct": true
             },
@@ -1474,67 +1396,67 @@
               }
             }
           ],
-          "sourceSentence": "ええ、私は家族を思い出しました",
+          "sourceSentence": "ええ。わたしは家族を思い出しました。",
           "fromConversationId": "l15-conv-002",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l15-q-002-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
-            "zh": "请选择「是啊，让我想起了我的家人。」的日语说法。",
-            "en": "Select Japanese for \"是啊，让我想起了我的家人。\"."
+            "zh": "请选择「是啊。我想起了我的家人。」的日语说法。",
+            "en": "Select Japanese for \"是啊。我想起了我的家人。\"."
           },
           "choices": [
             {
               "text": {
-                "jp": "ええ、私は家族を思い出しました"
+                "jp": "ええ。わたしは家族を思い出しました。"
               },
               "correct": true
             }
           ],
-          "sourceSentence": "ええ、私は家族を思い出しました",
+          "sourceSentence": "ええ。わたしは家族を思い出しました。",
           "fromConversationId": "l15-conv-002",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l15-q-002-recall-001",
           "type": "recall_check",
           "prompt": {
-            "zh": "「ええ、私は家族を思い出しました」的中文意思是？",
-            "en": "What does \"ええ、私は家族を思い出しました\" mean?"
+            "zh": "「ええ。わたしは家族を思い出しました。」的中文意思是？",
+            "en": "What does \"ええ。わたしは家族を思い出しました。\" mean?"
           },
           "choices": [
             {
               "text": {
-                "zh": "是啊，让我想起了我的家人。",
-                "en": "是啊，让我想起了我的家人。"
+                "zh": "是啊。我想起了我的家人。",
+                "en": "是啊。我想起了我的家人。"
               },
               "correct": true
             }
           ],
-          "sourceSentence": "ええ、私は家族を思い出しました",
+          "sourceSentence": "ええ。わたしは家族を思い出しました。",
           "fromConversationId": "l15-conv-002",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l15-q-003-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
-            "zh": "「そうですか、ミラーさんのご家族は?」是什么意思？",
-            "en": "What does \"そうですか、ミラーさんのご家族は?\" mean?"
+            "zh": "「そうですか。ミラーさんのご家族は？」是什么意思？",
+            "en": "What does \"そうですか。ミラーさんのご家族は？\" mean?"
           },
           "choices": [
             {
               "text": {
-                "zh": "是吗？米勒先生的家人是？",
-                "en": "是吗？米勒先生的家人是？"
+                "zh": "是吗？米勒先生的家人呢？",
+                "en": "是吗？米勒先生的家人呢？"
               },
               "correct": true
             },
@@ -1545,61 +1467,61 @@
               }
             }
           ],
-          "sourceSentence": "そうですか、ミラーさんのご家族は?",
+          "sourceSentence": "そうですか。ミラーさんのご家族は？",
           "fromConversationId": "l15-conv-003",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l15-q-003-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
-            "zh": "请选择「是吗？米勒先生的家人是？」的日语说法。",
-            "en": "Select Japanese for \"是吗？米勒先生的家人是？\"."
+            "zh": "请选择「是吗？米勒先生的家人呢？」的日语说法。",
+            "en": "Select Japanese for \"是吗？米勒先生的家人呢？\"."
           },
           "choices": [
             {
               "text": {
-                "jp": "そうですか、ミラーさんのご家族は?"
+                "jp": "そうですか。ミラーさんのご家族は？"
               },
               "correct": true
             }
           ],
-          "sourceSentence": "そうですか、ミラーさんのご家族は?",
+          "sourceSentence": "そうですか。ミラーさんのご家族は？",
           "fromConversationId": "l15-conv-003",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l15-q-003-recall-001",
           "type": "recall_check",
           "prompt": {
-            "zh": "「そうですか、ミラーさんのご家族は?」的中文意思是？",
-            "en": "What does \"そうですか、ミラーさんのご家族は?\" mean?"
+            "zh": "「そうですか。ミラーさんのご家族は？」的中文意思是？",
+            "en": "What does \"そうですか。ミラーさんのご家族は？\" mean?"
           },
           "choices": [
             {
               "text": {
-                "zh": "是吗？米勒先生的家人是？",
-                "en": "是吗？米勒先生的家人是？"
+                "zh": "是吗？米勒先生的家人呢？",
+                "en": "是吗？米勒先生的家人呢？"
               },
               "correct": true
             }
           ],
-          "sourceSentence": "そうですか、ミラーさんのご家族は?",
+          "sourceSentence": "そうですか。ミラーさんのご家族は？",
           "fromConversationId": "l15-conv-003",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l15-q-004-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
-            "zh": "「両親と姉が一人います」是什么意思？",
-            "en": "What does \"両親と姉が一人います\" mean?"
+            "zh": "「両親と姉が1人います。」是什么意思？",
+            "en": "What does \"両親と姉が1人います。\" mean?"
           },
           "choices": [
             {
@@ -1616,11 +1538,11 @@
               }
             }
           ],
-          "sourceSentence": "両親と姉が一人います",
+          "sourceSentence": "両親と姉が1人います。",
           "fromConversationId": "l15-conv-004",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l15-q-004-zh2jp-001",
@@ -1632,23 +1554,23 @@
           "choices": [
             {
               "text": {
-                "jp": "両親と姉が一人います"
+                "jp": "両親と姉が1人います。"
               },
               "correct": true
             }
           ],
-          "sourceSentence": "両親と姉が一人います",
+          "sourceSentence": "両親と姉が1人います。",
           "fromConversationId": "l15-conv-004",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l15-q-004-recall-001",
           "type": "recall_check",
           "prompt": {
-            "zh": "「両親と姉が一人います」的中文意思是？",
-            "en": "What does \"両親と姉が一人います\" mean?"
+            "zh": "「両親と姉が1人います。」的中文意思是？",
+            "en": "What does \"両親と姉が1人います。\" mean?"
           },
           "choices": [
             {
@@ -1659,24 +1581,24 @@
               "correct": true
             }
           ],
-          "sourceSentence": "両親と姉が一人います",
+          "sourceSentence": "両親と姉が1人います。",
           "fromConversationId": "l15-conv-004",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l15-q-005-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
-            "zh": "「どちらにいらっしゃいますか?」是什么意思？",
-            "en": "What does \"どちらにいらっしゃいますか?\" mean?"
+            "zh": "「どちらにいらっしゃいますか。」是什么意思？",
+            "en": "What does \"どちらにいらっしゃいますか。\" mean?"
           },
           "choices": [
             {
               "text": {
-                "zh": "他们住在哪里呢？",
-                "en": "他们住在哪里呢？"
+                "zh": "他们在哪儿？",
+                "en": "他们在哪儿？"
               },
               "correct": true
             },
@@ -1687,67 +1609,67 @@
               }
             }
           ],
-          "sourceSentence": "どちらにいらっしゃいますか?",
+          "sourceSentence": "どちらにいらっしゃいますか。",
           "fromConversationId": "l15-conv-005",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l15-q-005-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
-            "zh": "请选择「他们住在哪里呢？」的日语说法。",
-            "en": "Select Japanese for \"他们住在哪里呢？\"."
+            "zh": "请选择「他们在哪儿？」的日语说法。",
+            "en": "Select Japanese for \"他们在哪儿？\"."
           },
           "choices": [
             {
               "text": {
-                "jp": "どちらにいらっしゃいますか?"
+                "jp": "どちらにいらっしゃいますか。"
               },
               "correct": true
             }
           ],
-          "sourceSentence": "どちらにいらっしゃいますか?",
+          "sourceSentence": "どちらにいらっしゃいますか。",
           "fromConversationId": "l15-conv-005",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l15-q-005-recall-001",
           "type": "recall_check",
           "prompt": {
-            "zh": "「どちらにいらっしゃいますか?」的中文意思是？",
-            "en": "What does \"どちらにいらっしゃいますか?\" mean?"
+            "zh": "「どちらにいらっしゃいますか。」的中文意思是？",
+            "en": "What does \"どちらにいらっしゃいますか。\" mean?"
           },
           "choices": [
             {
               "text": {
-                "zh": "他们住在哪里呢？",
-                "en": "他们住在哪里呢？"
+                "zh": "他们在哪儿？",
+                "en": "他们在哪儿？"
               },
               "correct": true
             }
           ],
-          "sourceSentence": "どちらにいらっしゃいますか?",
+          "sourceSentence": "どちらにいらっしゃいますか。",
           "fromConversationId": "l15-conv-005",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l15-q-006-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
-            "zh": "「両親はニューヨークの近くに住んでいます」是什么意思？",
-            "en": "What does \"両親はニューヨークの近くに住んでいます\" mean?"
+            "zh": "「両親はニューヨークの近くに住んでいます。」是什么意思？",
+            "en": "What does \"両親はニューヨークの近くに住んでいます。\" mean?"
           },
           "choices": [
             {
               "text": {
-                "zh": "我父母住在纽约附近。",
-                "en": "我父母住在纽约附近。"
+                "zh": "父母住在纽约附近。",
+                "en": "父母住在纽约附近。"
               },
               "correct": true
             },
@@ -1758,61 +1680,61 @@
               }
             }
           ],
-          "sourceSentence": "両親はニューヨークの近くに住んでいます",
+          "sourceSentence": "両親はニューヨークの近くに住んでいます。",
           "fromConversationId": "l15-conv-006",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l15-q-006-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
-            "zh": "请选择「我父母住在纽约附近。」的日语说法。",
-            "en": "Select Japanese for \"我父母住在纽约附近。\"."
+            "zh": "请选择「父母住在纽约附近。」的日语说法。",
+            "en": "Select Japanese for \"父母住在纽约附近。\"."
           },
           "choices": [
             {
               "text": {
-                "jp": "両親はニューヨークの近くに住んでいます"
+                "jp": "両親はニューヨークの近くに住んでいます。"
               },
               "correct": true
             }
           ],
-          "sourceSentence": "両親はニューヨークの近くに住んでいます",
+          "sourceSentence": "両親はニューヨークの近くに住んでいます。",
           "fromConversationId": "l15-conv-006",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l15-q-006-recall-001",
           "type": "recall_check",
           "prompt": {
-            "zh": "「両親はニューヨークの近くに住んでいます」的中文意思是？",
-            "en": "What does \"両親はニューヨークの近くに住んでいます\" mean?"
+            "zh": "「両親はニューヨークの近くに住んでいます。」的中文意思是？",
+            "en": "What does \"両親はニューヨークの近くに住んでいます。\" mean?"
           },
           "choices": [
             {
               "text": {
-                "zh": "我父母住在纽约附近。",
-                "en": "我父母住在纽约附近。"
+                "zh": "父母住在纽约附近。",
+                "en": "父母住在纽约附近。"
               },
               "correct": true
             }
           ],
-          "sourceSentence": "両親はニューヨークの近くに住んでいます",
+          "sourceSentence": "両親はニューヨークの近くに住んでいます。",
           "fromConversationId": "l15-conv-006",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l15-q-007-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
-            "zh": "「姉はロンドンで働いています」是什么意思？",
-            "en": "What does \"姉はロンドンで働いています\" mean?"
+            "zh": "「姉はロンドンで働いています。」是什么意思？",
+            "en": "What does \"姉はロンドンで働いています。\" mean?"
           },
           "choices": [
             {
@@ -1829,11 +1751,11 @@
               }
             }
           ],
-          "sourceSentence": "姉はロンドンで働いています",
+          "sourceSentence": "姉はロンドンで働いています。",
           "fromConversationId": "l15-conv-007",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l15-q-007-zh2jp-001",
@@ -1845,23 +1767,23 @@
           "choices": [
             {
               "text": {
-                "jp": "姉はロンドンで働いています"
+                "jp": "姉はロンドンで働いています。"
               },
               "correct": true
             }
           ],
-          "sourceSentence": "姉はロンドンで働いています",
+          "sourceSentence": "姉はロンドンで働いています。",
           "fromConversationId": "l15-conv-007",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l15-q-007-recall-001",
           "type": "recall_check",
           "prompt": {
-            "zh": "「姉はロンドンで働いています」的中文意思是？",
-            "en": "What does \"姉はロンドンで働いています\" mean?"
+            "zh": "「姉はロンドンで働いています。」的中文意思是？",
+            "en": "What does \"姉はロンドンで働いています。\" mean?"
           },
           "choices": [
             {
@@ -1872,24 +1794,24 @@
               "correct": true
             }
           ],
-          "sourceSentence": "姉はロンドンで働いています",
+          "sourceSentence": "姉はロンドンで働いています。",
           "fromConversationId": "l15-conv-007",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l15-q-008-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
-            "zh": "「木村さんのご家族は?」是什么意思？",
-            "en": "What does \"木村さんのご家族は?\" mean?"
+            "zh": "「木村さんのご家族は？」是什么意思？",
+            "en": "What does \"木村さんのご家族は？\" mean?"
           },
           "choices": [
             {
               "text": {
-                "zh": "木村小姐的家人呢？",
-                "en": "木村小姐的家人呢？"
+                "zh": "木村先生的家人呢？",
+                "en": "木村先生的家人呢？"
               },
               "correct": true
             },
@@ -1900,67 +1822,67 @@
               }
             }
           ],
-          "sourceSentence": "木村さんのご家族は?",
+          "sourceSentence": "木村さんのご家族は？",
           "fromConversationId": "l15-conv-008",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l15-q-008-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
-            "zh": "请选择「木村小姐的家人呢？」的日语说法。",
-            "en": "Select Japanese for \"木村小姐的家人呢？\"."
+            "zh": "请选择「木村先生的家人呢？」的日语说法。",
+            "en": "Select Japanese for \"木村先生的家人呢？\"."
           },
           "choices": [
             {
               "text": {
-                "jp": "木村さんのご家族は?"
+                "jp": "木村さんのご家族は？"
               },
               "correct": true
             }
           ],
-          "sourceSentence": "木村さんのご家族は?",
+          "sourceSentence": "木村さんのご家族は？",
           "fromConversationId": "l15-conv-008",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l15-q-008-recall-001",
           "type": "recall_check",
           "prompt": {
-            "zh": "「木村さんのご家族は?」的中文意思是？",
-            "en": "What does \"木村さんのご家族は?\" mean?"
+            "zh": "「木村さんのご家族は？」的中文意思是？",
+            "en": "What does \"木村さんのご家族は？\" mean?"
           },
           "choices": [
             {
               "text": {
-                "zh": "木村小姐的家人呢？",
-                "en": "木村小姐的家人呢？"
+                "zh": "木村先生的家人呢？",
+                "en": "木村先生的家人呢？"
               },
               "correct": true
             }
           ],
-          "sourceSentence": "木村さんのご家族は?",
+          "sourceSentence": "木村さんのご家族は？",
           "fromConversationId": "l15-conv-008",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l15-q-009-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
-            "zh": "「3人です」是什么意思？",
-            "en": "What does \"3人です\" mean?"
+            "zh": "「3人です。父は銀行員です。」是什么意思？",
+            "en": "What does \"3人です。父は銀行員です。\" mean?"
           },
           "choices": [
             {
               "text": {
-                "zh": "我们家有三口人。",
-                "en": "我们家有三口人。"
+                "zh": "三个人。父亲是银行职员。",
+                "en": "三个人。父亲是银行职员。"
               },
               "correct": true
             },
@@ -1971,132 +1893,61 @@
               }
             }
           ],
-          "sourceSentence": "3人です",
+          "sourceSentence": "3人です。父は銀行員です。",
           "fromConversationId": "l15-conv-009",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l15-q-009-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
-            "zh": "请选择「我们家有三口人。」的日语说法。",
-            "en": "Select Japanese for \"我们家有三口人。\"."
+            "zh": "请选择「三个人。父亲是银行职员。」的日语说法。",
+            "en": "Select Japanese for \"三个人。父亲是银行职员。\"."
           },
           "choices": [
             {
               "text": {
-                "jp": "3人です"
+                "jp": "3人です。父は銀行員です。"
               },
               "correct": true
             }
           ],
-          "sourceSentence": "3人です",
+          "sourceSentence": "3人です。父は銀行員です。",
           "fromConversationId": "l15-conv-009",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l15-q-009-recall-001",
           "type": "recall_check",
           "prompt": {
-            "zh": "「3人です」的中文意思是？",
-            "en": "What does \"3人です\" mean?"
+            "zh": "「3人です。父は銀行員です。」的中文意思是？",
+            "en": "What does \"3人です。父は銀行員です。\" mean?"
           },
           "choices": [
             {
               "text": {
-                "zh": "我们家有三口人。",
-                "en": "我们家有三口人。"
+                "zh": "三个人。父亲是银行职员。",
+                "en": "三个人。父亲是银行职员。"
               },
               "correct": true
             }
           ],
-          "sourceSentence": "3人です",
+          "sourceSentence": "3人です。父は銀行員です。",
           "fromConversationId": "l15-conv-009",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l15-q-010-listen-001",
           "type": "listen_choose_meaning",
           "prompt": {
-            "zh": "「父は銀行員です」是什么意思？",
-            "en": "What does \"父は銀行員です\" mean?"
-          },
-          "choices": [
-            {
-              "text": {
-                "zh": "父亲是银行职员。",
-                "en": "父亲是银行职员。"
-              },
-              "correct": true
-            },
-            {
-              "text": {
-                "zh": "我不确定",
-                "en": "I'm not sure"
-              }
-            }
-          ],
-          "sourceSentence": "父は銀行員です",
-          "fromConversationId": "l15-conv-010",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l15-q-010-zh2jp-001",
-          "type": "chinese_to_japanese",
-          "prompt": {
-            "zh": "请选择「父亲是银行职员。」的日语说法。",
-            "en": "Select Japanese for \"父亲是银行职员。\"."
-          },
-          "choices": [
-            {
-              "text": {
-                "jp": "父は銀行員です"
-              },
-              "correct": true
-            }
-          ],
-          "sourceSentence": "父は銀行員です",
-          "fromConversationId": "l15-conv-010",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l15-q-010-recall-001",
-          "type": "recall_check",
-          "prompt": {
-            "zh": "「父は銀行員です」的中文意思是？",
-            "en": "What does \"父は銀行員です\" mean?"
-          },
-          "choices": [
-            {
-              "text": {
-                "zh": "父亲是银行职员。",
-                "en": "父亲是银行职员。"
-              },
-              "correct": true
-            }
-          ],
-          "sourceSentence": "父は銀行員です",
-          "fromConversationId": "l15-conv-010",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l15-q-011-listen-001",
-          "type": "listen_choose_meaning",
-          "prompt": {
-            "zh": "「母は高校で英語を教えています」是什么意思？",
-            "en": "What does \"母は高校で英語を教えています\" mean?"
+            "zh": "「母は高校で英語を教えています。」是什么意思？",
+            "en": "What does \"母は高校で英語を教えています。\" mean?"
           },
           "choices": [
             {
@@ -2113,14 +1964,14 @@
               }
             }
           ],
-          "sourceSentence": "母は高校で英語を教えています",
-          "fromConversationId": "l15-conv-011",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceSentence": "母は高校で英語を教えています。",
+          "fromConversationId": "l15-conv-010",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
-          "id": "l15-q-011-zh2jp-001",
+          "id": "l15-q-010-zh2jp-001",
           "type": "chinese_to_japanese",
           "prompt": {
             "zh": "请选择「母亲在高中教英语。」的日语说法。",
@@ -2129,23 +1980,23 @@
           "choices": [
             {
               "text": {
-                "jp": "母は高校で英語を教えています"
+                "jp": "母は高校で英語を教えています。"
               },
               "correct": true
             }
           ],
-          "sourceSentence": "母は高校で英語を教えています",
-          "fromConversationId": "l15-conv-011",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceSentence": "母は高校で英語を教えています。",
+          "fromConversationId": "l15-conv-010",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         },
         {
-          "id": "l15-q-011-recall-001",
+          "id": "l15-q-010-recall-001",
           "type": "recall_check",
           "prompt": {
-            "zh": "「母は高校で英語を教えています」的中文意思是？",
-            "en": "What does \"母は高校で英語を教えています\" mean?"
+            "zh": "「母は高校で英語を教えています。」的中文意思是？",
+            "en": "What does \"母は高校で英語を教えています。\" mean?"
           },
           "choices": [
             {
@@ -2156,13 +2007,14 @@
               "correct": true
             }
           ],
-          "sourceSentence": "母は高校で英語を教えています",
-          "fromConversationId": "l15-conv-011",
-          "sourceType": "generated_from_official_video_subtitle",
-          "needsReview": true,
-          "reviewStatus": "needs_review"
+          "sourceSentence": "母は高校で英語を教えています。",
+          "fromConversationId": "l15-conv-010",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "reviewStatus": "confirmed"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     }
   ],
   "conversationVideo": {
@@ -2190,37 +2042,183 @@
     "verifiedOnline": "not_started"
   },
   "deepDive": {
-    "sceneSummary": "Miller和木村看完电影后走出影院，聊起电影感受，随后谈论各自的家人。Miller介绍了住在纽约附近的父母和在伦敦工作的姐姐，木村则介绍了父母的工作。",
-    "storyExplanation": "这段对话展示了日本人如何礼貌地询问和介绍家人情况。Miller先分享自己看电影联想到家人，木村顺势询问他家人的情况。两人用「〜ています」描述家人居住地和工作，体现了日语中描述持续性状态的自然表达。对话中使用了敬语表达（ご家族、いらっしゃいます），体现了同事间的礼貌距离。",
+    "sceneSummary": "木村和ミラー看完电影后谈到家人。ミラー介绍父母和姐姐的所在地，随后询问木村的家人，木村介绍父母的职业。",
+    "storyExplanation": "第15课会话「ご家族は？」围绕家人介绍展开。木村说电影很好，ミラー说想起了家人。木村询问ミラー的家人，ミラー说明有父母和一个姐姐，父母住在纽约附近，姐姐在伦敦工作。随后ミラー询问木村的家人，木村说明家里三个人，父亲是银行职员，母亲在高中教英语。",
     "characters": [
-      { "name": "ミラーさん", "role": "同事/朋友", "relationship": "与木村是同事或朋友关系" },
-      { "name": "木村さん", "role": "同事/朋友", "relationship": "与Miller是同事或朋友关系" }
+      {
+        "name": "ミラーさん",
+        "role": "同事/朋友",
+        "relationship": "与木村是同事或朋友关系"
+      },
+      {
+        "name": "木村さん",
+        "role": "同事/朋友",
+        "relationship": "与Miller是同事或朋友关系"
+      }
     ],
     "conversationFlow": [
-      { "step": 1, "title": "看完电影的感受", "explanation": "Miller先感叹电影好看，用「いい映画でしたね」表达对电影的正面评价，语气词「ね」表示与对方分享感受。", "relatedLineIds": ["l15-conv-001"] },
-      { "step": 2, "title": "电影引发的联想", "explanation": "木村回应赞同，并说电影让她想起了家人。用「思い出しました」表达触景生情的感受。", "relatedLineIds": ["l15-conv-002"] },
-      { "step": 3, "title": "询问对方的家人情况", "explanation": "Miller用「そうですか」表示理解新信息，然后用「ミラーさんのご家族は?」询问木村的家人。注意使用敬语「ご家族」。", "relatedLineIds": ["l15-conv-003"] },
-      { "step": 4, "title": "介绍自己的家人构成", "explanation": "Miller介绍自己有父母和一个姐姐，用「〜がいます」表达存在。", "relatedLineIds": ["l15-conv-004"] },
-      { "step": 5, "title": "询问家人居住地", "explanation": "木村用敬语「どちらにいらっしゃいますか」询问Miller家人的居住地。", "relatedLineIds": ["l15-conv-005"] },
-      { "step": 6, "title": "介绍父母居住地", "explanation": "Miller用「住んでいます」描述父母住在纽约附近。", "relatedLineIds": ["l15-conv-006"] },
-      { "step": 7, "title": "介绍姐姐的工作地点", "explanation": "Miller用「働いています」描述姐姐在伦敦工作。", "relatedLineIds": ["l15-conv-007"] },
-      { "step": 8, "title": "反问对方家人", "explanation": "Miller反问木村的家人情况，用「木村さんのご家族は?」保持敬语。", "relatedLineIds": ["l15-conv-008"] },
-      { "step": 9, "title": "介绍家人构成", "explanation": "木村简洁回答「3人です」，日语中直接说数量即可表达家庭成员数。", "relatedLineIds": ["l15-conv-009"] },
-      { "step": 10, "title": "介绍父亲的工作", "explanation": "木村用「〜は〜です」句型介绍父亲是银行职员。", "relatedLineIds": ["l15-conv-010"] },
-      { "step": 11, "title": "介绍母亲的工作", "explanation": "木村用「教えています」描述母亲在高中教英语，使用〜ています形表示持续性工作。", "relatedLineIds": ["l15-conv-011"] }
+      {
+        "step": 1,
+        "title": "木村：いい映画でしたね。",
+        "explanation": "木村说「いい映画でしたね。」——「是一部好电影啊。」。",
+        "relatedLineIds": [
+          "l15-conv-001"
+        ]
+      },
+      {
+        "step": 2,
+        "title": "ミラー：ええ。わたしは家族を思い出しました。",
+        "explanation": "ミラー说「ええ。わたしは家族を思い出しました。」——「是啊。我想起了我的家人。」。",
+        "relatedLineIds": [
+          "l15-conv-002"
+        ]
+      },
+      {
+        "step": 3,
+        "title": "木村：そうですか。ミラーさんのご家族は？",
+        "explanation": "木村说「そうですか。ミラーさんのご家族は？」——「是吗？米勒先生的家人呢？」。",
+        "relatedLineIds": [
+          "l15-conv-003"
+        ]
+      },
+      {
+        "step": 4,
+        "title": "ミラー：両親と姉が1人います。",
+        "explanation": "ミラー说「両親と姉が1人います。」——「有父母和一个姐姐。」。",
+        "relatedLineIds": [
+          "l15-conv-004"
+        ]
+      },
+      {
+        "step": 5,
+        "title": "木村：どちらにいらっしゃいますか。",
+        "explanation": "木村说「どちらにいらっしゃいますか。」——「他们在哪儿？」。",
+        "relatedLineIds": [
+          "l15-conv-005"
+        ]
+      },
+      {
+        "step": 6,
+        "title": "ミラー：両親はニューヨークの近くに住んでいます。",
+        "explanation": "ミラー说「両親はニューヨークの近くに住んでいます。」——「父母住在纽约附近。」。",
+        "relatedLineIds": [
+          "l15-conv-006"
+        ]
+      },
+      {
+        "step": 7,
+        "title": "ミラー：姉はロンドンで働いています。",
+        "explanation": "ミラー说「姉はロンドンで働いています。」——「姐姐在伦敦工作。」。",
+        "relatedLineIds": [
+          "l15-conv-007"
+        ]
+      },
+      {
+        "step": 8,
+        "title": "ミラー：木村さんのご家族は？",
+        "explanation": "ミラー说「木村さんのご家族は？」——「木村先生的家人呢？」。",
+        "relatedLineIds": [
+          "l15-conv-008"
+        ]
+      },
+      {
+        "step": 9,
+        "title": "木村：3人です。父は銀行員です。",
+        "explanation": "木村说「3人です。父は銀行員です。」——「三个人。父亲是银行职员。」。",
+        "relatedLineIds": [
+          "l15-conv-009"
+        ]
+      },
+      {
+        "step": 10,
+        "title": "木村：母は高校で英語を教えています。",
+        "explanation": "木村说「母は高校で英語を教えています。」——「母亲在高中教英语。」。",
+        "relatedLineIds": [
+          "l15-conv-010"
+        ]
+      }
     ],
     "lineUsage": [
-      { "lineId": "l15-conv-001", "japanese": "いい映画でしたね", "chineseMeaning": "真是一部好电影呢。", "realLifeUse": "看完电影、演出或展览后对同伴表达正面评价的常用句型。", "emotionTone": "感叹、分享", "memoryTip": "「いい」+「映画」+「でしたね」= 好电影呢，「ね」表示与对方分享感受" },
-      { "lineId": "l15-conv-002", "japanese": "ええ、私は家族を思い出しました", "chineseMeaning": "是啊，让我想起了我的家人。", "realLifeUse": "当某事物触发回忆时，用「〜を思い出しました」表达触景生情的感受。", "emotionTone": "感慨、温情", "memoryTip": "「思い出す」= 想起，「思い出しました」是过去式，表示被某事物触发的回忆" },
-      { "lineId": "l15-conv-003", "japanese": "そうですか、ミラーさんのご家族は?", "chineseMeaning": "是吗？米勒先生的家人是？", "realLifeUse": "「そうですか」表示接收新信息时的反应，「ご家族」是敬语，询问对方家人时必须使用敬称。", "emotionTone": "好奇、关心", "memoryTip": "「ご家族」中的「ご」是美化语/敬语前缀，对他人家人要用敬称" },
-      { "lineId": "l15-conv-004", "japanese": "両親と姉が一人います", "chineseMeaning": "有父母和一个姐姐。", "realLifeUse": "介绍家庭成员用「〜がいます」表达\"有〜\"，注意数量词的位置和读法。", "emotionTone": "陈述、自然", "memoryTip": "「両親」= 父母，「姉」= 姐姐，「一人」读作「ひとり」，「います」表示有生命的存在" },
-      { "lineId": "l15-conv-005", "japanese": "どちらにいらっしゃいますか?", "chineseMeaning": "他们住在哪里呢？", "realLifeUse": "「いらっしゃいます」是「います」的敬语，询问他人或家人所在地时要用敬语。", "emotionTone": "礼貌询问", "memoryTip": "「どちら」是「どこ」的礼貌说法，「いらっしゃいます」是「います」的敬语形式" },
-      { "lineId": "l15-conv-006", "japanese": "両親はニューヨークの近くに住んでいます", "chineseMeaning": "我父母住在纽约附近。", "realLifeUse": "用「〜に住んでいます」描述居住地，〜ています形表示持续性的居住状态。", "emotionTone": "陈述、日常", "memoryTip": "「住んでいます」是「住みます」的〜ています形，表示居住这一持续状态" },
-      { "lineId": "l15-conv-007", "japanese": "姉はロンドンで働いています", "chineseMeaning": "姐姐在伦敦工作。", "realLifeUse": "工作地点用「〜で」标记动作场所，「働いています」描述持续性工作状态。", "emotionTone": "陈述、日常", "memoryTip": "「ロンドンで」的「で」表示动作发生的场所，「働いています」是「働きます」的〜ています形" },
-      { "lineId": "l15-conv-008", "japanese": "木村さんのご家族は?", "chineseMeaning": "木村小姐的家人呢？", "realLifeUse": "反问对方时保持敬语，使用「ご家族」。此句省略了谓语，是日语常见的省略表达。", "emotionTone": "关心、反问", "memoryTip": "「〜は?」是省略问句，根据上下文可理解为「ご家族は何人ですか」或「ご家族はどうですか」" },
-      { "lineId": "l15-conv-009", "japanese": "3人です", "chineseMeaning": "我们家有三口人。", "realLifeUse": "日语中直接说数量即可简洁地表达家庭成员数。", "emotionTone": "简答、自然", "memoryTip": "「3人」读作「さんにん」，注意「一人（ひとり）」「二人（ふたり）」「三人（さんにん）」的特殊读法" },
-      { "lineId": "l15-conv-010", "japanese": "父は銀行員です", "chineseMeaning": "父亲是银行职员。", "realLifeUse": "介绍家人职业用「〜は〜です」的句型，「銀行員」表示职业身份。", "emotionTone": "陈述、日常", "memoryTip": "「父」是称呼自己父亲的词，「銀行員」= 银行职员，「員」表示职业身份" },
-      { "lineId": "l15-conv-011", "japanese": "母は高校で英語を教えています", "chineseMeaning": "母亲在高中教英语。", "realLifeUse": "用「〜で〜を教えています」描述教学工作的场所和教授内容，〜ています形表示持续性教学。", "emotionTone": "陈述、日常", "memoryTip": "「教えています」是「教えます」的〜ています形，表示持续性的教学工作" }
+      {
+        "lineId": "l15-conv-001",
+        "japanese": "いい映画でしたね。",
+        "chineseMeaning": "是一部好电影啊。",
+        "realLifeUse": "会话图人工确认的第15课台词。",
+        "emotionTone": "自然、礼貌",
+        "memoryTip": "いい えいがでしたね。"
+      },
+      {
+        "lineId": "l15-conv-002",
+        "japanese": "ええ。わたしは家族を思い出しました。",
+        "chineseMeaning": "是啊。我想起了我的家人。",
+        "realLifeUse": "会话图人工确认的第15课台词。",
+        "emotionTone": "自然、礼貌",
+        "memoryTip": "ええ。わたしは かぞくを おもいだしました。"
+      },
+      {
+        "lineId": "l15-conv-003",
+        "japanese": "そうですか。ミラーさんのご家族は？",
+        "chineseMeaning": "是吗？米勒先生的家人呢？",
+        "realLifeUse": "会话图人工确认的第15课台词。",
+        "emotionTone": "自然、礼貌",
+        "memoryTip": "そうですか。ミラーさんの ごかぞくは？"
+      },
+      {
+        "lineId": "l15-conv-004",
+        "japanese": "両親と姉が1人います。",
+        "chineseMeaning": "有父母和一个姐姐。",
+        "realLifeUse": "会话图人工确认的第15课台词。",
+        "emotionTone": "自然、礼貌",
+        "memoryTip": "りょうしんと あねが ひとり います。"
+      },
+      {
+        "lineId": "l15-conv-005",
+        "japanese": "どちらにいらっしゃいますか。",
+        "chineseMeaning": "他们在哪儿？",
+        "realLifeUse": "会话图人工确认的第15课台词。",
+        "emotionTone": "自然、礼貌",
+        "memoryTip": "どちらに いらっしゃいますか。"
+      },
+      {
+        "lineId": "l15-conv-006",
+        "japanese": "両親はニューヨークの近くに住んでいます。",
+        "chineseMeaning": "父母住在纽约附近。",
+        "realLifeUse": "会话图人工确认的第15课台词。",
+        "emotionTone": "自然、礼貌",
+        "memoryTip": "りょうしんは ニューヨークの ちかくに すんでいます。"
+      },
+      {
+        "lineId": "l15-conv-007",
+        "japanese": "姉はロンドンで働いています。",
+        "chineseMeaning": "姐姐在伦敦工作。",
+        "realLifeUse": "会话图人工确认的第15课台词。",
+        "emotionTone": "自然、礼貌",
+        "memoryTip": "あねは ロンドンで はたらいています。"
+      },
+      {
+        "lineId": "l15-conv-008",
+        "japanese": "木村さんのご家族は？",
+        "chineseMeaning": "木村先生的家人呢？",
+        "realLifeUse": "会话图人工确认的第15课台词。",
+        "emotionTone": "自然、礼貌",
+        "memoryTip": "きむらさんの ごかぞくは？"
+      },
+      {
+        "lineId": "l15-conv-009",
+        "japanese": "3人です。父は銀行員です。",
+        "chineseMeaning": "三个人。父亲是银行职员。",
+        "realLifeUse": "会话图人工确认的第15课台词。",
+        "emotionTone": "自然、礼貌",
+        "memoryTip": "さんにんです。ちちは ぎんこういんです。"
+      },
+      {
+        "lineId": "l15-conv-010",
+        "japanese": "母は高校で英語を教えています。",
+        "chineseMeaning": "母亲在高中教英语。",
+        "realLifeUse": "会话图人工确认的第15课台词。",
+        "emotionTone": "自然、礼貌",
+        "memoryTip": "ははは こうこうで えいごを おしえています。"
+      }
     ],
     "chineseRetellPrompt": "请用中文复述Miller和木村看完电影后的对话内容。先描述他们看完电影后说了什么（电影好看的感受），然后Miller如何介绍自己的家人（有父母和姐姐，父母住在纽约附近，姐姐在伦敦工作），最后木村如何介绍她的家人（三口人，父亲是银行职员，母亲在高中教英语）。",
     "realLifeReplacementPractice": [
