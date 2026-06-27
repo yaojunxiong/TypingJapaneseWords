@@ -1,0 +1,53 @@
+{
+  "project": "minna-recitation-canonical",
+  "sourceRule": "conversation image is the only source of truth",
+  "range": "lesson-15-50",
+  "status": "draft_needs_human_review",
+  "combinedImports": [
+    {
+      "range": "36-50",
+      "canonicalImport": "lesson-36-50.canonical.import.json",
+      "handoff": "opencode-handoff-36-50.md",
+      "status": "draft_needs_chatgpt_review"
+    }
+  ],
+  "batches": [
+    {
+      "range": "26-30",
+      "canonicalFile": "lesson-26-30.canonical.json",
+      "reviewReport": "review-report-26-30.md",
+      "status": "needs_human_review"
+    },
+    {
+      "range": "31-35",
+      "canonicalFile": "lesson-31-35.canonical.json",
+      "reviewReport": "review-report-31-35.md",
+      "status": "needs_human_review"
+    },
+    {
+      "range": "36-40",
+      "canonicalFile": "lesson-36-40.canonical.json",
+      "reviewReport": "review-report-36-40.md",
+      "status": "needs_human_review"
+    },
+    {
+      "range": "41-45",
+      "canonicalFile": "lesson-41-45.canonical.json",
+      "reviewReport": "review-report-41-45.md",
+      "status": "needs_human_review"
+    },
+    {
+      "range": "46-50",
+      "canonicalFile": "lesson-46-50.canonical.json",
+      "reviewReport": "review-report-46-50.md",
+      "status": "needs_human_review"
+    }
+  ],
+  "rules": [
+    "conversation image is the only source of truth",
+    "old JSON, OCR and TTS are only references",
+    "OpenCode must not infer missing content",
+    "needsReview lines must not be published",
+    "only human-confirmed canonical content can be written into lesson data"
+  ]
+}

@@ -1,0 +1,2040 @@
+{
+  "range": "36-50",
+  "source": "conversation-image canonical drafts",
+  "status": "draft_needs_chatgpt_review",
+  "lessons": [
+    {
+      "lessonNo": 36,
+      "titleJa": "毎日 運動するように しています",
+      "titleZh": "我每天坚持运动",
+      "sourceImage": "public/minna/lessons/lesson-36/conversation-anime-mobile.webp",
+      "status": "needs_human_review",
+      "lineCount": 11,
+      "characters": [
+        {
+          "name": "アナウンサー",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        },
+        {
+          "name": "小川はね",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        }
+      ],
+      "lines": [
+        {
+          "lineNo": 1,
+          "speaker": "アナウンサー",
+          "japanese": "皆さん、こんにちは。きょうのお客様はことし80歳の小川はねさんです。",
+          "reading": "みなさん、こんにちは。きょうのおきゃくさまはことし80としのおがわはねさんです。",
+          "chinese": "大家好，今天的嘉宾是今年已经80岁的小川よね女士。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 2,
+          "speaker": "小川はね",
+          "japanese": "こんにちは。",
+          "reading": "こんにちは。",
+          "chinese": "您好。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 3,
+          "speaker": "アナウンサー",
+          "japanese": "お元気ですね。何か特別なことをしていらっしゃいますか。",
+          "reading": "おげんきですね。なにかとくべつなことをしていらっしゃいますか。",
+          "chinese": "您好，看您精神很好，平时有什么特别的养生秘诀吗？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 4,
+          "speaker": "小川はね",
+          "japanese": "毎日運動するようにしています。",
+          "reading": "まいにちうんどうするようにしています。",
+          "chinese": "我每天都会尽量锻炼。是什么样的运动呢？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 5,
+          "speaker": "アナウンサー",
+          "japanese": "どんな運動ですか。",
+          "reading": "どんなうんどうですか。",
+          "chinese": "是什么样的运动？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 6,
+          "speaker": "小川はね",
+          "japanese": "ダンスとか、水泳とか……。最近500メートル泳げるようになりました。",
+          "reading": "だんすとか、すいえいとか……。さいきん500めーとるおよげるようになりました。",
+          "chinese": "像是跳舞啊、游泳之类的。最近我已经能游500米了。——好厉害啊！那饮食方面呢？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 7,
+          "speaker": "アナウンサー",
+          "japanese": "すごいですね。食べ物は？",
+          "reading": "すごいですね。たべものは？",
+          "chinese": "真厉害。饮食方面呢？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 8,
+          "speaker": "小川はね",
+          "japanese": "何でも食べますが、特に魚が好きです。毎日誰か、料理を作るようにしています。",
+          "reading": "なんでもたべますが、とくにさかながすきです。まいにちだれか、りょうりをつくるようにしています。",
+          "chinese": "我什么都吃，特别喜欢吃鱼。我尽量每天都做不一样的菜。",
+          "confidence": "low",
+          "needsReview": true,
+          "note": "图中文字清晰显示“毎日誰か、料理を作るようにしています”，语义可能冲突；严格保留图中文字。"
+        },
+        {
+          "lineNo": 9,
+          "speaker": "アナウンサー",
+          "japanese": "頭と体をよく使っていらっしゃるんですね。",
+          "reading": "あたまとからだをよくつかっていらっしゃるんですね。",
+          "chinese": "您真是动脑又动身体呢。我打算明年去法国旅行。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 10,
+          "speaker": "小川はね",
+          "japanese": "ええ。来年フランスへ行きたいと思っています。それでフランス語の勉強も始めました。",
+          "reading": "ええ。らいねんふらんすへいきたいとおもっています。それでふらんすごのべんきょうもはじめました。",
+          "chinese": "您真是动脑又动身体呢。我打算明年去法国旅行。所以我也开始学习法语了。我觉得敢于挑战一切的心态非常重要。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 11,
+          "speaker": "アナウンサー",
+          "japanese": "何でもチャレンジする気持ちが大切なんですね。楽しいお話、どうもありがとうございました。",
+          "reading": "なんでもちゃれんじするきもちがたいせつなんですね。たのしいおはなし、どうもありがとうございました。",
+          "chinese": "所以我也开始学习法语了。我觉得敢于挑战一切的心态非常重要。感谢您带来的精彩分享。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        }
+      ],
+      "riskReport": {
+        "speakerUncertain": [],
+        "textUncertain": [
+          8
+        ],
+        "readingUncertain": [],
+        "translationUncertain": [],
+        "possibleSplitMergeIssues": [],
+        "possibleNonConversationText": [],
+        "needsHumanReviewLines": [
+          8
+        ]
+      }
+    },
+    {
+      "lessonNo": 37,
+      "titleJa": "金閣寺は 14世紀に 建てられました",
+      "titleZh": "金阁寺建于14世纪",
+      "sourceImage": "public/minna/lessons/lesson-37/conversation-anime-mobile.webp",
+      "status": "needs_human_review",
+      "lineCount": 7,
+      "characters": [
+        {
+          "name": "ガイド",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        },
+        {
+          "name": "カリナ",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        }
+      ],
+      "lines": [
+        {
+          "lineNo": 1,
+          "speaker": "ガイド",
+          "japanese": "皆様、あちらが有名な金閣寺です。金閣寺は14世紀に建てられました。1950年に一度焼けてしまいましたが、その後、義満という将軍の命で作られて、1994年に世界遺産になりました。京都で人気があるお寺の一つです。",
+          "reading": "みなさま、あちらがゆうめいなきんかくじです。きんかくじは14せいきにたてられました。1950ねんにいちどやけてしまいましたが、そののち、よしみつというしょうぐんのいのちでつくられて、1994ねんにせかいいさんになりました。きょうとでにんきがあるおてらのひとつです。",
+          "chinese": "大家请看，那边就是著名的金阁寺。金阁寺建于14世纪。1950年曾经被烧毁一次，之后按照原样重建了。它是京都最受欢迎的寺庙之一。",
+          "confidence": "low",
+          "needsReview": true,
+          "note": "图中文字把1950年火灾之后与“義満という将軍の命で作られて”连续叙述，年代语义明显冲突；未改写。"
+        },
+        {
+          "lineNo": 2,
+          "speaker": "カリナ",
+          "japanese": "きれいですね。壁が金色ですが、本物の金ですか。",
+          "reading": "きれいですね。かべがきんいろですが、ほんもののきんですか。",
+          "chinese": "真漂亮呢，墙壁是金色的，是真正的黄金吗？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 3,
+          "speaker": "ガイド",
+          "japanese": "はい。金が20キロぐらい使われました。",
+          "reading": "はい。きんが20きろぐらいつかわれました。",
+          "chinese": "是的，使用了大约20公斤的黄金。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 4,
+          "speaker": "カリナ",
+          "japanese": "そうですか。お寺の中に入れますか。",
+          "reading": "そうですか。おてらのなかにいれますか。",
+          "chinese": "这样啊，那可以进去参观吗？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 5,
+          "speaker": "ガイド",
+          "japanese": "中には入れないんです。池の周りを歩きながら見てください。",
+          "reading": "なかにはいれないんです。いけのまわりをあるきながらみてください。",
+          "chinese": "寺内是不能进入的。请一边绕着池塘走，一边欣赏。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 6,
+          "speaker": "カリナ",
+          "japanese": "紅葉がきれいですね。",
+          "reading": "こうようがきれいですね。",
+          "chinese": "枫叶好美啊。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 7,
+          "speaker": "ガイド",
+          "japanese": "ええ。金閣寺は紅葉と雪の季節が特に美しいと言われています。",
+          "reading": "ええ。きんかくじはこうようとゆきのきせつがとくにうつくしいといわれています。",
+          "chinese": "据说金阁寺在枫叶和雪景的季节尤其美丽。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        }
+      ],
+      "riskReport": {
+        "speakerUncertain": [],
+        "textUncertain": [
+          1
+        ],
+        "readingUncertain": [],
+        "translationUncertain": [],
+        "possibleSplitMergeIssues": [],
+        "possibleNonConversationText": [],
+        "needsHumanReviewLines": [
+          1
+        ]
+      }
+    },
+    {
+      "lessonNo": 38,
+      "titleJa": "片づけるのが 好きなんです",
+      "titleZh": "我喜欢整理",
+      "sourceImage": "public/minna/lessons/lesson-38/conversation-anime-mobile.webp",
+      "status": "needs_human_review",
+      "lineCount": 11,
+      "characters": [
+        {
+          "name": "大学職員",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        },
+        {
+          "name": "ワット",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        }
+      ],
+      "lines": [
+        {
+          "lineNo": 1,
+          "speaker": "大学職員",
+          "japanese": "ワット先生、回覧です。",
+          "reading": "わっとせんせい、かいらんです。",
+          "chinese": "瓦特老师，这是要传阅的文件。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 2,
+          "speaker": "ワット",
+          "japanese": "あ、すみません。そこに置いといてください。",
+          "reading": "あ、すみません。そこにおいといてください。",
+          "chinese": "啊，麻烦放在那里就可以了。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 3,
+          "speaker": "大学職員",
+          "japanese": "先生の研究室はいつもきれいですね。",
+          "reading": "せんせいのけんきゅうしつはいつもきれいですね。",
+          "chinese": "老师的研究室总是这么整洁啊。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 4,
+          "speaker": "ワット",
+          "japanese": "わたしは片づけるのが好きなんです。",
+          "reading": "わたしはかたづけるのがすきなんです。",
+          "chinese": "我喜欢整理。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 5,
+          "speaker": "大学職員",
+          "japanese": "本もきちんと並べてあるし……。整理するのが上手なんですね。",
+          "reading": "ほんもきちんとなべてあるし……。せいりするのがじょうずなんですね。",
+          "chinese": "书也排得整整齐齐的呢。您很擅长整理啊。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 6,
+          "speaker": "ワット",
+          "japanese": "昔「上手な整理の方法」という本を書いたことがあるんです。",
+          "reading": "むかし「じょうずなせいりのほうほう」というほんをかいたことがあるんです。",
+          "chinese": "以前我还写过一本关于整理方法的书。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 7,
+          "speaker": "大学職員",
+          "japanese": "へえ、すごいですね。",
+          "reading": "へえ、すごいですね。",
+          "chinese": "哇，真了不起。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 8,
+          "speaker": "ワット",
+          "japanese": "あまり売れませんでしたけどね。よかったら、1冊持って来ましょうか。",
+          "reading": "あまりうれませんでしたけどね。よかったら、1さつもってきましょうか。",
+          "chinese": "不过销量不是很好。如果您愿意，我送您一本吧？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 9,
+          "speaker": "大学職員",
+          "japanese": "おはようございます。",
+          "reading": "おはようございます。",
+          "chinese": "早上好。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 10,
+          "speaker": "ワット",
+          "japanese": "あ、本を持って来るのを忘れました。すみません。",
+          "reading": "あ、ほんをもってくるのをわすれました。すみません。",
+          "chinese": "啊，好。啊，我忘了带书了。不好意思。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 11,
+          "speaker": "大学職員",
+          "japanese": "いいですよ。でも、回覧にはんこを押すのを忘れないでください。先月も押してありませんでしたよ。",
+          "reading": "いいですよ。でも、かいらんにはんこをおすのをわすれないでください。せんげつもおしてありませんでしたよ。",
+          "chinese": "没关系的。不过，在阅览时……请别忘了盖章哦。上个月也没盖章哦。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        }
+      ],
+      "riskReport": {
+        "speakerUncertain": [],
+        "textUncertain": [],
+        "readingUncertain": [],
+        "translationUncertain": [],
+        "possibleSplitMergeIssues": [],
+        "possibleNonConversationText": [],
+        "needsHumanReviewLines": []
+      }
+    },
+    {
+      "lessonNo": 39,
+      "titleJa": "遅れて、すみません",
+      "titleZh": "对不起，我迟到了",
+      "sourceImage": "public/minna/lessons/lesson-39/conversation-anime-mobile.webp",
+      "status": "needs_human_review",
+      "lineCount": 8,
+      "characters": [
+        {
+          "name": "ミラー",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        },
+        {
+          "name": "中村課長",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        }
+      ],
+      "lines": [
+        {
+          "lineNo": 1,
+          "speaker": "ミラー",
+          "japanese": "課長、遅れて、すみません。",
+          "reading": "かちょう、おくれて、すみません。",
+          "chinese": "不好意思来晚了",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 2,
+          "speaker": "中村課長",
+          "japanese": "ミラーさん、どうしたんですか。",
+          "reading": "みらーさん、どうしたんですか。",
+          "chinese": "大家怎么了？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 3,
+          "speaker": "ミラー",
+          "japanese": "実は来る途中で事故があって、バスが遅れてしまったんです。",
+          "reading": "じつはくるとちゅうでじこがあって、ばすがおくれてしまったんです。",
+          "chinese": "其实在来的路上出了事故公交车因此晚点了",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 4,
+          "speaker": "中村課長",
+          "japanese": "バスの事故ですか。",
+          "reading": "ばすのじこですか。",
+          "chinese": "是公交车出事故了吗？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 5,
+          "speaker": "ミラー",
+          "japanese": "いいえ。交差点でトラックと車がぶつかって、バスが動かなかったんです。",
+          "reading": "いいえ。こうさてんでとらっくとくるまがぶつかって、ばすがうごかなかったんです。",
+          "chinese": "不是，是在十字路口卡车和汽车相撞了公交车动不了了",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 6,
+          "speaker": "中村課長",
+          "japanese": "それは大変でしたね。連絡がないので、みんな心配していたんですよ。",
+          "reading": "それはたいへんでしたね。れんらくがないので、みんなしんぱいしていたんですよ。",
+          "chinese": "那可真糟糕啊大家因为没收到联络，都很担心你呢",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 7,
+          "speaker": "ミラー",
+          "japanese": "電話したかったんですが、ケータイをうちに忘れてしまって……。どうもすみませんでした。",
+          "reading": "でんわしたかったんですが、けーたいをうちにわすれてしまって……。どうもすみませんでした。",
+          "chinese": "我本来想打电话的结果把手机忘在家里了真的非常抱歉",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 8,
+          "speaker": "中村課長",
+          "japanese": "わかりました。じゃ、会議を始めましょう。",
+          "reading": "わかりました。じゃ、かいぎをはじめましょう。",
+          "chinese": "我知道了那我们开始开会吧",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        }
+      ],
+      "riskReport": {
+        "speakerUncertain": [],
+        "textUncertain": [],
+        "readingUncertain": [],
+        "translationUncertain": [],
+        "possibleSplitMergeIssues": [],
+        "possibleNonConversationText": [],
+        "needsHumanReviewLines": []
+      }
+    },
+    {
+      "lessonNo": 40,
+      "titleJa": "友達が できたか どうか、心配です",
+      "titleZh": "担心他有没有交到朋友",
+      "sourceImage": "public/minna/lessons/lesson-40/conversation-anime-mobile.webp",
+      "status": "needs_human_review",
+      "lineCount": 9,
+      "characters": [
+        {
+          "name": "クララ",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        },
+        {
+          "name": "伊藤先生",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        }
+      ],
+      "lines": [
+        {
+          "lineNo": 1,
+          "speaker": "クララ",
+          "japanese": "先生、ハンスは学校でどうでしょうか。友達ができたかどうか、心配なんですが……。",
+          "reading": "せんせい、はんすはがっこうでどうでしょうか。ともだちができたかどうか、しんぱいなんですが……。",
+          "chinese": "老师，汉斯在学校的情况怎么样？我有些担心他有没有交到朋友。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 2,
+          "speaker": "伊藤先生",
+          "japanese": "大丈夫ですよ。ハンス君はクラスでとても人気があります。",
+          "reading": "だいじょうぶですよ。はんすくんはくらすでとてもにんきがあります。",
+          "chinese": "没问题的，汉斯在班上非常受欢迎。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 3,
+          "speaker": "クララ",
+          "japanese": "そうですか。安心しました。勉強はどうですか。漢字が大変だと言っていますが",
+          "reading": "そうですか。あんしんしました。べんきょうはどうですか。かんじがたいへんだといっていますが",
+          "chinese": "是吗？那我就放心了。那学习方面呢？他总说汉字很难。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 4,
+          "speaker": "伊藤先生",
+          "japanese": "毎日漢字のテストをしていますが、ハンス君はいい成績ですよ。",
+          "reading": "まいにちかんじのてすとをしていますが、はんすくんはいいせいせきですよ。",
+          "chinese": "我们每天都有汉字测验，汉斯的成绩很好哦。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 5,
+          "speaker": "クララ",
+          "japanese": "そうですか。ありがとうございます。",
+          "reading": "そうですか。ありがとうございます。",
+          "chinese": "是吗？非常感谢您。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 6,
+          "speaker": "伊藤先生",
+          "japanese": "ところで、もうすぐ運動会ですが、お父さんもいらっしゃいますか。",
+          "reading": "ところで、もうすぐうんどうかいですが、おとうさんもいらっしゃいますか。",
+          "chinese": "对了，运动会快到了，您先生也会来吗？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 7,
+          "speaker": "クララ",
+          "japanese": "ええ。",
+          "reading": "ええ。",
+          "chinese": "嗯，他会的。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 8,
+          "speaker": "伊藤先生",
+          "japanese": "ハンス君が学校でどんな様子か、ぜひ見てください。",
+          "reading": "はんすくんががっこうでどんなようすか、ぜひみてください。",
+          "chinese": "请一定来看看汉斯在学校的样子。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 9,
+          "speaker": "クララ",
+          "japanese": "わかりました。これからもよろしくお願いします。",
+          "reading": "わかりました。これからもよろしくおねがいします。",
+          "chinese": "好的，今后也请多关照。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        }
+      ],
+      "riskReport": {
+        "speakerUncertain": [],
+        "textUncertain": [],
+        "readingUncertain": [],
+        "translationUncertain": [],
+        "possibleSplitMergeIssues": [],
+        "possibleNonConversationText": [],
+        "needsHumanReviewLines": []
+      }
+    },
+    {
+      "lessonNo": 41,
+      "titleJa": "ご結婚 おめでとう ございます",
+      "titleZh": "祝贺新婚",
+      "sourceImage": "public/minna/lessons/lesson-41/conversation-anime-mobile.webp",
+      "status": "needs_human_review",
+      "lineCount": 6,
+      "characters": [
+        {
+          "name": "学長",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        },
+        {
+          "name": "皆",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        },
+        {
+          "name": "司会者",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        },
+        {
+          "name": "松本良子",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        },
+        {
+          "name": "大学職員",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        },
+        {
+          "name": "ミラー",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        }
+      ],
+      "lines": [
+        {
+          "lineNo": 1,
+          "speaker": "学長",
+          "japanese": "ワットさん、いずみさん、ご結婚おめでとうございます。乾杯。",
+          "reading": "わっとさん、いずみさん、ごけっこんおめでとうございます。かんぱい。",
+          "chinese": "瓦特先生、泉小姐，祝贺你们新婚快乐！干杯！",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 2,
+          "speaker": "皆",
+          "japanese": "乾杯。",
+          "reading": "かんぱい。",
+          "chinese": "干杯！",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 3,
+          "speaker": "司会者",
+          "japanese": "次にこちらの皆さんにひとことずつお願いします。",
+          "reading": "つぎにこちらのみなさんにひとことずつおねがいします。",
+          "chinese": "接下来，请在座的各位也说几句话吧",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 4,
+          "speaker": "松本良子",
+          "japanese": "わたしは去年の夏のクラスでワット先生に英語を教えていただきました。先生の授業はユーモアがあって、楽しかったです。実はそのクラスにいずみさんもいらっしゃったんです。",
+          "reading": "わたしはきょねんのなつのくらすでわっとせんせいにえいごをおしえていただきました。せんせいのじゅぎょうはゆーもあがあって、たのしかったです。じつはそのくらすにいずみさんもいらっしゃったんです。",
+          "chinese": "我在去年夏天的课程上，曾经接受瓦特老师的英语指导他的课风趣幽默，非常有意思其实泉小姐也在那个班上",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 5,
+          "speaker": "大学職員",
+          "japanese": "わたしは先生に「上手な整理の方法」という本をいただきました。先生は整理するのがお上手で、研究室はいつもきれいです。きっとお二人のお宅もすてきだと思います。",
+          "reading": "わたしはせんせいに「じょうずなせいりのほうほう」というほんをいただきました。せんせいはせいりするのがおじょうずで、けんきゅうしつはいつもきれいです。きっとおふたりのおたくもすてきだとおもいます。",
+          "chinese": "我还收到了一本老师写的《整理术》的书老师的课……老师非常擅长整理，他的研究室总是井井有条我想你们的家一定也会很漂亮",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 6,
+          "speaker": "ミラー",
+          "japanese": "ワットさん、今度は「すてきな人と結婚する方法」という本を書いてくださいませんか。ぜひ読んで、勉強したいです。どうぞお幸せに。",
+          "reading": "わっとさん、こんどは「すてきなにんとけっこんするほうほう」というほんをかいてくださいませんか。ぜひよんで、べんきょうしたいです。どうぞおしあわせに。",
+          "chinese": "瓦特老师，下次也请写一本《如何与理想伴侣结婚》的书吧我一定会认真阅读好好学习的祝你们永远幸福！",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        }
+      ],
+      "riskReport": {
+        "speakerUncertain": [],
+        "textUncertain": [],
+        "readingUncertain": [],
+        "translationUncertain": [],
+        "possibleSplitMergeIssues": [],
+        "possibleNonConversationText": [],
+        "needsHumanReviewLines": []
+      }
+    },
+    {
+      "lessonNo": 42,
+      "titleJa": "ボーナスは 何に 使いますか",
+      "titleZh": "奖金用来做什么",
+      "sourceImage": "public/minna/lessons/lesson-42/conversation-anime-mobile.webp",
+      "status": "needs_human_review",
+      "lineCount": 11,
+      "characters": [
+        {
+          "name": "鈴木",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        },
+        {
+          "name": "林",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        },
+        {
+          "name": "小川",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        }
+      ],
+      "lines": [
+        {
+          "lineNo": 1,
+          "speaker": "鈴木",
+          "japanese": "林さん、ボーナスはいつ出るんですか。",
+          "reading": "はやしさん、ぼーなすはいつでるんですか。",
+          "chinese": "林小姐，奖金什么时候发？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 2,
+          "speaker": "林",
+          "japanese": "来週です。鈴木さんの会社は？",
+          "reading": "らいしゅうです。すずきさんのかいしゃは？",
+          "chinese": "下周发。铃木先生你们公司呢？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 3,
+          "speaker": "鈴木",
+          "japanese": "あしたです。楽しみですね。",
+          "reading": "あしたです。たのしみですね。",
+          "chinese": "明天发，真让人期待啊。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 4,
+          "speaker": "林",
+          "japanese": "ええ。鈴木さんは何に使いますか。",
+          "reading": "ええ。すずきさんはなににつかいますか。",
+          "chinese": "是啊。铃木先生你打算用来做什么？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 5,
+          "speaker": "鈴木",
+          "japanese": "まず新しい自転車を買って、それから旅行に行って……。",
+          "reading": "まずあたらしいじてんしゃをかって、それからりょこうにいって……。",
+          "chinese": "首先买辆新自行车，然后去旅行。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 6,
+          "speaker": "小川",
+          "japanese": "貯金はしないんですか。",
+          "reading": "ちょきんはしないんですか。",
+          "chinese": "不打算存点钱吗？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 7,
+          "speaker": "鈴木",
+          "japanese": "僕はあまり考えたこと、ありませんね。",
+          "reading": "ぼくはあまりかんがえたこと、ありませんね。",
+          "chinese": "我倒是没怎么考虑过。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 8,
+          "speaker": "林",
+          "japanese": "わたしは半分は貯金するつもりです。",
+          "reading": "わたしははんぶんはちょきんするつもりです。",
+          "chinese": "我打算把一半存起来。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 9,
+          "speaker": "鈴木",
+          "japanese": "えっ、半分も貯金するんですか。",
+          "reading": "えっ、はんぶんもちょきんするんですか。",
+          "chinese": "咦，要存一半啊？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 10,
+          "speaker": "林",
+          "japanese": "ええ、いつかイギリスへ留学しようと思っているんです。",
+          "reading": "ええ、いつかいぎりすへりゅうがくしようとおもっているんです。",
+          "chinese": "嗯，因为我打算将来去英国留学。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 11,
+          "speaker": "小川",
+          "japanese": "へえ、独身の人はいいですね。全部自分のために、使えて。わたしは家のローンを払って、子どもの教育のために、貯金したら、ほとんど残りませんよ。",
+          "reading": "へえ、どくしんのにんはいいですね。ぜんぶじぶんのために、つかえて。わたしはいえのろーんをはらって、こどものきょういくのために、ちょきんしたら、ほとんどのこりませんよ。",
+          "chinese": "哇，单身的人真好啊。可以把钱都用在自己身上。我得付房贷，再为了孩子教育存点钱，几乎什么都剩不下了。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        }
+      ],
+      "riskReport": {
+        "speakerUncertain": [],
+        "textUncertain": [],
+        "readingUncertain": [],
+        "translationUncertain": [],
+        "possibleSplitMergeIssues": [],
+        "possibleNonConversationText": [],
+        "needsHumanReviewLines": []
+      }
+    },
+    {
+      "lessonNo": 43,
+      "titleJa": "毎日 楽しそうです",
+      "titleZh": "他每天看起来都很开心",
+      "sourceImage": "public/minna/lessons/lesson-43/conversation-anime-mobile.webp",
+      "status": "needs_human_review",
+      "lineCount": 8,
+      "characters": [
+        {
+          "name": "林",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        },
+        {
+          "name": "シュミット",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        }
+      ],
+      "lines": [
+        {
+          "lineNo": 1,
+          "speaker": "林",
+          "japanese": "これ、どなたの写真ですか。",
+          "reading": "これ、どなたのしゃしんですか。",
+          "chinese": "这是谁的照片？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 2,
+          "speaker": "シュミット",
+          "japanese": "息子のハンスです。運動会のとき、撮った写真です。",
+          "reading": "むすこのはんすです。うんどうかいのとき、とったしゃしんです。",
+          "chinese": "是我儿子汉斯的。这是运动会时拍的照片。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 3,
+          "speaker": "林",
+          "japanese": "元気そうですね。",
+          "reading": "げんきそうですね。",
+          "chinese": "看起来很有精神呢。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 4,
+          "speaker": "シュミット",
+          "japanese": "ええ。ハンスは走るのが速いんですよ。日本の小学校にも慣れて、友達もできて、毎日楽しそうです。",
+          "reading": "ええ。はんすははしるのがはやいんですよ。にっぽんのしょうがっこうにもなれて、ともだちもできて、まいにちたのしそうです。",
+          "chinese": "是啊，汉斯跑得很快哦。他也已经习惯了日本的小学，交到了朋友，每天看起来都很开心。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 5,
+          "speaker": "林",
+          "japanese": "よかったですね。こちらの方は奥さんですか。きれいな方ですね。",
+          "reading": "よかったですね。こちらのかたはおくさんですか。きれいなほうですね。",
+          "chinese": "那太好了。这位是您太太吗？真是位漂亮的女士啊。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 6,
+          "speaker": "シュミット",
+          "japanese": "ありがとうございます。妻はいろいろなことに興味があって、いっしょにいると、おもしろいんですよ。",
+          "reading": "ありがとうございます。つまはいろいろなことにきょうみがあって、いっしょにいると、おもしろいんですよ。",
+          "chinese": "谢谢您。我妻子对各种事情都感兴趣，跟她在一起很有意思。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 7,
+          "speaker": "林",
+          "japanese": "そうですか。",
+          "reading": "そうですか。",
+          "chinese": "是这样啊。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 8,
+          "speaker": "シュミット",
+          "japanese": "特に歴史が好きで、時間があれば、古い町を歩いています。",
+          "reading": "とくにれきしがすきで、じかんがあれば、ふるいまちをあるいています。",
+          "chinese": "她特别喜欢历史，有时间就会去老街散步。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        }
+      ],
+      "riskReport": {
+        "speakerUncertain": [],
+        "textUncertain": [],
+        "readingUncertain": [],
+        "translationUncertain": [],
+        "possibleSplitMergeIssues": [],
+        "possibleNonConversationText": [],
+        "needsHumanReviewLines": []
+      }
+    },
+    {
+      "lessonNo": 44,
+      "titleJa": "この 写真みたいに して ください",
+      "titleZh": "请剪成这张照片的样子",
+      "sourceImage": "public/minna/lessons/lesson-44/conversation-anime-mobile.webp",
+      "status": "needs_human_review",
+      "lineCount": 10,
+      "characters": [
+        {
+          "name": "美容師",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        },
+        {
+          "name": "イー",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        }
+      ],
+      "lines": [
+        {
+          "lineNo": 1,
+          "speaker": "美容師",
+          "japanese": "いらっしゃいませ。きょうはどうなさいますか。",
+          "reading": "いらっしゃいませ。きょうはどうなさいますか。",
+          "chinese": "欢迎光临。今天您想做什么造型？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 2,
+          "speaker": "イー",
+          "japanese": "カット、お願いします。",
+          "reading": "かっと、おねがいします。",
+          "chinese": "请帮我剪个头发。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 3,
+          "speaker": "美容師",
+          "japanese": "じゃ、シャンプーをしますから、こちらへどうぞ。",
+          "reading": "じゃ、しゃんぷーをしますから、こちらへどうぞ。",
+          "chinese": "那我先帮您洗头吧。这边请。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 4,
+          "speaker": "美容師",
+          "japanese": "カットはどういうふうになさいますか。",
+          "reading": "かっとはどういうふうになさいますか。",
+          "chinese": "您想剪成什么样的发型？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 5,
+          "speaker": "イー",
+          "japanese": "ショートにしたいんですけど……。この写真みたいにしてください。",
+          "reading": "しょーとにしたいんですけど……。このしゃしんみたいにしてください。",
+          "chinese": "我想剪短，请剪成像这张照片这样的发型。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 6,
+          "speaker": "美容師",
+          "japanese": "あ、すてきですね。",
+          "reading": "あ、すてきですね。",
+          "chinese": "啊，这发型真不错。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 7,
+          "speaker": "美容師",
+          "japanese": "前の長さはこれでよろしいでしょうか。",
+          "reading": "まえのながさはこれでよろしいでしょうか。",
+          "chinese": "前面的长度这样可以吗？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 8,
+          "speaker": "イー",
+          "japanese": "そうですね。もう少し短くしてください。",
+          "reading": "そうですね。もうすこしみじかくしてください。",
+          "chinese": "嗯……请再剪短一点。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 9,
+          "speaker": "美容師",
+          "japanese": "どうもお疲れさまでした。",
+          "reading": "どうもおつかれさまでした。",
+          "chinese": "辛苦您了。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 10,
+          "speaker": "イー",
+          "japanese": "ありがとう。",
+          "reading": "ありがとう。",
+          "chinese": "非常感谢。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        }
+      ],
+      "riskReport": {
+        "speakerUncertain": [],
+        "textUncertain": [],
+        "readingUncertain": [],
+        "translationUncertain": [],
+        "possibleSplitMergeIssues": [],
+        "possibleNonConversationText": [],
+        "needsHumanReviewLines": []
+      }
+    },
+    {
+      "lessonNo": 45,
+      "titleJa": "コースを まちがえた 場合は、どう したら いいですか",
+      "titleZh": "走错路线时该怎么办",
+      "sourceImage": "public/minna/lessons/lesson-45/conversation-anime-mobile.webp",
+      "status": "needs_human_review",
+      "lineCount": 11,
+      "characters": [
+        {
+          "name": "係員",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        },
+        {
+          "name": "参加者全員",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        },
+        {
+          "name": "参加者1",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        },
+        {
+          "name": "参加者2",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        },
+        {
+          "name": "鈴木",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        },
+        {
+          "name": "ミラー",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        }
+      ],
+      "lines": [
+        {
+          "lineNo": 1,
+          "speaker": "係員",
+          "japanese": "皆さん、このマラソンは健康マラソンですから、無理をしないでください。もし気分が悪くなったら、係員に言ってください。",
+          "reading": "みなさん、このまらそんはけんこうまらそんですから、むりをしないでください。もしきぶんがわるくなったら、かかりいんにいってください。",
+          "chinese": "大家这次是健康马拉松，请不要勉强自己。如果感觉不舒服，请去找工作人员。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 2,
+          "speaker": "参加者全員",
+          "japanese": "はい。",
+          "reading": "はい。",
+          "chinese": "好的。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 3,
+          "speaker": "参加者1",
+          "japanese": "すみません。コースをまちがえた場合は、どうしたらいいですか。",
+          "reading": "すみません。こーすをまちがえたばあいは、どうしたらいいですか。",
+          "chinese": "不好意思如果跑错路线了该怎么办？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 4,
+          "speaker": "係員",
+          "japanese": "元の所に戻って、続けてください。",
+          "reading": "もとのところにもどって、つづけてください。",
+          "chinese": "请回到原来的位置继续跑。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 5,
+          "speaker": "参加者2",
+          "japanese": "あのう、途中でやめたい場合は？",
+          "reading": "あのう、とちゅうでやめたいばあいは？",
+          "chinese": "那个……如果想中途退出的话，",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 6,
+          "speaker": "係員",
+          "japanese": "その場合は、近くの係員に名前を言って、帰ってください。では、スタートの時間です。",
+          "reading": "そのばあいは、ちかくのかかりいんになまえをいって、かえってください。では、すたーとのじかんです。",
+          "chinese": "请向附近的工作人员报上姓名后离开。那么，现在是起跑时间。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 7,
+          "speaker": "鈴木",
+          "japanese": "ミラーさん、マラソンはどうでしたか。",
+          "reading": "みらーさん、まらそんはどうでしたか。",
+          "chinese": "米勒先生，马拉松跑得怎么样？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 8,
+          "speaker": "ミラー",
+          "japanese": "2位でした。",
+          "reading": "2くらいでした。",
+          "chinese": "我拿了第二名。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 9,
+          "speaker": "鈴木",
+          "japanese": "2位だったんですか。すごいですね。",
+          "reading": "2くらいだったんですか。すごいですね。",
+          "chinese": "拿了第二啊？好厉害啊。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 10,
+          "speaker": "ミラー",
+          "japanese": "いいえ、一生懸命練習したのに、優勝できなくて、残念です。",
+          "reading": "いいえ、いっしょうけんめいれんしゅうしたのに、ゆうしょうできなくて、ざんねんです。",
+          "chinese": "不过明明努力练习了，没能拿第一有点遗憾。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 11,
+          "speaker": "鈴木",
+          "japanese": "また来年がありますよ。",
+          "reading": "またらいねんがありますよ。",
+          "chinese": "明年还有机会嘛。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        }
+      ],
+      "riskReport": {
+        "speakerUncertain": [],
+        "textUncertain": [],
+        "readingUncertain": [],
+        "translationUncertain": [],
+        "possibleSplitMergeIssues": [],
+        "possibleNonConversationText": [],
+        "needsHumanReviewLines": []
+      }
+    },
+    {
+      "lessonNo": 46,
+      "titleJa": "先週 直して もらった ばかりなのに、また……",
+      "titleZh": "上周才修好，却又……",
+      "sourceImage": "public/minna/lessons/lesson-46/conversation-anime-mobile.webp",
+      "status": "needs_human_review",
+      "lineCount": 10,
+      "characters": [
+        {
+          "name": "係員",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        },
+        {
+          "name": "タワポン",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        }
+      ],
+      "lines": [
+        {
+          "lineNo": 1,
+          "speaker": "係員",
+          "japanese": "はい、ガスサービスセンターでございます。",
+          "reading": "はい、がすさーびすせんたーでございます。",
+          "chinese": "这里是燃气服务中心。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 2,
+          "speaker": "タワポン",
+          "japanese": "あのう、ガスレンジの調子がおかしいんですが……。",
+          "reading": "あのう、がすれんじのちょうしがおかしいんですが……。",
+          "chinese": "那个，燃气灶的好像有点问题。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 3,
+          "speaker": "係員",
+          "japanese": "どんな具合ですか。",
+          "reading": "どんなぐあいですか。",
+          "chinese": "如何？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 4,
+          "speaker": "タワポン",
+          "japanese": "先週直してもらったばかりなのに、また火が消えてしまうんです。危ないので、すぐ見に来てくれませんか。",
+          "reading": "せんしゅうなおしてもらったばかりなのに、またひがきえてしまうんです。あぶないので、すぐみにきてくれませんか。",
+          "chinese": "明明上周才请人来修过，火又会熄灭。很危险，请马上过来看看。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 5,
+          "speaker": "係員",
+          "japanese": "わかりました。5時ごろには行けると思います。ご住所とお名前をお願いします。",
+          "reading": "わかりました。5ときごろにはいけるとおもいます。ごじゅうしょとおなまえをおねがいします。",
+          "chinese": "明白了。我想5点左右可以过去。请告诉我地址和姓名。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 6,
+          "speaker": "タワポン",
+          "japanese": "もしもし、5時ごろにガスレンジを見に来てくれるはずなんですが、まだですか。",
+          "reading": "もしもし、5ときごろにがすれんじをみにきてくれるはずなんですが、まだですか。",
+          "chinese": "喂，原定5点左右来看燃气灶，请问还没到吗？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 7,
+          "speaker": "係員",
+          "japanese": "申し訳ありません。どちら様でしょうか。",
+          "reading": "もうしわけありません。どちらさまでしょうか。",
+          "chinese": "非常抱歉。请问您是哪位？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 8,
+          "speaker": "タワポン",
+          "japanese": "タワポンです。",
+          "reading": "たわぽんです。",
+          "chinese": "我是塔瓦蓬。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 9,
+          "speaker": "係員",
+          "japanese": "少々お待ちください。係員に連絡しますから。",
+          "reading": "しょうしょうおまちください。かかりいんにれんらくしますから。",
+          "chinese": "请等待片刻我联系一下负责人。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 10,
+          "speaker": "係員",
+          "japanese": "お待たせしました。今そちらに向かっているところです。あと10分ほどお待ちください。",
+          "reading": "おまたせしました。いまそちらにむかっているところです。あと10ふんほどおまちください。",
+          "chinese": "抱歉让您等待我现在正朝那个请再等10分钟",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        }
+      ],
+      "riskReport": {
+        "speakerUncertain": [],
+        "textUncertain": [],
+        "readingUncertain": [],
+        "translationUncertain": [],
+        "possibleSplitMergeIssues": [],
+        "possibleNonConversationText": [],
+        "needsHumanReviewLines": []
+      }
+    },
+    {
+      "lessonNo": 47,
+      "titleJa": "婚約したそうです",
+      "titleZh": "听说订婚了",
+      "sourceImage": "public/minna/lessons/lesson-47/conversation-anime-mobile.webp",
+      "status": "needs_human_review",
+      "lineCount": 12,
+      "characters": [
+        {
+          "name": "渡辺",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        },
+        {
+          "name": "高橋",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        },
+        {
+          "name": "林",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        }
+      ],
+      "lines": [
+        {
+          "lineNo": 1,
+          "speaker": "渡辺",
+          "japanese": "お先に失礼します。",
+          "reading": "おさきにしつれいします。",
+          "chinese": "我先告辞了。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 2,
+          "speaker": "高橋",
+          "japanese": "あっ、渡辺さん、ちょっと待って。僕も帰ります。",
+          "reading": "あっ、わたなべさん、ちょっとまって。ぼくもかえります。",
+          "chinese": "啊，渡边小姐，等一下，我也一起回去。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 3,
+          "speaker": "渡辺",
+          "japanese": "すみません、ちょっと急ぎますから。",
+          "reading": "すみません、ちょっといそぎますから。",
+          "chinese": "不好意思，我赶时间。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 4,
+          "speaker": "高橋",
+          "japanese": "渡辺さん、このごろ早く帰りますね。どうも恋人ができたようですね。",
+          "reading": "わたなべさん、このごろはやくかえりますね。どうもこいびとができたようですね。",
+          "chinese": "你最近总是很早回去呢。听说好像交了个男朋友哦。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 5,
+          "speaker": "林",
+          "japanese": "あ、知らないんですか。この間婚約したそうですよ。",
+          "reading": "あ、しらないんですか。このかんこんやくしたそうですよ。",
+          "chinese": "你不知道吗？听说前几天还一起去看了电影。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 6,
+          "speaker": "高橋",
+          "japanese": "えっ、だれですか、相手は。",
+          "reading": "えっ、だれですか、あいては。",
+          "chinese": "诶？是谁啊？对象是？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 7,
+          "speaker": "林",
+          "japanese": "IMCの鈴木さんですよ。",
+          "reading": "IMCのすずきさんですよ。",
+          "chinese": "是IMC的铃木先生啦。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 8,
+          "speaker": "高橋",
+          "japanese": "えっ、鈴木さん？",
+          "reading": "えっ、すずきさん？",
+          "chinese": "诶，铃木先生？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 9,
+          "speaker": "林",
+          "japanese": "ワットさんの結婚式で知り合ったそうですよ。",
+          "reading": "わっとさんのけっこんしきでしりあったそうですよ。",
+          "chinese": "好像是在瓦特先生的婚礼上认识的哦。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 10,
+          "speaker": "高橋",
+          "japanese": "そうですか。",
+          "reading": "そうですか。",
+          "chinese": "原来如此……",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 11,
+          "speaker": "林",
+          "japanese": "ところで、高橋さんは？",
+          "reading": "ところで、たかはしさんは？",
+          "chinese": "说起来，高井先生你呢？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 12,
+          "speaker": "高橋",
+          "japanese": "僕ですか。僕は仕事が恋人です。",
+          "reading": "ぼくですか。ぼくはしごとがこいびとです。",
+          "chinese": "我吗？我啊……工作的就是我的恋人啦。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        }
+      ],
+      "riskReport": {
+        "speakerUncertain": [],
+        "textUncertain": [],
+        "readingUncertain": [],
+        "translationUncertain": [],
+        "possibleSplitMergeIssues": [],
+        "possibleNonConversationText": [],
+        "needsHumanReviewLines": []
+      }
+    },
+    {
+      "lessonNo": 48,
+      "titleJa": "休ませて いただけませんか",
+      "titleZh": "能让我请假吗",
+      "sourceImage": "public/minna/lessons/lesson-48/conversation-anime-mobile.webp",
+      "status": "needs_human_review",
+      "lineCount": 11,
+      "characters": [
+        {
+          "name": "ミラー",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        },
+        {
+          "name": "中村課長",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        }
+      ],
+      "lines": [
+        {
+          "lineNo": 1,
+          "speaker": "ミラー",
+          "japanese": "課長、今お忙しいですか。",
+          "reading": "かちょう、いまおいそがしいですか。",
+          "chinese": "课长，现在您忙吗？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 2,
+          "speaker": "中村課長",
+          "japanese": "いいえ、どうぞ。",
+          "reading": "いいえ、どうぞ。",
+          "chinese": "不，您请说。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 3,
+          "speaker": "ミラー",
+          "japanese": "ちょっとお願いがあるんですが……。",
+          "reading": "ちょっとおねがいがあるんですが……。",
+          "chinese": "我有个小请求。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 4,
+          "speaker": "中村課長",
+          "japanese": "何ですか。",
+          "reading": "なんですか。",
+          "chinese": "是这样啊。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 5,
+          "speaker": "ミラー",
+          "japanese": "あのう、来月7日から10日ほど休みを取らせていただけませんか。",
+          "reading": "あのう、らいげつ7にちから10にちほどやすみをとらせていただけませんか。",
+          "chinese": "什么事呢？那个……从下个月7号开始，我能请大约十天的假么？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 6,
+          "speaker": "中村課長",
+          "japanese": "10日間ですか。",
+          "reading": "10にちかんですか。",
+          "chinese": "10天吗？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 7,
+          "speaker": "ミラー",
+          "japanese": "実はアメリカの友達が結婚するんです。",
+          "reading": "じつはあめりかのともだちがけっこんするんです。",
+          "chinese": "十天吗？其实是因为我美国的朋友要结婚了。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 8,
+          "speaker": "中村課長",
+          "japanese": "そうですか。えーと、来月は20日に営業会議がありますが、それまでに帰れますね。",
+          "reading": "そうですか。えーと、らいげつは20にちにえいぎょうかいぎがありますが、それまでにかえれますね。",
+          "chinese": "是这样啊。这个……下个月的第一天有个销售会议，你能在那之前回来吧？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 9,
+          "speaker": "ミラー",
+          "japanese": "はい。",
+          "reading": "はい。",
+          "chinese": "是的。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 10,
+          "speaker": "中村課長",
+          "japanese": "じゃ、かまいませんよ。楽しんで来てください。",
+          "reading": "じゃ、かまいませんよ。たのしんできてください。",
+          "chinese": "那就没问题了，祝你玩得开心。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 11,
+          "speaker": "ミラー",
+          "japanese": "ありがとうございます。",
+          "reading": "ありがとうございます。",
+          "chinese": "非常感谢您！",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        }
+      ],
+      "riskReport": {
+        "speakerUncertain": [],
+        "textUncertain": [],
+        "readingUncertain": [],
+        "translationUncertain": [],
+        "possibleSplitMergeIssues": [],
+        "possibleNonConversationText": [],
+        "needsHumanReviewLines": []
+      }
+    },
+    {
+      "lessonNo": 49,
+      "titleJa": "よろしく お伝え ください",
+      "titleZh": "请代为转告",
+      "sourceImage": "public/minna/lessons/lesson-49/conversation-anime-mobile.webp",
+      "status": "needs_human_review",
+      "lineCount": 10,
+      "characters": [
+        {
+          "name": "先生",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        },
+        {
+          "name": "クララ",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        }
+      ],
+      "lines": [
+        {
+          "lineNo": 1,
+          "speaker": "先生",
+          "japanese": "はい、ひまわり小学校です。",
+          "reading": "はい、ひまわりしょうがっこうです。",
+          "chinese": "您好，这里是向日葵小学。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 2,
+          "speaker": "クララ",
+          "japanese": "おはようございます。5年2組のハンス・シュミットの母ですが、伊藤先生はいらっしゃいますか。",
+          "reading": "おはようございます。5ねん2くのはんす・しゅみっとのははですが、いとうせんせいはいらっしゃいますか。",
+          "chinese": "早上好，我是五年二班的汉斯·施密特的母亲。请问井上老师在吗？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 3,
+          "speaker": "先生",
+          "japanese": "まだなんですが……。",
+          "reading": "まだなんですが……。",
+          "chinese": "他还没来……",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 4,
+          "speaker": "クララ",
+          "japanese": "では、伊藤先生に伝えていただきたいんですが……。",
+          "reading": "では、いとうせんせいにつたえていただきたいんですが……。",
+          "chinese": "他还没到……那我想拜托您转告井上老师。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 5,
+          "speaker": "先生",
+          "japanese": "はい、何でしょうか。",
+          "reading": "はい、なんでしょうか。",
+          "chinese": "好的，请说。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 6,
+          "speaker": "クララ",
+          "japanese": "実はハンスがゆうべ熱を出しまして、けさもまだ下がらないんです。",
+          "reading": "じつははんすがゆうべねつをだしまして、けさもまださがらないんです。",
+          "chinese": "其实汉斯从昨晚开始发烧，到现在还没有退烧。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 7,
+          "speaker": "先生",
+          "japanese": "それはいけませんね。",
+          "reading": "それはいけませんね。",
+          "chinese": "那可不行呢。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 8,
+          "speaker": "クララ",
+          "japanese": "それで、きょうは学校を休ませますので、先生によろしくお伝えください。",
+          "reading": "それで、きょうはがっこうをやすませますので、せんせいによろしくおつたえください。",
+          "chinese": "所以他今天会请假不上学，请代我向老师转达。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 9,
+          "speaker": "先生",
+          "japanese": "わかりました。どうぞお大事に。",
+          "reading": "わかりました。どうぞおだいじに。",
+          "chinese": "好的，请多保重。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 10,
+          "speaker": "クララ",
+          "japanese": "ありがとうございます。失礼いたします。",
+          "reading": "ありがとうございます。しつれいいたします。",
+          "chinese": "谢谢您，失礼了。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        }
+      ],
+      "riskReport": {
+        "speakerUncertain": [],
+        "textUncertain": [],
+        "readingUncertain": [],
+        "translationUncertain": [],
+        "possibleSplitMergeIssues": [],
+        "possibleNonConversationText": [],
+        "needsHumanReviewLines": []
+      }
+    },
+    {
+      "lessonNo": 50,
+      "titleJa": "心から 感謝いたします",
+      "titleZh": "衷心感谢",
+      "sourceImage": "public/minna/lessons/lesson-50/conversation-anime-mobile.webp",
+      "status": "needs_human_review",
+      "lineCount": 12,
+      "characters": [
+        {
+          "name": "司会者",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        },
+        {
+          "name": "ミラー",
+          "role": "图中会话角色",
+          "confidence": "high",
+          "note": ""
+        }
+      ],
+      "lines": [
+        {
+          "lineNo": 1,
+          "speaker": "司会者",
+          "japanese": "優勝おめでとうございます。すばらしいスピーチでした。",
+          "reading": "ゆうしょうおめでとうございます。すばらしいすぴーちでした。",
+          "chinese": "恭喜你获得第一名！演讲非常精彩。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 2,
+          "speaker": "ミラー",
+          "japanese": "ありがとうございます。",
+          "reading": "ありがとうございます。",
+          "chinese": "谢谢。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 3,
+          "speaker": "司会者",
+          "japanese": "緊張なさいましたか。",
+          "reading": "きんちょうなさいましたか。",
+          "chinese": "你紧张吗？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 4,
+          "speaker": "ミラー",
+          "japanese": "はい、とても緊張いたしました。",
+          "reading": "はい、とてもきんちょういたしました。",
+          "chinese": "是的。我非常紧张。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 5,
+          "speaker": "司会者",
+          "japanese": "練習は大変でしたか。",
+          "reading": "れんしゅうはたいへんでしたか。",
+          "chinese": "练习辛苦吗？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 6,
+          "speaker": "ミラー",
+          "japanese": "ええ。忙しくて、なかなか練習の時間がありませんでした。",
+          "reading": "ええ。いそがしくて、なかなかれんしゅうのじかんがありませんでした。",
+          "chinese": "嗯，是的。因为很忙，没什么时间练习。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 7,
+          "speaker": "司会者",
+          "japanese": "賞金は何にお使いになりますか。",
+          "reading": "しょうきんはなににおつかいになりますか。",
+          "chinese": "奖金准备怎么使用？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 8,
+          "speaker": "ミラー",
+          "japanese": "そうですね。わたしは動物が好きで、子どものときからアフリカへ行くのが夢でした。",
+          "reading": "そうですね。わたしはどうぶつがすきで、こどものときからあふりかへいくのがゆめでした。",
+          "chinese": "这个嘛……我喜欢动物，从小我的梦想就是去非洲。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 9,
+          "speaker": "司会者",
+          "japanese": "じゃ、アフリカへ行かれますか。",
+          "reading": "じゃ、あふりかへいかれますか。",
+          "chinese": "那你打算去非洲吗？",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 10,
+          "speaker": "ミラー",
+          "japanese": "はい。アフリカの自然の中で、きりんや象を見たいと思います。",
+          "reading": "はい。あふりかのしぜんのなかで、きりんやぞうをみたいとおもいます。",
+          "chinese": "是的。我想亲眼看看非洲自然环境里的长颈鹿和大象。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 11,
+          "speaker": "司会者",
+          "japanese": "子どものころの夢がかなうんですね。",
+          "reading": "こどものころのゆめがかなうんですね。",
+          "chinese": "童年的梦想就要实现了呢。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        },
+        {
+          "lineNo": 12,
+          "speaker": "ミラー",
+          "japanese": "はい。うれしいです。応援してくださった皆様に心から感謝いたします。どうもありがとうございました。",
+          "reading": "はい。うれしいです。おうえんしてくださったみなさまにこころからかんしゃいたします。どうもありがとうございました。",
+          "chinese": "是的。我很开心。对所有支持我的人，我由衷地表示感谢。衷心感谢大家。",
+          "confidence": "high",
+          "needsReview": false,
+          "note": ""
+        }
+      ],
+      "riskReport": {
+        "speakerUncertain": [],
+        "textUncertain": [],
+        "readingUncertain": [],
+        "translationUncertain": [],
+        "possibleSplitMergeIssues": [],
+        "possibleNonConversationText": [],
+        "needsHumanReviewLines": []
+      }
+    }
+  ]
+}

@@ -835,205 +835,173 @@
         "en": "Conversation Practice"
       },
       "dialogTitle": {
-        "zh": "第49课会话",
-        "en": "第49课会话"
+        "zh": "请代为转告",
+        "en": "よろしく お伝え ください"
       },
       "conversationGoal": {
-        "zh": "第49课会话练习",
-        "en": "Lesson 49 Conversation Practice"
+        "zh": "会话图确认内容",
+        "en": "Conversation image confirmed"
       },
       "items": [
         {
           "id": "l49-conv-001",
-          "speaker": "",
-          "jp": "【音楽】",
-          "kana": "",
-          "zh": "【音乐】",
-          "keyword": "音楽",
-          "videoStart": "0:00.40",
-          "videoEnd": "0:21.54",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "先生",
+          "jp": "はい、ひまわり小学校です。",
+          "kana": "はい、ひまわりしょうがっこうです。",
+          "zh": "您好，这里是向日葵小学。",
+          "keyword": "はいひまわり",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l49-conv-002",
-          "speaker": "",
-          "jp": "はい、ひまわり小学校です。",
-          "kana": "",
-          "zh": "您好，这里是向日葵小学。",
-          "keyword": "小学校です",
-          "videoStart": "0:21.54",
-          "videoEnd": "0:30.94",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "クララ",
+          "jp": "おはようございます。5年2組のハンス・シュミットの母ですが、伊藤先生はいらっしゃいますか。",
+          "kana": "おはようございます。ごねんにくみのハンス・シュミットのははですが、いとうせんせいはいらっしゃいますか。",
+          "zh": "早上好。我是五年二班汉斯・施密特的母亲。请问伊藤老师在吗？",
+          "keyword": "おはようござ",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l49-conv-003",
-          "speaker": "",
-          "jp": "おはようございます。5年2組のハンス・シュミットの母ですが、",
-          "kana": "",
-          "zh": "早上好，我是五年二班的汉斯·施密特的母亲。",
-          "keyword": "5年2組",
-          "videoStart": "0:30.94",
-          "videoEnd": "0:35.54",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "先生",
+          "jp": "まだなんですが……。",
+          "kana": "まだなんですが……。",
+          "zh": "他还没来……",
+          "keyword": "まだなんです",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l49-conv-004",
-          "speaker": "",
-          "jp": "井上先生はいらっしゃいますか？",
-          "kana": "",
-          "zh": "请问井上老师在吗？",
-          "keyword": "井上先生",
-          "videoStart": "0:35.54",
-          "videoEnd": "0:40.34",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "クララ",
+          "jp": "では、伊藤先生に伝えていただきたいんですが……。",
+          "kana": "では、いとうせんせいにつたえていただきたいんですが……。",
+          "zh": "那么，我想请您转告伊藤老师……",
+          "keyword": "では伊藤先生",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l49-conv-005",
-          "speaker": "",
-          "jp": "まだなんですが。では、井上先生に伝えていただきたいんですが、",
-          "kana": "",
-          "zh": "他还没到……那我想拜托您转告井上老师。",
-          "keyword": "井上先生",
-          "videoStart": "0:40.34",
-          "videoEnd": "0:47.06",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "先生",
+          "jp": "はい、何でしょうか。",
+          "kana": "はい、なんでしょうか。",
+          "zh": "好的，请说。",
+          "keyword": "はい何でしょ",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l49-conv-006",
-          "speaker": "",
-          "jp": "はい、なんでしょうか？",
-          "kana": "はい、なんでしょうか？",
-          "zh": "好的，请说。",
-          "keyword": "",
-          "videoStart": "0:47.06",
-          "videoEnd": "0:49.30",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "speaker": "クララ",
+          "jp": "実はハンスがゆうべ熱を出しまして、けさもまだ下がらないんです。",
+          "kana": "じつははんすがゆうべねつをだしまして、けさもまださがらないんです。",
+          "zh": "其实汉斯从昨晚开始发烧，到现在还没有退烧。",
+          "keyword": "実はハンスが",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l49-conv-007",
-          "speaker": "",
-          "jp": "実はハンスが昨夜から熱を出しまして、熱がまだ下がらないんです。",
-          "kana": "",
-          "zh": "其实汉斯从昨晚开始发烧，到现在还没有退烧。",
-          "keyword": "昨夜",
-          "videoStart": "0:49.30",
-          "videoEnd": "0:56.54",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "先生",
+          "jp": "それはいけませんね。",
+          "kana": "それはいけませんね。",
+          "zh": "那可不行呢。",
+          "keyword": "それはいけま",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l49-conv-008",
-          "speaker": "",
-          "jp": "それは、いけませんね。",
-          "kana": "それは、いけませんね。",
-          "zh": "那可不行呢。",
-          "keyword": "",
-          "videoStart": "0:56.54",
-          "videoEnd": "0:59.14",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "speaker": "クララ",
+          "jp": "それで、きょうは学校を休ませますので、先生によろしくお伝えください。",
+          "kana": "それで、きょうはがっこうをやすませますので、せんせいによろしくおつたえください。",
+          "zh": "所以今天让他请假不上学，请代我向老师转达。",
+          "keyword": "それできょう",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l49-conv-009",
-          "speaker": "",
-          "jp": "それで今日は学校を休ませますので、",
-          "kana": "",
-          "zh": "所以他今天会请假不上学，",
-          "keyword": "学校",
-          "videoStart": "0:59.14",
-          "videoEnd": "1:02.34",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "先生",
+          "jp": "わかりました。どうぞお大事に。",
+          "kana": "わかりました。どうぞおだいじに。",
+          "zh": "好的，请多保重。",
+          "keyword": "わかりました",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l49-conv-010",
-          "speaker": "",
-          "jp": "先生によろしくお伝えください。",
-          "kana": "",
-          "zh": "请代我向老师转达。",
-          "keyword": "先生",
-          "videoStart": "1:02.34",
-          "videoEnd": "1:05.38",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l49-conv-011",
-          "speaker": "",
-          "jp": "わかりました。どうぞお大事に。",
-          "kana": "",
-          "zh": "好的，请多保重。",
-          "keyword": "大事",
-          "videoStart": "1:05.38",
-          "videoEnd": "1:08.54",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l49-conv-012",
-          "speaker": "",
+          "speaker": "クララ",
           "jp": "ありがとうございます。失礼いたします。",
-          "kana": "",
+          "kana": "ありがとうございます。しつれいいたします。",
           "zh": "谢谢您，失礼了。",
-          "keyword": "失礼",
-          "videoStart": "1:08.54",
-          "videoEnd": "1:12.14",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "keyword": "ありがとうご",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         }
       ]
     },
@@ -1270,7 +1238,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_grammar",
@@ -1397,7 +1366,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_examples",
@@ -1548,7 +1518,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_quiz",
@@ -2415,7 +2386,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     }
   ],
   "conversationVideo": {
@@ -2446,26 +2418,165 @@
     "sceneSummary": "母親が小学校に電話をかけ、担任の井上先生に子供の体調不良による欠席を伝えてもらうよう依頼する場面です。敬語（尊敬語・謙譲語）が豊富に使われています。",
     "storyExplanation": "この課は、学校に電話をかけて子供の欠席を伝えるという場面を通じて、尊敬語（相手を高める）を学びます。\n\n「井上先生はいらっしゃいますか」の「いらっしゃいます」は「います」の尊敬語です。先生が「いる」ことを敬って表現しています。\n\n「伝えていただきたいんですが」の「いただく」は「もらう」の謙譲語で、相手に何かをしてもらうことをへりくだって表現します。\n\n「先生によろしくお伝えください」の「お伝えください」は「伝えてください」の丁寧な言い方です。「お〜ください」は尊敬語のパターンです。\n\n「失礼いたします」の「いたします」は「します」の謙譲語です。「失礼します」より丁寧な表現で電話を切る時の決まり文句です。\n\n文法ポイント：\n1. 尊敬語①：いらっしゃいます（います）、おっしゃいます（言います）、なさいます（します）\n2. 尊敬語②：お〜になります（お帰りになります）\n3. 謙譲語①：いたします（します）、申します（言います）、参ります（来ます/行きます）\n4. 謙譲語②：お〜します（お伝えします）",
     "characters": [
-      { "name": "母親（ハンス・シュミットの母）", "role": "保護者", "relationship": "学校に電話し、子供の欠席を伝える" },
-      { "name": "学校の受付", "role": "ひまわり小学校の職員", "relationship": "電話に対応し、担任への伝言を受ける" }
+      {
+        "name": "母親（ハンス・シュミットの母）",
+        "role": "保護者",
+        "relationship": "学校に電話し、子供の欠席を伝える"
+      },
+      {
+        "name": "学校の受付",
+        "role": "ひまわり小学校の職員",
+        "relationship": "電話に対応し、担任への伝言を受ける"
+      }
     ],
     "conversationFlow": [
-      { "step": 1, "title": "電話の応答", "explanation": "受付が「はい、ひまわり小学校です」と出る。母親が自己紹介する。", "relatedLineIds": ["l49-conv-002","l49-conv-003"] },
-      { "step": 2, "title": "先生を呼び出す", "explanation": "母親が「井上先生はいらっしゃいますか」と尊敬語で先生の在室を尋ねる。", "relatedLineIds": ["l49-conv-004"] },
-      { "step": 3, "title": "伝言の依頼", "explanation": "先生がまだ来ていないことを知り、「伝えていただきたいんですが」と謙譲語で伝言を依頼する。", "relatedLineIds": ["l49-conv-005","l49-conv-006"] },
-      { "step": 4, "title": "欠席の理由", "explanation": "母親が漢くんが昨夜から発熱していることを説明し、今日は休ませると伝える。", "relatedLineIds": ["l49-conv-007","l49-conv-008","l49-conv-009"] },
-      { "step": 5, "title": "お礼と締め", "explanation": "母親が「よろしくお伝えください」と頼み、受付が「お大事に」と返す。母親が「失礼いたします」で電話を切る。", "relatedLineIds": ["l49-conv-010","l49-conv-011","l49-conv-012"] }
+      {
+        "step": 1,
+        "title": "電話の応答",
+        "explanation": "受付が「はい、ひまわり小学校です」と出る。母親が自己紹介する。",
+        "relatedLineIds": [
+          "l49-conv-002",
+          "l49-conv-003"
+        ]
+      },
+      {
+        "step": 2,
+        "title": "先生を呼び出す",
+        "explanation": "母親が「井上先生はいらっしゃいますか」と尊敬語で先生の在室を尋ねる。",
+        "relatedLineIds": [
+          "l49-conv-004"
+        ]
+      },
+      {
+        "step": 3,
+        "title": "伝言の依頼",
+        "explanation": "先生がまだ来ていないことを知り、「伝えていただきたいんですが」と謙譲語で伝言を依頼する。",
+        "relatedLineIds": [
+          "l49-conv-005",
+          "l49-conv-006"
+        ]
+      },
+      {
+        "step": 4,
+        "title": "欠席の理由",
+        "explanation": "母親が漢くんが昨夜から発熱していることを説明し、今日は休ませると伝える。",
+        "relatedLineIds": [
+          "l49-conv-007",
+          "l49-conv-008",
+          "l49-conv-009"
+        ]
+      },
+      {
+        "step": 5,
+        "title": "お礼と締め",
+        "explanation": "母親が「よろしくお伝えください」と頼み、受付が「お大事に」と返す。母親が「失礼いたします」で電話を切る。",
+        "relatedLineIds": [
+          "l49-conv-010",
+          "l49-conv-011",
+          "l49-conv-012"
+        ]
+      }
     ],
     "lineUsage": [
-      { "lineId": "l49-conv-002", "japanese": "はい、ひまわり小学校です。", "chineseMeaning": "您好，这里是向日葵小学。", "intention": "接听电话时自报学校名称", "memorizationHint": "「はい」＋学校名＋「です」。电话接听的标准格式", "commonMistake": "「はい」是接电话的第一声。不要省略", "realLifeUse": "学校や企業が電話に出る時の定型表現", "emotionTone": "丁寧・業務的", "memoryTip": "「はい、〜です」是电话接听的标准开场" },
-      { "lineId": "l49-conv-003", "japanese": "おはようございます。5年2組のハンス・シュミットの母ですが、", "chineseMeaning": "早上好，我是五年二班的汉斯·施密特的母亲。", "intention": "先问候再自我介绍，表明身份", "memorizationHint": "「〜の母ですが」＝我是～的母亲。「ですが」铺垫后续", "commonMistake": "「〜の母ですが」只说「ですが」不说完整也可，后面的内容让对方期待", "realLifeUse": "保護者が学校に電話する時の自己紹介の仕方", "emotionTone": "丁寧・自己紹介", "memoryTip": "「〜の母ですが」是家长打电话给学校的标准自我介绍" },
-      { "lineId": "l49-conv-004", "japanese": "井上先生はいらっしゃいますか？", "chineseMeaning": "请问井上老师在吗？", "intention": "用尊敬语询问老师是否在", "memorizationHint": "「いらっしゃいます」＝「います」的尊敬语。本课核心敬语", "commonMistake": "「いますか」ではなく「いらっしゃいますか」が正しい尊敬語。先生には必ず尊敬語を使う", "realLifeUse": "目上の人の在室を尋ねる時の尊敬語表現", "emotionTone": "敬語・確認", "memoryTip": "「いらっしゃいますか」＝「いますか」的尊敬语，询问老师是否在" },
-      { "lineId": "l49-conv-005", "japanese": "まだなんですが。では、井上先生に伝えていただきたいんですが、", "chineseMeaning": "他还没到……那我想拜托您转告井上老师。", "intention": "得知老师不在后，改为请求转达留言", "memorizationHint": "「伝えていただきたい」＝「伝えてもらいたい」的谦让语", "commonMistake": "「伝えていただきたい」是「伝える」＋「いただく」＋「たい」的组合，意思是「希望您能为我传达」", "realLifeUse": "相手に何かをしてもらいたい時の謙譲表現。伝言を頼む時に便利", "emotionTone": "依頼・丁寧", "memoryTip": "「伝えていただきたい」＝想让您帮我传达。谦让语＋愿望" },
-      { "lineId": "l49-conv-007", "japanese": "実はハンスが昨夜から熱を出しまして、熱がまだ下がらないんです。", "chineseMeaning": "其实汉斯从昨晚开始发烧，到现在还没有退烧。", "intention": "详细说明孩子生病的情况", "memorizationHint": "「〜出しまして」＝「〜出して」的ます形て形连接。「下がらない」＝不退", "commonMistake": "「熱を出す」＝发烧。「熱が下がる」＝退烧。一对常用搭配", "realLifeUse": "体調不良を詳しく説明する時の言い方。「〜出しまして」で症状の始まりを述べる", "emotionTone": "説明・心配", "memoryTip": "「熱を出しました」＝发烧了。「熱が下がりません」＝还没退烧" },
-      { "lineId": "l49-conv-009", "japanese": "それで今日は学校を休ませますので、", "chineseMeaning": "所以他今天会请假不上学。", "intention": "告知因病因请假的决定", "memorizationHint": "「休ませます」＝「休む」的使役形。休ませる＝让～休息/请假", "commonMistake": "「学校を休む」＝请假不上学（を）。不是「学校に休む」", "realLifeUse": "使役形で「子供を休ませる」（让孩子请假）の表現。保護者が学校に伝える時に使う", "emotionTone": "報告・決定", "memoryTip": "「学校を休ませます」＝让孩子请假不上学。使役形＋ます" },
-      { "lineId": "l49-conv-010", "japanese": "先生によろしくお伝えください。", "chineseMeaning": "请代我向老师转达。", "intention": "请求向老师传达问候和情况", "memorizationHint": "「お伝えください」＝「伝えてください」的敬语。「よろしく」＝请多关照", "commonMistake": "「お〜ください」是尊敬语的句型。给长辈转达信息时用", "realLifeUse": "「よろしくお伝えください」は第三者に挨拶やメッセージを伝える時の定型フレーズ", "emotionTone": "依頼・敬語", "memoryTip": "「よろしくお伝えください」是请转达问候的标准敬语表达" },
-      { "lineId": "l49-conv-011", "japanese": "わかりました。どうぞお大事に。", "chineseMeaning": "好的，请多保重。", "intention": "表示理解并送上祝福", "memorizationHint": "「お大事に」＝「お大事にしてください」的省略。请保重", "commonMistake": "「お大事に」是对生病/受伤的人说的祝福。不要对健康的人说", "realLifeUse": "病気や怪我の人を気遣う時の定番フレーズ。「わかりました」の後に続けて使う", "emotionTone": "理解・気遣い", "memoryTip": "「お大事に」＝请保重。对生病的人说的祝福语" },
-      { "lineId": "l49-conv-012", "japanese": "ありがとうございます。失礼いたします。", "chineseMeaning": "谢谢您，失礼了。", "intention": "感谢对方并礼貌地结束通话", "memorizationHint": "「失礼いたします」＝「失礼します」的谦让语（更礼貌）", "commonMistake": "「いたします」是「します」的谦让语。电话结束时用「失礼いたします」更正式", "realLifeUse": "電話を切る直前の締めの挨拶。感謝＋失礼でワンセット", "emotionTone": "感謝・丁寧", "memoryTip": "「失礼いたします」是挂电话前最礼貌的道别" }
+      {
+        "lineId": "l49-conv-002",
+        "japanese": "はい、ひまわり小学校です。",
+        "chineseMeaning": "您好，这里是向日葵小学。",
+        "intention": "接听电话时自报学校名称",
+        "memorizationHint": "「はい」＋学校名＋「です」。电话接听的标准格式",
+        "commonMistake": "「はい」是接电话的第一声。不要省略",
+        "realLifeUse": "学校や企業が電話に出る時の定型表現",
+        "emotionTone": "丁寧・業務的",
+        "memoryTip": "「はい、〜です」是电话接听的标准开场"
+      },
+      {
+        "lineId": "l49-conv-003",
+        "japanese": "おはようございます。5年2組のハンス・シュミットの母ですが、",
+        "chineseMeaning": "早上好，我是五年二班的汉斯·施密特的母亲。",
+        "intention": "先问候再自我介绍，表明身份",
+        "memorizationHint": "「〜の母ですが」＝我是～的母亲。「ですが」铺垫后续",
+        "commonMistake": "「〜の母ですが」只说「ですが」不说完整也可，后面的内容让对方期待",
+        "realLifeUse": "保護者が学校に電話する時の自己紹介の仕方",
+        "emotionTone": "丁寧・自己紹介",
+        "memoryTip": "「〜の母ですが」是家长打电话给学校的标准自我介绍"
+      },
+      {
+        "lineId": "l49-conv-004",
+        "japanese": "井上先生はいらっしゃいますか？",
+        "chineseMeaning": "请问井上老师在吗？",
+        "intention": "用尊敬语询问老师是否在",
+        "memorizationHint": "「いらっしゃいます」＝「います」的尊敬语。本课核心敬语",
+        "commonMistake": "「いますか」ではなく「いらっしゃいますか」が正しい尊敬語。先生には必ず尊敬語を使う",
+        "realLifeUse": "目上の人の在室を尋ねる時の尊敬語表現",
+        "emotionTone": "敬語・確認",
+        "memoryTip": "「いらっしゃいますか」＝「いますか」的尊敬语，询问老师是否在"
+      },
+      {
+        "lineId": "l49-conv-005",
+        "japanese": "まだなんですが。では、井上先生に伝えていただきたいんですが、",
+        "chineseMeaning": "他还没到……那我想拜托您转告井上老师。",
+        "intention": "得知老师不在后，改为请求转达留言",
+        "memorizationHint": "「伝えていただきたい」＝「伝えてもらいたい」的谦让语",
+        "commonMistake": "「伝えていただきたい」是「伝える」＋「いただく」＋「たい」的组合，意思是「希望您能为我传达」",
+        "realLifeUse": "相手に何かをしてもらいたい時の謙譲表現。伝言を頼む時に便利",
+        "emotionTone": "依頼・丁寧",
+        "memoryTip": "「伝えていただきたい」＝想让您帮我传达。谦让语＋愿望"
+      },
+      {
+        "lineId": "l49-conv-007",
+        "japanese": "実はハンスが昨夜から熱を出しまして、熱がまだ下がらないんです。",
+        "chineseMeaning": "其实汉斯从昨晚开始发烧，到现在还没有退烧。",
+        "intention": "详细说明孩子生病的情况",
+        "memorizationHint": "「〜出しまして」＝「〜出して」的ます形て形连接。「下がらない」＝不退",
+        "commonMistake": "「熱を出す」＝发烧。「熱が下がる」＝退烧。一对常用搭配",
+        "realLifeUse": "体調不良を詳しく説明する時の言い方。「〜出しまして」で症状の始まりを述べる",
+        "emotionTone": "説明・心配",
+        "memoryTip": "「熱を出しました」＝发烧了。「熱が下がりません」＝还没退烧"
+      },
+      {
+        "lineId": "l49-conv-009",
+        "japanese": "それで今日は学校を休ませますので、",
+        "chineseMeaning": "所以他今天会请假不上学。",
+        "intention": "告知因病因请假的决定",
+        "memorizationHint": "「休ませます」＝「休む」的使役形。休ませる＝让～休息/请假",
+        "commonMistake": "「学校を休む」＝请假不上学（を）。不是「学校に休む」",
+        "realLifeUse": "使役形で「子供を休ませる」（让孩子请假）の表現。保護者が学校に伝える時に使う",
+        "emotionTone": "報告・決定",
+        "memoryTip": "「学校を休ませます」＝让孩子请假不上学。使役形＋ます"
+      },
+      {
+        "lineId": "l49-conv-010",
+        "japanese": "先生によろしくお伝えください。",
+        "chineseMeaning": "请代我向老师转达。",
+        "intention": "请求向老师传达问候和情况",
+        "memorizationHint": "「お伝えください」＝「伝えてください」的敬语。「よろしく」＝请多关照",
+        "commonMistake": "「お〜ください」是尊敬语的句型。给长辈转达信息时用",
+        "realLifeUse": "「よろしくお伝えください」は第三者に挨拶やメッセージを伝える時の定型フレーズ",
+        "emotionTone": "依頼・敬語",
+        "memoryTip": "「よろしくお伝えください」是请转达问候的标准敬语表达"
+      },
+      {
+        "lineId": "l49-conv-011",
+        "japanese": "わかりました。どうぞお大事に。",
+        "chineseMeaning": "好的，请多保重。",
+        "intention": "表示理解并送上祝福",
+        "memorizationHint": "「お大事に」＝「お大事にしてください」的省略。请保重",
+        "commonMistake": "「お大事に」是对生病/受伤的人说的祝福。不要对健康的人说",
+        "realLifeUse": "病気や怪我の人を気遣う時の定番フレーズ。「わかりました」の後に続けて使う",
+        "emotionTone": "理解・気遣い",
+        "memoryTip": "「お大事に」＝请保重。对生病的人说的祝福语"
+      },
+      {
+        "lineId": "l49-conv-012",
+        "japanese": "ありがとうございます。失礼いたします。",
+        "chineseMeaning": "谢谢您，失礼了。",
+        "intention": "感谢对方并礼貌地结束通话",
+        "memorizationHint": "「失礼いたします」＝「失礼します」的谦让语（更礼貌）",
+        "commonMistake": "「いたします」是「します」的谦让语。电话结束时用「失礼いたします」更正式",
+        "realLifeUse": "電話を切る直前の締めの挨拶。感謝＋失礼でワンセット",
+        "emotionTone": "感謝・丁寧",
+        "memoryTip": "「失礼いたします」是挂电话前最礼貌的道别"
+      }
     ],
     "chineseRetellPrompt": "请用中文复述第49课的对话内容。\n\n「第49课讲的是汉斯的母亲打电话到向日葵小学，想找班主任井上老师，但老师还没到。于是母亲请接电话的老师转告：汉斯从昨晚开始发烧，还没退烧，今天需要请假。最后请代为问候老师，对方说『请多保重』，母亲道谢后挂了电话。」\n\n请用自己的话把这个打电话请假的故事讲一遍，注意突出尊敬语（いらっしゃいます）和谦让语（いただく、いたします）的使用场景。",
     "realLifeReplacementPractice": [

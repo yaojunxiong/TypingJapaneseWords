@@ -1036,157 +1036,189 @@
         "en": "Conversation Practice"
       },
       "dialogTitle": {
-        "zh": "第36课会话",
-        "en": "第36课会话"
+        "zh": "我每天坚持运动",
+        "en": "毎日運動するようにしています"
       },
       "conversationGoal": {
-        "zh": "第36课会话练习",
-        "en": "Lesson 36 Conversation Practice"
+        "zh": "会话图确认内容",
+        "en": "Conversation image confirmed"
       },
       "items": [
         {
           "id": "l36-conv-001",
-          "speaker": "",
-          "jp": "みなさんこんにちは。今日のお客様は、今年80歳の小川よねさんです。",
-          "kana": "",
-          "zh": "大家好，今天的嘉宾是今年已经80岁的**小川よね女士**。",
-          "keyword": "小川よ",
-          "videoStart": "0:00.00",
-          "videoEnd": "0:16.28",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "アナウンサー",
+          "jp": "皆さん、こんにちは。きょうのお客様はことし80歳の小川よねさんです。",
+          "kana": "みなさん、こんにちは。きょうのおきゃくさまはことしはちじゅっさいのおがわよねさんです。",
+          "zh": "大家好。今天的嘉宾是今年80岁的 小川よね 女士。",
+          "keyword": "皆さんこんに",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l36-conv-002",
-          "speaker": "",
-          "jp": "こんにちは。お元気ですね。何か特別なことをしていらっしゃいますか？",
-          "kana": "",
-          "zh": "您好，看您精神很好，平时有什么特别的养生秘诀吗？",
-          "keyword": "特別",
-          "videoStart": "0:16.28",
-          "videoEnd": "0:23.04",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "小川よね",
+          "jp": "こんにちは。",
+          "kana": "こんにちは。",
+          "zh": "您好。",
+          "keyword": "こんにちは",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l36-conv-003",
-          "speaker": "",
-          "jp": "毎日運動するようにしています。どんな運動ですか？",
-          "kana": "",
-          "zh": "我每天都会尽量锻炼。是什么样的运动呢？",
-          "keyword": "運動です",
-          "videoStart": "0:23.04",
-          "videoEnd": "0:30.12",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "アナウンサー",
+          "jp": "お元気ですね。何か特別なことをしていらっしゃいますか。",
+          "kana": "おげんきですね。なにかとくべつなことをしていらっしゃいますか。",
+          "zh": "您很精神啊。平时有什么特别在做的事吗？",
+          "keyword": "お元気ですね",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l36-conv-004",
-          "speaker": "",
-          "jp": "ダンスとか、水泳とか。",
-          "kana": "",
-          "zh": "像是跳舞啊、游泳之类的。",
-          "keyword": "水泳",
-          "videoStart": "0:30.12",
-          "videoEnd": "0:34.18",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "小川よね",
+          "jp": "毎日運動するようにしています。",
+          "kana": "まいにちうんどうするようにしています。",
+          "zh": "我每天坚持运动。",
+          "keyword": "毎日運動する",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l36-conv-005",
-          "speaker": "",
-          "jp": "最近、500メートルを泳げるようになりました。すごいですね！食べ物は？",
-          "kana": "",
-          "zh": "最近我已经能游500米了。——好厉害啊！那饮食方面呢？",
-          "keyword": "500",
-          "videoStart": "0:34.18",
-          "videoEnd": "0:42.48",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "アナウンサー",
+          "jp": "どんな運動ですか。",
+          "kana": "どんなうんどうですか。",
+          "zh": "是什么样的运动？",
+          "keyword": "どんな運動で",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l36-conv-006",
-          "speaker": "",
-          "jp": "何でも食べますが、特に魚が好きです。毎日違う料理を作るようにしています。",
-          "kana": "",
-          "zh": "我什么都吃，特别喜欢吃鱼。我尽量每天都做不一样的菜。",
-          "keyword": "料理",
-          "videoStart": "0:42.48",
-          "videoEnd": "0:51.84",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "小川よね",
+          "jp": "ダンスとか、水泳とか……。最近500メートル泳げるようになりました。",
+          "kana": "ダンスとか、すいえいとか……。さいきんごひゃくメートルおよげるようになりました。",
+          "zh": "跳舞、游泳之类的。最近我能游500米了。",
+          "keyword": "ダンスとか水",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l36-conv-007",
-          "speaker": "",
-          "jp": "頭と体をよく使っていらっしゃるんですね。来年、フランスへ行きたいと思っています。",
-          "kana": "",
-          "zh": "您真是动脑又动身体呢。我打算明年去法国旅行。",
-          "keyword": "来年",
-          "videoStart": "0:51.84",
-          "videoEnd": "0:59.92",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "アナウンサー",
+          "jp": "すごいですね。食べ物は？",
+          "kana": "すごいですね。たべものは？",
+          "zh": "真厉害。饮食方面呢？",
+          "keyword": "すごいですね",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l36-conv-008",
-          "speaker": "",
-          "jp": "それでフランス語の勉強も始めました。何でもチャレンジする気持ちが大切なんですね。",
-          "kana": "",
-          "zh": "所以我也开始学习法语了。我觉得敢于挑战一切的心态非常重要。",
-          "keyword": "大切",
-          "videoStart": "0:59.92",
-          "videoEnd": "1:07.64",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "小川よね",
+          "jp": "何でも食べますが、特に魚が好きです。毎日何か、料理を作るようにしています。",
+          "kana": "なんでもたべますが、とくにさかながすきです。まいにちなにか、りょうりをつくるようにしています。",
+          "zh": "我什么都吃，特别喜欢鱼。我每天尽量做点菜。",
+          "keyword": "何でも食べま",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l36-conv-009",
-          "speaker": "",
-          "jp": "楽しいお話、どうもありがとうございました。",
-          "kana": "",
-          "zh": "感谢您带来的精彩分享。",
-          "keyword": "",
-          "videoStart": "1:07.64",
-          "videoEnd": "1:12.24",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "アナウンサー",
+          "jp": "頭と体をよく使っていらっしゃるんですね。",
+          "kana": "あたまとからだをよくつかっていらっしゃるんですね。",
+          "zh": "您真是经常动脑又动身体啊。",
+          "keyword": "頭と体をよく",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
+        },
+        {
+          "id": "l36-conv-010",
+          "speaker": "小川よね",
+          "jp": "ええ。来年フランスへ行きたいと思っています。それでフランス語の勉強も始めました。",
+          "kana": "ええ。らいねんふらんすへいきたいとおもっています。それでふらんすごのべんきょうもはじめました。",
+          "zh": "是的。我想明年去法国。所以也开始学习法语了。",
+          "keyword": "ええ来年フラ",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
+        },
+        {
+          "id": "l36-conv-011",
+          "speaker": "アナウンサー",
+          "jp": "何でもチャレンジする気持ちが大切なんですね。楽しいお話、どうもありがとうございました。",
+          "kana": "なんでもちゃれんじするきもちがたいせつなんですね。たのしいおはなし、どうもありがとうございました。",
+          "zh": "不管什么都要有挑战的心态，这很重要啊。谢谢您带来这么愉快的谈话。",
+          "keyword": "何でもチャレ",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         }
       ]
     },
@@ -1478,7 +1510,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_grammar",
@@ -1577,7 +1610,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_examples",
@@ -1682,7 +1716,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_quiz",
@@ -2336,7 +2371,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     }
   ],
   "conversationVideo": {
@@ -2367,19 +2403,90 @@
     "sceneSummary": "电视访谈节目主持人采访80岁的小川よね女士。主持人惊讶于よねさん的精神状态，询问养生秘诀。よねさん说自己每天坚持运动（跳舞、游泳），最近刚达成了游500米的目标；饮食上爱吃鱼且每天换花样做菜。主持人感慨她动脑又动身体，よねさん透露明年想去法国旅行，为此已经开始学法语，展现出勇于挑战的人生态度。",
     "storyExplanation": "这段会话通过采访的形式，自然呈现了「～ようにしています」（平时坚持做某事）和「～ようになりました」（变得能够做某事）的典型用法。\n\n「毎日運動するようにしています」是习惯性努力的表达，暗示这是日复一日的坚持。与之呼应的是「毎日違う料理を作るようにしています」，同样是持续性的努力。\n\n「500メートルを泳げるようになりました」则展现了能力从无到有的变化，是「～ようになりました」的典型场景——从不能游到能游500米。\n\n最后「フランスへ行きたいと思っています」表示长期愿望/计划，与「～たいです」相比更强调心里一直这么想。\n\n整段对话节奏自然，先引出话题（健康），再追问方法（运动），继而深挖细节（游泳500米），再转向饮食、未来计划，最后总结升华（挑战精神），是典型的采访式渐进结构。",
     "characters": [
-      { "name": "主持人", "role": "电视访谈节目主持人", "relationship": "采访者，引导话题" },
-      { "name": "小川よね", "role": "80岁的嘉宾", "relationship": "被采访者，分享健康与生活方式" }
+      {
+        "name": "主持人",
+        "role": "电视访谈节目主持人",
+        "relationship": "采访者，引导话题"
+      },
+      {
+        "name": "小川よね",
+        "role": "80岁的嘉宾",
+        "relationship": "被采访者，分享健康与生活方式"
+      }
     ],
     "conversationFlow": [
-      { "step": 1, "title": "开场介绍", "explanation": "主持人介绍今天嘉宾——80岁的小川よね女士，礼貌开场。", "relatedLineIds": ["l36-conv-001"] },
-      { "step": 2, "title": "询问养生秘诀", "explanation": "主持人注意到嘉宾精神很好，追问平时是否有特别的做法。使用「～ていらっしゃいますか」敬语表达。", "relatedLineIds": ["l36-conv-002"] },
-      { "step": 3, "title": "运动习惯", "explanation": "嘉宾回答每天坚持运动，使用了核心语法「～ようにしています」。主持人顺势追问具体运动种类。", "relatedLineIds": ["l36-conv-003"] },
-      { "step": 4, "title": "运动种类", "explanation": "嘉宾举例跳舞和游泳，使用「～とか～とか」列举。", "relatedLineIds": ["l36-conv-004"] },
-      { "step": 5, "title": "能力变化与夸奖", "explanation": "嘉宾透露最近能游500米了，使用「～ようになりました」表示能力变化。主持人惊叹并转向饮食话题。", "relatedLineIds": ["l36-conv-005"] },
-      { "step": 6, "title": "饮食习惯", "explanation": "嘉宾说自己什么都吃、特别爱吃鱼，每天做不同菜，再次使用「～ようにしています」表示日常努力。", "relatedLineIds": ["l36-conv-006"] },
-      { "step": 7, "title": "未来计划", "explanation": "主持人总结嘉宾动脑又动身体，嘉宾透露明年想去法国，使用「～たいと思っています」表达长期愿望。", "relatedLineIds": ["l36-conv-007"] },
-      { "step": 8, "title": "挑战精神", "explanation": "嘉宾说为此开始学法语，主持人感慨挑战一切的心态很重要，使用「～んですね」表示感慨和认同。", "relatedLineIds": ["l36-conv-008"] },
-      { "step": 9, "title": "结束致谢", "explanation": "主持人感谢嘉宾带来的精彩分享，对话圆满结束。", "relatedLineIds": ["l36-conv-009"] }
+      {
+        "step": 1,
+        "title": "开场介绍",
+        "explanation": "主持人介绍今天嘉宾——80岁的小川よね女士，礼貌开场。",
+        "relatedLineIds": [
+          "l36-conv-001"
+        ]
+      },
+      {
+        "step": 2,
+        "title": "询问养生秘诀",
+        "explanation": "主持人注意到嘉宾精神很好，追问平时是否有特别的做法。使用「～ていらっしゃいますか」敬语表达。",
+        "relatedLineIds": [
+          "l36-conv-002"
+        ]
+      },
+      {
+        "step": 3,
+        "title": "运动习惯",
+        "explanation": "嘉宾回答每天坚持运动，使用了核心语法「～ようにしています」。主持人顺势追问具体运动种类。",
+        "relatedLineIds": [
+          "l36-conv-003"
+        ]
+      },
+      {
+        "step": 4,
+        "title": "运动种类",
+        "explanation": "嘉宾举例跳舞和游泳，使用「～とか～とか」列举。",
+        "relatedLineIds": [
+          "l36-conv-004"
+        ]
+      },
+      {
+        "step": 5,
+        "title": "能力变化与夸奖",
+        "explanation": "嘉宾透露最近能游500米了，使用「～ようになりました」表示能力变化。主持人惊叹并转向饮食话题。",
+        "relatedLineIds": [
+          "l36-conv-005"
+        ]
+      },
+      {
+        "step": 6,
+        "title": "饮食习惯",
+        "explanation": "嘉宾说自己什么都吃、特别爱吃鱼，每天做不同菜，再次使用「～ようにしています」表示日常努力。",
+        "relatedLineIds": [
+          "l36-conv-006"
+        ]
+      },
+      {
+        "step": 7,
+        "title": "未来计划",
+        "explanation": "主持人总结嘉宾动脑又动身体，嘉宾透露明年想去法国，使用「～たいと思っています」表达长期愿望。",
+        "relatedLineIds": [
+          "l36-conv-007"
+        ]
+      },
+      {
+        "step": 8,
+        "title": "挑战精神",
+        "explanation": "嘉宾说为此开始学法语，主持人感慨挑战一切的心态很重要，使用「～んですね」表示感慨和认同。",
+        "relatedLineIds": [
+          "l36-conv-008"
+        ]
+      },
+      {
+        "step": 9,
+        "title": "结束致谢",
+        "explanation": "主持人感谢嘉宾带来的精彩分享，对话圆满结束。",
+        "relatedLineIds": [
+          "l36-conv-009"
+        ]
+      }
     ],
     "lineUsage": [
       {

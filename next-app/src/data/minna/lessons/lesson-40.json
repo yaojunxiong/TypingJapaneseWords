@@ -835,205 +835,157 @@
         "en": "Conversation Practice"
       },
       "dialogTitle": {
-        "zh": "第40课会话",
-        "en": "第40课会话"
+        "zh": "担心他有没有交到朋友",
+        "en": "友達が できたか どうか、心配です"
       },
       "conversationGoal": {
-        "zh": "第40课会话练习",
-        "en": "Lesson 40 Conversation Practice"
+        "zh": "会话图确认内容",
+        "en": "Conversation image confirmed"
       },
       "items": [
         {
           "id": "l40-conv-001",
-          "speaker": "",
-          "jp": "お待たせしました。どうぞ。",
-          "kana": "",
-          "zh": "久等了，请进。",
-          "keyword": "",
-          "videoStart": "0:00.00",
-          "videoEnd": "0:12.60",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "クララ",
+          "jp": "先生、ハンスは学校でどうでしょうか。友達ができたかどうか、心配なんですが……。",
+          "kana": "せんせい、ハンスはがっこうでどうでしょうか。ともだちができたかどうか、しんぱいなんですが……。",
+          "zh": "老师，汉斯在学校的情况怎么样？我有些担心他有没有交到朋友。",
+          "keyword": "先生ハンスは",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l40-conv-002",
-          "speaker": "",
-          "jp": "先生、ハンスは学校でどうでしょうか?",
-          "kana": "",
-          "zh": "老师，汉斯在学校的情况怎么样？",
-          "keyword": "学校",
-          "videoStart": "0:20.80",
-          "videoEnd": "0:23.90",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "伊藤先生",
+          "jp": "大丈夫ですよ。ハンス君はクラスでとても人気があります。",
+          "kana": "だいじょうぶですよ。ハンスくんはクラスでとてもにんきがあります。",
+          "zh": "没问题的，汉斯在班上非常受欢迎。",
+          "keyword": "大丈夫ですよ",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l40-conv-003",
-          "speaker": "",
-          "jp": "友達ができたかどうか心配なんですが。",
-          "kana": "",
-          "zh": "我有些担心他有没有交到朋友。",
-          "keyword": "心配",
-          "videoStart": "0:24.30",
-          "videoEnd": "0:27.20",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "クララ",
+          "jp": "そうですか。安心しました。勉強はどうですか。漢字が大変だと言っていますが……。",
+          "kana": "そうですか。あんしんしました。べんきょうはどうですか。かんじがたいへんだといっていますが……。",
+          "zh": "是吗？那我就放心了。那学习方面呢？他总说汉字很难。",
+          "keyword": "そうですか安",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l40-conv-004",
-          "speaker": "",
-          "jp": "大丈夫ですよ。ハンス君はクラスでとても人気があります。",
-          "kana": "",
-          "zh": "没问题的，汉斯在班上非常受欢迎。",
-          "keyword": "人気",
-          "videoStart": "0:27.20",
-          "videoEnd": "0:31.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "伊藤先生",
+          "jp": "毎日漢字のテストをしていますが、ハンス君はいい成績ですよ。",
+          "kana": "まいにちかんじのテストをしていますが、ハンスくんはいいせいせきですよ。",
+          "zh": "我们每天都有汉字测验，汉斯的成绩很好哦。",
+          "keyword": "毎日漢字のテ",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
           "id": "l40-conv-005",
-          "speaker": "",
-          "jp": "そうですか。安心しました。",
-          "kana": "",
-          "zh": "是吗？那我就放心了。",
-          "keyword": "安心",
-          "videoStart": "0:32.00",
-          "videoEnd": "0:34.40",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l40-conv-006",
-          "speaker": "",
-          "jp": "勉強はどうですか?漢字が大変だと言っていますが。",
-          "kana": "",
-          "zh": "那学习方面呢？他总说汉字很难。",
-          "keyword": "大変",
-          "videoStart": "0:35.50",
-          "videoEnd": "0:40.10",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l40-conv-007",
-          "speaker": "",
-          "jp": "毎日漢字のテストをしていますが、ハンス君はいい成績ですよ。",
-          "kana": "",
-          "zh": "我们每天都有汉字测验，汉斯的成绩很好哦。",
-          "keyword": "成績です",
-          "videoStart": "0:41.00",
-          "videoEnd": "0:45.10",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l40-conv-008",
-          "speaker": "",
+          "speaker": "クララ",
           "jp": "そうですか。ありがとうございます。",
           "kana": "そうですか。ありがとうございます。",
           "zh": "是吗？非常感谢您。",
-          "keyword": "",
-          "videoStart": "0:45.80",
-          "videoEnd": "0:47.80",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "keyword": "そうですかあ",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
-          "id": "l40-conv-009",
-          "speaker": "",
-          "jp": "ところで、もうすぐ運動会ですが、お父さんもいらっしゃいますか?",
-          "kana": "",
+          "id": "l40-conv-006",
+          "speaker": "伊藤先生",
+          "jp": "ところで、もうすぐ運動会ですが、お父さんもいらっしゃいますか。",
+          "kana": "ところで、もうすぐうんどうかいですが、おとうさんもいらっしゃいますか。",
           "zh": "对了，运动会快到了，您先生也会来吗？",
-          "keyword": "運動会です",
-          "videoStart": "0:50.50",
-          "videoEnd": "0:54.20",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "keyword": "ところでもう",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
-          "id": "l40-conv-010",
-          "speaker": "",
+          "id": "l40-conv-007",
+          "speaker": "クララ",
           "jp": "ええ。",
           "kana": "ええ。",
           "zh": "嗯，他会的。",
-          "keyword": "",
-          "videoStart": "0:54.90",
-          "videoEnd": "0:55.30",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "keyword": "ええ",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
-          "id": "l40-conv-011",
-          "speaker": "",
+          "id": "l40-conv-008",
+          "speaker": "伊藤先生",
           "jp": "ハンス君が学校でどんな様子か、ぜひ見てください。",
-          "kana": "",
+          "kana": "ハンスくんががっこうでどんなようすか、ぜひみてください。",
           "zh": "请一定来看看汉斯在学校的样子。",
-          "keyword": "様子",
-          "videoStart": "0:55.30",
-          "videoEnd": "0:59.50",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "keyword": "ハンス君が学",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         },
         {
-          "id": "l40-conv-012",
-          "speaker": "",
+          "id": "l40-conv-009",
+          "speaker": "クララ",
           "jp": "わかりました。これからもよろしくお願いします。",
-          "kana": "",
+          "kana": "わかりました。これからもよろしくおねがいします。",
           "zh": "好的，今后也请多关照。",
-          "keyword": "",
-          "videoStart": "1:00.10",
-          "videoEnd": "1:03.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "keyword": "わかりました",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "confirmed"
         }
       ]
     },
@@ -1292,7 +1244,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_grammar",
@@ -1391,7 +1344,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_examples",
@@ -1526,7 +1480,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     },
     {
       "type": "conversation_quiz",
@@ -2393,7 +2348,8 @@
           "needsReview": true,
           "reviewStatus": "needs_review"
         }
-      ]
+      ],
+      "conversationStatus": "lines_updated_needs_content_review"
     }
   ],
   "conversationVideo": {
@@ -2424,30 +2380,170 @@
     "sceneSummary": "家长会场景。母亲担心汉斯在学校是否适应，老师表示汉斯在班上很受欢迎，母亲放心了；接着询问学习情况，老师说汉斯的汉字成绩很好；最后老师邀请父母参加即将到来的运动会。",
     "storyExplanation": "这段会话发生在家长会上。汉斯的母亲一见到老师就礼貌地问候，然后直接表达了最关心的问题——汉斯有没有交到朋友（友達ができたかどうか心配）。老师笑着说汉斯在班上非常有人气，母亲顿时安心。\n\n接着母亲又问学习情况，提到汉斯总说汉字很难。老师回答说每天都有汉字测验，但汉斯的成绩很好。母亲再次感谢。老师顺势邀请父母参加运动会，说辞里用了「どんな様子か、ぜひ見てください」——请一定来看看汉斯在学校是什么样子。母亲答应了并说今后也请多关照。\n\n全篇自然地展示了「かどうか」和「疑問詞＋か」的实际运用，同时体现了礼貌的师生对话以及家长与老师之间的信任关系。",
     "characters": [
-      { "name": "ハンスの母", "role": "家长（母亲）", "relationship": "汉斯的母亲，关心儿子的学校生活" },
-      { "name": "先生", "role": "老师", "relationship": "汉斯的班主任，负责向家长汇报情况" }
+      {
+        "name": "ハンスの母",
+        "role": "家长（母亲）",
+        "relationship": "汉斯的母亲，关心儿子的学校生活"
+      },
+      {
+        "name": "先生",
+        "role": "老师",
+        "relationship": "汉斯的班主任，负责向家长汇报情况"
+      }
     ],
     "conversationFlow": [
-      { "step": 1, "title": "寒暄与开场", "explanation": "老师先礼貌地请母亲进来。母亲立刻切入正题，问汉斯在学校怎么样。", "relatedLineIds": ["l40-conv-001", "l40-conv-002"] },
-      { "step": 2, "title": "担心朋友", "explanation": "母亲说出最担心的事——汉斯有没有交到朋友，使用了「〜かどうか」的语法。", "relatedLineIds": ["l40-conv-003"] },
-      { "step": 3, "title": "老师安慰", "explanation": "老师说汉斯在班上非常有人气，母亲听了放心了。", "relatedLineIds": ["l40-conv-004", "l40-conv-005"] },
-      { "step": 4, "title": "询问学习", "explanation": "母亲接着问学习，提到汉斯总说汉字难；老师汇报成绩很好。", "relatedLineIds": ["l40-conv-006", "l40-conv-007", "l40-conv-008"] },
-      { "step": 5, "title": "邀请运动会", "explanation": "老师用「ところで」转换话题，邀请父亲也来看运动会；使用了「どんな様子か」的嵌入疑问。", "relatedLineIds": ["l40-conv-009", "l40-conv-010", "l40-conv-011"] },
-      { "step": 6, "title": "道别", "explanation": "母亲答应并请求今后继续关照。", "relatedLineIds": ["l40-conv-012"] }
+      {
+        "step": 1,
+        "title": "寒暄与开场",
+        "explanation": "老师先礼貌地请母亲进来。母亲立刻切入正题，问汉斯在学校怎么样。",
+        "relatedLineIds": [
+          "l40-conv-001",
+          "l40-conv-002"
+        ]
+      },
+      {
+        "step": 2,
+        "title": "担心朋友",
+        "explanation": "母亲说出最担心的事——汉斯有没有交到朋友，使用了「〜かどうか」的语法。",
+        "relatedLineIds": [
+          "l40-conv-003"
+        ]
+      },
+      {
+        "step": 3,
+        "title": "老师安慰",
+        "explanation": "老师说汉斯在班上非常有人气，母亲听了放心了。",
+        "relatedLineIds": [
+          "l40-conv-004",
+          "l40-conv-005"
+        ]
+      },
+      {
+        "step": 4,
+        "title": "询问学习",
+        "explanation": "母亲接着问学习，提到汉斯总说汉字难；老师汇报成绩很好。",
+        "relatedLineIds": [
+          "l40-conv-006",
+          "l40-conv-007",
+          "l40-conv-008"
+        ]
+      },
+      {
+        "step": 5,
+        "title": "邀请运动会",
+        "explanation": "老师用「ところで」转换话题，邀请父亲也来看运动会；使用了「どんな様子か」的嵌入疑问。",
+        "relatedLineIds": [
+          "l40-conv-009",
+          "l40-conv-010",
+          "l40-conv-011"
+        ]
+      },
+      {
+        "step": 6,
+        "title": "道别",
+        "explanation": "母亲答应并请求今后继续关照。",
+        "relatedLineIds": [
+          "l40-conv-012"
+        ]
+      }
     ],
     "lineUsage": [
-      { "lineId": "l40-conv-001", "japanese": "お待たせしました。どうぞ。", "chineseMeaning": "久等了，请进。", "realLifeUse": "在拜访他人或进入房间时，对方说的礼貌用语。", "emotionTone": "礼貌、客气", "memoryTip": "「お待たせしました」是「让您久等了」的敬语，记住「待たせる」的使役+过去。" },
-      { "lineId": "l40-conv-002", "japanese": "先生、ハンスは学校でどうでしょうか?", "chineseMeaning": "老师，汉斯在学校的情况怎么样？", "realLifeUse": "家长向老师询问孩子情况的标准句式，用「どうでしょうか」委婉询问。", "emotionTone": "关切、礼貌", "memoryTip": "「どうでしょうか」比「どうですか」更礼貌柔和。" },
-      { "lineId": "l40-conv-003", "japanese": "友達ができたかどうか心配なんですが。", "chineseMeaning": "我有些担心他有没有交到朋友。", "realLifeUse": "表达对某事是否发生的担心，用「〜かどうか心配」。", "emotionTone": "担忧、坦诚", "memoryTip": "「かどうか」= whether or not，记住「できたかどうか」是整个嵌入疑问。" },
-      { "lineId": "l40-conv-004", "japanese": "大丈夫ですよ。ハンス君はクラスでとても人気があります。", "chineseMeaning": "没问题的，汉斯在班上非常受欢迎。", "realLifeUse": "安慰对方并给出积极信息的完整句式。", "emotionTone": "肯定、安慰", "memoryTip": "「人気があります」是固定搭配，表示「受欢迎」。" },
-      { "lineId": "l40-conv-005", "japanese": "そうですか。安心しました。", "chineseMeaning": "是吗？那我就放心了。", "realLifeUse": "听到好消息后的标准回应，表示释然。", "emotionTone": "释然、欣慰", "memoryTip": "「安心しました」= 放心了，过去形表示状态已改变。" },
-      { "lineId": "l40-conv-006", "japanese": "勉強はどうですか?漢字が大変だと言っていますが。", "chineseMeaning": "那学习方面呢？他总说汉字很难。", "realLifeUse": "转换话题时用「勉強はどうですか」引导，后面接引用孩子的话。", "emotionTone": "关心、略带担心", "memoryTip": "「〜と言っています」表示引用别人的话，这里引用儿子的说法。" },
-      { "lineId": "l40-conv-007", "japanese": "毎日漢字のテストをしていますが、ハンス君はいい成績ですよ。", "chineseMeaning": "我们每天都有汉字测验，汉斯的成绩很好哦。", "realLifeUse": "先说明情况再给出结论的典型日语句式。", "emotionTone": "肯定、赞赏", "memoryTip": "「〜ていますが、〜」先铺垫再给结论的结构。" },
-      { "lineId": "l40-conv-008", "japanese": "そうですか。ありがとうございます。", "chineseMeaning": "是吗？非常感谢您。", "realLifeUse": "得到好消息后表达感谢的基本礼貌用语。", "emotionTone": "感谢、满意", "memoryTip": "「そうですか」表示理解/意外，加上「ありがとうございます」表达感谢。" },
-      { "lineId": "l40-conv-009", "japanese": "ところで、もうすぐ運動会ですが、お父さんもいらっしゃいますか?", "chineseMeaning": "对了，运动会快到了，您先生也会来吗？", "realLifeUse": "「ところで」转换话题，「いらっしゃいますか」是对对方丈夫的敬语。", "emotionTone": "亲切、邀请", "memoryTip": "「いらっしゃいますか」是「来ますか」的尊敬语，用于提及对方家人。" },
-      { "lineId": "l40-conv-010", "japanese": "ええ。", "chineseMeaning": "嗯，他会的。", "realLifeUse": "对询问的简短肯定回应。", "emotionTone": "肯定、简洁", "memoryTip": "「ええ」是比「はい」更口语化的肯定回答。" },
-      { "lineId": "l40-conv-011", "japanese": "ハンス君が学校でどんな様子か、ぜひ見てください。", "chineseMeaning": "请一定来看看汉斯在学校的样子。", "realLifeUse": "用「どんな様子か」嵌入疑问邀请对方来看情况。", "emotionTone": "热情、期待", "memoryTip": "「どんな様子か」是嵌入疑问，「ぜひ」表示强烈的邀请意愿。" },
-      { "lineId": "l40-conv-012", "japanese": "わかりました。これからもよろしくお願いします。", "chineseMeaning": "好的，今后也请多关照。", "realLifeUse": "结束对话时的标准礼貌用语。", "emotionTone": "礼貌、正式", "memoryTip": "「これからもよろしくお願いします」是长期请多关照，比「よろしくお願いします」更强调今后。" }
+      {
+        "lineId": "l40-conv-001",
+        "japanese": "お待たせしました。どうぞ。",
+        "chineseMeaning": "久等了，请进。",
+        "realLifeUse": "在拜访他人或进入房间时，对方说的礼貌用语。",
+        "emotionTone": "礼貌、客气",
+        "memoryTip": "「お待たせしました」是「让您久等了」的敬语，记住「待たせる」的使役+过去。"
+      },
+      {
+        "lineId": "l40-conv-002",
+        "japanese": "先生、ハンスは学校でどうでしょうか?",
+        "chineseMeaning": "老师，汉斯在学校的情况怎么样？",
+        "realLifeUse": "家长向老师询问孩子情况的标准句式，用「どうでしょうか」委婉询问。",
+        "emotionTone": "关切、礼貌",
+        "memoryTip": "「どうでしょうか」比「どうですか」更礼貌柔和。"
+      },
+      {
+        "lineId": "l40-conv-003",
+        "japanese": "友達ができたかどうか心配なんですが。",
+        "chineseMeaning": "我有些担心他有没有交到朋友。",
+        "realLifeUse": "表达对某事是否发生的担心，用「〜かどうか心配」。",
+        "emotionTone": "担忧、坦诚",
+        "memoryTip": "「かどうか」= whether or not，记住「できたかどうか」是整个嵌入疑问。"
+      },
+      {
+        "lineId": "l40-conv-004",
+        "japanese": "大丈夫ですよ。ハンス君はクラスでとても人気があります。",
+        "chineseMeaning": "没问题的，汉斯在班上非常受欢迎。",
+        "realLifeUse": "安慰对方并给出积极信息的完整句式。",
+        "emotionTone": "肯定、安慰",
+        "memoryTip": "「人気があります」是固定搭配，表示「受欢迎」。"
+      },
+      {
+        "lineId": "l40-conv-005",
+        "japanese": "そうですか。安心しました。",
+        "chineseMeaning": "是吗？那我就放心了。",
+        "realLifeUse": "听到好消息后的标准回应，表示释然。",
+        "emotionTone": "释然、欣慰",
+        "memoryTip": "「安心しました」= 放心了，过去形表示状态已改变。"
+      },
+      {
+        "lineId": "l40-conv-006",
+        "japanese": "勉強はどうですか?漢字が大変だと言っていますが。",
+        "chineseMeaning": "那学习方面呢？他总说汉字很难。",
+        "realLifeUse": "转换话题时用「勉強はどうですか」引导，后面接引用孩子的话。",
+        "emotionTone": "关心、略带担心",
+        "memoryTip": "「〜と言っています」表示引用别人的话，这里引用儿子的说法。"
+      },
+      {
+        "lineId": "l40-conv-007",
+        "japanese": "毎日漢字のテストをしていますが、ハンス君はいい成績ですよ。",
+        "chineseMeaning": "我们每天都有汉字测验，汉斯的成绩很好哦。",
+        "realLifeUse": "先说明情况再给出结论的典型日语句式。",
+        "emotionTone": "肯定、赞赏",
+        "memoryTip": "「〜ていますが、〜」先铺垫再给结论的结构。"
+      },
+      {
+        "lineId": "l40-conv-008",
+        "japanese": "そうですか。ありがとうございます。",
+        "chineseMeaning": "是吗？非常感谢您。",
+        "realLifeUse": "得到好消息后表达感谢的基本礼貌用语。",
+        "emotionTone": "感谢、满意",
+        "memoryTip": "「そうですか」表示理解/意外，加上「ありがとうございます」表达感谢。"
+      },
+      {
+        "lineId": "l40-conv-009",
+        "japanese": "ところで、もうすぐ運動会ですが、お父さんもいらっしゃいますか?",
+        "chineseMeaning": "对了，运动会快到了，您先生也会来吗？",
+        "realLifeUse": "「ところで」转换话题，「いらっしゃいますか」是对对方丈夫的敬语。",
+        "emotionTone": "亲切、邀请",
+        "memoryTip": "「いらっしゃいますか」是「来ますか」的尊敬语，用于提及对方家人。"
+      },
+      {
+        "lineId": "l40-conv-010",
+        "japanese": "ええ。",
+        "chineseMeaning": "嗯，他会的。",
+        "realLifeUse": "对询问的简短肯定回应。",
+        "emotionTone": "肯定、简洁",
+        "memoryTip": "「ええ」是比「はい」更口语化的肯定回答。"
+      },
+      {
+        "lineId": "l40-conv-011",
+        "japanese": "ハンス君が学校でどんな様子か、ぜひ見てください。",
+        "chineseMeaning": "请一定来看看汉斯在学校的样子。",
+        "realLifeUse": "用「どんな様子か」嵌入疑问邀请对方来看情况。",
+        "emotionTone": "热情、期待",
+        "memoryTip": "「どんな様子か」是嵌入疑问，「ぜひ」表示强烈的邀请意愿。"
+      },
+      {
+        "lineId": "l40-conv-012",
+        "japanese": "わかりました。これからもよろしくお願いします。",
+        "chineseMeaning": "好的，今后也请多关照。",
+        "realLifeUse": "结束对话时的标准礼貌用语。",
+        "emotionTone": "礼貌、正式",
+        "memoryTip": "「これからもよろしくお願いします」是长期请多关照，比「よろしくお願いします」更强调今后。"
+      }
     ],
     "chineseRetellPrompt": "请用中文复述第40课的会话内容，使用嵌入疑问（かどうか/疑問詞+か）的结构。\n\n「第40课讲的是家长会上，汉斯的母亲和老师的对话。母亲先问……」\n\n试试看能否把以下信息自然地串起来：\n- 老师请母亲进来\n- 母亲担心汉斯有没有交到朋友\n- 老师说汉斯很受欢迎\n- 母亲放心了，又问学习\n- 老师说汉斯汉字成绩很好\n- 老师邀请父母来运动会\n- 母亲答应并道谢",
     "realLifeReplacementPractice": [
