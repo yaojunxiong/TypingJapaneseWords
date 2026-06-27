@@ -760,6 +760,7 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
   const ttsAudioRef = useRef<HTMLAudioElement | null>(null)
   const stopTtsPlaybackRef = useRef(false)
   const [showImageModal, setShowImageModal] = useState(false)
+  const [ttsDebug, setTtsDebug] = useState('')
 
   useEffect(() => {
     loadRecitationLesson(lessonNo).then((data) => {
@@ -874,6 +875,7 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
       ttsAudioRef.current = null
     }
     setTtsPlayback({ status: 'idle', currentIndex: 0, totalLines: 0 })
+    setTtsDebug('')
   }, [])
 
   const stopContinuousPlayback = useCallback(() => {
@@ -1106,29 +1108,39 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
   }, [continuousPlayback.status])
 
   const handleStartTtsPlayback = useCallback(() => {
-    if (!lesson) return
+    if (!lesson) {
+      setTtsDebug('lesson 未加载')
+      return
+    }
+    setTtsDebug('onClick 已触发，正在停止其他播放...')
     stopContinuousPlayback()
     stopTtsPlayback()
     stopOriginalAudio()
+    stopTtsPlaybackRef.current = false
 
     const sortedLines = [...lesson.lines].sort((a, b) => a.order - b.order)
     const total = sortedLines.length
+    setTtsDebug(`找到 ${total} 条朗诵句，正在验证音频...`)
 
     // Validate all lines have audio before starting
     for (let i = 0; i < sortedLines.length; i++) {
       const audioUrl = sortedLines[i].originalAudioUrl || sortedLines[i].ttsAudioUrl
+      const urlSource = sortedLines[i].originalAudioUrl ? 'originalAudioUrl' : (sortedLines[i].ttsAudioUrl ? 'ttsAudioUrl' : 'missing')
+      setTtsDebug(`验证第 ${sortedLines[i].order}/${total} 句: audioUrl=${audioUrl ? '存在' : '缺失'} (来源: ${urlSource})`)
       if (!audioUrl) {
         showNotice(`第 ${sortedLines[i].order} 句缺少系统音频，无法试听全文音频`)
         return
       }
     }
 
+    setTtsDebug(`全部 ${total} 句验证通过，开始播放第 1 句...`)
     setTtsPlayback({ status: 'loading', currentIndex: 0, totalLines: total })
 
     const playNext = (idx: number) => {
       if (stopTtsPlaybackRef.current || idx >= sortedLines.length) {
         if (idx >= sortedLines.length && !stopTtsPlaybackRef.current) {
           showNotice('全文音频播放完成')
+          setTtsDebug('全文音频播放完成')
         }
         setTtsPlayback({ status: 'idle', currentIndex: 0, totalLines: 0 })
         return
@@ -1140,14 +1152,20 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
       // Use the SAME audioUrl as single-play: originalAudioUrl || ttsAudioUrl
       const audioUrl = line.originalAudioUrl || line.ttsAudioUrl
 
+      setTtsDebug(`正在播放第 ${idx + 1}/${total} 句: audioUrl=${audioUrl}`)
+
       const audio = new Audio(audioUrl)
       ttsAudioRef.current = audio
       audio.onended = () => {
         ttsAudioRef.current = null
         playNext(idx + 1)
       }
-      audio.play().catch(() => {
+      audio.play().then(() => {
+        setTtsDebug(`播放成功：第 ${idx + 1}/${total} 句`)
+      }).catch(() => {
         ttsAudioRef.current = null
+        showNotice(`第 ${line.order} 句系统音频播放失败，已跳过`)
+        setTtsDebug(`播放失败：第 ${idx + 1}/${total} 句 (已跳过)`)
         playNext(idx + 1)
       })
     }
@@ -1386,8 +1404,18 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
                 background: 'linear-gradient(transparent 10%, rgba(0,0,0,0.5) 80%, rgba(0,0,0,0.6))',
                 borderRadius: '0 0 12px 12px',
                 padding: '36px 12px 10px',
-                display: 'flex', gap: 8,
+                display: 'flex', flexDirection: 'column', gap: 4, pointerEvents: 'none',
               }}>
+                {ttsDebug && (
+                  <div style={{
+                    background: 'rgba(0,0,0,0.7)', color: '#4ade80', fontSize: 11,
+                    padding: '4px 8px', borderRadius: 6, textAlign: 'center',
+                    pointerEvents: 'none', wordBreak: 'break-word',
+                  }}>
+                    {ttsDebug}
+                  </div>
+                )}
+                <div style={{ display: 'flex', gap: 8, pointerEvents: 'auto' }}>
                 {ttsPlayback.status !== 'idle' ? (
                   <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'rgba(255,255,255,0.2)', backdropFilter: 'blur(4px)', borderRadius: 12, padding: '8px 12px' }}>
                     <span style={{ color: '#fff', fontSize: 13, fontWeight: 800, textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
@@ -1422,7 +1450,7 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
                       <span>🔊 试听全文音频</span>
                       <span style={{ fontSize: 11, opacity: 0.8 }}>系统音频</span>
                     </button>
-                    <button type="button" onClick={hasBestTakeCount === totalLessonLines ? handleStartContinuousPlayback : undefined} style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1, background: hasBestTakeCount === totalLessonLines ? 'rgba(255,255,255,0.2)' : 'rgba(255,255,255,0.08)', backdropFilter: 'blur(4px)', border: 'none', borderRadius: 12, padding: '8px 4px', cursor: hasBestTakeCount === totalLessonLines ? 'pointer' : 'default', color: hasBestTakeCount === totalLessonLines ? '#fff' : 'rgba(255,255,255,0.5)', fontWeight: 700, fontSize: 14, textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
+                    <button type="button" onClick={hasBestTakeCount === totalLessonLines ? handleStartContinuousPlayback : () => showNotice('完成本课全部句子后可试听完整背诵')} style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1, background: hasBestTakeCount === totalLessonLines ? 'rgba(255,255,255,0.2)' : 'rgba(255,255,255,0.08)', backdropFilter: 'blur(4px)', border: 'none', borderRadius: 12, padding: '8px 4px', cursor: hasBestTakeCount === totalLessonLines ? 'pointer' : 'default', color: hasBestTakeCount === totalLessonLines ? '#fff' : 'rgba(255,255,255,0.5)', fontWeight: 700, fontSize: 14, textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
                       <span>🎤 试听完整背诵</span>
                       <span style={{ fontSize: 11, opacity: 0.8 }}>
                         {hasBestTakeCount === totalLessonLines ? `已完成 ${totalLessonLines}/${totalLessonLines}` : `我的背诵 (${hasBestTakeCount}/${totalLessonLines})`}
@@ -1434,6 +1462,7 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
             </div>
           </div>
         </div>
+      </div>
       )}
     </div>
   )
