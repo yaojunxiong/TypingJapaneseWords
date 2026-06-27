@@ -1194,6 +1194,30 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
   const showBottomNav = !focusMode
   const activeLine = lesson?.lines.find(l => l.lineId === activeLineId) || null
   const activeIndex = lesson?.lines.findIndex(l => l.lineId === activeLineId) ?? -1
+  const sortedLessonLines = lesson ? [...lesson.lines].sort((a, b) => a.order - b.order) : []
+  const currentTtsLine = ttsPlayback.status !== 'idle'
+    ? sortedLessonLines[ttsPlayback.currentIndex] || null
+    : null
+  const currentPlaybackQueueItem = continuousPlayback.status !== 'idle'
+    ? playbackQueueRef.current[continuousPlayback.currentIndex] || null
+    : null
+  const currentContinuousLine = currentPlaybackQueueItem
+    ? lesson?.lines.find(l => l.lineId === currentPlaybackQueueItem.lineId) || null
+    : null
+  const modalCaptionLine = currentTtsLine || currentContinuousLine
+  const modalCaptionMode = currentTtsLine ? '系统音频' : (currentContinuousLine ? '我的背诵' : '')
+  const modalCaptionStatus = currentTtsLine
+    ? ttsPlayback.status
+    : (currentContinuousLine ? continuousPlayback.status : 'idle')
+  const modalCaptionIndex = currentTtsLine
+    ? ttsPlayback.currentIndex + 1
+    : (currentContinuousLine ? continuousPlayback.currentIndex + 1 : 0)
+  const modalCaptionTotal = currentTtsLine
+    ? ttsPlayback.totalLines
+    : (currentContinuousLine ? continuousPlayback.totalLines : 0)
+  const modalCaptionReading = modalCaptionLine
+    ? ((modalCaptionLine as RecitationLineWithKana).kana || '')
+    : ''
   const floatingBottomOffset = showBottomNav
     ? 'calc(96px + env(safe-area-inset-bottom, 0px))'
     : 'calc(14px + env(safe-area-inset-bottom, 0px))'
@@ -1419,6 +1443,24 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
                 padding: '36px 12px 10px',
                 display: 'flex', flexDirection: 'column', gap: 4, pointerEvents: 'none',
               }}>
+                {modalCaptionLine && (
+                  <div style={{
+                    alignSelf: 'center', maxWidth: '90%', maxHeight: '38dvh', overflow: 'auto',
+                    background: 'rgba(15,23,42,0.82)', color: '#fff', borderRadius: 12,
+                    padding: '10px 12px', boxShadow: '0 10px 28px rgba(0,0,0,0.28)',
+                    fontSize: 12, lineHeight: 1.45, textAlign: 'left', pointerEvents: 'none',
+                    wordBreak: 'break-word', overflowWrap: 'break-word',
+                  }}>
+                    <div style={{ fontSize: 12, fontWeight: 900, color: '#bfdbfe', marginBottom: 6 }}>
+                      {modalCaptionStatus === 'paused' ? '已暂停' : modalCaptionMode} · 第 {modalCaptionIndex} / {modalCaptionTotal} 句
+                    </div>
+                    <div style={{ fontSize: 15, fontWeight: 900, marginBottom: 5 }}>{modalCaptionLine.ja}</div>
+                    {modalCaptionReading && (
+                      <div style={{ color: '#e0f2fe', marginBottom: 5 }}>读音：{modalCaptionReading}</div>
+                    )}
+                    <div style={{ color: '#e5e7eb' }}>中文：{modalCaptionLine.zh}</div>
+                  </div>
+                )}
                 {ttsDebug && (
                   <div style={{
                     background: 'rgba(0,0,0,0.7)', color: '#4ade80', fontSize: 11,
