@@ -759,6 +759,7 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
   }>({ status: 'idle', currentIndex: 0, totalLines: 0 })
   const ttsAudioRef = useRef<HTMLAudioElement | null>(null)
   const stopTtsPlaybackRef = useRef(false)
+  const [showImageModal, setShowImageModal] = useState(false)
 
   useEffect(() => {
     loadRecitationLesson(lessonNo).then((data) => {
@@ -1112,6 +1113,16 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
 
     const sortedLines = [...lesson.lines].sort((a, b) => a.order - b.order)
     const total = sortedLines.length
+
+    // Validate all lines have audio before starting
+    for (let i = 0; i < sortedLines.length; i++) {
+      const audioUrl = sortedLines[i].originalAudioUrl || sortedLines[i].ttsAudioUrl
+      if (!audioUrl) {
+        showNotice(`第 ${sortedLines[i].order} 句缺少系统音频，无法试听全文音频`)
+        return
+      }
+    }
+
     setTtsPlayback({ status: 'loading', currentIndex: 0, totalLines: total })
 
     const playNext = (idx: number) => {
@@ -1126,11 +1137,8 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
       setActiveLineId(line.lineId)
       setTtsPlayback({ status: 'playing', currentIndex: idx, totalLines: total })
 
-      const audioUrl = line.ttsAudioUrl || line.originalAudioUrl
-      if (!audioUrl) {
-        playNext(idx + 1)
-        return
-      }
+      // Use the SAME audioUrl as single-play: originalAudioUrl || ttsAudioUrl
+      const audioUrl = line.originalAudioUrl || line.ttsAudioUrl
 
       const audio = new Audio(audioUrl)
       ttsAudioRef.current = audio
@@ -1157,6 +1165,12 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
       setTtsPlayback(prev => ({ ...prev, status: 'playing' }))
     }
   }, [ttsPlayback.status])
+
+  const handleCloseImageModal = useCallback(() => {
+    setShowImageModal(false)
+    stopTtsPlayback()
+    stopContinuousPlayback()
+  }, [stopTtsPlayback, stopContinuousPlayback])
 
   const showTopBar = !focusMode
   const showBottomNav = !focusMode
@@ -1244,74 +1258,19 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
           </div>
         </div>
 
-        {lesson.conversationImageUrl && (
-          <div style={{ position: 'relative', marginBottom: 14, borderRadius: 14, overflow: 'hidden' }}>
-            <img
-              src={lesson.conversationImageUrl}
-              alt="会话场景图"
-              style={{ width: '100%', display: 'block', borderRadius: 14 }}
-              onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
-            />
-            <div style={{
-              position: 'absolute', bottom: 0, left: 0, right: 0,
-              background: 'linear-gradient(transparent 10%, rgba(0,0,0,0.5) 80%, rgba(0,0,0,0.6))',
-              borderRadius: '0 0 14px 14px',
-              padding: '36px 12px 10px',
-              display: 'flex', gap: 8,
-            }}>
-              {ttsPlayback.status !== 'idle' ? (
-                <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'rgba(255,255,255,0.2)', backdropFilter: 'blur(4px)', borderRadius: 12, padding: '8px 12px' }}>
-                  <span style={{ color: '#fff', fontSize: 13, fontWeight: 800, textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
-                    全文音频 · 第 {ttsPlayback.currentIndex + 1}/{ttsPlayback.totalLines} 句
-                  </span>
-                  <div style={{ display: 'flex', gap: 4 }}>
-                    <button type="button" onClick={handleTogglePauseTts} style={{ background: 'rgba(255,255,255,0.9)', border: 'none', borderRadius: 8, padding: '6px 12px', fontSize: 13, fontWeight: 700, cursor: 'pointer' }}>
-                      {ttsPlayback.status === 'paused' ? '继续' : '暂停'}
-                    </button>
-                    <button type="button" onClick={stopTtsPlayback} style={{ background: '#dc2626', color: '#fff', border: 'none', borderRadius: 8, padding: '6px 12px', fontSize: 13, fontWeight: 700, cursor: 'pointer' }}>
-                      停止
-                    </button>
-                  </div>
-                </div>
-              ) : continuousPlayback.status !== 'idle' ? (
-                <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'rgba(255,255,255,0.2)', backdropFilter: 'blur(4px)', borderRadius: 12, padding: '8px 12px' }}>
-                  <span style={{ color: '#fff', fontSize: 13, fontWeight: 800, textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
-                    我的背诵 · 第 {continuousPlayback.currentIndex + 1}/{continuousPlayback.totalLines} 句
-                  </span>
-                  <div style={{ display: 'flex', gap: 4 }}>
-                    <button type="button" onClick={togglePauseContinuousPlayback} style={{ background: 'rgba(255,255,255,0.9)', border: 'none', borderRadius: 8, padding: '6px 12px', fontSize: 13, fontWeight: 700, cursor: 'pointer' }}>
-                      {continuousPlayback.status === 'paused' ? '继续' : '暂停'}
-                    </button>
-                    <button type="button" onClick={stopContinuousPlayback} style={{ background: '#dc2626', color: '#fff', border: 'none', borderRadius: 8, padding: '6px 12px', fontSize: 13, fontWeight: 700, cursor: 'pointer' }}>
-                      停止
-                    </button>
-                  </div>
-                </div>
-              ) : (
-                <>
-                  <button type="button" onClick={handleStartTtsPlayback} style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1, background: 'rgba(255,255,255,0.2)', backdropFilter: 'blur(4px)', border: 'none', borderRadius: 12, padding: '8px 4px', cursor: 'pointer', color: '#fff', fontWeight: 700, fontSize: 14, textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
-                    <span>🔊 试听全文音频</span>
-                    <span style={{ fontSize: 11, opacity: 0.8 }}>系统音频</span>
-                  </button>
-                  <button type="button" onClick={hasBestTakeCount === totalLessonLines ? handleStartContinuousPlayback : undefined} style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1, background: hasBestTakeCount === totalLessonLines ? 'rgba(255,255,255,0.2)' : 'rgba(255,255,255,0.08)', backdropFilter: 'blur(4px)', border: 'none', borderRadius: 12, padding: '8px 4px', cursor: hasBestTakeCount === totalLessonLines ? 'pointer' : 'default', color: hasBestTakeCount === totalLessonLines ? '#fff' : 'rgba(255,255,255,0.5)', fontWeight: 700, fontSize: 14, textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
-                    <span>🎤 试听完整背诵</span>
-                    <span style={{ fontSize: 11, opacity: 0.8 }}>
-                      {hasBestTakeCount === totalLessonLines ? `已完成 ${totalLessonLines}/${totalLessonLines}` : `我的背诵 (${hasBestTakeCount}/${totalLessonLines})`}
-                    </span>
-                  </button>
-                </>
-              )}
-            </div>
-          </div>
-        )}
-
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: 10 }}>
           <a href={lesson.videoUrl} target="_blank" rel="noopener noreferrer" style={{ border: '1px solid #dbe3ee', borderRadius: 12, padding: '12px 8px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, color: '#0f172a', background: '#fff' }}>
             <span style={{ fontSize: 24 }}>▶</span><span style={{ fontWeight: 900 }}>原视频</span>
           </a>
-          <a href={lesson.conversationImageUrl} target="_blank" rel="noopener noreferrer" style={{ border: '1px solid #dbe3ee', borderRadius: 12, padding: '12px 8px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, color: '#0f172a', background: '#fff' }}>
-            <span style={{ fontSize: 24 }}>▰</span><span style={{ fontWeight: 900 }}>会话图</span>
-          </a>
+          {lesson.conversationImageUrl ? (
+            <button type="button" onClick={() => setShowImageModal(true)} style={{ border: '1px solid #dbe3ee', borderRadius: 12, padding: '12px 8px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, color: '#0f172a', background: '#fff', cursor: 'pointer', fontSize: 'inherit' }}>
+              <span style={{ fontSize: 24 }}>▰</span><span style={{ fontWeight: 900 }}>查看会话图</span>
+            </button>
+          ) : (
+            <span style={{ border: '1px solid #dbe3ee', borderRadius: 12, padding: '12px 8px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, color: '#94a3b8', background: '#fff', opacity: 0.5 }}>
+              <span style={{ fontSize: 24 }}>▰</span><span style={{ fontWeight: 900 }}>会话图</span>
+            </span>
+          )}
           <Link href={`/lessons/${lessonNo}/deep-dive`} style={{ border: '1px solid #dbe3ee', borderRadius: 12, padding: '12px 8px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, color: '#0f172a', background: '#fff' }}>
             <span style={{ fontSize: 24 }}>A文</span><span style={{ fontWeight: 900 }}>中文翻译</span>
           </Link>
@@ -1386,6 +1345,94 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
               </div>
             </div>
           )}
+        </div>
+      )}
+
+      {showImageModal && lesson?.conversationImageUrl && (
+        <div style={{
+          position: 'fixed', inset: 0, zIndex: 200,
+          background: 'rgba(0,0,0,0.85)',
+          display: 'flex', flexDirection: 'column',
+          overflow: 'hidden',
+        }}>
+          <div style={{
+            display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+            padding: '12px 16px', flexShrink: 0,
+          }}>
+            <span style={{ color: '#fff', fontSize: 14 }}>会话图</span>
+            <button
+              type="button"
+              onClick={handleCloseImageModal}
+              style={{
+                background: 'rgba(255,255,255,0.15)', border: 'none',
+                borderRadius: 999, color: '#fff', fontSize: 20,
+                width: 36, height: 36, cursor: 'pointer',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+              }}
+            >
+              ✕
+            </button>
+          </div>
+
+          <div style={{ flex: 1, overflow: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 12px 200px' }}>
+            <div style={{ position: 'relative', maxWidth: '100%', borderRadius: 12, overflow: 'hidden' }}>
+              <img
+                src={lesson.conversationImageUrl}
+                alt="会话场景图"
+                style={{ width: '100%', display: 'block', borderRadius: 12 }}
+              />
+              <div style={{
+                position: 'absolute', bottom: 0, left: 0, right: 0,
+                background: 'linear-gradient(transparent 10%, rgba(0,0,0,0.5) 80%, rgba(0,0,0,0.6))',
+                borderRadius: '0 0 12px 12px',
+                padding: '36px 12px 10px',
+                display: 'flex', gap: 8,
+              }}>
+                {ttsPlayback.status !== 'idle' ? (
+                  <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'rgba(255,255,255,0.2)', backdropFilter: 'blur(4px)', borderRadius: 12, padding: '8px 12px' }}>
+                    <span style={{ color: '#fff', fontSize: 13, fontWeight: 800, textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
+                      全文音频 · 第 {ttsPlayback.currentIndex + 1}/{ttsPlayback.totalLines} 句
+                    </span>
+                    <div style={{ display: 'flex', gap: 4 }}>
+                      <button type="button" onClick={handleTogglePauseTts} style={{ background: 'rgba(255,255,255,0.9)', border: 'none', borderRadius: 8, padding: '6px 12px', fontSize: 13, fontWeight: 700, cursor: 'pointer' }}>
+                        {ttsPlayback.status === 'paused' ? '继续' : '暂停'}
+                      </button>
+                      <button type="button" onClick={stopTtsPlayback} style={{ background: '#dc2626', color: '#fff', border: 'none', borderRadius: 8, padding: '6px 12px', fontSize: 13, fontWeight: 700, cursor: 'pointer' }}>
+                        停止
+                      </button>
+                    </div>
+                  </div>
+                ) : continuousPlayback.status !== 'idle' ? (
+                  <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'rgba(255,255,255,0.2)', backdropFilter: 'blur(4px)', borderRadius: 12, padding: '8px 12px' }}>
+                    <span style={{ color: '#fff', fontSize: 13, fontWeight: 800, textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
+                      我的背诵 · 第 {continuousPlayback.currentIndex + 1}/{continuousPlayback.totalLines} 句
+                    </span>
+                    <div style={{ display: 'flex', gap: 4 }}>
+                      <button type="button" onClick={togglePauseContinuousPlayback} style={{ background: 'rgba(255,255,255,0.9)', border: 'none', borderRadius: 8, padding: '6px 12px', fontSize: 13, fontWeight: 700, cursor: 'pointer' }}>
+                        {continuousPlayback.status === 'paused' ? '继续' : '暂停'}
+                      </button>
+                      <button type="button" onClick={stopContinuousPlayback} style={{ background: '#dc2626', color: '#fff', border: 'none', borderRadius: 8, padding: '6px 12px', fontSize: 13, fontWeight: 700, cursor: 'pointer' }}>
+                        停止
+                      </button>
+                    </div>
+                  </div>
+                ) : (
+                  <>
+                    <button type="button" onClick={handleStartTtsPlayback} style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1, background: 'rgba(255,255,255,0.2)', backdropFilter: 'blur(4px)', border: 'none', borderRadius: 12, padding: '8px 4px', cursor: 'pointer', color: '#fff', fontWeight: 700, fontSize: 14, textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
+                      <span>🔊 试听全文音频</span>
+                      <span style={{ fontSize: 11, opacity: 0.8 }}>系统音频</span>
+                    </button>
+                    <button type="button" onClick={hasBestTakeCount === totalLessonLines ? handleStartContinuousPlayback : undefined} style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1, background: hasBestTakeCount === totalLessonLines ? 'rgba(255,255,255,0.2)' : 'rgba(255,255,255,0.08)', backdropFilter: 'blur(4px)', border: 'none', borderRadius: 12, padding: '8px 4px', cursor: hasBestTakeCount === totalLessonLines ? 'pointer' : 'default', color: hasBestTakeCount === totalLessonLines ? '#fff' : 'rgba(255,255,255,0.5)', fontWeight: 700, fontSize: 14, textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
+                      <span>🎤 试听完整背诵</span>
+                      <span style={{ fontSize: 11, opacity: 0.8 }}>
+                        {hasBestTakeCount === totalLessonLines ? `已完成 ${totalLessonLines}/${totalLessonLines}` : `我的背诵 (${hasBestTakeCount}/${totalLessonLines})`}
+                      </span>
+                    </button>
+                  </>
+                )}
+              </div>
+            </div>
+          </div>
         </div>
       )}
     </div>
