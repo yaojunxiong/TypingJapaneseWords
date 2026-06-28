@@ -796,13 +796,14 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     })
   }, [lessonNo])
 
-  // For Lesson 25, inject original line audio segment URLs from published index
-  const ORIGINAL_SEGMENTS_INDEX_URL = 'https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-25/index.draft.json'
+  // Lessons that have original line audio segments published
+  const ORIGINAL_LINE_AUDIO_LESSONS = [1, 2, 3, 4, 5, 25]
   useEffect(() => {
-    if (lessonNo !== 25) return
+    if (!ORIGINAL_LINE_AUDIO_LESSONS.includes(lessonNo)) return
     if (!lesson) return
     let cancelled = false
-    fetch(ORIGINAL_SEGMENTS_INDEX_URL)
+    const url = `https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-${lessonNo}/index.draft.json`
+    fetch(url)
       .then(r => r.json())
       .then(idx => {
         if (cancelled) return
