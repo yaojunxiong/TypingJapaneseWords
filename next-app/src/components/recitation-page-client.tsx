@@ -210,9 +210,9 @@ function CompactLineItem({
         const currentId = selectedBestIdRef.current
         const hasSelected = currentId && merged.some(t => t.takeId === currentId)
         if (!hasSelected) {
-          const best = merged.find(t => t.isBest) || merged[0]
-          setSelectedBestId(best.takeId)
-          onBestTakeChange(line.lineId, best.takeId)
+          const best = merged.find(t => t.isBest)
+          setSelectedBestId(best ? best.takeId : merged[0].takeId)
+          onBestTakeChange(line.lineId, best ? best.takeId : null)
         }
       } else {
         setSelectedBestId(null)
@@ -232,9 +232,9 @@ function CompactLineItem({
         const currentId = selectedBestIdRef.current
         const hasSelected = currentId && merged.some(t => t.takeId === currentId)
         if (!hasSelected) {
-          const best = merged.find(t => t.isBest) || merged[0]
-          setSelectedBestId(best.takeId)
-          onBestTakeChange(line.lineId, best.takeId)
+          const best = merged.find(t => t.isBest)
+          setSelectedBestId(best ? best.takeId : merged[0].takeId)
+          onBestTakeChange(line.lineId, best ? best.takeId : null)
         }
       } else {
         setSelectedBestId(null)

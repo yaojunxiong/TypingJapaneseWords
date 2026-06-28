@@ -136,5 +136,28 @@ export async function POST(request: NextRequest) {
     })
   }
 
+  // Step G: Auto-set as best if this is the first successful take for this (user, lesson, line)
+  if (record) {
+    const { data: existingBest } = await supabase
+      .from('recording_takes')
+      .select('id')
+      .eq('user_id', user.id)
+      .eq('lesson_no', lessonNo)
+      .eq('line_no', lineNo)
+      .eq('upload_status', 'uploaded')
+      .eq('is_best', true)
+      .is('deleted_at', null)
+      .limit(1)
+      .maybeSingle()
+
+    if (!existingBest) {
+      await supabase
+        .from('recording_takes')
+        .update({ is_best: true })
+        .eq('id', record.id)
+      record.is_best = true
+    }
+  }
+
   return NextResponse.json(record, { status: 201 })
 }
