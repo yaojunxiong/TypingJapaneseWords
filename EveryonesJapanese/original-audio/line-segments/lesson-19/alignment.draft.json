@@ -1,0 +1,203 @@
+{
+  "version": "minna-line-alignment-draft-v1",
+  "lesson": 19,
+  "sourceSet": "source-230001",
+  "cd": "CD66",
+  "sourceTrack": "source-230001/tracks/cd-066.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-230001/tracks/cd-066.mp3",
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "みんな",
+      "japanese": "乾杯。",
+      "normalizedTarget": "かんぱい",
+      "normalizedAsrText": "かんぱい",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        1
+      ],
+      "startMs": 6840,
+      "endMs": 12020,
+      "durationMs": 5180,
+      "audioPath": "line-segments/lesson-19/l19-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-19/l19-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [1]；外侧最多保留约180ms自然余音；重点复核：保留多人举杯及「乾杯」的现场余音。"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "松本良子",
+      "japanese": "マリアさん、あまり食べませんね。",
+      "normalizedTarget": "まりあさんあまりたべませんね",
+      "normalizedAsrText": "まりあさんあまりたべませんね",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        2
+      ],
+      "startMs": 12000,
+      "endMs": 15750,
+      "durationMs": 3750,
+      "audioPath": "line-segments/lesson-19/l19-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-19/l19-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [2]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "マリア",
+      "japanese": "ええ。きのうからダイエットをしています。",
+      "normalizedTarget": "ええきのうからだいえっとをしています",
+      "normalizedAsrText": "ええきのうからだいえっとをしています",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        3
+      ],
+      "startMs": 15750,
+      "endMs": 19020,
+      "durationMs": 3270,
+      "audioPath": "line-segments/lesson-19/l19-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-19/l19-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [3]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "松本良子",
+      "japanese": "そうですか。わたしもダイエットをしたことがあります。",
+      "normalizedTarget": "そうですかわたしもだいえっとをしたことがあります",
+      "normalizedAsrText": "そうですかわたしもだいえっとをしたことがあります",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        4
+      ],
+      "startMs": 19000,
+      "endMs": 22020,
+      "durationMs": 3020,
+      "audioPath": "line-segments/lesson-19/l19-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-19/l19-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [4]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "マリア",
+      "japanese": "どんなダイエットですか。",
+      "normalizedTarget": "どんなだいえっとですか",
+      "normalizedAsrText": "どんなだいえっとですか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        5
+      ],
+      "startMs": 22000,
+      "endMs": 24020,
+      "durationMs": 2020,
+      "audioPath": "line-segments/lesson-19/l19-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-19/l19-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [5]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "松本良子",
+      "japanese": "毎日りんごだけ食べたり、水をたくさん飲んだりしました。でも、無理なダイエットは体によくないですね。",
+      "normalizedTarget": "まいにちりんごだけたべたりみずをたくさんのんだりしましたでもむりなだいえっとはからだによくないですね",
+      "normalizedAsrText": "まいにちりんごだけたべたりみずをたくさんのんだりしましたでもむりなだいえっとはからだによくないですね",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        6,
+        7
+      ],
+      "startMs": 24000,
+      "endMs": 33020,
+      "durationMs": 9020,
+      "audioPath": "line-segments/lesson-19/l19-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-19/l19-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [6, 7]；外侧最多保留约180ms自然余音；重点复核：正式长句由饮食方法与健康提醒两个 utterance 合并。"
+    },
+    {
+      "lineNo": 7,
+      "displayOrder": 7,
+      "speaker": "マリア",
+      "japanese": "そうですね。",
+      "normalizedTarget": "そうですね",
+      "normalizedAsrText": "そうですね",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        8
+      ],
+      "startMs": 33000,
+      "endMs": 35020,
+      "durationMs": 2020,
+      "audioPath": "line-segments/lesson-19/l19-07.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-19/l19-07.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [8]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 8,
+      "displayOrder": 8,
+      "speaker": "松本良子",
+      "japanese": "マリアさん、このアイスクリーム、おいしいですよ。",
+      "normalizedTarget": "まりあさんこのあいすくりーむおいしいですよ",
+      "normalizedAsrText": "まりあさんこのあいすくりーむおいしいですよ",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        9
+      ],
+      "startMs": 35000,
+      "endMs": 39020,
+      "durationMs": 4020,
+      "audioPath": "line-segments/lesson-19/l19-08.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-19/l19-08.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [9]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 9,
+      "displayOrder": 9,
+      "speaker": "マリア",
+      "japanese": "そうですか。……。ダイエットはまたあしたからします。",
+      "normalizedTarget": "そうですかだいえっとはまたあしたからします",
+      "normalizedAsrText": "そうですかだいえっとはまたあしたからします",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        10,
+        11
+      ],
+      "startMs": 39000,
+      "endMs": 46180,
+      "durationMs": 7180,
+      "audioPath": "line-segments/lesson-19/l19-09.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-19/l19-09.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [10, 11]；外侧最多保留约180ms自然余音；重点复核：合并「そうですか」、品尝停顿及最后一句。"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ]
+}

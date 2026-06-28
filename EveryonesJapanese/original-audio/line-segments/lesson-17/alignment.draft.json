@@ -1,0 +1,243 @@
+{
+  "version": "minna-line-alignment-draft-v1",
+  "lesson": 17,
+  "sourceSet": "source-230001",
+  "cd": "CD60",
+  "sourceTrack": "source-230001/tracks/cd-060.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-230001/tracks/cd-060.mp3",
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "医者",
+      "japanese": "どうしましたか。",
+      "normalizedTarget": "どうしましたか",
+      "normalizedAsrText": "どうしましたか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        1
+      ],
+      "startMs": 5840,
+      "endMs": 8020,
+      "durationMs": 2180,
+      "audioPath": "line-segments/lesson-17/l17-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-17/l17-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [1]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "松本",
+      "japanese": "きのうからのどが痛くて、熱も少しあります。",
+      "normalizedTarget": "きのうからのどがいたくてねつもすこしあります",
+      "normalizedAsrText": "きのうからのどがいたくてねつもすこしあります",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        2
+      ],
+      "startMs": 8000,
+      "endMs": 12020,
+      "durationMs": 4020,
+      "audioPath": "line-segments/lesson-17/l17-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-17/l17-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [2]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "医者",
+      "japanese": "そうですか。ちょっと口を開けてください。",
+      "normalizedTarget": "そうですかちょっとくちをあけてください",
+      "normalizedAsrText": "そうですかちょっとくちをあけてください",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        3
+      ],
+      "startMs": 12000,
+      "endMs": 17020,
+      "durationMs": 5020,
+      "audioPath": "line-segments/lesson-17/l17-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-17/l17-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [3]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "医者",
+      "japanese": "かぜですね。2、3日ゆっくり休んでください。",
+      "normalizedTarget": "かぜですねにさんにちゆっくりやすんでください",
+      "normalizedAsrText": "かぜですねにさんにちゆっくりやすんでください",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        4
+      ],
+      "startMs": 17000,
+      "endMs": 21020,
+      "durationMs": 4020,
+      "audioPath": "line-segments/lesson-17/l17-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-17/l17-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [4]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "松本",
+      "japanese": "あのう、あしたから東京へ出張しなければなりません。",
+      "normalizedTarget": "あのうあしたからとうきょうへしゅっちょうしなければなりません",
+      "normalizedAsrText": "あのうあしたからとうきょうへしゅっちょうしなければなりません",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        5
+      ],
+      "startMs": 21000,
+      "endMs": 26020,
+      "durationMs": 5020,
+      "audioPath": "line-segments/lesson-17/l17-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-17/l17-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [5]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "医者",
+      "japanese": "じゃ、きょうは薬を飲んで、早く寝てください。",
+      "normalizedTarget": "じゃきょうはくすりをのんではやくねてください",
+      "normalizedAsrText": "じゃきょうはくすりをのんではやくねてください",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        6
+      ],
+      "startMs": 26000,
+      "endMs": 30180,
+      "durationMs": 4180,
+      "audioPath": "line-segments/lesson-17/l17-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-17/l17-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [6]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 7,
+      "displayOrder": 7,
+      "speaker": "松本",
+      "japanese": "はい。",
+      "normalizedTarget": "はい",
+      "normalizedAsrText": "はい",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        7
+      ],
+      "startMs": 30290,
+      "endMs": 31020,
+      "durationMs": 730,
+      "audioPath": "line-segments/lesson-17/l17-07.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-17/l17-07.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [7]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 8,
+      "displayOrder": 8,
+      "speaker": "医者",
+      "japanese": "それから今晩はおふろに入らないでくださいね。",
+      "normalizedTarget": "それからこんばんはおふろにはいらないでくださいね",
+      "normalizedAsrText": "それからこんばんはおふろにはいらないでくださいね",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        8
+      ],
+      "startMs": 31000,
+      "endMs": 34020,
+      "durationMs": 3020,
+      "audioPath": "line-segments/lesson-17/l17-08.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-17/l17-08.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [8]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 9,
+      "displayOrder": 9,
+      "speaker": "松本",
+      "japanese": "はい、わかりました。",
+      "normalizedTarget": "はいわかりました",
+      "normalizedAsrText": "はいわかりました",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        9
+      ],
+      "startMs": 34000,
+      "endMs": 36020,
+      "durationMs": 2020,
+      "audioPath": "line-segments/lesson-17/l17-09.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-17/l17-09.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [9]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 10,
+      "displayOrder": 10,
+      "speaker": "医者",
+      "japanese": "じゃ、お大事に。",
+      "normalizedTarget": "じゃおだいじに",
+      "normalizedAsrText": "じゃおだいじに",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        10
+      ],
+      "startMs": 36000,
+      "endMs": 37020,
+      "durationMs": 1020,
+      "audioPath": "line-segments/lesson-17/l17-10.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-17/l17-10.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [10]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 11,
+      "displayOrder": 11,
+      "speaker": "松本",
+      "japanese": "どうもありがとうございました。",
+      "normalizedTarget": "どうもありがとうございました",
+      "normalizedAsrText": "どうもありがとうございました",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        11
+      ],
+      "startMs": 37000,
+      "endMs": 39180,
+      "durationMs": 2180,
+      "audioPath": "line-segments/lesson-17/l17-11.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-17/l17-11.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [11]；外侧最多保留约180ms自然余音"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ]
+}

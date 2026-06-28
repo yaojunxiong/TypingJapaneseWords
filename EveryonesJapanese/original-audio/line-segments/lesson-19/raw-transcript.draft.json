@@ -1,0 +1,111 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 19,
+  "cd": "CD66",
+  "sourceTrack": "source-230001/tracks/cd-066.mp3",
+  "durationMs": 46838,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "guidedPrompt": false,
+    "role": "timestamp_source_only"
+  },
+  "excludedRegions": [
+    {
+      "startMs": 0,
+      "endMs": 7000,
+      "reason": "课号、会話与标题朗读"
+    }
+  ],
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 7020,
+      "endMs": 12000,
+      "text": "乾杯。",
+      "normalizedText": "かんぱい",
+      "confidence": 0.92
+    },
+    {
+      "index": 2,
+      "startMs": 12020,
+      "endMs": 16000,
+      "text": "マリアさん、あまり食べませんね。",
+      "normalizedText": "まりあさんあまりたべませんね",
+      "confidence": 0.92
+    },
+    {
+      "index": 3,
+      "startMs": 16020,
+      "endMs": 19000,
+      "text": "ええ。昨日からダイエットをしています。",
+      "normalizedText": "ええきのうからだいえっとをしています",
+      "confidence": 0.92
+    },
+    {
+      "index": 4,
+      "startMs": 19020,
+      "endMs": 22000,
+      "text": "そうですか。私もダイエットをしたことがあります。",
+      "normalizedText": "そうですかわたしもだいえっとをしたことがあります",
+      "confidence": 0.92
+    },
+    {
+      "index": 5,
+      "startMs": 22020,
+      "endMs": 24000,
+      "text": "どんなダイエットですか。",
+      "normalizedText": "どんなだいえっとですか",
+      "confidence": 0.92
+    },
+    {
+      "index": 6,
+      "startMs": 24020,
+      "endMs": 29000,
+      "text": "毎日りんごだけ食べたり、水をたくさん飲んだりしました。",
+      "normalizedText": "まいにちりんごだけたべたりみずをたくさんのんだりしました",
+      "confidence": 0.92
+    },
+    {
+      "index": 7,
+      "startMs": 29020,
+      "endMs": 33000,
+      "text": "でも、無理なダイエットは体によくないですね。",
+      "normalizedText": "でもむりなだいえっとはからだによくないですね",
+      "confidence": 0.92
+    },
+    {
+      "index": 8,
+      "startMs": 33020,
+      "endMs": 35000,
+      "text": "そうですね。",
+      "normalizedText": "そうですね",
+      "confidence": 0.92
+    },
+    {
+      "index": 9,
+      "startMs": 35020,
+      "endMs": 39000,
+      "text": "マリアさん、このアイスクリーム、おいしいですよ。",
+      "normalizedText": "まりあさんこのあいすくりーむおいしいですよ",
+      "confidence": 0.92
+    },
+    {
+      "index": 10,
+      "startMs": 39020,
+      "endMs": 42000,
+      "text": "そうですか。",
+      "normalizedText": "そうですか",
+      "confidence": 0.92
+    },
+    {
+      "index": 11,
+      "startMs": 42020,
+      "endMs": 46000,
+      "text": "ダイエットはまた明日からします。",
+      "normalizedText": "だいえっとはまたあしたからします",
+      "confidence": 0.92
+    }
+  ]
+}

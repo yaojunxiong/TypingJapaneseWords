@@ -1,0 +1,111 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 17,
+  "cd": "CD60",
+  "sourceTrack": "source-230001/tracks/cd-060.mp3",
+  "durationMs": 41404,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "guidedPrompt": false,
+    "role": "timestamp_source_only"
+  },
+  "excludedRegions": [
+    {
+      "startMs": 0,
+      "endMs": 6000,
+      "reason": "课号、会話与标题朗读"
+    }
+  ],
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 6020,
+      "endMs": 8000,
+      "text": "どうしましたか。",
+      "normalizedText": "どうしましたか",
+      "confidence": 0.92
+    },
+    {
+      "index": 2,
+      "startMs": 8020,
+      "endMs": 12000,
+      "text": "昨日から喉が痛くて、熱も少しあります。",
+      "normalizedText": "きのうからのどがいたくてねつもすこしあります",
+      "confidence": 0.92
+    },
+    {
+      "index": 3,
+      "startMs": 12020,
+      "endMs": 17000,
+      "text": "そうですか。ちょっと口を開けてください。",
+      "normalizedText": "そうですかちょっとくちをあけてください",
+      "confidence": 0.92
+    },
+    {
+      "index": 4,
+      "startMs": 17020,
+      "endMs": 21000,
+      "text": "風邪ですね。2、3日ゆっくり休んでください。",
+      "normalizedText": "かぜですねにさんにちゆっくりやすんでください",
+      "confidence": 0.92
+    },
+    {
+      "index": 5,
+      "startMs": 21020,
+      "endMs": 26000,
+      "text": "あのう、明日から東京へ出張しなければなりません。",
+      "normalizedText": "あのうあしたからとうきょうへしゅっちょうしなければなりません",
+      "confidence": 0.92
+    },
+    {
+      "index": 6,
+      "startMs": 26020,
+      "endMs": 30000,
+      "text": "じゃあ、今日は薬を飲んで、早く寝てください。",
+      "normalizedText": "じゃきょうはくすりをのんではやくねてください",
+      "confidence": 0.92
+    },
+    {
+      "index": 7,
+      "startMs": 30470,
+      "endMs": 31000,
+      "text": "はい。",
+      "normalizedText": "はい",
+      "confidence": 0.92
+    },
+    {
+      "index": 8,
+      "startMs": 31020,
+      "endMs": 34000,
+      "text": "それから、今晩はお風呂に入らないでくださいね。",
+      "normalizedText": "それからこんばんはおふろにはいらないでくださいね",
+      "confidence": 0.92
+    },
+    {
+      "index": 9,
+      "startMs": 34020,
+      "endMs": 36000,
+      "text": "はい、わかりました。",
+      "normalizedText": "はいわかりました",
+      "confidence": 0.92
+    },
+    {
+      "index": 10,
+      "startMs": 36020,
+      "endMs": 37000,
+      "text": "じゃあ、お大事に。",
+      "normalizedText": "じゃおだいじに",
+      "confidence": 0.92
+    },
+    {
+      "index": 11,
+      "startMs": 37020,
+      "endMs": 39000,
+      "text": "どうもありがとうございました。",
+      "normalizedText": "どうもありがとうございました",
+      "confidence": 0.92
+    }
+  ]
+}

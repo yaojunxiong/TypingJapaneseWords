@@ -1,0 +1,127 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 16,
+  "cd": "CD56",
+  "sourceTrack": "source-230001/tracks/cd-056.mp3",
+  "durationMs": 42057,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "guidedPrompt": false,
+    "role": "timestamp_source_only"
+  },
+  "excludedRegions": [
+    {
+      "startMs": 0,
+      "endMs": 7000,
+      "reason": "课号、会話与标题朗读"
+    }
+  ],
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 7020,
+      "endMs": 10990,
+      "text": "すみませんが、ちょっと使い方を教えてください。",
+      "normalizedText": "すみませんがちょっとつかいかたをおしえてください",
+      "confidence": 0.92
+    },
+    {
+      "index": 2,
+      "startMs": 11020,
+      "endMs": 12000,
+      "text": "お引き出しですか。",
+      "normalizedText": "おひきだしですか",
+      "confidence": 0.92
+    },
+    {
+      "index": 3,
+      "startMs": 12970,
+      "endMs": 13500,
+      "text": "そうです。",
+      "normalizedText": "そうです",
+      "confidence": 0.92
+    },
+    {
+      "index": 4,
+      "startMs": 13970,
+      "endMs": 16000,
+      "text": "じゃあ、まずここを押してください。",
+      "normalizedText": "じゃまずここをおしてください",
+      "confidence": 0.92
+    },
+    {
+      "index": 5,
+      "startMs": 16480,
+      "endMs": 17000,
+      "text": "はい。",
+      "normalizedText": "はい",
+      "confidence": 0.92
+    },
+    {
+      "index": 6,
+      "startMs": 17020,
+      "endMs": 21500,
+      "text": "次にキャッシュカードをここに入れて、暗証番号を押してください。",
+      "normalizedText": "つぎにきゃっしゅかーどをここにいれてあんしょうばんごうをおしてください",
+      "confidence": 0.92
+    },
+    {
+      "index": 7,
+      "startMs": 21970,
+      "endMs": 22500,
+      "text": "はい。",
+      "normalizedText": "はい",
+      "confidence": 0.92
+    },
+    {
+      "index": 8,
+      "startMs": 22970,
+      "endMs": 24000,
+      "text": "押しました。",
+      "normalizedText": "おしました",
+      "confidence": 0.92
+    },
+    {
+      "index": 9,
+      "startMs": 24020,
+      "endMs": 26500,
+      "text": "じゃあ、金額を押してください。",
+      "normalizedText": "じゃきんがくをおしてください",
+      "confidence": 0.92
+    },
+    {
+      "index": 10,
+      "startMs": 26970,
+      "endMs": 29500,
+      "text": "5万円ですが、5……。",
+      "normalizedText": "ごまんえんですがご",
+      "confidence": 0.92
+    },
+    {
+      "index": 11,
+      "startMs": 29970,
+      "endMs": 33000,
+      "text": "この「万円」のを押します。",
+      "normalizedText": "このまんえんのをおします",
+      "confidence": 0.92
+    },
+    {
+      "index": 12,
+      "startMs": 33020,
+      "endMs": 37000,
+      "text": "それから、この「確認」ボタンを押してください。",
+      "normalizedText": "それからこのかくにんぼたんをおしてください",
+      "confidence": 0.92
+    },
+    {
+      "index": 13,
+      "startMs": 37470,
+      "endMs": 41000,
+      "text": "はい。どうもありがとうございました。",
+      "normalizedText": "はいどうもありがとうございました",
+      "confidence": 0.92
+    }
+  ]
+}

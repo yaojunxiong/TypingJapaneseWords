@@ -1,0 +1,185 @@
+{
+  "version": "minna-original-line-segments-draft-v1",
+  "lesson": 18,
+  "sourceSet": "source-230001",
+  "cd": "CD63",
+  "sourceTrack": "source-230001/tracks/cd-063.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-230001/tracks/cd-063.mp3",
+  "segmentCount": 8,
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "山田",
+      "japanese": "サントスさんの趣味は何ですか。",
+      "normalizedTarget": "さんとすさんのしゅみはなんですか",
+      "normalizedAsrText": "さんとすさんのしゅみはなんですか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        1
+      ],
+      "startMs": 6260,
+      "endMs": 9020,
+      "durationMs": 2760,
+      "audioPath": "line-segments/lesson-18/l18-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-18/l18-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [1]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "サントス",
+      "japanese": "写真です。",
+      "normalizedTarget": "しゃしんです",
+      "normalizedAsrText": "しゃしんです",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        2
+      ],
+      "startMs": 9000,
+      "endMs": 10220,
+      "durationMs": 1220,
+      "audioPath": "line-segments/lesson-18/l18-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-18/l18-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [2]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "山田",
+      "japanese": "どんな写真を撮りますか。",
+      "normalizedTarget": "どんなしゃしんをとりますか",
+      "normalizedAsrText": "どんなしゃしんをとりますか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        3
+      ],
+      "startMs": 10200,
+      "endMs": 12220,
+      "durationMs": 2020,
+      "audioPath": "line-segments/lesson-18/l18-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-18/l18-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [3]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "サントス",
+      "japanese": "動物の写真です。特に馬が好きです。",
+      "normalizedTarget": "どうぶつのしゃしんですとくにうまがすきです",
+      "normalizedAsrText": "どうぶつのしゃしんですとくにうまがすきです",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        4,
+        5
+      ],
+      "startMs": 12200,
+      "endMs": 16220,
+      "durationMs": 4020,
+      "audioPath": "line-segments/lesson-18/l18-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-18/l18-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [4, 5]；外侧最多保留约180ms自然余音；重点复核：合并「動物の写真です」与「特に馬が好きです」。"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "山田",
+      "japanese": "へえ、それはおもしろいですね。日本へ来てから、馬の写真を撮りましたか。",
+      "normalizedTarget": "へえそれはおもしろいですねにほんへきてからうまのしゃしんをとりましたか",
+      "normalizedAsrText": "へえそれはおもしろいですねにほんへきてからうまのしゃしんをとりましたか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        6,
+        7
+      ],
+      "startMs": 16200,
+      "endMs": 22280,
+      "durationMs": 6080,
+      "audioPath": "line-segments/lesson-18/l18-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-18/l18-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [6, 7]；外侧最多保留约180ms自然余音；重点复核：合并感叹与后续提问。"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "サントス",
+      "japanese": "いいえ、日本ではなかなか馬を見ることができません。",
+      "normalizedTarget": "いいえにほんではなかなかうまをみることができません",
+      "normalizedAsrText": "いいえにほんではなかなかうまをみることができません",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        8,
+        9
+      ],
+      "startMs": 22280,
+      "endMs": 26770,
+      "durationMs": 4490,
+      "audioPath": "line-segments/lesson-18/l18-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-18/l18-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [8, 9]；外侧最多保留约180ms自然余音；重点复核：合并「いいえ」与完整解释。"
+    },
+    {
+      "lineNo": 7,
+      "displayOrder": 7,
+      "speaker": "山田",
+      "japanese": "北海道に馬がたくさんいますよ。",
+      "normalizedTarget": "ほっかいどうにうまがたくさんいますよ",
+      "normalizedAsrText": "ほっかいどうにうまがたくさんいますよ",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        10
+      ],
+      "startMs": 26770,
+      "endMs": 29600,
+      "durationMs": 2830,
+      "audioPath": "line-segments/lesson-18/l18-07.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-18/l18-07.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [10]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 8,
+      "displayOrder": 8,
+      "speaker": "サントス",
+      "japanese": "ほんとうですか。じゃ、夏休みにぜひ行きたいです。",
+      "normalizedTarget": "ほんとうですかじゃなつやすみにぜひいきたいです",
+      "normalizedAsrText": "ほんとうですかじゃなつやすみにぜひいきたいです",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        11,
+        12
+      ],
+      "startMs": 29600,
+      "endMs": 35500,
+      "durationMs": 5900,
+      "audioPath": "line-segments/lesson-18/l18-08.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-18/l18-08.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [11, 12]；外侧最多保留约180ms自然余音；重点复核：合并「ほんとうですか」与夏休计划。"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ]
+}

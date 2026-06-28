@@ -1,0 +1,119 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 18,
+  "cd": "CD63",
+  "sourceTrack": "source-230001/tracks/cd-063.mp3",
+  "durationMs": 36284,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "guidedPrompt": false,
+    "role": "timestamp_source_only"
+  },
+  "excludedRegions": [
+    {
+      "startMs": 0,
+      "endMs": 6440,
+      "reason": "课号、会話与标题朗读"
+    }
+  ],
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 6440,
+      "endMs": 9000,
+      "text": "サントスさんの趣味は何ですか。",
+      "normalizedText": "さんとすさんのしゅみはなんですか",
+      "confidence": 0.92
+    },
+    {
+      "index": 2,
+      "startMs": 9020,
+      "endMs": 10200,
+      "text": "写真です。",
+      "normalizedText": "しゃしんです",
+      "confidence": 0.92
+    },
+    {
+      "index": 3,
+      "startMs": 10220,
+      "endMs": 12200,
+      "text": "どんな写真を撮りますか。",
+      "normalizedText": "どんなしゃしんをとりますか",
+      "confidence": 0.92
+    },
+    {
+      "index": 4,
+      "startMs": 12220,
+      "endMs": 14200,
+      "text": "動物の写真です。",
+      "normalizedText": "どうぶつのしゃしんです",
+      "confidence": 0.92
+    },
+    {
+      "index": 5,
+      "startMs": 14220,
+      "endMs": 16200,
+      "text": "特に馬が好きです。",
+      "normalizedText": "とくにうまがすきです",
+      "confidence": 0.92
+    },
+    {
+      "index": 6,
+      "startMs": 16220,
+      "endMs": 19120,
+      "text": "へえ、それはおもしろいですね。",
+      "normalizedText": "へえそれはおもしろいですね",
+      "confidence": 0.92
+    },
+    {
+      "index": 7,
+      "startMs": 19120,
+      "endMs": 22280,
+      "text": "日本へ来てから、馬の写真を撮りましたか。",
+      "normalizedText": "にほんへきてからうまのしゃしんをとりましたか",
+      "confidence": 0.92
+    },
+    {
+      "index": 8,
+      "startMs": 22280,
+      "endMs": 23640,
+      "text": "いいえ。",
+      "normalizedText": "いいえ",
+      "confidence": 0.92
+    },
+    {
+      "index": 9,
+      "startMs": 23640,
+      "endMs": 26770,
+      "text": "日本ではなかなか馬を見ることができません。",
+      "normalizedText": "にほんではなかなかうまをみることができません",
+      "confidence": 0.92
+    },
+    {
+      "index": 10,
+      "startMs": 26770,
+      "endMs": 29600,
+      "text": "北海道に馬がたくさんいますよ。",
+      "normalizedText": "ほっかいどうにうまがたくさんいますよ",
+      "confidence": 0.92
+    },
+    {
+      "index": 11,
+      "startMs": 29600,
+      "endMs": 31200,
+      "text": "ほんとうですか。",
+      "normalizedText": "ほんとうですか",
+      "confidence": 0.92
+    },
+    {
+      "index": 12,
+      "startMs": 31200,
+      "endMs": 35320,
+      "text": "じゃあ、夏休みにぜひ行きたいです。",
+      "normalizedText": "じゃなつやすみにぜひいきたいです",
+      "confidence": 0.92
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 20,
+  "cd": "CD69",
+  "sourceTrack": "source-230001/tracks/cd-069.mp3",
+  "durationMs": 32104,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "guidedPrompt": false,
+    "role": "timestamp_source_only"
+  },
+  "excludedRegions": [
+    {
+      "startMs": 0,
+      "endMs": 6000,
+      "reason": "课号、会話与标题朗读"
+    },
+    {
+      "startMs": 29000,
+      "endMs": 32000,
+      "reason": "会话结束音乐"
+    }
+  ],
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 6020,
+      "endMs": 8000,
+      "text": "夏休みは国へ帰る？",
+      "normalizedText": "なつやすみはくにへかえる",
+      "confidence": 0.92
+    },
+    {
+      "index": 2,
+      "startMs": 8020,
+      "endMs": 10000,
+      "text": "ううん。帰りたいけど、……。",
+      "normalizedText": "ううんかえりたいけど",
+      "confidence": 0.92
+    },
+    {
+      "index": 3,
+      "startMs": 11020,
+      "endMs": 12000,
+      "text": "そう。",
+      "normalizedText": "そう",
+      "confidence": 0.92
+    },
+    {
+      "index": 4,
+      "startMs": 12020,
+      "endMs": 15000,
+      "text": "タワポン君、富士山に登ったことある？",
+      "normalizedText": "たわぽんくんふじさんにのぼったことある",
+      "confidence": 0.92
+    },
+    {
+      "index": 5,
+      "startMs": 15020,
+      "endMs": 16000,
+      "text": "ううん、ない。",
+      "normalizedText": "ううんない",
+      "confidence": 0.92
+    },
+    {
+      "index": 6,
+      "startMs": 16020,
+      "endMs": 19000,
+      "text": "じゃあ、よかったら、いっしょに行かない？",
+      "normalizedText": "じゃよかったらいっしょにいかない",
+      "confidence": 0.92
+    },
+    {
+      "index": 7,
+      "startMs": 19020,
+      "endMs": 21000,
+      "text": "うん。いつごろ？",
+      "normalizedText": "うんいつごろ",
+      "confidence": 0.92
+    },
+    {
+      "index": 8,
+      "startMs": 21020,
+      "endMs": 24000,
+      "text": "8月の初めごろはどう？",
+      "normalizedText": "はちがつのはじめごろはどう",
+      "confidence": 0.92
+    },
+    {
+      "index": 9,
+      "startMs": 24020,
+      "endMs": 25000,
+      "text": "いいよ。",
+      "normalizedText": "いいよ",
+      "confidence": 0.92
+    },
+    {
+      "index": 10,
+      "startMs": 25020,
+      "endMs": 27000,
+      "text": "じゃ、いろいろ調べて、また電話するよ。",
+      "normalizedText": "じゃいろいろしらべてまたでんわするよ",
+      "confidence": 0.92
+    },
+    {
+      "index": 11,
+      "startMs": 27020,
+      "endMs": 29000,
+      "text": "ありがとう。待ってるよ。",
+      "normalizedText": "ありがとうまってるよ",
+      "confidence": 0.92
+    }
+  ]
+}
