@@ -1,0 +1,140 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 3,
+  "cd": "CD09",
+  "sourceTrack": "source-230001/tracks/cd-009.mp3",
+  "durationMs": 37695,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "guidedPrompt": false,
+    "role": "timestamp_source_only"
+  },
+  "excludedRegions": [
+    {
+      "startMs": 0,
+      "endMs": 6169,
+      "reason": "课号、会話与标题"
+    },
+    {
+      "startMs": 12889,
+      "endMs": 21257,
+      "reason": "卖场场景转换与环境音"
+    }
+  ],
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 6169,
+      "endMs": 6956,
+      "text": "いらっしゃいませ。",
+      "normalizedText": "いらっしゃいませ",
+      "confidence": 0.92
+    },
+    {
+      "index": 2,
+      "startMs": 7639,
+      "endMs": 8290,
+      "text": "すみません。",
+      "normalizedText": "すみません",
+      "confidence": 0.92
+    },
+    {
+      "index": 3,
+      "startMs": 8987,
+      "endMs": 10704,
+      "text": "ワイン売り場はどこですか。",
+      "normalizedText": "わいんうりばはどこですか",
+      "confidence": 0.92
+    },
+    {
+      "index": 4,
+      "startMs": 11152,
+      "endMs": 12065,
+      "text": "地下1階です。",
+      "normalizedText": "ちかいっかいです",
+      "confidence": 0.92
+    },
+    {
+      "index": 5,
+      "startMs": 12484,
+      "endMs": 12889,
+      "text": "どうも。",
+      "normalizedText": "どうも",
+      "confidence": 0.88
+    },
+    {
+      "index": 6,
+      "startMs": 21257,
+      "endMs": 21917,
+      "text": "すみません。",
+      "normalizedText": "すみません",
+      "confidence": 0.92
+    },
+    {
+      "index": 7,
+      "startMs": 22576,
+      "endMs": 24002,
+      "text": "そのワインを見せてください。",
+      "normalizedText": "そのわいんをみせてください",
+      "confidence": 0.92
+    },
+    {
+      "index": 8,
+      "startMs": 24686,
+      "endMs": 25749,
+      "text": "はい、どうぞ。",
+      "normalizedText": "はいどうぞ",
+      "confidence": 0.92
+    },
+    {
+      "index": 9,
+      "startMs": 26532,
+      "endMs": 27996,
+      "text": "これはどこのワインですか。",
+      "normalizedText": "これはどこのわいんですか",
+      "confidence": 0.92
+    },
+    {
+      "index": 10,
+      "startMs": 28808,
+      "endMs": 29554,
+      "text": "日本のです。",
+      "normalizedText": "にほんのです",
+      "confidence": 0.92
+    },
+    {
+      "index": 11,
+      "startMs": 30180,
+      "endMs": 30910,
+      "text": "いくらですか。",
+      "normalizedText": "いくらですか",
+      "confidence": 0.92
+    },
+    {
+      "index": 12,
+      "startMs": 31696,
+      "endMs": 33011,
+      "text": "2,500円です。",
+      "normalizedText": "にせんごひゃくえんです",
+      "confidence": 0.86
+    },
+    {
+      "index": 13,
+      "startMs": 33541,
+      "endMs": 33825,
+      "text": "じゃ、",
+      "normalizedText": "じゃ",
+      "confidence": 0.82
+    },
+    {
+      "index": 14,
+      "startMs": 34122,
+      "endMs": 34875,
+      "text": "これをください。",
+      "normalizedText": "これをください",
+      "confidence": 0.92
+    }
+  ]
+}

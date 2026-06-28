@@ -1,0 +1,101 @@
+{
+  "version": "minna-original-line-segments-draft-v1",
+  "lesson": 1,
+  "sourceSet": "source-230001",
+  "cd": "CD01",
+  "sourceTrack": "source-230001/tracks/cd-001.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-230001/tracks/cd-001.mp3",
+  "alignmentSource": "raw-transcript.draft.json",
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "佐藤",
+      "japanese": "おはようございます。",
+      "normalizedTarget": "おはようございます",
+      "normalizedAsrText": "おはようございます",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        1
+      ],
+      "startMs": 5758,
+      "endMs": 7219,
+      "durationMs": 1461,
+      "audioPath": "line-segments/lesson-01/l01-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-01/l01-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [1]；以首尾语音活动边缘各保留约200ms自然余音"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "山田",
+      "japanese": "おはようございます。佐藤さん、こちらはマイク・ミラーさんです。",
+      "normalizedTarget": "おはようございますさとうさんこちらはまいくみらーさんです",
+      "normalizedAsrText": "おはようございますさとうさんこちらはまいくみらーさんです",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        2,
+        3
+      ],
+      "startMs": 7444,
+      "endMs": 12634,
+      "durationMs": 5190,
+      "audioPath": "line-segments/lesson-01/l01-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-01/l01-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [2, 3]；以首尾语音活动边缘各保留约200ms自然余音"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "ミラー",
+      "japanese": "初めまして。マイク・ミラーです。アメリカから来ました。どうぞよろしく。",
+      "normalizedTarget": "はじめましてまいくみらーですあめりかからきましたどうぞよろしく",
+      "normalizedAsrText": "はじめましてまいくみらーですあめりかからきましたどうぞよろしく",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        4,
+        5,
+        6
+      ],
+      "startMs": 13033,
+      "endMs": 18309,
+      "durationMs": 5276,
+      "audioPath": "line-segments/lesson-01/l01-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-01/l01-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [4, 5, 6]；以首尾语音活动边缘各保留约200ms自然余音"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "佐藤",
+      "japanese": "佐藤けい子です。どうぞよろしく。",
+      "normalizedTarget": "さとうけいこですどうぞよろしく",
+      "normalizedAsrText": "さとうけいこですどうぞよろしく",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        7,
+        8
+      ],
+      "startMs": 18538,
+      "endMs": 21381,
+      "durationMs": 2843,
+      "audioPath": "line-segments/lesson-01/l01-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-01/l01-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [7, 8]；以首尾语音活动边缘各保留约200ms自然余音"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4
+  ]
+}

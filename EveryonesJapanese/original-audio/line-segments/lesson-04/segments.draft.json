@@ -1,0 +1,208 @@
+{
+  "version": "minna-original-line-segments-draft-v1",
+  "lesson": 4,
+  "sourceSet": "source-230001",
+  "cd": "CD12",
+  "sourceTrack": "source-230001/tracks/cd-012.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-230001/tracks/cd-012.mp3",
+  "alignmentSource": "raw-transcript.draft.json",
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "ミラー",
+      "japanese": "すみません。「あすか」の電話番号は何番ですか。",
+      "normalizedTarget": "すみませんあすかのでんわばんごうはなんばんですか",
+      "normalizedAsrText": "すみませんあすかのでんわばんごうはなんばんですか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        1,
+        2
+      ],
+      "startMs": 6806,
+      "endMs": 10412,
+      "durationMs": 3606,
+      "audioPath": "line-segments/lesson-04/l04-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-04/l04-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [1, 2]；以首尾语音活动边缘各保留约200ms自然余音"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "佐藤",
+      "japanese": "「あすか」ですか。5275の2725です。",
+      "normalizedTarget": "あすかですかごにななごのにななにごです",
+      "normalizedAsrText": "あすかですかごにななごのにななにごです",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        3,
+        4
+      ],
+      "startMs": 10952,
+      "endMs": 15680,
+      "durationMs": 4728,
+      "audioPath": "line-segments/lesson-04/l04-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-04/l04-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [3, 4]；以首尾语音活动边缘各保留约200ms自然余音"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "ミラー",
+      "japanese": "どうもありがとうございます。",
+      "normalizedTarget": "どうもありがとうございます",
+      "normalizedAsrText": "どうもありがとうございます",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        5
+      ],
+      "startMs": 15833,
+      "endMs": 17394,
+      "durationMs": 1561,
+      "audioPath": "line-segments/lesson-04/l04-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-04/l04-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [5]；以首尾语音活动边缘各保留约200ms自然余音"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "店の人",
+      "japanese": "はい、「あすか」です。",
+      "normalizedTarget": "はいあすかです",
+      "normalizedAsrText": "はいあすかです",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        6,
+        7,
+        8
+      ],
+      "startMs": 24284,
+      "endMs": 26956,
+      "durationMs": 2672,
+      "audioPath": "line-segments/lesson-04/l04-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-04/l04-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [6, 7, 8]；以首尾语音活动边缘各保留约200ms自然余音"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "ミラー",
+      "japanese": "すみません。そちらは何時までですか。",
+      "normalizedTarget": "すみませんそちらはなんじまでですか",
+      "normalizedAsrText": "すみませんそちらはなんじまでですか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        9,
+        10
+      ],
+      "startMs": 27268,
+      "endMs": 30362,
+      "durationMs": 3094,
+      "audioPath": "line-segments/lesson-04/l04-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-04/l04-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [9, 10]；以首尾语音活动边缘各保留约200ms自然余音"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "店の人",
+      "japanese": "10時までです。",
+      "normalizedTarget": "じゅうじまでです",
+      "normalizedAsrText": "じゅうじまでです",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        11
+      ],
+      "startMs": 30412,
+      "endMs": 31692,
+      "durationMs": 1280,
+      "audioPath": "line-segments/lesson-04/l04-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-04/l04-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [11]；以首尾语音活动边缘各保留约200ms自然余音"
+    },
+    {
+      "lineNo": 7,
+      "displayOrder": 7,
+      "speaker": "ミラー",
+      "japanese": "休みは何曜日ですか。",
+      "normalizedTarget": "やすみはなんようびですか",
+      "normalizedAsrText": "やすみはなんようびですか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        12
+      ],
+      "startMs": 31863,
+      "endMs": 33663,
+      "durationMs": 1800,
+      "audioPath": "line-segments/lesson-04/l04-07.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-04/l04-07.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [12]；以首尾语音活动边缘各保留约200ms自然余音"
+    },
+    {
+      "lineNo": 8,
+      "displayOrder": 8,
+      "speaker": "店の人",
+      "japanese": "日曜日です。",
+      "normalizedTarget": "にちようびです",
+      "normalizedAsrText": "にちようびです",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        13
+      ],
+      "startMs": 33934,
+      "endMs": 35174,
+      "durationMs": 1240,
+      "audioPath": "line-segments/lesson-04/l04-08.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-04/l04-08.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [13]；以首尾语音活动边缘各保留约200ms自然余音"
+    },
+    {
+      "lineNo": 9,
+      "displayOrder": 9,
+      "speaker": "ミラー",
+      "japanese": "そうですか。どうも。",
+      "normalizedTarget": "そうですかどうも",
+      "normalizedAsrText": "そうですかどうも",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        14,
+        15
+      ],
+      "startMs": 35189,
+      "endMs": 37040,
+      "durationMs": 1851,
+      "audioPath": "line-segments/lesson-04/l04-09.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-04/l04-09.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [14, 15]；以首尾语音活动边缘各保留约200ms自然余音"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ]
+}

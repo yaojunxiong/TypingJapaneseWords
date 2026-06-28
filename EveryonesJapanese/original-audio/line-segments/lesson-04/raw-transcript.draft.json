@@ -1,0 +1,148 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 4,
+  "cd": "CD12",
+  "sourceTrack": "source-230001/tracks/cd-012.mp3",
+  "durationMs": 39654,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "guidedPrompt": false,
+    "role": "timestamp_source_only"
+  },
+  "excludedRegions": [
+    {
+      "startMs": 0,
+      "endMs": 7006,
+      "reason": "课号、会話与标题"
+    },
+    {
+      "startMs": 17194,
+      "endMs": 24484,
+      "reason": "电话铃与场景转换"
+    }
+  ],
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 7006,
+      "endMs": 7640,
+      "text": "すみません。",
+      "normalizedText": "すみません",
+      "confidence": 0.92
+    },
+    {
+      "index": 2,
+      "startMs": 8219,
+      "endMs": 10212,
+      "text": "「あすか」の電話番号は何番ですか。",
+      "normalizedText": "あすかのでんわばんごうはなんばんですか",
+      "confidence": 0.92
+    },
+    {
+      "index": 3,
+      "startMs": 11152,
+      "endMs": 11958,
+      "text": "「あすか」ですか。",
+      "normalizedText": "あすかですか",
+      "confidence": 0.92
+    },
+    {
+      "index": 4,
+      "startMs": 12850,
+      "endMs": 15480,
+      "text": "5275の2725です。",
+      "normalizedText": "ごにななごのにななにごです",
+      "confidence": 0.84
+    },
+    {
+      "index": 5,
+      "startMs": 16033,
+      "endMs": 17194,
+      "text": "どうもありがとうございます。",
+      "normalizedText": "どうもありがとうございます",
+      "confidence": 0.92
+    },
+    {
+      "index": 6,
+      "startMs": 24484,
+      "endMs": 24840,
+      "text": "はい、",
+      "normalizedText": "はい",
+      "confidence": 0.84
+    },
+    {
+      "index": 7,
+      "startMs": 25477,
+      "endMs": 25690,
+      "text": "「あすか」",
+      "normalizedText": "あすか",
+      "confidence": 0.8
+    },
+    {
+      "index": 8,
+      "startMs": 26098,
+      "endMs": 26756,
+      "text": "です。",
+      "normalizedText": "です",
+      "confidence": 0.85
+    },
+    {
+      "index": 9,
+      "startMs": 27468,
+      "endMs": 28143,
+      "text": "すみません。",
+      "normalizedText": "すみません",
+      "confidence": 0.92
+    },
+    {
+      "index": 10,
+      "startMs": 28715,
+      "endMs": 30162,
+      "text": "そちらは何時までですか。",
+      "normalizedText": "そちらはなんじまでですか",
+      "confidence": 0.92
+    },
+    {
+      "index": 11,
+      "startMs": 30612,
+      "endMs": 31492,
+      "text": "10時までです。",
+      "normalizedText": "じゅうじまでです",
+      "confidence": 0.92
+    },
+    {
+      "index": 12,
+      "startMs": 32063,
+      "endMs": 33463,
+      "text": "休みは何曜日ですか。",
+      "normalizedText": "やすみはなんようびですか",
+      "confidence": 0.92
+    },
+    {
+      "index": 13,
+      "startMs": 34134,
+      "endMs": 34974,
+      "text": "日曜日です。",
+      "normalizedText": "にちようびです",
+      "confidence": 0.92
+    },
+    {
+      "index": 14,
+      "startMs": 35389,
+      "endMs": 35926,
+      "text": "そうですか。",
+      "normalizedText": "そうですか",
+      "confidence": 0.92
+    },
+    {
+      "index": 15,
+      "startMs": 36509,
+      "endMs": 36840,
+      "text": "どうも。",
+      "normalizedText": "どうも",
+      "confidence": 0.84
+    }
+  ]
+}

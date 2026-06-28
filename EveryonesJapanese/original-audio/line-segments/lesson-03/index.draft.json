@@ -1,0 +1,247 @@
+{
+  "version": "minna-original-line-segments-draft-v1",
+  "lesson": 3,
+  "sourceSet": "source-230001",
+  "cd": "CD09",
+  "sourceTrack": "source-230001/tracks/cd-009.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-230001/tracks/cd-009.mp3",
+  "segmentCount": 11,
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "店員A",
+      "japanese": "いらっしゃいませ。",
+      "normalizedTarget": "いらっしゃいませ",
+      "normalizedAsrText": "いらっしゃいませ",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        1
+      ],
+      "startMs": 5969,
+      "endMs": 7156,
+      "durationMs": 1187,
+      "audioPath": "line-segments/lesson-03/l03-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-03/l03-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [1]；以首尾语音活动边缘各保留约200ms自然余音"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "マリア",
+      "japanese": "すみません。ワイン売り場はどこですか。",
+      "normalizedTarget": "すみませんわいんうりばはどこですか",
+      "normalizedAsrText": "すみませんわいんうりばはどこですか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        2,
+        3
+      ],
+      "startMs": 7439,
+      "endMs": 10904,
+      "durationMs": 3465,
+      "audioPath": "line-segments/lesson-03/l03-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-03/l03-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [2, 3]；以首尾语音活动边缘各保留约200ms自然余音"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "店員A",
+      "japanese": "地下1階です。",
+      "normalizedTarget": "ちかいっかいです",
+      "normalizedAsrText": "ちかいっかいです",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        4
+      ],
+      "startMs": 10952,
+      "endMs": 12265,
+      "durationMs": 1313,
+      "audioPath": "line-segments/lesson-03/l03-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-03/l03-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [4]；以首尾语音活动边缘各保留约200ms自然余音"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "マリア",
+      "japanese": "どうも。",
+      "normalizedTarget": "どうも",
+      "normalizedAsrText": "どうも",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        5
+      ],
+      "startMs": 12284,
+      "endMs": 13089,
+      "durationMs": 805,
+      "audioPath": "line-segments/lesson-03/l03-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-03/l03-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [5]；以首尾语音活动边缘各保留约200ms自然余音"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "マリア",
+      "japanese": "すみません。そのワインを見せてください。",
+      "normalizedTarget": "すみませんそのわいんをみせてください",
+      "normalizedAsrText": "すみませんそのわいんをみせてください",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        6,
+        7
+      ],
+      "startMs": 21057,
+      "endMs": 24202,
+      "durationMs": 3145,
+      "audioPath": "line-segments/lesson-03/l03-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-03/l03-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [6, 7]；以首尾语音活动边缘各保留约200ms自然余音"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "店員B",
+      "japanese": "はい、どうぞ。",
+      "normalizedTarget": "はいどうぞ",
+      "normalizedAsrText": "はいどうぞ",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        8
+      ],
+      "startMs": 24486,
+      "endMs": 25949,
+      "durationMs": 1463,
+      "audioPath": "line-segments/lesson-03/l03-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-03/l03-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [8]；以首尾语音活动边缘各保留约200ms自然余音"
+    },
+    {
+      "lineNo": 7,
+      "displayOrder": 7,
+      "speaker": "マリア",
+      "japanese": "これはどこのワインですか。",
+      "normalizedTarget": "これはどこのわいんですか",
+      "normalizedAsrText": "これはどこのわいんですか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        9
+      ],
+      "startMs": 26332,
+      "endMs": 28196,
+      "durationMs": 1864,
+      "audioPath": "line-segments/lesson-03/l03-07.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-03/l03-07.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [9]；以首尾语音活动边缘各保留约200ms自然余音"
+    },
+    {
+      "lineNo": 8,
+      "displayOrder": 8,
+      "speaker": "店員B",
+      "japanese": "日本のです。",
+      "normalizedTarget": "にほんのです",
+      "normalizedAsrText": "にほんのです",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        10
+      ],
+      "startMs": 28608,
+      "endMs": 29754,
+      "durationMs": 1146,
+      "audioPath": "line-segments/lesson-03/l03-08.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-03/l03-08.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [10]；以首尾语音活动边缘各保留约200ms自然余音"
+    },
+    {
+      "lineNo": 9,
+      "displayOrder": 9,
+      "speaker": "マリア",
+      "japanese": "いくらですか。",
+      "normalizedTarget": "いくらですか",
+      "normalizedAsrText": "いくらですか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        11
+      ],
+      "startMs": 29980,
+      "endMs": 31110,
+      "durationMs": 1130,
+      "audioPath": "line-segments/lesson-03/l03-09.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-03/l03-09.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [11]；以首尾语音活动边缘各保留约200ms自然余音"
+    },
+    {
+      "lineNo": 10,
+      "displayOrder": 10,
+      "speaker": "店員B",
+      "japanese": "2,500円です。",
+      "normalizedTarget": "にせんごひゃくえんです",
+      "normalizedAsrText": "にせんごひゃくえんです",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        12
+      ],
+      "startMs": 31496,
+      "endMs": 33211,
+      "durationMs": 1715,
+      "audioPath": "line-segments/lesson-03/l03-10.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-03/l03-10.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [12]；以首尾语音活动边缘各保留约200ms自然余音"
+    },
+    {
+      "lineNo": 11,
+      "displayOrder": 11,
+      "speaker": "マリア",
+      "japanese": "じゃ、これをください。",
+      "normalizedTarget": "じゃこれをください",
+      "normalizedAsrText": "じゃこれをください",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        13,
+        14
+      ],
+      "startMs": 33341,
+      "endMs": 35075,
+      "durationMs": 1734,
+      "audioPath": "line-segments/lesson-03/l03-11.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-03/l03-11.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [13, 14]；以首尾语音活动边缘各保留约200ms自然余音"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "version": "minna-line-alignment-draft-v1",
+  "lesson": 5,
+  "sourceSet": "source-230001",
+  "cd": "CD17",
+  "sourceTrack": "source-230001/tracks/cd-017.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-230001/tracks/cd-017.mp3",
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "サントス",
+      "japanese": "すみません。甲子園までいくらですか。",
+      "normalizedTarget": "すみませんこうしえんまでいくらですか",
+      "normalizedAsrText": "すみませんこうしえんまでいくらですか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        1,
+        2
+      ],
+      "startMs": 7507,
+      "endMs": 10744,
+      "durationMs": 3237,
+      "audioPath": "line-segments/lesson-05/l05-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-05/l05-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [1, 2]；以首尾语音活动边缘各保留约200ms自然余音"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "女の人",
+      "japanese": "350円です。",
+      "normalizedTarget": "さんびゃくごじゅうえんです",
+      "normalizedAsrText": "さんびゃくごじゅうえんです",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        3
+      ],
+      "startMs": 11003,
+      "endMs": 12717,
+      "durationMs": 1714,
+      "audioPath": "line-segments/lesson-05/l05-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-05/l05-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [3]；以首尾语音活动边缘各保留约200ms自然余音"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "サントス",
+      "japanese": "350円ですね。ありがとうございました。",
+      "normalizedTarget": "さんびゃくごじゅうえんですねありがとうございました",
+      "normalizedAsrText": "さんびゃくごじゅうえんですねありがとうございました",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        4,
+        5
+      ],
+      "startMs": 12819,
+      "endMs": 16005,
+      "durationMs": 3186,
+      "audioPath": "line-segments/lesson-05/l05-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-05/l05-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [4, 5]；以首尾语音活动边缘各保留约200ms自然余音"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "女の人",
+      "japanese": "どういたしまして。",
+      "normalizedTarget": "どういたしまして",
+      "normalizedAsrText": "どういたしまして",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        6
+      ],
+      "startMs": 16186,
+      "endMs": 17450,
+      "durationMs": 1264,
+      "audioPath": "line-segments/lesson-05/l05-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-05/l05-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [6]；以首尾语音活动边缘各保留约200ms自然余音"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "サントス",
+      "japanese": "すみません。甲子園は何番線ですか。",
+      "normalizedTarget": "すみませんこうしえんはなんばんせんですか",
+      "normalizedAsrText": "すみませんこうしえんはなんばんせんですか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        7,
+        8
+      ],
+      "startMs": 24921,
+      "endMs": 28346,
+      "durationMs": 3425,
+      "audioPath": "line-segments/lesson-05/l05-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-05/l05-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [7, 8]；以首尾语音活动边缘各保留约200ms自然余音"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "駅員",
+      "japanese": "5番線です。",
+      "normalizedTarget": "ごばんせんです",
+      "normalizedAsrText": "ごばんせんです",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        9
+      ],
+      "startMs": 28525,
+      "endMs": 29688,
+      "durationMs": 1163,
+      "audioPath": "line-segments/lesson-05/l05-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-05/l05-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [9]；以首尾语音活动边缘各保留约200ms自然余音"
+    },
+    {
+      "lineNo": 7,
+      "displayOrder": 7,
+      "speaker": "サントス",
+      "japanese": "どうも。",
+      "normalizedTarget": "どうも",
+      "normalizedAsrText": "どうも",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        10
+      ],
+      "startMs": 29996,
+      "endMs": 30694,
+      "durationMs": 698,
+      "audioPath": "line-segments/lesson-05/l05-07.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-05/l05-07.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [10]；以首尾语音活动边缘各保留约200ms自然余音"
+    },
+    {
+      "lineNo": 8,
+      "displayOrder": 8,
+      "speaker": "サントス",
+      "japanese": "あのう、この電車は甲子園へ行きますか。",
+      "normalizedTarget": "あのうこのでんしゃはこうしえんへいきますか",
+      "normalizedAsrText": "あのうこのでんしゃはこうしえんへいきますか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        11,
+        12
+      ],
+      "startMs": 38568,
+      "endMs": 42293,
+      "durationMs": 3725,
+      "audioPath": "line-segments/lesson-05/l05-08.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-05/l05-08.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [11, 12]；以首尾语音活动边缘各保留约200ms自然余音"
+    },
+    {
+      "lineNo": 9,
+      "displayOrder": 9,
+      "speaker": "男の人",
+      "japanese": "いいえ、次の「普通」ですよ。",
+      "normalizedTarget": "いいえつぎのふつうですよ",
+      "normalizedAsrText": "いいえつぎのふつうですよ",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        13,
+        14
+      ],
+      "startMs": 42522,
+      "endMs": 44853,
+      "durationMs": 2331,
+      "audioPath": "line-segments/lesson-05/l05-09.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-05/l05-09.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [13, 14]；以首尾语音活动边缘各保留约200ms自然余音"
+    },
+    {
+      "lineNo": 10,
+      "displayOrder": 10,
+      "speaker": "サントス",
+      "japanese": "そうですか。どうも。",
+      "normalizedTarget": "そうですかどうも",
+      "normalizedAsrText": "そうですかどうも",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        15,
+        16
+      ],
+      "startMs": 45106,
+      "endMs": 46992,
+      "durationMs": 1886,
+      "audioPath": "line-segments/lesson-05/l05-10.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-05/l05-10.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [15, 16]；以首尾语音活动边缘各保留约200ms自然余音"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 5,
+  "cd": "CD17",
+  "sourceTrack": "source-230001/tracks/cd-017.mp3",
+  "durationMs": 49607,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "guidedPrompt": false,
+    "role": "timestamp_source_only"
+  },
+  "excludedRegions": [
+    {
+      "startMs": 0,
+      "endMs": 7707,
+      "reason": "课号、会話与标题"
+    },
+    {
+      "startMs": 17250,
+      "endMs": 25121,
+      "reason": "车站场景转换与环境音"
+    },
+    {
+      "startMs": 30494,
+      "endMs": 38768,
+      "reason": "站台场景转换与列车环境音"
+    }
+  ],
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 7707,
+      "endMs": 8345,
+      "text": "すみません。",
+      "normalizedText": "すみません",
+      "confidence": 0.92
+    },
+    {
+      "index": 2,
+      "startMs": 9118,
+      "endMs": 10544,
+      "text": "甲子園までいくらですか。",
+      "normalizedText": "こうしえんまでいくらですか",
+      "confidence": 0.92
+    },
+    {
+      "index": 3,
+      "startMs": 11203,
+      "endMs": 12517,
+      "text": "350円です。",
+      "normalizedText": "さんびゃくごじゅうえんです",
+      "confidence": 0.92
+    },
+    {
+      "index": 4,
+      "startMs": 13019,
+      "endMs": 14170,
+      "text": "350円ですね。",
+      "normalizedText": "さんびゃくごじゅうえんですね",
+      "confidence": 0.92
+    },
+    {
+      "index": 5,
+      "startMs": 14917,
+      "endMs": 15805,
+      "text": "ありがとうございました。",
+      "normalizedText": "ありがとうございました",
+      "confidence": 0.92
+    },
+    {
+      "index": 6,
+      "startMs": 16386,
+      "endMs": 17250,
+      "text": "どういたしまして。",
+      "normalizedText": "どういたしまして",
+      "confidence": 0.92
+    },
+    {
+      "index": 7,
+      "startMs": 25121,
+      "endMs": 25739,
+      "text": "すみません。",
+      "normalizedText": "すみません",
+      "confidence": 0.92
+    },
+    {
+      "index": 8,
+      "startMs": 26434,
+      "endMs": 28146,
+      "text": "甲子園は何番線ですか。",
+      "normalizedText": "こうしえんはなんばんせんですか",
+      "confidence": 0.92
+    },
+    {
+      "index": 9,
+      "startMs": 28725,
+      "endMs": 29488,
+      "text": "5番線です。",
+      "normalizedText": "ごばんせんです",
+      "confidence": 0.92
+    },
+    {
+      "index": 10,
+      "startMs": 30196,
+      "endMs": 30494,
+      "text": "どうも。",
+      "normalizedText": "どうも",
+      "confidence": 0.8
+    },
+    {
+      "index": 11,
+      "startMs": 38768,
+      "endMs": 39357,
+      "text": "あのう、",
+      "normalizedText": "あのう",
+      "confidence": 0.92
+    },
+    {
+      "index": 12,
+      "startMs": 40014,
+      "endMs": 42093,
+      "text": "この電車は甲子園へ行きますか。",
+      "normalizedText": "このでんしゃはこうしえんへいきますか",
+      "confidence": 0.92
+    },
+    {
+      "index": 13,
+      "startMs": 42722,
+      "endMs": 43045,
+      "text": "いいえ、",
+      "normalizedText": "いいえ",
+      "confidence": 0.84
+    },
+    {
+      "index": 14,
+      "startMs": 43531,
+      "endMs": 44653,
+      "text": "次の「普通」ですよ。",
+      "normalizedText": "つぎのふつうですよ",
+      "confidence": 0.92
+    },
+    {
+      "index": 15,
+      "startMs": 45306,
+      "endMs": 45824,
+      "text": "そうですか。",
+      "normalizedText": "そうですか",
+      "confidence": 0.92
+    },
+    {
+      "index": 16,
+      "startMs": 46513,
+      "endMs": 46792,
+      "text": "どうも。",
+      "normalizedText": "どうも",
+      "confidence": 0.8
+    }
+  ]
+}

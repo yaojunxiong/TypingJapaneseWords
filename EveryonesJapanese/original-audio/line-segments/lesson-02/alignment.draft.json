@@ -1,0 +1,142 @@
+{
+  "version": "minna-line-alignment-draft-v1",
+  "lesson": 2,
+  "sourceSet": "source-230001",
+  "cd": "CD05",
+  "sourceTrack": "source-230001/tracks/cd-005.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-230001/tracks/cd-005.mp3",
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "山田一郎",
+      "japanese": "はい。どなたですか。",
+      "normalizedTarget": "はいどなたですか",
+      "normalizedAsrText": "はいどなたですか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        1
+      ],
+      "startMs": 10967,
+      "endMs": 12772,
+      "durationMs": 1805,
+      "audioPath": "line-segments/lesson-02/l02-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-02/l02-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [1]；以首尾语音活动边缘各保留约200ms自然余音"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "サントス",
+      "japanese": "408のサントスです。",
+      "normalizedTarget": "よんまるはちのさんとすです",
+      "normalizedAsrText": "よんまるはちのさんとすです",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        2
+      ],
+      "startMs": 13440,
+      "endMs": 15385,
+      "durationMs": 1945,
+      "audioPath": "line-segments/lesson-02/l02-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-02/l02-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [2]；以首尾语音活动边缘各保留约200ms自然余音"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "サントス",
+      "japanese": "こんにちは。サントスです。これからお世話になります。どうぞよろしくお願いします。",
+      "normalizedTarget": "こんにちはさんとすですこれからおせわになりますどうぞよろしくおねがいします",
+      "normalizedAsrText": "こんにちはさんとすですこれからおせわになりますどうぞよろしくおねがいします",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        3,
+        4,
+        5
+      ],
+      "startMs": 19592,
+      "endMs": 26280,
+      "durationMs": 6688,
+      "audioPath": "line-segments/lesson-02/l02-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-02/l02-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [3, 4, 5]；以首尾语音活动边缘各保留约200ms自然余音"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "山田一郎",
+      "japanese": "こちらこそよろしくお願いします。",
+      "normalizedTarget": "こちらこそよろしくおねがいします",
+      "normalizedAsrText": "こちらこそよろしくおねがいします",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        6
+      ],
+      "startMs": 26825,
+      "endMs": 28801,
+      "durationMs": 1976,
+      "audioPath": "line-segments/lesson-02/l02-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-02/l02-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [6]；以首尾语音活动边缘各保留约200ms自然余音"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "サントス",
+      "japanese": "あのう、これ、コーヒーです。どうぞ。",
+      "normalizedTarget": "あのうこれこーひーですどうぞ",
+      "normalizedAsrText": "あのうこれこーひーですどうぞ",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        7,
+        8,
+        9
+      ],
+      "startMs": 29045,
+      "endMs": 32402,
+      "durationMs": 3357,
+      "audioPath": "line-segments/lesson-02/l02-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-02/l02-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [7, 8, 9]；以首尾语音活动边缘各保留约200ms自然余音"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "山田一郎",
+      "japanese": "どうもありがとうございます。",
+      "normalizedTarget": "どうもありがとうございます",
+      "normalizedAsrText": "どうもありがとうございます",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        10
+      ],
+      "startMs": 32632,
+      "endMs": 34267,
+      "durationMs": 1635,
+      "audioPath": "line-segments/lesson-02/l02-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-02/l02-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按ASR文字顺序匹配 utterance [10]；以首尾语音活动边缘各保留约200ms自然余音"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ]
+}

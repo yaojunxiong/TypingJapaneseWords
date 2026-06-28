@@ -1,0 +1,123 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 2,
+  "cd": "CD05",
+  "sourceTrack": "source-230001/tracks/cd-005.mp3",
+  "durationMs": 36885,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "guidedPrompt": false,
+    "role": "timestamp_source_only"
+  },
+  "excludedRegions": [
+    {
+      "startMs": 0,
+      "endMs": 6641,
+      "reason": "课号、会話与标题"
+    },
+    {
+      "startMs": 6641,
+      "endMs": 8604,
+      "reason": "门铃音效「チーン」"
+    },
+    {
+      "startMs": 8604,
+      "endMs": 11167,
+      "reason": "门铃后停顿"
+    },
+    {
+      "startMs": 12572,
+      "endMs": 13640,
+      "reason": "说话人间停顿"
+    },
+    {
+      "startMs": 15185,
+      "endMs": 19792,
+      "reason": "场景转换与门铃音效"
+    }
+  ],
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 11167,
+      "endMs": 12572,
+      "text": "はい。どなたですか。",
+      "normalizedText": "はいどなたですか",
+      "confidence": 0.92
+    },
+    {
+      "index": 2,
+      "startMs": 13640,
+      "endMs": 15185,
+      "text": "408のサントスです。",
+      "normalizedText": "よんまるはちのさんとすです",
+      "confidence": 0.92
+    },
+    {
+      "index": 3,
+      "startMs": 19792,
+      "endMs": 21257,
+      "text": "こんにちは。サントスです。",
+      "normalizedText": "こんにちはさんとすです",
+      "confidence": 0.92
+    },
+    {
+      "index": 4,
+      "startMs": 22486,
+      "endMs": 23680,
+      "text": "これからお世話になります。",
+      "normalizedText": "これからおせわになります",
+      "confidence": 0.92
+    },
+    {
+      "index": 5,
+      "startMs": 24814,
+      "endMs": 26080,
+      "text": "どうぞよろしくお願いします。",
+      "normalizedText": "どうぞよろしくおねがいします",
+      "confidence": 0.92
+    },
+    {
+      "index": 6,
+      "startMs": 27025,
+      "endMs": 28601,
+      "text": "こちらこそよろしくお願いします。",
+      "normalizedText": "こちらこそよろしくおねがいします",
+      "confidence": 0.92
+    },
+    {
+      "index": 7,
+      "startMs": 29245,
+      "endMs": 29743,
+      "text": "あのう、",
+      "normalizedText": "あのう",
+      "confidence": 0.92
+    },
+    {
+      "index": 8,
+      "startMs": 30434,
+      "endMs": 31339,
+      "text": "これ、コーヒーです。",
+      "normalizedText": "これこーひーです",
+      "confidence": 0.92
+    },
+    {
+      "index": 9,
+      "startMs": 31939,
+      "endMs": 32202,
+      "text": "どうぞ。",
+      "normalizedText": "どうぞ",
+      "confidence": 0.84
+    },
+    {
+      "index": 10,
+      "startMs": 32832,
+      "endMs": 34067,
+      "text": "どうもありがとうございます。",
+      "normalizedText": "どうもありがとうございます",
+      "confidence": 0.92
+    }
+  ]
+}

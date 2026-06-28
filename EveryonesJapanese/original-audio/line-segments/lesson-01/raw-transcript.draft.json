@@ -1,0 +1,87 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 1,
+  "cd": "CD01",
+  "sourceTrack": "source-230001/tracks/cd-001.mp3",
+  "durationMs": 23980,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "guidedPrompt": false,
+    "role": "timestamp_source_only"
+  },
+  "excludedRegions": [
+    {
+      "startMs": 0,
+      "endMs": 5958,
+      "reason": "课号、会話与标题"
+    }
+  ],
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 5958,
+      "endMs": 7019,
+      "text": "おはようございます。",
+      "normalizedText": "おはようございます",
+      "confidence": 0.92
+    },
+    {
+      "index": 2,
+      "startMs": 7644,
+      "endMs": 8551,
+      "text": "おはようございます。",
+      "normalizedText": "おはようございます",
+      "confidence": 0.92
+    },
+    {
+      "index": 3,
+      "startMs": 9789,
+      "endMs": 12434,
+      "text": "佐藤さん、こちらはマイク・ミラーさんです。",
+      "normalizedText": "さとうさんこちらはまいくみらーさんです",
+      "confidence": 0.92
+    },
+    {
+      "index": 4,
+      "startMs": 13233,
+      "endMs": 13867,
+      "text": "初めまして。",
+      "normalizedText": "はじめまして",
+      "confidence": 0.92
+    },
+    {
+      "index": 5,
+      "startMs": 14444,
+      "endMs": 16939,
+      "text": "マイク・ミラーです。アメリカから来ました。",
+      "normalizedText": "まいくみらーですあめりかからきました",
+      "confidence": 0.92
+    },
+    {
+      "index": 6,
+      "startMs": 17512,
+      "endMs": 18109,
+      "text": "どうぞよろしく。",
+      "normalizedText": "どうぞよろしく",
+      "confidence": 0.92
+    },
+    {
+      "index": 7,
+      "startMs": 18738,
+      "endMs": 19757,
+      "text": "佐藤けい子です。",
+      "normalizedText": "さとうけいこです",
+      "confidence": 0.92
+    },
+    {
+      "index": 8,
+      "startMs": 20309,
+      "endMs": 21181,
+      "text": "どうぞよろしく。",
+      "normalizedText": "どうぞよろしく",
+      "confidence": 0.92
+    }
+  ]
+}
