@@ -1,0 +1,148 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 25,
+  "cd": "CD85",
+  "sourceTrack": "source-230001/tracks/cd-085.mp3",
+  "durationMs": 42554,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "guidedPrompt": false
+  },
+  "excludedIntro": {
+    "startMs": 0,
+    "endMs": 7000,
+    "text": "第二十五課、会話、いろいろお世話になりました"
+  },
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 7139,
+      "endMs": 8710,
+      "text": "天気、おめでとうございます。",
+      "normalizedText": "てんきおめでとうございます",
+      "confidence": 0.8
+    },
+    {
+      "index": 2,
+      "startMs": 9068,
+      "endMs": 9926,
+      "text": "ありがとうございます。",
+      "normalizedText": "ありがとうございます",
+      "confidence": 0.91
+    },
+    {
+      "index": 3,
+      "startMs": 10543,
+      "endMs": 13533,
+      "text": "ミラーさんが東京へ行ったら、寂しくなりますね。",
+      "normalizedText": "みらーさんがとうきょうへいったらさびしくなりますね",
+      "confidence": 0.94
+    },
+    {
+      "index": 4,
+      "startMs": 14089,
+      "endMs": 14779,
+      "text": "そうですね。",
+      "normalizedText": "そうですね",
+      "confidence": 0.97
+    },
+    {
+      "index": 5,
+      "startMs": 15320,
+      "endMs": 18431,
+      "text": "東京へ行っても、大阪のことを忘れないでくださいね。",
+      "normalizedText": "とうきょうへいってもおおさかのことをわすれないでくださいね",
+      "confidence": 0.94
+    },
+    {
+      "index": 6,
+      "startMs": 18824,
+      "endMs": 19248,
+      "text": "もちろん。",
+      "normalizedText": "もちろん",
+      "confidence": 0.99
+    },
+    {
+      "index": 7,
+      "startMs": 20446,
+      "endMs": 23603,
+      "text": "皆さん、暇があったら、ぜひ東京へ遊びに来てください。",
+      "normalizedText": "みなさんひまがあったらぜひとうきょうへあそびにきてください",
+      "confidence": 0.92
+    },
+    {
+      "index": 8,
+      "startMs": 24274,
+      "endMs": 26727,
+      "text": "ミラーさんも大阪へ来たら、電話をください。",
+      "normalizedText": "みらーさんもおおさかへきたらでんわをください",
+      "confidence": 0.9
+    },
+    {
+      "index": 9,
+      "startMs": 27433,
+      "endMs": 28394,
+      "text": "一緒に飲みましょう。",
+      "normalizedText": "いっしょにのみましょう",
+      "confidence": 0.94
+    },
+    {
+      "index": 10,
+      "startMs": 28806,
+      "endMs": 29573,
+      "text": "ぜひ。",
+      "normalizedText": "ぜひ",
+      "confidence": 0.79
+    },
+    {
+      "index": 11,
+      "startMs": 30857,
+      "endMs": 31263,
+      "text": "皆さん、",
+      "normalizedText": "みなさん",
+      "confidence": 0.96
+    },
+    {
+      "index": 12,
+      "startMs": 31894,
+      "endMs": 33646,
+      "text": "ほんとうにいろいろお世話になりました。",
+      "normalizedText": "ほんとうにいろいろおせわになりました",
+      "confidence": 0.91
+    },
+    {
+      "index": 13,
+      "startMs": 34360,
+      "endMs": 35210,
+      "text": "頑張ってください。",
+      "normalizedText": "がんばってください",
+      "confidence": 0.98
+    },
+    {
+      "index": 14,
+      "startMs": 35930,
+      "endMs": 37123,
+      "text": "お体に気をつけて。",
+      "normalizedText": "おからだにきをつけて",
+      "confidence": 0.85
+    },
+    {
+      "index": 15,
+      "startMs": 37563,
+      "endMs": 37758,
+      "text": "はい。",
+      "normalizedText": "はい",
+      "confidence": 0.93
+    },
+    {
+      "index": 16,
+      "startMs": 38547,
+      "endMs": 39753,
+      "text": "皆さんもどうぞお元気で。",
+      "normalizedText": "みなさんもどうぞおげんきで",
+      "confidence": 0.98
+    }
+  ]
+}

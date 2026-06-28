@@ -1,0 +1,240 @@
+{
+  "version": "minna-original-line-segments-draft-v2",
+  "lesson": 25,
+  "sourceSet": "source-230001",
+  "cd": "CD85",
+  "sourceTrack": "source-230001/tracks/cd-085.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-230001/tracks/cd-085.mp3",
+  "alignmentSource": "raw-transcript.draft.json",
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "木村",
+      "japanese": "転勤、おめでとうございます。",
+      "normalizedTarget": "てんきんおめでとうございます",
+      "normalizedAsrText": "てんきおめでとうございます",
+      "phoneticSimilarity": 0.963,
+      "matchedUtteranceIndexes": [
+        1
+      ],
+      "startMs": 6939,
+      "endMs": 8889,
+      "durationMs": 1950,
+      "matchConfidence": "high",
+      "boundaryReason": "ASR同音近似「天気」→教材・recitation「転勤」",
+      "audioPath": "line-segments/lesson-25/l25-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-25/l25-01.mp3",
+      "needsReview": true,
+      "contentMismatch": {
+        "rawTranscript": "天気、おめでとうございます。",
+        "textbook": "転勤、おめでとうございます。",
+        "recitationJson": "転勤、おめでとうございます。",
+        "assessment": "同音近似，使用假名相似度匹配，不判定为失败"
+      }
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "ミラー",
+      "japanese": "ありがとうございます。",
+      "normalizedTarget": "ありがとうございます",
+      "normalizedAsrText": "ありがとうございます",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        2
+      ],
+      "startMs": 8889,
+      "endMs": 10126,
+      "durationMs": 1237,
+      "matchConfidence": "high",
+      "boundaryReason": "单一ASR utterance，前后说话人停顿中点",
+      "audioPath": "line-segments/lesson-25/l25-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-25/l25-02.mp3",
+      "needsReview": true
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "木村",
+      "japanese": "ミラーさんが東京へ行ったら、寂しくなりますね。",
+      "normalizedTarget": "みらーさんがとうきょうへいったらさびしくなりますね",
+      "normalizedAsrText": "みらーさんがとうきょうへいったらさびしくなりますね",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        3
+      ],
+      "startMs": 10343,
+      "endMs": 13733,
+      "durationMs": 3390,
+      "matchConfidence": "high",
+      "boundaryReason": "单一ASR utterance，保留句内短停顿",
+      "audioPath": "line-segments/lesson-25/l25-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-25/l25-03.mp3",
+      "needsReview": true
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "佐藤",
+      "japanese": "そうですね。",
+      "normalizedTarget": "そうですね",
+      "normalizedAsrText": "そうですね",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        4
+      ],
+      "startMs": 13889,
+      "endMs": 14979,
+      "durationMs": 1090,
+      "matchConfidence": "high",
+      "boundaryReason": "单一ASR utterance",
+      "audioPath": "line-segments/lesson-25/l25-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-25/l25-04.mp3",
+      "needsReview": true
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "木村",
+      "japanese": "東京へ行っても、大阪のことを忘れないでくださいね。",
+      "normalizedTarget": "とうきょうへいってもおおさかのことをわすれないでくださいね",
+      "normalizedAsrText": "とうきょうへいってもおおさかのことをわすれないでくださいね",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        5
+      ],
+      "startMs": 15120,
+      "endMs": 18631,
+      "durationMs": 3511,
+      "matchConfidence": "high",
+      "boundaryReason": "跨ASR内部窗口但文本连续，按完整目标句合并",
+      "audioPath": "line-segments/lesson-25/l25-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-25/l25-05.mp3",
+      "needsReview": true
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "ミラー",
+      "japanese": "もちろん。皆さん、暇があったら、ぜひ東京へ遊びに来てください。",
+      "normalizedTarget": "もちろんみなさんひまがあったらぜひとうきょうへあそびにきてください",
+      "normalizedAsrText": "もちろんみなさんひまがあったらぜひとうきょうへあそびにきてください",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        6,
+        7
+      ],
+      "startMs": 18624,
+      "endMs": 23803,
+      "durationMs": 5179,
+      "matchConfidence": "high",
+      "boundaryReason": "正式台词对应两个ASR短语，按目标句合并",
+      "audioPath": "line-segments/lesson-25/l25-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-25/l25-06.mp3",
+      "needsReview": true
+    },
+    {
+      "lineNo": 7,
+      "displayOrder": 7,
+      "speaker": "サントス",
+      "japanese": "ミラーさんも大阪へ来たら、電話をください。いっしょに飲みましょう。",
+      "normalizedTarget": "みらーさんもおおさかへきたらでんわをくださいいっしょにのみましょう",
+      "normalizedAsrText": "みらーさんもおおさかへきたらでんわをくださいいっしょにのみましょう",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        8,
+        9
+      ],
+      "startMs": 24074,
+      "endMs": 28594,
+      "durationMs": 4520,
+      "matchConfidence": "high",
+      "boundaryReason": "正式第7句对应两个ASR短语；终点在第8句语音开始前",
+      "audioPath": "line-segments/lesson-25/l25-07.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-25/l25-07.mp3",
+      "needsReview": true
+    },
+    {
+      "lineNo": 8,
+      "displayOrder": 8,
+      "speaker": "ミラー",
+      "japanese": "ええ、ぜひ。皆さん、本当にいろいろお世話になりました。",
+      "normalizedTarget": "ええぜひみなさんほんとうにいろいろおせわになりました",
+      "normalizedAsrText": "ぜひみなさんほんとうにいろいろおせわになりました",
+      "phoneticSimilarity": 0.96,
+      "matchedUtteranceIndexes": [
+        10,
+        11,
+        12
+      ],
+      "startMs": 28606,
+      "endMs": 33846,
+      "durationMs": 5240,
+      "matchConfidence": "high",
+      "boundaryReason": "正式第8句合并三个ASR短语；ASR漏识别开头「ええ」",
+      "audioPath": "line-segments/lesson-25/l25-08.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-25/l25-08.mp3",
+      "needsReview": true,
+      "transcriptOmission": {
+        "rawTranscript": "ぜひ。皆さん、ほんとうにいろいろお世話になりました。",
+        "recitationJson": "ええ、ぜひ。皆さん、本当にいろいろお世話になりました。",
+        "omittedText": "ええ、"
+      }
+    },
+    {
+      "lineNo": 9,
+      "displayOrder": 9,
+      "speaker": "佐藤",
+      "japanese": "頑張ってください。お体に気をつけて。",
+      "normalizedTarget": "がんばってくださいおからだにきをつけて",
+      "normalizedAsrText": "がんばってくださいおからだにきをつけて",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        13,
+        14
+      ],
+      "startMs": 34160,
+      "endMs": 37323,
+      "durationMs": 3163,
+      "matchConfidence": "high",
+      "boundaryReason": "正式第9句只匹配「頑張って…／お体に…」，排除第8句后半段",
+      "audioPath": "line-segments/lesson-25/l25-09.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-25/l25-09.mp3",
+      "needsReview": true
+    },
+    {
+      "lineNo": 10,
+      "displayOrder": 10,
+      "speaker": "ミラー",
+      "japanese": "はい。皆さんもどうぞお元気で。",
+      "normalizedTarget": "はいみなさんもどうぞおげんきで",
+      "normalizedAsrText": "はいみなさんもどうぞおげんきで",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        15,
+        16
+      ],
+      "startMs": 37363,
+      "endMs": 39953,
+      "durationMs": 2590,
+      "matchConfidence": "high",
+      "boundaryReason": "正式第10句对应两个ASR短语，按目标句合并",
+      "audioPath": "line-segments/lesson-25/l25-10.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-25/l25-10.mp3",
+      "needsReview": true
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ]
+}
