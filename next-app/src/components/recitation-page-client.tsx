@@ -296,7 +296,7 @@ function CompactLineItem({
         <button
           type="button"
           data-testid="recitation-original-audio-button"
-          aria-label={hasOriginalAudio ? '播放原音' : '播放合成练习音'}
+          aria-label={hasOriginalAudio ? '播放教材原声' : '播放合成练习音'}
           onClick={(e) => { e.stopPropagation(); onPlayOriginal(line) }}
           style={{
             width: 28, height: 28, borderRadius: 14,
@@ -317,7 +317,7 @@ function CompactLineItem({
               中文提示
             </button>
             <button className="btn ghost small" onClick={(e) => { e.stopPropagation(); onPlayOriginal(line) }} style={{ background: '#fff', color: '#0f172a', border: '1px solid #dbe3ee', borderRadius: 10, padding: '8px 3px', fontSize: 12, whiteSpace: 'nowrap', opacity: hasPlayableAudio ? 1 : 0.65 }}>
-              原音
+               {hasOriginalAudio ? '教材原声' : '合成练习音'}
             </button>
             <button className="btn ghost small" onClick={(e) => { e.stopPropagation(); setShowExplanation(v => !v) }} style={{ background: '#fff', color: '#0f172a', border: '1px solid #dbe3ee', borderRadius: 10, padding: '8px 3px', fontSize: 12, whiteSpace: 'nowrap' }}>
               解析
@@ -796,6 +796,30 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     })
   }, [lessonNo])
 
+  // For Lesson 25, inject original line audio segment URLs from published index
+  const ORIGINAL_SEGMENTS_INDEX_URL = 'https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-25/index.draft.json'
+  useEffect(() => {
+    if (lessonNo !== 25) return
+    if (!lesson) return
+    let cancelled = false
+    fetch(ORIGINAL_SEGMENTS_INDEX_URL)
+      .then(r => r.json())
+      .then(idx => {
+        if (cancelled) return
+        const segMap = new Map<number, string>()
+        for (const seg of (idx.segments || [])) {
+          segMap.set(seg.lineNo, seg.audioUrl.startsWith('http') ? seg.audioUrl : `https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/${seg.audioPath}`)
+        }
+        const lines = lesson.lines.map(l => {
+          const url = segMap.get(l.order)
+          return url ? { ...l, originalAudioUrl: url, uiLabelZh: '教材原声' } : l
+        })
+        setLesson({ ...lesson, lines })
+      })
+      .catch(() => {})
+    return () => { cancelled = true }
+  }, [lessonNo, lesson])
+
   useEffect(() => {
     let cancelled = false
     listTakes(lessonNo)
@@ -944,7 +968,7 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     }
 
     if (line.originalAudioUrl) {
-      showNotice(line.uiLabelZh || '正在播放教材会话原声')
+      showNotice('正在播放教材原声')
     } else if (line.ttsAudioUrl) {
       showNotice('正在播放合成练习音')
     }
@@ -1285,7 +1309,8 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     : null
   const isOriginalPlaying = originalPlayback.status !== 'idle'
   const modalCaptionLine = currentTtsLine || currentContinuousLine
-  const modalCaptionMode = isOriginalPlaying ? '教材原音' : (currentTtsLine ? '系统音频' : (currentContinuousLine ? '我的背诵' : ''))
+  const ttsPlaybackLabel = currentTtsLine && currentTtsLine.originalAudioUrl ? '教材原声' : '系统音频'
+  const modalCaptionMode = isOriginalPlaying ? '教材原音' : (currentTtsLine ? ttsPlaybackLabel : (currentContinuousLine ? '我的背诵' : ''))
   const modalCaptionStatus = isOriginalPlaying
     ? originalPlayback.status
     : (currentTtsLine
@@ -1300,6 +1325,10 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
   const modalCaptionReading = modalCaptionLine
     ? ((modalCaptionLine as RecitationLineWithKana).kana || '')
     : ''
+  const hasOriginalLineAudio = lesson?.lines.some(l => Boolean(l.originalAudioUrl)) ?? false
+  const ttsModeLabel = hasOriginalLineAudio ? '教材原声' : '系统音频'
+  const ttsButtonSubtitle = hasOriginalLineAudio ? '教材原声' : '系统音频'
+  const originalLineLabel = hasOriginalLineAudio ? '教材原声' : '合成练习音'
   const floatingBottomOffset = showBottomNav
     ? 'calc(96px + env(safe-area-inset-bottom, 0px))'
     : 'calc(14px + env(safe-area-inset-bottom, 0px))'
@@ -1614,7 +1643,7 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
                   <div style={{ display: 'flex', gap: 8, flex: 1, flexWrap: 'wrap' }}>
                     <button type="button" onClick={handleStartTtsPlayback} style={{ flex: '1 1 calc(50% - 8px)', minWidth: 100, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1, background: 'rgba(255,255,255,0.2)', backdropFilter: 'blur(4px)', border: 'none', borderRadius: 12, padding: '8px 4px', cursor: 'pointer', color: '#fff', fontWeight: 700, fontSize: 14, textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
                       <span>🔊 试听全文音频</span>
-                      <span style={{ fontSize: 11, opacity: 0.8 }}>系统音频</span>
+                      <span style={{ fontSize: 11, opacity: 0.8 }}>{ttsButtonSubtitle}</span>
                     </button>
                     <button type="button" onClick={hasBestTakeCount === totalLessonLines ? handleStartContinuousPlayback : () => showNotice('完成本课全部句子后可试听完整背诵')} style={{ flex: '1 1 calc(50% - 8px)', minWidth: 100, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1, background: hasBestTakeCount === totalLessonLines ? 'rgba(255,255,255,0.2)' : 'rgba(255,255,255,0.08)', backdropFilter: 'blur(4px)', border: 'none', borderRadius: 12, padding: '8px 4px', cursor: hasBestTakeCount === totalLessonLines ? 'pointer' : 'default', color: hasBestTakeCount === totalLessonLines ? '#fff' : 'rgba(255,255,255,0.5)', fontWeight: 700, fontSize: 14, textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
                       <span>🎤 试听完整背诵</span>
