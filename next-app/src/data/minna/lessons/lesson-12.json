@@ -760,9 +760,9 @@
     {
       "type": "conversation",
       "id": "l12_conversation",
-      "sourceType": "official_video_subtitle",
-      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P12_%E7%AC%AC12%E8%AA%B2.json",
-      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P12_%E7%AC%AC12%E8%AA%B2.mp4",
+      "sourceType": "conversation_image_human_confirmed",
+      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/大家的日本語第2版-会話_P12_第12課.mp4",
+      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/大家的日本語第2版-会話_P12_第12課.mp4",
       "title": {
         "zh": "会话背诵",
         "en": "Conversation Practice"
@@ -778,275 +778,156 @@
       "items": [
         {
           "id": "l12-conv-001",
-          "speaker": "",
-          "jp": "ん",
-          "kana": "ん",
-          "zh": "嗯",
+          "speaker": "ミラー",
+          "jp": "ただいま。",
+          "zh": "我回来了。",
           "keyword": "",
-          "videoStart": "0:00.00",
-          "videoEnd": "0:02.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "ただいま。"
         },
         {
           "id": "l12-conv-002",
-          "speaker": "",
-          "jp": "ただいま",
-          "kana": "ただいま",
-          "zh": "我回来了。",
+          "speaker": "管理人",
+          "jp": "お帰りなさい。",
+          "zh": "欢迎回来。",
           "keyword": "",
-          "videoStart": "0:09.20",
-          "videoEnd": "0:10.80",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "おかえりなさい。"
         },
         {
           "id": "l12-conv-003",
-          "speaker": "",
-          "jp": "おかえりなさい",
-          "kana": "おかえりなさい",
-          "zh": "欢迎回来。",
+          "speaker": "ミラー",
+          "jp": "これ、京都のお土産です。",
+          "zh": "这是京都的特产。",
           "keyword": "",
-          "videoStart": "0:10.80",
-          "videoEnd": "0:12.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "これ、きょうとのおみやげです。"
         },
         {
           "id": "l12-conv-004",
-          "speaker": "",
-          "jp": "これ、京都のお土産です",
-          "kana": "",
-          "zh": "这是我从京都带回来的特产。",
-          "keyword": "土産です",
-          "videoStart": "0:12.00",
-          "videoEnd": "0:14.80",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "管理人",
+          "jp": "どうもすみません。祇園祭はどうでしたか。",
+          "zh": "谢谢。祇园祭怎么样？",
+          "keyword": "",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "どうもすみません。ぎおんまつりはどうでしたか。"
         },
         {
           "id": "l12-conv-005",
-          "speaker": "",
-          "jp": "どうもありがとうございます",
-          "kana": "どうもありがとうございます",
-          "zh": "非常感谢你。",
+          "speaker": "ミラー",
+          "jp": "おもしろかったです。とてもにぎやかでした。",
+          "zh": "很好玩。非常热闹。",
           "keyword": "",
-          "videoStart": "0:14.80",
-          "videoEnd": "0:18.10",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "おもしろかったです。とてもにぎやかでした。"
         },
         {
           "id": "l12-conv-006",
-          "speaker": "",
-          "jp": "祇園祭はどうでしたか？",
-          "kana": "",
-          "zh": "祇园祭怎么样？",
-          "keyword": "祇園祭",
-          "videoStart": "0:18.10",
-          "videoEnd": "0:20.20",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "管理人",
+          "jp": "祇園祭は京都の祭りでいちばん有名ですからね。",
+          "zh": "因为祇园祭是京都最有名的祭典嘛。",
+          "keyword": "",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "ぎおんまつりはきょうとのまつりでいちばんゆうめいですからね。"
         },
         {
           "id": "l12-conv-007",
-          "speaker": "",
-          "jp": "面白かったです",
-          "kana": "",
-          "zh": "很好玩。",
-          "keyword": "面白",
-          "videoStart": "0:20.20",
-          "videoEnd": "0:21.30",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "ミラー",
+          "jp": "そうですか。写真をたくさん撮りました。これです。",
+          "zh": "是吗？我拍了很多照片。就是这些。",
+          "keyword": "",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "そうですか。しゃしんをたくさんとりました。これです。"
         },
         {
           "id": "l12-conv-008",
-          "speaker": "",
-          "jp": "とてもにぎやかでした",
-          "kana": "とてもにぎやかでした",
-          "zh": "非常热闹。",
+          "speaker": "管理人",
+          "jp": "わあ、すごい人ですね。",
+          "zh": "人好多啊！",
           "keyword": "",
-          "videoStart": "0:21.30",
-          "videoEnd": "0:24.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "わあ、すごいひとですね。"
         },
         {
           "id": "l12-conv-009",
-          "speaker": "",
-          "jp": "祇園祭は、",
-          "kana": "",
-          "zh": "祇园祭是",
-          "keyword": "祇園祭",
-          "videoStart": "0:24.00",
-          "videoEnd": "0:25.60",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l12-conv-010",
-          "speaker": "",
-          "jp": "京都のお祭りで、",
-          "kana": "",
-          "zh": "京都的节日，",
-          "keyword": "京都",
-          "videoStart": "0:25.60",
-          "videoEnd": "0:27.44",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l12-conv-011",
-          "speaker": "",
-          "jp": "一番有名ですからね",
-          "kana": "",
-          "zh": "是最有名的嘛。",
-          "keyword": "一番有名です",
-          "videoStart": "0:27.44",
-          "videoEnd": "0:29.70",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l12-conv-012",
-          "speaker": "",
-          "jp": "そうですか",
-          "kana": "そうですか",
-          "zh": "是吗？",
+          "speaker": "ミラー",
+          "jp": "ええ。ちょっと疲れました。",
+          "zh": "嗯。有点累了。",
           "keyword": "",
-          "videoStart": "0:29.70",
-          "videoEnd": "0:31.30",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l12-conv-013",
-          "speaker": "",
-          "jp": "写真をたくさん撮りました",
-          "kana": "",
-          "zh": "我拍了很多照片。",
-          "keyword": "写真",
-          "videoStart": "0:31.30",
-          "videoEnd": "0:35.60",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l12-conv-014",
-          "speaker": "",
-          "jp": "これです",
-          "kana": "これです",
-          "zh": "就是这些。",
-          "keyword": "",
-          "videoStart": "0:35.60",
-          "videoEnd": "0:38.60",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l12-conv-015",
-          "speaker": "",
-          "jp": "うわっ",
-          "kana": "うわっ",
-          "zh": "哇！",
-          "keyword": "",
-          "videoStart": "0:39.60",
-          "videoEnd": "0:40.60",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l12-conv-016",
-          "speaker": "",
-          "jp": "すごい人ですね",
-          "kana": "",
-          "zh": "人好多啊！",
-          "keyword": "",
-          "videoStart": "0:40.60",
-          "videoEnd": "0:44.10",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l12-conv-017",
-          "speaker": "",
-          "jp": "ちょっと疲れました",
-          "kana": "",
-          "zh": "有点累了。",
-          "keyword": "",
-          "videoStart": "0:44.10",
-          "videoEnd": "0:47.10",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "ええ。ちょっとつかれました。"
         }
       ]
     },
@@ -2817,39 +2698,243 @@
     "sceneSummary": "Miller从京都旅行回到寄宿家庭。他给家庭成员带了京都特产作为礼物。家人感谢他并询问祇园祭的情况。Miller分享了他的体验和照片，展示了一个温馨的归家场景。",
     "storyExplanation": "这段对话展示了日本家庭生活中的典型场景——外出归来。Miller使用「ただいま」告知家人自己回来了，家人则以「おかえりなさい」回应。赠送礼物（お土産）是日本旅行后的重要礼仪。对话中大量使用了过去形（面白かったです、にぎやかでした、撮りました、疲れました），这是本课的核心语法。家人还通过「一番有名ですからね」解释了祇园祭为何如此盛大，运用了最高级和「から」表示原因。整体对话自然流畅地融合了本课所有重点语法。",
     "characters": [
-      { "name": "Miller", "role": "留学生", "relationship": "寄宿家庭的客人" },
-      { "name": "山田", "role": "寄宿家庭主人", "relationship": "寄宿家庭成员" }
+      {
+        "name": "Miller",
+        "role": "留学生",
+        "relationship": "寄宿家庭的客人"
+      },
+      {
+        "name": "山田",
+        "role": "寄宿家庭主人",
+        "relationship": "寄宿家庭成员"
+      }
     ],
     "conversationFlow": [
-      { "step": 1, "title": "开场思考", "explanation": "Miller回到家门前，发出「ん」的思考声，可能在整理思绪或准备进门。", "relatedLineIds": ["l12-conv-001"] },
-      { "step": 2, "title": "回家报告", "explanation": "Miller进门后说「ただいま」，这是日本人回家时的标准问候语，告知家人自己回来了。", "relatedLineIds": ["l12-conv-002"] },
-      { "step": 3, "title": "家人迎接", "explanation": "家庭成员用「おかえりなさい」迎接Miller回家，这是对「ただいま」的标准回应，表示欢迎。", "relatedLineIds": ["l12-conv-003"] },
-      { "step": 4, "title": "赠送礼物", "explanation": "Miller立即拿出从京都带回来的特产送给家人，日本习俗中旅行归来带伴手礼是基本礼仪。", "relatedLineIds": ["l12-conv-004"] },
-      { "step": 5, "title": "表达感谢", "explanation": "家人收到礼物后用礼貌的「どうもありがとうございます」表达感谢，体现了日本人对礼节的重视。", "relatedLineIds": ["l12-conv-005"] },
-      { "step": 6, "title": "询问旅行体验", "explanation": "家人询问祇园祭怎么样，使用了过去疑问形「どうでしたか」，自然地引入对话主题。", "relatedLineIds": ["l12-conv-006"] },
-      { "step": 7, "title": "描述体验", "explanation": "Miller用「面白かったです」和「とてもにぎやかでした」描述祇园祭的体验，分别使用了い形容词和な形容词的过去形。", "relatedLineIds": ["l12-conv-007", "l12-conv-008"] },
-      { "step": 8, "title": "补充说明", "explanation": "家人解释祇园祭是京都最有名的节日，使用了「一番有名」的最高级表达和「から」表示原因，语气中带有「ね」的共识感。", "relatedLineIds": ["l12-conv-009", "l12-conv-010", "l12-conv-011"] },
-      { "step": 9, "title": "展示照片", "explanation": "Miller说拍了很多照片，并用「これです」引出照片，家人看到后发出惊叹「うわっ」和「すごい人ですね」。", "relatedLineIds": ["l12-conv-012", "l12-conv-013", "l12-conv-014", "l12-conv-015", "l12-conv-016"] },
-      { "step": 10, "title": "表达疲劳", "explanation": "对话以Miller说「ちょっと疲れました」结束，表示虽然很开心但也有点累了，使用了动词过去形。", "relatedLineIds": ["l12-conv-017"] }
+      {
+        "step": 1,
+        "title": "开场思考",
+        "explanation": "Miller回到家门前，发出「ん」的思考声，可能在整理思绪或准备进门。",
+        "relatedLineIds": [
+          "l12-conv-001"
+        ]
+      },
+      {
+        "step": 2,
+        "title": "回家报告",
+        "explanation": "Miller进门后说「ただいま」，这是日本人回家时的标准问候语，告知家人自己回来了。",
+        "relatedLineIds": [
+          "l12-conv-002"
+        ]
+      },
+      {
+        "step": 3,
+        "title": "家人迎接",
+        "explanation": "家庭成员用「おかえりなさい」迎接Miller回家，这是对「ただいま」的标准回应，表示欢迎。",
+        "relatedLineIds": [
+          "l12-conv-003"
+        ]
+      },
+      {
+        "step": 4,
+        "title": "赠送礼物",
+        "explanation": "Miller立即拿出从京都带回来的特产送给家人，日本习俗中旅行归来带伴手礼是基本礼仪。",
+        "relatedLineIds": [
+          "l12-conv-004"
+        ]
+      },
+      {
+        "step": 5,
+        "title": "表达感谢",
+        "explanation": "家人收到礼物后用礼貌的「どうもありがとうございます」表达感谢，体现了日本人对礼节的重视。",
+        "relatedLineIds": [
+          "l12-conv-005"
+        ]
+      },
+      {
+        "step": 6,
+        "title": "询问旅行体验",
+        "explanation": "家人询问祇园祭怎么样，使用了过去疑问形「どうでしたか」，自然地引入对话主题。",
+        "relatedLineIds": [
+          "l12-conv-006"
+        ]
+      },
+      {
+        "step": 7,
+        "title": "描述体验",
+        "explanation": "Miller用「面白かったです」和「とてもにぎやかでした」描述祇园祭的体验，分别使用了い形容词和な形容词的过去形。",
+        "relatedLineIds": [
+          "l12-conv-007",
+          "l12-conv-008"
+        ]
+      },
+      {
+        "step": 8,
+        "title": "补充说明",
+        "explanation": "家人解释祇园祭是京都最有名的节日，使用了「一番有名」的最高级表达和「から」表示原因，语气中带有「ね」的共识感。",
+        "relatedLineIds": [
+          "l12-conv-009",
+          "l12-conv-010",
+          "l12-conv-011"
+        ]
+      },
+      {
+        "step": 9,
+        "title": "展示照片",
+        "explanation": "Miller说拍了很多照片，并用「これです」引出照片，家人看到后发出惊叹「うわっ」和「すごい人ですね」。",
+        "relatedLineIds": [
+          "l12-conv-012",
+          "l12-conv-013",
+          "l12-conv-014",
+          "l12-conv-015",
+          "l12-conv-016"
+        ]
+      },
+      {
+        "step": 10,
+        "title": "表达疲劳",
+        "explanation": "对话以Miller说「ちょっと疲れました」结束，表示虽然很开心但也有点累了，使用了动词过去形。",
+        "relatedLineIds": [
+          "l12-conv-017"
+        ]
+      }
     ],
     "lineUsage": [
-      { "lineId": "l12-conv-001", "japanese": "ん", "chineseMeaning": "嗯", "realLifeUse": "思考或犹豫时的自然发声，类似中文的「嗯」，在开口前使用。", "emotionTone": "沉思、犹豫", "memoryTip": "想象进门前的深吸一口气" },
-      { "lineId": "l12-conv-002", "japanese": "ただいま", "chineseMeaning": "我回来了。", "realLifeUse": "回到家时说的固定用语，无论对家人还是室友都要说。", "emotionTone": "轻松、自然", "memoryTip": "联想「ただ今」（刚刚现在），表示「我现在回来了」" },
-      { "lineId": "l12-conv-003", "japanese": "おかえりなさい", "chineseMeaning": "欢迎回来。", "realLifeUse": "回应「ただいま」的标准答复，家人或室友听到后必须回应。", "emotionTone": "温暖、欢迎", "memoryTip": "「お帰り」=回去 + 「なさい」=请，即「请回来（的人进来）」" },
-      { "lineId": "l12-conv-004", "japanese": "これ、京都のお土産です", "chineseMeaning": "这是我从京都带回来的特产。", "realLifeUse": "旅行归来赠送伴手礼时的标准说法，也可以替换地名如「これ、北海道のお土産です」。", "emotionTone": "礼貌、热情", "memoryTip": "「お土産」的土是「土地」，産是「产物」——当地的特产" },
-      { "lineId": "l12-conv-005", "japanese": "どうもありがとうございます", "chineseMeaning": "非常感谢你。", "realLifeUse": "表达感谢的最礼貌说法，收到礼物、帮助时均可使用。", "emotionTone": "真诚、感激", "memoryTip": "「どうも」加强语气 + 「ありがとう」=谢谢 + 「ございます」=礼貌形" },
-      { "lineId": "l12-conv-006", "japanese": "祇園祭はどうでしたか？", "chineseMeaning": "祇园祭怎么样？", "realLifeUse": "询问对方对某个活动/地点的感受时使用，替换主语即可，如「旅行はどうでしたか？」。", "emotionTone": "关心、好奇", "memoryTip": "「どうでしたか」是「どうですか」的过去形，询问过去的体验" },
-      { "lineId": "l12-conv-007", "japanese": "面白かったです", "chineseMeaning": "很好玩。", "realLifeUse": "描述某事物有趣/好玩的过去式，可用于电影、旅行、活动等。", "emotionTone": "愉快、满足", "memoryTip": "「面白い」→「面白かった」：い→かった，即い形容词过去形" },
-      { "lineId": "l12-conv-008", "japanese": "とてもにぎやかでした", "chineseMeaning": "非常热闹。", "realLifeUse": "描述场所或活动很热闹的过去式，如「パーティーはとてもにぎやかでした」。", "emotionTone": "惊叹、兴奋", "memoryTip": "「にぎやかだ」→「にぎやかでした」：な形容词过去形用でした" },
-      { "lineId": "l12-conv-009", "japanese": "祇園祭は、", "chineseMeaning": "祇园祭是", "realLifeUse": "引出话题时的铺垫，先提出主题再补充说明。", "emotionTone": "陈述、引导", "memoryTip": "句中用「は」提示主题，逗号表示话还没说完" },
-      { "lineId": "l12-conv-010", "japanese": "京都のお祭りで、", "chineseMeaning": "京都的节日，", "realLifeUse": "用「で」中顿连接前后句，相当于中文的「是……，……」，用于列举说明。", "emotionTone": "说明、客观", "memoryTip": "「で」是「です」的中顿形，连接前后分句" },
-      { "lineId": "l12-conv-011", "japanese": "一番有名ですからね", "chineseMeaning": "是最有名的嘛。", "realLifeUse": "「一番」+形容词表示最高级，「から」说明原因，「ね」寻求认同。日常表达推荐理由时很常用。", "emotionTone": "肯定、共识", "memoryTip": "「一番」=最 + 「有名」+ 「から」=因为 + 「ね」=对吧" },
-      { "lineId": "l12-conv-012", "japanese": "そうですか", "chineseMeaning": "是吗？", "realLifeUse": "听到新信息时的回应，表示「原来如此」或「是吗」，语调不同含义不同。", "emotionTone": "好奇、理解", "memoryTip": "「そう」=那样 + 「ですか」=是吗，字面「是那样吗」" },
-      { "lineId": "l12-conv-013", "japanese": "写真をたくさん撮りました", "chineseMeaning": "我拍了很多照片。", "realLifeUse": "描述做了某事且数量很多。结构是「宾语 + を + たくさん + 动词过去形」。", "emotionTone": "分享、开心", "memoryTip": "「写真」=照片 + 「を」+ 「たくさん」=很多 + 「撮る」→「撮りました」=拍了" },
-      { "lineId": "l12-conv-014", "japanese": "これです", "chineseMeaning": "就是这些。", "realLifeUse": "指示事物时的简洁表达，可以指着照片、物品说「就是这个」。", "emotionTone": "干脆、肯定", "memoryTip": "「これ」=这个 + 「です」=是，简单直接的指示" },
-      { "lineId": "l12-conv-015", "japanese": "うわっ", "chineseMeaning": "哇！", "realLifeUse": "看到令人惊讶或赞叹的事物时的感叹词，类似中文的「哇」。", "emotionTone": "惊讶、赞叹", "memoryTip": "促音「っ」表示声音短促，增强惊讶感" },
-      { "lineId": "l12-conv-016", "japanese": "すごい人ですね", "chineseMeaning": "人好多啊！", "realLifeUse": "「すごい」表示「厉害/惊人」，「人」+「ですね」表示感叹。看到拥挤人群时非常实用。", "emotionTone": "震惊、感叹", "memoryTip": "「すごい」=好厉害 + 「人」=人 + 「ですね」=呢/啊" },
-      { "lineId": "l12-conv-017", "japanese": "ちょっと疲れました", "chineseMeaning": "有点累了。", "realLifeUse": "表达疲劳程度不高时使用，「ちょっと」缓和语气。旅行累了、工作累了都可以用。", "emotionTone": "疲惫、放松", "memoryTip": "「ちょっと」=稍微 + 「疲れる」→「疲れました」=累了" }
+      {
+        "lineId": "l12-conv-001",
+        "japanese": "ん",
+        "chineseMeaning": "嗯",
+        "realLifeUse": "思考或犹豫时的自然发声，类似中文的「嗯」，在开口前使用。",
+        "emotionTone": "沉思、犹豫",
+        "memoryTip": "想象进门前的深吸一口气"
+      },
+      {
+        "lineId": "l12-conv-002",
+        "japanese": "ただいま",
+        "chineseMeaning": "我回来了。",
+        "realLifeUse": "回到家时说的固定用语，无论对家人还是室友都要说。",
+        "emotionTone": "轻松、自然",
+        "memoryTip": "联想「ただ今」（刚刚现在），表示「我现在回来了」"
+      },
+      {
+        "lineId": "l12-conv-003",
+        "japanese": "おかえりなさい",
+        "chineseMeaning": "欢迎回来。",
+        "realLifeUse": "回应「ただいま」的标准答复，家人或室友听到后必须回应。",
+        "emotionTone": "温暖、欢迎",
+        "memoryTip": "「お帰り」=回去 + 「なさい」=请，即「请回来（的人进来）」"
+      },
+      {
+        "lineId": "l12-conv-004",
+        "japanese": "これ、京都のお土産です",
+        "chineseMeaning": "这是我从京都带回来的特产。",
+        "realLifeUse": "旅行归来赠送伴手礼时的标准说法，也可以替换地名如「これ、北海道のお土産です」。",
+        "emotionTone": "礼貌、热情",
+        "memoryTip": "「お土産」的土是「土地」，産是「产物」——当地的特产"
+      },
+      {
+        "lineId": "l12-conv-005",
+        "japanese": "どうもありがとうございます",
+        "chineseMeaning": "非常感谢你。",
+        "realLifeUse": "表达感谢的最礼貌说法，收到礼物、帮助时均可使用。",
+        "emotionTone": "真诚、感激",
+        "memoryTip": "「どうも」加强语气 + 「ありがとう」=谢谢 + 「ございます」=礼貌形"
+      },
+      {
+        "lineId": "l12-conv-006",
+        "japanese": "祇園祭はどうでしたか？",
+        "chineseMeaning": "祇园祭怎么样？",
+        "realLifeUse": "询问对方对某个活动/地点的感受时使用，替换主语即可，如「旅行はどうでしたか？」。",
+        "emotionTone": "关心、好奇",
+        "memoryTip": "「どうでしたか」是「どうですか」的过去形，询问过去的体验"
+      },
+      {
+        "lineId": "l12-conv-007",
+        "japanese": "面白かったです",
+        "chineseMeaning": "很好玩。",
+        "realLifeUse": "描述某事物有趣/好玩的过去式，可用于电影、旅行、活动等。",
+        "emotionTone": "愉快、满足",
+        "memoryTip": "「面白い」→「面白かった」：い→かった，即い形容词过去形"
+      },
+      {
+        "lineId": "l12-conv-008",
+        "japanese": "とてもにぎやかでした",
+        "chineseMeaning": "非常热闹。",
+        "realLifeUse": "描述场所或活动很热闹的过去式，如「パーティーはとてもにぎやかでした」。",
+        "emotionTone": "惊叹、兴奋",
+        "memoryTip": "「にぎやかだ」→「にぎやかでした」：な形容词过去形用でした"
+      },
+      {
+        "lineId": "l12-conv-009",
+        "japanese": "祇園祭は、",
+        "chineseMeaning": "祇园祭是",
+        "realLifeUse": "引出话题时的铺垫，先提出主题再补充说明。",
+        "emotionTone": "陈述、引导",
+        "memoryTip": "句中用「は」提示主题，逗号表示话还没说完"
+      },
+      {
+        "lineId": "l12-conv-010",
+        "japanese": "京都のお祭りで、",
+        "chineseMeaning": "京都的节日，",
+        "realLifeUse": "用「で」中顿连接前后句，相当于中文的「是……，……」，用于列举说明。",
+        "emotionTone": "说明、客观",
+        "memoryTip": "「で」是「です」的中顿形，连接前后分句"
+      },
+      {
+        "lineId": "l12-conv-011",
+        "japanese": "一番有名ですからね",
+        "chineseMeaning": "是最有名的嘛。",
+        "realLifeUse": "「一番」+形容词表示最高级，「から」说明原因，「ね」寻求认同。日常表达推荐理由时很常用。",
+        "emotionTone": "肯定、共识",
+        "memoryTip": "「一番」=最 + 「有名」+ 「から」=因为 + 「ね」=对吧"
+      },
+      {
+        "lineId": "l12-conv-012",
+        "japanese": "そうですか",
+        "chineseMeaning": "是吗？",
+        "realLifeUse": "听到新信息时的回应，表示「原来如此」或「是吗」，语调不同含义不同。",
+        "emotionTone": "好奇、理解",
+        "memoryTip": "「そう」=那样 + 「ですか」=是吗，字面「是那样吗」"
+      },
+      {
+        "lineId": "l12-conv-013",
+        "japanese": "写真をたくさん撮りました",
+        "chineseMeaning": "我拍了很多照片。",
+        "realLifeUse": "描述做了某事且数量很多。结构是「宾语 + を + たくさん + 动词过去形」。",
+        "emotionTone": "分享、开心",
+        "memoryTip": "「写真」=照片 + 「を」+ 「たくさん」=很多 + 「撮る」→「撮りました」=拍了"
+      },
+      {
+        "lineId": "l12-conv-014",
+        "japanese": "これです",
+        "chineseMeaning": "就是这些。",
+        "realLifeUse": "指示事物时的简洁表达，可以指着照片、物品说「就是这个」。",
+        "emotionTone": "干脆、肯定",
+        "memoryTip": "「これ」=这个 + 「です」=是，简单直接的指示"
+      },
+      {
+        "lineId": "l12-conv-015",
+        "japanese": "うわっ",
+        "chineseMeaning": "哇！",
+        "realLifeUse": "看到令人惊讶或赞叹的事物时的感叹词，类似中文的「哇」。",
+        "emotionTone": "惊讶、赞叹",
+        "memoryTip": "促音「っ」表示声音短促，增强惊讶感"
+      },
+      {
+        "lineId": "l12-conv-016",
+        "japanese": "すごい人ですね",
+        "chineseMeaning": "人好多啊！",
+        "realLifeUse": "「すごい」表示「厉害/惊人」，「人」+「ですね」表示感叹。看到拥挤人群时非常实用。",
+        "emotionTone": "震惊、感叹",
+        "memoryTip": "「すごい」=好厉害 + 「人」=人 + 「ですね」=呢/啊"
+      },
+      {
+        "lineId": "l12-conv-017",
+        "japanese": "ちょっと疲れました",
+        "chineseMeaning": "有点累了。",
+        "realLifeUse": "表达疲劳程度不高时使用，「ちょっと」缓和语气。旅行累了、工作累了都可以用。",
+        "emotionTone": "疲惫、放松",
+        "memoryTip": "「ちょっと」=稍微 + 「疲れる」→「疲れました」=累了"
+      }
     ],
     "chineseRetellPrompt": "请用中文复述Miller从京都回到家中的情景。内容包括：他如何进门打招呼、赠送伴手礼、家人感谢并询问祇园祭体验、Miller描述祭典的热闹场面、家人补充说明祇园祭是京都最有名的节日、Miller展示照片、家人看到人山人海的照片感到惊讶、以及Miller表示虽然开心但有点累了。尽量使用自然的口语表达。",
     "realLifeReplacementPractice": [

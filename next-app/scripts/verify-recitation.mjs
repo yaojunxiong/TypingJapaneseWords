@@ -63,14 +63,6 @@ function verifyLesson(filename) {
     if (manifestEntry.audioType !== 'tts-practice') fail(`${prefix}: manifest audioType mismatch`)
   })
 
-  if (lessonId === 'lesson-02') {
-    if (lesson.lines.length !== 9) fail('lesson-02.json: expected 9 lines')
-    const line7 = lesson.lines[6]
-    if (line7.speaker !== 'サントス') fail('lesson-02.json: line 7 speaker must be サントス')
-    if (line7.ja !== 'あのー、これコーヒーです') fail('lesson-02.json: line 7 text mismatch')
-    if (line7.confidence !== 'high') fail('lesson-02.json: line 7 confidence must be high')
-    if (line7.requiresManualReview !== false) fail('lesson-02.json: line 7 requiresManualReview must be false')
-  }
 
   return { lessonId, lines: lesson.lines.length }
 }

@@ -692,9 +692,9 @@
     {
       "type": "conversation",
       "id": "l06_conversation",
-      "sourceType": "official_video_subtitle",
-      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P6_%E7%AC%AC6%E8%AA%B2.json",
-      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P6_%E7%AC%AC6%E8%AA%B2.mp4",
+      "sourceType": "conversation_image_human_confirmed",
+      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/大家的日本語第2版-会話_P6_第6課.mp4",
+      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/大家的日本語第2版-会話_P6_第6課.mp4",
       "title": {
         "zh": "会话背诵",
         "en": "Conversation Practice"
@@ -710,179 +710,156 @@
       "items": [
         {
           "id": "l06-conv-001",
-          "speaker": "",
-          "jp": "ミラーさん!",
-          "kana": "ミラーさん!",
+          "speaker": "佐藤",
+          "jp": "ミラーさん。",
           "zh": "米勒先生！",
           "keyword": "",
-          "videoStart": "0:00.00",
-          "videoEnd": "0:01.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "みらーさん。"
         },
         {
           "id": "l06-conv-002",
-          "speaker": "",
-          "jp": "何ですか?",
-          "kana": "",
+          "speaker": "ミラー",
+          "jp": "何ですか。",
           "zh": "什么事？",
           "keyword": "",
-          "videoStart": "0:02.00",
-          "videoEnd": "0:03.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "なんですか。"
         },
         {
           "id": "l06-conv-003",
-          "speaker": "",
-          "jp": "明日、友達とお花見をします。",
-          "kana": "",
-          "zh": "明天我和朋友去赏花。",
-          "keyword": "花見",
-          "videoStart": "0:03.50",
-          "videoEnd": "0:07.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "佐藤",
+          "jp": "あした、友達とお花見をします。ミラーさんもいっしょに行きませんか。",
+          "zh": "明天我和朋友去赏花。米勒先生也一起去吧？",
+          "keyword": "",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "あした、ともだちとおはなみをします。みらーさんもいっしょにいきませんか。"
         },
         {
           "id": "l06-conv-004",
-          "speaker": "",
-          "jp": "ミラーさんも一緒に行きませんか?",
-          "kana": "",
-          "zh": "米勒先生也一起去吧？",
-          "keyword": "一緒",
-          "videoStart": "0:07.00",
-          "videoEnd": "0:09.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "ミラー",
+          "jp": "いいですね。どこへ行きますか。",
+          "zh": "好啊。去哪儿？",
+          "keyword": "",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "いいですね。どこへいきますか。"
         },
         {
           "id": "l06-conv-005",
-          "speaker": "",
-          "jp": "いいですね",
-          "kana": "いいですね",
-          "zh": "那挺好的",
+          "speaker": "佐藤",
+          "jp": "大阪城です。",
+          "zh": "去大阪城。",
           "keyword": "",
-          "videoStart": "0:30.32",
-          "videoEnd": "0:31.76",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "おおさかじょうです。"
         },
         {
           "id": "l06-conv-006",
-          "speaker": "",
-          "jp": "どこへ行きますか",
-          "kana": "",
-          "zh": "你要去哪里？",
+          "speaker": "ミラー",
+          "jp": "何時に行きますか。",
+          "zh": "几点去？",
           "keyword": "",
-          "videoStart": "0:31.76",
-          "videoEnd": "0:33.80",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "なんじにいきますか。"
         },
         {
           "id": "l06-conv-007",
-          "speaker": "",
-          "jp": "大阪城です",
-          "kana": "",
-          "zh": "是大阪城堡",
-          "keyword": "大阪城です",
-          "videoStart": "0:33.80",
-          "videoEnd": "0:38.40",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "佐藤",
+          "jp": "10時に大阪駅で会いましょう。",
+          "zh": "10点在大阪站见吧。",
+          "keyword": "",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "じゅうじにおおさかえきであいましょう。"
         },
         {
           "id": "l06-conv-008",
-          "speaker": "",
-          "jp": "何時に行きますか",
-          "kana": "なんじに いきますか",
-          "zh": "几点去？",
-          "keyword": "何時",
-          "videoStart": "0:38.40",
-          "videoEnd": "0:41.16",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "ミラー",
+          "jp": "わかりました。",
+          "zh": "明白了。",
+          "keyword": "",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "わかりました。"
         },
         {
           "id": "l06-conv-009",
-          "speaker": "",
-          "jp": "10時に大阪駅で会いましょう",
-          "kana": "じゅうじに おおさかえきで あいましょう",
-          "zh": "10点在大阪站见吧。",
-          "keyword": "大阪駅",
-          "videoStart": "0:41.16",
-          "videoEnd": "0:47.04",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l06-conv-010",
-          "speaker": "",
-          "jp": "わかりました",
-          "kana": "わかりました",
-          "zh": "知道了",
+          "speaker": "佐藤",
+          "jp": "じゃ、またあした。",
+          "zh": "那么，明天见。",
           "keyword": "",
-          "videoStart": "0:47.04",
-          "videoEnd": "0:48.52",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l06-conv-011",
-          "speaker": "",
-          "jp": "じゃあまた明日",
-          "kana": "",
-          "zh": "明天见",
-          "keyword": "明日",
-          "videoStart": "0:48.52",
-          "videoEnd": "0:51.52",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "じゃ、またあした。"
         }
       ]
     },
@@ -2128,61 +2105,82 @@
         "step": 1,
         "title": "同事叫住米勒先生",
         "explanation": "同事用「ミラーさん!」叫住米勒先生，引起他的注意。在日语中，叫对方的名字是最自然的引起注意的方式，在说正事前先叫名字让对方准备好听你说话。",
-        "relatedLineIds": ["l06-conv-001"]
+        "relatedLineIds": [
+          "l06-conv-001"
+        ]
       },
       {
         "step": 2,
         "title": "米勒先生回应",
         "explanation": "米勒先生回应「何ですか?」——「什么事？」。这是被叫住时的标准回应，表示听到了对方的呼唤并请对方继续说下去。",
-        "relatedLineIds": ["l06-conv-002"]
+        "relatedLineIds": [
+          "l06-conv-002"
+        ]
       },
       {
         "step": 3,
         "title": "说明明天的计划",
         "explanation": "同事说明天和朋友去赏花：「明日、友達とお花見をします。」这里的「お花見」是赏花的正式说法。「友達と」的「と」表示共同做动作的伙伴，即「和朋友一起」。动词「します」是「做」的意思，「お花見をします」是「赏花」的动宾结构。助词「を」标记动作的直接宾语。",
-        "relatedLineIds": ["l06-conv-003"]
+        "relatedLineIds": [
+          "l06-conv-003"
+        ]
       },
       {
         "step": 4,
         "title": "发出邀请",
         "explanation": "同事邀请米勒先生一起去：「ミラーさんも一緒に行きませんか?」关键句式是「〜ませんか」——「不〜吗？」，用于委婉地发出邀请。「一緒に」是「一起」，「も」是「也」。整句意思是「米勒先生也一起去吗？」。用否定疑问比直接肯定更礼貌。",
-        "relatedLineIds": ["l06-conv-004"]
+        "relatedLineIds": [
+          "l06-conv-004"
+        ]
       },
       {
         "step": 5,
         "title": "接受邀请",
         "explanation": "米勒先生高兴地说「いいですね」——「好啊/听起来不错」。句尾的「ね」是感叹助词，表示认同和共鸣。接受邀请时用「いいですね」是日语中最自然、最常见的积极回应。",
-        "relatedLineIds": ["l06-conv-005"]
+        "relatedLineIds": [
+          "l06-conv-005"
+        ]
       },
       {
         "step": 6,
         "title": "询问去哪里",
         "explanation": "米勒先生接着问「どこへ行きますか」——「去哪里？」。「どこ」是「哪里」，「へ」是方向助词（读作e），「行きます」是「去」的ます形。这是问目的地的最基本句型。",
-        "relatedLineIds": ["l06-conv-006"]
+        "relatedLineIds": [
+          "l06-conv-006"
+        ]
       },
       {
         "step": 7,
         "title": "告知目的地",
         "explanation": "同事回答「大阪城です」——「是大阪城」。大阪城是大阪著名的历史地标，也是赏花的名所。用判断句「〜です」直接简洁地回答。",
-        "relatedLineIds": ["l06-conv-007"]
+        "relatedLineIds": [
+          "l06-conv-007"
+        ]
       },
       {
         "step": 8,
         "title": "询问集合时间",
         "explanation": "米勒先生问「何時に行きますか」——「几点去？」。「何時」是「几点」，「に」是时间点助词，时间点+「に」+动词表示「在〜时间做〜」。这是日语问时间的标准结构。",
-        "relatedLineIds": ["l06-conv-008"]
+        "relatedLineIds": [
+          "l06-conv-008"
+        ]
       },
       {
         "step": 9,
         "title": "提议具体时间地点",
         "explanation": "同事说「10時に大阪駅で会いましょう」——「10点在大阪站见面吧」。这里使用了〜ましょう形表示提议——「让我们〜吧」。「で」是动作发生的地点助词。整句包含了时间（10時に）、地点（大阪駅で）、动作（会いましょう）三个要素，是约定见面的万能句型。",
-        "relatedLineIds": ["l06-conv-009"]
+        "relatedLineIds": [
+          "l06-conv-009"
+        ]
       },
       {
         "step": 10,
         "title": "同意约定并告别",
         "explanation": "米勒先生先回答「わかりました」——「好的/明白了」，表示同意约定。然后说「じゃあまた明日」——「那明天见」。「じゃあ」是「那么」的口语形式，「また」是「再/又」，「明日」是「明天」。这是约定后道别的自然搭配。",
-        "relatedLineIds": ["l06-conv-010", "l06-conv-011"]
+        "relatedLineIds": [
+          "l06-conv-010",
+          "l06-conv-011"
+        ]
       }
     ],
     "lineUsage": [

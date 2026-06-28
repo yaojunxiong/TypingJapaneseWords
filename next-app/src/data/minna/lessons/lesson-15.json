@@ -760,9 +760,9 @@
     {
       "type": "conversation",
       "id": "l15_conversation",
-      "sourceType": "official_video_subtitle",
-      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P15_%E7%AC%AC15%E8%AA%B2.json",
-      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P15_%E7%AC%AC15%E8%AA%B2.mp4",
+      "sourceType": "conversation_image_human_confirmed",
+      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/大家的日本語第2版-会話_P15_第15課.mp4",
+      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/大家的日本語第2版-会話_P15_第15課.mp4",
       "title": {
         "zh": "会话背诵",
         "en": "Conversation Practice"
@@ -780,9 +780,8 @@
           "id": "l15-conv-001",
           "speaker": "木村",
           "jp": "いい映画でしたね。",
-          "kana": "いいえいがでしたね。",
           "zh": "真是一部好电影啊。",
-          "keyword": "いい映画でし",
+          "keyword": "",
           "videoStart": "",
           "videoEnd": "",
           "sourceType": "conversation_image_human_confirmed",
@@ -790,15 +789,16 @@
           "needsSpeakerReview": false,
           "needsKanaReview": false,
           "needsKeywordReview": false,
-          "reviewStatus": "confirmed"
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "いいえいがでしたね。"
         },
         {
           "id": "l15-conv-002",
           "speaker": "ミラー",
           "jp": "ええ。わたしは家族を思い出しました。",
-          "kana": "ええ。わたしはかぞくをおもいだしました。",
           "zh": "是啊。我想起了家人。",
-          "keyword": "ええわたしは",
+          "keyword": "",
           "videoStart": "",
           "videoEnd": "",
           "sourceType": "conversation_image_human_confirmed",
@@ -806,15 +806,16 @@
           "needsSpeakerReview": false,
           "needsKanaReview": false,
           "needsKeywordReview": false,
-          "reviewStatus": "confirmed"
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "ええ。わたしはかぞくをおもいだしました。"
         },
         {
           "id": "l15-conv-003",
           "speaker": "木村",
           "jp": "そうですか。ミラーさんのご家族は？",
-          "kana": "そうですか。ミラーさんのごかぞくは？",
           "zh": "是吗？米勒先生的家人呢？",
-          "keyword": "そうですかミ",
+          "keyword": "",
           "videoStart": "",
           "videoEnd": "",
           "sourceType": "conversation_image_human_confirmed",
@@ -822,15 +823,16 @@
           "needsSpeakerReview": false,
           "needsKanaReview": false,
           "needsKeywordReview": false,
-          "reviewStatus": "confirmed"
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "そうですか。みらーさんのごかぞくは？"
         },
         {
           "id": "l15-conv-004",
           "speaker": "ミラー",
           "jp": "両親と姉が1人います。",
-          "kana": "りょうしんとあねがひとりいます。",
           "zh": "我有父母和一个姐姐。",
-          "keyword": "両親と姉が1",
+          "keyword": "",
           "videoStart": "",
           "videoEnd": "",
           "sourceType": "conversation_image_human_confirmed",
@@ -838,15 +840,16 @@
           "needsSpeakerReview": false,
           "needsKanaReview": false,
           "needsKeywordReview": false,
-          "reviewStatus": "confirmed"
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "りょうしんとあねがひとりいます。"
         },
         {
           "id": "l15-conv-005",
           "speaker": "木村",
           "jp": "どちらにいらっしゃいますか。",
-          "kana": "どちらにいらっしゃいますか。",
           "zh": "他们住在哪里？",
-          "keyword": "どちらにいら",
+          "keyword": "",
           "videoStart": "",
           "videoEnd": "",
           "sourceType": "conversation_image_human_confirmed",
@@ -854,15 +857,16 @@
           "needsSpeakerReview": false,
           "needsKanaReview": false,
           "needsKeywordReview": false,
-          "reviewStatus": "confirmed"
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "どちらにいらっしゃいますか。"
         },
         {
           "id": "l15-conv-006",
           "speaker": "ミラー",
-          "jp": "両親はニューヨークの近くに住んでいます。",
-          "kana": "りょうしんはニューヨークのちかくにすんでいます。",
-          "zh": "我父母住在纽约附近。",
-          "keyword": "両親はニュー",
+          "jp": "両親はニューヨークの近くに住んでいます。姉はロンドンで働いています。",
+          "zh": "我父母住在纽约附近，姐姐在伦敦工作。",
+          "keyword": "",
           "videoStart": "",
           "videoEnd": "",
           "sourceType": "conversation_image_human_confirmed",
@@ -870,15 +874,16 @@
           "needsSpeakerReview": false,
           "needsKanaReview": false,
           "needsKeywordReview": false,
-          "reviewStatus": "confirmed"
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "りょうしんはにゅーよーくのちかくにすんでいます。あねはろんどんではたらいています。"
         },
         {
           "id": "l15-conv-007",
           "speaker": "ミラー",
-          "jp": "姉はロンドンで働いています。",
-          "kana": "あねはロンドンではたらいています。",
-          "zh": "我姐姐在伦敦工作。",
-          "keyword": "姉はロンドン",
+          "jp": "木村さんのご家族は？",
+          "zh": "木村女士，您的家人呢？",
+          "keyword": "",
           "videoStart": "",
           "videoEnd": "",
           "sourceType": "conversation_image_human_confirmed",
@@ -886,31 +891,16 @@
           "needsSpeakerReview": false,
           "needsKanaReview": false,
           "needsKeywordReview": false,
-          "reviewStatus": "confirmed"
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "きむらさんのごかぞくは？"
         },
         {
           "id": "l15-conv-008",
-          "speaker": "ミラー",
-          "jp": "木村さんのご家族は？",
-          "kana": "きむらさんのごかぞくは？",
-          "zh": "木村先生的家人呢？",
-          "keyword": "木村さんのご",
-          "videoStart": "",
-          "videoEnd": "",
-          "sourceType": "conversation_image_human_confirmed",
-          "needsReview": false,
-          "needsSpeakerReview": false,
-          "needsKanaReview": false,
-          "needsKeywordReview": false,
-          "reviewStatus": "confirmed"
-        },
-        {
-          "id": "l15-conv-009",
           "speaker": "木村",
-          "jp": "3人です。父は銀行員です。",
-          "kana": "さんにんです。ちちはぎんこういんです。",
-          "zh": "有三个人。父亲是银行职员。",
-          "keyword": "3人です父は",
+          "jp": "3人です。父は銀行員です。母は高校で英語を教えています。",
+          "zh": "三口人。父亲是银行职员，母亲在高中教英语。",
+          "keyword": "",
           "videoStart": "",
           "videoEnd": "",
           "sourceType": "conversation_image_human_confirmed",
@@ -918,23 +908,9 @@
           "needsSpeakerReview": false,
           "needsKanaReview": false,
           "needsKeywordReview": false,
-          "reviewStatus": "confirmed"
-        },
-        {
-          "id": "l15-conv-010",
-          "speaker": "木村",
-          "jp": "母は高校で英語を教えています。",
-          "kana": "はははこうこうでえいごをおしえています。",
-          "zh": "母亲在高中教英语。",
-          "keyword": "母は高校で英",
-          "videoStart": "",
-          "videoEnd": "",
-          "sourceType": "conversation_image_human_confirmed",
-          "needsReview": false,
-          "needsSpeakerReview": false,
-          "needsKanaReview": false,
-          "needsKeywordReview": false,
-          "reviewStatus": "confirmed"
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "さんにんです。ちちはぎんこういんです。はははこうこうでえいごをおしえています。"
         }
       ]
     },

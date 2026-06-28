@@ -692,9 +692,9 @@
     {
       "type": "conversation",
       "id": "l08_conversation",
-      "sourceType": "official_video_subtitle",
-      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P8_%E7%AC%AC8%E8%AA%B2.json",
-      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P8_%E7%AC%AC8%E8%AA%B2.mp4",
+      "sourceType": "conversation_image_human_confirmed",
+      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/大家的日本語第2版-会話_P8_第8課.mp4",
+      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/大家的日本語第2版-会話_P8_第8課.mp4",
       "title": {
         "zh": "会话背诵",
         "en": "Conversation Practice"
@@ -710,179 +710,173 @@
       "items": [
         {
           "id": "l08-conv-001",
-          "speaker": "",
-          "jp": "【音楽】",
-          "kana": "",
-          "zh": "【音乐】",
-          "keyword": "音楽",
-          "videoStart": "0:00.00",
-          "videoEnd": "0:07.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "山田一郎",
+          "jp": "マリアさん、日本の生活はどうですか。",
+          "zh": "玛丽亚小姐，日本的生活怎么样？",
+          "keyword": "",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "まりあさん、にほんのせいかつはどうですか。"
         },
         {
           "id": "l08-conv-002",
-          "speaker": "",
-          "jp": "マリアさん 日本の生活はどうですか?",
-          "kana": "",
-          "zh": "玛丽亚小姐，日本的生活怎么样？",
-          "keyword": "生活",
-          "videoStart": "0:13.50",
-          "videoEnd": "0:16.90",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "マリア・サントス",
+          "jp": "毎日とても楽しいです。",
+          "zh": "每天都很开心。",
+          "keyword": "",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "まいにちとてもたのしいです。"
         },
         {
           "id": "l08-conv-003",
-          "speaker": "",
-          "jp": "毎日とても楽しいです",
-          "kana": "",
-          "zh": "每天都很开心。",
-          "keyword": "毎日",
-          "videoStart": "0:16.90",
-          "videoEnd": "0:19.90",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "山田一郎",
+          "jp": "そうですか。サントスさん、お仕事はどうですか。",
+          "zh": "是吗？桑托斯先生，工作怎么样？",
+          "keyword": "",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "そうですか。さんとすさん、おしごとはどうですか。"
         },
         {
           "id": "l08-conv-004",
-          "speaker": "",
-          "jp": "そうですか サントスさん お仕事はどうですか?",
-          "kana": "",
-          "zh": "是吗？桑托斯先生，工作怎么样？",
-          "keyword": "仕事",
-          "videoStart": "0:19.90",
-          "videoEnd": "0:25.10",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "ジョゼ・サントス",
+          "jp": "そうですね。忙しいですが、おもしろいです。",
+          "zh": "是啊，虽然很忙，但挺有意思的。",
+          "keyword": "",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "そうですね。いそがしいですが、おもしろいです。"
         },
         {
           "id": "l08-conv-005",
-          "speaker": "",
-          "jp": "そうですね 忙しいですが面白いです",
-          "kana": "",
-          "zh": "是啊，虽然很忙，但挺有意思的。",
-          "keyword": "面白",
-          "videoStart": "0:25.20",
-          "videoEnd": "0:29.10",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "山田友子",
+          "jp": "コーヒー、もう一杯いかがですか。",
+          "zh": "再来一杯咖啡怎么样？",
+          "keyword": "",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "こーひー、もういっぱいいかがですか。"
         },
         {
           "id": "l08-conv-006",
-          "speaker": "",
-          "jp": "コーヒー もういっぱいいかがですか?",
-          "kana": "コーヒー もういっぱいいかがですか?",
-          "zh": "再来一杯咖啡怎么样？",
+          "speaker": "マリア・サントス",
+          "jp": "いいえ、けっこうです。",
+          "zh": "不用了，谢谢。",
           "keyword": "",
-          "videoStart": "0:31.60",
-          "videoEnd": "0:34.10",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "いいえ、けっこうです。"
         },
         {
           "id": "l08-conv-007",
-          "speaker": "",
-          "jp": "いいえ 結構です",
-          "kana": "",
-          "zh": "不用了，谢谢。",
-          "keyword": "結構です",
-          "videoStart": "0:34.10",
-          "videoEnd": "0:36.10",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "ジョゼ・サントス",
+          "jp": "あ、もう6時ですね。そろそろ失礼します。",
+          "zh": "啊，已经6点了。我该告辞了。",
+          "keyword": "",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "あ、もうろくじですね。そろそろしつれいします。"
         },
         {
           "id": "l08-conv-008",
-          "speaker": "",
-          "jp": "もう6時ですね そろそろ失礼します",
-          "kana": "",
-          "zh": "已经6点了，我该告辞了。",
-          "keyword": "失礼",
-          "videoStart": "0:41.10",
-          "videoEnd": "0:45.10",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "山田一郎",
+          "jp": "そうですか。",
+          "zh": "这样啊。",
+          "keyword": "",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "そうですか。"
         },
         {
           "id": "l08-conv-009",
-          "speaker": "",
-          "jp": "そうですか",
-          "kana": "そうですか",
-          "zh": "这样啊。",
+          "speaker": "マリア・サントス",
+          "jp": "きょうはどうもありがとうございました。",
+          "zh": "今天真的非常感谢。",
           "keyword": "",
-          "videoStart": "0:45.10",
-          "videoEnd": "0:47.10",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "きょうはどうもありがとうございました。"
         },
         {
           "id": "l08-conv-010",
-          "speaker": "",
-          "jp": "今日はどうもありがとうございました",
-          "kana": "",
-          "zh": "今天真的非常感谢。",
-          "keyword": "今日",
-          "videoStart": "0:48.10",
-          "videoEnd": "0:50.10",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l08-conv-011",
-          "speaker": "",
-          "jp": "いいえ またいらっしゃってください",
-          "kana": "いいえ またいらっしゃってください",
+          "speaker": "山田友子",
+          "jp": "いいえ。またいらっしゃってください。",
           "zh": "不客气，请再来玩。",
           "keyword": "",
-          "videoStart": "0:50.10",
-          "videoEnd": "0:53.10",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "いいえ。またいらっしゃってください。"
         }
       ]
     },
@@ -2157,61 +2151,82 @@
         "step": 1,
         "title": "音乐场景开场",
         "explanation": "画面显示「【音楽】」，表示会话开始前有一段背景音乐。这不是台词，而是场景说明——营造朋友聚会的轻松氛围。",
-        "relatedLineIds": ["l08-conv-001"]
+        "relatedLineIds": [
+          "l08-conv-001"
+        ]
       },
       {
         "step": 2,
         "title": "询问日本生活情况",
         "explanation": "主人向玛丽亚提问「マリアさん 日本の生活はどうですか」——「玛丽亚，日本的生活怎么样？」。这里用「どうですか」询问对方的印象和感受，是第8课的核心句型。注意称呼方式「マリアさん」在日语中无论男女都在名字后加「さん」表示礼貌。",
-        "relatedLineIds": ["l08-conv-002"]
+        "relatedLineIds": [
+          "l08-conv-002"
+        ]
       },
       {
         "step": 3,
         "title": "回答：每天很开心",
         "explanation": "玛丽亚回答「毎日とても楽しいです」——「每天都很开心」。「楽しい」是典型的い形容词，直接加「です」构成敬体肯定句。「とても」表示程度'非常'。这里展示い形容词作谓语的用法。",
-        "relatedLineIds": ["l08-conv-003"]
+        "relatedLineIds": [
+          "l08-conv-003"
+        ]
       },
       {
         "step": 4,
         "title": "转向桑托斯问工作",
         "explanation": "主人用「そうですか」先对玛丽亚的回答表示回应，然后转向桑托斯问「サントスさん お仕事はどうですか」——「桑托斯先生，工作怎么样？」。注意这里使用的对比——同样是用「どうですか」提问，但对象从生活变成了工作。",
-        "relatedLineIds": ["l08-conv-004"]
+        "relatedLineIds": [
+          "l08-conv-004"
+        ]
       },
       {
         "step": 5,
         "title": "回答：忙但有趣（转折对比）",
         "explanation": "桑托斯用「そうですね」稍作思考后回答「忙しいですが面白いです」——「虽然忙，但有趣」。这是本课最重要的语法点：助词「が」连接两个句子表示转折对比——「忙しいです + が + 面白いです」。两个い形容词并列使用，展示了形容词描述事物的能力。",
-        "relatedLineIds": ["l08-conv-005"]
+        "relatedLineIds": [
+          "l08-conv-005"
+        ]
       },
       {
         "step": 6,
         "title": "主人邀请再来一杯咖啡",
         "explanation": "主人提议「コーヒー もういっぱいいかがですか」——「再来一杯咖啡怎么样？」。「もう」表示'再/还'，「いっぱい」是'一杯'，「いかがですか」是「どうですか」的更礼貌说法，用于邀请、提议。这是日本待客时常用的邀请表达。",
-        "relatedLineIds": ["l08-conv-006"]
+        "relatedLineIds": [
+          "l08-conv-006"
+        ]
       },
       {
         "step": 7,
         "title": "礼貌拒绝",
         "explanation": "桑托斯回答「いいえ 結構です」——「不用了，谢谢」。「結構です」可以表示肯定（足够好）或否定（不用了），在此结合「いいえ」表示礼貌拒绝。这是日语中拒绝他人提议的标准委婉说法，比直接说「いりません」更得体。",
-        "relatedLineIds": ["l08-conv-007"]
+        "relatedLineIds": [
+          "l08-conv-007"
+        ]
       },
       {
         "step": 8,
         "title": "注意到时间，准备告辞",
         "explanation": "桑托斯说「もう6時ですね そろそろ失礼します」——「已经6点了啊，我该告辞了」。「もう」表示'已经'，「そろそろ」表示'差不多该…了'，「失礼します」是告辞时的固定表达，字面意思是'要做失礼的事了'，实为'我先告辞了'的礼貌说法。",
-        "relatedLineIds": ["l08-conv-008"]
+        "relatedLineIds": [
+          "l08-conv-008"
+        ]
       },
       {
         "step": 9,
         "title": "主人回应",
         "explanation": "主人回答「そうですか」——「这样啊」。这里的「そうですか」语调下降，表示理解了对方要离开的意思，附带轻微的'知道了'之意。不同于升调的疑问语气，这里是接受信息的陈述语气。",
-        "relatedLineIds": ["l08-conv-009"]
+        "relatedLineIds": [
+          "l08-conv-009"
+        ]
       },
       {
         "step": 10,
         "title": "感谢与送别",
         "explanation": "桑托斯说「今日はどうもありがとうございました」——「今天真的非常感谢」。使用过去式「ありがとうございました」表示对当天已经发生的招待的感谢。主人回应「いいえ またいらっしゃってください」——「不客气，请再来玩」。「いらっしゃってください」是「来てください」的敬语形式，邀请客人再次光临。这是日本做客与送别时的标准对话。",
-        "relatedLineIds": ["l08-conv-010", "l08-conv-011"]
+        "relatedLineIds": [
+          "l08-conv-010",
+          "l08-conv-011"
+        ]
       }
     ],
     "lineUsage": [

@@ -692,9 +692,9 @@
     {
       "type": "conversation",
       "id": "l07_conversation",
-      "sourceType": "official_video_subtitle",
-      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P7_%E7%AC%AC7%E8%AA%B2.json",
-      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P7_%E7%AC%AC7%E8%AA%B2.mp4",
+      "sourceType": "conversation_image_human_confirmed",
+      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/大家的日本語第2版-会話_P7_第7課.mp4",
+      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/大家的日本語第2版-会話_P7_第7課.mp4",
       "title": {
         "zh": "会话背诵",
         "en": "Conversation Practice"
@@ -710,179 +710,173 @@
       "items": [
         {
           "id": "l07-conv-001",
-          "speaker": "",
-          "jp": "はい",
-          "kana": "はい",
-          "zh": "是的",
+          "speaker": "山田一郎",
+          "jp": "はい。",
+          "zh": "您好。",
           "keyword": "",
-          "videoStart": "0:00.00",
-          "videoEnd": "0:07.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "はい。"
         },
         {
           "id": "l07-conv-002",
-          "speaker": "",
-          "jp": "はい サントスです",
-          "kana": "はい サントスです",
-          "zh": "是的，是桑托斯",
+          "speaker": "ジョゼ・サントス",
+          "jp": "サントスです。",
+          "zh": "我是桑托斯。",
           "keyword": "",
-          "videoStart": "0:12.00",
-          "videoEnd": "0:16.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "さんとすです。"
         },
         {
           "id": "l07-conv-003",
-          "speaker": "",
-          "jp": "いらっしゃい どうぞおがりください",
-          "kana": "いらっしゃい どうぞおがりください",
+          "speaker": "山田一郎",
+          "jp": "いらっしゃい。どうぞお上がりください。",
           "zh": "欢迎，请进来吧。",
           "keyword": "",
-          "videoStart": "0:22.00",
-          "videoEnd": "0:25.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "いらっしゃい。どうぞおあがりください。"
         },
         {
           "id": "l07-conv-004",
-          "speaker": "",
-          "jp": "失礼します",
-          "kana": "",
+          "speaker": "ジョゼ・サントス",
+          "jp": "失礼します。",
           "zh": "打扰了。",
-          "keyword": "失礼",
-          "videoStart": "0:25.00",
-          "videoEnd": "0:28.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "keyword": "",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "しつれいします。"
         },
         {
           "id": "l07-conv-005",
-          "speaker": "",
-          "jp": "コーヒーはいかがですか?",
-          "kana": "コーヒーはいかがですか?",
-          "zh": "你想要咖啡吗？",
+          "speaker": "山田友子",
+          "jp": "コーヒーはいかがですか。",
+          "zh": "要不要喝咖啡？",
           "keyword": "",
-          "videoStart": "0:50.00",
-          "videoEnd": "0:52.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "こーひーはいかがですか。"
         },
         {
           "id": "l07-conv-006",
-          "speaker": "",
-          "jp": "ありがとうございます",
-          "kana": "ありがとうございます",
-          "zh": "谢谢",
+          "speaker": "マリア・サントス",
+          "jp": "ありがとうございます。",
+          "zh": "谢谢。",
           "keyword": "",
-          "videoStart": "0:52.00",
-          "videoEnd": "0:55.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "ありがとうございます。"
         },
         {
           "id": "l07-conv-007",
-          "speaker": "",
-          "jp": "どうぞ",
-          "kana": "どうぞ",
-          "zh": "请",
+          "speaker": "山田友子",
+          "jp": "どうぞ。",
+          "zh": "请。",
           "keyword": "",
-          "videoStart": "1:07.00",
-          "videoEnd": "1:09.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "どうぞ。"
         },
         {
           "id": "l07-conv-008",
-          "speaker": "",
-          "jp": "いただきます",
-          "kana": "いただきます",
-          "zh": "我开动了。",
+          "speaker": "マリア・サントス",
+          "jp": "いただきます。",
+          "zh": "那我就不客气了。",
           "keyword": "",
-          "videoStart": "1:09.00",
-          "videoEnd": "1:11.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "いただきます。"
         },
         {
           "id": "l07-conv-009",
-          "speaker": "",
-          "jp": "このスポーン素敵ですね",
-          "kana": "",
+          "speaker": "マリア・サントス",
+          "jp": "このスプーン、すてきですね。",
           "zh": "这把勺子真漂亮啊。",
-          "keyword": "素敵です",
-          "videoStart": "1:12.00",
-          "videoEnd": "1:15.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "keyword": "",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "このすぷーん、すてきですね。"
         },
         {
           "id": "l07-conv-010",
-          "speaker": "",
-          "jp": "ええ、会社の人にもらいました",
-          "kana": "",
-          "zh": "是公司的人送的。",
-          "keyword": "会社",
-          "videoStart": "1:15.00",
-          "videoEnd": "1:18.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l07-conv-011",
-          "speaker": "",
-          "jp": "メキシコのお土産です",
-          "kana": "メキシコの おみやげです",
-          "zh": "是墨西哥的特产/礼物。",
-          "keyword": "お土産",
-          "videoStart": "1:18.00",
-          "videoEnd": "1:21.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "山田友子",
+          "jp": "ええ、会社の人にもらいました。メキシコのお土産です。",
+          "zh": "是啊，是公司的人送给我的。是墨西哥的礼物。",
+          "keyword": "",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "ええ、かいしゃのひとにもらいました。めきしこのおみやげです。"
         }
       ]
     },
@@ -2095,31 +2089,208 @@
     "sceneSummary": "サントスさんが日本人の友達の家を訪問し、コーヒーをいただきながら、テーブルのスプーンをきっかけに贈り物の話になる場面です。",
     "storyExplanation": "この課は、誰かの家を訪問するという日常生活の場面を通じて、授受表現（あげます／もらいます）と道具・手段（で）を学びます。\n\nサントスさんが友達の家を訪ねます。呼び鈴に「はい」と応答があり、サントスさんが「サントスです」と名乗ります。友達は「いらっしゃい、どうぞお上がりください」と迎え入れます。\n\n室内で「コーヒーはいかがですか」と勧められ、サントスさんは「いただきます」と言ってコーヒーをいただきます。\n\nそこでサントスさんが「このスプーン素敵ですね」と褒めると、友達は「ええ、会社の人にもらいました。メキシコのお土産です」と答えます。ここで授受動詞「もらいました」（我收到了）が自然に使われています。\n\n文法ポイント：\n1. あげます：我给别人某物（話し手→相手）\n2. もらいます：我从别人那里收到某物（相手→話し手）\n3. で：工具・手段（例：スプーンで食べます）\n4. もう：もう（already）、もう少し（a little more）\n5. いかがですか：いかがですか是「どうですか」的礼貌表达",
     "characters": [
-      { "name": "サントスさん", "role": "訪問者", "relationship": "友達の家を訪ねる外国人" },
-      { "name": "友達（主人）", "role": "家の主人", "relationship": "サントスさんを迎え入れ、コーヒーを出す" }
+      {
+        "name": "サントスさん",
+        "role": "訪問者",
+        "relationship": "友達の家を訪ねる外国人"
+      },
+      {
+        "name": "友達（主人）",
+        "role": "家の主人",
+        "relationship": "サントスさんを迎え入れ、コーヒーを出す"
+      }
     ],
     "conversationFlow": [
-      { "step": 1, "title": "呼び鈴に応答", "explanation": "サントスさんが訪問し、主人が「はい」と応答する。", "relatedLineIds": ["l07-conv-001"] },
-      { "step": 2, "title": "名乗り", "explanation": "サントスさんが「サントスです」と自分の名前を伝える。", "relatedLineIds": ["l07-conv-002"] },
-      { "step": 3, "title": "歓迎", "explanation": "主人が「いらっしゃい、どうぞお上がりください」とサントスさんを中に招き入れる。", "relatedLineIds": ["l07-conv-003"] },
-      { "step": 4, "title": "入室の挨拶", "explanation": "サントスさんが「失礼します」と言ってから家に上がる。", "relatedLineIds": ["l07-conv-004"] },
-      { "step": 5, "title": "コーヒーの勧め", "explanation": "主人が「コーヒーはいかがですか」と丁寧に飲み物を勧め、サントスさんが「ありがとうございます」と受ける。", "relatedLineIds": ["l07-conv-005","l07-conv-006"] },
-      { "step": 6, "title": "コーヒーをいただく", "explanation": "主人が「どうぞ」と差し出し、サントスさんが「いただきます」と挨拶してから飲み始める。", "relatedLineIds": ["l07-conv-007","l07-conv-008"] },
-      { "step": 7, "title": "スプーンを褒める", "explanation": "サントスさんがテーブルのスプーンを見て「素敵ですね」と褒める。", "relatedLineIds": ["l07-conv-009"] },
-      { "step": 8, "title": "贈り物の話", "explanation": "主人がそのスプーンは「会社の人にもらいました。メキシコのお土産です」と説明する。", "relatedLineIds": ["l07-conv-010","l07-conv-011"] }
+      {
+        "step": 1,
+        "title": "呼び鈴に応答",
+        "explanation": "サントスさんが訪問し、主人が「はい」と応答する。",
+        "relatedLineIds": [
+          "l07-conv-001"
+        ]
+      },
+      {
+        "step": 2,
+        "title": "名乗り",
+        "explanation": "サントスさんが「サントスです」と自分の名前を伝える。",
+        "relatedLineIds": [
+          "l07-conv-002"
+        ]
+      },
+      {
+        "step": 3,
+        "title": "歓迎",
+        "explanation": "主人が「いらっしゃい、どうぞお上がりください」とサントスさんを中に招き入れる。",
+        "relatedLineIds": [
+          "l07-conv-003"
+        ]
+      },
+      {
+        "step": 4,
+        "title": "入室の挨拶",
+        "explanation": "サントスさんが「失礼します」と言ってから家に上がる。",
+        "relatedLineIds": [
+          "l07-conv-004"
+        ]
+      },
+      {
+        "step": 5,
+        "title": "コーヒーの勧め",
+        "explanation": "主人が「コーヒーはいかがですか」と丁寧に飲み物を勧め、サントスさんが「ありがとうございます」と受ける。",
+        "relatedLineIds": [
+          "l07-conv-005",
+          "l07-conv-006"
+        ]
+      },
+      {
+        "step": 6,
+        "title": "コーヒーをいただく",
+        "explanation": "主人が「どうぞ」と差し出し、サントスさんが「いただきます」と挨拶してから飲み始める。",
+        "relatedLineIds": [
+          "l07-conv-007",
+          "l07-conv-008"
+        ]
+      },
+      {
+        "step": 7,
+        "title": "スプーンを褒める",
+        "explanation": "サントスさんがテーブルのスプーンを見て「素敵ですね」と褒める。",
+        "relatedLineIds": [
+          "l07-conv-009"
+        ]
+      },
+      {
+        "step": 8,
+        "title": "贈り物の話",
+        "explanation": "主人がそのスプーンは「会社の人にもらいました。メキシコのお土産です」と説明する。",
+        "relatedLineIds": [
+          "l07-conv-010",
+          "l07-conv-011"
+        ]
+      }
     ],
     "lineUsage": [
-      { "lineId": "l07-conv-001", "japanese": "はい", "chineseMeaning": "是的/来了", "intention": "听到敲门声后回应，表示「有人在」", "memorizationHint": "最简单的应门回应，也是日语中最基本的肯定回答", "commonMistake": "「はい」在应门时是「来了/在」的意思，不是肯定疑问", "realLifeUse": "呼び鈴や電話に応答する時の第一声。最も基本的な返事", "emotionTone": "応答・シンプル", "memoryTip": "「はい」是敲门或呼叫时的基本回应" },
-      { "lineId": "l07-conv-002", "japanese": "はい サントスです", "chineseMeaning": "是的，我是桑托斯", "intention": "在门口报上自己的姓名，让对方知道是谁来了", "memorizationHint": "「〜です」=我是～。用肯定的语气表明身份", "commonMistake": "「はい」和「サントスです」之间是停顿，不是两个独立句子。语气自然连贯", "realLifeUse": "訪問先で名前を告げる時の定型表現", "emotionTone": "丁寧・自己紹介", "memoryTip": "「はい、〜です」是报上姓名时的标准表达" },
-      { "lineId": "l07-conv-003", "japanese": "いらっしゃい どうぞお上がりください", "chineseMeaning": "欢迎，请进来吧", "intention": "热情欢迎客人并请对方进屋", "memorizationHint": "「いらっしゃい」=欢迎。「お上がりください」=请进（「上がる」的敬语）", "commonMistake": "「お上がりください」是「入ってください」的敬语，日式房屋需要脱鞋上台阶", "realLifeUse": "来客を家に招き入れる時の丁寧な表現。「いらっしゃい」は歓迎の気持ちを伝える", "emotionTone": "歓迎・丁寧", "memoryTip": "「いらっしゃい」欢迎＋「お上がりください」请进。访问时的标准欢迎语" },
-      { "lineId": "l07-conv-004", "japanese": "失礼します", "chineseMeaning": "打扰了", "intention": "进入他人家里前表达歉意和礼貌", "memorizationHint": "「失礼します」=失礼了/打扰了。进入他人空间前的固定表达", "commonMistake": "离开时说「失礼しました」（过去时），进入时说「失礼します」（现在时）", "realLifeUse": "他人の家や部屋に入る時の決まり文句。日本のマナーとして必須", "emotionTone": "丁寧・挨拶", "memoryTip": "「失礼します」是进入他人房间/家门时的礼貌用语" },
-      { "lineId": "l07-conv-005", "japanese": "コーヒーはいかがですか？", "chineseMeaning": "喝咖啡怎么样？", "intention": "礼貌地询问对方是否需要咖啡", "memorizationHint": "「いかがですか」=「どうですか」的礼貌表达。待客时常用", "commonMistake": "「いかがですか」比「どうですか」更礼貌正式。对客人要用「いかがですか」", "realLifeUse": "飲み物や食べ物を勧める時の丁寧な表現。来客対応の定番フレーズ", "emotionTone": "勧め・丁寧", "memoryTip": "「〜はいかがですか」=要不要～？待客时必备的礼貌邀请" },
-      { "lineId": "l07-conv-006", "japanese": "ありがとうございます", "chineseMeaning": "谢谢", "intention": "表达感谢和接受对方的好意", "memorizationHint": "「ありがとうございます」=谢谢（现在时，用于接受好意时）", "commonMistake": "事前の招待や申し出に対する感謝は「ありがとうございます」（现在时）", "realLifeUse": "親切や申し出を受けた時に使う最も基本的なお礼", "emotionTone": "感謝", "memoryTip": "「ありがとうございます」是接受好意时的基本感谢表达" },
-      { "lineId": "l07-conv-007", "japanese": "どうぞ", "chineseMeaning": "请", "intention": "递给对方东西时示意对方请用", "memorizationHint": "「どうぞ」=请。递东西时最简短的表达", "commonMistake": "「どうぞ」单独使用表示「请用」。不需要加其他词", "realLifeUse": "物を差し出す時や席を勧める時の万能表現", "emotionTone": "勧め・親切", "memoryTip": "「どうぞ」是递东西或让座时的万能用语" },
-      { "lineId": "l07-conv-008", "japanese": "いただきます", "chineseMeaning": "我开动了", "intention": "用餐或饮用前表达对食物和提供者的感谢", "memorizationHint": "「いただきます」=「もらいます」的谦让语。字面意思是「我领受了」", "commonMistake": "「いただきます」是「もらう」的谦让语。和「ごちそうさま」是前后的固定搭配", "realLifeUse": "食事や飲み物をいただく前に必ず言う日本の大切なマナー", "emotionTone": "感謝・丁寧", "memoryTip": "「いただきます」是饭前/喝东西前的固定致谢用语" },
-      { "lineId": "l07-conv-009", "japanese": "このスプーン素敵ですね", "chineseMeaning": "这个勺子真漂亮啊", "intention": "赞美桌上的勺子，引出话题", "memorizationHint": "「素敵（すてき）」=很棒/漂亮。「ですね」向对方确认共感", "commonMistake": "「素敵」是な形容词，修饰名词时用「素敵な」（素敵なスプーン）", "realLifeUse": "相手の持ち物を褒める時の自然な言い方。会話のきっかけ作りに最適", "emotionTone": "賞賛・感心", "memoryTip": "「素敵ですね」=真棒啊。称赞对方物品时常用的表达" },
-      { "lineId": "l07-conv-010", "japanese": "ええ、会社の人にもらいました", "chineseMeaning": "嗯，是公司的人送的", "intention": "说明物品的来源，用授受动词表示从别人那里收到", "memorizationHint": "「〜に〜をもらいました」=从～收到了～。本课核心语法", "commonMistake": "「もらいました」是「もらう」的过去形。动作主体是「私」（我收到），给的人是「会社の人」", "realLifeUse": "贈り物の由来を説明する時の授受表現。「〜に〜をもらう」で誰から何をもらったかを伝える", "emotionTone": "説明・感謝", "memoryTip": "「〜にもらいました」=从～收到了～。授受动词もらう的核心用法" },
-      { "lineId": "l07-conv-011", "japanese": "メキシコのお土産です", "chineseMeaning": "是从墨西哥带回来的纪念品", "intention": "补充说明物品的详细背景信息", "memorizationHint": "「お土産（おみやげ）」=纪念品/伴手礼。「〜です」=是～", "commonMistake": "「お土産」指旅行带回来的礼物/纪念品，不是普通的礼物", "realLifeUse": "物の産地や由来を説明する時のシンプルな言い方", "emotionTone": "説明・情報", "memoryTip": "「お土産」=伴手礼/纪念品。旅行带回的礼物" }
+      {
+        "lineId": "l07-conv-001",
+        "japanese": "はい",
+        "chineseMeaning": "是的/来了",
+        "intention": "听到敲门声后回应，表示「有人在」",
+        "memorizationHint": "最简单的应门回应，也是日语中最基本的肯定回答",
+        "commonMistake": "「はい」在应门时是「来了/在」的意思，不是肯定疑问",
+        "realLifeUse": "呼び鈴や電話に応答する時の第一声。最も基本的な返事",
+        "emotionTone": "応答・シンプル",
+        "memoryTip": "「はい」是敲门或呼叫时的基本回应"
+      },
+      {
+        "lineId": "l07-conv-002",
+        "japanese": "はい サントスです",
+        "chineseMeaning": "是的，我是桑托斯",
+        "intention": "在门口报上自己的姓名，让对方知道是谁来了",
+        "memorizationHint": "「〜です」=我是～。用肯定的语气表明身份",
+        "commonMistake": "「はい」和「サントスです」之间是停顿，不是两个独立句子。语气自然连贯",
+        "realLifeUse": "訪問先で名前を告げる時の定型表現",
+        "emotionTone": "丁寧・自己紹介",
+        "memoryTip": "「はい、〜です」是报上姓名时的标准表达"
+      },
+      {
+        "lineId": "l07-conv-003",
+        "japanese": "いらっしゃい どうぞお上がりください",
+        "chineseMeaning": "欢迎，请进来吧",
+        "intention": "热情欢迎客人并请对方进屋",
+        "memorizationHint": "「いらっしゃい」=欢迎。「お上がりください」=请进（「上がる」的敬语）",
+        "commonMistake": "「お上がりください」是「入ってください」的敬语，日式房屋需要脱鞋上台阶",
+        "realLifeUse": "来客を家に招き入れる時の丁寧な表現。「いらっしゃい」は歓迎の気持ちを伝える",
+        "emotionTone": "歓迎・丁寧",
+        "memoryTip": "「いらっしゃい」欢迎＋「お上がりください」请进。访问时的标准欢迎语"
+      },
+      {
+        "lineId": "l07-conv-004",
+        "japanese": "失礼します",
+        "chineseMeaning": "打扰了",
+        "intention": "进入他人家里前表达歉意和礼貌",
+        "memorizationHint": "「失礼します」=失礼了/打扰了。进入他人空间前的固定表达",
+        "commonMistake": "离开时说「失礼しました」（过去时），进入时说「失礼します」（现在时）",
+        "realLifeUse": "他人の家や部屋に入る時の決まり文句。日本のマナーとして必須",
+        "emotionTone": "丁寧・挨拶",
+        "memoryTip": "「失礼します」是进入他人房间/家门时的礼貌用语"
+      },
+      {
+        "lineId": "l07-conv-005",
+        "japanese": "コーヒーはいかがですか？",
+        "chineseMeaning": "喝咖啡怎么样？",
+        "intention": "礼貌地询问对方是否需要咖啡",
+        "memorizationHint": "「いかがですか」=「どうですか」的礼貌表达。待客时常用",
+        "commonMistake": "「いかがですか」比「どうですか」更礼貌正式。对客人要用「いかがですか」",
+        "realLifeUse": "飲み物や食べ物を勧める時の丁寧な表現。来客対応の定番フレーズ",
+        "emotionTone": "勧め・丁寧",
+        "memoryTip": "「〜はいかがですか」=要不要～？待客时必备的礼貌邀请"
+      },
+      {
+        "lineId": "l07-conv-006",
+        "japanese": "ありがとうございます",
+        "chineseMeaning": "谢谢",
+        "intention": "表达感谢和接受对方的好意",
+        "memorizationHint": "「ありがとうございます」=谢谢（现在时，用于接受好意时）",
+        "commonMistake": "事前の招待や申し出に対する感謝は「ありがとうございます」（现在时）",
+        "realLifeUse": "親切や申し出を受けた時に使う最も基本的なお礼",
+        "emotionTone": "感謝",
+        "memoryTip": "「ありがとうございます」是接受好意时的基本感谢表达"
+      },
+      {
+        "lineId": "l07-conv-007",
+        "japanese": "どうぞ",
+        "chineseMeaning": "请",
+        "intention": "递给对方东西时示意对方请用",
+        "memorizationHint": "「どうぞ」=请。递东西时最简短的表达",
+        "commonMistake": "「どうぞ」单独使用表示「请用」。不需要加其他词",
+        "realLifeUse": "物を差し出す時や席を勧める時の万能表現",
+        "emotionTone": "勧め・親切",
+        "memoryTip": "「どうぞ」是递东西或让座时的万能用语"
+      },
+      {
+        "lineId": "l07-conv-008",
+        "japanese": "いただきます",
+        "chineseMeaning": "我开动了",
+        "intention": "用餐或饮用前表达对食物和提供者的感谢",
+        "memorizationHint": "「いただきます」=「もらいます」的谦让语。字面意思是「我领受了」",
+        "commonMistake": "「いただきます」是「もらう」的谦让语。和「ごちそうさま」是前后的固定搭配",
+        "realLifeUse": "食事や飲み物をいただく前に必ず言う日本の大切なマナー",
+        "emotionTone": "感謝・丁寧",
+        "memoryTip": "「いただきます」是饭前/喝东西前的固定致谢用语"
+      },
+      {
+        "lineId": "l07-conv-009",
+        "japanese": "このスプーン素敵ですね",
+        "chineseMeaning": "这个勺子真漂亮啊",
+        "intention": "赞美桌上的勺子，引出话题",
+        "memorizationHint": "「素敵（すてき）」=很棒/漂亮。「ですね」向对方确认共感",
+        "commonMistake": "「素敵」是な形容词，修饰名词时用「素敵な」（素敵なスプーン）",
+        "realLifeUse": "相手の持ち物を褒める時の自然な言い方。会話のきっかけ作りに最適",
+        "emotionTone": "賞賛・感心",
+        "memoryTip": "「素敵ですね」=真棒啊。称赞对方物品时常用的表达"
+      },
+      {
+        "lineId": "l07-conv-010",
+        "japanese": "ええ、会社の人にもらいました",
+        "chineseMeaning": "嗯，是公司的人送的",
+        "intention": "说明物品的来源，用授受动词表示从别人那里收到",
+        "memorizationHint": "「〜に〜をもらいました」=从～收到了～。本课核心语法",
+        "commonMistake": "「もらいました」是「もらう」的过去形。动作主体是「私」（我收到），给的人是「会社の人」",
+        "realLifeUse": "贈り物の由来を説明する時の授受表現。「〜に〜をもらう」で誰から何をもらったかを伝える",
+        "emotionTone": "説明・感謝",
+        "memoryTip": "「〜にもらいました」=从～收到了～。授受动词もらう的核心用法"
+      },
+      {
+        "lineId": "l07-conv-011",
+        "japanese": "メキシコのお土産です",
+        "chineseMeaning": "是从墨西哥带回来的纪念品",
+        "intention": "补充说明物品的详细背景信息",
+        "memorizationHint": "「お土産（おみやげ）」=纪念品/伴手礼。「〜です」=是～",
+        "commonMistake": "「お土産」指旅行带回来的礼物/纪念品，不是普通的礼物",
+        "realLifeUse": "物の産地や由来を説明する時のシンプルな言い方",
+        "emotionTone": "説明・情報",
+        "memoryTip": "「お土産」=伴手礼/纪念品。旅行带回的礼物"
+      }
     ],
     "chineseRetellPrompt": "请用中文复述第7课的对话内容。\n\n「第7课讲的是桑托斯去朋友家做客的故事。他敲门后朋友回应『はい』，桑托斯报上名字『我是桑托斯』。朋友开门说『欢迎，请进』，桑托斯说『打扰了』走进屋里。朋友问『喝咖啡怎么样？』桑托斯道谢。朋友端上咖啡说『请』，桑托斯说『いただきます』开始喝。桑托斯看到桌上的勺子说『这个勺子真漂亮啊』，朋友解释说『嗯，是公司的人送的，从墨西哥带回来的纪念品』。」\n\n请用自己的话把这个做客的故事复述一遍，注意突出授受动词「もらいました」（收到）的用法。",
     "realLifeReplacementPractice": [

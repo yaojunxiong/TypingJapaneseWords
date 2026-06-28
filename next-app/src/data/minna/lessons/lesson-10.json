@@ -692,9 +692,9 @@
     {
       "type": "conversation",
       "id": "l10_conversation",
-      "sourceType": "official_video_subtitle",
-      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P10_%E7%AC%AC10%E8%AA%B2.json",
-      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P10_%E7%AC%AC10%E8%AA%B2.mp4",
+      "sourceType": "conversation_image_human_confirmed",
+      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/大家的日本語第2版-会話_P10_第10課.mp4",
+      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/大家的日本語第2版-会話_P10_第10課.mp4",
       "title": {
         "zh": "会话背诵",
         "en": "Conversation Practice"
@@ -710,211 +710,122 @@
       "items": [
         {
           "id": "l10-conv-001",
-          "speaker": "",
-          "jp": "アジアストア",
-          "kana": "アジアストア",
-          "zh": "亚洲商店",
+          "speaker": "ミラー",
+          "jp": "すみません。アジアストアはどこですか。",
+          "zh": "不好意思，亚洲商店在哪里？",
           "keyword": "",
-          "videoStart": "0:00.00",
-          "videoEnd": "0:05.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "すみません。あじあすとあはどこですか。"
         },
         {
           "id": "l10-conv-002",
-          "speaker": "",
-          "jp": "すみません アジアストアはどこですか?",
-          "kana": "すみません アジアストアはどこですか?",
-          "zh": "不好意思，亚洲商店在哪里？",
+          "speaker": "女の人",
+          "jp": "アジアストアですか。あそこに白いビルがありますね。あのビルの中です。",
+          "zh": "您是说亚洲商店吗？那边有一栋白色的大楼，对吧？就在那栋楼里。",
           "keyword": "",
-          "videoStart": "0:10.00",
-          "videoEnd": "0:13.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "あじあすとあですか。あそこにしろいびるがありますね。あのびるのなかです。"
         },
         {
           "id": "l10-conv-003",
-          "speaker": "",
-          "jp": "アジアストアですか?",
-          "kana": "アジアストアですか?",
-          "zh": "您是说亚洲商店吗？",
+          "speaker": "ミラー",
+          "jp": "そうですか。どうもすみません。",
+          "zh": "是这样啊，真不好意思。",
           "keyword": "",
-          "videoStart": "0:13.00",
-          "videoEnd": "0:15.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "そうですか。どうもすみません。"
         },
         {
           "id": "l10-conv-004",
-          "speaker": "",
-          "jp": "あそこに白いビルがありますね",
-          "kana": "",
-          "zh": "那边有一栋白色的大楼，对吧？",
+          "speaker": "女の人",
+          "jp": "いいえ。",
+          "zh": "不客气。",
           "keyword": "",
-          "videoStart": "0:15.00",
-          "videoEnd": "0:18.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "いいえ。"
         },
         {
           "id": "l10-conv-005",
-          "speaker": "",
-          "jp": "あのビルの中です",
-          "kana": "",
-          "zh": "就在那栋楼里",
+          "speaker": "ミラー",
+          "jp": "あのう、ナンプラー、ありますか。",
+          "zh": "那个……请问有鱼露吗？",
           "keyword": "",
-          "videoStart": "0:18.00",
-          "videoEnd": "0:20.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "あのう、なんぷらー、ありますか。"
         },
         {
           "id": "l10-conv-006",
-          "speaker": "",
-          "jp": "そうですか どうもすみません",
-          "kana": "そうですか どうもすみません",
-          "zh": "是这样啊，真不好意思",
+          "speaker": "店員",
+          "jp": "はい。あちらにタイ料理のコーナーがあります。ナンプラーはいちばん下です。",
+          "zh": "有的。那边有一个泰国菜专区，鱼露在最下面一层。",
           "keyword": "",
-          "videoStart": "0:20.00",
-          "videoEnd": "0:23.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "はい。あちらにたいりょうりのこーなーがあります。なんぷらーはいちばんしたです。"
         },
         {
           "id": "l10-conv-007",
-          "speaker": "",
-          "jp": "いいえ",
-          "kana": "いいえ",
-          "zh": "不客气",
+          "speaker": "ミラー",
+          "jp": "わかりました。どうも。",
+          "zh": "我知道了，谢谢。",
           "keyword": "",
-          "videoStart": "0:23.00",
-          "videoEnd": "0:24.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l10-conv-008",
-          "speaker": "",
-          "jp": "アジアストア",
-          "kana": "アジアストア",
-          "zh": "亚洲商店",
-          "keyword": "",
-          "videoStart": "0:30.00",
-          "videoEnd": "0:34.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l10-conv-009",
-          "speaker": "",
-          "jp": "あの",
-          "kana": "あの",
-          "zh": "那个……",
-          "keyword": "",
-          "videoStart": "0:36.00",
-          "videoEnd": "0:38.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l10-conv-010",
-          "speaker": "",
-          "jp": "ナンプラーありますか?",
-          "kana": "ナンプラーありますか?",
-          "zh": "请问有鱼露吗？",
-          "keyword": "",
-          "videoStart": "0:39.00",
-          "videoEnd": "0:42.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l10-conv-011",
-          "speaker": "",
-          "jp": "はい あちらにタイ料理のコーナーがあります",
-          "kana": "",
-          "zh": "有的，那边有一个泰国菜专区",
-          "keyword": "料理",
-          "videoStart": "0:42.00",
-          "videoEnd": "0:46.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l10-conv-012",
-          "speaker": "",
-          "jp": "ナンプラーは一番下です",
-          "kana": "",
-          "zh": "鱼露在最下面一层",
-          "keyword": "一番下です",
-          "videoStart": "0:48.00",
-          "videoEnd": "0:51.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l10-conv-013",
-          "speaker": "",
-          "jp": "わかりました どうも",
-          "kana": "わかりました どうも",
-          "zh": "我知道了，谢谢",
-          "keyword": "",
-          "videoStart": "0:51.00",
-          "videoEnd": "0:54.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "わかりました。どうも。"
         }
       ]
     },
@@ -2373,67 +2284,91 @@
         "step": 1,
         "title": "场景标题：亚洲商店",
         "explanation": "字幕显示本课场景标题「アジアストア」（亚洲商店），提示接下来的对话发生地点。这是会话中的场景切换标记。",
-        "relatedLineIds": ["l10-conv-001"]
+        "relatedLineIds": [
+          "l10-conv-001"
+        ]
       },
       {
         "step": 2,
         "title": "在街上问路",
         "explanation": "顾客A用「すみません」叫住路人，然后问「アジアストアはどこですか？」——亚洲商店在哪里？「すみません」在日语中非常万能，可以表示道歉、道谢、以及引起对方注意。这里用作引起注意的打招呼。「どこ」是疑问词「哪里」，「〜はどこですか」是询问位置的基本句型。",
-        "relatedLineIds": ["l10-conv-002"]
+        "relatedLineIds": [
+          "l10-conv-002"
+        ]
       },
       {
         "step": 3,
         "title": "路人反问确认",
         "explanation": "路人没有直接回答，而是先反问「アジアストアですか？」——您是说亚洲商店吗？在日语对话中，先反问确认对方说的是什么再做回答是一种礼貌的习惯，避免搞错目标。这里用「〜ですか」的升调表示确认疑问。",
-        "relatedLineIds": ["l10-conv-003"]
+        "relatedLineIds": [
+          "l10-conv-003"
+        ]
       },
       {
         "step": 4,
         "title": "远指建筑",
         "explanation": "路人先指向远处说「あそこに白いビルがありますね」——那边有一栋白色的大楼，对吧？这里用了存在句「〜に〜があります」表示某处存在某物。「あそこに」是「在那里」，「白いビル」是「白色的楼」，「あります」表示无生命物的存在。句尾的「ね」表示确认，相当于「对吧？」。",
-        "relatedLineIds": ["l10-conv-004"]
+        "relatedLineIds": [
+          "l10-conv-004"
+        ]
       },
       {
         "step": 5,
         "title": "告知准确位置",
         "explanation": "路人接着说「あのビルの中です」——就在那栋楼里。用「あのビル」（那栋楼，即上文提到的white大楼）承接前面的信息。「〜の中」表示「在〜里面」，「です」是判断句结尾。这句話明确了商店的具体所在。",
-        "relatedLineIds": ["l10-conv-005"]
+        "relatedLineIds": [
+          "l10-conv-005"
+        ]
       },
       {
         "step": 6,
         "title": "道谢与回应",
         "explanation": "顾客A先恍然大悟地说「そうですか」（是这样啊），然后道谢「どうもすみません」（真不好意思）。「そうですか」是听到新信息时的标准反应，表示理解或确认。路人回应「いいえ」（不客气），简洁而礼貌。注意「すみません」在这里是道谢而非道歉。",
-        "relatedLineIds": ["l10-conv-006", "l10-conv-007"]
+        "relatedLineIds": [
+          "l10-conv-006",
+          "l10-conv-007"
+        ]
       },
       {
         "step": 7,
         "title": "店内搭话",
         "explanation": "场景切换到店内。顾客A用「あの…」（那个……）引起店员的注意。在日语中，「あの」是犹豫或引起注意的填充词，相当于中文的「那个……」或英文的「Um…」。后面加上升调或拖长音表示话还没说完，等待对方回应。",
-        "relatedLineIds": ["l10-conv-008", "l10-conv-009"]
+        "relatedLineIds": [
+          "l10-conv-008",
+          "l10-conv-009"
+        ]
       },
       {
         "step": 8,
         "title": "询问商品",
         "explanation": "顾客A问「ナンプラーありますか？」——请问有鱼露吗？「ナンプラー」是泰式鱼露（一种调味料）的日语名称。「ありますか」是「あります」的疑问形，表示询问某物是否存在。这是一个省略了助词的口语问法，完整形式是「ナンプラーはありますか？」。在商店里问「〜ありますか」是最常用的询问商品的方式。",
-        "relatedLineIds": ["l10-conv-010"]
+        "relatedLineIds": [
+          "l10-conv-010"
+        ]
       },
       {
         "step": 9,
         "title": "店员回应有货",
         "explanation": "店员先肯定回答「はい」（好的），然后指向远处说「あちらにタイ料理のコーナーがあります」——那边有一个泰国菜专区。「あちらに」是「那边」的礼貌说法，「タイ料理のコーナー」是「泰国菜专区」，「があります」表示存在。店员没有直接说位置，而是先告诉对方区域。",
-        "relatedLineIds": ["l10-conv-011"]
+        "relatedLineIds": [
+          "l10-conv-011"
+        ]
       },
       {
         "step": 10,
         "title": "具体位置说明",
         "explanation": "店员进一步说明「ナンプラーは一番下です」——鱼露在最下面一层。这里用「〜は〜です」的判断句结构来描述位置。实际上这是一种省略说法，完整的意思是「ナンプラーが置いてある場所は一番下の段です」。「一番下」是「最下面」的意思，指货架的最底层。",
-        "relatedLineIds": ["l10-conv-012"]
+        "relatedLineIds": [
+          "l10-conv-012"
+        ]
       },
       {
         "step": 11,
         "title": "致谢结束",
         "explanation": "顾客A说「わかりました、どうも」——我知道了，谢谢。「わかりました」是「明白了/知道了」的过去式，表示理解了对方说的信息。「どうも」是「谢谢」的口语简略形式，源自「どうもありがとう」。整句话简洁自然，是得到帮助后的标准结束语。",
-        "relatedLineIds": ["l10-conv-013"]
+        "relatedLineIds": [
+          "l10-conv-013"
+        ]
       }
     ],
     "lineUsage": [

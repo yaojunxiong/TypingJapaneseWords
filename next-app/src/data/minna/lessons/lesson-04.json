@@ -692,9 +692,9 @@
     {
       "type": "conversation",
       "id": "l04_conversation",
-      "sourceType": "official_video_subtitle",
-      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P4_%E7%AC%AC4%E8%AA%B2.json",
-      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P4_%E7%AC%AC4%E8%AA%B2.mp4",
+      "sourceType": "conversation_image_human_confirmed",
+      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/大家的日本語第2版-会話_P4_第4課.mp4",
+      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/大家的日本語第2版-会話_P4_第4課.mp4",
       "title": {
         "zh": "会话背诵",
         "en": "Conversation Practice"
@@ -710,195 +710,156 @@
       "items": [
         {
           "id": "l04-conv-001",
-          "speaker": "",
-          "jp": "【アスカの電話番号】",
-          "kana": "",
-          "zh": "【Asuka的电话号码】",
-          "keyword": "電話番号",
-          "videoStart": "0:00.00",
-          "videoEnd": "0:02.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "ミラー",
+          "jp": "すみません。「あすか」の電話番号は何番ですか。",
+          "zh": "不好意思，请问Asuka的电话号码是多少？",
+          "keyword": "",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "すみません。「あすか」のでんわばんごうはなんばんですか。"
         },
         {
           "id": "l04-conv-002",
-          "speaker": "",
-          "jp": "すみません アスカの電話番号は何番ですか?",
-          "kana": "",
-          "zh": "不好意思，请问Asuka的电话号码是多少？",
-          "keyword": "何番です",
-          "videoStart": "0:11.00",
-          "videoEnd": "0:14.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "佐藤",
+          "jp": "「あすか」ですか。5275の2725です。",
+          "zh": "您是说「あすか」吗？号码是5275-2725。",
+          "keyword": "",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "「あすか」ですか。ご・に・なな・ごのに・なな・に・ごです。"
         },
         {
           "id": "l04-conv-003",
-          "speaker": "",
-          "jp": "アスカですか?",
-          "kana": "アスカですか?",
-          "zh": "您是说Asuka吗？",
+          "speaker": "ミラー",
+          "jp": "どうもありがとうございます。",
+          "zh": "非常感谢您。",
           "keyword": "",
-          "videoStart": "0:15.00",
-          "videoEnd": "0:16.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "どうもありがとうございます。"
         },
         {
           "id": "l04-conv-004",
-          "speaker": "",
-          "jp": "5275-2725です",
-          "kana": "5275-2725です",
-          "zh": "是5275-2725",
-          "keyword": "2725です",
-          "videoStart": "0:24.00",
-          "videoEnd": "0:28.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "speaker": "店の人",
+          "jp": "はい、「あすか」です。",
+          "zh": "您好，这里是「あすか」。",
+          "keyword": "",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "はい、「あすか」です。"
         },
         {
           "id": "l04-conv-005",
-          "speaker": "",
-          "jp": "どうもありがとうございます",
-          "kana": "どうもありがとうございます",
-          "zh": "非常感谢您",
+          "speaker": "ミラー",
+          "jp": "すみません。そちらは何時までですか。",
+          "zh": "不好意思，请问你们营业到几点？",
           "keyword": "",
-          "videoStart": "0:30.00",
-          "videoEnd": "0:32.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "すみません。そちらはなんじまでですか。"
         },
         {
           "id": "l04-conv-006",
-          "speaker": "",
-          "jp": "はい アスカです",
-          "kana": "はい アスカです",
-          "zh": "您好，这里是Asuka",
+          "speaker": "店の人",
+          "jp": "10時までです。",
+          "zh": "营业到10点。",
           "keyword": "",
-          "videoStart": "0:38.00",
-          "videoEnd": "0:40.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "じゅうじまでです。"
         },
         {
           "id": "l04-conv-007",
-          "speaker": "",
-          "jp": "すみません そちらは何時までですか?",
-          "kana": "",
-          "zh": "不好意思，请问你们营业到几点？",
-          "keyword": "何時",
-          "videoStart": "0:41.00",
-          "videoEnd": "0:44.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "ミラー",
+          "jp": "休みは何曜日ですか。",
+          "zh": "你们星期几休息？",
+          "keyword": "",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "やすみはなんようびですか。"
         },
         {
           "id": "l04-conv-008",
-          "speaker": "",
-          "jp": "10時までです",
-          "kana": "",
-          "zh": "营业到10点",
-          "keyword": "10時",
-          "videoStart": "0:46.00",
-          "videoEnd": "0:47.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "店の人",
+          "jp": "日曜日です。",
+          "zh": "星期天休息。",
+          "keyword": "",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "にちようびです。"
         },
         {
           "id": "l04-conv-009",
-          "speaker": "",
-          "jp": "休みは何曜日ですか?",
-          "kana": "",
-          "zh": "你们星期几休息？",
-          "keyword": "何曜日です",
-          "videoStart": "0:51.00",
-          "videoEnd": "0:53.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l04-conv-010",
-          "speaker": "",
-          "jp": "日曜日です",
-          "kana": "",
-          "zh": "星期天休息",
-          "keyword": "日曜日です",
-          "videoStart": "0:54.00",
-          "videoEnd": "0:55.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l04-conv-011",
-          "speaker": "",
-          "jp": "【アスカの電話番号】",
-          "kana": "",
-          "zh": "【Asuka的电话号码】",
-          "keyword": "電話番号",
-          "videoStart": "0:55.00",
-          "videoEnd": "0:57.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l04-conv-012",
-          "speaker": "",
-          "jp": "そうですか どうも",
-          "kana": "そうですか どうも",
-          "zh": "是这样啊，谢谢",
+          "speaker": "ミラー",
+          "jp": "そうですか。どうも。",
+          "zh": "是这样啊，谢谢。",
           "keyword": "",
-          "videoStart": "0:58.00",
-          "videoEnd": "1:00.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "そうですか。どうも。"
         }
       ]
     },
@@ -2242,49 +2203,69 @@
         "step": 1,
         "title": "询问电话号码",
         "explanation": "A先说出主题'アスカの電話番号'，然后问号码是多少。'電話番号'是电话号码，'何番'是问'几号/多少号'。这是询问标准号码的表达方式。",
-        "relatedLineIds": ["l04-conv-001", "l04-conv-002"]
+        "relatedLineIds": [
+          "l04-conv-001",
+          "l04-conv-002"
+        ]
       },
       {
         "step": 2,
         "title": "确认对象",
         "explanation": "B确认地问'アスカですか?'，相当于'你是说Asuka吗？'。在回答信息之前先确认询问对象是否正确，这是确保信息准确的常用做法。用上升语调表示疑问。",
-        "relatedLineIds": ["l04-conv-003"]
+        "relatedLineIds": [
+          "l04-conv-003"
+        ]
       },
       {
         "step": 3,
         "title": "提供号码",
         "explanation": "B说出号码'5275-2725です'。注意日语读电话数字时，可以一位一位地读。如5275可以读作ご・に・なな・ご。数字连读时要保持清晰的发音。",
-        "relatedLineIds": ["l04-conv-004"]
+        "relatedLineIds": [
+          "l04-conv-004"
+        ]
       },
       {
         "step": 4,
         "title": "郑重道谢",
         "explanation": "A说'どうもありがとうございます'，是郑重感谢的表达。得到别人帮助提供信息后，使用完整的感谢句式是礼貌的表现。",
-        "relatedLineIds": ["l04-conv-005"]
+        "relatedLineIds": [
+          "l04-conv-005"
+        ]
       },
       {
         "step": 5,
         "title": "拨打电话自报姓名",
         "explanation": "A拨通Asuka的电话，对方接起说'はい アスカです'。在电话中接听后先自报店铺或姓名是日本的电话礼仪。'はい'在电话中相当于'喂，您好'。",
-        "relatedLineIds": ["l04-conv-006"]
+        "relatedLineIds": [
+          "l04-conv-006"
+        ]
       },
       {
         "step": 6,
         "title": "询问营业时间",
         "explanation": "A问'そちらは何時までですか'，意思是'你们营业到几点'。'そちら'是礼貌的'你那边/你们'。'何時まで'是'到几点'的意思，用'まで'表示时间终点。句型：'〜は何時までですか'=〜到几点。",
-        "relatedLineIds": ["l04-conv-007"]
+        "relatedLineIds": [
+          "l04-conv-007"
+        ]
       },
       {
         "step": 7,
         "title": "回答时间与休息日",
         "explanation": "Asuka回答'10時までです'（营业到10点）。A接着问'休みは何曜日ですか'（休息日是星期几）。'休み'是休息日，'何曜日'是周几。Asuka回答'日曜日です'（星期天）。这里展示了询问和回答时间、星期的句型。",
-        "relatedLineIds": ["l04-conv-008", "l04-conv-009", "l04-conv-010"]
+        "relatedLineIds": [
+          "l04-conv-008",
+          "l04-conv-009",
+          "l04-conv-010"
+        ]
       },
       {
         "step": 8,
         "title": "结束通话",
         "explanation": "A边记录边说'そうですか どうも'，意思是'这样啊，谢谢'。'そうですか'表示'是吗/这样啊'，表示听懂了对方提供的信息。然后简短道谢后挂断电话。",
-        "relatedLineIds": ["l04-conv-011", "l04-conv-012"]
+        "relatedLineIds": [
+          "l04-conv-011",
+          "l04-conv-012"
+        ]
       }
     ],
     "lineUsage": [

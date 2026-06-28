@@ -748,9 +748,9 @@
     {
       "type": "conversation",
       "id": "l02_conversation",
-      "sourceType": "official_video_subtitle",
-      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P2_%E7%AC%AC2%E8%AA%B2.json",
-      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P2_%E7%AC%AC2%E8%AA%B2.mp4",
+      "sourceType": "conversation_image_human_confirmed",
+      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/大家的日本語第2版-会話_P2_第2課.mp4",
+      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/大家的日本語第2版-会話_P2_第2課.mp4",
       "title": {
         "zh": "会话背诵",
         "en": "Conversation Practice"
@@ -766,147 +766,105 @@
       "items": [
         {
           "id": "l02-conv-001",
-          "speaker": "",
-          "jp": "はい、どなたですか?",
-          "kana": "はい、どなたですか?",
+          "speaker": "山田一郎",
+          "jp": "はい。どなたですか。",
           "zh": "您好，请问是哪位？",
           "keyword": "",
-          "videoStart": "0:00.00",
-          "videoEnd": "0:14.70",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "はい。どなたですか。"
         },
         {
           "id": "l02-conv-002",
-          "speaker": "",
-          "jp": "408のサントスです",
-          "kana": "408のサントスです",
-          "zh": "我是408号的桑托斯",
-          "keyword": "408",
-          "videoStart": "0:15.90",
-          "videoEnd": "0:17.30",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "speaker": "サントス",
+          "jp": "408のサントスです。",
+          "zh": "我是408号的桑托斯。",
+          "keyword": "",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "よんまるはちのサントスです。"
         },
         {
           "id": "l02-conv-003",
-          "speaker": "",
-          "jp": "こんにちは、サントスです",
-          "kana": "こんにちは、サントスです",
-          "zh": "你好，我是桑托斯",
+          "speaker": "サントス",
+          "jp": "こんにちは。サントスです。これからお世話になります。どうぞよろしくお願いします。",
+          "zh": "你好，我是桑托斯。今后要承蒙关照，请多关照。",
           "keyword": "",
-          "videoStart": "0:17.30",
-          "videoEnd": "0:22.40",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "こんにちは。さんとすです。これからおせわになります。どうぞよろしくおねがいします。"
         },
         {
           "id": "l02-conv-004",
-          "speaker": "",
-          "jp": "これからお世話になります",
-          "kana": "",
-          "zh": "今后请多多关照",
-          "keyword": "世話",
-          "videoStart": "0:22.40",
-          "videoEnd": "0:24.20",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "山田一郎",
+          "jp": "こちらこそよろしくお願いします。",
+          "zh": "我才是，请多关照。",
+          "keyword": "",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "こちらこそよろしくおねがいします。"
         },
         {
           "id": "l02-conv-005",
-          "speaker": "",
-          "jp": "どうぞよろしくお願いします",
-          "kana": "",
-          "zh": "请多关照",
+          "speaker": "サントス",
+          "jp": "あのう、これ、コーヒーです。どうぞ。",
+          "zh": "那个，这是咖啡，请收下。",
           "keyword": "",
-          "videoStart": "0:24.20",
-          "videoEnd": "0:26.10",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "あのう、これ、こーひーです。どうぞ。"
         },
         {
           "id": "l02-conv-006",
-          "speaker": "",
-          "jp": "こちらこそよろしくお願いします",
-          "kana": "",
-          "zh": "我才是，请多关照",
+          "speaker": "山田一郎",
+          "jp": "どうもありがとうございます。",
+          "zh": "非常感谢。",
           "keyword": "",
-          "videoStart": "0:26.10",
-          "videoEnd": "0:28.60",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l02-conv-008",
-          "speaker": "",
-          "jp": "あのー、これコーヒーです",
-          "kana": "あのー、これコーヒーです",
-          "zh": "那个，这是咖啡",
-          "keyword": "",
-          "videoStart": "0:30.00",
-          "videoEnd": "0:32.10",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l02-conv-009",
-          "speaker": "",
-          "jp": "どうぞ",
-          "kana": "どうぞ",
-          "zh": "请用",
-          "keyword": "",
-          "videoStart": "0:32.10",
-          "videoEnd": "0:33.10",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l02-conv-010",
-          "speaker": "",
-          "jp": "どうもありがとうございます",
-          "kana": "どうもありがとうございます",
-          "zh": "非常感谢",
-          "keyword": "",
-          "videoStart": "0:33.10",
-          "videoEnd": "0:39.60",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "どうもありがとうございます。"
         }
       ]
     },
@@ -1994,43 +1952,59 @@
         "step": 1,
         "title": "门铃应答",
         "explanation": "有人按门铃，邻居（主人）在屋内问'はい、どなたですか？'。'どなた'是'谁'的礼貌说法（比'だれ'更正式），用在询问来客身份时。注意这里使用的是郑重语，不是随意的口吻。",
-        "relatedLineIds": ["l02-conv-001"]
+        "relatedLineIds": [
+          "l02-conv-001"
+        ]
       },
       {
         "step": 2,
         "title": "报上身份",
         "explanation": "桑托斯回答'408のサントスです'——先报房间号再报姓名，让主人知道是谁来了。在公寓或酒店等场所，先报房号再报名是常见的做法。'の'在这里表示'～的'（408号的）。",
-        "relatedLineIds": ["l02-conv-002"]
+        "relatedLineIds": [
+          "l02-conv-002"
+        ]
       },
       {
         "step": 3,
         "title": "进屋正式问候",
         "explanation": "桑托斯进屋后正式说'こんにちは、サントスです'。'こんにちは'是白天（一般是上午11点到傍晚）通用的问候语，相当于'你好/下午好'。这里桑托斯再次报自己的名字，让主人确认。",
-        "relatedLineIds": ["l02-conv-003"]
+        "relatedLineIds": [
+          "l02-conv-003"
+        ]
       },
       {
         "step": 4,
         "title": "表达今后受关照的意愿",
         "explanation": "桑托斯说'これからお世話になります'。'これから'是'从现在起'，'お世話になります'字面意思是'给您添麻烦了'，实际含义是'今后请您多关照'。这是日本人在开始新关系时非常经典的一句话，比如搬家后对邻居、入职后对同事都会用。",
-        "relatedLineIds": ["l02-conv-004"]
+        "relatedLineIds": [
+          "l02-conv-004"
+        ]
       },
       {
         "step": 5,
         "title": "互相表达友好",
         "explanation": "桑托斯说'どうぞよろしくお願いします'是'请多关照'的标准说法。邻居回应'こちらこそよろしくお願いします'——'こちらこそ'意思是'我才是'，表示客气地回应对方的问候，体现了日本人谦逊的社交礼仪。",
-        "relatedLineIds": ["l02-conv-005", "l02-conv-006"]
+        "relatedLineIds": [
+          "l02-conv-005",
+          "l02-conv-006"
+        ]
       },
       {
         "step": 6,
         "title": "赠送礼物",
         "explanation": "桑托斯拿出咖啡说'あのー、これコーヒーです'。'これ'是这课的核心语法——指示代词'这个'，指代手中拿着的物品。'コーヒー'是咖啡。这句话展示了如何用'これ〜です'介绍自己手中的物品，在赠送礼物时非常常用。注意这里省略了助词'は'，是口语中比较自然的说法。",
-        "relatedLineIds": ["l02-conv-008"]
+        "relatedLineIds": [
+          "l02-conv-008"
+        ]
       },
       {
         "step": 7,
         "title": "接收与感谢",
         "explanation": "邻居接过礼物说'どうぞ'（请/请给我），然后桑托斯说'どうもありがとうございます'（非常感谢）。'どうぞ'在这里是接受对方好意时的回应，相当于'好的，谢谢'。'どうもありがとうございます'比'ありがとう'更郑重，适合正式场合。",
-        "relatedLineIds": ["l02-conv-009", "l02-conv-010"]
+        "relatedLineIds": [
+          "l02-conv-009",
+          "l02-conv-010"
+        ]
       }
     ],
     "lineUsage": [

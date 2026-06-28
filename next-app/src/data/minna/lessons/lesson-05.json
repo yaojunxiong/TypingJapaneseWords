@@ -692,9 +692,9 @@
     {
       "type": "conversation",
       "id": "l05_conversation",
-      "sourceType": "official_video_subtitle",
-      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P5_%E7%AC%AC5%E8%AA%B2.json",
-      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AF%AD%E7%AC%AC2%E7%89%88-%E4%BC%9A%E8%AF%9D_P5_%E7%AC%AC5%E8%AA%B2.mp4",
+      "sourceType": "conversation_image_human_confirmed",
+      "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/大家的日本語第2版-会話_P5_第5課.mp4",
+      "videoUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/大家的日本語第2版-会話_P5_第5課.mp4",
       "title": {
         "zh": "会话背诵",
         "en": "Conversation Practice"
@@ -709,164 +709,174 @@
       },
       "items": [
         {
-          "id": "l05-conv-002",
-          "speaker": "",
-          "jp": "すみません。甲子園までいくらですか?",
-          "kana": "",
+          "id": "l05-conv-001",
+          "speaker": "サントス",
+          "jp": "すみません。甲子園までいくらですか。",
           "zh": "不好意思，到甲子园多少钱？",
-          "keyword": "甲子園",
-          "videoStart": "0:15.00",
-          "videoEnd": "0:19.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "keyword": "",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "すみません。こうしえんまでいくらですか。"
+        },
+        {
+          "id": "l05-conv-002",
+          "speaker": "女の人",
+          "jp": "350円です。",
+          "zh": "是350日元。",
+          "keyword": "",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "さんびゃくごじゅうえんです。"
         },
         {
           "id": "l05-conv-003",
-          "speaker": "",
-          "jp": "350円です。",
-          "kana": "",
-          "zh": "是350日元。",
-          "keyword": "350円です",
-          "videoStart": "0:25.00",
-          "videoEnd": "0:27.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "サントス",
+          "jp": "350円ですね。ありがとうございました。",
+          "zh": "350日元啊，谢谢您。",
+          "keyword": "",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "さんびゃくごじゅうえんですね。ありがとうございました。"
         },
         {
           "id": "l05-conv-004",
-          "speaker": "",
-          "jp": "350円ですね。ありがとうございました。",
-          "kana": "",
-          "zh": "350日元啊，谢谢您。",
-          "keyword": "350円です",
-          "videoStart": "0:28.00",
-          "videoEnd": "0:31.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "女の人",
+          "jp": "どういたしまして。",
+          "zh": "不客气。",
+          "keyword": "",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "どういたしまして。"
         },
         {
           "id": "l05-conv-005",
-          "speaker": "",
-          "jp": "どういたしまして。",
-          "kana": "どういたしまして。",
-          "zh": "不客气。",
+          "speaker": "サントス",
+          "jp": "すみません。甲子園は何番線ですか。",
+          "zh": "不好意思，请问去甲子园是几号站台？",
           "keyword": "",
-          "videoStart": "0:31.00",
-          "videoEnd": "0:33.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "すみません。こうしえんはなんばんせんですか。"
         },
         {
           "id": "l05-conv-006",
-          "speaker": "",
-          "jp": "すみません。甲子園は何番線ですか?",
-          "kana": "",
-          "zh": "不好意思，请问去甲子园是几号站台？",
-          "keyword": "何番線です",
-          "videoStart": "0:40.00",
-          "videoEnd": "0:44.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "駅員",
+          "jp": "5番線です。",
+          "zh": "是5号站台。",
+          "keyword": "",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "ごばんせんです。"
         },
         {
           "id": "l05-conv-007",
-          "speaker": "",
-          "jp": "5番線です。",
-          "kana": "",
-          "zh": "是5号站台。",
-          "keyword": "5番線です",
-          "videoStart": "0:44.00",
-          "videoEnd": "0:45.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "サントス",
+          "jp": "どうも。",
+          "zh": "谢谢。",
+          "keyword": "",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "どうも。"
         },
         {
           "id": "l05-conv-008",
-          "speaker": "",
-          "jp": "どうも。",
-          "kana": "どうも。",
-          "zh": "谢谢。",
+          "speaker": "サントス",
+          "jp": "あのう、この電車は甲子園へ行きますか。",
+          "zh": "请问，这班电车去甲子园吗？",
           "keyword": "",
-          "videoStart": "0:45.00",
-          "videoEnd": "0:47.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "あのう、このでんしゃはこうしえんへいきますか。"
         },
         {
           "id": "l05-conv-009",
-          "speaker": "",
-          "jp": "あの、この電車は甲子園へ行きますか?",
-          "kana": "",
-          "zh": "请问，这班电车去甲子园吗？",
-          "keyword": "甲子園",
-          "videoStart": "0:53.00",
-          "videoEnd": "0:56.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "speaker": "男の人",
+          "jp": "いいえ、次の「普通」ですよ。",
+          "zh": "不，这班不是，下一班普通车才去。",
+          "keyword": "",
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
+          "needsKanaReview": false,
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "いいえ、つぎの「ふつう」ですよ。"
         },
         {
           "id": "l05-conv-010",
-          "speaker": "",
-          "jp": "いえ、次の普通ですよ。",
-          "kana": "",
-          "zh": "不，这班不是，下一班普通车才去。",
-          "keyword": "普通です",
-          "videoStart": "0:56.00",
-          "videoEnd": "0:59.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
-          "needsKanaReview": true,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
-        },
-        {
-          "id": "l05-conv-011",
-          "speaker": "",
+          "speaker": "サントス",
           "jp": "そうですか。どうも。",
-          "kana": "そうですか。どうも。",
           "zh": "是这样啊，谢谢。",
           "keyword": "",
-          "videoStart": "0:59.00",
-          "videoEnd": "1:02.00",
-          "sourceType": "official_video_subtitle",
-          "needsReview": true,
-          "needsSpeakerReview": true,
+          "videoStart": "",
+          "videoEnd": "",
+          "sourceType": "conversation_image_human_confirmed",
+          "needsReview": false,
+          "needsSpeakerReview": false,
           "needsKanaReview": false,
-          "needsKeywordReview": true,
-          "reviewStatus": "needs_review"
+          "needsKeywordReview": false,
+          "reviewStatus": "approved",
+          "reviewNote": "chatgpt-corrected import",
+          "kana": "そうですか。どうも。"
         }
       ]
     },
@@ -2046,55 +2056,74 @@
         "step": 1,
         "title": "询问到目的地的票价",
         "explanation": "乘客问'すみません。甲子園までいくらですか'——'到甲子园多少钱？'。这里用'まで'表示终点（到〜为止），'いくら'问价格。'〜までいくらですか'是询问交通费用的标准句型。",
-        "relatedLineIds": ["l05-conv-002"]
+        "relatedLineIds": [
+          "l05-conv-002"
+        ]
       },
       {
         "step": 2,
         "title": "告知票价",
         "explanation": "工作人员回答'350円です'。这是到甲子园的单程票价。在日本的轨道交通中，票价通常较低，短途约130-300日元。",
-        "relatedLineIds": ["l05-conv-003"]
+        "relatedLineIds": [
+          "l05-conv-003"
+        ]
       },
       {
         "step": 3,
         "title": "确认并道谢",
         "explanation": "乘客复述'350円ですね'确认信息。'〜ですね'表示确认'是〜啊'，是日语中常用的确认表达。然后说'ありがとうございました'——使用过去式'ございました'比'ございます'更礼貌，在对话结束时使用。",
-        "relatedLineIds": ["l05-conv-004"]
+        "relatedLineIds": [
+          "l05-conv-004"
+        ]
       },
       {
         "step": 4,
         "title": "对方回应不客气",
         "explanation": "工作人员说'どういたしまして'——'不客气'。这是回答别人感谢时的标准表达。与中文一样，当别人说谢谢时要给予礼貌的回应。",
-        "relatedLineIds": ["l05-conv-005"]
+        "relatedLineIds": [
+          "l05-conv-005"
+        ]
       },
       {
         "step": 5,
         "title": "询问站台",
         "explanation": "乘客接着问'甲子園は何番線ですか'——'甲子园是几号站台？'。'何番線'是问'几号线/几号站台'，在火车站台问路时非常常用。",
-        "relatedLineIds": ["l05-conv-006"]
+        "relatedLineIds": [
+          "l05-conv-006"
+        ]
       },
       {
         "step": 6,
         "title": "告知站台和道谢",
         "explanation": "工作人员回答'5番線です'。乘客简短道谢'どうも'。这里简洁地完成了第二个问题——先问到站台号，然后道谢。",
-        "relatedLineIds": ["l05-conv-007", "l05-conv-008"]
+        "relatedLineIds": [
+          "l05-conv-007",
+          "l05-conv-008"
+        ]
       },
       {
         "step": 7,
         "title": "确认电车是否到达目的地",
         "explanation": "在站台上，乘客问工作人员（或另一位工作人员）'あの、この電車は甲子園へ行きますか'——'请问，这班电车去甲子园吗？'。'あの'是犹豫/引起注意的语气词。'この電車'是'这班电车'。'〜へ行きますか'是'去〜吗'的询问句型。",
-        "relatedLineIds": ["l05-conv-009"]
+        "relatedLineIds": [
+          "l05-conv-009"
+        ]
       },
       {
         "step": 8,
         "title": "告知不是这班",
         "explanation": "工作人员回答'いえ、次の普通ですよ'，意思是'不，下一班普通车才去'。'いえ'比'いいえ'更口语化。'次の普通'是'下一班普通列车'。句尾的'よ'是提示性助词，表示'告诉你哦'。",
-        "relatedLineIds": ["l05-conv-010"]
+        "relatedLineIds": [
+          "l05-conv-010"
+        ]
       },
       {
         "step": 9,
         "title": "理解并感谢",
         "explanation": "乘客说'そうですか。どうも。'——'这样啊，谢谢。'表示理解了对方提供的信息并道谢。在得到信息后，用'そうですか'确认理解是最自然的回应。",
-        "relatedLineIds": ["l05-conv-011"]
+        "relatedLineIds": [
+          "l05-conv-011"
+        ]
       }
     ],
     "lineUsage": [
