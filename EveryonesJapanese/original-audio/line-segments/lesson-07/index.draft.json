@@ -1,0 +1,224 @@
+{
+  "version": "minna-original-line-segments-draft-v1",
+  "lesson": 7,
+  "sourceSet": "source-230001",
+  "cd": "CD24",
+  "sourceTrack": "source-230001/tracks/cd-024.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-230001/tracks/cd-024.mp3",
+  "segmentCount": 10,
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "山田一郎",
+      "japanese": "はい。",
+      "normalizedTarget": "はい",
+      "normalizedAsrText": "はい",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        1
+      ],
+      "startMs": 9980,
+      "endMs": 11280,
+      "durationMs": 1300,
+      "audioPath": "line-segments/lesson-07/l07-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-07/l07-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [1]；紧邻说话轮次在语音边界处分割，外侧最多保留约180ms自然余音；人工复核提示：开门后的第一声「はい」；请确认是否希望保留门/室内环境余音。"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "ジョゼ・サントス",
+      "japanese": "サントスです。",
+      "normalizedTarget": "さんとすです",
+      "normalizedAsrText": "さんとすです",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        2
+      ],
+      "startMs": 11280,
+      "endMs": 13220,
+      "durationMs": 1940,
+      "audioPath": "line-segments/lesson-07/l07-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-07/l07-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [2]；紧邻说话轮次在语音边界处分割，外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "山田一郎",
+      "japanese": "いらっしゃい。どうぞお上がりください。",
+      "normalizedTarget": "いらっしゃいどうぞおあがりください",
+      "normalizedAsrText": "いらっしゃいどうぞおあがりください",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        3
+      ],
+      "startMs": 15700,
+      "endMs": 19440,
+      "durationMs": 3740,
+      "audioPath": "line-segments/lesson-07/l07-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-07/l07-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [3]；紧邻说话轮次在语音边界处分割，外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "ジョゼ・サントス",
+      "japanese": "失礼します。",
+      "normalizedTarget": "しつれいします",
+      "normalizedAsrText": "しつれいします",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        4
+      ],
+      "startMs": 19440,
+      "endMs": 21220,
+      "durationMs": 1780,
+      "audioPath": "line-segments/lesson-07/l07-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-07/l07-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [4]；紧邻说话轮次在语音边界处分割，外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "山田友子",
+      "japanese": "コーヒーはいかがですか。",
+      "normalizedTarget": "こーひーはいかがですか",
+      "normalizedAsrText": "こーひーはいかがですか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        5
+      ],
+      "startMs": 22300,
+      "endMs": 24560,
+      "durationMs": 2260,
+      "audioPath": "line-segments/lesson-07/l07-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-07/l07-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [5]；紧邻说话轮次在语音边界处分割，外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "マリア・サントス",
+      "japanese": "ありがとうございます。",
+      "normalizedTarget": "ありがとうございます",
+      "normalizedAsrText": "ありがとうございます",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        6
+      ],
+      "startMs": 24560,
+      "endMs": 26660,
+      "durationMs": 2100,
+      "audioPath": "line-segments/lesson-07/l07-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-07/l07-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [6]；紧邻说话轮次在语音边界处分割，外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 7,
+      "displayOrder": 7,
+      "speaker": "山田友子",
+      "japanese": "どうぞ。",
+      "normalizedTarget": "どうぞ",
+      "normalizedAsrText": "どうぞ",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        7
+      ],
+      "startMs": 32460,
+      "endMs": 33820,
+      "durationMs": 1360,
+      "audioPath": "line-segments/lesson-07/l07-07.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-07/l07-07.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [7]；紧邻说话轮次在语音边界处分割，外侧最多保留约180ms自然余音；人工复核提示：「どうぞ」前有端杯场景声，本切片从台词语音开始。"
+    },
+    {
+      "lineNo": 8,
+      "displayOrder": 8,
+      "speaker": "マリア・サントス",
+      "japanese": "いただきます。",
+      "normalizedTarget": "いただきます",
+      "normalizedAsrText": "いただきます",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        8
+      ],
+      "startMs": 34420,
+      "endMs": 35770,
+      "durationMs": 1350,
+      "audioPath": "line-segments/lesson-07/l07-08.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-07/l07-08.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [8]；紧邻说话轮次在语音边界处分割，外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 9,
+      "displayOrder": 9,
+      "speaker": "マリア・サントス",
+      "japanese": "このスプーン、すてきですね。",
+      "normalizedTarget": "このすぷーんすてきですね",
+      "normalizedAsrText": "このすぷーんすてきですね",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        9
+      ],
+      "startMs": 35830,
+      "endMs": 38010,
+      "durationMs": 2180,
+      "audioPath": "line-segments/lesson-07/l07-09.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-07/l07-09.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [9]；紧邻说话轮次在语音边界处分割，外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 10,
+      "displayOrder": 10,
+      "speaker": "山田友子",
+      "japanese": "ええ、会社の人にもらいました。メキシコのお土産です。",
+      "normalizedTarget": "ええかいしゃのひとにもらいましためきしこのおみやげです",
+      "normalizedAsrText": "ええかいしゃのひとにもらいましためきしこのおみやげです",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        10,
+        11
+      ],
+      "startMs": 37990,
+      "endMs": 44120,
+      "durationMs": 6130,
+      "audioPath": "line-segments/lesson-07/l07-10.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-07/l07-10.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [10, 11]；紧邻说话轮次在语音边界处分割，外侧最多保留约180ms自然余音"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ]
+}

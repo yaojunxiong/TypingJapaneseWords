@@ -1,0 +1,122 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 7,
+  "cd": "CD24",
+  "sourceTrack": "source-230001/tracks/cd-024.mp3",
+  "durationMs": 45871,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "guidedPrompt": false,
+    "role": "timestamp_source_only",
+    "rawEngineOutput": "/tmp/minna-l6-10-asr/lesson-07.json"
+  },
+  "excludedRegions": [
+    {
+      "startMs": 0,
+      "endMs": 10160,
+      "reason": "课号、会話标题及开门前环境声"
+    },
+    {
+      "startMs": 13040,
+      "endMs": 15880,
+      "reason": "入户场景动作与停顿"
+    },
+    {
+      "startMs": 26480,
+      "endMs": 32640,
+      "reason": "端咖啡场景动作与杯碟声"
+    }
+  ],
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 10160,
+      "endMs": 11280,
+      "text": "はい。",
+      "normalizedText": "はい",
+      "confidence": 0.92
+    },
+    {
+      "index": 2,
+      "startMs": 11280,
+      "endMs": 13040,
+      "text": "サントスです。",
+      "normalizedText": "さんとすです",
+      "confidence": 0.92
+    },
+    {
+      "index": 3,
+      "startMs": 15880,
+      "endMs": 19440,
+      "text": "いらっしゃい。どうぞお上がりください。",
+      "normalizedText": "いらっしゃいどうぞおあがりください",
+      "confidence": 0.92
+    },
+    {
+      "index": 4,
+      "startMs": 19440,
+      "endMs": 21040,
+      "text": "失礼します。",
+      "normalizedText": "しつれいします",
+      "confidence": 0.92
+    },
+    {
+      "index": 5,
+      "startMs": 22480,
+      "endMs": 24560,
+      "text": "コーヒーはいかがですか。",
+      "normalizedText": "こーひーはいかがですか",
+      "confidence": 0.92
+    },
+    {
+      "index": 6,
+      "startMs": 24560,
+      "endMs": 26480,
+      "text": "ありがとうございます。",
+      "normalizedText": "ありがとうございます",
+      "confidence": 0.92
+    },
+    {
+      "index": 7,
+      "startMs": 32640,
+      "endMs": 33640,
+      "text": "どうぞ。",
+      "normalizedText": "どうぞ",
+      "confidence": 0.92
+    },
+    {
+      "index": 8,
+      "startMs": 34600,
+      "endMs": 35590,
+      "text": "いただきます。",
+      "normalizedText": "いただきます",
+      "confidence": 0.92
+    },
+    {
+      "index": 9,
+      "startMs": 36010,
+      "endMs": 37990,
+      "text": "このスプーン、すてきですね。",
+      "normalizedText": "このすぷーんすてきですね",
+      "confidence": 0.92
+    },
+    {
+      "index": 10,
+      "startMs": 38010,
+      "endMs": 40470,
+      "text": "ええ、会社の人にもらいました。",
+      "normalizedText": "ええかいしゃのひとにもらいました",
+      "confidence": 0.92
+    },
+    {
+      "index": 11,
+      "startMs": 41010,
+      "endMs": 43940,
+      "text": "メキシコのお土産です。",
+      "normalizedText": "めきしこのおみやげです",
+      "confidence": 0.92
+    }
+  ]
+}

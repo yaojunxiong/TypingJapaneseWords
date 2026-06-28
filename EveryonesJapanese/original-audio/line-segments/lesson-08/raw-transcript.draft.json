@@ -1,0 +1,128 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 8,
+  "cd": "CD28",
+  "sourceTrack": "source-230001/tracks/cd-028.mp3",
+  "durationMs": 42162,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "guidedPrompt": false,
+    "role": "timestamp_source_only",
+    "rawEngineOutput": "/tmp/minna-l6-10-asr/lesson-08.json"
+  },
+  "excludedRegions": [
+    {
+      "startMs": 0,
+      "endMs": 6000,
+      "reason": "课号、会話与标题朗读"
+    }
+  ],
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 6000,
+      "endMs": 10000,
+      "text": "マリアさん、日本の生活はどうですか。",
+      "normalizedText": "まりあさんにほんのせいかつはどうですか",
+      "confidence": 0.92
+    },
+    {
+      "index": 2,
+      "startMs": 10000,
+      "endMs": 12000,
+      "text": "毎日とても楽しいです。",
+      "normalizedText": "まいにちとてもたのしいです",
+      "confidence": 0.92
+    },
+    {
+      "index": 3,
+      "startMs": 12000,
+      "endMs": 14000,
+      "text": "そうですか。",
+      "normalizedText": "そうですか",
+      "confidence": 0.92
+    },
+    {
+      "index": 4,
+      "startMs": 14000,
+      "endMs": 16000,
+      "text": "サントスさん、お仕事はどうですか。",
+      "normalizedText": "さんとすさんおしごとはどうですか",
+      "confidence": 0.92
+    },
+    {
+      "index": 5,
+      "startMs": 16000,
+      "endMs": 18000,
+      "text": "そうですね。",
+      "normalizedText": "そうですね",
+      "confidence": 0.92
+    },
+    {
+      "index": 6,
+      "startMs": 18000,
+      "endMs": 21000,
+      "text": "忙しいですが、おもしろいです。",
+      "normalizedText": "いそがしいですがおもしろいです",
+      "confidence": 0.92
+    },
+    {
+      "index": 7,
+      "startMs": 21000,
+      "endMs": 24000,
+      "text": "コーヒー、もう一杯いかがですか。",
+      "normalizedText": "こーひーもういっぱいいかがですか",
+      "confidence": 0.92
+    },
+    {
+      "index": 8,
+      "startMs": 24000,
+      "endMs": 28000,
+      "text": "いいえ、けっこうです。",
+      "normalizedText": "いいえけっこうです",
+      "confidence": 0.92
+    },
+    {
+      "index": 9,
+      "startMs": 28000,
+      "endMs": 31000,
+      "text": "あ、もう6時ですね。",
+      "normalizedText": "あもうろくじですね",
+      "confidence": 0.92
+    },
+    {
+      "index": 10,
+      "startMs": 31000,
+      "endMs": 33000,
+      "text": "そろそろ失礼します。",
+      "normalizedText": "そろそろしつれいします",
+      "confidence": 0.92
+    },
+    {
+      "index": 11,
+      "startMs": 33000,
+      "endMs": 34000,
+      "text": "そうですか。",
+      "normalizedText": "そうですか",
+      "confidence": 0.92
+    },
+    {
+      "index": 12,
+      "startMs": 34000,
+      "endMs": 37000,
+      "text": "きょうはどうもありがとうございました。",
+      "normalizedText": "きょうはどうもありがとうございました",
+      "confidence": 0.92
+    },
+    {
+      "index": 13,
+      "startMs": 37000,
+      "endMs": 40000,
+      "text": "いいえ、またいらっしゃってください。",
+      "normalizedText": "いいえまたいらっしゃってください",
+      "confidence": 0.92
+    }
+  ]
+}

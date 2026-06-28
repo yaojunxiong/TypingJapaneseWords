@@ -1,0 +1,101 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 10,
+  "cd": "CD35",
+  "sourceTrack": "source-230001/tracks/cd-035.mp3",
+  "durationMs": 38896,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "guidedPrompt": false,
+    "role": "timestamp_source_only",
+    "rawEngineOutput": "/tmp/minna-l6-10-asr/lesson-10.json"
+  },
+  "excludedRegions": [
+    {
+      "startMs": 0,
+      "endMs": 6420,
+      "reason": "课号、会話与标题朗读"
+    },
+    {
+      "startMs": 20420,
+      "endMs": 26320,
+      "reason": "场景转换与商店环境声"
+    }
+  ],
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 6420,
+      "endMs": 9440,
+      "text": "すみません。アジアストアはどこですか。",
+      "normalizedText": "すみませんあじあすとあはどこですか",
+      "confidence": 0.92
+    },
+    {
+      "index": 2,
+      "startMs": 9440,
+      "endMs": 11420,
+      "text": "アジアストアですか。",
+      "normalizedText": "あじあすとあですか",
+      "confidence": 0.92
+    },
+    {
+      "index": 3,
+      "startMs": 11420,
+      "endMs": 15440,
+      "text": "あそこに白いビルがありますね。あのビルの中です。",
+      "normalizedText": "あそこにしろいびるがありますねあのびるのなかです",
+      "confidence": 0.92
+    },
+    {
+      "index": 4,
+      "startMs": 15440,
+      "endMs": 17920,
+      "text": "そうですか。どうもすみません。",
+      "normalizedText": "そうですかどうもすみません",
+      "confidence": 0.92
+    },
+    {
+      "index": 5,
+      "startMs": 17920,
+      "endMs": 20420,
+      "text": "いいえ。",
+      "normalizedText": "いいえ",
+      "confidence": 0.92
+    },
+    {
+      "index": 6,
+      "startMs": 26320,
+      "endMs": 28720,
+      "text": "あのう、ナンプラー、ありますか。",
+      "normalizedText": "あのうなんぷらーありますか",
+      "confidence": 0.92
+    },
+    {
+      "index": 7,
+      "startMs": 28720,
+      "endMs": 32680,
+      "text": "はい。あちらにタイ料理のコーナーがあります。",
+      "normalizedText": "はいあちらにたいりょうりのこーなーがあります",
+      "confidence": 0.92
+    },
+    {
+      "index": 8,
+      "startMs": 32680,
+      "endMs": 34560,
+      "text": "ナンプラーはいちばん下です。",
+      "normalizedText": "なんぷらーはいちばんしたです",
+      "confidence": 0.92
+    },
+    {
+      "index": 9,
+      "startMs": 34560,
+      "endMs": 36560,
+      "text": "わかりました。どうも。",
+      "normalizedText": "わかりましたどうも",
+      "confidence": 0.92
+    }
+  ]
+}

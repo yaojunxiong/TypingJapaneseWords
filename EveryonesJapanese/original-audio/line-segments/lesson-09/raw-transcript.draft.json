@@ -1,0 +1,128 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 9,
+  "cd": "CD32",
+  "sourceTrack": "source-230001/tracks/cd-032.mp3",
+  "durationMs": 47804,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "guidedPrompt": false,
+    "role": "timestamp_source_only",
+    "rawEngineOutput": "/tmp/minna-l6-10-asr/lesson-09.json"
+  },
+  "excludedRegions": [
+    {
+      "startMs": 0,
+      "endMs": 12000,
+      "reason": "课号、会話、标题朗读及电话接通前铃声"
+    }
+  ],
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 12000,
+      "endMs": 13000,
+      "text": "はい。",
+      "normalizedText": "はい",
+      "confidence": 0.92
+    },
+    {
+      "index": 2,
+      "startMs": 13000,
+      "endMs": 16000,
+      "text": "木村さんですね。ミラーです。",
+      "normalizedText": "きむらさんですねみらーです",
+      "confidence": 0.92
+    },
+    {
+      "index": 3,
+      "startMs": 16000,
+      "endMs": 20000,
+      "text": "ああ、ミラーさん、こんばんは。お元気ですか。",
+      "normalizedText": "ああみらーさんこんばんはおげんきですか",
+      "confidence": 0.92
+    },
+    {
+      "index": 4,
+      "startMs": 20000,
+      "endMs": 22000,
+      "text": "ええ、元気です。",
+      "normalizedText": "ええげんきです",
+      "confidence": 0.92
+    },
+    {
+      "index": 5,
+      "startMs": 22000,
+      "endMs": 27000,
+      "text": "あのう、木村さん、クラシックのコンサート、いっしょにいかがですか。",
+      "normalizedText": "あのうきむらさんくらしっくのこんさーといっしょにいかがですか",
+      "confidence": 0.92
+    },
+    {
+      "index": 6,
+      "startMs": 27000,
+      "endMs": 29000,
+      "text": "いいですね。いつですか。",
+      "normalizedText": "いいですねいつですか",
+      "confidence": 0.92
+    },
+    {
+      "index": 7,
+      "startMs": 29000,
+      "endMs": 31000,
+      "text": "来週の金曜日の晩です。",
+      "normalizedText": "らいしゅうのきんようびのばんです",
+      "confidence": 0.92
+    },
+    {
+      "index": 8,
+      "startMs": 31000,
+      "endMs": 33000,
+      "text": "金曜日ですね。",
+      "normalizedText": "きんようびですね",
+      "confidence": 0.92
+    },
+    {
+      "index": 9,
+      "startMs": 33000,
+      "endMs": 35000,
+      "text": "金曜日の晩はちょっと……。",
+      "normalizedText": "きんようびのばんはちょっと",
+      "confidence": 0.92
+    },
+    {
+      "index": 10,
+      "startMs": 35000,
+      "endMs": 37000,
+      "text": "だめですか。",
+      "normalizedText": "だめですか",
+      "confidence": 0.92
+    },
+    {
+      "index": 11,
+      "startMs": 37000,
+      "endMs": 41000,
+      "text": "ええ、残念ですが、友達と約束がありますから、……。",
+      "normalizedText": "ええざんねんですがともだちとやくそくがありますから",
+      "confidence": 0.92
+    },
+    {
+      "index": 12,
+      "startMs": 41000,
+      "endMs": 42000,
+      "text": "そうですか。",
+      "normalizedText": "そうですか",
+      "confidence": 0.92
+    },
+    {
+      "index": 13,
+      "startMs": 42000,
+      "endMs": 45000,
+      "text": "ええ。また今度お願いします。",
+      "normalizedText": "ええまたこんどおねがいします",
+      "confidence": 0.92
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "version": "minna-original-line-segments-draft-v1",
+  "lesson": 10,
+  "sourceSet": "source-230001",
+  "cd": "CD35",
+  "sourceTrack": "source-230001/tracks/cd-035.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-230001/tracks/cd-035.mp3",
+  "segmentCount": 7,
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "ミラー",
+      "japanese": "すみません。アジアストアはどこですか。",
+      "normalizedTarget": "すみませんあじあすとあはどこですか",
+      "normalizedAsrText": "すみませんあじあすとあはどこですか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        1
+      ],
+      "startMs": 6240,
+      "endMs": 9440,
+      "durationMs": 3200,
+      "audioPath": "line-segments/lesson-10/l10-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-10/l10-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [1]；紧邻说话轮次在语音边界处分割，外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "女の人",
+      "japanese": "アジアストアですか。あそこに白いビルがありますね。あのビルの中です。",
+      "normalizedTarget": "あじあすとあですかあそこにしろいびるがありますねあのびるのなかです",
+      "normalizedAsrText": "あじあすとあですかあそこにしろいびるがありますねあのびるのなかです",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        2,
+        3
+      ],
+      "startMs": 9440,
+      "endMs": 15440,
+      "durationMs": 6000,
+      "audioPath": "line-segments/lesson-10/l10-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-10/l10-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [2, 3]；紧邻说话轮次在语音边界处分割，外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "ミラー",
+      "japanese": "そうですか。どうもすみません。",
+      "normalizedTarget": "そうですかどうもすみません",
+      "normalizedAsrText": "そうですかどうもすみません",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        4
+      ],
+      "startMs": 15440,
+      "endMs": 17920,
+      "durationMs": 2480,
+      "audioPath": "line-segments/lesson-10/l10-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-10/l10-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [4]；紧邻说话轮次在语音边界处分割，外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "女の人",
+      "japanese": "いいえ。",
+      "normalizedTarget": "いいえ",
+      "normalizedAsrText": "いいえ",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        5
+      ],
+      "startMs": 17920,
+      "endMs": 20600,
+      "durationMs": 2680,
+      "audioPath": "line-segments/lesson-10/l10-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-10/l10-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [5]；紧邻说话轮次在语音边界处分割，外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "ミラー",
+      "japanese": "あのう、ナンプラー、ありますか。",
+      "normalizedTarget": "あのうなんぷらーありますか",
+      "normalizedAsrText": "あのうなんぷらーありますか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        6
+      ],
+      "startMs": 26140,
+      "endMs": 28720,
+      "durationMs": 2580,
+      "audioPath": "line-segments/lesson-10/l10-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-10/l10-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [6]；紧邻说话轮次在语音边界处分割，外侧最多保留约180ms自然余音；人工复核提示：商店场景切换后第一句；切片排除了前一场景尾声和环境转换。"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "店員",
+      "japanese": "はい。あちらにタイ料理のコーナーがあります。ナンプラーはいちばん下です。",
+      "normalizedTarget": "はいあちらにたいりょうりのこーなーがありますなんぷらーはいちばんしたです",
+      "normalizedAsrText": "はいあちらにたいりょうりのこーなーがありますなんぷらーはいちばんしたです",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        7,
+        8
+      ],
+      "startMs": 28720,
+      "endMs": 34560,
+      "durationMs": 5840,
+      "audioPath": "line-segments/lesson-10/l10-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-10/l10-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [7, 8]；紧邻说话轮次在语音边界处分割，外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 7,
+      "displayOrder": 7,
+      "speaker": "ミラー",
+      "japanese": "わかりました。どうも。",
+      "normalizedTarget": "わかりましたどうも",
+      "normalizedAsrText": "わかりましたどうも",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        9
+      ],
+      "startMs": 34560,
+      "endMs": 36740,
+      "durationMs": 2180,
+      "audioPath": "line-segments/lesson-10/l10-07.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-10/l10-07.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [9]；紧邻说话轮次在语音边界处分割，外侧最多保留约180ms自然余音"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ]
+}
