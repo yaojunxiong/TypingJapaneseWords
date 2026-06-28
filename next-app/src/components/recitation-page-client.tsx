@@ -818,7 +818,7 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
   }, [lessonNo])
 
   // Lessons that have original line audio segments published
-  const ORIGINAL_LINE_AUDIO_LESSONS = [1, 2, 3, 4, 5, 25]
+  const ORIGINAL_LINE_AUDIO_LESSONS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 25]
   useEffect(() => {
     if (!ORIGINAL_LINE_AUDIO_LESSONS.includes(lessonNo)) return
     if (!lesson) return
