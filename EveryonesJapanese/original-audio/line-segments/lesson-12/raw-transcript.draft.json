@@ -1,0 +1,176 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 12,
+  "cd": "CD43",
+  "sourceTrack": "source-230001/tracks/cd-043.mp3",
+  "durationMs": 35631,
+  "transcriptionEngine": {
+    "name": "ffmpeg silencedetect",
+    "model": "none",
+    "language": "ja",
+    "guidedPrompt": false,
+    "role": "timestamp_source_only",
+    "rawEngineOutput": null
+  },
+  "excludedRegions": [
+    {
+      "startMs": 0,
+      "endMs": 5469,
+      "reason": "课号、会話与标题朗读"
+    }
+  ],
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 385,
+      "endMs": 1350,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 2,
+      "startMs": 2166,
+      "endMs": 2601,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 3,
+      "startMs": 3824,
+      "endMs": 5469,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 4,
+      "startMs": 7136,
+      "endMs": 7622,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 5,
+      "startMs": 8421,
+      "endMs": 9128,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 6,
+      "startMs": 9766,
+      "endMs": 11120,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 7,
+      "startMs": 11618,
+      "endMs": 12706,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 8,
+      "startMs": 13910,
+      "endMs": 15407,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 9,
+      "startMs": 16048,
+      "endMs": 16966,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 10,
+      "startMs": 17722,
+      "endMs": 18831,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 11,
+      "startMs": 19571,
+      "endMs": 20353,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 12,
+      "startMs": 20756,
+      "endMs": 23153,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 13,
+      "startMs": 23431,
+      "endMs": 24170,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 14,
+      "startMs": 25054,
+      "endMs": 26398,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 15,
+      "startMs": 27052,
+      "endMs": 27466,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 16,
+      "startMs": 28150,
+      "endMs": 28758,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 17,
+      "startMs": 29253,
+      "endMs": 30695,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 18,
+      "startMs": 31066,
+      "endMs": 31439,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 19,
+      "startMs": 31839,
+      "endMs": 32797,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    }
+  ]
+}

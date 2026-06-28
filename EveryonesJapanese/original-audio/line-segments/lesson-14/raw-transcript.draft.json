@@ -1,0 +1,208 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 14,
+  "cd": "CD49",
+  "sourceTrack": "source-230001/tracks/cd-049.mp3",
+  "durationMs": 52820,
+  "transcriptionEngine": {
+    "name": "ffmpeg silencedetect",
+    "model": "none",
+    "language": "ja",
+    "guidedPrompt": false,
+    "role": "timestamp_source_only",
+    "rawEngineOutput": null
+  },
+  "excludedRegions": [
+    {
+      "startMs": 0,
+      "endMs": 5442,
+      "reason": "课号、会話与标题朗读"
+    }
+  ],
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 403,
+      "endMs": 1461,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 2,
+      "startMs": 2189,
+      "endMs": 2616,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 3,
+      "startMs": 3798,
+      "endMs": 5442,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 4,
+      "startMs": 7164,
+      "endMs": 8821,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 5,
+      "startMs": 9387,
+      "endMs": 9548,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 6,
+      "startMs": 10709,
+      "endMs": 10849,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 7,
+      "startMs": 12278,
+      "endMs": 13908,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 8,
+      "startMs": 14106,
+      "endMs": 14631,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 9,
+      "startMs": 17980,
+      "endMs": 18658,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 10,
+      "startMs": 19381,
+      "endMs": 21396,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 11,
+      "startMs": 22193,
+      "endMs": 22834,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 12,
+      "startMs": 23400,
+      "endMs": 23692,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 13,
+      "startMs": 25909,
+      "endMs": 26643,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 14,
+      "startMs": 27374,
+      "endMs": 27588,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 15,
+      "startMs": 28090,
+      "endMs": 29133,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 16,
+      "startMs": 31278,
+      "endMs": 33121,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 17,
+      "startMs": 33783,
+      "endMs": 33941,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 18,
+      "startMs": 35011,
+      "endMs": 35244,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 19,
+      "startMs": 36130,
+      "endMs": 40040,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 20,
+      "startMs": 41962,
+      "endMs": 42867,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 21,
+      "startMs": 43711,
+      "endMs": 44815,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 22,
+      "startMs": 46816,
+      "endMs": 48257,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    },
+    {
+      "index": 23,
+      "startMs": 49204,
+      "endMs": 50025,
+      "text": "",
+      "normalizedText": "",
+      "confidence": 0.0
+    }
+  ]
+}

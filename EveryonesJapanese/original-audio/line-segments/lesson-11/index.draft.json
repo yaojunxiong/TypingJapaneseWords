@@ -1,0 +1,295 @@
+{
+  "version": "minna-original-line-segments-draft-v1",
+  "lesson": 11,
+  "sourceSet": "source-230001",
+  "cd": "CD39",
+  "sourceTrack": "source-230001/tracks/cd-039.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-230001/tracks/cd-039.mp3",
+  "segmentCount": 13,
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "管理人",
+      "japanese": "いい天気ですね。お出かけですか。",
+      "normalizedTarget": "いい天気ですねお出かけですか",
+      "normalizedAsrText": "",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        6,
+        7
+      ],
+      "startMs": 6758,
+      "endMs": 9332,
+      "durationMs": 2574,
+      "audioPath": "line-segments/lesson-11/l11-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-11/l11-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "ワン",
+      "japanese": "ええ、ちょっと郵便局まで。",
+      "normalizedTarget": "ええちょっと郵便局まで",
+      "normalizedAsrText": "",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        8,
+        9
+      ],
+      "startMs": 9542,
+      "endMs": 11546,
+      "durationMs": 2004,
+      "audioPath": "line-segments/lesson-11/l11-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-11/l11-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "管理人",
+      "japanese": "そうですか。行ってらっしゃい。",
+      "normalizedTarget": "そうですか行ってらっしゃい",
+      "normalizedAsrText": "",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        10,
+        11,
+        12
+      ],
+      "startMs": 11631,
+      "endMs": 14719,
+      "durationMs": 3088,
+      "audioPath": "line-segments/lesson-11/l11-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-11/l11-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "ワン",
+      "japanese": "行ってきます。",
+      "normalizedTarget": "行ってきます",
+      "normalizedAsrText": "",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        13
+      ],
+      "startMs": 16694,
+      "endMs": 20138,
+      "durationMs": 3445,
+      "audioPath": "line-segments/lesson-11/l11-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-11/l11-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "ワン",
+      "japanese": "これ、オーストラリアまでお願いします。",
+      "normalizedTarget": "これオーストラリアまでお願いします",
+      "normalizedAsrText": "",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        14,
+        15
+      ],
+      "startMs": 21797,
+      "endMs": 24380,
+      "durationMs": 2583,
+      "audioPath": "line-segments/lesson-11/l11-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-11/l11-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "郵便局員",
+      "japanese": "はい。船便ですか、航空便ですか。",
+      "normalizedTarget": "はい船便ですか航空便ですか",
+      "normalizedAsrText": "",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        16,
+        17,
+        18
+      ],
+      "startMs": 24542,
+      "endMs": 27757,
+      "durationMs": 3215,
+      "audioPath": "line-segments/lesson-11/l11-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-11/l11-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+    },
+    {
+      "lineNo": 7,
+      "displayOrder": 7,
+      "speaker": "ワン",
+      "japanese": "航空便はいくらですか。",
+      "normalizedTarget": "航空便はいくらですか",
+      "normalizedAsrText": "",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        19
+      ],
+      "startMs": 28310,
+      "endMs": 29931,
+      "durationMs": 1621,
+      "audioPath": "line-segments/lesson-11/l11-07.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-11/l11-07.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+    },
+    {
+      "lineNo": 8,
+      "displayOrder": 8,
+      "speaker": "郵便局員",
+      "japanese": "7,600円です。",
+      "normalizedTarget": "7600円です",
+      "normalizedAsrText": "",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        20
+      ],
+      "startMs": 30133,
+      "endMs": 31594,
+      "durationMs": 1461,
+      "audioPath": "line-segments/lesson-11/l11-08.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-11/l11-08.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+    },
+    {
+      "lineNo": 9,
+      "displayOrder": 9,
+      "speaker": "ワン",
+      "japanese": "船便は？",
+      "normalizedTarget": "船便は",
+      "normalizedAsrText": "",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        21
+      ],
+      "startMs": 32043,
+      "endMs": 33115,
+      "durationMs": 1072,
+      "audioPath": "line-segments/lesson-11/l11-09.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-11/l11-09.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+    },
+    {
+      "lineNo": 10,
+      "displayOrder": 10,
+      "speaker": "郵便局員",
+      "japanese": "3,450円です。",
+      "normalizedTarget": "3450円です",
+      "normalizedAsrText": "",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        22
+      ],
+      "startMs": 33182,
+      "endMs": 35035,
+      "durationMs": 1853,
+      "audioPath": "line-segments/lesson-11/l11-10.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-11/l11-10.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+    },
+    {
+      "lineNo": 11,
+      "displayOrder": 11,
+      "speaker": "ワン",
+      "japanese": "どのくらいかかりますか。",
+      "normalizedTarget": "どのくらいかかりますか",
+      "normalizedAsrText": "",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        23
+      ],
+      "startMs": 35582,
+      "endMs": 37071,
+      "durationMs": 1489,
+      "audioPath": "line-segments/lesson-11/l11-11.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-11/l11-11.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+    },
+    {
+      "lineNo": 12,
+      "displayOrder": 12,
+      "speaker": "郵便局員",
+      "japanese": "航空便で7日、船便で2か月ぐらいです。",
+      "normalizedTarget": "航空便で7日船便で2か月ぐらいです",
+      "normalizedAsrText": "",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        24,
+        25,
+        26
+      ],
+      "startMs": 37506,
+      "endMs": 41483,
+      "durationMs": 3977,
+      "audioPath": "line-segments/lesson-11/l11-12.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-11/l11-12.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+    },
+    {
+      "lineNo": 13,
+      "displayOrder": 13,
+      "speaker": "ワン",
+      "japanese": "じゃ、船便でお願いします。",
+      "normalizedTarget": "じゃ船便でお願いします",
+      "normalizedAsrText": "",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        27
+      ],
+      "startMs": 41718,
+      "endMs": 42985,
+      "durationMs": 1267,
+      "audioPath": "line-segments/lesson-11/l11-13.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-11/l11-13.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ]
+}
