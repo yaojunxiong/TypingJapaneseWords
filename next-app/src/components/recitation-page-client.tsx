@@ -801,6 +801,8 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
   useEffect(() => {
     if (!ORIGINAL_LINE_AUDIO_LESSONS.includes(lessonNo)) return
     if (!lesson) return
+    // Already enriched — prevent infinite re-trigger loop
+    if (lesson.lines.some(l => l.originalAudioUrl)) return
     let cancelled = false
     const url = `https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-${lessonNo}/index.draft.json`
     fetch(url)
