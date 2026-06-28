@@ -57,6 +57,26 @@ function getLineDisplayOrder(line: RecitationLine): number {
   return Number.isFinite(line.displayOrder) ? Number(line.displayOrder) : line.order
 }
 
+type LinePracticeAudio = {
+  url: string
+  label: '教材原声' | '合成练习音'
+  source: 'original' | 'tts'
+}
+
+function getLinePracticeAudio(line: RecitationLine): LinePracticeAudio | null {
+  const originalUrl = line.originalAudioUrl?.trim()
+  if (originalUrl) {
+    return { url: originalUrl, label: '教材原声', source: 'original' }
+  }
+
+  const ttsUrl = ((line as RecitationLine & { audioUrl?: string }).audioUrl || line.ttsAudioUrl)?.trim()
+  if (ttsUrl) {
+    return { url: ttsUrl, label: '合成练习音', source: 'tts' }
+  }
+
+  return null
+}
+
 function Waveform({ seed, active = false }: { seed: string; active?: boolean }) {
   const hashBase = seed.split('').reduce((sum, ch) => sum + ch.charCodeAt(0), 0)
   return (
@@ -244,8 +264,9 @@ function CompactLineItem({
   }, [line.lineId, lessonNo, line.order, takesRefreshKey, onBestTakeChange])
 
   const isCompleted = mergedTakes.length > 0 && selectedBestId !== null
-  const hasOriginalAudio = Boolean(line.originalAudioUrl)
-  const hasPlayableAudio = Boolean(line.originalAudioUrl || line.ttsAudioUrl)
+  const practiceAudio = getLinePracticeAudio(line)
+  const hasOriginalAudio = practiceAudio?.source === 'original'
+  const hasPlayableAudio = Boolean(practiceAudio)
   const speakerAvatar = getSpeakerAvatar(line)
 
   return (
@@ -296,7 +317,7 @@ function CompactLineItem({
         <button
           type="button"
           data-testid="recitation-original-audio-button"
-          aria-label={hasOriginalAudio ? '播放教材原声' : '播放合成练习音'}
+          aria-label={`播放${practiceAudio?.label ?? '合成练习音'}`}
           onClick={(e) => { e.stopPropagation(); onPlayOriginal(line) }}
           style={{
             width: 28, height: 28, borderRadius: 14,
@@ -317,7 +338,7 @@ function CompactLineItem({
               中文提示
             </button>
             <button className="btn ghost small" onClick={(e) => { e.stopPropagation(); onPlayOriginal(line) }} style={{ background: '#fff', color: '#0f172a', border: '1px solid #dbe3ee', borderRadius: 10, padding: '8px 3px', fontSize: 12, whiteSpace: 'nowrap', opacity: hasPlayableAudio ? 1 : 0.65 }}>
-               {hasOriginalAudio ? '教材原声' : '合成练习音'}
+               {practiceAudio?.label ?? '合成练习音'}
             </button>
             <button className="btn ghost small" onClick={(e) => { e.stopPropagation(); setShowExplanation(v => !v) }} style={{ background: '#fff', color: '#0f172a', border: '1px solid #dbe3ee', borderRadius: 10, padding: '8px 3px', fontSize: 12, whiteSpace: 'nowrap' }}>
               解析
@@ -804,17 +825,22 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     // Already enriched — prevent infinite re-trigger loop
     if (lesson.lines.some(l => l.originalAudioUrl)) return
     let cancelled = false
-    const url = `https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-${lessonNo}/index.draft.json`
+    const paddedLesson = String(lessonNo).padStart(2, '0')
+    const url = `https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-${paddedLesson}/index.draft.json`
     fetch(url)
       .then(r => r.json())
       .then(idx => {
         if (cancelled) return
         const segMap = new Map<number, string>()
         for (const seg of (idx.segments || [])) {
-          segMap.set(seg.lineNo, seg.audioUrl.startsWith('http') ? seg.audioUrl : `https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/${seg.audioPath}`)
+          const segUrl = seg.audioUrl.startsWith('http') ? seg.audioUrl : `https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/${seg.audioPath}`
+          const lineNo = Number(seg.lineNo)
+          const displayOrder = Number(seg.displayOrder)
+          if (Number.isFinite(lineNo)) segMap.set(lineNo, segUrl)
+          if (Number.isFinite(displayOrder)) segMap.set(displayOrder, segUrl)
         }
         const lines = lesson.lines.map(l => {
-          const url = segMap.get(l.order)
+          const url = segMap.get(getLineDisplayOrder(l)) || segMap.get(l.order)
           return url ? { ...l, originalAudioUrl: url, uiLabelZh: '教材原声' } : l
         })
         setLesson({ ...lesson, lines })
@@ -964,22 +990,22 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     stopOriginalAudio()
     setActiveLineId(line.lineId)
 
-    const audioUrl = line.originalAudioUrl || line.ttsAudioUrl
-    if (!audioUrl) {
+    const practiceAudio = getLinePracticeAudio(line)
+    if (!practiceAudio) {
       showNotice('暂无原音')
       return
     }
 
-    if (line.originalAudioUrl) {
+    if (practiceAudio.source === 'original') {
       showNotice('正在播放教材原声')
-    } else if (line.ttsAudioUrl) {
+    } else {
       showNotice('正在播放合成练习音')
     }
 
-    const audio = new Audio(audioUrl)
+    const audio = new Audio(practiceAudio.url)
     const startSec = Number(line.start)
     const endSec = Number(line.end)
-    const shouldPlaySegment = Boolean(line.originalAudioUrl) && Number.isFinite(startSec) && Number.isFinite(endSec) && endSec > startSec
+    const shouldPlaySegment = practiceAudio.source === 'original' && Number.isFinite(startSec) && Number.isFinite(endSec) && endSec > startSec
     if (shouldPlaySegment) {
       audio.currentTime = startSec
       audio.ontimeupdate = () => {
@@ -1229,11 +1255,10 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
 
     // Validate all lines have audio before starting
     for (let i = 0; i < sortedLines.length; i++) {
-      const audioUrl = sortedLines[i].originalAudioUrl || sortedLines[i].ttsAudioUrl
-      const urlSource = sortedLines[i].originalAudioUrl ? 'originalAudioUrl' : (sortedLines[i].ttsAudioUrl ? 'ttsAudioUrl' : 'missing')
-      setTtsDebug(`验证第 ${sortedLines[i].order}/${total} 句: audioUrl=${audioUrl ? '存在' : '缺失'} (来源: ${urlSource})`)
-      if (!audioUrl) {
-        showNotice(`第 ${sortedLines[i].order} 句缺少系统音频，无法试听全文音频`)
+      const practiceAudio = getLinePracticeAudio(sortedLines[i])
+      setTtsDebug(`验证第 ${sortedLines[i].order}/${total} 句: audioUrl=${practiceAudio ? '存在' : '缺失'} (来源: ${practiceAudio?.source ?? 'missing'})`)
+      if (!practiceAudio) {
+        showNotice(`第 ${sortedLines[i].order} 句缺少练习音，无法试听全文音频`)
         return
       }
     }
@@ -1254,10 +1279,17 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
       setActiveLineId(line.lineId)
       setTtsPlayback({ status: 'playing', currentIndex: idx, totalLines: total })
 
-      // Use the SAME audioUrl as single-play: originalAudioUrl || ttsAudioUrl
-      const audioUrl = line.originalAudioUrl || line.ttsAudioUrl
+      // Use the SAME audio source as single-play.
+      const practiceAudio = getLinePracticeAudio(line)
+      if (!practiceAudio) {
+        showNotice(`第 ${line.order} 句缺少练习音，已跳过`)
+        setTtsDebug(`播放失败：第 ${idx + 1}/${total} 句 (缺少练习音)`)
+        playNext(idx + 1)
+        return
+      }
+      const audioUrl = practiceAudio.url
 
-      setTtsDebug(`正在播放第 ${idx + 1}/${total} 句: audioUrl=${audioUrl}`)
+      setTtsDebug(`正在播放第 ${idx + 1}/${total} 句: ${practiceAudio.label} ${audioUrl}`)
 
       const audio = new Audio(audioUrl)
       ttsAudioRef.current = audio
@@ -1269,7 +1301,7 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
         setTtsDebug(`播放成功：第 ${idx + 1}/${total} 句`)
       }).catch(() => {
         ttsAudioRef.current = null
-        showNotice(`第 ${line.order} 句系统音频播放失败，已跳过`)
+        showNotice(`第 ${line.order} 句${practiceAudio.label}播放失败，已跳过`)
         setTtsDebug(`播放失败：第 ${idx + 1}/${total} 句 (已跳过)`)
         playNext(idx + 1)
       })
@@ -1312,7 +1344,8 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     : null
   const isOriginalPlaying = originalPlayback.status !== 'idle'
   const modalCaptionLine = currentTtsLine || currentContinuousLine
-  const ttsPlaybackLabel = currentTtsLine && currentTtsLine.originalAudioUrl ? '教材原声' : '系统音频'
+  const currentTtsPracticeAudio = currentTtsLine ? getLinePracticeAudio(currentTtsLine) : null
+  const ttsPlaybackLabel = currentTtsPracticeAudio?.label ?? '合成练习音'
   const modalCaptionMode = isOriginalPlaying ? '教材原音' : (currentTtsLine ? ttsPlaybackLabel : (currentContinuousLine ? '我的背诵' : ''))
   const modalCaptionStatus = isOriginalPlaying
     ? originalPlayback.status
@@ -1328,10 +1361,8 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
   const modalCaptionReading = modalCaptionLine
     ? ((modalCaptionLine as RecitationLineWithKana).kana || '')
     : ''
-  const hasOriginalLineAudio = lesson?.lines.some(l => Boolean(l.originalAudioUrl)) ?? false
-  const ttsModeLabel = hasOriginalLineAudio ? '教材原声' : '系统音频'
-  const ttsButtonSubtitle = hasOriginalLineAudio ? '教材原声' : '系统音频'
-  const originalLineLabel = hasOriginalLineAudio ? '教材原声' : '合成练习音'
+  const hasOriginalLineAudio = lesson?.lines.some(l => getLinePracticeAudio(l)?.source === 'original') ?? false
+  const ttsButtonSubtitle = hasOriginalLineAudio ? '教材原声' : '合成练习音'
   const floatingBottomOffset = showBottomNav
     ? 'calc(96px + env(safe-area-inset-bottom, 0px))'
     : 'calc(14px + env(safe-area-inset-bottom, 0px))'
