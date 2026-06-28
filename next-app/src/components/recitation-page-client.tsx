@@ -762,6 +762,30 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
   const [showImageModal, setShowImageModal] = useState(false)
   const [ttsDebug, setTtsDebug] = useState('')
 
+  const ORIGINAL_AUDIO_MAP_URL = 'https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/lesson-audio-map.json'
+  const [originalAudioLesson, setOriginalAudioLesson] = useState<{ url: string; cd: string; needsReview: boolean } | null>(null)
+  const [originalPlayback, setOriginalPlayback] = useState<{
+    status: 'idle' | 'loading' | 'playing' | 'paused'
+    cd: string
+  }>({ status: 'idle', cd: '' })
+  const originalFullAudioRef = useRef<HTMLAudioElement | null>(null)
+
+  useEffect(() => {
+    fetch(ORIGINAL_AUDIO_MAP_URL)
+      .then(r => r.json())
+      .then(data => {
+        const entry = (data.lessons || []).find((l: { lesson: number }) => l.lesson === lessonNo)
+        if (entry && entry.url && !entry.needsReview) {
+          setOriginalAudioLesson({ url: entry.url, cd: entry.cd || '', needsReview: false })
+        } else {
+          setOriginalAudioLesson({ url: '', cd: '', needsReview: true })
+        }
+      })
+      .catch(() => {
+        setOriginalAudioLesson({ url: '', cd: '', needsReview: true })
+      })
+  }, [lessonNo])
+
   useEffect(() => {
     loadRecitationLesson(lessonNo).then((data) => {
       setLesson(data)
@@ -878,6 +902,16 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     setTtsDebug('')
   }, [])
 
+  const stopOriginalPlayback = useCallback(() => {
+    if (originalFullAudioRef.current) {
+      originalFullAudioRef.current.pause()
+      originalFullAudioRef.current.ontimeupdate = null
+      originalFullAudioRef.current.onended = null
+      originalFullAudioRef.current = null
+    }
+    setOriginalPlayback({ status: 'idle', cd: '' })
+  }, [])
+
   const stopContinuousPlayback = useCallback(() => {
     stopPlaybackRef.current = true
     if (pauseDelayTimerRef.current) {
@@ -951,15 +985,17 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
       stopTtsPlayback()
       stopOriginalAudio()
       stopContinuousPlayback()
+      stopOriginalPlayback()
       if (noticeTimerRef.current) clearTimeout(noticeTimerRef.current)
     }
-  }, [stopTtsPlayback, stopOriginalAudio, stopContinuousPlayback])
+  }, [stopTtsPlayback, stopOriginalAudio, stopContinuousPlayback, stopOriginalPlayback])
 
   const handleStartContinuousPlayback = useCallback(async () => {
     if (!lesson) return
 
     stopTtsPlayback()
     stopContinuousPlayback()
+    stopOriginalPlayback()
     stopPlaybackRef.current = false
     playbackFailedCountRef.current = 0
 
@@ -1107,6 +1143,42 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     }
   }, [continuousPlayback.status])
 
+  const handleStartOriginalPlayback = useCallback(() => {
+    if (!originalAudioLesson || !originalAudioLesson.url) {
+      showNotice('暂无原音')
+      return
+    }
+    stopTtsPlayback()
+    stopContinuousPlayback()
+    stopOriginalAudio()
+    stopOriginalPlayback()
+    setOriginalPlayback({ status: 'loading', cd: originalAudioLesson.cd })
+    const audio = new Audio(originalAudioLesson.url)
+    originalFullAudioRef.current = audio
+    audio.onended = () => {
+      originalFullAudioRef.current = null
+      setOriginalPlayback({ status: 'idle', cd: '' })
+    }
+    audio.play().then(() => {
+      setOriginalPlayback({ status: 'playing', cd: originalAudioLesson.cd })
+    }).catch(() => {
+      originalFullAudioRef.current = null
+      setOriginalPlayback({ status: 'idle', cd: '' })
+      showNotice('原音播放失败')
+    })
+  }, [originalAudioLesson, stopTtsPlayback, stopContinuousPlayback, stopOriginalAudio, stopOriginalPlayback, showNotice])
+
+  const handleTogglePauseOriginal = useCallback(() => {
+    if (!originalFullAudioRef.current) return
+    if (originalPlayback.status === 'playing') {
+      originalFullAudioRef.current.pause()
+      setOriginalPlayback(prev => ({ ...prev, status: 'paused' }))
+    } else if (originalPlayback.status === 'paused') {
+      originalFullAudioRef.current.play().catch(() => {})
+      setOriginalPlayback(prev => ({ ...prev, status: 'playing' }))
+    }
+  }, [originalPlayback.status])
+
   const handleStartTtsPlayback = useCallback(() => {
     if (!lesson) {
       setTtsDebug('lesson 未加载')
@@ -1116,6 +1188,7 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     stopContinuousPlayback()
     stopTtsPlayback()
     stopOriginalAudio()
+    stopOriginalPlayback()
     stopTtsPlaybackRef.current = false
 
     const sortedLines = [...lesson.lines].sort((a, b) => a.order - b.order)
@@ -1188,7 +1261,8 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     setShowImageModal(false)
     stopTtsPlayback()
     stopContinuousPlayback()
-  }, [stopTtsPlayback, stopContinuousPlayback])
+    stopOriginalPlayback()
+  }, [stopTtsPlayback, stopContinuousPlayback, stopOriginalPlayback])
 
   const showTopBar = !focusMode
   const showBottomNav = !focusMode
@@ -1204,17 +1278,20 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
   const currentContinuousLine = currentPlaybackQueueItem
     ? lesson?.lines.find(l => l.lineId === currentPlaybackQueueItem.lineId) || null
     : null
+  const isOriginalPlaying = originalPlayback.status !== 'idle'
   const modalCaptionLine = currentTtsLine || currentContinuousLine
-  const modalCaptionMode = currentTtsLine ? '系统音频' : (currentContinuousLine ? '我的背诵' : '')
-  const modalCaptionStatus = currentTtsLine
-    ? ttsPlayback.status
-    : (currentContinuousLine ? continuousPlayback.status : 'idle')
-  const modalCaptionIndex = currentTtsLine
+  const modalCaptionMode = isOriginalPlaying ? '教材原音' : (currentTtsLine ? '系统音频' : (currentContinuousLine ? '我的背诵' : ''))
+  const modalCaptionStatus = isOriginalPlaying
+    ? originalPlayback.status
+    : (currentTtsLine
+      ? ttsPlayback.status
+      : (currentContinuousLine ? continuousPlayback.status : 'idle'))
+  const modalCaptionIndex = isOriginalPlaying ? 0 : (currentTtsLine
     ? ttsPlayback.currentIndex + 1
-    : (currentContinuousLine ? continuousPlayback.currentIndex + 1 : 0)
-  const modalCaptionTotal = currentTtsLine
+    : (currentContinuousLine ? continuousPlayback.currentIndex + 1 : 0))
+  const modalCaptionTotal = isOriginalPlaying ? 0 : (currentTtsLine
     ? ttsPlayback.totalLines
-    : (currentContinuousLine ? continuousPlayback.totalLines : 0)
+    : (currentContinuousLine ? continuousPlayback.totalLines : 0))
   const modalCaptionReading = modalCaptionLine
     ? ((modalCaptionLine as RecitationLineWithKana).kana || '')
     : ''
@@ -1452,13 +1529,23 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
                     wordBreak: 'break-word', overflowWrap: 'break-word',
                   }}>
                     <div style={{ fontSize: 12, fontWeight: 900, color: '#bfdbfe', marginBottom: 6 }}>
-                      {modalCaptionStatus === 'paused' ? '已暂停' : modalCaptionMode} · 第 {modalCaptionIndex} / {modalCaptionTotal} 句
+                      {isOriginalPlaying
+                        ? (modalCaptionStatus === 'paused' ? '原音已暂停' : '教材原音播放中')
+                        : (modalCaptionStatus === 'paused' ? '已暂停' : modalCaptionMode)}
+                      {modalCaptionTotal > 0 && ` · 第 ${modalCaptionIndex} / ${modalCaptionTotal} 句`}
+                      {isOriginalPlaying && originalPlayback.cd && ` · ${originalPlayback.cd}`}
                     </div>
-                    <div style={{ fontSize: 15, fontWeight: 900, marginBottom: 5 }}>{modalCaptionLine.ja}</div>
-                    {modalCaptionReading && (
-                      <div style={{ color: '#e0f2fe', marginBottom: 5 }}>读音：{modalCaptionReading}</div>
+                    {modalCaptionLine ? (
+                      <>
+                        <div style={{ fontSize: 15, fontWeight: 900, marginBottom: 5 }}>{modalCaptionLine.ja}</div>
+                        {modalCaptionReading && (
+                          <div style={{ color: '#e0f2fe', marginBottom: 5 }}>读音：{modalCaptionReading}</div>
+                        )}
+                        <div style={{ color: '#e5e7eb' }}>中文：{modalCaptionLine.zh}</div>
+                      </>
+                    ) : (
+                      <div style={{ fontSize: 13, color: '#e5e7eb' }}>教材原音，整段播放，不显示逐句字幕</div>
                     )}
-                    <div style={{ color: '#e5e7eb' }}>中文：{modalCaptionLine.zh}</div>
                   </div>
                 )}
                 {ttsDebug && (
@@ -1499,19 +1586,44 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
                       </button>
                     </div>
                   </div>
+                ) : originalPlayback.status !== 'idle' ? (
+                  <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'rgba(255,255,255,0.2)', backdropFilter: 'blur(4px)', borderRadius: 12, padding: '8px 12px' }}>
+                    <span style={{ color: '#fff', fontSize: 13, fontWeight: 800, textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
+                      教材原音
+                    </span>
+                    <div style={{ display: 'flex', gap: 4 }}>
+                      <button type="button" onClick={handleTogglePauseOriginal} style={{ background: 'rgba(255,255,255,0.9)', border: 'none', borderRadius: 8, padding: '6px 12px', fontSize: 13, fontWeight: 700, cursor: 'pointer' }}>
+                        {originalPlayback.status === 'paused' ? '继续' : '暂停'}
+                      </button>
+                      <button type="button" onClick={stopOriginalPlayback} style={{ background: '#dc2626', color: '#fff', border: 'none', borderRadius: 8, padding: '6px 12px', fontSize: 13, fontWeight: 700, cursor: 'pointer' }}>
+                        停止
+                      </button>
+                    </div>
+                  </div>
                 ) : (
-                  <>
-                    <button type="button" onClick={handleStartTtsPlayback} style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1, background: 'rgba(255,255,255,0.2)', backdropFilter: 'blur(4px)', border: 'none', borderRadius: 12, padding: '8px 4px', cursor: 'pointer', color: '#fff', fontWeight: 700, fontSize: 14, textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
+                  <div style={{ display: 'flex', gap: 8, flex: 1, flexWrap: 'wrap' }}>
+                    <button type="button" onClick={handleStartTtsPlayback} style={{ flex: '1 1 calc(50% - 8px)', minWidth: 100, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1, background: 'rgba(255,255,255,0.2)', backdropFilter: 'blur(4px)', border: 'none', borderRadius: 12, padding: '8px 4px', cursor: 'pointer', color: '#fff', fontWeight: 700, fontSize: 14, textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
                       <span>🔊 试听全文音频</span>
                       <span style={{ fontSize: 11, opacity: 0.8 }}>系统音频</span>
                     </button>
-                    <button type="button" onClick={hasBestTakeCount === totalLessonLines ? handleStartContinuousPlayback : () => showNotice('完成本课全部句子后可试听完整背诵')} style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1, background: hasBestTakeCount === totalLessonLines ? 'rgba(255,255,255,0.2)' : 'rgba(255,255,255,0.08)', backdropFilter: 'blur(4px)', border: 'none', borderRadius: 12, padding: '8px 4px', cursor: hasBestTakeCount === totalLessonLines ? 'pointer' : 'default', color: hasBestTakeCount === totalLessonLines ? '#fff' : 'rgba(255,255,255,0.5)', fontWeight: 700, fontSize: 14, textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
+                    <button type="button" onClick={hasBestTakeCount === totalLessonLines ? handleStartContinuousPlayback : () => showNotice('完成本课全部句子后可试听完整背诵')} style={{ flex: '1 1 calc(50% - 8px)', minWidth: 100, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1, background: hasBestTakeCount === totalLessonLines ? 'rgba(255,255,255,0.2)' : 'rgba(255,255,255,0.08)', backdropFilter: 'blur(4px)', border: 'none', borderRadius: 12, padding: '8px 4px', cursor: hasBestTakeCount === totalLessonLines ? 'pointer' : 'default', color: hasBestTakeCount === totalLessonLines ? '#fff' : 'rgba(255,255,255,0.5)', fontWeight: 700, fontSize: 14, textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
                       <span>🎤 试听完整背诵</span>
                       <span style={{ fontSize: 11, opacity: 0.8 }}>
                         {hasBestTakeCount === totalLessonLines ? `已完成 ${totalLessonLines}/${totalLessonLines}` : `我的背诵 (${hasBestTakeCount}/${totalLessonLines})`}
                       </span>
                     </button>
-                  </>
+                    {originalAudioLesson && !originalAudioLesson.needsReview && originalAudioLesson.url ? (
+                      <button type="button" onClick={handleStartOriginalPlayback} style={{ flex: '1 1 calc(50% - 8px)', minWidth: 100, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1, background: 'rgba(255,255,255,0.2)', backdropFilter: 'blur(4px)', border: 'none', borderRadius: 12, padding: '8px 4px', cursor: 'pointer', color: '#fff', fontWeight: 700, fontSize: 14, textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
+                        <span>📻 试听原音</span>
+                        <span style={{ fontSize: 11, opacity: 0.8 }}>{originalAudioLesson.cd}</span>
+                      </button>
+                    ) : originalAudioLesson && originalAudioLesson.needsReview ? (
+                      <button type="button" disabled style={{ flex: '1 1 calc(50% - 8px)', minWidth: 100, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1, background: 'rgba(255,255,255,0.08)', backdropFilter: 'blur(4px)', border: 'none', borderRadius: 12, padding: '8px 4px', cursor: 'default', color: 'rgba(255,255,255,0.5)', fontWeight: 700, fontSize: 14, textShadow: '0 1px 3px rgba(0,0,0,0.3)' }}>
+                        <span>📻 原音待确认</span>
+                        <span style={{ fontSize: 11, opacity: 0.8 }}>暂无</span>
+                      </button>
+                    ) : null}
+                  </div>
                 )}
               </div>
             </div>
