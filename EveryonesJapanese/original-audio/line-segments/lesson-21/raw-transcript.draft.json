@@ -1,0 +1,95 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 21,
+  "cd": "CD72",
+  "sourceTrack": "source-230001/tracks/cd-072.mp3",
+  "durationMs": 50181,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "role": "timestamp_source_only"
+  },
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 7000,
+      "endMs": 10000,
+      "text": "あ、サントスさん、久しぶりですね。",
+      "normalizedText": "あさんとすさんひさしぶりですね",
+      "confidence": 0.92
+    },
+    {
+      "index": 2,
+      "startMs": 10000,
+      "endMs": 13000,
+      "text": "あ、松本さん、お元気ですか。",
+      "normalizedText": "あまつもとさんおげんきですか",
+      "confidence": 0.92
+    },
+    {
+      "index": 3,
+      "startMs": 13000,
+      "endMs": 17000,
+      "text": "ええ、ちょっとビールでも飲みませんか。",
+      "normalizedText": "ええちょっとびーるでものみませんか",
+      "confidence": 0.92
+    },
+    {
+      "index": 4,
+      "startMs": 17000,
+      "endMs": 19000,
+      "text": "いいですね。",
+      "normalizedText": "いいですね",
+      "confidence": 0.92
+    },
+    {
+      "index": 5,
+      "startMs": 26000,
+      "endMs": 30000,
+      "text": "今晩10時から日本とブラジルのサッカーの試合がありますね。",
+      "normalizedText": "こんばんじゅうじからにほんとぶらじるのさっかーのしあいがありますね",
+      "confidence": 0.92
+    },
+    {
+      "index": 6,
+      "startMs": 30000,
+      "endMs": 35000,
+      "text": "ああ、そうですね。サントスさんはどちらが勝つと思いますか。",
+      "normalizedText": "ああそうですねさんとすさんはどちらがかつとおもいますか",
+      "confidence": 0.92
+    },
+    {
+      "index": 7,
+      "startMs": 35000,
+      "endMs": 37000,
+      "text": "もちろんブラジルですよ。",
+      "normalizedText": "もちろんぶらじるですよ",
+      "confidence": 0.92
+    },
+    {
+      "index": 8,
+      "startMs": 37000,
+      "endMs": 41000,
+      "text": "そうですね。でも、最近日本も強くなりましたよ。",
+      "normalizedText": "そうですねでもさいきんにほんもつよくなりましたよ",
+      "confidence": 0.92
+    },
+    {
+      "index": 9,
+      "startMs": 41000,
+      "endMs": 46000,
+      "text": "ええ、わたしもそう思いますが、……。あ、もう帰らないと……。",
+      "normalizedText": "ええわたしもそうおもいますがあもうかえらないと",
+      "confidence": 0.92
+    },
+    {
+      "index": 10,
+      "startMs": 46000,
+      "endMs": 48000,
+      "text": "ええ、帰りましょう。",
+      "normalizedText": "ええかえりましょう",
+      "confidence": 0.92
+    }
+  ]
+}

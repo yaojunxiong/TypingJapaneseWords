@@ -1,0 +1,103 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 24,
+  "cd": "CD82",
+  "sourceTrack": "source-230001/tracks/cd-082.mp3",
+  "durationMs": 38322,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "role": "timestamp_source_only"
+  },
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 7000,
+      "endMs": 12000,
+      "text": "ワンさん、日曜日引っ越しですね。手伝いに行きましょうか。",
+      "normalizedText": "わんさんにちようびひっこしですねてつだいにいきましょうか",
+      "confidence": 0.92
+    },
+    {
+      "index": 2,
+      "startMs": 12000,
+      "endMs": 17000,
+      "text": "ありがとうございます。じゃ、すみませんが、9時ごろお願いします。",
+      "normalizedText": "ありがとうございますじゃすみませんがくじごろおねがいします",
+      "confidence": 0.92
+    },
+    {
+      "index": 3,
+      "startMs": 17000,
+      "endMs": 19500,
+      "text": "ほかにだれか手伝いに行きますか。",
+      "normalizedText": "ほかにだれかてつだいにいきますか",
+      "confidence": 0.92
+    },
+    {
+      "index": 4,
+      "startMs": 19500,
+      "endMs": 22000,
+      "text": "山田さんとミラーさんが来てくれます。",
+      "normalizedText": "やまださんとみらーさんがきてくれます",
+      "confidence": 0.92
+    },
+    {
+      "index": 5,
+      "startMs": 22000,
+      "endMs": 22800,
+      "text": "車は？",
+      "normalizedText": "くるまは",
+      "confidence": 0.92
+    },
+    {
+      "index": 6,
+      "startMs": 22800,
+      "endMs": 25000,
+      "text": "山田さんに貸してもらいます。",
+      "normalizedText": "やまださんにかしてもらいます",
+      "confidence": 0.92
+    },
+    {
+      "index": 7,
+      "startMs": 25000,
+      "endMs": 28000,
+      "text": "昼ごはんはどうしますか。",
+      "normalizedText": "ひるごはんはどうしますか",
+      "confidence": 0.92
+    },
+    {
+      "index": 8,
+      "startMs": 28000,
+      "endMs": 29000,
+      "text": "えーと……。",
+      "normalizedText": "えーと",
+      "confidence": 0.92
+    },
+    {
+      "index": 9,
+      "startMs": 29000,
+      "endMs": 32500,
+      "text": "わたしがお弁当を持って行きましょうか。",
+      "normalizedText": "わたしがおべんとうをもっていきましょうか",
+      "confidence": 0.92
+    },
+    {
+      "index": 10,
+      "startMs": 32500,
+      "endMs": 34000,
+      "text": "すみません。お願いします。",
+      "normalizedText": "すみませんおねがいします",
+      "confidence": 0.92
+    },
+    {
+      "index": 11,
+      "startMs": 34000,
+      "endMs": 36000,
+      "text": "じゃ、日曜日に。",
+      "normalizedText": "じゃにちようびに",
+      "confidence": 0.92
+    }
+  ]
+}

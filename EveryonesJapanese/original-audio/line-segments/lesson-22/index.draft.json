@@ -1,0 +1,181 @@
+{
+  "version": "minna-original-line-segments-draft-v1",
+  "lesson": 22,
+  "sourceSet": "source-230001",
+  "cd": "CD75",
+  "sourceTrack": "source-230001/tracks/cd-075.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-230001/tracks/cd-075.mp3",
+  "segmentCount": 8,
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "不動産屋",
+      "japanese": "どんな部屋をお探しですか。",
+      "normalizedTarget": "どんなへやをおさがしですか",
+      "normalizedAsrText": "どんなへやをおさがしですか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        1
+      ],
+      "startMs": 6340,
+      "endMs": 9440,
+      "durationMs": 3100,
+      "audioPath": "line-segments/lesson-22/l22-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-22/l22-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [1]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "ワン",
+      "japanese": "そうですね。家賃は8万円ぐらいで、駅から遠くない所がいいですね。",
+      "normalizedTarget": "そうですねやちんははちまんえんぐらいでえきからとおくないところがいいですね",
+      "normalizedAsrText": "そうですねやちんははちまんえんぐらいでえきからとおくないところがいいですね",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        2
+      ],
+      "startMs": 9440,
+      "endMs": 15720,
+      "durationMs": 6280,
+      "audioPath": "line-segments/lesson-22/l22-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-22/l22-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [2]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "不動産屋",
+      "japanese": "では、こちらはいかがですか。駅から10分で、家賃は83,000円です。",
+      "normalizedTarget": "ではこちらはいかがですかえきからじゅっぷんでやちんははちまんさんぜんえんです",
+      "normalizedAsrText": "ではこちらはいかがですかえきからじゅっぷんでやちんははちまんさんぜんえんです",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        3
+      ],
+      "startMs": 15720,
+      "endMs": 21800,
+      "durationMs": 6080,
+      "audioPath": "line-segments/lesson-22/l22-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-22/l22-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [3]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "ワン",
+      "japanese": "ダイニングキッチンと和室ですね。すみません。ここは何ですか。",
+      "normalizedTarget": "だいにんぐきっちんとわしつですねすみませんここはなんですか",
+      "normalizedAsrText": "だいにんぐきっちんとわしつですねすみませんここはなんですか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        4
+      ],
+      "startMs": 21800,
+      "endMs": 28320,
+      "durationMs": 6520,
+      "audioPath": "line-segments/lesson-22/l22-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-22/l22-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [4]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "不動産屋",
+      "japanese": "押し入れです。布団を入れる所ですよ。",
+      "normalizedTarget": "おしいれですふとんをいれるところですよ",
+      "normalizedAsrText": "おしいれですふとんをいれるところですよ",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        5
+      ],
+      "startMs": 28320,
+      "endMs": 32320,
+      "durationMs": 4000,
+      "audioPath": "line-segments/lesson-22/l22-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-22/l22-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [5]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "ワン",
+      "japanese": "そうですか。この部屋、きょう見ることができますか。",
+      "normalizedTarget": "そうですかこのへやきょうみることができますか",
+      "normalizedAsrText": "そうですかこのへやきょうみることができますか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        6
+      ],
+      "startMs": 32320,
+      "endMs": 36560,
+      "durationMs": 4240,
+      "audioPath": "line-segments/lesson-22/l22-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-22/l22-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [6]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 7,
+      "displayOrder": 7,
+      "speaker": "不動産屋",
+      "japanese": "ええ。今から行きましょうか。",
+      "normalizedTarget": "ええいまからいきましょうか",
+      "normalizedAsrText": "ええいまからいきましょうか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        7
+      ],
+      "startMs": 36560,
+      "endMs": 38960,
+      "durationMs": 2400,
+      "audioPath": "line-segments/lesson-22/l22-07.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-22/l22-07.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [7]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 8,
+      "displayOrder": 8,
+      "speaker": "ワン",
+      "japanese": "ええ、お願いします。",
+      "normalizedTarget": "ええおねがいします",
+      "normalizedAsrText": "ええおねがいします",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        8
+      ],
+      "startMs": 38960,
+      "endMs": 40900,
+      "durationMs": 1940,
+      "audioPath": "line-segments/lesson-22/l22-08.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-22/l22-08.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [8]；外侧最多保留约180ms自然余音"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ]
+}

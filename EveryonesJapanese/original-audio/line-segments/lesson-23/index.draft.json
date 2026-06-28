@@ -1,0 +1,181 @@
+{
+  "version": "minna-original-line-segments-draft-v1",
+  "lesson": 23,
+  "sourceSet": "source-230001",
+  "cd": "CD78",
+  "sourceTrack": "source-230001/tracks/cd-078.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-230001/tracks/cd-078.mp3",
+  "segmentCount": 8,
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "図書館の人",
+      "japanese": "はい、みどり図書館です。",
+      "normalizedTarget": "はいみどりとしょかんです",
+      "normalizedAsrText": "はいみどりとしょかんです",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        1
+      ],
+      "startMs": 12420,
+      "endMs": 14760,
+      "durationMs": 2340,
+      "audioPath": "line-segments/lesson-23/l23-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-23/l23-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [1]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "カリナ",
+      "japanese": "あのう、そちらまでどうやって行きますか。",
+      "normalizedTarget": "あのうそちらまでどうやっていきますか",
+      "normalizedAsrText": "あのうそちらまでどうやっていきますか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        2
+      ],
+      "startMs": 14760,
+      "endMs": 18000,
+      "durationMs": 3240,
+      "audioPath": "line-segments/lesson-23/l23-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-23/l23-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [2]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "図書館の人",
+      "japanese": "本田駅から12番のバスに乗って、図書館前で降りてください。3つ目ですよ。",
+      "normalizedTarget": "ほんだえきからじゅうにばんのばすにのってとしょかんまえでおりてくださいみっつめですよ",
+      "normalizedAsrText": "ほんだえきからじゅうにばんのばすにのってとしょかんまえでおりてくださいみっつめですよ",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        3
+      ],
+      "startMs": 18000,
+      "endMs": 24360,
+      "durationMs": 6360,
+      "audioPath": "line-segments/lesson-23/l23-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-23/l23-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [3]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "カリナ",
+      "japanese": "3つ目ですか。",
+      "normalizedTarget": "みっつめですか",
+      "normalizedAsrText": "みっつめですか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        4
+      ],
+      "startMs": 24360,
+      "endMs": 25800,
+      "durationMs": 1440,
+      "audioPath": "line-segments/lesson-23/l23-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-23/l23-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [4]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "図書館の人",
+      "japanese": "ええ。降りると、前に公園があります。図書館は公園の中の白い建物です。",
+      "normalizedTarget": "ええおりるとまえにこうえんがありますとしょかんはこうえんのなかのしろいたてものです",
+      "normalizedAsrText": "ええおりるとまえにこうえんがありますとしょかんはこうえんのなかのしろいたてものです",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        5
+      ],
+      "startMs": 25800,
+      "endMs": 33360,
+      "durationMs": 7560,
+      "audioPath": "line-segments/lesson-23/l23-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-23/l23-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [5]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "カリナ",
+      "japanese": "わかりました。それから本を借りるとき、何か要りますか。",
+      "normalizedTarget": "わかりましたそれからほんをかりるときなにかいりますか",
+      "normalizedAsrText": "わかりましたそれからほんをかりるときなにかいりますか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        6
+      ],
+      "startMs": 33360,
+      "endMs": 38760,
+      "durationMs": 5400,
+      "audioPath": "line-segments/lesson-23/l23-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-23/l23-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [6]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 7,
+      "displayOrder": 7,
+      "speaker": "図書館の人",
+      "japanese": "お名前とご住所がわかる物を持って来てください。",
+      "normalizedTarget": "おなまえとごじゅうしょがわかるものをもってきてください",
+      "normalizedAsrText": "おなまえとごじゅうしょがわかるものをもってきてください",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        7
+      ],
+      "startMs": 38760,
+      "endMs": 42440,
+      "durationMs": 3680,
+      "audioPath": "line-segments/lesson-23/l23-07.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-23/l23-07.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [7]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 8,
+      "displayOrder": 8,
+      "speaker": "カリナ",
+      "japanese": "はい。どうもありがとうございました。",
+      "normalizedTarget": "はいどうもありがとうございました",
+      "normalizedAsrText": "はいどうもありがとうございました",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        8
+      ],
+      "startMs": 42440,
+      "endMs": 45620,
+      "durationMs": 3180,
+      "audioPath": "line-segments/lesson-23/l23-08.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-23/l23-08.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [8]；外侧最多保留约180ms自然余音"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ]
+}

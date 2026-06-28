@@ -1,0 +1,79 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 23,
+  "cd": "CD78",
+  "sourceTrack": "source-230001/tracks/cd-078.mp3",
+  "durationMs": 47674,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "role": "timestamp_source_only"
+  },
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 12600,
+      "endMs": 14760,
+      "text": "はい、みどり図書館です。",
+      "normalizedText": "はいみどりとしょかんです",
+      "confidence": 0.92
+    },
+    {
+      "index": 2,
+      "startMs": 14760,
+      "endMs": 18000,
+      "text": "あのう、そちらまでどうやって行きますか。",
+      "normalizedText": "あのうそちらまでどうやっていきますか",
+      "confidence": 0.92
+    },
+    {
+      "index": 3,
+      "startMs": 18000,
+      "endMs": 24360,
+      "text": "本田駅から12番のバスに乗って、図書館前で降りてください。3つ目ですよ。",
+      "normalizedText": "ほんだえきからじゅうにばんのばすにのってとしょかんまえでおりてくださいみっつめですよ",
+      "confidence": 0.92
+    },
+    {
+      "index": 4,
+      "startMs": 24360,
+      "endMs": 25800,
+      "text": "3つ目ですか。",
+      "normalizedText": "みっつめですか",
+      "confidence": 0.92
+    },
+    {
+      "index": 5,
+      "startMs": 25800,
+      "endMs": 33360,
+      "text": "ええ。降りると、前に公園があります。図書館は公園の中の白い建物です。",
+      "normalizedText": "ええおりるとまえにこうえんがありますとしょかんはこうえんのなかのしろいたてものです",
+      "confidence": 0.92
+    },
+    {
+      "index": 6,
+      "startMs": 33360,
+      "endMs": 38760,
+      "text": "わかりました。それから本を借りるとき、何か要りますか。",
+      "normalizedText": "わかりましたそれからほんをかりるときなにかいりますか",
+      "confidence": 0.92
+    },
+    {
+      "index": 7,
+      "startMs": 38760,
+      "endMs": 42440,
+      "text": "お名前とご住所がわかる物を持って来てください。",
+      "normalizedText": "おなまえとごじゅうしょがわかるものをもってきてください",
+      "confidence": 0.92
+    },
+    {
+      "index": 8,
+      "startMs": 42440,
+      "endMs": 45440,
+      "text": "はい。どうもありがとうございました。",
+      "normalizedText": "はいどうもありがとうございました",
+      "confidence": 0.92
+    }
+  ]
+}

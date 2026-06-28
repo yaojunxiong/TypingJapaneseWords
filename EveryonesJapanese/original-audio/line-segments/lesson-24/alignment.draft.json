@@ -1,0 +1,243 @@
+{
+  "version": "minna-line-alignment-draft-v1",
+  "lesson": 24,
+  "sourceSet": "source-230001",
+  "cd": "CD82",
+  "sourceTrack": "source-230001/tracks/cd-082.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-230001/tracks/cd-082.mp3",
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "カリナ",
+      "japanese": "ワンさん、日曜日引っ越しですね。手伝いに行きましょうか。",
+      "normalizedTarget": "わんさんにちようびひっこしですねてつだいにいきましょうか",
+      "normalizedAsrText": "わんさんにちようびひっこしですねてつだいにいきましょうか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        1
+      ],
+      "startMs": 6820,
+      "endMs": 12000,
+      "durationMs": 5180,
+      "audioPath": "line-segments/lesson-24/l24-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-24/l24-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [1]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "ワン",
+      "japanese": "ありがとうございます。じゃ、すみませんが、9時ごろお願いします。",
+      "normalizedTarget": "ありがとうございますじゃすみませんがくじごろおねがいします",
+      "normalizedAsrText": "ありがとうございますじゃすみませんがくじごろおねがいします",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        2
+      ],
+      "startMs": 12000,
+      "endMs": 17000,
+      "durationMs": 5000,
+      "audioPath": "line-segments/lesson-24/l24-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-24/l24-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [2]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "カリナ",
+      "japanese": "ほかにだれか手伝いに行きますか。",
+      "normalizedTarget": "ほかにだれかてつだいにいきますか",
+      "normalizedAsrText": "ほかにだれかてつだいにいきますか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        3
+      ],
+      "startMs": 17000,
+      "endMs": 19500,
+      "durationMs": 2500,
+      "audioPath": "line-segments/lesson-24/l24-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-24/l24-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [3]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "ワン",
+      "japanese": "山田さんとミラーさんが来てくれます。",
+      "normalizedTarget": "やまださんとみらーさんがきてくれます",
+      "normalizedAsrText": "やまださんとみらーさんがきてくれます",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        4
+      ],
+      "startMs": 19500,
+      "endMs": 22000,
+      "durationMs": 2500,
+      "audioPath": "line-segments/lesson-24/l24-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-24/l24-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [4]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "カリナ",
+      "japanese": "車は？",
+      "normalizedTarget": "くるまは",
+      "normalizedAsrText": "くるまは",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        5
+      ],
+      "startMs": 22000,
+      "endMs": 22800,
+      "durationMs": 800,
+      "audioPath": "line-segments/lesson-24/l24-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-24/l24-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [5]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "ワン",
+      "japanese": "山田さんに貸してもらいます。",
+      "normalizedTarget": "やまださんにかしてもらいます",
+      "normalizedAsrText": "やまださんにかしてもらいます",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        6
+      ],
+      "startMs": 22800,
+      "endMs": 25000,
+      "durationMs": 2200,
+      "audioPath": "line-segments/lesson-24/l24-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-24/l24-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [6]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 7,
+      "displayOrder": 7,
+      "speaker": "カリナ",
+      "japanese": "昼ごはんはどうしますか。",
+      "normalizedTarget": "ひるごはんはどうしますか",
+      "normalizedAsrText": "ひるごはんはどうしますか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        7
+      ],
+      "startMs": 25000,
+      "endMs": 26800,
+      "durationMs": 1800,
+      "audioPath": "line-segments/lesson-24/l24-07.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-24/l24-07.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [7]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 8,
+      "displayOrder": 8,
+      "speaker": "ワン",
+      "japanese": "えーと……。",
+      "normalizedTarget": "えーと",
+      "normalizedAsrText": "えーと",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        8
+      ],
+      "startMs": 26800,
+      "endMs": 29000,
+      "durationMs": 2200,
+      "audioPath": "line-segments/lesson-24/l24-08.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-24/l24-08.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [8]；外侧最多保留约180ms自然余音；重点复核：保留思考停顿「えーと」。"
+    },
+    {
+      "lineNo": 9,
+      "displayOrder": 9,
+      "speaker": "カリナ",
+      "japanese": "わたしがお弁当を持って行きましょうか。",
+      "normalizedTarget": "わたしがおべんとうをもっていきましょうか",
+      "normalizedAsrText": "わたしがおべんとうをもっていきましょうか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        9
+      ],
+      "startMs": 29000,
+      "endMs": 31500,
+      "durationMs": 2500,
+      "audioPath": "line-segments/lesson-24/l24-09.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-24/l24-09.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [9]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 10,
+      "displayOrder": 10,
+      "speaker": "ワン",
+      "japanese": "すみません。お願いします。",
+      "normalizedTarget": "すみませんおねがいします",
+      "normalizedAsrText": "すみませんおねがいします",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        10
+      ],
+      "startMs": 31500,
+      "endMs": 34000,
+      "durationMs": 2500,
+      "audioPath": "line-segments/lesson-24/l24-10.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-24/l24-10.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [10]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 11,
+      "displayOrder": 11,
+      "speaker": "カリナ",
+      "japanese": "じゃ、日曜日に。",
+      "normalizedTarget": "じゃにちようびに",
+      "normalizedAsrText": "じゃにちようびに",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        11
+      ],
+      "startMs": 34000,
+      "endMs": 36180,
+      "durationMs": 2180,
+      "audioPath": "line-segments/lesson-24/l24-11.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-24/l24-11.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [11]；外侧最多保留约180ms自然余音"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ]
+}

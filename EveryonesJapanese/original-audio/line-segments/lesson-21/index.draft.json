@@ -1,0 +1,223 @@
+{
+  "version": "minna-original-line-segments-draft-v1",
+  "lesson": 21,
+  "sourceSet": "source-230001",
+  "cd": "CD72",
+  "sourceTrack": "source-230001/tracks/cd-072.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-230001/tracks/cd-072.mp3",
+  "segmentCount": 10,
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "松本",
+      "japanese": "あ、サントスさん、久しぶりですね。",
+      "normalizedTarget": "あさんとすさんひさしぶりですね",
+      "normalizedAsrText": "あさんとすさんひさしぶりですね",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        1
+      ],
+      "startMs": 6820,
+      "endMs": 10000,
+      "durationMs": 3180,
+      "audioPath": "line-segments/lesson-21/l21-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-21/l21-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [1]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "サントス",
+      "japanese": "あ、松本さん、お元気ですか。",
+      "normalizedTarget": "あまつもとさんおげんきですか",
+      "normalizedAsrText": "あまつもとさんおげんきですか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        2
+      ],
+      "startMs": 10000,
+      "endMs": 13000,
+      "durationMs": 3000,
+      "audioPath": "line-segments/lesson-21/l21-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-21/l21-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [2]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "松本",
+      "japanese": "ええ、ちょっとビールでも飲みませんか。",
+      "normalizedTarget": "ええちょっとびーるでものみませんか",
+      "normalizedAsrText": "ええちょっとびーるでものみませんか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        3
+      ],
+      "startMs": 13000,
+      "endMs": 17000,
+      "durationMs": 4000,
+      "audioPath": "line-segments/lesson-21/l21-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-21/l21-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [3]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "サントス",
+      "japanese": "いいですね。",
+      "normalizedTarget": "いいですね",
+      "normalizedAsrText": "いいですね",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        4
+      ],
+      "startMs": 17000,
+      "endMs": 19180,
+      "durationMs": 2180,
+      "audioPath": "line-segments/lesson-21/l21-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-21/l21-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [4]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "サントス",
+      "japanese": "今晩10時から日本とブラジルのサッカーの試合がありますね。",
+      "normalizedTarget": "こんばんじゅうじからにほんとぶらじるのさっかーのしあいがありますね",
+      "normalizedAsrText": "こんばんじゅうじからにほんとぶらじるのさっかーのしあいがありますね",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        5
+      ],
+      "startMs": 25820,
+      "endMs": 30000,
+      "durationMs": 4180,
+      "audioPath": "line-segments/lesson-21/l21-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-21/l21-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [5]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "松本",
+      "japanese": "ああ、そうですね。サントスさんはどちらが勝つと思いますか。",
+      "normalizedTarget": "ああそうですねさんとすさんはどちらがかつとおもいますか",
+      "normalizedAsrText": "ああそうですねさんとすさんはどちらがかつとおもいますか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        6
+      ],
+      "startMs": 30000,
+      "endMs": 35000,
+      "durationMs": 5000,
+      "audioPath": "line-segments/lesson-21/l21-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-21/l21-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [6]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 7,
+      "displayOrder": 7,
+      "speaker": "サントス",
+      "japanese": "もちろんブラジルですよ。",
+      "normalizedTarget": "もちろんぶらじるですよ",
+      "normalizedAsrText": "もちろんぶらじるですよ",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        7
+      ],
+      "startMs": 35000,
+      "endMs": 36800,
+      "durationMs": 1800,
+      "audioPath": "line-segments/lesson-21/l21-07.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-21/l21-07.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [7]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 8,
+      "displayOrder": 8,
+      "speaker": "松本",
+      "japanese": "そうですね。でも、最近日本も強くなりましたよ。",
+      "normalizedTarget": "そうですねでもさいきんにほんもつよくなりましたよ",
+      "normalizedAsrText": "そうですねでもさいきんにほんもつよくなりましたよ",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        8
+      ],
+      "startMs": 36800,
+      "endMs": 41000,
+      "durationMs": 4200,
+      "audioPath": "line-segments/lesson-21/l21-08.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-21/l21-08.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [8]；外侧最多保留约180ms自然余音"
+    },
+    {
+      "lineNo": 9,
+      "displayOrder": 9,
+      "speaker": "サントス",
+      "japanese": "ええ、わたしもそう思いますが、……。あ、もう帰らないと……。",
+      "normalizedTarget": "ええわたしもそうおもいますがあもうかえらないと",
+      "normalizedAsrText": "ええわたしもそうおもいますがあもうかえらないと",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        9
+      ],
+      "startMs": 41000,
+      "endMs": 46000,
+      "durationMs": 5000,
+      "audioPath": "line-segments/lesson-21/l21-09.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-21/l21-09.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [9]；外侧最多保留约180ms自然余音；重点复核：保留两段犹豫及「もう帰らないと」。"
+    },
+    {
+      "lineNo": 10,
+      "displayOrder": 10,
+      "speaker": "松本",
+      "japanese": "ええ、帰りましょう。",
+      "normalizedTarget": "ええかえりましょう",
+      "normalizedAsrText": "ええかえりましょう",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        10
+      ],
+      "startMs": 46000,
+      "endMs": 48180,
+      "durationMs": 2180,
+      "audioPath": "line-segments/lesson-21/l21-10.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-21/l21-10.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [10]；外侧最多保留约180ms自然余音"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ]
+}

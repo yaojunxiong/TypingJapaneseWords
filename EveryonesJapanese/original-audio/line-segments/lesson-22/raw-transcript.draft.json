@@ -1,0 +1,79 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 22,
+  "cd": "CD75",
+  "sourceTrack": "source-230001/tracks/cd-075.mp3",
+  "durationMs": 43233,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "role": "timestamp_source_only"
+  },
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 6520,
+      "endMs": 9440,
+      "text": "どんな部屋をお探しですか。",
+      "normalizedText": "どんなへやをおさがしですか",
+      "confidence": 0.92
+    },
+    {
+      "index": 2,
+      "startMs": 9440,
+      "endMs": 15720,
+      "text": "そうですね。家賃は8万円ぐらいで、駅から遠くない所がいいですね。",
+      "normalizedText": "そうですねやちんははちまんえんぐらいでえきからとおくないところがいいですね",
+      "confidence": 0.92
+    },
+    {
+      "index": 3,
+      "startMs": 15720,
+      "endMs": 21800,
+      "text": "では、こちらはいかがですか。駅から10分で、家賃は83,000円です。",
+      "normalizedText": "ではこちらはいかがですかえきからじゅっぷんでやちんははちまんさんぜんえんです",
+      "confidence": 0.92
+    },
+    {
+      "index": 4,
+      "startMs": 21800,
+      "endMs": 28320,
+      "text": "ダイニングキッチンと和室ですね。すみません。ここは何ですか。",
+      "normalizedText": "だいにんぐきっちんとわしつですねすみませんここはなんですか",
+      "confidence": 0.92
+    },
+    {
+      "index": 5,
+      "startMs": 28320,
+      "endMs": 32320,
+      "text": "押し入れです。布団を入れる所ですよ。",
+      "normalizedText": "おしいれですふとんをいれるところですよ",
+      "confidence": 0.92
+    },
+    {
+      "index": 6,
+      "startMs": 32320,
+      "endMs": 36560,
+      "text": "そうですか。この部屋、きょう見ることができますか。",
+      "normalizedText": "そうですかこのへやきょうみることができますか",
+      "confidence": 0.92
+    },
+    {
+      "index": 7,
+      "startMs": 36560,
+      "endMs": 38960,
+      "text": "ええ。今から行きましょうか。",
+      "normalizedText": "ええいまからいきましょうか",
+      "confidence": 0.92
+    },
+    {
+      "index": 8,
+      "startMs": 38960,
+      "endMs": 40720,
+      "text": "ええ、お願いします。",
+      "normalizedText": "ええおねがいします",
+      "confidence": 0.92
+    }
+  ]
+}
