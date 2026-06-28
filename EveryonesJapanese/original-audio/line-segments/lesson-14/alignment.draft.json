@@ -1,27 +1,30 @@
 {
   "version": "minna-line-alignment-draft-v1",
   "lesson": 14,
+  "sourceSet": "source-230001",
+  "cd": "CD49",
   "sourceTrack": "source-230001/tracks/cd-049.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-230001/tracks/cd-049.mp3",
   "segments": [
     {
       "lineNo": 1,
       "displayOrder": 1,
       "speaker": "カリナ",
       "japanese": "みどり町までお願いします。",
-      "normalizedTarget": "みどり町までお願いします",
-      "normalizedAsrText": "",
+      "normalizedTarget": "みどりまちまでおねがいします",
+      "normalizedAsrText": "みどりまちまでおねがいします",
       "phoneticSimilarity": 1.0,
       "matchedUtteranceIndexes": [
-        4
+        1
       ],
-      "startMs": 7044,
-      "endMs": 8981,
-      "durationMs": 1937,
+      "startMs": 6840,
+      "endMs": 8640,
+      "durationMs": 1800,
       "audioPath": "line-segments/lesson-14/l14-01.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-14/l14-01.mp3",
       "needsReview": true,
       "matchConfidence": "high",
-      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [1]；外侧最多保留约180ms自然余音"
     },
     {
       "lineNo": 2,
@@ -29,61 +32,59 @@
       "speaker": "運転手",
       "japanese": "はい。",
       "normalizedTarget": "はい",
-      "normalizedAsrText": "",
+      "normalizedAsrText": "はい",
       "phoneticSimilarity": 1.0,
       "matchedUtteranceIndexes": [
-        5,
-        6
+        2
       ],
-      "startMs": 9267,
-      "endMs": 11009,
-      "durationMs": 1742,
+      "startMs": 9010,
+      "endMs": 9770,
+      "durationMs": 760,
       "audioPath": "line-segments/lesson-14/l14-02.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-14/l14-02.mp3",
       "needsReview": true,
       "matchConfidence": "high",
-      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [2]；外侧最多保留约180ms自然余音"
     },
     {
       "lineNo": 3,
       "displayOrder": 3,
       "speaker": "カリナ",
       "japanese": "すみません。あの信号を右へ曲がってください。",
-      "normalizedTarget": "すみませんあの信号を右へ曲がってください",
-      "normalizedAsrText": "",
+      "normalizedTarget": "すみませんあのしんごうをみぎへまがってください",
+      "normalizedAsrText": "すみませんあのしんごうをみぎへまがってください",
       "phoneticSimilarity": 1.0,
       "matchedUtteranceIndexes": [
-        7,
-        8
+        3
       ],
-      "startMs": 12158,
-      "endMs": 14791,
-      "durationMs": 2632,
+      "startMs": 17820,
+      "endMs": 22020,
+      "durationMs": 4200,
       "audioPath": "line-segments/lesson-14/l14-03.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-14/l14-03.mp3",
       "needsReview": true,
       "matchConfidence": "high",
-      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [3]；外侧最多保留约180ms自然余音"
     },
     {
       "lineNo": 4,
       "displayOrder": 4,
       "speaker": "運転手",
       "japanese": "右ですね。",
-      "normalizedTarget": "右ですね",
-      "normalizedAsrText": "",
+      "normalizedTarget": "みぎですね",
+      "normalizedAsrText": "みぎですね",
       "phoneticSimilarity": 1.0,
       "matchedUtteranceIndexes": [
-        9
+        4
       ],
-      "startMs": 17860,
-      "endMs": 18818,
-      "durationMs": 958,
+      "startMs": 22000,
+      "endMs": 23000,
+      "durationMs": 1000,
       "audioPath": "line-segments/lesson-14/l14-04.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-14/l14-04.mp3",
       "needsReview": true,
       "matchConfidence": "high",
-      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [4]；外侧最多保留约180ms自然余音"
     },
     {
       "lineNo": 5,
@@ -91,17 +92,19 @@
       "speaker": "カリナ",
       "japanese": "ええ。",
       "normalizedTarget": "ええ",
-      "normalizedAsrText": "",
-      "phoneticSimilarity": 0.0,
-      "matchedUtteranceIndexes": [],
-      "startMs": 19261,
-      "endMs": 19940,
-      "durationMs": 679,
+      "normalizedAsrText": "ええ",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        5
+      ],
+      "startMs": 23000,
+      "endMs": 24770,
+      "durationMs": 1770,
       "audioPath": "line-segments/lesson-14/l14-05.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-14/l14-05.mp3",
       "needsReview": true,
-      "matchConfidence": "medium",
-      "boundaryReason": "连续语音内部估算边界；需人工复听确认"
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [5]；外侧最多保留约180ms自然余音"
     },
     {
       "lineNo": 6,
@@ -109,125 +112,133 @@
       "speaker": "運転手",
       "japanese": "まっすぐですか。",
       "normalizedTarget": "まっすぐですか",
-      "normalizedAsrText": "",
-      "phoneticSimilarity": 0.0,
-      "matchedUtteranceIndexes": [],
-      "startMs": 19660,
-      "endMs": 21556,
-      "durationMs": 1896,
+      "normalizedAsrText": "まっすぐですか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        6
+      ],
+      "startMs": 25150,
+      "endMs": 27310,
+      "durationMs": 2160,
       "audioPath": "line-segments/lesson-14/l14-06.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-14/l14-06.mp3",
       "needsReview": true,
-      "matchConfidence": "medium",
-      "boundaryReason": "连续语音内部估算边界；需人工复听确认"
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [6]；外侧最多保留约180ms自然余音"
     },
     {
       "lineNo": 7,
       "displayOrder": 7,
       "speaker": "カリナ",
       "japanese": "ええ。まっすぐ行ってください。",
-      "normalizedTarget": "ええまっすぐ行ってください",
-      "normalizedAsrText": "",
+      "normalizedTarget": "ええまっすぐいってください",
+      "normalizedAsrText": "ええまっすぐいってください",
       "phoneticSimilarity": 1.0,
       "matchedUtteranceIndexes": [
-        11,
-        12,
-        13,
-        14,
-        15
+        7
       ],
-      "startMs": 22073,
-      "endMs": 29293,
-      "durationMs": 7220,
+      "startMs": 27310,
+      "endMs": 30600,
+      "durationMs": 3290,
       "audioPath": "line-segments/lesson-14/l14-07.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-14/l14-07.mp3",
       "needsReview": true,
       "matchConfidence": "high",
-      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [7]；外侧最多保留约180ms自然余音"
     },
     {
       "lineNo": 8,
       "displayOrder": 8,
       "speaker": "カリナ",
       "japanese": "あの花屋の前で止めてください。",
-      "normalizedTarget": "あの花屋の前で止めてください",
-      "normalizedAsrText": "",
+      "normalizedTarget": "あのはなやのまえでとめてください",
+      "normalizedAsrText": "あのはなやのまえでとめてください",
       "phoneticSimilarity": 1.0,
       "matchedUtteranceIndexes": [
-        16
+        8
       ],
-      "startMs": 31158,
-      "endMs": 33281,
-      "durationMs": 2123,
+      "startMs": 30850,
+      "endMs": 32640,
+      "durationMs": 1790,
       "audioPath": "line-segments/lesson-14/l14-08.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-14/l14-08.mp3",
       "needsReview": true,
       "matchConfidence": "high",
-      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [8]；外侧最多保留约180ms自然余音"
     },
     {
       "lineNo": 9,
       "displayOrder": 9,
       "speaker": "運転手",
       "japanese": "はい。1,800円です。",
-      "normalizedTarget": "はい1800円です",
-      "normalizedAsrText": "",
-      "phoneticSimilarity": 0.0,
+      "normalizedTarget": "はいせんはっぴゃくえんです",
+      "normalizedAsrText": "はいせんはっぴゃくえんです",
+      "phoneticSimilarity": 1.0,
       "matchedUtteranceIndexes": [
-        17,
-        18
+        9,
+        10
       ],
-      "startMs": 33663,
-      "endMs": 35404,
-      "durationMs": 1741,
+      "startMs": 33010,
+      "endMs": 42630,
+      "durationMs": 9620,
       "audioPath": "line-segments/lesson-14/l14-09.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-14/l14-09.mp3",
       "needsReview": true,
-      "matchConfidence": "medium",
-      "boundaryReason": "连续语音内部估算边界；需人工复听确认"
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [9, 10]；外侧最多保留约180ms自然余音；重点复核：该正式台词包含「はい」和到达后的「1,800円です」，中间保留出租车停车/计价的自然停顿。"
     },
     {
       "lineNo": 10,
       "displayOrder": 10,
       "speaker": "カリナ",
       "japanese": "これでお願いします。",
-      "normalizedTarget": "これでお願いします",
-      "normalizedAsrText": "",
-      "phoneticSimilarity": 0.0,
+      "normalizedTarget": "これでおねがいします",
+      "normalizedAsrText": "これでおねがいします",
+      "phoneticSimilarity": 1.0,
       "matchedUtteranceIndexes": [
-        19
+        11
       ],
-      "startMs": 36010,
-      "endMs": 40200,
-      "durationMs": 4190,
+      "startMs": 43010,
+      "endMs": 46020,
+      "durationMs": 3010,
       "audioPath": "line-segments/lesson-14/l14-10.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-14/l14-10.mp3",
       "needsReview": true,
-      "matchConfidence": "medium",
-      "boundaryReason": "连续语音内部估算边界；需人工复听确认"
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [11]；外侧最多保留约180ms自然余音"
     },
     {
       "lineNo": 11,
       "displayOrder": 11,
       "speaker": "運転手",
       "japanese": "3,200円のお釣りです。ありがとうございました。",
-      "normalizedTarget": "3200円のお釣りですありがとうございました",
-      "normalizedAsrText": "",
+      "normalizedTarget": "さんぜんにひゃくえんのおつりですありがとうございました",
+      "normalizedAsrText": "さんぜんにひゃくえんのおつりですありがとうございました",
       "phoneticSimilarity": 1.0,
       "matchedUtteranceIndexes": [
-        20,
-        21,
-        22,
-        23
+        12
       ],
-      "startMs": 41842,
-      "endMs": 50185,
-      "durationMs": 8343,
+      "startMs": 45990,
+      "endMs": 51600,
+      "durationMs": 5610,
       "audioPath": "line-segments/lesson-14/l14-11.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-14/l14-11.mp3",
       "needsReview": true,
       "matchConfidence": "high",
-      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [12]；外侧最多保留约180ms自然余音"
     }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
   ]
 }

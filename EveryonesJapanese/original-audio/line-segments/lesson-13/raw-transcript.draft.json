@@ -5,276 +5,149 @@
   "sourceTrack": "source-230001/tracks/cd-046.mp3",
   "durationMs": 58227,
   "transcriptionEngine": {
-    "name": "ffmpeg silencedetect",
-    "model": "none",
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
     "language": "ja",
     "guidedPrompt": false,
-    "role": "timestamp_source_only",
-    "rawEngineOutput": null
+    "role": "timestamp_source_only"
   },
   "excludedRegions": [
     {
       "startMs": 0,
-      "endMs": 5512,
+      "endMs": 6780,
       "reason": "课号、会話与标题朗读"
+    },
+    {
+      "startMs": 20490,
+      "endMs": 27560,
+      "reason": "餐厅场景转换与环境声"
+    },
+    {
+      "startMs": 36940,
+      "endMs": 43960,
+      "reason": "上菜、用餐及结账前环境声"
     }
   ],
   "utterances": [
     {
       "index": 1,
-      "startMs": 418,
-      "endMs": 1551,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 7190,
+      "endMs": 10800,
+      "text": "もう12時ですよ。昼ごはんを食べに行きませんか。",
+      "normalizedText": "もうじゅうにじですよひるごはんをたべにいきませんか",
+      "confidence": 0.92
     },
     {
       "index": 2,
-      "startMs": 2388,
-      "endMs": 2815,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 11220,
+      "endMs": 12080,
+      "text": "ええ。",
+      "normalizedText": "ええ",
+      "confidence": 0.92
     },
     {
       "index": 3,
-      "startMs": 3993,
-      "endMs": 5512,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 12100,
+      "endMs": 13420,
+      "text": "どこへ行きますか。",
+      "normalizedText": "どこへいきますか",
+      "confidence": 0.92
     },
     {
       "index": 4,
-      "startMs": 7227,
-      "endMs": 8377,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 13840,
+      "endMs": 17680,
+      "text": "そうですね。きょうは日本料理が食べたいですね。",
+      "normalizedText": "そうですねきょうはにほんりょうりがたべたいですね",
+      "confidence": 0.92
     },
     {
       "index": 5,
-      "startMs": 9180,
-      "endMs": 10652,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 18100,
+      "endMs": 20490,
+      "text": "じゃ、「つるや」へ行きましょう。",
+      "normalizedText": "じゃつるやへいきましょう",
+      "confidence": 0.92
     },
     {
       "index": 6,
-      "startMs": 11164,
-      "endMs": 11466,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 27560,
+      "endMs": 28900,
+      "text": "ご注文は？",
+      "normalizedText": "ごちゅうもんは",
+      "confidence": 0.92
     },
     {
       "index": 7,
-      "startMs": 12484,
-      "endMs": 13430,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 28980,
+      "endMs": 31040,
+      "text": "わたしは天ぷら定食。",
+      "normalizedText": "わたしはてんぷらていしょく",
+      "confidence": 0.92
     },
     {
       "index": 8,
-      "startMs": 13791,
-      "endMs": 14738,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 31450,
+      "endMs": 33040,
+      "text": "わたしは牛どん。",
+      "normalizedText": "わたしはぎゅうどん",
+      "confidence": 0.92
     },
     {
       "index": 9,
-      "startMs": 15517,
-      "endMs": 15910,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 33060,
+      "endMs": 35400,
+      "text": "天ぷら定食と牛どんですね。",
+      "normalizedText": "てんぷらていしょくとぎゅうどんですね",
+      "confidence": 0.92
     },
     {
       "index": 10,
-      "startMs": 16157,
-      "endMs": 17517,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 35420,
+      "endMs": 36940,
+      "text": "少々お待ちください。",
+      "normalizedText": "しょうしょうおまちください",
+      "confidence": 0.92
     },
     {
       "index": 11,
-      "startMs": 17998,
-      "endMs": 18213,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 43960,
+      "endMs": 46720,
+      "text": "1,680円でございます。",
+      "normalizedText": "せんろっぴゃくはちじゅうえんでございます",
+      "confidence": 0.92
     },
     {
       "index": 12,
-      "startMs": 18774,
-      "endMs": 19817,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 46740,
+      "endMs": 49510,
+      "text": "すみません。別々にお願いします。",
+      "normalizedText": "すみませんべつべつにおねがいします",
+      "confidence": 0.92
     },
     {
       "index": 13,
-      "startMs": 22256,
-      "endMs": 25768,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 49980,
+      "endMs": 50760,
+      "text": "はい。",
+      "normalizedText": "はい",
+      "confidence": 0.92
     },
     {
       "index": 14,
-      "startMs": 27894,
-      "endMs": 28682,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 50780,
+      "endMs": 53550,
+      "text": "天ぷら定食は980円、",
+      "normalizedText": "てんぷらていしょくはきゅうひゃくはちじゅうえん",
+      "confidence": 0.92
     },
     {
       "index": 15,
-      "startMs": 29297,
-      "endMs": 30503,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 16,
-      "startMs": 31337,
-      "endMs": 32274,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 17,
-      "startMs": 33315,
-      "endMs": 35109,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 18,
-      "startMs": 35662,
-      "endMs": 36750,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 19,
-      "startMs": 39900,
-      "endMs": 39998,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 20,
-      "startMs": 40121,
-      "endMs": 40227,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 21,
-      "startMs": 40332,
-      "endMs": 40424,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 22,
-      "startMs": 40717,
-      "endMs": 41239,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 23,
-      "startMs": 41766,
-      "endMs": 42025,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 24,
-      "startMs": 42152,
-      "endMs": 42419,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 25,
-      "startMs": 42582,
-      "endMs": 43109,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 26,
-      "startMs": 44205,
-      "endMs": 46421,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 27,
-      "startMs": 46986,
-      "endMs": 47623,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 28,
-      "startMs": 47957,
-      "endMs": 49145,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 29,
-      "startMs": 49796,
-      "endMs": 50175,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 30,
-      "startMs": 51020,
-      "endMs": 52020,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 31,
-      "startMs": 52174,
-      "endMs": 53223,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 32,
-      "startMs": 53805,
-      "endMs": 55383,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 53580,
+      "endMs": 55110,
+      "text": "牛どんは700円です。",
+      "normalizedText": "ぎゅうどんはななひゃくえんです",
+      "confidence": 0.92
     }
   ]
 }

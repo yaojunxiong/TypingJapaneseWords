@@ -5,172 +5,107 @@
   "sourceTrack": "source-230001/tracks/cd-043.mp3",
   "durationMs": 35631,
   "transcriptionEngine": {
-    "name": "ffmpeg silencedetect",
-    "model": "none",
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
     "language": "ja",
     "guidedPrompt": false,
-    "role": "timestamp_source_only",
-    "rawEngineOutput": null
+    "role": "timestamp_source_only"
   },
   "excludedRegions": [
     {
       "startMs": 0,
-      "endMs": 5469,
+      "endMs": 7000,
       "reason": "课号、会話与标题朗读"
     }
   ],
   "utterances": [
     {
       "index": 1,
-      "startMs": 385,
-      "endMs": 1350,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 7380,
+      "endMs": 8000,
+      "text": "ただいま。",
+      "normalizedText": "ただいま",
+      "confidence": 0.92
     },
     {
       "index": 2,
-      "startMs": 2166,
-      "endMs": 2601,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 8000,
+      "endMs": 9590,
+      "text": "お帰りなさい。",
+      "normalizedText": "おかえりなさい",
+      "confidence": 0.92
     },
     {
       "index": 3,
-      "startMs": 3824,
-      "endMs": 5469,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 9590,
+      "endMs": 11520,
+      "text": "これ、京都のお土産です。",
+      "normalizedText": "これきょうとのおみやげです",
+      "confidence": 0.92
     },
     {
       "index": 4,
-      "startMs": 7136,
-      "endMs": 7622,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 11520,
+      "endMs": 13800,
+      "text": "どうもすみません。",
+      "normalizedText": "どうもすみません",
+      "confidence": 0.92
     },
     {
       "index": 5,
-      "startMs": 8421,
-      "endMs": 9128,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 13820,
+      "endMs": 15800,
+      "text": "祇園祭はどうでしたか。",
+      "normalizedText": "ぎおんまつりはどうでしたか",
+      "confidence": 0.92
     },
     {
       "index": 6,
-      "startMs": 9766,
-      "endMs": 11120,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 15970,
+      "endMs": 19260,
+      "text": "おもしろかったです。とてもにぎやかでした。",
+      "normalizedText": "おもしろかったですとてもにぎやかでした",
+      "confidence": 0.92
     },
     {
       "index": 7,
-      "startMs": 11618,
-      "endMs": 12706,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 19460,
+      "endMs": 23660,
+      "text": "祇園祭は京都の祭りでいちばん有名ですからね。",
+      "normalizedText": "ぎおんまつりはきょうとのまつりでいちばんゆうめいですからね",
+      "confidence": 0.92
     },
     {
       "index": 8,
-      "startMs": 13910,
-      "endMs": 15407,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 23660,
+      "endMs": 26880,
+      "text": "そうですか。写真をたくさん撮りました。",
+      "normalizedText": "そうですかしゃしんをたくさんとりました",
+      "confidence": 0.92
     },
     {
       "index": 9,
-      "startMs": 16048,
-      "endMs": 16966,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 27260,
+      "endMs": 28220,
+      "text": "これです。",
+      "normalizedText": "これです",
+      "confidence": 0.92
     },
     {
       "index": 10,
-      "startMs": 17722,
-      "endMs": 18831,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 28700,
+      "endMs": 30920,
+      "text": "わあ、すごい人ですね。",
+      "normalizedText": "わあすごいひとですね",
+      "confidence": 0.92
     },
     {
       "index": 11,
-      "startMs": 19571,
-      "endMs": 20353,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 12,
-      "startMs": 20756,
-      "endMs": 23153,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 13,
-      "startMs": 23431,
-      "endMs": 24170,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 14,
-      "startMs": 25054,
-      "endMs": 26398,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 15,
-      "startMs": 27052,
-      "endMs": 27466,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 16,
-      "startMs": 28150,
-      "endMs": 28758,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 17,
-      "startMs": 29253,
-      "endMs": 30695,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 18,
-      "startMs": 31066,
-      "endMs": 31439,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 19,
-      "startMs": 31839,
-      "endMs": 32797,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 31300,
+      "endMs": 33520,
+      "text": "ええ。ちょっと疲れました。",
+      "normalizedText": "ええちょっとつかれました",
+      "confidence": 0.92
     }
   ]
 }

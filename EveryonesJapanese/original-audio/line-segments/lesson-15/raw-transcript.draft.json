@@ -5,164 +5,107 @@
   "sourceTrack": "source-230001/tracks/cd-053.mp3",
   "durationMs": 36389,
   "transcriptionEngine": {
-    "name": "ffmpeg silencedetect",
-    "model": "none",
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
     "language": "ja",
     "guidedPrompt": false,
-    "role": "timestamp_source_only",
-    "rawEngineOutput": null
+    "role": "timestamp_source_only"
   },
   "excludedRegions": [
     {
       "startMs": 0,
-      "endMs": 4757,
+      "endMs": 6200,
       "reason": "课号、会話与标题朗读"
     }
   ],
   "utterances": [
     {
       "index": 1,
-      "startMs": 460,
-      "endMs": 1489,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 6300,
+      "endMs": 7680,
+      "text": "いい映画でしたね。",
+      "normalizedText": "いいえいがでしたね",
+      "confidence": 0.92
     },
     {
       "index": 2,
-      "startMs": 2328,
-      "endMs": 2759,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 8210,
+      "endMs": 11240,
+      "text": "ええ。わたしは家族を思い出しました。",
+      "normalizedText": "ええわたしはかぞくをおもいだしました",
+      "confidence": 0.92
     },
     {
       "index": 3,
-      "startMs": 3979,
-      "endMs": 4757,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 11690,
+      "endMs": 14720,
+      "text": "そうですか。ミラーさんのご家族は？",
+      "normalizedText": "そうですかみらーさんのごかぞくは",
+      "confidence": 0.92
     },
     {
       "index": 4,
-      "startMs": 6516,
-      "endMs": 7635,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 14740,
+      "endMs": 17320,
+      "text": "両親と姉が1人います。",
+      "normalizedText": "りょうしんとあねがひとりいます",
+      "confidence": 0.92
     },
     {
       "index": 5,
-      "startMs": 8094,
-      "endMs": 8394,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 17340,
+      "endMs": 19320,
+      "text": "どちらにいらっしゃいますか。",
+      "normalizedText": "どちらにいらっしゃいますか",
+      "confidence": 0.92
     },
     {
       "index": 6,
-      "startMs": 9235,
-      "endMs": 10936,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 19340,
+      "endMs": 22320,
+      "text": "両親はニューヨークの近くに住んでいます。",
+      "normalizedText": "りょうしんはにゅーよーくのちかくにすんでいます",
+      "confidence": 0.92
     },
     {
       "index": 7,
-      "startMs": 11560,
-      "endMs": 12330,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 22340,
+      "endMs": 24920,
+      "text": "姉はロンドンで働いています。",
+      "normalizedText": "あねはろんどんではたらいています",
+      "confidence": 0.92
     },
     {
       "index": 8,
-      "startMs": 13090,
-      "endMs": 14495,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 24940,
+      "endMs": 26920,
+      "text": "木村さんのご家族は？",
+      "normalizedText": "きむらさんのごかぞくは",
+      "confidence": 0.92
     },
     {
       "index": 9,
-      "startMs": 15053,
-      "endMs": 15753,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 27320,
+      "endMs": 28400,
+      "text": "3人です。",
+      "normalizedText": "さんにんです",
+      "confidence": 0.92
     },
     {
       "index": 10,
-      "startMs": 16096,
-      "endMs": 17017,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 29170,
+      "endMs": 30920,
+      "text": "父は銀行員です。",
+      "normalizedText": "ちちはぎんこういんです",
+      "confidence": 0.92
     },
     {
       "index": 11,
-      "startMs": 17667,
-      "endMs": 19079,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 12,
-      "startMs": 19697,
-      "endMs": 21772,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 13,
-      "startMs": 22710,
-      "endMs": 24256,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 14,
-      "startMs": 25263,
-      "endMs": 26435,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 15,
-      "startMs": 27277,
-      "endMs": 28006,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 16,
-      "startMs": 28913,
-      "endMs": 30275,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 17,
-      "startMs": 31197,
-      "endMs": 31671,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 18,
-      "startMs": 31948,
-      "endMs": 33576,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 30940,
+      "endMs": 34920,
+      "text": "母は高校で英語を教えています。",
+      "normalizedText": "はははこうこうでえいごをおしえています",
+      "confidence": 0.92
     }
   ]
 }

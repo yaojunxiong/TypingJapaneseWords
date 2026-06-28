@@ -5,204 +5,125 @@
   "sourceTrack": "source-230001/tracks/cd-049.mp3",
   "durationMs": 52820,
   "transcriptionEngine": {
-    "name": "ffmpeg silencedetect",
-    "model": "none",
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
     "language": "ja",
     "guidedPrompt": false,
-    "role": "timestamp_source_only",
-    "rawEngineOutput": null
+    "role": "timestamp_source_only"
   },
   "excludedRegions": [
     {
       "startMs": 0,
-      "endMs": 5442,
+      "endMs": 7000,
       "reason": "课号、会話与标题朗读"
+    },
+    {
+      "startMs": 9590,
+      "endMs": 18000,
+      "reason": "出租车行驶环境声"
+    },
+    {
+      "startMs": 32460,
+      "endMs": 33190,
+      "reason": "停车动作声"
     }
   ],
   "utterances": [
     {
       "index": 1,
-      "startMs": 403,
-      "endMs": 1461,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 7020,
+      "endMs": 8460,
+      "text": "みどり町までお願いします。",
+      "normalizedText": "みどりまちまでおねがいします",
+      "confidence": 0.92
     },
     {
       "index": 2,
-      "startMs": 2189,
-      "endMs": 2616,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 9190,
+      "endMs": 9590,
+      "text": "はい。",
+      "normalizedText": "はい",
+      "confidence": 0.92
     },
     {
       "index": 3,
-      "startMs": 3798,
-      "endMs": 5442,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 18000,
+      "endMs": 22000,
+      "text": "すみません。あの信号を右へ曲がってください。",
+      "normalizedText": "すみませんあのしんごうをみぎへまがってください",
+      "confidence": 0.92
     },
     {
       "index": 4,
-      "startMs": 7164,
-      "endMs": 8821,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 22020,
+      "endMs": 23000,
+      "text": "右ですね。",
+      "normalizedText": "みぎですね",
+      "confidence": 0.92
     },
     {
       "index": 5,
-      "startMs": 9387,
-      "endMs": 9548,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 23000,
+      "endMs": 24590,
+      "text": "ええ。",
+      "normalizedText": "ええ",
+      "confidence": 0.92
     },
     {
       "index": 6,
-      "startMs": 10709,
-      "endMs": 10849,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 25330,
+      "endMs": 27310,
+      "text": "まっすぐですか。",
+      "normalizedText": "まっすぐですか",
+      "confidence": 0.92
     },
     {
       "index": 7,
-      "startMs": 12278,
-      "endMs": 13908,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 27310,
+      "endMs": 30420,
+      "text": "ええ。まっすぐ行ってください。",
+      "normalizedText": "ええまっすぐいってください",
+      "confidence": 0.92
     },
     {
       "index": 8,
-      "startMs": 14106,
-      "endMs": 14631,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 31030,
+      "endMs": 32460,
+      "text": "あの花屋の前で止めてください。",
+      "normalizedText": "あのはなやのまえでとめてください",
+      "confidence": 0.92
     },
     {
       "index": 9,
-      "startMs": 17980,
-      "endMs": 18658,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 33190,
+      "endMs": 35990,
+      "text": "はい。",
+      "normalizedText": "はい",
+      "confidence": 0.92
     },
     {
       "index": 10,
-      "startMs": 19381,
-      "endMs": 21396,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 41000,
+      "endMs": 42450,
+      "text": "1,800円です。",
+      "normalizedText": "せんはっぴゃくえんです",
+      "confidence": 0.92
     },
     {
       "index": 11,
-      "startMs": 22193,
-      "endMs": 22834,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 43190,
+      "endMs": 45990,
+      "text": "これでお願いします。",
+      "normalizedText": "これでおねがいします",
+      "confidence": 0.92
     },
     {
       "index": 12,
-      "startMs": 23400,
-      "endMs": 23692,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 13,
-      "startMs": 25909,
-      "endMs": 26643,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 14,
-      "startMs": 27374,
-      "endMs": 27588,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 15,
-      "startMs": 28090,
-      "endMs": 29133,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 16,
-      "startMs": 31278,
-      "endMs": 33121,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 17,
-      "startMs": 33783,
-      "endMs": 33941,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 18,
-      "startMs": 35011,
-      "endMs": 35244,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 19,
-      "startMs": 36130,
-      "endMs": 40040,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 20,
-      "startMs": 41962,
-      "endMs": 42867,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 21,
-      "startMs": 43711,
-      "endMs": 44815,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 22,
-      "startMs": 46816,
-      "endMs": 48257,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
-    },
-    {
-      "index": 23,
-      "startMs": 49204,
-      "endMs": 50025,
-      "text": "",
-      "normalizedText": "",
-      "confidence": 0.0
+      "startMs": 46020,
+      "endMs": 51420,
+      "text": "3,200円のお釣りです。ありがとうございました。",
+      "normalizedText": "さんぜんにひゃくえんのおつりですありがとうございました",
+      "confidence": 0.92
     }
   ]
 }

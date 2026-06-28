@@ -12,21 +12,20 @@
       "displayOrder": 1,
       "speaker": "山田",
       "japanese": "もう12時ですよ。昼ごはんを食べに行きませんか。",
-      "normalizedTarget": "もう12時ですよ昼ごはんを食べに行きませんか",
-      "normalizedAsrText": "",
+      "normalizedTarget": "もうじゅうにじですよひるごはんをたべにいきませんか",
+      "normalizedAsrText": "もうじゅうにじですよひるごはんをたべにいきませんか",
       "phoneticSimilarity": 1.0,
       "matchedUtteranceIndexes": [
-        4,
-        5
+        1
       ],
-      "startMs": 7107,
-      "endMs": 10812,
-      "durationMs": 3704,
+      "startMs": 7010,
+      "endMs": 10980,
+      "durationMs": 3970,
       "audioPath": "line-segments/lesson-13/l13-01.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-13/l13-01.mp3",
       "needsReview": true,
       "matchConfidence": "high",
-      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [1]；外侧最多保留约180ms自然余音"
     },
     {
       "lineNo": 2,
@@ -34,231 +33,222 @@
       "speaker": "ミラー",
       "japanese": "ええ。",
       "normalizedTarget": "ええ",
-      "normalizedAsrText": "",
+      "normalizedAsrText": "ええ",
       "phoneticSimilarity": 1.0,
       "matchedUtteranceIndexes": [
-        6
+        2
       ],
-      "startMs": 11044,
-      "endMs": 11626,
-      "durationMs": 582,
+      "startMs": 11040,
+      "endMs": 12100,
+      "durationMs": 1060,
       "audioPath": "line-segments/lesson-13/l13-02.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-13/l13-02.mp3",
       "needsReview": true,
       "matchConfidence": "high",
-      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [2]；外侧最多保留约180ms自然余音"
     },
     {
       "lineNo": 3,
       "displayOrder": 3,
       "speaker": "山田",
       "japanese": "どこへ行きますか。",
-      "normalizedTarget": "どこへ行きますか",
-      "normalizedAsrText": "",
+      "normalizedTarget": "どこへいきますか",
+      "normalizedAsrText": "どこへいきますか",
       "phoneticSimilarity": 1.0,
       "matchedUtteranceIndexes": [
-        7
+        3
       ],
-      "startMs": 12364,
-      "endMs": 13590,
-      "durationMs": 1226,
+      "startMs": 12080,
+      "endMs": 13600,
+      "durationMs": 1520,
       "audioPath": "line-segments/lesson-13/l13-03.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-13/l13-03.mp3",
       "needsReview": true,
       "matchConfidence": "high",
-      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [3]；外侧最多保留约180ms自然余音"
     },
     {
       "lineNo": 4,
       "displayOrder": 4,
       "speaker": "ミラー",
       "japanese": "そうですね。きょうは日本料理が食べたいですね。",
-      "normalizedTarget": "そうですねきょうは日本料理が食べたいですね",
-      "normalizedAsrText": "",
+      "normalizedTarget": "そうですねきょうはにほんりょうりがたべたいですね",
+      "normalizedAsrText": "そうですねきょうはにほんりょうりがたべたいですね",
       "phoneticSimilarity": 1.0,
       "matchedUtteranceIndexes": [
-        8,
-        9,
-        10
+        4
       ],
-      "startMs": 13671,
-      "endMs": 17677,
-      "durationMs": 4006,
+      "startMs": 13660,
+      "endMs": 17860,
+      "durationMs": 4200,
       "audioPath": "line-segments/lesson-13/l13-04.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-13/l13-04.mp3",
       "needsReview": true,
       "matchConfidence": "high",
-      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [4]；外侧最多保留约180ms自然余音"
     },
     {
       "lineNo": 5,
       "displayOrder": 5,
       "speaker": "山田",
       "japanese": "じゃ、「つるや」へ行きましょう。",
-      "normalizedTarget": "じゃつるやへ行きましょう",
-      "normalizedAsrText": "",
+      "normalizedTarget": "じゃつるやへいきましょう",
+      "normalizedAsrText": "じゃつるやへいきましょう",
       "phoneticSimilarity": 1.0,
       "matchedUtteranceIndexes": [
-        11,
-        12
+        5
       ],
-      "startMs": 17878,
-      "endMs": 19977,
-      "durationMs": 2098,
+      "startMs": 17920,
+      "endMs": 20670,
+      "durationMs": 2750,
       "audioPath": "line-segments/lesson-13/l13-05.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-13/l13-05.mp3",
       "needsReview": true,
       "matchConfidence": "high",
-      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [5]；外侧最多保留约180ms自然余音"
     },
     {
       "lineNo": 6,
       "displayOrder": 6,
       "speaker": "店の人",
       "japanese": "ご注文は？",
-      "normalizedTarget": "ご注文は",
-      "normalizedAsrText": "",
-      "phoneticSimilarity": 0.0,
-      "matchedUtteranceIndexes": [],
-      "startMs": 22136,
-      "endMs": 23110,
-      "durationMs": 974,
+      "normalizedTarget": "ごちゅうもんは",
+      "normalizedAsrText": "ごちゅうもんは",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        6
+      ],
+      "startMs": 27380,
+      "endMs": 28980,
+      "durationMs": 1600,
       "audioPath": "line-segments/lesson-13/l13-06.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-13/l13-06.mp3",
       "needsReview": true,
-      "matchConfidence": "medium",
-      "boundaryReason": "连续语音内部估算边界；需人工复听确认"
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [6]；外侧最多保留约180ms自然余音"
     },
     {
       "lineNo": 7,
       "displayOrder": 7,
       "speaker": "ミラー",
       "japanese": "わたしは天ぷら定食。",
-      "normalizedTarget": "わたしは天ぷら定食",
-      "normalizedAsrText": "",
-      "phoneticSimilarity": 0.0,
-      "matchedUtteranceIndexes": [],
-      "startMs": 22830,
-      "endMs": 24410,
-      "durationMs": 1580,
+      "normalizedTarget": "わたしはてんぷらていしょく",
+      "normalizedAsrText": "わたしはてんぷらていしょく",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        7
+      ],
+      "startMs": 28900,
+      "endMs": 31220,
+      "durationMs": 2320,
       "audioPath": "line-segments/lesson-13/l13-07.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-13/l13-07.mp3",
       "needsReview": true,
-      "matchConfidence": "medium",
-      "boundaryReason": "连续语音内部估算边界；需人工复听确认"
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [7]；外侧最多保留约180ms自然余音"
     },
     {
       "lineNo": 8,
       "displayOrder": 8,
       "speaker": "山田",
       "japanese": "わたしは牛どん。",
-      "normalizedTarget": "わたしは牛どん",
-      "normalizedAsrText": "",
-      "phoneticSimilarity": 0.0,
-      "matchedUtteranceIndexes": [],
-      "startMs": 24130,
-      "endMs": 25928,
-      "durationMs": 1798,
+      "normalizedTarget": "わたしはぎゅうどん",
+      "normalizedAsrText": "わたしはぎゅうどん",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        8
+      ],
+      "startMs": 31270,
+      "endMs": 33060,
+      "durationMs": 1790,
       "audioPath": "line-segments/lesson-13/l13-08.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-13/l13-08.mp3",
       "needsReview": true,
-      "matchConfidence": "medium",
-      "boundaryReason": "连续语音内部估算边界；需人工复听确认"
+      "matchConfidence": "high",
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [8]；外侧最多保留约180ms自然余音"
     },
     {
       "lineNo": 9,
       "displayOrder": 9,
       "speaker": "店の人",
       "japanese": "天ぷら定食と牛どんですね。少々お待ちください。",
-      "normalizedTarget": "天ぷら定食と牛どんですね少々お待ちください",
-      "normalizedAsrText": "",
+      "normalizedTarget": "てんぷらていしょくとぎゅうどんですねしょうしょうおまちください",
+      "normalizedAsrText": "てんぷらていしょくとぎゅうどんですねしょうしょうおまちください",
       "phoneticSimilarity": 1.0,
       "matchedUtteranceIndexes": [
-        14,
-        15,
-        16,
-        17,
-        18
+        9,
+        10
       ],
-      "startMs": 27774,
-      "endMs": 36910,
-      "durationMs": 9136,
+      "startMs": 33040,
+      "endMs": 37120,
+      "durationMs": 4080,
       "audioPath": "line-segments/lesson-13/l13-09.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-13/l13-09.mp3",
       "needsReview": true,
       "matchConfidence": "high",
-      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [9, 10]；外侧最多保留约180ms自然余音"
     },
     {
       "lineNo": 10,
       "displayOrder": 10,
       "speaker": "店の人",
       "japanese": "1,680円でございます。",
-      "normalizedTarget": "1680円でございます",
-      "normalizedAsrText": "",
+      "normalizedTarget": "せんろっぴゃくはちじゅうえんでございます",
+      "normalizedAsrText": "せんろっぴゃくはちじゅうえんでございます",
       "phoneticSimilarity": 1.0,
       "matchedUtteranceIndexes": [
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25
+        11
       ],
-      "startMs": 39780,
-      "endMs": 43269,
-      "durationMs": 3489,
+      "startMs": 43780,
+      "endMs": 46740,
+      "durationMs": 2960,
       "audioPath": "line-segments/lesson-13/l13-10.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-13/l13-10.mp3",
       "needsReview": true,
       "matchConfidence": "high",
-      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [11]；外侧最多保留约180ms自然余音"
     },
     {
       "lineNo": 11,
       "displayOrder": 11,
       "speaker": "ミラー",
       "japanese": "すみません。別々にお願いします。",
-      "normalizedTarget": "すみません別々にお願いします",
-      "normalizedAsrText": "",
+      "normalizedTarget": "すみませんべつべつにおねがいします",
+      "normalizedAsrText": "すみませんべつべつにおねがいします",
       "phoneticSimilarity": 1.0,
       "matchedUtteranceIndexes": [
-        26
+        12
       ],
-      "startMs": 44085,
-      "endMs": 46581,
-      "durationMs": 2497,
+      "startMs": 46720,
+      "endMs": 49690,
+      "durationMs": 2970,
       "audioPath": "line-segments/lesson-13/l13-11.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-13/l13-11.mp3",
       "needsReview": true,
       "matchConfidence": "high",
-      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [12]；外侧最多保留约180ms自然余音"
     },
     {
       "lineNo": 12,
       "displayOrder": 12,
       "speaker": "店の人",
       "japanese": "はい。天ぷら定食は980円、牛どんは700円です。",
-      "normalizedTarget": "はい天ぷら定食は980円牛どんは700円です",
-      "normalizedAsrText": "",
+      "normalizedTarget": "はいてんぷらていしょくはきゅうひゃくはちじゅうえんぎゅうどんはななひゃくえんです",
+      "normalizedAsrText": "はいてんぷらていしょくはきゅうひゃくはちじゅうえんぎゅうどんはななひゃくえんです",
       "phoneticSimilarity": 1.0,
       "matchedUtteranceIndexes": [
-        27,
-        28,
-        29,
-        30,
-        31,
-        32
+        13,
+        14,
+        15
       ],
-      "startMs": 46866,
-      "endMs": 55543,
-      "durationMs": 8677,
+      "startMs": 49800,
+      "endMs": 55290,
+      "durationMs": 5490,
       "audioPath": "line-segments/lesson-13/l13-12.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-13/l13-12.mp3",
       "needsReview": true,
       "matchConfidence": "high",
-      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [13, 14, 15]；外侧最多保留约180ms自然余音"
     }
   ],
   "needsReview": [

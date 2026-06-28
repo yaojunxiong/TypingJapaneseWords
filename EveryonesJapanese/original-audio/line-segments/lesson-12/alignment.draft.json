@@ -1,7 +1,10 @@
 {
   "version": "minna-line-alignment-draft-v1",
   "lesson": 12,
+  "sourceSet": "source-230001",
+  "cd": "CD43",
   "sourceTrack": "source-230001/tracks/cd-043.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-230001/tracks/cd-043.mp3",
   "segments": [
     {
       "lineNo": 1,
@@ -9,80 +12,80 @@
       "speaker": "ミラー",
       "japanese": "ただいま。",
       "normalizedTarget": "ただいま",
-      "normalizedAsrText": "",
+      "normalizedAsrText": "ただいま",
       "phoneticSimilarity": 1.0,
       "matchedUtteranceIndexes": [
-        4
+        1
       ],
-      "startMs": 7016,
-      "endMs": 7782,
-      "durationMs": 766,
+      "startMs": 7200,
+      "endMs": 8000,
+      "durationMs": 800,
       "audioPath": "line-segments/lesson-12/l12-01.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-12/l12-01.mp3",
       "needsReview": true,
       "matchConfidence": "high",
-      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [1]；外侧最多保留约180ms自然余音"
     },
     {
       "lineNo": 2,
       "displayOrder": 2,
       "speaker": "管理人",
       "japanese": "お帰りなさい。",
-      "normalizedTarget": "お帰りなさい",
-      "normalizedAsrText": "",
+      "normalizedTarget": "おかえりなさい",
+      "normalizedAsrText": "おかえりなさい",
       "phoneticSimilarity": 1.0,
       "matchedUtteranceIndexes": [
-        5
+        2
       ],
-      "startMs": 8301,
-      "endMs": 9288,
-      "durationMs": 987,
+      "startMs": 8000,
+      "endMs": 9590,
+      "durationMs": 1590,
       "audioPath": "line-segments/lesson-12/l12-02.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-12/l12-02.mp3",
       "needsReview": true,
       "matchConfidence": "high",
-      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [2]；外侧最多保留约180ms自然余音"
     },
     {
       "lineNo": 3,
       "displayOrder": 3,
       "speaker": "ミラー",
       "japanese": "これ、京都のお土産です。",
-      "normalizedTarget": "これ京都のお土産です",
-      "normalizedAsrText": "",
+      "normalizedTarget": "これきょうとのおみやげです",
+      "normalizedAsrText": "これきょうとのおみやげです",
       "phoneticSimilarity": 1.0,
       "matchedUtteranceIndexes": [
-        6
+        3
       ],
-      "startMs": 9646,
-      "endMs": 11280,
-      "durationMs": 1633,
+      "startMs": 9590,
+      "endMs": 11520,
+      "durationMs": 1930,
       "audioPath": "line-segments/lesson-12/l12-03.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-12/l12-03.mp3",
       "needsReview": true,
       "matchConfidence": "high",
-      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [3]；外侧最多保留约180ms自然余音"
     },
     {
       "lineNo": 4,
       "displayOrder": 4,
       "speaker": "管理人",
       "japanese": "どうもすみません。祇園祭はどうでしたか。",
-      "normalizedTarget": "どうもすみません祇園祭はどうでしたか",
-      "normalizedAsrText": "",
+      "normalizedTarget": "どうもすみませんぎおんまつりはどうでしたか",
+      "normalizedAsrText": "どうもすみませんぎおんまつりはどうでしたか",
       "phoneticSimilarity": 1.0,
       "matchedUtteranceIndexes": [
-        7,
-        8
+        4,
+        5
       ],
-      "startMs": 11498,
-      "endMs": 15567,
-      "durationMs": 4069,
+      "startMs": 11520,
+      "endMs": 15970,
+      "durationMs": 4450,
       "audioPath": "line-segments/lesson-12/l12-04.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-12/l12-04.mp3",
       "needsReview": true,
       "matchConfidence": "high",
-      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [4, 5]；外侧最多保留约180ms自然余音"
     },
     {
       "lineNo": 5,
@@ -90,105 +93,111 @@
       "speaker": "ミラー",
       "japanese": "おもしろかったです。とてもにぎやかでした。",
       "normalizedTarget": "おもしろかったですとてもにぎやかでした",
-      "normalizedAsrText": "",
+      "normalizedAsrText": "おもしろかったですとてもにぎやかでした",
       "phoneticSimilarity": 1.0,
       "matchedUtteranceIndexes": [
-        9,
-        10
+        6
       ],
-      "startMs": 15928,
-      "endMs": 18991,
-      "durationMs": 3064,
+      "startMs": 15800,
+      "endMs": 19440,
+      "durationMs": 3640,
       "audioPath": "line-segments/lesson-12/l12-05.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-12/l12-05.mp3",
       "needsReview": true,
       "matchConfidence": "high",
-      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [6]；外侧最多保留约180ms自然余音"
     },
     {
       "lineNo": 6,
       "displayOrder": 6,
       "speaker": "管理人",
       "japanese": "祇園祭は京都の祭りでいちばん有名ですからね。",
-      "normalizedTarget": "祇園祭は京都の祭りでいちばん有名ですからね",
-      "normalizedAsrText": "",
+      "normalizedTarget": "ぎおんまつりはきょうとのまつりでいちばんゆうめいですからね",
+      "normalizedAsrText": "ぎおんまつりはきょうとのまつりでいちばんゆうめいですからね",
       "phoneticSimilarity": 1.0,
       "matchedUtteranceIndexes": [
-        11,
-        12,
-        13
+        7
       ],
-      "startMs": 19451,
-      "endMs": 24330,
-      "durationMs": 4880,
+      "startMs": 19280,
+      "endMs": 23660,
+      "durationMs": 4380,
       "audioPath": "line-segments/lesson-12/l12-06.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-12/l12-06.mp3",
       "needsReview": true,
       "matchConfidence": "high",
-      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [7]；外侧最多保留约180ms自然余音"
     },
     {
       "lineNo": 7,
       "displayOrder": 7,
       "speaker": "ミラー",
       "japanese": "そうですか。写真をたくさん撮りました。これです。",
-      "normalizedTarget": "そうですか写真をたくさん撮りましたこれです",
-      "normalizedAsrText": "",
+      "normalizedTarget": "そうですかしゃしんをたくさんとりましたこれです",
+      "normalizedAsrText": "そうですかしゃしんをたくさんとりましたこれです",
       "phoneticSimilarity": 1.0,
       "matchedUtteranceIndexes": [
-        14,
-        15,
-        16,
-        17
+        8,
+        9
       ],
-      "startMs": 24934,
-      "endMs": 30855,
-      "durationMs": 5921,
+      "startMs": 23660,
+      "endMs": 28400,
+      "durationMs": 4740,
       "audioPath": "line-segments/lesson-12/l12-07.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-12/l12-07.mp3",
       "needsReview": true,
       "matchConfidence": "high",
-      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [8, 9]；外侧最多保留约180ms自然余音"
     },
     {
       "lineNo": 8,
       "displayOrder": 8,
       "speaker": "管理人",
       "japanese": "わあ、すごい人ですね。",
-      "normalizedTarget": "わあすごい人ですね",
-      "normalizedAsrText": "",
+      "normalizedTarget": "わあすごいひとですね",
+      "normalizedAsrText": "わあすごいひとですね",
       "phoneticSimilarity": 1.0,
       "matchedUtteranceIndexes": [
-        18
+        10
       ],
-      "startMs": 30946,
-      "endMs": 31599,
-      "durationMs": 653,
+      "startMs": 28520,
+      "endMs": 31100,
+      "durationMs": 2580,
       "audioPath": "line-segments/lesson-12/l12-08.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-12/l12-08.mp3",
       "needsReview": true,
       "matchConfidence": "high",
-      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [10]；外侧最多保留约180ms自然余音"
     },
     {
       "lineNo": 9,
       "displayOrder": 9,
       "speaker": "ミラー",
       "japanese": "ええ。ちょっと疲れました。",
-      "normalizedTarget": "ええちょっと疲れました",
-      "normalizedAsrText": "",
+      "normalizedTarget": "ええちょっとつかれました",
+      "normalizedAsrText": "ええちょっとつかれました",
       "phoneticSimilarity": 1.0,
       "matchedUtteranceIndexes": [
-        19
+        11
       ],
-      "startMs": 31719,
-      "endMs": 32957,
-      "durationMs": 1237,
+      "startMs": 31120,
+      "endMs": 33700,
+      "durationMs": 2580,
       "audioPath": "line-segments/lesson-12/l12-09.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-12/l12-09.mp3",
       "needsReview": true,
       "matchConfidence": "high",
-      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [11]；外侧最多保留约180ms自然余音"
     }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
   ]
 }

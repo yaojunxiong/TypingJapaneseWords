@@ -1,90 +1,90 @@
 {
   "version": "minna-line-alignment-draft-v1",
   "lesson": 15,
+  "sourceSet": "source-230001",
+  "cd": "CD53",
   "sourceTrack": "source-230001/tracks/cd-053.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-230001/tracks/cd-053.mp3",
   "segments": [
     {
       "lineNo": 1,
       "displayOrder": 1,
       "speaker": "木村",
       "japanese": "いい映画でしたね。",
-      "normalizedTarget": "いい映画でしたね",
-      "normalizedAsrText": "",
+      "normalizedTarget": "いいえいがでしたね",
+      "normalizedAsrText": "いいえいがでしたね",
       "phoneticSimilarity": 1.0,
       "matchedUtteranceIndexes": [
-        4
+        1
       ],
-      "startMs": 6396,
-      "endMs": 7795,
-      "durationMs": 1400,
+      "startMs": 6120,
+      "endMs": 7860,
+      "durationMs": 1740,
       "audioPath": "line-segments/lesson-15/l15-01.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-15/l15-01.mp3",
       "needsReview": true,
       "matchConfidence": "high",
-      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [1]；外侧最多保留约180ms自然余音"
     },
     {
       "lineNo": 2,
       "displayOrder": 2,
       "speaker": "ミラー",
       "japanese": "ええ。わたしは家族を思い出しました。",
-      "normalizedTarget": "ええわたしは家族を思い出しました",
-      "normalizedAsrText": "",
+      "normalizedTarget": "ええわたしはかぞくをおもいだしました",
+      "normalizedAsrText": "ええわたしはかぞくをおもいだしました",
       "phoneticSimilarity": 1.0,
       "matchedUtteranceIndexes": [
-        5,
-        6
+        2
       ],
-      "startMs": 7974,
-      "endMs": 11096,
-      "durationMs": 3121,
+      "startMs": 8030,
+      "endMs": 11420,
+      "durationMs": 3390,
       "audioPath": "line-segments/lesson-15/l15-02.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-15/l15-02.mp3",
       "needsReview": true,
       "matchConfidence": "high",
-      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [2]；外侧最多保留约180ms自然余音"
     },
     {
       "lineNo": 3,
       "displayOrder": 3,
       "speaker": "木村",
       "japanese": "そうですか。ミラーさんのご家族は？",
-      "normalizedTarget": "そうですかミラーさんのご家族は",
-      "normalizedAsrText": "",
+      "normalizedTarget": "そうですかみらーさんのごかぞくは",
+      "normalizedAsrText": "そうですかみらーさんのごかぞくは",
       "phoneticSimilarity": 1.0,
       "matchedUtteranceIndexes": [
-        7,
-        8
+        3
       ],
-      "startMs": 11440,
-      "endMs": 14655,
-      "durationMs": 3216,
+      "startMs": 11510,
+      "endMs": 14740,
+      "durationMs": 3230,
       "audioPath": "line-segments/lesson-15/l15-03.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-15/l15-03.mp3",
       "needsReview": true,
       "matchConfidence": "high",
-      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [3]；外侧最多保留约180ms自然余音"
     },
     {
       "lineNo": 4,
       "displayOrder": 4,
       "speaker": "ミラー",
       "japanese": "両親と姉が1人います。",
-      "normalizedTarget": "両親と姉が1人います",
-      "normalizedAsrText": "",
+      "normalizedTarget": "りょうしんとあねがひとりいます",
+      "normalizedAsrText": "りょうしんとあねがひとりいます",
       "phoneticSimilarity": 1.0,
       "matchedUtteranceIndexes": [
-        9,
-        10
+        4
       ],
-      "startMs": 14933,
-      "endMs": 17177,
-      "durationMs": 2243,
+      "startMs": 14720,
+      "endMs": 17340,
+      "durationMs": 2620,
       "audioPath": "line-segments/lesson-15/l15-04.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-15/l15-04.mp3",
       "needsReview": true,
       "matchConfidence": "high",
-      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [4]；外侧最多保留约180ms自然余音"
     },
     {
       "lineNo": 5,
@@ -92,83 +92,92 @@
       "speaker": "木村",
       "japanese": "どちらにいらっしゃいますか。",
       "normalizedTarget": "どちらにいらっしゃいますか",
-      "normalizedAsrText": "",
+      "normalizedAsrText": "どちらにいらっしゃいますか",
       "phoneticSimilarity": 1.0,
       "matchedUtteranceIndexes": [
-        11
+        5
       ],
-      "startMs": 17547,
-      "endMs": 19239,
-      "durationMs": 1692,
+      "startMs": 17320,
+      "endMs": 19340,
+      "durationMs": 2020,
       "audioPath": "line-segments/lesson-15/l15-05.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-15/l15-05.mp3",
       "needsReview": true,
       "matchConfidence": "high",
-      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [5]；外侧最多保留约180ms自然余音"
     },
     {
       "lineNo": 6,
       "displayOrder": 6,
       "speaker": "ミラー",
       "japanese": "両親はニューヨークの近くに住んでいます。姉はロンドンで働いています。",
-      "normalizedTarget": "両親はニューヨークの近くに住んでいます姉はロンドンで働いています",
-      "normalizedAsrText": "",
+      "normalizedTarget": "りょうしんはにゅーよーくのちかくにすんでいますあねはろんどんではたらいています",
+      "normalizedAsrText": "りょうしんはにゅーよーくのちかくにすんでいますあねはろんどんではたらいています",
       "phoneticSimilarity": 1.0,
       "matchedUtteranceIndexes": [
-        12,
-        13
+        6,
+        7
       ],
-      "startMs": 19577,
-      "endMs": 24416,
-      "durationMs": 4839,
+      "startMs": 19320,
+      "endMs": 24940,
+      "durationMs": 5620,
       "audioPath": "line-segments/lesson-15/l15-06.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-15/l15-06.mp3",
       "needsReview": true,
       "matchConfidence": "high",
-      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [6, 7]；外侧最多保留约180ms自然余音"
     },
     {
       "lineNo": 7,
       "displayOrder": 7,
       "speaker": "ミラー",
       "japanese": "木村さんのご家族は？",
-      "normalizedTarget": "木村さんのご家族は",
-      "normalizedAsrText": "",
+      "normalizedTarget": "きむらさんのごかぞくは",
+      "normalizedAsrText": "きむらさんのごかぞくは",
       "phoneticSimilarity": 1.0,
       "matchedUtteranceIndexes": [
-        14
+        8
       ],
-      "startMs": 25143,
-      "endMs": 26595,
-      "durationMs": 1451,
+      "startMs": 24920,
+      "endMs": 27100,
+      "durationMs": 2180,
       "audioPath": "line-segments/lesson-15/l15-07.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-15/l15-07.mp3",
       "needsReview": true,
       "matchConfidence": "high",
-      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [8]；外侧最多保留约180ms自然余音"
     },
     {
       "lineNo": 8,
       "displayOrder": 8,
       "speaker": "木村",
       "japanese": "3人です。父は銀行員です。母は高校で英語を教えています。",
-      "normalizedTarget": "3人です父は銀行員です母は高校で英語を教えています",
-      "normalizedAsrText": "",
+      "normalizedTarget": "さんにんですちちはぎんこういんですはははこうこうでえいごをおしえています",
+      "normalizedAsrText": "さんにんですちちはぎんこういんですはははこうこうでえいごをおしえています",
       "phoneticSimilarity": 1.0,
       "matchedUtteranceIndexes": [
-        15,
-        16,
-        17,
-        18
+        9,
+        10,
+        11
       ],
-      "startMs": 27157,
-      "endMs": 33736,
-      "durationMs": 6579,
+      "startMs": 27140,
+      "endMs": 35100,
+      "durationMs": 7960,
       "audioPath": "line-segments/lesson-15/l15-08.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-15/l15-08.mp3",
       "needsReview": true,
       "matchConfidence": "high",
-      "boundaryReason": "按VAD时间顺序匹配教材台词；ASR仅作时间轴参考，边界保留约120-160ms自然余音"
+      "boundaryReason": "按发音与顺序匹配 ASR utterance [9, 10, 11]；外侧最多保留约180ms自然余音"
     }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
   ]
 }
