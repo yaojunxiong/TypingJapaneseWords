@@ -980,6 +980,11 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     : 0
   const totalLessonLines = lesson?.lines.length ?? 0
 
+  const conversationTextbookUrl = lessonNo
+    ? `/minna/lessons/lesson-${String(lessonNo).padStart(2, '0')}/conversation-textbook-mobile.webp`
+    : ''
+  const conversationFallbackUrl = lesson?.conversationImageUrl || ''
+
   useEffect(() => {
     return () => {
       stopTtsPlayback()
@@ -1467,7 +1472,7 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
         </div>
       )}
 
-      {showImageModal && lesson?.conversationImageUrl && (
+      {showImageModal && (
         <div style={{
           position: 'fixed', inset: 0, zIndex: 200,
           background: 'rgba(0,0,0,0.85)',
@@ -1504,8 +1509,13 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
               borderRadius: 12, overflow: 'hidden',
             }}>
               <img
-                src={lesson.conversationImageUrl}
+                src={conversationTextbookUrl}
                 alt="会话场景图"
+                onError={(e) => {
+                  if (e.currentTarget.src !== conversationFallbackUrl) {
+                    e.currentTarget.src = conversationFallbackUrl
+                  }
+                }}
                 style={{
                   maxWidth: '100%', maxHeight: 'calc(100dvh - 110px)',
                   width: 'auto', height: 'auto',
