@@ -1,0 +1,92 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 39,
+  "cd": "CD40",
+  "sourceTrack": "source-240000/tracks/cd-040.mp3",
+  "durationMs": 40176,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "role": "timestamp_source_only"
+  },
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 0,
+      "endMs": 7000,
+      "text": "第39日会話 遅れて済みません",
+      "confidence": null
+    },
+    {
+      "index": 2,
+      "startMs": 7000,
+      "endMs": 9000,
+      "text": "課長 遅れて済みません",
+      "confidence": null
+    },
+    {
+      "index": 3,
+      "startMs": 9000,
+      "endMs": 11000,
+      "text": "ミランさん どうしたんですか",
+      "confidence": null
+    },
+    {
+      "index": 4,
+      "startMs": 11000,
+      "endMs": 15000,
+      "text": "実は 来る途中で事故があって バスが遅れてしまったんです",
+      "confidence": null
+    },
+    {
+      "index": 5,
+      "startMs": 15000,
+      "endMs": 17000,
+      "text": "バスの事故ですか",
+      "confidence": null
+    },
+    {
+      "index": 6,
+      "startMs": 17000,
+      "endMs": 22000,
+      "text": "いいえ 交差点でトラックと車がぶつかって バスが動かなかったんです",
+      "confidence": null
+    },
+    {
+      "index": 7,
+      "startMs": 22000,
+      "endMs": 24000,
+      "text": "それは大変でしたね",
+      "confidence": null
+    },
+    {
+      "index": 8,
+      "startMs": 24000,
+      "endMs": 28000,
+      "text": "連絡がないので みんな心配していたんですよ",
+      "confidence": null
+    },
+    {
+      "index": 9,
+      "startMs": 28000,
+      "endMs": 32000,
+      "text": "電話したかったんですが 携帯をうちに忘れてしまって",
+      "confidence": null
+    },
+    {
+      "index": 10,
+      "startMs": 32000,
+      "endMs": 34000,
+      "text": "どうも済みませんでした",
+      "confidence": null
+    },
+    {
+      "index": 11,
+      "startMs": 34000,
+      "endMs": 38000,
+      "text": "わかりました じゃあ会議を始めましょう",
+      "confidence": null
+    }
+  ]
+}

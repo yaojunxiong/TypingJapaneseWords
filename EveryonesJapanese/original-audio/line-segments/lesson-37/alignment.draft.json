@@ -1,0 +1,165 @@
+{
+  "version": "minna-line-alignment-draft-v1",
+  "lesson": 37,
+  "sourceSet": "source-240000",
+  "cd": "CD34",
+  "sourceTrack": "source-240000/tracks/cd-034.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-240000/tracks/cd-034.mp3",
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "ガイド",
+      "japanese": "皆様、あちらが有名な金閣寺です。金閣寺は14世紀に建てられました。1950年に一度焼けてしまいましたが、その後、また建てられました。1994年に世界遺産になりました。京都で人気があるお寺の一つです。",
+      "normalizedTarget": "みなさまあちらがゆうめいなきんかくじですきんかくじはじゅうよんせいきにたてられましたせんきゅうひゃくごじゅうねんにいちどやけてしまいましたがそのごまたたてられましたせんきゅうひゃくきゅうじゅうよねんにせかいいさんになりましたきょうとでにんきがあるおてらのひとつです",
+      "normalizedAsrText": "皆様あちらが有名な金核寺です金核寺は14世紀に建てられました1950年に一度焼けてしまいましたがその後新しい建物が建てられて1994年に世界遺産になりました京都で人気があるお寺の一つです",
+      "phoneticSimilarity": 0.4089,
+      "matchedUtteranceIndexes": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "startMs": 8460,
+      "endMs": 31140,
+      "durationMs": 22680,
+      "audioPath": "line-segments/lesson-37/l37-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-37/l37-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [2, 3, 4, 5, 6] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "カリナ",
+      "japanese": "きれいですね。壁が金色ですが、本物の金ですか。",
+      "normalizedTarget": "きれいですねかべがきんいろですがほんもののきんですか",
+      "normalizedAsrText": "綺麗ですね壁側金色ですが本物の金ですか",
+      "phoneticSimilarity": 0.4444,
+      "matchedUtteranceIndexes": [
+        7,
+        8
+      ],
+      "startMs": 31140,
+      "endMs": 36240,
+      "durationMs": 5100,
+      "audioPath": "line-segments/lesson-37/l37-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-37/l37-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [7, 8] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "ガイド",
+      "japanese": "はい。金が20キロぐらい使われました。",
+      "normalizedTarget": "はいきんがにじゅっきろぐらいつかわれました",
+      "normalizedAsrText": "はい金が20きろぐらい使われました",
+      "phoneticSimilarity": 0.6842,
+      "matchedUtteranceIndexes": [
+        9
+      ],
+      "startMs": 36240,
+      "endMs": 39700,
+      "durationMs": 3460,
+      "audioPath": "line-segments/lesson-37/l37-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-37/l37-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [9] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "カリナ",
+      "japanese": "そうですか。お寺の中に入れますか。",
+      "normalizedTarget": "そうですかおてらのなかにいれますか",
+      "normalizedAsrText": "そうですかあの中に入れますか",
+      "phoneticSimilarity": 0.7097,
+      "matchedUtteranceIndexes": [
+        10
+      ],
+      "startMs": 39700,
+      "endMs": 43100,
+      "durationMs": 3400,
+      "audioPath": "line-segments/lesson-37/l37-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-37/l37-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [10] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "ガイド",
+      "japanese": "中には入れないんです。池の周りを歩きながら見てください。",
+      "normalizedTarget": "なかにはいれないんですいけのまわりをあるきながらみてください",
+      "normalizedAsrText": "中には入れないんです池の周りを歩きながら見てください",
+      "phoneticSimilarity": 0.7143,
+      "matchedUtteranceIndexes": [
+        11,
+        12
+      ],
+      "startMs": 43100,
+      "endMs": 50240,
+      "durationMs": 7140,
+      "audioPath": "line-segments/lesson-37/l37-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-37/l37-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [11, 12] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "カリナ",
+      "japanese": "紅葉がきれいですね。",
+      "normalizedTarget": "こうようがきれいですね",
+      "normalizedAsrText": "もみじが綺麗ですね",
+      "phoneticSimilarity": 0.4,
+      "matchedUtteranceIndexes": [
+        13
+      ],
+      "startMs": 50240,
+      "endMs": 52340,
+      "durationMs": 2100,
+      "audioPath": "line-segments/lesson-37/l37-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-37/l37-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [13] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 7,
+      "displayOrder": 7,
+      "speaker": "ガイド",
+      "japanese": "ええ。金閣寺は紅葉と雪の季節が特に美しいと言われています。",
+      "normalizedTarget": "ええきんかくじはこうようとゆきのきせつがとくにうつくしいといわれています",
+      "normalizedAsrText": "金核寺はもみじと雪の季節が特に美しいと言われています",
+      "phoneticSimilarity": 0.4516,
+      "matchedUtteranceIndexes": [
+        14
+      ],
+      "startMs": 52340,
+      "endMs": 59560,
+      "durationMs": 7220,
+      "audioPath": "line-segments/lesson-37/l37-07.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-37/l37-07.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [14] 对齐；应用已校准 MP3 时间偏移"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ]
+}

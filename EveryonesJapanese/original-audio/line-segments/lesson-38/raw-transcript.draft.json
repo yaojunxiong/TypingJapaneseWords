@@ -1,0 +1,127 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 38,
+  "cd": "CD37",
+  "sourceTrack": "source-240000/tracks/cd-037.mp3",
+  "durationMs": 53473,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "role": "timestamp_source_only"
+  },
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 0,
+      "endMs": 7000,
+      "text": "第38日会話 片付けるのが好きなんです",
+      "confidence": null
+    },
+    {
+      "index": 2,
+      "startMs": 7000,
+      "endMs": 10000,
+      "text": "ワット先生 階段です",
+      "confidence": null
+    },
+    {
+      "index": 3,
+      "startMs": 10000,
+      "endMs": 13000,
+      "text": "あ すみません そこに置いておいてください",
+      "confidence": null
+    },
+    {
+      "index": 4,
+      "startMs": 13000,
+      "endMs": 17000,
+      "text": "先生の研究室はいつも綺麗ですね",
+      "confidence": null
+    },
+    {
+      "index": 5,
+      "startMs": 17000,
+      "endMs": 19000,
+      "text": "私は片付けるのが好きなんです",
+      "confidence": null
+    },
+    {
+      "index": 6,
+      "startMs": 19000,
+      "endMs": 25000,
+      "text": "本もきちんと並べてあるし 整理するのが上手なんですね",
+      "confidence": null
+    },
+    {
+      "index": 7,
+      "startMs": 25000,
+      "endMs": 29000,
+      "text": "昔 上手な整理の方法という本を書いたことがあるんです",
+      "confidence": null
+    },
+    {
+      "index": 8,
+      "startMs": 29000,
+      "endMs": 31000,
+      "text": "え すごいですね",
+      "confidence": null
+    },
+    {
+      "index": 9,
+      "startMs": 31000,
+      "endMs": 33000,
+      "text": "あまり売れませんでしたけどね",
+      "confidence": null
+    },
+    {
+      "index": 10,
+      "startMs": 33000,
+      "endMs": 37000,
+      "text": "よかったら一冊持ってきましょうか",
+      "confidence": null
+    },
+    {
+      "index": 11,
+      "startMs": 37000,
+      "endMs": 39000,
+      "text": "おはようございます",
+      "confidence": null
+    },
+    {
+      "index": 12,
+      "startMs": 39000,
+      "endMs": 42000,
+      "text": "あ 本を持ってくるのを忘れました",
+      "confidence": null
+    },
+    {
+      "index": 13,
+      "startMs": 42000,
+      "endMs": 43000,
+      "text": "すみません",
+      "confidence": null
+    },
+    {
+      "index": 14,
+      "startMs": 43000,
+      "endMs": 45000,
+      "text": "いいですよ",
+      "confidence": null
+    },
+    {
+      "index": 15,
+      "startMs": 45000,
+      "endMs": 48000,
+      "text": "でも階段に反抗を押すのを忘れないでください",
+      "confidence": null
+    },
+    {
+      "index": 16,
+      "startMs": 48000,
+      "endMs": 52000,
+      "text": "先月も押してありませんでしたよ",
+      "confidence": null
+    }
+  ]
+}

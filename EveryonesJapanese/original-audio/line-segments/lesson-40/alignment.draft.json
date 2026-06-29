@@ -1,0 +1,203 @@
+{
+  "version": "minna-line-alignment-draft-v1",
+  "lesson": 40,
+  "sourceSet": "source-240000",
+  "cd": "CD43",
+  "sourceTrack": "source-240000/tracks/cd-043.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-240000/tracks/cd-043.mp3",
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "クララ",
+      "japanese": "先生、ハンスは学校でどうでしょうか。友達ができたかどうか、心配なんですが……。",
+      "normalizedTarget": "せんせいはんすはがっこうでどうでしょうかともだちができたかどうかしんぱいなんですが",
+      "normalizedAsrText": "先生はんすは学校でどうでしょうか友達ができたかどうか心配なんですが",
+      "phoneticSimilarity": 0.6757,
+      "matchedUtteranceIndexes": [
+        2,
+        3
+      ],
+      "startMs": 7440,
+      "endMs": 14520,
+      "durationMs": 7080,
+      "audioPath": "line-segments/lesson-40/l40-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-40/l40-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [2, 3] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "伊藤先生",
+      "japanese": "大丈夫ですよ。ハンス君はクラスでとても人気があります。",
+      "normalizedTarget": "だいじょうぶですよはんすくんはくらすでとてもにんきがあります",
+      "normalizedAsrText": "大丈夫ですよはんす君はくらすでとても人気があります",
+      "phoneticSimilarity": 0.6909,
+      "matchedUtteranceIndexes": [
+        4
+      ],
+      "startMs": 14520,
+      "endMs": 19200,
+      "durationMs": 4680,
+      "audioPath": "line-segments/lesson-40/l40-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-40/l40-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [4] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "クララ",
+      "japanese": "そうですか。安心しました。勉強はどうですか。漢字が大変だと言っていますが……。",
+      "normalizedTarget": "そうですかあんしんしましたべんきょうはどうですかかんじがたいへんだといっていますが",
+      "normalizedAsrText": "そうですか安心しました勉強はどうですか漢字が大変だと言っていますが",
+      "phoneticSimilarity": 0.6486,
+      "matchedUtteranceIndexes": [
+        5,
+        6
+      ],
+      "startMs": 19200,
+      "endMs": 27060,
+      "durationMs": 7860,
+      "audioPath": "line-segments/lesson-40/l40-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-40/l40-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [5, 6] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "伊藤先生",
+      "japanese": "毎日漢字のテストをしていますが、ハンス君はいい成績ですよ。",
+      "normalizedTarget": "まいにちかんじのてすとをしていますがはんすくんはいいせいせきですよ",
+      "normalizedAsrText": "毎日漢字のてすとをしていますがはんす君は良い成績ですよ",
+      "phoneticSimilarity": 0.6333,
+      "matchedUtteranceIndexes": [
+        7
+      ],
+      "startMs": 27060,
+      "endMs": 31820,
+      "durationMs": 4760,
+      "audioPath": "line-segments/lesson-40/l40-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-40/l40-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [7] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "クララ",
+      "japanese": "そうですか。ありがとうございます。",
+      "normalizedTarget": "そうですかありがとうございます",
+      "normalizedAsrText": "そうですかありがとうございます",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        8
+      ],
+      "startMs": 31820,
+      "endMs": 34800,
+      "durationMs": 2980,
+      "audioPath": "line-segments/lesson-40/l40-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-40/l40-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [8] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "伊藤先生",
+      "japanese": "ところで、もうすぐ運動会ですが、お父さんもいらっしゃいますか。",
+      "normalizedTarget": "ところでもうすぐうんどうかいですがおとうさんもいらっしゃいますか",
+      "normalizedAsrText": "ところでもうすぐ運動会ですがお父さんもいらっしゃいますか",
+      "phoneticSimilarity": 0.8,
+      "matchedUtteranceIndexes": [
+        9
+      ],
+      "startMs": 34800,
+      "endMs": 39400,
+      "durationMs": 4600,
+      "audioPath": "line-segments/lesson-40/l40-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-40/l40-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [9] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 7,
+      "displayOrder": 7,
+      "speaker": "クララ",
+      "japanese": "ええ。",
+      "normalizedTarget": "ええ",
+      "normalizedAsrText": "ええはんす君が学校でどんな様子かぜひ見てください",
+      "phoneticSimilarity": 0.1538,
+      "matchedUtteranceIndexes": [
+        10
+      ],
+      "startMs": 39400,
+      "endMs": 40200,
+      "durationMs": 800,
+      "audioPath": "line-segments/lesson-40/l40-07.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-40/l40-07.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [10] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 8,
+      "displayOrder": 8,
+      "speaker": "伊藤先生",
+      "japanese": "ハンス君が学校でどんな様子か、ぜひ見てください。",
+      "normalizedTarget": "はんすくんががっこうでどんなようすかぜひみてください",
+      "normalizedAsrText": "ええはんす君が学校でどんな様子かぜひ見てください",
+      "phoneticSimilarity": 0.64,
+      "matchedUtteranceIndexes": [
+        10
+      ],
+      "startMs": 40200,
+      "endMs": 44720,
+      "durationMs": 4520,
+      "audioPath": "line-segments/lesson-40/l40-08.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-40/l40-08.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [10] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 9,
+      "displayOrder": 9,
+      "speaker": "クララ",
+      "japanese": "わかりました。これからもよろしくお願いします。",
+      "normalizedTarget": "わかりましたこれからもよろしくおねがいします",
+      "normalizedAsrText": "わかりましたこれからもよろしくお願いします",
+      "phoneticSimilarity": 0.9302,
+      "matchedUtteranceIndexes": [
+        11
+      ],
+      "startMs": 44720,
+      "endMs": 48720,
+      "durationMs": 4000,
+      "audioPath": "line-segments/lesson-40/l40-09.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-40/l40-09.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [11] 对齐；应用已校准 MP3 时间偏移"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ]
+}

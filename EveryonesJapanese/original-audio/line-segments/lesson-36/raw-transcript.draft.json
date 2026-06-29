@@ -1,0 +1,92 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 36,
+  "cd": "CD31",
+  "sourceTrack": "source-240000/tracks/cd-031.mp3",
+  "durationMs": 61153,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "role": "timestamp_source_only"
+  },
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 0,
+      "endMs": 7720,
+      "text": "第36日会話 毎日運動するようにしています",
+      "confidence": null
+    },
+    {
+      "index": 2,
+      "startMs": 7720,
+      "endMs": 13920,
+      "text": "皆さんこんにちは 今日のお客様は今年80歳の小川ヨネさんです",
+      "confidence": null
+    },
+    {
+      "index": 3,
+      "startMs": 13920,
+      "endMs": 16960,
+      "text": "こんにちは お元気ですね",
+      "confidence": null
+    },
+    {
+      "index": 4,
+      "startMs": 16960,
+      "endMs": 22680,
+      "text": "何か特別なことをしていらっしゃいますか 毎日運動するようにしています",
+      "confidence": null
+    },
+    {
+      "index": 5,
+      "startMs": 22680,
+      "endMs": 30440,
+      "text": "どんな運動ですか? ダンスとか水泳とか 最近500メートル泳げるようになりました",
+      "confidence": null
+    },
+    {
+      "index": 6,
+      "startMs": 30440,
+      "endMs": 33480,
+      "text": "すごいですね 食べ物は?",
+      "confidence": null
+    },
+    {
+      "index": 7,
+      "startMs": 33480,
+      "endMs": 40880,
+      "text": "何でも食べますが特に魚が好きです 毎日違う料理を作るようにしています",
+      "confidence": null
+    },
+    {
+      "index": 8,
+      "startMs": 40880,
+      "endMs": 44160,
+      "text": "頭と体をよく使っていらっしゃるんですね",
+      "confidence": null
+    },
+    {
+      "index": 9,
+      "startMs": 44160,
+      "endMs": 48240,
+      "text": "ええ 来年フランスへ行きたいと思っています",
+      "confidence": null
+    },
+    {
+      "index": 10,
+      "startMs": 48240,
+      "endMs": 51960,
+      "text": "それでフランス語の勉強も始めました",
+      "confidence": null
+    },
+    {
+      "index": 11,
+      "startMs": 51960,
+      "endMs": 60240,
+      "text": "何でもチャレンジする気持ちが大切なんですね 楽しいお話どうもありがとうございました",
+      "confidence": null
+    }
+  ]
+}

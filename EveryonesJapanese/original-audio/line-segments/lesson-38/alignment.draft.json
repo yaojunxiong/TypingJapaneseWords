@@ -1,0 +1,247 @@
+{
+  "version": "minna-line-alignment-draft-v1",
+  "lesson": 38,
+  "sourceSet": "source-240000",
+  "cd": "CD37",
+  "sourceTrack": "source-240000/tracks/cd-037.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-240000/tracks/cd-037.mp3",
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "大学職員",
+      "japanese": "ワット先生、回覧です。",
+      "normalizedTarget": "わっとせんせいかいらんです",
+      "normalizedAsrText": "わっと先生階段です",
+      "phoneticSimilarity": 0.4545,
+      "matchedUtteranceIndexes": [
+        2
+      ],
+      "startMs": 7000,
+      "endMs": 10000,
+      "durationMs": 3000,
+      "audioPath": "line-segments/lesson-38/l38-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-38/l38-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [2] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "ワット",
+      "japanese": "あ、すみません。そこに置いといてください。",
+      "normalizedTarget": "あすみませんそこにおいといてください",
+      "normalizedAsrText": "あすみませんそこに置いておいてください",
+      "phoneticSimilarity": 0.8649,
+      "matchedUtteranceIndexes": [
+        3
+      ],
+      "startMs": 10000,
+      "endMs": 13000,
+      "durationMs": 3000,
+      "audioPath": "line-segments/lesson-38/l38-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-38/l38-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [3] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "大学職員",
+      "japanese": "先生の研究室はいつもきれいですね。",
+      "normalizedTarget": "せんせいのけんきゅうしつはいつもきれいですね",
+      "normalizedAsrText": "先生の研究室はいつも綺麗ですね",
+      "phoneticSimilarity": 0.4324,
+      "matchedUtteranceIndexes": [
+        4
+      ],
+      "startMs": 13000,
+      "endMs": 17000,
+      "durationMs": 4000,
+      "audioPath": "line-segments/lesson-38/l38-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-38/l38-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [4] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "ワット",
+      "japanese": "わたしは片づけるのが好きなんです。",
+      "normalizedTarget": "わたしはかたづけるのがすきなんです",
+      "normalizedAsrText": "私は片付けるのが好きなんです",
+      "phoneticSimilarity": 0.6452,
+      "matchedUtteranceIndexes": [
+        5
+      ],
+      "startMs": 17000,
+      "endMs": 19000,
+      "durationMs": 2000,
+      "audioPath": "line-segments/lesson-38/l38-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-38/l38-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [5] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "大学職員",
+      "japanese": "本もきちんと並べてあるし……。整理するのが上手なんですね。",
+      "normalizedTarget": "ほんもきちんとならべてあるしせいりするのがじょうずなんですね",
+      "normalizedAsrText": "本もきちんと並べてあるし整理するのが上手なんですね",
+      "phoneticSimilarity": 0.6909,
+      "matchedUtteranceIndexes": [
+        6
+      ],
+      "startMs": 19000,
+      "endMs": 25000,
+      "durationMs": 6000,
+      "audioPath": "line-segments/lesson-38/l38-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-38/l38-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [6] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "ワット",
+      "japanese": "昔「上手な整理の方法」という本を書いたことがあるんです。",
+      "normalizedTarget": "むかしじょうずなせいりのほうほうというほんをかいたことがあるんです",
+      "normalizedAsrText": "昔上手な整理の方法という本を書いたことがあるんです",
+      "phoneticSimilarity": 0.5517,
+      "matchedUtteranceIndexes": [
+        7
+      ],
+      "startMs": 25000,
+      "endMs": 29000,
+      "durationMs": 4000,
+      "audioPath": "line-segments/lesson-38/l38-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-38/l38-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [7] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 7,
+      "displayOrder": 7,
+      "speaker": "大学職員",
+      "japanese": "へえ、すごいですね。",
+      "normalizedTarget": "へえすごいですね",
+      "normalizedAsrText": "えすごいですね",
+      "phoneticSimilarity": 0.9333,
+      "matchedUtteranceIndexes": [
+        8
+      ],
+      "startMs": 29000,
+      "endMs": 31000,
+      "durationMs": 2000,
+      "audioPath": "line-segments/lesson-38/l38-07.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-38/l38-07.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [8] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 8,
+      "displayOrder": 8,
+      "speaker": "ワット",
+      "japanese": "あまり売れませんでしたけどね。よかったら、1冊持って来ましょうか。",
+      "normalizedTarget": "あまりうれませんでしたけどねよかったらいっさつもってきましょうか",
+      "normalizedAsrText": "あまり売れませんでしたけどねよかったら一冊持ってきましょうか",
+      "phoneticSimilarity": 0.8387,
+      "matchedUtteranceIndexes": [
+        9,
+        10
+      ],
+      "startMs": 31000,
+      "endMs": 37000,
+      "durationMs": 6000,
+      "audioPath": "line-segments/lesson-38/l38-08.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-38/l38-08.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [9, 10] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 9,
+      "displayOrder": 9,
+      "speaker": "大学職員",
+      "japanese": "おはようございます。",
+      "normalizedTarget": "おはようございます",
+      "normalizedAsrText": "おはようございます",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        11
+      ],
+      "startMs": 37000,
+      "endMs": 39000,
+      "durationMs": 2000,
+      "audioPath": "line-segments/lesson-38/l38-09.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-38/l38-09.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [11] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 10,
+      "displayOrder": 10,
+      "speaker": "ワット",
+      "japanese": "あ、本を持って来るのを忘れました。すみません。",
+      "normalizedTarget": "あほんをもってくるのをわすれましたすみません",
+      "normalizedAsrText": "あ本を持ってくるのを忘れましたすみません",
+      "phoneticSimilarity": 0.8095,
+      "matchedUtteranceIndexes": [
+        12,
+        13
+      ],
+      "startMs": 39000,
+      "endMs": 43000,
+      "durationMs": 4000,
+      "audioPath": "line-segments/lesson-38/l38-10.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-38/l38-10.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [12, 13] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 11,
+      "displayOrder": 11,
+      "speaker": "大学職員",
+      "japanese": "いいですよ。でも、回覧にはんこを押すのを忘れないでください。先月も押してありませんでしたよ。",
+      "normalizedTarget": "いいですよでもかいらんにはんこをおすのをわすれないでくださいせんげつもおしてありませんでしたよ",
+      "normalizedAsrText": "いいですよでも階段に反抗を押すのを忘れないでください先月も押してありませんでしたよ",
+      "phoneticSimilarity": 0.7273,
+      "matchedUtteranceIndexes": [
+        14,
+        15,
+        16
+      ],
+      "startMs": 43000,
+      "endMs": 52000,
+      "durationMs": 9000,
+      "audioPath": "line-segments/lesson-38/l38-11.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-38/l38-11.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [14, 15, 16] 对齐；应用已校准 MP3 时间偏移"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ]
+}

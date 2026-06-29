@@ -1,0 +1,246 @@
+{
+  "version": "minna-original-line-segments-draft-v1",
+  "lesson": 36,
+  "sourceSet": "source-240000",
+  "cd": "CD31",
+  "sourceTrack": "source-240000/tracks/cd-031.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-240000/tracks/cd-031.mp3",
+  "segmentCount": 11,
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "アナウンサー",
+      "japanese": "皆さん、こんにちは。きょうのお客様はことし80歳の小川よねさんです。",
+      "normalizedTarget": "みなさんこんにちはきょうのおきゃくさまはことしはちじゅっさいのおがわよねさんです",
+      "normalizedAsrText": "皆さんこんにちは今日のお客様は今年80歳の小川よねさんです",
+      "phoneticSimilarity": 0.4928,
+      "matchedUtteranceIndexes": [
+        2
+      ],
+      "startMs": 7720,
+      "endMs": 13920,
+      "durationMs": 6200,
+      "audioPath": "line-segments/lesson-36/l36-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-36/l36-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [2] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "小川よね",
+      "japanese": "こんにちは。",
+      "normalizedTarget": "こんにちは",
+      "normalizedAsrText": "こんにちはお元気ですね",
+      "phoneticSimilarity": 0.625,
+      "matchedUtteranceIndexes": [
+        3
+      ],
+      "startMs": 13920,
+      "endMs": 14850,
+      "durationMs": 930,
+      "audioPath": "line-segments/lesson-36/l36-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-36/l36-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [3] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "アナウンサー",
+      "japanese": "お元気ですね。何か特別なことをしていらっしゃいますか。",
+      "normalizedTarget": "おげんきですねなにかとくべつなことをしていらっしゃいますか",
+      "normalizedAsrText": "こんにちはお元気ですね何か特別なことをしていらっしゃいますか毎日運動するようにしています",
+      "phoneticSimilarity": 0.5479,
+      "matchedUtteranceIndexes": [
+        3,
+        4
+      ],
+      "startMs": 14850,
+      "endMs": 19000,
+      "durationMs": 4150,
+      "audioPath": "line-segments/lesson-36/l36-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-36/l36-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [3, 4] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "小川よね",
+      "japanese": "毎日運動するようにしています。",
+      "normalizedTarget": "まいにちうんどうするようにしています",
+      "normalizedAsrText": "何か特別なことをしていらっしゃいますか毎日運動するようにしています",
+      "phoneticSimilarity": 0.4314,
+      "matchedUtteranceIndexes": [
+        4
+      ],
+      "startMs": 19000,
+      "endMs": 22680,
+      "durationMs": 3680,
+      "audioPath": "line-segments/lesson-36/l36-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-36/l36-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [4] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "アナウンサー",
+      "japanese": "どんな運動ですか。",
+      "normalizedTarget": "どんなうんどうですか",
+      "normalizedAsrText": "どんな運動ですかだんすとか水泳とか最近500めーとる泳げるようになりました",
+      "phoneticSimilarity": 0.2553,
+      "matchedUtteranceIndexes": [
+        5
+      ],
+      "startMs": 22680,
+      "endMs": 24000,
+      "durationMs": 1320,
+      "audioPath": "line-segments/lesson-36/l36-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-36/l36-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [5] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "小川よね",
+      "japanese": "ダンスとか、水泳とか……。最近500メートル泳げるようになりました。",
+      "normalizedTarget": "だんすとかすいえいとかさいきんごひゃくめーとるおよげるようになりました",
+      "normalizedAsrText": "どんな運動ですかだんすとか水泳とか最近500めーとる泳げるようになりました",
+      "phoneticSimilarity": 0.5833,
+      "matchedUtteranceIndexes": [
+        5
+      ],
+      "startMs": 24000,
+      "endMs": 30440,
+      "durationMs": 6440,
+      "audioPath": "line-segments/lesson-36/l36-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-36/l36-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [5] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 7,
+      "displayOrder": 7,
+      "speaker": "アナウンサー",
+      "japanese": "すごいですね。食べ物は？",
+      "normalizedTarget": "すごいですねたべものは",
+      "normalizedAsrText": "すごいですね食べ物は",
+      "phoneticSimilarity": 0.7619,
+      "matchedUtteranceIndexes": [
+        6
+      ],
+      "startMs": 30440,
+      "endMs": 33480,
+      "durationMs": 3040,
+      "audioPath": "line-segments/lesson-36/l36-07.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-36/l36-07.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [6] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 8,
+      "displayOrder": 8,
+      "speaker": "小川よね",
+      "japanese": "何でも食べますが、特に魚が好きです。毎日何か、料理を作るようにしています。",
+      "normalizedTarget": "なんでもたべますがとくにさかながすきですまいにちなにかりょうりをつくるようにしています",
+      "normalizedAsrText": "何でも食べますが特に魚が好きです毎日違う料理を作るようにしています",
+      "phoneticSimilarity": 0.5789,
+      "matchedUtteranceIndexes": [
+        7
+      ],
+      "startMs": 33480,
+      "endMs": 40880,
+      "durationMs": 7400,
+      "audioPath": "line-segments/lesson-36/l36-08.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-36/l36-08.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [7] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 9,
+      "displayOrder": 9,
+      "speaker": "アナウンサー",
+      "japanese": "頭と体をよく使っていらっしゃるんですね。",
+      "normalizedTarget": "あたまとからだをよくつかっていらっしゃるんですね",
+      "normalizedAsrText": "頭と体をよく使っていらっしゃるんですね",
+      "phoneticSimilarity": 0.7442,
+      "matchedUtteranceIndexes": [
+        8
+      ],
+      "startMs": 40880,
+      "endMs": 44160,
+      "durationMs": 3280,
+      "audioPath": "line-segments/lesson-36/l36-09.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-36/l36-09.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [8] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 10,
+      "displayOrder": 10,
+      "speaker": "小川よね",
+      "japanese": "ええ。来年フランスへ行きたいと思っています。それでフランス語の勉強も始めました。",
+      "normalizedTarget": "ええらいねんふらんすへいきたいとおもっていますそれでふらんすごのべんきょうもはじめました",
+      "normalizedAsrText": "ええ来年ふらんすへ行きたいと思っていますそれでふらんす語の勉強も始めました",
+      "phoneticSimilarity": 0.716,
+      "matchedUtteranceIndexes": [
+        9,
+        10
+      ],
+      "startMs": 44160,
+      "endMs": 51960,
+      "durationMs": 7800,
+      "audioPath": "line-segments/lesson-36/l36-10.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-36/l36-10.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [9, 10] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 11,
+      "displayOrder": 11,
+      "speaker": "アナウンサー",
+      "japanese": "何でもチャレンジする気持ちが大切なんですね。楽しいお話、どうもありがとうございました。",
+      "normalizedTarget": "なんでもちゃれんじするきもちがたいせつなんですねたのしいおはなしどうもありがとうございました",
+      "normalizedAsrText": "何でもちゃれんじする気持ちが大切なんですね楽しいお話どうもありがとうございました",
+      "phoneticSimilarity": 0.7674,
+      "matchedUtteranceIndexes": [
+        11
+      ],
+      "startMs": 51960,
+      "endMs": 60240,
+      "durationMs": 8280,
+      "audioPath": "line-segments/lesson-36/l36-11.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-36/l36-11.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [11] 对齐；应用已校准 MP3 时间偏移"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ]
+}

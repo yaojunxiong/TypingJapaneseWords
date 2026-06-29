@@ -1,0 +1,113 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 37,
+  "cd": "CD34",
+  "sourceTrack": "source-240000/tracks/cd-034.mp3",
+  "durationMs": 60526,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "role": "timestamp_source_only"
+  },
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 0,
+      "endMs": 8460,
+      "text": "第37日会話 金核寺は14世紀に建てられました",
+      "confidence": null
+    },
+    {
+      "index": 2,
+      "startMs": 8460,
+      "endMs": 12760,
+      "text": "皆様、あちらが有名な金核寺です",
+      "confidence": null
+    },
+    {
+      "index": 3,
+      "startMs": 12760,
+      "endMs": 16660,
+      "text": "金核寺は14世紀に建てられました",
+      "confidence": null
+    },
+    {
+      "index": 4,
+      "startMs": 16660,
+      "endMs": 20240,
+      "text": "1950年に一度焼けてしまいましたが",
+      "confidence": null
+    },
+    {
+      "index": 5,
+      "startMs": 20240,
+      "endMs": 28340,
+      "text": "その後新しい建物が建てられて1994年に世界遺産になりました",
+      "confidence": null
+    },
+    {
+      "index": 6,
+      "startMs": 28340,
+      "endMs": 31140,
+      "text": "京都で人気があるお寺の一つです",
+      "confidence": null
+    },
+    {
+      "index": 7,
+      "startMs": 31140,
+      "endMs": 32800,
+      "text": "綺麗ですね",
+      "confidence": null
+    },
+    {
+      "index": 8,
+      "startMs": 32800,
+      "endMs": 36240,
+      "text": "壁側金色ですが、本物の金ですか?",
+      "confidence": null
+    },
+    {
+      "index": 9,
+      "startMs": 36240,
+      "endMs": 39700,
+      "text": "はい、金が20キロぐらい使われました",
+      "confidence": null
+    },
+    {
+      "index": 10,
+      "startMs": 39700,
+      "endMs": 43100,
+      "text": "そうですか、あの中に入れますか?",
+      "confidence": null
+    },
+    {
+      "index": 11,
+      "startMs": 43100,
+      "endMs": 45580,
+      "text": "中には入れないんです",
+      "confidence": null
+    },
+    {
+      "index": 12,
+      "startMs": 45580,
+      "endMs": 50240,
+      "text": "池の周りを歩きながら見てください",
+      "confidence": null
+    },
+    {
+      "index": 13,
+      "startMs": 50240,
+      "endMs": 52340,
+      "text": "もみじが綺麗ですね",
+      "confidence": null
+    },
+    {
+      "index": 14,
+      "startMs": 52340,
+      "endMs": 59560,
+      "text": "金核寺はもみじと雪の季節が特に美しいと言われています",
+      "confidence": null
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "version": "minna-line-alignment-draft-v1",
+  "lesson": 39,
+  "sourceSet": "source-240000",
+  "cd": "CD40",
+  "sourceTrack": "source-240000/tracks/cd-040.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-240000/tracks/cd-040.mp3",
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "ミラー",
+      "japanese": "課長、遅れて、すみません。",
+      "normalizedTarget": "かちょうおくれてすみません",
+      "normalizedAsrText": "課長遅れて済みません",
+      "phoneticSimilarity": 0.5217,
+      "matchedUtteranceIndexes": [
+        2
+      ],
+      "startMs": 7000,
+      "endMs": 9000,
+      "durationMs": 2000,
+      "audioPath": "line-segments/lesson-39/l39-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-39/l39-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [2] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "中村課長",
+      "japanese": "ミラーさん、どうしたんですか。",
+      "normalizedTarget": "みらーさんどうしたんですか",
+      "normalizedAsrText": "みらんさんどうしたんですか",
+      "phoneticSimilarity": 0.9231,
+      "matchedUtteranceIndexes": [
+        3
+      ],
+      "startMs": 9000,
+      "endMs": 11000,
+      "durationMs": 2000,
+      "audioPath": "line-segments/lesson-39/l39-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-39/l39-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [3] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "ミラー",
+      "japanese": "実は来る途中で事故があって、バスが遅れてしまったんです。",
+      "normalizedTarget": "じつはくるとちゅうでじこがあってばすがおくれてしまったんです",
+      "normalizedAsrText": "実は来る途中で事故があってばすが遅れてしまったんです",
+      "phoneticSimilarity": 0.6786,
+      "matchedUtteranceIndexes": [
+        4
+      ],
+      "startMs": 11000,
+      "endMs": 15000,
+      "durationMs": 4000,
+      "audioPath": "line-segments/lesson-39/l39-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-39/l39-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [4] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "中村課長",
+      "japanese": "バスの事故ですか。",
+      "normalizedTarget": "ばすのじこですか",
+      "normalizedAsrText": "ばすの事故ですか",
+      "phoneticSimilarity": 0.75,
+      "matchedUtteranceIndexes": [
+        5
+      ],
+      "startMs": 15000,
+      "endMs": 17000,
+      "durationMs": 2000,
+      "audioPath": "line-segments/lesson-39/l39-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-39/l39-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [5] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "ミラー",
+      "japanese": "いいえ。交差点でトラックと車がぶつかって、バスが動かなかったんです。",
+      "normalizedTarget": "いいえこうさてんでとらっくとくるまがぶつかってばすがうごかなかったんです",
+      "normalizedAsrText": "いいえ交差点でとらっくと車がぶつかってばすが動かなかったんです",
+      "phoneticSimilarity": 0.7761,
+      "matchedUtteranceIndexes": [
+        6
+      ],
+      "startMs": 17000,
+      "endMs": 22000,
+      "durationMs": 5000,
+      "audioPath": "line-segments/lesson-39/l39-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-39/l39-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [6] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "中村課長",
+      "japanese": "それは大変でしたね。連絡がないので、みんな心配していたんですよ。",
+      "normalizedTarget": "それはたいへんでしたねれんらくがないのでみんなしんぱいしていたんですよ",
+      "normalizedAsrText": "それは大変でしたね連絡がないのでみんな心配していたんですよ",
+      "phoneticSimilarity": 0.7188,
+      "matchedUtteranceIndexes": [
+        7,
+        8
+      ],
+      "startMs": 22000,
+      "endMs": 28000,
+      "durationMs": 6000,
+      "audioPath": "line-segments/lesson-39/l39-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-39/l39-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [7, 8] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 7,
+      "displayOrder": 7,
+      "speaker": "ミラー",
+      "japanese": "電話したかったんですが、ケータイをうちに忘れてしまって……。どうもすみませんでした。",
+      "normalizedTarget": "でんわしたかったんですがけーたいをうちにわすれてしまってどうもすみませんでした",
+      "normalizedAsrText": "電話したかったんですが携帯をうちに忘れてしまってどうも済みませんでした",
+      "phoneticSimilarity": 0.7838,
+      "matchedUtteranceIndexes": [
+        9,
+        10
+      ],
+      "startMs": 28000,
+      "endMs": 34000,
+      "durationMs": 6000,
+      "audioPath": "line-segments/lesson-39/l39-07.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-39/l39-07.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [9, 10] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 8,
+      "displayOrder": 8,
+      "speaker": "中村課長",
+      "japanese": "わかりました。じゃ、会議を始めましょう。",
+      "normalizedTarget": "わかりましたじゃかいぎをはじめましょう",
+      "normalizedAsrText": "わかりましたじゃあ会議を始めましょう",
+      "phoneticSimilarity": 0.7568,
+      "matchedUtteranceIndexes": [
+        11
+      ],
+      "startMs": 34000,
+      "endMs": 38000,
+      "durationMs": 4000,
+      "audioPath": "line-segments/lesson-39/l39-08.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-39/l39-08.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [11] 对齐；应用已校准 MP3 时间偏移"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ]
+}
