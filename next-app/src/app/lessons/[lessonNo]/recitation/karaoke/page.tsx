@@ -18,7 +18,7 @@ export default async function KaraokePage({ params }: Props) {
   const { lessonNo } = await params
   const num = parseInt(lessonNo, 10)
 
-  if (num !== 1 && num !== 2) {
+  if (num !== 1 && num !== 2 && num !== 3 && num !== 4 && num !== 5) {
     redirect(`/lessons/${lessonNo}/recitation`)
   }
 
