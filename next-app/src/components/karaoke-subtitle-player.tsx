@@ -109,6 +109,13 @@ export default function KaraokeSubtitlePlayer({ lessonNo }: Props) {
 
   const audioRef = useRef<HTMLAudioElement | null>(null)
   const rafRef = useRef<number>(0)
+  const userLastScrolledAt = useRef(0)
+
+  useEffect(() => {
+    const onScroll = () => { userLastScrolledAt.current = Date.now() }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   useEffect(() => {
     let cancelled = false
@@ -298,6 +305,17 @@ export default function KaraokeSubtitlePlayer({ lessonNo }: Props) {
     setSelectedWord(null)
   }, [audioMode])
 
+  const activeLineId = activeLine?.lineId ?? null
+  useEffect(() => {
+    if (!playing || !activeLineId) return
+    if (selectedWord) return
+    if (Date.now() - userLastScrolledAt.current < 2000) return
+    const el = document.getElementById(`line-${activeLineId}`)
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+    }
+  }, [activeLineId, playing, selectedWord])
+
   const progress = duration > 0 ? (currentTime / duration) * 100 : 0
 
   if (loading) {
@@ -326,30 +344,30 @@ export default function KaraokeSubtitlePlayer({ lessonNo }: Props) {
           >
             ← 返回背诵页
           </a>
-          <span style={{ fontSize: 12, color: '#94a3b8', fontWeight: 700 }}>
-             实验功能 v0.2
-          </span>
+           <span style={{ fontSize: 12, color: '#94a3b8', fontWeight: 700 }}>
+              实验功能 v0.3
+           </span>
         </div>
-        <h1 style={{ fontSize: 22, fontWeight: 900, margin: 0 }}>第 {lessonNo} 课 · 卡拉OK字幕模式</h1>
+        <h1 style={{ fontSize: 22, fontWeight: 900, margin: 0 }}>第 {lessonNo} 课 · 卡拉OK字幕</h1>
         <p style={{ fontSize: 13, color: '#64748b', margin: '4px 0 0' }}>
-          跟随原音高亮台词，辅助理解和背诵
+          原音 / 练习音双模式，辅助理解和背诵
         </p>
       </div>
 
       <div style={{
         background: '#fff', border: '1px solid #e2e8f0', borderRadius: 16,
-        padding: 12, marginBottom: 16, boxShadow: '0 4px 12px rgba(15,23,42,0.04)',
+        padding: '10px 12px', marginBottom: 12,
       }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 10 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 8 }}>
           <button
             type="button"
             onClick={togglePlay}
             disabled={!audioReady || audioError}
             style={{
-              width: 44, height: 44, borderRadius: 22,
+              width: 40, height: 40, borderRadius: 20,
               background: audioReady && !audioError ? '#1683ff' : '#e2e8f0',
               border: 'none', color: audioReady && !audioError ? '#fff' : '#94a3b8',
-              fontSize: 18, cursor: audioReady && !audioError ? 'pointer' : 'default',
+              fontSize: 16, cursor: audioReady && !audioError ? 'pointer' : 'default',
               display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
               flexShrink: 0,
             }}
@@ -360,7 +378,7 @@ export default function KaraokeSubtitlePlayer({ lessonNo }: Props) {
             <div
               onClick={handleSeek}
               style={{
-                height: 6, borderRadius: 3, background: '#e2e8f0', cursor: 'pointer',
+                height: 5, borderRadius: 3, background: '#e2e8f0', cursor: 'pointer',
                 position: 'relative', overflow: 'hidden',
               }}
             >
@@ -369,30 +387,29 @@ export default function KaraokeSubtitlePlayer({ lessonNo }: Props) {
                 width: `${progress}%`, transition: 'width 0.1s linear',
               }} />
             </div>
-            <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 6, fontSize: 12, color: '#64748b' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 4, fontSize: 11, color: '#64748b' }}>
               <span>{formatTime(currentTime)}</span>
               <span>{duration > 0 ? formatTime(duration) : '--:--'}</span>
             </div>
           </div>
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 12, color: '#64748b' }}>
-          <span style={{ flex: 1 }}>
-            {audioMode === 'ttsPractice' ? '练习卡拉OK音 · 逐词跟读' : 'CD01 完整原音'}
-            {audioError && <span style={{ color: '#dc2626', marginLeft: 8 }}>音频加载失败</span>}
-            {!audioReady && !audioError && <span style={{ marginLeft: 8 }}>加载中...</span>}
-          </span>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8 }}>
           <button
             type="button"
             onClick={() => setAudioMode('original')}
             style={{
-              fontSize: 12, fontWeight: 700, border: '1px solid #e2e8f0',
-              borderRadius: 999, padding: '4px 12px', cursor: 'pointer',
-              background: audioMode === 'original' ? '#1683ff' : '#fff',
-              color: audioMode === 'original' ? '#fff' : '#475569',
+              padding: '8px 10px', borderRadius: 10, textAlign: 'left', cursor: 'pointer',
+              border: audioMode === 'original' ? '2px solid #1683ff' : '1px solid #e2e8f0',
+              background: audioMode === 'original' ? '#eff6ff' : '#fff',
               transition: 'all 0.15s',
             }}
           >
-            教材原音
+            <div style={{ fontSize: 13, fontWeight: 800, color: audioMode === 'original' ? '#1683ff' : '#475569' }}>
+              教材原音
+            </div>
+            <div style={{ fontSize: 10, color: '#94a3b8', marginTop: 1, lineHeight: 1.3 }}>
+              教材真实录音，句子高亮
+            </div>
           </button>
           <button
             type="button"
@@ -401,21 +418,31 @@ export default function KaraokeSubtitlePlayer({ lessonNo }: Props) {
               setAudioMode('ttsPractice')
             }}
             style={{
-              fontSize: 12, fontWeight: 700, border: '1px solid #e2e8f0',
-              borderRadius: 999, padding: '4px 12px',
+              padding: '8px 10px', borderRadius: 10, textAlign: 'left',
               cursor: ttsError ? 'default' : 'pointer',
-              background: audioMode === 'ttsPractice' ? '#1683ff' : '#fff',
-              color: audioMode === 'ttsPractice' ? '#fff' : '#475569',
+              border: audioMode === 'ttsPractice' ? '2px solid #1683ff' : '1px solid #e2e8f0',
+              background: audioMode === 'ttsPractice' ? '#eff6ff' : '#fff',
               transition: 'all 0.15s',
               opacity: ttsError ? 0.5 : 1,
             }}
             title={ttsError ? '练习卡拉OK音正在整理中' : undefined}
           >
-            练习卡拉OK音
+            <div style={{ fontSize: 13, fontWeight: 800, color: audioMode === 'ttsPractice' ? '#1683ff' : '#475569' }}>
+              练习卡拉OK音
+            </div>
+            <div style={{ fontSize: 10, color: '#94a3b8', marginTop: 1, lineHeight: 1.3 }}>
+              合成练习音，逐词高亮，适合跟读
+            </div>
           </button>
         </div>
+        {audioError && (
+          <div style={{ fontSize: 11, color: '#dc2626', marginTop: 6 }}>音频加载失败</div>
+        )}
+        {!audioReady && !audioError && (
+          <div style={{ fontSize: 11, color: '#64748b', marginTop: 6 }}>音频加载中...</div>
+        )}
         {audioMode === 'ttsPractice' && ttsError && (
-          <div style={{ fontSize: 12, color: '#f59e0b', marginTop: 4 }}>练习卡拉OK音正在整理中</div>
+          <div style={{ fontSize: 11, color: '#f59e0b', marginTop: 6 }}>练习卡拉OK音正在整理中</div>
         )}
       </div>
 
@@ -428,26 +455,27 @@ export default function KaraokeSubtitlePlayer({ lessonNo }: Props) {
             return (
               <div
                 key={line.lineId}
+                id={`line-${line.lineId}`}
                 onClick={() => handleSeekLine(line)}
                 style={{
-                  padding: '10px 14px',
-                  borderRadius: 12,
+                  padding: '8px 12px',
+                  borderRadius: 10,
                   background: '#fff',
                   border: '1px solid #f1f5f9',
                   cursor: 'pointer',
-                  opacity: 0.45,
-                  transition: 'opacity 0.15s',
+                  opacity: 0.4,
+                  transition: 'opacity 0.2s',
                 }}
               >
-                <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
-                  <span style={{ fontSize: 11, fontWeight: 800, color: '#94a3b8', fontVariantNumeric: 'tabular-nums' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 3 }}>
+                  <span style={{ fontSize: 10, fontWeight: 800, color: '#cbd5e1', fontVariantNumeric: 'tabular-nums' }}>
                     {formatTime(line.lineStartTime)}
                   </span>
-                  <span style={{ fontSize: 12, fontWeight: 800, color: '#94a3b8' }}>
+                  <span style={{ fontSize: 11, fontWeight: 700, color: '#cbd5e1' }}>
                     {line.speakerCn || line.speaker}
                   </span>
                 </div>
-                <div style={{ fontSize: 15, fontWeight: 800, color: '#94a3b8', wordBreak: 'break-word', overflowWrap: 'break-word' }}>
+                <div style={{ fontSize: 14, fontWeight: 800, color: '#cbd5e1', wordBreak: 'break-word', overflowWrap: 'break-word' }}>
                   {line.sentenceJp.length > 40 ? line.sentenceJp.slice(0, 38) + '…' : line.sentenceJp}
                 </div>
               </div>
@@ -457,29 +485,30 @@ export default function KaraokeSubtitlePlayer({ lessonNo }: Props) {
           return (
             <div
               key={line.lineId}
+              id={`line-${line.lineId}`}
               onClick={() => handleSeekLine(line)}
               style={{
-                padding: '14px 16px',
-                borderRadius: 14,
+                padding: '12px 14px',
+                borderRadius: 12,
                 background: '#eff6ff',
-                border: '2px solid #bfdbfe',
-                boxShadow: '0 4px 16px rgba(22,131,255,0.08)',
+                border: '2px solid #93c5fd',
+                boxShadow: '0 4px 12px rgba(22,131,255,0.08)',
                 cursor: 'pointer',
                 transition: 'all 0.15s',
               }}
             >
-              <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
-                <span style={{ fontSize: 12, fontWeight: 800, color: '#1683ff', fontVariantNumeric: 'tabular-nums' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 6 }}>
+                <span style={{ fontSize: 11, fontWeight: 800, color: '#1683ff', fontVariantNumeric: 'tabular-nums' }}>
                   {formatTime(line.lineStartTime)}
                 </span>
                 <span style={{
-                  fontSize: 13, fontWeight: 800, color: '#fff',
-                  background: '#1683ff', borderRadius: 999, padding: '2px 10px',
+                  fontSize: 11, fontWeight: 800, color: '#fff',
+                  background: '#1683ff', borderRadius: 999, padding: '1px 8px',
                 }}>
                   {line.speakerCn || line.speaker}
                 </span>
               </div>
-              <div style={{ fontSize: 20, fontWeight: 900, color: '#0f172a', lineHeight: 1.5, wordBreak: 'break-word', overflowWrap: 'break-word' }}>
+              <div style={{ fontSize: 18, fontWeight: 900, color: '#0f172a', lineHeight: 1.6, wordBreak: 'break-word', overflowWrap: 'break-word' }}>
                 {segments.map((seg, i) => {
                   const isActiveWord = seg.word != null && activeWord?.id === seg.word.id
                   return seg.word ? (
@@ -488,15 +517,17 @@ export default function KaraokeSubtitlePlayer({ lessonNo }: Props) {
                       type="button"
                       onClick={(e) => { e.stopPropagation(); setSelectedWord(seg.word!) }}
                       style={{
-                        background: isActiveWord ? '#dbeafe' : 'none',
+                        background: isActiveWord ? '#2563eb' : 'none',
                         border: 'none',
-                        padding: isActiveWord ? '0 2px' : 0,
+                        padding: isActiveWord ? '1px 4px' : 0,
+                        margin: isActiveWord ? '-1px 0' : 0,
                         borderRadius: 4,
-                        fontSize: 'inherit', fontWeight: 'inherit', color: 'inherit',
+                        fontSize: 'inherit', fontWeight: 'inherit',
+                        color: isActiveWord ? '#fff' : 'inherit',
                         fontFamily: 'inherit', lineHeight: 'inherit',
                         cursor: 'pointer',
-                        borderBottom: isActiveWord ? '2px solid #1683ff' : '2px dashed #93c5fd',
-                        transition: 'background 0.08s, border-color 0.08s',
+                        borderBottom: isActiveWord ? 'none' : '2px dashed #93c5fd',
+                        transition: 'background 0.08s',
                       }}
                     >
                       {seg.text}
@@ -506,7 +537,7 @@ export default function KaraokeSubtitlePlayer({ lessonNo }: Props) {
                   )
                 })}
               </div>
-              <div style={{ fontSize: 15, color: '#475569', marginTop: 6, wordBreak: 'break-word', overflowWrap: 'break-word' }}>
+              <div style={{ fontSize: 14, color: '#475569', marginTop: 4, lineHeight: 1.4, wordBreak: 'break-word', overflowWrap: 'break-word' }}>
                 {line.sentenceCn}
               </div>
             </div>
@@ -517,7 +548,7 @@ export default function KaraokeSubtitlePlayer({ lessonNo }: Props) {
       {selectedWord && (
         <div
           style={{
-            position: 'fixed', inset: 0, zIndex: 90, background: 'rgba(15,23,42,0.3)',
+            position: 'fixed', inset: 0, zIndex: 90, background: 'rgba(15,23,42,0.25)',
           }}
           onClick={() => setSelectedWord(null)}
         />
@@ -526,33 +557,34 @@ export default function KaraokeSubtitlePlayer({ lessonNo }: Props) {
       {selectedWord && (
         <div style={{
           position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 100,
-          background: '#fff', borderTopLeftRadius: 18, borderTopRightRadius: 18,
-          boxShadow: '0 -6px 28px rgba(15,23,42,0.12)',
-          padding: '22px 20px 32px',
+          background: '#fff', borderTopLeftRadius: 16, borderTopRightRadius: 16,
+          boxShadow: '0 -4px 20px rgba(15,23,42,0.1)',
+          padding: '16px 18px 24px',
           animation: 'slideUp 0.2s ease-out',
+          maxHeight: '45vh', overflowY: 'auto',
         }}>
           <style>{`@keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }`}</style>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
-            <span style={{ fontSize: 22, fontWeight: 900 }}>{selectedWord.surface}</span>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 }}>
+            <span style={{ fontSize: 20, fontWeight: 900 }}>{selectedWord.surface}</span>
             <button
               type="button"
               onClick={() => setSelectedWord(null)}
-              style={{ background: '#f1f5f9', border: 'none', borderRadius: 999, width: 32, height: 32, cursor: 'pointer', fontSize: 16, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#475569' }}
+              style={{ background: '#f1f5f9', border: 'none', borderRadius: 999, width: 28, height: 28, cursor: 'pointer', fontSize: 14, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#475569' }}
             >
               ✕
             </button>
           </div>
 
-          <div style={{ color: '#475569', fontSize: 15, marginBottom: 6 }}>
+          <div style={{ color: '#475569', fontSize: 14, marginBottom: 4 }}>
             <span style={{ fontWeight: 700 }}>假名：</span>{selectedWord.kana}
           </div>
-          <div style={{ color: '#475569', fontSize: 15, marginBottom: 12 }}>
+          <div style={{ color: '#475569', fontSize: 14, marginBottom: 8 }}>
             <span style={{ fontWeight: 700 }}>罗马音：</span>{selectedWord.romaji}
           </div>
-          <div style={{ color: '#0f172a', fontSize: 18, fontWeight: 800, marginBottom: 10 }}>
+          <div style={{ color: '#0f172a', fontSize: 16, fontWeight: 800, marginBottom: 6 }}>
             {selectedWord.meaningCn}
           </div>
-          <div style={{ color: '#64748b', fontSize: 13, lineHeight: 1.6, wordBreak: 'break-word', overflowWrap: 'break-word' }}>
+          <div style={{ color: '#64748b', fontSize: 12, lineHeight: 1.5, wordBreak: 'break-word', overflowWrap: 'break-word' }}>
             {selectedWord.noteCn}
           </div>
         </div>
