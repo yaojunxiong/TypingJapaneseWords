@@ -1,0 +1,328 @@
+{
+  "version": "minna-original-line-segments-draft-v1",
+  "lesson": 29,
+  "sourceSet": "source-240000",
+  "cd": "CD10",
+  "sourceTrack": "source-240000/tracks/cd-010.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-240000/tracks/cd-010.mp3",
+  "segmentCount": 15,
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "イー",
+      "japanese": "すみません。今の電車に忘れ物をしてしまったんですが……。",
+      "normalizedTarget": "すみませんいまのでんしゃにわすれものをしてしまったんですが",
+      "normalizedAsrText": "すみません今の電車に忘れ物をしてしまったんですが",
+      "phoneticSimilarity": 0.717,
+      "matchedUtteranceIndexes": [
+        2
+      ],
+      "startMs": 7450,
+      "endMs": 11450,
+      "durationMs": 4000,
+      "audioPath": "line-segments/lesson-29/l29-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-29/l29-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [2] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "駅員",
+      "japanese": "何を忘れたんですか。",
+      "normalizedTarget": "なにをわすれたんですか",
+      "normalizedAsrText": "何を忘れたんですか",
+      "phoneticSimilarity": 0.7,
+      "matchedUtteranceIndexes": [
+        3
+      ],
+      "startMs": 11450,
+      "endMs": 13450,
+      "durationMs": 2000,
+      "audioPath": "line-segments/lesson-29/l29-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-29/l29-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [3] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "イー",
+      "japanese": "青いかばんです。このくらいの……。",
+      "normalizedTarget": "あおいかばんですこのくらいの",
+      "normalizedAsrText": "青いかばんですこのくらいの",
+      "phoneticSimilarity": 0.8889,
+      "matchedUtteranceIndexes": [
+        4
+      ],
+      "startMs": 13450,
+      "endMs": 16450,
+      "durationMs": 3000,
+      "audioPath": "line-segments/lesson-29/l29-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-29/l29-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [4] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "イー",
+      "japanese": "外側に大きいポケットが付いています。",
+      "normalizedTarget": "そとがわにおおきいぽけっとがついています",
+      "normalizedAsrText": "外側に大きいぽけっとが付いています",
+      "phoneticSimilarity": 0.7027,
+      "matchedUtteranceIndexes": [
+        5
+      ],
+      "startMs": 16450,
+      "endMs": 19450,
+      "durationMs": 3000,
+      "audioPath": "line-segments/lesson-29/l29-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-29/l29-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [5] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "駅員",
+      "japanese": "どの辺に置きましたか。",
+      "normalizedTarget": "どのへんにおきましたか",
+      "normalizedAsrText": "どの辺に置きましたか",
+      "phoneticSimilarity": 0.7619,
+      "matchedUtteranceIndexes": [
+        6
+      ],
+      "startMs": 19450,
+      "endMs": 21450,
+      "durationMs": 2000,
+      "audioPath": "line-segments/lesson-29/l29-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-29/l29-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [6] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "イー",
+      "japanese": "よく覚えていません。でも、網棚の上に置きました。",
+      "normalizedTarget": "よくおぼえていませんでもあみだなのうえにおきました",
+      "normalizedAsrText": "よく覚えていませんでも編みだなの上に置きました",
+      "phoneticSimilarity": 0.7917,
+      "matchedUtteranceIndexes": [
+        7
+      ],
+      "startMs": 21450,
+      "endMs": 25450,
+      "durationMs": 4000,
+      "audioPath": "line-segments/lesson-29/l29-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-29/l29-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [7] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 7,
+      "displayOrder": 7,
+      "speaker": "駅員",
+      "japanese": "中に何が入っていますか。",
+      "normalizedTarget": "なかになにがはいっていますか",
+      "normalizedAsrText": "中に何が入っていますか",
+      "phoneticSimilarity": 0.64,
+      "matchedUtteranceIndexes": [
+        8
+      ],
+      "startMs": 25450,
+      "endMs": 27450,
+      "durationMs": 2000,
+      "audioPath": "line-segments/lesson-29/l29-07.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-29/l29-07.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [8] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 8,
+      "displayOrder": 8,
+      "speaker": "イー",
+      "japanese": "えーと、鍵か、本と傘が入っています。",
+      "normalizedTarget": "えーとかぎかほんとかさがはいっています",
+      "normalizedAsrText": "えっと確か本と傘が入っています",
+      "phoneticSimilarity": 0.5882,
+      "matchedUtteranceIndexes": [
+        9
+      ],
+      "startMs": 27450,
+      "endMs": 31450,
+      "durationMs": 4000,
+      "audioPath": "line-segments/lesson-29/l29-08.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-29/l29-08.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [9] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 9,
+      "displayOrder": 9,
+      "speaker": "駅員",
+      "japanese": "じゃ、調べますから、ちょっと待っていてください。",
+      "normalizedTarget": "じゃしらべますからちょっとまっていてください",
+      "normalizedAsrText": "じゃあ調べますからちょっと待っていてください",
+      "phoneticSimilarity": 0.8636,
+      "matchedUtteranceIndexes": [
+        10
+      ],
+      "startMs": 31450,
+      "endMs": 35450,
+      "durationMs": 4000,
+      "audioPath": "line-segments/lesson-29/l29-09.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-29/l29-09.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [10] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 10,
+      "displayOrder": 10,
+      "speaker": "駅員",
+      "japanese": "ありましたよ。",
+      "normalizedTarget": "ありましたよ",
+      "normalizedAsrText": "ありましたよ",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        11
+      ],
+      "startMs": 36450,
+      "endMs": 37450,
+      "durationMs": 1000,
+      "audioPath": "line-segments/lesson-29/l29-10.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-29/l29-10.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [11] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 11,
+      "displayOrder": 11,
+      "speaker": "イー",
+      "japanese": "ああ、よかった。",
+      "normalizedTarget": "ああよかった",
+      "normalizedAsrText": "ああよかった",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        12
+      ],
+      "startMs": 37450,
+      "endMs": 39450,
+      "durationMs": 2000,
+      "audioPath": "line-segments/lesson-29/l29-11.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-29/l29-11.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [12] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 12,
+      "displayOrder": 12,
+      "speaker": "駅員",
+      "japanese": "今、新宿駅にありますが、どうしますか。",
+      "normalizedTarget": "いましんじゅくえきにありますがどうしますか",
+      "normalizedAsrText": "今新宿駅にありますがどうしますか",
+      "phoneticSimilarity": 0.6486,
+      "matchedUtteranceIndexes": [
+        13
+      ],
+      "startMs": 39450,
+      "endMs": 42450,
+      "durationMs": 3000,
+      "audioPath": "line-segments/lesson-29/l29-12.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-29/l29-12.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [13] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 13,
+      "displayOrder": 13,
+      "speaker": "イー",
+      "japanese": "すぐ取りに行きます。",
+      "normalizedTarget": "すぐとりにいきます",
+      "normalizedAsrText": "すぐ取りに行きます",
+      "phoneticSimilarity": 0.7778,
+      "matchedUtteranceIndexes": [
+        14
+      ],
+      "startMs": 42470,
+      "endMs": 44170,
+      "durationMs": 1700,
+      "audioPath": "line-segments/lesson-29/l29-13.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-29/l29-13.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [14] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 14,
+      "displayOrder": 14,
+      "speaker": "駅員",
+      "japanese": "じゃ、新宿駅の事務所に行ってください。",
+      "normalizedTarget": "じゃしんじゅくえきのじむしょにいってください",
+      "normalizedAsrText": "じゃあ新宿駅の事務所に行ってください",
+      "phoneticSimilarity": 0.5,
+      "matchedUtteranceIndexes": [
+        15
+      ],
+      "startMs": 44470,
+      "endMs": 46440,
+      "durationMs": 1970,
+      "audioPath": "line-segments/lesson-29/l29-14.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-29/l29-14.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [15] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 15,
+      "displayOrder": 15,
+      "speaker": "イー",
+      "japanese": "はい、どうもありがとうございました。",
+      "normalizedTarget": "はいどうもありがとうございました",
+      "normalizedAsrText": "はいどうもありがとうございました",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        16
+      ],
+      "startMs": 46470,
+      "endMs": 49400,
+      "durationMs": 2930,
+      "audioPath": "line-segments/lesson-29/l29-15.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-29/l29-15.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [16] 对齐；相邻句使用不重叠边界"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ]
+}

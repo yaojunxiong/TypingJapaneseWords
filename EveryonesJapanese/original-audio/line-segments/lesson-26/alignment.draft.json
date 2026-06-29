@@ -1,0 +1,204 @@
+{
+  "version": "minna-line-alignment-draft-v1",
+  "lesson": 26,
+  "sourceSet": "source-240000",
+  "cd": "CD01",
+  "sourceTrack": "source-240000/tracks/cd-001.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-240000/tracks/cd-001.mp3",
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "管理人",
+      "japanese": "ミラーさん、引っ越しの荷物は片づきましたか。",
+      "normalizedTarget": "みらーさんひっこしのにもつはかたづきましたか",
+      "normalizedAsrText": "みらーさん引っ越しの荷物は片付きましたか",
+      "phoneticSimilarity": 0.6667,
+      "matchedUtteranceIndexes": [
+        2
+      ],
+      "startMs": 7410,
+      "endMs": 11170,
+      "durationMs": 3760,
+      "audioPath": "line-segments/lesson-26/l26-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-26/l26-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [2] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "ミラー",
+      "japanese": "はい、だいたい片づきました。あのう、ごみを捨てたいんですが、どこに出したらいいですか。",
+      "normalizedTarget": "はいだいたいかたづきましたあのうごみをすてたいんですがどこにだしたらいいですか",
+      "normalizedAsrText": "はい大体片付きましたあのごみを捨てたいんですがどこに出したらいいですか",
+      "phoneticSimilarity": 0.7838,
+      "matchedUtteranceIndexes": [
+        3,
+        4
+      ],
+      "startMs": 11170,
+      "endMs": 19050,
+      "durationMs": 7880,
+      "audioPath": "line-segments/lesson-26/l26-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-26/l26-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [3, 4] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "管理人",
+      "japanese": "燃えるごみは、月曜日の朝出してください。ごみ置き場は駐車場の横です。",
+      "normalizedTarget": "もえるごみはげつようびのあさだしてくださいごみおきばはちゅうしゃじょうのよこです",
+      "normalizedAsrText": "燃えるごみは月曜日と木曜日の朝出してくださいごみ置き場は駐車場の横です",
+      "phoneticSimilarity": 0.5067,
+      "matchedUtteranceIndexes": [
+        5,
+        6
+      ],
+      "startMs": 19050,
+      "endMs": 26530,
+      "durationMs": 7480,
+      "audioPath": "line-segments/lesson-26/l26-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-26/l26-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [5, 6] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "ミラー",
+      "japanese": "瓶や缶はいつですか。",
+      "normalizedTarget": "びんやかんはいつですか",
+      "normalizedAsrText": "瓶や缶はいつですか",
+      "phoneticSimilarity": 0.7,
+      "matchedUtteranceIndexes": [
+        7
+      ],
+      "startMs": 26530,
+      "endMs": 28730,
+      "durationMs": 2200,
+      "audioPath": "line-segments/lesson-26/l26-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-26/l26-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [7] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "管理人",
+      "japanese": "土曜日です。",
+      "normalizedTarget": "どようびです",
+      "normalizedAsrText": "土曜日です",
+      "phoneticSimilarity": 0.3636,
+      "matchedUtteranceIndexes": [
+        8
+      ],
+      "startMs": 28730,
+      "endMs": 29810,
+      "durationMs": 1080,
+      "audioPath": "line-segments/lesson-26/l26-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-26/l26-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [8] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "ミラー",
+      "japanese": "わかりました。それからお湯が出ないんですが……。",
+      "normalizedTarget": "わかりましたそれからおゆがでないんですが",
+      "normalizedAsrText": "分かりましたそれからお湯が出ないんですが",
+      "phoneticSimilarity": 0.85,
+      "matchedUtteranceIndexes": [
+        9,
+        10
+      ],
+      "startMs": 29810,
+      "endMs": 34490,
+      "durationMs": 4680,
+      "audioPath": "line-segments/lesson-26/l26-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-26/l26-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [9, 10] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 7,
+      "displayOrder": 7,
+      "speaker": "管理人",
+      "japanese": "ガス会社に連絡したら、すぐ来てくれますよ。",
+      "normalizedTarget": "がすがいしゃにれんらくしたらすぐきてくれますよ",
+      "normalizedAsrText": "がす会社に連絡したらすぐ来てくれますよ",
+      "phoneticSimilarity": 0.6667,
+      "matchedUtteranceIndexes": [
+        11
+      ],
+      "startMs": 34490,
+      "endMs": 38090,
+      "durationMs": 3600,
+      "audioPath": "line-segments/lesson-26/l26-07.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-26/l26-07.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [11] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 8,
+      "displayOrder": 8,
+      "speaker": "ミラー",
+      "japanese": "すみませんが、電話番号を教えていただけませんか。",
+      "normalizedTarget": "すみませんがでんわばんごうをおしえていただけませんか",
+      "normalizedAsrText": "すみませんが電話番号を教えていただけませんか",
+      "phoneticSimilarity": 0.7083,
+      "matchedUtteranceIndexes": [
+        12
+      ],
+      "startMs": 38090,
+      "endMs": 41810,
+      "durationMs": 3720,
+      "audioPath": "line-segments/lesson-26/l26-08.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-26/l26-08.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [12] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 9,
+      "displayOrder": 9,
+      "speaker": "管理人",
+      "japanese": "ええ、いいですよ。",
+      "normalizedTarget": "ええいいですよ",
+      "normalizedAsrText": "ええいいですよ",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        13
+      ],
+      "startMs": 41950,
+      "endMs": 43690,
+      "durationMs": 1740,
+      "audioPath": "line-segments/lesson-26/l26-09.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-26/l26-09.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [13] 对齐；相邻句使用不重叠边界"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ]
+}

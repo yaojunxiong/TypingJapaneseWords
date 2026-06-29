@@ -1,0 +1,106 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 26,
+  "cd": "CD01",
+  "sourceTrack": "source-240000/tracks/cd-001.mp3",
+  "durationMs": 45505,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "role": "timestamp_source_only"
+  },
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 0,
+      "endMs": 6960,
+      "text": "第26日、会話、ゴミはどこに出したらいいですか?",
+      "confidence": null
+    },
+    {
+      "index": 2,
+      "startMs": 6960,
+      "endMs": 10720,
+      "text": "ミラーさん、引っ越しの荷物は片付きましたか?",
+      "confidence": null
+    },
+    {
+      "index": 3,
+      "startMs": 10720,
+      "endMs": 13960,
+      "text": "はい、大体片付きました。",
+      "confidence": null
+    },
+    {
+      "index": 4,
+      "startMs": 13960,
+      "endMs": 18600,
+      "text": "あの、ゴミを捨てたいんですが、どこに出したらいいですか?",
+      "confidence": null
+    },
+    {
+      "index": 5,
+      "startMs": 18600,
+      "endMs": 23240,
+      "text": "燃えるゴミは月曜日と木曜日の朝出してください。",
+      "confidence": null
+    },
+    {
+      "index": 6,
+      "startMs": 23240,
+      "endMs": 26080,
+      "text": "ゴミ置き場は駐車場の横です。",
+      "confidence": null
+    },
+    {
+      "index": 7,
+      "startMs": 26080,
+      "endMs": 28280,
+      "text": "瓶や缶はいつですか?",
+      "confidence": null
+    },
+    {
+      "index": 8,
+      "startMs": 28280,
+      "endMs": 29360,
+      "text": "土曜日です。",
+      "confidence": null
+    },
+    {
+      "index": 9,
+      "startMs": 29360,
+      "endMs": 31160,
+      "text": "分かりました。",
+      "confidence": null
+    },
+    {
+      "index": 10,
+      "startMs": 31160,
+      "endMs": 34040,
+      "text": "それから、お湯が出ないんですが。",
+      "confidence": null
+    },
+    {
+      "index": 11,
+      "startMs": 34040,
+      "endMs": 37640,
+      "text": "ガス会社に連絡したら、すぐ来てくれますよ。",
+      "confidence": null
+    },
+    {
+      "index": 12,
+      "startMs": 37640,
+      "endMs": 41360,
+      "text": "すみませんが、電話番号を教えていただけませんか?",
+      "confidence": null
+    },
+    {
+      "index": 13,
+      "startMs": 41360,
+      "endMs": 43240,
+      "text": "ええ、いいですよ。",
+      "confidence": null
+    }
+  ]
+}

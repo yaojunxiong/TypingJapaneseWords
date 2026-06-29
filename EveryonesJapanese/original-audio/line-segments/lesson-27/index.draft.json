@@ -1,0 +1,246 @@
+{
+  "version": "minna-original-line-segments-draft-v1",
+  "lesson": 27,
+  "sourceSet": "source-240000",
+  "cd": "CD04",
+  "sourceTrack": "source-240000/tracks/cd-004.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-240000/tracks/cd-004.mp3",
+  "segmentCount": 11,
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "ミラー",
+      "japanese": "明るくて、いい部屋ですね。",
+      "normalizedTarget": "あかるくていいへやですね",
+      "normalizedAsrText": "明るくていい部屋ですね",
+      "phoneticSimilarity": 0.6957,
+      "matchedUtteranceIndexes": [
+        3
+      ],
+      "startMs": 6450,
+      "endMs": 9450,
+      "durationMs": 3000,
+      "audioPath": "line-segments/lesson-27/l27-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-27/l27-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [3] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "鈴木",
+      "japanese": "ええ。天気がいい日には海が見えるんです。",
+      "normalizedTarget": "ええてんきがいいひにはうみがみえるんです",
+      "normalizedAsrText": "ええ天気がいい日には海が見えるんです",
+      "phoneticSimilarity": 0.6842,
+      "matchedUtteranceIndexes": [
+        4
+      ],
+      "startMs": 9900,
+      "endMs": 12410,
+      "durationMs": 2510,
+      "audioPath": "line-segments/lesson-27/l27-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-27/l27-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [4] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "ミラー",
+      "japanese": "このテーブルはおもしろいデザインですね。どこで買ったんですか。",
+      "normalizedTarget": "このてーぶるはおもしろいでざいんですねどこでかったんですか",
+      "normalizedAsrText": "このてーぶるは面白いでざいんですねどこで買ったんですか",
+      "phoneticSimilarity": 0.8571,
+      "matchedUtteranceIndexes": [
+        5,
+        6
+      ],
+      "startMs": 12800,
+      "endMs": 17450,
+      "durationMs": 4650,
+      "audioPath": "line-segments/lesson-27/l27-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-27/l27-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [5, 6] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "鈴木",
+      "japanese": "これはわたしが作ったんですよ。",
+      "normalizedTarget": "これはわたしがつくったんですよ",
+      "normalizedAsrText": "これは私が作ったんですよ",
+      "phoneticSimilarity": 0.7407,
+      "matchedUtteranceIndexes": [
+        7
+      ],
+      "startMs": 17890,
+      "endMs": 19450,
+      "durationMs": 1560,
+      "audioPath": "line-segments/lesson-27/l27-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-27/l27-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [7] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "ミラー",
+      "japanese": "えっ、ほんとうですか。",
+      "normalizedTarget": "えっほんとうですか",
+      "normalizedAsrText": "ええ本当ですか",
+      "phoneticSimilarity": 0.5,
+      "matchedUtteranceIndexes": [
+        8
+      ],
+      "startMs": 19890,
+      "endMs": 21480,
+      "durationMs": 1590,
+      "audioPath": "line-segments/lesson-27/l27-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-27/l27-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [8] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "鈴木",
+      "japanese": "ええ。趣味は自分で家具を作ることなんです。",
+      "normalizedTarget": "ええしゅみはじぶんでかぐをつくることなんです",
+      "normalizedAsrText": "ええ趣味は自分で家具を作ることなんです",
+      "phoneticSimilarity": 0.5854,
+      "matchedUtteranceIndexes": [
+        9
+      ],
+      "startMs": 21450,
+      "endMs": 25450,
+      "durationMs": 4000,
+      "audioPath": "line-segments/lesson-27/l27-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-27/l27-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [9] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 7,
+      "displayOrder": 7,
+      "speaker": "ミラー",
+      "japanese": "へえ。じゃ、あの本棚も作ったんですか。",
+      "normalizedTarget": "へえじゃあのほんだなもつくったんですか",
+      "normalizedAsrText": "ええじゃああの本棚も作ったんですか",
+      "phoneticSimilarity": 0.6667,
+      "matchedUtteranceIndexes": [
+        10
+      ],
+      "startMs": 25900,
+      "endMs": 29950,
+      "durationMs": 4050,
+      "audioPath": "line-segments/lesson-27/l27-07.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-27/l27-07.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [10] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 8,
+      "displayOrder": 8,
+      "speaker": "鈴木",
+      "japanese": "ええ。",
+      "normalizedTarget": "ええ",
+      "normalizedAsrText": "ええすごいですね",
+      "phoneticSimilarity": 0.4,
+      "matchedUtteranceIndexes": [
+        11
+      ],
+      "startMs": 29900,
+      "endMs": 31150,
+      "durationMs": 1250,
+      "audioPath": "line-segments/lesson-27/l27-08.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-27/l27-08.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [11] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 9,
+      "displayOrder": 9,
+      "speaker": "ミラー",
+      "japanese": "すごいですね。鈴木さん、何でも作れるんですね。",
+      "normalizedTarget": "すごいですねすずきさんなんでもつくれるんですね",
+      "normalizedAsrText": "ええすごいですね鈴木さん何でも作れるんですね",
+      "phoneticSimilarity": 0.7111,
+      "matchedUtteranceIndexes": [
+        11,
+        12
+      ],
+      "startMs": 31420,
+      "endMs": 35410,
+      "durationMs": 3990,
+      "audioPath": "line-segments/lesson-27/l27-09.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-27/l27-09.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [11, 12] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 10,
+      "displayOrder": 10,
+      "speaker": "鈴木",
+      "japanese": "わたしの夢はいつか自分で家を建てることなんです。",
+      "normalizedTarget": "わたしのゆめはいつかじぶんでいえをたてることなんです",
+      "normalizedAsrText": "私の夢はいつか自分で家を立てることなんです",
+      "phoneticSimilarity": 0.6383,
+      "matchedUtteranceIndexes": [
+        13
+      ],
+      "startMs": 35890,
+      "endMs": 39350,
+      "durationMs": 3460,
+      "audioPath": "line-segments/lesson-27/l27-10.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-27/l27-10.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [13] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 11,
+      "displayOrder": 11,
+      "speaker": "ミラー",
+      "japanese": "すばらしい夢ですね。",
+      "normalizedTarget": "すばらしいゆめですね",
+      "normalizedAsrText": "素晴らしい夢ですね",
+      "phoneticSimilarity": 0.6316,
+      "matchedUtteranceIndexes": [
+        14
+      ],
+      "startMs": 39470,
+      "endMs": 41450,
+      "durationMs": 1980,
+      "audioPath": "line-segments/lesson-27/l27-11.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-27/l27-11.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [14] 对齐；相邻句使用不重叠边界"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ]
+}

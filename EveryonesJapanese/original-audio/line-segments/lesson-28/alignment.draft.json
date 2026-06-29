@@ -1,0 +1,287 @@
+{
+  "version": "minna-line-alignment-draft-v1",
+  "lesson": 28,
+  "sourceSet": "source-240000",
+  "cd": "CD07",
+  "sourceTrack": "source-240000/tracks/cd-007.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-240000/tracks/cd-007.mp3",
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "小川幸子",
+      "japanese": "ミラーさん、ちょっとお願いがあるんですが。",
+      "normalizedTarget": "みらーさんちょっとおねがいがあるんですが",
+      "normalizedAsrText": "みらさんちょっとお願いがあるんですが",
+      "phoneticSimilarity": 0.8947,
+      "matchedUtteranceIndexes": [
+        2
+      ],
+      "startMs": 8450,
+      "endMs": 11450,
+      "durationMs": 3000,
+      "audioPath": "line-segments/lesson-28/l28-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-28/l28-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [2] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "ミラー",
+      "japanese": "何ですか。",
+      "normalizedTarget": "なんですか",
+      "normalizedAsrText": "何ですか",
+      "phoneticSimilarity": 0.6667,
+      "matchedUtteranceIndexes": [
+        3
+      ],
+      "startMs": 11450,
+      "endMs": 12450,
+      "durationMs": 1000,
+      "audioPath": "line-segments/lesson-28/l28-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-28/l28-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [3] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "小川幸子",
+      "japanese": "実は8月にオーストラリアへホームステイに行くんです。",
+      "normalizedTarget": "じつははちがつにおーすとらりあへほーむすていにいくんです",
+      "normalizedAsrText": "実は8月におーすとらりあへほーむすていに行くんです",
+      "phoneticSimilarity": 0.7925,
+      "matchedUtteranceIndexes": [
+        4
+      ],
+      "startMs": 12450,
+      "endMs": 17450,
+      "durationMs": 5000,
+      "audioPath": "line-segments/lesson-28/l28-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-28/l28-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [4] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "ミラー",
+      "japanese": "ホームステイですか。いいですね。",
+      "normalizedTarget": "ほーむすていですかいいですね",
+      "normalizedAsrText": "ほーむすていですかいいですね",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        5
+      ],
+      "startMs": 17450,
+      "endMs": 20450,
+      "durationMs": 3000,
+      "audioPath": "line-segments/lesson-28/l28-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-28/l28-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [5] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "小川幸子",
+      "japanese": "ええ。それで、今友達と英語を勉強しているんですが……。",
+      "normalizedTarget": "ええそれでいまともだちとえいごをべんきょうしているんですが",
+      "normalizedAsrText": "ええそれで今友達と英語を勉強しているんですが",
+      "phoneticSimilarity": 0.5882,
+      "matchedUtteranceIndexes": [
+        6
+      ],
+      "startMs": 20450,
+      "endMs": 25450,
+      "durationMs": 5000,
+      "audioPath": "line-segments/lesson-28/l28-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-28/l28-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [6] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "ミラー",
+      "japanese": "ええ。",
+      "normalizedTarget": "ええ",
+      "normalizedAsrText": "ええ",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        7
+      ],
+      "startMs": 25450,
+      "endMs": 26450,
+      "durationMs": 1000,
+      "audioPath": "line-segments/lesson-28/l28-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-28/l28-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [7] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 7,
+      "displayOrder": 7,
+      "speaker": "小川幸子",
+      "japanese": "なかなか上手にならないんです。先生もいないし、英語で話すチャンスもないし……。",
+      "normalizedTarget": "なかなかじょうずにならないんですせんせいもいないしえいごではなすちゃんすもないし",
+      "normalizedAsrText": "なかなか上手にならないんです先生もいないし英語で話すちゃんすもないし",
+      "phoneticSimilarity": 0.7297,
+      "matchedUtteranceIndexes": [
+        8,
+        9
+      ],
+      "startMs": 26450,
+      "endMs": 33450,
+      "durationMs": 7000,
+      "audioPath": "line-segments/lesson-28/l28-07.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-28/l28-07.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [8, 9] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 8,
+      "displayOrder": 8,
+      "speaker": "小川幸子",
+      "japanese": "ミラーさん、会話の先生になっていただけませんか。",
+      "normalizedTarget": "みらーさんかいわのせんせいになっていただけませんか",
+      "normalizedAsrText": "みらさん会話の先生になっていただけませんか",
+      "phoneticSimilarity": 0.7391,
+      "matchedUtteranceIndexes": [
+        10
+      ],
+      "startMs": 33450,
+      "endMs": 38450,
+      "durationMs": 5000,
+      "audioPath": "line-segments/lesson-28/l28-08.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-28/l28-08.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [10] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 9,
+      "displayOrder": 9,
+      "speaker": "ミラー",
+      "japanese": "え？先生に？うーん、ちょっと仕事が……。",
+      "normalizedTarget": "えせんせいにうーんちょっとしごとが",
+      "normalizedAsrText": "え先生にうーんちょっと仕事が",
+      "phoneticSimilarity": 0.6452,
+      "matchedUtteranceIndexes": [
+        11,
+        12
+      ],
+      "startMs": 38450,
+      "endMs": 44450,
+      "durationMs": 6000,
+      "audioPath": "line-segments/lesson-28/l28-09.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-28/l28-09.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [11, 12] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 10,
+      "displayOrder": 10,
+      "speaker": "小川幸子",
+      "japanese": "お願い。ときどき、お茶でも飲みながら……。",
+      "normalizedTarget": "おねがいときどきおちゃでものみながら",
+      "normalizedAsrText": "お暇な時お茶でも飲みながら",
+      "phoneticSimilarity": 0.5161,
+      "matchedUtteranceIndexes": [
+        13
+      ],
+      "startMs": 44450,
+      "endMs": 48450,
+      "durationMs": 4000,
+      "audioPath": "line-segments/lesson-28/l28-10.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-28/l28-10.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [13] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 11,
+      "displayOrder": 11,
+      "speaker": "ミラー",
+      "japanese": "うーん、出張も多いし、もうすぐ日本語の試験もあるし……。",
+      "normalizedTarget": "うーんしゅっちょうもおおいしもうすぐにほんごのしけんもあるし",
+      "normalizedAsrText": "うーん出張も多いしもうすぐ日本語の試験もあるし",
+      "phoneticSimilarity": 0.566,
+      "matchedUtteranceIndexes": [
+        14
+      ],
+      "startMs": 48450,
+      "endMs": 54450,
+      "durationMs": 6000,
+      "audioPath": "line-segments/lesson-28/l28-11.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-28/l28-11.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [14] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 12,
+      "displayOrder": 12,
+      "speaker": "小川幸子",
+      "japanese": "そうですか。",
+      "normalizedTarget": "そうですか",
+      "normalizedAsrText": "そうですか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        15
+      ],
+      "startMs": 54450,
+      "endMs": 55450,
+      "durationMs": 1000,
+      "audioPath": "line-segments/lesson-28/l28-12.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-28/l28-12.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [15] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 13,
+      "displayOrder": 13,
+      "speaker": "ミラー",
+      "japanese": "すみません。",
+      "normalizedTarget": "すみません",
+      "normalizedAsrText": "すみません",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        16
+      ],
+      "startMs": 55450,
+      "endMs": 57450,
+      "durationMs": 2000,
+      "audioPath": "line-segments/lesson-28/l28-13.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-28/l28-13.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [16] 对齐；相邻句使用不重叠边界"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ]
+}

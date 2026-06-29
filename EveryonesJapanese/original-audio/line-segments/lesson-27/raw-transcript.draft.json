@@ -1,0 +1,113 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 27,
+  "cd": "CD04",
+  "sourceTrack": "source-240000/tracks/cd-004.mp3",
+  "durationMs": 44251,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "role": "timestamp_source_only"
+  },
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 0,
+      "endMs": 3000,
+      "text": "第27日会話",
+      "confidence": null
+    },
+    {
+      "index": 2,
+      "startMs": 3000,
+      "endMs": 6000,
+      "text": "何でも作れるんですね",
+      "confidence": null
+    },
+    {
+      "index": 3,
+      "startMs": 6000,
+      "endMs": 9000,
+      "text": "明るくていい部屋ですね",
+      "confidence": null
+    },
+    {
+      "index": 4,
+      "startMs": 9000,
+      "endMs": 12000,
+      "text": "ええ 天気がいい日には海が見えるんです",
+      "confidence": null
+    },
+    {
+      "index": 5,
+      "startMs": 12000,
+      "endMs": 15000,
+      "text": "このテーブルは面白いデザインですね",
+      "confidence": null
+    },
+    {
+      "index": 6,
+      "startMs": 15000,
+      "endMs": 17000,
+      "text": "どこで買ったんですか?",
+      "confidence": null
+    },
+    {
+      "index": 7,
+      "startMs": 17000,
+      "endMs": 19000,
+      "text": "これは私が作ったんですよ",
+      "confidence": null
+    },
+    {
+      "index": 8,
+      "startMs": 19000,
+      "endMs": 21000,
+      "text": "ええ 本当ですか?",
+      "confidence": null
+    },
+    {
+      "index": 9,
+      "startMs": 21000,
+      "endMs": 25000,
+      "text": "ええ 趣味は自分で家具を作ることなんです",
+      "confidence": null
+    },
+    {
+      "index": 10,
+      "startMs": 25000,
+      "endMs": 29000,
+      "text": "ええ じゃあ あの本棚も作ったんですか?",
+      "confidence": null
+    },
+    {
+      "index": 11,
+      "startMs": 29000,
+      "endMs": 32000,
+      "text": "ええ すごいですね",
+      "confidence": null
+    },
+    {
+      "index": 12,
+      "startMs": 32000,
+      "endMs": 35000,
+      "text": "鈴木さん 何でも作れるんですね",
+      "confidence": null
+    },
+    {
+      "index": 13,
+      "startMs": 35000,
+      "endMs": 39000,
+      "text": "私の夢はいつか自分で家を立てることなんです",
+      "confidence": null
+    },
+    {
+      "index": 14,
+      "startMs": 39000,
+      "endMs": 41000,
+      "text": "素晴らしい夢ですね",
+      "confidence": null
+    }
+  ]
+}

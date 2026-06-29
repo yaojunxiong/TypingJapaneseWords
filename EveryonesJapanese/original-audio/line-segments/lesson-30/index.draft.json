@@ -1,0 +1,249 @@
+{
+  "version": "minna-original-line-segments-draft-v1",
+  "lesson": 30,
+  "sourceSet": "source-240000",
+  "cd": "CD13",
+  "sourceTrack": "source-240000/tracks/cd-013.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-240000/tracks/cd-013.mp3",
+  "segmentCount": 11,
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "ミラー",
+      "japanese": "こんにちは。",
+      "normalizedTarget": "こんにちは",
+      "normalizedAsrText": "こんにちは",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        2
+      ],
+      "startMs": 7900,
+      "endMs": 8450,
+      "durationMs": 550,
+      "audioPath": "line-segments/lesson-30/l30-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-30/l30-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [2] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "鈴木",
+      "japanese": "いらっしゃい。さあ、どうぞ。",
+      "normalizedTarget": "いらっしゃいさあどうぞ",
+      "normalizedAsrText": "いらっしゃいさあどうぞ",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        3,
+        4
+      ],
+      "startMs": 8470,
+      "endMs": 11440,
+      "durationMs": 2970,
+      "audioPath": "line-segments/lesson-30/l30-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-30/l30-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [3, 4] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "ミラー",
+      "japanese": "大きいリュックが置いてありますね。山へ行くんですか。",
+      "normalizedTarget": "おおきいりゅっくがおいてありますねやまへいくんですか",
+      "normalizedAsrText": "大きいりゅっくが置いてありますね山へ行くんですか",
+      "phoneticSimilarity": 0.8,
+      "matchedUtteranceIndexes": [
+        5,
+        6
+      ],
+      "startMs": 13450,
+      "endMs": 17450,
+      "durationMs": 4000,
+      "audioPath": "line-segments/lesson-30/l30-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-30/l30-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [5, 6] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "鈴木",
+      "japanese": "いいえ。非常袋ですよ。",
+      "normalizedTarget": "いいえひじょうぶくろですよ",
+      "normalizedAsrText": "いえ非常袋ですよ",
+      "phoneticSimilarity": 0.4762,
+      "matchedUtteranceIndexes": [
+        7
+      ],
+      "startMs": 17900,
+      "endMs": 19450,
+      "durationMs": 1550,
+      "audioPath": "line-segments/lesson-30/l30-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-30/l30-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [7] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "ミラー",
+      "japanese": "非常袋？何ですか。",
+      "normalizedTarget": "ひじょうぶくろなんですか",
+      "normalizedAsrText": "非常袋何ですか",
+      "phoneticSimilarity": 0.3158,
+      "matchedUtteranceIndexes": [
+        8,
+        9
+      ],
+      "startMs": 19450,
+      "endMs": 23450,
+      "durationMs": 4000,
+      "audioPath": "line-segments/lesson-30/l30-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-30/l30-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [8, 9] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "鈴木",
+      "japanese": "非常時に使う物を入れておく袋です。電気やガスが止まっても、3日ぐらい生活できる物が入れてあるんです。",
+      "normalizedTarget": "ひじょうじにつかうものをいれておくふくろですでんきやがすがとまってもみっかぐらいせいかつできるものがいれてあるんです",
+      "normalizedAsrText": "非常時に使うものを入れておく袋です電気やがすが止まっても3日ぐらい生活できるものが入れてあるんです",
+      "phoneticSimilarity": 0.6542,
+      "matchedUtteranceIndexes": [
+        10,
+        11
+      ],
+      "startMs": 23450,
+      "endMs": 31450,
+      "durationMs": 8000,
+      "audioPath": "line-segments/lesson-30/l30-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-30/l30-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [10, 11] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 7,
+      "displayOrder": 7,
+      "speaker": "ミラー",
+      "japanese": "水や食べ物ですか。",
+      "normalizedTarget": "みずやたべものですか",
+      "normalizedAsrText": "水や食べ物ですか",
+      "phoneticSimilarity": 0.5556,
+      "matchedUtteranceIndexes": [
+        12
+      ],
+      "startMs": 31450,
+      "endMs": 33450,
+      "durationMs": 2000,
+      "audioPath": "line-segments/lesson-30/l30-07.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-30/l30-07.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [12] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 8,
+      "displayOrder": 8,
+      "speaker": "鈴木",
+      "japanese": "ええ、ほかにもいろいろありますよ。懐中電灯とか、ラジオとか……。",
+      "normalizedTarget": "ええほかにもいろいろありますよかいちゅうでんとうとからじおとか",
+      "normalizedAsrText": "ええ他にもいろいろありますよ海中電灯とからじおとか",
+      "phoneticSimilarity": 0.7143,
+      "matchedUtteranceIndexes": [
+        13,
+        14
+      ],
+      "startMs": 33450,
+      "endMs": 39450,
+      "durationMs": 6000,
+      "audioPath": "line-segments/lesson-30/l30-08.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-30/l30-08.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [13, 14] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 9,
+      "displayOrder": 9,
+      "speaker": "ミラー",
+      "japanese": "わたしも準備しておかないと。",
+      "normalizedTarget": "わたしもじゅんびしておかないと",
+      "normalizedAsrText": "私も準備しておかないと",
+      "phoneticSimilarity": 0.6154,
+      "matchedUtteranceIndexes": [
+        15
+      ],
+      "startMs": 39470,
+      "endMs": 42170,
+      "durationMs": 2700,
+      "audioPath": "line-segments/lesson-30/l30-09.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-30/l30-09.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [15] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 10,
+      "displayOrder": 10,
+      "speaker": "鈴木",
+      "japanese": "非常食はスーパーでも売っていますよ。",
+      "normalizedTarget": "ひじょうしょくはすーぱーでもうっていますよ",
+      "normalizedAsrText": "非常袋はすーぱーでも売っていますよ",
+      "phoneticSimilarity": 0.6842,
+      "matchedUtteranceIndexes": [
+        16
+      ],
+      "startMs": 42800,
+      "endMs": 44950,
+      "durationMs": 2150,
+      "audioPath": "line-segments/lesson-30/l30-10.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-30/l30-10.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [16] 对齐；相邻句使用不重叠边界"
+    },
+    {
+      "lineNo": 11,
+      "displayOrder": 11,
+      "speaker": "ミラー",
+      "japanese": "そうですか。じゃ、買っておきます。",
+      "normalizedTarget": "そうですかじゃかっておきます",
+      "normalizedAsrText": "そうですかじゃあ買っておきます",
+      "phoneticSimilarity": 0.8966,
+      "matchedUtteranceIndexes": [
+        17
+      ],
+      "startMs": 45400,
+      "endMs": 48170,
+      "durationMs": 2770,
+      "audioPath": "line-segments/lesson-30/l30-11.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-30/l30-11.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [17] 对齐；相邻句使用不重叠边界"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ]
+}
