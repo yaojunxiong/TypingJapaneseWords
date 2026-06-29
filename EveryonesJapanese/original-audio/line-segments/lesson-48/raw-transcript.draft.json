@@ -1,0 +1,64 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 48,
+  "cd": "CD67",
+  "sourceTrack": "source-240000/tracks/cd-067.mp3",
+  "durationMs": 42214,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "role": "timestamp_source_only"
+  },
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 0,
+      "endMs": 7300,
+      "text": "第48日会話 休ませていただけませんか",
+      "confidence": null
+    },
+    {
+      "index": 2,
+      "startMs": 7300,
+      "endMs": 11680,
+      "text": "課長今お忙しいですか いいえどうぞ",
+      "confidence": null
+    },
+    {
+      "index": 3,
+      "startMs": 11680,
+      "endMs": 18120,
+      "text": "ちょっとお願いがあるんですが なんですかあの来月7日から10日ほど休みを",
+      "confidence": null
+    },
+    {
+      "index": 4,
+      "startMs": 18120,
+      "endMs": 23600,
+      "text": "取らせていただけませんか 10日間ですか実はアメリカの友達が",
+      "confidence": null
+    },
+    {
+      "index": 5,
+      "startMs": 23600,
+      "endMs": 30440,
+      "text": "結婚するんです そうですかえっと来月は20日に営業会議が",
+      "confidence": null
+    },
+    {
+      "index": 6,
+      "startMs": 30440,
+      "endMs": 34760,
+      "text": "ありますがそれまでに帰れますね はい",
+      "confidence": null
+    },
+    {
+      "index": 7,
+      "startMs": 34760,
+      "endMs": 41280,
+      "text": "じゃあ構いませんよ楽しんできてください ありがとうございます",
+      "confidence": null
+    }
+  ]
+}

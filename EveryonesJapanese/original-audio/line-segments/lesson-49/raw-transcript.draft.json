@@ -1,0 +1,134 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 49,
+  "cd": "CD70",
+  "sourceTrack": "source-240000/tracks/cd-070.mp3",
+  "durationMs": 50913,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "role": "timestamp_source_only"
+  },
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 0,
+      "endMs": 6720,
+      "text": "第49課 会話 よろしくお伝えください",
+      "confidence": null
+    },
+    {
+      "index": 2,
+      "startMs": 12720,
+      "endMs": 14920,
+      "text": "はい 暇あり小学校です",
+      "confidence": null
+    },
+    {
+      "index": 3,
+      "startMs": 14920,
+      "endMs": 16480,
+      "text": "おはようございます",
+      "confidence": null
+    },
+    {
+      "index": 4,
+      "startMs": 16480,
+      "endMs": 19760,
+      "text": "5年に組のハンスシュミットの母ですが",
+      "confidence": null
+    },
+    {
+      "index": 5,
+      "startMs": 19760,
+      "endMs": 22560,
+      "text": "伊藤先生はいらっしゃいますか?",
+      "confidence": null
+    },
+    {
+      "index": 6,
+      "startMs": 22560,
+      "endMs": 23960,
+      "text": "まだなんですが",
+      "confidence": null
+    },
+    {
+      "index": 7,
+      "startMs": 23960,
+      "endMs": 27440,
+      "text": "では伊藤先生に伝えていただきたいんですが",
+      "confidence": null
+    },
+    {
+      "index": 8,
+      "startMs": 27440,
+      "endMs": 29200,
+      "text": "はい なんでしょうか",
+      "confidence": null
+    },
+    {
+      "index": 9,
+      "startMs": 29200,
+      "endMs": 32360,
+      "text": "実はハンスが有名熱を出しまして",
+      "confidence": null
+    },
+    {
+      "index": 10,
+      "startMs": 32360,
+      "endMs": 34520,
+      "text": "けさもまだ下がらないんです",
+      "confidence": null
+    },
+    {
+      "index": 11,
+      "startMs": 34520,
+      "endMs": 36400,
+      "text": "それはいけませんね",
+      "confidence": null
+    },
+    {
+      "index": 12,
+      "startMs": 36400,
+      "endMs": 39720,
+      "text": "それで今日は学校を休ませますので",
+      "confidence": null
+    },
+    {
+      "index": 13,
+      "startMs": 39720,
+      "endMs": 42160,
+      "text": "先生によろしくお伝えください",
+      "confidence": null
+    },
+    {
+      "index": 14,
+      "startMs": 42160,
+      "endMs": 43520,
+      "text": "わかりました",
+      "confidence": null
+    },
+    {
+      "index": 15,
+      "startMs": 43520,
+      "endMs": 45000,
+      "text": "どうぞお大事に",
+      "confidence": null
+    },
+    {
+      "index": 16,
+      "startMs": 45000,
+      "endMs": 47000,
+      "text": "ありがとうございます",
+      "confidence": null
+    },
+    {
+      "index": 17,
+      "startMs": 47000,
+      "endMs": 49000,
+      "text": "失礼いたします",
+      "confidence": null
+    }
+  ]
+}

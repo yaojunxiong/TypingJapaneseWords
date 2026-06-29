@@ -1,0 +1,120 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 47,
+  "cd": "CD64",
+  "sourceTrack": "source-240000/tracks/cd-064.mp3",
+  "durationMs": 46550,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "role": "timestamp_source_only"
+  },
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 0,
+      "endMs": 6000,
+      "text": "第47課 会話 婚約したそうです",
+      "confidence": null
+    },
+    {
+      "index": 2,
+      "startMs": 6000,
+      "endMs": 8000,
+      "text": "お酒に失礼します",
+      "confidence": null
+    },
+    {
+      "index": 3,
+      "startMs": 8000,
+      "endMs": 11000,
+      "text": "あ 渡辺さん ちょっと待って 僕も帰ります",
+      "confidence": null
+    },
+    {
+      "index": 4,
+      "startMs": 11000,
+      "endMs": 14000,
+      "text": "すみません ちょっと急ぎますから",
+      "confidence": null
+    },
+    {
+      "index": 5,
+      "startMs": 15000,
+      "endMs": 19000,
+      "text": "渡辺さん このごろ早く帰りますね",
+      "confidence": null
+    },
+    {
+      "index": 6,
+      "startMs": 19000,
+      "endMs": 21000,
+      "text": "どうも恋人ができたようですね",
+      "confidence": null
+    },
+    {
+      "index": 7,
+      "startMs": 21000,
+      "endMs": 26000,
+      "text": "あ 知らないんですか? この間 婚約したそうですよ",
+      "confidence": null
+    },
+    {
+      "index": 8,
+      "startMs": 26000,
+      "endMs": 29000,
+      "text": "え? 誰ですか相手は?",
+      "confidence": null
+    },
+    {
+      "index": 9,
+      "startMs": 29000,
+      "endMs": 31000,
+      "text": "imcの鈴木さんですよ",
+      "confidence": null
+    },
+    {
+      "index": 10,
+      "startMs": 31000,
+      "endMs": 33000,
+      "text": "え?鈴木さん?",
+      "confidence": null
+    },
+    {
+      "index": 11,
+      "startMs": 33000,
+      "endMs": 36000,
+      "text": "ワットさんの結婚式で知り合ったそうですよ",
+      "confidence": null
+    },
+    {
+      "index": 12,
+      "startMs": 36000,
+      "endMs": 38000,
+      "text": "そうですか",
+      "confidence": null
+    },
+    {
+      "index": 13,
+      "startMs": 38000,
+      "endMs": 40000,
+      "text": "ところで 高橋さんは?",
+      "confidence": null
+    },
+    {
+      "index": 14,
+      "startMs": 40000,
+      "endMs": 42000,
+      "text": "僕ですか?",
+      "confidence": null
+    },
+    {
+      "index": 15,
+      "startMs": 42000,
+      "endMs": 44000,
+      "text": "僕は仕事が恋人です",
+      "confidence": null
+    }
+  ]
+}

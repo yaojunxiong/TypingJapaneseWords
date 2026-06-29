@@ -1,0 +1,266 @@
+{
+  "version": "minna-line-alignment-draft-v1",
+  "lesson": 47,
+  "sourceSet": "source-240000",
+  "cd": "CD64",
+  "sourceTrack": "source-240000/tracks/cd-064.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-240000/tracks/cd-064.mp3",
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "渡辺",
+      "japanese": "お先に失礼します。",
+      "normalizedTarget": "おさきにしつれいします",
+      "normalizedAsrText": "お酒に失礼します",
+      "phoneticSimilarity": 0.5263,
+      "matchedUtteranceIndexes": [
+        2
+      ],
+      "startMs": 6000,
+      "endMs": 8000,
+      "durationMs": 2000,
+      "audioPath": "line-segments/lesson-47/l47-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-47/l47-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [2] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "高橋",
+      "japanese": "あっ、渡辺さん、ちょっと待って。僕も帰ります。",
+      "normalizedTarget": "あっわたなべさんちょっとまってぼくもかえります",
+      "normalizedAsrText": "あ渡辺さんちょっと待って僕も帰ります",
+      "phoneticSimilarity": 0.6341,
+      "matchedUtteranceIndexes": [
+        3
+      ],
+      "startMs": 8000,
+      "endMs": 11000,
+      "durationMs": 3000,
+      "audioPath": "line-segments/lesson-47/l47-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-47/l47-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [3] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "渡辺",
+      "japanese": "すみません、ちょっと急ぎますから。",
+      "normalizedTarget": "すみませんちょっといそぎますから",
+      "normalizedAsrText": "すみませんちょっと急ぎますから",
+      "phoneticSimilarity": 0.9032,
+      "matchedUtteranceIndexes": [
+        4
+      ],
+      "startMs": 11000,
+      "endMs": 14000,
+      "durationMs": 3000,
+      "audioPath": "line-segments/lesson-47/l47-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-47/l47-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [4] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "高橋",
+      "japanese": "渡辺さん、このごろ早く帰りますね。どうも恋人ができたようですね。",
+      "normalizedTarget": "わたなべさんこのごろはやくかえりますねどうもこいびとができたようですね",
+      "normalizedAsrText": "渡辺さんこのごろ早く帰りますねどうも恋人ができたようですね",
+      "phoneticSimilarity": 0.7188,
+      "matchedUtteranceIndexes": [
+        5,
+        6
+      ],
+      "startMs": 15000,
+      "endMs": 21000,
+      "durationMs": 6000,
+      "audioPath": "line-segments/lesson-47/l47-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-47/l47-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [5, 6] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "林",
+      "japanese": "あ、知らないんですか。この間婚約したそうですよ。",
+      "normalizedTarget": "あしらないんですかこのあいだこんやくしたそうですよ",
+      "normalizedAsrText": "あ知らないんですかこの間婚約したそうですよ",
+      "phoneticSimilarity": 0.7391,
+      "matchedUtteranceIndexes": [
+        7
+      ],
+      "startMs": 21200,
+      "endMs": 26000,
+      "durationMs": 4800,
+      "audioPath": "line-segments/lesson-47/l47-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-47/l47-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [7] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "高橋",
+      "japanese": "えっ、だれですか、相手は。",
+      "normalizedTarget": "えっだれですかあいては",
+      "normalizedAsrText": "え誰ですか相手は",
+      "phoneticSimilarity": 0.5263,
+      "matchedUtteranceIndexes": [
+        8
+      ],
+      "startMs": 26000,
+      "endMs": 29000,
+      "durationMs": 3000,
+      "audioPath": "line-segments/lesson-47/l47-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-47/l47-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [8] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 7,
+      "displayOrder": 7,
+      "speaker": "林",
+      "japanese": "IMCの鈴木さんですよ。",
+      "normalizedTarget": "imcのすずきさんですよ",
+      "normalizedAsrText": "imcの鈴木さんですよ",
+      "phoneticSimilarity": 0.7826,
+      "matchedUtteranceIndexes": [
+        9
+      ],
+      "startMs": 29000,
+      "endMs": 31000,
+      "durationMs": 2000,
+      "audioPath": "line-segments/lesson-47/l47-07.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-47/l47-07.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [9] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 8,
+      "displayOrder": 8,
+      "speaker": "高橋",
+      "japanese": "えっ、鈴木さん？",
+      "normalizedTarget": "えっすずきさん",
+      "normalizedAsrText": "え鈴木さん",
+      "phoneticSimilarity": 0.5,
+      "matchedUtteranceIndexes": [
+        10
+      ],
+      "startMs": 31000,
+      "endMs": 33000,
+      "durationMs": 2000,
+      "audioPath": "line-segments/lesson-47/l47-08.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-47/l47-08.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [10] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 9,
+      "displayOrder": 9,
+      "speaker": "林",
+      "japanese": "ワットさんの結婚式で知り合ったそうですよ。",
+      "normalizedTarget": "わっとさんのけっこんしきでしりあったそうですよ",
+      "normalizedAsrText": "わっとさんの結婚式で知り合ったそうですよ",
+      "phoneticSimilarity": 0.6977,
+      "matchedUtteranceIndexes": [
+        11
+      ],
+      "startMs": 33000,
+      "endMs": 36000,
+      "durationMs": 3000,
+      "audioPath": "line-segments/lesson-47/l47-09.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-47/l47-09.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [11] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 10,
+      "displayOrder": 10,
+      "speaker": "高橋",
+      "japanese": "そうですか。",
+      "normalizedTarget": "そうですか",
+      "normalizedAsrText": "そうですか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        12
+      ],
+      "startMs": 36000,
+      "endMs": 38000,
+      "durationMs": 2000,
+      "audioPath": "line-segments/lesson-47/l47-10.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-47/l47-10.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [12] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 11,
+      "displayOrder": 11,
+      "speaker": "林",
+      "japanese": "ところで、高橋さんは？",
+      "normalizedTarget": "ところでたかはしさんは",
+      "normalizedAsrText": "ところで高橋さんは",
+      "phoneticSimilarity": 0.7,
+      "matchedUtteranceIndexes": [
+        13
+      ],
+      "startMs": 38000,
+      "endMs": 40000,
+      "durationMs": 2000,
+      "audioPath": "line-segments/lesson-47/l47-11.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-47/l47-11.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [13] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 12,
+      "displayOrder": 12,
+      "speaker": "高橋",
+      "japanese": "僕ですか。僕は仕事が恋人です。",
+      "normalizedTarget": "ぼくですかぼくはしごとがこいびとです",
+      "normalizedAsrText": "僕ですか僕は仕事が恋人です",
+      "phoneticSimilarity": 0.4516,
+      "matchedUtteranceIndexes": [
+        14,
+        15
+      ],
+      "startMs": 40000,
+      "endMs": 44000,
+      "durationMs": 4000,
+      "audioPath": "line-segments/lesson-47/l47-12.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-47/l47-12.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [14, 15] 对齐；应用已校准 MP3 时间偏移"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ]
+}

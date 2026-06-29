@@ -1,0 +1,246 @@
+{
+  "version": "minna-original-line-segments-draft-v1",
+  "lesson": 48,
+  "sourceSet": "source-240000",
+  "cd": "CD67",
+  "sourceTrack": "source-240000/tracks/cd-067.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-240000/tracks/cd-067.mp3",
+  "segmentCount": 11,
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "ミラー",
+      "japanese": "課長、今お忙しいですか。",
+      "normalizedTarget": "かちょういまおいそがしいですか",
+      "normalizedAsrText": "課長今お忙しいですかいいえどうぞ",
+      "phoneticSimilarity": 0.3871,
+      "matchedUtteranceIndexes": [
+        2
+      ],
+      "startMs": 7300,
+      "endMs": 10100,
+      "durationMs": 2800,
+      "audioPath": "line-segments/lesson-48/l48-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-48/l48-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [2] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "中村課長",
+      "japanese": "いいえ、どうぞ。",
+      "normalizedTarget": "いいえどうぞ",
+      "normalizedAsrText": "課長今お忙しいですかいいえどうぞ",
+      "phoneticSimilarity": 0.5455,
+      "matchedUtteranceIndexes": [
+        2
+      ],
+      "startMs": 10100,
+      "endMs": 11600,
+      "durationMs": 1500,
+      "audioPath": "line-segments/lesson-48/l48-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-48/l48-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [2] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "ミラー",
+      "japanese": "ちょっとお願いがあるんですが……。",
+      "normalizedTarget": "ちょっとおねがいがあるんですが",
+      "normalizedAsrText": "ちょっとお願いがあるんですがなんですかあの来月7日から10日ほど休みを",
+      "phoneticSimilarity": 0.52,
+      "matchedUtteranceIndexes": [
+        3
+      ],
+      "startMs": 11680,
+      "endMs": 13600,
+      "durationMs": 1920,
+      "audioPath": "line-segments/lesson-48/l48-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-48/l48-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [3] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "中村課長",
+      "japanese": "何ですか。",
+      "normalizedTarget": "なんですか",
+      "normalizedAsrText": "ちょっとお願いがあるんですがなんですかあの来月7日から10日ほど休みを",
+      "phoneticSimilarity": 0.25,
+      "matchedUtteranceIndexes": [
+        3
+      ],
+      "startMs": 13600,
+      "endMs": 14660,
+      "durationMs": 1060,
+      "audioPath": "line-segments/lesson-48/l48-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-48/l48-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [3] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "ミラー",
+      "japanese": "あのう、来月7日から10日ほど休みを取らせていただけませんか。",
+      "normalizedTarget": "あのうらいげつなのかからとおかほどやすみをとらせていただけませんか",
+      "normalizedAsrText": "ちょっとお願いがあるんですがなんですかあの来月7日から10日ほど休みを取らせていただけませんか10日間ですか実はあめりかの友達が",
+      "phoneticSimilarity": 0.3918,
+      "matchedUtteranceIndexes": [
+        3,
+        4
+      ],
+      "startMs": 14700,
+      "endMs": 19840,
+      "durationMs": 5140,
+      "audioPath": "line-segments/lesson-48/l48-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-48/l48-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [3, 4] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "中村課長",
+      "japanese": "10日間ですか。",
+      "normalizedTarget": "とおかかんですか",
+      "normalizedAsrText": "取らせていただけませんか10日間ですか実はあめりかの友達が",
+      "phoneticSimilarity": 0.2162,
+      "matchedUtteranceIndexes": [
+        4
+      ],
+      "startMs": 20000,
+      "endMs": 21600,
+      "durationMs": 1600,
+      "audioPath": "line-segments/lesson-48/l48-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-48/l48-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [4] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 7,
+      "displayOrder": 7,
+      "speaker": "ミラー",
+      "japanese": "実はアメリカの友達が結婚するんです。",
+      "normalizedTarget": "じつはあめりかのともだちがけっこんするんです",
+      "normalizedAsrText": "取らせていただけませんか10日間ですか実はあめりかの友達が結婚するんですそうですかえっと来月は20日に営業会議が",
+      "phoneticSimilarity": 0.3077,
+      "matchedUtteranceIndexes": [
+        4,
+        5
+      ],
+      "startMs": 21680,
+      "endMs": 25300,
+      "durationMs": 3620,
+      "audioPath": "line-segments/lesson-48/l48-07.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-48/l48-07.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [4, 5] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 8,
+      "displayOrder": 8,
+      "speaker": "中村課長",
+      "japanese": "そうですか。えーと、来月は20日に営業会議がありますが、それまでに帰れますね。",
+      "normalizedTarget": "そうですかえーとらいげつははつかにえいぎょうかいぎがありますがそれまでにかえれますね",
+      "normalizedAsrText": "結婚するんですそうですかえっと来月は20日に営業会議が",
+      "phoneticSimilarity": 0.2899,
+      "matchedUtteranceIndexes": [
+        5
+      ],
+      "startMs": 25300,
+      "endMs": 33680,
+      "durationMs": 8380,
+      "audioPath": "line-segments/lesson-48/l48-08.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-48/l48-08.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [5] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 9,
+      "displayOrder": 9,
+      "speaker": "ミラー",
+      "japanese": "はい。",
+      "normalizedTarget": "はい",
+      "normalizedAsrText": "ありますがそれまでに帰れますねはい",
+      "phoneticSimilarity": 0.2105,
+      "matchedUtteranceIndexes": [
+        6
+      ],
+      "startMs": 33680,
+      "endMs": 34760,
+      "durationMs": 1080,
+      "audioPath": "line-segments/lesson-48/l48-09.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-48/l48-09.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [6] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 10,
+      "displayOrder": 10,
+      "speaker": "中村課長",
+      "japanese": "じゃ、かまいませんよ。楽しんで来てください。",
+      "normalizedTarget": "じゃかまいませんよたのしんできてください",
+      "normalizedAsrText": "じゃあ構いませんよ楽しんできてくださいありがとうございます",
+      "phoneticSimilarity": 0.6531,
+      "matchedUtteranceIndexes": [
+        7
+      ],
+      "startMs": 35140,
+      "endMs": 37740,
+      "durationMs": 2600,
+      "audioPath": "line-segments/lesson-48/l48-10.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-48/l48-10.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [7] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 11,
+      "displayOrder": 11,
+      "speaker": "ミラー",
+      "japanese": "ありがとうございます。",
+      "normalizedTarget": "ありがとうございます",
+      "normalizedAsrText": "じゃあ構いませんよ楽しんできてくださいありがとうございます",
+      "phoneticSimilarity": 0.5128,
+      "matchedUtteranceIndexes": [
+        7
+      ],
+      "startMs": 37740,
+      "endMs": 40560,
+      "durationMs": 2820,
+      "audioPath": "line-segments/lesson-48/l48-11.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-48/l48-11.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [7] 对齐；应用已校准 MP3 时间偏移"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "version": "minna-line-alignment-draft-v1",
+  "lesson": 46,
+  "sourceSet": "source-240000",
+  "cd": "CD61",
+  "sourceTrack": "source-240000/tracks/cd-061.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-240000/tracks/cd-061.mp3",
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "係員",
+      "japanese": "はい、ガスサービスセンターでございます。",
+      "normalizedTarget": "はいがすさーびすせんたーでございます",
+      "normalizedAsrText": "はいがすさーびすせんたーでございます",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        2
+      ],
+      "startMs": 14200,
+      "endMs": 17040,
+      "durationMs": 2840,
+      "audioPath": "line-segments/lesson-46/l46-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-46/l46-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [2] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "タワポン",
+      "japanese": "あのう、ガスレンジの調子がおかしいんですが……。",
+      "normalizedTarget": "あのうがすれんじのちょうしがおかしいんですが",
+      "normalizedAsrText": "あのーがすれんじの調子がおかしいんですが",
+      "phoneticSimilarity": 0.8095,
+      "matchedUtteranceIndexes": [
+        3
+      ],
+      "startMs": 17040,
+      "endMs": 20640,
+      "durationMs": 3600,
+      "audioPath": "line-segments/lesson-46/l46-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-46/l46-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [3] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "係員",
+      "japanese": "どんな具合ですか。",
+      "normalizedTarget": "どんなぐあいですか",
+      "normalizedAsrText": "どんな具合ですか",
+      "phoneticSimilarity": 0.7059,
+      "matchedUtteranceIndexes": [
+        4
+      ],
+      "startMs": 20640,
+      "endMs": 22280,
+      "durationMs": 1640,
+      "audioPath": "line-segments/lesson-46/l46-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-46/l46-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [4] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "タワポン",
+      "japanese": "先週直してもらったばかりなのに、また火が消えてしまうんです。危ないので、すぐ見に来てくれませんか。",
+      "normalizedTarget": "せんしゅうなおしてもらったばかりなのにまたひがきえてしまうんですあぶないのですぐみにきてくれませんか",
+      "normalizedAsrText": "先週直してもらったばかりなのにまた火が消えてしまうんです危ないのですぐ見に来てくれませんか",
+      "phoneticSimilarity": 0.7789,
+      "matchedUtteranceIndexes": [
+        5,
+        6
+      ],
+      "startMs": 22280,
+      "endMs": 29720,
+      "durationMs": 7440,
+      "audioPath": "line-segments/lesson-46/l46-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-46/l46-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [5, 6] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "係員",
+      "japanese": "わかりました。5時ごろには行けると思います。ご住所とお名前をお願いします。",
+      "normalizedTarget": "わかりましたごじごろにはいけるとおもいますごじゅうしょとおなまえをおねがいします",
+      "normalizedAsrText": "わかりましたごじごろには行けると思いますご住所とお名前をお願いします",
+      "phoneticSimilarity": 0.7297,
+      "matchedUtteranceIndexes": [
+        7,
+        8,
+        9
+      ],
+      "startMs": 29720,
+      "endMs": 38320,
+      "durationMs": 8600,
+      "audioPath": "line-segments/lesson-46/l46-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-46/l46-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [7, 8, 9] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "タワポン",
+      "japanese": "もしもし、5時ごろにガスレンジを見に来てくれるはずなんですが、まだですか。",
+      "normalizedTarget": "もしもしごじごろにがすれんじをみにきてくれるはずなんですがまだですか",
+      "normalizedAsrText": "もしもしごじごろにがすれんじを見に来てくれるはずなんですがまだですか",
+      "phoneticSimilarity": 0.9412,
+      "matchedUtteranceIndexes": [
+        10,
+        11
+      ],
+      "startMs": 43960,
+      "endMs": 49720,
+      "durationMs": 5760,
+      "audioPath": "line-segments/lesson-46/l46-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-46/l46-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [10, 11] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 7,
+      "displayOrder": 7,
+      "speaker": "係員",
+      "japanese": "申し訳ありません。どちら様でしょうか。",
+      "normalizedTarget": "もうしわけありませんどちらさまでしょうか",
+      "normalizedAsrText": "申し訳ありませんどちら様でしょうか",
+      "phoneticSimilarity": 0.7568,
+      "matchedUtteranceIndexes": [
+        12
+      ],
+      "startMs": 49720,
+      "endMs": 53000,
+      "durationMs": 3280,
+      "audioPath": "line-segments/lesson-46/l46-07.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-46/l46-07.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [12] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 8,
+      "displayOrder": 8,
+      "speaker": "タワポン",
+      "japanese": "タワポンです。",
+      "normalizedTarget": "たわぽんです",
+      "normalizedAsrText": "たわぽんです",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        13
+      ],
+      "startMs": 53000,
+      "endMs": 54280,
+      "durationMs": 1280,
+      "audioPath": "line-segments/lesson-46/l46-08.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-46/l46-08.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [13] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 9,
+      "displayOrder": 9,
+      "speaker": "係員",
+      "japanese": "少々お待ちください。係員に連絡しますから。",
+      "normalizedTarget": "しょうしょうおまちくださいかかりいんにれんらくしますから",
+      "normalizedAsrText": "少々お待ちくださいかかりんに連絡しますから",
+      "phoneticSimilarity": 0.6531,
+      "matchedUtteranceIndexes": [
+        14
+      ],
+      "startMs": 54280,
+      "endMs": 58240,
+      "durationMs": 3960,
+      "audioPath": "line-segments/lesson-46/l46-09.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-46/l46-09.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [14] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 10,
+      "displayOrder": 10,
+      "speaker": "係員",
+      "japanese": "お待たせしました。今そちらに向かっているところです。あと10分ほどお待ちください。",
+      "normalizedTarget": "おまたせしましたいまそちらにむかっているところですあとじゅっぷんほどおまちください",
+      "normalizedAsrText": "お待たせしました今そちらに向かっているところですあと10分ほどお待ちください",
+      "phoneticSimilarity": 0.7848,
+      "matchedUtteranceIndexes": [
+        15,
+        16,
+        17
+      ],
+      "startMs": 60720,
+      "endMs": 67560,
+      "durationMs": 6840,
+      "audioPath": "line-segments/lesson-46/l46-10.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-46/l46-10.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [15, 16, 17] 对齐；应用已校准 MP3 时间偏移"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ]
+}

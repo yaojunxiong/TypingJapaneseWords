@@ -1,0 +1,272 @@
+{
+  "version": "minna-original-line-segments-draft-v1",
+  "lesson": 50,
+  "sourceSet": "source-240000",
+  "cd": "CD73",
+  "sourceTrack": "source-240000/tracks/cd-073.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-240000/tracks/cd-073.mp3",
+  "segmentCount": 12,
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "司会者",
+      "japanese": "優勝おめでとうございます。すばらしいスピーチでした。",
+      "normalizedTarget": "ゆうしょうおめでとうございますすばらしいすぴーちでした",
+      "normalizedAsrText": "優勝おめでとうございます素晴らしいすぴーちでした",
+      "phoneticSimilarity": 0.7843,
+      "matchedUtteranceIndexes": [
+        2,
+        3
+      ],
+      "startMs": 6540,
+      "endMs": 11000,
+      "durationMs": 4460,
+      "audioPath": "line-segments/lesson-50/l50-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-50/l50-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [2, 3] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "ミラー",
+      "japanese": "ありがとうございます。",
+      "normalizedTarget": "ありがとうございます",
+      "normalizedAsrText": "ありがとうございます",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        4
+      ],
+      "startMs": 11000,
+      "endMs": 12440,
+      "durationMs": 1440,
+      "audioPath": "line-segments/lesson-50/l50-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-50/l50-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [4] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "司会者",
+      "japanese": "緊張なさいましたか。",
+      "normalizedTarget": "きんちょうなさいましたか",
+      "normalizedAsrText": "緊張なさいましたか",
+      "phoneticSimilarity": 0.6667,
+      "matchedUtteranceIndexes": [
+        5
+      ],
+      "startMs": 12440,
+      "endMs": 13840,
+      "durationMs": 1400,
+      "audioPath": "line-segments/lesson-50/l50-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-50/l50-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [5] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "ミラー",
+      "japanese": "はい、とても緊張いたしました。",
+      "normalizedTarget": "はいとてもきんちょういたしました",
+      "normalizedAsrText": "はいとても緊張いたしました",
+      "phoneticSimilarity": 0.7586,
+      "matchedUtteranceIndexes": [
+        6
+      ],
+      "startMs": 13840,
+      "endMs": 16540,
+      "durationMs": 2700,
+      "audioPath": "line-segments/lesson-50/l50-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-50/l50-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [6] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "司会者",
+      "japanese": "練習は大変でしたか。",
+      "normalizedTarget": "れんしゅうはたいへんでしたか",
+      "normalizedAsrText": "練習は大変でしたか",
+      "phoneticSimilarity": 0.4348,
+      "matchedUtteranceIndexes": [
+        7
+      ],
+      "startMs": 16540,
+      "endMs": 18140,
+      "durationMs": 1600,
+      "audioPath": "line-segments/lesson-50/l50-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-50/l50-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [7] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "ミラー",
+      "japanese": "ええ。忙しくて、なかなか練習の時間がありませんでした。",
+      "normalizedTarget": "ええいそがしくてなかなかれんしゅうのじかんがありませんでした",
+      "normalizedAsrText": "ええ忙しくてなかなか練習の時間がありませんでした",
+      "phoneticSimilarity": 0.7037,
+      "matchedUtteranceIndexes": [
+        8
+      ],
+      "startMs": 18140,
+      "endMs": 22500,
+      "durationMs": 4360,
+      "audioPath": "line-segments/lesson-50/l50-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-50/l50-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [8] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 7,
+      "displayOrder": 7,
+      "speaker": "司会者",
+      "japanese": "賞金は何にお使いになりますか。",
+      "normalizedTarget": "しょうきんはなににおつかいになりますか",
+      "normalizedAsrText": "賞金は何にお使いになりますか",
+      "phoneticSimilarity": 0.6061,
+      "matchedUtteranceIndexes": [
+        9
+      ],
+      "startMs": 22500,
+      "endMs": 25000,
+      "durationMs": 2500,
+      "audioPath": "line-segments/lesson-50/l50-07.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-50/l50-07.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [9] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 8,
+      "displayOrder": 8,
+      "speaker": "ミラー",
+      "japanese": "そうですね。わたしは動物が好きで、子どものときからアフリカへ行くのが夢でした。",
+      "normalizedTarget": "そうですねわたしはどうぶつがすきでこどものときからあふりかへいくのがゆめでした",
+      "normalizedAsrText": "そうですね私は動物が好きで子供の時からあふりかへ行くのが夢でした",
+      "phoneticSimilarity": 0.6479,
+      "matchedUtteranceIndexes": [
+        10,
+        11,
+        12
+      ],
+      "startMs": 25000,
+      "endMs": 33100,
+      "durationMs": 8100,
+      "audioPath": "line-segments/lesson-50/l50-08.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-50/l50-08.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [10, 11, 12] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 9,
+      "displayOrder": 9,
+      "speaker": "司会者",
+      "japanese": "じゃ、アフリカへ行かれますか。",
+      "normalizedTarget": "じゃあふりかへいかれますか",
+      "normalizedAsrText": "じゃああふりかへ行かれますか",
+      "phoneticSimilarity": 0.8889,
+      "matchedUtteranceIndexes": [
+        13
+      ],
+      "startMs": 33100,
+      "endMs": 35300,
+      "durationMs": 2200,
+      "audioPath": "line-segments/lesson-50/l50-09.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-50/l50-09.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [13] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 10,
+      "displayOrder": 10,
+      "speaker": "ミラー",
+      "japanese": "はい。アフリカの自然の中で、きりんや象を見たいと思います。",
+      "normalizedTarget": "はいあふりかのしぜんのなかできりんやぞうをみたいとおもいます",
+      "normalizedAsrText": "はいあふりかの自然の中できりんやぞうを見たいと思います",
+      "phoneticSimilarity": 0.7719,
+      "matchedUtteranceIndexes": [
+        14,
+        15
+      ],
+      "startMs": 35300,
+      "endMs": 40000,
+      "durationMs": 4700,
+      "audioPath": "line-segments/lesson-50/l50-10.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-50/l50-10.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [14, 15] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 11,
+      "displayOrder": 11,
+      "speaker": "司会者",
+      "japanese": "子どものころの夢がかなうんですね。",
+      "normalizedTarget": "こどものころのゆめがかなうんですね",
+      "normalizedAsrText": "子供の頃の夢が課だうんですね",
+      "phoneticSimilarity": 0.5161,
+      "matchedUtteranceIndexes": [
+        16
+      ],
+      "startMs": 40000,
+      "endMs": 42600,
+      "durationMs": 2600,
+      "audioPath": "line-segments/lesson-50/l50-11.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-50/l50-11.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [16] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 12,
+      "displayOrder": 12,
+      "speaker": "ミラー",
+      "japanese": "はい。うれしいです。応援してくださった皆様に心から感謝いたします。どうもありがとうございました。",
+      "normalizedTarget": "はいうれしいですおうえんしてくださったみなさまにこころからかんしゃいたしますどうもありがとうございました",
+      "normalizedAsrText": "はい嬉しいです応援してくださった皆様に心から感謝いたしますどうもありがとうございました",
+      "phoneticSimilarity": 0.7368,
+      "matchedUtteranceIndexes": [
+        17,
+        18,
+        19,
+        20
+      ],
+      "startMs": 42600,
+      "endMs": 51100,
+      "durationMs": 8500,
+      "audioPath": "line-segments/lesson-50/l50-12.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-50/l50-12.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [17, 18, 19, 20] 对齐；应用已校准 MP3 时间偏移"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ]
+}

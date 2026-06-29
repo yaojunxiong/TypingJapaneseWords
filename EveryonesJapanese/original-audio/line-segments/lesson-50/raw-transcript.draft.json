@@ -1,0 +1,155 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 50,
+  "cd": "CD73",
+  "sourceTrack": "source-240000/tracks/cd-073.mp3",
+  "durationMs": 53629,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "role": "timestamp_source_only"
+  },
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 0,
+      "endMs": 6540,
+      "text": "第50課 会話 心から感謝いたします",
+      "confidence": null
+    },
+    {
+      "index": 2,
+      "startMs": 6540,
+      "endMs": 9140,
+      "text": "優勝おめでとうございます",
+      "confidence": null
+    },
+    {
+      "index": 3,
+      "startMs": 9140,
+      "endMs": 11000,
+      "text": "素晴らしいスピーチでした",
+      "confidence": null
+    },
+    {
+      "index": 4,
+      "startMs": 11000,
+      "endMs": 12440,
+      "text": "ありがとうございます",
+      "confidence": null
+    },
+    {
+      "index": 5,
+      "startMs": 12440,
+      "endMs": 13840,
+      "text": "緊張なさいましたか?",
+      "confidence": null
+    },
+    {
+      "index": 6,
+      "startMs": 13840,
+      "endMs": 16540,
+      "text": "はい とても緊張いたしました",
+      "confidence": null
+    },
+    {
+      "index": 7,
+      "startMs": 16540,
+      "endMs": 18140,
+      "text": "練習は大変でしたか?",
+      "confidence": null
+    },
+    {
+      "index": 8,
+      "startMs": 18140,
+      "endMs": 22500,
+      "text": "ええ 忙しくてなかなか練習の時間がありませんでした",
+      "confidence": null
+    },
+    {
+      "index": 9,
+      "startMs": 22500,
+      "endMs": 25000,
+      "text": "賞金は何にお使いになりますか?",
+      "confidence": null
+    },
+    {
+      "index": 10,
+      "startMs": 25000,
+      "endMs": 28000,
+      "text": "そうですね",
+      "confidence": null
+    },
+    {
+      "index": 11,
+      "startMs": 28000,
+      "endMs": 30200,
+      "text": "私は動物が好きで",
+      "confidence": null
+    },
+    {
+      "index": 12,
+      "startMs": 30200,
+      "endMs": 33100,
+      "text": "子供の時からアフリカへ行くのが夢でした",
+      "confidence": null
+    },
+    {
+      "index": 13,
+      "startMs": 33100,
+      "endMs": 35300,
+      "text": "じゃあ アフリカへ行かれますか?",
+      "confidence": null
+    },
+    {
+      "index": 14,
+      "startMs": 35300,
+      "endMs": 37900,
+      "text": "はい アフリカの自然の中で",
+      "confidence": null
+    },
+    {
+      "index": 15,
+      "startMs": 37900,
+      "endMs": 40000,
+      "text": "キリンやゾウを見たいと思います",
+      "confidence": null
+    },
+    {
+      "index": 16,
+      "startMs": 40000,
+      "endMs": 42600,
+      "text": "子供の頃の夢が課だうんですね",
+      "confidence": null
+    },
+    {
+      "index": 17,
+      "startMs": 42600,
+      "endMs": 45400,
+      "text": "はい 嬉しいです",
+      "confidence": null
+    },
+    {
+      "index": 18,
+      "startMs": 45400,
+      "endMs": 47200,
+      "text": "応援してくださった皆様に",
+      "confidence": null
+    },
+    {
+      "index": 19,
+      "startMs": 47200,
+      "endMs": 49200,
+      "text": "心から感謝いたします",
+      "confidence": null
+    },
+    {
+      "index": 20,
+      "startMs": 49200,
+      "endMs": 51100,
+      "text": "どうもありがとうございました",
+      "confidence": null
+    }
+  ]
+}
