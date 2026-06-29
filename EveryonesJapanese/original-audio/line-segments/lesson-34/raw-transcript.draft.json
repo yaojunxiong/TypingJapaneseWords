@@ -1,0 +1,120 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 34,
+  "cd": "CD25",
+  "sourceTrack": "source-240000/tracks/cd-025.mp3",
+  "durationMs": 66220,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "role": "timestamp_source_only"
+  },
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 0,
+      "endMs": 7340,
+      "text": "第34日、会話。 私がした通りにしてください。",
+      "confidence": null
+    },
+    {
+      "index": 2,
+      "startMs": 7340,
+      "endMs": 10320,
+      "text": "一度、佐藤が見たいんですが。",
+      "confidence": null
+    },
+    {
+      "index": 3,
+      "startMs": 10320,
+      "endMs": 15240,
+      "text": "じゃあ、来週の土曜日一緒に行きませんか?",
+      "confidence": null
+    },
+    {
+      "index": 4,
+      "startMs": 15240,
+      "endMs": 21800,
+      "text": "渡辺さん、お茶を立ててください。 クララさん、お菓子をどうぞ。",
+      "confidence": null
+    },
+    {
+      "index": 5,
+      "startMs": 21800,
+      "endMs": 25200,
+      "text": "え? 先にお菓子を食べるんですか?",
+      "confidence": null
+    },
+    {
+      "index": 6,
+      "startMs": 25200,
+      "endMs": 30800,
+      "text": "ええ。甘いお菓子を食べた後でお茶を飲むと美味しいんですよ。",
+      "confidence": null
+    },
+    {
+      "index": 7,
+      "startMs": 30800,
+      "endMs": 32520,
+      "text": "そうですか。",
+      "confidence": null
+    },
+    {
+      "index": 8,
+      "startMs": 32520,
+      "endMs": 36440,
+      "text": "では、お茶を飲みましょう。",
+      "confidence": null
+    },
+    {
+      "index": 9,
+      "startMs": 36440,
+      "endMs": 43280,
+      "text": "まず、右手でお茶碗を取って、左手に乗せます。",
+      "confidence": null
+    },
+    {
+      "index": 10,
+      "startMs": 43280,
+      "endMs": 49480,
+      "text": "次に、お茶碗を2回回して、それから飲みます。",
+      "confidence": null
+    },
+    {
+      "index": 11,
+      "startMs": 49480,
+      "endMs": 50800,
+      "text": "はい。",
+      "confidence": null
+    },
+    {
+      "index": 12,
+      "startMs": 50800,
+      "endMs": 55000,
+      "text": "じゃあ、私がした通りにしてください。",
+      "confidence": null
+    },
+    {
+      "index": 13,
+      "startMs": 55000,
+      "endMs": 57280,
+      "text": "これで、いいですか?",
+      "confidence": null
+    },
+    {
+      "index": 14,
+      "startMs": 57280,
+      "endMs": 60200,
+      "text": "はい。いかがですか?",
+      "confidence": null
+    },
+    {
+      "index": 15,
+      "startMs": 60200,
+      "endMs": 63520,
+      "text": "少し苦いですが、美味しいです。",
+      "confidence": null
+    }
+  ]
+}

@@ -1,0 +1,243 @@
+{
+  "version": "minna-line-alignment-draft-v1",
+  "lesson": 35,
+  "sourceSet": "source-240000",
+  "cd": "CD28",
+  "sourceTrack": "source-240000/tracks/cd-028.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-240000/tracks/cd-028.mp3",
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "タワポン",
+      "japanese": "鈴木さん、冬休みに友達とスキーに行きたいんですが、どこかいい所、ありませんか。",
+      "normalizedTarget": "すずきさんふゆやすみにともだちとすきーにいきたいんですがどこかいいところありませんか",
+      "normalizedAsrText": "鈴木さん冬休みに友達とすきーに行きたいんですがどこかいいところありませんか",
+      "phoneticSimilarity": 0.7595,
+      "matchedUtteranceIndexes": [
+        2
+      ],
+      "startMs": 7000,
+      "endMs": 14000,
+      "durationMs": 7000,
+      "audioPath": "line-segments/lesson-35/l35-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-35/l35-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [2] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "鈴木",
+      "japanese": "何日ぐらいの予定ですか。",
+      "normalizedTarget": "なんにちぐらいのよていですか",
+      "normalizedAsrText": "何日ぐらいの予定ですか",
+      "phoneticSimilarity": 0.56,
+      "matchedUtteranceIndexes": [
+        3
+      ],
+      "startMs": 14000,
+      "endMs": 16000,
+      "durationMs": 2000,
+      "audioPath": "line-segments/lesson-35/l35-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-35/l35-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [3] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "タワポン",
+      "japanese": "3日ぐらいです。",
+      "normalizedTarget": "みっかぐらいです",
+      "normalizedAsrText": "3日ぐらいです",
+      "phoneticSimilarity": 0.6667,
+      "matchedUtteranceIndexes": [
+        4
+      ],
+      "startMs": 16000,
+      "endMs": 17000,
+      "durationMs": 1000,
+      "audioPath": "line-segments/lesson-35/l35-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-35/l35-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [4] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "鈴木",
+      "japanese": "それなら、草津か志賀高原がいいと思いますよ。温泉もあるし……。",
+      "normalizedTarget": "それならくさつかしがこうげんがいいとおもいますよおんせんもあるし",
+      "normalizedAsrText": "それなら草菓子学校園がいいと思いますよ温泉もあるし",
+      "phoneticSimilarity": 0.5614,
+      "matchedUtteranceIndexes": [
+        5
+      ],
+      "startMs": 17000,
+      "endMs": 22000,
+      "durationMs": 5000,
+      "audioPath": "line-segments/lesson-35/l35-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-35/l35-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [5] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "タワポン",
+      "japanese": "どうやって行くんですか。",
+      "normalizedTarget": "どうやっていくんですか",
+      "normalizedAsrText": "どうやって行くんですか",
+      "phoneticSimilarity": 0.9091,
+      "matchedUtteranceIndexes": [
+        6
+      ],
+      "startMs": 22000,
+      "endMs": 24000,
+      "durationMs": 2000,
+      "audioPath": "line-segments/lesson-35/l35-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-35/l35-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [6] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "鈴木",
+      "japanese": "JRでも行けますが、夜行バスなら、朝着きますから、便利ですよ。",
+      "normalizedTarget": "じぇいあーるでもいけますがやこうばすならあさつきますからべんりですよ",
+      "normalizedAsrText": "jrでも行けますが夜行ばすなら朝つきますから便利ですよ",
+      "phoneticSimilarity": 0.623,
+      "matchedUtteranceIndexes": [
+        7
+      ],
+      "startMs": 24000,
+      "endMs": 29000,
+      "durationMs": 5000,
+      "audioPath": "line-segments/lesson-35/l35-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-35/l35-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [7] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 7,
+      "displayOrder": 7,
+      "speaker": "タワポン",
+      "japanese": "そうですか。どちらが安いんですか。",
+      "normalizedTarget": "そうですかどちらがやすいんですか",
+      "normalizedAsrText": "そうですかどちらが安いんですか",
+      "phoneticSimilarity": 0.9032,
+      "matchedUtteranceIndexes": [
+        8
+      ],
+      "startMs": 29000,
+      "endMs": 33000,
+      "durationMs": 4000,
+      "audioPath": "line-segments/lesson-35/l35-07.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-35/l35-07.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [8] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 8,
+      "displayOrder": 8,
+      "speaker": "鈴木",
+      "japanese": "さあ……。旅行社へ行けばもっと詳しいことがわかりますよ。",
+      "normalizedTarget": "さありょこうしゃへいけばもっとくわしいことがわかりますよ",
+      "normalizedAsrText": "そう旅行者へ行けばもっと詳しいことが分かりますよ",
+      "phoneticSimilarity": 0.6538,
+      "matchedUtteranceIndexes": [
+        9
+      ],
+      "startMs": 33000,
+      "endMs": 38000,
+      "durationMs": 5000,
+      "audioPath": "line-segments/lesson-35/l35-08.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-35/l35-08.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [9] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 9,
+      "displayOrder": 9,
+      "speaker": "タワポン",
+      "japanese": "それから、スキーの道具や服は何も持っていないんですが……。",
+      "normalizedTarget": "それからすきーのどうぐやふくはなにももっていないんですが",
+      "normalizedAsrText": "それからすきーの道具や服は何も持っていないんですが",
+      "phoneticSimilarity": 0.7547,
+      "matchedUtteranceIndexes": [
+        10
+      ],
+      "startMs": 38000,
+      "endMs": 42000,
+      "durationMs": 4000,
+      "audioPath": "line-segments/lesson-35/l35-09.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-35/l35-09.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [10] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 10,
+      "displayOrder": 10,
+      "speaker": "鈴木",
+      "japanese": "全部スキー場で借りられますよ。心配なら、旅行社で予約もできますし……。",
+      "normalizedTarget": "ぜんぶすきーじょうでかりられますよしんぱいならりょこうしゃでよやくもできますし",
+      "normalizedAsrText": "全部すきー上で借りられますよ心配なら旅行者で予約もできるし",
+      "phoneticSimilarity": 0.5,
+      "matchedUtteranceIndexes": [
+        11
+      ],
+      "startMs": 42000,
+      "endMs": 48000,
+      "durationMs": 6000,
+      "audioPath": "line-segments/lesson-35/l35-10.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-35/l35-10.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [11] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 11,
+      "displayOrder": 11,
+      "speaker": "タワポン",
+      "japanese": "そうですか。どうもありがとうございました。",
+      "normalizedTarget": "そうですかどうもありがとうございました",
+      "normalizedAsrText": "そうですかどうもありがとうございました",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        12
+      ],
+      "startMs": 48000,
+      "endMs": 51000,
+      "durationMs": 3000,
+      "audioPath": "line-segments/lesson-35/l35-11.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-35/l35-11.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [12] 对齐；应用已校准 MP3 时间偏移"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 33,
+  "cd": "CD22",
+  "sourceTrack": "source-240000/tracks/cd-022.mp3",
+  "durationMs": 48640,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "role": "timestamp_source_only"
+  },
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 0,
+      "endMs": 6980,
+      "text": "第33日会話 これはどういう意味ですか",
+      "confidence": null
+    },
+    {
+      "index": 2,
+      "startMs": 6980,
+      "endMs": 14000,
+      "text": "すみません私の車にこんな紙が貼ってあったんですが この漢字は何と読むんですか",
+      "confidence": null
+    },
+    {
+      "index": 3,
+      "startMs": 14000,
+      "endMs": 17760,
+      "text": "注射違反です 注射違反",
+      "confidence": null
+    },
+    {
+      "index": 4,
+      "startMs": 17760,
+      "endMs": 23120,
+      "text": "どういう意味ですか 止めてはいけない場所に車を止めたという意味です",
+      "confidence": null
+    },
+    {
+      "index": 5,
+      "startMs": 23120,
+      "endMs": 26640,
+      "text": "どこに止めたんですか 駅の前です",
+      "confidence": null
+    },
+    {
+      "index": 6,
+      "startMs": 26640,
+      "endMs": 32620,
+      "text": "雑誌を買いに行って10分だけ 駅の前だったら10分でもダメですよ",
+      "confidence": null
+    },
+    {
+      "index": 7,
+      "startMs": 32620,
+      "endMs": 37120,
+      "text": "そうですか バッキンを払わなければなりませんか",
+      "confidence": null
+    },
+    {
+      "index": 8,
+      "startMs": 37120,
+      "endMs": 41440,
+      "text": "え 15000円払わないといけません",
+      "confidence": null
+    },
+    {
+      "index": 9,
+      "startMs": 41440,
+      "endMs": 47760,
+      "text": "15000円ですか 雑誌は300円だったんですけど",
+      "confidence": null
+    }
+  ]
+}

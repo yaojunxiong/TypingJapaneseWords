@@ -1,0 +1,204 @@
+{
+  "version": "minna-line-alignment-draft-v1",
+  "lesson": 33,
+  "sourceSet": "source-240000",
+  "cd": "CD22",
+  "sourceTrack": "source-240000/tracks/cd-022.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-240000/tracks/cd-022.mp3",
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "ワット",
+      "japanese": "すみません。わたしの車にこんな紙がはあったんですが、この漢字は何と読むんですか。",
+      "normalizedTarget": "すみませんわたしのくるまにこんなかみがはあったんですがこのかんじはなんとよむんですか",
+      "normalizedAsrText": "すみません私の車にこんな紙が貼ってあったんですがこの漢字は何と読むんですか",
+      "phoneticSimilarity": 0.6835,
+      "matchedUtteranceIndexes": [
+        2
+      ],
+      "startMs": 6980,
+      "endMs": 14000,
+      "durationMs": 7020,
+      "audioPath": "line-segments/lesson-33/l33-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-33/l33-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [2] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "大学職員",
+      "japanese": "「ちゅうしゃいはん」です。",
+      "normalizedTarget": "ちゅうしゃいはんです",
+      "normalizedAsrText": "注射違反です注射違反",
+      "phoneticSimilarity": 0.2,
+      "matchedUtteranceIndexes": [
+        3
+      ],
+      "startMs": 14000,
+      "endMs": 15400,
+      "durationMs": 1400,
+      "audioPath": "line-segments/lesson-33/l33-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-33/l33-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [3] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "ワット",
+      "japanese": "ちゅうしゃいはん……。どういう意味ですか。",
+      "normalizedTarget": "ちゅうしゃいはんどういういみですか",
+      "normalizedAsrText": "注射違反です注射違反どういう意味ですか止めてはいけない場所に車を止めたという意味です",
+      "phoneticSimilarity": 0.2373,
+      "matchedUtteranceIndexes": [
+        3,
+        4
+      ],
+      "startMs": 15400,
+      "endMs": 19000,
+      "durationMs": 3600,
+      "audioPath": "line-segments/lesson-33/l33-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-33/l33-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [3, 4] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "大学職員",
+      "japanese": "止めてはいけない場所に車を止めたという意味です。どこに止めたんですか。",
+      "normalizedTarget": "とめてはいけないばしょにくるまをとめたといういみですどこにとめたんですか",
+      "normalizedAsrText": "どういう意味ですか止めてはいけない場所に車を止めたという意味ですどこに止めたんですか駅の前です",
+      "phoneticSimilarity": 0.6024,
+      "matchedUtteranceIndexes": [
+        4,
+        5
+      ],
+      "startMs": 19000,
+      "endMs": 24500,
+      "durationMs": 5500,
+      "audioPath": "line-segments/lesson-33/l33-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-33/l33-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [4, 5] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "ワット",
+      "japanese": "駅の前です。雑誌を買いに行って、10分だけ……。",
+      "normalizedTarget": "えきのまえですざっしをかいにいってじゅっぷんだけ",
+      "normalizedAsrText": "どこに止めたんですか駅の前です雑誌を買いに行って10分だけ駅の前だったら10分でもだめですよ",
+      "phoneticSimilarity": 0.2571,
+      "matchedUtteranceIndexes": [
+        5,
+        6
+      ],
+      "startMs": 24500,
+      "endMs": 28500,
+      "durationMs": 4000,
+      "audioPath": "line-segments/lesson-33/l33-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-33/l33-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [5, 6] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "大学職員",
+      "japanese": "駅の前だったら、10分でもだめですよ。",
+      "normalizedTarget": "えきのまえだったらじゅっぷんでもだめですよ",
+      "normalizedAsrText": "雑誌を買いに行って10分だけ駅の前だったら10分でもだめですよ",
+      "phoneticSimilarity": 0.4615,
+      "matchedUtteranceIndexes": [
+        6
+      ],
+      "startMs": 28500,
+      "endMs": 32620,
+      "durationMs": 4120,
+      "audioPath": "line-segments/lesson-33/l33-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-33/l33-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [6] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 7,
+      "displayOrder": 7,
+      "speaker": "ワット",
+      "japanese": "そうですか。罰金を払わなければなりませんか。",
+      "normalizedTarget": "そうですかばっきんをはらわなければなりませんか",
+      "normalizedAsrText": "そうですかばっきんを払わなければなりませんか",
+      "phoneticSimilarity": 0.9333,
+      "matchedUtteranceIndexes": [
+        7
+      ],
+      "startMs": 32620,
+      "endMs": 37120,
+      "durationMs": 4500,
+      "audioPath": "line-segments/lesson-33/l33-07.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-33/l33-07.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [7] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 8,
+      "displayOrder": 8,
+      "speaker": "大学職員",
+      "japanese": "ええ、15,000円払わないといけません。",
+      "normalizedTarget": "ええいちまんごせんえんはらわないといけません",
+      "normalizedAsrText": "え15000円払わないといけません",
+      "phoneticSimilarity": 0.5128,
+      "matchedUtteranceIndexes": [
+        8
+      ],
+      "startMs": 37120,
+      "endMs": 41440,
+      "durationMs": 4320,
+      "audioPath": "line-segments/lesson-33/l33-08.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-33/l33-08.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [8] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 9,
+      "displayOrder": 9,
+      "speaker": "ワット",
+      "japanese": "えっ。15,000円ですか。雑誌は300円だったんですけど……。",
+      "normalizedTarget": "えっいちまんごせんえんですかざっしはさんびゃくえんだったんですけど",
+      "normalizedAsrText": "15000円ですか雑誌は300円だったんですけど",
+      "phoneticSimilarity": 0.4211,
+      "matchedUtteranceIndexes": [
+        9
+      ],
+      "startMs": 41440,
+      "endMs": 47760,
+      "durationMs": 6320,
+      "audioPath": "line-segments/lesson-33/l33-09.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-33/l33-09.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [9] 对齐；应用已校准 MP3 时间偏移"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ]
+}

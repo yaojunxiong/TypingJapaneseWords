@@ -1,0 +1,120 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 31,
+  "cd": "CD16",
+  "sourceTrack": "source-240000/tracks/cd-016.mp3",
+  "durationMs": 50521,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "role": "timestamp_source_only"
+  },
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 0,
+      "endMs": 7060,
+      "text": "第31課 会話 料理を習おうと思っています",
+      "confidence": null
+    },
+    {
+      "index": 2,
+      "startMs": 7060,
+      "endMs": 9000,
+      "text": "来月から独新です",
+      "confidence": null
+    },
+    {
+      "index": 3,
+      "startMs": 9000,
+      "endMs": 10000,
+      "text": "え?",
+      "confidence": null
+    },
+    {
+      "index": 4,
+      "startMs": 10000,
+      "endMs": 13280,
+      "text": "実は 大阪の本社に転勤なんです",
+      "confidence": null
+    },
+    {
+      "index": 5,
+      "startMs": 13280,
+      "endMs": 16760,
+      "text": "本社ですか それはおめでとうございます",
+      "confidence": null
+    },
+    {
+      "index": 6,
+      "startMs": 16760,
+      "endMs": 19600,
+      "text": "でも どうして独新になるんですか?",
+      "confidence": null
+    },
+    {
+      "index": 7,
+      "startMs": 19600,
+      "endMs": 22080,
+      "text": "妻と子供は東京に残るんです",
+      "confidence": null
+    },
+    {
+      "index": 8,
+      "startMs": 22080,
+      "endMs": 24800,
+      "text": "え? 一緒に行かないんですか?",
+      "confidence": null
+    },
+    {
+      "index": 9,
+      "startMs": 24800,
+      "endMs": 30480,
+      "text": "ええ 息子は来年大学の入学試験があるから東京に残るというし",
+      "confidence": null
+    },
+    {
+      "index": 10,
+      "startMs": 30480,
+      "endMs": 33640,
+      "text": "妻も今の会社をやめたくないと言うんです",
+      "confidence": null
+    },
+    {
+      "index": 11,
+      "startMs": 33640,
+      "endMs": 35840,
+      "text": "それで別々に住むんですね",
+      "confidence": null
+    },
+    {
+      "index": 12,
+      "startMs": 35840,
+      "endMs": 40760,
+      "text": "ええ でも月に二、三回週末に帰るつもりです",
+      "confidence": null
+    },
+    {
+      "index": 13,
+      "startMs": 40760,
+      "endMs": 42440,
+      "text": "大変ですね",
+      "confidence": null
+    },
+    {
+      "index": 14,
+      "startMs": 42440,
+      "endMs": 46480,
+      "text": "でも いいチャンスですから料理を習おうと思っています",
+      "confidence": null
+    },
+    {
+      "index": 15,
+      "startMs": 46480,
+      "endMs": 48080,
+      "text": "それはいいですね",
+      "confidence": null
+    }
+  ]
+}

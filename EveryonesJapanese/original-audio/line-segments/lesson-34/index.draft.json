@@ -1,0 +1,309 @@
+{
+  "version": "minna-original-line-segments-draft-v1",
+  "lesson": 34,
+  "sourceSet": "source-240000",
+  "cd": "CD25",
+  "sourceTrack": "source-240000/tracks/cd-025.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-240000/tracks/cd-025.mp3",
+  "segmentCount": 14,
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "クララ",
+      "japanese": "一度茶道が見たいんですが……。",
+      "normalizedTarget": "いちどさどうがみたいんですが",
+      "normalizedAsrText": "一度佐藤が見たいんですが",
+      "phoneticSimilarity": 0.5385,
+      "matchedUtteranceIndexes": [
+        2
+      ],
+      "startMs": 7340,
+      "endMs": 10320,
+      "durationMs": 2980,
+      "audioPath": "line-segments/lesson-34/l34-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-34/l34-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [2] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "渡辺",
+      "japanese": "じゃ、来週の土曜日いっしょに行きませんか。",
+      "normalizedTarget": "じゃらいしゅうのどようびいっしょにいきませんか",
+      "normalizedAsrText": "じゃあ来週の土曜日一緒に行きませんか",
+      "phoneticSimilarity": 0.439,
+      "matchedUtteranceIndexes": [
+        3
+      ],
+      "startMs": 10320,
+      "endMs": 15240,
+      "durationMs": 4920,
+      "audioPath": "line-segments/lesson-34/l34-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-34/l34-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [3] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "お茶の先生",
+      "japanese": "渡辺さん、お茶をたててください。",
+      "normalizedTarget": "わたなべさんおちゃをたててください",
+      "normalizedAsrText": "渡辺さんお茶を立ててくださいくららさんお菓子をどうぞ",
+      "phoneticSimilarity": 0.4651,
+      "matchedUtteranceIndexes": [
+        4
+      ],
+      "startMs": 15240,
+      "endMs": 18000,
+      "durationMs": 2760,
+      "audioPath": "line-segments/lesson-34/l34-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-34/l34-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [4] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "渡辺",
+      "japanese": "はい。",
+      "normalizedTarget": "はい",
+      "normalizedAsrText": "渡辺さんお茶を立ててくださいくららさんお菓子をどうぞ",
+      "phoneticSimilarity": 0.0714,
+      "matchedUtteranceIndexes": [
+        4
+      ],
+      "startMs": 18000,
+      "endMs": 18500,
+      "durationMs": 500,
+      "audioPath": "line-segments/lesson-34/l34-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-34/l34-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [4] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "お茶の先生",
+      "japanese": "クララさん、お菓子をどうぞ。",
+      "normalizedTarget": "くららさんおかしをどうぞ",
+      "normalizedAsrText": "渡辺さんお茶を立ててくださいくららさんお菓子をどうぞ",
+      "phoneticSimilarity": 0.5263,
+      "matchedUtteranceIndexes": [
+        4
+      ],
+      "startMs": 18500,
+      "endMs": 21800,
+      "durationMs": 3300,
+      "audioPath": "line-segments/lesson-34/l34-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-34/l34-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [4] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "クララ",
+      "japanese": "えっ、先にお菓子を食べるんですか。",
+      "normalizedTarget": "えっさきにおかしをたべるんですか",
+      "normalizedAsrText": "え先にお菓子を食べるんですか",
+      "phoneticSimilarity": 0.6667,
+      "matchedUtteranceIndexes": [
+        5
+      ],
+      "startMs": 21800,
+      "endMs": 25200,
+      "durationMs": 3400,
+      "audioPath": "line-segments/lesson-34/l34-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-34/l34-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [5] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 7,
+      "displayOrder": 7,
+      "speaker": "お茶の先生",
+      "japanese": "ええ。甘いお菓子を食べたあとで、お茶を飲むと、おいしいんですよ。",
+      "normalizedTarget": "ええあまいおかしをたべたあとでおちゃをのむとおいしいんですよ",
+      "normalizedAsrText": "ええ甘いお菓子を食べた後でお茶を飲むと美味しいんですよ",
+      "phoneticSimilarity": 0.6316,
+      "matchedUtteranceIndexes": [
+        6
+      ],
+      "startMs": 25200,
+      "endMs": 30800,
+      "durationMs": 5600,
+      "audioPath": "line-segments/lesson-34/l34-07.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-34/l34-07.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [6] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 8,
+      "displayOrder": 8,
+      "speaker": "クララ",
+      "japanese": "そうですか。",
+      "normalizedTarget": "そうですか",
+      "normalizedAsrText": "そうですか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        7
+      ],
+      "startMs": 30800,
+      "endMs": 32520,
+      "durationMs": 1720,
+      "audioPath": "line-segments/lesson-34/l34-08.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-34/l34-08.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [7] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 9,
+      "displayOrder": 9,
+      "speaker": "お茶の先生",
+      "japanese": "では、お茶を飲みましょう。まず、右手でおちゃわんを取って、左手に載せます。次におちゃわんを2回回して、それから飲みます。",
+      "normalizedTarget": "ではおちゃをのみましょうまずみぎてでおちゃわんをとってひだりてにのせますつぎにおちゃわんをにかいまわしてそれからのみます",
+      "normalizedAsrText": "ではお茶を飲みましょうまず右手でお茶碗を取って左手に乗せます次にお茶碗を2回回してそれから飲みます",
+      "phoneticSimilarity": 0.5872,
+      "matchedUtteranceIndexes": [
+        8,
+        9,
+        10
+      ],
+      "startMs": 32520,
+      "endMs": 49480,
+      "durationMs": 16960,
+      "audioPath": "line-segments/lesson-34/l34-09.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-34/l34-09.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [8, 9, 10] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 10,
+      "displayOrder": 10,
+      "speaker": "クララ",
+      "japanese": "はい。",
+      "normalizedTarget": "はい",
+      "normalizedAsrText": "はい",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        11
+      ],
+      "startMs": 49480,
+      "endMs": 50800,
+      "durationMs": 1320,
+      "audioPath": "line-segments/lesson-34/l34-10.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-34/l34-10.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [11] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 11,
+      "displayOrder": 11,
+      "speaker": "お茶の先生",
+      "japanese": "じゃ、わたしがしたとおりに、してください。",
+      "normalizedTarget": "じゃわたしがしたとおりにしてください",
+      "normalizedAsrText": "じゃあ私がした通りにしてください",
+      "phoneticSimilarity": 0.7647,
+      "matchedUtteranceIndexes": [
+        12
+      ],
+      "startMs": 50800,
+      "endMs": 55000,
+      "durationMs": 4200,
+      "audioPath": "line-segments/lesson-34/l34-11.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-34/l34-11.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [12] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 12,
+      "displayOrder": 12,
+      "speaker": "クララ",
+      "japanese": "これでいいですか。",
+      "normalizedTarget": "これでいいですか",
+      "normalizedAsrText": "これでいいですか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        13
+      ],
+      "startMs": 55000,
+      "endMs": 57280,
+      "durationMs": 2280,
+      "audioPath": "line-segments/lesson-34/l34-12.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-34/l34-12.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [13] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 13,
+      "displayOrder": 13,
+      "speaker": "お茶の先生",
+      "japanese": "はい。いかがですか。",
+      "normalizedTarget": "はいいかがですか",
+      "normalizedAsrText": "はいいかがですか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        14
+      ],
+      "startMs": 57280,
+      "endMs": 60200,
+      "durationMs": 2920,
+      "audioPath": "line-segments/lesson-34/l34-13.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-34/l34-13.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [14] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 14,
+      "displayOrder": 14,
+      "speaker": "クララ",
+      "japanese": "少し苦いですが、おいしいです。",
+      "normalizedTarget": "すこしにがいですがおいしいです",
+      "normalizedAsrText": "少し苦いですが美味しいです",
+      "phoneticSimilarity": 0.6429,
+      "matchedUtteranceIndexes": [
+        15
+      ],
+      "startMs": 60200,
+      "endMs": 63520,
+      "durationMs": 3320,
+      "audioPath": "line-segments/lesson-34/l34-14.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-34/l34-14.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [15] 对齐；应用已校准 MP3 时间偏移"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ]
+}

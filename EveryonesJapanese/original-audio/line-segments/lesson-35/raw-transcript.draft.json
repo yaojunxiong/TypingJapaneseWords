@@ -1,0 +1,99 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 35,
+  "cd": "CD28",
+  "sourceTrack": "source-240000/tracks/cd-028.mp3",
+  "durationMs": 53577,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "role": "timestamp_source_only"
+  },
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 0,
+      "endMs": 7000,
+      "text": "第35か。会話。どこかいいところありませんか?",
+      "confidence": null
+    },
+    {
+      "index": 2,
+      "startMs": 7000,
+      "endMs": 14000,
+      "text": "鈴木さん、冬休みに友達とスキーに行きたいんですが、どこかいいところありませんか?",
+      "confidence": null
+    },
+    {
+      "index": 3,
+      "startMs": 14000,
+      "endMs": 16000,
+      "text": "何日ぐらいの予定ですか?",
+      "confidence": null
+    },
+    {
+      "index": 4,
+      "startMs": 16000,
+      "endMs": 17000,
+      "text": "3日ぐらいです。",
+      "confidence": null
+    },
+    {
+      "index": 5,
+      "startMs": 17000,
+      "endMs": 22000,
+      "text": "それなら、草菓子学校園がいいと思いますよ。温泉もあるし。",
+      "confidence": null
+    },
+    {
+      "index": 6,
+      "startMs": 22000,
+      "endMs": 24000,
+      "text": "どうやって行くんですか?",
+      "confidence": null
+    },
+    {
+      "index": 7,
+      "startMs": 24000,
+      "endMs": 29000,
+      "text": "JRでも行けますが、夜行バスなら朝つきますから便利ですよ。",
+      "confidence": null
+    },
+    {
+      "index": 8,
+      "startMs": 29000,
+      "endMs": 33000,
+      "text": "そうですか。どちらが安いんですか?",
+      "confidence": null
+    },
+    {
+      "index": 9,
+      "startMs": 33000,
+      "endMs": 38000,
+      "text": "そう。旅行者へ行けばもっと詳しいことが分かりますよ。",
+      "confidence": null
+    },
+    {
+      "index": 10,
+      "startMs": 38000,
+      "endMs": 42000,
+      "text": "それから、スキーの道具や服は何も持っていないんですが。",
+      "confidence": null
+    },
+    {
+      "index": 11,
+      "startMs": 42000,
+      "endMs": 48000,
+      "text": "全部スキー上で借りられますよ。心配なら旅行者で予約もできるし。",
+      "confidence": null
+    },
+    {
+      "index": 12,
+      "startMs": 48000,
+      "endMs": 51000,
+      "text": "そうですか。どうもありがとうございました。",
+      "confidence": null
+    }
+  ]
+}

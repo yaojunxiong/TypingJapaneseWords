@@ -1,0 +1,287 @@
+{
+  "version": "minna-original-line-segments-draft-v1",
+  "lesson": 31,
+  "sourceSet": "source-240000",
+  "cd": "CD16",
+  "sourceTrack": "source-240000/tracks/cd-016.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-240000/tracks/cd-016.mp3",
+  "segmentCount": 13,
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "小川",
+      "japanese": "来月から独身です。",
+      "normalizedTarget": "らいげつからどくしんです",
+      "normalizedAsrText": "来月から独新です",
+      "phoneticSimilarity": 0.4,
+      "matchedUtteranceIndexes": [
+        2
+      ],
+      "startMs": 7060,
+      "endMs": 9000,
+      "durationMs": 1940,
+      "audioPath": "line-segments/lesson-31/l31-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-31/l31-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [2] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "ミラー",
+      "japanese": "えっ？",
+      "normalizedTarget": "えっ",
+      "normalizedAsrText": "え",
+      "phoneticSimilarity": 0.6667,
+      "matchedUtteranceIndexes": [
+        3
+      ],
+      "startMs": 9000,
+      "endMs": 10000,
+      "durationMs": 1000,
+      "audioPath": "line-segments/lesson-31/l31-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-31/l31-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [3] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "小川",
+      "japanese": "実は大阪の本社に転勤なんです。",
+      "normalizedTarget": "じつはおおさかのほんしゃにてんきんなんです",
+      "normalizedAsrText": "実は大阪の本社に転勤なんです",
+      "phoneticSimilarity": 0.4,
+      "matchedUtteranceIndexes": [
+        4
+      ],
+      "startMs": 10000,
+      "endMs": 13280,
+      "durationMs": 3280,
+      "audioPath": "line-segments/lesson-31/l31-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-31/l31-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [4] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "ミラー",
+      "japanese": "本社ですか。それはおめでとうございます。",
+      "normalizedTarget": "ほんしゃですかそれはおめでとうございます",
+      "normalizedAsrText": "本社ですかそれはおめでとうございます",
+      "phoneticSimilarity": 0.8421,
+      "matchedUtteranceIndexes": [
+        5
+      ],
+      "startMs": 13280,
+      "endMs": 16760,
+      "durationMs": 3480,
+      "audioPath": "line-segments/lesson-31/l31-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-31/l31-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [5] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "ミラー",
+      "japanese": "でも、どうして独身になるんですか。",
+      "normalizedTarget": "でもどうしてどくしんになるんですか",
+      "normalizedAsrText": "でもどうして独新になるんですか",
+      "phoneticSimilarity": 0.8125,
+      "matchedUtteranceIndexes": [
+        6
+      ],
+      "startMs": 16760,
+      "endMs": 19600,
+      "durationMs": 2840,
+      "audioPath": "line-segments/lesson-31/l31-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-31/l31-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [6] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "小川",
+      "japanese": "妻と子どもは東京に残るんです。",
+      "normalizedTarget": "つまとこどもはとうきょうにのこるんです",
+      "normalizedAsrText": "妻と子供は東京に残るんです",
+      "phoneticSimilarity": 0.4375,
+      "matchedUtteranceIndexes": [
+        7
+      ],
+      "startMs": 19600,
+      "endMs": 22080,
+      "durationMs": 2480,
+      "audioPath": "line-segments/lesson-31/l31-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-31/l31-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [7] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 7,
+      "displayOrder": 7,
+      "speaker": "ミラー",
+      "japanese": "えっ、いっしょに行かないんですか。",
+      "normalizedTarget": "えっいっしょにいかないんですか",
+      "normalizedAsrText": "え一緒に行かないんですか",
+      "phoneticSimilarity": 0.6667,
+      "matchedUtteranceIndexes": [
+        8
+      ],
+      "startMs": 22080,
+      "endMs": 24800,
+      "durationMs": 2720,
+      "audioPath": "line-segments/lesson-31/l31-07.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-31/l31-07.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [8] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 8,
+      "displayOrder": 8,
+      "speaker": "小川",
+      "japanese": "ええ。息子は来年大学の入学試験があるから、東京に残ると言うし、妻も今の会社をやめたくないと言うんです。",
+      "normalizedTarget": "ええむすこはらいねんだいがくのにゅうがくしけんがあるからとうきょうにのこるというしつまもいまのかいしゃをやめたくないというんです",
+      "normalizedAsrText": "ええ息子は来年大学の入学試験があるから東京に残るというし妻も今の会社をやめたくないと言うんです",
+      "phoneticSimilarity": 0.5225,
+      "matchedUtteranceIndexes": [
+        9,
+        10
+      ],
+      "startMs": 24800,
+      "endMs": 33640,
+      "durationMs": 8840,
+      "audioPath": "line-segments/lesson-31/l31-08.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-31/l31-08.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [9, 10] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 9,
+      "displayOrder": 9,
+      "speaker": "ミラー",
+      "japanese": "それで、別々に住むんですね。",
+      "normalizedTarget": "それでべつべつにすむんですね",
+      "normalizedAsrText": "それで別々に住むんですね",
+      "phoneticSimilarity": 0.6923,
+      "matchedUtteranceIndexes": [
+        11
+      ],
+      "startMs": 33640,
+      "endMs": 35840,
+      "durationMs": 2200,
+      "audioPath": "line-segments/lesson-31/l31-09.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-31/l31-09.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [11] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 10,
+      "displayOrder": 10,
+      "speaker": "小川",
+      "japanese": "ええ。でも、月に2、3回週末に帰るつもりです。",
+      "normalizedTarget": "ええでもつきににさんかいしゅうまつにかえるつもりです",
+      "normalizedAsrText": "ええでも月に二三回週末に帰るつもりです",
+      "phoneticSimilarity": 0.5333,
+      "matchedUtteranceIndexes": [
+        12
+      ],
+      "startMs": 35840,
+      "endMs": 40760,
+      "durationMs": 4920,
+      "audioPath": "line-segments/lesson-31/l31-10.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-31/l31-10.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [12] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 11,
+      "displayOrder": 11,
+      "speaker": "ミラー",
+      "japanese": "大変ですね。",
+      "normalizedTarget": "たいへんですね",
+      "normalizedAsrText": "大変ですね",
+      "phoneticSimilarity": 0.5,
+      "matchedUtteranceIndexes": [
+        13
+      ],
+      "startMs": 40760,
+      "endMs": 42440,
+      "durationMs": 1680,
+      "audioPath": "line-segments/lesson-31/l31-11.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-31/l31-11.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [13] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 12,
+      "displayOrder": 12,
+      "speaker": "小川",
+      "japanese": "でも、いいチャンスですから、料理を習おうと思っています。",
+      "normalizedTarget": "でもいいちゃんすですからりょうりをならおうとおもっています",
+      "normalizedAsrText": "でもいいちゃんすですから料理を習おうと思っています",
+      "phoneticSimilarity": 0.7778,
+      "matchedUtteranceIndexes": [
+        14
+      ],
+      "startMs": 42440,
+      "endMs": 46480,
+      "durationMs": 4040,
+      "audioPath": "line-segments/lesson-31/l31-12.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-31/l31-12.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [14] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 13,
+      "displayOrder": 13,
+      "speaker": "ミラー",
+      "japanese": "それはいいですね。",
+      "normalizedTarget": "それはいいですね",
+      "normalizedAsrText": "それはいいですね",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        15
+      ],
+      "startMs": 46480,
+      "endMs": 48080,
+      "durationMs": 1600,
+      "audioPath": "line-segments/lesson-31/l31-13.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-31/l31-13.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [15] 对齐；应用已校准 MP3 时间偏移"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ]
+}
