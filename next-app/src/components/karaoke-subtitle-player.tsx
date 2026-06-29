@@ -59,10 +59,12 @@ interface Segment {
 
 const subtitleLoaders: Record<number, () => Promise<SubtitleLine[]>> = {
   1: () => import('@/data/minna/subtitle-learning/lesson-01-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  2: () => import('@/data/minna/subtitle-learning/lesson-02-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
 }
 
 const CD_AUDIO_URLS: Record<number, string> = {
   1: 'https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-230001/tracks/cd-001.mp3',
+  2: 'https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-230001/tracks/cd-005.mp3',
 }
 
 function formatTime(seconds: number): string {
@@ -143,7 +145,8 @@ export default function KaraokeSubtitlePlayer({ lessonNo }: Props) {
       setTtsError(false)
       return
     }
-    fetch('/generated/tts-karaoke/lesson-01/manifest.json')
+    const padded = String(lessonNo).padStart(2, '0')
+    fetch(`/generated/tts-karaoke/lesson-${padded}/manifest.json`)
       .then(r => r.ok ? r.json() : Promise.reject())
       .then(data => setTtsManifest(data))
       .catch(() => setTtsError(true))

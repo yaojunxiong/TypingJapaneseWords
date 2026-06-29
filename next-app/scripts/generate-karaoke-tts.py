@@ -1,40 +1,53 @@
 #!/usr/bin/env python3
 """
-Generate karaoke TTS practice audio for Lesson 1.
+Generate karaoke TTS practice audio for a given lesson.
 
-Reads lesson-01-subtitle-learning.json, generates TTS for each word
+Reads <lesson>-subtitle-learning.json, generates TTS for each word
 using edge-tts with appropriate speaker voice, concatenates with 50ms
 gaps, writes manifest.json, and injects wordStartTime/wordEndTime
 back into the subtitle JSON based on actual audio durations.
+
+Usage:
+    python generate-karaoke-tts.py <lesson_no>
+    python generate-karaoke-tts.py 2
 """
 
 import asyncio
 import json
 import os
 import subprocess
+import sys
 import tempfile
 import time
 from pathlib import Path
 
 import edge_tts
 
-SUBTITLE_PATH = "src/data/minna/subtitle-learning/lesson-01-subtitle-learning.json"
-OUTPUT_BASE = Path("public/generated/tts-karaoke/lesson-01")
-WORDS_DIR = OUTPUT_BASE / "words"
 GAP_SECONDS = 0.050
 
 VOICE_FEMALE = "ja-JP-NanamiNeural"
 VOICE_MALE = "ja-JP-KeitaNeural"
 
-SPEAKER_VOICES = {
+SPEAKER_VOICES_LESSON_01 = {
     "佐藤": {"voice": VOICE_FEMALE, "rate": "+0%"},
     "山田": {"voice": VOICE_MALE, "rate": "+0%"},
     "ミラー": {"voice": VOICE_MALE, "rate": "-10%"},
 }
 
+SPEAKER_VOICES_LESSON_02 = {
+    "山田一郎": {"voice": VOICE_MALE, "rate": "+0%"},
+    "サントス": {"voice": VOICE_MALE, "rate": "-10%"},
+}
 
-def get_voice_for_speaker(speaker_jp: str) -> dict:
-    return SPEAKER_VOICES.get(speaker_jp, {"voice": VOICE_FEMALE, "rate": "+0%"})
+SPEAKER_VOICES = {
+    1: SPEAKER_VOICES_LESSON_01,
+    2: SPEAKER_VOICES_LESSON_02,
+}
+
+
+def get_voice_for_speaker(lesson_no: int, speaker_jp: str) -> dict:
+    voices = SPEAKER_VOICES.get(lesson_no, {})
+    return voices.get(speaker_jp, {"voice": VOICE_FEMALE, "rate": "+0%"})
 
 
 def get_audio_duration(filepath: str) -> float:
@@ -93,15 +106,26 @@ async def generate_word_audio(text: str, output_path: str, voice_cfg: dict) -> f
     )
     await communicate.save(output_path)
     duration = get_audio_duration(output_path)
-    return round(max(duration, 0.050), 3)  # floor 50ms
+    return round(max(duration, 0.050), 3)
 
 
 async def main():
+    if len(sys.argv) < 2:
+        print("Usage: python generate-karaoke-tts.py <lesson_no>")
+        sys.exit(1)
+
+    lesson_no = int(sys.argv[1])
+    padded = str(lesson_no).zfill(2)
+
+    SUBTITLE_PATH = f"src/data/minna/subtitle-learning/lesson-{padded}-subtitle-learning.json"
+    OUTPUT_BASE = Path(f"public/generated/tts-karaoke/lesson-{padded}")
+    WORDS_DIR = OUTPUT_BASE / "words"
+
     with open(SUBTITLE_PATH, "r", encoding="utf-8") as f:
         subtitle_data = json.load(f)
 
     WORDS_DIR.mkdir(parents=True, exist_ok=True)
-    (OUTPUT_BASE).mkdir(parents=True, exist_ok=True)
+    OUTPUT_BASE.mkdir(parents=True, exist_ok=True)
 
     # Generate silence gap file
     silence_path = str(WORDS_DIR / "_silence.mp3")
@@ -117,7 +141,7 @@ async def main():
 
     for line_idx, line in enumerate(subtitle_data):
         speaker = line["speaker"]
-        voice_cfg = get_voice_for_speaker(speaker)
+        voice_cfg = get_voice_for_speaker(lesson_no, speaker)
 
         for word_idx, word in enumerate(line["words"]):
             word_id = word["id"]
@@ -178,8 +202,8 @@ async def main():
 
     # Write manifest
     manifest = {
-        "lessonId": 1,
-        "audioUrl": "/generated/tts-karaoke/lesson-01/combined.mp3",
+        "lessonId": lesson_no,
+        "audioUrl": f"/generated/tts-karaoke/lesson-{padded}/combined.mp3",
         "gapBetweenWords": GAP_SECONDS,
         "totalDuration": round(cumulative, 3),
         "segments": manifest_segments,
