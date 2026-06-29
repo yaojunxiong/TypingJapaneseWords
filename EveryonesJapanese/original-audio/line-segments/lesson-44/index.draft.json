@@ -1,0 +1,223 @@
+{
+  "version": "minna-original-line-segments-draft-v1",
+  "lesson": 44,
+  "sourceSet": "source-240000",
+  "cd": "CD55",
+  "sourceTrack": "source-240000/tracks/cd-055.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-240000/tracks/cd-055.mp3",
+  "segmentCount": 10,
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "美容師",
+      "japanese": "いらっしゃいませ。きょうはどうなさいますか。",
+      "normalizedTarget": "いらっしゃいませきょうはどうなさいますか",
+      "normalizedAsrText": "いらっしゃいませ今日はどうなさいますか",
+      "phoneticSimilarity": 0.8718,
+      "matchedUtteranceIndexes": [
+        2
+      ],
+      "startMs": 7300,
+      "endMs": 10400,
+      "durationMs": 3100,
+      "audioPath": "line-segments/lesson-44/l44-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-44/l44-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [2] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "イー",
+      "japanese": "カット、お願いします。",
+      "normalizedTarget": "かっとおねがいします",
+      "normalizedAsrText": "かっとお願いします",
+      "phoneticSimilarity": 0.8421,
+      "matchedUtteranceIndexes": [
+        3
+      ],
+      "startMs": 10400,
+      "endMs": 12000,
+      "durationMs": 1600,
+      "audioPath": "line-segments/lesson-44/l44-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-44/l44-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [3] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "美容師",
+      "japanese": "じゃ、シャンプーをしますから、こちらへどうぞ。",
+      "normalizedTarget": "じゃしゃんぷーをしますからこちらへどうぞ",
+      "normalizedAsrText": "じゃあしゃんぷー押しますからこちらへどうぞ",
+      "phoneticSimilarity": 0.9268,
+      "matchedUtteranceIndexes": [
+        4
+      ],
+      "startMs": 12000,
+      "endMs": 16400,
+      "durationMs": 4400,
+      "audioPath": "line-segments/lesson-44/l44-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-44/l44-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [4] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "美容師",
+      "japanese": "カットはどういうふうになさいますか。",
+      "normalizedTarget": "かっとはどういうふうになさいますか",
+      "normalizedAsrText": "かっとはどういうふうになさいますか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        5
+      ],
+      "startMs": 16400,
+      "endMs": 18800,
+      "durationMs": 2400,
+      "audioPath": "line-segments/lesson-44/l44-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-44/l44-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [5] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "イー",
+      "japanese": "ショートにしたいんですけど……。この写真みたいにしてください。",
+      "normalizedTarget": "しょーとにしたいんですけどこのしゃしんみたいにしてください",
+      "normalizedAsrText": "しょーとにしたいんですけどこの写真みたいにしてください",
+      "phoneticSimilarity": 0.8929,
+      "matchedUtteranceIndexes": [
+        6
+      ],
+      "startMs": 18800,
+      "endMs": 23400,
+      "durationMs": 4600,
+      "audioPath": "line-segments/lesson-44/l44-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-44/l44-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [6] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "美容師",
+      "japanese": "あ、すてきですね。",
+      "normalizedTarget": "あすてきですね",
+      "normalizedAsrText": "あ素敵ですね",
+      "phoneticSimilarity": 0.6154,
+      "matchedUtteranceIndexes": [
+        7
+      ],
+      "startMs": 23400,
+      "endMs": 27400,
+      "durationMs": 4000,
+      "audioPath": "line-segments/lesson-44/l44-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-44/l44-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [7] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 7,
+      "displayOrder": 7,
+      "speaker": "美容師",
+      "japanese": "前の長さはこれでよろしいでしょうか。",
+      "normalizedTarget": "まえのながさはこれでよろしいでしょうか",
+      "normalizedAsrText": "前の長さはこれでよろしいでしょうか",
+      "phoneticSimilarity": 0.8333,
+      "matchedUtteranceIndexes": [
+        8
+      ],
+      "startMs": 27400,
+      "endMs": 30200,
+      "durationMs": 2800,
+      "audioPath": "line-segments/lesson-44/l44-07.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-44/l44-07.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [8] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 8,
+      "displayOrder": 8,
+      "speaker": "イー",
+      "japanese": "そうですね。もう少し短くしてください。",
+      "normalizedTarget": "そうですねもうすこしみじかくしてください",
+      "normalizedAsrText": "そうですねもう少し短くしてください",
+      "phoneticSimilarity": 0.8108,
+      "matchedUtteranceIndexes": [
+        9
+      ],
+      "startMs": 30200,
+      "endMs": 36000,
+      "durationMs": 5800,
+      "audioPath": "line-segments/lesson-44/l44-08.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-44/l44-08.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [9] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 9,
+      "displayOrder": 9,
+      "speaker": "美容師",
+      "japanese": "どうもお疲れさまでした。",
+      "normalizedTarget": "どうもおつかれさまでした",
+      "normalizedAsrText": "どうもお疲れさまでした",
+      "phoneticSimilarity": 0.8696,
+      "matchedUtteranceIndexes": [
+        10
+      ],
+      "startMs": 36000,
+      "endMs": 37800,
+      "durationMs": 1800,
+      "audioPath": "line-segments/lesson-44/l44-09.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-44/l44-09.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [10] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 10,
+      "displayOrder": 10,
+      "speaker": "イー",
+      "japanese": "ありがとう。",
+      "normalizedTarget": "ありがとう",
+      "normalizedAsrText": "ありがとう",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        11
+      ],
+      "startMs": 37800,
+      "endMs": 40800,
+      "durationMs": 3000,
+      "audioPath": "line-segments/lesson-44/l44-10.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-44/l44-10.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [11] 对齐；应用已校准 MP3 时间偏移"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ]
+}

@@ -1,0 +1,245 @@
+{
+  "version": "minna-original-line-segments-draft-v1",
+  "lesson": 45,
+  "sourceSet": "source-240000",
+  "cd": "CD58",
+  "sourceTrack": "source-240000/tracks/cd-058.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-240000/tracks/cd-058.mp3",
+  "segmentCount": 11,
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "係員",
+      "japanese": "皆さん、このマラソンは健康マラソンですから、無理をしないでください。もし気分が悪くなったら、係員に言ってください。",
+      "normalizedTarget": "みなさんこのまらそんはけんこうまらそんですからむりをしないでくださいもしきぶんがわるくなったらかかりいんにいってください",
+      "normalizedAsrText": "みなさんこのまらそんは健康まらそんですから無理をしないでくださいもし気分が悪くなったらかかりに行ってくださいはい",
+      "phoneticSimilarity": 0.7931,
+      "matchedUtteranceIndexes": [
+        2,
+        3
+      ],
+      "startMs": 8520,
+      "endMs": 18500,
+      "durationMs": 9980,
+      "audioPath": "line-segments/lesson-45/l45-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-45/l45-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [2, 3] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "参加者全員",
+      "japanese": "はい。",
+      "normalizedTarget": "はい",
+      "normalizedAsrText": "もし気分が悪くなったらかかりに行ってくださいはい",
+      "phoneticSimilarity": 0.1538,
+      "matchedUtteranceIndexes": [
+        3
+      ],
+      "startMs": 18500,
+      "endMs": 19880,
+      "durationMs": 1380,
+      "audioPath": "line-segments/lesson-45/l45-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-45/l45-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [3] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "参加者1",
+      "japanese": "すみません。コースをまちがえた場合は、どうしたらいいですか。",
+      "normalizedTarget": "すみませんこーすをまちがえたばあいはどうしたらいいですか",
+      "normalizedAsrText": "すみませんこーすを間違えた場合はどうしたらいいですか",
+      "phoneticSimilarity": 0.8148,
+      "matchedUtteranceIndexes": [
+        4
+      ],
+      "startMs": 19880,
+      "endMs": 24040,
+      "durationMs": 4160,
+      "audioPath": "line-segments/lesson-45/l45-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-45/l45-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [4] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "係員",
+      "japanese": "元の所に戻って、続けてください。",
+      "normalizedTarget": "もとのところにもどってつづけてください",
+      "normalizedAsrText": "元のところに戻って続けてくださいあの途中でやめたい場合は",
+      "phoneticSimilarity": 0.5532,
+      "matchedUtteranceIndexes": [
+        5
+      ],
+      "startMs": 24040,
+      "endMs": 27000,
+      "durationMs": 2960,
+      "audioPath": "line-segments/lesson-45/l45-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-45/l45-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [5] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "参加者2",
+      "japanese": "あのう、途中でやめたい場合は？",
+      "normalizedTarget": "あのうとちゅうでやめたいばあいは",
+      "normalizedAsrText": "元のところに戻って続けてくださいあの途中でやめたい場合は",
+      "phoneticSimilarity": 0.3636,
+      "matchedUtteranceIndexes": [
+        5
+      ],
+      "startMs": 27000,
+      "endMs": 29520,
+      "durationMs": 2520,
+      "audioPath": "line-segments/lesson-45/l45-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-45/l45-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [5] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "係員",
+      "japanese": "その場合は、近くの係員に名前を言って、帰ってください。では、スタートの時間です。",
+      "normalizedTarget": "そのばあいはちかくのかかりいんになまえをいってかえってくださいではすたーとのじかんです",
+      "normalizedAsrText": "その場合は近くのかかりに名前を言って帰ってくださいではすたーとの時間です",
+      "phoneticSimilarity": 0.6835,
+      "matchedUtteranceIndexes": [
+        6
+      ],
+      "startMs": 29520,
+      "endMs": 38360,
+      "durationMs": 8840,
+      "audioPath": "line-segments/lesson-45/l45-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-45/l45-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [6] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 7,
+      "displayOrder": 7,
+      "speaker": "鈴木",
+      "japanese": "ミラーさん、マラソンはどうでしたか。",
+      "normalizedTarget": "みらーさんまらそんはどうでしたか",
+      "normalizedAsrText": "みなさんまらそんはどうでしたか2でした2だったんですかすごいですね",
+      "phoneticSimilarity": 0.5714,
+      "matchedUtteranceIndexes": [
+        7
+      ],
+      "startMs": 38360,
+      "endMs": 41000,
+      "durationMs": 2640,
+      "audioPath": "line-segments/lesson-45/l45-07.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-45/l45-07.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [7] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 8,
+      "displayOrder": 8,
+      "speaker": "ミラー",
+      "japanese": "2位でした。",
+      "normalizedTarget": "にいでした",
+      "normalizedAsrText": "みなさんまらそんはどうでしたか2でした2だったんですかすごいですね",
+      "phoneticSimilarity": 0.1579,
+      "matchedUtteranceIndexes": [
+        7
+      ],
+      "startMs": 41000,
+      "endMs": 42500,
+      "durationMs": 1500,
+      "audioPath": "line-segments/lesson-45/l45-08.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-45/l45-08.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [7] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 9,
+      "displayOrder": 9,
+      "speaker": "鈴木",
+      "japanese": "2位だったんですか。すごいですね。",
+      "normalizedTarget": "にいだったんですかすごいですね",
+      "normalizedAsrText": "みなさんまらそんはどうでしたか2でした2だったんですかすごいですね",
+      "phoneticSimilarity": 0.5417,
+      "matchedUtteranceIndexes": [
+        7
+      ],
+      "startMs": 42500,
+      "endMs": 45480,
+      "durationMs": 2980,
+      "audioPath": "line-segments/lesson-45/l45-09.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-45/l45-09.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [7] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 10,
+      "displayOrder": 10,
+      "speaker": "ミラー",
+      "japanese": "いいえ、一生懸命練習したのに、優勝できなくて、残念です。",
+      "normalizedTarget": "いいえいっしょうけんめいれんしゅうしたのにゆうしょうできなくてざんねんです",
+      "normalizedAsrText": "いいえ一生懸命練習したのに優勝できなくて残念ですまた来年がありますよ",
+      "phoneticSimilarity": 0.3944,
+      "matchedUtteranceIndexes": [
+        8
+      ],
+      "startMs": 45480,
+      "endMs": 50360,
+      "durationMs": 4880,
+      "audioPath": "line-segments/lesson-45/l45-10.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-45/l45-10.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [8] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 11,
+      "displayOrder": 11,
+      "speaker": "鈴木",
+      "japanese": "また来年がありますよ。",
+      "normalizedTarget": "またらいねんがありますよ",
+      "normalizedAsrText": "いいえ一生懸命練習したのに優勝できなくて残念ですまた来年がありますよ",
+      "phoneticSimilarity": 0.3478,
+      "matchedUtteranceIndexes": [
+        8
+      ],
+      "startMs": 50360,
+      "endMs": 53640,
+      "durationMs": 3280,
+      "audioPath": "line-segments/lesson-45/l45-11.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-45/l45-11.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [8] 对齐；应用已校准 MP3 时间偏移"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ]
+}

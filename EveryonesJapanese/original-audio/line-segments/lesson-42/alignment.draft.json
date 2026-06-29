@@ -1,0 +1,246 @@
+{
+  "version": "minna-line-alignment-draft-v1",
+  "lesson": 42,
+  "sourceSet": "source-240000",
+  "cd": "CD49",
+  "sourceTrack": "source-240000/tracks/cd-049.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-240000/tracks/cd-049.mp3",
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "鈴木",
+      "japanese": "林さん、ボーナスはいつ出るんですか。",
+      "normalizedTarget": "はやしさんぼーなすはいつでるんですか",
+      "normalizedAsrText": "はやしさんぼーなすはいつ出るんですか",
+      "phoneticSimilarity": 0.9444,
+      "matchedUtteranceIndexes": [
+        3
+      ],
+      "startMs": 7000,
+      "endMs": 10000,
+      "durationMs": 3000,
+      "audioPath": "line-segments/lesson-42/l42-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-42/l42-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [3] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "林",
+      "japanese": "来週です。鈴木さんの会社は？",
+      "normalizedTarget": "らいしゅうですすずきさんのかいしゃは",
+      "normalizedAsrText": "来週です鈴木さんの会社は",
+      "phoneticSimilarity": 0.4,
+      "matchedUtteranceIndexes": [
+        4
+      ],
+      "startMs": 10000,
+      "endMs": 13000,
+      "durationMs": 3000,
+      "audioPath": "line-segments/lesson-42/l42-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-42/l42-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [4] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "鈴木",
+      "japanese": "あしたです。楽しみですね。",
+      "normalizedTarget": "あしたですたのしみですね",
+      "normalizedAsrText": "明日です楽しみですね",
+      "phoneticSimilarity": 0.6364,
+      "matchedUtteranceIndexes": [
+        5
+      ],
+      "startMs": 13000,
+      "endMs": 16000,
+      "durationMs": 3000,
+      "audioPath": "line-segments/lesson-42/l42-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-42/l42-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [5] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "林",
+      "japanese": "ええ。鈴木さんは何に使いますか。",
+      "normalizedTarget": "ええすずきさんはなににつかいますか",
+      "normalizedAsrText": "ええ鈴木さんは何に使いますか",
+      "phoneticSimilarity": 0.6452,
+      "matchedUtteranceIndexes": [
+        6
+      ],
+      "startMs": 16000,
+      "endMs": 19000,
+      "durationMs": 3000,
+      "audioPath": "line-segments/lesson-42/l42-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-42/l42-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [6] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "鈴木",
+      "japanese": "まず新しい自転車を買って、それから旅行に行って……。",
+      "normalizedTarget": "まずあたらしいじてんしゃをかってそれからりょこうにいって",
+      "normalizedAsrText": "まず新しい自転車を買ってそれから旅行に行って",
+      "phoneticSimilarity": 0.56,
+      "matchedUtteranceIndexes": [
+        7
+      ],
+      "startMs": 19000,
+      "endMs": 24000,
+      "durationMs": 5000,
+      "audioPath": "line-segments/lesson-42/l42-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-42/l42-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [7] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "小川",
+      "japanese": "貯金はしないんですか。",
+      "normalizedTarget": "ちょきんはしないんですか",
+      "normalizedAsrText": "貯金はしないんですか",
+      "phoneticSimilarity": 0.7273,
+      "matchedUtteranceIndexes": [
+        8
+      ],
+      "startMs": 24000,
+      "endMs": 26000,
+      "durationMs": 2000,
+      "audioPath": "line-segments/lesson-42/l42-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-42/l42-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [8] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 7,
+      "displayOrder": 7,
+      "speaker": "鈴木",
+      "japanese": "僕はあまり考えたこと、ありませんね。",
+      "normalizedTarget": "ぼくはあまりかんがえたことありませんね",
+      "normalizedAsrText": "僕はあまり考えたことはありませんね",
+      "phoneticSimilarity": 0.7778,
+      "matchedUtteranceIndexes": [
+        9
+      ],
+      "startMs": 26000,
+      "endMs": 29000,
+      "durationMs": 3000,
+      "audioPath": "line-segments/lesson-42/l42-07.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-42/l42-07.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [9] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 8,
+      "displayOrder": 8,
+      "speaker": "林",
+      "japanese": "わたしは半分は貯金するつもりです。",
+      "normalizedTarget": "わたしははんぶんはちょきんするつもりです",
+      "normalizedAsrText": "私は半分は貯金するつもりです",
+      "phoneticSimilarity": 0.5294,
+      "matchedUtteranceIndexes": [
+        10
+      ],
+      "startMs": 29000,
+      "endMs": 32000,
+      "durationMs": 3000,
+      "audioPath": "line-segments/lesson-42/l42-08.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-42/l42-08.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [10] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 9,
+      "displayOrder": 9,
+      "speaker": "鈴木",
+      "japanese": "えっ、半分も貯金するんですか。",
+      "normalizedTarget": "えっはんぶんもちょきんするんですか",
+      "normalizedAsrText": "え半分も貯金するんですか",
+      "phoneticSimilarity": 0.5517,
+      "matchedUtteranceIndexes": [
+        11
+      ],
+      "startMs": 32000,
+      "endMs": 35000,
+      "durationMs": 3000,
+      "audioPath": "line-segments/lesson-42/l42-09.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-42/l42-09.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [11] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 10,
+      "displayOrder": 10,
+      "speaker": "林",
+      "japanese": "ええ、いつかイギリスへ留学しようと思っているんです。",
+      "normalizedTarget": "ええいつかいぎりすへりゅうがくしようとおもっているんです",
+      "normalizedAsrText": "ええいつかいぎりすへ留学しようと思っているんです",
+      "phoneticSimilarity": 0.8077,
+      "matchedUtteranceIndexes": [
+        12
+      ],
+      "startMs": 35000,
+      "endMs": 39000,
+      "durationMs": 4000,
+      "audioPath": "line-segments/lesson-42/l42-10.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-42/l42-10.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [12] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 11,
+      "displayOrder": 11,
+      "speaker": "小川",
+      "japanese": "へえ、独身の人はいいですね。全部自分のために、使えて。わたしは家のローンを払って、子どもの教育のために、貯金したら、ほとんど残りませんよ。",
+      "normalizedTarget": "へえどくしんのひとはいいですねぜんぶじぶんのためにつかえてわたしはいえのろーんをはらってこどものきょういくのためにちょきんしたらほとんどのこりませんよ",
+      "normalizedAsrText": "ええ独新の人はいいですね全部自分のために使えて私は家のろーんを払って子供の教育のために貯金したらほとんど残りませんよ",
+      "phoneticSimilarity": 0.5865,
+      "matchedUtteranceIndexes": [
+        13,
+        14,
+        15,
+        16
+      ],
+      "startMs": 39000,
+      "endMs": 52000,
+      "durationMs": 13000,
+      "audioPath": "line-segments/lesson-42/l42-11.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-42/l42-11.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [13, 14, 15, 16] 对齐；应用已校准 MP3 时间偏移"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ]
+}

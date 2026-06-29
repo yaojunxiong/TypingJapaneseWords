@@ -1,0 +1,71 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 45,
+  "cd": "CD58",
+  "sourceTrack": "source-240000/tracks/cd-058.mp3",
+  "durationMs": 54596,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "role": "timestamp_source_only"
+  },
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 0,
+      "endMs": 8520,
+      "text": "第45課会話 コースを間違えた場合はどうしたらいいですか",
+      "confidence": null
+    },
+    {
+      "index": 2,
+      "startMs": 8520,
+      "endMs": 14440,
+      "text": "みなさん このマラソンは健康マラソンですから無理をしないでください",
+      "confidence": null
+    },
+    {
+      "index": 3,
+      "startMs": 14440,
+      "endMs": 19880,
+      "text": "もし気分が悪くなったらかかりに行ってください はい",
+      "confidence": null
+    },
+    {
+      "index": 4,
+      "startMs": 19880,
+      "endMs": 24040,
+      "text": "すみません コースを間違えた場合はどうしたらいいですか",
+      "confidence": null
+    },
+    {
+      "index": 5,
+      "startMs": 24040,
+      "endMs": 29520,
+      "text": "元のところに戻って続けてください あの途中でやめたい場合は",
+      "confidence": null
+    },
+    {
+      "index": 6,
+      "startMs": 29520,
+      "endMs": 38360,
+      "text": "その場合は近くのかかりに名前を言って帰ってください ではスタートの時間です",
+      "confidence": null
+    },
+    {
+      "index": 7,
+      "startMs": 38360,
+      "endMs": 45480,
+      "text": "みなさんマラソンはどうでしたか2でした 2だったんですかすごいですね",
+      "confidence": null
+    },
+    {
+      "index": 8,
+      "startMs": 45480,
+      "endMs": 53640,
+      "text": "いいえ一生懸命練習したのに優勝できなくて残念です また来年がありますよ",
+      "confidence": null
+    }
+  ]
+}

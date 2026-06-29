@@ -1,0 +1,99 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 41,
+  "cd": "CD46",
+  "sourceTrack": "source-240000/tracks/cd-046.mp3",
+  "durationMs": 68493,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "role": "timestamp_source_only"
+  },
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 0,
+      "endMs": 7640,
+      "text": "第41日会話 ご結婚おめでとうございます",
+      "confidence": null
+    },
+    {
+      "index": 2,
+      "startMs": 7640,
+      "endMs": 13600,
+      "text": "ワットさん イズミさん ご結婚おめでとうございます",
+      "confidence": null
+    },
+    {
+      "index": 3,
+      "startMs": 13600,
+      "endMs": 16560,
+      "text": "乾杯 乾杯",
+      "confidence": null
+    },
+    {
+      "index": 4,
+      "startMs": 20120,
+      "endMs": 24760,
+      "text": "次にこちらの皆さんに一言ずつお願いします",
+      "confidence": null
+    },
+    {
+      "index": 5,
+      "startMs": 24760,
+      "endMs": 30840,
+      "text": "私は去年の夏のクラスでワット先生に英語を教えていただきました",
+      "confidence": null
+    },
+    {
+      "index": 6,
+      "startMs": 30840,
+      "endMs": 35440,
+      "text": "先生の授業はユーモアがあって楽しかったです",
+      "confidence": null
+    },
+    {
+      "index": 7,
+      "startMs": 35440,
+      "endMs": 40200,
+      "text": "実はそのクラスにイズミさんもいらっしゃったんです",
+      "confidence": null
+    },
+    {
+      "index": 8,
+      "startMs": 40200,
+      "endMs": 45800,
+      "text": "私は先生に「上手な整理の方法」という本をいただきました",
+      "confidence": null
+    },
+    {
+      "index": 9,
+      "startMs": 45800,
+      "endMs": 51000,
+      "text": "先生は整理するのがお上手で研究室はいつも綺麗です",
+      "confidence": null
+    },
+    {
+      "index": 10,
+      "startMs": 51000,
+      "endMs": 54680,
+      "text": "きっとお二人のお宅も素敵だと思います",
+      "confidence": null
+    },
+    {
+      "index": 11,
+      "startMs": 54680,
+      "endMs": 62360,
+      "text": "ワットさん 今度は素敵な人と結婚する方法という本を書いてくださいませんか",
+      "confidence": null
+    },
+    {
+      "index": 12,
+      "startMs": 62360,
+      "endMs": 67640,
+      "text": "是非読んで勉強したいです どうぞお幸せに",
+      "confidence": null
+    }
+  ]
+}

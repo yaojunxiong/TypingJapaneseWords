@@ -1,0 +1,145 @@
+{
+  "version": "minna-original-line-segments-draft-v1",
+  "lesson": 41,
+  "sourceSet": "source-240000",
+  "cd": "CD46",
+  "sourceTrack": "source-240000/tracks/cd-046.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-240000/tracks/cd-046.mp3",
+  "segmentCount": 6,
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "学長",
+      "japanese": "ワットさん、いずみさん、ご結婚おめでとうございます。乾杯。",
+      "normalizedTarget": "わっとさんいずみさんごけっこんおめでとうございますかんぱい",
+      "normalizedAsrText": "わっとさんいずみさんご結婚おめでとうございます乾杯乾杯",
+      "phoneticSimilarity": 0.75,
+      "matchedUtteranceIndexes": [
+        2,
+        3
+      ],
+      "startMs": 7640,
+      "endMs": 15000,
+      "durationMs": 7360,
+      "audioPath": "line-segments/lesson-41/l41-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-41/l41-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [2, 3] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "皆",
+      "japanese": "乾杯。",
+      "normalizedTarget": "かんぱい",
+      "normalizedAsrText": "乾杯乾杯",
+      "phoneticSimilarity": 0.0,
+      "matchedUtteranceIndexes": [
+        3
+      ],
+      "startMs": 15000,
+      "endMs": 16560,
+      "durationMs": 1560,
+      "audioPath": "line-segments/lesson-41/l41-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-41/l41-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [3] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "司会者",
+      "japanese": "次にこちらの皆さんにひとことずつお願いします。",
+      "normalizedTarget": "つぎにこちらのみなさんにひとことずつおねがいします",
+      "normalizedAsrText": "次にこちらの皆さんに一言ずつお願いします",
+      "phoneticSimilarity": 0.6667,
+      "matchedUtteranceIndexes": [
+        4
+      ],
+      "startMs": 20120,
+      "endMs": 24760,
+      "durationMs": 4640,
+      "audioPath": "line-segments/lesson-41/l41-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-41/l41-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [4] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "松本良子",
+      "japanese": "わたしは去年の夏のクラスでワット先生に英語を教えていただきました。先生の授業はユーモアがあって、楽しかったです。実はそのクラスにいずみさんもいらっしゃったんです。",
+      "normalizedTarget": "わたしはきょねんのなつのくらすでわっとせんせいにえいごをおしえていただきましたせんせいのじゅぎょうはゆーもあがあってたのしかったですじつはそのくらすにいずみさんもいらっしゃったんです",
+      "normalizedAsrText": "私は去年の夏のくらすでわっと先生に英語を教えていただきました先生の授業はゆーもあがあって楽しかったです実はそのくらすにいずみさんもいらっしゃったんです",
+      "phoneticSimilarity": 0.7229,
+      "matchedUtteranceIndexes": [
+        5,
+        6,
+        7
+      ],
+      "startMs": 24760,
+      "endMs": 40200,
+      "durationMs": 15440,
+      "audioPath": "line-segments/lesson-41/l41-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-41/l41-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [5, 6, 7] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "大学職員",
+      "japanese": "わたしは先生に「上手な整理の方法」という本をいただきました。先生は整理するのがお上手で、研究室はいつもきれいです。きっとお二人のお宅もすてきだと思います。",
+      "normalizedTarget": "わたしはせんせいにじょうずなせいりのほうほうというほんをいただきましたせんせいはせいりするのがおじょうずでけんきゅうしつはいつもきれいですきっとおふたりのおたくもすてきだとおもいます",
+      "normalizedAsrText": "私は先生に上手な整理の方法という本をいただきました先生は整理するのがお上手で研究室はいつも綺麗ですきっとお二人のお宅も素敵だと思います",
+      "phoneticSimilarity": 0.5063,
+      "matchedUtteranceIndexes": [
+        8,
+        9,
+        10
+      ],
+      "startMs": 40200,
+      "endMs": 54680,
+      "durationMs": 14480,
+      "audioPath": "line-segments/lesson-41/l41-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-41/l41-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [8, 9, 10] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "ミラー",
+      "japanese": "ワットさん、今度は「すてきな人と結婚する方法」という本を書いてくださいませんか。ぜひ読んで、勉強したいです。どうぞお幸せに。",
+      "normalizedTarget": "わっとさんこんどはすてきなひととけっこんするほうほうというほんをかいてくださいませんかぜひよんでべんきょうしたいですどうぞおしあわせに",
+      "normalizedAsrText": "わっとさん今度は素敵な人と結婚する方法という本を書いてくださいませんか是非読んで勉強したいですどうぞお幸せに",
+      "phoneticSimilarity": 0.6116,
+      "matchedUtteranceIndexes": [
+        11,
+        12
+      ],
+      "startMs": 54680,
+      "endMs": 67640,
+      "durationMs": 12960,
+      "audioPath": "line-segments/lesson-41/l41-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-41/l41-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [11, 12] 对齐；应用已校准 MP3 时间偏移"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ]
+}

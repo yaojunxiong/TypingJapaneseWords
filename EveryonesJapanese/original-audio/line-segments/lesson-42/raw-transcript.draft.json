@@ -1,0 +1,127 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 42,
+  "cd": "CD49",
+  "sourceTrack": "source-240000/tracks/cd-049.mp3",
+  "durationMs": 54465,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "role": "timestamp_source_only"
+  },
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 0,
+      "endMs": 3000,
+      "text": "第42日会話",
+      "confidence": null
+    },
+    {
+      "index": 2,
+      "startMs": 4000,
+      "endMs": 6000,
+      "text": "ボーナスは何に使いますか?",
+      "confidence": null
+    },
+    {
+      "index": 3,
+      "startMs": 7000,
+      "endMs": 10000,
+      "text": "はやしさん、ボーナスはいつ出るんですか?",
+      "confidence": null
+    },
+    {
+      "index": 4,
+      "startMs": 10000,
+      "endMs": 13000,
+      "text": "来週です。鈴木さんの会社は?",
+      "confidence": null
+    },
+    {
+      "index": 5,
+      "startMs": 13000,
+      "endMs": 16000,
+      "text": "明日です。楽しみですね。",
+      "confidence": null
+    },
+    {
+      "index": 6,
+      "startMs": 16000,
+      "endMs": 19000,
+      "text": "ええ、鈴木さんは何に使いますか?",
+      "confidence": null
+    },
+    {
+      "index": 7,
+      "startMs": 19000,
+      "endMs": 24000,
+      "text": "まず、新しい自転車を買って、それから旅行に行って",
+      "confidence": null
+    },
+    {
+      "index": 8,
+      "startMs": 24000,
+      "endMs": 26000,
+      "text": "貯金はしないんですか?",
+      "confidence": null
+    },
+    {
+      "index": 9,
+      "startMs": 26000,
+      "endMs": 29000,
+      "text": "僕はあまり考えたことはありませんね。",
+      "confidence": null
+    },
+    {
+      "index": 10,
+      "startMs": 29000,
+      "endMs": 32000,
+      "text": "私は半分は貯金するつもりです。",
+      "confidence": null
+    },
+    {
+      "index": 11,
+      "startMs": 32000,
+      "endMs": 35000,
+      "text": "え、半分も貯金するんですか?",
+      "confidence": null
+    },
+    {
+      "index": 12,
+      "startMs": 35000,
+      "endMs": 39000,
+      "text": "ええ、いつかイギリスへ留学しようと思っているんです。",
+      "confidence": null
+    },
+    {
+      "index": 13,
+      "startMs": 39000,
+      "endMs": 42000,
+      "text": "ええ、独新の人はいいですね。",
+      "confidence": null
+    },
+    {
+      "index": 14,
+      "startMs": 42000,
+      "endMs": 45000,
+      "text": "全部自分のために使えて。",
+      "confidence": null
+    },
+    {
+      "index": 15,
+      "startMs": 45000,
+      "endMs": 50000,
+      "text": "私は家のローンを払って、子供の教育のために貯金したら",
+      "confidence": null
+    },
+    {
+      "index": 16,
+      "startMs": 50000,
+      "endMs": 52000,
+      "text": "ほとんど残りませんよ。",
+      "confidence": null
+    }
+  ]
+}

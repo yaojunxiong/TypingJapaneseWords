@@ -1,0 +1,99 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 43,
+  "cd": "CD52",
+  "sourceTrack": "source-240000/tracks/cd-052.mp3",
+  "durationMs": 44904,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "role": "timestamp_source_only"
+  },
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 0,
+      "endMs": 6960,
+      "text": "第43課 会話 毎日楽しそうです",
+      "confidence": null
+    },
+    {
+      "index": 2,
+      "startMs": 6960,
+      "endMs": 9560,
+      "text": "これ どなたの写真ですか?",
+      "confidence": null
+    },
+    {
+      "index": 3,
+      "startMs": 9560,
+      "endMs": 13920,
+      "text": "息子のハンスです 運動会の時取った写真です",
+      "confidence": null
+    },
+    {
+      "index": 4,
+      "startMs": 13920,
+      "endMs": 15360,
+      "text": "元気そうですね",
+      "confidence": null
+    },
+    {
+      "index": 5,
+      "startMs": 15360,
+      "endMs": 19300,
+      "text": "ええ ハンスは走るのが早いんですよ",
+      "confidence": null
+    },
+    {
+      "index": 6,
+      "startMs": 19300,
+      "endMs": 24200,
+      "text": "日本の小学校にも慣れて 友達もできて 毎日楽しそうです",
+      "confidence": null
+    },
+    {
+      "index": 7,
+      "startMs": 24200,
+      "endMs": 28520,
+      "text": "よかったですね こちらの方は奥さんですか?",
+      "confidence": null
+    },
+    {
+      "index": 8,
+      "startMs": 28520,
+      "endMs": 30200,
+      "text": "綺麗な方ですね",
+      "confidence": null
+    },
+    {
+      "index": 9,
+      "startMs": 30200,
+      "endMs": 32120,
+      "text": "ありがとうございます",
+      "confidence": null
+    },
+    {
+      "index": 10,
+      "startMs": 32120,
+      "endMs": 36720,
+      "text": "妻はいろいろなことに興味があって 一緒にいると面白いんですよ",
+      "confidence": null
+    },
+    {
+      "index": 11,
+      "startMs": 36720,
+      "endMs": 38040,
+      "text": "そうですか",
+      "confidence": null
+    },
+    {
+      "index": 12,
+      "startMs": 38040,
+      "endMs": 42120,
+      "text": "特に歴史が好きで 時間があれば古い町を歩いています",
+      "confidence": null
+    }
+  ]
+}

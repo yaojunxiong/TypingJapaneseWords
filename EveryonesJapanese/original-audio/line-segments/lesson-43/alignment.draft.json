@@ -1,0 +1,183 @@
+{
+  "version": "minna-line-alignment-draft-v1",
+  "lesson": 43,
+  "sourceSet": "source-240000",
+  "cd": "CD52",
+  "sourceTrack": "source-240000/tracks/cd-052.mp3",
+  "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-240000/tracks/cd-052.mp3",
+  "segments": [
+    {
+      "lineNo": 1,
+      "displayOrder": 1,
+      "speaker": "林",
+      "japanese": "これ、どなたの写真ですか。",
+      "normalizedTarget": "これどなたのしゃしんですか",
+      "normalizedAsrText": "これどなたの写真ですか",
+      "phoneticSimilarity": 0.75,
+      "matchedUtteranceIndexes": [
+        2
+      ],
+      "startMs": 6960,
+      "endMs": 9560,
+      "durationMs": 2600,
+      "audioPath": "line-segments/lesson-43/l43-01.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-43/l43-01.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [2] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 2,
+      "displayOrder": 2,
+      "speaker": "シュミット",
+      "japanese": "息子のハンスです。運動会のとき、撮った写真です。",
+      "normalizedTarget": "むすこのはんすですうんどうかいのときとったしゃしんです",
+      "normalizedAsrText": "息子のはんすです運動会の時取った写真です",
+      "phoneticSimilarity": 0.4681,
+      "matchedUtteranceIndexes": [
+        3
+      ],
+      "startMs": 9560,
+      "endMs": 13920,
+      "durationMs": 4360,
+      "audioPath": "line-segments/lesson-43/l43-02.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-43/l43-02.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [3] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 3,
+      "displayOrder": 3,
+      "speaker": "林",
+      "japanese": "元気そうですね。",
+      "normalizedTarget": "げんきそうですね",
+      "normalizedAsrText": "元気そうですね",
+      "phoneticSimilarity": 0.6667,
+      "matchedUtteranceIndexes": [
+        4
+      ],
+      "startMs": 13920,
+      "endMs": 15360,
+      "durationMs": 1440,
+      "audioPath": "line-segments/lesson-43/l43-03.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-43/l43-03.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [4] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 4,
+      "displayOrder": 4,
+      "speaker": "シュミット",
+      "japanese": "ええ。ハンスは走るのが速いんですよ。日本の小学校にも慣れて、友達もできて、毎日楽しそうです。",
+      "normalizedTarget": "ええはんすははしるのがはやいんですよにほんのしょうがっこうにもなれてともだちもできてまいにちたのしそうです",
+      "normalizedAsrText": "ええはんすは走るのが早いんですよ日本の小学校にも慣れて友達もできて毎日楽しそうです",
+      "phoneticSimilarity": 0.5957,
+      "matchedUtteranceIndexes": [
+        5,
+        6
+      ],
+      "startMs": 15360,
+      "endMs": 24200,
+      "durationMs": 8840,
+      "audioPath": "line-segments/lesson-43/l43-04.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-43/l43-04.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [5, 6] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 5,
+      "displayOrder": 5,
+      "speaker": "林",
+      "japanese": "よかったですね。こちらの方は奥さんですか。きれいな方ですね。",
+      "normalizedTarget": "よかったですねこちらのかたはおくさんですかきれいなかたですね",
+      "normalizedAsrText": "よかったですねこちらの方は奥さんですか綺麗な方ですね",
+      "phoneticSimilarity": 0.75,
+      "matchedUtteranceIndexes": [
+        7,
+        8
+      ],
+      "startMs": 24200,
+      "endMs": 30200,
+      "durationMs": 6000,
+      "audioPath": "line-segments/lesson-43/l43-05.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-43/l43-05.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [7, 8] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 6,
+      "displayOrder": 6,
+      "speaker": "シュミット",
+      "japanese": "ありがとうございます。妻はいろいろなことに興味があって、いっしょにいると、おもしろいんですよ。",
+      "normalizedTarget": "ありがとうございますつまはいろいろなことにきょうみがあっていっしょにいるとおもしろいんですよ",
+      "normalizedAsrText": "ありがとうございます妻はいろいろなことに興味があって一緒にいると面白いんですよ",
+      "phoneticSimilarity": 0.7529,
+      "matchedUtteranceIndexes": [
+        9,
+        10
+      ],
+      "startMs": 30200,
+      "endMs": 36720,
+      "durationMs": 6520,
+      "audioPath": "line-segments/lesson-43/l43-06.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-43/l43-06.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [9, 10] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 7,
+      "displayOrder": 7,
+      "speaker": "林",
+      "japanese": "そうですか。",
+      "normalizedTarget": "そうですか",
+      "normalizedAsrText": "そうですか",
+      "phoneticSimilarity": 1.0,
+      "matchedUtteranceIndexes": [
+        11
+      ],
+      "startMs": 36720,
+      "endMs": 38040,
+      "durationMs": 1320,
+      "audioPath": "line-segments/lesson-43/l43-07.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-43/l43-07.mp3",
+      "needsReview": true,
+      "matchConfidence": "high",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [11] 对齐；应用已校准 MP3 时间偏移"
+    },
+    {
+      "lineNo": 8,
+      "displayOrder": 8,
+      "speaker": "シュミット",
+      "japanese": "特に歴史が好きで、時間があれば、古い町を歩いています。",
+      "normalizedTarget": "とくにれきしがすきでじかんがあればふるいまちをあるいています",
+      "normalizedAsrText": "特に歴史が好きで時間があれば古い町を歩いています",
+      "phoneticSimilarity": 0.5556,
+      "matchedUtteranceIndexes": [
+        12
+      ],
+      "startMs": 38040,
+      "endMs": 42120,
+      "durationMs": 4080,
+      "audioPath": "line-segments/lesson-43/l43-08.mp3",
+      "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-43/l43-08.mp3",
+      "needsReview": true,
+      "matchConfidence": "medium",
+      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [12] 对齐；应用已校准 MP3 时间偏移"
+    }
+  ],
+  "needsReview": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ]
+}

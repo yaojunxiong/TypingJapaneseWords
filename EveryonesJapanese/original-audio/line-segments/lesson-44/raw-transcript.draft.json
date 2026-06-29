@@ -1,0 +1,92 @@
+{
+  "version": "minna-original-audio-transcript-draft-v1",
+  "lesson": 44,
+  "cd": "CD55",
+  "sourceTrack": "source-240000/tracks/cd-055.mp3",
+  "durationMs": 41430,
+  "transcriptionEngine": {
+    "name": "whisper.cpp",
+    "model": "ggml-small multilingual",
+    "language": "ja",
+    "role": "timestamp_source_only"
+  },
+  "utterances": [
+    {
+      "index": 1,
+      "startMs": 0,
+      "endMs": 7300,
+      "text": "第44課会話 この写真みたいにしてください",
+      "confidence": null
+    },
+    {
+      "index": 2,
+      "startMs": 7300,
+      "endMs": 10400,
+      "text": "いらっしゃいませ 今日はどうなさいますか?",
+      "confidence": null
+    },
+    {
+      "index": 3,
+      "startMs": 10400,
+      "endMs": 12000,
+      "text": "カットお願いします",
+      "confidence": null
+    },
+    {
+      "index": 4,
+      "startMs": 12000,
+      "endMs": 16400,
+      "text": "じゃあシャンプー押しますから こちらへどうぞ",
+      "confidence": null
+    },
+    {
+      "index": 5,
+      "startMs": 16400,
+      "endMs": 18800,
+      "text": "カットはどういうふうになさいますか?",
+      "confidence": null
+    },
+    {
+      "index": 6,
+      "startMs": 18800,
+      "endMs": 23400,
+      "text": "ショートにしたいんですけど この写真みたいにしてください",
+      "confidence": null
+    },
+    {
+      "index": 7,
+      "startMs": 23400,
+      "endMs": 27400,
+      "text": "あ 素敵ですね",
+      "confidence": null
+    },
+    {
+      "index": 8,
+      "startMs": 27400,
+      "endMs": 30200,
+      "text": "前の長さはこれでよろしいでしょうか?",
+      "confidence": null
+    },
+    {
+      "index": 9,
+      "startMs": 30200,
+      "endMs": 36000,
+      "text": "そうですね もう少し短くしてください",
+      "confidence": null
+    },
+    {
+      "index": 10,
+      "startMs": 36000,
+      "endMs": 37800,
+      "text": "どうもお疲れさまでした",
+      "confidence": null
+    },
+    {
+      "index": 11,
+      "startMs": 37800,
+      "endMs": 40800,
+      "text": "ありがとう",
+      "confidence": null
+    }
+  ]
+}
