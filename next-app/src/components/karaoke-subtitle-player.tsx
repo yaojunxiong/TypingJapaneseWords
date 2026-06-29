@@ -2,6 +2,27 @@
 
 import { useState, useRef, useEffect, useCallback, useMemo } from 'react'
 
+type AudioMode = 'original' | 'ttsPractice'
+
+interface TtsSegment {
+  wordId: string
+  surface: string
+  file: string
+  duration: number
+  speaker: string
+  voice: string
+  startTime: number
+  endTime: number
+}
+
+interface TtsManifest {
+  lessonId: number
+  audioUrl: string
+  gapBetweenWords: number
+  totalDuration: number
+  segments: TtsSegment[]
+}
+
 interface SubtitleWord {
   id: string
   surface: string
@@ -82,9 +103,12 @@ export default function KaraokeSubtitlePlayer({ lessonNo }: Props) {
   const [currentTime, setCurrentTime] = useState(0)
   const [duration, setDuration] = useState(0)
   const [selectedWord, setSelectedWord] = useState<SubtitleWord | null>(null)
+  const [audioMode, setAudioMode] = useState<AudioMode>('original')
+  const [ttsManifest, setTtsManifest] = useState<TtsManifest | null>(null)
+  const [ttsError, setTtsError] = useState(false)
 
   const audioRef = useRef<HTMLAudioElement | null>(null)
-  const animFrameRef = useRef<number>(0)
+  const rafRef = useRef<number>(0)
 
   useEffect(() => {
     let cancelled = false
@@ -106,9 +130,47 @@ export default function KaraokeSubtitlePlayer({ lessonNo }: Props) {
     return () => { cancelled = true }
   }, [lessonNo])
 
+  useEffect(() => {
+    if (audioMode !== 'ttsPractice') {
+      setTtsManifest(null)
+      setTtsError(false)
+      return
+    }
+    fetch('/generated/tts-karaoke/lesson-01/manifest.json')
+      .then(r => r.ok ? r.json() : Promise.reject())
+      .then(data => setTtsManifest(data))
+      .catch(() => setTtsError(true))
+  }, [audioMode])
+
+  const audioUrl = useMemo(() => {
+    if (audioMode === 'ttsPractice') {
+      return ttsManifest?.audioUrl ?? null
+    }
+    return CD_AUDIO_URLS[lessonNo] ?? null
+  }, [audioMode, ttsManifest, lessonNo])
+
+  const subtitlesWithTimes = useMemo(() => {
+    if (audioMode !== 'ttsPractice') return subtitles
+    return subtitles.map(line => ({
+      ...line,
+      lineStartTime: line.words[0]?.wordStartTime ?? line.lineStartTime,
+      lineEndTime: line.words[line.words.length - 1]?.wordEndTime ?? line.lineEndTime,
+    }))
+  }, [subtitles, audioMode])
+
   const activeLine = useMemo(() => {
-    return subtitles.find(s => currentTime >= s.lineStartTime && currentTime < s.lineEndTime) || null
-  }, [subtitles, currentTime])
+    return subtitlesWithTimes.find(s => currentTime >= s.lineStartTime && currentTime < s.lineEndTime) || null
+  }, [subtitlesWithTimes, currentTime])
+
+  const activeWord = useMemo(() => {
+    if (audioMode !== 'ttsPractice' || !activeLine) return null
+    return activeLine.words.find(w =>
+      w.wordStartTime != null &&
+      w.wordEndTime != null &&
+      currentTime >= w.wordStartTime &&
+      currentTime < w.wordEndTime
+    ) || null
+  }, [audioMode, activeLine, currentTime])
 
   const togglePlay = useCallback(() => {
     if (!audioRef.current) return
@@ -136,13 +198,24 @@ export default function KaraokeSubtitlePlayer({ lessonNo }: Props) {
   }, [audioReady])
 
   useEffect(() => {
-    if (audioRef.current) return
-    const url = CD_AUDIO_URLS[lessonNo]
-    if (!url) {
+    if (audioRef.current) {
+      cancelAnimationFrame(rafRef.current)
+      rafRef.current = 0
+      audioRef.current.pause()
+      audioRef.current.src = ''
+      audioRef.current = null
+    }
+    setAudioReady(false)
+    setAudioError(false)
+    setPlaying(false)
+    setCurrentTime(0)
+    setDuration(0)
+
+    if (!audioUrl) {
       setAudioError(true)
       return
     }
-    const audio = new Audio(url)
+    const audio = new Audio(audioUrl)
     audio.preload = 'auto'
     audioRef.current = audio
 
@@ -176,7 +249,7 @@ export default function KaraokeSubtitlePlayer({ lessonNo }: Props) {
     audio.addEventListener('pause', onPause)
 
     return () => {
-      cancelAnimationFrame(animFrameRef.current)
+      cancelAnimationFrame(rafRef.current)
       audio.removeEventListener('canplay', onCanPlay)
       audio.removeEventListener('loadedmetadata', onLoadedMetadata)
       audio.removeEventListener('ended', onEnded)
@@ -187,7 +260,43 @@ export default function KaraokeSubtitlePlayer({ lessonNo }: Props) {
       audio.pause()
       audioRef.current = null
     }
-  }, [lessonNo])
+  }, [audioUrl])
+
+  useEffect(() => {
+    if (!playing) {
+      if (rafRef.current) {
+        cancelAnimationFrame(rafRef.current)
+        rafRef.current = 0
+      }
+      return
+    }
+    const audio = audioRef.current
+    if (!audio) return
+    const tick = () => {
+      if (!audio.paused) {
+        setCurrentTime(audio.currentTime)
+      }
+      rafRef.current = requestAnimationFrame(tick)
+    }
+    rafRef.current = requestAnimationFrame(tick)
+    return () => {
+      if (rafRef.current) {
+        cancelAnimationFrame(rafRef.current)
+        rafRef.current = 0
+      }
+    }
+  }, [playing])
+
+  useEffect(() => {
+    if (!audioRef.current) return
+    cancelAnimationFrame(rafRef.current)
+    rafRef.current = 0
+    audioRef.current.pause()
+    audioRef.current.currentTime = 0
+    setPlaying(false)
+    setCurrentTime(0)
+    setSelectedWord(null)
+  }, [audioMode])
 
   const progress = duration > 0 ? (currentTime / duration) * 100 : 0
 
@@ -218,7 +327,7 @@ export default function KaraokeSubtitlePlayer({ lessonNo }: Props) {
             ← 返回背诵页
           </a>
           <span style={{ fontSize: 12, color: '#94a3b8', fontWeight: 700 }}>
-            实验功能 v0.1
+             实验功能 v0.2
           </span>
         </div>
         <h1 style={{ fontSize: 22, fontWeight: 900, margin: 0 }}>第 {lessonNo} 课 · 卡拉OK字幕模式</h1>
@@ -266,15 +375,52 @@ export default function KaraokeSubtitlePlayer({ lessonNo }: Props) {
             </div>
           </div>
         </div>
-        <div style={{ fontSize: 12, color: '#64748b' }}>
-          CD01 完整原音
-          {audioError && <span style={{ color: '#dc2626', marginLeft: 8 }}>音频加载失败</span>}
-          {!audioReady && !audioError && <span style={{ marginLeft: 8 }}>加载中...</span>}
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 12, color: '#64748b' }}>
+          <span style={{ flex: 1 }}>
+            {audioMode === 'ttsPractice' ? '练习卡拉OK音 · 逐词跟读' : 'CD01 完整原音'}
+            {audioError && <span style={{ color: '#dc2626', marginLeft: 8 }}>音频加载失败</span>}
+            {!audioReady && !audioError && <span style={{ marginLeft: 8 }}>加载中...</span>}
+          </span>
+          <button
+            type="button"
+            onClick={() => setAudioMode('original')}
+            style={{
+              fontSize: 12, fontWeight: 700, border: '1px solid #e2e8f0',
+              borderRadius: 999, padding: '4px 12px', cursor: 'pointer',
+              background: audioMode === 'original' ? '#1683ff' : '#fff',
+              color: audioMode === 'original' ? '#fff' : '#475569',
+              transition: 'all 0.15s',
+            }}
+          >
+            教材原音
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              if (ttsError) return
+              setAudioMode('ttsPractice')
+            }}
+            style={{
+              fontSize: 12, fontWeight: 700, border: '1px solid #e2e8f0',
+              borderRadius: 999, padding: '4px 12px',
+              cursor: ttsError ? 'default' : 'pointer',
+              background: audioMode === 'ttsPractice' ? '#1683ff' : '#fff',
+              color: audioMode === 'ttsPractice' ? '#fff' : '#475569',
+              transition: 'all 0.15s',
+              opacity: ttsError ? 0.5 : 1,
+            }}
+            title={ttsError ? '练习卡拉OK音正在整理中' : undefined}
+          >
+            练习卡拉OK音
+          </button>
         </div>
+        {audioMode === 'ttsPractice' && ttsError && (
+          <div style={{ fontSize: 12, color: '#f59e0b', marginTop: 4 }}>练习卡拉OK音正在整理中</div>
+        )}
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-        {subtitles.map((line) => {
+        {subtitlesWithTimes.map((line) => {
           const isActive = activeLine?.lineId === line.lineId
           const segments = splitIntoSegments(line.sentenceJp, line.words)
 
@@ -334,19 +480,23 @@ export default function KaraokeSubtitlePlayer({ lessonNo }: Props) {
                 </span>
               </div>
               <div style={{ fontSize: 20, fontWeight: 900, color: '#0f172a', lineHeight: 1.5, wordBreak: 'break-word', overflowWrap: 'break-word' }}>
-                {segments.map((seg, i) =>
-                  seg.word ? (
+                {segments.map((seg, i) => {
+                  const isActiveWord = seg.word != null && activeWord?.id === seg.word.id
+                  return seg.word ? (
                     <button
                       key={i}
                       type="button"
                       onClick={(e) => { e.stopPropagation(); setSelectedWord(seg.word!) }}
                       style={{
-                        background: 'none', border: 'none', padding: 0,
+                        background: isActiveWord ? '#dbeafe' : 'none',
+                        border: 'none',
+                        padding: isActiveWord ? '0 2px' : 0,
+                        borderRadius: 4,
                         fontSize: 'inherit', fontWeight: 'inherit', color: 'inherit',
                         fontFamily: 'inherit', lineHeight: 'inherit',
                         cursor: 'pointer',
-                        borderBottom: '2px dashed #93c5fd',
-                        transition: 'background 0.1s',
+                        borderBottom: isActiveWord ? '2px solid #1683ff' : '2px dashed #93c5fd',
+                        transition: 'background 0.08s, border-color 0.08s',
                       }}
                     >
                       {seg.text}
@@ -354,7 +504,7 @@ export default function KaraokeSubtitlePlayer({ lessonNo }: Props) {
                   ) : (
                     <span key={i}>{seg.text}</span>
                   )
-                )}
+                })}
               </div>
               <div style={{ fontSize: 15, color: '#475569', marginTop: 6, wordBreak: 'break-word', overflowWrap: 'break-word' }}>
                 {line.sentenceCn}
