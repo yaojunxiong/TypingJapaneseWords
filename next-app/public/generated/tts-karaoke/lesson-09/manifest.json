@@ -1,0 +1,608 @@
+{
+  "lessonId": 9,
+  "audioUrl": "/generated/tts-karaoke/lesson-09/combined.mp3",
+  "gapBetweenWords": 0.05,
+  "totalDuration": 91.678,
+  "segments": [
+    {
+      "wordId": "l9_l001_w001",
+      "surface": "はい",
+      "file": "l9_l001_w001.mp3",
+      "duration": 1.344,
+      "speaker": "木村",
+      "voice": "ja-JP-NanamiNeural / rate +0%",
+      "startTime": 0.0,
+      "endTime": 1.344
+    },
+    {
+      "wordId": "l9_l002_w001",
+      "surface": "木村さん",
+      "file": "l9_l002_w001.mp3",
+      "duration": 1.8,
+      "speaker": "ミラー",
+      "voice": "ja-JP-KeitaNeural / rate -10%",
+      "startTime": 1.394,
+      "endTime": 3.194
+    },
+    {
+      "wordId": "l9_l002_w002",
+      "surface": "です",
+      "file": "l9_l002_w002.mp3",
+      "duration": 1.44,
+      "speaker": "ミラー",
+      "voice": "ja-JP-KeitaNeural / rate -10%",
+      "startTime": 3.244,
+      "endTime": 4.684
+    },
+    {
+      "wordId": "l9_l002_w003",
+      "surface": "ね",
+      "file": "l9_l002_w003.mp3",
+      "duration": 1.248,
+      "speaker": "ミラー",
+      "voice": "ja-JP-KeitaNeural / rate -10%",
+      "startTime": 4.734,
+      "endTime": 5.982
+    },
+    {
+      "wordId": "l9_l002_w004",
+      "surface": "ミラー",
+      "file": "l9_l002_w004.mp3",
+      "duration": 1.584,
+      "speaker": "ミラー",
+      "voice": "ja-JP-KeitaNeural / rate -10%",
+      "startTime": 6.032,
+      "endTime": 7.616
+    },
+    {
+      "wordId": "l9_l002_w005",
+      "surface": "です",
+      "file": "l9_l002_w005.mp3",
+      "duration": 1.44,
+      "speaker": "ミラー",
+      "voice": "ja-JP-KeitaNeural / rate -10%",
+      "startTime": 7.666,
+      "endTime": 9.106
+    },
+    {
+      "wordId": "l9_l003_w001",
+      "surface": "ああ",
+      "file": "l9_l003_w001.mp3",
+      "duration": 1.392,
+      "speaker": "木村",
+      "voice": "ja-JP-NanamiNeural / rate +0%",
+      "startTime": 9.156,
+      "endTime": 10.548
+    },
+    {
+      "wordId": "l9_l003_w002",
+      "surface": "ミラーさん",
+      "file": "l9_l003_w002.mp3",
+      "duration": 1.704,
+      "speaker": "木村",
+      "voice": "ja-JP-NanamiNeural / rate +0%",
+      "startTime": 10.598,
+      "endTime": 12.302
+    },
+    {
+      "wordId": "l9_l003_w003",
+      "surface": "こんばんは",
+      "file": "l9_l003_w003.mp3",
+      "duration": 1.728,
+      "speaker": "木村",
+      "voice": "ja-JP-NanamiNeural / rate +0%",
+      "startTime": 12.352,
+      "endTime": 14.08
+    },
+    {
+      "wordId": "l9_l003_w004",
+      "surface": "お元気",
+      "file": "l9_l003_w004.mp3",
+      "duration": 1.68,
+      "speaker": "木村",
+      "voice": "ja-JP-NanamiNeural / rate +0%",
+      "startTime": 14.13,
+      "endTime": 15.81
+    },
+    {
+      "wordId": "l9_l003_w005",
+      "surface": "です",
+      "file": "l9_l003_w005.mp3",
+      "duration": 1.416,
+      "speaker": "木村",
+      "voice": "ja-JP-NanamiNeural / rate +0%",
+      "startTime": 15.86,
+      "endTime": 17.276
+    },
+    {
+      "wordId": "l9_l003_w006",
+      "surface": "か",
+      "file": "l9_l003_w006.mp3",
+      "duration": 1.248,
+      "speaker": "木村",
+      "voice": "ja-JP-NanamiNeural / rate +0%",
+      "startTime": 17.326,
+      "endTime": 18.574
+    },
+    {
+      "wordId": "l9_l004_w001",
+      "surface": "ええ",
+      "file": "l9_l004_w001.mp3",
+      "duration": 1.416,
+      "speaker": "ミラー",
+      "voice": "ja-JP-KeitaNeural / rate -10%",
+      "startTime": 18.624,
+      "endTime": 20.04
+    },
+    {
+      "wordId": "l9_l004_w002",
+      "surface": "元気",
+      "file": "l9_l004_w002.mp3",
+      "duration": 1.608,
+      "speaker": "ミラー",
+      "voice": "ja-JP-KeitaNeural / rate -10%",
+      "startTime": 20.09,
+      "endTime": 21.698
+    },
+    {
+      "wordId": "l9_l004_w003",
+      "surface": "です",
+      "file": "l9_l004_w003.mp3",
+      "duration": 1.44,
+      "speaker": "ミラー",
+      "voice": "ja-JP-KeitaNeural / rate -10%",
+      "startTime": 21.748,
+      "endTime": 23.188
+    },
+    {
+      "wordId": "l9_l004_w004",
+      "surface": "あのう",
+      "file": "l9_l004_w004.mp3",
+      "duration": 1.584,
+      "speaker": "ミラー",
+      "voice": "ja-JP-KeitaNeural / rate -10%",
+      "startTime": 23.238,
+      "endTime": 24.822
+    },
+    {
+      "wordId": "l9_l004_w005",
+      "surface": "木村さん",
+      "file": "l9_l004_w005.mp3",
+      "duration": 1.8,
+      "speaker": "ミラー",
+      "voice": "ja-JP-KeitaNeural / rate -10%",
+      "startTime": 24.872,
+      "endTime": 26.672
+    },
+    {
+      "wordId": "l9_l004_w006",
+      "surface": "クラシック",
+      "file": "l9_l004_w006.mp3",
+      "duration": 1.752,
+      "speaker": "ミラー",
+      "voice": "ja-JP-KeitaNeural / rate -10%",
+      "startTime": 26.722,
+      "endTime": 28.474
+    },
+    {
+      "wordId": "l9_l004_w007",
+      "surface": "の",
+      "file": "l9_l004_w007.mp3",
+      "duration": 1.2,
+      "speaker": "ミラー",
+      "voice": "ja-JP-KeitaNeural / rate -10%",
+      "startTime": 28.524,
+      "endTime": 29.724
+    },
+    {
+      "wordId": "l9_l004_w008",
+      "surface": "コンサート",
+      "file": "l9_l004_w008.mp3",
+      "duration": 1.752,
+      "speaker": "ミラー",
+      "voice": "ja-JP-KeitaNeural / rate -10%",
+      "startTime": 29.774,
+      "endTime": 31.526
+    },
+    {
+      "wordId": "l9_l004_w009",
+      "surface": "いっしょに",
+      "file": "l9_l004_w009.mp3",
+      "duration": 1.68,
+      "speaker": "ミラー",
+      "voice": "ja-JP-KeitaNeural / rate -10%",
+      "startTime": 31.576,
+      "endTime": 33.256
+    },
+    {
+      "wordId": "l9_l004_w010",
+      "surface": "いかが",
+      "file": "l9_l004_w010.mp3",
+      "duration": 1.536,
+      "speaker": "ミラー",
+      "voice": "ja-JP-KeitaNeural / rate -10%",
+      "startTime": 33.306,
+      "endTime": 34.842
+    },
+    {
+      "wordId": "l9_l004_w011",
+      "surface": "です",
+      "file": "l9_l004_w011.mp3",
+      "duration": 1.44,
+      "speaker": "ミラー",
+      "voice": "ja-JP-KeitaNeural / rate -10%",
+      "startTime": 34.892,
+      "endTime": 36.332
+    },
+    {
+      "wordId": "l9_l004_w012",
+      "surface": "か",
+      "file": "l9_l004_w012.mp3",
+      "duration": 1.248,
+      "speaker": "ミラー",
+      "voice": "ja-JP-KeitaNeural / rate -10%",
+      "startTime": 36.382,
+      "endTime": 37.63
+    },
+    {
+      "wordId": "l9_l005_w001",
+      "surface": "いいですね",
+      "file": "l9_l005_w001.mp3",
+      "duration": 1.776,
+      "speaker": "木村",
+      "voice": "ja-JP-NanamiNeural / rate +0%",
+      "startTime": 37.68,
+      "endTime": 39.456
+    },
+    {
+      "wordId": "l9_l005_w002",
+      "surface": "いつ",
+      "file": "l9_l005_w002.mp3",
+      "duration": 1.488,
+      "speaker": "木村",
+      "voice": "ja-JP-NanamiNeural / rate +0%",
+      "startTime": 39.506,
+      "endTime": 40.994
+    },
+    {
+      "wordId": "l9_l005_w003",
+      "surface": "です",
+      "file": "l9_l005_w003.mp3",
+      "duration": 1.416,
+      "speaker": "木村",
+      "voice": "ja-JP-NanamiNeural / rate +0%",
+      "startTime": 41.044,
+      "endTime": 42.46
+    },
+    {
+      "wordId": "l9_l005_w004",
+      "surface": "か",
+      "file": "l9_l005_w004.mp3",
+      "duration": 1.248,
+      "speaker": "木村",
+      "voice": "ja-JP-NanamiNeural / rate +0%",
+      "startTime": 42.51,
+      "endTime": 43.758
+    },
+    {
+      "wordId": "l9_l006_w001",
+      "surface": "来週",
+      "file": "l9_l006_w001.mp3",
+      "duration": 1.632,
+      "speaker": "ミラー",
+      "voice": "ja-JP-KeitaNeural / rate -10%",
+      "startTime": 43.808,
+      "endTime": 45.44
+    },
+    {
+      "wordId": "l9_l006_w002",
+      "surface": "の",
+      "file": "l9_l006_w002.mp3",
+      "duration": 1.2,
+      "speaker": "ミラー",
+      "voice": "ja-JP-KeitaNeural / rate -10%",
+      "startTime": 45.49,
+      "endTime": 46.69
+    },
+    {
+      "wordId": "l9_l006_w003",
+      "surface": "金曜日",
+      "file": "l9_l006_w003.mp3",
+      "duration": 1.776,
+      "speaker": "ミラー",
+      "voice": "ja-JP-KeitaNeural / rate -10%",
+      "startTime": 46.74,
+      "endTime": 48.516
+    },
+    {
+      "wordId": "l9_l006_w004",
+      "surface": "の",
+      "file": "l9_l006_w004.mp3",
+      "duration": 1.2,
+      "speaker": "ミラー",
+      "voice": "ja-JP-KeitaNeural / rate -10%",
+      "startTime": 48.566,
+      "endTime": 49.766
+    },
+    {
+      "wordId": "l9_l006_w005",
+      "surface": "晩",
+      "file": "l9_l006_w005.mp3",
+      "duration": 1.368,
+      "speaker": "ミラー",
+      "voice": "ja-JP-KeitaNeural / rate -10%",
+      "startTime": 49.816,
+      "endTime": 51.184
+    },
+    {
+      "wordId": "l9_l006_w006",
+      "surface": "です",
+      "file": "l9_l006_w006.mp3",
+      "duration": 1.44,
+      "speaker": "ミラー",
+      "voice": "ja-JP-KeitaNeural / rate -10%",
+      "startTime": 51.234,
+      "endTime": 52.674
+    },
+    {
+      "wordId": "l9_l007_w001",
+      "surface": "金曜日",
+      "file": "l9_l007_w001.mp3",
+      "duration": 1.704,
+      "speaker": "木村",
+      "voice": "ja-JP-NanamiNeural / rate +0%",
+      "startTime": 52.724,
+      "endTime": 54.428
+    },
+    {
+      "wordId": "l9_l007_w002",
+      "surface": "です",
+      "file": "l9_l007_w002.mp3",
+      "duration": 1.416,
+      "speaker": "木村",
+      "voice": "ja-JP-NanamiNeural / rate +0%",
+      "startTime": 54.478,
+      "endTime": 55.894
+    },
+    {
+      "wordId": "l9_l007_w003",
+      "surface": "ね",
+      "file": "l9_l007_w003.mp3",
+      "duration": 1.272,
+      "speaker": "木村",
+      "voice": "ja-JP-NanamiNeural / rate +0%",
+      "startTime": 55.944,
+      "endTime": 57.216
+    },
+    {
+      "wordId": "l9_l007_w004",
+      "surface": "金曜日",
+      "file": "l9_l007_w004.mp3",
+      "duration": 1.704,
+      "speaker": "木村",
+      "voice": "ja-JP-NanamiNeural / rate +0%",
+      "startTime": 57.266,
+      "endTime": 58.97
+    },
+    {
+      "wordId": "l9_l007_w005",
+      "surface": "の",
+      "file": "l9_l007_w005.mp3",
+      "duration": 1.248,
+      "speaker": "木村",
+      "voice": "ja-JP-NanamiNeural / rate +0%",
+      "startTime": 59.02,
+      "endTime": 60.268
+    },
+    {
+      "wordId": "l9_l007_w006",
+      "surface": "晩",
+      "file": "l9_l007_w006.mp3",
+      "duration": 1.296,
+      "speaker": "木村",
+      "voice": "ja-JP-NanamiNeural / rate +0%",
+      "startTime": 60.318,
+      "endTime": 61.614
+    },
+    {
+      "wordId": "l9_l007_w007",
+      "surface": "は",
+      "file": "l9_l007_w007.mp3",
+      "duration": 1.296,
+      "speaker": "木村",
+      "voice": "ja-JP-NanamiNeural / rate +0%",
+      "startTime": 61.664,
+      "endTime": 62.96
+    },
+    {
+      "wordId": "l9_l007_w008",
+      "surface": "ちょっと",
+      "file": "l9_l007_w008.mp3",
+      "duration": 1.488,
+      "speaker": "木村",
+      "voice": "ja-JP-NanamiNeural / rate +0%",
+      "startTime": 63.01,
+      "endTime": 64.498
+    },
+    {
+      "wordId": "l9_l008_w001",
+      "surface": "だめ",
+      "file": "l9_l008_w001.mp3",
+      "duration": 1.464,
+      "speaker": "ミラー",
+      "voice": "ja-JP-KeitaNeural / rate -10%",
+      "startTime": 64.548,
+      "endTime": 66.012
+    },
+    {
+      "wordId": "l9_l008_w002",
+      "surface": "です",
+      "file": "l9_l008_w002.mp3",
+      "duration": 1.44,
+      "speaker": "ミラー",
+      "voice": "ja-JP-KeitaNeural / rate -10%",
+      "startTime": 66.062,
+      "endTime": 67.502
+    },
+    {
+      "wordId": "l9_l008_w003",
+      "surface": "か",
+      "file": "l9_l008_w003.mp3",
+      "duration": 1.248,
+      "speaker": "ミラー",
+      "voice": "ja-JP-KeitaNeural / rate -10%",
+      "startTime": 67.552,
+      "endTime": 68.8
+    },
+    {
+      "wordId": "l9_l009_w001",
+      "surface": "ええ",
+      "file": "l9_l009_w001.mp3",
+      "duration": 1.296,
+      "speaker": "木村",
+      "voice": "ja-JP-NanamiNeural / rate +0%",
+      "startTime": 68.85,
+      "endTime": 70.146
+    },
+    {
+      "wordId": "l9_l009_w002",
+      "surface": "残念",
+      "file": "l9_l009_w002.mp3",
+      "duration": 1.608,
+      "speaker": "木村",
+      "voice": "ja-JP-NanamiNeural / rate +0%",
+      "startTime": 70.196,
+      "endTime": 71.804
+    },
+    {
+      "wordId": "l9_l009_w003",
+      "surface": "です",
+      "file": "l9_l009_w003.mp3",
+      "duration": 1.416,
+      "speaker": "木村",
+      "voice": "ja-JP-NanamiNeural / rate +0%",
+      "startTime": 71.854,
+      "endTime": 73.27
+    },
+    {
+      "wordId": "l9_l009_w004",
+      "surface": "が",
+      "file": "l9_l009_w004.mp3",
+      "duration": 1.224,
+      "speaker": "木村",
+      "voice": "ja-JP-NanamiNeural / rate +0%",
+      "startTime": 73.32,
+      "endTime": 74.544
+    },
+    {
+      "wordId": "l9_l009_w005",
+      "surface": "その",
+      "file": "l9_l009_w005.mp3",
+      "duration": 1.464,
+      "speaker": "木村",
+      "voice": "ja-JP-NanamiNeural / rate +0%",
+      "startTime": 74.594,
+      "endTime": 76.058
+    },
+    {
+      "wordId": "l9_l009_w006",
+      "surface": "晩",
+      "file": "l9_l009_w006.mp3",
+      "duration": 1.296,
+      "speaker": "木村",
+      "voice": "ja-JP-NanamiNeural / rate +0%",
+      "startTime": 76.108,
+      "endTime": 77.404
+    },
+    {
+      "wordId": "l9_l009_w007",
+      "surface": "約束",
+      "file": "l9_l009_w007.mp3",
+      "duration": 1.704,
+      "speaker": "木村",
+      "voice": "ja-JP-NanamiNeural / rate +0%",
+      "startTime": 77.454,
+      "endTime": 79.158
+    },
+    {
+      "wordId": "l9_l009_w008",
+      "surface": "が",
+      "file": "l9_l009_w008.mp3",
+      "duration": 1.224,
+      "speaker": "木村",
+      "voice": "ja-JP-NanamiNeural / rate +0%",
+      "startTime": 79.208,
+      "endTime": 80.432
+    },
+    {
+      "wordId": "l9_l009_w009",
+      "surface": "あります",
+      "file": "l9_l009_w009.mp3",
+      "duration": 1.632,
+      "speaker": "木村",
+      "voice": "ja-JP-NanamiNeural / rate +0%",
+      "startTime": 80.482,
+      "endTime": 82.114
+    },
+    {
+      "wordId": "l9_l009_w010",
+      "surface": "から",
+      "file": "l9_l009_w010.mp3",
+      "duration": 1.344,
+      "speaker": "木村",
+      "voice": "ja-JP-NanamiNeural / rate +0%",
+      "startTime": 82.164,
+      "endTime": 83.508
+    },
+    {
+      "wordId": "l9_l010_w001",
+      "surface": "そうですか",
+      "file": "l9_l010_w001.mp3",
+      "duration": 1.776,
+      "speaker": "ミラー",
+      "voice": "ja-JP-KeitaNeural / rate -10%",
+      "startTime": 83.558,
+      "endTime": 85.334
+    },
+    {
+      "wordId": "l9_l011_w001",
+      "surface": "ええ",
+      "file": "l9_l011_w001.mp3",
+      "duration": 1.296,
+      "speaker": "木村",
+      "voice": "ja-JP-NanamiNeural / rate +0%",
+      "startTime": 85.384,
+      "endTime": 86.68
+    },
+    {
+      "wordId": "l9_l011_w002",
+      "surface": "また",
+      "file": "l9_l011_w002.mp3",
+      "duration": 1.416,
+      "speaker": "木村",
+      "voice": "ja-JP-NanamiNeural / rate +0%",
+      "startTime": 86.73,
+      "endTime": 88.146
+    },
+    {
+      "wordId": "l9_l011_w003",
+      "surface": "今度",
+      "file": "l9_l011_w003.mp3",
+      "duration": 1.488,
+      "speaker": "木村",
+      "voice": "ja-JP-NanamiNeural / rate +0%",
+      "startTime": 88.196,
+      "endTime": 89.684
+    },
+    {
+      "wordId": "l9_l011_w004",
+      "surface": "お願いします",
+      "file": "l9_l011_w004.mp3",
+      "duration": 1.944,
+      "speaker": "木村",
+      "voice": "ja-JP-NanamiNeural / rate +0%",
+      "startTime": 89.734,
+      "endTime": 91.678
+    }
+  ]
+}
