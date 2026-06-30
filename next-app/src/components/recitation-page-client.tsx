@@ -332,6 +332,7 @@ function CompactLineItem({
           <span style={{ display: 'inline-block', fontSize: 11, color: '#166534', fontWeight: 800 }}>已完成</span>
         </div>
       )}
+
     </div>
   )
 }
@@ -696,6 +697,7 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
   const [loading, setLoading] = useState(true)
   const [bestTakes, setBestTakes] = useState<Map<string, string | null>>(new Map())
   const [activeLineId, setActiveLineId] = useState<string | null>(null)
+  const [showRecordingBar, setShowRecordingBar] = useState(false)
   const [takesRefreshKey, setTakesRefreshKey] = useState(0)
   const [lessonTakeCount, setLessonTakeCount] = useState(0)
   const [isRecording, setIsRecording] = useState(false)
@@ -935,6 +937,7 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     stopContinuousPlayback()
     stopOriginalAudio()
     setActiveLineId(line.lineId)
+    setShowRecordingBar(true)
 
     const practiceAudio = getLinePracticeAudio(line)
     if (!practiceAudio) {
@@ -1309,9 +1312,12 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     : ''
   const hasOriginalLineAudio = lesson?.lines.some(l => getLinePracticeAudio(l)?.source === 'original') ?? false
   const ttsButtonSubtitle = hasOriginalLineAudio ? '教材原声' : '合成练习音'
+  const recordingBarBottomOffset = showBottomNav
+    ? 'calc(56px + env(safe-area-inset-bottom, 0px))'
+    : 'env(safe-area-inset-bottom, 0px)'
   const pageBottomPadding = showBottomNav
-    ? 'calc(100px + env(safe-area-inset-bottom, 0px))'
-    : 'calc(20px + env(safe-area-inset-bottom, 0px))'
+    ? 'calc(180px + env(safe-area-inset-bottom, 0px))'
+    : 'calc(130px + env(safe-area-inset-bottom, 0px))'
 
   if (loading) {
     return (
@@ -1471,18 +1477,6 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
             </div>
           )}
         </section>
-      )}
-
-      {activeLine && (
-        <RecitationFloatingBar
-          line={activeLine}
-          lessonNo={lessonNo}
-          currentIndex={activeIndex}
-          totalLines={lesson.lines.length}
-          onRecordingComplete={handleRecordingComplete}
-          onRecordingStateChange={setIsRecording}
-          onPlayOriginal={handlePlayOriginal}
-        />
       )}
 
       <section data-testid="recitation-conversation-list" style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 18, overflow: 'hidden', boxShadow: '0 10px 28px rgba(15, 23, 42, 0.05)' }}>
@@ -1713,6 +1707,20 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
           </div>
         </div>
       </div>
+      )}
+
+      {activeLine && showRecordingBar && (
+        <RecitationFloatingBar
+          line={activeLine}
+          lessonNo={lessonNo}
+          currentIndex={activeIndex}
+          totalLines={lesson.lines.length}
+          onRecordingComplete={handleRecordingComplete}
+          onRecordingStateChange={setIsRecording}
+          onPlayOriginal={handlePlayOriginal}
+          onClose={isRecording ? undefined : () => setShowRecordingBar(false)}
+          bottomOffset={recordingBarBottomOffset}
+        />
       )}
     </div>
   )

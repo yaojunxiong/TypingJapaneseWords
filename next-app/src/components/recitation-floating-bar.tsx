@@ -16,6 +16,8 @@ interface Props {
   onUploadComplete?: (lineId: string, localTakeId: string, cloudTake: RecordingTakeDTO) => void
   onUploadFailed?: (lineId: string, localTakeId: string, errorMsg: string) => void
   onPlayOriginal?: (line: RecitationLine) => void
+  onClose?: () => void
+  bottomOffset?: string
 }
 
 type RecitationLineWithKana = RecitationLine & { kana?: string }
@@ -52,7 +54,7 @@ function getSupportedMimeType(): string | null {
   return null
 }
 
-export default function RecitationFloatingBar({ line, lessonNo, currentIndex, totalLines, onRecordingComplete, onRecordingStateChange, onUploadComplete, onUploadFailed, onPlayOriginal }: Props) {
+export default function RecitationFloatingBar({ line, lessonNo, currentIndex, totalLines, onRecordingComplete, onRecordingStateChange, onUploadComplete, onUploadFailed, onPlayOriginal, onClose, bottomOffset = '0px' }: Props) {
   const [recording, setRecording] = useState(false)
   const [message, setMessage] = useState('')
   const [localPlaying, setLocalPlaying] = useState(false)
@@ -192,15 +194,42 @@ export default function RecitationFloatingBar({ line, lessonNo, currentIndex, to
     <div
       data-testid="recitation-floating-bar"
       style={{
+        position: 'fixed',
+        left: 14,
+        right: 14,
+        bottom: bottomOffset,
+        zIndex: 50,
         background: '#fff',
-        border: '1px solid #e2e8f0',
-        borderRadius: 18,
-        boxShadow: '0 10px 28px rgba(15, 23, 42, 0.05)',
-        padding: '14px 16px',
+        borderTop: '1px solid #e2e8f0',
+        borderLeft: '1px solid #e2e8f0',
+        borderRight: '1px solid #e2e8f0',
+        borderRadius: '14px 14px 0 0',
+        boxShadow: '0 -6px 20px rgba(15, 23, 42, 0.08)',
+        padding: '10px 14px',
       }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
         <span style={{ fontWeight: 900, fontSize: 15, color: '#0f172a' }}>本句跟读录音</span>
-        <span style={{ fontSize: 12, color: '#64748b', fontWeight: 800 }}>第 {currentIndex + 1} 句 / 共 {totalLines} 句</span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+          <span style={{ fontSize: 12, color: '#64748b', fontWeight: 800 }}>第 {currentIndex + 1} 句 / 共 {totalLines} 句</span>
+          {onClose && (
+            <button
+              type="button"
+              aria-label="关闭录音条"
+              onClick={onClose}
+              disabled={recording}
+              style={{
+                width: 28, height: 28, borderRadius: 14,
+                border: 'none', background: recording ? '#f1f5f9' : '#f1f5f9',
+                color: recording ? '#cbd5e1' : '#64748b',
+                fontSize: 16, lineHeight: 1,
+                cursor: recording ? 'default' : 'pointer',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                padding: 0,
+              }}>
+              ✕
+            </button>
+          )}
+        </div>
       </div>
 
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 12 }}>
