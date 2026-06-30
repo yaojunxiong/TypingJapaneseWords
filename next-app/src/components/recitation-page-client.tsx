@@ -211,9 +211,6 @@ function CompactLineItem({
   takesRefreshKey: number
   onBestTakeChange: (lineId: string, takeId: string | null) => void
 }) {
-  const [showZh, setShowZh] = useState(false)
-  const [showAnswer, setShowAnswer] = useState(false)
-  const [showExplanation, setShowExplanation] = useState(false)
   const [mergedTakes, setMergedTakes] = useState<MergedTake[]>([])
   const [selectedBestId, setSelectedBestId] = useState<string | null>(null)
   const selectedBestIdRef = useRef(selectedBestId)
@@ -265,7 +262,6 @@ function CompactLineItem({
 
   const isCompleted = mergedTakes.length > 0 && selectedBestId !== null
   const practiceAudio = getLinePracticeAudio(line)
-  const hasOriginalAudio = practiceAudio?.source === 'original'
   const hasPlayableAudio = Boolean(practiceAudio)
   const speakerAvatar = getSpeakerAvatar(line)
 
@@ -331,45 +327,9 @@ function CompactLineItem({
         </button>
       </div>
 
-      {isActive && (
+      {isActive && isCompleted && (
         <div style={{ padding: '0 12px 12px 56px' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: 6 }}>
-            <button className="btn ghost small" onClick={(e) => { e.stopPropagation(); setShowZh(v => !v) }} style={{ background: '#fff', color: '#0f172a', border: '1px solid #dbe3ee', borderRadius: 10, padding: '8px 3px', fontSize: 12, whiteSpace: 'nowrap' }}>
-              中文提示
-            </button>
-            <button className="btn ghost small" onClick={(e) => { e.stopPropagation(); onPlayOriginal(line) }} style={{ background: '#fff', color: '#0f172a', border: '1px solid #dbe3ee', borderRadius: 10, padding: '8px 3px', fontSize: 12, whiteSpace: 'nowrap', opacity: hasPlayableAudio ? 1 : 0.65 }}>
-               {practiceAudio?.label ?? '合成练习音'}
-            </button>
-            <button className="btn ghost small" onClick={(e) => { e.stopPropagation(); setShowExplanation(v => !v) }} style={{ background: '#fff', color: '#0f172a', border: '1px solid #dbe3ee', borderRadius: 10, padding: '8px 3px', fontSize: 12, whiteSpace: 'nowrap' }}>
-              解析
-            </button>
-            <button className="btn ghost small" onClick={(e) => { e.stopPropagation(); setShowAnswer(v => !v) }} style={{ background: '#fff', color: '#0f172a', border: '1px solid #dbe3ee', borderRadius: 10, padding: '8px 3px', fontSize: 12, whiteSpace: 'nowrap' }}>
-              答案
-            </button>
-          </div>
-
-          {showZh && (
-            <div style={{ marginTop: 8, padding: 8, background: '#f8fafc', borderRadius: 10, fontSize: 13, color: '#475569', wordBreak: 'break-word', overflowWrap: 'break-word' }}>
-              {line.zh}
-            </div>
-          )}
-          {showAnswer && (
-            <div style={{ marginTop: 8, padding: 8, background: '#f0fdf4', borderRadius: 10, fontSize: 14, color: '#166534', fontWeight: 700, wordBreak: 'break-word', overflowWrap: 'break-word' }}>
-              {line.ja}
-            </div>
-          )}
-          {showExplanation && (
-            <div style={{ marginTop: 8, padding: 8, background: '#f8fafc', borderRadius: 10, fontSize: 12, color: '#64748b' }}>
-              <div style={{ fontWeight: 700, marginBottom: 4 }}>解析</div>
-              <div>词汇/语法/句型 — 请参考课程原文和语法说明</div>
-              <div style={{ marginTop: 4 }}>
-                <a href={`/lessons/${lessonNo}/practice?stage=conversation_vocab`} style={{ color: '#2563eb', marginRight: 8 }}>词汇</a>
-                <a href={`/lessons/${lessonNo}/practice?stage=conversation_grammar`} style={{ color: '#2563eb', marginRight: 8 }}>语法</a>
-                <a href={`/lessons/${lessonNo}/deep-dive`} style={{ color: '#2563eb' }}>深度解析</a>
-              </div>
-            </div>
-          )}
-          {isCompleted && <span style={{ display: 'inline-block', marginTop: 8, fontSize: 11, color: '#166534', fontWeight: 800 }}>已完成</span>}
+          <span style={{ display: 'inline-block', fontSize: 11, color: '#166534', fontWeight: 800 }}>已完成</span>
         </div>
       )}
     </div>
@@ -378,7 +338,6 @@ function CompactLineItem({
 
 function MyRecordingsPanel({
   line, lessonNo, takesRefreshKey, lessonTakeCount, onBestTakeChange, showNotice,
-  onRecordingComplete, onRecordingStateChange, bottomOffset, currentIndex, totalLines,
 }: {
   line: RecitationLine | null
   lessonNo: number
@@ -386,11 +345,6 @@ function MyRecordingsPanel({
   lessonTakeCount: number
   onBestTakeChange: (lineId: string, takeId: string | null) => void
   showNotice: (message: string) => void
-  onRecordingComplete: (lineId: string) => void
-  onRecordingStateChange?: (recording: boolean) => void
-  bottomOffset?: string
-  currentIndex: number
-  totalLines: number
 }) {
   const [mergedTakes, setMergedTakes] = useState<MergedTake[]>([])
   const [loadedLineId, setLoadedLineId] = useState<string | null>(null)
@@ -718,17 +672,6 @@ function MyRecordingsPanel({
         </div>
       )}
     </section>
-    <RecitationFloatingBar
-      line={line}
-      lessonNo={lessonNo}
-      currentIndex={currentIndex}
-      totalLines={totalLines}
-      onRecordingComplete={onRecordingComplete}
-      onRecordingStateChange={onRecordingStateChange}
-      onUploadComplete={handleUploadComplete}
-      onUploadFailed={handleUploadFailed}
-      bottomOffset={bottomOffset}
-    />
     </>
   )
 }
@@ -782,6 +725,9 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
   const stopTtsPlaybackRef = useRef(false)
   const [showImageModal, setShowImageModal] = useState(false)
   const [ttsDebug, setTtsDebug] = useState('')
+  const [showCurrentZh, setShowCurrentZh] = useState(false)
+  const [showCurrentExplanation, setShowCurrentExplanation] = useState(false)
+  const [showCurrentAnswer, setShowCurrentAnswer] = useState(false)
 
   const ORIGINAL_AUDIO_MAP_URL = 'https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/lesson-audio-map.json'
   const [originalAudioLesson, setOriginalAudioLesson] = useState<{ url: string; cd: string; needsReview: boolean } | null>(null)
@@ -1363,12 +1309,9 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     : ''
   const hasOriginalLineAudio = lesson?.lines.some(l => getLinePracticeAudio(l)?.source === 'original') ?? false
   const ttsButtonSubtitle = hasOriginalLineAudio ? '教材原声' : '合成练习音'
-  const floatingBottomOffset = showBottomNav
-    ? 'calc(96px + env(safe-area-inset-bottom, 0px))'
-    : 'calc(14px + env(safe-area-inset-bottom, 0px))'
   const pageBottomPadding = showBottomNav
-    ? 'calc(320px + env(safe-area-inset-bottom, 0px))'
-    : 'calc(236px + env(safe-area-inset-bottom, 0px))'
+    ? 'calc(100px + env(safe-area-inset-bottom, 0px))'
+    : 'calc(20px + env(safe-area-inset-bottom, 0px))'
 
   if (loading) {
     return (
@@ -1445,25 +1388,25 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
           </div>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: lessonNo === 1 ? 'repeat(2, minmax(0, 1fr))' : 'repeat(3, minmax(0, 1fr))', gap: 10 }}>
-          <a href={lesson.videoUrl} target="_blank" rel="noopener noreferrer" style={{ border: '1px solid #dbe3ee', borderRadius: 12, padding: '12px 8px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, color: '#0f172a', background: '#fff' }}>
-            <span style={{ fontSize: 24 }}>▶</span><span style={{ fontWeight: 900 }}>原视频</span>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 8 }}>
+          <a href={lesson.videoUrl} target="_blank" rel="noopener noreferrer" style={{ border: '1px solid #dbe3ee', borderRadius: 12, padding: '10px 6px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, color: '#0f172a', background: '#fff', textDecoration: 'none', fontSize: 13 }}>
+            <span style={{ fontSize: 20 }}>▶</span><span style={{ fontWeight: 900 }}>原视频</span>
           </a>
           {lesson.conversationImageUrl ? (
-            <button type="button" onClick={() => setShowImageModal(true)} style={{ border: '1px solid #dbe3ee', borderRadius: 12, padding: '12px 8px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, color: '#0f172a', background: '#fff', cursor: 'pointer', fontSize: 'inherit' }}>
-              <span style={{ fontSize: 24 }}>▰</span><span style={{ fontWeight: 900 }}>查看会话图</span>
+            <button type="button" onClick={() => setShowImageModal(true)} style={{ border: '1px solid #dbe3ee', borderRadius: 12, padding: '10px 6px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, color: '#0f172a', background: '#fff', cursor: 'pointer', fontSize: 13 }}>
+              <span style={{ fontSize: 20 }}>▰</span><span style={{ fontWeight: 900 }}>查看会话图</span>
             </button>
           ) : (
-            <span style={{ border: '1px solid #dbe3ee', borderRadius: 12, padding: '12px 8px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, color: '#94a3b8', background: '#fff', opacity: 0.5 }}>
-              <span style={{ fontSize: 24 }}>▰</span><span style={{ fontWeight: 900 }}>会话图</span>
+            <span style={{ border: '1px solid #dbe3ee', borderRadius: 12, padding: '10px 6px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, color: '#94a3b8', background: '#fff', opacity: 0.5, fontSize: 13 }}>
+              <span style={{ fontSize: 20 }}>▰</span><span style={{ fontWeight: 900 }}>会话图</span>
             </span>
           )}
-          <Link href={`/lessons/${lessonNo}/deep-dive`} style={{ border: '1px solid #dbe3ee', borderRadius: 12, padding: '12px 8px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, color: '#0f172a', background: '#fff' }}>
-            <span style={{ fontSize: 24 }}>A文</span><span style={{ fontWeight: 900 }}>中文翻译</span>
+          <Link href={`/lessons/${lessonNo}/deep-dive`} style={{ border: '1px solid #dbe3ee', borderRadius: 12, padding: '10px 6px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, color: '#0f172a', background: '#fff', textDecoration: 'none', fontSize: 13 }}>
+            <span style={{ fontSize: 20 }}>A文</span><span style={{ fontWeight: 900 }}>中文翻译</span>
           </Link>
           {lessonNo <= 50 && (
-            <Link href={`/lessons/${lessonNo}/recitation/karaoke`} style={{ border: '1px solid #dbe3ee', borderRadius: 12, padding: '12px 8px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, color: '#0f172a', background: '#fff' }}>
-              <span style={{ fontSize: 24 }}>🎤</span><span style={{ fontWeight: 900 }}>卡拉OK字幕</span>
+            <Link href={`/lessons/${lessonNo}/recitation/karaoke`} style={{ border: '1px solid #1683ff', borderRadius: 12, padding: '10px 6px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, color: '#fff', background: 'linear-gradient(135deg, #1683ff, #2563eb)', textDecoration: 'none', fontSize: 13 }}>
+              <span style={{ fontSize: 20 }}>🎤</span><span style={{ fontWeight: 900 }}>卡拉OK字幕</span>
             </Link>
           )}
         </div>
@@ -1473,6 +1416,73 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
         <div role="status" aria-live="polite" style={{ position: 'fixed', left: '50%', top: 16, transform: 'translateX(-50%)', zIndex: 120, padding: '8px 14px', borderRadius: 999, background: '#0f172a', color: '#fff', fontSize: 13, fontWeight: 800, boxShadow: '0 10px 24px rgba(15, 23, 42, 0.18)' }}>
           {notice}
         </div>
+      )}
+
+      {activeLine && (
+        <section data-testid="recitation-current-sentence-card" style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 18, padding: 16, marginBottom: 12, boxShadow: '0 10px 28px rgba(15, 23, 42, 0.05)' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 }}>
+            <span style={{ color: '#475569', fontSize: 13, fontWeight: 800 }}>第 {activeIndex + 1} 句 / 共 {lesson.lines.length} 句</span>
+            {bestTakes.get(activeLine.lineId) && bestTakes.get(activeLine.lineId) !== 'pending' && (
+              <span style={{ fontSize: 11, color: '#166534', fontWeight: 800, padding: '2px 8px', background: '#f0fdf4', borderRadius: 999 }}>已完成</span>
+            )}
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 8 }}>
+            {(() => { const sa = getSpeakerAvatar(activeLine); return (
+              <span style={{ width: 24, height: 24, borderRadius: 999, background: sa.activeBackground, border: `1px solid ${sa.activeBorder}`, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, fontSize: 14, lineHeight: 1 }}>{sa.emoji}</span>
+            ); })()}
+            <span style={{ fontSize: 15, fontWeight: 800, color: '#0875f5' }}>{activeLine.speaker}:</span>
+          </div>
+          <div style={{ fontSize: 20, lineHeight: 1.3, fontWeight: 900, color: '#0f172a', wordBreak: 'break-word', overflowWrap: 'break-word', marginBottom: 6 }}>
+            {activeLine.ja}
+          </div>
+          <div style={{ fontSize: 15, color: '#64748b', fontWeight: 700, wordBreak: 'break-word', overflowWrap: 'break-word', marginBottom: 12 }}>
+            {showCurrentZh ? activeLine.zh : activeLine.zh.slice(0, 20) + (activeLine.zh.length > 20 ? '...' : '')}
+          </div>
+          <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+            <button className="btn ghost small" onClick={() => setShowCurrentZh(v => !v)} style={{ background: '#fff', color: '#0f172a', border: '1px solid #dbe3ee', borderRadius: 10, padding: '8px 12px', fontSize: 12, fontWeight: 800, whiteSpace: 'nowrap' }}>
+              {showCurrentZh ? '收起翻译' : '中文翻译'}
+            </button>
+            {getLinePracticeAudio(activeLine) && (
+              <button className="btn ghost small" onClick={() => handlePlayOriginal(activeLine)} style={{ background: '#fff', color: '#0f172a', border: '1px solid #dbe3ee', borderRadius: 10, padding: '8px 12px', fontSize: 12, fontWeight: 800, whiteSpace: 'nowrap' }}>
+                🔊 {getLinePracticeAudio(activeLine)!.label}
+              </button>
+            )}
+            <button className="btn ghost small" onClick={() => setShowCurrentExplanation(v => !v)} style={{ background: '#fff', color: '#0f172a', border: '1px solid #dbe3ee', borderRadius: 10, padding: '8px 12px', fontSize: 12, fontWeight: 800, whiteSpace: 'nowrap' }}>
+              解析
+            </button>
+            <button className="btn ghost small" onClick={() => setShowCurrentAnswer(v => !v)} style={{ background: '#fff', color: '#0f172a', border: '1px solid #dbe3ee', borderRadius: 10, padding: '8px 12px', fontSize: 12, fontWeight: 800, whiteSpace: 'nowrap' }}>
+              {showCurrentAnswer ? '收起原文' : '显示原文'}
+            </button>
+          </div>
+          {showCurrentAnswer && (
+            <div style={{ marginTop: 8, padding: 10, background: '#f0fdf4', borderRadius: 12, fontSize: 16, color: '#166534', fontWeight: 700, wordBreak: 'break-word', overflowWrap: 'break-word' }}>
+              {activeLine.ja}
+            </div>
+          )}
+          {showCurrentExplanation && (
+            <div style={{ marginTop: 8, padding: 10, background: '#f8fafc', borderRadius: 12, fontSize: 12, color: '#64748b' }}>
+              <div style={{ fontWeight: 700, marginBottom: 4 }}>解析</div>
+              <div>词汇/语法/句型 — 请参考课程原文和语法说明</div>
+              <div style={{ marginTop: 4 }}>
+                <a href={`/lessons/${lessonNo}/practice?stage=conversation_vocab`} style={{ color: '#2563eb', marginRight: 8 }}>词汇</a>
+                <a href={`/lessons/${lessonNo}/practice?stage=conversation_grammar`} style={{ color: '#2563eb', marginRight: 8 }}>语法</a>
+                <a href={`/lessons/${lessonNo}/deep-dive`} style={{ color: '#2563eb' }}>深度解析</a>
+              </div>
+            </div>
+          )}
+        </section>
+      )}
+
+      {activeLine && (
+        <RecitationFloatingBar
+          line={activeLine}
+          lessonNo={lessonNo}
+          currentIndex={activeIndex}
+          totalLines={lesson.lines.length}
+          onRecordingComplete={handleRecordingComplete}
+          onRecordingStateChange={setIsRecording}
+          onPlayOriginal={handlePlayOriginal}
+        />
       )}
 
       <section data-testid="recitation-conversation-list" style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 18, overflow: 'hidden', boxShadow: '0 10px 28px rgba(15, 23, 42, 0.05)' }}>
@@ -1499,11 +1509,6 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
         lessonTakeCount={lessonTakeCount}
         onBestTakeChange={handleBestTakeChange}
         showNotice={showNotice}
-        onRecordingComplete={handleRecordingComplete}
-        onRecordingStateChange={setIsRecording}
-        bottomOffset={floatingBottomOffset}
-        currentIndex={activeIndex}
-        totalLines={lesson.lines.length}
       />
 
       {(ttsPlayback.status !== 'idle' || continuousPlayback.status !== 'idle') && (

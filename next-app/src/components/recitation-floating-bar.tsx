@@ -15,7 +15,7 @@ interface Props {
   onRecordingStateChange?: (recording: boolean) => void
   onUploadComplete?: (lineId: string, localTakeId: string, cloudTake: RecordingTakeDTO) => void
   onUploadFailed?: (lineId: string, localTakeId: string, errorMsg: string) => void
-  bottomOffset?: string
+  onPlayOriginal?: (line: RecitationLine) => void
 }
 
 type RecitationLineWithKana = RecitationLine & { kana?: string }
@@ -52,7 +52,7 @@ function getSupportedMimeType(): string | null {
   return null
 }
 
-export default function RecitationFloatingBar({ line, lessonNo, currentIndex, totalLines, onRecordingComplete, onRecordingStateChange, onUploadComplete, onUploadFailed, bottomOffset = 'calc(96px + env(safe-area-inset-bottom, 0px))' }: Props) {
+export default function RecitationFloatingBar({ line, lessonNo, currentIndex, totalLines, onRecordingComplete, onRecordingStateChange, onUploadComplete, onUploadFailed, onPlayOriginal }: Props) {
   const [recording, setRecording] = useState(false)
   const [message, setMessage] = useState('')
   const [localPlaying, setLocalPlaying] = useState(false)
@@ -178,99 +178,115 @@ export default function RecitationFloatingBar({ line, lessonNo, currentIndex, to
 
   if (!line) return null
 
+  const statusText = uploading
+    ? '正在保存'
+    : recording
+    ? '正在录音'
+    : message
+    ? message
+    : latestTakeUrl.current
+    ? '已录音，可回放'
+    : '听原音后，开始跟读'
+
   return (
     <div
       data-testid="recitation-floating-bar"
       style={{
-        position: 'fixed',
-        left: 14,
-        right: 14,
-        bottom: bottomOffset,
-        zIndex: 80,
         background: '#fff',
         border: '1px solid #e2e8f0',
-        borderRadius: 22,
-        boxShadow: '0 -10px 30px rgba(15, 23, 42, 0.18)',
-        padding: '14px 14px 16px',
+        borderRadius: 18,
+        boxShadow: '0 10px 28px rgba(15, 23, 42, 0.05)',
+        padding: '14px 16px',
       }}>
-      <div style={{ width: 48, height: 6, borderRadius: 999, background: '#e5e7eb', margin: '0 auto 10px' }} />
-      {uploading && (
-        <div style={{ textAlign: 'center', fontSize: 12, color: '#1683ff', fontWeight: 700, marginBottom: 6 }}>
-          正在保存录音...
-        </div>
-      )}
-      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) 54px 82px 54px', gap: 10, alignItems: 'start' }}>
-        <div style={{ minWidth: 0 }}>
-          <div style={{ color: '#1683ff', fontSize: 13, fontWeight: 900, marginBottom: 2 }}>{getReadingHint(line)}</div>
-          <div style={{ fontSize: 25, lineHeight: 1.2, fontWeight: 900, wordBreak: 'break-word', overflowWrap: 'break-word' }}>{line.ja}</div>
-          <div style={{ color: '#64748b', fontSize: 15, fontWeight: 700, marginTop: 4, wordBreak: 'break-word', overflowWrap: 'break-word' }}>{line.zh}</div>
-          <span style={{ display: 'inline-flex', marginTop: 8, padding: '4px 10px', background: '#f1f5f9', border: '1px solid #e2e8f0', borderRadius: 999, color: '#475569', fontSize: 14, fontWeight: 800 }}>
-            第 {currentIndex + 1} 句 / 共 {totalLines} 句
-          </span>
-        </div>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
+        <span style={{ fontWeight: 900, fontSize: 15, color: '#0f172a' }}>本句跟读录音</span>
+        <span style={{ fontSize: 12, color: '#64748b', fontWeight: 800 }}>第 {currentIndex + 1} 句 / 共 {totalLines} 句</span>
+      </div>
 
-        <div style={{ display: 'grid', justifyItems: 'center', gap: 6 }}>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 12 }}>
+        <button
+          type="button"
+          aria-label="听原音"
+          onClick={() => onPlayOriginal?.(line)}
+          disabled={!onPlayOriginal}
+          style={{
+            height: 48, borderRadius: 12,
+            border: '1px solid #dbe3ee', background: '#fff',
+            color: onPlayOriginal ? '#0f172a' : '#cbd5e1',
+            fontSize: 13, fontWeight: 800,
+            cursor: onPlayOriginal ? 'pointer' : 'default',
+            padding: '0 16px',
+            display: 'flex', alignItems: 'center', gap: 6,
+          }}>
+          <span style={{ fontSize: 16 }}>🔊</span>
+          听原音
+        </button>
+
+        {recording ? (
           <button
             type="button"
             data-testid="recitation-stop-button"
             aria-label="停止录音"
             onClick={stopRecording}
-            disabled={!recording}
             style={{
-              width: 46, height: 46, borderRadius: 23,
-              border: '1px solid #dbe3ee', background: '#fff',
-              color: recording ? '#dc2626' : '#475569',
-              opacity: recording ? 1 : 0.7,
-              fontSize: 18,
-              cursor: recording ? 'pointer' : 'default',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              height: 52, borderRadius: 14,
+              background: '#dc2626', color: '#fff',
+              border: 'none',
+              fontSize: 15, fontWeight: 900,
+              cursor: 'pointer',
+              padding: '0 24px',
+              display: 'flex', alignItems: 'center', gap: 8,
+              boxShadow: '0 6px 16px rgba(220, 38, 38, 0.3)',
             }}>
-            ■
+            <span style={{ fontSize: 18 }}>🎙</span>
+            停止录音
           </button>
-          <span style={{ fontSize: 13, color: '#475569', fontWeight: 800 }}>停止</span>
-        </div>
-
-        <div style={{ display: 'grid', justifyItems: 'center', gap: 6 }}>
+        ) : (
           <button
             type="button"
             data-testid="recitation-record-button"
             aria-label="开始录音"
             onClick={startRecording}
-            disabled={recording || uploading || unsupported}
+            disabled={uploading || unsupported}
             style={{
-              width: 74, height: 74, borderRadius: 37,
-              background: recording ? '#60a5fa' : uploading || unsupported ? '#94a3b8' : '#1683ff',
-              color: '#fff', border: `6px solid ${uploading || unsupported ? '#e2e8f0' : '#dbeafe'}`,
-              fontSize: 34, cursor: (recording || uploading) ? 'default' : 'pointer',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              boxShadow: uploading ? 'none' : '0 8px 20px rgba(22, 131, 255, 0.28)',
+              height: 52, borderRadius: 14,
+              background: uploading || unsupported ? '#94a3b8' : '#1683ff',
+              color: '#fff', border: 'none',
+              fontSize: 15, fontWeight: 900,
+              cursor: (uploading || unsupported) ? 'default' : 'pointer',
+              padding: '0 24px',
+              display: 'flex', alignItems: 'center', gap: 8,
+              boxShadow: uploading ? 'none' : '0 6px 16px rgba(22, 131, 255, 0.3)',
+              opacity: (uploading || unsupported) ? 0.65 : 1,
             }}>
-            🎙
+            <span style={{ fontSize: 18 }}>🎙</span>
+            开始跟读
           </button>
-          <span style={{ fontSize: 13, color: message.includes('得分') ? '#1683ff' : '#475569', fontWeight: 800, whiteSpace: 'nowrap' }}>
-            {recording ? '录音中...' : message || '点击开始录音'}
-          </span>
-        </div>
+        )}
 
-        <div style={{ display: 'grid', justifyItems: 'center', gap: 6 }}>
-          <button
-            type="button"
-            data-testid="recitation-playback-button"
-            aria-label="回放录音"
-            onClick={handlePlaybackLatest}
-            disabled={!latestTakeUrl.current || localPlaying}
-            style={{
-              width: 46, height: 46, borderRadius: 23,
-              border: '1px solid #dbe3ee', background: '#fff',
-              color: latestTakeUrl.current ? '#475569' : '#cbd5e1',
-              fontSize: 18,
-              cursor: latestTakeUrl.current ? 'pointer' : 'default',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-            }}>
-            {localPlaying ? '…' : '▶'}
-          </button>
-          <span style={{ fontSize: 13, color: '#475569', fontWeight: 800 }}>回放</span>
-        </div>
+        <button
+          type="button"
+          data-testid="recitation-playback-button"
+          aria-label="回放录音"
+          onClick={handlePlaybackLatest}
+          disabled={!latestTakeUrl.current || localPlaying}
+          style={{
+            height: 48, borderRadius: 12,
+            border: '1px solid #dbe3ee', background: '#fff',
+            color: latestTakeUrl.current ? '#0f172a' : '#cbd5e1',
+            fontSize: 13, fontWeight: 800,
+            cursor: latestTakeUrl.current ? 'pointer' : 'default',
+            padding: '0 16px',
+            display: 'flex', alignItems: 'center', gap: 6,
+          }}>
+          <span style={{ fontSize: 16 }}>▶</span>
+          回放
+        </button>
+      </div>
+
+      <div style={{ textAlign: 'center', marginTop: 10, fontSize: 12, color: uploading ? '#1683ff' : recording ? '#dc2626' : message?.includes('得分') ? '#1683ff' : latestTakeUrl.current ? '#166534' : '#64748b', fontWeight: 800 }}>
+        {uploading && <span>⏳ </span>}
+        {statusText}
       </div>
     </div>
   )
