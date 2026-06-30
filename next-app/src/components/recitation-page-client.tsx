@@ -5,12 +5,27 @@ import type { RecitationLesson, RecitationLine, RecitationTake, RecordingTakeDTO
 import { loadRecitationLesson, getBestTake } from '@/lib/recitation-lesson'
 import { getTakesByLine, deleteTake as deleteLocalTake, updateTake } from '@/lib/recitation-storage'
 import { listTakes, setBestTake as apiSetBest, deleteCloudTake, getSignedUrl, type SignedUrlResult } from '@/lib/recitation-api'
-import RecitationFloatingBar from '@/components/recitation-floating-bar'
 import StudyMobileChrome from '@/components/study-mobile-chrome'
 import type { Lang } from '@/lib/i18n'
 import Link from 'next/link'
 import { resolveSpeakerAvatar } from '@/data/minna/speaker-registry'
 import conversationTitles from '@/data/minna/conversation-titles.json'
+
+function getSupportedMimeType(): string | null {
+  if (typeof MediaRecorder === 'undefined') return null
+  if (typeof navigator !== 'undefined' && /iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+    const iosTypes = ['audio/mp4', 'audio/mp4;codecs=mp4a', 'audio/webm;codecs=opus', 'audio/webm']
+    for (const type of iosTypes) {
+      if (MediaRecorder.isTypeSupported(type)) return type
+    }
+    return null
+  }
+  const types = ['audio/webm;codecs=opus', 'audio/webm', 'audio/mp4', 'audio/mp4;codecs=mp4a']
+  for (const type of types) {
+    if (MediaRecorder.isTypeSupported(type)) return type
+  }
+  return null
+}
 
 type RecitationLineWithKana = RecitationLine & { kana?: string }
 type SpeakerAvatar = {
@@ -202,11 +217,12 @@ async function syncLearningStateBestEffort() {
 }
 
 function CompactLineItem({
-  line, lessonNo, isActive, onPlayOriginal, takesRefreshKey, onBestTakeChange,
+  line, lessonNo, isExpanded, onToggleExpand, onPlayOriginal, takesRefreshKey, onBestTakeChange,
 }: {
   line: RecitationLine
   lessonNo: number
-  isActive: boolean
+  isExpanded: boolean
+  onToggleExpand: (lineId: string) => void
   onPlayOriginal: (line: RecitationLine) => void
   takesRefreshKey: number
   onBestTakeChange: (lineId: string, takeId: string | null) => void
@@ -219,7 +235,6 @@ function CompactLineItem({
   useEffect(() => {
     const lineNo = line.order
     ;(async () => {
-      // 1. Show local takes immediately
       const local = await getTakesByLine(line.lineId)
       let merged = mergeTakes(local, [])
       setMergedTakes(merged)
@@ -236,7 +251,6 @@ function CompactLineItem({
         onBestTakeChange(line.lineId, null)
       }
 
-      // 2. Load cloud data in background
       const cloud = filterCloudTakesForLine(
         await listTakes(lessonNo, lineNo).catch(() => [] as RecordingTakeDTO[]),
         lessonNo,
@@ -266,414 +280,442 @@ function CompactLineItem({
   const speakerAvatar = getSpeakerAvatar(line)
 
   return (
-    <div
-      data-testid="recitation-line-row"
-      data-line-order={line.order}
-      onClick={() => onPlayOriginal(line)}
-      style={{
-        borderBottom: '1px solid #e5e7eb',
-        background: isActive ? 'linear-gradient(90deg, #e8f6ff, #f5fbff)' : '#fff',
-        cursor: 'pointer',
-      }}>
-      <div style={{ display: 'grid', gridTemplateColumns: '34px 110px minmax(0, 1fr) 34px', alignItems: 'center', gap: 8, minHeight: 52, padding: '0 12px' }}>
-        <span style={{
-          width: 26, height: 26, borderRadius: 13,
-          background: isActive ? '#1683ff' : '#f1f5f9',
-          color: isActive ? '#fff' : '#0f172a',
-          display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-          fontSize: 13, fontWeight: 800,
+    <div>
+      <div
+        data-testid="recitation-line-row"
+        data-line-order={line.order}
+        onClick={() => onToggleExpand(line.lineId)}
+        style={{
+          borderBottom: '1px solid #e5e7eb',
+          background: isExpanded ? 'linear-gradient(90deg, #e8f6ff, #f5fbff)' : '#fff',
+          cursor: 'pointer',
         }}>
-          {getLineDisplayOrder(line)}
-        </span>
-        <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, minWidth: 0, fontSize: 15, fontWeight: 800, color: isActive ? '#0875f5' : '#475569', whiteSpace: 'nowrap' }}>
-          <span
-            data-testid="recitation-speaker-avatar"
-            aria-hidden="true"
-            style={{
-              width: 28,
-              height: 28,
-              borderRadius: 9999,
-              background: isActive ? speakerAvatar.activeBackground : speakerAvatar.background,
-              border: `1px solid ${isActive ? speakerAvatar.activeBorder : speakerAvatar.border}`,
-              display: 'inline-flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              flexShrink: 0,
-              fontSize: 16,
-              lineHeight: 1,
-            }}
-          >
-            {speakerAvatar.emoji}
-          </span>
-          <span>{line.speaker}:</span>
-        </span>
-        <span style={{ fontSize: 17, fontWeight: 800, color: '#0f172a', wordBreak: 'break-word', overflowWrap: 'break-word' }}>
-          {line.ja}
-        </span>
-        <button
-          type="button"
-          data-testid="recitation-original-audio-button"
-          aria-label={`播放${practiceAudio?.label ?? '合成练习音'}`}
-          onClick={(e) => { e.stopPropagation(); onPlayOriginal(line) }}
-          style={{
-            width: 28, height: 28, borderRadius: 14,
-            border: `1px solid ${isActive ? '#1683ff' : '#cbd5e1'}`,
-            background: '#fff', color: isActive ? '#1683ff' : '#475569',
-            opacity: hasPlayableAudio ? 1 : 0.75,
+        <div style={{ display: 'grid', gridTemplateColumns: '34px 110px minmax(0, 1fr) 34px', alignItems: 'center', gap: 8, minHeight: 52, padding: '0 12px' }}>
+          <span style={{
+            width: 26, height: 26, borderRadius: 13,
+            background: isExpanded ? '#1683ff' : '#f1f5f9',
+            color: isExpanded ? '#fff' : '#0f172a',
             display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-            fontSize: 14, cursor: 'pointer',
+            fontSize: 13, fontWeight: 800,
           }}>
-          🔊
-        </button>
+            {getLineDisplayOrder(line)}
+          </span>
+          <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, minWidth: 0, fontSize: 15, fontWeight: 800, color: isExpanded ? '#0875f5' : '#475569', whiteSpace: 'nowrap' }}>
+            <span
+              data-testid="recitation-speaker-avatar"
+              aria-hidden="true"
+              style={{
+                width: 28,
+                height: 28,
+                borderRadius: 9999,
+                background: isExpanded ? speakerAvatar.activeBackground : speakerAvatar.background,
+                border: `1px solid ${isExpanded ? speakerAvatar.activeBorder : speakerAvatar.border}`,
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexShrink: 0,
+                fontSize: 16,
+                lineHeight: 1,
+              }}
+            >
+              {speakerAvatar.emoji}
+            </span>
+            <span>{line.speaker}:</span>
+          </span>
+          <span style={{ fontSize: 17, fontWeight: 800, color: '#0f172a', wordBreak: 'break-word', overflowWrap: 'break-word' }}>
+            {line.ja}
+          </span>
+          <button
+            type="button"
+            data-testid="recitation-original-audio-button"
+            aria-label={`播放${practiceAudio?.label ?? '合成练习音'}`}
+            onClick={(e) => { e.stopPropagation(); onPlayOriginal(line) }}
+            style={{
+              width: 28, height: 28, borderRadius: 14,
+              border: `1px solid ${isExpanded ? '#1683ff' : '#cbd5e1'}`,
+              background: '#fff', color: isExpanded ? '#1683ff' : '#475569',
+              opacity: hasPlayableAudio ? 1 : 0.75,
+              display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+              fontSize: 14, cursor: 'pointer',
+            }}>
+            🔊
+          </button>
+        </div>
+
+        {isExpanded && isCompleted && (
+          <div style={{ padding: '0 12px 12px 56px' }}>
+            <span style={{ display: 'inline-block', fontSize: 11, color: '#166534', fontWeight: 800 }}>已完成</span>
+          </div>
+        )}
       </div>
 
-      {isActive && isCompleted && (
-        <div style={{ padding: '0 12px 12px 56px' }}>
-          <span style={{ display: 'inline-block', fontSize: 11, color: '#166534', fontWeight: 800 }}>已完成</span>
-        </div>
+      {isExpanded && (
+        <SentenceTrainingPanel
+          line={line}
+          lessonNo={lessonNo}
+          onPlayOriginal={onPlayOriginal}
+        />
       )}
-
     </div>
   )
 }
 
-function MyRecordingsPanel({
-  line, lessonNo, takesRefreshKey, lessonTakeCount, onBestTakeChange, showNotice,
+interface SubtitleWord {
+  surface: string; kana: string; romaji: string; meaningCn: string
+  wordStartTime: number; wordEndTime: number
+}
+interface SubtitleLine {
+  lineOrder: number; sentenceJp: string; sentenceCn: string
+  words: SubtitleWord[]
+}
+
+const SUBTITLE_LOADERS: Record<number, () => Promise<SubtitleLine[]>> = {
+  1: () => import('@/data/minna/subtitle-learning/lesson-01-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  2: () => import('@/data/minna/subtitle-learning/lesson-02-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  3: () => import('@/data/minna/subtitle-learning/lesson-03-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  4: () => import('@/data/minna/subtitle-learning/lesson-04-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  5: () => import('@/data/minna/subtitle-learning/lesson-05-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  6: () => import('@/data/minna/subtitle-learning/lesson-06-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  7: () => import('@/data/minna/subtitle-learning/lesson-07-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  8: () => import('@/data/minna/subtitle-learning/lesson-08-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  9: () => import('@/data/minna/subtitle-learning/lesson-09-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  10: () => import('@/data/minna/subtitle-learning/lesson-10-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  11: () => import('@/data/minna/subtitle-learning/lesson-11-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  12: () => import('@/data/minna/subtitle-learning/lesson-12-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  13: () => import('@/data/minna/subtitle-learning/lesson-13-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  14: () => import('@/data/minna/subtitle-learning/lesson-14-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  15: () => import('@/data/minna/subtitle-learning/lesson-15-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  16: () => import('@/data/minna/subtitle-learning/lesson-16-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  17: () => import('@/data/minna/subtitle-learning/lesson-17-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  18: () => import('@/data/minna/subtitle-learning/lesson-18-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  19: () => import('@/data/minna/subtitle-learning/lesson-19-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  20: () => import('@/data/minna/subtitle-learning/lesson-20-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  21: () => import('@/data/minna/subtitle-learning/lesson-21-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  22: () => import('@/data/minna/subtitle-learning/lesson-22-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  23: () => import('@/data/minna/subtitle-learning/lesson-23-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  24: () => import('@/data/minna/subtitle-learning/lesson-24-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  25: () => import('@/data/minna/subtitle-learning/lesson-25-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  26: () => import('@/data/minna/subtitle-learning/lesson-26-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  27: () => import('@/data/minna/subtitle-learning/lesson-27-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  28: () => import('@/data/minna/subtitle-learning/lesson-28-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  29: () => import('@/data/minna/subtitle-learning/lesson-29-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  30: () => import('@/data/minna/subtitle-learning/lesson-30-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  31: () => import('@/data/minna/subtitle-learning/lesson-31-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  32: () => import('@/data/minna/subtitle-learning/lesson-32-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  33: () => import('@/data/minna/subtitle-learning/lesson-33-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  34: () => import('@/data/minna/subtitle-learning/lesson-34-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  35: () => import('@/data/minna/subtitle-learning/lesson-35-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  36: () => import('@/data/minna/subtitle-learning/lesson-36-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  37: () => import('@/data/minna/subtitle-learning/lesson-37-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  38: () => import('@/data/minna/subtitle-learning/lesson-38-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  39: () => import('@/data/minna/subtitle-learning/lesson-39-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  40: () => import('@/data/minna/subtitle-learning/lesson-40-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  41: () => import('@/data/minna/subtitle-learning/lesson-41-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  42: () => import('@/data/minna/subtitle-learning/lesson-42-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  43: () => import('@/data/minna/subtitle-learning/lesson-43-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  44: () => import('@/data/minna/subtitle-learning/lesson-44-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  45: () => import('@/data/minna/subtitle-learning/lesson-45-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  46: () => import('@/data/minna/subtitle-learning/lesson-46-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  47: () => import('@/data/minna/subtitle-learning/lesson-47-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  48: () => import('@/data/minna/subtitle-learning/lesson-48-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  49: () => import('@/data/minna/subtitle-learning/lesson-49-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  50: () => import('@/data/minna/subtitle-learning/lesson-50-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+}
+
+function SentenceTrainingPanel({
+  line, lessonNo, onPlayOriginal,
 }: {
-  line: RecitationLine | null
+  line: RecitationLine
   lessonNo: number
-  takesRefreshKey: number
-  lessonTakeCount: number
-  onBestTakeChange: (lineId: string, takeId: string | null) => void
-  showNotice: (message: string) => void
+  onPlayOriginal: (line: RecitationLine) => void
 }) {
-  const [mergedTakes, setMergedTakes] = useState<MergedTake[]>([])
-  const [loadedLineId, setLoadedLineId] = useState<string | null>(null)
-  const [isLoadingCloud, setIsLoadingCloud] = useState(false)
-  const [selectedBestId, setSelectedBestId] = useState<string | null>(null)
-  const [playingId, setPlayingId] = useState<string | null>(null)
-  const signedUrlCacheRef = useRef<Map<string, { url: string; expiresAt: number }>>(new Map())
-  const cloudDtoRef = useRef<RecordingTakeDTO[]>([])
-  const autoRetriedRef = useRef<Set<string>>(new Set())
-  const autoRetryLineRef = useRef<string | null>(null)
+  const [subtitleEntry, setSubtitleEntry] = useState<SubtitleLine | null>(null)
+  const [activeWordIdx, setActiveWordIdx] = useState(-1)
+  const [isPlaying, setIsPlaying] = useState(false)
+  const [isRecording, setIsRecording] = useState(false)
+  const [message, setMessage] = useState('')
+  const [localPlaying, setLocalPlaying] = useState(false)
+  const [unsupported, setUnsupported] = useState(false)
+  const mediaRecorderRef = useRef<MediaRecorder | null>(null)
+  const chunksRef = useRef<Blob[]>([])
+  const latestTakeUrl = useRef<string | null>(null)
   const audioRef = useRef<HTMLAudioElement | null>(null)
-  const selectedBestIdRef = useRef(selectedBestId)
-  selectedBestIdRef.current = selectedBestId
-
-  const loadMerged = useCallback(async (cloudOverride?: RecordingTakeDTO[]) => {
-    if (!line) {
-      setMergedTakes([])
-      setLoadedLineId(null)
-      setSelectedBestId(null)
-      setIsLoadingCloud(false)
-      return []
-    }
-    const lineNo = line.order
-    setIsLoadingCloud(true)
-
-    // Show local retryable takes immediately; uploaded cloud takes remain authoritative.
-    const tLocalStart = performance.now()
-    const local = await getTakesByLine(line.lineId)
-    let merged = mergeTakes(local, [])
-    if (process.env.NODE_ENV === 'development') console.log(`[perf] loadMerged local: ${Math.round(performance.now() - tLocalStart)}ms`)
-    if (merged.length > 0) {
-      setMergedTakes(merged)
-      setLoadedLineId(line.lineId)
-      const currentId = selectedBestIdRef.current
-      const hasSelected = currentId && merged.some(t => t.takeId === currentId)
-      if (!hasSelected) {
-        const best = merged.find(t => t.isBest) || merged[0]
-        setSelectedBestId(best.takeId)
-        onBestTakeChange(line.lineId, best.takeId)
-      }
-    }
-
-    // Load cloud data for the current line. Local empty state must not override cloud data.
-    let cloud: RecordingTakeDTO[]
-    if (cloudOverride) {
-      cloud = cloudOverride
-    } else {
-      const tCloudStart = performance.now()
-      cloud = filterCloudTakesForLine(
-        await listTakes(lessonNo, lineNo).catch(() => [] as RecordingTakeDTO[]),
-        lessonNo,
-        lineNo,
-      )
-      if (process.env.NODE_ENV === 'development') console.log(`[perf] loadMerged cloud: ${Math.round(performance.now() - tCloudStart)}ms`)
-      // Cache cloud DTOs so upload-complete can inject without re-fetching
-      cloudDtoRef.current = cloud
-    }
-    const freshLocal = await getTakesByLine(line.lineId)
-    merged = mergeTakes(freshLocal, cloud)
-    setMergedTakes(merged)
-    setLoadedLineId(line.lineId)
-    setIsLoadingCloud(false)
-    if (merged.length > 0) {
-      const currentId = selectedBestIdRef.current
-      const hasSelected = currentId && merged.some(t => t.takeId === currentId)
-      if (!hasSelected) {
-        const best = merged.find(t => t.isBest) || merged[0]
-        setSelectedBestId(best.takeId)
-        onBestTakeChange(line.lineId, best.takeId)
-      }
-    } else {
-      setSelectedBestId(null)
-      onBestTakeChange(line.lineId, null)
-    }
-    return merged
-  }, [line, lessonNo, onBestTakeChange])
 
   useEffect(() => {
-    loadMerged()
-  }, [loadMerged, takesRefreshKey])
-
-  const ensureBestAfterUpload = useCallback(async (cloudTake: RecordingTakeDTO) => {
-    if (!line) return { cloudTake, cloud: [cloudTake], autoSelected: false }
-    const lineNo = line.order
-    const currentCloud = filterCloudTakesForLine(
-      await listTakes(lessonNo, lineNo).catch(() => [] as RecordingTakeDTO[]),
-      lessonNo,
-      lineNo,
-    )
-    const hasBest = currentCloud.some(t => t.uploadStatus === 'uploaded' && t.isBest)
-    if (hasBest) return { cloudTake, cloud: currentCloud, autoSelected: false }
-
-    await apiSetBest(cloudTake.id)
-    const nextCloudTake = { ...cloudTake, isBest: true }
-    const nextCloud = currentCloud.map(t => t.id === nextCloudTake.id ? nextCloudTake : { ...t, isBest: false })
-    if (!nextCloud.some(t => t.id === nextCloudTake.id)) nextCloud.push(nextCloudTake)
-    return { cloudTake: nextCloudTake, cloud: nextCloud, autoSelected: true }
-  }, [line, lessonNo])
-
-  const handleUploadComplete = useCallback(async (lineId: string, localTakeId: string, cloudTake: RecordingTakeDTO) => {
-    if (line?.lineId !== lineId) return
-    try {
-      const { cloudTake: nextCloudTake, cloud, autoSelected } = await ensureBestAfterUpload(cloudTake)
-      const lineNo = line.order
-      cloudDtoRef.current = [
-        ...cloudDtoRef.current.filter(t => t.lineNo !== lineNo || t.lessonNo !== lessonNo),
-        ...cloud,
-      ]
-      await loadMerged(cloud)
-      if (autoSelected) showNotice('已自动设为最佳')
-    } catch (err) {
-      const msg = err instanceof Error ? err.message : '自动设为最佳失败'
-      showNotice(`上传成功，但${msg}`)
-      const lineNo = line.order
-      cloudDtoRef.current = [...cloudDtoRef.current, cloudTake]
-      const relevantCloud = cloudDtoRef.current.filter(t => t.lessonNo === lessonNo && t.lineNo === lineNo)
-      await loadMerged(relevantCloud)
-    }
-  }, [line, lessonNo, loadMerged, ensureBestAfterUpload, showNotice])
-
-  const handleUploadFailed = useCallback((lineId: string, localTakeId: string, errorMsg: string) => {
-    if (line?.lineId !== lineId) return
-    setMergedTakes(prev => prev.map(t =>
-      t.takeId === localTakeId ? { ...t, uploadStatus: 'failed' as const } : t
-    ))
-  }, [line])
-
-  // Auto-retry pending takes on page load (once per line)
-  const getPlaybackUrl = useCallback(async (take: MergedTake, forceRefresh = false): Promise<string> => {
-    if (take.localBlob) {
-      return URL.createObjectURL(take.localBlob)
-    }
-    if (take.storagePath) {
-      const cache = signedUrlCacheRef.current
-      const cached = !forceRefresh ? cache.get(take.takeId) : undefined
-      if (cached && Date.now() < cached.expiresAt) return cached.url
-      try {
-        const t0 = performance.now()
-        const result = await getSignedUrl(take.takeId)
-        if (process.env.NODE_ENV === 'development') console.log(`[perf] getSignedUrl: ${Math.round(performance.now() - t0)}ms`)
-        cache.set(take.takeId, { url: result.signedUrl, expiresAt: Date.now() + result.expiresIn * 1000 })
-        return result.signedUrl
-      } catch {
-        return ''
-      }
-    }
-    return ''
+    setUnsupported(getSupportedMimeType() === null)
   }, [])
 
-  const handleSelectBest = useCallback(async (takeId: string) => {
-    if (!line) return
-    setSelectedBestId(takeId)
-    onBestTakeChange(line.lineId, takeId)
-    setMergedTakes(prev => prev.map(t => ({
-      ...t,
-      isBest: t.takeId === takeId,
-    })))
-    // Try cloud API, silently fall back to local-only
-    try {
-      await apiSetBest(takeId)
-      const mt = mergedTakes.find(t => t.takeId === takeId)
-      if (mt?.uploadStatus === 'uploaded') {
-        await updateTake(takeId, { isUserSelected: true, uploadStatus: 'uploaded' })
-      }
-    } catch {
-      // Local-only or failed upload
-      await updateTake(takeId, { isUserSelected: true })
-    }
-  }, [line, onBestTakeChange, mergedTakes])
-
-  const handlePlay = useCallback(async (takeId: string) => {
-    setPlayingId(takeId)
-    const take = mergedTakes.find(t => t.takeId === takeId)
-    if (!take) { setPlayingId(null); return }
-    const tryPlayOnce = async (forceRefresh: boolean): Promise<boolean> => {
-      const url = await getPlaybackUrl(take, forceRefresh)
-      if (!url) return false
-      try {
-        const audio = new Audio(url)
-        audioRef.current = audio
-        await new Promise<void>((resolve, reject) => {
-          audio.onended = () => resolve()
-          audio.onerror = () => reject(new Error('playback error'))
-          audio.play().catch(reject)
-        })
-        return true
-      } catch {
-        return false
-      }
-    }
-    const ok = await tryPlayOnce(false)
-    if (!ok) {
-      const ok2 = await tryPlayOnce(true)
-      if (!ok2) {
-        showNotice('录音链接刷新失败，请稍后重试')
-      }
-    }
-    audioRef.current = null
-    setPlayingId(null)
-  }, [mergedTakes, getPlaybackUrl, showNotice])
-
-  const handleDelete = useCallback(async (takeId: string) => {
-    if (!line) return
-    const take = mergedTakes.find(t => t.takeId === takeId)
-    const isLocalOnly = take && take.uploadStatus !== 'uploaded'
-    if (!isLocalOnly) {
-      try {
-        await deleteCloudTake(takeId)
-      } catch {
-        // Ignore cloud delete errors
-      }
-    }
-    await deleteLocalTake(takeId)
-    const merged = await loadMerged()
-    if (merged.length > 0) {
-      const best = merged.find(t => t.isBest) || merged[0]
-      setSelectedBestId(best.takeId)
-      onBestTakeChange(line.lineId, best.takeId)
-    } else {
-      setSelectedBestId(null)
-      onBestTakeChange(line.lineId, null)
-    }
-  }, [line, loadMerged, onBestTakeChange])
-
-  const handleRetryUpload = useCallback(async (takeId: string) => {
-    if (!line) return
-    const take = mergedTakes.find(t => t.takeId === takeId)
-    if (!take) return
-    if (!take.localBlob || take.localBlob.size === 0) {
-      showNotice('本地录音已失效，请删除后重新录音')
-      return
-    }
-    const targetLessonNo = take.lessonNo ?? lessonNo
-    const targetLineNo = take.lineNo ?? line.order
-    try {
-      const { uploadTake } = await import('@/lib/recitation-api')
-      const dto = await uploadTake(take.localBlob, targetLessonNo, targetLineNo)
-      const { cloudTake: nextDto, cloud, autoSelected } = await ensureBestAfterUpload(dto)
-      await updateTake(takeId, { uploadStatus: 'uploaded', storagePath: nextDto.storagePath })
-      await loadMerged(cloud)
-      if (autoSelected) showNotice('已自动设为最佳')
-    } catch (err) {
-      const msg = err instanceof Error ? err.message : '上传失败'
-      await updateTake(takeId, { errorMessage: msg, retryCount: (take as { retryCount?: number }).retryCount ?? 0 + 1 }).catch(() => {})
-      showNotice(msg)
-    }
-  }, [line, lessonNo, mergedTakes, loadMerged, showNotice, ensureBestAfterUpload])
-
-  // Auto-retry failed takes and stale pending takes on mount / line change (once per take).
-  // Fresh pending takes are uploaded by the recorder itself; retrying them immediately can duplicate uploads.
   useEffect(() => {
-    if (loadedLineId !== line?.lineId) return
-    if (line?.lineId !== autoRetryLineRef.current) {
-      autoRetriedRef.current.clear()
-      autoRetryLineRef.current = line?.lineId ?? null
-    }
-    for (const take of mergedTakes) {
-      const createdAtMs = Date.parse(take.createdAt)
-      const isStalePending = take.uploadStatus === 'pending'
-        && Number.isFinite(createdAtMs)
-        && Date.now() - createdAtMs >= PENDING_AUTO_RETRY_DELAY_MS
-      const shouldRetry = take.uploadStatus === 'failed' || isStalePending
-      if (shouldRetry && take.localBlob && !autoRetriedRef.current.has(take.takeId)) {
-        autoRetriedRef.current.add(take.takeId)
-        handleRetryUpload(take.takeId)
-      }
-    }
-  }, [mergedTakes, line?.lineId, loadedLineId, handleRetryUpload])
+    stopPlayback()
+    setActiveWordIdx(-1)
+    setSubtitleEntry(null)
+    const loader = SUBTITLE_LOADERS[lessonNo]
+    if (!loader) return
+    let cancelled = false
+    loader().then(lines => {
+      if (cancelled) return
+      const entry = lines.find(s => s.lineOrder === line.order) || null
+      setSubtitleEntry(entry)
+    }).catch(() => {})
+    return () => { cancelled = true }
+  }, [lessonNo, line.order])
 
-  const displayedTakes = loadedLineId === line?.lineId ? mergedTakes : []
-  const MAX_TAKES = 10
-  const limitedTakes = displayedTakes.slice(0, MAX_TAKES)
+  const practiceAudio = getLinePracticeAudio(line)
+  const paddedLesson = String(lessonNo).padStart(2, '0')
+  const karaokeUrl = `/generated/tts-karaoke/lesson-${paddedLesson}/combined.mp3`
+  const thisWords = subtitleEntry?.words ?? []
+  const sentenceStart = thisWords[0]?.wordStartTime ?? 0
+  const sentenceEnd = thisWords[thisWords.length - 1]?.wordEndTime ?? 0
+
+  const stopPlayback = () => {
+    if (audioRef.current) {
+      audioRef.current.pause()
+      audioRef.current.ontimeupdate = null
+      audioRef.current.onended = null
+      audioRef.current = null
+    }
+    setIsPlaying(false)
+    setActiveWordIdx(-1)
+  }
+
+  const startKaraokePlayback = () => {
+    stopPlayback()
+    if (!sentenceEnd) return
+    const audio = new Audio(karaokeUrl)
+    audio.currentTime = sentenceStart
+    audioRef.current = audio
+    setIsPlaying(true)
+    audio.ontimeupdate = () => {
+      if (audio.currentTime >= sentenceEnd) {
+        audio.pause()
+        setIsPlaying(false)
+        setActiveWordIdx(-1)
+        audio.ontimeupdate = null
+        return
+      }
+      let idx = -1
+      for (let i = thisWords.length - 1; i >= 0; i--) {
+        if (audio.currentTime >= thisWords[i].wordStartTime && audio.currentTime < thisWords[i].wordEndTime) {
+          idx = i; break
+        }
+      }
+      setActiveWordIdx(idx)
+    }
+    audio.onended = () => {
+      setIsPlaying(false)
+      setActiveWordIdx(-1)
+    }
+    audio.play().catch(() => {})
+  }
+
+  const handlePlayOriginal = () => {
+    stopPlayback()
+    onPlayOriginal(line)
+  }
+
+  const pausePlayback = () => {
+    if (audioRef.current) {
+      audioRef.current.pause()
+      setIsPlaying(false)
+    }
+  }
+
+  const resumePlayback = () => {
+    if (audioRef.current) {
+      audioRef.current.play().catch(() => {})
+      setIsPlaying(true)
+    }
+  }
+
+  const getMimeType = () => getSupportedMimeType() || 'audio/webm'
+
+  const startRecording = async () => {
+    if (unsupported) { setMessage('浏览器不支持录音'); return }
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true })
+      const mimeType = getMimeType()
+      const recorder = new MediaRecorder(stream, { mimeType })
+      mediaRecorderRef.current = recorder
+      chunksRef.current = []
+      setIsRecording(true)
+      setMessage('')
+      setLocalPlaying(false)
+      recorder.ondataavailable = (e) => {
+        if (e.data.size > 0) chunksRef.current.push(e.data)
+      }
+      recorder.onstop = () => {
+        stream.getTracks().forEach(t => t.stop())
+        const blob = new Blob(chunksRef.current, { type: mimeType })
+        latestTakeUrl.current = URL.createObjectURL(blob)
+        setMessage('')
+        setIsRecording(false)
+      }
+      recorder.start()
+    } catch {
+      setMessage('麦克风访问被拒绝')
+      setIsRecording(false)
+    }
+  }
+
+  const stopRecording = () => {
+    if (mediaRecorderRef.current && mediaRecorderRef.current.state !== 'inactive') {
+      mediaRecorderRef.current.stop()
+    }
+  }
+
+  const handlePlaybackLatest = () => {
+    if (latestTakeUrl.current) {
+      const audio = new Audio(latestTakeUrl.current)
+      audio.onended = () => setLocalPlaying(false)
+      audio.play()
+      setLocalPlaying(true)
+      setMessage('')
+    }
+  }
+
+  const [showWords, setShowWords] = useState(false)
 
   return (
-    <>
-    <section data-testid="recitation-recordings-panel" style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 18, marginTop: 12, overflow: 'hidden', boxShadow: '0 10px 28px rgba(15, 23, 42, 0.05)' }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '14px 16px 8px' }}>
-        <strong style={{ fontSize: 17 }}>{displayedTakes.length > MAX_TAKES ? `我的录音（最近 ${MAX_TAKES} 条）` : `我的录音（共 ${displayedTakes.length} 条）`}</strong>
-        <span style={{ fontSize: 24, color: '#64748b', lineHeight: 1 }}>›</span>
+    <div style={{
+      background: '#f0f5ff',
+      borderBottom: '1px solid #e0e7ff',
+      padding: 14,
+    }}>
+      {/* Speaker + Chinese translation */}
+      <div style={{ fontSize: 14, marginBottom: 10, lineHeight: 1.5 }}>
+        <span style={{ fontWeight: 800, color: '#1d4ed8' }}>{line.speaker}</span>
+        <span style={{ color: '#475569', fontWeight: 700, marginLeft: 6 }}>{line.zh}</span>
       </div>
 
-      {limitedTakes.length === 0 ? (
-        <div style={{ padding: '8px 16px 18px', color: '#64748b', fontSize: 13 }}>
-          {isLoadingCloud ? '正在读取云端录音...' : '当前句暂无录音。'}
-          {!isLoadingCloud && lessonTakeCount > 0 ? (
-            <div style={{ marginTop: 6 }}>本课已有 {lessonTakeCount} 条录音，切换到对应句子可查看。</div>
-          ) : null}
+      {/* A. 听音频 */}
+      <div style={{ marginBottom: 10 }}>
+        <div style={{ fontSize: 11, fontWeight: 800, color: '#64748b', marginBottom: 6 }}>听音频</div>
+        <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', alignItems: 'center' }}>
+          {practiceAudio && (
+            <button type="button" className="btn ghost small" onClick={handlePlayOriginal}
+              style={{ background: '#fff', color: '#0f172a', border: '1px solid #dbe3ee', borderRadius: 10, padding: '8px 12px', fontSize: 12, fontWeight: 800, whiteSpace: 'nowrap' }}>
+              🔊 教材原声
+            </button>
+          )}
+          <button type="button" className="btn ghost small" onClick={startKaraokePlayback}
+            style={{ background: isPlaying && !audioRef.current?.paused ? '#dbeafe' : '#fff', color: '#0f172a', border: '1px solid #dbe3ee', borderRadius: 10, padding: '8px 12px', fontSize: 12, fontWeight: 800, whiteSpace: 'nowrap' }}>
+            🎤 练习卡拉OK音
+          </button>
+          {thisWords.length > 0 && !isPlaying && (
+            <button type="button" className="btn ghost small" onClick={startKaraokePlayback}
+              style={{ background: '#eef2ff', color: '#4f46e5', border: '1px solid #c7d2fe', borderRadius: 10, padding: '8px 12px', fontSize: 12, fontWeight: 800, whiteSpace: 'nowrap' }}>
+              ▶ 播放当前句
+            </button>
+          )}
+          {isPlaying && (
+            <button type="button" className="btn ghost small" onClick={stopPlayback}
+              style={{ background: '#fee2e2', color: '#dc2626', border: '1px solid #fecaca', borderRadius: 10, padding: '8px 12px', fontSize: 12, fontWeight: 800, whiteSpace: 'nowrap' }}>
+              ⏹ 停止
+            </button>
+          )}
         </div>
-      ) : (
-        <div style={{ padding: '0 12px 14px' }}>
-          {limitedTakes.map((take, index) => {
-            const isBest = take.takeId === selectedBestId
-            const isPending = take.uploadStatus === 'pending'
-            const isFailed = take.uploadStatus === 'failed'
-            return (
-              <div key={take.takeId} data-testid="recitation-take-row" data-take-id={take.takeId} style={{ display: 'grid', gridTemplateColumns: '30px 86px minmax(0, 1fr) 46px', gap: '4px 8px', alignItems: 'center', minHeight: 54, padding: '2px 0' }}>
-                <span style={{ width: 26, height: 26, borderRadius: 13, background: isBest ? '#eff6ff' : '#f1f5f9', color: isBest ? '#1683ff' : '#0f172a', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: 13, fontWeight: 800 }}>
-                  {index + 1}
-                </span>
-                <span style={{ color: isBest ? '#1683ff' : '#475569', fontSize: 14, whiteSpace: 'nowrap' }}>{formatTakeTime(take.createdAt)}</span>
-                <Waveform seed={take.takeId} active={isBest} />
-                <span style={{ color: isBest ? '#1683ff' : '#475569', fontSize: 14, fontWeight: 800, textAlign: 'right' }}>{take.score}分</span>
-                <span style={{ gridColumn: '3 / 5', display: 'flex', justifyContent: 'flex-end', alignItems: 'center', gap: 4 }}>
-                  {(isPending || isFailed) && (
-                    <span style={{ border: '1px solid #f59e0b', color: '#d97706', borderRadius: 999, padding: '3px 10px', fontSize: 11, fontWeight: 800, whiteSpace: 'nowrap' }}>
-                      {isFailed ? (take.localBlob ? '上传失败' : '本地录音已失效') : '等待上传'}
-                    </span>
-                  )}
-                  {isFailed && take.localBlob && (
-                    <button type="button" className="btn ghost small" onClick={() => handleRetryUpload(take.takeId)} style={{ background: '#fff', border: '1px solid #dbe3ee', color: '#d97706', borderRadius: 999, padding: '3px 10px', fontSize: 12, whiteSpace: 'nowrap' }}>重试</button>
-                  )}
-                  {isFailed && !take.localBlob && (
-                    <span style={{ color: '#94a3b8', fontSize: 11, whiteSpace: 'nowrap' }}>请删除后重新录音</span>
-                  )}
-                  {isBest ? (
-                    <span style={{ border: '1px solid #1683ff', color: '#1683ff', borderRadius: 999, padding: '3px 10px', fontSize: 12, fontWeight: 800, whiteSpace: 'nowrap' }}>最佳</span>
-                  ) : isPending || isFailed ? null : (
-                    <button type="button" className="btn ghost small" onClick={() => handleSelectBest(take.takeId)} style={{ background: '#fff', border: '1px solid #dbe3ee', color: '#1683ff', borderRadius: 999, padding: '3px 10px', fontSize: 12, whiteSpace: 'nowrap' }}>选为最佳</button>
-                  )}
-                  <button type="button" data-testid="recitation-take-play-button" className="btn ghost small" onClick={() => handlePlay(take.takeId)} disabled={playingId === take.takeId} style={{ padding: '3px 7px', background: '#fff', color: '#475569' }}>{playingId === take.takeId ? '⏳' : '▶'}</button>
-                </span>
-              </div>
-            )
-          })}
+      </div>
+
+      {/* Karaoke word display — highlighted during playback */}
+      {thisWords.length > 0 && (
+        <div style={{ fontSize: 20, fontWeight: 900, color: '#0f172a', lineHeight: 2.2, marginBottom: 10, wordBreak: 'break-word', overflowWrap: 'break-word' }}>
+          {thisWords.map((w, i) => (
+            <span key={i} style={{
+              display: 'inline',
+              background: i === activeWordIdx ? '#2563eb' : 'transparent',
+              color: i === activeWordIdx ? '#fff' : '#0f172a',
+              borderRadius: 6,
+              padding: '3px 6px',
+              marginRight: 8,
+              transition: 'background 0.1s',
+              whiteSpace: 'normal',
+            }}>
+              {w.surface}
+            </span>
+          ))}
         </div>
       )}
-    </section>
-    </>
+
+      {/* B. 跟读录音 */}
+      <div style={{ marginBottom: 4 }}>
+        <div style={{ fontSize: 11, fontWeight: 800, color: '#64748b', marginBottom: 6 }}>跟读录音</div>
+        <div style={{ display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
+          <button
+            type="button"
+            onClick={isRecording ? stopRecording : startRecording}
+            disabled={unsupported}
+            style={{
+              background: isRecording ? '#dc2626' : '#1683ff',
+              color: '#fff',
+              border: 'none',
+              borderRadius: 12,
+              padding: '10px 20px',
+              fontSize: 14,
+              fontWeight: 900,
+              whiteSpace: 'nowrap',
+              opacity: unsupported ? 0.5 : 1,
+              cursor: unsupported ? 'not-allowed' : 'pointer',
+              boxShadow: isRecording ? 'none' : '0 2px 8px rgba(22, 131, 255, 0.25)',
+              transition: 'all 0.15s',
+            }}
+          >
+            {isRecording ? '■ 停止录音' : unsupported ? '不支持录音' : latestTakeUrl.current ? '🎙 重新跟读' : '🎙 开始跟读'}
+          </button>
+          {latestTakeUrl.current && (
+            <button
+              type="button"
+              onClick={handlePlaybackLatest}
+              disabled={localPlaying}
+              className="btn ghost small"
+              style={{
+                background: '#f1f5f9', color: '#475569', border: '1px solid #e2e8f0',
+                borderRadius: 10, padding: '8px 14px', fontSize: 12, fontWeight: 800, whiteSpace: 'nowrap',
+                opacity: localPlaying ? 0.5 : 1, cursor: localPlaying ? 'not-allowed' : 'pointer',
+              }}
+            >
+              {localPlaying ? '▶ 播放中...' : '▶ 回放我的录音'}
+            </button>
+          )}
+        </div>
+        {message && <span style={{ fontSize: 11, color: '#dc2626', fontWeight: 700, marginTop: 4, display: 'inline-block' }}>{message}</span>}
+      </div>
+
+      {/* C. 辅助学习 — 本句单词 */}
+      {thisWords.length > 0 && (
+        <div style={{ marginTop: 4 }}>
+          <div style={{ fontSize: 11, fontWeight: 800, color: '#64748b', marginBottom: 6 }}>辅助学习</div>
+          <button
+            type="button"
+            onClick={() => setShowWords(v => !v)}
+            className="btn ghost small"
+            style={{
+              background: '#fff', color: '#475569',
+              border: '1px solid #dbe3ee', borderRadius: 10,
+              padding: '6px 12px', fontSize: 11, fontWeight: 800, whiteSpace: 'nowrap',
+              cursor: 'pointer',
+            }}
+          >
+            {showWords ? '▲' : '▼'} 本句单词
+          </button>
+          {showWords && (
+            <div style={{ marginTop: 8, display: 'flex', flexDirection: 'column', gap: 3 }}>
+              {thisWords.map((w, i) => (
+                <div key={i} style={{
+                  background: '#fff', border: '1px solid #e5e7eb', borderRadius: 8,
+                  padding: '5px 10px',
+                }}>
+                  <div style={{ fontSize: 14, fontWeight: 900, color: '#0f172a' }}>{w.surface}</div>
+                  <div style={{ fontSize: 11, color: '#64748b', marginTop: 1 }}>
+                    {w.kana || w.romaji ? <span style={{ marginRight: 6 }}>{w.kana || w.romaji}</span> : null}
+                    <span style={{ color: '#2563eb' }}>{w.meaningCn}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+    </div>
   )
 }
 
@@ -697,9 +739,7 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
   const [loading, setLoading] = useState(true)
   const [bestTakes, setBestTakes] = useState<Map<string, string | null>>(new Map())
   const [activeLineId, setActiveLineId] = useState<string | null>(null)
-  const [showRecordingBar, setShowRecordingBar] = useState(false)
   const [takesRefreshKey, setTakesRefreshKey] = useState(0)
-  const [lessonTakeCount, setLessonTakeCount] = useState(0)
   const [isRecording, setIsRecording] = useState(false)
   const [focusMode, setFocusMode] = useState(false)
   const [notice, setNotice] = useState('')
@@ -727,9 +767,7 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
   const stopTtsPlaybackRef = useRef(false)
   const [showImageModal, setShowImageModal] = useState(false)
   const [ttsDebug, setTtsDebug] = useState('')
-  const [showCurrentZh, setShowCurrentZh] = useState(false)
-  const [showCurrentExplanation, setShowCurrentExplanation] = useState(false)
-  const [showCurrentAnswer, setShowCurrentAnswer] = useState(false)
+  const [subtitleManifest, setSubtitleManifest] = useState<any>(null)
 
   const ORIGINAL_AUDIO_MAP_URL = 'https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/lesson-audio-map.json'
   const [originalAudioLesson, setOriginalAudioLesson] = useState<{ url: string; cd: string; needsReview: boolean } | null>(null)
@@ -759,9 +797,12 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     loadRecitationLesson(lessonNo).then((data) => {
       setLesson(data)
       setLoading(false)
-      if (data?.lines?.[0]) {
-        setActiveLineId(data.lines[0].lineId)
-      }
+      // Load karaoke manifest for word timings
+      const padded = String(lessonNo).padStart(2, '0')
+      fetch(`/generated/tts-karaoke/lesson-${padded}/manifest.json`)
+        .then(r => r.json())
+        .then(m => setSubtitleManifest(m))
+        .catch(() => setSubtitleManifest(null))
     })
   }, [lessonNo])
 
@@ -797,19 +838,9 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     return () => { cancelled = true }
   }, [lessonNo, lesson])
 
-  useEffect(() => {
-    let cancelled = false
-    listTakes(lessonNo)
-      .then(takes => {
-        if (!cancelled) setLessonTakeCount(takes.filter(t => t.uploadStatus === 'uploaded').length)
-      })
-      .catch(() => {
-        if (!cancelled) setLessonTakeCount(0)
-      })
-    return () => {
-      cancelled = true
-    }
-  }, [lessonNo, takesRefreshKey])
+  const handleToggleExpand = useCallback((lineId: string) => {
+    setActiveLineId(prev => prev === lineId ? null : lineId)
+  }, [])
 
   const handleBestTakeChange = useCallback((lineId: string, takeId: string | null) => {
     setBestTakes(prev => {
@@ -937,7 +968,6 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     stopContinuousPlayback()
     stopOriginalAudio()
     setActiveLineId(line.lineId)
-    setShowRecordingBar(true)
 
     const practiceAudio = getLinePracticeAudio(line)
     if (!practiceAudio) {
@@ -1279,8 +1309,6 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
 
   const showTopBar = !focusMode
   const showBottomNav = !focusMode
-  const activeLine = lesson?.lines.find(l => l.lineId === activeLineId) || null
-  const activeIndex = lesson?.lines.findIndex(l => l.lineId === activeLineId) ?? -1
   const sortedLessonLines = lesson ? [...lesson.lines].sort((a, b) => a.order - b.order) : []
   const currentTtsLine = ttsPlayback.status !== 'idle'
     ? sortedLessonLines[ttsPlayback.currentIndex] || null
@@ -1312,12 +1340,9 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     : ''
   const hasOriginalLineAudio = lesson?.lines.some(l => getLinePracticeAudio(l)?.source === 'original') ?? false
   const ttsButtonSubtitle = hasOriginalLineAudio ? '教材原声' : '合成练习音'
-  const recordingBarBottomOffset = showBottomNav
+  const pageBottomPadding = showBottomNav
     ? 'calc(56px + env(safe-area-inset-bottom, 0px))'
     : 'env(safe-area-inset-bottom, 0px)'
-  const pageBottomPadding = showBottomNav
-    ? 'calc(180px + env(safe-area-inset-bottom, 0px))'
-    : 'calc(130px + env(safe-area-inset-bottom, 0px))'
 
   if (loading) {
     return (
@@ -1424,86 +1449,23 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
         </div>
       )}
 
-      {activeLine && (
-        <section data-testid="recitation-current-sentence-card" style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 18, padding: 16, marginBottom: 12, boxShadow: '0 10px 28px rgba(15, 23, 42, 0.05)' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 }}>
-            <span style={{ color: '#475569', fontSize: 13, fontWeight: 800 }}>第 {activeIndex + 1} 句 / 共 {lesson.lines.length} 句</span>
-            {bestTakes.get(activeLine.lineId) && bestTakes.get(activeLine.lineId) !== 'pending' && (
-              <span style={{ fontSize: 11, color: '#166534', fontWeight: 800, padding: '2px 8px', background: '#f0fdf4', borderRadius: 999 }}>已完成</span>
-            )}
-          </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 8 }}>
-            {(() => { const sa = getSpeakerAvatar(activeLine); return (
-              <span style={{ width: 24, height: 24, borderRadius: 999, background: sa.activeBackground, border: `1px solid ${sa.activeBorder}`, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, fontSize: 14, lineHeight: 1 }}>{sa.emoji}</span>
-            ); })()}
-            <span style={{ fontSize: 15, fontWeight: 800, color: '#0875f5' }}>{activeLine.speaker}:</span>
-          </div>
-          <div style={{ fontSize: 20, lineHeight: 1.3, fontWeight: 900, color: '#0f172a', wordBreak: 'break-word', overflowWrap: 'break-word', marginBottom: 6 }}>
-            {activeLine.ja}
-          </div>
-          <div style={{ fontSize: 15, color: '#64748b', fontWeight: 700, wordBreak: 'break-word', overflowWrap: 'break-word', marginBottom: 12 }}>
-            {showCurrentZh ? activeLine.zh : activeLine.zh.slice(0, 20) + (activeLine.zh.length > 20 ? '...' : '')}
-          </div>
-          <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-            <button className="btn ghost small" onClick={() => setShowCurrentZh(v => !v)} style={{ background: '#fff', color: '#0f172a', border: '1px solid #dbe3ee', borderRadius: 10, padding: '8px 12px', fontSize: 12, fontWeight: 800, whiteSpace: 'nowrap' }}>
-              {showCurrentZh ? '收起翻译' : '中文翻译'}
-            </button>
-            {getLinePracticeAudio(activeLine) && (
-              <button className="btn ghost small" onClick={() => handlePlayOriginal(activeLine)} style={{ background: '#fff', color: '#0f172a', border: '1px solid #dbe3ee', borderRadius: 10, padding: '8px 12px', fontSize: 12, fontWeight: 800, whiteSpace: 'nowrap' }}>
-                🔊 {getLinePracticeAudio(activeLine)!.label}
-              </button>
-            )}
-            <button className="btn ghost small" onClick={() => setShowCurrentExplanation(v => !v)} style={{ background: '#fff', color: '#0f172a', border: '1px solid #dbe3ee', borderRadius: 10, padding: '8px 12px', fontSize: 12, fontWeight: 800, whiteSpace: 'nowrap' }}>
-              解析
-            </button>
-            <button className="btn ghost small" onClick={() => setShowCurrentAnswer(v => !v)} style={{ background: '#fff', color: '#0f172a', border: '1px solid #dbe3ee', borderRadius: 10, padding: '8px 12px', fontSize: 12, fontWeight: 800, whiteSpace: 'nowrap' }}>
-              {showCurrentAnswer ? '收起原文' : '显示原文'}
-            </button>
-          </div>
-          {showCurrentAnswer && (
-            <div style={{ marginTop: 8, padding: 10, background: '#f0fdf4', borderRadius: 12, fontSize: 16, color: '#166534', fontWeight: 700, wordBreak: 'break-word', overflowWrap: 'break-word' }}>
-              {activeLine.ja}
-            </div>
-          )}
-          {showCurrentExplanation && (
-            <div style={{ marginTop: 8, padding: 10, background: '#f8fafc', borderRadius: 12, fontSize: 12, color: '#64748b' }}>
-              <div style={{ fontWeight: 700, marginBottom: 4 }}>解析</div>
-              <div>词汇/语法/句型 — 请参考课程原文和语法说明</div>
-              <div style={{ marginTop: 4 }}>
-                <a href={`/lessons/${lessonNo}/practice?stage=conversation_vocab`} style={{ color: '#2563eb', marginRight: 8 }}>词汇</a>
-                <a href={`/lessons/${lessonNo}/practice?stage=conversation_grammar`} style={{ color: '#2563eb', marginRight: 8 }}>语法</a>
-                <a href={`/lessons/${lessonNo}/deep-dive`} style={{ color: '#2563eb' }}>深度解析</a>
-              </div>
-            </div>
-          )}
-        </section>
-      )}
-
       <section data-testid="recitation-conversation-list" style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 18, overflow: 'hidden', boxShadow: '0 10px 28px rgba(15, 23, 42, 0.05)' }}>
         <div style={{ padding: '14px 16px', borderBottom: '1px solid #e5e7eb', fontSize: 18, fontWeight: 900 }}>
-          逐句背诵 · 第 {activeIndex + 1} 句 / 共 {lesson.lines.length} 句
+          逐句背诵 · 共 {lesson.lines.length} 句
         </div>
         {lesson.lines.map(line => (
           <CompactLineItem
             key={line.lineId}
             line={line}
             lessonNo={lessonNo}
-            isActive={activeLineId === line.lineId}
+            isExpanded={activeLineId === line.lineId}
+            onToggleExpand={handleToggleExpand}
             onPlayOriginal={handlePlayOriginal}
             takesRefreshKey={takesRefreshKey}
             onBestTakeChange={handleBestTakeChange}
           />
         ))}
       </section>
-
-      <MyRecordingsPanel
-        line={activeLine}
-        lessonNo={lessonNo}
-        takesRefreshKey={takesRefreshKey}
-        lessonTakeCount={lessonTakeCount}
-        onBestTakeChange={handleBestTakeChange}
-        showNotice={showNotice}
-      />
 
       {(ttsPlayback.status !== 'idle' || continuousPlayback.status !== 'idle') && (
         <div style={{ marginTop: 16, padding: '14px 16px', background: '#f8fafc', borderRadius: 14, textAlign: 'center' }}>
@@ -1709,19 +1671,6 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
       </div>
       )}
 
-      {activeLine && showRecordingBar && (
-        <RecitationFloatingBar
-          line={activeLine}
-          lessonNo={lessonNo}
-          currentIndex={activeIndex}
-          totalLines={lesson.lines.length}
-          onRecordingComplete={handleRecordingComplete}
-          onRecordingStateChange={setIsRecording}
-          onPlayOriginal={handlePlayOriginal}
-          onClose={isRecording ? undefined : () => setShowRecordingBar(false)}
-          bottomOffset={recordingBarBottomOffset}
-        />
-      )}
     </div>
   )
 }
