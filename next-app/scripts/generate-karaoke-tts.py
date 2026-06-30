@@ -196,6 +196,120 @@ SPEAKER_VOICES = {
     25: SPEAKER_VOICES_LESSON_25,
 }
 
+SPEAKER_VOICES.update({
+    26: {
+        "管理人": {"voice": VOICE_MALE, "rate": "+0%"},
+        "ミラー": {"voice": VOICE_MALE, "rate": "-10%"},
+    },
+    27: {
+        "ミラー": {"voice": VOICE_MALE, "rate": "-10%"},
+        "鈴木": {"voice": VOICE_MALE, "rate": "+0%"},
+    },
+    28: {
+        "小川幸子": {"voice": VOICE_FEMALE, "rate": "+0%"},
+        "ミラー": {"voice": VOICE_MALE, "rate": "-10%"},
+    },
+    29: {
+        "イー": {"voice": VOICE_FEMALE, "rate": "+0%"},
+        "駅員": {"voice": VOICE_MALE, "rate": "+0%"},
+    },
+    30: {
+        "ミラー": {"voice": VOICE_MALE, "rate": "-10%"},
+        "鈴木": {"voice": VOICE_MALE, "rate": "+0%"},
+    },
+    31: {
+        "小川": {"voice": VOICE_MALE, "rate": "+0%"},
+        "ミラー": {"voice": VOICE_MALE, "rate": "-10%"},
+    },
+    32: {
+        "小川": {"voice": VOICE_MALE, "rate": "+0%"},
+        "シュミット": {"voice": VOICE_MALE, "rate": "-10%"},
+    },
+    33: {
+        "ワット": {"voice": VOICE_MALE, "rate": "-10%"},
+        "大学職員": {"voice": VOICE_FEMALE, "rate": "+0%"},
+    },
+    34: {
+        "クララ": {"voice": VOICE_FEMALE, "rate": "+0%"},
+        "渡辺": {"voice": VOICE_FEMALE, "rate": "+0%"},
+        "お茶の先生": {"voice": VOICE_FEMALE, "rate": "+0%"},
+    },
+    35: {
+        "タワポン": {"voice": VOICE_MALE, "rate": "-10%"},
+        "鈴木": {"voice": VOICE_MALE, "rate": "+0%"},
+    },
+    36: {
+        "アナウンサー": {"voice": VOICE_MALE, "rate": "+0%"},
+        "小川よね": {"voice": VOICE_FEMALE, "rate": "-5%"},
+    },
+    37: {
+        "ガイド": {"voice": VOICE_FEMALE, "rate": "+0%"},
+        "カリナ": {"voice": VOICE_FEMALE, "rate": "+0%"},
+    },
+    38: {
+        "大学職員": {"voice": VOICE_FEMALE, "rate": "+0%"},
+        "ワット": {"voice": VOICE_MALE, "rate": "-10%"},
+    },
+    39: {
+        "ミラー": {"voice": VOICE_MALE, "rate": "-10%"},
+        "中村課長": {"voice": VOICE_MALE, "rate": "+0%"},
+    },
+    40: {
+        "クララ": {"voice": VOICE_FEMALE, "rate": "+0%"},
+        "伊藤先生": {"voice": VOICE_FEMALE, "rate": "+0%"},
+    },
+    41: {
+        "学長": {"voice": VOICE_MALE, "rate": "+0%"},
+        "皆": {"voice": VOICE_FEMALE, "rate": "+0%"},
+        "司会者": {"voice": VOICE_MALE, "rate": "+0%"},
+        "松本良子": {"voice": VOICE_FEMALE, "rate": "+0%"},
+        "大学職員": {"voice": VOICE_FEMALE, "rate": "+0%"},
+        "ミラー": {"voice": VOICE_MALE, "rate": "-10%"},
+    },
+    42: {
+        "鈴木": {"voice": VOICE_MALE, "rate": "+0%"},
+        "林": {"voice": VOICE_FEMALE, "rate": "+0%"},
+        "小川": {"voice": VOICE_MALE, "rate": "+0%"},
+    },
+    43: {
+        "林": {"voice": VOICE_FEMALE, "rate": "+0%"},
+        "シュミット": {"voice": VOICE_MALE, "rate": "-10%"},
+    },
+    44: {
+        "美容師": {"voice": VOICE_MALE, "rate": "+0%"},
+        "イー": {"voice": VOICE_FEMALE, "rate": "+0%"},
+    },
+    45: {
+        "係員": {"voice": VOICE_MALE, "rate": "+0%"},
+        "参加者全員": {"voice": VOICE_FEMALE, "rate": "+0%"},
+        "参加者1": {"voice": VOICE_FEMALE, "rate": "+0%"},
+        "参加者2": {"voice": VOICE_MALE, "rate": "+0%"},
+        "鈴木": {"voice": VOICE_MALE, "rate": "+0%"},
+        "ミラー": {"voice": VOICE_MALE, "rate": "-10%"},
+    },
+    46: {
+        "係員": {"voice": VOICE_MALE, "rate": "+0%"},
+        "タワポン": {"voice": VOICE_MALE, "rate": "-10%"},
+    },
+    47: {
+        "渡辺": {"voice": VOICE_FEMALE, "rate": "+0%"},
+        "高橋": {"voice": VOICE_MALE, "rate": "+0%"},
+        "林": {"voice": VOICE_FEMALE, "rate": "+0%"},
+    },
+    48: {
+        "ミラー": {"voice": VOICE_MALE, "rate": "-10%"},
+        "中村課長": {"voice": VOICE_MALE, "rate": "+0%"},
+    },
+    49: {
+        "先生": {"voice": VOICE_FEMALE, "rate": "+0%"},
+        "クララ": {"voice": VOICE_FEMALE, "rate": "+0%"},
+    },
+    50: {
+        "司会者": {"voice": VOICE_MALE, "rate": "+0%"},
+        "ミラー": {"voice": VOICE_MALE, "rate": "-10%"},
+    },
+})
+
 
 def get_voice_for_speaker(lesson_no: int, speaker_jp: str) -> dict:
     voices = SPEAKER_VOICES.get(lesson_no, {})
