@@ -699,6 +699,9 @@ function SentenceTrainingPanel({
   }
 
   const [showWords, setShowWords] = useState(false)
+  const visibleTakes = [...mergedTakes]
+    .sort((a, b) => b.createdAt.localeCompare(a.createdAt))
+    .slice(0, 10)
 
   return (
     <div style={{
@@ -813,22 +816,20 @@ function SentenceTrainingPanel({
             暂无录音。完成一次跟读后，最近录音会显示在这里。
           </div>
         ) : (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-            {[...mergedTakes].sort((a, b) => b.createdAt.localeCompare(a.createdAt)).map((take, i) => {
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+            {visibleTakes.map((take, i) => {
             const isBest = take.takeId === selectedBestId
             return (
               <div key={take.takeId} style={{
-                display: 'flex', alignItems: 'center', gap: 6, padding: '6px 8px',
+                display: 'flex', alignItems: 'center', gap: 5, padding: '4px 6px',
                 background: isBest ? '#f0fdf4' : '#fff',
                 borderRadius: 8, border: `1px solid ${isBest ? '#86efac' : '#e5e7eb'}`,
-                marginBottom: 4,
               }}>
-                <div style={{ flex: 1, minWidth: 0, display: 'flex', alignItems: 'center', gap: 6 }}>
+                <div style={{ flex: 1, minWidth: 0, display: 'flex', alignItems: 'center', gap: 5 }}>
                   <Waveform seed={take.takeId} active={isBest} />
                   <span style={{ fontSize: 11, fontWeight: 800, color: '#64748b', whiteSpace: 'nowrap' }}>
-                    第{mergedTakes.length - i}版
+                    {i === 0 ? '最新' : `第${i + 1}条`}
                   </span>
-                  <span style={{ fontSize: 12, fontWeight: 800, color: isBest ? '#166534' : '#0f172a', minWidth: 36 }}>{take.score}分</span>
                   <span style={{ fontSize: 10, color: '#94a3b8', whiteSpace: 'nowrap' }}>{formatTakeTimeShort(take.createdAt)}</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 4, flexShrink: 0 }}>
@@ -837,7 +838,7 @@ function SentenceTrainingPanel({
                     className="btn ghost small"
                     onClick={() => handleTakePlayback(take)}
                     disabled={playingTakeId === take.takeId}
-                    style={{ fontSize: 11, padding: '4px 6px', minWidth: 28 }}
+                    style={{ fontSize: 11, padding: '3px 6px', minWidth: 28 }}
                   >
                     {playingTakeId === take.takeId ? '⏳' : '▶'}
                   </button>
@@ -850,7 +851,7 @@ function SentenceTrainingPanel({
                       className="btn ghost small"
                       onClick={() => handleRetryUpload(take)}
                       disabled={uploading}
-                      style={{ fontSize: 10, color: '#dc2626', padding: '4px 6px' }}
+                      style={{ fontSize: 10, color: '#dc2626', padding: '3px 6px' }}
                     >
                       ↻
                     </button>
@@ -863,7 +864,7 @@ function SentenceTrainingPanel({
                       type="button"
                       className="btn ghost small"
                       onClick={() => handleSelectBest(take.takeId)}
-                      style={{ fontSize: 10, color: '#4f46e5', padding: '4px 6px' }}
+                      style={{ fontSize: 10, color: '#4f46e5', padding: '3px 6px' }}
                     >
                       ★
                     </button>
@@ -871,14 +872,6 @@ function SentenceTrainingPanel({
                   {isBest && (
                     <span style={{ fontSize: 11, color: '#166534', fontWeight: 800 }}>★</span>
                   )}
-                  <button
-                    type="button"
-                    className="btn ghost small"
-                    onClick={() => handleDeleteTake(take.takeId)}
-                    style={{ fontSize: 10, color: '#dc2626', padding: '4px 6px' }}
-                  >
-                    ✕
-                  </button>
                 </div>
               </div>
             )
