@@ -141,6 +141,33 @@ SPEAKER_VOICES_LESSON_20 = {
     "タワポン": {"voice": VOICE_MALE, "rate": "-10%"},
 }
 
+SPEAKER_VOICES_LESSON_21 = {
+    "松本": {"voice": VOICE_MALE, "rate": "-10%"},
+    "サントス": {"voice": VOICE_MALE, "rate": "-10%"},
+}
+
+SPEAKER_VOICES_LESSON_22 = {
+    "不動産屋": {"voice": VOICE_MALE, "rate": "+0%"},
+    "ワン": {"voice": VOICE_MALE, "rate": "-10%"},
+}
+
+SPEAKER_VOICES_LESSON_23 = {
+    "図書館の人": {"voice": VOICE_MALE, "rate": "+0%"},
+    "カリナ": {"voice": VOICE_FEMALE, "rate": "+0%"},
+}
+
+SPEAKER_VOICES_LESSON_24 = {
+    "カリナ": {"voice": VOICE_FEMALE, "rate": "+0%"},
+    "ワン": {"voice": VOICE_MALE, "rate": "-10%"},
+}
+
+SPEAKER_VOICES_LESSON_25 = {
+    "木村": {"voice": VOICE_FEMALE, "rate": "+0%"},
+    "ミラー": {"voice": VOICE_MALE, "rate": "-10%"},
+    "佐藤": {"voice": VOICE_MALE, "rate": "+0%"},
+    "サントス": {"voice": VOICE_MALE, "rate": "-10%"},
+}
+
 SPEAKER_VOICES = {
     1: SPEAKER_VOICES_LESSON_01,
     2: SPEAKER_VOICES_LESSON_02,
@@ -162,6 +189,11 @@ SPEAKER_VOICES = {
     18: SPEAKER_VOICES_LESSON_18,
     19: SPEAKER_VOICES_LESSON_19,
     20: SPEAKER_VOICES_LESSON_20,
+    21: SPEAKER_VOICES_LESSON_21,
+    22: SPEAKER_VOICES_LESSON_22,
+    23: SPEAKER_VOICES_LESSON_23,
+    24: SPEAKER_VOICES_LESSON_24,
+    25: SPEAKER_VOICES_LESSON_25,
 }
 
 

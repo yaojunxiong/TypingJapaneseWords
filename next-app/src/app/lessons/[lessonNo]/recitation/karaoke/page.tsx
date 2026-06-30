@@ -18,7 +18,7 @@ export default async function KaraokePage({ params }: Props) {
   const { lessonNo } = await params
   const num = parseInt(lessonNo, 10)
 
-  if (Number.isNaN(num) || num < 1 || num > 20) {
+  if (Number.isNaN(num) || num < 1 || num > 25) {
     redirect(`/lessons/${lessonNo}/recitation`)
   }
 
