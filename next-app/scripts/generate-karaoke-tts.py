@@ -58,12 +58,47 @@ SPEAKER_VOICES_LESSON_05 = {
     "男の人": {"voice": VOICE_MALE, "rate": "+0%"},
 }
 
+SPEAKER_VOICES_LESSON_06 = {
+    "佐藤": {"voice": VOICE_FEMALE, "rate": "+0%"},
+    "ミラー": {"voice": VOICE_MALE, "rate": "-10%"},
+}
+
+SPEAKER_VOICES_LESSON_07 = {
+    "山田一郎": {"voice": VOICE_MALE, "rate": "+0%"},
+    "ジョゼ・サントス": {"voice": VOICE_MALE, "rate": "-10%"},
+    "山田友子": {"voice": VOICE_FEMALE, "rate": "+0%"},
+    "マリア・サントス": {"voice": VOICE_FEMALE, "rate": "+0%"},
+}
+
+SPEAKER_VOICES_LESSON_08 = {
+    "山田一郎": {"voice": VOICE_MALE, "rate": "+0%"},
+    "マリア・サントス": {"voice": VOICE_FEMALE, "rate": "+0%"},
+    "ジョゼ・サントス": {"voice": VOICE_MALE, "rate": "-10%"},
+    "山田友子": {"voice": VOICE_FEMALE, "rate": "+0%"},
+}
+
+SPEAKER_VOICES_LESSON_09 = {
+    "木村": {"voice": VOICE_FEMALE, "rate": "+0%"},
+    "ミラー": {"voice": VOICE_MALE, "rate": "-10%"},
+}
+
+SPEAKER_VOICES_LESSON_10 = {
+    "ミラー": {"voice": VOICE_MALE, "rate": "-10%"},
+    "女の人": {"voice": VOICE_FEMALE, "rate": "+0%"},
+    "店員": {"voice": VOICE_FEMALE, "rate": "+0%"},
+}
+
 SPEAKER_VOICES = {
     1: SPEAKER_VOICES_LESSON_01,
     2: SPEAKER_VOICES_LESSON_02,
     3: SPEAKER_VOICES_LESSON_03,
     4: SPEAKER_VOICES_LESSON_04,
     5: SPEAKER_VOICES_LESSON_05,
+    6: SPEAKER_VOICES_LESSON_06,
+    7: SPEAKER_VOICES_LESSON_07,
+    8: SPEAKER_VOICES_LESSON_08,
+    9: SPEAKER_VOICES_LESSON_09,
+    10: SPEAKER_VOICES_LESSON_10,
 }
 
 
