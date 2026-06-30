@@ -3,8 +3,8 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import type { RecitationLesson, RecitationLine, RecitationTake, RecordingTakeDTO } from '@/types/recitation'
 import { loadRecitationLesson, getBestTake } from '@/lib/recitation-lesson'
-import { getTakesByLine, deleteTake as deleteLocalTake, updateTake } from '@/lib/recitation-storage'
-import { listTakes, setBestTake as apiSetBest, deleteCloudTake, getSignedUrl, type SignedUrlResult } from '@/lib/recitation-api'
+import { getTakesByLine, deleteTake as deleteLocalTake, updateTake, saveTake } from '@/lib/recitation-storage'
+import { listTakes, setBestTake as apiSetBest, deleteCloudTake, getSignedUrl, uploadTake, UploadError, type SignedUrlResult } from '@/lib/recitation-api'
 import StudyMobileChrome from '@/components/study-mobile-chrome'
 import type { Lang } from '@/lib/i18n'
 import Link from 'next/link'
@@ -152,7 +152,7 @@ function mergeTakes(local: RecitationTake[], cloud: RecordingTakeDTO[]): MergedT
   // IndexedDB is only for pending/failed local retries.
   for (const lt of local) {
     const localStatus = lt.uploadStatus || 'pending'
-    if (!seenLocal.has(lt.takeId) && (localStatus === 'pending' || localStatus === 'failed')) {
+    if (!seenLocal.has(lt.takeId) && (localStatus === 'pending' || localStatus === 'failed' || localStatus === 'uploaded')) {
       result.push({
         takeId: lt.takeId,
         createdAt: lt.createdAt,
@@ -172,6 +172,24 @@ function mergeTakes(local: RecitationTake[], cloud: RecordingTakeDTO[]): MergedT
 
 function filterCloudTakesForLine(takes: RecordingTakeDTO[], lessonNo: number, lineNo: number): RecordingTakeDTO[] {
   return takes.filter(t => t.lessonNo === lessonNo && t.lineNo === lineNo)
+}
+
+function generateTakeId(): string {
+  return `take-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`
+}
+
+function mockScore(): number {
+  return Math.floor(70 + Math.random() * 28)
+}
+
+function formatTakeTimeShort(createdAt: string): string {
+  const date = new Date(createdAt)
+  if (Number.isNaN(date.getTime())) return '--'
+  const month = String(date.getMonth() + 1).padStart(2, '0')
+  const day = String(date.getDate()).padStart(2, '0')
+  const hour = String(date.getHours()).padStart(2, '0')
+  const minute = String(date.getMinutes()).padStart(2, '0')
+  return `${month}-${day} ${hour}:${minute}`
 }
 
 function markRecitationLessonCompleted(lessonNo: number): boolean {
@@ -217,7 +235,7 @@ async function syncLearningStateBestEffort() {
 }
 
 function CompactLineItem({
-  line, lessonNo, isExpanded, onToggleExpand, onPlayOriginal, takesRefreshKey, onBestTakeChange,
+  line, lessonNo, isExpanded, onToggleExpand, onPlayOriginal, takesRefreshKey, onBestTakeChange, onRecordingComplete,
 }: {
   line: RecitationLine
   lessonNo: number
@@ -226,6 +244,7 @@ function CompactLineItem({
   onPlayOriginal: (line: RecitationLine) => void
   takesRefreshKey: number
   onBestTakeChange: (lineId: string, takeId: string | null) => void
+  onRecordingComplete: (lineId: string) => void
 }) {
   const [mergedTakes, setMergedTakes] = useState<MergedTake[]>([])
   const [selectedBestId, setSelectedBestId] = useState<string | null>(null)
@@ -354,6 +373,10 @@ function CompactLineItem({
           line={line}
           lessonNo={lessonNo}
           onPlayOriginal={onPlayOriginal}
+          mergedTakes={mergedTakes}
+          selectedBestId={selectedBestId}
+          onBestTakeChange={onBestTakeChange}
+          onRecordingComplete={onRecordingComplete}
         />
       )}
     </div>
@@ -423,11 +446,15 @@ const SUBTITLE_LOADERS: Record<number, () => Promise<SubtitleLine[]>> = {
 }
 
 function SentenceTrainingPanel({
-  line, lessonNo, onPlayOriginal,
+  line, lessonNo, onPlayOriginal, mergedTakes, selectedBestId, onBestTakeChange, onRecordingComplete,
 }: {
   line: RecitationLine
   lessonNo: number
   onPlayOriginal: (line: RecitationLine) => void
+  mergedTakes: MergedTake[]
+  selectedBestId: string | null
+  onBestTakeChange: (lineId: string, takeId: string | null) => void
+  onRecordingComplete: (lineId: string) => void
 }) {
   const [subtitleEntry, setSubtitleEntry] = useState<SubtitleLine | null>(null)
   const [activeWordIdx, setActiveWordIdx] = useState(-1)
@@ -436,6 +463,8 @@ function SentenceTrainingPanel({
   const [message, setMessage] = useState('')
   const [localPlaying, setLocalPlaying] = useState(false)
   const [unsupported, setUnsupported] = useState(false)
+  const [uploading, setUploading] = useState(false)
+  const [playingTakeId, setPlayingTakeId] = useState<string | null>(null)
   const mediaRecorderRef = useRef<MediaRecorder | null>(null)
   const chunksRef = useRef<Blob[]>([])
   const latestTakeUrl = useRef<string | null>(null)
@@ -543,12 +572,46 @@ function SentenceTrainingPanel({
       recorder.ondataavailable = (e) => {
         if (e.data.size > 0) chunksRef.current.push(e.data)
       }
-      recorder.onstop = () => {
+      recorder.onstop = async () => {
+        setIsRecording(false)
         stream.getTracks().forEach(t => t.stop())
         const blob = new Blob(chunksRef.current, { type: mimeType })
-        latestTakeUrl.current = URL.createObjectURL(blob)
-        setMessage('')
-        setIsRecording(false)
+        const takeId = generateTakeId()
+        const score = mockScore()
+        const take: RecitationTake = {
+          takeId,
+          lineId: line.lineId,
+          lessonId: `${lessonNo}`,
+          lessonNo,
+          lineNo: line.order,
+          audioBlob: blob,
+          audioUrl: URL.createObjectURL(blob),
+          score,
+          durationMs: blob.size > 0 ? Math.round(blob.size / 16) : 0,
+          createdAt: new Date().toISOString(),
+          isSystemRecommended: false,
+          isUserSelected: false,
+          uploadStatus: 'pending',
+        }
+        await saveTake(take)
+        latestTakeUrl.current = take.audioUrl
+        setMessage(`得分 ${score}`)
+        onRecordingComplete(line.lineId)
+
+        // Upload to cloud
+        setUploading(true)
+        try {
+          const dto = await uploadTake(blob, lessonNo, line.order)
+          await updateTake(takeId, { uploadStatus: 'uploaded', storagePath: dto.storagePath })
+          onRecordingComplete(line.lineId)
+        } catch (err) {
+          const uploadErr = err instanceof UploadError ? err : new UploadError('上传异常', 0, true)
+          const errMsg = uploadErr.status === 401 ? '请登录后再保存录音' : uploadErr.message
+          setMessage(errMsg)
+          await updateTake(takeId, { uploadStatus: 'failed', errorMessage: errMsg, retryCount: 0 })
+          onRecordingComplete(line.lineId)
+        }
+        setUploading(false)
       }
       recorder.start()
     } catch {
@@ -571,6 +634,68 @@ function SentenceTrainingPanel({
       setLocalPlaying(true)
       setMessage('')
     }
+  }
+
+  const handleTakePlayback = async (take: MergedTake) => {
+    if (playingTakeId === take.takeId) return
+    let url = take.localBlob ? URL.createObjectURL(take.localBlob) : ''
+    if (!url && take.uploadStatus === 'uploaded') {
+      try {
+        url = (await getSignedUrl(take.takeId)).signedUrl
+      } catch {
+        setMessage('获取播放地址失败')
+        return
+      }
+    }
+    if (!url) {
+      setMessage('录音暂不可播放')
+      return
+    }
+    const audio = new Audio(url)
+    audio.onended = () => setPlayingTakeId(null)
+    setPlayingTakeId(take.takeId)
+    audio.play().catch(() => {
+      setPlayingTakeId(null)
+      setMessage('播放失败')
+    })
+    setMessage('')
+  }
+
+  const handleSelectBest = async (takeId: string) => {
+    onBestTakeChange(line.lineId, takeId)
+    await updateTake(takeId, { isUserSelected: true, isBest: true }).catch(() => {})
+    try { await apiSetBest(takeId).catch(() => {}) } catch {}
+    onRecordingComplete(line.lineId)
+  }
+
+  const handleRetryUpload = async (take: MergedTake) => {
+    if (!take.localBlob) {
+      setMessage('缺少本地录音，无法重试')
+      return
+    }
+    setUploading(true)
+    setMessage('重新上传...')
+    try {
+      const dto = await uploadTake(take.localBlob, lessonNo, line.order)
+      await updateTake(take.takeId, { uploadStatus: 'uploaded', storagePath: dto.storagePath })
+      setMessage('上传成功')
+      onRecordingComplete(line.lineId)
+    } catch (err) {
+      const errMsg = err instanceof UploadError ? err.message : '上传失败'
+      setMessage(errMsg)
+      await updateTake(take.takeId, { uploadStatus: 'failed', errorMessage: errMsg, retryCount: 1 })
+      onRecordingComplete(line.lineId)
+    }
+    setUploading(false)
+  }
+
+  const handleDeleteTake = async (takeId: string) => {
+    await deleteLocalTake(takeId).catch(() => {})
+    try { await deleteCloudTake(takeId).catch(() => {}) } catch {}
+    if (selectedBestId === takeId) {
+      onBestTakeChange(line.lineId, null)
+    }
+    onRecordingComplete(line.lineId)
   }
 
   const [showWords, setShowWords] = useState(false)
@@ -678,6 +803,88 @@ function SentenceTrainingPanel({
           )}
         </div>
         {message && <span style={{ fontSize: 11, color: '#dc2626', fontWeight: 700, marginTop: 4, display: 'inline-block' }}>{message}</span>}
+      </div>
+
+      {/* 本句录音 */}
+      <div style={{ marginTop: 10, borderTop: '1px solid #e0e7ff', paddingTop: 8 }}>
+        <div style={{ fontSize: 11, fontWeight: 800, color: '#64748b', marginBottom: 6 }}>本句录音</div>
+        {mergedTakes.length === 0 ? (
+          <div style={{ background: '#fff', border: '1px dashed #cbd5e1', borderRadius: 10, padding: '8px 10px', fontSize: 12, color: '#64748b', fontWeight: 700 }}>
+            暂无录音。完成一次跟读后，最近录音会显示在这里。
+          </div>
+        ) : (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+            {[...mergedTakes].sort((a, b) => b.createdAt.localeCompare(a.createdAt)).map((take, i) => {
+            const isBest = take.takeId === selectedBestId
+            return (
+              <div key={take.takeId} style={{
+                display: 'flex', alignItems: 'center', gap: 6, padding: '6px 8px',
+                background: isBest ? '#f0fdf4' : '#fff',
+                borderRadius: 8, border: `1px solid ${isBest ? '#86efac' : '#e5e7eb'}`,
+                marginBottom: 4,
+              }}>
+                <div style={{ flex: 1, minWidth: 0, display: 'flex', alignItems: 'center', gap: 6 }}>
+                  <Waveform seed={take.takeId} active={isBest} />
+                  <span style={{ fontSize: 11, fontWeight: 800, color: '#64748b', whiteSpace: 'nowrap' }}>
+                    第{mergedTakes.length - i}版
+                  </span>
+                  <span style={{ fontSize: 12, fontWeight: 800, color: isBest ? '#166534' : '#0f172a', minWidth: 36 }}>{take.score}分</span>
+                  <span style={{ fontSize: 10, color: '#94a3b8', whiteSpace: 'nowrap' }}>{formatTakeTimeShort(take.createdAt)}</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 4, flexShrink: 0 }}>
+                  <button
+                    type="button"
+                    className="btn ghost small"
+                    onClick={() => handleTakePlayback(take)}
+                    disabled={playingTakeId === take.takeId}
+                    style={{ fontSize: 11, padding: '4px 6px', minWidth: 28 }}
+                  >
+                    {playingTakeId === take.takeId ? '⏳' : '▶'}
+                  </button>
+                  {take.uploadStatus === 'uploaded' && (
+                    <span style={{ fontSize: 11, color: '#166534' }} title="已上传到云端">☁️</span>
+                  )}
+                  {take.uploadStatus === 'failed' && (
+                    <button
+                      type="button"
+                      className="btn ghost small"
+                      onClick={() => handleRetryUpload(take)}
+                      disabled={uploading}
+                      style={{ fontSize: 10, color: '#dc2626', padding: '4px 6px' }}
+                    >
+                      ↻
+                    </button>
+                  )}
+                  {(take.uploadStatus === 'pending' || !take.uploadStatus) && (
+                    <span style={{ fontSize: 11, color: '#a0aec0' }} title="等待上传">⏳</span>
+                  )}
+                  {!isBest && (
+                    <button
+                      type="button"
+                      className="btn ghost small"
+                      onClick={() => handleSelectBest(take.takeId)}
+                      style={{ fontSize: 10, color: '#4f46e5', padding: '4px 6px' }}
+                    >
+                      ★
+                    </button>
+                  )}
+                  {isBest && (
+                    <span style={{ fontSize: 11, color: '#166534', fontWeight: 800 }}>★</span>
+                  )}
+                  <button
+                    type="button"
+                    className="btn ghost small"
+                    onClick={() => handleDeleteTake(take.takeId)}
+                    style={{ fontSize: 10, color: '#dc2626', padding: '4px 6px' }}
+                  >
+                    ✕
+                  </button>
+                </div>
+              </div>
+            )
+          })}
+          </div>
+        )}
       </div>
 
       {/* C. 辅助学习 — 本句单词 */}
@@ -1463,6 +1670,7 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
             onPlayOriginal={handlePlayOriginal}
             takesRefreshKey={takesRefreshKey}
             onBestTakeChange={handleBestTakeChange}
+            onRecordingComplete={handleRecordingComplete}
           />
         ))}
       </section>
