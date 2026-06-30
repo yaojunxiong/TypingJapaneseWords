@@ -28,6 +28,7 @@ tags:
 - “试听完整背诵”优化已上线：bestTake 队列、signed URL 缓存、失败跳过，点击后明显更快开始
 - 学习端录音列表已收口：每句最多显示最近 10 条，学习端不显示删除按钮
 - 1～50 课会话动漫场景图 `conversation-anime-mobile.webp` 已覆盖
+- 1～50 课卡拉OK字幕学习模式已上线：逐词高亮、TTS/原音双模式、词卡面板
 - 练习页已移除今日学习/最近学习记录
 - 学习中心已集成学习统计面板
 - 管理员可访问全部课程
@@ -43,6 +44,10 @@ tags:
 | Deep Dive 组件 | `src/components/lesson-deep-dive.tsx` |
 | 视频跟读组件 | `src/components/lesson-video-follow-player.tsx` |
 | 学习中心面板 | `src/components/learning-dashboard.tsx` |
+| 卡拉OK字幕播放器 | `src/components/karaoke-subtitle-player.tsx` |
+| 卡拉OK字幕数据 | `src/data/minna/subtitle-learning/lesson-{01..50}-subtitle-learning.json` |
+| 卡拉OK TTS 资源 | `public/generated/tts-karaoke/lesson-{01..50}/` |
+| TTS 生成脚本 | `scripts/generate-karaoke-tts.py` |
 | 老师讲解音频 | `public/audio/deep-dive/lesson-{01..50}-zh.mp3` |
 | 音频生成脚本 | `scripts/generate-deep-dive-audio.py` |
 | 业务邮件服务（Resend） | `src/lib/email-service.ts` |
@@ -82,6 +87,8 @@ tags:
 | [[学习状态与云端同步]] | localStorage ↔ Supabase 双向同步机制 |
 | [[本地存储键值表]] | 所有 localStorage key 速查 |
 | [[会话背诵系统]] | 会话背诵流程与 UI |
+| [[卡拉OK字幕模式]] | 卡拉OK字幕学习模式架构（dual-mode 播放器、数据标准、TTS 标准） |
+| [[卡拉OK回归检查清单]] | 卡拉OK回归检查清单 |
 
 ## 外部参考
 
@@ -496,3 +503,14 @@ tags:
   - `workflow_actions` 使用 `actor_user_id`、`from_node_key`、`to_node_key`
 - **后续任务**：适配已有代码到旧 workflow 结构，而非新建表
 - **验证**：`npm run build` PASS
+
+### 2026-06-30 — Lesson 26～50 卡拉OK字幕模式一次性实现并上线
+
+- **实现范围**：Lesson 26～50 共 25 课的卡拉OK字幕学习模式
+- **数据**：25 个 `subtitle-learning` JSON，词卡质量验证全部通过（无空字段、无 fallback 兜底、无 startChar/endChar 错误、全部 timestamp 存在）
+- **TTS 资源**：25 课的 manifest/combined.mp3/words/*.mp3/_silence.mp3 全部生成并部署
+- **UI 修改**：路由守卫 `num > 25` → `num > 50`；入口条件 `lessonNo <= 25` → `lessonNo <= 50`；subtitle loaders 新增 L26-L50 动态 import；CD_AUDIO_URLS 新增 L26-L50 source-240000 系列
+- **TTS 生成器**：`scripts/generate-karaoke-tts.py` voice maps 扩展至 L50
+- **Production commit**：`99a8a87`
+- **部署状态**：`master` 已推送，Vercel Production 已上线
+- **知识库**：新增 [[卡拉OK字幕模式]]（架构文档）、[[卡拉OK回归检查清单]]（回归检查清单）
