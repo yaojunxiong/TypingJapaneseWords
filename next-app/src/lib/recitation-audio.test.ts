@@ -28,5 +28,9 @@ describe('recitation audio helpers', () => {
       getPlaybackErrorMessage(new DOMException('not allowed', 'NotAllowedError')),
       '播放失败，请重新点一次播放（NotAllowedError）',
     )
+    assert.equal(
+      getPlaybackErrorMessage(new DOMException('aborted', 'AbortError'), '完整背诵播放失败'),
+      '完整背诵播放失败，请重新点一次播放（AbortError）',
+    )
   })
 })

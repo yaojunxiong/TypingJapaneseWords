@@ -40,6 +40,7 @@ type SpeakerAvatar = {
 const PENDING_AUTO_RETRY_DELAY_MS = 120_000
 const LEARNING_STATE_KEY = 'minna.mobile.learning.state.v1'
 const LEARNING_CLOUD_DIRTY_KEY = 'minna.cloud.state.dirty_at.v1'
+const SILENT_AUDIO_DATA_URL = 'data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAESsAACJWAAACABAAZGF0YQAAAAA='
 
 function formatTakeTime(createdAt: string): string {
   const date = new Date(createdAt)
@@ -1282,6 +1283,13 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     stopPlaybackRef.current = false
     playbackFailedCountRef.current = 0
 
+    const preparedAudio = new Audio(SILENT_AUDIO_DATA_URL)
+    preparedAudio.preload = 'auto'
+    preparedAudio.muted = true
+    preparedAudio.setAttribute('playsinline', '')
+    playbackAudioRef.current = preparedAudio
+    preparedAudio.play().catch(() => {})
+
     const sortedLines = [...lesson.lines].sort((a, b) => a.order - b.order)
     const total = sortedLines.length
     setContinuousPlayback({ status: 'loading', currentIndex: 0, totalLines: total, failedCount: 0 })
@@ -1294,6 +1302,8 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     }
 
     if (candidates.length === 0) {
+      preparedAudio.pause()
+      if (playbackAudioRef.current === preparedAudio) playbackAudioRef.current = null
       setContinuousPlayback({ status: 'idle', currentIndex: 0, totalLines: 0, failedCount: 0 })
       return
     }
@@ -1360,12 +1370,14 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     playbackQueueRef.current = queue
 
     if (queue.length === 0) {
+      preparedAudio.pause()
+      if (playbackAudioRef.current === preparedAudio) playbackAudioRef.current = null
       setContinuousPlayback({ status: 'idle', currentIndex: 0, totalLines: 0, failedCount: initialFailedCount })
       return
     }
 
     // Playback driver
-    const playNext = (idx: number) => {
+    const playNext = async (idx: number, audio: HTMLAudioElement = preparedAudio) => {
       if (stopPlaybackRef.current || idx >= queue.length) {
         if (queue.length > 0 && idx >= queue.length) {
           const fc = playbackFailedCountRef.current
@@ -1382,8 +1394,11 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
 
       const item = queue[idx]
       setActiveLineId(item.lineId)
-      setContinuousPlayback({ status: 'playing', currentIndex: idx, totalLines: queue.length, failedCount: playbackFailedCountRef.current })
-      const audio = new Audio(item.signedUrl)
+      setContinuousPlayback({ status: 'loading', currentIndex: idx, totalLines: queue.length, failedCount: playbackFailedCountRef.current })
+      audio.pause()
+      audio.muted = false
+      audio.src = item.signedUrl
+      audio.currentTime = 0
       playbackAudioRef.current = audio
 
       audio.onended = () => {
@@ -1392,39 +1407,41 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
         pauseDelayTimerRef.current = setTimeout(() => playNext(idx + 1), delay)
       }
 
-      audio.play().catch(async () => {
-        // Retry: refresh signed URL once
-        try {
-          const cache = continuousSignedUrlCacheRef.current
-          cache.delete(item.takeId)
-          const result = await getSignedUrl(item.takeId)
-          cache.set(item.takeId, { url: result.signedUrl, expiresAt: Date.now() + result.expiresIn * 1000 })
-          item.signedUrl = result.signedUrl
-          audio.src = result.signedUrl
-          await audio.play()
-          return
-        } catch {
-          // Retry failed too — skip this line
-          playbackFailedCountRef.current++
-          setContinuousPlayback(prev => ({ ...prev, failedCount: playbackFailedCountRef.current }))
-          playNext(idx + 1)
-        }
-      })
+      try {
+        await audio.play()
+        if (stopPlaybackRef.current) return
+        setContinuousPlayback({ status: 'playing', currentIndex: idx, totalLines: queue.length, failedCount: playbackFailedCountRef.current })
+      } catch (err) {
+        audio.pause()
+        if (playbackAudioRef.current === audio) playbackAudioRef.current = null
+        stopPlaybackRef.current = true
+        setContinuousPlayback({ status: 'idle', currentIndex: 0, totalLines: 0, failedCount: playbackFailedCountRef.current })
+        showNotice(getPlaybackErrorMessage(err, '完整背诵播放失败'))
+      }
     }
 
     playNext(0)
-  }, [lesson, bestTakes, lessonNo, showNotice, stopContinuousPlayback])
+  }, [lesson, bestTakes, showNotice, stopTtsPlayback, stopContinuousPlayback, stopOriginalPlayback])
 
-  const togglePauseContinuousPlayback = useCallback(() => {
+  const togglePauseContinuousPlayback = useCallback(async () => {
     if (!playbackAudioRef.current) return
     if (continuousPlayback.status === 'playing') {
       playbackAudioRef.current.pause()
       setContinuousPlayback(prev => ({ ...prev, status: 'paused' }))
     } else if (continuousPlayback.status === 'paused') {
-      playbackAudioRef.current.play().catch(() => {})
-      setContinuousPlayback(prev => ({ ...prev, status: 'playing' }))
+      const audio = playbackAudioRef.current
+      setContinuousPlayback(prev => ({ ...prev, status: 'loading' }))
+      try {
+        await audio.play()
+        if (playbackAudioRef.current === audio && !stopPlaybackRef.current) {
+          setContinuousPlayback(prev => ({ ...prev, status: 'playing' }))
+        }
+      } catch (err) {
+        setContinuousPlayback(prev => ({ ...prev, status: 'paused' }))
+        showNotice(getPlaybackErrorMessage(err, '完整背诵播放失败'))
+      }
     }
-  }, [continuousPlayback.status])
+  }, [continuousPlayback.status, showNotice])
 
   const handleStartOriginalPlayback = useCallback(() => {
     if (!originalAudioLesson || !originalAudioLesson.url) {
@@ -1732,12 +1749,12 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
             </div>
           ) : (
             <div>
-              <p style={{ fontSize: 14, fontWeight: 700, color: '#0f172a', marginBottom: 10 }}>
-                完整背诵播放中：第 {continuousPlayback.currentIndex + 1}/{continuousPlayback.totalLines} 句
+              <p data-testid={showImageModal ? undefined : 'recitation-continuous-playback-status'} style={{ fontSize: 14, fontWeight: 700, color: '#0f172a', marginBottom: 10 }}>
+                {continuousPlayback.status === 'loading' ? '完整背诵准备中' : continuousPlayback.status === 'paused' ? '完整背诵已暂停' : '完整背诵播放中'}：第 {continuousPlayback.currentIndex + 1}/{continuousPlayback.totalLines} 句
               </p>
               <div style={{ display: 'flex', justifyContent: 'center', gap: 10 }}>
                 <button className="btn" onClick={togglePauseContinuousPlayback} style={{ background: '#0f172a', color: '#fff', padding: '8px 20px', fontSize: 13 }}>
-                  {continuousPlayback.status === 'paused' ? '继续' : '暂停'}
+                  {continuousPlayback.status === 'loading' ? '准备中' : continuousPlayback.status === 'paused' ? '继续' : '暂停'}
                 </button>
                 <button className="btn" onClick={stopContinuousPlayback} style={{ background: '#dc2626', color: '#fff', padding: '8px 20px', fontSize: 13 }}>
                   停止
@@ -1859,13 +1876,13 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
                     </div>
                   </div>
                 ) : continuousPlayback.status !== 'idle' ? (
-                  <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'rgba(255,255,255,0.2)', backdropFilter: 'blur(4px)', borderRadius: 12, padding: '8px 12px' }}>
+                  <div data-testid="recitation-continuous-playback-status" style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'rgba(255,255,255,0.2)', backdropFilter: 'blur(4px)', borderRadius: 12, padding: '8px 12px' }}>
                     <span style={{ color: '#fff', fontSize: 13, fontWeight: 800, textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}>
-                      我的背诵 · 第 {continuousPlayback.currentIndex + 1}/{continuousPlayback.totalLines} 句
+                      我的背诵 · {continuousPlayback.status === 'loading' ? '准备中' : continuousPlayback.status === 'paused' ? '已暂停' : '播放中'} · 第 {continuousPlayback.currentIndex + 1}/{continuousPlayback.totalLines} 句
                     </span>
                     <div style={{ display: 'flex', gap: 4 }}>
                       <button type="button" onClick={togglePauseContinuousPlayback} style={{ background: 'rgba(255,255,255,0.9)', border: 'none', borderRadius: 8, padding: '6px 12px', fontSize: 13, fontWeight: 700, cursor: 'pointer' }}>
-                        {continuousPlayback.status === 'paused' ? '继续' : '暂停'}
+                        {continuousPlayback.status === 'loading' ? '准备中' : continuousPlayback.status === 'paused' ? '继续' : '暂停'}
                       </button>
                       <button type="button" onClick={stopContinuousPlayback} style={{ background: '#dc2626', color: '#fff', border: 'none', borderRadius: 8, padding: '6px 12px', fontSize: 13, fontWeight: 700, cursor: 'pointer' }}>
                         停止
@@ -1892,7 +1909,7 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
                       <span>🔊 试听全文音频</span>
                       <span style={{ fontSize: 11, opacity: 0.8 }}>{ttsButtonSubtitle}</span>
                     </button>
-                    <button type="button" onClick={hasBestTakeCount === totalLessonLines ? handleStartContinuousPlayback : () => showNotice('完成本课全部句子后可试听完整背诵')} style={{ flex: '1 1 calc(50% - 8px)', minWidth: 100, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1, background: hasBestTakeCount === totalLessonLines ? 'rgba(255,255,255,0.2)' : 'rgba(255,255,255,0.08)', backdropFilter: 'blur(4px)', border: 'none', borderRadius: 12, padding: '8px 4px', cursor: hasBestTakeCount === totalLessonLines ? 'pointer' : 'default', color: hasBestTakeCount === totalLessonLines ? '#fff' : 'rgba(255,255,255,0.5)', fontWeight: 700, fontSize: 14, textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
+                    <button type="button" data-testid="recitation-modal-continuous-play-button" onClick={hasBestTakeCount === totalLessonLines ? handleStartContinuousPlayback : () => showNotice('完成本课全部句子后可试听完整背诵')} style={{ flex: '1 1 calc(50% - 8px)', minWidth: 100, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1, background: hasBestTakeCount === totalLessonLines ? 'rgba(255,255,255,0.2)' : 'rgba(255,255,255,0.08)', backdropFilter: 'blur(4px)', border: 'none', borderRadius: 12, padding: '8px 4px', cursor: hasBestTakeCount === totalLessonLines ? 'pointer' : 'default', color: hasBestTakeCount === totalLessonLines ? '#fff' : 'rgba(255,255,255,0.5)', fontWeight: 700, fontSize: 14, textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
                       <span>🎤 试听完整背诵</span>
                       <span style={{ fontSize: 11, opacity: 0.8 }}>
                         {hasBestTakeCount === totalLessonLines ? `已完成 ${totalLessonLines}/${totalLessonLines}` : `我的背诵 (${hasBestTakeCount}/${totalLessonLines})`}

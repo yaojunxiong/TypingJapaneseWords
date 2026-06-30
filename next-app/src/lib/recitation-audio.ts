@@ -16,9 +16,10 @@ export function getRecordingUploadFilename(mimeType: string | null | undefined, 
   return `take-${timestamp}.${getAudioExtension(mimeType)}`
 }
 
-export function getPlaybackErrorMessage(error: unknown): string {
+export function getPlaybackErrorMessage(error: unknown, prefix = '播放失败'): string {
   const name = error instanceof DOMException || error instanceof Error ? error.name : ''
-  if (name === 'NotAllowedError') return '播放失败，请重新点一次播放（NotAllowedError）'
-  if (name === 'NotSupportedError') return '播放失败，请重新点一次播放（NotSupportedError）'
-  return name ? `播放失败，请重新点一次播放（${name}）` : '播放失败，请重新点一次播放'
+  if (name === 'NotAllowedError') return `${prefix}，请重新点一次播放（NotAllowedError）`
+  if (name === 'NotSupportedError') return `${prefix}，请重新点一次播放（NotSupportedError）`
+  if (name === 'AbortError') return `${prefix}，请重新点一次播放（AbortError）`
+  return name ? `${prefix}，请重新点一次播放（${name}）` : `${prefix}，请重新点一次播放`
 }
