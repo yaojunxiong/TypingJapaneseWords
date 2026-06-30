@@ -5,7 +5,7 @@ import type { RecitationLesson, RecitationLine, RecitationTake, RecordingTakeDTO
 import { loadRecitationLesson, getBestTake } from '@/lib/recitation-lesson'
 import { getTakesByLine, deleteTake as deleteLocalTake, updateTake, saveTake } from '@/lib/recitation-storage'
 import { listTakes, setBestTake as apiSetBest, deleteCloudTake, getSignedUrl, uploadTake, UploadError, type SignedUrlResult } from '@/lib/recitation-api'
-import { getPlaybackErrorMessage } from '@/lib/recitation-audio'
+import { getPlaybackErrorMessage, playContinuousAudioQueue, type ContinuousPlaybackAudio } from '@/lib/recitation-audio'
 import StudyMobileChrome from '@/components/study-mobile-chrome'
 import type { Lang } from '@/lib/i18n'
 import Link from 'next/link'
@@ -40,8 +40,6 @@ type SpeakerAvatar = {
 const PENDING_AUTO_RETRY_DELAY_MS = 120_000
 const LEARNING_STATE_KEY = 'minna.mobile.learning.state.v1'
 const LEARNING_CLOUD_DIRTY_KEY = 'minna.cloud.state.dirty_at.v1'
-const SILENT_AUDIO_DATA_URL = 'data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAESsAACJWAAACABAAZGF0YQAAAAA='
-
 function formatTakeTime(createdAt: string): string {
   const date = new Date(createdAt)
   if (Number.isNaN(date.getTime())) return '-- --:--'
@@ -1283,13 +1281,6 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     stopPlaybackRef.current = false
     playbackFailedCountRef.current = 0
 
-    const preparedAudio = new Audio(SILENT_AUDIO_DATA_URL)
-    preparedAudio.preload = 'auto'
-    preparedAudio.muted = true
-    preparedAudio.setAttribute('playsinline', '')
-    playbackAudioRef.current = preparedAudio
-    preparedAudio.play().catch(() => {})
-
     const sortedLines = [...lesson.lines].sort((a, b) => a.order - b.order)
     const total = sortedLines.length
     setContinuousPlayback({ status: 'loading', currentIndex: 0, totalLines: total, failedCount: 0 })
@@ -1302,8 +1293,6 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     }
 
     if (candidates.length === 0) {
-      preparedAudio.pause()
-      if (playbackAudioRef.current === preparedAudio) playbackAudioRef.current = null
       setContinuousPlayback({ status: 'idle', currentIndex: 0, totalLines: 0, failedCount: 0 })
       return
     }
@@ -1370,16 +1359,39 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     playbackQueueRef.current = queue
 
     if (queue.length === 0) {
-      preparedAudio.pause()
-      if (playbackAudioRef.current === preparedAudio) playbackAudioRef.current = null
       setContinuousPlayback({ status: 'idle', currentIndex: 0, totalLines: 0, failedCount: initialFailedCount })
       return
     }
 
-    // Playback driver
-    const playNext = async (idx: number, audio: HTMLAudioElement = preparedAudio) => {
-      if (stopPlaybackRef.current || idx >= queue.length) {
-        if (queue.length > 0 && idx >= queue.length) {
+    void playContinuousAudioQueue({
+      queue,
+      createAudio: (item) => {
+        const audio = new Audio(item.signedUrl)
+        audio.preload = 'auto'
+        audio.setAttribute('playsinline', '')
+        return audio
+      },
+      shouldStop: () => stopPlaybackRef.current,
+      onLoading: (idx, playbackAudio) => {
+        const audio = playbackAudio as HTMLAudioElement
+        const item = queue[idx]
+        setActiveLineId(item.lineId)
+        playbackAudioRef.current = audio
+        setContinuousPlayback({ status: 'loading', currentIndex: idx, totalLines: queue.length, failedCount: playbackFailedCountRef.current })
+      },
+      onPlaying: (idx, playbackAudio) => {
+        if (playbackAudioRef.current !== playbackAudio) return
+        setContinuousPlayback({ status: 'playing', currentIndex: idx, totalLines: queue.length, failedCount: playbackFailedCountRef.current })
+      },
+      onEnded: (_idx, playbackAudio) => {
+        if (playbackAudioRef.current === playbackAudio) playbackAudioRef.current = null
+      },
+      waitBeforeNext: () => new Promise(resolve => {
+        const delay = 300 + Math.random() * 300
+        pauseDelayTimerRef.current = setTimeout(resolve, delay)
+      }),
+      onComplete: () => {
+        if (!stopPlaybackRef.current) {
           const fc = playbackFailedCountRef.current
           if (fc > 0) {
             showNotice(`完整背诵试听完成，${fc} 句录音加载失败，已自动跳过`)
@@ -1389,38 +1401,16 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
         }
         stopPlaybackRef.current = true
         setContinuousPlayback({ status: 'idle', currentIndex: 0, totalLines: 0, failedCount: 0 })
-        return
-      }
-
-      const item = queue[idx]
-      setActiveLineId(item.lineId)
-      setContinuousPlayback({ status: 'loading', currentIndex: idx, totalLines: queue.length, failedCount: playbackFailedCountRef.current })
-      audio.pause()
-      audio.muted = false
-      audio.src = item.signedUrl
-      audio.currentTime = 0
-      playbackAudioRef.current = audio
-
-      audio.onended = () => {
-        playbackAudioRef.current = null
-        const delay = 300 + Math.random() * 300
-        pauseDelayTimerRef.current = setTimeout(() => playNext(idx + 1), delay)
-      }
-
-      try {
-        await audio.play()
-        if (stopPlaybackRef.current) return
-        setContinuousPlayback({ status: 'playing', currentIndex: idx, totalLines: queue.length, failedCount: playbackFailedCountRef.current })
-      } catch (err) {
+      },
+      onError: (err, _idx, playbackAudio) => {
+        const audio = playbackAudio as HTMLAudioElement
         audio.pause()
         if (playbackAudioRef.current === audio) playbackAudioRef.current = null
         stopPlaybackRef.current = true
         setContinuousPlayback({ status: 'idle', currentIndex: 0, totalLines: 0, failedCount: playbackFailedCountRef.current })
         showNotice(getPlaybackErrorMessage(err, '完整背诵播放失败'))
-      }
-    }
-
-    playNext(0)
+      },
+    })
   }, [lesson, bestTakes, showNotice, stopTtsPlayback, stopContinuousPlayback, stopOriginalPlayback])
 
   const togglePauseContinuousPlayback = useCallback(async () => {

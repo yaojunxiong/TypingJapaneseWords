@@ -23,3 +23,57 @@ export function getPlaybackErrorMessage(error: unknown, prefix = '播放失败')
   if (name === 'AbortError') return `${prefix}，请重新点一次播放（AbortError）`
   return name ? `${prefix}，请重新点一次播放（${name}）` : `${prefix}，请重新点一次播放`
 }
+
+export interface ContinuousPlaybackAudio {
+  onended: ((event: Event) => void) | null
+  play(): Promise<void>
+}
+
+interface ContinuousPlaybackOptions<T> {
+  queue: T[]
+  createAudio(item: T): ContinuousPlaybackAudio
+  shouldStop(): boolean
+  onLoading(index: number, audio: ContinuousPlaybackAudio): void
+  onPlaying(index: number, audio: ContinuousPlaybackAudio): void
+  onEnded(index: number, audio: ContinuousPlaybackAudio): void
+  onComplete(): void
+  onError(error: unknown, index: number, audio: ContinuousPlaybackAudio): void
+  waitBeforeNext?(): Promise<void>
+}
+
+export async function playContinuousAudioQueue<T>({
+  queue,
+  createAudio,
+  shouldStop,
+  onLoading,
+  onPlaying,
+  onEnded,
+  onComplete,
+  onError,
+  waitBeforeNext = () => Promise.resolve(),
+}: ContinuousPlaybackOptions<T>): Promise<void> {
+  const playNext = async (index: number): Promise<void> => {
+    if (shouldStop()) return
+    if (index >= queue.length) {
+      onComplete()
+      return
+    }
+
+    const audio = createAudio(queue[index])
+    onLoading(index, audio)
+    audio.onended = () => {
+      onEnded(index, audio)
+      void waitBeforeNext().then(() => playNext(index + 1))
+    }
+
+    try {
+      await audio.play()
+      if (!shouldStop()) onPlaying(index, audio)
+    } catch (error) {
+      audio.onended = null
+      onError(error, index, audio)
+    }
+  }
+
+  await playNext(0)
+}
