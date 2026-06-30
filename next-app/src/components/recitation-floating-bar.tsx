@@ -5,6 +5,7 @@ import type { RecitationLine, RecitationTake } from '@/types/recitation'
 import type { RecordingTakeDTO } from '@/types/recitation'
 import { saveTake, updateTake } from '@/lib/recitation-storage'
 import { uploadTake, UploadError } from '@/lib/recitation-api'
+import { getPlaybackErrorMessage } from '@/lib/recitation-audio'
 
 interface Props {
   line: RecitationLine | null
@@ -174,7 +175,10 @@ export default function RecitationFloatingBar({ line, lessonNo, currentIndex, to
       setLocalPlaying(true)
       const audio = new Audio(latestTakeUrl.current)
       audio.onended = () => setLocalPlaying(false)
-      audio.play().catch(() => setLocalPlaying(false))
+      audio.play().catch(err => {
+        setLocalPlaying(false)
+        setMessage(getPlaybackErrorMessage(err))
+      })
     }
   }, [])
 

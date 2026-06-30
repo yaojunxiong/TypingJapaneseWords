@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/utils/supabase/server'
 import { createAdminClient } from '@/utils/supabase/admin'
 import { cookies } from 'next/headers'
+import { getAudioExtensionFromFile } from '@/lib/recitation-audio'
 
 function errJson(error: string, errorCode: string, stage: string, ctx: Record<string, unknown>) {
   return NextResponse.json({ error, errorCode, stage, ...ctx }, { status: 500 })
@@ -67,7 +68,7 @@ export async function POST(request: NextRequest) {
 
   // Step C: Generate unique storage path (never depends on takeNo)
   const uniqueId = Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 10)
-  const storagePath = `${user.id}/lesson-${lessonNo}/line-${lineNo}/${uniqueId}.webm`
+  const storagePath = `${user.id}/lesson-${lessonNo}/line-${lineNo}/${uniqueId}.${getAudioExtensionFromFile(mimeType, audioFile.name)}`
 
   // Step D: Admin client for storage upload (bypass Storage RLS)
   const storageClient = createAdminClient()

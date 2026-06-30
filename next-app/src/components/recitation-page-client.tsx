@@ -5,6 +5,7 @@ import type { RecitationLesson, RecitationLine, RecitationTake, RecordingTakeDTO
 import { loadRecitationLesson, getBestTake } from '@/lib/recitation-lesson'
 import { getTakesByLine, deleteTake as deleteLocalTake, updateTake, saveTake } from '@/lib/recitation-storage'
 import { listTakes, setBestTake as apiSetBest, deleteCloudTake, getSignedUrl, uploadTake, UploadError, type SignedUrlResult } from '@/lib/recitation-api'
+import { getPlaybackErrorMessage } from '@/lib/recitation-audio'
 import StudyMobileChrome from '@/components/study-mobile-chrome'
 import type { Lang } from '@/lib/i18n'
 import Link from 'next/link'
@@ -465,10 +466,12 @@ function SentenceTrainingPanel({
   const [unsupported, setUnsupported] = useState(false)
   const [uploading, setUploading] = useState(false)
   const [playingTakeId, setPlayingTakeId] = useState<string | null>(null)
+  const [loadingTakeId, setLoadingTakeId] = useState<string | null>(null)
   const mediaRecorderRef = useRef<MediaRecorder | null>(null)
   const chunksRef = useRef<Blob[]>([])
   const latestTakeUrl = useRef<string | null>(null)
   const audioRef = useRef<HTMLAudioElement | null>(null)
+  const signedUrlCacheRef = useRef<Map<string, string>>(new Map())
 
   useEffect(() => {
     setUnsupported(getSupportedMimeType() === null)
@@ -630,35 +633,63 @@ function SentenceTrainingPanel({
     if (latestTakeUrl.current) {
       const audio = new Audio(latestTakeUrl.current)
       audio.onended = () => setLocalPlaying(false)
-      audio.play()
       setLocalPlaying(true)
       setMessage('')
+      audio.play().catch(err => {
+        setLocalPlaying(false)
+        setMessage(getPlaybackErrorMessage(err))
+      })
     }
   }
 
   const handleTakePlayback = async (take: MergedTake) => {
-    if (playingTakeId === take.takeId) return
+    if (playingTakeId === take.takeId || loadingTakeId === take.takeId) return
+    const audio = new Audio()
+    let playRejected = false
+    audio.preload = 'auto'
+    audio.onended = () => {
+      setPlayingTakeId(null)
+      setLoadingTakeId(null)
+    }
+    audio.onerror = () => {
+      if (playRejected) return
+      setPlayingTakeId(null)
+      setLoadingTakeId(null)
+      setMessage('播放失败，请重新点一次播放')
+    }
+    setLoadingTakeId(take.takeId)
+    setMessage('')
+
     let url = take.localBlob ? URL.createObjectURL(take.localBlob) : ''
     if (!url && take.uploadStatus === 'uploaded') {
+      url = signedUrlCacheRef.current.get(take.takeId) || ''
       try {
-        url = (await getSignedUrl(take.takeId)).signedUrl
+        if (!url) {
+          url = (await getSignedUrl(take.takeId)).signedUrl
+          signedUrlCacheRef.current.set(take.takeId, url)
+        }
       } catch {
+        setLoadingTakeId(null)
         setMessage('获取播放地址失败')
         return
       }
     }
     if (!url) {
+      setLoadingTakeId(null)
       setMessage('录音暂不可播放')
       return
     }
-    const audio = new Audio(url)
-    audio.onended = () => setPlayingTakeId(null)
+    audio.src = url
     setPlayingTakeId(take.takeId)
-    audio.play().catch(() => {
+    try {
+      await audio.play()
+      setLoadingTakeId(null)
+    } catch (err) {
+      playRejected = true
       setPlayingTakeId(null)
-      setMessage('播放失败')
-    })
-    setMessage('')
+      setLoadingTakeId(null)
+      setMessage(getPlaybackErrorMessage(err))
+    }
   }
 
   const handleSelectBest = async (takeId: string) => {
@@ -702,6 +733,20 @@ function SentenceTrainingPanel({
   const visibleTakes = [...mergedTakes]
     .sort((a, b) => b.createdAt.localeCompare(a.createdAt))
     .slice(0, 10)
+  const visibleUploadedTakeIds = visibleTakes
+    .filter(take => take.uploadStatus === 'uploaded' && !take.localBlob)
+    .map(take => take.takeId)
+    .join('|')
+
+  useEffect(() => {
+    if (!visibleUploadedTakeIds) return
+    visibleUploadedTakeIds.split('|').forEach(takeId => {
+      if (signedUrlCacheRef.current.has(takeId)) return
+      getSignedUrl(takeId)
+        .then(result => signedUrlCacheRef.current.set(takeId, result.signedUrl))
+        .catch(() => {})
+    })
+  }, [visibleUploadedTakeIds])
 
   return (
     <div style={{
@@ -835,12 +880,13 @@ function SentenceTrainingPanel({
                 <div style={{ display: 'flex', alignItems: 'center', gap: 4, flexShrink: 0 }}>
                   <button
                     type="button"
+                    data-testid="sentence-recording-play-button"
                     className="btn ghost small"
                     onClick={() => handleTakePlayback(take)}
-                    disabled={playingTakeId === take.takeId}
+                    disabled={playingTakeId === take.takeId || loadingTakeId === take.takeId}
                     style={{ fontSize: 11, padding: '3px 6px', minWidth: 28 }}
                   >
-                    {playingTakeId === take.takeId ? '⏳' : '▶'}
+                    {playingTakeId === take.takeId || loadingTakeId === take.takeId ? '⏳' : '▶'}
                   </button>
                   {take.uploadStatus === 'uploaded' && (
                     <span style={{ fontSize: 11, color: '#166534' }} title="已上传到云端">☁️</span>

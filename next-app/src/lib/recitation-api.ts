@@ -1,4 +1,5 @@
 import type { RecordingTakeDTO } from '@/types/recitation'
+import { getRecordingUploadFilename } from '@/lib/recitation-audio'
 
 const BASE = '/api/recording'
 
@@ -63,7 +64,7 @@ export async function uploadTake(
   lineNo: number,
 ): Promise<RecordingTakeDTO> {
   const formData = new FormData()
-  formData.append('audio', audioBlob, `take-${Date.now()}.webm`)
+  formData.append('audio', audioBlob, getRecordingUploadFilename(audioBlob.type))
   formData.append('lessonNo', String(lessonNo))
   formData.append('lineNo', String(lineNo))
 
