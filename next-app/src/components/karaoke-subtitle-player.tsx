@@ -73,6 +73,11 @@ const subtitleLoaders: Record<number, () => Promise<SubtitleLine[]>> = {
   13: () => import('@/data/minna/subtitle-learning/lesson-13-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
   14: () => import('@/data/minna/subtitle-learning/lesson-14-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
   15: () => import('@/data/minna/subtitle-learning/lesson-15-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  16: () => import('@/data/minna/subtitle-learning/lesson-16-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  17: () => import('@/data/minna/subtitle-learning/lesson-17-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  18: () => import('@/data/minna/subtitle-learning/lesson-18-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  19: () => import('@/data/minna/subtitle-learning/lesson-19-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
+  20: () => import('@/data/minna/subtitle-learning/lesson-20-subtitle-learning.json').then(m => [...(Array.isArray(m.default) ? m.default : m) as SubtitleLine[]]),
 }
 
 const CD_AUDIO_URLS: Record<number, string> = {
@@ -91,6 +96,11 @@ const CD_AUDIO_URLS: Record<number, string> = {
   13: 'https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-230001/tracks/cd-046.mp3',
   14: 'https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-230001/tracks/cd-049.mp3',
   15: 'https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-230001/tracks/cd-053.mp3',
+  16: 'https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-230001/tracks/cd-056.mp3',
+  17: 'https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-230001/tracks/cd-060.mp3',
+  18: 'https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-230001/tracks/cd-063.mp3',
+  19: 'https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-230001/tracks/cd-066.mp3',
+  20: 'https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-230001/tracks/cd-069.mp3',
 }
 
 function formatTime(seconds: number): string {
