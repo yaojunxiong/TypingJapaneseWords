@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "dev:local-recitation": "LOCAL_RECITATION_TOOL=1 next dev --port 3003",
+    "video-worker": "node --env-file=.env.local --import=tsx/esm scripts/recitation-video-worker.ts",
+    "video-worker:check": "node --env-file=.env.local --import=tsx/esm scripts/recitation-video-worker-check.ts",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -27,6 +29,7 @@
     "@types/react-dom": "^19.1.5",
     "eslint": "^9.27.0",
     "eslint-config-next": "^15.5.18",
+    "tsx": "^4.22.4",
     "typescript": "^5.8.3"
   }
 }

@@ -11,6 +11,7 @@ export const dynamic = 'force-dynamic'
 function statusBadge(status: string) {
   if (status === 'generated') return { color: '#166534', background: '#dcfce7', border: '1px solid #86efac', label: '已完成' }
   if (status === 'generating') return { color: '#92400e', background: '#fef3c7', border: '1px solid #fcd34d', label: '生成中' }
+  if (status === 'queued') return { color: '#92400e', background: '#fef9c3', border: '1px solid #fcd34d', label: '排队中' }
   if (status === 'failed') return { color: '#991b1b', background: '#fee2e2', border: '1px solid #fca5a5', label: '失败' }
   return { color: '#64748b', background: '#f1f5f9', border: '1px solid #e2e8f0', label: '草稿' }
 }
@@ -112,6 +113,11 @@ export default async function ProjectDetailPage({
             </>
           )}
         </div>
+        {(p.status === 'queued' || p.status === 'generating') && (
+          <p className="small" style={{ marginTop: 8, color: '#92400e' }}>
+            {tr(lang, '视频生成任务已在队列中。请在本地运行 npm run video-worker 生成 MP4。', 'Video generation task is queued. Run npm run video-worker locally to generate the MP4.')}
+          </p>
+        )}
       </section>
 
       {/* Project Info */}
