@@ -32,6 +32,15 @@ export type AggregatedResult = {
   latestCreatedAt: string
 }
 
+export type LessonRecordingUser = {
+  userId: string
+  displayName: string
+  recordedLineCount: number
+  totalTakeCount: number
+  onlineBestCount: number
+  adminBestCount: number
+}
+
 export type BestSelection = {
   id: string
   user_id: string
@@ -145,6 +154,109 @@ export async function loadLessonScript(
 
 export async function loadLessonLines(lessonNo: number): Promise<LessonLine[]> {
   return (await loadLessonScript(lessonNo))?.lines || []
+}
+
+export async function getLessonRecordingUsers(
+  cookieStore: CookieStore,
+  lessonNo: number,
+  lessonLineCount: number
+): Promise<{ data: LessonRecordingUser[]; error?: string }> {
+  try {
+    const supabase = createSupabaseClient(cookieStore)
+    const pageSize = 1000
+    const takes: Array<{
+      id: string
+      user_id: string
+      line_no: number
+      is_best: boolean
+    }> = []
+
+    for (let from = 0; ; from += pageSize) {
+      const { data, error } = await supabase
+        .from('recording_takes')
+        .select('id, user_id, line_no, is_best')
+        .eq('lesson_no', lessonNo)
+        .is('deleted_at', null)
+        .order('id', { ascending: true })
+        .range(from, from + pageSize - 1)
+
+      if (error) return { data: [], error: error.message }
+      const page = data || []
+      takes.push(...page)
+      if (page.length < pageSize) break
+    }
+
+    const userIds = [...new Set(takes.map((take) => take.user_id))]
+    if (userIds.length === 0) return { data: [] }
+
+    const [
+      { data: profiles, error: profilesError },
+      { data: bestSelections, error: bestSelectionsError },
+    ] = await Promise.all([
+      supabase
+        .from('profiles')
+        .select('id, display_name')
+        .in('id', userIds),
+      supabase
+        .from('admin_recitation_best_selections')
+        .select('user_id, selected_take_ids')
+        .eq('lesson_no', lessonNo)
+        .in('user_id', userIds),
+    ])
+    if (profilesError) return { data: [], error: profilesError.message }
+    if (bestSelectionsError) {
+      return { data: [], error: bestSelectionsError.message }
+    }
+
+    const displayNames = new Map(
+      (profiles || []).map((profile) => [
+        profile.id,
+        profile.display_name || profile.id.slice(0, 8),
+      ])
+    )
+    const adminBestIds = new Map<string, Set<string>>()
+    for (const selection of bestSelections || []) {
+      adminBestIds.set(
+        selection.user_id,
+        new Set((selection.selected_take_ids || []) as string[])
+      )
+    }
+
+    const takesByUser = new Map<string, typeof takes>()
+    for (const take of takes) {
+      const userTakes = takesByUser.get(take.user_id) || []
+      userTakes.push(take)
+      takesByUser.set(take.user_id, userTakes)
+    }
+
+    const maxRecordedLines = Math.max(0, lessonLineCount)
+    const users = userIds.map((userId) => {
+      const userTakes = takesByUser.get(userId) || []
+      const recordedLines = new Set(
+        userTakes
+          .map((take) => take.line_no)
+          .filter((lineNo) => lineNo >= 1 && lineNo <= maxRecordedLines)
+      )
+      const selectedIds = adminBestIds.get(userId) || new Set<string>()
+      return {
+        userId,
+        displayName: displayNames.get(userId) || userId.slice(0, 8),
+        recordedLineCount: Math.min(recordedLines.size, maxRecordedLines),
+        totalTakeCount: userTakes.length,
+        onlineBestCount: userTakes.filter((take) => take.is_best).length,
+        adminBestCount: userTakes.filter((take) => selectedIds.has(take.id)).length,
+      }
+    })
+
+    users.sort(
+      (a, b) =>
+        a.displayName.localeCompare(b.displayName, 'zh-CN') ||
+        a.userId.localeCompare(b.userId)
+    )
+    return { data: users }
+  } catch (err) {
+    return { data: [], error: String(err) }
+  }
 }
 
 export async function getAggregatedResults(

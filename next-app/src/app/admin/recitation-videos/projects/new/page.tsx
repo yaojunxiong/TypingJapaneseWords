@@ -3,11 +3,12 @@ import { cookies } from 'next/headers'
 import MinnaNav from '@/components/minna-nav'
 import { getLang, tr } from '@/lib/i18n-server'
 import { checkAdminAccess } from '@/lib/admin-auth'
-import { createClient } from '@/utils/supabase/server'
 import {
   buildLinePlanFromTemplate,
   getLessonDetail,
+  getLessonRecordingUsers,
   loadLessonScript,
+  type LessonRecordingUser,
   type LessonScript,
   type LinePlanItem,
   type RecordingTake,
@@ -61,23 +62,25 @@ export default async function NewProjectPage({
   let initialBestTakeIds: string[] = []
   let initialLinePlan: LinePlanItem[] = []
   let displayName = ''
-  let userList: { id: string; display_name: string }[] = []
+  let userList: LessonRecordingUser[] = []
 
-  const supabase = createClient(cookieStore)
-
-  // Fetch users for dropdown
-  const { data: profiles } = await supabase
-    .from('profiles')
-    .select('id, display_name')
-    .order('display_name')
-  userList = (profiles || []) as any[]
-
-  // If both userId and lessonNo are provided via URL, auto-select and load data
   if (lessonNo > 0) {
     lesson = await loadLessonScript(lessonNo)
+    if (lesson) {
+      const usersResult = await getLessonRecordingUsers(
+        cookieStore,
+        lessonNo,
+        lesson.lines.length
+      )
+      userList = usersResult.data
+    }
   }
-  if (userId && lessonNo > 0 && lesson) {
-    const detail = await getLessonDetail(cookieStore, userId, lessonNo)
+  const selectedUserId = userList.some((user) => user.userId === userId)
+    ? userId
+    : ''
+
+  if (selectedUserId && lessonNo > 0 && lesson) {
+    const detail = await getLessonDetail(cookieStore, selectedUserId, lessonNo)
     initialTakes = detail.takes
     initialBestTakeIds = detail.bestSelection?.selected_take_ids || []
     initialLinePlan = buildLinePlanFromTemplate(
@@ -86,12 +89,8 @@ export default async function NewProjectPage({
       initialTakes,
       initialBestTakeIds
     )
-    const profile = userList.find((p) => p.id === userId)
-    if (profile) displayName = profile.display_name
-  }
-
-  if (userId && !userList.some((profile) => profile.id === userId)) {
-    userList.push({ id: userId, display_name: userId.slice(0, 8) })
+    const user = userList.find((item) => item.userId === selectedUserId)
+    if (user) displayName = user.displayName
   }
 
   return (
@@ -100,14 +99,14 @@ export default async function NewProjectPage({
       <h1>{tr(lang, '新建视频项目', 'New Video Project')}</h1>
 
       <ProjectEditor
-        userId={userId}
+        userId={selectedUserId}
         lessonNo={lessonNo}
         bestSelectionId={bestSelectionId}
         initialLesson={lesson}
         initialTakes={initialTakes}
         initialBestTakeIds={initialBestTakeIds}
         initialLinePlan={initialLinePlan}
-        users={userList.map((p) => ({ id: p.id, displayName: p.display_name || p.id.slice(0, 8) }))}
+        users={userList}
         displayName={displayName}
       />
 

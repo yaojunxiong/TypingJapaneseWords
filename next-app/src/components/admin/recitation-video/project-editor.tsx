@@ -4,12 +4,12 @@ import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import type {
   LessonLine,
+  LessonRecordingUser,
   LessonScript,
   LinePlanItem,
   RecordingTake,
 } from '@/lib/admin-recitation-videos'
 
-type UserOption = { id: string; displayName: string }
 type TemplateType =
   | 'all-user-recordings'
   | 'user-odd-lines'
@@ -24,7 +24,7 @@ type ProjectEditorProps = {
   initialTakes: RecordingTake[]
   initialBestTakeIds: string[]
   initialLinePlan: LinePlanItem[]
-  users: UserOption[]
+  users: LessonRecordingUser[]
   displayName: string
 }
 
@@ -119,11 +119,12 @@ export function ProjectEditor({
   initialTakes,
   initialBestTakeIds,
   initialLinePlan,
-  users,
+  users: initialUsers,
   displayName: initialDisplayName,
 }: ProjectEditorProps) {
   const router = useRouter()
   const [selectedUserId, setSelectedUserId] = useState(initialUserId)
+  const [users, setUsers] = useState(initialUsers)
   const [selectedLessonNo, setSelectedLessonNo] = useState(initialLessonNo || 1)
   const [lesson, setLesson] = useState<LessonScript | null>(initialLesson)
   const [takes, setTakes] = useState(initialTakes)
@@ -153,7 +154,16 @@ export function ProjectEditor({
   const [saving, setSaving] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
-  const recordedLines = new Set(takes.map((take) => take.line_no)).size
+  const currentUser = users.find((user) => user.userId === selectedUserId)
+  const lessonLineCount = lesson?.lines.length || 0
+  const recordedLines = Math.min(
+    new Set(
+      takes
+        .map((take) => take.line_no)
+        .filter((lineNo) => lineNo >= 1 && lineNo <= lessonLineCount)
+    ).size,
+    lessonLineCount
+  )
   const onlineBestCount = takes.filter((take) => take.is_best).length
   const defaultBackground = lesson?.conversationImageUrl || null
 
@@ -209,13 +219,38 @@ export function ProjectEditor({
       const payload = await response.json()
       if (!response.ok) throw new Error(payload.error || '课程脚本加载失败')
       const nextLesson = payload.data as LessonScript
+      const usersResponse = await fetch(
+        `/api/admin/recitation-videos/lessons/${selectedLessonNo}/users`
+      )
+      const usersPayload = await usersResponse.json()
+      if (!usersResponse.ok) {
+        throw new Error(usersPayload.error || '课程录音用户加载失败')
+      }
+      const nextUsers = (usersPayload.data || []) as LessonRecordingUser[]
+      setUsers(nextUsers)
       setLesson(nextLesson)
       setLinePlan(emptyLinePlan(nextLesson.lines))
       setTakes([])
       setAdminBestTakeIds([])
       setPreviewUrls({})
       setBackgroundUrl(nextLesson.conversationImageUrl || '')
-      if (selectedUserId) await loadUserTakes(selectedUserId, nextLesson)
+      const nextUserId = nextUsers.some(
+        (user) => user.userId === selectedUserId
+      )
+        ? selectedUserId
+        : ''
+      setSelectedUserId(nextUserId)
+      if (nextUserId) {
+        const user = nextUsers.find((item) => item.userId === nextUserId)
+        setCurrentUserDisplay(user?.displayName || nextUserId.slice(0, 8))
+        setTitle(
+          `第${nextLesson.lessonNo}课 · ${user?.displayName || nextUserId.slice(0, 8)} 会话成果`
+        )
+        await loadUserTakes(nextUserId, nextLesson)
+      } else {
+        setCurrentUserDisplay('')
+        setTitle('')
+      }
     } catch (loadError) {
       setError(loadError instanceof Error ? loadError.message : '课程脚本加载失败')
     } finally {
@@ -254,7 +289,16 @@ export function ProjectEditor({
 
   async function handleUserChange(userId: string): Promise<void> {
     setSelectedUserId(userId)
-    const user = users.find((item) => item.id === userId)
+    if (!userId) {
+      setCurrentUserDisplay('')
+      setTitle('')
+      setTakes([])
+      setAdminBestTakeIds([])
+      setPreviewUrls({})
+      if (lesson) setLinePlan(emptyLinePlan(lesson.lines))
+      return
+    }
+    const user = users.find((item) => item.userId === userId)
     const displayName = user?.displayName || userId.slice(0, 8)
     setCurrentUserDisplay(displayName)
     setTitle(
@@ -456,14 +500,20 @@ export function ProjectEditor({
         >
           <option value="">选择用户…</option>
           {users.map((user) => (
-            <option key={user.id} value={user.id}>{user.displayName}</option>
+            <option key={user.userId} value={user.userId}>
+              {user.displayName}
+            </option>
           ))}
         </select>
         <div style={{ display: 'flex', gap: 18, marginTop: 12, flexWrap: 'wrap' }}>
-          <span className="small">已录句数：<b>{recordedLines}</b></span>
+          <span className="small">
+            已录句数：<b>{recordedLines}/{lessonLineCount}</b>
+          </span>
           <span className="small">录音条数：<b>{takes.length}</b></span>
           <span className="small">线上 Best：<b>{onlineBestCount}</b></span>
-          <span className="small">后台最优版：<b>{adminBestTakeIds.length}</b></span>
+          <span className="small">
+            后台最优版：<b>{currentUser?.adminBestCount ?? adminBestTakeIds.length}</b>
+          </span>
         </div>
       </section>
 
