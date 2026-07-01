@@ -85,16 +85,12 @@ export async function uploadTake(
 
 const listTakesCache = new Map<string, Promise<RecordingTakeDTO[]>>()
 
-export async function listTakes(
-  lessonNo: number,
-  lineNo?: number,
-): Promise<RecordingTakeDTO[]> {
-  const key = `${lessonNo}:${lineNo ?? ''}`
+export async function listTakes(lessonNo: number): Promise<RecordingTakeDTO[]> {
+  const key = String(lessonNo)
   const existing = listTakesCache.get(key)
   if (existing) return existing
 
   const params = new URLSearchParams({ lessonNo: String(lessonNo) })
-  if (lineNo !== undefined) params.set('lineNo', String(lineNo))
 
   const promise = (async () => {
     try {

@@ -1,4 +1,4 @@
-import type { RecordingTakeDTO, RecitationLine } from '@/types/recitation'
+import type { RecordingTakeDTO, RecitationLine, RecitationTake } from '@/types/recitation'
 
 export function getAudioExtension(mimeType: string | null | undefined): 'm4a' | 'webm' {
   const normalized = (mimeType || '').toLowerCase()
@@ -27,6 +27,132 @@ export function getPlaybackErrorMessage(error: unknown, prefix = '播放失败')
 }
 
 export type ContinuousPlaybackReadyStatus = 'loading' | 'ready' | 'incomplete' | 'error'
+
+export interface MergedRecitationTake {
+  takeId: string
+  createdAt: string
+  score: number
+  isBest: boolean
+  localBlob?: Blob
+  storagePath?: string
+  uploadStatus?: string
+  audioMimeType?: string
+  lessonNo?: number
+  lineNo?: number
+}
+
+export interface LessonTakesSnapshot {
+  localTakesByLine: Map<string, RecitationTake[]>
+  cloudTakes: RecordingTakeDTO[]
+  mergedTakesByLine: Map<string, MergedRecitationTake[]>
+  bestTakeByLine: Map<string, string>
+  readyCount: number
+}
+
+export interface ContinuousPlaybackSource {
+  line: RecitationLine
+  bestTakeId: string
+  localBlob?: Blob
+  requiresSignedUrl: boolean
+}
+
+export function mergeRecitationTakes(
+  local: RecitationTake[],
+  cloud: RecordingTakeDTO[],
+): MergedRecitationTake[] {
+  const seenLocal = new Set<string>()
+  const result: MergedRecitationTake[] = []
+
+  for (const cloudTake of cloud.filter(take => take.uploadStatus === 'uploaded')) {
+    const localMatch = local.find(take =>
+      take.takeId === cloudTake.id
+      || Boolean(cloudTake.storagePath && take.storagePath === cloudTake.storagePath)
+    )
+    if (localMatch) seenLocal.add(localMatch.takeId)
+    result.push({
+      takeId: cloudTake.id,
+      createdAt: cloudTake.createdAt,
+      score: cloudTake.score ?? 0,
+      isBest: cloudTake.isBest,
+      storagePath: cloudTake.storagePath,
+      uploadStatus: cloudTake.uploadStatus,
+      localBlob: localMatch?.audioBlob,
+      audioMimeType: cloudTake.audioMimeType,
+      lessonNo: cloudTake.lessonNo,
+      lineNo: cloudTake.lineNo,
+    })
+  }
+
+  for (const localTake of local) {
+    const uploadStatus = localTake.uploadStatus || 'pending'
+    if (
+      !seenLocal.has(localTake.takeId)
+      && (uploadStatus === 'pending' || uploadStatus === 'failed' || uploadStatus === 'uploaded')
+    ) {
+      result.push({
+        takeId: localTake.takeId,
+        createdAt: localTake.createdAt,
+        score: localTake.score,
+        isBest: localTake.isUserSelected || Boolean(localTake.isBest),
+        localBlob: localTake.audioBlob,
+        storagePath: localTake.storagePath,
+        uploadStatus,
+        lessonNo: localTake.lessonNo,
+        lineNo: localTake.lineNo,
+      })
+    }
+  }
+
+  return result.sort((a, b) => String(b.createdAt ?? '').localeCompare(String(a.createdAt ?? '')))
+}
+
+export function buildContinuousPlaybackSources(
+  lines: RecitationLine[],
+  mergedTakesByLine: Map<string, MergedRecitationTake[]>,
+): ContinuousPlaybackSource[] {
+  return [...lines]
+    .sort((a, b) => a.order - b.order)
+    .flatMap(line => {
+      const merged = mergedTakesByLine.get(line.lineId) || []
+      const local = merged.find(take => take.localBlob && take.isBest)
+        || merged.find(take => take.localBlob)
+      const cloud = merged.find(take => take.uploadStatus === 'uploaded' && take.isBest)
+      const selected = local || cloud
+      if (!selected) return []
+      return [{
+        line,
+        bestTakeId: selected.takeId,
+        localBlob: selected.localBlob,
+        requiresSignedUrl: !selected.localBlob,
+      }]
+    })
+}
+
+export function buildLessonTakesSnapshot(
+  lines: RecitationLine[],
+  localTakesByLine: Map<string, RecitationTake[]>,
+  cloudTakes: RecordingTakeDTO[],
+  lessonNo: number,
+): LessonTakesSnapshot {
+  const mergedTakesByLine = new Map<string, MergedRecitationTake[]>()
+  for (const line of lines) {
+    const cloudForLine = cloudTakes.filter(take =>
+      take.lessonNo === lessonNo && take.lineNo === line.order
+    )
+    mergedTakesByLine.set(
+      line.lineId,
+      mergeRecitationTakes(localTakesByLine.get(line.lineId) || [], cloudForLine),
+    )
+  }
+  const sources = buildContinuousPlaybackSources(lines, mergedTakesByLine)
+  return {
+    localTakesByLine,
+    cloudTakes,
+    mergedTakesByLine,
+    bestTakeByLine: new Map(sources.map(source => [source.line.lineId, source.bestTakeId])),
+    readyCount: sources.length,
+  }
+}
 
 export interface ContinuousPlaybackCandidate {
   line: RecitationLine

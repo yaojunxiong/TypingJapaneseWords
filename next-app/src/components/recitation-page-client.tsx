@@ -1,18 +1,19 @@
 'use client'
 
 import { useCallback, useEffect, useRef, useState } from 'react'
-import type { RecitationLesson, RecitationLine, RecitationTake, RecordingTakeDTO } from '@/types/recitation'
+import type { RecitationLesson, RecitationLine, RecitationTake } from '@/types/recitation'
 import { loadRecitationLesson, getBestTake } from '@/lib/recitation-lesson'
 import { getTakesByLine, deleteTake as deleteLocalTake, updateTake, saveTake } from '@/lib/recitation-storage'
 import { listTakes, setBestTake as apiSetBest, deleteCloudTake, getSignedUrl, uploadTake, UploadError, type SignedUrlResult } from '@/lib/recitation-api'
 import {
-  candidatesToBestTakes,
-  getCloudContinuousPlaybackCandidates,
-  getContinuousPlaybackReadyStatus,
+  buildContinuousPlaybackSources,
+  buildLessonTakesSnapshot,
   getPlaybackErrorMessage,
   playContinuousAudioQueue,
   type ContinuousPlaybackAudio,
   type ContinuousPlaybackReadyStatus,
+  type LessonTakesSnapshot,
+  type MergedRecitationTake,
 } from '@/lib/recitation-audio'
 import StudyMobileChrome from '@/components/study-mobile-chrome'
 import type { Lang } from '@/lib/i18n'
@@ -123,64 +124,7 @@ function Waveform({ seed, active = false }: { seed: string; active?: boolean }) 
   )
 }
 
-// Merge local takes with cloud DTOs for unified display
-interface MergedTake {
-  takeId: string
-  createdAt: string
-  score: number
-  isBest: boolean
-  localBlob?: Blob
-  storagePath?: string
-  uploadStatus?: string
-  audioMimeType?: string
-  lessonNo?: number
-  lineNo?: number
-}
-
-function mergeTakes(local: RecitationTake[], cloud: RecordingTakeDTO[]): MergedTake[] {
-  const seenLocal = new Set<string>()
-  const result: MergedTake[] = []
-
-  // Uploaded cloud takes are the authoritative cross-device source.
-  for (const ct of cloud.filter(t => t.uploadStatus === 'uploaded')) {
-    const localMatch = local.find(t => t.takeId === ct.id || (ct.storagePath && t.storagePath === ct.storagePath))
-    if (localMatch) seenLocal.add(localMatch.takeId)
-    result.push({
-      takeId: ct.id,
-      createdAt: ct.createdAt,
-      score: ct.score ?? 0,
-      isBest: ct.isBest,
-      storagePath: ct.storagePath,
-      uploadStatus: ct.uploadStatus,
-      localBlob: localMatch?.audioBlob,
-      audioMimeType: ct.audioMimeType,
-    })
-  }
-
-  // IndexedDB is only for pending/failed local retries.
-  for (const lt of local) {
-    const localStatus = lt.uploadStatus || 'pending'
-    if (!seenLocal.has(lt.takeId) && (localStatus === 'pending' || localStatus === 'failed' || localStatus === 'uploaded')) {
-      result.push({
-        takeId: lt.takeId,
-        createdAt: lt.createdAt,
-        score: lt.score,
-        isBest: lt.isUserSelected || false,
-        localBlob: lt.audioBlob,
-        uploadStatus: localStatus,
-        lessonNo: lt.lessonNo,
-        lineNo: lt.lineNo,
-      })
-    }
-  }
-
-  result.sort((a, b) => String(b.createdAt ?? '').localeCompare(String(a.createdAt ?? '')))
-  return result
-}
-
-function filterCloudTakesForLine(takes: RecordingTakeDTO[], lessonNo: number, lineNo: number): RecordingTakeDTO[] {
-  return takes.filter(t => t.lessonNo === lessonNo && t.lineNo === lineNo)
-}
+type MergedTake = MergedRecitationTake
 
 function generateTakeId(): string {
   return `take-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`
@@ -243,64 +187,18 @@ async function syncLearningStateBestEffort() {
 }
 
 function CompactLineItem({
-  line, lessonNo, isExpanded, onToggleExpand, onPlayOriginal, takesRefreshKey, onBestTakeChange, onRecordingComplete,
+  line, lessonNo, isExpanded, onToggleExpand, onPlayOriginal, mergedTakes, selectedBestId, onBestTakeChange, onRecordingComplete,
 }: {
   line: RecitationLine
   lessonNo: number
   isExpanded: boolean
   onToggleExpand: (lineId: string) => void
   onPlayOriginal: (line: RecitationLine) => void
-  takesRefreshKey: number
+  mergedTakes: MergedTake[]
+  selectedBestId: string | null
   onBestTakeChange: (lineId: string, takeId: string | null) => void
   onRecordingComplete: (lineId: string) => void
 }) {
-  const [mergedTakes, setMergedTakes] = useState<MergedTake[]>([])
-  const [selectedBestId, setSelectedBestId] = useState<string | null>(null)
-  const selectedBestIdRef = useRef(selectedBestId)
-  selectedBestIdRef.current = selectedBestId
-
-  useEffect(() => {
-    const lineNo = line.order
-    ;(async () => {
-      const local = await getTakesByLine(line.lineId)
-      let merged = mergeTakes(local, [])
-      setMergedTakes(merged)
-      if (merged.length > 0) {
-        const currentId = selectedBestIdRef.current
-        const hasSelected = currentId && merged.some(t => t.takeId === currentId)
-        if (!hasSelected) {
-          const best = merged.find(t => t.isBest)
-          setSelectedBestId(best ? best.takeId : merged[0].takeId)
-          onBestTakeChange(line.lineId, best ? best.takeId : null)
-        }
-      } else {
-        setSelectedBestId(null)
-        onBestTakeChange(line.lineId, null)
-      }
-
-      const cloud = filterCloudTakesForLine(
-        await listTakes(lessonNo, lineNo).catch(() => [] as RecordingTakeDTO[]),
-        lessonNo,
-        lineNo,
-      )
-      const freshLocal = await getTakesByLine(line.lineId)
-      merged = mergeTakes(freshLocal, cloud)
-      setMergedTakes(merged)
-      if (merged.length > 0) {
-        const currentId = selectedBestIdRef.current
-        const hasSelected = currentId && merged.some(t => t.takeId === currentId)
-        if (!hasSelected) {
-          const best = merged.find(t => t.isBest)
-          setSelectedBestId(best ? best.takeId : merged[0].takeId)
-          onBestTakeChange(line.lineId, best ? best.takeId : null)
-        }
-      } else {
-        setSelectedBestId(null)
-        onBestTakeChange(line.lineId, null)
-      }
-    })()
-  }, [line.lineId, lessonNo, line.order, takesRefreshKey, onBestTakeChange])
-
   const isCompleted = mergedTakes.length > 0 && selectedBestId !== null
   const practiceAudio = getLinePracticeAudio(line)
   const hasPlayableAudio = Boolean(practiceAudio)
@@ -990,9 +888,14 @@ interface Props {
 export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlock = true }: Props) {
   const [lesson, setLesson] = useState<RecitationLesson | null>(null)
   const [loading, setLoading] = useState(true)
-  const [bestTakes, setBestTakes] = useState<Map<string, string | null>>(new Map())
+  const [lessonTakesState, setLessonTakesState] = useState<LessonTakesSnapshot>({
+    localTakesByLine: new Map(),
+    cloudTakes: [],
+    mergedTakesByLine: new Map(),
+    bestTakeByLine: new Map(),
+    readyCount: 0,
+  })
   const [continuousPlaybackReadyStatus, setContinuousPlaybackReadyStatus] = useState<ContinuousPlaybackReadyStatus>('loading')
-  const [cloudBestTakeCount, setCloudBestTakeCount] = useState(0)
   const [activeLineId, setActiveLineId] = useState<string | null>(null)
   const [takesRefreshKey, setTakesRefreshKey] = useState(0)
   const [isRecording, setIsRecording] = useState(false)
@@ -1012,7 +915,8 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
   const pauseDelayTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const continuousSignedUrlCacheRef = useRef<Map<string, { url: string; expiresAt: number }>>(new Map())
   const playbackFailedCountRef = useRef(0)
-  const completionCheckInFlightRef = useRef(false)
+  const recordingLinesRef = useRef<RecitationLine[]>([])
+  const loadedRecordingSignatureRef = useRef('')
   const [ttsPlayback, setTtsPlayback] = useState<{
     status: 'idle' | 'loading' | 'playing' | 'paused'
     currentIndex: number
@@ -1061,29 +965,54 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     })
   }, [lessonNo])
 
+  const recordingLineSignature = lesson?.lines
+    .map(line => `${line.lineId}:${line.order}`)
+    .join('|') || ''
+  recordingLinesRef.current = lesson?.lines || []
+
   useEffect(() => {
-    if (!lesson || lesson.lines.length === 0) return
+    if (!recordingLineSignature) return
     let cancelled = false
-    setContinuousPlaybackReadyStatus('loading')
+    const loadSignature = `${lessonNo}:${recordingLineSignature}`
+    if (loadedRecordingSignatureRef.current !== loadSignature) {
+      loadedRecordingSignatureRef.current = loadSignature
+      setContinuousPlaybackReadyStatus('loading')
+    }
 
     ;(async () => {
+      const lines = recordingLinesRef.current
+      const localEntries = await Promise.all(lines.map(async line => {
+        const takes = await getTakesByLine(line.lineId).catch(() => [] as RecitationTake[])
+        return [line.lineId, takes] as const
+      }))
+      if (cancelled) return
+      const localTakesByLine = new Map(localEntries)
+      const localSnapshot = buildLessonTakesSnapshot(lines, localTakesByLine, [], lessonNo)
+      setLessonTakesState(localSnapshot)
+      setContinuousPlaybackReadyStatus(
+        localSnapshot.readyCount === lines.length ? 'ready' : 'loading'
+      )
+
       try {
         const cloudTakes = await listTakes(lessonNo)
         if (cancelled) return
-        const candidates = getCloudContinuousPlaybackCandidates(lesson.lines, cloudTakes, lessonNo)
-        setBestTakes(candidatesToBestTakes(candidates))
-        setCloudBestTakeCount(candidates.length)
-        setContinuousPlaybackReadyStatus(getContinuousPlaybackReadyStatus(lesson.lines.length, candidates.length))
+        const snapshot = buildLessonTakesSnapshot(lines, localTakesByLine, cloudTakes, lessonNo)
+        setLessonTakesState(snapshot)
+        setContinuousPlaybackReadyStatus(
+          snapshot.readyCount === lines.length ? 'ready' : 'incomplete'
+        )
       } catch {
         if (cancelled) return
-        setContinuousPlaybackReadyStatus('error')
+        setContinuousPlaybackReadyStatus(
+          localSnapshot.readyCount === lines.length ? 'ready' : 'error'
+        )
       }
     })()
 
     return () => {
       cancelled = true
     }
-  }, [lesson, lessonNo, takesRefreshKey])
+  }, [lessonNo, recordingLineSignature, takesRefreshKey])
 
   // Lessons that have original line audio segments published
   const ORIGINAL_LINE_AUDIO_LESSONS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50]
@@ -1122,25 +1051,27 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
   }, [])
 
   const handleBestTakeChange = useCallback((lineId: string, takeId: string | null) => {
-    setBestTakes(prev => {
-      const next = new Map(prev)
+    setLessonTakesState(prev => {
+      const bestTakeByLine = new Map(prev.bestTakeByLine)
+      const mergedTakesByLine = new Map(prev.mergedTakesByLine)
       if (takeId) {
-        next.set(lineId, takeId)
+        bestTakeByLine.set(lineId, takeId)
+        mergedTakesByLine.set(
+          lineId,
+          (mergedTakesByLine.get(lineId) || []).map(take => ({
+            ...take,
+            isBest: take.takeId === takeId,
+          })),
+        )
       } else {
-        next.delete(lineId)
+        bestTakeByLine.delete(lineId)
       }
-      return next
+      return { ...prev, bestTakeByLine, mergedTakesByLine }
     })
   }, [])
 
-  const handleRecordingComplete = useCallback((lineId: string) => {
+  const handleRecordingComplete = useCallback((_lineId: string) => {
     setTakesRefreshKey(k => k + 1)
-    setContinuousPlaybackReadyStatus('loading')
-    setBestTakes(prev => {
-      const next = new Map(prev)
-      next.set(lineId, 'pending')
-      return next
-    })
   }, [])
 
   const showNotice = useCallback((message: string) => {
@@ -1151,47 +1082,26 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
 
   useEffect(() => {
     if (!trackLearningUnlock) return
-    if (!lesson || lesson.lines.length === 0) return
+    const lines = recordingLinesRef.current
+    if (lines.length === 0) return
     const completedKey = `minna.recitation.completed.lesson.${lessonNo}`
     try {
       if (localStorage.getItem(completedKey) === 'true') return
     } catch {}
-    if (completionCheckInFlightRef.current) return
-
-    const hasCandidateForEveryLine = lesson.lines.every(line => {
-      const v = bestTakes.get(line.lineId)
-      return Boolean(v && v !== 'pending')
+    const complete = lines.every(line => {
+      return lessonTakesState.cloudTakes.some(take =>
+        take.lessonNo === lessonNo
+        && take.lineNo === line.order
+        && take.uploadStatus === 'uploaded'
+        && take.isBest
+      )
     })
-    if (!hasCandidateForEveryLine) return
-
-    let cancelled = false
-    completionCheckInFlightRef.current = true
-    ;(async () => {
-      try {
-        const takes = await listTakes(lessonNo)
-        if (cancelled) return
-        const complete = lesson.lines.every(line => {
-          return takes.some(t =>
-            t.lessonNo === lessonNo &&
-            t.lineNo === line.order &&
-            t.uploadStatus === 'uploaded' &&
-            t.isBest
-          )
-        })
-        if (!complete) return
-        if (markRecitationLessonCompleted(lessonNo)) {
-          showNotice(`第 ${lessonNo} 课会话背诵完成，已解锁第 ${lessonNo + 1} 课`)
-          void syncLearningStateBestEffort()
-        }
-      } finally {
-        completionCheckInFlightRef.current = false
-      }
-    })()
-
-    return () => {
-      cancelled = true
+    if (!complete) return
+    if (markRecitationLessonCompleted(lessonNo)) {
+      showNotice(`第 ${lessonNo} 课会话背诵完成，已解锁第 ${lessonNo + 1} 课`)
+      void syncLearningStateBestEffort()
     }
-  }, [lesson, lessonNo, bestTakes, showNotice, trackLearningUnlock])
+  }, [lessonNo, lessonTakesState.cloudTakes, recordingLineSignature, showNotice, trackLearningUnlock])
 
   const stopOriginalAudio = useCallback(() => {
     if (!originalAudioRef.current) return
@@ -1284,12 +1194,6 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     })
   }, [isRecording, showNotice, stopOriginalAudio])
 
-  const missingCount = lesson !== null
-    ? lesson.lines.filter(l => !bestTakes.has(l.lineId)).length
-    : 0
-  const hasBestTakeCount = lesson !== null
-    ? lesson.lines.filter(l => { const v = bestTakes.get(l.lineId); return v && v !== 'pending' }).length
-    : 0
   const totalLessonLines = lesson?.lines.length ?? 0
 
   const conversationTextbookUrl = lessonNo
@@ -1320,21 +1224,28 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     const total = sortedLines.length
     setContinuousPlayback({ status: 'loading', currentIndex: 0, totalLines: total, failedCount: 0 })
 
-    let candidates
-    try {
-      const cloudTakes = await listTakes(lessonNo)
-      candidates = getCloudContinuousPlaybackCandidates(sortedLines, cloudTakes, lessonNo)
-      setBestTakes(candidatesToBestTakes(candidates))
-      setCloudBestTakeCount(candidates.length)
-      const readyStatus = getContinuousPlaybackReadyStatus(total, candidates.length)
-      setContinuousPlaybackReadyStatus(readyStatus)
-      if (readyStatus !== 'ready') {
+    let sources = buildContinuousPlaybackSources(sortedLines, lessonTakesState.mergedTakesByLine)
+    if (sources.length !== total) {
+      try {
+        const cloudTakes = await listTakes(lessonNo)
+        const snapshot = buildLessonTakesSnapshot(
+          sortedLines,
+          lessonTakesState.localTakesByLine,
+          cloudTakes,
+          lessonNo,
+        )
+        setLessonTakesState(snapshot)
+        sources = buildContinuousPlaybackSources(sortedLines, snapshot.mergedTakesByLine)
+        setContinuousPlaybackReadyStatus(sources.length === total ? 'ready' : 'incomplete')
+      } catch {
+        setContinuousPlaybackReadyStatus('error')
         setContinuousPlayback({ status: 'idle', currentIndex: 0, totalLines: 0, failedCount: 0 })
         showNotice('完整背诵还在准备中，请稍后再试')
         return
       }
-    } catch {
-      setContinuousPlaybackReadyStatus('error')
+    }
+
+    if (sources.length !== total) {
       setContinuousPlayback({ status: 'idle', currentIndex: 0, totalLines: 0, failedCount: 0 })
       showNotice('完整背诵还在准备中，请稍后再试')
       return
@@ -1344,18 +1255,15 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     const items: PlaybackQueueItem[] = []
     const needSignedUrl: { idx: number; takeId: string }[] = []
 
-    for (let i = 0; i < candidates.length; i++) {
-      const { line, bestTakeId } = candidates[i]
-      // Check local blob first
-      const local = await getTakesByLine(line.lineId)
-      const localTake = local.find(t => t.takeId === bestTakeId)
-      if (localTake?.audioBlob) {
+    for (let i = 0; i < sources.length; i++) {
+      const { line, bestTakeId, localBlob } = sources[i]
+      if (localBlob) {
         items.push({
           lineNo: line.order,
           lineId: line.lineId,
           lineText: line.ja,
           takeId: bestTakeId,
-          signedUrl: URL.createObjectURL(localTake.audioBlob),
+          signedUrl: URL.createObjectURL(localBlob),
           status: 'ready',
         })
       } else {
@@ -1401,7 +1309,7 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     const queue = items.filter(i => i.status === 'ready')
     playbackQueueRef.current = queue
 
-    if (queue.length !== candidates.length) {
+    if (queue.length !== sources.length) {
       playbackQueueRef.current = []
       setContinuousPlayback({ status: 'idle', currentIndex: 0, totalLines: 0, failedCount: initialFailedCount })
       showNotice('完整背诵录音加载失败，请稍后重试')
@@ -1456,7 +1364,7 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
         showNotice(getPlaybackErrorMessage(err, '完整背诵播放失败'))
       },
     })
-  }, [lesson, lessonNo, showNotice, stopTtsPlayback, stopContinuousPlayback, stopOriginalPlayback])
+  }, [lesson, lessonNo, lessonTakesState, showNotice, stopTtsPlayback, stopContinuousPlayback, stopOriginalPlayback])
 
   const togglePauseContinuousPlayback = useCallback(async () => {
     if (!playbackAudioRef.current) return
@@ -1662,7 +1570,7 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     )
   }
 
-  const completedCount = Math.min(bestTakes.size, lesson.lines.length)
+  const completedCount = Math.min(lessonTakesState.readyCount, lesson.lines.length)
 
   return (
     <div className="page-container" style={{
@@ -1759,7 +1667,8 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
             isExpanded={activeLineId === line.lineId}
             onToggleExpand={handleToggleExpand}
             onPlayOriginal={handlePlayOriginal}
-            takesRefreshKey={takesRefreshKey}
+            mergedTakes={lessonTakesState.mergedTakesByLine.get(line.lineId) || []}
+            selectedBestId={lessonTakesState.bestTakeByLine.get(line.lineId) || null}
             onBestTakeChange={handleBestTakeChange}
             onRecordingComplete={handleRecordingComplete}
           />
@@ -1953,7 +1862,7 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
                             ? `已完成 ${totalLessonLines}/${totalLessonLines}`
                             : continuousPlaybackReadyStatus === 'error'
                               ? '录音准备失败，请刷新重试'
-                              : `准备中 ${cloudBestTakeCount}/${totalLessonLines}，请稍后再试`}
+                              : `准备中 ${lessonTakesState.readyCount}/${totalLessonLines}，请稍后再试`}
                       </span>
                     </button>
                     {originalAudioLesson && !originalAudioLesson.needsReview && originalAudioLesson.url ? (

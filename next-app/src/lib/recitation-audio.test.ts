@@ -2,8 +2,8 @@ import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { describe, it } from 'node:test'
 // @ts-expect-error Node's built-in TS runner requires the explicit .ts extension here.
-import { candidatesToBestTakes, getAudioExtension, getAudioExtensionFromFile, getCloudContinuousPlaybackCandidates, getContinuousPlaybackReadyStatus, getPlaybackErrorMessage, getRecordingUploadFilename, playContinuousAudioQueue } from './recitation-audio.ts'
-import type { RecordingTakeDTO, RecitationLine } from '@/types/recitation'
+import { buildContinuousPlaybackSources, buildLessonTakesSnapshot, candidatesToBestTakes, getAudioExtension, getAudioExtensionFromFile, getCloudContinuousPlaybackCandidates, getContinuousPlaybackReadyStatus, getPlaybackErrorMessage, getRecordingUploadFilename, playContinuousAudioQueue } from './recitation-audio.ts'
+import type { RecordingTakeDTO, RecitationLine, RecitationTake } from '@/types/recitation'
 
 class MockAudio {
   onended: ((event: Event) => void) | null = null
@@ -234,7 +234,101 @@ describe('recitation audio helpers', () => {
     assert.deepEqual(playing, [0])
   })
 
-  it('disables real playback before cloud readiness and refreshes cloud takes before signed URLs', () => {
+  it('builds a four-line local queue without requesting signed URLs or waiting for cloud', () => {
+    const lines = Array.from({ length: 4 }, (_, index) => ({
+      lineId: `local-line-${index + 1}`,
+      lessonId: 'lesson-01',
+      order: index + 1,
+      speaker: 'test',
+      ja: `line ${index + 1}`,
+      zh: `句子 ${index + 1}`,
+    })) satisfies RecitationLine[]
+    const localTakesByLine = new Map(lines.map((line, index) => [
+      line.lineId,
+      [{
+        takeId: `local-take-${index + 1}`,
+        lineId: line.lineId,
+        lessonId: '1',
+        lessonNo: 1,
+        lineNo: line.order,
+        audioBlob: new Blob([`audio-${index + 1}`], { type: 'audio/mp4' }),
+        audioUrl: '',
+        score: 80,
+        durationMs: 1000,
+        createdAt: `2026-07-01T00:00:0${index}Z`,
+        isSystemRecommended: false,
+        isUserSelected: false,
+        uploadStatus: 'pending',
+      } satisfies RecitationTake],
+    ]))
+    const snapshot = buildLessonTakesSnapshot(lines, localTakesByLine, [], 1)
+    const sources = buildContinuousPlaybackSources(lines, snapshot.mergedTakesByLine)
+    let signedUrlCalls = 0
+    for (const source of sources) {
+      if (source.requiresSignedUrl) signedUrlCalls += 1
+    }
+
+    assert.equal(snapshot.readyCount, 4)
+    assert.equal(sources.length, 4)
+    assert.equal(sources.every(source => Boolean(source.localBlob)), true)
+    assert.equal(signedUrlCalls, 0)
+  })
+
+  it('builds four signed-url sources when local is incomplete but cloud best takes are complete', () => {
+    const lines = Array.from({ length: 4 }, (_, index) => ({
+      lineId: `cloud-line-${index + 1}`,
+      lessonId: 'lesson-01',
+      order: index + 1,
+      speaker: 'test',
+      ja: `line ${index + 1}`,
+      zh: `句子 ${index + 1}`,
+    })) satisfies RecitationLine[]
+    const cloudTakes = lines.map((line, index) => ({
+      id: `cloud-take-${index + 1}`,
+      userId: 'user',
+      lessonNo: 1,
+      lineNo: line.order,
+      takeNo: 1,
+      storagePath: `take-${index + 1}.m4a`,
+      audioMimeType: 'audio/mp4',
+      durationMs: 1000,
+      score: null,
+      isBest: true,
+      isSystemRecommended: false,
+      uploadStatus: 'uploaded',
+      createdAt: '',
+      updatedAt: '',
+    })) satisfies RecordingTakeDTO[]
+    const snapshot = buildLessonTakesSnapshot(lines, new Map(), cloudTakes, 1)
+    const sources = buildContinuousPlaybackSources(lines, snapshot.mergedTakesByLine)
+
+    assert.equal(snapshot.readyCount, 4)
+    assert.equal(sources.length, 4)
+    assert.equal(sources.every(source => source.requiresSignedUrl), true)
+  })
+
+  it('keeps recording readiness independent from lesson audio enrichment', () => {
+    const source = readFileSync(new URL('../components/recitation-page-client.tsx', import.meta.url), 'utf8')
+    assert.match(source, /\}, \[lessonNo, recordingLineSignature, takesRefreshKey\]\)/)
+    assert.doesNotMatch(source, /\}, \[lesson, lessonNo, takesRefreshKey\]\)/)
+  })
+
+  it('uses one parent recording source and removes line-level recording fetches', () => {
+    const source = readFileSync(new URL('../components/recitation-page-client.tsx', import.meta.url), 'utf8')
+    const compactLineItem = source.slice(
+      source.indexOf('function CompactLineItem'),
+      source.indexOf('interface SubtitleWord'),
+    )
+    assert.doesNotMatch(compactLineItem, /listTakes\(/)
+    assert.doesNotMatch(compactLineItem, /getTakesByLine\(/)
+    assert.match(compactLineItem, /mergedTakes: MergedTake\[\]/)
+
+    const allLessonCloudCalls = source.match(/listTakes\(lessonNo\)/g) || []
+    assert.equal(allLessonCloudCalls.length, 2)
+    assert.equal(source.includes('listTakes(lessonNo, lineNo)'), false)
+  })
+
+  it('disables playback only while the parent source is not ready and uses local sources before cloud refresh', () => {
     const source = readFileSync(new URL('../components/recitation-page-client.tsx', import.meta.url), 'utf8')
     assert.match(source, /disabled=\{continuousPlaybackReadyStatus !== 'ready'\}/)
     assert.match(source, /continuousPlaybackReadyStatus === 'loading'[\s\S]*?'准备录音中\.\.\.'/)
@@ -244,7 +338,8 @@ describe('recitation audio helpers', () => {
       source.indexOf('const handleStartContinuousPlayback'),
       source.indexOf('const togglePauseContinuousPlayback'),
     )
-    assert.ok(handler.indexOf('await listTakes(lessonNo)') < handler.indexOf('getSignedUrl(takeId)'))
+    assert.ok(handler.indexOf('buildContinuousPlaybackSources') < handler.indexOf('await listTakes(lessonNo)'))
+    assert.match(handler, /if \(sources\.length !== total\) \{[\s\S]*?await listTakes\(lessonNo\)/)
     assert.ok(handler.indexOf('getSignedUrl(takeId)') < handler.indexOf('playContinuousAudioQueue({'))
   })
 })
