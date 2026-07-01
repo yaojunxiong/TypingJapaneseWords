@@ -48,9 +48,15 @@ export type LinePlanItem = {
   lineNo: number
   textJa: string
   textZh: string
-  audioSource: 'user_recording' | 'tts' | 'skip'
+  speaker: string | null
+  audioSource: 'user_recording' | 'system_tts' | 'silence' | 'skip'
+  audioRef: 'latest' | 'online_best' | 'admin_best' | 'take_id' | 'tts' | 'silence' | 'skip'
   takeId: string | null
+  takeNo: number | null
   ttsAudioUrl: string | null
+  backgroundMode: 'inherit' | 'custom' | 'gradient'
+  backgroundUrl: string | null
+  duration: number | null
 }
 
 export type VideoProject = {
@@ -92,9 +98,17 @@ export type LessonLine = {
   ttsAudioUrl: string
 }
 
-export async function loadLessonLines(
+export type LessonScript = {
   lessonNo: number
-): Promise<LessonLine[]> {
+  title: string
+  conversationTitle: string
+  conversationImageUrl: string | null
+  lines: LessonLine[]
+}
+
+export async function loadLessonScript(
+  lessonNo: number
+): Promise<LessonScript | null> {
   const fileNo = String(lessonNo).padStart(2, '0')
   const filePath = path.resolve(
     process.cwd(),
@@ -107,7 +121,7 @@ export async function loadLessonLines(
   try {
     const raw = await fs.readFile(filePath, 'utf-8')
     const data = JSON.parse(raw)
-    return (data.lines || []).map((l: Record<string, unknown>) => ({
+    const lines = (data.lines || []).map((l: Record<string, unknown>) => ({
       lineId: String(l.lineId || ''),
       order: Number(l.order || 0),
       speaker: String(l.speaker || ''),
@@ -115,9 +129,22 @@ export async function loadLessonLines(
       zh: String(l.zh || ''),
       ttsAudioUrl: String(l.ttsAudioUrl || ''),
     }))
+    return {
+      lessonNo,
+      title: String(data.title || `第${lessonNo}课`),
+      conversationTitle: String(data.conversationTitle || ''),
+      conversationImageUrl: data.conversationImageUrl
+        ? String(data.conversationImageUrl)
+        : null,
+      lines,
+    }
   } catch {
-    return []
+    return null
   }
+}
+
+export async function loadLessonLines(lessonNo: number): Promise<LessonLine[]> {
+  return (await loadLessonScript(lessonNo))?.lines || []
 }
 
 export async function getAggregatedResults(
@@ -253,59 +280,65 @@ export function buildLinePlanFromTemplate(
   takes: RecordingTake[],
   bestTakeIds?: string[]
 ): LinePlanItem[] {
+  const buildItem = (
+    ll: LessonLine,
+    take: RecordingTake | null,
+    fallback: 'system_tts' | 'skip',
+    selectedRef: LinePlanItem['audioRef'] = 'online_best'
+  ): LinePlanItem => ({
+    lineNo: ll.order,
+    textJa: ll.ja,
+    textZh: ll.zh,
+    speaker: ll.speaker || null,
+    audioSource: take ? 'user_recording' : fallback,
+    audioRef: take ? selectedRef : fallback === 'system_tts' ? 'tts' : 'skip',
+    takeId: take?.id || null,
+    takeNo: take?.take_no || null,
+    ttsAudioUrl: fallback === 'system_tts' && !take ? ll.ttsAudioUrl : null,
+    backgroundMode: 'inherit',
+    backgroundUrl: null,
+    duration: null,
+  })
+
   if (templateType === 'all-user-recordings') {
     return lessonLines.map((ll) => {
-      const bestTakes = takes.filter((t) => t.line_no === ll.order && t.is_best)
-      const bestTake = bestTakes.length > 0 ? bestTakes[0] : null
-      return {
-        lineNo: ll.order,
-        textJa: ll.ja,
-        textZh: ll.zh,
-        audioSource: bestTake ? 'user_recording' : 'tts',
-        takeId: bestTake ? bestTake.id : null,
-        ttsAudioUrl: bestTake ? null : ll.ttsAudioUrl,
-      }
+      const lineTakes = takes.filter((take) => take.line_no === ll.order)
+      const adminBest = lineTakes.find((take) => bestTakeIds?.includes(take.id))
+      const onlineBest = lineTakes.find((take) => take.is_best)
+      const latest = lineTakes[0]
+      const selectedTake = adminBest || onlineBest || latest || null
+      const selectedRef = adminBest
+        ? 'admin_best'
+        : onlineBest
+          ? 'online_best'
+          : 'latest'
+      return buildItem(ll, selectedTake, 'system_tts', selectedRef)
     })
   }
 
   if (templateType === 'user-odd-lines') {
     return lessonLines.map((ll) => {
       const isOdd = ll.order % 2 === 1
-      const bestTakes = takes.filter((t) => t.line_no === ll.order && t.is_best)
-      const bestTake = isOdd && bestTakes.length > 0 ? bestTakes[0] : null
-      return {
-        lineNo: ll.order,
-        textJa: ll.ja,
-        textZh: ll.zh,
-        audioSource: bestTake ? 'user_recording' : isOdd ? 'tts' : 'skip',
-        takeId: bestTake ? bestTake.id : null,
-        ttsAudioUrl: bestTake ? null : isOdd ? ll.ttsAudioUrl : null,
-      }
+      const lineTakes = takes.filter((take) => take.line_no === ll.order)
+      const adminBest = lineTakes.find((take) => bestTakeIds?.includes(take.id))
+      const onlineBest = lineTakes.find((take) => take.is_best)
+      const selectedTake = isOdd ? adminBest || onlineBest || lineTakes[0] || null : null
+      const selectedRef = adminBest ? 'admin_best' : onlineBest ? 'online_best' : 'latest'
+      return buildItem(ll, selectedTake, isOdd ? 'system_tts' : 'skip', selectedRef)
     })
   }
 
   if (templateType === 'user-even-lines') {
     return lessonLines.map((ll) => {
       const isEven = ll.order % 2 === 0
-      const bestTakes = takes.filter((t) => t.line_no === ll.order && t.is_best)
-      const bestTake = isEven && bestTakes.length > 0 ? bestTakes[0] : null
-      return {
-        lineNo: ll.order,
-        textJa: ll.ja,
-        textZh: ll.zh,
-        audioSource: bestTake ? 'user_recording' : isEven ? 'tts' : 'skip',
-        takeId: bestTake ? bestTake.id : null,
-        ttsAudioUrl: bestTake ? null : isEven ? ll.ttsAudioUrl : null,
-      }
+      const lineTakes = takes.filter((take) => take.line_no === ll.order)
+      const adminBest = lineTakes.find((take) => bestTakeIds?.includes(take.id))
+      const onlineBest = lineTakes.find((take) => take.is_best)
+      const selectedTake = isEven ? adminBest || onlineBest || lineTakes[0] || null : null
+      const selectedRef = adminBest ? 'admin_best' : onlineBest ? 'online_best' : 'latest'
+      return buildItem(ll, selectedTake, isEven ? 'system_tts' : 'skip', selectedRef)
     })
   }
 
-  return lessonLines.map((ll) => ({
-    lineNo: ll.order,
-    textJa: ll.ja,
-    textZh: ll.zh,
-    audioSource: 'skip' as const,
-    takeId: null,
-    ttsAudioUrl: null,
-  }))
+  return lessonLines.map((ll) => buildItem(ll, null, 'skip'))
 }

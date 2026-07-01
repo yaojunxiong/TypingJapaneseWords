@@ -5,6 +5,23 @@ import { createClient } from '@/utils/supabase/server'
 
 export const dynamic = 'force-dynamic'
 
+const AUDIO_SOURCES = new Set([
+  'user_recording',
+  'system_tts',
+  'silence',
+  'skip',
+])
+const AUDIO_REFS = new Set([
+  'latest',
+  'online_best',
+  'admin_best',
+  'take_id',
+  'tts',
+  'silence',
+  'skip',
+])
+const BACKGROUND_MODES = new Set(['inherit', 'custom', 'gradient'])
+
 export async function GET() {
   const cookieStore = await cookies()
   const adminCheck = await checkAdminAccess(cookieStore)
@@ -36,6 +53,48 @@ export async function POST(request: NextRequest) {
   if (!user_id || !lesson_no) {
     return NextResponse.json({ error: '缺少 user_id 或 lesson_no' }, { status: 400 })
   }
+  if (!Array.isArray(line_plan) || line_plan.length === 0) {
+    return NextResponse.json({ error: 'line_plan 必须包含有效台词' }, { status: 400 })
+  }
+
+  const normalizedLinePlan = line_plan.map((line: Record<string, unknown>) => ({
+    lineNo: Number(line.lineNo),
+    textJa: String(line.textJa || ''),
+    textZh: String(line.textZh || ''),
+    speaker: line.speaker ? String(line.speaker) : null,
+    audioSource: String(line.audioSource || ''),
+    audioRef: String(line.audioRef || ''),
+    takeId: line.takeId ? String(line.takeId) : null,
+    takeNo: line.takeNo == null ? null : Number(line.takeNo),
+    ttsAudioUrl: line.ttsAudioUrl ? String(line.ttsAudioUrl) : null,
+    backgroundMode: String(line.backgroundMode || 'inherit'),
+    backgroundUrl: line.backgroundUrl ? String(line.backgroundUrl) : null,
+    duration: line.duration == null ? null : Number(line.duration),
+  }))
+
+  const invalidLine = normalizedLinePlan.find(
+    (line: {
+      lineNo: number
+      textJa: string
+      audioSource: string
+      audioRef: string
+      takeId: string | null
+      backgroundMode: string
+    }) =>
+      !Number.isInteger(line.lineNo) ||
+      line.lineNo < 1 ||
+      !line.textJa.trim() ||
+      !AUDIO_SOURCES.has(line.audioSource) ||
+      !AUDIO_REFS.has(line.audioRef) ||
+      !BACKGROUND_MODES.has(line.backgroundMode) ||
+      (line.audioSource === 'user_recording' && !line.takeId)
+  )
+  if (invalidLine) {
+    return NextResponse.json(
+      { error: `第 ${invalidLine.lineNo || '?'} 句 line_plan 无效` },
+      { status: 400 }
+    )
+  }
 
   const { data, error } = await supabase
     .from('admin_recitation_video_projects')
@@ -45,7 +104,7 @@ export async function POST(request: NextRequest) {
       best_selection_id: best_selection_id || null,
       title: title || null,
       template_type: template_type || 'custom',
-      line_plan: line_plan || [],
+      line_plan: normalizedLinePlan,
       background_type: background_type || 'gradient',
       background_url: background_url || null,
       status: 'draft',

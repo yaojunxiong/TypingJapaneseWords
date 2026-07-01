@@ -4,7 +4,14 @@ import MinnaNav from '@/components/minna-nav'
 import { getLang, tr } from '@/lib/i18n-server'
 import { checkAdminAccess } from '@/lib/admin-auth'
 import { createClient } from '@/utils/supabase/server'
-import { loadLessonLines, buildLinePlanFromTemplate, type LinePlanItem, type LessonLine, type RecordingTake } from '@/lib/admin-recitation-videos'
+import {
+  buildLinePlanFromTemplate,
+  getLessonDetail,
+  loadLessonScript,
+  type LessonScript,
+  type LinePlanItem,
+  type RecordingTake,
+} from '@/lib/admin-recitation-videos'
 import { ProjectEditor } from '@/components/admin/recitation-video/project-editor'
 
 export const dynamic = 'force-dynamic'
@@ -26,7 +33,7 @@ export default async function NewProjectPage({
         <h1>{tr(lang, '新建视频项目', 'New Video Project')}</h1>
         <section className="card">
           <p className="small">{tr(lang, '请先登录后访问。', 'Please sign in first.')}</p>
-          <p><Link href="/login">{tr(lang, '去登录', 'Sign in')}</Link></p>
+          <Link href="/login" className="text-blue-600">去登录</Link>
         </section>
       </main>
     )
@@ -49,7 +56,9 @@ export default async function NewProjectPage({
   const bestSelectionId = sp.bestSelectionId || ''
   const lessonNo = parseInt(lessonNoRaw, 10)
 
-  let lessonLines: LessonLine[] = []
+  let lesson: LessonScript | null = null
+  let initialTakes: RecordingTake[] = []
+  let initialBestTakeIds: string[] = []
   let initialLinePlan: LinePlanItem[] = []
   let displayName = ''
   let userList: { id: string; display_name: string }[] = []
@@ -63,41 +72,40 @@ export default async function NewProjectPage({
     .order('display_name')
   userList = (profiles || []) as any[]
 
-  // Fetch takes if userId and lessonNo provided
-  let takes: RecordingTake[] = []
-  if (userId && lessonNo > 0) {
-    lessonLines = await loadLessonLines(lessonNo)
-    const { data: takeData } = await supabase
-      .from('recording_takes')
-      .select('*')
-      .eq('user_id', userId)
-      .eq('lesson_no', lessonNo)
-      .is('deleted_at', null)
-      .eq('is_best', true)
-    takes = (takeData || []) as RecordingTake[]
-
-    const bestTakeIds = takes.map((t) => t.id)
-    initialLinePlan = buildLinePlanFromTemplate('all-user-recordings', lessonLines, takes)
-
+  // If both userId and lessonNo are provided via URL, auto-select and load data
+  if (lessonNo > 0) {
+    lesson = await loadLessonScript(lessonNo)
+  }
+  if (userId && lessonNo > 0 && lesson) {
+    const detail = await getLessonDetail(cookieStore, userId, lessonNo)
+    initialTakes = detail.takes
+    initialBestTakeIds = detail.bestSelection?.selected_take_ids || []
+    initialLinePlan = buildLinePlanFromTemplate(
+      'all-user-recordings',
+      lesson.lines,
+      initialTakes,
+      initialBestTakeIds
+    )
     const profile = userList.find((p) => p.id === userId)
     if (profile) displayName = profile.display_name
+  }
+
+  if (userId && !userList.some((profile) => profile.id === userId)) {
+    userList.push({ id: userId, display_name: userId.slice(0, 8) })
   }
 
   return (
     <main style={{ paddingBottom: 'calc(140px + env(safe-area-inset-bottom, 0px))' }}>
       <MinnaNav active="me" />
-      <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap', marginBottom: 8 }}>
-        <span style={{ fontSize: 22, lineHeight: 1 }}>🎬</span>
-        <h1 style={{ margin: 0, fontSize: 20, fontWeight: 800 }}>
-          {tr(lang, '新建视频项目', 'New Video Project')}
-        </h1>
-      </div>
+      <h1>{tr(lang, '新建视频项目', 'New Video Project')}</h1>
 
       <ProjectEditor
         userId={userId}
         lessonNo={lessonNo}
         bestSelectionId={bestSelectionId}
-        lessonLines={lessonLines.map((l) => ({ order: l.order, ja: l.ja, zh: l.zh, ttsAudioUrl: l.ttsAudioUrl }))}
+        initialLesson={lesson}
+        initialTakes={initialTakes}
+        initialBestTakeIds={initialBestTakeIds}
         initialLinePlan={initialLinePlan}
         users={userList.map((p) => ({ id: p.id, displayName: p.display_name || p.id.slice(0, 8) }))}
         displayName={displayName}
