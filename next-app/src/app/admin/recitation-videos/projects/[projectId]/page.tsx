@@ -74,6 +74,28 @@ export default async function ProjectDetailPage({
   const p = project as any
   const badge = statusBadge(p.status)
   const linePlan: any[] = p.line_plan || []
+  let previewVideoUrl: string | null = null
+  let downloadVideoUrl: string | null = null
+
+  if (p.status === 'generated' && p.output_video_url) {
+    const objectMarker = '/storage/v1/object/public/admin-recitation-videos/'
+    const markerIndex = p.output_video_url.indexOf(objectMarker)
+    if (markerIndex !== -1) {
+      const objectPath = decodeURIComponent(
+        p.output_video_url.slice(markerIndex + objectMarker.length)
+      )
+      const [{ data: previewData }, { data: downloadData }] = await Promise.all([
+        supabase.storage
+          .from('admin-recitation-videos')
+          .createSignedUrl(objectPath, 3600),
+        supabase.storage
+          .from('admin-recitation-videos')
+          .createSignedUrl(objectPath, 3600, { download: true }),
+      ])
+      previewVideoUrl = previewData?.signedUrl || null
+      downloadVideoUrl = downloadData?.signedUrl || null
+    }
+  }
 
   return (
     <main style={{ paddingBottom: 'calc(140px + env(safe-area-inset-bottom, 0px))' }}>
@@ -92,10 +114,10 @@ export default async function ProjectDetailPage({
       <section className="card" style={{ marginBottom: 12 }}>
         <div style={{ display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
           <GenerateButton projectId={projectId} status={p.status} />
-          {p.status === 'generated' && p.output_video_url && (
+          {p.status === 'generated' && previewVideoUrl && (
             <>
               <a
-                href={p.output_video_url}
+                href={previewVideoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn"
@@ -104,7 +126,7 @@ export default async function ProjectDetailPage({
                 ▶ {tr(lang, '预览视频', 'Preview Video')}
               </a>
               <a
-                href={p.output_video_url}
+                href={downloadVideoUrl || previewVideoUrl}
                 download
                 className="btn ghost"
               >

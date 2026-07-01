@@ -1,11 +1,31 @@
 import { createClient } from '@supabase/supabase-js'
 import path from 'node:path'
 import fs from 'node:fs/promises'
-import { execSync, exec as execCallback } from 'node:child_process'
-import { promisify } from 'node:util'
+import { spawnSync } from 'node:child_process'
+import sharp from 'sharp'
 
-const execAsync = promisify(execCallback)
-const FONT = '/System/Library/Fonts/Supplemental/AppleGothic.ttf'
+function runFFmpeg(args: string[]): void {
+  const result = spawnSync('ffmpeg', args, { stdio: 'pipe' })
+  if (result.status === 0) return
+
+  const stderr = result.stderr?.toString() || ''
+  const last = stderr.slice(-2000)
+  console.error('  ffmpeg 错误输出片段:')
+  console.error(last)
+  throw new Error(`ffmpeg 失败 (exit ${result.status})`)
+}
+
+function runFFprobe(args: string[]): string {
+  const result = spawnSync('ffprobe', args, { stdio: 'pipe' })
+  if (result.status !== 0) {
+    const stderr = result.stderr?.toString() || ''
+    const last = stderr.slice(-2000)
+    console.error('  ffprobe 错误输出片段:')
+    console.error(last)
+    throw new Error(`ffprobe 失败 (exit ${result.status})`)
+  }
+  return result.stdout?.toString() || ''
+}
 
 type LinePlanItem = {
   lineNo: number
@@ -124,13 +144,96 @@ async function downloadAudio(
       }
     }
 
-    const { stdout } = await execAsync(
-      `ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "${outputPath}"`
-    )
+    const stdout = runFFprobe([
+      '-v', 'error',
+      '-show_entries', 'format=duration',
+      '-of', 'default=noprint_wrappers=1:nokey=1',
+      outputPath,
+    ])
     const duration = parseFloat(stdout.trim())
     return { duration: isNaN(duration) ? 3 : duration }
   } catch {
     return null
+  }
+}
+
+function escapeXml(s: string): string {
+  return s
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;')
+}
+
+function wrapSvgText(text: string, maxChars: number): string[] {
+  const normalized = text.trim()
+  if (!normalized) return ['']
+
+  const lines: string[] = []
+  for (let offset = 0; offset < normalized.length; offset += maxChars) {
+    lines.push(normalized.slice(offset, offset + maxChars))
+  }
+  return lines
+}
+
+function buildTextSvg(
+  textJa: string,
+  textZh: string,
+  sourceLabel: string,
+  lessonNo: number
+): string {
+  const header = `Lesson ${lessonNo} 会话成果`
+  const jaLines = wrapSvgText(textJa, 22)
+  const zhLines = wrapSvgText(textZh, 28)
+  const jaStartY = 1620 - Math.max(0, jaLines.length - 1) * 28
+  const zhStartY = 1750 - Math.max(0, zhLines.length - 1) * 22
+  const jaText = jaLines
+    .map((line, index) => `<tspan x="540" y="${jaStartY + index * 58}">${escapeXml(line)}</tspan>`)
+    .join('')
+  const zhText = zhLines
+    .map((line, index) => `<tspan x="540" y="${zhStartY + index * 44}">${escapeXml(line)}</tspan>`)
+    .join('')
+
+  return `<svg width="1080" height="1920" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="1080" height="130" fill="black" opacity="0.28"/>
+  <rect x="0" y="1500" width="1080" height="420" fill="black" opacity="0.58"/>
+  <text x="54" y="82" font-family="AppleGothic, -apple-system, BlinkMacSystemFont, sans-serif" font-size="34" font-weight="600" fill="#d7dcff">${escapeXml(header)}</text>
+  <text font-family="AppleGothic, -apple-system, BlinkMacSystemFont, sans-serif" font-size="46" font-weight="600" fill="white" text-anchor="middle">${jaText}</text>
+  <text font-family="AppleGothic, -apple-system, BlinkMacSystemFont, sans-serif" font-size="32" fill="#d8dbe8" text-anchor="middle">${zhText}</text>
+  <text x="1025" y="1865" font-family="AppleGothic, -apple-system, BlinkMacSystemFont, sans-serif" font-size="24" fill="#b8bfd0" text-anchor="end">${escapeXml(sourceLabel)}</text>
+</svg>`
+}
+
+async function generateFrame(
+  outputPath: string,
+  textJa: string,
+  textZh: string,
+  sourceLabel: string,
+  lessonNo: number,
+  backgroundPath: string | null
+): Promise<void> {
+  const textSvg = buildTextSvg(textJa, textZh, sourceLabel, lessonNo)
+  const textBuf = Buffer.from(textSvg)
+
+  if (backgroundPath) {
+    await sharp(backgroundPath)
+      .resize(1080, 1920, { fit: 'cover' })
+      .composite([{ input: textBuf, top: 0, left: 0 }])
+      .png()
+      .toFile(outputPath)
+  } else {
+    const bgSvg = `<svg width="1080" height="1920" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#1a1a2e"/>
+    <stop offset="100%" stop-color="#0f3460"/>
+  </linearGradient></defs>
+  <rect width="1080" height="1920" fill="url(#g)"/>
+</svg>`
+    await sharp(Buffer.from(bgSvg))
+      .composite([{ input: textBuf, top: 0, left: 0 }])
+      .png()
+      .toFile(outputPath)
   }
 }
 
@@ -142,39 +245,41 @@ async function createVideoSegment(
   audioSource: string,
   audioPath: string | null,
   backgroundPath: string | null,
-  segmentDuration: number
+  segmentDuration: number,
+  lessonNo: number
 ): Promise<string> {
   const outputPath = path.join(segmentDir, `seg_${String(index).padStart(3, '0')}.mp4`)
-  const bgPath = backgroundPath || path.join(segmentDir, 'bg.png')
+  const pngPath = path.join(segmentDir, `seg_${String(index).padStart(3, '0')}.png`)
 
-  if (!backgroundPath) {
-    execSync(
-      `ffmpeg -y -f lavfi -i "color=c=#1a1a2e:s=1080x1920:d=1" -frames:v 1 "${bgPath}" 2>/dev/null`
-    )
-  }
+  const sourceLabel = audioSource === 'user_recording'
+    ? '用户录音'
+    : audioSource === 'tts'
+      ? '系统练习音'
+      : '静音'
+  await generateFrame(pngPath, textJa, textZh, sourceLabel, lessonNo, backgroundPath)
 
-  const jaFile = path.join(segmentDir, `ja_${index}.txt`)
-  const zhFile = path.join(segmentDir, `zh_${index}.txt`)
-  const sourceFile = path.join(segmentDir, `src_${index}.txt`)
-  const headerFile = path.join(segmentDir, `header_${index}.txt`)
-  await fs.writeFile(jaFile, textJa || '')
-  await fs.writeFile(zhFile, textZh || '')
-  const sourceLabel = audioSource === 'user_recording' ? '用户录音' : audioSource === 'tts' ? '系统练习音' : ''
-  await fs.writeFile(sourceFile, sourceLabel)
-  await fs.writeFile(headerFile, '会話成果')
-
-  const audioInput = audioPath ? `-i "${audioPath}"` : ''
   const duration = audioPath ? segmentDuration : 2
 
-  const cmd =
-    `ffmpeg -y -loop 1 -i "${bgPath}" ${audioInput}` +
-    ` -vf "drawtext=textfile='${jaFile}':fontfile=${FONT}:fontsize=42:fontcolor=white:x=(w-tw)/2:y=h-280:box=1:boxcolor=black@0.5:boxborderw=12,"` +
-    `drawtext=textfile='${zhFile}':fontfile=${FONT}:fontsize=30:fontcolor='#cccccc':x=(w-tw)/2:y=h-200:box=1:boxcolor=black@0.5:boxborderw=10,"` +
-    `drawtext=textfile='${sourceFile}':fontfile=${FONT}:fontsize=20:fontcolor='#999999':x=w-tw-30:y=h-60,"` +
-    `drawtext=textfile='${headerFile}':fontfile=${FONT}:fontsize=28:fontcolor='#8888ff':x=30:y=40"` +
-    ` -c:v libx264 -c:a aac -pix_fmt yuv420p -t ${duration} -shortest "${outputPath}" 2>/dev/null`
+  const args: string[] = [
+    '-y',
+    '-loop', '1',
+    '-i', pngPath,
+  ]
+  if (audioPath) {
+    args.push('-i', audioPath)
+  } else {
+    args.push('-f', 'lavfi', '-i', 'anullsrc=r=44100:cl=mono')
+  }
+  args.push(
+    '-c:v', 'libx264',
+    '-c:a', 'aac',
+    '-pix_fmt', 'yuv420p',
+    '-t', String(duration),
+    '-shortest',
+    outputPath,
+  )
 
-  execSync(cmd)
+  runFFmpeg(args)
   return outputPath
 }
 
@@ -252,7 +357,8 @@ async function processJob(job: JobRow) {
       const audioResult = await downloadAudio(item.audioSource, item.takeId, item.ttsAudioUrl, audioPath)
       const segPath = await createVideoSegment(
         segmentsDir, i, item.textJa, item.textZh, item.audioSource,
-        audioResult ? audioPath : null, bgPath, audioResult?.duration || 2
+        audioResult ? audioPath : null, bgPath, audioResult?.duration || 2,
+        p.lesson_no
       )
       segmentPaths.push(segPath)
     }
@@ -261,13 +367,23 @@ async function processJob(job: JobRow) {
     const outputPath = path.join(tmpDir, 'output.mp4')
     const listFile = path.join(segmentsDir, 'concat.txt')
     await fs.writeFile(listFile, segmentPaths.map((p) => `file '${p}'`).join('\n'))
-    execSync(`ffmpeg -y -f concat -safe 0 -i "${listFile}" -c copy "${outputPath}" 2>/dev/null`)
+    runFFmpeg([
+      '-y',
+      '-f', 'concat',
+      '-safe', '0',
+      '-i', listFile,
+      '-c', 'copy',
+      outputPath,
+    ])
 
     // Get duration
-    const { stdout } = await execAsync(
-      `ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "${outputPath}"`
-    )
-    const duration = parseFloat(stdout.trim())
+    const ffprobeStdout = runFFprobe([
+      '-v', 'error',
+      '-show_entries', 'format=duration',
+      '-of', 'default=noprint_wrappers=1:nokey=1',
+      outputPath,
+    ])
+    const duration = parseFloat(ffprobeStdout.trim())
 
     console.log(`  ✅ MP4 生成完成: ${(duration || 0).toFixed(1)}秒`)
 
@@ -335,7 +451,7 @@ async function processJob(job: JobRow) {
   }
 
   // Cleanup
-  execSync(`rm -rf "${tmpDir}"`)
+  spawnSync('rm', ['-rf', tmpDir], { stdio: 'pipe' })
 }
 
 async function main() {
