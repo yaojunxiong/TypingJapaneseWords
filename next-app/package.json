@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:local-recitation": "LOCAL_RECITATION_TOOL=1 next dev --port 3003",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

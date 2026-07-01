@@ -120,6 +120,13 @@ export default function VisitorActivityTracker() {
 
   useEffect(() => {
     const path = pathname || '/'
+
+    // Local private tool pages are not tracked
+    if (path.startsWith('/local')) {
+      diag({ path, skipped: true, reason: 'local-tool' })
+      return
+    }
+
     const last = readLast()
     if (last?.path === path && Date.now() - Number(last.at || 0) < DEDUPE_MS) {
       diag({ path, deduped: true })

@@ -617,6 +617,12 @@ export default async function AdminPage({
       description: tr(lang, '环境变量、部署状态、访客流程开关', 'Environment, deployment status, visitor workflow toggles.'),
       href: '/admin/system',
     },
+    {
+      icon: '🎬',
+      label: tr(lang, '会话成果视频', 'Recitation Videos'),
+      description: tr(lang, '查看录音成果、选择后台最优版、编排台词并生成 9:16 MP4 视频', 'View recitation results, select admin best takes, arrange lines, and generate 9:16 MP4 videos.'),
+      href: '/admin/recitation-videos',
+    },
   ]
 
   const availableCapabilities: CapabilityCard[] = [
@@ -717,6 +723,13 @@ export default async function AdminPage({
       description: tr(lang, '检查录音云存储健康状态：上传统计、Storage 文件匹配、异常记录。', 'Check recording cloud storage health: upload stats, Storage file matching, anomaly records.'),
       status: 'available',
       href: '/admin/recording-health',
+    },
+    {
+      icon: '🎬',
+      label: tr(lang, '会话成果视频', 'Recitation Videos'),
+      description: tr(lang, '查看录音成果、选择后台最优版、编排台词并生成 9:16 MP4 视频', 'View recitation results, select best takes, arrange lines, and generate 9:16 MP4 videos.'),
+      status: 'available',
+      href: '/admin/recitation-videos',
     },
   ]
 
