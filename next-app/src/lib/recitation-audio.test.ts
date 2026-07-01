@@ -2,7 +2,8 @@ import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { describe, it } from 'node:test'
 // @ts-expect-error Node's built-in TS runner requires the explicit .ts extension here.
-import { getAudioExtension, getAudioExtensionFromFile, getPlaybackErrorMessage, getRecordingUploadFilename, playContinuousAudioQueue } from './recitation-audio.ts'
+import { candidatesToBestTakes, getAudioExtension, getAudioExtensionFromFile, getCloudContinuousPlaybackCandidates, getContinuousPlaybackReadyStatus, getPlaybackErrorMessage, getRecordingUploadFilename, playContinuousAudioQueue } from './recitation-audio.ts'
+import type { RecordingTakeDTO, RecitationLine } from '@/types/recitation'
 
 class MockAudio {
   onended: ((event: Event) => void) | null = null
@@ -136,5 +137,114 @@ describe('recitation audio helpers', () => {
     assert.equal(source.split(selector).length - 1, 1)
     assert.match(source, /data-testid="recitation-modal-continuous-play-button"[\s\S]*?🎤 试听完整背诵/)
     assert.doesNotMatch(source, /data-testid="recitation-modal-continuous-play-button"[\s\S]{0,200}?试听全文音频/)
+  })
+
+  it('builds all four candidates from authoritative cloud best takes when local bestTakes starts empty', () => {
+    const lines = Array.from({ length: 4 }, (_, index) => ({
+      lineId: `line-${index + 1}`,
+      lessonId: 'lesson-01',
+      order: index + 1,
+      speaker: 'test',
+      ja: `line ${index + 1}`,
+      zh: `句子 ${index + 1}`,
+    })) satisfies RecitationLine[]
+    const cloudTakes = lines.map((line, index) => ({
+      id: `take-${index + 1}`,
+      userId: 'user',
+      lessonNo: 1,
+      lineNo: line.order,
+      takeNo: 1,
+      storagePath: `take-${index + 1}.m4a`,
+      audioMimeType: 'audio/mp4',
+      durationMs: 1000,
+      score: null,
+      isBest: true,
+      isSystemRecommended: false,
+      uploadStatus: 'uploaded',
+      createdAt: '',
+      updatedAt: '',
+    })) satisfies RecordingTakeDTO[]
+    const initialBestTakes = new Map<string, string>()
+
+    assert.equal(initialBestTakes.size, 0)
+    const candidates = getCloudContinuousPlaybackCandidates(lines, cloudTakes, 1)
+    assert.equal(candidates.length, 4)
+    assert.equal(candidatesToBestTakes(candidates).size, 4)
+    assert.equal(getContinuousPlaybackReadyStatus(lines.length, candidates.length), 'ready')
+  })
+
+  it('reports incomplete until every line has an uploaded cloud best take', () => {
+    assert.equal(getContinuousPlaybackReadyStatus(4, 0), 'incomplete')
+    assert.equal(getContinuousPlaybackReadyStatus(4, 3), 'incomplete')
+    assert.equal(getContinuousPlaybackReadyStatus(4, 4), 'ready')
+  })
+
+  it('requests signed URLs after readiness and starts the first cloud recording', async () => {
+    const lines = [1, 2].map(order => ({
+      lineId: `line-${order}`,
+      lessonId: 'lesson-01',
+      order,
+      speaker: 'test',
+      ja: `line ${order}`,
+      zh: `句子 ${order}`,
+    })) satisfies RecitationLine[]
+    const cloudTakes = lines.map(line => ({
+      id: `take-${line.order}`,
+      userId: 'user',
+      lessonNo: 1,
+      lineNo: line.order,
+      takeNo: 1,
+      storagePath: `take-${line.order}.m4a`,
+      audioMimeType: 'audio/mp4',
+      durationMs: 1000,
+      score: null,
+      isBest: true,
+      isSystemRecommended: false,
+      uploadStatus: 'uploaded',
+      createdAt: '',
+      updatedAt: '',
+    })) satisfies RecordingTakeDTO[]
+    const candidates = getCloudContinuousPlaybackCandidates(lines, cloudTakes, 1)
+    const signedUrlRequests: string[] = []
+    const queue = await Promise.all(candidates.map(async candidate => {
+      signedUrlRequests.push(candidate.bestTakeId)
+      return { ...candidate, signedUrl: `https://audio.test/${candidate.bestTakeId}.m4a` }
+    }))
+    const firstAudio = new MockAudio()
+    const loading: number[] = []
+    const playing: number[] = []
+    const playback = playContinuousAudioQueue({
+      queue,
+      createAudio: item => {
+        assert.equal(item.signedUrl, 'https://audio.test/take-1.m4a')
+        return firstAudio
+      },
+      shouldStop: () => false,
+      onLoading: index => loading.push(index),
+      onPlaying: index => playing.push(index),
+      onEnded: () => {},
+      onComplete: () => {},
+      onError: error => assert.fail(String(error)),
+    })
+
+    assert.deepEqual(signedUrlRequests, ['take-1', 'take-2'])
+    assert.deepEqual(loading, [0])
+    firstAudio.resolve()
+    await playback
+    assert.deepEqual(playing, [0])
+  })
+
+  it('disables real playback before cloud readiness and refreshes cloud takes before signed URLs', () => {
+    const source = readFileSync(new URL('../components/recitation-page-client.tsx', import.meta.url), 'utf8')
+    assert.match(source, /disabled=\{continuousPlaybackReadyStatus !== 'ready'\}/)
+    assert.match(source, /continuousPlaybackReadyStatus === 'loading'[\s\S]*?'准备录音中\.\.\.'/)
+    assert.match(source, /完整背诵还在准备中，请稍后再试/)
+
+    const handler = source.slice(
+      source.indexOf('const handleStartContinuousPlayback'),
+      source.indexOf('const togglePauseContinuousPlayback'),
+    )
+    assert.ok(handler.indexOf('await listTakes(lessonNo)') < handler.indexOf('getSignedUrl(takeId)'))
+    assert.ok(handler.indexOf('getSignedUrl(takeId)') < handler.indexOf('playContinuousAudioQueue({'))
   })
 })

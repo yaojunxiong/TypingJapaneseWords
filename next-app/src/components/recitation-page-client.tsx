@@ -5,7 +5,15 @@ import type { RecitationLesson, RecitationLine, RecitationTake, RecordingTakeDTO
 import { loadRecitationLesson, getBestTake } from '@/lib/recitation-lesson'
 import { getTakesByLine, deleteTake as deleteLocalTake, updateTake, saveTake } from '@/lib/recitation-storage'
 import { listTakes, setBestTake as apiSetBest, deleteCloudTake, getSignedUrl, uploadTake, UploadError, type SignedUrlResult } from '@/lib/recitation-api'
-import { getPlaybackErrorMessage, playContinuousAudioQueue, type ContinuousPlaybackAudio } from '@/lib/recitation-audio'
+import {
+  candidatesToBestTakes,
+  getCloudContinuousPlaybackCandidates,
+  getContinuousPlaybackReadyStatus,
+  getPlaybackErrorMessage,
+  playContinuousAudioQueue,
+  type ContinuousPlaybackAudio,
+  type ContinuousPlaybackReadyStatus,
+} from '@/lib/recitation-audio'
 import StudyMobileChrome from '@/components/study-mobile-chrome'
 import type { Lang } from '@/lib/i18n'
 import Link from 'next/link'
@@ -983,6 +991,8 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
   const [lesson, setLesson] = useState<RecitationLesson | null>(null)
   const [loading, setLoading] = useState(true)
   const [bestTakes, setBestTakes] = useState<Map<string, string | null>>(new Map())
+  const [continuousPlaybackReadyStatus, setContinuousPlaybackReadyStatus] = useState<ContinuousPlaybackReadyStatus>('loading')
+  const [cloudBestTakeCount, setCloudBestTakeCount] = useState(0)
   const [activeLineId, setActiveLineId] = useState<string | null>(null)
   const [takesRefreshKey, setTakesRefreshKey] = useState(0)
   const [isRecording, setIsRecording] = useState(false)
@@ -1051,6 +1061,30 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     })
   }, [lessonNo])
 
+  useEffect(() => {
+    if (!lesson || lesson.lines.length === 0) return
+    let cancelled = false
+    setContinuousPlaybackReadyStatus('loading')
+
+    ;(async () => {
+      try {
+        const cloudTakes = await listTakes(lessonNo)
+        if (cancelled) return
+        const candidates = getCloudContinuousPlaybackCandidates(lesson.lines, cloudTakes, lessonNo)
+        setBestTakes(candidatesToBestTakes(candidates))
+        setCloudBestTakeCount(candidates.length)
+        setContinuousPlaybackReadyStatus(getContinuousPlaybackReadyStatus(lesson.lines.length, candidates.length))
+      } catch {
+        if (cancelled) return
+        setContinuousPlaybackReadyStatus('error')
+      }
+    })()
+
+    return () => {
+      cancelled = true
+    }
+  }, [lesson, lessonNo, takesRefreshKey])
+
   // Lessons that have original line audio segments published
   const ORIGINAL_LINE_AUDIO_LESSONS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50]
   useEffect(() => {
@@ -1101,6 +1135,7 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
 
   const handleRecordingComplete = useCallback((lineId: string) => {
     setTakesRefreshKey(k => k + 1)
+    setContinuousPlaybackReadyStatus('loading')
     setBestTakes(prev => {
       const next = new Map(prev)
       next.set(lineId, 'pending')
@@ -1285,15 +1320,23 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     const total = sortedLines.length
     setContinuousPlayback({ status: 'loading', currentIndex: 0, totalLines: total, failedCount: 0 })
 
-    // Collect lines that have a real bestTakeId (not 'pending')
-    const candidates: { line: RecitationLine; bestTakeId: string }[] = []
-    for (const line of sortedLines) {
-      const v = bestTakes.get(line.lineId)
-      if (v && v !== 'pending') candidates.push({ line, bestTakeId: v })
-    }
-
-    if (candidates.length === 0) {
+    let candidates
+    try {
+      const cloudTakes = await listTakes(lessonNo)
+      candidates = getCloudContinuousPlaybackCandidates(sortedLines, cloudTakes, lessonNo)
+      setBestTakes(candidatesToBestTakes(candidates))
+      setCloudBestTakeCount(candidates.length)
+      const readyStatus = getContinuousPlaybackReadyStatus(total, candidates.length)
+      setContinuousPlaybackReadyStatus(readyStatus)
+      if (readyStatus !== 'ready') {
+        setContinuousPlayback({ status: 'idle', currentIndex: 0, totalLines: 0, failedCount: 0 })
+        showNotice('完整背诵还在准备中，请稍后再试')
+        return
+      }
+    } catch {
+      setContinuousPlaybackReadyStatus('error')
       setContinuousPlayback({ status: 'idle', currentIndex: 0, totalLines: 0, failedCount: 0 })
+      showNotice('完整背诵还在准备中，请稍后再试')
       return
     }
 
@@ -1358,8 +1401,10 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     const queue = items.filter(i => i.status === 'ready')
     playbackQueueRef.current = queue
 
-    if (queue.length === 0) {
+    if (queue.length !== candidates.length) {
+      playbackQueueRef.current = []
       setContinuousPlayback({ status: 'idle', currentIndex: 0, totalLines: 0, failedCount: initialFailedCount })
+      showNotice('完整背诵录音加载失败，请稍后重试')
       return
     }
 
@@ -1411,7 +1456,7 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
         showNotice(getPlaybackErrorMessage(err, '完整背诵播放失败'))
       },
     })
-  }, [lesson, bestTakes, showNotice, stopTtsPlayback, stopContinuousPlayback, stopOriginalPlayback])
+  }, [lesson, lessonNo, showNotice, stopTtsPlayback, stopContinuousPlayback, stopOriginalPlayback])
 
   const togglePauseContinuousPlayback = useCallback(async () => {
     if (!playbackAudioRef.current) return
@@ -1899,10 +1944,16 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
                       <span>🔊 试听全文音频</span>
                       <span style={{ fontSize: 11, opacity: 0.8 }}>{ttsButtonSubtitle}</span>
                     </button>
-                    <button type="button" data-testid="recitation-modal-continuous-play-button" onClick={hasBestTakeCount === totalLessonLines ? handleStartContinuousPlayback : () => showNotice('完成本课全部句子后可试听完整背诵')} style={{ flex: '1 1 calc(50% - 8px)', minWidth: 100, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1, background: hasBestTakeCount === totalLessonLines ? 'rgba(255,255,255,0.2)' : 'rgba(255,255,255,0.08)', backdropFilter: 'blur(4px)', border: 'none', borderRadius: 12, padding: '8px 4px', cursor: hasBestTakeCount === totalLessonLines ? 'pointer' : 'default', color: hasBestTakeCount === totalLessonLines ? '#fff' : 'rgba(255,255,255,0.5)', fontWeight: 700, fontSize: 14, textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
+                    <button type="button" data-testid="recitation-modal-continuous-play-button" disabled={continuousPlaybackReadyStatus !== 'ready'} onClick={continuousPlaybackReadyStatus === 'ready' ? handleStartContinuousPlayback : undefined} style={{ flex: '1 1 calc(50% - 8px)', minWidth: 100, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1, background: continuousPlaybackReadyStatus === 'ready' ? 'rgba(255,255,255,0.2)' : 'rgba(255,255,255,0.08)', backdropFilter: 'blur(4px)', border: 'none', borderRadius: 12, padding: '8px 4px', cursor: continuousPlaybackReadyStatus === 'ready' ? 'pointer' : 'default', color: continuousPlaybackReadyStatus === 'ready' ? '#fff' : 'rgba(255,255,255,0.5)', fontWeight: 700, fontSize: 14, textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
                       <span>🎤 试听完整背诵</span>
                       <span style={{ fontSize: 11, opacity: 0.8 }}>
-                        {hasBestTakeCount === totalLessonLines ? `已完成 ${totalLessonLines}/${totalLessonLines}` : `我的背诵 (${hasBestTakeCount}/${totalLessonLines})`}
+                        {continuousPlaybackReadyStatus === 'loading'
+                          ? '准备录音中...'
+                          : continuousPlaybackReadyStatus === 'ready'
+                            ? `已完成 ${totalLessonLines}/${totalLessonLines}`
+                            : continuousPlaybackReadyStatus === 'error'
+                              ? '录音准备失败，请刷新重试'
+                              : `准备中 ${cloudBestTakeCount}/${totalLessonLines}，请稍后再试`}
                       </span>
                     </button>
                     {originalAudioLesson && !originalAudioLesson.needsReview && originalAudioLesson.url ? (

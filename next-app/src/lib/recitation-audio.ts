@@ -1,3 +1,5 @@
+import type { RecordingTakeDTO, RecitationLine } from '@/types/recitation'
+
 export function getAudioExtension(mimeType: string | null | undefined): 'm4a' | 'webm' {
   const normalized = (mimeType || '').toLowerCase()
   if (normalized.includes('mp4') || normalized.includes('mpeg') || normalized.includes('aac')) return 'm4a'
@@ -22,6 +24,51 @@ export function getPlaybackErrorMessage(error: unknown, prefix = '播放失败')
   if (name === 'NotSupportedError') return `${prefix}，请重新点一次播放（NotSupportedError）`
   if (name === 'AbortError') return `${prefix}，请重新点一次播放（AbortError）`
   return name ? `${prefix}，请重新点一次播放（${name}）` : `${prefix}，请重新点一次播放`
+}
+
+export type ContinuousPlaybackReadyStatus = 'loading' | 'ready' | 'incomplete' | 'error'
+
+export interface ContinuousPlaybackCandidate {
+  line: RecitationLine
+  bestTakeId: string
+}
+
+export function getCloudContinuousPlaybackCandidates(
+  lines: RecitationLine[],
+  takes: RecordingTakeDTO[],
+  lessonNo: number,
+): ContinuousPlaybackCandidate[] {
+  const bestTakeByLineNo = new Map<number, string>()
+  for (const take of takes) {
+    if (
+      take.lessonNo === lessonNo
+      && take.uploadStatus === 'uploaded'
+      && take.isBest
+      && take.id
+    ) {
+      bestTakeByLineNo.set(take.lineNo, take.id)
+    }
+  }
+
+  return [...lines]
+    .sort((a, b) => a.order - b.order)
+    .flatMap(line => {
+      const bestTakeId = bestTakeByLineNo.get(line.order)
+      return bestTakeId ? [{ line, bestTakeId }] : []
+    })
+}
+
+export function getContinuousPlaybackReadyStatus(
+  totalLines: number,
+  candidateCount: number,
+): ContinuousPlaybackReadyStatus {
+  return totalLines > 0 && candidateCount === totalLines ? 'ready' : 'incomplete'
+}
+
+export function candidatesToBestTakes(
+  candidates: ContinuousPlaybackCandidate[],
+): Map<string, string> {
+  return new Map(candidates.map(candidate => [candidate.line.lineId, candidate.bestTakeId]))
 }
 
 export interface ContinuousPlaybackAudio {
