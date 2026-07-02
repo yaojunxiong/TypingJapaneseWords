@@ -7,6 +7,7 @@
     "dev:local-recitation": "LOCAL_RECITATION_TOOL=1 next dev --port 3003",
     "video-worker": "node --env-file=.env.local --import=tsx/esm scripts/recitation-video-worker.ts",
     "video-worker:check": "node --env-file=.env.local --import=tsx/esm scripts/recitation-video-worker-check.ts",
+    "publish-original-audio-videos": "tsx --env-file=.env.local scripts/publish-original-audio-videos.ts",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

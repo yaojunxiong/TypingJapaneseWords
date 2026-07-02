@@ -6,7 +6,7 @@ import MinnaTopStatsClient from '@/components/minna-top-stats-client'
 import UserAuthEntry from '@/components/user-auth-entry'
 import { tr, type Lang } from '@/lib/i18n'
 
-export type StudyNavKey = 'home' | 'login' | 'me' | 'toolbox' | 'lessons' | 'messages' | 'favorites' | 'chat' | 'settings'
+export type StudyNavKey = 'home' | 'login' | 'me' | 'toolbox' | 'lessons' | 'messages' | 'favorites' | 'videos' | 'chat' | 'settings'
 
 type NavItem = { key: StudyNavKey; label: string; href: string; icon: string }
 
@@ -40,7 +40,7 @@ function getPrimaryItems(lang: Lang): NavItem[] {
     { key: 'home', label: tr(lang, '首页', 'Home'), href: '/', icon: '🏠' },
     { key: 'lessons', label: tr(lang, '课程', 'Lessons'), href: '/lessons', icon: '🌳' },
     { key: 'toolbox', label: tr(lang, '学习', 'Learn'), href: '/toolbox', icon: '🧰' },
-    { key: 'favorites', label: tr(lang, '收藏', 'Saved'), href: '/favorites', icon: '💗' },
+    { key: 'videos', label: tr(lang, '视频', 'Videos'), href: '/videos', icon: '🎬' },
     { key: 'messages', label: tr(lang, '消息', 'Inbox'), href: '/messages', icon: '🐟' },
   ]
 }

@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 
 type Props = {
   lang: 'zh' | 'en'
-  active?: 'home' | 'login' | 'me' | 'toolbox' | 'lessons' | 'messages' | 'favorites' | 'chat' | 'settings'
+  active?: 'home' | 'login' | 'me' | 'toolbox' | 'lessons' | 'messages' | 'favorites' | 'videos' | 'chat' | 'settings'
 }
 
 type TopStats = {
@@ -52,6 +52,7 @@ export default function MinnaTopStatsClient({ lang, active = 'home' }: Props) {
     active === 'lessons' ? t(lang, '课程', 'Lessons') :
     active === 'toolbox' ? t(lang, '学习', 'Learn') :
     active === 'favorites' ? t(lang, '收藏', 'Saved') :
+    active === 'videos' ? t(lang, '视频', 'Videos') :
     active === 'messages' ? t(lang, '消息', 'Inbox') :
     active === 'settings' ? t(lang, '设置', 'Settings') :
     active === 'login' ? t(lang, '登录', 'Sign in') :
