@@ -52,6 +52,11 @@ export async function POST(request: NextRequest) {
   const body = await request.json()
   const { user_id, lesson_no, best_selection_id, title, template_type, line_plan, background_type, background_url } = body
 
+  const normalizedUserId =
+    typeof user_id === 'string' && user_id.trim().length > 0
+      ? user_id.trim()
+      : null
+
   if (!lesson_no) {
     return NextResponse.json({ error: '缺少 lesson_no' }, { status: 400 })
   }
@@ -120,7 +125,7 @@ export async function POST(request: NextRequest) {
   const { data, error } = await supabase
     .from('admin_recitation_video_projects')
     .insert({
-      user_id,
+      user_id: normalizedUserId,
       lesson_no,
       best_selection_id: best_selection_id || null,
       title: title || null,

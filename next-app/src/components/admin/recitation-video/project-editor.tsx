@@ -824,7 +824,7 @@ export function ProjectEditor({
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          user_id: selectedUserId,
+          user_id: selectedUserId || null,
           lesson_no: lesson.lessonNo,
           best_selection_id: bestSelectionId || null,
           title:
