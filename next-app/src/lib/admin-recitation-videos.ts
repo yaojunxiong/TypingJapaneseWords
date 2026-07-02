@@ -34,11 +34,16 @@ export type AggregatedResult = {
 
 export type LessonRecordingUser = {
   userId: string
+  email: string | null
+  fullName: string | null
+  name: string | null
   displayName: string
+  avatarUrl: string | null
   recordedLineCount: number
   totalTakeCount: number
   onlineBestCount: number
   adminBestCount: number
+  latestRecordingAt: string
 }
 
 export type BestSelection = {
@@ -58,11 +63,30 @@ export type LinePlanItem = {
   textJa: string
   textZh: string
   speaker: string | null
-  audioSource: 'user_recording' | 'system_tts' | 'silence' | 'skip'
-  audioRef: 'latest' | 'online_best' | 'admin_best' | 'take_id' | 'tts' | 'silence' | 'skip'
+  audioSource:
+    | 'user_recording'
+    | 'system_tts'
+    | 'original_audio'
+    | 'silence'
+    | 'skip'
+  audioUserId: string | null
+  audioUserName: string | null
+  audioRef:
+    | 'latest'
+    | 'online_best'
+    | 'admin_best'
+    | 'take_id'
+    | 'tts'
+    | 'original'
+    | 'silence'
+    | 'skip'
   takeId: string | null
   takeNo: number | null
   ttsAudioUrl: string | null
+  originalAudioUrl: string | null
+  originalStartTime: number | null
+  originalEndTime: number | null
+  originalStatus: 'ready' | 'uncalibrated' | 'missing'
   backgroundMode: 'inherit' | 'custom' | 'gradient'
   backgroundUrl: string | null
   duration: number | null
@@ -105,6 +129,10 @@ export type LessonLine = {
   ja: string
   zh: string
   ttsAudioUrl: string
+  originalAudioUrl: string
+  originalStartTime: number | null
+  originalEndTime: number | null
+  originalStatus: 'ready' | 'uncalibrated' | 'missing'
 }
 
 export type LessonScript = {
@@ -130,14 +158,35 @@ export async function loadLessonScript(
   try {
     const raw = await fs.readFile(filePath, 'utf-8')
     const data = JSON.parse(raw)
-    const lines = (data.lines || []).map((l: Record<string, unknown>) => ({
-      lineId: String(l.lineId || ''),
-      order: Number(l.order || 0),
-      speaker: String(l.speaker || ''),
-      ja: String(l.ja || ''),
-      zh: String(l.zh || ''),
-      ttsAudioUrl: String(l.ttsAudioUrl || ''),
-    }))
+    const lines = (data.lines || []).map((l: Record<string, unknown>) => {
+      const originalAudioUrl = String(l.originalAudioUrl || '')
+      const originalStartTime =
+        l.originalStartTime == null ? null : Number(l.originalStartTime)
+      const originalEndTime =
+        l.originalEndTime == null ? null : Number(l.originalEndTime)
+      const hasCalibratedRange =
+        originalAudioUrl.length > 0 &&
+        Number.isFinite(originalStartTime) &&
+        Number.isFinite(originalEndTime) &&
+        Number(originalEndTime) > Number(originalStartTime)
+      const originalStatus: LessonLine['originalStatus'] = hasCalibratedRange
+        ? 'ready'
+        : originalAudioUrl || (lessonNo >= 6 && lessonNo <= 10)
+          ? 'uncalibrated'
+          : 'missing'
+      return {
+        lineId: String(l.lineId || ''),
+        order: Number(l.order || 0),
+        speaker: String(l.speaker || ''),
+        ja: String(l.ja || ''),
+        zh: String(l.zh || ''),
+        ttsAudioUrl: String(l.ttsAudioUrl || ''),
+        originalAudioUrl,
+        originalStartTime,
+        originalEndTime,
+        originalStatus,
+      }
+    })
     return {
       lessonNo,
       title: String(data.title || `第${lessonNo}课`),
@@ -169,12 +218,13 @@ export async function getLessonRecordingUsers(
       user_id: string
       line_no: number
       is_best: boolean
+      created_at: string
     }> = []
 
     for (let from = 0; ; from += pageSize) {
       const { data, error } = await supabase
         .from('recording_takes')
-        .select('id, user_id, line_no, is_best')
+        .select('id, user_id, line_no, is_best, created_at')
         .eq('lesson_no', lessonNo)
         .is('deleted_at', null)
         .order('id', { ascending: true })
@@ -191,12 +241,17 @@ export async function getLessonRecordingUsers(
 
     const [
       { data: profiles, error: profilesError },
+      { data: userRoles, error: userRolesError },
       { data: bestSelections, error: bestSelectionsError },
     ] = await Promise.all([
       supabase
         .from('profiles')
-        .select('id, display_name')
+        .select('id, email, display_name, avatar_url')
         .in('id', userIds),
+      supabase
+        .from('user_roles')
+        .select('user_id, email')
+        .in('user_id', userIds),
       supabase
         .from('admin_recitation_best_selections')
         .select('user_id, selected_take_ids')
@@ -204,15 +259,38 @@ export async function getLessonRecordingUsers(
         .in('user_id', userIds),
     ])
     if (profilesError) return { data: [], error: profilesError.message }
+    if (userRolesError) return { data: [], error: userRolesError.message }
     if (bestSelectionsError) {
       return { data: [], error: bestSelectionsError.message }
     }
 
-    const displayNames = new Map(
-      (profiles || []).map((profile) => [
-        profile.id,
-        profile.display_name || profile.id.slice(0, 8),
-      ])
+    const profileMap = new Map(
+      (profiles || []).map((profile) => [profile.id, profile])
+    )
+    const roleEmails = new Map(
+      (userRoles || []).map((role) => [role.user_id, role.email])
+    )
+    const activityEmailResults = await Promise.all(
+      userIds.map(async (userId) => {
+        const { data, error } = await supabase
+          .from('visitor_activity_events')
+          .select('email')
+          .eq('user_id', userId)
+          .not('email', 'is', null)
+          .order('created_at', { ascending: false })
+          .limit(1)
+          .maybeSingle()
+        return { userId, email: data?.email || null, error }
+      })
+    )
+    const activityEmailError = activityEmailResults.find(
+      (result) => result.error
+    )?.error
+    if (activityEmailError) {
+      return { data: [], error: activityEmailError.message }
+    }
+    const activityEmails = new Map(
+      activityEmailResults.map((result) => [result.userId, result.email])
     )
     const adminBestIds = new Map<string, Set<string>>()
     for (const selection of bestSelections || []) {
@@ -232,6 +310,13 @@ export async function getLessonRecordingUsers(
     const maxRecordedLines = Math.max(0, lessonLineCount)
     const users = userIds.map((userId) => {
       const userTakes = takesByUser.get(userId) || []
+      const profile = profileMap.get(userId)
+      const email =
+        profile?.email ||
+        roleEmails.get(userId) ||
+        activityEmails.get(userId) ||
+        null
+      const knownName = profile?.display_name || null
       const recordedLines = new Set(
         userTakes
           .map((take) => take.line_no)
@@ -240,11 +325,23 @@ export async function getLessonRecordingUsers(
       const selectedIds = adminBestIds.get(userId) || new Set<string>()
       return {
         userId,
-        displayName: displayNames.get(userId) || userId.slice(0, 8),
+        email,
+        fullName: knownName,
+        name: knownName,
+        displayName:
+          knownName || email || `用户 ${userId.slice(0, 8)}`,
+        avatarUrl: profile?.avatar_url || null,
         recordedLineCount: Math.min(recordedLines.size, maxRecordedLines),
         totalTakeCount: userTakes.length,
         onlineBestCount: userTakes.filter((take) => take.is_best).length,
         adminBestCount: userTakes.filter((take) => selectedIds.has(take.id)).length,
+        latestRecordingAt: userTakes.reduce(
+          (latest, take) =>
+            Date.parse(take.created_at) > Date.parse(latest)
+              ? take.created_at
+              : latest,
+          userTakes[0]?.created_at || ''
+        ),
       }
     })
 
@@ -390,7 +487,8 @@ export function buildLinePlanFromTemplate(
   templateType: string,
   lessonLines: LessonLine[],
   takes: RecordingTake[],
-  bestTakeIds?: string[]
+  bestTakeIds?: string[],
+  defaultAudioUserName?: string
 ): LinePlanItem[] {
   const buildItem = (
     ll: LessonLine,
@@ -403,10 +501,18 @@ export function buildLinePlanFromTemplate(
     textZh: ll.zh,
     speaker: ll.speaker || null,
     audioSource: take ? 'user_recording' : fallback,
+    audioUserId: take?.user_id || null,
+    audioUserName: take
+      ? defaultAudioUserName || take.user_id.slice(0, 8)
+      : null,
     audioRef: take ? selectedRef : fallback === 'system_tts' ? 'tts' : 'skip',
     takeId: take?.id || null,
     takeNo: take?.take_no || null,
     ttsAudioUrl: fallback === 'system_tts' && !take ? ll.ttsAudioUrl : null,
+    originalAudioUrl: ll.originalAudioUrl || null,
+    originalStartTime: ll.originalStartTime,
+    originalEndTime: ll.originalEndTime,
+    originalStatus: ll.originalStatus,
     backgroundMode: 'inherit',
     backgroundUrl: null,
     duration: null,

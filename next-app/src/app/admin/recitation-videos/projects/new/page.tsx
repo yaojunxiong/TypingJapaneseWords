@@ -83,14 +83,15 @@ export default async function NewProjectPage({
     const detail = await getLessonDetail(cookieStore, selectedUserId, lessonNo)
     initialTakes = detail.takes
     initialBestTakeIds = detail.bestSelection?.selected_take_ids || []
+    const user = userList.find((item) => item.userId === selectedUserId)
+    if (user) displayName = user.displayName
     initialLinePlan = buildLinePlanFromTemplate(
       'all-user-recordings',
       lesson.lines,
       initialTakes,
-      initialBestTakeIds
+      initialBestTakeIds,
+      displayName || selectedUserId.slice(0, 8)
     )
-    const user = userList.find((item) => item.userId === selectedUserId)
-    if (user) displayName = user.displayName
   }
 
   return (

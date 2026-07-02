@@ -8,6 +8,7 @@ export const dynamic = 'force-dynamic'
 const AUDIO_SOURCES = new Set([
   'user_recording',
   'system_tts',
+  'original_audio',
   'silence',
   'skip',
 ])
@@ -17,6 +18,7 @@ const AUDIO_REFS = new Set([
   'admin_best',
   'take_id',
   'tts',
+  'original',
   'silence',
   'skip',
 ])
@@ -63,10 +65,24 @@ export async function POST(request: NextRequest) {
     textZh: String(line.textZh || ''),
     speaker: line.speaker ? String(line.speaker) : null,
     audioSource: String(line.audioSource || ''),
+    audioUserId: line.audioUserId ? String(line.audioUserId) : null,
+    audioUserName: line.audioUserName ? String(line.audioUserName) : null,
     audioRef: String(line.audioRef || ''),
     takeId: line.takeId ? String(line.takeId) : null,
     takeNo: line.takeNo == null ? null : Number(line.takeNo),
     ttsAudioUrl: line.ttsAudioUrl ? String(line.ttsAudioUrl) : null,
+    originalAudioUrl: line.originalAudioUrl
+      ? String(line.originalAudioUrl)
+      : null,
+    originalStartTime:
+      line.originalStartTime == null ? null : Number(line.originalStartTime),
+    originalEndTime:
+      line.originalEndTime == null ? null : Number(line.originalEndTime),
+    originalStatus: ['ready', 'uncalibrated', 'missing'].includes(
+      String(line.originalStatus)
+    )
+      ? String(line.originalStatus)
+      : 'missing',
     backgroundMode: String(line.backgroundMode || 'inherit'),
     backgroundUrl: line.backgroundUrl ? String(line.backgroundUrl) : null,
     duration: line.duration == null ? null : Number(line.duration),
@@ -77,6 +93,7 @@ export async function POST(request: NextRequest) {
       lineNo: number
       textJa: string
       audioSource: string
+      audioUserId: string | null
       audioRef: string
       takeId: string | null
       backgroundMode: string
@@ -87,7 +104,8 @@ export async function POST(request: NextRequest) {
       !AUDIO_SOURCES.has(line.audioSource) ||
       !AUDIO_REFS.has(line.audioRef) ||
       !BACKGROUND_MODES.has(line.backgroundMode) ||
-      (line.audioSource === 'user_recording' && !line.takeId)
+      (line.audioSource === 'user_recording' &&
+        (!line.audioUserId || !line.takeId))
   )
   if (invalidLine) {
     return NextResponse.json(
