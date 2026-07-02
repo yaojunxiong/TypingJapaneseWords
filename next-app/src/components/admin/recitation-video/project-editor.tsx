@@ -746,6 +746,20 @@ export function ProjectEditor({
       setError(`第 ${invalidRecording.lineNo} 句尚未选择录音用户或具体录音`)
       return
     }
+    const invalidOriginalAudio = linePlan.find(
+      (line) =>
+        line.audioSource === 'original_audio' && line.originalStatus !== 'ready'
+    )
+    if (invalidOriginalAudio) {
+      setError(
+        `第 ${invalidOriginalAudio.lineNo} 句教材原声${
+          invalidOriginalAudio.originalStatus === 'uncalibrated'
+            ? '时间轴未校准'
+            : '缺失'
+        }，不能用于生成正式视频`
+      )
+      return
+    }
     setSaving(true)
     setError(null)
     try {
@@ -1149,10 +1163,10 @@ export function ProjectEditor({
                           disabled={line.originalStatus !== 'ready'}
                         >
                           {line.originalStatus === 'ready'
-                            ? '原音频 · 已校准'
+                            ? '教材原声 · 已校准'
                             : line.originalStatus === 'uncalibrated'
-                              ? '原音频 · 未校准'
-                              : '原音频 · 缺失'}
+                              ? '教材原声 · 时间轴未校准'
+                              : '教材原声 · 缺失'}
                         </option>
                         <option value="silence">静音</option>
                         <option value="skip">跳过</option>
@@ -1174,7 +1188,7 @@ export function ProjectEditor({
                           {line.audioSource === 'system_tts'
                             ? '系统练习音'
                             : line.audioSource === 'original_audio'
-                              ? '教材原音'
+                              ? '教材原声'
                               : '无需选择用户'}
                         </span>
                       )}
@@ -1216,14 +1230,14 @@ export function ProjectEditor({
                             }}
                           >
                             {line.originalStatus === 'ready'
-                              ? '原音频 · 已校准'
+                              ? '教材原声已校准'
                               : line.originalStatus === 'uncalibrated'
-                                ? '原音频时间轴未校准，暂不建议生成'
-                                : '本句缺少原音频'}
+                                ? '时间轴未校准'
+                                : '教材原声缺失'}
                           </span>
                           {line.originalStatus === 'ready' && (
                             <div className="small" style={{ marginTop: 4 }}>
-                              {line.originalStartTime?.toFixed(2)}s –{' '}
+                              原声片段 / {line.originalStartTime?.toFixed(2)}s –{' '}
                               {line.originalEndTime?.toFixed(2)}s
                             </div>
                           )}

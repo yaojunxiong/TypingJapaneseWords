@@ -96,6 +96,7 @@ export async function POST(request: NextRequest) {
       audioUserId: string | null
       audioRef: string
       takeId: string | null
+      originalStatus: string
       backgroundMode: string
     }) =>
       !Number.isInteger(line.lineNo) ||
@@ -105,7 +106,9 @@ export async function POST(request: NextRequest) {
       !AUDIO_REFS.has(line.audioRef) ||
       !BACKGROUND_MODES.has(line.backgroundMode) ||
       (line.audioSource === 'user_recording' &&
-        (!line.audioUserId || !line.takeId))
+        (!line.audioUserId || !line.takeId)) ||
+      (line.audioSource === 'original_audio' &&
+        line.originalStatus !== 'ready')
   )
   if (invalidLine) {
     return NextResponse.json(

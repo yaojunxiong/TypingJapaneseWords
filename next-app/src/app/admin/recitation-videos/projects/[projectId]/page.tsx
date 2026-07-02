@@ -55,7 +55,7 @@ type OutputManifest = {
 function audioSourceLabel(source?: string) {
   if (source === 'user_recording') return '用户录音'
   if (source === 'system_tts' || source === 'tts') return '系统练习音'
-  if (source === 'original_audio') return '原音频'
+  if (source === 'original_audio') return '教材原声'
   if (source === 'silence') return '静音'
   if (source === 'skip') return '跳过'
   return source || '未设置'
