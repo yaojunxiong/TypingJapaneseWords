@@ -33,7 +33,8 @@ export function GenerateButton({ projectId, status }: { projectId: string; statu
     }
   }
 
-  const isDisabled = creating || status === 'queued' || status === 'generating' || status === 'generated'
+  const isCompleted = status === 'generated' || status === 'completed'
+  const isDisabled = creating || status === 'queued' || status === 'generating'
 
   return (
     <div>
@@ -44,11 +45,12 @@ export function GenerateButton({ projectId, status }: { projectId: string; statu
           className="btn"
           style={{
             fontSize: 13, padding: '7px 16px',
-            background: isDisabled ? '#94a3b8' : '#1d4ed8',
-            color: '#fff', border: 'none',
+            background: isDisabled || isCompleted ? '#e2e8f0' : '#1d4ed8',
+            color: isDisabled || isCompleted ? '#475569' : '#fff',
+            border: isCompleted ? '1px solid #cbd5e1' : 'none',
           }}
         >
-          {creating ? '创建中...' : status === 'generated' ? '重新创建任务' : '创建生成任务'}
+          {creating ? '创建中...' : isCompleted ? '重新创建任务' : '创建生成任务'}
         </button>
         {error && (
           <span style={{ color: '#dc2626', fontSize: 12, maxWidth: 300 }}>
