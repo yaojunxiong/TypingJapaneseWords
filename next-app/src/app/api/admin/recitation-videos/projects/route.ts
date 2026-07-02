@@ -52,8 +52,8 @@ export async function POST(request: NextRequest) {
   const body = await request.json()
   const { user_id, lesson_no, best_selection_id, title, template_type, line_plan, background_type, background_url } = body
 
-  if (!user_id || !lesson_no) {
-    return NextResponse.json({ error: '缺少 user_id 或 lesson_no' }, { status: 400 })
+  if (!lesson_no) {
+    return NextResponse.json({ error: '缺少 lesson_no' }, { status: 400 })
   }
   if (!Array.isArray(line_plan) || line_plan.length === 0) {
     return NextResponse.json({ error: 'line_plan 必须包含有效台词' }, { status: 400 })

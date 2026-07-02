@@ -783,8 +783,8 @@ export function ProjectEditor({
   }
 
   async function handleSave(): Promise<void> {
-    if (!selectedUserId || !lesson) {
-      setError('请先选择课程和用户')
+    if (!lesson) {
+      setError('请先加载课程脚本')
       return
     }
     if (
@@ -829,7 +829,9 @@ export function ProjectEditor({
           best_selection_id: bestSelectionId || null,
           title:
             title ||
-            `第${lesson.lessonNo}课 · ${currentUserDisplay} 会话成果`,
+            (selectedUserId
+              ? `第${lesson.lessonNo}课 · ${currentUserDisplay} 会话成果`
+              : `第${lesson.lessonNo}课 · 会话视频项目`),
           template_type: templateType,
           line_plan: linePlan,
           background_type: backgroundUrl ? 'custom' : 'gradient',
@@ -894,82 +896,115 @@ export function ProjectEditor({
       </section>
 
       <section className="card" style={{ marginBottom: 12 }}>
-        <h2 style={{ margin: '0 0 6px', fontSize: 15 }}>2. 项目展示用户</h2>
+        <h2 style={{ margin: '0 0 6px', fontSize: 15 }}>2. 项目展示用户（可选）</h2>
         <p className="small" style={{ margin: '0 0 10px', color: '#64748b' }}>
-          用于项目标题和默认录音筛选；逐句音频仍可选择其他用户录音。
+          用于项目标题和默认录音筛选；不影响逐句音频来源。
         </p>
         <div style={{ position: 'relative', maxWidth: 620 }}>
-          <input
-            role="combobox"
-            aria-expanded={userPickerOpen}
-            aria-controls="recitation-video-user-options"
-            aria-autocomplete="list"
-            value={userSearch}
-            onChange={(event) => {
-              setUserSearch(event.target.value)
-              setUserPickerOpen(true)
-            }}
-            onFocus={() => setUserPickerOpen(true)}
-            onKeyDown={(event) => {
-              if (event.key === 'Escape') setUserPickerOpen(false)
-            }}
-            disabled={!lesson || loadingTakes}
-            placeholder="搜索用户姓名、邮箱或 user_id"
-            style={{ ...inputStyle, width: '100%' }}
-          />
-
-          {currentUser && !userPickerOpen && (
+          {!selectedUserId ? (
             <div
+              onClick={() => {
+                setUserSearch('')
+                setUserPickerOpen(true)
+              }}
               style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: 10,
-                marginTop: 8,
-                padding: 10,
-                border: '1px solid #bfdbfe',
-                borderRadius: 10,
-                background: '#eff6ff',
+                ...inputStyle,
+                cursor: 'pointer',
+                color: '#64748b',
               }}
             >
-              {currentUser.avatarUrl ? (
-                <img
-                  src={currentUser.avatarUrl}
-                  alt=""
-                  width={36}
-                  height={36}
-                  style={{ borderRadius: '50%', objectFit: 'cover' }}
-                />
-              ) : (
-                <span
-                  aria-hidden="true"
+              {lesson ? '点击选择展示用户（可选）' : '请先加载课程脚本'}
+            </div>
+          ) : (
+            <div>
+              <input
+                role="combobox"
+                aria-expanded={userPickerOpen}
+                aria-controls="recitation-video-user-options"
+                aria-autocomplete="list"
+                value={userSearch}
+                onChange={(event) => {
+                  setUserSearch(event.target.value)
+                  setUserPickerOpen(true)
+                }}
+                onFocus={() => setUserPickerOpen(true)}
+                onKeyDown={(event) => {
+                  if (event.key === 'Escape') setUserPickerOpen(false)
+                }}
+                disabled={!lesson || loadingTakes}
+                placeholder="搜索用户姓名、邮箱或 user_id"
+                style={{ ...inputStyle, width: '100%' }}
+              />
+
+              {currentUser && !userPickerOpen && (
+                <div
                   style={{
-                    display: 'grid',
-                    placeItems: 'center',
-                    width: 36,
-                    height: 36,
-                    borderRadius: '50%',
-                    background: '#dbeafe',
-                    color: '#1d4ed8',
-                    fontWeight: 700,
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 10,
+                    marginTop: 8,
+                    padding: 10,
+                    border: '1px solid #bfdbfe',
+                    borderRadius: 10,
+                    background: '#eff6ff',
                   }}
                 >
-                  {currentUser.displayName.slice(0, 1).toUpperCase()}
-                </span>
-              )}
-              <div style={{ minWidth: 0 }}>
-                <div style={{ fontWeight: 700 }}>{currentUser.displayName}</div>
-                <div className="small" style={{ color: '#64748b' }}>
-                  {[
-                    currentUser.email,
-                    currentUser.userId.slice(0, 8),
-                    `${currentUser.recordedLineCount}/${lessonLineCount}句`,
-                    `${currentUser.totalTakeCount}条录音`,
-                    `Best ${currentUser.onlineBestCount}`,
-                  ]
-                    .filter(Boolean)
-                    .join(' · ')}
+                  {currentUser.avatarUrl ? (
+                    <img
+                      src={currentUser.avatarUrl}
+                      alt=""
+                      width={36}
+                      height={36}
+                      style={{ borderRadius: '50%', objectFit: 'cover' }}
+                    />
+                  ) : (
+                    <span
+                      aria-hidden="true"
+                      style={{
+                        display: 'grid',
+                        placeItems: 'center',
+                        width: 36,
+                        height: 36,
+                        borderRadius: '50%',
+                        background: '#dbeafe',
+                        color: '#1d4ed8',
+                        fontWeight: 700,
+                      }}
+                    >
+                      {currentUser.displayName.slice(0, 1).toUpperCase()}
+                    </span>
+                  )}
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div style={{ fontWeight: 700 }}>{currentUser.displayName}</div>
+                    <div className="small" style={{ color: '#64748b' }}>
+                      {[
+                        currentUser.email,
+                        currentUser.userId.slice(0, 8),
+                        `${currentUser.recordedLineCount}/${lessonLineCount}句`,
+                        `${currentUser.totalTakeCount}条录音`,
+                        `Best ${currentUser.onlineBestCount}`,
+                      ]
+                        .filter(Boolean)
+                        .join(' · ')}
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    className="small"
+                    onClick={() => void handleUserChange('')}
+                    style={{
+                      border: 0,
+                      background: 'none',
+                      color: '#dc2626',
+                      cursor: 'pointer',
+                      fontWeight: 600,
+                      padding: '4px 8px',
+                    }}
+                  >
+                    清除
+                  </button>
                 </div>
-              </div>
+              )}
             </div>
           )}
 
@@ -1078,16 +1113,18 @@ export function ProjectEditor({
             </div>
           )}
         </div>
-        <div style={{ display: 'flex', gap: 18, marginTop: 12, flexWrap: 'wrap' }}>
-          <span className="small">
-            已录句数：<b>{recordedLines}/{lessonLineCount}</b>
-          </span>
-          <span className="small">录音条数：<b>{totalTakeCount}</b></span>
-          <span className="small">线上 Best：<b>{onlineBestCount}</b></span>
-          <span className="small">
-            后台最优版：<b>{currentUser?.adminBestCount ?? adminBestTakeIds.length}</b>
-          </span>
-        </div>
+        {selectedUserId && (
+          <div style={{ display: 'flex', gap: 18, marginTop: 12, flexWrap: 'wrap' }}>
+            <span className="small">
+              已录句数：<b>{recordedLines}/{lessonLineCount}</b>
+            </span>
+            <span className="small">录音条数：<b>{totalTakeCount}</b></span>
+            <span className="small">线上 Best：<b>{onlineBestCount}</b></span>
+            <span className="small">
+              后台最优版：<b>{currentUser?.adminBestCount ?? adminBestTakeIds.length}</b>
+            </span>
+          </div>
+        )}
       </section>
 
       <section className="card" style={{ marginBottom: 12 }}>
