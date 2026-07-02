@@ -193,7 +193,7 @@ export default function RecitationVideosClient({ lang }: { lang: Lang }) {
       ref={feedRef}
       aria-label={t(lang, '会话视频滑动列表', 'Recitation video feed')}
       style={{
-        height: 'calc(100dvh - 68px)',
+        height: '100dvh',
         overflowY: 'auto',
         overscrollBehaviorY: 'contain',
         scrollSnapType: 'y mandatory',
@@ -211,13 +211,13 @@ export default function RecitationVideosClient({ lang }: { lang: Lang }) {
             data-video-id={video.id}
             data-lesson-no={video.lessonNo}
             style={{
-              height: 'calc(100dvh - 68px)',
-              minHeight: 560,
+              height: '100dvh',
+              minHeight: 'calc(100dvh - 96px)',
               scrollSnapAlign: 'start',
               scrollSnapStop: 'always',
-              padding: '12px 12px calc(106px + env(safe-area-inset-bottom, 0px))',
-              display: 'grid',
-              placeItems: 'center',
+              padding: '10px 12px calc(106px + env(safe-area-inset-bottom, 0px))',
+              display: 'flex',
+              flexDirection: 'column',
             }}
           >
             <div
@@ -226,25 +226,24 @@ export default function RecitationVideosClient({ lang }: { lang: Lang }) {
                 maxWidth: 430,
                 height: '100%',
                 minHeight: 0,
-                display: 'grid',
-                gridTemplateRows: 'auto minmax(0, 1fr) auto',
-                gap: 10,
-                padding: 12,
-                border: isActive ? '2px solid #38bdf8' : '1px solid #dbeafe',
-                borderRadius: 22,
-                background: '#fff',
-                boxShadow: isActive
-                  ? '0 18px 44px rgba(2, 132, 199, 0.16)'
-                  : '0 12px 30px rgba(15, 23, 42, 0.08)',
+                margin: '0 auto',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 8,
               }}
             >
-              <header>
+              <header
+                style={{
+                  flex: '0 0 auto',
+                  padding: '2px 4px 0',
+                }}
+              >
                 <div
                   style={{
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'space-between',
-                    gap: 10,
+                    flexWrap: 'wrap',
+                    gap: 6,
                   }}
                 >
                   <span
@@ -259,29 +258,52 @@ export default function RecitationVideosClient({ lang }: { lang: Lang }) {
                   >
                     {t(lang, `第 ${video.lessonNo} 课`, `Lesson ${video.lessonNo}`)}
                   </span>
-                  <span className="small" style={{ fontSize: 12, fontWeight: 800 }}>
-                    🎧 {video.audioType}
+                  <span
+                    style={{
+                      padding: '5px 9px',
+                      borderRadius: 999,
+                      background: '#eff6ff',
+                      color: '#1d4ed8',
+                      fontSize: 12,
+                      fontWeight: 900,
+                    }}
+                  >
+                    {video.audioType}
+                  </span>
+                  <span
+                    style={{
+                      padding: '5px 9px',
+                      borderRadius: 999,
+                      background: '#f1f5f9',
+                      color: '#475569',
+                      fontSize: 12,
+                      fontWeight: 900,
+                    }}
+                  >
+                    {t(lang, '会话背诵', 'Conversation recitation')}
                   </span>
                 </div>
-                <h2 style={{ margin: '8px 0 3px', fontSize: 19, lineHeight: 1.3 }}>
-                  {video.title}
-                </h2>
-                <p className="small" style={{ margin: 0, fontSize: 13 }}>
+                <h2 style={{ margin: '6px 0 0', fontSize: 18, lineHeight: 1.25 }}>
                   {t(
                     lang,
-                    '用教材原声先听懂，再跟读背诵',
-                    'Listen with the original audio, then shadow and recite'
+                    `第${video.lessonNo}课 · 教材原声会话视频`,
+                    `Lesson ${video.lessonNo} · Original-audio conversation`
                   )}
-                </p>
+                </h2>
               </header>
 
               <div
                 style={{
+                  flex: '1 1 72%',
                   minHeight: 0,
                   position: 'relative',
                   overflow: 'hidden',
-                  borderRadius: 16,
+                  border: isActive ? '2px solid #38bdf8' : '1px solid #dbeafe',
+                  borderRadius: 18,
                   background: '#f1f5f9',
+                  boxShadow: isActive
+                    ? '0 16px 38px rgba(2, 132, 199, 0.16)'
+                    : '0 10px 26px rgba(15, 23, 42, 0.08)',
                 }}
               >
                 <video
@@ -343,34 +365,95 @@ export default function RecitationVideosClient({ lang }: { lang: Lang }) {
                 )}
               </div>
 
-              <footer>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 9 }}>
+              <footer
+                style={{
+                  flex: '0 0 auto',
+                  padding: '0 4px',
+                }}
+              >
+                <p
+                  className="small"
+                  style={{
+                    margin: '0 0 7px',
+                    fontSize: 12,
+                    lineHeight: 1.35,
+                  }}
+                >
+                  {t(
+                    lang,
+                    '先听懂真实会话，再跟读背诵。',
+                    'Understand the conversation first, then shadow and recite.'
+                  )}
+                </p>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 7 }}>
                   <Link
                     href={`/lessons/${video.lessonNo}`}
-                    className="btn"
                     style={{
+                      minWidth: 0,
+                      padding: '8px 4px',
                       textAlign: 'center',
+                      textDecoration: 'none',
                       background: '#fff',
                       color: '#0369a1',
                       border: '1px solid #7dd3fc',
+                      borderRadius: 12,
                     }}
                   >
-                    {t(lang, '进入课程', 'Open lesson')}
+                    <span style={{ display: 'block', fontSize: 10, opacity: 0.72 }}>
+                      {t(lang, '第一步', 'Step 1')}
+                    </span>
+                    <strong style={{ display: 'block', marginTop: 2, fontSize: 12 }}>
+                      {t(lang, '看懂这一课', 'Understand')}
+                    </strong>
                   </Link>
                   <Link
                     href={`/lessons/${video.lessonNo}/recitation`}
-                    className="btn"
-                    style={{ textAlign: 'center' }}
+                    style={{
+                      minWidth: 0,
+                      padding: '8px 4px',
+                      textAlign: 'center',
+                      textDecoration: 'none',
+                      background: '#0284c7',
+                      color: '#fff',
+                      border: '1px solid #0284c7',
+                      borderRadius: 12,
+                    }}
                   >
-                    {t(lang, '跟读背诵', 'Shadow & recite')}
+                    <span style={{ display: 'block', fontSize: 10, opacity: 0.82 }}>
+                      {t(lang, '第二步', 'Step 2')}
+                    </span>
+                    <strong style={{ display: 'block', marginTop: 2, fontSize: 12 }}>
+                      {t(lang, '跟读背诵', 'Shadow')}
+                    </strong>
+                  </Link>
+                  <Link
+                    href={`/lessons/${video.lessonNo}/recitation?mode=challenge`}
+                    style={{
+                      minWidth: 0,
+                      padding: '8px 4px',
+                      textAlign: 'center',
+                      textDecoration: 'none',
+                      background: '#e0f2fe',
+                      color: '#075985',
+                      border: '1px solid #7dd3fc',
+                      borderRadius: 12,
+                    }}
+                  >
+                    <span style={{ display: 'block', fontSize: 10, opacity: 0.72 }}>
+                      {t(lang, '第三步', 'Step 3')}
+                    </span>
+                    <strong style={{ display: 'block', marginTop: 2, fontSize: 12 }}>
+                      {t(lang, '背诵挑战', 'Challenge')}
+                    </strong>
                   </Link>
                 </div>
                 <p
                   className="small"
                   style={{
-                    margin: '8px 0 0',
+                    margin: '6px 0 0',
                     textAlign: 'center',
                     fontSize: 11,
+                    lineHeight: 1.2,
                   }}
                 >
                   {index < videos.length - 1

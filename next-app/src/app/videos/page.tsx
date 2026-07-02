@@ -11,13 +11,14 @@ export default async function VideosPage() {
     <main
       style={{
         maxWidth: 'none',
+        paddingTop: 0,
         paddingLeft: 0,
         paddingRight: 0,
         paddingBottom: 0,
         overflow: 'hidden',
       }}
     >
-      <MinnaNav active="videos" />
+      <MinnaNav active="videos" showTopBar={false} />
       <header
         style={{
           position: 'absolute',
