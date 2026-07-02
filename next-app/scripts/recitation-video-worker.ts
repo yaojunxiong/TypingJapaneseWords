@@ -31,9 +31,13 @@ type LinePlanItem = {
   lineNo: number
   textJa: string
   textZh: string
-  audioSource: 'user_recording' | 'tts' | 'skip'
+  audioSource: 'user_recording' | 'system_tts' | 'original_audio' | 'silence' | 'skip'
   takeId: string | null
   ttsAudioUrl: string | null
+  originalAudioUrl: string | null
+  originalStartTime: number | null
+  originalEndTime: number | null
+  originalStatus: 'ready' | 'uncalibrated' | 'missing'
 }
 
 type JobRow = {
@@ -52,6 +56,38 @@ type ProjectRow = {
   output_video_url: string | null
   error_message: string | null
 }
+
+type RecordingTakeRow = {
+  id: string
+  user_id: string
+  lesson_no: number
+  line_no: number
+  take_no: number
+  storage_path: string | null
+  audio_mime_type: string | null
+  duration_ms: number | null
+  upload_status: string | null
+  deleted_at: string | null
+  is_best: boolean
+  created_at: string
+}
+
+type AudioDownloadResult = {
+  duration: number
+  hasAudio: boolean
+  error: string | null
+  takeId: string | null
+  storagePath: string | null
+  downloadMethod: 'storage.download' | 'signedUrlFetch' | 'none'
+  downloadStatus: 'ok' | 'failed'
+  audioFileSize: number
+  ffprobeDuration: number | null
+  ffprobeStderr: string | null
+  fallbackUsed: boolean
+}
+
+// 模块级 CD 音频下载缓存，避免项目内多句重复下载同一 URL
+const cdAudioCache = new Map<string, string>()
 
 async function loadEnv() {
   const envFile = path.resolve(process.cwd(), '.env.local')
@@ -95,13 +131,135 @@ async function loadEnv() {
   return { url, key }
 }
 
+function summarizeStderr(stderr: string): string {
+  return stderr.replace(/\s+/g, ' ').trim().slice(-600)
+}
+
+function looksLikeErrorDocument(buffer: Buffer): boolean {
+  const prefix = buffer.subarray(0, 256).toString('utf8').trimStart().toLowerCase()
+  return (
+    prefix.startsWith('<!doctype') ||
+    prefix.startsWith('<html') ||
+    prefix.startsWith('<?xml') ||
+    prefix.startsWith('{"') ||
+    prefix.startsWith('[{')
+  )
+}
+
+function inspectAudioDuration(filePath: string): {
+  duration: number | null
+  stderr: string
+} {
+  const metadataProbe = spawnSync(
+    'ffprobe',
+    [
+      '-v', 'error',
+      '-show_entries', 'format=duration:stream=duration',
+      '-of', 'json',
+      filePath,
+    ],
+    { stdio: 'pipe' }
+  )
+  const metadataStderr = metadataProbe.stderr?.toString() || ''
+
+  if (metadataProbe.status === 0) {
+    try {
+      const parsed = JSON.parse(metadataProbe.stdout?.toString() || '{}') as {
+        format?: { duration?: string }
+        streams?: Array<{ duration?: string }>
+      }
+      const candidates = [
+        parsed.format?.duration,
+        ...(parsed.streams || []).map((stream) => stream.duration),
+      ]
+        .map((value) => Number.parseFloat(value || ''))
+        .filter((value) => Number.isFinite(value) && value > 0)
+      if (candidates.length > 0) {
+        return {
+          duration: Math.max(...candidates),
+          stderr: summarizeStderr(metadataStderr),
+        }
+      }
+    } catch {
+      // Fall through to packet timestamps for MediaRecorder WebM files.
+    }
+  }
+
+  const packetProbe = spawnSync(
+    'ffprobe',
+    [
+      '-v', 'error',
+      '-select_streams', 'a:0',
+      '-show_entries', 'packet=pts_time,duration_time',
+      '-of', 'csv=p=0',
+      filePath,
+    ],
+    { stdio: 'pipe' }
+  )
+  const packetStderr = packetProbe.stderr?.toString() || ''
+  if (packetProbe.status !== 0) {
+    return {
+      duration: null,
+      stderr: summarizeStderr(
+        [metadataStderr, packetStderr].filter(Boolean).join(' | ')
+      ),
+    }
+  }
+
+  let packetDuration = 0
+  for (const row of (packetProbe.stdout?.toString() || '').split(/\r?\n/)) {
+    if (!row.trim()) continue
+    const [ptsRaw, durationRaw] = row.split(',')
+    const pts = Number.parseFloat(ptsRaw)
+    const duration = Number.parseFloat(durationRaw)
+    if (Number.isFinite(pts)) {
+      packetDuration = Math.max(
+        packetDuration,
+        pts + (Number.isFinite(duration) ? duration : 0)
+      )
+    }
+  }
+
+  return {
+    duration: packetDuration > 0 ? packetDuration : null,
+    stderr: summarizeStderr(
+      [metadataStderr, packetStderr].filter(Boolean).join(' | ')
+    ),
+  }
+}
+
 async function downloadAudio(
   source: string,
   takeId: string | null,
   ttsAudioUrl: string | null,
-  outputPath: string
-): Promise<{ duration: number } | null> {
-  if (source === 'skip') return null
+  originalAudioUrl: string | null,
+  originalStartTime: number | null,
+  originalEndTime: number | null,
+  originalStatus: string | null,
+  outputPath: string,
+  tmpDir: string
+): Promise<AudioDownloadResult> {
+  if (source === 'skip' || source === 'silence') {
+    return {
+      duration: 2,
+      hasAudio: false,
+      error: null,
+      takeId,
+      storagePath: null,
+      downloadMethod: 'none',
+      downloadStatus: 'failed',
+      audioFileSize: 0,
+      ffprobeDuration: null,
+      ffprobeStderr: null,
+      fallbackUsed: true,
+    }
+  }
+
+  let storagePath: string | null = null
+  let downloadMethod: AudioDownloadResult['downloadMethod'] = 'none'
+  let audioFileSize = 0
+  let ffprobeDuration: number | null = null
+  let ffprobeStderr: string | null = null
 
   try {
     if (source === 'user_recording' && takeId) {
@@ -109,51 +267,193 @@ async function downloadAudio(
         process.env.NEXT_PUBLIC_SUPABASE_URL!,
         process.env.SUPABASE_SERVICE_ROLE_KEY!
       )
-      const { data: take } = await supabase
+      const { data: takeData, error: takeError } = await supabase
         .from('recording_takes')
-        .select('storage_path')
+        .select(
+          'id, user_id, lesson_no, line_no, take_no, storage_path, audio_mime_type, duration_ms, upload_status, deleted_at, is_best, created_at'
+        )
         .eq('id', takeId)
-        .single()
+        .maybeSingle()
+      const take = takeData as RecordingTakeRow | null
 
-      if (!take?.storage_path) return null
+      console.log(`    takeId: ${takeId}`)
+      console.log(`    recording_takes 查询命中: ${take ? '是' : '否'}`)
+      if (takeError) {
+        console.warn(`    recording_takes 查询错误: ${takeError.message}`)
+      }
+      if (!take) throw new Error('take not found')
 
-      const { data: signedData } = await supabase.storage
+      storagePath = take.storage_path
+      console.log(`    storage_path: ${take.storage_path || '(empty)'}`)
+      console.log(`    upload_status: ${take.upload_status || '(null)'}`)
+      console.log(`    deleted_at: ${take.deleted_at || 'null'}`)
+      console.log(`    audio_mime_type: ${take.audio_mime_type || '(null)'}`)
+      console.log(`    duration_ms: ${take.duration_ms ?? 'null'}`)
+
+      if (take.deleted_at) throw new Error('take deleted')
+      if (take.upload_status !== 'uploaded') {
+        throw new Error(`upload_status is ${take.upload_status || 'null'}`)
+      }
+      if (!take.storage_path) throw new Error('storage_path empty')
+
+      let buffer: Buffer | null = null
+      console.log('    Supabase Storage 下载方式: storage.download')
+      const { data: downloadedBlob, error: downloadError } = await supabase.storage
         .from('recordings')
-        .createSignedUrl(take.storage_path, 3600)
+        .download(take.storage_path)
 
-      if (!signedData?.signedUrl) return null
+      if (downloadedBlob && !downloadError) {
+        downloadMethod = 'storage.download'
+        buffer = Buffer.from(await downloadedBlob.arrayBuffer())
+        console.log('    storage.download: ok')
+      } else {
+        console.warn(
+          `    storage.download error: ${downloadError?.message || 'empty response'}`
+        )
+        console.log('    Supabase Storage 下载方式: signedUrlFetch fallback')
+        const { data: signedData, error: signedError } = await supabase.storage
+          .from('recordings')
+          .createSignedUrl(take.storage_path, 300)
+        if (signedError || !signedData?.signedUrl) {
+          throw new Error(
+            `storage download failed; signed URL creation failed: ${
+              signedError?.message || 'empty signed URL'
+            }`
+          )
+        }
 
-      const resp = await fetch(signedData.signedUrl)
-      if (!resp.ok) return null
-      const buffer = Buffer.from(await resp.arrayBuffer())
+        const response = await fetch(signedData.signedUrl)
+        console.log(`    signedUrlFetch HTTP status: ${response.status}`)
+        if (!response.ok) {
+          throw new Error(`storage download failed; signed URL fetch HTTP ${response.status}`)
+        }
+        downloadMethod = 'signedUrlFetch'
+        buffer = Buffer.from(await response.arrayBuffer())
+      }
+
+      audioFileSize = buffer.length
+      console.log(`    下载文件大小: ${audioFileSize} bytes`)
+      if (audioFileSize <= 0) throw new Error('downloaded file is empty')
+      if (looksLikeErrorDocument(buffer)) {
+        throw new Error('downloaded file is html/json')
+      }
       await fs.writeFile(outputPath, buffer)
-    } else if (source === 'tts' && ttsAudioUrl) {
+      const fileStat = await fs.stat(outputPath)
+      if (!fileStat.isFile() || fileStat.size <= 0) {
+        throw new Error('downloaded file is empty')
+      }
+    } else if (source === 'user_recording') {
+      throw new Error('takeId missing')
+    } else if ((source === 'tts' || source === 'system_tts') && ttsAudioUrl) {
       const publicDir = path.resolve(process.cwd(), 'public')
       const localPath = path.join(publicDir, ttsAudioUrl.replace(/^\//, ''))
       try {
         await fs.access(localPath)
         await fs.copyFile(localPath, outputPath)
+        downloadMethod = 'none'
       } catch {
         const url = ttsAudioUrl.startsWith('http')
           ? ttsAudioUrl
           : `http://localhost:3000${ttsAudioUrl}`
         const resp = await fetch(url)
-        if (!resp.ok) return null
+        if (!resp.ok) throw new Error(`TTS 下载失败 (${resp.status})`)
         const buffer = Buffer.from(await resp.arrayBuffer())
         await fs.writeFile(outputPath, buffer)
+        downloadMethod = 'signedUrlFetch'
       }
+    } else if (source === 'original_audio') {
+      if (!originalAudioUrl) throw new Error('教材原声缺少 URL')
+      if (originalStatus !== 'ready') throw new Error('教材原声未校准')
+      if (originalStartTime == null || originalEndTime == null || originalEndTime <= originalStartTime) {
+        throw new Error('教材原声时间轴无效')
+      }
+      const segmentDuration = originalEndTime - originalStartTime
+      const cacheKey = originalAudioUrl.replace(/[^a-zA-Z0-9]/g, '_')
+      let cdLocalPath = cdAudioCache.get(cacheKey)
+      if (!cdLocalPath) {
+        cdLocalPath = path.join(tmpDir, `cd_cache_${cacheKey}.mp3`)
+        console.log(`    📥 下载教材原声 ${path.basename(originalAudioUrl)}`)
+        const resp = await fetch(originalAudioUrl)
+        if (!resp.ok) throw new Error(`教材原声下载失败 (${resp.status})`)
+        const buffer = Buffer.from(await resp.arrayBuffer())
+        await fs.writeFile(cdLocalPath, buffer)
+        cdAudioCache.set(cacheKey, cdLocalPath)
+      } else {
+        try {
+          await fs.access(cdLocalPath)
+          console.log(`    📦 使用缓存的教材原声 ${path.basename(originalAudioUrl)}`)
+        } catch {
+          cdAudioCache.delete(cacheKey)
+          cdLocalPath = path.join(tmpDir, `cd_cache_${cacheKey}.mp3`)
+          console.log(`    📥 重新下载教材原声 ${path.basename(originalAudioUrl)}`)
+          const resp = await fetch(originalAudioUrl)
+          if (!resp.ok) throw new Error(`教材原声下载失败 (${resp.status})`)
+          const buffer = Buffer.from(await resp.arrayBuffer())
+          await fs.writeFile(cdLocalPath, buffer)
+          cdAudioCache.set(cacheKey, cdLocalPath)
+        }
+      }
+      console.log(`    ✂️ 裁剪 ${originalStartTime.toFixed(3)}s – ${originalEndTime.toFixed(3)}s，duration ${segmentDuration.toFixed(3)}s`)
+      runFFmpeg([
+        '-y',
+        '-ss', String(originalStartTime),
+        '-i', cdLocalPath,
+        '-t', String(segmentDuration),
+        '-c', 'copy',
+        outputPath,
+      ])
+      downloadMethod = 'none'
+    } else {
+      throw new Error('TTS 缺少音频 URL')
     }
 
-    const stdout = runFFprobe([
-      '-v', 'error',
-      '-show_entries', 'format=duration',
-      '-of', 'default=noprint_wrappers=1:nokey=1',
-      outputPath,
-    ])
-    const duration = parseFloat(stdout.trim())
-    return { duration: isNaN(duration) ? 3 : duration }
-  } catch {
-    return null
+    if (audioFileSize === 0) {
+      audioFileSize = (await fs.stat(outputPath)).size
+    }
+    const probe = inspectAudioDuration(outputPath)
+    ffprobeDuration = probe.duration
+    ffprobeStderr = probe.stderr || null
+    console.log(
+      `    ffprobe duration: ${
+        ffprobeDuration === null ? 'invalid' : `${ffprobeDuration.toFixed(3)}s`
+      }`
+    )
+    console.log(`    ffprobe stderr 摘要: ${ffprobeStderr || '(empty)'}`)
+    if (ffprobeDuration === null || ffprobeDuration <= 0) {
+      throw new Error(
+        ffprobeStderr ? `ffprobe failed: ${ffprobeStderr}` : 'duration invalid'
+      )
+    }
+    return {
+      duration: ffprobeDuration,
+      hasAudio: true,
+      error: null,
+      takeId,
+      storagePath,
+      downloadMethod,
+      downloadStatus: 'ok',
+      audioFileSize,
+      ffprobeDuration,
+      ffprobeStderr,
+      fallbackUsed: false,
+    }
+  } catch (error) {
+    await fs.rm(outputPath, { force: true })
+    const message = error instanceof Error ? error.message : String(error)
+    console.warn(`    下载/探测结果: failed (${message})`)
+    return {
+      duration: 2,
+      hasAudio: false,
+      error: message,
+      takeId,
+      storagePath,
+      downloadMethod,
+      downloadStatus: 'failed',
+      audioFileSize,
+      ffprobeDuration,
+      ffprobeStderr,
+      fallbackUsed: true,
+    }
   }
 }
 
@@ -247,15 +547,17 @@ async function createVideoSegment(
   backgroundPath: string | null,
   segmentDuration: number,
   lessonNo: number
-): Promise<string> {
+): Promise<{ path: string; framePath: string; duration: number }> {
   const outputPath = path.join(segmentDir, `seg_${String(index).padStart(3, '0')}.mp4`)
-  const pngPath = path.join(segmentDir, `seg_${String(index).padStart(3, '0')}.png`)
+  const pngPath = path.join(segmentDir, `frame_${String(index).padStart(3, '0')}.png`)
 
   const sourceLabel = audioSource === 'user_recording'
     ? '用户录音'
-    : audioSource === 'tts'
+    : (audioSource === 'tts' || audioSource === 'system_tts')
       ? '系统练习音'
-      : '静音'
+      : audioSource === 'original_audio'
+        ? '教材原声'
+        : '静音'
   await generateFrame(pngPath, textJa, textZh, sourceLabel, lessonNo, backgroundPath)
 
   const duration = audioPath ? segmentDuration : 2
@@ -274,13 +576,111 @@ async function createVideoSegment(
     '-c:v', 'libx264',
     '-c:a', 'aac',
     '-pix_fmt', 'yuv420p',
+    '-r', '30',
+    '-ar', '44100',
+    '-ac', '2',
+    '-movflags', '+faststart',
     '-t', String(duration),
     '-shortest',
     outputPath,
   )
 
   runFFmpeg(args)
-  return outputPath
+  return { path: outputPath, framePath: pngPath, duration }
+}
+
+async function assertNonEmptyFile(filePath: string, label: string): Promise<void> {
+  const stat = await fs.stat(filePath)
+  if (!stat.isFile() || stat.size <= 0) {
+    throw new Error(`${label} 文件为空`)
+  }
+}
+
+function probeDuration(filePath: string): number {
+  const stdout = runFFprobe([
+    '-v', 'error',
+    '-show_entries', 'format=duration',
+    '-of', 'default=noprint_wrappers=1:nokey=1',
+    filePath,
+  ])
+  const duration = parseFloat(stdout.trim())
+  if (!Number.isFinite(duration) || duration <= 0) {
+    throw new Error(`媒体时长无效: ${path.basename(filePath)}`)
+  }
+  return duration
+}
+
+function assertPlayableSegment(filePath: string): void {
+  runFFmpeg([
+    '-v', 'error',
+    '-i', filePath,
+    '-map', '0:v:0',
+    '-map', '0:a:0',
+    '-f', 'null',
+    '-',
+  ])
+}
+
+function escapeConcatPath(filePath: string): string {
+  return filePath.replace(/'/g, "'\\''")
+}
+
+type ManifestLine = {
+  lineNo: number
+  textJa: string
+  textZh: string
+  audioSource: LinePlanItem['audioSource']
+  takeId: string | null
+  storagePath: string | null
+  downloadMethod: AudioDownloadResult['downloadMethod']
+  downloadStatus: AudioDownloadResult['downloadStatus']
+  audioFileSize: number
+  ffprobeDuration: number | null
+  fallbackUsed: boolean
+  segmentPath: string
+  duration: number
+  hasAudio: boolean
+  error: string | null
+  originalAudioUrl: string | null
+  originalStartTime: number | null
+  originalEndTime: number | null
+  originalDuration: number | null
+}
+
+type LocalOutputResult = {
+  localOutputPath: string | null
+  localOutputError: string | null
+}
+
+async function preserveLocalOutput(
+  outputPath: string,
+  lessonNo: number,
+  projectId: string,
+  timestamp: number
+): Promise<LocalOutputResult> {
+  const localOutputDir = path.resolve(process.cwd(), 'local-output', 'recitation-videos')
+  const localFileName =
+    `lesson-${String(lessonNo).padStart(2, '0')}-project-${projectId}-${timestamp}.mp4`
+  const absoluteLocalOutputPath = path.join(localOutputDir, localFileName)
+  const relativeLocalOutputPath = path.relative(process.cwd(), absoluteLocalOutputPath)
+
+  try {
+    await fs.mkdir(localOutputDir, { recursive: true })
+    await fs.copyFile(outputPath, absoluteLocalOutputPath)
+    await assertNonEmptyFile(absoluteLocalOutputPath, '本地 MP4 成品')
+    console.log(`  ✅ 本地视频已保存：\n  ${relativeLocalOutputPath}`)
+    return {
+      localOutputPath: relativeLocalOutputPath,
+      localOutputError: null,
+    }
+  } catch (error) {
+    const localOutputError = error instanceof Error ? error.message : String(error)
+    console.warn(`  ⚠️ 本地视频保存失败（不影响线上上传）: ${localOutputError}`)
+    return {
+      localOutputPath: null,
+      localOutputError,
+    }
+  }
 }
 
 async function processJob(job: JobRow) {
@@ -348,47 +748,121 @@ async function processJob(job: JobRow) {
     const segmentsDir = path.join(tmpDir, 'segments')
     await fs.mkdir(segmentsDir, { recursive: true })
     const segmentPaths: string[] = []
+    const segmentDurations: number[] = []
+    const manifestLines: ManifestLine[] = []
 
     for (let i = 0; i < linePlan.length; i++) {
       const item = linePlan[i]
-      const audioPath = path.join(tmpDir, `audio_${i}.mp3`)
-      console.log(`  句 ${item.lineNo}: ${item.audioSource}`)
+      const suffix = String(i).padStart(3, '0')
+      const audioPath = path.join(tmpDir, `audio_${suffix}_line_${item.lineNo}.mp3`)
+      console.log(
+        `  句 ${item.lineNo}: ${item.audioSource}` +
+        ` takeId=${item.takeId ?? '-'} tts=${item.ttsAudioUrl ?? '-'}`
+      )
 
-      const audioResult = await downloadAudio(item.audioSource, item.takeId, item.ttsAudioUrl, audioPath)
-      const segPath = await createVideoSegment(
+      const audioResult = await downloadAudio(
+        item.audioSource, item.takeId, item.ttsAudioUrl,
+        item.originalAudioUrl, item.originalStartTime, item.originalEndTime,
+        item.originalStatus ?? null,
+        audioPath, tmpDir
+      )
+      if (audioResult.error) {
+        console.warn(`    ⚠️ ${audioResult.error}，降级为 2 秒静音段`)
+      }
+      const segment = await createVideoSegment(
         segmentsDir, i, item.textJa, item.textZh, item.audioSource,
-        audioResult ? audioPath : null, bgPath, audioResult?.duration || 2,
+        audioResult.hasAudio ? audioPath : null, bgPath, audioResult.duration,
         p.lesson_no
       )
-      segmentPaths.push(segPath)
+      await assertNonEmptyFile(segment.framePath, `第 ${item.lineNo} 句 PNG`)
+      await assertNonEmptyFile(segment.path, `第 ${item.lineNo} 句 segment`)
+      assertPlayableSegment(segment.path)
+      const actualDuration = probeDuration(segment.path)
+
+      segmentPaths.push(segment.path)
+      segmentDurations.push(actualDuration)
+      manifestLines.push({
+        lineNo: item.lineNo,
+        textJa: item.textJa,
+        textZh: item.textZh,
+        audioSource: item.audioSource,
+        takeId: audioResult.takeId,
+        storagePath: audioResult.storagePath,
+        downloadMethod: audioResult.downloadMethod,
+        downloadStatus: audioResult.downloadStatus,
+        audioFileSize: audioResult.audioFileSize,
+        ffprobeDuration: audioResult.ffprobeDuration,
+        fallbackUsed: audioResult.fallbackUsed,
+        segmentPath: `segments/${path.basename(segment.path)}`,
+        duration: actualDuration,
+        hasAudio: audioResult.hasAudio,
+        error: audioResult.error,
+      })
+      console.log(`    ✅ ${path.basename(segment.path)}: ${actualDuration.toFixed(2)}秒`)
     }
 
     // Concat
     const outputPath = path.join(tmpDir, 'output.mp4')
     const listFile = path.join(segmentsDir, 'concat.txt')
-    await fs.writeFile(listFile, segmentPaths.map((p) => `file '${p}'`).join('\n'))
+    if (segmentPaths.length !== linePlan.length) {
+      throw new Error(`segment 数量异常: 期望 ${linePlan.length}，实际 ${segmentPaths.length}`)
+    }
+    await fs.writeFile(
+      listFile,
+      segmentPaths.map((segmentPath) => `file '${escapeConcatPath(segmentPath)}'`).join('\n')
+    )
+    const concatFilterParts = segmentPaths.flatMap((_, index) => [
+      `[${index}:v]setpts=PTS-STARTPTS[v${index}]`,
+      `[${index}:a]asetpts=PTS-STARTPTS[a${index}]`,
+    ])
+    const concatStreams = segmentPaths
+      .map((_, index) => `[v${index}][a${index}]`)
+      .join('')
+    const concatFilter = [
+      ...concatFilterParts,
+      `${concatStreams}concat=n=${segmentPaths.length}:v=1:a=1[vout][aout]`,
+    ].join(';')
+
     runFFmpeg([
       '-y',
-      '-f', 'concat',
-      '-safe', '0',
-      '-i', listFile,
-      '-c', 'copy',
+      ...segmentPaths.flatMap((segmentPath) => ['-i', segmentPath]),
+      '-filter_complex', concatFilter,
+      '-map', '[vout]',
+      '-map', '[aout]',
+      '-c:v', 'libx264',
+      '-c:a', 'aac',
+      '-pix_fmt', 'yuv420p',
+      '-r', '30',
+      '-ar', '44100',
+      '-ac', '2',
+      '-movflags', '+faststart',
       outputPath,
     ])
+    await assertNonEmptyFile(outputPath, '最终 MP4')
+    assertPlayableSegment(outputPath)
 
     // Get duration
-    const ffprobeStdout = runFFprobe([
-      '-v', 'error',
-      '-show_entries', 'format=duration',
-      '-of', 'default=noprint_wrappers=1:nokey=1',
-      outputPath,
-    ])
-    const duration = parseFloat(ffprobeStdout.trim())
+    const duration = probeDuration(outputPath)
+    const expectedDuration = segmentDurations.reduce((total, value) => total + value, 0)
+    const durationTolerance = Math.max(1, expectedDuration * 0.1)
+    if (Math.abs(duration - expectedDuration) > durationTolerance) {
+      throw new Error(
+        `最终 MP4 时长异常: 期望约 ${expectedDuration.toFixed(2)}秒，实际 ${duration.toFixed(2)}秒`
+      )
+    }
 
     console.log(`  ✅ MP4 生成完成: ${(duration || 0).toFixed(1)}秒`)
 
+    const outputTimestamp = Date.now()
+    const localOutput = await preserveLocalOutput(
+      outputPath,
+      p.lesson_no,
+      p.id,
+      outputTimestamp
+    )
+
     // Upload to storage
-    const storagePath = `projects/${p.id}/output_${Date.now()}.mp4`
+    const storagePath = `projects/${p.id}/output_${outputTimestamp}.mp4`
     const fileBuf = await fs.readFile(outputPath)
     const { data: uploadData, error: uploadErr } = await supabase.storage
       .from('admin-recitation-videos')
@@ -398,18 +872,16 @@ async function processJob(job: JobRow) {
       throw new Error(`上传失败: ${uploadErr?.message}`)
     }
 
-    const { data: urlData } = supabase.storage
-      .from('admin-recitation-videos')
-      .getPublicUrl(storagePath)
-
-    const publicUrl = urlData?.publicUrl
-    if (!publicUrl) throw new Error('获取 public URL 失败')
-
     const manifest = {
       projectId: p.id,
       lessonNo: p.lesson_no,
-      lines: linePlan,
+      lines: manifestLines,
       duration,
+      expectedDuration,
+      localOutputPath: localOutput.localOutputPath,
+      localOutputError: localOutput.localOutputError,
+      storagePath,
+      outputStoragePath: storagePath,
       generatedAt: new Date().toISOString(),
     }
 
@@ -418,8 +890,9 @@ async function processJob(job: JobRow) {
       .from('admin_recitation_video_projects')
       .update({
         status: 'generated',
-        output_video_url: publicUrl,
+        output_video_url: storagePath,
         output_manifest: manifest,
+        error_message: null,
         updated_at: new Date().toISOString(),
       })
       .eq('id', p.id)
@@ -430,11 +903,12 @@ async function processJob(job: JobRow) {
       .update({
         status: 'completed',
         completed_at: new Date().toISOString(),
-        output_video_url: publicUrl,
+        output_video_url: storagePath,
+        error_message: null,
       })
       .eq('id', job.id)
 
-    console.log(`  ✅ 上传完成: ${publicUrl}`)
+    console.log(`  ✅ 上传完成，storage path: ${storagePath}`)
   } catch (err) {
     const errorMessage = err instanceof Error ? err.message : String(err)
     console.error(`  ❌ 生成失败: ${errorMessage}`)
