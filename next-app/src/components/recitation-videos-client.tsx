@@ -1,7 +1,7 @@
 'use client'
 
-import Image from 'next/image'
-import { useEffect, useState } from 'react'
+import Link from 'next/link'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import type { Lang } from '@/lib/i18n'
 
 type RecitationVideo = {
@@ -19,21 +19,15 @@ function t(lang: Lang, zh: string, en: string) {
   return lang === 'en' ? en : zh
 }
 
-function formatDuration(duration: number | null, lang: Lang) {
-  if (duration == null || !Number.isFinite(duration)) {
-    return t(lang, '时长待确认', 'Duration unavailable')
-  }
-  const totalSeconds = Math.max(0, Math.round(duration))
-  const minutes = Math.floor(totalSeconds / 60)
-  const seconds = totalSeconds % 60
-  return `${minutes}:${String(seconds).padStart(2, '0')}`
-}
-
 export default function RecitationVideosClient({ lang }: { lang: Lang }) {
   const [videos, setVideos] = useState<RecitationVideo[]>([])
-  const [selectedId, setSelectedId] = useState<string | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const [activeId, setActiveId] = useState<string | null>(null)
+  const [blockedIds, setBlockedIds] = useState<Set<string>>(() => new Set())
+  const feedRef = useRef<HTMLDivElement | null>(null)
+  const videoRefs = useRef(new Map<string, HTMLVideoElement>())
+  const visibilityRef = useRef(new Map<string, number>())
 
   useEffect(() => {
     const controller = new AbortController()
@@ -50,11 +44,7 @@ export default function RecitationVideosClient({ lang }: { lang: Lang }) {
         if (!response.ok) {
           throw new Error(payload?.error || 'failed to load videos')
         }
-        const nextVideos = Array.isArray(payload)
-          ? (payload as RecitationVideo[])
-          : []
-        setVideos(nextVideos)
-        setSelectedId((current) => current || nextVideos[0]?.id || null)
+        setVideos(Array.isArray(payload) ? (payload as RecitationVideo[]) : [])
       } catch (loadError) {
         if (controller.signal.aborted) return
         setError(
@@ -71,12 +61,96 @@ export default function RecitationVideosClient({ lang }: { lang: Lang }) {
     return () => controller.abort()
   }, [lang])
 
-  const selectedVideo =
-    videos.find((video) => video.id === selectedId) || null
+  const pauseOtherVideos = useCallback((activeVideoId?: string) => {
+    for (const [videoId, videoElement] of videoRefs.current) {
+      if (videoId !== activeVideoId && !videoElement.paused) {
+        videoElement.pause()
+      }
+    }
+  }, [])
+
+  const activateVideo = useCallback(
+    (videoId: string) => {
+      const videoElement = videoRefs.current.get(videoId)
+      if (!videoElement) return
+
+      pauseOtherVideos(videoId)
+      setActiveId(videoId)
+      videoElement.muted = true
+      const playResult = videoElement.play()
+      if (playResult) {
+        void playResult
+          .then(() => {
+            setBlockedIds((current) => {
+              if (!current.has(videoId)) return current
+              const next = new Set(current)
+              next.delete(videoId)
+              return next
+            })
+          })
+          .catch(() => {
+            setBlockedIds((current) => new Set(current).add(videoId))
+          })
+      }
+    },
+    [pauseOtherVideos]
+  )
+
+  useEffect(() => {
+    const feedElement = feedRef.current
+    if (!feedElement || videos.length === 0) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          const videoId = (entry.target as HTMLElement).dataset.videoId
+          if (videoId) {
+            visibilityRef.current.set(
+              videoId,
+              entry.isIntersecting ? entry.intersectionRatio : 0
+            )
+          }
+        }
+
+        let nextActiveId: string | null = null
+        let highestRatio = 0
+        for (const [videoId, ratio] of visibilityRef.current) {
+          if (ratio >= 0.65 && ratio > highestRatio) {
+            nextActiveId = videoId
+            highestRatio = ratio
+          }
+        }
+
+        if (nextActiveId) {
+          activateVideo(nextActiveId)
+        } else {
+          pauseOtherVideos()
+          setActiveId(null)
+        }
+      },
+      {
+        root: feedElement,
+        threshold: [0, 0.35, 0.65, 0.85, 1],
+      }
+    )
+
+    for (const video of videos) {
+      const item = feedElement.querySelector<HTMLElement>(
+        `[data-video-id="${video.id}"]`
+      )
+      if (item) observer.observe(item)
+    }
+
+    return () => {
+      observer.disconnect()
+      visibilityRef.current.clear()
+      pauseOtherVideos()
+    }
+  }, [activateVideo, pauseOtherVideos, videos])
 
   if (loading) {
     return (
-      <section className="card" aria-live="polite">
+      <section className="card" aria-live="polite" style={{ maxWidth: 430, margin: '24px auto' }}>
         <p style={{ margin: 0, fontWeight: 800 }}>
           🎬 {t(lang, '正在加载会话视频…', 'Loading recitation videos…')}
         </p>
@@ -89,7 +163,7 @@ export default function RecitationVideosClient({ lang }: { lang: Lang }) {
 
   if (error) {
     return (
-      <section className="card" role="alert">
+      <section className="card" role="alert" style={{ maxWidth: 430, margin: '24px auto' }}>
         <h2 style={{ marginTop: 0, fontSize: 18 }}>
           {t(lang, '视频加载失败', 'Unable to load videos')}
         </h2>
@@ -103,183 +177,211 @@ export default function RecitationVideosClient({ lang }: { lang: Lang }) {
 
   if (videos.length === 0) {
     return (
-      <section className="card">
+      <section className="card" style={{ maxWidth: 430, margin: '24px auto' }}>
         <h2 style={{ marginTop: 0, fontSize: 18 }}>
           {t(lang, '视频正在准备中', 'Videos are being prepared')}
         </h2>
         <p className="small" style={{ marginBottom: 0 }}>
-          {t(lang, '教材原声会话视频生成后会显示在这里。', 'Original-audio recitation videos will appear here once generated.')}
+          {t(lang, '教材原声会话视频发布后会显示在这里。', 'Published original-audio recitation videos will appear here.')}
         </p>
       </section>
     )
   }
 
   return (
-    <>
-      {selectedVideo && (
-        <section
-          className="card"
-          style={{
-            padding: 12,
-            borderRadius: 18,
-            borderColor: '#bae6fd',
-            boxShadow: '0 12px 28px rgba(2, 132, 199, 0.1)',
-          }}
-        >
-          <div style={{ marginBottom: 10 }}>
-            <span className="homeTag">{selectedVideo.audioType}</span>
-            <h2 style={{ margin: '8px 0 4px', fontSize: 20 }}>
-              {selectedVideo.title}
-            </h2>
-            <p className="small" style={{ margin: 0 }}>
-              {t(lang, `第 ${selectedVideo.lessonNo} 课`, `Lesson ${selectedVideo.lessonNo}`)}
-              {' · '}
-              {formatDuration(selectedVideo.duration, lang)}
-            </p>
-          </div>
-          <video
-            key={selectedVideo.publicVideoUrl}
-            controls
-            playsInline
-            preload="metadata"
-            poster={selectedVideo.thumbnailUrl}
-            src={selectedVideo.publicVideoUrl}
+    <div
+      ref={feedRef}
+      aria-label={t(lang, '会话视频滑动列表', 'Recitation video feed')}
+      style={{
+        height: 'calc(100dvh - 68px)',
+        overflowY: 'auto',
+        overscrollBehaviorY: 'contain',
+        scrollSnapType: 'y mandatory',
+        scrollBehavior: 'smooth',
+        scrollbarWidth: 'none',
+      }}
+    >
+      {videos.map((video, index) => {
+        const isActive = activeId === video.id
+        const isBlocked = blockedIds.has(video.id)
+
+        return (
+          <article
+            key={video.id}
+            data-video-id={video.id}
+            data-lesson-no={video.lessonNo}
             style={{
-              display: 'block',
-              width: '100%',
-              maxHeight: '68vh',
-              borderRadius: 14,
-              background: '#0f172a',
+              height: 'calc(100dvh - 68px)',
+              minHeight: 560,
+              scrollSnapAlign: 'start',
+              scrollSnapStop: 'always',
+              padding: '12px 12px calc(106px + env(safe-area-inset-bottom, 0px))',
+              display: 'grid',
+              placeItems: 'center',
             }}
           >
-            {t(lang, '你的浏览器暂不支持视频播放。', 'Your browser does not support video playback.')}
-          </video>
-        </section>
-      )}
-
-      <section aria-label={t(lang, '会话视频列表', 'Recitation video list')}>
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))',
-            gap: 14,
-          }}
-        >
-          {videos.map((video) => {
-            const selected = video.id === selectedId
-            return (
-              <article
-                key={video.id}
-                className="card"
-                style={{
-                  margin: 0,
-                  padding: 10,
-                  borderColor: selected ? '#38bdf8' : '#e2e8f0',
-                  boxShadow: selected
-                    ? '0 8px 20px rgba(2, 132, 199, 0.12)'
-                    : 'none',
-                }}
-              >
-                <button
-                  type="button"
-                  onClick={() => {
-                    setSelectedId(video.id)
-                    window.scrollTo({ top: 0, behavior: 'smooth' })
-                  }}
-                  aria-label={t(lang, `播放第 ${video.lessonNo} 课`, `Play lesson ${video.lessonNo}`)}
+            <div
+              style={{
+                width: '100%',
+                maxWidth: 430,
+                height: '100%',
+                minHeight: 0,
+                display: 'grid',
+                gridTemplateRows: 'auto minmax(0, 1fr) auto',
+                gap: 10,
+                padding: 12,
+                border: isActive ? '2px solid #38bdf8' : '1px solid #dbeafe',
+                borderRadius: 22,
+                background: '#fff',
+                boxShadow: isActive
+                  ? '0 18px 44px rgba(2, 132, 199, 0.16)'
+                  : '0 12px 30px rgba(15, 23, 42, 0.08)',
+              }}
+            >
+              <header>
+                <div
                   style={{
-                    width: '100%',
-                    border: 0,
-                    padding: 0,
-                    background: 'transparent',
-                    cursor: 'pointer',
-                    textAlign: 'left',
-                    color: 'inherit',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    gap: 10,
                   }}
                 >
                   <span
                     style={{
-                      display: 'block',
-                      position: 'relative',
-                      overflow: 'hidden',
-                      aspectRatio: '16 / 10',
-                      borderRadius: 12,
+                      padding: '5px 9px',
+                      borderRadius: 999,
                       background: '#e0f2fe',
+                      color: '#0369a1',
+                      fontSize: 12,
+                      fontWeight: 900,
                     }}
                   >
-                    <Image
-                      src={video.thumbnailUrl}
-                      alt={t(lang, `第 ${video.lessonNo} 课会话图`, `Lesson ${video.lessonNo} conversation`)}
-                      fill
-                      sizes="(max-width: 600px) 100vw, 280px"
-                      style={{ objectFit: 'cover' }}
-                    />
-                    <span
-                      aria-hidden="true"
-                      style={{
-                        position: 'absolute',
-                        right: 10,
-                        bottom: 10,
-                        width: 42,
-                        height: 42,
-                        display: 'grid',
-                        placeItems: 'center',
-                        borderRadius: 999,
-                        background: 'rgba(2, 132, 199, 0.92)',
-                        color: '#fff',
-                        fontSize: 17,
-                        boxShadow: '0 4px 12px rgba(15, 23, 42, 0.25)',
-                      }}
-                    >
-                      ▶
-                    </span>
+                    {t(lang, `第 ${video.lessonNo} 课`, `Lesson ${video.lessonNo}`)}
                   </span>
-                  <span style={{ display: 'block', padding: '10px 4px 2px' }}>
-                    <span
-                      style={{
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        alignItems: 'center',
-                        gap: 8,
-                      }}
-                    >
-                      <strong>{t(lang, `第 ${video.lessonNo} 课`, `Lesson ${video.lessonNo}`)}</strong>
-                      <span className="small" style={{ fontSize: 12 }}>
-                        {formatDuration(video.duration, lang)}
-                      </span>
-                    </span>
-                    <span
-                      style={{
-                        display: 'block',
-                        marginTop: 5,
-                        fontSize: 14,
-                        fontWeight: 700,
-                        lineHeight: 1.4,
-                      }}
-                    >
-                      {video.title}
-                    </span>
-                    <span
-                      style={{
-                        display: 'inline-block',
-                        marginTop: 7,
-                        padding: '4px 8px',
-                        borderRadius: 999,
-                        background: '#e0f2fe',
-                        color: '#0369a1',
-                        fontSize: 11,
-                        fontWeight: 800,
-                      }}
-                    >
-                      🎧 {video.audioType}
-                    </span>
+                  <span className="small" style={{ fontSize: 12, fontWeight: 800 }}>
+                    🎧 {video.audioType}
                   </span>
-                </button>
-              </article>
-            )
-          })}
-        </div>
-      </section>
-    </>
+                </div>
+                <h2 style={{ margin: '8px 0 3px', fontSize: 19, lineHeight: 1.3 }}>
+                  {video.title}
+                </h2>
+                <p className="small" style={{ margin: 0, fontSize: 13 }}>
+                  {t(
+                    lang,
+                    '用教材原声先听懂，再跟读背诵',
+                    'Listen with the original audio, then shadow and recite'
+                  )}
+                </p>
+              </header>
+
+              <div
+                style={{
+                  minHeight: 0,
+                  position: 'relative',
+                  overflow: 'hidden',
+                  borderRadius: 16,
+                  background: '#f1f5f9',
+                }}
+              >
+                <video
+                  ref={(element) => {
+                    if (element) videoRefs.current.set(video.id, element)
+                    else videoRefs.current.delete(video.id)
+                  }}
+                  controls
+                  playsInline
+                  muted
+                  preload="metadata"
+                  poster={video.thumbnailUrl}
+                  src={video.publicVideoUrl}
+                  onPlay={() => {
+                    pauseOtherVideos(video.id)
+                    setActiveId(video.id)
+                    setBlockedIds((current) => {
+                      if (!current.has(video.id)) return current
+                      const next = new Set(current)
+                      next.delete(video.id)
+                      return next
+                    })
+                  }}
+                  aria-label={t(
+                    lang,
+                    `第 ${video.lessonNo} 课教材原声会话视频`,
+                    `Lesson ${video.lessonNo} original-audio recitation video`
+                  )}
+                  style={{
+                    display: 'block',
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'contain',
+                    background: '#e2e8f0',
+                  }}
+                >
+                  {t(lang, '你的浏览器暂不支持视频播放。', 'Your browser does not support video playback.')}
+                </video>
+                {isBlocked && (
+                  <button
+                    type="button"
+                    onClick={() => activateVideo(video.id)}
+                    style={{
+                      position: 'absolute',
+                      inset: '50% auto auto 50%',
+                      transform: 'translate(-50%, -50%)',
+                      border: 0,
+                      borderRadius: 999,
+                      padding: '11px 16px',
+                      background: 'rgba(2, 132, 199, 0.94)',
+                      color: '#fff',
+                      fontWeight: 900,
+                      cursor: 'pointer',
+                      boxShadow: '0 8px 20px rgba(15, 23, 42, 0.22)',
+                    }}
+                  >
+                    ▶ {t(lang, '点击播放', 'Tap to play')}
+                  </button>
+                )}
+              </div>
+
+              <footer>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 9 }}>
+                  <Link
+                    href={`/lessons/${video.lessonNo}`}
+                    className="btn"
+                    style={{
+                      textAlign: 'center',
+                      background: '#fff',
+                      color: '#0369a1',
+                      border: '1px solid #7dd3fc',
+                    }}
+                  >
+                    {t(lang, '进入课程', 'Open lesson')}
+                  </Link>
+                  <Link
+                    href={`/lessons/${video.lessonNo}/recitation`}
+                    className="btn"
+                    style={{ textAlign: 'center' }}
+                  >
+                    {t(lang, '跟读背诵', 'Shadow & recite')}
+                  </Link>
+                </div>
+                <p
+                  className="small"
+                  style={{
+                    margin: '8px 0 0',
+                    textAlign: 'center',
+                    fontSize: 11,
+                  }}
+                >
+                  {index < videos.length - 1
+                    ? t(lang, '向上滑动观看下一课 ↑', 'Swipe up for the next lesson ↑')
+                    : t(lang, '已到达当前视频末尾', 'You have reached the latest video')}
+                </p>
+              </footer>
+            </div>
+          </article>
+        )
+      })}
+    </div>
   )
 }
