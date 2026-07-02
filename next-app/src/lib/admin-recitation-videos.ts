@@ -135,6 +135,62 @@ export type LessonLine = {
   originalStatus: 'ready' | 'uncalibrated' | 'missing'
 }
 
+const ORIGINAL_AUDIO_BASE_URL =
+  'https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio'
+
+const LESSON_CD_TRACK_PATH: Record<number, string> = {
+  1: 'source-230001/tracks/cd-001.mp3',
+  2: 'source-230001/tracks/cd-005.mp3',
+  3: 'source-230001/tracks/cd-009.mp3',
+  4: 'source-230001/tracks/cd-012.mp3',
+  5: 'source-230001/tracks/cd-017.mp3',
+  6: 'source-230001/tracks/cd-021.mp3',
+  7: 'source-230001/tracks/cd-024.mp3',
+  8: 'source-230001/tracks/cd-028.mp3',
+  9: 'source-230001/tracks/cd-032.mp3',
+  10: 'source-230001/tracks/cd-035.mp3',
+  11: 'source-230001/tracks/cd-039.mp3',
+  12: 'source-230001/tracks/cd-043.mp3',
+  13: 'source-230001/tracks/cd-046.mp3',
+  14: 'source-230001/tracks/cd-049.mp3',
+  15: 'source-230001/tracks/cd-053.mp3',
+  16: 'source-230001/tracks/cd-056.mp3',
+  17: 'source-230001/tracks/cd-060.mp3',
+  18: 'source-230001/tracks/cd-063.mp3',
+  19: 'source-230001/tracks/cd-066.mp3',
+  20: 'source-230001/tracks/cd-069.mp3',
+  21: 'source-230001/tracks/cd-072.mp3',
+  22: 'source-230001/tracks/cd-075.mp3',
+  23: 'source-230001/tracks/cd-078.mp3',
+  24: 'source-230001/tracks/cd-082.mp3',
+  25: 'source-230001/tracks/cd-085.mp3',
+  26: 'source-240000/tracks/cd-001.mp3',
+  27: 'source-240000/tracks/cd-004.mp3',
+  28: 'source-240000/tracks/cd-007.mp3',
+  29: 'source-240000/tracks/cd-010.mp3',
+  30: 'source-240000/tracks/cd-013.mp3',
+  31: 'source-240000/tracks/cd-016.mp3',
+  32: 'source-240000/tracks/cd-019.mp3',
+  33: 'source-240000/tracks/cd-022.mp3',
+  34: 'source-240000/tracks/cd-025.mp3',
+  35: 'source-240000/tracks/cd-028.mp3',
+  36: 'source-240000/tracks/cd-031.mp3',
+  37: 'source-240000/tracks/cd-034.mp3',
+  38: 'source-240000/tracks/cd-037.mp3',
+  39: 'source-240000/tracks/cd-040.mp3',
+  40: 'source-240000/tracks/cd-043.mp3',
+  41: 'source-240000/tracks/cd-046.mp3',
+  42: 'source-240000/tracks/cd-049.mp3',
+  43: 'source-240000/tracks/cd-052.mp3',
+  44: 'source-240000/tracks/cd-055.mp3',
+  45: 'source-240000/tracks/cd-058.mp3',
+  46: 'source-240000/tracks/cd-061.mp3',
+  47: 'source-240000/tracks/cd-064.mp3',
+  48: 'source-240000/tracks/cd-067.mp3',
+  49: 'source-240000/tracks/cd-070.mp3',
+  50: 'source-240000/tracks/cd-073.mp3',
+}
+
 export type LessonScript = {
   lessonNo: number
   title: string
@@ -155,28 +211,35 @@ export async function loadLessonScript(
     'recitation',
     `lesson-${fileNo}.json`
   )
+  const subtitleMap = await loadSubtitleTimeMap(fileNo)
+  const trackPath = LESSON_CD_TRACK_PATH[lessonNo]
+  const cdAudioUrl = trackPath
+    ? `${ORIGINAL_AUDIO_BASE_URL}/${trackPath}`
+    : ''
   try {
     const raw = await fs.readFile(filePath, 'utf-8')
     const data = JSON.parse(raw)
     const lines = (data.lines || []).map((l: Record<string, unknown>) => {
-      const originalAudioUrl = String(l.originalAudioUrl || '')
-      const originalStartTime =
-        l.originalStartTime == null ? null : Number(l.originalStartTime)
-      const originalEndTime =
-        l.originalEndTime == null ? null : Number(l.originalEndTime)
+      const order = Number(l.order || 0)
+      const subEntry = subtitleMap.get(order)
+      const originalAudioUrl = cdAudioUrl
+      const originalStartTime = subEntry?.lineStartTime ?? null
+      const originalEndTime = subEntry?.lineEndTime ?? null
       const hasCalibratedRange =
         originalAudioUrl.length > 0 &&
+        originalStartTime !== null &&
         Number.isFinite(originalStartTime) &&
+        originalEndTime !== null &&
         Number.isFinite(originalEndTime) &&
-        Number(originalEndTime) > Number(originalStartTime)
+        originalEndTime > originalStartTime
       const originalStatus: LessonLine['originalStatus'] = hasCalibratedRange
         ? 'ready'
-        : originalAudioUrl || (lessonNo >= 6 && lessonNo <= 10)
+        : originalAudioUrl
           ? 'uncalibrated'
           : 'missing'
       return {
         lineId: String(l.lineId || ''),
-        order: Number(l.order || 0),
+        order,
         speaker: String(l.speaker || ''),
         ja: String(l.ja || ''),
         zh: String(l.zh || ''),
@@ -199,6 +262,45 @@ export async function loadLessonScript(
   } catch {
     return null
   }
+}
+
+async function loadSubtitleTimeMap(
+  fileNo: string
+): Promise<Map<number, { lineStartTime: number; lineEndTime: number }>> {
+  const map = new Map<
+    number,
+    { lineStartTime: number; lineEndTime: number }
+  >()
+  const subFilePath = path.resolve(
+    process.cwd(),
+    'src',
+    'data',
+    'minna',
+    'subtitle-learning',
+    `lesson-${fileNo}-subtitle-learning.json`
+  )
+  try {
+    const subRaw = await fs.readFile(subFilePath, 'utf-8')
+    const subData = JSON.parse(subRaw)
+    if (Array.isArray(subData)) {
+      for (const entry of subData) {
+        const order = Number(entry.lineOrder)
+        const start = Number(entry.lineStartTime)
+        const end = Number(entry.lineEndTime)
+        if (
+          Number.isFinite(order) &&
+          Number.isFinite(start) &&
+          Number.isFinite(end) &&
+          end > start
+        ) {
+          map.set(order, { lineStartTime: start, lineEndTime: end })
+        }
+      }
+    }
+  } catch {
+    // subtitle-learning file may not exist; map stays empty
+  }
+  return map
 }
 
 export async function loadLessonLines(lessonNo: number): Promise<LessonLine[]> {
