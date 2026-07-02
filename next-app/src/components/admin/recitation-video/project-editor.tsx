@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import type {
   LessonLine,
@@ -258,6 +258,63 @@ function CompactUserPicker({
         </div>
       )}
     </div>
+  )
+}
+
+function PreviewAudioPlayer({
+  url,
+  startTime,
+  endTime,
+}: {
+  url: string
+  startTime?: number
+  endTime?: number
+}) {
+  const audioRef = useRef<HTMLAudioElement>(null)
+
+  useEffect(() => {
+    if (startTime == null || endTime == null) return
+    const audio = audioRef.current
+    if (!audio) return
+
+    const onLoadedMetadata = () => {
+      audio.currentTime = startTime
+      audio.play().catch(() => {})
+    }
+
+    const onTimeUpdate = () => {
+      if (audio.currentTime >= endTime) {
+        audio.pause()
+        audio.currentTime = startTime
+      }
+    }
+
+    const onPlay = () => {
+      if (audio.currentTime < startTime || audio.currentTime >= endTime) {
+        audio.currentTime = startTime
+      }
+    }
+
+    audio.addEventListener('loadedmetadata', onLoadedMetadata)
+    audio.addEventListener('timeupdate', onTimeUpdate)
+    audio.addEventListener('play', onPlay)
+
+    return () => {
+      audio.removeEventListener('loadedmetadata', onLoadedMetadata)
+      audio.removeEventListener('timeupdate', onTimeUpdate)
+      audio.removeEventListener('play', onPlay)
+      audio.pause()
+    }
+  }, [url, startTime, endTime])
+
+  return (
+    <audio
+      ref={audioRef}
+      controls
+      autoPlay={startTime == null}
+      src={url}
+      style={{ display: 'block', width: 180, height: 32, marginTop: 6 }}
+    />
   )
 }
 
@@ -1269,11 +1326,18 @@ export function ProjectEditor({
                         试听
                       </button>
                       {previewUrl && (
-                        <audio
-                          controls
-                          autoPlay
-                          src={previewUrl}
-                          style={{ display: 'block', width: 180, height: 32, marginTop: 6 }}
+                        <PreviewAudioPlayer
+                          url={previewUrl}
+                          startTime={
+                            line.audioSource === 'original_audio'
+                              ? line.originalStartTime ?? undefined
+                              : undefined
+                          }
+                          endTime={
+                            line.audioSource === 'original_audio'
+                              ? line.originalEndTime ?? undefined
+                              : undefined
+                          }
                         />
                       )}
                     </td>
