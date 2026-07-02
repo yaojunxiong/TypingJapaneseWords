@@ -40,18 +40,27 @@ export default async function AdminRecitationVideosPage() {
 
   const supabase = createClient(cookieStore)
 
-  const { data: projectCount } = await supabase
-    .from('admin_recitation_video_projects')
-    .select('*', { count: 'exact', head: true })
-
-  const { data: bestCount } = await supabase
-    .from('admin_recitation_best_selections')
-    .select('*', { count: 'exact', head: true })
-
-  const { data: jobCount } = await supabase
-    .from('admin_recitation_video_jobs')
-    .select('*', { count: 'exact', head: true })
-    .neq('status', 'queued')
+  const [
+    { count: projectCount },
+    { count: bestCount },
+    { count: completedJobCount },
+    { count: failedJobCount },
+  ] = await Promise.all([
+    supabase
+      .from('admin_recitation_video_projects')
+      .select('id', { count: 'exact', head: true }),
+    supabase
+      .from('admin_recitation_best_selections')
+      .select('id', { count: 'exact', head: true }),
+    supabase
+      .from('admin_recitation_video_jobs')
+      .select('id', { count: 'exact', head: true })
+      .eq('status', 'completed'),
+    supabase
+      .from('admin_recitation_video_jobs')
+      .select('id', { count: 'exact', head: true })
+      .eq('status', 'failed'),
+  ])
 
   const aggResult = await getAggregatedResults(cookieStore)
   const totalResults = aggResult.data.length
@@ -81,9 +90,13 @@ export default async function AdminRecitationVideosPage() {
     {
       icon: '📹',
       label: tr(lang, '生成记录', 'Generation History'),
-      description: tr(lang, `${jobCount || 0} 个已完成生成`, `${jobCount || 0} completed generations`),
+      description: tr(
+        lang,
+        `${completedJobCount || 0} 个已完成生成${failedJobCount ? ` · ${failedJobCount} 个失败` : ''}`,
+        `${completedJobCount || 0} completed generations${failedJobCount ? ` · ${failedJobCount} failed` : ''}`
+      ),
       href: '/admin/recitation-videos/projects',
-      count: jobCount || 0,
+      count: completedJobCount || 0,
     },
   ]
 
