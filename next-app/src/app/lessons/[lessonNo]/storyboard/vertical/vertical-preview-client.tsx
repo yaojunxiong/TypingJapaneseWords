@@ -8,6 +8,8 @@ import type { StoryboardLesson, ImagePromptReviewData } from '@/types/storyboard
 
 const AUTO_PLAY_INTERVAL = 4000
 
+const ILLUST_BASE = '/assets/storyboards/lesson-01/vertical'
+
 type Frame = {
   storyboardLineId: string
   sourceLineId: string
@@ -19,6 +21,11 @@ type Frame = {
   characterActionCn: string
   memoryHintCn: string
   imagePromptCn: string
+  illustrationUrl: string
+}
+
+function illUrl(storyboardLineId: string): string {
+  return ILLUST_BASE + '/' + storyboardLineId + '.png'
 }
 
 function buildFrames(): Frame[] {
@@ -39,6 +46,7 @@ function buildFrames(): Frame[] {
       characterActionCn: line.characterActionCn,
       memoryHintCn: line.memoryHintCn,
       imagePromptCn: prompt.imagePromptCn,
+      illustrationUrl: illUrl(prompt.storyboardLineId),
     })
   }
   return frames
@@ -55,7 +63,7 @@ function getBystanders(frames: Frame[], currentIndex: number): string[] {
   return [...allChars].filter(c => !active.has(c))
 }
 
-function PlaceholderCard({ frame, index }: { frame: Frame; index: number }) {
+function GradientCard({ frame, index }: { frame: Frame; index: number }) {
   const gradientColors = [
     ['#1e3a5f', '#2d5a8e'],
     ['#2d5a3f', '#3a7a5e'],
@@ -71,28 +79,19 @@ function PlaceholderCard({ frame, index }: { frame: Frame; index: number }) {
 
   return (
     <div style={{
-      width: '100%',
-      height: '100%',
+      width: '100%', height: '100%',
       background: `linear-gradient(135deg, ${c1}, ${c2})`,
       borderRadius: 12,
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: 24,
-      boxSizing: 'border-box',
-      position: 'relative',
-      overflow: 'hidden',
+      display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+      padding: 24, boxSizing: 'border-box',
+      position: 'relative', overflow: 'hidden',
     }}>
       <div style={{
-        position: 'absolute', inset: 0,
-        opacity: 0.15,
+        position: 'absolute', inset: 0, opacity: 0.15,
         backgroundImage: `radial-gradient(circle at 25% 25%, rgba(255,255,255,0.3) 0%, transparent 50%),
                           radial-gradient(circle at 75% 75%, rgba(255,255,255,0.2) 0%, transparent 50%)`,
       }} />
-      <div style={{ fontSize: 48, marginBottom: 12, position: 'relative', zIndex: 1 }}>
-        🎬
-      </div>
+      <div style={{ fontSize: 48, marginBottom: 12, position: 'relative', zIndex: 1 }}>🎬</div>
       <div style={{
         fontSize: 14, color: 'rgba(255,255,255,0.9)',
         textAlign: 'center', lineHeight: 1.6, maxWidth: '90%', position: 'relative', zIndex: 1,
@@ -122,6 +121,33 @@ function PlaceholderCard({ frame, index }: { frame: Frame; index: number }) {
       }}>
         {frame.storyboardLineId}
       </div>
+    </div>
+  )
+}
+
+function IllustCard({ frame, index }: { frame: Frame; index: number }) {
+  const [failed, setFailed] = useState(false)
+
+  if (failed) return <GradientCard frame={frame} index={index} />
+
+  return (
+    <div style={{
+      width: '100%', height: '100%',
+      background: '#0f172a',
+      borderRadius: 12,
+      position: 'relative', overflow: 'hidden',
+    }}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={frame.illustrationUrl}
+        alt={frame.storyboardLineId}
+        onError={() => setFailed(true)}
+        style={{
+          width: '100%', height: '100%',
+          objectFit: 'contain',
+          display: 'block',
+        }}
+      />
     </div>
   )
 }
@@ -225,7 +251,7 @@ export default function VerticalPreviewClient() {
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
         >
-          <PlaceholderCard frame={frame} index={currentIndex} />
+          <IllustCard frame={frame} index={currentIndex} />
         </div>
       </div>
 
