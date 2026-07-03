@@ -53,3 +53,29 @@ export type StoryboardLineValidation = {
   ready: boolean
   missingFields: string[]
 }
+
+export type ReviewStatus = 'pending-human-review' | 'approved' | 'rejected'
+
+export interface ImagePromptReviewItem {
+  storyboardLineId: string
+  sourceLineId: string
+  imagePromptCn: string
+  imagePromptJa: string
+  negativePrompt: string
+  reviewStatus: ReviewStatus
+  generationAllowed: boolean
+}
+
+export interface ImagePromptReviewData {
+  lessonNo: number
+  conversationTitle?: string
+  reviewStatus: ReviewStatus
+  generationAllowed: boolean
+  prompts: ImagePromptReviewItem[]
+}
+
+export interface StoryboardValidationIssue {
+  type: 'missing-line' | 'source-mismatch' | 'generation-not-blocked' | 'missing-negative-prompt' | 'missing-cn-prompt' | 'missing-ja-prompt'
+  storyboardLineId: string
+  message: string
+}
