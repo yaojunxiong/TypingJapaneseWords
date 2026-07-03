@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useCallback, useRef } from 'react'
+import { useState, useEffect, useCallback, useRef, useLayoutEffect } from 'react'
 import Link from 'next/link'
 import storyboardData from '@/data/minna/storyboards/lesson-01.json'
 import reviewData from '@/data/minna/storyboards/lesson-01-image-prompts-review.json'
@@ -154,15 +154,23 @@ function IllustCard({ frame, index }: { frame: Frame; index: number }) {
 
 export default function VerticalPreviewClient() {
   const frames = buildFrames()
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [isPlaying, setIsPlaying] = useState(true)
   const totalFrames = frames.length
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [isPlaying, setIsPlaying] = useState(false)
+  const [ready, setReady] = useState(false)
   const touchStartX = useRef(0)
   const touchEndX = useRef(0)
+
+  useLayoutEffect(() => setReady(true), [])
 
   const goTo = useCallback((i: number) => {
     if (i >= 0 && i < totalFrames) setCurrentIndex(i)
   }, [totalFrames])
+
+  useEffect(() => {
+    const id = setTimeout(() => setIsPlaying(true), 1000)
+    return () => clearTimeout(id)
+  }, [])
 
   const goNext = useCallback(() => {
     if (currentIndex < totalFrames - 1) goTo(currentIndex + 1)
@@ -182,6 +190,10 @@ export default function VerticalPreviewClient() {
     }, AUTO_PLAY_INTERVAL)
     return () => clearInterval(id)
   }, [isPlaying, totalFrames])
+
+  if (!ready) {
+    return <div style={{ width: '100%', maxWidth: 430, margin: '0 auto', padding: '0 0 24px', minHeight: '100vh' }} />
+  }
 
   const frame = frames[currentIndex]
   if (!frame) return null
