@@ -218,6 +218,37 @@ export default async function StoryboardPage({
           </p>
         </header>
 
+        <Link href="/lessons/1/storyboard/vertical" style={{ textDecoration: 'none', display: 'block', marginBottom: 14 }}>
+          <div className="card" style={{
+            padding: '14px 16px',
+            background: 'linear-gradient(135deg, #1e3a5f, #2d5a8e)',
+            border: 'none',
+            cursor: 'pointer',
+          }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+              <div style={{
+                width: 40, height: 40, borderRadius: 10,
+                background: 'rgba(255,255,255,0.15)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                fontSize: 20, flexShrink: 0,
+              }}>
+                🎬
+              </div>
+              <div style={{ flex: 1 }}>
+                <div style={{ fontSize: 15, fontWeight: 700, color: '#fff', marginBottom: 2 }}>
+                  竖屏短视频预览
+                </div>
+                <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.7)', lineHeight: 1.5 }}>
+                  用手机短视频方式逐句看懂第 1 课会话。
+                </div>
+              </div>
+              <div style={{ fontSize: 20, color: 'rgba(255,255,255,0.5)' }}>
+                →
+              </div>
+            </div>
+          </div>
+        </Link>
+
         <StoryboardPageClient storyboard={storyboard} />
 
         <details
