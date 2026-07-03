@@ -156,27 +156,32 @@ export default function VerticalPreviewClient() {
   const frames = buildFrames()
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isPlaying, setIsPlaying] = useState(true)
-  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
+  const totalFrames = frames.length
   const touchStartX = useRef(0)
   const touchEndX = useRef(0)
 
   const goTo = useCallback((i: number) => {
-    if (i >= 0 && i < frames.length) setCurrentIndex(i)
-  }, [frames.length])
+    if (i >= 0 && i < totalFrames) setCurrentIndex(i)
+  }, [totalFrames])
 
-  const goNext = useCallback(() => goTo(currentIndex + 1), [currentIndex, goTo])
-  const goPrev = useCallback(() => goTo(currentIndex - 1), [currentIndex, goTo])
+  const goNext = useCallback(() => {
+    if (currentIndex < totalFrames - 1) goTo(currentIndex + 1)
+  }, [currentIndex, goTo, totalFrames])
+
+  const goPrev = useCallback(() => {
+    if (currentIndex > 0) goTo(currentIndex - 1)
+  }, [currentIndex, goTo])
 
   useEffect(() => {
-    if (isPlaying) {
-      timerRef.current = setInterval(() => {
-        setCurrentIndex(prev => (prev + 1) % frames.length)
-      }, AUTO_PLAY_INTERVAL)
-    }
-    return () => {
-      if (timerRef.current) clearInterval(timerRef.current)
-    }
-  }, [isPlaying, frames.length])
+    if (!isPlaying) return
+    const id = setInterval(() => {
+      setCurrentIndex(prev => {
+        if (prev < totalFrames - 1) return prev + 1
+        return prev
+      })
+    }, AUTO_PLAY_INTERVAL)
+    return () => clearInterval(id)
+  }, [isPlaying, totalFrames])
 
   const frame = frames[currentIndex]
   if (!frame) return null
