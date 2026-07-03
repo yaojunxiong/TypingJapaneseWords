@@ -8,7 +8,8 @@ import type { StoryboardLesson, ImagePromptReviewData } from '@/types/storyboard
 
 const AUTO_PLAY_INTERVAL = 4000
 
-const ILLUST_BASE = '/assets/storyboards/lesson-01/vertical'
+const ILLUST_V2_BASE = '/assets/storyboards/lesson-01/vertical-v2'
+const ILLUST_LEGACY_BASE = '/assets/storyboards/lesson-01/vertical'
 
 type Frame = {
   storyboardLineId: string
@@ -21,11 +22,15 @@ type Frame = {
   characterActionCn: string
   memoryHintCn: string
   imagePromptCn: string
-  illustrationUrl: string
+  illustrationUrls: string[]
 }
 
-function illUrl(storyboardLineId: string): string {
-  return ILLUST_BASE + '/' + storyboardLineId + '.png'
+function illustrationUrls(storyboardLineId: string): string[] {
+  const filename = storyboardLineId + '.png'
+  return [
+    ILLUST_V2_BASE + '/' + filename,
+    ILLUST_LEGACY_BASE + '/' + filename,
+  ]
 }
 
 function buildFrames(): Frame[] {
@@ -46,7 +51,7 @@ function buildFrames(): Frame[] {
       characterActionCn: line.characterActionCn,
       memoryHintCn: line.memoryHintCn,
       imagePromptCn: prompt.imagePromptCn,
-      illustrationUrl: illUrl(prompt.storyboardLineId),
+      illustrationUrls: illustrationUrls(prompt.storyboardLineId),
     })
   }
   return frames
@@ -126,9 +131,10 @@ function GradientCard({ frame, index }: { frame: Frame; index: number }) {
 }
 
 function IllustCard({ frame, index }: { frame: Frame; index: number }) {
-  const [failed, setFailed] = useState(false)
+  const [sourceIndex, setSourceIndex] = useState(0)
+  const illustrationUrl = frame.illustrationUrls[sourceIndex]
 
-  if (failed) return <GradientCard frame={frame} index={index} />
+  if (!illustrationUrl) return <GradientCard frame={frame} index={index} />
 
   return (
     <div style={{
@@ -139,9 +145,9 @@ function IllustCard({ frame, index }: { frame: Frame; index: number }) {
     }}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src={frame.illustrationUrl}
+        src={illustrationUrl}
         alt={frame.storyboardLineId}
-        onError={() => setFailed(true)}
+        onError={() => setSourceIndex(current => current + 1)}
         style={{
           width: '100%', height: '100%',
           objectFit: 'contain',
@@ -268,7 +274,7 @@ export default function VerticalPreviewClient() {
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
         >
-          <IllustCard frame={frame} index={currentIndex} />
+          <IllustCard key={frame.storyboardLineId} frame={frame} index={currentIndex} />
         </div>
       </div>
 
