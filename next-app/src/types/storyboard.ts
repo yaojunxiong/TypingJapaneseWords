@@ -58,7 +58,9 @@ export type ReviewStatus = 'pending-human-review' | 'approved' | 'rejected'
 
 export interface ImagePromptReviewItem {
   storyboardLineId: string
+  storyboardTextLineId: string
   sourceLineId: string
+  legacyPromptSourceLineId?: string
   imagePromptCn: string
   imagePromptJa: string
   negativePrompt: string

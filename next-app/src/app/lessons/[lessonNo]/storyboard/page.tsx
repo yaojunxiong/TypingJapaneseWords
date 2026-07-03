@@ -5,14 +5,31 @@ import StoryboardPageClient from '@/components/storyboard/storyboard-page-client
 import TopLabelSync from '@/components/top-label-sync'
 import storyboardData from '@/data/minna/storyboards/lesson-01.json'
 import reviewPromptData from '@/data/minna/storyboards/lesson-01-image-prompts-review.json'
-import type { StoryboardLesson, ImagePromptReviewData, ImagePromptReviewItem, StoryboardValidationIssue } from '@/types/storyboard'
+import type { StoryboardLesson, StoryboardLine, ImagePromptReviewData, ImagePromptReviewItem, StoryboardValidationIssue } from '@/types/storyboard'
 
 function validatePrompts(
   data: ImagePromptReviewData,
+  storyboardLines: StoryboardLine[],
 ): StoryboardValidationIssue[] {
   const issues: StoryboardValidationIssue[] = []
 
   for (const prompt of data.prompts) {
+    const matchedLine = storyboardLines.find(l => l.lineId === prompt.storyboardTextLineId)
+
+    if (!matchedLine) {
+      issues.push({
+        type: 'missing-line',
+        storyboardLineId: prompt.storyboardLineId,
+        message: `storyboardTextLineId "${prompt.storyboardTextLineId}" not found in storyboard lines`
+      })
+    } else if (matchedLine.sourceLineId !== prompt.sourceLineId) {
+      issues.push({
+        type: 'source-mismatch',
+        storyboardLineId: prompt.storyboardLineId,
+        message: `sourceLineId "${prompt.sourceLineId}" does not match storyboard line "${prompt.storyboardTextLineId}" sourceLineId "${matchedLine.sourceLineId}"`
+      })
+    }
+
     if (prompt.generationAllowed !== false) {
       issues.push({
         type: 'generation-not-blocked',
@@ -90,13 +107,23 @@ function ReviewCard({ prompt, index, validationIssues }: {
 
       <div style={{ display: 'grid', gap: 6, fontSize: 13, lineHeight: 1.6 }}>
         <div>
-          <span style={{ color: '#64748b', fontWeight: 600 }}>storyboard lineId: </span>
+          <span style={{ color: '#64748b', fontWeight: 600 }}>storyboardLineId: </span>
           <span className="code" style={{ fontSize: 12 }}>{prompt.storyboardLineId}</span>
+        </div>
+        <div>
+          <span style={{ color: '#64748b', fontWeight: 600 }}>storyboardTextLineId: </span>
+          <span className="code" style={{ fontSize: 12 }}>{prompt.storyboardTextLineId}</span>
         </div>
         <div>
           <span style={{ color: '#64748b', fontWeight: 600 }}>sourceLineId: </span>
           <span className="code" style={{ fontSize: 12 }}>{prompt.sourceLineId}</span>
         </div>
+        {prompt.legacyPromptSourceLineId && (
+          <div>
+            <span style={{ color: '#64748b', fontWeight: 600 }}>legacyPromptSourceLineId: </span>
+            <span className="code" style={{ fontSize: 12 }}>{prompt.legacyPromptSourceLineId}</span>
+          </div>
+        )}
         <div style={{ marginTop: 4 }}>
           <span style={{ color: '#64748b', fontWeight: 600 }}>imagePromptCn</span>
           <p style={{ margin: '2px 0 0', fontSize: 13, color: '#1e293b', whiteSpace: 'pre-wrap' }}>{prompt.imagePromptCn}</p>
@@ -160,7 +187,7 @@ export default async function StoryboardPage({
     })
   }
 
-  const promptIssues = validatePrompts(review)
+  const promptIssues = validatePrompts(review, storyboard.lines)
   const allIssues = [...globalIssues, ...promptIssues]
 
   return (
