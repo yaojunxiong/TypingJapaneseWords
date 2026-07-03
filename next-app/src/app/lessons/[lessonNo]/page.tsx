@@ -184,6 +184,32 @@ export default async function LessonDetailPage({
             🔍 {tr(lang, '中文理解', 'Deep Dive')}
           </Link>
         </div>
+        {no === 1 ? (
+          <Link
+            href="/lessons/1/storyboard"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 10,
+              marginTop: 12,
+              padding: '10px 12px',
+              color: '#075985',
+              textDecoration: 'none',
+              background: '#fff',
+              border: '1px solid #bae6fd',
+              borderRadius: 12,
+            }}
+          >
+            <span aria-hidden="true" style={{ fontSize: 20 }}>🧩</span>
+            <span>
+              <strong style={{ display: 'block', fontSize: 14 }}>{tr(lang, '课文图解分镜', 'Text Storyboard')}</strong>
+              <span className="small" style={{ display: 'block', marginTop: 2, fontSize: 12 }}>
+                {tr(lang, '先看懂真实会话关系，再开始背诵。', 'Understand the real conversation roles before reciting.')}
+              </span>
+            </span>
+            <span aria-hidden="true" style={{ marginLeft: 'auto' }}>→</span>
+          </Link>
+        ) : null}
       </section>
 
       <section className="card" style={{ background: '#f0fdf4', borderColor: '#bbf7d0' }}>

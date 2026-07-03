@@ -1,0 +1,55 @@
+export type StoryboardCharacter = {
+  characterId: string
+  nameJa: string
+  displayNameCn: string
+  roleCn: string
+  relationshipCn: string
+}
+
+export type StoryboardLine = {
+  lessonId: string
+  lineId: string
+  sourceLineId: string
+  segmentIndex: number
+  sourceTextExact: string
+  speaker: string
+  listener: string
+  japaneseText: string
+  kanaOrRomaji?: string
+  chineseText: string
+  conversationFunction: string
+  sceneMeaningCn: string
+  visualDescriptionCn: string
+  characterActionCn: string
+  cameraHint: string
+  memoryHintCn: string
+  forbiddenMisreadCn: string
+}
+
+export type StoryboardLesson = {
+  schema: 'minna.storyboard.v1'
+  lessonId: string
+  lessonNo: number
+  title: string
+  conversationTitle: string
+  status: 'draft' | 'approved'
+  sourcePolicy: {
+    primary: string
+    secondary: string
+    forbidAddedDialogue: boolean
+    note: string
+  }
+  scene: {
+    settingCn: string
+    coreGoalCn: string
+    forbiddenStoryCn: string[]
+  }
+  characters: StoryboardCharacter[]
+  lines: StoryboardLine[]
+}
+
+export type StoryboardLineValidation = {
+  lineId: string
+  ready: boolean
+  missingFields: string[]
+}
