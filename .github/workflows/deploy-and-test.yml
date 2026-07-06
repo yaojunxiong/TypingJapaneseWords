@@ -47,12 +47,14 @@ jobs:
           echo "Waiting for Vercel deployment for commit ${SHA:0:8}..."
           echo "Candidate environments: ${ENV_NAMES[*]}"
 
+          FOUND_DEPLOYMENT="false"
           for i in $(seq 1 60); do
             for VERCEL_ENV in "${ENV_NAMES[@]}"; do
               DEPLOY_ID=$(gh api "repos/${REPO}/deployments" \
                 --jq "[.[] | select(.sha == \"$SHA\" and .environment == \"$VERCEL_ENV\")][0].id")
 
               if [ -n "$DEPLOY_ID" ] && [ "$DEPLOY_ID" != "null" ]; then
+                FOUND_DEPLOYMENT="true"
                 STATE=$(gh api "repos/${REPO}/deployments/${DEPLOY_ID}/statuses" \
                   --jq "[.[] | select(.environment == \"$VERCEL_ENV\")][0].state")
 
@@ -76,23 +78,47 @@ jobs:
             sleep 15
           done
 
-          echo "Timeout waiting for Vercel deployment"
-          exit 1
+          if [ "$FOUND_DEPLOYMENT" = "true" ]; then
+            echo "Timed out waiting for Vercel deployment to become ready."
+            echo "This means deployment metadata exists but did not report success in time."
+            exit 1
+          fi
 
-      - name: Health check Production URL
+          echo "No Vercel deployment metadata appeared for this SHA."
+          echo "Continuing to direct production health/smoke checks instead of failing on missing metadata."
+          exit 0
+
+      - name: Health and smoke check Production URL
         run: |
           URL="https://study.jimmyyao.com"
           echo "Health checking $URL..."
+
+          ROUTES=(
+            "/"
+            "/lessons/1/ai-practice"
+            "/lessons/6/ai-practice"
+            "/lessons/25/ai-practice"
+          )
+
           for i in $(seq 1 12); do
-            HTTP_CODE=$(curl -s -o /dev/null -w '%{http_code}' "$URL" 2>/dev/null || echo "fail")
-            echo "Attempt $i: HTTP $HTTP_CODE"
-            if [ "$HTTP_CODE" = "200" ]; then
-              echo "URL responded with 200"
+            FAILED="false"
+            for ROUTE in "${ROUTES[@]}"; do
+              HTTP_CODE=$(curl -s -o /dev/null -w '%{http_code}' "${URL}${ROUTE}" 2>/dev/null || echo "fail")
+              echo "Attempt $i: ${ROUTE} HTTP $HTTP_CODE"
+              if [ "$HTTP_CODE" != "200" ]; then
+                FAILED="true"
+              fi
+            done
+
+            if [ "$FAILED" = "false" ]; then
+              echo "Production health/smoke routes responded with 200"
               exit 0
             fi
+
             sleep 10
           done
-          echo "Health check failed"
+
+          echo "Production health/smoke check failed"
           exit 1
 
       - name: Trigger Auto Test
