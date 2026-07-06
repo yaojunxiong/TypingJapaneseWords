@@ -1646,8 +1646,8 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
               <span style={{ fontSize: 20 }}>🎤</span><span style={{ fontWeight: 900 }}>卡拉OK字幕</span>
             </Link>
           )}
-          {lessonNo === 1 && (
-            <Link href="/lessons/1/ai-practice" style={{ border: '1px solid #bfdbfe', borderRadius: 12, padding: '10px 6px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, color: '#1d4ed8', background: '#eff6ff', textDecoration: 'none', fontSize: 13 }}>
+          {lessonNo >= 1 && lessonNo <= 5 && (
+            <Link href={`/lessons/${lessonNo}/ai-practice`} style={{ border: '1px solid #bfdbfe', borderRadius: 12, padding: '10px 6px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, color: '#1d4ed8', background: '#eff6ff', textDecoration: 'none', fontSize: 13 }}>
               <span style={{ fontSize: 20 }}>🤖</span><span style={{ fontWeight: 900 }}>AI 会话陪练</span>
             </Link>
           )}

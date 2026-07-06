@@ -12,8 +12,10 @@ type Props = {
   lang: Lang
 }
 
-type LineResult = 'correct' | 'weak' | 'retry'
+type LineResult = 'correct' | 'weak'
 type LineAttemptMap = Record<string, LineResult>
+
+const ENABLED_LESSON_NOS = new Set([1, 2, 3, 4, 5])
 
 type RecitationLineWithExtras = RecitationLine & {
   kana?: string
@@ -43,6 +45,7 @@ export default function AiPracticePageClient({ lessonNo, lang }: Props) {
   const [showHint, setShowHint] = useState(false)
   const [showAnswer, setShowAnswer] = useState(false)
   const [attempts, setAttempts] = useState<LineAttemptMap>({})
+  const [retryCount, setRetryCount] = useState(0)
   const [completed, setCompleted] = useState(false)
   const audioRef = useRef<HTMLAudioElement | null>(null)
 
@@ -71,7 +74,6 @@ export default function AiPracticePageClient({ lessonNo, lang }: Props) {
   const completedAttempts = Object.values(attempts)
   const weakLines = lines.filter(line => attempts[line.lineId] === 'weak')
   const correctCount = completedAttempts.filter(result => result === 'correct').length
-  const retryCount = completedAttempts.filter(result => result === 'retry').length
 
   function resetLineReveal() {
     setShowHint(false)
@@ -90,7 +92,12 @@ export default function AiPracticePageClient({ lessonNo, lang }: Props) {
   function markLine(result: LineResult) {
     if (!currentLine) return
     setAttempts(previous => ({ ...previous, [currentLine.lineId]: result }))
-    if (result !== 'retry') goNext()
+    goNext()
+  }
+
+  function retryCurrentLine() {
+    resetLineReveal()
+    setRetryCount(value => value + 1)
   }
 
   function restartPractice() {
@@ -99,6 +106,7 @@ export default function AiPracticePageClient({ lessonNo, lang }: Props) {
     setShowHint(false)
     setShowAnswer(false)
     setAttempts({})
+    setRetryCount(0)
     setCompleted(false)
   }
 
@@ -134,13 +142,13 @@ export default function AiPracticePageClient({ lessonNo, lang }: Props) {
     )
   }
 
-  if (lessonNo !== 1) {
+  if (!ENABLED_LESSON_NOS.has(lessonNo)) {
     return (
       <div className="page-container" style={{ maxWidth: 820, margin: '0 auto', padding: '16px 14px 120px' }}>
         <StudyMobileChrome lang={lang} active="lessons" />
         <section className="card" style={{ padding: 20 }}>
           <h1 style={{ margin: 0, fontSize: 24 }}>AI 会话陪练</h1>
-          <p className="small">MVP 当前只开放第 1 课。请先完成第 1 课角色扮演练习。</p>
+          <p className="small">AI 会话陪练当前开放第 1-5 课。请先完成已开放课程的角色扮演练习。</p>
           <Link className="btn" href="/lessons/1/ai-practice">去第 1 课 AI 会话陪练</Link>
         </section>
       </div>
@@ -154,7 +162,7 @@ export default function AiPracticePageClient({ lessonNo, lang }: Props) {
         <section className="card" data-testid="ai-practice-completion" style={{ padding: 20, borderRadius: 20, borderColor: '#bbf7d0', background: '#f0fdf4' }}>
           <p style={{ margin: '0 0 6px', color: '#15803d', fontSize: 14, fontWeight: 900 }}>完成本课 AI 会话练习</p>
           <h1 style={{ margin: 0, fontSize: 30, lineHeight: 1.15 }}>{lesson.conversationTitle}</h1>
-          <p className="small" style={{ marginTop: 10 }}>你完成了第 1 课角色扮演模式。弱句会先保留在本页总结中，后续可接入统一弱句复习。</p>
+          <p className="small" style={{ marginTop: 10 }}>你完成了第 {lessonNo} 课角色扮演模式。弱句会先保留在本页总结中，后续可接入统一弱句复习。</p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8, marginTop: 16 }}>
             <div style={{ borderRadius: 14, background: '#fff', border: '1px solid #dcfce7', padding: 12, textAlign: 'center' }}><strong>{correctCount}</strong><br /><span className="small">答对</span></div>
             <div style={{ borderRadius: 14, background: '#fff', border: '1px solid #fee2e2', padding: 12, textAlign: 'center' }}><strong>{weakLines.length}</strong><br /><span className="small">不熟</span></div>
@@ -176,7 +184,7 @@ export default function AiPracticePageClient({ lessonNo, lang }: Props) {
           ) : null}
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginTop: 18 }}>
             <button type="button" className="btn" onClick={restartPractice}>再练一次</button>
-            <Link className="btn ghost" href="/lessons/1/recitation">回到会话背诵</Link>
+            <Link className="btn ghost" href={`/lessons/${lessonNo}/recitation`}>回到会话背诵</Link>
           </div>
         </section>
       </div>
@@ -264,7 +272,7 @@ export default function AiPracticePageClient({ lessonNo, lang }: Props) {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: 8, marginTop: 10 }}>
             <button type="button" className="btn" onClick={() => markLine('correct')}>我答对了</button>
             <button type="button" className="btn ghost" onClick={() => markLine('weak')}>我不熟</button>
-            <button type="button" className="btn ghost" onClick={() => markLine('retry')}>再试一次</button>
+            <button type="button" className="btn ghost" onClick={retryCurrentLine}>再试一次</button>
           </div>
         ) : null}
       </section>
