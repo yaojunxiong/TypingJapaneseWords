@@ -2,9 +2,10 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import MinnaNav from '@/components/minna-nav'
 import StoryboardPageClient from '@/components/storyboard/storyboard-page-client'
+import storyboardStyles from '@/components/storyboard/storyboard-page-client.module.css'
 import TopLabelSync from '@/components/top-label-sync'
-import storyboardData from '@/data/minna/storyboards/lesson-01.json'
-import reviewPromptData from '@/data/minna/storyboards/lesson-01-image-prompts-review.json'
+import { validateStoryboard } from '@/lib/storyboard'
+import { getStoryboardData } from '@/lib/storyboard-data'
 import type { StoryboardLesson, StoryboardLine, ImagePromptReviewData, ImagePromptReviewItem, StoryboardValidationIssue } from '@/types/storyboard'
 
 function validatePrompts(
@@ -159,16 +160,106 @@ function ReviewCard({ prompt, index, validationIssues }: {
   )
 }
 
+function GenericStoryboardPreview({ storyboard }: { storyboard: StoryboardLesson }) {
+  const validation = validateStoryboard(storyboard)
+  const firstLine = storyboard.lines[0]
+
+  if (!firstLine) return null
+
+  return (
+    <div className={storyboardStyles.shell}>
+      <section className={storyboardStyles.card}>
+        <h2 className={storyboardStyles.sectionTitle}>本课核心关系</h2>
+        <p className={storyboardStyles.relationshipNotice}>{storyboard.scene.settingCn}</p>
+        <div className={storyboardStyles.characterGrid}>
+          {storyboard.characters.map((character) => (
+            <div className={storyboardStyles.character} key={character.characterId}>
+              <strong>{character.displayNameCn}</strong>
+              <span>{character.roleCn}</span>
+            </div>
+          ))}
+        </div>
+        <p className={storyboardStyles.relationFlow}>{storyboard.scene.coreGoalCn}</p>
+      </section>
+
+      <section className={storyboardStyles.card}>
+        <h2 className={storyboardStyles.sectionTitle}>首句分镜预览</h2>
+        <div className={storyboardStyles.preview}>
+          <div className={storyboardStyles.previewHeader}>
+            <span className={storyboardStyles.sceneBadge}>场景：{storyboard.scene.settingCn}</span>
+            <span className={storyboardStyles.countBadge}>1 / {storyboard.lines.length}</span>
+          </div>
+          <div className={storyboardStyles.previewCaption}>
+            <p className={storyboardStyles.previewJapanese}>{firstLine.japaneseText}</p>
+            <p className={storyboardStyles.previewChinese}>{firstLine.chineseText}</p>
+          </div>
+        </div>
+        <div className={storyboardStyles.explainGrid} style={{ marginTop: 10 }}>
+          <div className={storyboardStyles.explainBox}>
+            <strong>说话方向</strong>
+            {firstLine.speaker} → {firstLine.listener}
+          </div>
+          <div className={storyboardStyles.explainBox}>
+            <strong>人物动作</strong>
+            {firstLine.characterActionCn}
+          </div>
+          <div className={storyboardStyles.explainBox}>
+            <strong>背诵提示</strong>
+            {firstLine.memoryHintCn}
+          </div>
+          <div className={`${storyboardStyles.explainBox} ${storyboardStyles.warningBox}`}>
+            <strong>禁止误读</strong>
+            {firstLine.forbiddenMisreadCn}
+          </div>
+        </div>
+      </section>
+
+      <section className={storyboardStyles.card}>
+        <h2 className={storyboardStyles.sectionTitle}>数据校验</h2>
+        <p className={`${storyboardStyles.validationSummary} ${validation.ready ? '' : storyboardStyles.validationError}`}>
+          {validation.ready
+            ? `${storyboard.lines.length} / ${storyboard.lines.length} 句字段完整，全部可用于图解预览。这里只校验静态分镜数据，不会生成真实视频。`
+            : `有 ${validation.lines.filter((line) => !line.ready).length} 句缺少必填字段，已标记“不可生成视频”。`}
+        </p>
+      </section>
+
+      <section className={storyboardStyles.card}>
+        <h2 className={storyboardStyles.sectionTitle}>{storyboard.lines.length} 句分镜列表</h2>
+        <div className={storyboardStyles.lineList}>
+          {storyboard.lines.map((line, index) => {
+            const lineValidation = validation.lines[index]
+            return (
+              <div className={storyboardStyles.lineButton} key={line.lineId}>
+                <span className={storyboardStyles.lineButtonTop}>
+                  <span className={storyboardStyles.lineOrder}>分镜 {index + 1} · {line.sourceLineId}</span>
+                  <span className={lineValidation.ready ? storyboardStyles.statusReady : storyboardStyles.statusBlocked}>
+                    {lineValidation.ready ? '可用于图解预览' : '不可生成视频'}
+                  </span>
+                </span>
+                <span className={storyboardStyles.lineText}>{line.japaneseText}</span>
+                <span className={storyboardStyles.lineDirection}>
+                  {line.speaker} → {line.listener} · {line.chineseText}
+                </span>
+              </div>
+            )
+          })}
+        </div>
+      </section>
+    </div>
+  )
+}
+
 export default async function StoryboardPage({
   params,
 }: {
   params: Promise<{ lessonNo: string }>
 }) {
-  const { lessonNo } = await params
-  if (Number(lessonNo) !== 1) notFound()
+  const { lessonNo: lessonNoParam } = await params
+  const lessonNo = Number(lessonNoParam)
+  const data = getStoryboardData(lessonNo)
+  if (!data) notFound()
 
-  const storyboard = storyboardData as StoryboardLesson
-  const review = reviewPromptData as ImagePromptReviewData
+  const { storyboard, review } = data
   const globalIssues: StoryboardValidationIssue[] = []
 
   if (review.generationAllowed !== false) {
@@ -193,10 +284,10 @@ export default async function StoryboardPage({
   return (
     <main>
       <MinnaNav active="lessons" />
-      <TopLabelSync label="第 1 课 · 课文图解分镜" />
+      <TopLabelSync label={`第 ${lessonNo} 课 · 课文图解分镜`} />
       <div style={{ width: '100%', maxWidth: 430, margin: '0 auto' }}>
         <header className="card" style={{ marginBottom: 14 }}>
-          <Link href="/lessons/1" style={{ display: 'inline-block', marginBottom: 10, fontSize: 13 }}>
+          <Link href={`/lessons/${lessonNo}`} style={{ display: 'inline-block', marginBottom: 10, fontSize: 13 }}>
             ← 返回课程
           </Link>
           <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: 8 }}>
@@ -212,13 +303,15 @@ export default async function StoryboardPage({
             </span>
             <span className="small" style={{ fontSize: 12 }}>静态预览 v1</span>
           </div>
-          <h1 style={{ margin: '10px 0 4px', fontSize: 24 }}>第 1 课｜初めまして</h1>
+          <h1 style={{ margin: '10px 0 4px', fontSize: 24 }}>
+            第 {lessonNo} 课｜{storyboard.conversationTitle}
+          </h1>
           <p className="small" style={{ margin: 0, lineHeight: 1.65 }}>
-            按真实课文逐句拆解，先看懂三人关系和说话方向，再开始背诵。
+            按真实课文逐句拆解，先看懂人物关系和说话方向，再开始背诵。
           </p>
         </header>
 
-        <Link href="/lessons/1/storyboard/vertical" style={{ textDecoration: 'none', display: 'block', marginBottom: 14 }}>
+        <Link href={`/lessons/${lessonNo}/storyboard/vertical`} style={{ textDecoration: 'none', display: 'block', marginBottom: 14 }}>
           <div className="card" style={{
             padding: '14px 16px',
             background: 'linear-gradient(135deg, #1e3a5f, #2d5a8e)',
@@ -239,7 +332,7 @@ export default async function StoryboardPage({
                   竖屏短视频预览
                 </div>
                 <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.7)', lineHeight: 1.5 }}>
-                  用手机短视频方式逐句看懂第 1 课会话。
+                  用手机短视频方式逐句看懂第 {lessonNo} 课会话。
                 </div>
               </div>
               <div style={{ fontSize: 20, color: 'rgba(255,255,255,0.5)' }}>
@@ -249,7 +342,9 @@ export default async function StoryboardPage({
           </div>
         </Link>
 
-        <StoryboardPageClient storyboard={storyboard} />
+        {lessonNo === 1
+          ? <StoryboardPageClient storyboard={storyboard} />
+          : <GenericStoryboardPreview storyboard={storyboard} />}
 
         <details
           style={{ marginBottom: 14 }}

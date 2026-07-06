@@ -1,0 +1,98 @@
+{
+  "lessonNo": 2,
+  "conversationTitle": "これからお世話になります",
+  "reviewStatus": "pending-human-review",
+  "generationAllowed": false,
+  "prompts": [
+    {
+      "storyboardLineId": "sb-02-001",
+      "storyboardTextLineId": "l02-conv-001-s01",
+      "sourceLineId": "l02-conv-001",
+      "imagePromptCn": "手机竖屏 9:16、1080×1920、清爽日式动漫教育插画风。现代日本公寓玄关内侧，山田一郎作为住户站在门边，面向关闭或刚开启的门礼貌询问门外来访者身份；门外的桑托斯只作为等待中的听话对象自然可见。两人服装朴素得体，白天自然光，门框、鞋柜等轻量背景保持真实。上方主要表现人物和动作，下方保留干净字幕安全区。画面不含任何文字、字幕、编号、标签、气泡或 UI。",
+      "imagePromptJa": "スマートフォン向け縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。現代日本のマンション玄関の内側で、住人の山田一郎が閉じた、または開きかけのドアに向かい、外の訪問者に礼儀正しく身元を尋ねている。ドアの外のサントスは聞き手として静かに待つ。二人は落ち着いた普段着、昼間の自然光、ドア枠と靴箱を控えめに描く。人物と動作は上部中心、下部に字幕用の十分な余白。文字、字幕、番号、ラベル、吹き出し、UIは一切入れない。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, classroom, school campus, shop, office, travel scene, romance, flirting, extra characters, wrong speaker, wrong listener, coffee shop, exaggerated emotion, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-02-002",
+      "storyboardTextLineId": "l02-conv-002-s01",
+      "sourceLineId": "l02-conv-002",
+      "imagePromptCn": "手机竖屏 9:16、1080×1920、与上一帧一致的日式动漫教育插画。现代日本公寓门口，桑托斯站在门外面向门内的山田一郎，礼貌回答自己是 408 室的桑托斯；手中自然拿着简洁无文字的咖啡礼盒，但尚未递出。山田是听话对象。门框明确区分内外位置，白天自然光，下方保留字幕安全区。无任何文字、房号文字、字幕、标签、气泡或 UI。",
+      "imagePromptJa": "スマートフォン向け縦長9:16、1080×1920、前のフレームと同じ日本アニメ調の教育イラスト。現代日本のマンション入口で、サントスがドアの外から中の山田一郎に向かい、408号室のサントスだと礼儀正しく答える。文字のない簡素なコーヒーの贈り物を自然に持つが、まだ差し出さない。山田は聞き手。ドア枠で内外を明確にし、昼間の自然光、下部に字幕用余白。文字、部屋番号の表示、字幕、ラベル、吹き出し、UIなし。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, room number text, labels, speech bubbles, UI elements, classroom, school campus, shop, office, travel scene, romance, flirting, extra characters, wrong speaker, wrong listener, offering gift too early, exaggerated emotion, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-02-003",
+      "storyboardTextLineId": "l02-conv-003-s01",
+      "sourceLineId": "l02-conv-003",
+      "imagePromptCn": "手机竖屏 9:16、1080×1920、统一角色与公寓玄关场景。门已打开，桑托斯在玄关面向山田一郎，礼貌点头并当面问候、自我介绍；山田认真倾听。咖啡礼盒低调拿在桑托斯身侧，不递出。双人中景，桑托斯是当前视觉焦点，鞋柜与门框轻量可见，下方留出字幕安全区。无文字、字幕、姓名标签、编号、气泡或 UI。",
+      "imagePromptJa": "スマートフォン向け縦長9:16、1080×1920、統一された人物とマンション玄関。ドアが開き、サントスが玄関で山田一郎に向かって礼儀正しくうなずき、対面で挨拶と自己紹介をしている。山田は真剣に聞く。コーヒーの贈り物はサントスの脇に控えめに持ち、まだ渡さない。二人の中景、サントスが視覚的な中心、靴箱とドア枠を軽く描き、下部に字幕用余白。文字、字幕、名札、番号、吹き出し、UIなし。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, name labels, speech bubbles, UI elements, classroom, school campus, shop, office, travel scene, romance, flirting, extra characters, wrong speaker, wrong listener, offering gift, exaggerated emotion, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-02-004",
+      "storyboardTextLineId": "l02-conv-003-s02",
+      "sourceLineId": "l02-conv-003",
+      "imagePromptCn": "手机竖屏 9:16、1080×1920、同一日本公寓玄关和固定服装。桑托斯面向山田一郎，以新邻居身份谦逊地轻轻鞠躬，表达今后承蒙关照；山田保持接待和倾听姿态。咖啡礼盒仍握在身侧，不能提前递出。双人中景，动作克制自然，下方保留字幕安全区。无文字、字幕、编号、标签、气泡或 UI。",
+      "imagePromptJa": "スマートフォン向け縦長9:16、1080×1920、同じ日本のマンション玄関と固定された服装。サントスが新しい隣人として山田一郎に向かい、今後お世話になる気持ちを込めて控えめにお辞儀をする。山田は迎える姿勢で聞いている。コーヒーの贈り物はまだ脇に持ち、先に渡さない。二人の中景、自然で控えめな動作、下部に字幕用余白。文字、字幕、番号、ラベル、吹き出し、UIなし。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, classroom, school campus, shop, office, travel scene, romance, flirting, extra characters, wrong speaker, wrong listener, offering gift too early, deep exaggerated bow, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-02-005",
+      "storyboardTextLineId": "l02-conv-003-s03",
+      "sourceLineId": "l02-conv-003",
+      "imagePromptCn": "手机竖屏 9:16、1080×1920、同一公寓玄关连续场景。桑托斯仍面向山田一郎，以轻微鞠躬和诚恳平静的表情礼貌收尾；山田准备回应。咖啡礼盒仍未递出。双人中景清楚呈现说话方向桑托斯到山田，下方保留字幕安全区。画面不含文字、字幕、编号、姓名标签、气泡或 UI。",
+      "imagePromptJa": "スマートフォン向け縦長9:16、1080×1920、同じマンション玄関の連続した場面。サントスが山田一郎に向かい、軽いお辞儀と誠実で落ち着いた表情で丁寧な挨拶を締めくくる。山田は返答の準備をする。コーヒーの贈り物はまだ渡さない。サントスから山田への話す方向が明確な二人の中景、下部に字幕用余白。文字、字幕、番号、名札、吹き出し、UIなし。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, name labels, speech bubbles, UI elements, classroom, school campus, shop, office, travel scene, romance, flirting, extra characters, wrong speaker, wrong listener, handshake, hug, offering gift too early, exaggerated emotion, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-02-006",
+      "storyboardTextLineId": "l02-conv-004-s01",
+      "sourceLineId": "l02-conv-004",
+      "imagePromptCn": "手机竖屏 9:16、1080×1920、同一现代日本公寓玄关。镜头焦点转向山田一郎，山田面向桑托斯温和点头或轻鞠躬，礼貌回应对方；桑托斯直身认真倾听，礼盒仍在身侧。保持固定人物外貌服装和空间连续，下方留字幕安全区。无文字、字幕、编号、标签、气泡或 UI。",
+      "imagePromptJa": "スマートフォン向け縦長9:16、1080×1920、同じ現代日本のマンション玄関。視覚的な中心を山田一郎に移し、山田がサントスに向かって穏やかにうなずくか軽くお辞儀をして丁寧に返答する。サントスは姿勢を戻して真剣に聞き、贈り物はまだ脇に持つ。固定された外見・服装・空間の連続性を保ち、下部に字幕用余白。文字、字幕、番号、ラベル、吹き出し、UIなし。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, classroom, school campus, shop, office, travel scene, romance, flirting, extra characters, wrong speaker, wrong listener, offering gift too early, exaggerated emotion, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-02-007",
+      "storyboardTextLineId": "l02-conv-005-s01",
+      "sourceLineId": "l02-conv-005",
+      "imagePromptCn": "手机竖屏 9:16、1080×1920、同一公寓玄关。寒暄后，桑托斯面向山田一郎，把简洁无文字的咖啡礼盒从身侧移到身前，低调示意这是咖啡；山田把视线移向礼盒并倾听。此帧只说明礼物，尚未正式递出。双人中景兼顾双手和礼盒，下方保留字幕安全区。无品牌、文字、字幕、编号、标签、气泡或 UI。",
+      "imagePromptJa": "スマートフォン向け縦長9:16、1080×1920、同じマンション玄関。挨拶の後、サントスが山田一郎に向かい、文字のない簡素なコーヒーの贈り物を脇から体の前へ移して控えめに示す。山田は贈り物へ視線を移して聞く。このフレームでは品物を説明するだけで、まだ正式に差し出さない。手と贈り物が見える二人の中景、下部に字幕用余白。ブランド、文字、字幕、番号、ラベル、吹き出し、UIなし。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, brand labels, speech bubbles, UI elements, classroom, school campus, coffee shop, office, travel scene, romance, flirting, extra characters, wrong speaker, wrong listener, receiving gift already, drinking coffee, exaggerated emotion, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-02-008",
+      "storyboardTextLineId": "l02-conv-005-s02",
+      "sourceLineId": "l02-conv-005",
+      "imagePromptCn": "手机竖屏 9:16、1080×1920、同一公寓玄关和固定角色。桑托斯面向山田一郎，用双手把无文字咖啡礼盒礼貌地向前递出；山田伸出双手准备接收，但尚未说感谢。递送方向桑托斯到山田必须清楚，双手、礼盒和面部完整，下方保留字幕安全区。无文字、字幕、编号、品牌、标签、气泡或 UI。",
+      "imagePromptJa": "スマートフォン向け縦長9:16、1080×1920、同じマンション玄関と固定された人物。サントスが山田一郎に向かい、文字のないコーヒーの贈り物を両手で丁寧に差し出す。山田は両手を伸ばして受け取る準備をするが、まだ感謝を述べていない。サントスから山田への受け渡し方向を明確にし、手、贈り物、顔を完全に描く。下部に字幕用余白。文字、字幕、番号、ブランド、ラベル、吹き出し、UIなし。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, brand labels, speech bubbles, UI elements, classroom, school campus, coffee shop, office, travel scene, romance, flirting, extra characters, wrong speaker, wrong listener, Yamada giving the gift, handshake, drinking coffee, exaggerated emotion, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-02-009",
+      "storyboardTextLineId": "l02-conv-006-s01",
+      "sourceLineId": "l02-conv-006",
+      "imagePromptCn": "手机竖屏 9:16、1080×1920、同一公寓玄关的收束画面。山田一郎双手接稳无文字的咖啡礼盒，面向桑托斯轻点头并诚恳道谢；桑托斯放松双手，以礼貌平静的姿态回应。山田是当前说话焦点，两人关系和礼物交接结果清楚，不进入客厅、不拆礼物。下方保留字幕安全区。无文字、字幕、编号、标签、气泡或 UI。",
+      "imagePromptJa": "スマートフォン向け縦長9:16、1080×1920、同じマンション玄関の締めの場面。山田一郎が文字のないコーヒーの贈り物を両手で受け取り、サントスに向かって軽くうなずき、誠実に感謝する。サントスは両手を下ろし、礼儀正しく落ち着いた姿勢で応える。山田が現在の話し手として目立ち、二人の関係と贈り物の受け渡し結果が明確。居間へ移動せず、贈り物を開けない。下部に字幕用余白。文字、字幕、番号、ラベル、吹き出し、UIなし。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, brand labels, speech bubbles, UI elements, classroom, school campus, coffee shop, office, travel scene, romance, flirting, extra characters, wrong speaker, wrong listener, Santos thanking himself, opening gift, drinking coffee, entering living room, exaggerated emotion, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    }
+  ]
+}

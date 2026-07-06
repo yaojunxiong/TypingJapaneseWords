@@ -2,14 +2,9 @@
 
 import { useState, useEffect, useCallback, useRef, useLayoutEffect } from 'react'
 import Link from 'next/link'
-import storyboardData from '@/data/minna/storyboards/lesson-01.json'
-import reviewData from '@/data/minna/storyboards/lesson-01-image-prompts-review.json'
 import type { StoryboardLesson, ImagePromptReviewData } from '@/types/storyboard'
 
 const AUTO_PLAY_INTERVAL = 4000
-
-const ILLUST_V2_BASE = '/assets/storyboards/lesson-01/vertical-v2'
-const ILLUST_LEGACY_BASE = '/assets/storyboards/lesson-01/vertical'
 
 type Frame = {
   storyboardLineId: string
@@ -25,20 +20,23 @@ type Frame = {
   illustrationUrls: string[]
 }
 
-function illustrationUrls(storyboardLineId: string): string[] {
+function illustrationUrls(lessonNo: number, storyboardLineId: string): string[] {
   const filename = storyboardLineId + '.png'
+  const lessonDirectory = `lesson-${String(lessonNo).padStart(2, '0')}`
   return [
-    ILLUST_V2_BASE + '/' + filename,
-    ILLUST_LEGACY_BASE + '/' + filename,
+    `/assets/storyboards/${lessonDirectory}/vertical-v2/${filename}`,
+    `/assets/storyboards/${lessonDirectory}/vertical/${filename}`,
   ]
 }
 
-function buildFrames(): Frame[] {
-  const sb = storyboardData as StoryboardLesson
-  const rv = reviewData as ImagePromptReviewData
+function buildFrames(
+  lessonNo: number,
+  storyboard: StoryboardLesson,
+  review: ImagePromptReviewData,
+): Frame[] {
   const frames: Frame[] = []
-  for (const prompt of rv.prompts) {
-    const line = sb.lines.find(l => l.lineId === prompt.storyboardTextLineId)
+  for (const prompt of review.prompts) {
+    const line = storyboard.lines.find(l => l.lineId === prompt.storyboardTextLineId)
     if (!line) continue
     frames.push({
       storyboardLineId: prompt.storyboardLineId,
@@ -51,7 +49,7 @@ function buildFrames(): Frame[] {
       characterActionCn: line.characterActionCn,
       memoryHintCn: line.memoryHintCn,
       imagePromptCn: prompt.imagePromptCn,
-      illustrationUrls: illustrationUrls(prompt.storyboardLineId),
+      illustrationUrls: illustrationUrls(lessonNo, prompt.storyboardLineId),
     })
   }
   return frames
@@ -158,8 +156,16 @@ function IllustCard({ frame, index }: { frame: Frame; index: number }) {
   )
 }
 
-export default function VerticalPreviewClient() {
-  const frames = buildFrames()
+export default function VerticalPreviewClient({
+  lessonNo,
+  storyboard,
+  review,
+}: {
+  lessonNo: number
+  storyboard: StoryboardLesson
+  review: ImagePromptReviewData
+}) {
+  const frames = buildFrames(lessonNo, storyboard, review)
   const totalFrames = frames.length
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isPlaying, setIsPlaying] = useState(false)
@@ -222,12 +228,12 @@ export default function VerticalPreviewClient() {
 
       <header className="card" style={{ marginBottom: 10, padding: '12px 14px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 6 }}>
-          <Link href="/lessons/1/storyboard" style={{ fontSize: 13, color: '#2563eb', textDecoration: 'none', flexShrink: 0 }}>
+          <Link href={`/lessons/${lessonNo}/storyboard`} style={{ fontSize: 13, color: '#2563eb', textDecoration: 'none', flexShrink: 0 }}>
             ← 返回
           </Link>
           <span style={{ fontSize: 12, color: '#64748b', fontWeight: 500 }}>みんなの日本語 初級</span>
           <span style={{ fontSize: 12, color: '#94a3b8' }}>|</span>
-          <span style={{ fontSize: 12, color: '#1e293b', fontWeight: 600 }}>第1課 会話</span>
+          <span style={{ fontSize: 12, color: '#1e293b', fontWeight: 600 }}>第{lessonNo}課 会話</span>
           <span style={{
             marginLeft: 'auto', fontSize: 11, fontWeight: 700,
             padding: '2px 8px', borderRadius: 6,
