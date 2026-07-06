@@ -1,0 +1,108 @@
+{
+  "lessonNo": 7,
+  "conversationTitle": "ごめんください",
+  "reviewStatus": "pending-human-review",
+  "generationAllowed": false,
+  "prompts": [
+    {
+      "storyboardLineId": "sb-07-001",
+      "storyboardTextLineId": "l07-conv-001-s01",
+      "sourceLineId": "l07-conv-001",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。日本家庭玄关或客厅。玄关门内，山田一郎回应来客。 当前说话人：山田一郎，听话对象：ジョゼ・サントス。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。日本家庭玄关或客厅。玄关门内，山田一郎回应来客。 話し手は山田一郎、聞き手はジョゼ・サントス。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-07-002",
+      "storyboardTextLineId": "l07-conv-002-s01",
+      "sourceLineId": "l07-conv-002",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。日本家庭玄关或客厅。门口外，ジョゼ・サントス礼貌自报姓名。 当前说话人：ジョゼ・サントス，听话对象：山田一郎。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。日本家庭玄关或客厅。门口外，ジョゼ・サントス礼貌自报姓名。 話し手はジョゼ・サントス、聞き手は山田一郎。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-07-003",
+      "storyboardTextLineId": "l07-conv-003-s01",
+      "sourceLineId": "l07-conv-003",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。日本家庭玄关或客厅。山田一郎请客人进门。 当前说话人：山田一郎，听话对象：ジョゼ・サントス。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。日本家庭玄关或客厅。山田一郎请客人进门。 話し手は山田一郎、聞き手はジョゼ・サントス。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-07-004",
+      "storyboardTextLineId": "l07-conv-004-s01",
+      "sourceLineId": "l07-conv-004",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。日本家庭玄关或客厅。ジョゼ・サントス进门前礼貌致意。 当前说话人：ジョゼ・サントス，听话对象：山田一郎。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。日本家庭玄关或客厅。ジョゼ・サントス进门前礼貌致意。 話し手はジョゼ・サントス、聞き手は山田一郎。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-07-005",
+      "storyboardTextLineId": "l07-conv-005-s01",
+      "sourceLineId": "l07-conv-005",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。日本家庭玄关或客厅。客厅茶几旁，山田友子询问玛丽亚是否喝咖啡。 当前说话人：山田友子，听话对象：マリア・サントス。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。日本家庭玄关或客厅。客厅茶几旁，山田友子询问玛丽亚是否喝咖啡。 話し手は山田友子、聞き手はマリア・サントス。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-07-006",
+      "storyboardTextLineId": "l07-conv-006-s01",
+      "sourceLineId": "l07-conv-006",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。日本家庭玄关或客厅。マリア・サントス接受咖啡并道谢。 当前说话人：マリア・サントス，听话对象：山田友子。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。日本家庭玄关或客厅。マリア・サントス接受咖啡并道谢。 話し手はマリア・サントス、聞き手は山田友子。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-07-007",
+      "storyboardTextLineId": "l07-conv-007-s01",
+      "sourceLineId": "l07-conv-007",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。日本家庭玄关或客厅。山田友子把咖啡递给玛丽亚。 当前说话人：山田友子，听话对象：マリア・サントス。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。日本家庭玄关或客厅。山田友子把咖啡递给玛丽亚。 話し手は山田友子、聞き手はマリア・サントス。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-07-008",
+      "storyboardTextLineId": "l07-conv-008-s01",
+      "sourceLineId": "l07-conv-008",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。日本家庭玄关或客厅。マリア・サントス在喝咖啡前礼貌说いただきます。 当前说话人：マリア・サントス，听话对象：山田友子。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。日本家庭玄关或客厅。マリア・サントス在喝咖啡前礼貌说いただきます。 話し手はマリア・サントス、聞き手は山田友子。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-07-009",
+      "storyboardTextLineId": "l07-conv-009-s01",
+      "sourceLineId": "l07-conv-009",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。日本家庭玄关或客厅。マリア・サントス看着手边勺子称赞漂亮，不出现标签文字。 当前说话人：マリア・サントス，听话对象：山田友子。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。日本家庭玄关或客厅。マリア・サントス看着手边勺子称赞漂亮，不出现标签文字。 話し手はマリア・サントス、聞き手は山田友子。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-07-010",
+      "storyboardTextLineId": "l07-conv-010-s01",
+      "sourceLineId": "l07-conv-010",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。日本家庭玄关或客厅。山田友子说明勺子是公司的人送的墨西哥土产；不切换到墨西哥场景。 当前说话人：山田友子，听话对象：マリア・サントス。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。日本家庭玄关或客厅。山田友子说明勺子是公司的人送的墨西哥土产；不切换到墨西哥场景。 話し手は山田友子、聞き手はマリア・サントス。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    }
+  ]
+}

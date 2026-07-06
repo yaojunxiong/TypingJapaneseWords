@@ -1,0 +1,98 @@
+{
+  "lessonNo": 6,
+  "conversationTitle": "お花見に行きませんか",
+  "reviewStatus": "pending-human-review",
+  "generationAllowed": false,
+  "prompts": [
+    {
+      "storyboardLineId": "sb-06-001",
+      "storyboardTextLineId": "l06-conv-001-s01",
+      "sourceLineId": "l06-conv-001",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。办公室休息区或办公区。佐藤在办公室里叫住米勒，米勒在旁边。 当前说话人：佐藤，听话对象：ミラー。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。办公室休息区或办公区。佐藤在办公室里叫住米勒，米勒在旁边。 話し手は佐藤、聞き手はミラー。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-06-002",
+      "storyboardTextLineId": "l06-conv-002-s01",
+      "sourceLineId": "l06-conv-002",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。办公室休息区或办公区。米勒转向佐藤回应。 当前说话人：ミラー，听话对象：佐藤。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。办公室休息区或办公区。米勒转向佐藤回应。 話し手はミラー、聞き手は佐藤。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-06-003",
+      "storyboardTextLineId": "l06-conv-003-s01",
+      "sourceLineId": "l06-conv-003",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。办公室休息区或办公区。佐藤礼貌说明明天和朋友赏花，并邀请米勒一起去；不出现朋友或赏花现场。 当前说话人：佐藤，听话对象：ミラー。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。办公室休息区或办公区。佐藤礼貌说明明天和朋友赏花，并邀请米勒一起去；不出现朋友或赏花现场。 話し手は佐藤、聞き手はミラー。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-06-004",
+      "storyboardTextLineId": "l06-conv-004-s01",
+      "sourceLineId": "l06-conv-004",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。办公室休息区或办公区。米勒露出感兴趣的表情，询问去哪里。 当前说话人：ミラー，听话对象：佐藤。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。办公室休息区或办公区。米勒露出感兴趣的表情，询问去哪里。 話し手はミラー、聞き手は佐藤。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-06-005",
+      "storyboardTextLineId": "l06-conv-005-s01",
+      "sourceLineId": "l06-conv-005",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。办公室休息区或办公区。佐藤回答目的地是大阪城，但画面仍在办公室。 当前说话人：佐藤，听话对象：ミラー。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。办公室休息区或办公区。佐藤回答目的地是大阪城，但画面仍在办公室。 話し手は佐藤、聞き手はミラー。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-06-006",
+      "storyboardTextLineId": "l06-conv-006-s01",
+      "sourceLineId": "l06-conv-006",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。办公室休息区或办公区。米勒继续询问几点去。 当前说话人：ミラー，听话对象：佐藤。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。办公室休息区或办公区。米勒继续询问几点去。 話し手はミラー、聞き手は佐藤。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-06-007",
+      "storyboardTextLineId": "l06-conv-007-s01",
+      "sourceLineId": "l06-conv-007",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。办公室休息区或办公区。佐藤说明约定时间和见面地点，可用日程本但不出现文字数字。 当前说话人：佐藤，听话对象：ミラー。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。办公室休息区或办公区。佐藤说明约定时间和见面地点，可用日程本但不出现文字数字。 話し手は佐藤、聞き手はミラー。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-06-008",
+      "storyboardTextLineId": "l06-conv-008-s01",
+      "sourceLineId": "l06-conv-008",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。办公室休息区或办公区。米勒点头表示明白。 当前说话人：ミラー，听话对象：佐藤。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。办公室休息区或办公区。米勒点头表示明白。 話し手はミラー、聞き手は佐藤。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-06-009",
+      "storyboardTextLineId": "l06-conv-009-s01",
+      "sourceLineId": "l06-conv-009",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。办公室休息区或办公区。佐藤微笑告别，保持同事距离。 当前说话人：佐藤，听话对象：ミラー。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。办公室休息区或办公区。佐藤微笑告别，保持同事距离。 話し手は佐藤、聞き手はミラー。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    }
+  ]
+}

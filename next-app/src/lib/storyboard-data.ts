@@ -8,6 +8,16 @@ import lesson04Storyboard from '@/data/minna/storyboards/lesson-04.json'
 import lesson04Review from '@/data/minna/storyboards/lesson-04-image-prompts-review.json'
 import lesson05Storyboard from '@/data/minna/storyboards/lesson-05.json'
 import lesson05Review from '@/data/minna/storyboards/lesson-05-image-prompts-review.json'
+import lesson06Storyboard from '@/data/minna/storyboards/lesson-06.json'
+import lesson06Review from '@/data/minna/storyboards/lesson-06-image-prompts-review.json'
+import lesson07Storyboard from '@/data/minna/storyboards/lesson-07.json'
+import lesson07Review from '@/data/minna/storyboards/lesson-07-image-prompts-review.json'
+import lesson08Storyboard from '@/data/minna/storyboards/lesson-08.json'
+import lesson08Review from '@/data/minna/storyboards/lesson-08-image-prompts-review.json'
+import lesson09Storyboard from '@/data/minna/storyboards/lesson-09.json'
+import lesson09Review from '@/data/minna/storyboards/lesson-09-image-prompts-review.json'
+import lesson10Storyboard from '@/data/minna/storyboards/lesson-10.json'
+import lesson10Review from '@/data/minna/storyboards/lesson-10-image-prompts-review.json'
 import type { ImagePromptReviewData, StoryboardLesson } from '@/types/storyboard'
 
 type StoryboardData = {
@@ -35,6 +45,26 @@ const STORYBOARD_DATA: Record<number, StoryboardData> = {
   5: {
     storyboard: lesson05Storyboard as StoryboardLesson,
     review: lesson05Review as ImagePromptReviewData,
+  },
+  6: {
+    storyboard: lesson06Storyboard as StoryboardLesson,
+    review: lesson06Review as ImagePromptReviewData,
+  },
+  7: {
+    storyboard: lesson07Storyboard as StoryboardLesson,
+    review: lesson07Review as ImagePromptReviewData,
+  },
+  8: {
+    storyboard: lesson08Storyboard as StoryboardLesson,
+    review: lesson08Review as ImagePromptReviewData,
+  },
+  9: {
+    storyboard: lesson09Storyboard as StoryboardLesson,
+    review: lesson09Review as ImagePromptReviewData,
+  },
+  10: {
+    storyboard: lesson10Storyboard as StoryboardLesson,
+    review: lesson10Review as ImagePromptReviewData,
   },
 }
 
