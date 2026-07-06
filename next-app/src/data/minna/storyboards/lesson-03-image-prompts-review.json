@@ -1,0 +1,118 @@
+{
+  "lessonNo": 3,
+  "conversationTitle": "これをください",
+  "reviewStatus": "pending-human-review",
+  "generationAllowed": false,
+  "prompts": [
+    {
+      "storyboardLineId": "sb-03-001",
+      "storyboardTextLineId": "l03-conv-001-s01",
+      "sourceLineId": "l03-conv-001",
+      "imagePromptCn": "手机竖屏 9:16、1080×1920、清爽日式动漫教育插画风。现代日本商场入口或楼层导购区，店员A面向刚到的玛丽亚礼貌欢迎，玛丽亚准备询问。下方保留字幕安全区。无任何文字、字幕、编号、标签、气泡、UI 或水印。",
+      "imagePromptJa": "スマートフォン向け縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。現代日本のデパート入口または案内エリアで、店員Aが来店したマリアに丁寧に挨拶している。マリアはこれから質問しようとしている。下部に字幕用余白。文字、字幕、番号、ラベル、吹き出し、UI、透かしなし。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, watermark, restaurant, bar, classroom, school campus, travel scene, romance, flirting, extra characters, wrong speaker, wrong listener, drinking wine, checkout, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-03-002",
+      "storyboardTextLineId": "l03-conv-002-s01",
+      "sourceLineId": "l03-conv-002",
+      "imagePromptCn": "手机竖屏 9:16、1080×1920、同一现代日本商场导购区。玛丽亚面向店员A礼貌询问葡萄酒卖场在哪里，店员A认真倾听。画面不出现葡萄酒柜台或可读导览文字。下方保留字幕安全区。无文字、字幕、编号、标签、气泡或 UI。",
+      "imagePromptJa": "スマートフォン向け縦長9:16、1080×1920、同じ現代日本のデパート案内エリア。マリアが店員Aに向かってワイン売り場の場所を丁寧に尋ね、店員Aは真剣に聞いている。ワイン売り場や読める案内文字は出さない。下部に字幕用余白。文字、字幕、番号、ラベル、吹き出し、UIなし。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, signs, map text, speech bubbles, UI elements, restaurant, bar, classroom, office, already in wine counter, extra characters, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-03-003",
+      "storyboardTextLineId": "l03-conv-003-s01",
+      "sourceLineId": "l03-conv-003",
+      "imagePromptCn": "手机竖屏 9:16、1080×1920、商场导购区连续场景。店员A面向玛丽亚礼貌说明葡萄酒卖场在地下楼层，可用手势指向楼下或电梯方向，但不出现可读文字或数字。玛丽亚顺着手势理解。下方留字幕安全区。",
+      "imagePromptJa": "スマートフォン向け縦長9:16、1080×1920、デパート案内エリアの連続場面。店員Aがマリアに向かってワイン売り場が地下階にあることを丁寧に説明し、下方向やエレベーター方向を控えめに示す。ただし読める文字や数字は入れない。マリアはその方向を理解する。下部に字幕用余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, floor number text, labels, signs, map, speech bubbles, UI elements, restaurant, bar, classroom, wrong speaker, wrong listener, price tag, checkout, cropped face, cropped hands, low resolution, blurry, distorted hands",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-03-004",
+      "storyboardTextLineId": "l03-conv-004-s01",
+      "sourceLineId": "l03-conv-004",
+      "imagePromptCn": "手机竖屏 9:16、1080×1920、商场导购区过渡场景。玛丽亚面向店员A点头致谢，身体略转向楼下或电梯方向，准备去葡萄酒卖场。店员A礼貌送客。不要出现葡萄酒柜台或购买完成画面。无文字、字幕、编号、标签或 UI。",
+      "imagePromptJa": "スマートフォン向け縦長9:16、1080×1920、デパート案内エリアの移行場面。マリアが店員Aに向かって軽くうなずいて感謝し、体は地下階またはエレベーター方向へ少し向いている。店員Aは丁寧に見送る。ワイン売り場や購入完了場面は出さない。文字、字幕、番号、ラベル、UIなし。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, restaurant, bar, classroom, wine counter too early, holding wine, checkout, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-03-005",
+      "storyboardTextLineId": "l03-conv-005-s01",
+      "sourceLineId": "l03-conv-005",
+      "imagePromptCn": "手机竖屏 9:16、1080×1920、现代日本商场地下葡萄酒卖场。玛丽亚面向店员B，礼貌指向柜台或酒架上一瓶无文字标签的葡萄酒，请店员拿给她看。店员B注意到商品。下方保留字幕安全区。无品牌文字、价格牌、字幕、编号、标签、气泡或 UI。",
+      "imagePromptJa": "スマートフォン向け縦長9:16、1080×1920、現代日本のデパート地下のワイン売り場。マリアが店員Bに向かい、カウンターまたは棚にある文字のないワインボトルを控えめに示して見せてほしいと頼む。店員Bは商品に気づく。下部に字幕用余白。ブランド文字、値札、字幕、番号、ラベル、吹き出し、UIなし。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, brand labels, price tag, speech bubbles, UI elements, restaurant, bar, drinking wine, checkout, extra characters, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-03-006",
+      "storyboardTextLineId": "l03-conv-006-s01",
+      "sourceLineId": "l03-conv-006",
+      "imagePromptCn": "手机竖屏 9:16、1080×1920、同一葡萄酒卖场。店员B面向玛丽亚，把无文字标签的葡萄酒瓶递给她查看；玛丽亚伸手准备接看。递送方向店员B到玛丽亚清楚。不要表现付款、包装或开瓶。无文字、字幕、标签、气泡或 UI。",
+      "imagePromptJa": "スマートフォン向け縦長9:16、1080×1920、同じワイン売り場。店員Bがマリアに向かって文字のないワインボトルを見せるために差し出し、マリアは受け取って見る準備をする。受け渡し方向は店員Bからマリアへ明確に。支払い、包装、開栓は描かない。文字、字幕、ラベル、吹き出し、UIなし。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, brand labels, price tag, speech bubbles, UI elements, restaurant, bar, drinking wine, checkout, packaging, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-03-007",
+      "storyboardTextLineId": "l03-conv-007-s01",
+      "sourceLineId": "l03-conv-007",
+      "imagePromptCn": "手机竖屏 9:16、1080×1920、葡萄酒卖场连续场景。玛丽亚看着手中或柜台上的无文字酒瓶，面向店员B询问这瓶酒的产地。店员B准备回答。不要出现地图、国旗或产地文字。下方留字幕安全区。",
+      "imagePromptJa": "スマートフォン向け縦長9:16、1080×1920、ワイン売り場の連続場面。マリアが手元またはカウンター上の文字のないワインボトルを見ながら、店員Bにこのワインの産地を尋ねる。店員Bは答える準備をする。地図、国旗、産地文字は出さない。下部に字幕用余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, map, flag, labels, speech bubbles, UI elements, restaurant, bar, drinking wine, price question, checkout, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-03-008",
+      "storyboardTextLineId": "l03-conv-008-s01",
+      "sourceLineId": "l03-conv-008",
+      "imagePromptCn": "手机竖屏 9:16、1080×1920、同一葡萄酒卖场。店员B面向玛丽亚礼貌回答产地，酒瓶仍在两人之间作为当前话题。画面不出现日本国旗、地图或文字标签。下方保留字幕安全区。",
+      "imagePromptJa": "スマートフォン向け縦長9:16、1080×1920、同じワイン売り場。店員Bがマリアに向かって産地を丁寧に答え、ワインボトルは二人の間に現在の話題として残る。日本国旗、地図、文字ラベルは出さない。下部に字幕用余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, Japan flag, map, labels, speech bubbles, UI elements, restaurant, bar, drinking wine, checkout, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-03-009",
+      "storyboardTextLineId": "l03-conv-009-s01",
+      "sourceLineId": "l03-conv-009",
+      "imagePromptCn": "手机竖屏 9:16、1080×1920、同一葡萄酒卖场。玛丽亚拿着或指着无文字酒瓶，面向店员B询问价格。店员B准备回答。不要提前出现价格数字、收银台、付款或收据。无文字、字幕、标签或 UI。",
+      "imagePromptJa": "スマートフォン向け縦長9:16、1080×1920、同じワイン売り場。マリアが文字のないワインボトルを持つか示しながら、店員Bに価格を尋ねる。店員Bは答える準備をする。価格数字、レジ、支払い、レシートは先に出さない。文字、字幕、ラベル、UIなし。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, price tag, receipt, cash register, labels, speech bubbles, UI elements, restaurant, bar, drinking wine, checkout, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-03-010",
+      "storyboardTextLineId": "l03-conv-010-s01",
+      "sourceLineId": "l03-conv-010",
+      "imagePromptCn": "手机竖屏 9:16、1080×1920、葡萄酒卖场。店员B面向玛丽亚回答价格，表情平静专业；玛丽亚看着酒瓶并听价格。画面不出现可读数字、价格牌、收据或付款动作。下方保留字幕安全区。",
+      "imagePromptJa": "スマートフォン向け縦長9:16、1080×1920、ワイン売り場。店員Bがマリアに向かって価格を答え、落ち着いた専門的な表情。マリアはワインボトルを見ながら価格を聞く。読める数字、値札、レシート、支払い動作は出さない。下部に字幕用余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, price tag, receipt, cash register, labels, speech bubbles, UI elements, restaurant, bar, drinking wine, checkout, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-03-011",
+      "storyboardTextLineId": "l03-conv-011-s01",
+      "sourceLineId": "l03-conv-011",
+      "imagePromptCn": "手机竖屏 9:16、1080×1920、葡萄酒卖场收束画面。玛丽亚面向店员B，指着或拿着这瓶无文字葡萄酒，礼貌表示决定购买。店员B准备继续服务，但不要出现付款、包装、收银员或喝酒。下方留字幕安全区。无文字、字幕、编号、标签、气泡或 UI。",
+      "imagePromptJa": "スマートフォン向け縦長9:16、1080×1920、ワイン売り場の締めの場面。マリアが店員Bに向かい、この文字のないワインボトルを指すか持ちながら、購入を決めたことを丁寧に伝える。店員Bは次の対応を準備するが、支払い、包装、レジ係、飲酒は描かない。下部に字幕用余白。文字、字幕、番号、ラベル、吹き出し、UIなし。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, price tag, receipt, cash register, labels, speech bubbles, UI elements, restaurant, bar, drinking wine, opening bottle, packaging, extra cashier, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    }
+  ]
+}

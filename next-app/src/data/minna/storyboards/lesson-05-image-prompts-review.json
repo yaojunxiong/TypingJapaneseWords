@@ -1,0 +1,108 @@
+{
+  "lessonNo": 5,
+  "conversationTitle": "甲子園へ行きますか",
+  "reviewStatus": "pending-human-review",
+  "generationAllowed": false,
+  "prompts": [
+    {
+      "storyboardLineId": "sb-05-001",
+      "storyboardTextLineId": "l05-conv-001-s01",
+      "sourceLineId": "l05-conv-001",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。现代日本车站售票或问询窗口，桑托斯面向窗口女性礼貌询问到甲子园多少钱。背景不出现站名、价格、数字或可读文字。下方留字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調教育イラスト。現代日本の駅の切符売り場または案内窓口で、サントスが窓口の女性に甲子園までの料金を丁寧に尋ねる。駅名、価格、数字、読める文字は出さない。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, price, station name, labels, speech bubbles, UI, travel tourism, classroom, romance, extra characters, wrong speaker, wrong listener, cropped face, cropped hands, blurry",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-05-002",
+      "storyboardTextLineId": "l05-conv-002-s01",
+      "sourceLineId": "l05-conv-002",
+      "imagePromptCn": "手机竖屏9:16，1080×1920。同一车站窗口，女性工作人员回答票价，桑托斯认真倾听。不要出现任何票价数字、车票文字、钱币或付款动作。下方留字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920。同じ駅の窓口で、女性スタッフが料金を答え、サントスは真剣に聞く。料金の数字、切符の文字、お金、支払い動作は出さない。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, price, ticket text, money, payment, labels, speech bubbles, UI, wrong speaker, wrong listener, blurry",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-05-003",
+      "storyboardTextLineId": "l05-conv-003-s01",
+      "sourceLineId": "l05-conv-003",
+      "imagePromptCn": "手机竖屏9:16，1080×1920。同一窗口前，桑托斯点头确认听到的票价并向女性工作人员道谢。不要画付款、买票完成、收据或票面文字。下方留字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920。同じ窓口前で、サントスが聞いた料金を確認して女性スタッフに感謝する。支払い、切符購入完了、領収書、切符の文字は描かない。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, price, ticket, receipt, payment, labels, speech bubbles, UI, wrong speaker, wrong listener, blurry",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-05-004",
+      "storyboardTextLineId": "l05-conv-004-s01",
+      "sourceLineId": "l05-conv-004",
+      "imagePromptCn": "手机竖屏9:16，1080×1920。车站窗口内女性工作人员微笑点头回应感谢，桑托斯在窗口外听。不要提前出现站台或列车。下方留字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920。駅の窓口内の女性スタッフが微笑んでうなずき、感謝に応える。サントスは窓口の外で聞く。ホームや電車はまだ出さない。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, station platform too early, train too early, labels, speech bubbles, UI, romance, extra characters, wrong speaker, wrong listener, blurry",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-05-005",
+      "storyboardTextLineId": "l05-conv-005-s01",
+      "sourceLineId": "l05-conv-005",
+      "imagePromptCn": "手机竖屏9:16，1080×1920。车站通道或站台入口，桑托斯面向穿制服的站员询问去甲子园是几号线。背景不出现站台数字、站名或标牌文字。下方留字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920。駅構内の通路またはホーム入口で、サントスが制服の駅員に甲子園は何番線か尋ねる。ホーム番号、駅名、標識文字は出さない。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, platform number, station sign, labels, speech bubbles, UI, ticket price, wrong speaker, wrong listener, blurry",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-05-006",
+      "storyboardTextLineId": "l05-conv-006-s01",
+      "sourceLineId": "l05-conv-006",
+      "imagePromptCn": "手机竖屏9:16，1080×1920。同一车站通道，站员面向桑托斯回答站台线，可用手势指向方向，但不能出现数字或站台牌文字。下方留字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920。同じ駅構内で、駅員がサントスに番線を答え、控えめな手振りで方向を示す。数字やホーム標識文字は出さない。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, platform number, station sign, labels, speech bubbles, UI, price, wrong speaker, wrong listener, blurry",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-05-007",
+      "storyboardTextLineId": "l05-conv-007-s01",
+      "sourceLineId": "l05-conv-007",
+      "imagePromptCn": "手机竖屏9:16，1080×1920。桑托斯在车站通道面对站员点头简短道谢，准备去站台但尚未上车。下方留字幕安全区。无文字、字幕、编号、标签、UI。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920。サントスが駅構内で駅員に向かって軽くうなずき、短く感謝する。ホームへ向かう前で、まだ乗車しない。下部に字幕余白。文字、字幕、番号、ラベル、UIなし。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI, boarding train, ticket purchase, wrong speaker, wrong listener, blurry",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-05-008",
+      "storyboardTextLineId": "l05-conv-008-s01",
+      "sourceLineId": "l05-conv-008",
+      "imagePromptCn": "手机竖屏9:16，1080×1920。车站站台上，桑托斯面向旁边男性乘客询问这班电车是否去甲子园，背景有电车但无目的地文字。下方留字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920。駅のホームで、サントスが隣の男性乗客にこの電車が甲子園へ行くか尋ねる。背景に電車はあるが行き先文字は出さない。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, destination sign, train text, labels, speech bubbles, UI, inside train, tourism, extra characters crowd, wrong speaker, wrong listener, blurry",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-05-009",
+      "storyboardTextLineId": "l05-conv-009-s01",
+      "sourceLineId": "l05-conv-009",
+      "imagePromptCn": "手机竖屏9:16，1080×1920。同一站台，男性乘客面向桑托斯平静说明这班不是，应该等下一班普通车；可用克制手势示意等待方向，但不出现列车种别文字。下方留字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920。同じホームで、男性乗客がサントスに向かって、この電車ではなく次の普通を待つべきだと落ち着いて説明する。控えめな手振りは可だが列車種別文字は出さない。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, train type text, destination sign, labels, speech bubbles, UI, station staff uniform, wrong speaker, wrong listener, blurry",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-05-010",
+      "storyboardTextLineId": "l05-conv-010-s01",
+      "sourceLineId": "l05-conv-010",
+      "imagePromptCn": "手机竖屏9:16，1080×1920。桑托斯在站台上对男性乘客点头表示明白并道谢，准备等待下一班车。不要画上车、旅行出发或挥手告别。下方留字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920。サントスがホームで男性乗客に向かってうなずき、理解して感謝する。次の電車を待つ雰囲気。乗車、旅行出発、手を振る別れは描かない。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI, boarding train, travel departure, waving goodbye, extra characters, wrong speaker, wrong listener, blurry",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    }
+  ]
+}

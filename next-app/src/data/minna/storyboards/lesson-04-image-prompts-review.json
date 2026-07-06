@@ -1,0 +1,98 @@
+{
+  "lessonNo": 4,
+  "conversationTitle": "そちらは何時までですか",
+  "reviewStatus": "pending-human-review",
+  "generationAllowed": false,
+  "prompts": [
+    {
+      "storyboardLineId": "sb-04-001",
+      "storyboardTextLineId": "l04-conv-001-s01",
+      "sourceLineId": "l04-conv-001",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。现代日本办公室或接待区，米勒面向佐藤礼貌询问「あすか」电话号码，桌上可有普通电话但不出现任何可读号码。下方留字幕安全区。无文字、字幕、编号、标签、气泡、UI。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調教育イラスト。現代日本のオフィスまたは受付エリアで、ミラーが佐藤に向かって「あすか」の電話番号を丁寧に尋ねる。机上に普通の電話はあっても読める番号は出さない。下部に字幕余白。文字、字幕、番号、ラベル、吹き出し、UIなし。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, phone number, labels, speech bubbles, UI elements, classroom, school campus, restaurant scene, romance, flirting, extra characters, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-04-002",
+      "storyboardTextLineId": "l04-conv-002-s01",
+      "sourceLineId": "l04-conv-002",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，同一办公室。佐藤面向米勒确认并回答电话号码，可看向便签或电话本，但不能有可读数字。米勒认真倾听。下方留字幕安全区。无文字、字幕、编号、标签、气泡、UI。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、同じオフィス。佐藤がミラーに向かって確認し、電話番号を答える。メモや電話帳を見てもよいが読める数字は入れない。ミラーは真剣に聞く。下部に字幕余白。文字、字幕、番号、ラベル、吹き出し、UIなし。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, phone number, labels, speech bubbles, UI elements, price, floor number, classroom, restaurant, extra characters, wrong speaker, wrong listener, cropped face, cropped hands, blurry",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-04-003",
+      "storyboardTextLineId": "l04-conv-003-s01",
+      "sourceLineId": "l04-conv-003",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，同一办公室。米勒面对佐藤轻轻点头郑重道谢，准备之后打电话但电话尚未接通。下方留字幕安全区。无文字、字幕、编号、标签、气泡、UI。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、同じオフィス。ミラーが佐藤に向かって軽くうなずき、丁寧に感謝する。これから電話する雰囲気だが、まだ通話は始まっていない。下部に字幕余白。文字、字幕、番号、ラベル、吹き出し、UIなし。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, phone call already connected, restaurant, classroom, extra characters, wrong speaker, wrong listener, cropped face, cropped hands, blurry",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-04-004",
+      "storyboardTextLineId": "l04-conv-004-s01",
+      "sourceLineId": "l04-conv-004",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，电话会话构图。米勒在电话这头，店员在店铺电话旁接听并报店名，远距离通话关系清楚。店铺背景简洁，不出现店名招牌文字。下方留字幕安全区。无文字、字幕、编号、标签、气泡、UI。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、電話会話の構図。ミラーは電話のこちら側、店員は店内の電話で応答し店名を名乗る。遠隔通話の関係を明確にする。店内背景は簡潔で店名看板文字は出さない。下部に字幕余白。文字、字幕、番号、ラベル、吹き出し、UIなし。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, shop sign text, labels, speech bubbles, UI elements, face to face meeting, dining, payment, extra characters, wrong speaker, wrong listener, cropped face, cropped hands, blurry",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-04-005",
+      "storyboardTextLineId": "l04-conv-005-s01",
+      "sourceLineId": "l04-conv-005",
+      "imagePromptCn": "手机竖屏9:16，1080×1920。米勒拿着电话认真询问店铺营业到几点，店员作为电话另一端听话对象可用分屏或远端空间暗示。不要出现钟表数字或营业时间文字。下方留字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920。ミラーが電話を持ち、店の営業時間が何時までかを真剣に尋ねる。店員は電話の向こう側の聞き手として分割構図や遠隔空間で示す。時計の数字や営業時間文字は出さない。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, clock numbers, business hours sign, labels, speech bubbles, UI, face to face, restaurant dining, classroom, wrong speaker, wrong listener, blurry",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-04-006",
+      "storyboardTextLineId": "l04-conv-006-s01",
+      "sourceLineId": "l04-conv-006",
+      "imagePromptCn": "手机竖屏9:16，1080×1920。店员在电话另一端礼貌回答营业时间，店铺内景简洁，米勒在电话那头倾听。不要出现数字、钟表、价格或招牌文字。下方留字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920。店員が電話の向こう側で営業時間を丁寧に答える。店内は簡潔、ミラーは電話のこちら側で聞く。数字、時計、価格、看板文字は出さない。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, clock, price, shop sign, labels, speech bubbles, UI, face to face, checkout, extra characters, wrong speaker, wrong listener, blurry",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-04-007",
+      "storyboardTextLineId": "l04-conv-007-s01",
+      "sourceLineId": "l04-conv-007",
+      "imagePromptCn": "手机竖屏9:16，1080×1920。米勒继续拿电话询问店铺星期几休息，姿态专注，可有空白便签但无可读文字。下方留字幕安全区。无日历文字、无星期标签。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920。ミラーが電話を続け、店の休みが何曜日かを尋ねる。集中した姿勢、空白のメモは可だが読める文字はなし。下部に字幕余白。カレンダー文字や曜日ラベルなし。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, calendar text, weekday labels, speech bubbles, UI, school schedule, travel, extra characters, wrong speaker, wrong listener, blurry",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-04-008",
+      "storyboardTextLineId": "l04-conv-008-s01",
+      "sourceLineId": "l04-conv-008",
+      "imagePromptCn": "手机竖屏9:16，1080×1920。店员在电话中回答休息日，表情平静专业，米勒在另一端听懂信息。不要出现日历、星期文字、数字。下方留字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920。店員が電話で定休日を答える。落ち着いた専門的な表情、ミラーは向こう側で理解する。カレンダー、曜日文字、数字は出さない。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, calendar, weekday text, labels, speech bubbles, UI, school, travel, face to face, wrong speaker, wrong listener, blurry",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-04-009",
+      "storyboardTextLineId": "l04-conv-009-s01",
+      "sourceLineId": "l04-conv-009",
+      "imagePromptCn": "手机竖屏9:16，1080×1920。米勒拿着电话点头表示明白并简短道谢，电话会话结束。不要出现到店用餐、付款或面对面告别。下方留字幕安全区。无文字、字幕、编号、标签、UI。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920。ミラーが電話を持ってうなずき、理解して短く感謝し、通話を終える。来店、食事、支払い、対面の別れは描かない。下部に字幕余白。文字、字幕、番号、ラベル、UIなし。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI, dining, payment, face to face, extra characters, wrong speaker, wrong listener, cropped face, cropped hands, blurry",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    }
+  ]
+}

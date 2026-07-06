@@ -295,10 +295,16 @@ export default function VerticalPreviewClient({
           </span>
           <span style={{ color: '#94a3b8', fontSize: 12 }}>说</span>
         </div>
-        <div style={{ fontSize: 20, fontWeight: 700, color: '#1e293b', marginBottom: 4, lineHeight: 1.4 }}>
+        <div style={{
+          fontSize: 20, fontWeight: 700, color: '#1e293b', marginBottom: 4, lineHeight: 1.4,
+          overflowWrap: 'anywhere', wordBreak: 'break-word',
+        }}>
           {frame.japaneseText}
         </div>
-        <div style={{ fontSize: 14, color: '#64748b', lineHeight: 1.5 }}>
+        <div style={{
+          fontSize: 14, color: '#64748b', lineHeight: 1.5,
+          overflowWrap: 'anywhere', wordBreak: 'break-word',
+        }}>
           {frame.chineseText}
         </div>
       </div>
