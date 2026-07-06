@@ -1,5 +1,5 @@
 export const AI_PRACTICE_ENABLED_LESSON_MIN = 1
-export const AI_PRACTICE_ENABLED_LESSON_MAX = 5
+export const AI_PRACTICE_ENABLED_LESSON_MAX = 25
 
 export function isAiPracticeEnabledLesson(lessonNo: number): boolean {
   return lessonNo >= AI_PRACTICE_ENABLED_LESSON_MIN && lessonNo <= AI_PRACTICE_ENABLED_LESSON_MAX
