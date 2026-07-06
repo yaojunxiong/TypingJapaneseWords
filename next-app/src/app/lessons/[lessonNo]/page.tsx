@@ -11,6 +11,7 @@ import RecitationV2Entry from '@/components/recitation-v2-entry'
 import LessonAccessBlocked from '@/components/lesson-access-blocked'
 import { LESSONS_1_50 } from '@/lib/minna-lessons'
 import { getLang, type Lang, tr } from '@/lib/i18n-server'
+import { isAiPracticeEnabledLesson } from '@/lib/ai-practice-config'
 import { getServerLessonAccess } from '@/lib/learning-access-server'
 import conversationTitles from '@/data/minna/conversation-titles.json'
 
@@ -180,7 +181,7 @@ export default async function LessonDetailPage({
           <Link className="btn" href={`/lessons/${no}/recitation`} style={{ padding: '12px 14px', minWidth: 150, textAlign: 'center' }}>
             🎙️ {tr(lang, '开始会话背诵', 'Start Recitation')}
           </Link>
-          {no >= 1 && no <= 5 ? (
+          {isAiPracticeEnabledLesson(no) ? (
             <Link className="btn ghost" href={`/lessons/${no}/ai-practice`} style={{ padding: '12px 14px', minWidth: 150, textAlign: 'center' }}>
               🤖 {tr(lang, 'AI 会话陪练', 'AI Role-Play')}
             </Link>

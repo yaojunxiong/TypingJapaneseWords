@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import StudyMobileChrome from '@/components/study-mobile-chrome'
+import { getAiPracticeEnabledLessonLabel, isAiPracticeEnabledLesson } from '@/lib/ai-practice-config'
 import { loadRecitationLesson } from '@/lib/recitation-lesson'
 import type { Lang } from '@/lib/i18n'
 import type { RecitationLesson, RecitationLine } from '@/types/recitation'
@@ -14,8 +15,6 @@ type Props = {
 
 type LineResult = 'correct' | 'weak'
 type LineAttemptMap = Record<string, LineResult>
-
-const ENABLED_LESSON_NOS = new Set([1, 2, 3, 4, 5])
 
 type RecitationLineWithExtras = RecitationLine & {
   kana?: string
@@ -142,13 +141,13 @@ export default function AiPracticePageClient({ lessonNo, lang }: Props) {
     )
   }
 
-  if (!ENABLED_LESSON_NOS.has(lessonNo)) {
+  if (!isAiPracticeEnabledLesson(lessonNo)) {
     return (
       <div className="page-container" style={{ maxWidth: 820, margin: '0 auto', padding: '16px 14px 120px' }}>
         <StudyMobileChrome lang={lang} active="lessons" />
         <section className="card" style={{ padding: 20 }}>
           <h1 style={{ margin: 0, fontSize: 24 }}>AI 会话陪练</h1>
-          <p className="small">AI 会话陪练当前开放第 1-5 课。请先完成已开放课程的角色扮演练习。</p>
+          <p className="small">AI 会话陪练当前开放{getAiPracticeEnabledLessonLabel()}。请先完成已开放课程的角色扮演练习。</p>
           <Link className="btn" href="/lessons/1/ai-practice">去第 1 课 AI 会话陪练</Link>
         </section>
       </div>
