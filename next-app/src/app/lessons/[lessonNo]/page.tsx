@@ -180,6 +180,11 @@ export default async function LessonDetailPage({
           <Link className="btn" href={`/lessons/${no}/recitation`} style={{ padding: '12px 14px', minWidth: 150, textAlign: 'center' }}>
             🎙️ {tr(lang, '开始会话背诵', 'Start Recitation')}
           </Link>
+          {no === 1 ? (
+            <Link className="btn ghost" href="/lessons/1/ai-practice" style={{ padding: '12px 14px', minWidth: 150, textAlign: 'center' }}>
+              🤖 {tr(lang, 'AI 会话陪练', 'AI Role-Play')}
+            </Link>
+          ) : null}
           <Link className="btn ghost" href={`/lessons/${no}/deep-dive`} style={{ padding: '12px 14px', minWidth: 150, textAlign: 'center' }}>
             🔍 {tr(lang, '中文理解', 'Deep Dive')}
           </Link>
