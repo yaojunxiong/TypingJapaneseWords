@@ -1,0 +1,98 @@
+{
+  "lessonNo": 12,
+  "conversationTitle": "祇園祭はどうでしたか",
+  "reviewStatus": "pending-human-review",
+  "generationAllowed": false,
+  "prompts": [
+    {
+      "storyboardLineId": "sb-12-001",
+      "storyboardTextLineId": "l12-conv-001-s01",
+      "sourceLineId": "l12-conv-001",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。公寓大厅或管理员室。米勒回到公寓大厅，对管理员说回来了。 当前说话人：ミラー，听话对象：管理人。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。公寓大厅或管理员室。米勒回到公寓大厅，对管理员说回来了。 話し手はミラー、聞き手は管理人。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-12-002",
+      "storyboardTextLineId": "l12-conv-002-s01",
+      "sourceLineId": "l12-conv-002",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。公寓大厅或管理员室。管理员在大厅欢迎米勒回来。 当前说话人：管理人，听话对象：ミラー。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。公寓大厅或管理员室。管理员在大厅欢迎米勒回来。 話し手は管理人、聞き手はミラー。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-12-003",
+      "storyboardTextLineId": "l12-conv-003-s01",
+      "sourceLineId": "l12-conv-003",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。公寓大厅或管理员室。米勒把京都土产小礼盒递给管理员；包装无文字。 当前说话人：ミラー，听话对象：管理人。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。公寓大厅或管理员室。米勒把京都土产小礼盒递给管理员；包装无文字。 話し手はミラー、聞き手は管理人。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-12-004",
+      "storyboardTextLineId": "l12-conv-004-s01",
+      "sourceLineId": "l12-conv-004",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。公寓大厅或管理员室。管理员感谢并询问祇园祭怎么样。 当前说话人：管理人，听话对象：ミラー。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。公寓大厅或管理员室。管理员感谢并询问祇园祭怎么样。 話し手は管理人、聞き手はミラー。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-12-005",
+      "storyboardTextLineId": "l12-conv-005-s01",
+      "sourceLineId": "l12-conv-005",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。公寓大厅或管理员室。米勒回答祭典很有趣、很热闹；仍在大厅，不切换祭典现场。 当前说话人：ミラー，听话对象：管理人。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。公寓大厅或管理员室。米勒回答祭典很有趣、很热闹；仍在大厅，不切换祭典现场。 話し手はミラー、聞き手は管理人。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-12-006",
+      "storyboardTextLineId": "l12-conv-006-s01",
+      "sourceLineId": "l12-conv-006",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。公寓大厅或管理员室。管理员说明祇园祭是京都最有名的祭典；不出现文字资料。 当前说话人：管理人，听话对象：ミラー。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。公寓大厅或管理员室。管理员说明祇园祭是京都最有名的祭典；不出现文字资料。 話し手は管理人、聞き手はミラー。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-12-007",
+      "storyboardTextLineId": "l12-conv-007-s01",
+      "sourceLineId": "l12-conv-007",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。公寓大厅或管理员室。米勒展示手机或照片给管理员看；照片内容不可读。 当前说话人：ミラー，听话对象：管理人。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。公寓大厅或管理员室。米勒展示手机或照片给管理员看；照片内容不可读。 話し手はミラー、聞き手は管理人。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-12-008",
+      "storyboardTextLineId": "l12-conv-008-s01",
+      "sourceLineId": "l12-conv-008",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。公寓大厅或管理员室。管理员看照片并感叹人很多。 当前说话人：管理人，听话对象：ミラー。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。公寓大厅或管理员室。管理员看照片并感叹人很多。 話し手は管理人、聞き手はミラー。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-12-009",
+      "storyboardTextLineId": "l12-conv-009-s01",
+      "sourceLineId": "l12-conv-009",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。公寓大厅或管理员室。米勒承认有点累，放松地微笑。 当前说话人：ミラー，听话对象：管理人。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。公寓大厅或管理员室。米勒承认有点累，放松地微笑。 話し手はミラー、聞き手は管理人。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    }
+  ]
+}

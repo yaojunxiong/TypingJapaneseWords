@@ -1,0 +1,138 @@
+{
+  "lessonNo": 11,
+  "conversationTitle": "郵便局まで",
+  "reviewStatus": "pending-human-review",
+  "generationAllowed": false,
+  "prompts": [
+    {
+      "storyboardLineId": "sb-11-001",
+      "storyboardTextLineId": "l11-conv-001-s01",
+      "sourceLineId": "l11-conv-001",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。公寓门口或现代日本邮局窗口。公寓门口，管理员看着准备出门的王，天气晴朗。 当前说话人：管理人，听话对象：ワン。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。公寓门口或现代日本邮局窗口。公寓门口，管理员看着准备出门的王，天气晴朗。 話し手は管理人、聞き手はワン。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-11-002",
+      "storyboardTextLineId": "l11-conv-002-s01",
+      "sourceLineId": "l11-conv-002",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。公寓门口或现代日本邮局窗口。王在公寓门口回应管理员，说明要去邮局。 当前说话人：ワン，听话对象：管理人。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。公寓门口或现代日本邮局窗口。王在公寓门口回应管理员，说明要去邮局。 話し手はワン、聞き手は管理人。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-11-003",
+      "storyboardTextLineId": "l11-conv-003-s01",
+      "sourceLineId": "l11-conv-003",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。公寓门口或现代日本邮局窗口。管理员礼貌送王出门。 当前说话人：管理人，听话对象：ワン。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。公寓门口或现代日本邮局窗口。管理员礼貌送王出门。 話し手は管理人、聞き手はワン。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-11-004",
+      "storyboardTextLineId": "l11-conv-004-s01",
+      "sourceLineId": "l11-conv-004",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。公寓门口或现代日本邮局窗口。王向管理员说出门了并准备离开。 当前说话人：ワン，听话对象：管理人。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。公寓门口或现代日本邮局窗口。王向管理员说出门了并准备离开。 話し手はワン、聞き手は管理人。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-11-005",
+      "storyboardTextLineId": "l11-conv-005-s01",
+      "sourceLineId": "l11-conv-005",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。公寓门口或现代日本邮局窗口。邮局窗口前，王把包裹递给邮局工作人员，说明要寄到澳大利亚；包裹无文字标签。 当前说话人：ワン，听话对象：郵便局員。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。公寓门口或现代日本邮局窗口。邮局窗口前，王把包裹递给邮局工作人员，说明要寄到澳大利亚；包裹无文字标签。 話し手はワン、聞き手は郵便局員。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-11-006",
+      "storyboardTextLineId": "l11-conv-006-s01",
+      "sourceLineId": "l11-conv-006",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。公寓门口或现代日本邮局窗口。邮局工作人员询问海运还是航空寄送；窗口前有包裹但无文字。 当前说话人：郵便局員，听话对象：ワン。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。公寓门口或现代日本邮局窗口。邮局工作人员询问海运还是航空寄送；窗口前有包裹但无文字。 話し手は郵便局員、聞き手はワン。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-11-007",
+      "storyboardTextLineId": "l11-conv-007-s01",
+      "sourceLineId": "l11-conv-007",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。公寓门口或现代日本邮局窗口。王询问航空寄送多少钱。 当前说话人：ワン，听话对象：郵便局員。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。公寓门口或现代日本邮局窗口。王询问航空寄送多少钱。 話し手はワン、聞き手は郵便局員。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-11-008",
+      "storyboardTextLineId": "l11-conv-008-s01",
+      "sourceLineId": "l11-conv-008",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。公寓门口或现代日本邮局窗口。邮局工作人员回答航空费用；不要出现价格数字。 当前说话人：郵便局員，听话对象：ワン。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。公寓门口或现代日本邮局窗口。邮局工作人员回答航空费用；不要出现价格数字。 話し手は郵便局員、聞き手はワン。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-11-009",
+      "storyboardTextLineId": "l11-conv-009-s01",
+      "sourceLineId": "l11-conv-009",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。公寓门口或现代日本邮局窗口。王继续询问海运费用。 当前说话人：ワン，听话对象：郵便局員。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。公寓门口或现代日本邮局窗口。王继续询问海运费用。 話し手はワン、聞き手は郵便局員。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-11-010",
+      "storyboardTextLineId": "l11-conv-010-s01",
+      "sourceLineId": "l11-conv-010",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。公寓门口或现代日本邮局窗口。邮局工作人员回答海运费用；不要出现价格数字。 当前说话人：郵便局員，听话对象：ワン。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。公寓门口或现代日本邮局窗口。邮局工作人员回答海运费用；不要出现价格数字。 話し手は郵便局員、聞き手はワン。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-11-011",
+      "storyboardTextLineId": "l11-conv-011-s01",
+      "sourceLineId": "l11-conv-011",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。公寓门口或现代日本邮局窗口。王询问大概要多久。 当前说话人：ワン，听话对象：郵便局員。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。公寓门口或现代日本邮局窗口。王询问大概要多久。 話し手はワン、聞き手は郵便局員。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-11-012",
+      "storyboardTextLineId": "l11-conv-012-s01",
+      "sourceLineId": "l11-conv-012",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。公寓门口或现代日本邮局窗口。邮局工作人员说明航空和海运大概所需时间；不要出现数字或日历。 当前说话人：郵便局員，听话对象：ワン。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。公寓门口或现代日本邮局窗口。邮局工作人员说明航空和海运大概所需时间；不要出现数字或日历。 話し手は郵便局員、聞き手はワン。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-11-013",
+      "storyboardTextLineId": "l11-conv-013-s01",
+      "sourceLineId": "l11-conv-013",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。公寓门口或现代日本邮局窗口。王决定用海运寄送。 当前说话人：ワン，听话对象：郵便局員。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。公寓门口或现代日本邮局窗口。王决定用海运寄送。 話し手はワン、聞き手は郵便局員。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    }
+  ]
+}

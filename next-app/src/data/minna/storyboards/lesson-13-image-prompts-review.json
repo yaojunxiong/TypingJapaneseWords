@@ -1,0 +1,128 @@
+{
+  "lessonNo": 13,
+  "conversationTitle": "別々にお願いします",
+  "reviewStatus": "pending-human-review",
+  "generationAllowed": false,
+  "prompts": [
+    {
+      "storyboardLineId": "sb-13-001",
+      "storyboardTextLineId": "l13-conv-001-s01",
+      "sourceLineId": "l13-conv-001",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。办公室休息区或现代日本餐馆。办公室里，山田看时间后邀请米勒去吃午饭；不出现时钟数字。 当前说话人：山田，听话对象：ミラー。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。办公室休息区或现代日本餐馆。办公室里，山田看时间后邀请米勒去吃午饭；不出现时钟数字。 話し手は山田、聞き手はミラー。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-13-002",
+      "storyboardTextLineId": "l13-conv-002-s01",
+      "sourceLineId": "l13-conv-002",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。办公室休息区或现代日本餐馆。米勒接受邀请。 当前说话人：ミラー，听话对象：山田。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。办公室休息区或现代日本餐馆。米勒接受邀请。 話し手はミラー、聞き手は山田。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-13-003",
+      "storyboardTextLineId": "l13-conv-003-s01",
+      "sourceLineId": "l13-conv-003",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。办公室休息区或现代日本餐馆。山田询问去哪里。 当前说话人：山田，听话对象：ミラー。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。办公室休息区或现代日本餐馆。山田询问去哪里。 話し手は山田、聞き手はミラー。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-13-004",
+      "storyboardTextLineId": "l13-conv-004-s01",
+      "sourceLineId": "l13-conv-004",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。办公室休息区或现代日本餐馆。米勒表示今天想吃日本料理。 当前说话人：ミラー，听话对象：山田。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。办公室休息区或现代日本餐馆。米勒表示今天想吃日本料理。 話し手はミラー、聞き手は山田。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-13-005",
+      "storyboardTextLineId": "l13-conv-005-s01",
+      "sourceLineId": "l13-conv-005",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。办公室休息区或现代日本餐馆。山田提议去一家日本料理店；不出现店名文字。 当前说话人：山田，听话对象：ミラー。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。办公室休息区或现代日本餐馆。山田提议去一家日本料理店；不出现店名文字。 話し手は山田、聞き手はミラー。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-13-006",
+      "storyboardTextLineId": "l13-conv-006-s01",
+      "sourceLineId": "l13-conv-006",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。办公室休息区或现代日本餐馆。餐馆里，店员询问点单。 当前说话人：店の人，听话对象：山田とミラー。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。办公室休息区或现代日本餐馆。餐馆里，店员询问点单。 話し手は店の人、聞き手は山田とミラー。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-13-007",
+      "storyboardTextLineId": "l13-conv-007-s01",
+      "sourceLineId": "l13-conv-007",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。办公室休息区或现代日本餐馆。米勒向店员点天妇罗套餐；可有食物意象但无菜单文字。 当前说话人：ミラー，听话对象：店の人。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。办公室休息区或现代日本餐馆。米勒向店员点天妇罗套餐；可有食物意象但无菜单文字。 話し手はミラー、聞き手は店の人。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-13-008",
+      "storyboardTextLineId": "l13-conv-008-s01",
+      "sourceLineId": "l13-conv-008",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。办公室休息区或现代日本餐馆。山田向店员点牛丼。 当前说话人：山田，听话对象：店の人。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。办公室休息区或现代日本餐馆。山田向店员点牛丼。 話し手は山田、聞き手は店の人。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-13-009",
+      "storyboardTextLineId": "l13-conv-009-s01",
+      "sourceLineId": "l13-conv-009",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。办公室休息区或现代日本餐馆。店员确认两人的点单并请稍等；无菜单文字。 当前说话人：店の人，听话对象：山田とミラー。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。办公室休息区或现代日本餐馆。店员确认两人的点单并请稍等；无菜单文字。 話し手は店の人、聞き手は山田とミラー。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-13-010",
+      "storyboardTextLineId": "l13-conv-010-s01",
+      "sourceLineId": "l13-conv-010",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。办公室休息区或现代日本餐馆。店员在结账场景说明总金额；不出现价格数字。 当前说话人：店の人，听话对象：山田とミラー。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。办公室休息区或现代日本餐馆。店员在结账场景说明总金额；不出现价格数字。 話し手は店の人、聞き手は山田とミラー。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-13-011",
+      "storyboardTextLineId": "l13-conv-011-s01",
+      "sourceLineId": "l13-conv-011",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。办公室休息区或现代日本餐馆。米勒要求分开结账。 当前说话人：ミラー，听话对象：店の人。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。办公室休息区或现代日本餐馆。米勒要求分开结账。 話し手はミラー、聞き手は店の人。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-13-012",
+      "storyboardTextLineId": "l13-conv-012-s01",
+      "sourceLineId": "l13-conv-012",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。办公室休息区或现代日本餐馆。店员分别说明两份餐的金额；不出现价格数字或收据。 当前说话人：店の人，听话对象：山田とミラー。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。办公室休息区或现代日本餐馆。店员分别说明两份餐的金额；不出现价格数字或收据。 話し手は店の人、聞き手は山田とミラー。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    }
+  ]
+}
