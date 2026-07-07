@@ -1,0 +1,88 @@
+{
+  "lessonNo": 39,
+  "conversationTitle": "遅れて、すみません",
+  "reviewStatus": "pending-human-review",
+  "generationAllowed": false,
+  "prompts": [
+    {
+      "storyboardLineId": "sb-39-001",
+      "storyboardTextLineId": "l39-conv-001-s01",
+      "sourceLineId": "l39-conv-001",
+      "imagePromptCn": "公司会议前，ミラー迟到后向中村課長道歉，说明路上十字路口卡车和汽车相撞导致公交车不能动，又因手机忘在家里无法联系，课长理解后开始会议。 当前画面聚焦ミラー对中村課長说这一句，保持真实课文场景和人物关系。 ミラー看向中村課長，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "公司会议前，ミラー迟到后向中村課長道歉，说明路上十字路口卡车和汽车相撞导致公交车不能动，又因手机忘在家里无法联系，课长理解后开始会议。 当前画面聚焦ミラー对中村課長说这一句，保持真实课文场景和人物关系。 ミラー看向中村課長，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-39-002",
+      "storyboardTextLineId": "l39-conv-002-s01",
+      "sourceLineId": "l39-conv-002",
+      "imagePromptCn": "公司会议前，ミラー迟到后向中村課長道歉，说明路上十字路口卡车和汽车相撞导致公交车不能动，又因手机忘在家里无法联系，课长理解后开始会议。 当前画面聚焦中村課長对ミラー说这一句，保持真实课文场景和人物关系。 中村課長看向ミラー，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "公司会议前，ミラー迟到后向中村課長道歉，说明路上十字路口卡车和汽车相撞导致公交车不能动，又因手机忘在家里无法联系，课长理解后开始会议。 当前画面聚焦中村課長对ミラー说这一句，保持真实课文场景和人物关系。 中村課長看向ミラー，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-39-003",
+      "storyboardTextLineId": "l39-conv-003-s01",
+      "sourceLineId": "l39-conv-003",
+      "imagePromptCn": "公司会议前，ミラー迟到后向中村課長道歉，说明路上十字路口卡车和汽车相撞导致公交车不能动，又因手机忘在家里无法联系，课长理解后开始会议。 当前画面聚焦ミラー对中村課長说这一句，保持真实课文场景和人物关系。 ミラー看向中村課長，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "公司会议前，ミラー迟到后向中村課長道歉，说明路上十字路口卡车和汽车相撞导致公交车不能动，又因手机忘在家里无法联系，课长理解后开始会议。 当前画面聚焦ミラー对中村課長说这一句，保持真实课文场景和人物关系。 ミラー看向中村課長，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-39-004",
+      "storyboardTextLineId": "l39-conv-004-s01",
+      "sourceLineId": "l39-conv-004",
+      "imagePromptCn": "公司会议前，ミラー迟到后向中村課長道歉，说明路上十字路口卡车和汽车相撞导致公交车不能动，又因手机忘在家里无法联系，课长理解后开始会议。 当前画面聚焦中村課長对ミラー说这一句，保持真实课文场景和人物关系。 中村課長看向ミラー，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "公司会议前，ミラー迟到后向中村課長道歉，说明路上十字路口卡车和汽车相撞导致公交车不能动，又因手机忘在家里无法联系，课长理解后开始会议。 当前画面聚焦中村課長对ミラー说这一句，保持真实课文场景和人物关系。 中村課長看向ミラー，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-39-005",
+      "storyboardTextLineId": "l39-conv-005-s01",
+      "sourceLineId": "l39-conv-005",
+      "imagePromptCn": "公司会议前，ミラー迟到后向中村課長道歉，说明路上十字路口卡车和汽车相撞导致公交车不能动，又因手机忘在家里无法联系，课长理解后开始会议。 当前画面聚焦ミラー对中村課長说这一句，保持真实课文场景和人物关系。 ミラー看向中村課長，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "公司会议前，ミラー迟到后向中村課長道歉，说明路上十字路口卡车和汽车相撞导致公交车不能动，又因手机忘在家里无法联系，课长理解后开始会议。 当前画面聚焦ミラー对中村課長说这一句，保持真实课文场景和人物关系。 ミラー看向中村課長，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-39-006",
+      "storyboardTextLineId": "l39-conv-006-s01",
+      "sourceLineId": "l39-conv-006",
+      "imagePromptCn": "公司会议前，ミラー迟到后向中村課長道歉，说明路上十字路口卡车和汽车相撞导致公交车不能动，又因手机忘在家里无法联系，课长理解后开始会议。 当前画面聚焦中村課長对ミラー说这一句，保持真实课文场景和人物关系。 中村課長看向ミラー，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "公司会议前，ミラー迟到后向中村課長道歉，说明路上十字路口卡车和汽车相撞导致公交车不能动，又因手机忘在家里无法联系，课长理解后开始会议。 当前画面聚焦中村課長对ミラー说这一句，保持真实课文场景和人物关系。 中村課長看向ミラー，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-39-007",
+      "storyboardTextLineId": "l39-conv-007-s01",
+      "sourceLineId": "l39-conv-007",
+      "imagePromptCn": "公司会议前，ミラー迟到后向中村課長道歉，说明路上十字路口卡车和汽车相撞导致公交车不能动，又因手机忘在家里无法联系，课长理解后开始会议。 当前画面聚焦ミラー对中村課長说这一句，保持真实课文场景和人物关系。 ミラー看向中村課長，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "公司会议前，ミラー迟到后向中村課長道歉，说明路上十字路口卡车和汽车相撞导致公交车不能动，又因手机忘在家里无法联系，课长理解后开始会议。 当前画面聚焦ミラー对中村課長说这一句，保持真实课文场景和人物关系。 ミラー看向中村課長，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-39-008",
+      "storyboardTextLineId": "l39-conv-008-s01",
+      "sourceLineId": "l39-conv-008",
+      "imagePromptCn": "公司会议前，ミラー迟到后向中村課長道歉，说明路上十字路口卡车和汽车相撞导致公交车不能动，又因手机忘在家里无法联系，课长理解后开始会议。 当前画面聚焦中村課長对ミラー说这一句，保持真实课文场景和人物关系。 中村課長看向ミラー，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "公司会议前，ミラー迟到后向中村課長道歉，说明路上十字路口卡车和汽车相撞导致公交车不能动，又因手机忘在家里无法联系，课长理解后开始会议。 当前画面聚焦中村課長对ミラー说这一句，保持真实课文场景和人物关系。 中村課長看向ミラー，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    }
+  ]
+}
