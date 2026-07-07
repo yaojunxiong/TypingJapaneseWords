@@ -1,0 +1,118 @@
+{
+  "lessonNo": 27,
+  "conversationTitle": "何でも作れるんですね",
+  "reviewStatus": "pending-human-review",
+  "generationAllowed": false,
+  "prompts": [
+    {
+      "storyboardLineId": "sb-27-001",
+      "storyboardTextLineId": "l27-conv-001-s01",
+      "sourceLineId": "l27-conv-001",
+      "imagePromptCn": "鈴木家或房间里，ミラー参观明亮房间，发现桌子和书架都是鈴木自己做的，并听到鈴木想自己建房子的梦想。 当前画面聚焦ミラー对鈴木说这一句，保持真实课文场景和人物关系。 ミラー看向鈴木，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "鈴木家或房间里，ミラー参观明亮房间，发现桌子和书架都是鈴木自己做的，并听到鈴木想自己建房子的梦想。 当前画面聚焦ミラー对鈴木说这一句，保持真实课文场景和人物关系。 ミラー看向鈴木，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-27-002",
+      "storyboardTextLineId": "l27-conv-002-s01",
+      "sourceLineId": "l27-conv-002",
+      "imagePromptCn": "鈴木家或房间里，ミラー参观明亮房间，发现桌子和书架都是鈴木自己做的，并听到鈴木想自己建房子的梦想。 当前画面聚焦鈴木对ミラー说这一句，保持真实课文场景和人物关系。 鈴木看向ミラー，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "鈴木家或房间里，ミラー参观明亮房间，发现桌子和书架都是鈴木自己做的，并听到鈴木想自己建房子的梦想。 当前画面聚焦鈴木对ミラー说这一句，保持真实课文场景和人物关系。 鈴木看向ミラー，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-27-003",
+      "storyboardTextLineId": "l27-conv-003-s01",
+      "sourceLineId": "l27-conv-003",
+      "imagePromptCn": "鈴木家或房间里，ミラー参观明亮房间，发现桌子和书架都是鈴木自己做的，并听到鈴木想自己建房子的梦想。 当前画面聚焦ミラー对鈴木说这一句，保持真实课文场景和人物关系。 ミラー看向鈴木，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "鈴木家或房间里，ミラー参观明亮房间，发现桌子和书架都是鈴木自己做的，并听到鈴木想自己建房子的梦想。 当前画面聚焦ミラー对鈴木说这一句，保持真实课文场景和人物关系。 ミラー看向鈴木，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-27-004",
+      "storyboardTextLineId": "l27-conv-004-s01",
+      "sourceLineId": "l27-conv-004",
+      "imagePromptCn": "鈴木家或房间里，ミラー参观明亮房间，发现桌子和书架都是鈴木自己做的，并听到鈴木想自己建房子的梦想。 当前画面聚焦鈴木对ミラー说这一句，保持真实课文场景和人物关系。 鈴木看向ミラー，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "鈴木家或房间里，ミラー参观明亮房间，发现桌子和书架都是鈴木自己做的，并听到鈴木想自己建房子的梦想。 当前画面聚焦鈴木对ミラー说这一句，保持真实课文场景和人物关系。 鈴木看向ミラー，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-27-005",
+      "storyboardTextLineId": "l27-conv-005-s01",
+      "sourceLineId": "l27-conv-005",
+      "imagePromptCn": "鈴木家或房间里，ミラー参观明亮房间，发现桌子和书架都是鈴木自己做的，并听到鈴木想自己建房子的梦想。 当前画面聚焦ミラー对鈴木说这一句，保持真实课文场景和人物关系。 ミラー看向鈴木，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "鈴木家或房间里，ミラー参观明亮房间，发现桌子和书架都是鈴木自己做的，并听到鈴木想自己建房子的梦想。 当前画面聚焦ミラー对鈴木说这一句，保持真实课文场景和人物关系。 ミラー看向鈴木，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-27-006",
+      "storyboardTextLineId": "l27-conv-006-s01",
+      "sourceLineId": "l27-conv-006",
+      "imagePromptCn": "鈴木家或房间里，ミラー参观明亮房间，发现桌子和书架都是鈴木自己做的，并听到鈴木想自己建房子的梦想。 当前画面聚焦鈴木对ミラー说这一句，保持真实课文场景和人物关系。 鈴木看向ミラー，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "鈴木家或房间里，ミラー参观明亮房间，发现桌子和书架都是鈴木自己做的，并听到鈴木想自己建房子的梦想。 当前画面聚焦鈴木对ミラー说这一句，保持真实课文场景和人物关系。 鈴木看向ミラー，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-27-007",
+      "storyboardTextLineId": "l27-conv-007-s01",
+      "sourceLineId": "l27-conv-007",
+      "imagePromptCn": "鈴木家或房间里，ミラー参观明亮房间，发现桌子和书架都是鈴木自己做的，并听到鈴木想自己建房子的梦想。 当前画面聚焦ミラー对鈴木说这一句，保持真实课文场景和人物关系。 ミラー看向鈴木，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "鈴木家或房间里，ミラー参观明亮房间，发现桌子和书架都是鈴木自己做的，并听到鈴木想自己建房子的梦想。 当前画面聚焦ミラー对鈴木说这一句，保持真实课文场景和人物关系。 ミラー看向鈴木，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-27-008",
+      "storyboardTextLineId": "l27-conv-008-s01",
+      "sourceLineId": "l27-conv-008",
+      "imagePromptCn": "鈴木家或房间里，ミラー参观明亮房间，发现桌子和书架都是鈴木自己做的，并听到鈴木想自己建房子的梦想。 当前画面聚焦鈴木对ミラー说这一句，保持真实课文场景和人物关系。 鈴木看向ミラー，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "鈴木家或房间里，ミラー参观明亮房间，发现桌子和书架都是鈴木自己做的，并听到鈴木想自己建房子的梦想。 当前画面聚焦鈴木对ミラー说这一句，保持真实课文场景和人物关系。 鈴木看向ミラー，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-27-009",
+      "storyboardTextLineId": "l27-conv-009-s01",
+      "sourceLineId": "l27-conv-009",
+      "imagePromptCn": "鈴木家或房间里，ミラー参观明亮房间，发现桌子和书架都是鈴木自己做的，并听到鈴木想自己建房子的梦想。 当前画面聚焦ミラー对鈴木说这一句，保持真实课文场景和人物关系。 ミラー看向鈴木，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "鈴木家或房间里，ミラー参观明亮房间，发现桌子和书架都是鈴木自己做的，并听到鈴木想自己建房子的梦想。 当前画面聚焦ミラー对鈴木说这一句，保持真实课文场景和人物关系。 ミラー看向鈴木，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-27-010",
+      "storyboardTextLineId": "l27-conv-010-s01",
+      "sourceLineId": "l27-conv-010",
+      "imagePromptCn": "鈴木家或房间里，ミラー参观明亮房间，发现桌子和书架都是鈴木自己做的，并听到鈴木想自己建房子的梦想。 当前画面聚焦鈴木对ミラー说这一句，保持真实课文场景和人物关系。 鈴木看向ミラー，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "鈴木家或房间里，ミラー参观明亮房间，发现桌子和书架都是鈴木自己做的，并听到鈴木想自己建房子的梦想。 当前画面聚焦鈴木对ミラー说这一句，保持真实课文场景和人物关系。 鈴木看向ミラー，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-27-011",
+      "storyboardTextLineId": "l27-conv-011-s01",
+      "sourceLineId": "l27-conv-011",
+      "imagePromptCn": "鈴木家或房间里，ミラー参观明亮房间，发现桌子和书架都是鈴木自己做的，并听到鈴木想自己建房子的梦想。 当前画面聚焦ミラー对鈴木说这一句，保持真实课文场景和人物关系。 ミラー看向鈴木，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "鈴木家或房间里，ミラー参观明亮房间，发现桌子和书架都是鈴木自己做的，并听到鈴木想自己建房子的梦想。 当前画面聚焦ミラー对鈴木说这一句，保持真实课文场景和人物关系。 ミラー看向鈴木，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    }
+  ]
+}

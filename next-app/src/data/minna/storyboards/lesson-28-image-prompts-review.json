@@ -1,0 +1,138 @@
+{
+  "lessonNo": 28,
+  "conversationTitle": "出張も多いし、試験もあるし……",
+  "reviewStatus": "pending-human-review",
+  "generationAllowed": false,
+  "prompts": [
+    {
+      "storyboardLineId": "sb-28-001",
+      "storyboardTextLineId": "l28-conv-001-s01",
+      "sourceLineId": "l28-conv-001",
+      "imagePromptCn": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦小川幸子对ミラー说这一句，保持真实课文场景和人物关系。 小川幸子看向ミラー，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦小川幸子对ミラー说这一句，保持真实课文场景和人物关系。 小川幸子看向ミラー，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-28-002",
+      "storyboardTextLineId": "l28-conv-002-s01",
+      "sourceLineId": "l28-conv-002",
+      "imagePromptCn": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦ミラー对小川幸子说这一句，保持真实课文场景和人物关系。 ミラー看向小川幸子，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦ミラー对小川幸子说这一句，保持真实课文场景和人物关系。 ミラー看向小川幸子，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-28-003",
+      "storyboardTextLineId": "l28-conv-003-s01",
+      "sourceLineId": "l28-conv-003",
+      "imagePromptCn": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦小川幸子对ミラー说这一句，保持真实课文场景和人物关系。 小川幸子看向ミラー，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦小川幸子对ミラー说这一句，保持真实课文场景和人物关系。 小川幸子看向ミラー，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-28-004",
+      "storyboardTextLineId": "l28-conv-004-s01",
+      "sourceLineId": "l28-conv-004",
+      "imagePromptCn": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦ミラー对小川幸子说这一句，保持真实课文场景和人物关系。 ミラー看向小川幸子，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦ミラー对小川幸子说这一句，保持真实课文场景和人物关系。 ミラー看向小川幸子，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-28-005",
+      "storyboardTextLineId": "l28-conv-005-s01",
+      "sourceLineId": "l28-conv-005",
+      "imagePromptCn": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦小川幸子对ミラー说这一句，保持真实课文场景和人物关系。 小川幸子看向ミラー，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦小川幸子对ミラー说这一句，保持真实课文场景和人物关系。 小川幸子看向ミラー，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-28-006",
+      "storyboardTextLineId": "l28-conv-006-s01",
+      "sourceLineId": "l28-conv-006",
+      "imagePromptCn": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦ミラー对小川幸子说这一句，保持真实课文场景和人物关系。 ミラー看向小川幸子，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦ミラー对小川幸子说这一句，保持真实课文场景和人物关系。 ミラー看向小川幸子，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-28-007",
+      "storyboardTextLineId": "l28-conv-007-s01",
+      "sourceLineId": "l28-conv-007",
+      "imagePromptCn": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦小川幸子对ミラー说这一句，保持真实课文场景和人物关系。 小川幸子看向ミラー，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦小川幸子对ミラー说这一句，保持真实课文场景和人物关系。 小川幸子看向ミラー，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-28-008",
+      "storyboardTextLineId": "l28-conv-008-s01",
+      "sourceLineId": "l28-conv-008",
+      "imagePromptCn": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦小川幸子对ミラー说这一句，保持真实课文场景和人物关系。 小川幸子看向ミラー，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦小川幸子对ミラー说这一句，保持真实课文场景和人物关系。 小川幸子看向ミラー，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-28-009",
+      "storyboardTextLineId": "l28-conv-009-s01",
+      "sourceLineId": "l28-conv-009",
+      "imagePromptCn": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦ミラー对小川幸子说这一句，保持真实课文场景和人物关系。 ミラー看向小川幸子，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦ミラー对小川幸子说这一句，保持真实课文场景和人物关系。 ミラー看向小川幸子，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-28-010",
+      "storyboardTextLineId": "l28-conv-010-s01",
+      "sourceLineId": "l28-conv-010",
+      "imagePromptCn": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦小川幸子对ミラー说这一句，保持真实课文场景和人物关系。 小川幸子看向ミラー，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦小川幸子对ミラー说这一句，保持真实课文场景和人物关系。 小川幸子看向ミラー，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-28-011",
+      "storyboardTextLineId": "l28-conv-011-s01",
+      "sourceLineId": "l28-conv-011",
+      "imagePromptCn": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦ミラー对小川幸子说这一句，保持真实课文场景和人物关系。 ミラー看向小川幸子，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦ミラー对小川幸子说这一句，保持真实课文场景和人物关系。 ミラー看向小川幸子，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-28-012",
+      "storyboardTextLineId": "l28-conv-012-s01",
+      "sourceLineId": "l28-conv-012",
+      "imagePromptCn": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦小川幸子对ミラー说这一句，保持真实课文场景和人物关系。 小川幸子看向ミラー，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦小川幸子对ミラー说这一句，保持真实课文场景和人物关系。 小川幸子看向ミラー，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-28-013",
+      "storyboardTextLineId": "l28-conv-013-s01",
+      "sourceLineId": "l28-conv-013",
+      "imagePromptCn": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦ミラー对小川幸子说这一句，保持真实课文场景和人物关系。 ミラー看向小川幸子，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦ミラー对小川幸子说这一句，保持真实课文场景和人物关系。 ミラー看向小川幸子，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    }
+  ]
+}

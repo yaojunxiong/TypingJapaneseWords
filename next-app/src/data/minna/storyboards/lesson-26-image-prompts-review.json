@@ -1,0 +1,98 @@
+{
+  "lessonNo": 26,
+  "conversationTitle": "ごみはどこに出したらいいですか",
+  "reviewStatus": "pending-human-review",
+  "generationAllowed": false,
+  "prompts": [
+    {
+      "storyboardLineId": "sb-26-001",
+      "storyboardTextLineId": "l26-conv-001-s01",
+      "sourceLineId": "l26-conv-001",
+      "imagePromptCn": "公寓搬家后，管理人向ミラー确认行李整理情况，并说明垃圾分类、垃圾放置地点和热水问题的联系办法。 当前画面聚焦管理人对ミラー说这一句，保持真实课文场景和人物关系。 管理人看向ミラー，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "公寓搬家后，管理人向ミラー确认行李整理情况，并说明垃圾分类、垃圾放置地点和热水问题的联系办法。 当前画面聚焦管理人对ミラー说这一句，保持真实课文场景和人物关系。 管理人看向ミラー，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-26-002",
+      "storyboardTextLineId": "l26-conv-002-s01",
+      "sourceLineId": "l26-conv-002",
+      "imagePromptCn": "公寓搬家后，管理人向ミラー确认行李整理情况，并说明垃圾分类、垃圾放置地点和热水问题的联系办法。 当前画面聚焦ミラー对管理人说这一句，保持真实课文场景和人物关系。 ミラー看向管理人，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "公寓搬家后，管理人向ミラー确认行李整理情况，并说明垃圾分类、垃圾放置地点和热水问题的联系办法。 当前画面聚焦ミラー对管理人说这一句，保持真实课文场景和人物关系。 ミラー看向管理人，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-26-003",
+      "storyboardTextLineId": "l26-conv-003-s01",
+      "sourceLineId": "l26-conv-003",
+      "imagePromptCn": "公寓搬家后，管理人向ミラー确认行李整理情况，并说明垃圾分类、垃圾放置地点和热水问题的联系办法。 当前画面聚焦管理人对ミラー说这一句，保持真实课文场景和人物关系。 管理人看向ミラー，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "公寓搬家后，管理人向ミラー确认行李整理情况，并说明垃圾分类、垃圾放置地点和热水问题的联系办法。 当前画面聚焦管理人对ミラー说这一句，保持真实课文场景和人物关系。 管理人看向ミラー，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-26-004",
+      "storyboardTextLineId": "l26-conv-004-s01",
+      "sourceLineId": "l26-conv-004",
+      "imagePromptCn": "公寓搬家后，管理人向ミラー确认行李整理情况，并说明垃圾分类、垃圾放置地点和热水问题的联系办法。 当前画面聚焦ミラー对管理人说这一句，保持真实课文场景和人物关系。 ミラー看向管理人，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "公寓搬家后，管理人向ミラー确认行李整理情况，并说明垃圾分类、垃圾放置地点和热水问题的联系办法。 当前画面聚焦ミラー对管理人说这一句，保持真实课文场景和人物关系。 ミラー看向管理人，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-26-005",
+      "storyboardTextLineId": "l26-conv-005-s01",
+      "sourceLineId": "l26-conv-005",
+      "imagePromptCn": "公寓搬家后，管理人向ミラー确认行李整理情况，并说明垃圾分类、垃圾放置地点和热水问题的联系办法。 当前画面聚焦管理人对ミラー说这一句，保持真实课文场景和人物关系。 管理人看向ミラー，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "公寓搬家后，管理人向ミラー确认行李整理情况，并说明垃圾分类、垃圾放置地点和热水问题的联系办法。 当前画面聚焦管理人对ミラー说这一句，保持真实课文场景和人物关系。 管理人看向ミラー，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-26-006",
+      "storyboardTextLineId": "l26-conv-006-s01",
+      "sourceLineId": "l26-conv-006",
+      "imagePromptCn": "公寓搬家后，管理人向ミラー确认行李整理情况，并说明垃圾分类、垃圾放置地点和热水问题的联系办法。 当前画面聚焦ミラー对管理人说这一句，保持真实课文场景和人物关系。 ミラー看向管理人，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "公寓搬家后，管理人向ミラー确认行李整理情况，并说明垃圾分类、垃圾放置地点和热水问题的联系办法。 当前画面聚焦ミラー对管理人说这一句，保持真实课文场景和人物关系。 ミラー看向管理人，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-26-007",
+      "storyboardTextLineId": "l26-conv-007-s01",
+      "sourceLineId": "l26-conv-007",
+      "imagePromptCn": "公寓搬家后，管理人向ミラー确认行李整理情况，并说明垃圾分类、垃圾放置地点和热水问题的联系办法。 当前画面聚焦管理人对ミラー说这一句，保持真实课文场景和人物关系。 管理人看向ミラー，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "公寓搬家后，管理人向ミラー确认行李整理情况，并说明垃圾分类、垃圾放置地点和热水问题的联系办法。 当前画面聚焦管理人对ミラー说这一句，保持真实课文场景和人物关系。 管理人看向ミラー，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-26-008",
+      "storyboardTextLineId": "l26-conv-008-s01",
+      "sourceLineId": "l26-conv-008",
+      "imagePromptCn": "公寓搬家后，管理人向ミラー确认行李整理情况，并说明垃圾分类、垃圾放置地点和热水问题的联系办法。 当前画面聚焦ミラー对管理人说这一句，保持真实课文场景和人物关系。 ミラー看向管理人，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "公寓搬家后，管理人向ミラー确认行李整理情况，并说明垃圾分类、垃圾放置地点和热水问题的联系办法。 当前画面聚焦ミラー对管理人说这一句，保持真实课文场景和人物关系。 ミラー看向管理人，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-26-009",
+      "storyboardTextLineId": "l26-conv-009-s01",
+      "sourceLineId": "l26-conv-009",
+      "imagePromptCn": "公寓搬家后，管理人向ミラー确认行李整理情况，并说明垃圾分类、垃圾放置地点和热水问题的联系办法。 当前画面聚焦管理人对ミラー说这一句，保持真实课文场景和人物关系。 管理人看向ミラー，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "公寓搬家后，管理人向ミラー确认行李整理情况，并说明垃圾分类、垃圾放置地点和热水问题的联系办法。 当前画面聚焦管理人对ミラー说这一句，保持真实课文场景和人物关系。 管理人看向ミラー，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    }
+  ]
+}

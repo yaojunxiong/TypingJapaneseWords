@@ -48,6 +48,16 @@ import lesson24Storyboard from '@/data/minna/storyboards/lesson-24.json'
 import lesson24Review from '@/data/minna/storyboards/lesson-24-image-prompts-review.json'
 import lesson25Storyboard from '@/data/minna/storyboards/lesson-25.json'
 import lesson25Review from '@/data/minna/storyboards/lesson-25-image-prompts-review.json'
+import lesson26Storyboard from '@/data/minna/storyboards/lesson-26.json'
+import lesson26Review from '@/data/minna/storyboards/lesson-26-image-prompts-review.json'
+import lesson27Storyboard from '@/data/minna/storyboards/lesson-27.json'
+import lesson27Review from '@/data/minna/storyboards/lesson-27-image-prompts-review.json'
+import lesson28Storyboard from '@/data/minna/storyboards/lesson-28.json'
+import lesson28Review from '@/data/minna/storyboards/lesson-28-image-prompts-review.json'
+import lesson29Storyboard from '@/data/minna/storyboards/lesson-29.json'
+import lesson29Review from '@/data/minna/storyboards/lesson-29-image-prompts-review.json'
+import lesson30Storyboard from '@/data/minna/storyboards/lesson-30.json'
+import lesson30Review from '@/data/minna/storyboards/lesson-30-image-prompts-review.json'
 import type { ImagePromptReviewData, StoryboardLesson } from '@/types/storyboard'
 
 type StoryboardData = {
@@ -155,6 +165,26 @@ const STORYBOARD_DATA: Record<number, StoryboardData> = {
   25: {
     storyboard: lesson25Storyboard as StoryboardLesson,
     review: lesson25Review as ImagePromptReviewData,
+  },
+  26: {
+    storyboard: lesson26Storyboard as StoryboardLesson,
+    review: lesson26Review as ImagePromptReviewData,
+  },
+  27: {
+    storyboard: lesson27Storyboard as StoryboardLesson,
+    review: lesson27Review as ImagePromptReviewData,
+  },
+  28: {
+    storyboard: lesson28Storyboard as StoryboardLesson,
+    review: lesson28Review as ImagePromptReviewData,
+  },
+  29: {
+    storyboard: lesson29Storyboard as StoryboardLesson,
+    review: lesson29Review as ImagePromptReviewData,
+  },
+  30: {
+    storyboard: lesson30Storyboard as StoryboardLesson,
+    review: lesson30Review as ImagePromptReviewData,
   },
 }
 
