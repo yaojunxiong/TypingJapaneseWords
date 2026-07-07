@@ -1,0 +1,128 @@
+{
+  "lessonNo": 25,
+  "conversationTitle": "いろいろお世話になりました",
+  "reviewStatus": "pending-human-review",
+  "generationAllowed": false,
+  "prompts": [
+    {
+      "storyboardLineId": "sb-25-001",
+      "storyboardTextLineId": "l25-conv-001-s01",
+      "sourceLineId": "l25-conv-001",
+      "imagePromptCn": "大阪送别场景中，木村面向ミラー表达祝贺转勤；画面保持温和正式的离别氛围。 木村看向ミラー，用礼貌而真诚的语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "大阪送别场景中，木村面向ミラー表达祝贺转勤；画面保持温和正式的离别氛围。 木村看向ミラー，用礼貌而真诚的语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, canonical conflict line, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-25-002",
+      "storyboardTextLineId": "l25-conv-002-s01",
+      "sourceLineId": "l25-conv-002",
+      "imagePromptCn": "大阪送别场景中，ミラー面向木村表达回应祝贺并感谢；画面保持温和正式的离别氛围。 ミラー看向木村，用礼貌而真诚的语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "大阪送别场景中，ミラー面向木村表达回应祝贺并感谢；画面保持温和正式的离别氛围。 ミラー看向木村，用礼貌而真诚的语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, canonical conflict line, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-25-003",
+      "storyboardTextLineId": "l25-conv-003-s01",
+      "sourceLineId": "l25-conv-003",
+      "imagePromptCn": "大阪送别场景中，木村面向ミラー表达表达对离别的不舍；画面保持温和正式的离别氛围。 木村看向ミラー，用礼貌而真诚的语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "大阪送别场景中，木村面向ミラー表达表达对离别的不舍；画面保持温和正式的离别氛围。 木村看向ミラー，用礼貌而真诚的语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, canonical conflict line, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-25-004",
+      "storyboardTextLineId": "l25-conv-004-s01",
+      "sourceLineId": "l25-conv-004",
+      "imagePromptCn": "大阪送别场景中，佐藤面向木村表达附和离别感受；画面保持温和正式的离别氛围。 佐藤看向木村，用礼貌而真诚的语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "大阪送别场景中，佐藤面向木村表达附和离别感受；画面保持温和正式的离别氛围。 佐藤看向木村，用礼貌而真诚的语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, canonical conflict line, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-25-005",
+      "storyboardTextLineId": "l25-conv-005-s01",
+      "sourceLineId": "l25-conv-005",
+      "imagePromptCn": "大阪送别场景中，木村面向ミラー表达叮嘱不要忘记大阪；画面保持温和正式的离别氛围。 木村看向ミラー，用礼貌而真诚的语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "大阪送别场景中，木村面向ミラー表达叮嘱不要忘记大阪；画面保持温和正式的离别氛围。 木村看向ミラー，用礼貌而真诚的语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, canonical conflict line, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-25-006",
+      "storyboardTextLineId": "l25-conv-006-s01",
+      "sourceLineId": "l25-conv-006",
+      "imagePromptCn": "大阪送别场景中，ミラー面向皆さん表达承诺并邀请大家去东京；画面保持温和正式的离别氛围。 ミラー看向皆さん，用礼貌而真诚的语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "大阪送别场景中，ミラー面向皆さん表达承诺并邀请大家去东京；画面保持温和正式的离别氛围。 ミラー看向皆さん，用礼貌而真诚的语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, canonical conflict line, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-25-007",
+      "storyboardTextLineId": "l25-conv-007-s01",
+      "sourceLineId": "l25-conv-007",
+      "imagePromptCn": "大阪送别场景中，サントス面向ミラー表达邀请以后来大阪联系；画面保持温和正式的离别氛围。 サントス看向ミラー，用礼貌而真诚的语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "大阪送别场景中，サントス面向ミラー表达邀请以后来大阪联系；画面保持温和正式的离别氛围。 サントス看向ミラー，用礼貌而真诚的语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, canonical conflict line, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-25-008",
+      "storyboardTextLineId": "l25-conv-008-s01",
+      "sourceLineId": "l25-conv-008",
+      "imagePromptCn": "大阪送别场景中，ミラー面向サントス表达回应サントス的邀请；画面保持温和正式的离别氛围。 ミラー看向サントス，用礼貌而真诚的语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "大阪送别场景中，ミラー面向サントス表达回应サントス的邀请；画面保持温和正式的离别氛围。 ミラー看向サントス，用礼貌而真诚的语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, canonical conflict line, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-25-009",
+      "storyboardTextLineId": "l25-conv-008-s02",
+      "sourceLineId": "l25-conv-008",
+      "imagePromptCn": "大阪送别场景中，ミラー面向皆さん表达向大家正式表达感谢；画面保持温和正式的离别氛围。 ミラー看向皆さん，用礼貌而真诚的语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "大阪送别场景中，ミラー面向皆さん表达向大家正式表达感谢；画面保持温和正式的离别氛围。 ミラー看向皆さん，用礼貌而真诚的语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, canonical conflict line, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-25-010",
+      "storyboardTextLineId": "l25-conv-009-s01",
+      "sourceLineId": "l25-conv-009",
+      "imagePromptCn": "大阪送别场景中，佐藤面向ミラー表达送上鼓励；画面保持温和正式的离别氛围。 佐藤看向ミラー，用礼貌而真诚的语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "大阪送别场景中，佐藤面向ミラー表达送上鼓励；画面保持温和正式的离别氛围。 佐藤看向ミラー，用礼貌而真诚的语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, canonical conflict line, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-25-011",
+      "storyboardTextLineId": "l25-conv-009-s02",
+      "sourceLineId": "l25-conv-009",
+      "imagePromptCn": "大阪送别场景中，佐藤面向ミラー表达提醒对方保重身体；画面保持温和正式的离别氛围。 佐藤看向ミラー，用礼貌而真诚的语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "大阪送别场景中，佐藤面向ミラー表达提醒对方保重身体；画面保持温和正式的离别氛围。 佐藤看向ミラー，用礼貌而真诚的语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, canonical conflict line, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-25-012",
+      "storyboardTextLineId": "l25-conv-010-s01",
+      "sourceLineId": "l25-conv-010",
+      "imagePromptCn": "大阪送别场景中，ミラー面向皆さん表达回应祝福并祝大家保重；画面保持温和正式的离别氛围。 ミラー看向皆さん，用礼貌而真诚的语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "大阪送别场景中，ミラー面向皆さん表达回应祝福并祝大家保重；画面保持温和正式的离别氛围。 ミラー看向皆さん，用礼貌而真诚的语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, canonical conflict line, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    }
+  ]
+}

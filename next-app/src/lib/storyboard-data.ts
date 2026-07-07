@@ -46,6 +46,8 @@ import lesson23Storyboard from '@/data/minna/storyboards/lesson-23.json'
 import lesson23Review from '@/data/minna/storyboards/lesson-23-image-prompts-review.json'
 import lesson24Storyboard from '@/data/minna/storyboards/lesson-24.json'
 import lesson24Review from '@/data/minna/storyboards/lesson-24-image-prompts-review.json'
+import lesson25Storyboard from '@/data/minna/storyboards/lesson-25.json'
+import lesson25Review from '@/data/minna/storyboards/lesson-25-image-prompts-review.json'
 import type { ImagePromptReviewData, StoryboardLesson } from '@/types/storyboard'
 
 type StoryboardData = {
@@ -149,6 +151,10 @@ const STORYBOARD_DATA: Record<number, StoryboardData> = {
   24: {
     storyboard: lesson24Storyboard as StoryboardLesson,
     review: lesson24Review as ImagePromptReviewData,
+  },
+  25: {
+    storyboard: lesson25Storyboard as StoryboardLesson,
+    review: lesson25Review as ImagePromptReviewData,
   },
 }
 
