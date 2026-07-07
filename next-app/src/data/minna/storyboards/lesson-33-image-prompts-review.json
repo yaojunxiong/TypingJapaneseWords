@@ -1,0 +1,98 @@
+{
+  "lessonNo": 33,
+  "conversationTitle": "これはどういう意味ですか",
+  "reviewStatus": "pending-human-review",
+  "generationAllowed": false,
+  "prompts": [
+    {
+      "storyboardLineId": "sb-33-001",
+      "storyboardTextLineId": "l33-conv-001-s01",
+      "sourceLineId": "l33-conv-001",
+      "imagePromptCn": "ワット拿着贴在车上的纸到大学职员处询问汉字读法和意思，职员说明是停车违章，并解释车站前即使只停十分钟也不行，最后说明罚款金额。 当前画面聚焦ワット对大学職員说这一句，保持真实课文场景和人物关系。 ワット看向大学職員，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "ワット拿着贴在车上的纸到大学职员处询问汉字读法和意思，职员说明是停车违章，并解释车站前即使只停十分钟也不行，最后说明罚款金额。 当前画面聚焦ワット对大学職員说这一句，保持真实课文场景和人物关系。 ワット看向大学職員，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-33-002",
+      "storyboardTextLineId": "l33-conv-002-s01",
+      "sourceLineId": "l33-conv-002",
+      "imagePromptCn": "ワット拿着贴在车上的纸到大学职员处询问汉字读法和意思，职员说明是停车违章，并解释车站前即使只停十分钟也不行，最后说明罚款金额。 当前画面聚焦大学職員对ワット说这一句，保持真实课文场景和人物关系。 大学職員看向ワット，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "ワット拿着贴在车上的纸到大学职员处询问汉字读法和意思，职员说明是停车违章，并解释车站前即使只停十分钟也不行，最后说明罚款金额。 当前画面聚焦大学職員对ワット说这一句，保持真实课文场景和人物关系。 大学職員看向ワット，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-33-003",
+      "storyboardTextLineId": "l33-conv-003-s01",
+      "sourceLineId": "l33-conv-003",
+      "imagePromptCn": "ワット拿着贴在车上的纸到大学职员处询问汉字读法和意思，职员说明是停车违章，并解释车站前即使只停十分钟也不行，最后说明罚款金额。 当前画面聚焦ワット对大学職員说这一句，保持真实课文场景和人物关系。 ワット看向大学職員，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "ワット拿着贴在车上的纸到大学职员处询问汉字读法和意思，职员说明是停车违章，并解释车站前即使只停十分钟也不行，最后说明罚款金额。 当前画面聚焦ワット对大学職員说这一句，保持真实课文场景和人物关系。 ワット看向大学職員，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-33-004",
+      "storyboardTextLineId": "l33-conv-004-s01",
+      "sourceLineId": "l33-conv-004",
+      "imagePromptCn": "ワット拿着贴在车上的纸到大学职员处询问汉字读法和意思，职员说明是停车违章，并解释车站前即使只停十分钟也不行，最后说明罚款金额。 当前画面聚焦大学職員对ワット说这一句，保持真实课文场景和人物关系。 大学職員看向ワット，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "ワット拿着贴在车上的纸到大学职员处询问汉字读法和意思，职员说明是停车违章，并解释车站前即使只停十分钟也不行，最后说明罚款金额。 当前画面聚焦大学職員对ワット说这一句，保持真实课文场景和人物关系。 大学職員看向ワット，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-33-005",
+      "storyboardTextLineId": "l33-conv-005-s01",
+      "sourceLineId": "l33-conv-005",
+      "imagePromptCn": "ワット拿着贴在车上的纸到大学职员处询问汉字读法和意思，职员说明是停车违章，并解释车站前即使只停十分钟也不行，最后说明罚款金额。 当前画面聚焦ワット对大学職員说这一句，保持真实课文场景和人物关系。 ワット看向大学職員，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "ワット拿着贴在车上的纸到大学职员处询问汉字读法和意思，职员说明是停车违章，并解释车站前即使只停十分钟也不行，最后说明罚款金额。 当前画面聚焦ワット对大学職員说这一句，保持真实课文场景和人物关系。 ワット看向大学職員，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-33-006",
+      "storyboardTextLineId": "l33-conv-006-s01",
+      "sourceLineId": "l33-conv-006",
+      "imagePromptCn": "ワット拿着贴在车上的纸到大学职员处询问汉字读法和意思，职员说明是停车违章，并解释车站前即使只停十分钟也不行，最后说明罚款金额。 当前画面聚焦大学職員对ワット说这一句，保持真实课文场景和人物关系。 大学職員看向ワット，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "ワット拿着贴在车上的纸到大学职员处询问汉字读法和意思，职员说明是停车违章，并解释车站前即使只停十分钟也不行，最后说明罚款金额。 当前画面聚焦大学職員对ワット说这一句，保持真实课文场景和人物关系。 大学職員看向ワット，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-33-007",
+      "storyboardTextLineId": "l33-conv-007-s01",
+      "sourceLineId": "l33-conv-007",
+      "imagePromptCn": "ワット拿着贴在车上的纸到大学职员处询问汉字读法和意思，职员说明是停车违章，并解释车站前即使只停十分钟也不行，最后说明罚款金额。 当前画面聚焦ワット对大学職員说这一句，保持真实课文场景和人物关系。 ワット看向大学職員，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "ワット拿着贴在车上的纸到大学职员处询问汉字读法和意思，职员说明是停车违章，并解释车站前即使只停十分钟也不行，最后说明罚款金额。 当前画面聚焦ワット对大学職員说这一句，保持真实课文场景和人物关系。 ワット看向大学職員，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-33-008",
+      "storyboardTextLineId": "l33-conv-008-s01",
+      "sourceLineId": "l33-conv-008",
+      "imagePromptCn": "ワット拿着贴在车上的纸到大学职员处询问汉字读法和意思，职员说明是停车违章，并解释车站前即使只停十分钟也不行，最后说明罚款金额。 当前画面聚焦大学職員对ワット说这一句，保持真实课文场景和人物关系。 大学職員看向ワット，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "ワット拿着贴在车上的纸到大学职员处询问汉字读法和意思，职员说明是停车违章，并解释车站前即使只停十分钟也不行，最后说明罚款金额。 当前画面聚焦大学職員对ワット说这一句，保持真实课文场景和人物关系。 大学職員看向ワット，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-33-009",
+      "storyboardTextLineId": "l33-conv-009-s01",
+      "sourceLineId": "l33-conv-009",
+      "imagePromptCn": "ワット拿着贴在车上的纸到大学职员处询问汉字读法和意思，职员说明是停车违章，并解释车站前即使只停十分钟也不行，最后说明罚款金额。 当前画面聚焦ワット对大学職員说这一句，保持真实课文场景和人物关系。 ワット看向大学職員，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "ワット拿着贴在车上的纸到大学职员处询问汉字读法和意思，职员说明是停车违章，并解释车站前即使只停十分钟也不行，最后说明罚款金额。 当前画面聚焦ワット对大学職員说这一句，保持真实课文场景和人物关系。 ワット看向大学職員，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    }
+  ]
+}

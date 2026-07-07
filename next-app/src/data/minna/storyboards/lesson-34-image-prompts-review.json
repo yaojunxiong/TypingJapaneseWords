@@ -1,0 +1,148 @@
+{
+  "lessonNo": 34,
+  "conversationTitle": "わたしがしたとおりに、してください",
+  "reviewStatus": "pending-human-review",
+  "generationAllowed": false,
+  "prompts": [
+    {
+      "storyboardLineId": "sb-34-001",
+      "storyboardTextLineId": "l34-conv-001-s01",
+      "sourceLineId": "l34-conv-001",
+      "imagePromptCn": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦クララ对渡辺说这一句，保持真实课文场景和人物关系。 クララ看向渡辺，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦クララ对渡辺说这一句，保持真实课文场景和人物关系。 クララ看向渡辺，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-34-002",
+      "storyboardTextLineId": "l34-conv-002-s01",
+      "sourceLineId": "l34-conv-002",
+      "imagePromptCn": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦渡辺对クララ说这一句，保持真实课文场景和人物关系。 渡辺看向クララ，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦渡辺对クララ说这一句，保持真实课文场景和人物关系。 渡辺看向クララ，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-34-003",
+      "storyboardTextLineId": "l34-conv-003-s01",
+      "sourceLineId": "l34-conv-003",
+      "imagePromptCn": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦お茶の先生对渡辺说这一句，保持真实课文场景和人物关系。 お茶の先生看向渡辺，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦お茶の先生对渡辺说这一句，保持真实课文场景和人物关系。 お茶の先生看向渡辺，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-34-004",
+      "storyboardTextLineId": "l34-conv-004-s01",
+      "sourceLineId": "l34-conv-004",
+      "imagePromptCn": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦渡辺对お茶の先生说这一句，保持真实课文场景和人物关系。 渡辺看向お茶の先生，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦渡辺对お茶の先生说这一句，保持真实课文场景和人物关系。 渡辺看向お茶の先生，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-34-005",
+      "storyboardTextLineId": "l34-conv-005-s01",
+      "sourceLineId": "l34-conv-005",
+      "imagePromptCn": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦お茶の先生对クララ说这一句，保持真实课文场景和人物关系。 お茶の先生看向クララ，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦お茶の先生对クララ说这一句，保持真实课文场景和人物关系。 お茶の先生看向クララ，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-34-006",
+      "storyboardTextLineId": "l34-conv-006-s01",
+      "sourceLineId": "l34-conv-006",
+      "imagePromptCn": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦クララ对お茶の先生说这一句，保持真实课文场景和人物关系。 クララ看向お茶の先生，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦クララ对お茶の先生说这一句，保持真实课文场景和人物关系。 クララ看向お茶の先生，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-34-007",
+      "storyboardTextLineId": "l34-conv-007-s01",
+      "sourceLineId": "l34-conv-007",
+      "imagePromptCn": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦お茶の先生对クララ说这一句，保持真实课文场景和人物关系。 お茶の先生看向クララ，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦お茶の先生对クララ说这一句，保持真实课文场景和人物关系。 お茶の先生看向クララ，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-34-008",
+      "storyboardTextLineId": "l34-conv-008-s01",
+      "sourceLineId": "l34-conv-008",
+      "imagePromptCn": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦クララ对お茶の先生说这一句，保持真实课文场景和人物关系。 クララ看向お茶の先生，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦クララ对お茶の先生说这一句，保持真实课文场景和人物关系。 クララ看向お茶の先生，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-34-009",
+      "storyboardTextLineId": "l34-conv-009-s01",
+      "sourceLineId": "l34-conv-009",
+      "imagePromptCn": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦お茶の先生对クララ说这一句，保持真实课文场景和人物关系。 お茶の先生看向クララ，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦お茶の先生对クララ说这一句，保持真实课文场景和人物关系。 お茶の先生看向クララ，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-34-010",
+      "storyboardTextLineId": "l34-conv-010-s01",
+      "sourceLineId": "l34-conv-010",
+      "imagePromptCn": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦クララ对お茶の先生说这一句，保持真实课文场景和人物关系。 クララ看向お茶の先生，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦クララ对お茶の先生说这一句，保持真实课文场景和人物关系。 クララ看向お茶の先生，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-34-011",
+      "storyboardTextLineId": "l34-conv-011-s01",
+      "sourceLineId": "l34-conv-011",
+      "imagePromptCn": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦お茶の先生对クララ说这一句，保持真实课文场景和人物关系。 お茶の先生看向クララ，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦お茶の先生对クララ说这一句，保持真实课文场景和人物关系。 お茶の先生看向クララ，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-34-012",
+      "storyboardTextLineId": "l34-conv-012-s01",
+      "sourceLineId": "l34-conv-012",
+      "imagePromptCn": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦クララ对お茶の先生说这一句，保持真实课文场景和人物关系。 クララ看向お茶の先生，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦クララ对お茶の先生说这一句，保持真实课文场景和人物关系。 クララ看向お茶の先生，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-34-013",
+      "storyboardTextLineId": "l34-conv-013-s01",
+      "sourceLineId": "l34-conv-013",
+      "imagePromptCn": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦お茶の先生对クララ说这一句，保持真实课文场景和人物关系。 お茶の先生看向クララ，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦お茶の先生对クララ说这一句，保持真实课文场景和人物关系。 お茶の先生看向クララ，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-34-014",
+      "storyboardTextLineId": "l34-conv-014-s01",
+      "sourceLineId": "l34-conv-014",
+      "imagePromptCn": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦クララ对お茶の先生说这一句，保持真实课文场景和人物关系。 クララ看向お茶の先生，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦クララ对お茶の先生说这一句，保持真实课文场景和人物关系。 クララ看向お茶の先生，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    }
+  ]
+}

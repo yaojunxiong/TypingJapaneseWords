@@ -8,7 +8,7 @@
     "speakerCn": "瓦特",
     "lineStartTime": 6.98,
     "lineEndTime": 14,
-    "sentenceJp": "すみません。わたしの車にこんな紙がはあったんですが、この漢字は何と読むんですか。",
+    "sentenceJp": "すみません。わたしの車にこんな紙が貼ってあったんですが、この漢字は何と読むんですか。",
     "sentenceCn": "不好意思，我车上有这样一张纸，这个汉字怎么读？",
     "words": [
       {
@@ -125,15 +125,15 @@
       },
       {
         "id": "l33_l001_w009",
-        "surface": "は",
-        "baseForm": "は",
-        "kana": "は",
-        "romaji": "wa",
-        "meaningCn": "（主题助词）",
-        "noteCn": "提示主题或对比；作助词时读 wa。",
-        "type": "助词",
+        "surface": "貼って",
+        "baseForm": "貼る",
+        "kana": "はって",
+        "romaji": "hatte",
+        "meaningCn": "贴着",
+        "noteCn": "动词「貼る」的て形，表示纸被贴在车上。",
+        "type": "动词て形",
         "startChar": 17,
-        "endChar": 17,
+        "endChar": 19,
         "wordStartTime": 11.656,
         "wordEndTime": 12.88
       },
@@ -146,8 +146,8 @@
         "meaningCn": "有过/发现了……不过",
         "noteCn": "说明背景并委婉提问。",
         "type": "句型表达",
-        "startChar": 18,
-        "endChar": 24,
+        "startChar": 20,
+        "endChar": 26,
         "wordStartTime": 12.93,
         "wordEndTime": 14.898
       },
@@ -160,8 +160,8 @@
         "meaningCn": "这/这个",
         "noteCn": "指示词「こ」系列，修饰名词。本句中「この電車」意为「这班电车」。",
         "type": "指示词",
-        "startChar": 26,
-        "endChar": 27,
+        "startChar": 28,
+        "endChar": 29,
         "wordStartTime": 14.948,
         "wordEndTime": 16.316
       },
@@ -174,8 +174,8 @@
         "meaningCn": "汉字",
         "noteCn": "日本文字中的汉字。",
         "type": "名词",
-        "startChar": 28,
-        "endChar": 29,
+        "startChar": 30,
+        "endChar": 31,
         "wordStartTime": 16.366,
         "wordEndTime": 17.95
       },
@@ -188,8 +188,8 @@
         "meaningCn": "（主题助词）",
         "noteCn": "提示主题或对比；作助词时读 wa。",
         "type": "助词",
-        "startChar": 30,
-        "endChar": 30,
+        "startChar": 32,
+        "endChar": 32,
         "wordStartTime": 18.0,
         "wordEndTime": 19.224
       },
@@ -202,8 +202,8 @@
         "meaningCn": "怎么/如何",
         "noteCn": "本句中询问读法。",
         "type": "疑问表达",
-        "startChar": 31,
-        "endChar": 32,
+        "startChar": 33,
+        "endChar": 34,
         "wordStartTime": 19.274,
         "wordEndTime": 20.762
       },
@@ -216,8 +216,8 @@
         "meaningCn": "怎么读/读吗",
         "noteCn": "询问读法或背景。",
         "type": "疑问表达",
-        "startChar": 33,
-        "endChar": 38,
+        "startChar": 35,
+        "endChar": 40,
         "wordStartTime": 20.812,
         "wordEndTime": 22.708
       }
