@@ -1,0 +1,158 @@
+{
+  "lessonNo": 16,
+  "conversationTitle": "使い方を教えてください",
+  "reviewStatus": "pending-human-review",
+  "generationAllowed": false,
+  "prompts": [
+    {
+      "storyboardLineId": "sb-16-001",
+      "storyboardTextLineId": "l16-conv-001-s01",
+      "sourceLineId": "l16-conv-001",
+      "imagePromptCn": "银行大厅 ATM 区，マリア站在 ATM 前显得有些不确定，转向旁边的银行职员，微微欠身礼貌求助。画面包含两人和 ATM，不显示可读屏幕文字。",
+      "imagePromptJa": "銀行ロビーのATMコーナー。マリアがATMの前で少し困った様子で、隣の銀行員に向き直り、軽く頭を下げて丁寧に助けを求めている。2人とATMを含め、画面内の文字は読めないようにする。",
+      "negativePrompt": "readable text, ATM screen text, button labels, extra main characters, drama, argument, robbery, text bubbles, subtitles, UI labels, numbers, logos",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-16-002",
+      "storyboardTextLineId": "l16-conv-002-s01",
+      "sourceLineId": "l16-conv-002",
+      "imagePromptCn": "银行职员站在 ATM 旁，礼貌地看向マリア并确认她的需求。マリア面对 ATM 屏幕等待说明。保持银行服务场景，不显示可读文字。",
+      "imagePromptJa": "銀行員がATMの横に立ち、マリアを丁寧に見ながら用件を確認している。マリアはATM画面の方を向いて説明を待っている。銀行サービスの場面で、読める文字は出さない。",
+      "negativePrompt": "readable text, ATM screen text, button labels, counter service, deposit scene, account opening, extra main characters, speech bubbles, subtitles",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-16-003",
+      "storyboardTextLineId": "l16-conv-003-s01",
+      "sourceLineId": "l16-conv-003",
+      "imagePromptCn": "マリア在 ATM 前点头确认，表情从困惑转为明确。银行职员在旁边准备开始说明操作步骤。银行 ATM 区背景，屏幕内容不可读。",
+      "imagePromptJa": "マリアがATMの前でうなずき、困った表情からはっきりした表情に変わる。銀行員はそばで次の操作説明を始めようとしている。ATM画面の内容は読めない。",
+      "negativePrompt": "readable text, screen text, exaggerated emotion, extra dialogue, extra characters, speech bubbles, subtitles",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-16-004",
+      "storyboardTextLineId": "l16-conv-004-s01",
+      "sourceLineId": "l16-conv-004",
+      "imagePromptCn": "银行职员伸手指向 ATM 操作区的第一个按钮位置，指导マリア先按这里。マリア认真注视被指的位置。按钮和屏幕不要出现可读文字。",
+      "imagePromptJa": "銀行員がATM操作部の最初に押す場所を指さし、マリアに案内している。マリアは指された場所を真剣に見ている。ボタンや画面に読める文字を入れない。",
+      "negativePrompt": "readable button labels, readable ATM text, numbers, UI labels, wrong step, card insertion, cash, speech bubbles, subtitles",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-16-005",
+      "storyboardTextLineId": "l16-conv-005-s01",
+      "sourceLineId": "l16-conv-005",
+      "imagePromptCn": "マリア按照指示伸手按下 ATM 按钮，银行职员在旁边观察确认。画面聚焦手部动作和 ATM 操作区，不显示可读按钮文字。",
+      "imagePromptJa": "マリアが指示どおりATMのボタンを押している。銀行員は横で確認している。手元の動作とATM操作部に焦点を当て、読めるボタン文字は出さない。",
+      "negativePrompt": "readable text, button labels, cash coming out, card insertion, password digits, extra UI, speech bubbles, subtitles",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-16-006",
+      "storyboardTextLineId": "l16-conv-006-s01",
+      "sourceLineId": "l16-conv-006",
+      "imagePromptCn": "银行职员指向 ATM 卡槽，マリア手里拿着银行卡准备插入。画面强调卡槽和银行卡，银行卡号码和屏幕文字不可读。",
+      "imagePromptJa": "銀行員がATMのカード挿入口を指さし、マリアがキャッシュカードを持って入れようとしている。カード挿入口とカードを強調し、カード番号や画面文字は読めない。",
+      "negativePrompt": "readable card number, readable text, screen labels, password input, cash, extra hands, speech bubbles, subtitles",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-16-007",
+      "storyboardTextLineId": "l16-conv-006-s02",
+      "sourceLineId": "l16-conv-006",
+      "imagePromptCn": "银行职员指向 ATM 数字键盘，提示マリア输入密码。マリア的手准备按键但具体数字不可见。保持隐私感和礼貌距离。",
+      "imagePromptJa": "銀行員がATMの数字キーを指し、マリアに暗証番号の入力を促している。マリアの手はキーに向かうが、具体的な数字は見えない。プライバシーと適切な距離を保つ。",
+      "negativePrompt": "visible password, readable digits, screen text, close-up personal information, unsafe banking scene, speech bubbles, subtitles",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-16-008",
+      "storyboardTextLineId": "l16-conv-007-s01",
+      "sourceLineId": "l16-conv-007",
+      "imagePromptCn": "マリア一边回应，一边低头看着 ATM 键盘进行操作。银行职员在旁边看向屏幕，保持协助姿态。不要显示密码或可读文字。",
+      "imagePromptJa": "マリアが返事をしながらATMのキーを見て操作している。銀行員は横で画面を見守り、補助する姿勢。暗証番号や読める文字は表示しない。",
+      "negativePrompt": "visible password, readable digits, text labels, screen text, cash, finished scene, speech bubbles, subtitles",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-16-009",
+      "storyboardTextLineId": "l16-conv-007-s02",
+      "sourceLineId": "l16-conv-007",
+      "imagePromptCn": "マリア完成输入后手离开键盘，抬头向银行职员报告操作完成。银行职员礼貌地听她汇报。ATM 仍在旁边。",
+      "imagePromptJa": "マリアが入力を終え、手をキーから離して銀行員に操作完了を伝えている。銀行員は丁寧に聞いている。ATMはそばにある。",
+      "negativePrompt": "readable text, password digits, cash, amount input, confirmation button, extra dialogue, speech bubbles, subtitles",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-16-010",
+      "storyboardTextLineId": "l16-conv-008-s01",
+      "sourceLineId": "l16-conv-008",
+      "imagePromptCn": "银行职员指向 ATM 屏幕上的金额选择区域，继续指导マリア输入金额。マリア认真看着屏幕。屏幕上的文字和数字不可读。",
+      "imagePromptJa": "銀行員がATM画面の金額選択エリアを指し、マリアに金額入力を案内している。マリアは画面を真剣に見ている。画面上の文字や数字は読めない。",
+      "negativePrompt": "readable amount, readable numbers, screen text, button labels, selected cash, extra UI labels, speech bubbles, subtitles",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-16-011",
+      "storyboardTextLineId": "l16-conv-009-s01",
+      "sourceLineId": "l16-conv-009",
+      "imagePromptCn": "マリア想选择金额但犹豫，手停在 ATM 按钮前，表情困惑。银行职员准备进一步说明。不要显示可读金额文字或数字。",
+      "imagePromptJa": "マリアが金額を選ぼうとして迷い、手をATMボタンの前で止め、困った表情をしている。銀行員は次に説明しようとしている。読める金額文字や数字は出さない。",
+      "negativePrompt": "readable 50000, readable numbers, amount labels, screen text, completed selection, cash, speech bubbles, subtitles",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-16-012",
+      "storyboardTextLineId": "l16-conv-010-s01",
+      "sourceLineId": "l16-conv-010",
+      "imagePromptCn": "银行职员指向 ATM 上某个金额单位按钮位置，说明应该按这个位置。マリア顺着手势看过去。按钮文字不要可读。",
+      "imagePromptJa": "銀行員がATMの金額単位に関係するボタンの位置を指し、ここを押すと説明している。マリアはその指先を見ている。ボタンの文字は読めないようにする。",
+      "negativePrompt": "readable 万円 text, readable button labels, screen text, numbers, cash, speech bubbles, subtitles, UI text",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-16-013",
+      "storyboardTextLineId": "l16-conv-010-s02",
+      "sourceLineId": "l16-conv-010",
+      "imagePromptCn": "银行职员继续把手势移向确认按钮的位置，マリア准备执行最后一步。画面只表现按钮位置和手势，不出现可读“确认”文字。",
+      "imagePromptJa": "銀行員が続けて確認ボタンの位置へ手を移し、マリアが最後の操作をしようとしている。ボタン位置と手の動きだけを見せ、読める確認文字は出さない。",
+      "negativePrompt": "readable confirmation text, readable button label, screen text, cash dispensing, final receipt, speech bubbles, subtitles",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-16-014",
+      "storyboardTextLineId": "l16-conv-011-s01",
+      "sourceLineId": "l16-conv-011",
+      "imagePromptCn": "マリア点头表示明白最后一步，手准备按下确认按钮。银行职员在旁边保持礼貌观察。ATM 屏幕不可读。",
+      "imagePromptJa": "マリアが最後の手順を理解してうなずき、確認操作をしようとしている。銀行員は横で丁寧に見守っている。ATM画面の文字は読めない。",
+      "negativePrompt": "readable text, button label, cash, receipt, ending bow, speech bubbles, subtitles, screen UI text",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-16-015",
+      "storyboardTextLineId": "l16-conv-011-s02",
+      "sourceLineId": "l16-conv-011",
+      "imagePromptCn": "操作说明结束后，マリア在 ATM 旁安心地向银行职员微微鞠躬致谢。银行职员礼貌回应。ATM 保持在背景中。",
+      "imagePromptJa": "操作説明が終わり、マリアがATMのそばで安心した表情で銀行員に軽くお辞儀をして感謝している。銀行員も丁寧に応じる。ATMは背景に残す。",
+      "negativePrompt": "readable text, cash stack, extra ending scene, leaving bank, extra characters, speech bubbles, subtitles, UI labels",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    }
+  ]
+}

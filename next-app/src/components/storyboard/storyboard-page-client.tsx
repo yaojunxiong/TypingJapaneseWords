@@ -5,8 +5,6 @@ import { validateStoryboard } from '@/lib/storyboard'
 import type { StoryboardLesson } from '@/types/storyboard'
 import styles from './storyboard-page-client.module.css'
 
-const DISPLAY_ORDER = ['佐藤', '山田', 'ミラー'] as const
-
 function characterForName(storyboard: StoryboardLesson, name: string) {
   return storyboard.characters.find((character) => {
     return character.displayNameCn === name || character.nameJa.includes(name)
@@ -19,6 +17,7 @@ export default function StoryboardPageClient({
   storyboard: StoryboardLesson
 }) {
   const [activeLineId, setActiveLineId] = useState(storyboard.lines[0]?.lineId ?? '')
+  const displayOrder = storyboard.characters.map((character) => character.nameJa)
   const validation = validateStoryboard(storyboard)
   const activeIndex = Math.max(
     0,
@@ -34,7 +33,7 @@ export default function StoryboardPageClient({
       <section className={styles.card} aria-labelledby="storyboard-relationship-title">
         <h2 id="storyboard-relationship-title" className={styles.sectionTitle}>本课核心关系</h2>
         <p className={styles.relationshipNotice}>
-          这不是两人闲聊，也不是自由校园剧情，而是办公室中的三人正式引见。
+          {storyboard.scene.coreGoalCn}
         </p>
         <div className={styles.characterGrid}>
           {storyboard.characters.map((character) => (
@@ -44,18 +43,18 @@ export default function StoryboardPageClient({
             </div>
           ))}
         </div>
-        <p className={styles.relationFlow}>山田（介绍人）→ 把米勒介绍给佐藤</p>
+        <p className={styles.relationFlow}>{storyboard.scene.settingCn}</p>
       </section>
 
       <section className={styles.card} aria-labelledby="storyboard-preview-title">
         <h2 id="storyboard-preview-title" className={styles.sectionTitle}>当前分镜预览</h2>
         <div className={styles.preview}>
           <div className={styles.previewHeader}>
-            <span className={styles.sceneBadge}>场景：办公室引见</span>
+            <span className={styles.sceneBadge}>场景：{storyboard.scene.settingCn}</span>
             <span className={styles.countBadge}>{activeIndex + 1} / {storyboard.lines.length}</span>
           </div>
           <div className={styles.people} aria-label={`当前说话人：${activeLine.speaker}；听话对象：${activeLine.listener}`}>
-            {DISPLAY_ORDER.map((name) => {
+            {displayOrder.map((name) => {
               const character = characterForName(storyboard, name)
               const isSpeaker = activeLine.speaker === name
               const isListener = activeLine.listener === name
@@ -68,7 +67,7 @@ export default function StoryboardPageClient({
                   <span className={styles.body} aria-hidden="true" />
                   <span className={styles.personName}>{character?.displayNameCn ?? name}</span>
                   <span className={styles.personRole}>
-                    {isSpeaker ? '正在说话' : isListener ? '正在听' : name === '山田' ? '介绍人在场' : '在场'}
+                    {isSpeaker ? '正在说话' : isListener ? '正在听' : '在场'}
                   </span>
                 </div>
               )
@@ -136,13 +135,13 @@ export default function StoryboardPageClient({
         <h2 id="storyboard-validation-title" className={styles.sectionTitle}>数据校验</h2>
         <p className={`${styles.validationSummary} ${validation.ready ? '' : styles.validationError}`}>
           {validation.ready
-            ? `9 / 9 句字段完整，全部可用于图解预览。这里只校验静态分镜数据，不会生成真实视频。`
+            ? `${storyboard.lines.length} / ${storyboard.lines.length} 句字段完整，全部可用于图解预览。这里只校验静态分镜数据，不会生成真实视频。`
             : `有 ${validation.lines.filter((line) => !line.ready).length} 句缺少必填字段，已标记“不可生成视频”。`}
         </p>
       </section>
 
       <section className={styles.card} aria-labelledby="storyboard-list-title">
-        <h2 id="storyboard-list-title" className={styles.sectionTitle}>9 句分镜列表</h2>
+        <h2 id="storyboard-list-title" className={styles.sectionTitle}>{storyboard.lines.length} 句分镜列表</h2>
         <div className={styles.lineList}>
           {storyboard.lines.map((line, index) => {
             const lineValidation = validation.lines[index]
