@@ -38,6 +38,14 @@ import lesson19Storyboard from '@/data/minna/storyboards/lesson-19.json'
 import lesson19Review from '@/data/minna/storyboards/lesson-19-image-prompts-review.json'
 import lesson20Storyboard from '@/data/minna/storyboards/lesson-20.json'
 import lesson20Review from '@/data/minna/storyboards/lesson-20-image-prompts-review.json'
+import lesson21Storyboard from '@/data/minna/storyboards/lesson-21.json'
+import lesson21Review from '@/data/minna/storyboards/lesson-21-image-prompts-review.json'
+import lesson22Storyboard from '@/data/minna/storyboards/lesson-22.json'
+import lesson22Review from '@/data/minna/storyboards/lesson-22-image-prompts-review.json'
+import lesson23Storyboard from '@/data/minna/storyboards/lesson-23.json'
+import lesson23Review from '@/data/minna/storyboards/lesson-23-image-prompts-review.json'
+import lesson24Storyboard from '@/data/minna/storyboards/lesson-24.json'
+import lesson24Review from '@/data/minna/storyboards/lesson-24-image-prompts-review.json'
 import type { ImagePromptReviewData, StoryboardLesson } from '@/types/storyboard'
 
 type StoryboardData = {
@@ -125,6 +133,22 @@ const STORYBOARD_DATA: Record<number, StoryboardData> = {
   20: {
     storyboard: lesson20Storyboard as StoryboardLesson,
     review: lesson20Review as ImagePromptReviewData,
+  },
+  21: {
+    storyboard: lesson21Storyboard as StoryboardLesson,
+    review: lesson21Review as ImagePromptReviewData,
+  },
+  22: {
+    storyboard: lesson22Storyboard as StoryboardLesson,
+    review: lesson22Review as ImagePromptReviewData,
+  },
+  23: {
+    storyboard: lesson23Storyboard as StoryboardLesson,
+    review: lesson23Review as ImagePromptReviewData,
+  },
+  24: {
+    storyboard: lesson24Storyboard as StoryboardLesson,
+    review: lesson24Review as ImagePromptReviewData,
   },
 }
 

@@ -1,0 +1,88 @@
+{
+  "lessonNo": 23,
+  "conversationTitle": "みどり図書館への行き方",
+  "reviewStatus": "pending-human-review",
+  "generationAllowed": false,
+  "prompts": [
+    {
+      "storyboardLineId": "sb-23-001",
+      "storyboardTextLineId": "l23-conv-001-s01",
+      "sourceLineId": "l23-conv-001",
+      "imagePromptCn": "电话中，カリナ向みどり図書館の人询问去图书馆的交通方式和借书所需物品。 当前画面聚焦図書館の人对カリナ说这一句，保持真实课文场景和人物关系。 図書館の人看向カリナ，用符合该场景的自然语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "电话中，カリナ向みどり図書館の人询问去图书馆的交通方式和借书所需物品。 当前画面聚焦図書館の人对カリナ说这一句，保持真实课文场景和人物关系。 図書館の人看向カリナ，用符合该场景的自然语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-23-002",
+      "storyboardTextLineId": "l23-conv-002-s01",
+      "sourceLineId": "l23-conv-002",
+      "imagePromptCn": "电话中，カリナ向みどり図書館の人询问去图书馆的交通方式和借书所需物品。 当前画面聚焦カリナ对図書館の人说这一句，保持真实课文场景和人物关系。 カリナ看向図書館の人，用符合该场景的自然语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "电话中，カリナ向みどり図書館の人询问去图书馆的交通方式和借书所需物品。 当前画面聚焦カリナ对図書館の人说这一句，保持真实课文场景和人物关系。 カリナ看向図書館の人，用符合该场景的自然语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-23-003",
+      "storyboardTextLineId": "l23-conv-003-s01",
+      "sourceLineId": "l23-conv-003",
+      "imagePromptCn": "电话中，カリナ向みどり図書館の人询问去图书馆的交通方式和借书所需物品。 当前画面聚焦図書館の人对カリナ说这一句，保持真实课文场景和人物关系。 図書館の人看向カリナ，用符合该场景的自然语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "电话中，カリナ向みどり図書館の人询问去图书馆的交通方式和借书所需物品。 当前画面聚焦図書館の人对カリナ说这一句，保持真实课文场景和人物关系。 図書館の人看向カリナ，用符合该场景的自然语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-23-004",
+      "storyboardTextLineId": "l23-conv-004-s01",
+      "sourceLineId": "l23-conv-004",
+      "imagePromptCn": "电话中，カリナ向みどり図書館の人询问去图书馆的交通方式和借书所需物品。 当前画面聚焦カリナ对図書館の人说这一句，保持真实课文场景和人物关系。 カリナ看向図書館の人，用符合该场景的自然语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "电话中，カリナ向みどり図書館の人询问去图书馆的交通方式和借书所需物品。 当前画面聚焦カリナ对図書館の人说这一句，保持真实课文场景和人物关系。 カリナ看向図書館の人，用符合该场景的自然语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-23-005",
+      "storyboardTextLineId": "l23-conv-005-s01",
+      "sourceLineId": "l23-conv-005",
+      "imagePromptCn": "电话中，カリナ向みどり図書館の人询问去图书馆的交通方式和借书所需物品。 当前画面聚焦図書館の人对カリナ说这一句，保持真实课文场景和人物关系。 図書館の人看向カリナ，用符合该场景的自然语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "电话中，カリナ向みどり図書館の人询问去图书馆的交通方式和借书所需物品。 当前画面聚焦図書館の人对カリナ说这一句，保持真实课文场景和人物关系。 図書館の人看向カリナ，用符合该场景的自然语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-23-006",
+      "storyboardTextLineId": "l23-conv-006-s01",
+      "sourceLineId": "l23-conv-006",
+      "imagePromptCn": "电话中，カリナ向みどり図書館の人询问去图书馆的交通方式和借书所需物品。 当前画面聚焦カリナ对図書館の人说这一句，保持真实课文场景和人物关系。 カリナ看向図書館の人，用符合该场景的自然语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "电话中，カリナ向みどり図書館の人询问去图书馆的交通方式和借书所需物品。 当前画面聚焦カリナ对図書館の人说这一句，保持真实课文场景和人物关系。 カリナ看向図書館の人，用符合该场景的自然语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-23-007",
+      "storyboardTextLineId": "l23-conv-007-s01",
+      "sourceLineId": "l23-conv-007",
+      "imagePromptCn": "电话中，カリナ向みどり図書館の人询问去图书馆的交通方式和借书所需物品。 当前画面聚焦図書館の人对カリナ说这一句，保持真实课文场景和人物关系。 図書館の人看向カリナ，用符合该场景的自然语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "电话中，カリナ向みどり図書館の人询问去图书馆的交通方式和借书所需物品。 当前画面聚焦図書館の人对カリナ说这一句，保持真实课文场景和人物关系。 図書館の人看向カリナ，用符合该场景的自然语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-23-008",
+      "storyboardTextLineId": "l23-conv-008-s01",
+      "sourceLineId": "l23-conv-008",
+      "imagePromptCn": "电话中，カリナ向みどり図書館の人询问去图书馆的交通方式和借书所需物品。 当前画面聚焦カリナ对図書館の人说这一句，保持真实课文场景和人物关系。 カリナ看向図書館の人，用符合该场景的自然语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "电话中，カリナ向みどり図書館の人询问去图书馆的交通方式和借书所需物品。 当前画面聚焦カリナ对図書館の人说这一句，保持真实课文场景和人物关系。 カリナ看向図書館の人，用符合该场景的自然语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    }
+  ]
+}

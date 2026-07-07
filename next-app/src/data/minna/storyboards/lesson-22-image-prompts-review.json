@@ -1,0 +1,88 @@
+{
+  "lessonNo": 22,
+  "conversationTitle": "どんな部屋をお探しですか",
+  "reviewStatus": "pending-human-review",
+  "generationAllowed": false,
+  "prompts": [
+    {
+      "storyboardLineId": "sb-22-001",
+      "storyboardTextLineId": "l22-conv-001-s01",
+      "sourceLineId": "l22-conv-001",
+      "imagePromptCn": "不动产中介处，ワン向不動産屋说明想找的房间条件，并确认房间图和看房安排。 当前画面聚焦不動産屋对ワン说这一句，保持真实课文场景和人物关系。 不動産屋看向ワン，用符合该场景的自然语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "不动产中介处，ワン向不動産屋说明想找的房间条件，并确认房间图和看房安排。 当前画面聚焦不動産屋对ワン说这一句，保持真实课文场景和人物关系。 不動産屋看向ワン，用符合该场景的自然语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-22-002",
+      "storyboardTextLineId": "l22-conv-002-s01",
+      "sourceLineId": "l22-conv-002",
+      "imagePromptCn": "不动产中介处，ワン向不動産屋说明想找的房间条件，并确认房间图和看房安排。 当前画面聚焦ワン对不動産屋说这一句，保持真实课文场景和人物关系。 ワン看向不動産屋，用符合该场景的自然语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "不动产中介处，ワン向不動産屋说明想找的房间条件，并确认房间图和看房安排。 当前画面聚焦ワン对不動産屋说这一句，保持真实课文场景和人物关系。 ワン看向不動産屋，用符合该场景的自然语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-22-003",
+      "storyboardTextLineId": "l22-conv-003-s01",
+      "sourceLineId": "l22-conv-003",
+      "imagePromptCn": "不动产中介处，ワン向不動産屋说明想找的房间条件，并确认房间图和看房安排。 当前画面聚焦不動産屋对ワン说这一句，保持真实课文场景和人物关系。 不動産屋看向ワン，用符合该场景的自然语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "不动产中介处，ワン向不動産屋说明想找的房间条件，并确认房间图和看房安排。 当前画面聚焦不動産屋对ワン说这一句，保持真实课文场景和人物关系。 不動産屋看向ワン，用符合该场景的自然语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-22-004",
+      "storyboardTextLineId": "l22-conv-004-s01",
+      "sourceLineId": "l22-conv-004",
+      "imagePromptCn": "不动产中介处，ワン向不動産屋说明想找的房间条件，并确认房间图和看房安排。 当前画面聚焦ワン对不動産屋说这一句，保持真实课文场景和人物关系。 ワン看向不動産屋，用符合该场景的自然语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "不动产中介处，ワン向不動産屋说明想找的房间条件，并确认房间图和看房安排。 当前画面聚焦ワン对不動産屋说这一句，保持真实课文场景和人物关系。 ワン看向不動産屋，用符合该场景的自然语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-22-005",
+      "storyboardTextLineId": "l22-conv-005-s01",
+      "sourceLineId": "l22-conv-005",
+      "imagePromptCn": "不动产中介处，ワン向不動産屋说明想找的房间条件，并确认房间图和看房安排。 当前画面聚焦不動産屋对ワン说这一句，保持真实课文场景和人物关系。 不動産屋看向ワン，用符合该场景的自然语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "不动产中介处，ワン向不動産屋说明想找的房间条件，并确认房间图和看房安排。 当前画面聚焦不動産屋对ワン说这一句，保持真实课文场景和人物关系。 不動産屋看向ワン，用符合该场景的自然语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-22-006",
+      "storyboardTextLineId": "l22-conv-006-s01",
+      "sourceLineId": "l22-conv-006",
+      "imagePromptCn": "不动产中介处，ワン向不動産屋说明想找的房间条件，并确认房间图和看房安排。 当前画面聚焦ワン对不動産屋说这一句，保持真实课文场景和人物关系。 ワン看向不動産屋，用符合该场景的自然语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "不动产中介处，ワン向不動産屋说明想找的房间条件，并确认房间图和看房安排。 当前画面聚焦ワン对不動産屋说这一句，保持真实课文场景和人物关系。 ワン看向不動産屋，用符合该场景的自然语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-22-007",
+      "storyboardTextLineId": "l22-conv-007-s01",
+      "sourceLineId": "l22-conv-007",
+      "imagePromptCn": "不动产中介处，ワン向不動産屋说明想找的房间条件，并确认房间图和看房安排。 当前画面聚焦不動産屋对ワン说这一句，保持真实课文场景和人物关系。 不動産屋看向ワン，用符合该场景的自然语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "不动产中介处，ワン向不動産屋说明想找的房间条件，并确认房间图和看房安排。 当前画面聚焦不動産屋对ワン说这一句，保持真实课文场景和人物关系。 不動産屋看向ワン，用符合该场景的自然语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-22-008",
+      "storyboardTextLineId": "l22-conv-008-s01",
+      "sourceLineId": "l22-conv-008",
+      "imagePromptCn": "不动产中介处，ワン向不動産屋说明想找的房间条件，并确认房间图和看房安排。 当前画面聚焦ワン对不動産屋说这一句，保持真实课文场景和人物关系。 ワン看向不動産屋，用符合该场景的自然语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "不动产中介处，ワン向不動産屋说明想找的房间条件，并确认房间图和看房安排。 当前画面聚焦ワン对不動産屋说这一句，保持真实课文场景和人物关系。 ワン看向不動産屋，用符合该场景的自然语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    }
+  ]
+}

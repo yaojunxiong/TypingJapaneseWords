@@ -1,0 +1,118 @@
+{
+  "lessonNo": 24,
+  "conversationTitle": "手伝いに行きましょうか",
+  "reviewStatus": "pending-human-review",
+  "generationAllowed": false,
+  "prompts": [
+    {
+      "storyboardLineId": "sb-24-001",
+      "storyboardTextLineId": "l24-conv-001-s01",
+      "sourceLineId": "l24-conv-001",
+      "imagePromptCn": "搬家前的朋友会话中，カリナ主动提出帮ワン搬家，并确认帮手、车和午饭安排。 当前画面聚焦カリナ对ワン说这一句，保持真实课文场景和人物关系。 カリナ看向ワン，用符合该场景的自然语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "搬家前的朋友会话中，カリナ主动提出帮ワン搬家，并确认帮手、车和午饭安排。 当前画面聚焦カリナ对ワン说这一句，保持真实课文场景和人物关系。 カリナ看向ワン，用符合该场景的自然语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-24-002",
+      "storyboardTextLineId": "l24-conv-002-s01",
+      "sourceLineId": "l24-conv-002",
+      "imagePromptCn": "搬家前的朋友会话中，カリナ主动提出帮ワン搬家，并确认帮手、车和午饭安排。 当前画面聚焦ワン对カリナ说这一句，保持真实课文场景和人物关系。 ワン看向カリナ，用符合该场景的自然语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "搬家前的朋友会话中，カリナ主动提出帮ワン搬家，并确认帮手、车和午饭安排。 当前画面聚焦ワン对カリナ说这一句，保持真实课文场景和人物关系。 ワン看向カリナ，用符合该场景的自然语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-24-003",
+      "storyboardTextLineId": "l24-conv-003-s01",
+      "sourceLineId": "l24-conv-003",
+      "imagePromptCn": "搬家前的朋友会话中，カリナ主动提出帮ワン搬家，并确认帮手、车和午饭安排。 当前画面聚焦カリナ对ワン说这一句，保持真实课文场景和人物关系。 カリナ看向ワン，用符合该场景的自然语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "搬家前的朋友会话中，カリナ主动提出帮ワン搬家，并确认帮手、车和午饭安排。 当前画面聚焦カリナ对ワン说这一句，保持真实课文场景和人物关系。 カリナ看向ワン，用符合该场景的自然语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-24-004",
+      "storyboardTextLineId": "l24-conv-004-s01",
+      "sourceLineId": "l24-conv-004",
+      "imagePromptCn": "搬家前的朋友会话中，カリナ主动提出帮ワン搬家，并确认帮手、车和午饭安排。 当前画面聚焦ワン对カリナ说这一句，保持真实课文场景和人物关系。 ワン看向カリナ，用符合该场景的自然语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "搬家前的朋友会话中，カリナ主动提出帮ワン搬家，并确认帮手、车和午饭安排。 当前画面聚焦ワン对カリナ说这一句，保持真实课文场景和人物关系。 ワン看向カリナ，用符合该场景的自然语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-24-005",
+      "storyboardTextLineId": "l24-conv-005-s01",
+      "sourceLineId": "l24-conv-005",
+      "imagePromptCn": "搬家前的朋友会话中，カリナ主动提出帮ワン搬家，并确认帮手、车和午饭安排。 当前画面聚焦カリナ对ワン说这一句，保持真实课文场景和人物关系。 カリナ看向ワン，用符合该场景的自然语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "搬家前的朋友会话中，カリナ主动提出帮ワン搬家，并确认帮手、车和午饭安排。 当前画面聚焦カリナ对ワン说这一句，保持真实课文场景和人物关系。 カリナ看向ワン，用符合该场景的自然语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-24-006",
+      "storyboardTextLineId": "l24-conv-006-s01",
+      "sourceLineId": "l24-conv-006",
+      "imagePromptCn": "搬家前的朋友会话中，カリナ主动提出帮ワン搬家，并确认帮手、车和午饭安排。 当前画面聚焦ワン对カリナ说这一句，保持真实课文场景和人物关系。 ワン看向カリナ，用符合该场景的自然语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "搬家前的朋友会话中，カリナ主动提出帮ワン搬家，并确认帮手、车和午饭安排。 当前画面聚焦ワン对カリナ说这一句，保持真实课文场景和人物关系。 ワン看向カリナ，用符合该场景的自然语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-24-007",
+      "storyboardTextLineId": "l24-conv-007-s01",
+      "sourceLineId": "l24-conv-007",
+      "imagePromptCn": "搬家前的朋友会话中，カリナ主动提出帮ワン搬家，并确认帮手、车和午饭安排。 当前画面聚焦カリナ对ワン说这一句，保持真实课文场景和人物关系。 カリナ看向ワン，用符合该场景的自然语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "搬家前的朋友会话中，カリナ主动提出帮ワン搬家，并确认帮手、车和午饭安排。 当前画面聚焦カリナ对ワン说这一句，保持真实课文场景和人物关系。 カリナ看向ワン，用符合该场景的自然语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-24-008",
+      "storyboardTextLineId": "l24-conv-008-s01",
+      "sourceLineId": "l24-conv-008",
+      "imagePromptCn": "搬家前的朋友会话中，カリナ主动提出帮ワン搬家，并确认帮手、车和午饭安排。 当前画面聚焦ワン对カリナ说这一句，保持真实课文场景和人物关系。 ワン看向カリナ，用符合该场景的自然语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "搬家前的朋友会话中，カリナ主动提出帮ワン搬家，并确认帮手、车和午饭安排。 当前画面聚焦ワン对カリナ说这一句，保持真实课文场景和人物关系。 ワン看向カリナ，用符合该场景的自然语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-24-009",
+      "storyboardTextLineId": "l24-conv-009-s01",
+      "sourceLineId": "l24-conv-009",
+      "imagePromptCn": "搬家前的朋友会话中，カリナ主动提出帮ワン搬家，并确认帮手、车和午饭安排。 当前画面聚焦カリナ对ワン说这一句，保持真实课文场景和人物关系。 カリナ看向ワン，用符合该场景的自然语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "搬家前的朋友会话中，カリナ主动提出帮ワン搬家，并确认帮手、车和午饭安排。 当前画面聚焦カリナ对ワン说这一句，保持真实课文场景和人物关系。 カリナ看向ワン，用符合该场景的自然语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-24-010",
+      "storyboardTextLineId": "l24-conv-010-s01",
+      "sourceLineId": "l24-conv-010",
+      "imagePromptCn": "搬家前的朋友会话中，カリナ主动提出帮ワン搬家，并确认帮手、车和午饭安排。 当前画面聚焦ワン对カリナ说这一句，保持真实课文场景和人物关系。 ワン看向カリナ，用符合该场景的自然语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "搬家前的朋友会话中，カリナ主动提出帮ワン搬家，并确认帮手、车和午饭安排。 当前画面聚焦ワン对カリナ说这一句，保持真实课文场景和人物关系。 ワン看向カリナ，用符合该场景的自然语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-24-011",
+      "storyboardTextLineId": "l24-conv-011-s01",
+      "sourceLineId": "l24-conv-011",
+      "imagePromptCn": "搬家前的朋友会话中，カリナ主动提出帮ワン搬家，并确认帮手、车和午饭安排。 当前画面聚焦カリナ对ワン说这一句，保持真实课文场景和人物关系。 カリナ看向ワン，用符合该场景的自然语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "搬家前的朋友会话中，カリナ主动提出帮ワン搬家，并确认帮手、车和午饭安排。 当前画面聚焦カリナ对ワン说这一句，保持真实课文场景和人物关系。 カリナ看向ワン，用符合该场景的自然语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    }
+  ]
+}
