@@ -1,0 +1,118 @@
+{
+  "lessonNo": 42,
+  "conversationTitle": "ボーナスは 何に 使いますか",
+  "reviewStatus": "pending-human-review",
+  "generationAllowed": false,
+  "prompts": [
+    {
+      "storyboardLineId": "sb-42-001",
+      "storyboardTextLineId": "l42-conv-001-s01",
+      "sourceLineId": "l42-conv-001",
+      "imagePromptCn": "公司休息场景中，鈴木、林和小川谈论奖金什么时候发以及怎么使用，鈴木想买自行车和旅行，林打算存一半去英国留学，小川感叹有家庭支出后几乎剩不下。 当前画面聚焦鈴木对林说这一句，保持真实课文场景和人物关系。 鈴木看向林，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "公司休息场景中，鈴木、林和小川谈论奖金什么时候发以及怎么使用，鈴木想买自行车和旅行，林打算存一半去英国留学，小川感叹有家庭支出后几乎剩不下。 当前画面聚焦鈴木对林说这一句，保持真实课文场景和人物关系。 鈴木看向林，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-42-002",
+      "storyboardTextLineId": "l42-conv-002-s01",
+      "sourceLineId": "l42-conv-002",
+      "imagePromptCn": "公司休息场景中，鈴木、林和小川谈论奖金什么时候发以及怎么使用，鈴木想买自行车和旅行，林打算存一半去英国留学，小川感叹有家庭支出后几乎剩不下。 当前画面聚焦林对鈴木说这一句，保持真实课文场景和人物关系。 林看向鈴木，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "公司休息场景中，鈴木、林和小川谈论奖金什么时候发以及怎么使用，鈴木想买自行车和旅行，林打算存一半去英国留学，小川感叹有家庭支出后几乎剩不下。 当前画面聚焦林对鈴木说这一句，保持真实课文场景和人物关系。 林看向鈴木，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-42-003",
+      "storyboardTextLineId": "l42-conv-003-s01",
+      "sourceLineId": "l42-conv-003",
+      "imagePromptCn": "公司休息场景中，鈴木、林和小川谈论奖金什么时候发以及怎么使用，鈴木想买自行车和旅行，林打算存一半去英国留学，小川感叹有家庭支出后几乎剩不下。 当前画面聚焦鈴木对林说这一句，保持真实课文场景和人物关系。 鈴木看向林，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "公司休息场景中，鈴木、林和小川谈论奖金什么时候发以及怎么使用，鈴木想买自行车和旅行，林打算存一半去英国留学，小川感叹有家庭支出后几乎剩不下。 当前画面聚焦鈴木对林说这一句，保持真实课文场景和人物关系。 鈴木看向林，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-42-004",
+      "storyboardTextLineId": "l42-conv-004-s01",
+      "sourceLineId": "l42-conv-004",
+      "imagePromptCn": "公司休息场景中，鈴木、林和小川谈论奖金什么时候发以及怎么使用，鈴木想买自行车和旅行，林打算存一半去英国留学，小川感叹有家庭支出后几乎剩不下。 当前画面聚焦林对鈴木说这一句，保持真实课文场景和人物关系。 林看向鈴木，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "公司休息场景中，鈴木、林和小川谈论奖金什么时候发以及怎么使用，鈴木想买自行车和旅行，林打算存一半去英国留学，小川感叹有家庭支出后几乎剩不下。 当前画面聚焦林对鈴木说这一句，保持真实课文场景和人物关系。 林看向鈴木，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-42-005",
+      "storyboardTextLineId": "l42-conv-005-s01",
+      "sourceLineId": "l42-conv-005",
+      "imagePromptCn": "公司休息场景中，鈴木、林和小川谈论奖金什么时候发以及怎么使用，鈴木想买自行车和旅行，林打算存一半去英国留学，小川感叹有家庭支出后几乎剩不下。 当前画面聚焦鈴木对林・小川说这一句，保持真实课文场景和人物关系。 鈴木看向林・小川，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "公司休息场景中，鈴木、林和小川谈论奖金什么时候发以及怎么使用，鈴木想买自行车和旅行，林打算存一半去英国留学，小川感叹有家庭支出后几乎剩不下。 当前画面聚焦鈴木对林・小川说这一句，保持真实课文场景和人物关系。 鈴木看向林・小川，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-42-006",
+      "storyboardTextLineId": "l42-conv-006-s01",
+      "sourceLineId": "l42-conv-006",
+      "imagePromptCn": "公司休息场景中，鈴木、林和小川谈论奖金什么时候发以及怎么使用，鈴木想买自行车和旅行，林打算存一半去英国留学，小川感叹有家庭支出后几乎剩不下。 当前画面聚焦小川对鈴木说这一句，保持真实课文场景和人物关系。 小川看向鈴木，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "公司休息场景中，鈴木、林和小川谈论奖金什么时候发以及怎么使用，鈴木想买自行车和旅行，林打算存一半去英国留学，小川感叹有家庭支出后几乎剩不下。 当前画面聚焦小川对鈴木说这一句，保持真实课文场景和人物关系。 小川看向鈴木，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-42-007",
+      "storyboardTextLineId": "l42-conv-007-s01",
+      "sourceLineId": "l42-conv-007",
+      "imagePromptCn": "公司休息场景中，鈴木、林和小川谈论奖金什么时候发以及怎么使用，鈴木想买自行车和旅行，林打算存一半去英国留学，小川感叹有家庭支出后几乎剩不下。 当前画面聚焦鈴木对小川・林说这一句，保持真实课文场景和人物关系。 鈴木看向小川・林，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "公司休息场景中，鈴木、林和小川谈论奖金什么时候发以及怎么使用，鈴木想买自行车和旅行，林打算存一半去英国留学，小川感叹有家庭支出后几乎剩不下。 当前画面聚焦鈴木对小川・林说这一句，保持真实课文场景和人物关系。 鈴木看向小川・林，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-42-008",
+      "storyboardTextLineId": "l42-conv-008-s01",
+      "sourceLineId": "l42-conv-008",
+      "imagePromptCn": "公司休息场景中，鈴木、林和小川谈论奖金什么时候发以及怎么使用，鈴木想买自行车和旅行，林打算存一半去英国留学，小川感叹有家庭支出后几乎剩不下。 当前画面聚焦林对鈴木・小川说这一句，保持真实课文场景和人物关系。 林看向鈴木・小川，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "公司休息场景中，鈴木、林和小川谈论奖金什么时候发以及怎么使用，鈴木想买自行车和旅行，林打算存一半去英国留学，小川感叹有家庭支出后几乎剩不下。 当前画面聚焦林对鈴木・小川说这一句，保持真实课文场景和人物关系。 林看向鈴木・小川，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-42-009",
+      "storyboardTextLineId": "l42-conv-009-s01",
+      "sourceLineId": "l42-conv-009",
+      "imagePromptCn": "公司休息场景中，鈴木、林和小川谈论奖金什么时候发以及怎么使用，鈴木想买自行车和旅行，林打算存一半去英国留学，小川感叹有家庭支出后几乎剩不下。 当前画面聚焦鈴木对林说这一句，保持真实课文场景和人物关系。 鈴木看向林，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "公司休息场景中，鈴木、林和小川谈论奖金什么时候发以及怎么使用，鈴木想买自行车和旅行，林打算存一半去英国留学，小川感叹有家庭支出后几乎剩不下。 当前画面聚焦鈴木对林说这一句，保持真实课文场景和人物关系。 鈴木看向林，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-42-010",
+      "storyboardTextLineId": "l42-conv-010-s01",
+      "sourceLineId": "l42-conv-010",
+      "imagePromptCn": "公司休息场景中，鈴木、林和小川谈论奖金什么时候发以及怎么使用，鈴木想买自行车和旅行，林打算存一半去英国留学，小川感叹有家庭支出后几乎剩不下。 当前画面聚焦林对鈴木・小川说这一句，保持真实课文场景和人物关系。 林看向鈴木・小川，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "公司休息场景中，鈴木、林和小川谈论奖金什么时候发以及怎么使用，鈴木想买自行车和旅行，林打算存一半去英国留学，小川感叹有家庭支出后几乎剩不下。 当前画面聚焦林对鈴木・小川说这一句，保持真实课文场景和人物关系。 林看向鈴木・小川，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-42-011",
+      "storyboardTextLineId": "l42-conv-011-s01",
+      "sourceLineId": "l42-conv-011",
+      "imagePromptCn": "公司休息场景中，鈴木、林和小川谈论奖金什么时候发以及怎么使用，鈴木想买自行车和旅行，林打算存一半去英国留学，小川感叹有家庭支出后几乎剩不下。 当前画面聚焦小川对鈴木・林说这一句，保持真实课文场景和人物关系。 小川看向鈴木・林，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "公司休息场景中，鈴木、林和小川谈论奖金什么时候发以及怎么使用，鈴木想买自行车和旅行，林打算存一半去英国留学，小川感叹有家庭支出后几乎剩不下。 当前画面聚焦小川对鈴木・林说这一句，保持真实课文场景和人物关系。 小川看向鈴木・林，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "lessonNo": 45,
+  "conversationTitle": "コースを まちがえた 場合は、どう したら いいですか",
+  "reviewStatus": "pending-human-review",
+  "generationAllowed": false,
+  "prompts": [
+    {
+      "storyboardLineId": "sb-45-001",
+      "storyboardTextLineId": "l45-conv-001-s01",
+      "sourceLineId": "l45-conv-001",
+      "imagePromptCn": "健康马拉松活动中，係員先向参加者说明不要勉强和身体不舒服时要找工作人员，参加者询问跑错路线和中途退出怎么办。比赛后，鈴木询问ミラー成绩，ミラー说第二名并因没能夺冠而遗憾。 当前画面聚焦係員对参加者全員说这一句，保持真实课文场景和人物关系。 係員看向参加者全員，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "健康马拉松活动中，係員先向参加者说明不要勉强和身体不舒服时要找工作人员，参加者询问跑错路线和中途退出怎么办。比赛后，鈴木询问ミラー成绩，ミラー说第二名并因没能夺冠而遗憾。 当前画面聚焦係員对参加者全員说这一句，保持真实课文场景和人物关系。 係員看向参加者全員，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-45-002",
+      "storyboardTextLineId": "l45-conv-002-s01",
+      "sourceLineId": "l45-conv-002",
+      "imagePromptCn": "健康马拉松活动中，係員先向参加者说明不要勉强和身体不舒服时要找工作人员，参加者询问跑错路线和中途退出怎么办。比赛后，鈴木询问ミラー成绩，ミラー说第二名并因没能夺冠而遗憾。 当前画面聚焦参加者全員对係員说这一句，保持真实课文场景和人物关系。 参加者全員看向係員，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "健康马拉松活动中，係員先向参加者说明不要勉强和身体不舒服时要找工作人员，参加者询问跑错路线和中途退出怎么办。比赛后，鈴木询问ミラー成绩，ミラー说第二名并因没能夺冠而遗憾。 当前画面聚焦参加者全員对係員说这一句，保持真实课文场景和人物关系。 参加者全員看向係員，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-45-003",
+      "storyboardTextLineId": "l45-conv-003-s01",
+      "sourceLineId": "l45-conv-003",
+      "imagePromptCn": "健康马拉松活动中，係員先向参加者说明不要勉强和身体不舒服时要找工作人员，参加者询问跑错路线和中途退出怎么办。比赛后，鈴木询问ミラー成绩，ミラー说第二名并因没能夺冠而遗憾。 当前画面聚焦参加者1对係員说这一句，保持真实课文场景和人物关系。 参加者1看向係員，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "健康马拉松活动中，係員先向参加者说明不要勉强和身体不舒服时要找工作人员，参加者询问跑错路线和中途退出怎么办。比赛后，鈴木询问ミラー成绩，ミラー说第二名并因没能夺冠而遗憾。 当前画面聚焦参加者1对係員说这一句，保持真实课文场景和人物关系。 参加者1看向係員，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-45-004",
+      "storyboardTextLineId": "l45-conv-004-s01",
+      "sourceLineId": "l45-conv-004",
+      "imagePromptCn": "健康马拉松活动中，係員先向参加者说明不要勉强和身体不舒服时要找工作人员，参加者询问跑错路线和中途退出怎么办。比赛后，鈴木询问ミラー成绩，ミラー说第二名并因没能夺冠而遗憾。 当前画面聚焦係員对参加者1说这一句，保持真实课文场景和人物关系。 係員看向参加者1，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "健康马拉松活动中，係員先向参加者说明不要勉强和身体不舒服时要找工作人员，参加者询问跑错路线和中途退出怎么办。比赛后，鈴木询问ミラー成绩，ミラー说第二名并因没能夺冠而遗憾。 当前画面聚焦係員对参加者1说这一句，保持真实课文场景和人物关系。 係員看向参加者1，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-45-005",
+      "storyboardTextLineId": "l45-conv-005-s01",
+      "sourceLineId": "l45-conv-005",
+      "imagePromptCn": "健康马拉松活动中，係員先向参加者说明不要勉强和身体不舒服时要找工作人员，参加者询问跑错路线和中途退出怎么办。比赛后，鈴木询问ミラー成绩，ミラー说第二名并因没能夺冠而遗憾。 当前画面聚焦参加者2对係員说这一句，保持真实课文场景和人物关系。 参加者2看向係員，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "健康马拉松活动中，係員先向参加者说明不要勉强和身体不舒服时要找工作人员，参加者询问跑错路线和中途退出怎么办。比赛后，鈴木询问ミラー成绩，ミラー说第二名并因没能夺冠而遗憾。 当前画面聚焦参加者2对係員说这一句，保持真实课文场景和人物关系。 参加者2看向係員，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-45-006",
+      "storyboardTextLineId": "l45-conv-006-s01",
+      "sourceLineId": "l45-conv-006",
+      "imagePromptCn": "健康马拉松活动中，係員先向参加者说明不要勉强和身体不舒服时要找工作人员，参加者询问跑错路线和中途退出怎么办。比赛后，鈴木询问ミラー成绩，ミラー说第二名并因没能夺冠而遗憾。 当前画面聚焦係員对参加者全員说这一句，保持真实课文场景和人物关系。 係員看向参加者全員，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "健康马拉松活动中，係員先向参加者说明不要勉强和身体不舒服时要找工作人员，参加者询问跑错路线和中途退出怎么办。比赛后，鈴木询问ミラー成绩，ミラー说第二名并因没能夺冠而遗憾。 当前画面聚焦係員对参加者全員说这一句，保持真实课文场景和人物关系。 係員看向参加者全員，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-45-007",
+      "storyboardTextLineId": "l45-conv-007-s01",
+      "sourceLineId": "l45-conv-007",
+      "imagePromptCn": "健康马拉松活动中，係員先向参加者说明不要勉强和身体不舒服时要找工作人员，参加者询问跑错路线和中途退出怎么办。比赛后，鈴木询问ミラー成绩，ミラー说第二名并因没能夺冠而遗憾。 当前画面聚焦鈴木对ミラー说这一句，保持真实课文场景和人物关系。 鈴木看向ミラー，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "健康马拉松活动中，係員先向参加者说明不要勉强和身体不舒服时要找工作人员，参加者询问跑错路线和中途退出怎么办。比赛后，鈴木询问ミラー成绩，ミラー说第二名并因没能夺冠而遗憾。 当前画面聚焦鈴木对ミラー说这一句，保持真实课文场景和人物关系。 鈴木看向ミラー，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-45-008",
+      "storyboardTextLineId": "l45-conv-008-s01",
+      "sourceLineId": "l45-conv-008",
+      "imagePromptCn": "健康马拉松活动中，係員先向参加者说明不要勉强和身体不舒服时要找工作人员，参加者询问跑错路线和中途退出怎么办。比赛后，鈴木询问ミラー成绩，ミラー说第二名并因没能夺冠而遗憾。 当前画面聚焦ミラー对鈴木说这一句，保持真实课文场景和人物关系。 ミラー看向鈴木，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "健康马拉松活动中，係員先向参加者说明不要勉强和身体不舒服时要找工作人员，参加者询问跑错路线和中途退出怎么办。比赛后，鈴木询问ミラー成绩，ミラー说第二名并因没能夺冠而遗憾。 当前画面聚焦ミラー对鈴木说这一句，保持真实课文场景和人物关系。 ミラー看向鈴木，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-45-009",
+      "storyboardTextLineId": "l45-conv-009-s01",
+      "sourceLineId": "l45-conv-009",
+      "imagePromptCn": "健康马拉松活动中，係員先向参加者说明不要勉强和身体不舒服时要找工作人员，参加者询问跑错路线和中途退出怎么办。比赛后，鈴木询问ミラー成绩，ミラー说第二名并因没能夺冠而遗憾。 当前画面聚焦鈴木对ミラー说这一句，保持真实课文场景和人物关系。 鈴木看向ミラー，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "健康马拉松活动中，係員先向参加者说明不要勉强和身体不舒服时要找工作人员，参加者询问跑错路线和中途退出怎么办。比赛后，鈴木询问ミラー成绩，ミラー说第二名并因没能夺冠而遗憾。 当前画面聚焦鈴木对ミラー说这一句，保持真实课文场景和人物关系。 鈴木看向ミラー，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-45-010",
+      "storyboardTextLineId": "l45-conv-010-s01",
+      "sourceLineId": "l45-conv-010",
+      "imagePromptCn": "健康马拉松活动中，係員先向参加者说明不要勉强和身体不舒服时要找工作人员，参加者询问跑错路线和中途退出怎么办。比赛后，鈴木询问ミラー成绩，ミラー说第二名并因没能夺冠而遗憾。 当前画面聚焦ミラー对鈴木说这一句，保持真实课文场景和人物关系。 ミラー看向鈴木，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "健康马拉松活动中，係員先向参加者说明不要勉强和身体不舒服时要找工作人员，参加者询问跑错路线和中途退出怎么办。比赛后，鈴木询问ミラー成绩，ミラー说第二名并因没能夺冠而遗憾。 当前画面聚焦ミラー对鈴木说这一句，保持真实课文场景和人物关系。 ミラー看向鈴木，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-45-011",
+      "storyboardTextLineId": "l45-conv-011-s01",
+      "sourceLineId": "l45-conv-011",
+      "imagePromptCn": "健康马拉松活动中，係員先向参加者说明不要勉强和身体不舒服时要找工作人员，参加者询问跑错路线和中途退出怎么办。比赛后，鈴木询问ミラー成绩，ミラー说第二名并因没能夺冠而遗憾。 当前画面聚焦鈴木对ミラー说这一句，保持真实课文场景和人物关系。 鈴木看向ミラー，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "健康马拉松活动中，係員先向参加者说明不要勉强和身体不舒服时要找工作人员，参加者询问跑错路线和中途退出怎么办。比赛后，鈴木询问ミラー成绩，ミラー说第二名并因没能夺冠而遗憾。 当前画面聚焦鈴木对ミラー说这一句，保持真实课文场景和人物关系。 鈴木看向ミラー，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "lessonNo": 43,
+  "conversationTitle": "毎日 楽しそうです",
+  "reviewStatus": "pending-human-review",
+  "generationAllowed": false,
+  "prompts": [
+    {
+      "storyboardLineId": "sb-43-001",
+      "storyboardTextLineId": "l43-conv-001-s01",
+      "sourceLineId": "l43-conv-001",
+      "imagePromptCn": "林看シュミット的家庭照片，询问照片中的人。シュミット介绍儿子ハンス运动会照片和妻子，说明ハンス适应日本小学、每天开心，妻子对历史等各种事情感兴趣。 当前画面聚焦林对シュミット说这一句，保持真实课文场景和人物关系。 林看向シュミット，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "林看シュミット的家庭照片，询问照片中的人。シュミット介绍儿子ハンス运动会照片和妻子，说明ハンス适应日本小学、每天开心，妻子对历史等各种事情感兴趣。 当前画面聚焦林对シュミット说这一句，保持真实课文场景和人物关系。 林看向シュミット，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-43-002",
+      "storyboardTextLineId": "l43-conv-002-s01",
+      "sourceLineId": "l43-conv-002",
+      "imagePromptCn": "林看シュミット的家庭照片，询问照片中的人。シュミット介绍儿子ハンス运动会照片和妻子，说明ハンス适应日本小学、每天开心，妻子对历史等各种事情感兴趣。 当前画面聚焦シュミット对林说这一句，保持真实课文场景和人物关系。 シュミット看向林，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "林看シュミット的家庭照片，询问照片中的人。シュミット介绍儿子ハンス运动会照片和妻子，说明ハンス适应日本小学、每天开心，妻子对历史等各种事情感兴趣。 当前画面聚焦シュミット对林说这一句，保持真实课文场景和人物关系。 シュミット看向林，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-43-003",
+      "storyboardTextLineId": "l43-conv-003-s01",
+      "sourceLineId": "l43-conv-003",
+      "imagePromptCn": "林看シュミット的家庭照片，询问照片中的人。シュミット介绍儿子ハンス运动会照片和妻子，说明ハンス适应日本小学、每天开心，妻子对历史等各种事情感兴趣。 当前画面聚焦林对シュミット说这一句，保持真实课文场景和人物关系。 林看向シュミット，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "林看シュミット的家庭照片，询问照片中的人。シュミット介绍儿子ハンス运动会照片和妻子，说明ハンス适应日本小学、每天开心，妻子对历史等各种事情感兴趣。 当前画面聚焦林对シュミット说这一句，保持真实课文场景和人物关系。 林看向シュミット，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-43-004",
+      "storyboardTextLineId": "l43-conv-004-s01",
+      "sourceLineId": "l43-conv-004",
+      "imagePromptCn": "林看シュミット的家庭照片，询问照片中的人。シュミット介绍儿子ハンス运动会照片和妻子，说明ハンス适应日本小学、每天开心，妻子对历史等各种事情感兴趣。 当前画面聚焦シュミット对林说这一句，保持真实课文场景和人物关系。 シュミット看向林，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "林看シュミット的家庭照片，询问照片中的人。シュミット介绍儿子ハンス运动会照片和妻子，说明ハンス适应日本小学、每天开心，妻子对历史等各种事情感兴趣。 当前画面聚焦シュミット对林说这一句，保持真实课文场景和人物关系。 シュミット看向林，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-43-005",
+      "storyboardTextLineId": "l43-conv-005-s01",
+      "sourceLineId": "l43-conv-005",
+      "imagePromptCn": "林看シュミット的家庭照片，询问照片中的人。シュミット介绍儿子ハンス运动会照片和妻子，说明ハンス适应日本小学、每天开心，妻子对历史等各种事情感兴趣。 当前画面聚焦林对シュミット说这一句，保持真实课文场景和人物关系。 林看向シュミット，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "林看シュミット的家庭照片，询问照片中的人。シュミット介绍儿子ハンス运动会照片和妻子，说明ハンス适应日本小学、每天开心，妻子对历史等各种事情感兴趣。 当前画面聚焦林对シュミット说这一句，保持真实课文场景和人物关系。 林看向シュミット，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-43-006",
+      "storyboardTextLineId": "l43-conv-006-s01",
+      "sourceLineId": "l43-conv-006",
+      "imagePromptCn": "林看シュミット的家庭照片，询问照片中的人。シュミット介绍儿子ハンス运动会照片和妻子，说明ハンス适应日本小学、每天开心，妻子对历史等各种事情感兴趣。 当前画面聚焦シュミット对林说这一句，保持真实课文场景和人物关系。 シュミット看向林，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "林看シュミット的家庭照片，询问照片中的人。シュミット介绍儿子ハンス运动会照片和妻子，说明ハンス适应日本小学、每天开心，妻子对历史等各种事情感兴趣。 当前画面聚焦シュミット对林说这一句，保持真实课文场景和人物关系。 シュミット看向林，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-43-007",
+      "storyboardTextLineId": "l43-conv-007-s01",
+      "sourceLineId": "l43-conv-007",
+      "imagePromptCn": "林看シュミット的家庭照片，询问照片中的人。シュミット介绍儿子ハンス运动会照片和妻子，说明ハンス适应日本小学、每天开心，妻子对历史等各种事情感兴趣。 当前画面聚焦林对シュミット说这一句，保持真实课文场景和人物关系。 林看向シュミット，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "林看シュミット的家庭照片，询问照片中的人。シュミット介绍儿子ハンス运动会照片和妻子，说明ハンス适应日本小学、每天开心，妻子对历史等各种事情感兴趣。 当前画面聚焦林对シュミット说这一句，保持真实课文场景和人物关系。 林看向シュミット，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-43-008",
+      "storyboardTextLineId": "l43-conv-008-s01",
+      "sourceLineId": "l43-conv-008",
+      "imagePromptCn": "林看シュミット的家庭照片，询问照片中的人。シュミット介绍儿子ハンス运动会照片和妻子，说明ハンス适应日本小学、每天开心，妻子对历史等各种事情感兴趣。 当前画面聚焦シュミット对林说这一句，保持真实课文场景和人物关系。 シュミット看向林，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "imagePromptJa": "林看シュミット的家庭照片，询问照片中的人。シュミット介绍儿子ハンス运动会照片和妻子，说明ハンス适应日本小学、每天开心，妻子对历史等各种事情感兴趣。 当前画面聚焦シュミット对林说这一句，保持真实课文场景和人物关系。 シュミット看向林，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    }
+  ]
+}

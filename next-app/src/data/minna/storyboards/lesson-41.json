@@ -1,0 +1,190 @@
+{
+  "schema": "minna.storyboard.v1",
+  "lessonId": "lesson-41",
+  "lessonNo": 41,
+  "title": "第 41 课｜课文图解分镜",
+  "conversationTitle": "ご結婚 おめでとう ございます",
+  "status": "draft",
+  "sourcePolicy": {
+    "primary": "src/data/minna/lessons/lesson-41.json#sections[type=conversation]",
+    "secondary": "src/data/minna/recitation/lesson-41.json + src/data/minna/subtitle-learning/lesson-41-subtitle-learning.json + content-canonical/minna/recitation/lesson-36-50.canonical.import.chatgpt-corrected.json#lessonNo=41",
+    "forbidAddedDialogue": true,
+    "note": "6 个分镜基于 6 条 confirmed primary conversation lines；已与 recitation / subtitle-learning / corrected canonical 交叉校验。corrected canonical riskReport 为空；无需额外人工确认。 不得使用 conversation_vocab / conversation_grammar / conversation_examples / conversation_quiz / deepDive / conversationFlow / lineUsage 等 derived blocks 作为 source truth。listener 原数据无显式字段，按相邻会话方向和场景关系推定，并在每行 listenerInference 标记。"
+  },
+  "scene": {
+    "settingCn": "ワット和いずみ的婚礼祝福场景中，学長带头祝贺并干杯，司会者请来宾逐一发言，松本良子、大学職員和ミラー分别回忆与ワット有关的课堂、整理书和结婚方法玩笑。",
+    "coreGoalCn": "看懂并背下“祝贺新婚并带头干杯→全体来宾回应干杯→请这边的来宾逐一发言→回忆在ワット课上学习并提到いずみ也在班上→回忆收到整理方法书并称赞新家会很棒→玩笑请求写结婚方法书并祝幸福”的真实顺序。",
+    "forbiddenStoryCn": [
+      "不得使用 conversation_vocab / grammar / examples / quiz / deepDive / lineUsage 中的旧残留、音乐行或不匹配内容",
+      "不得画成婚礼仪式细节、宗教仪式、舞台演出或新剧情求婚",
+      "不得新增课文外发言人、司仪流程、亲友对白或可读祝辞",
+      "不得显示可读横幅、席次表、书名封面、字幕、对话气泡、UI 或 logo"
+    ]
+  },
+  "characters": [
+    {
+      "characterId": "A",
+      "nameJa": "学長",
+      "displayNameCn": "学長",
+      "roleCn": "在婚礼祝福场景中致开场祝词并干杯的人",
+      "relationshipCn": "代表来宾向ワット和いずみ祝贺新婚"
+    },
+    {
+      "characterId": "B",
+      "nameJa": "皆",
+      "displayNameCn": "皆",
+      "roleCn": "跟随学長一起干杯的全体来宾",
+      "relationshipCn": "回应学長的干杯祝福"
+    },
+    {
+      "characterId": "C",
+      "nameJa": "司会者",
+      "displayNameCn": "司会者",
+      "roleCn": "安排来宾逐一发言的人",
+      "relationshipCn": "引导松本良子、大学職員、ミラー等来宾说祝福"
+    },
+    {
+      "characterId": "D",
+      "nameJa": "松本良子",
+      "displayNameCn": "松本良子",
+      "roleCn": "回忆去年夏天上过ワット英语课的人",
+      "relationshipCn": "说明ワット的课很有趣，并提到いずみ也在那个班上"
+    },
+    {
+      "characterId": "E",
+      "nameJa": "大学職員",
+      "displayNameCn": "大学職員",
+      "roleCn": "收到过ワット整理方法书并称赞他研究室整洁的人",
+      "relationshipCn": "用整理书和研究室整洁来祝福两人的家庭"
+    },
+    {
+      "characterId": "F",
+      "nameJa": "ミラー",
+      "displayNameCn": "ミラー",
+      "roleCn": "用写结婚方法书的玩笑来祝福ワット的人",
+      "relationshipCn": "向ワット开玩笑请他写关于结婚方法的书，并祝福幸福"
+    }
+  ],
+  "lines": [
+    {
+      "lessonId": "lesson-41",
+      "lineId": "l41-conv-001-s01",
+      "sourceLineId": "l41-conv-001",
+      "segmentIndex": 1,
+      "sourceTextExact": "ワットさん、いずみさん、ご結婚おめでとうございます。乾杯。",
+      "speaker": "学長",
+      "listener": "ワット・いずみ・皆",
+      "listenerInference": "inferred-from-adjacent-dialogue-and-scene-context",
+      "japaneseText": "ワットさん、いずみさん、ご結婚おめでとうございます。乾杯。",
+      "kanaOrRomaji": "わっとさん、いずみさん、ごけっこんおめでとうございます。かんぱい。",
+      "chineseText": "瓦特先生、泉小姐，祝贺你们新婚快乐！干杯！",
+      "conversationFunction": "祝贺新婚并带头干杯",
+      "sceneMeaningCn": "学長对ワット・いずみ・皆说“瓦特先生、泉小姐，祝贺你们新婚快乐！干杯！”，推进课文会话的第1步。",
+      "visualDescriptionCn": "ワット和いずみ的婚礼祝福场景中，学長带头祝贺并干杯，司会者请来宾逐一发言，松本良子、大学職員和ミラー分别回忆与ワット有关的课堂、整理书和结婚方法玩笑。 当前画面聚焦学長对ワット・いずみ・皆说这一句，保持真实课文场景和人物关系。",
+      "characterActionCn": "学長看向ワット・いずみ・皆，用符合场景的自然礼貌语气说出本句。",
+      "cameraHint": "双人、多人中景或说话者近中景；画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "memoryHintCn": "把这句记成会话第1步：祝贺新婚并带头干杯。",
+      "forbiddenMisreadCn": "不得新增对白、改写原句、调换说话人；不得使用 derived blocks / lineUsage 中的旧残留或不匹配内容。"
+    },
+    {
+      "lessonId": "lesson-41",
+      "lineId": "l41-conv-002-s01",
+      "sourceLineId": "l41-conv-002",
+      "segmentIndex": 1,
+      "sourceTextExact": "乾杯。",
+      "speaker": "皆",
+      "listener": "学長",
+      "listenerInference": "inferred-from-adjacent-dialogue-and-scene-context",
+      "japaneseText": "乾杯。",
+      "kanaOrRomaji": "かんぱい。",
+      "chineseText": "干杯！",
+      "conversationFunction": "全体来宾回应干杯",
+      "sceneMeaningCn": "皆对学長说“干杯！”，推进课文会话的第2步。",
+      "visualDescriptionCn": "ワット和いずみ的婚礼祝福场景中，学長带头祝贺并干杯，司会者请来宾逐一发言，松本良子、大学職員和ミラー分别回忆与ワット有关的课堂、整理书和结婚方法玩笑。 当前画面聚焦皆对学長说这一句，保持真实课文场景和人物关系。",
+      "characterActionCn": "皆看向学長，用符合场景的自然礼貌语气说出本句。",
+      "cameraHint": "双人、多人中景或说话者近中景；画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "memoryHintCn": "把这句记成会话第2步：全体来宾回应干杯。",
+      "forbiddenMisreadCn": "不得新增对白、改写原句、调换说话人；不得使用 derived blocks / lineUsage 中的旧残留或不匹配内容。"
+    },
+    {
+      "lessonId": "lesson-41",
+      "lineId": "l41-conv-003-s01",
+      "sourceLineId": "l41-conv-003",
+      "segmentIndex": 1,
+      "sourceTextExact": "次にこちらの皆さんにひとことずつお願いします。",
+      "speaker": "司会者",
+      "listener": "こちらの皆さん",
+      "listenerInference": "inferred-from-adjacent-dialogue-and-scene-context",
+      "japaneseText": "次にこちらの皆さんにひとことずつお願いします。",
+      "kanaOrRomaji": "つぎにこちらのみなさんにひとことずつおねがいします。",
+      "chineseText": "接下来，请这边的各位每人说一句祝福。",
+      "conversationFunction": "请这边的来宾逐一发言",
+      "sceneMeaningCn": "司会者对こちらの皆さん说“接下来，请这边的各位每人说一句祝福。”，推进课文会话的第3步。",
+      "visualDescriptionCn": "ワット和いずみ的婚礼祝福场景中，学長带头祝贺并干杯，司会者请来宾逐一发言，松本良子、大学職員和ミラー分别回忆与ワット有关的课堂、整理书和结婚方法玩笑。 当前画面聚焦司会者对こちらの皆さん说这一句，保持真实课文场景和人物关系。",
+      "characterActionCn": "司会者看向こちらの皆さん，用符合场景的自然礼貌语气说出本句。",
+      "cameraHint": "双人、多人中景或说话者近中景；画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "memoryHintCn": "把这句记成会话第3步：请这边的来宾逐一发言。",
+      "forbiddenMisreadCn": "不得新增对白、改写原句、调换说话人；不得使用 derived blocks / lineUsage 中的旧残留或不匹配内容。"
+    },
+    {
+      "lessonId": "lesson-41",
+      "lineId": "l41-conv-004-s01",
+      "sourceLineId": "l41-conv-004",
+      "segmentIndex": 1,
+      "sourceTextExact": "わたしは去年の夏のクラスでワット先生に英語を教えていただきました。先生の授業はユーモアがあって、楽しかったです。実はそのクラスにいずみさんもいらっしゃったんです。",
+      "speaker": "松本良子",
+      "listener": "ワット・いずみ・皆",
+      "listenerInference": "inferred-from-adjacent-dialogue-and-scene-context",
+      "japaneseText": "わたしは去年の夏のクラスでワット先生に英語を教えていただきました。先生の授業はユーモアがあって、楽しかったです。実はそのクラスにいずみさんもいらっしゃったんです。",
+      "kanaOrRomaji": "わたしはきょねんのなつのクラスでワットせんせいにえいごをおしえていただきました。せんせいのじゅぎょうはユーモアがあって、たのしかったです。じつはそのクラスにいずみさんもいらっしゃったんです。",
+      "chineseText": "我去年夏天在班上请瓦特老师教过英语。老师的课很幽默，非常有趣。其实泉小姐也在那个班上。",
+      "conversationFunction": "回忆在ワット课上学习并提到いずみ也在班上",
+      "sceneMeaningCn": "松本良子对ワット・いずみ・皆说“我去年夏天在班上请瓦特老师教过英语。老师的课很幽默，非常有趣。其实泉小姐也在那个班上。”，推进课文会话的第4步。",
+      "visualDescriptionCn": "ワット和いずみ的婚礼祝福场景中，学長带头祝贺并干杯，司会者请来宾逐一发言，松本良子、大学職員和ミラー分别回忆与ワット有关的课堂、整理书和结婚方法玩笑。 当前画面聚焦松本良子对ワット・いずみ・皆说这一句，保持真实课文场景和人物关系。",
+      "characterActionCn": "松本良子看向ワット・いずみ・皆，用符合场景的自然礼貌语气说出本句。",
+      "cameraHint": "双人、多人中景或说话者近中景；画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "memoryHintCn": "把这句记成会话第4步：回忆在ワット课上学习并提到いずみ也在班上。",
+      "forbiddenMisreadCn": "不得新增对白、改写原句、调换说话人；不得使用 derived blocks / lineUsage 中的旧残留或不匹配内容。"
+    },
+    {
+      "lessonId": "lesson-41",
+      "lineId": "l41-conv-005-s01",
+      "sourceLineId": "l41-conv-005",
+      "segmentIndex": 1,
+      "sourceTextExact": "わたしは先生に「上手な整理の方法」という本をいただきました。先生は整理するのがお上手で、研究室はいつもきれいです。きっとお二人のお宅もすてきだと思います。",
+      "speaker": "大学職員",
+      "listener": "ワット・いずみ・皆",
+      "listenerInference": "inferred-from-adjacent-dialogue-and-scene-context",
+      "japaneseText": "わたしは先生に「上手な整理の方法」という本をいただきました。先生は整理するのがお上手で、研究室はいつもきれいです。きっとお二人のお宅もすてきだと思います。",
+      "kanaOrRomaji": "わたしはせんせいに「じょうずなせいりのほうほう」というほんをいただきました。せんせいはせいりするのがおじょうずで、けんきゅうしつはいつもきれいです。きっとおふたりのおたくもすてきだとおもいます。",
+      "chineseText": "我从老师那里收到过一本叫《高明的整理方法》的书。老师很擅长整理，研究室总是很整洁。我想两位的家也一定会很漂亮。",
+      "conversationFunction": "回忆收到整理方法书并称赞新家会很棒",
+      "sceneMeaningCn": "大学職員对ワット・いずみ・皆说“我从老师那里收到过一本叫《高明的整理方法》的书。老师很擅长整理，研究室总是很整洁。我想两位的家也一定会很漂亮。”，推进课文会话的第5步。",
+      "visualDescriptionCn": "ワット和いずみ的婚礼祝福场景中，学長带头祝贺并干杯，司会者请来宾逐一发言，松本良子、大学職員和ミラー分别回忆与ワット有关的课堂、整理书和结婚方法玩笑。 当前画面聚焦大学職員对ワット・いずみ・皆说这一句，保持真实课文场景和人物关系。",
+      "characterActionCn": "大学職員看向ワット・いずみ・皆，用符合场景的自然礼貌语气说出本句。",
+      "cameraHint": "双人、多人中景或说话者近中景；画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "memoryHintCn": "把这句记成会话第5步：回忆收到整理方法书并称赞新家会很棒。",
+      "forbiddenMisreadCn": "不得新增对白、改写原句、调换说话人；不得使用 derived blocks / lineUsage 中的旧残留或不匹配内容。"
+    },
+    {
+      "lessonId": "lesson-41",
+      "lineId": "l41-conv-006-s01",
+      "sourceLineId": "l41-conv-006",
+      "segmentIndex": 1,
+      "sourceTextExact": "ワットさん、今度は「すてきな人と結婚する方法」という本を書いてくださいませんか。ぜひ読んで、勉強したいです。どうぞお幸せに。",
+      "speaker": "ミラー",
+      "listener": "ワット",
+      "listenerInference": "inferred-from-adjacent-dialogue-and-scene-context",
+      "japaneseText": "ワットさん、今度は「すてきな人と結婚する方法」という本を書いてくださいませんか。ぜひ読んで、勉強したいです。どうぞお幸せに。",
+      "kanaOrRomaji": "ワットさん、こんどは「すてきなひととけっこんするほうほう」というほんをかいてくださいませんか。ぜひよんで、べんきょうしたいです。どうぞおしあわせに。",
+      "chineseText": "瓦特先生，下次能不能写一本《和理想的人结婚的方法》呢？我一定想读来学习。祝你们幸福。",
+      "conversationFunction": "玩笑请求写结婚方法书并祝幸福",
+      "sceneMeaningCn": "ミラー对ワット说“瓦特先生，下次能不能写一本《和理想的人结婚的方法》呢？我一定想读来学习。祝你们幸福。”，推进课文会话的第6步。",
+      "visualDescriptionCn": "ワット和いずみ的婚礼祝福场景中，学長带头祝贺并干杯，司会者请来宾逐一发言，松本良子、大学職員和ミラー分别回忆与ワット有关的课堂、整理书和结婚方法玩笑。 当前画面聚焦ミラー对ワット说这一句，保持真实课文场景和人物关系。",
+      "characterActionCn": "ミラー看向ワット，用符合场景的自然礼貌语气说出本句。",
+      "cameraHint": "双人、多人中景或说话者近中景；画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
+      "memoryHintCn": "把这句记成会话第6步：玩笑请求写结婚方法书并祝幸福。",
+      "forbiddenMisreadCn": "不得新增对白、改写原句、调换说话人；不得使用 derived blocks / lineUsage 中的旧残留或不匹配内容。"
+    }
+  ]
+}
