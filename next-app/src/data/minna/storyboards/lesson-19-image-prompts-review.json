@@ -1,0 +1,138 @@
+{
+  "lessonNo": 19,
+  "conversationTitle": "ダイエットはあしたからします",
+  "reviewStatus": "pending-human-review",
+  "generationAllowed": false,
+  "prompts": [
+    {
+      "storyboardLineId": "sb-19-001",
+      "storyboardTextLineId": "l19-conv-001-s01",
+      "sourceLineId": "l19-conv-001",
+      "imagePromptCn": "聚会餐桌旁，大家举起杯子，气氛轻松愉快。 画面不出现可读文字、字幕、对话气泡或课外主要人物。",
+      "imagePromptJa": "聚会餐桌旁，大家举起杯子，气氛轻松愉快。。画面内に読める文字、字幕、吹き出し、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-19-002",
+      "storyboardTextLineId": "l19-conv-002-s01",
+      "sourceLineId": "l19-conv-002",
+      "imagePromptCn": "餐桌上有食物，松本良子看向マリア，注意到她几乎没怎么吃。 画面不出现可读文字、字幕、对话气泡或课外主要人物。",
+      "imagePromptJa": "餐桌上有食物，松本良子看向マリア，注意到她几乎没怎么吃。。画面内に読める文字、字幕、吹き出し、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-19-003",
+      "storyboardTextLineId": "l19-conv-003-s01",
+      "sourceLineId": "l19-conv-003",
+      "imagePromptCn": "マリア轻轻点头回应松本良子的观察。 画面不出现可读文字、字幕、对话气泡或课外主要人物。",
+      "imagePromptJa": "マリア轻轻点头回应松本良子的观察。。画面内に読める文字、字幕、吹き出し、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-19-004",
+      "storyboardTextLineId": "l19-conv-003-s02",
+      "sourceLineId": "l19-conv-003",
+      "imagePromptCn": "マリア看着餐桌上的食物，解释自己正在减肥。 画面不出现可读文字、字幕、对话气泡或课外主要人物。",
+      "imagePromptJa": "マリア看着餐桌上的食物，解释自己正在减肥。。画面内に読める文字、字幕、吹き出し、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-19-005",
+      "storyboardTextLineId": "l19-conv-004-s01",
+      "sourceLineId": "l19-conv-004",
+      "imagePromptCn": "松本良子听完后轻轻点头。 画面不出现可读文字、字幕、对话气泡或课外主要人物。",
+      "imagePromptJa": "松本良子听完后轻轻点头。。画面内に読める文字、字幕、吹き出し、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-19-006",
+      "storyboardTextLineId": "l19-conv-004-s02",
+      "sourceLineId": "l19-conv-004",
+      "imagePromptCn": "松本良子以经验分享的语气对マリア说话。 画面不出现可读文字、字幕、对话气泡或课外主要人物。",
+      "imagePromptJa": "松本良子以经验分享的语气对マリア说话。。画面内に読める文字、字幕、吹き出し、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-19-007",
+      "storyboardTextLineId": "l19-conv-005-s01",
+      "sourceLineId": "l19-conv-005",
+      "imagePromptCn": "マリア看向松本良子，好奇地追问。 画面不出现可读文字、字幕、对话气泡或课外主要人物。",
+      "imagePromptJa": "マリア看向松本良子，好奇地追问。。画面内に読める文字、字幕、吹き出し、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-19-008",
+      "storyboardTextLineId": "l19-conv-006-s01",
+      "sourceLineId": "l19-conv-006",
+      "imagePromptCn": "松本良子说明过去尝试的节食方法，可用苹果和水杯作低调提示。 画面不出现可读文字、字幕、对话气泡或课外主要人物。",
+      "imagePromptJa": "松本良子说明过去尝试的节食方法，可用苹果和水杯作低调提示。。画面内に読める文字、字幕、吹き出し、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-19-009",
+      "storyboardTextLineId": "l19-conv-006-s02",
+      "sourceLineId": "l19-conv-006",
+      "imagePromptCn": "松本良子认真提醒，マリア听取这个经验。 画面不出现可读文字、字幕、对话气泡或课外主要人物。",
+      "imagePromptJa": "松本良子认真提醒，マリア听取这个经验。。画面内に読める文字、字幕、吹き出し、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-19-010",
+      "storyboardTextLineId": "l19-conv-007-s01",
+      "sourceLineId": "l19-conv-007",
+      "imagePromptCn": "マリア点头同意，气氛仍然轻松。 画面不出现可读文字、字幕、对话气泡或课外主要人物。",
+      "imagePromptJa": "マリア点头同意，气氛仍然轻松。。画面内に読める文字、字幕、吹き出し、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-19-011",
+      "storyboardTextLineId": "l19-conv-008-s01",
+      "sourceLineId": "l19-conv-008",
+      "imagePromptCn": "松本良子指向或拿起冰淇淋，笑着推荐给マリア。 画面不出现可读文字、字幕、对话气泡或课外主要人物。",
+      "imagePromptJa": "松本良子指向或拿起冰淇淋，笑着推荐给マリア。。画面内に読める文字、字幕、吹き出し、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-19-012",
+      "storyboardTextLineId": "l19-conv-009-s01",
+      "sourceLineId": "l19-conv-009",
+      "imagePromptCn": "マリア看着冰淇淋，表情从坚持减肥转为犹豫。 画面不出现可读文字、字幕、对话气泡或课外主要人物。",
+      "imagePromptJa": "マリア看着冰淇淋，表情从坚持减肥转为犹豫。。画面内に読める文字、字幕、吹き出し、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-19-013",
+      "storyboardTextLineId": "l19-conv-009-s02",
+      "sourceLineId": "l19-conv-009",
+      "imagePromptCn": "マリア带着轻松表情接受冰淇淋的诱惑，松本良子在旁边微笑。 画面不出现可读文字、字幕、对话气泡或课外主要人物。",
+      "imagePromptJa": "マリア带着轻松表情接受冰淇淋的诱惑，松本良子在旁边微笑。。画面内に読める文字、字幕、吹き出し、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    }
+  ]
+}

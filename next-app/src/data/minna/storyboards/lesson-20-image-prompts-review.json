@@ -1,0 +1,158 @@
+{
+  "lessonNo": 20,
+  "conversationTitle": "いっしょに行かない？",
+  "reviewStatus": "pending-human-review",
+  "generationAllowed": false,
+  "prompts": [
+    {
+      "storyboardLineId": "sb-20-001",
+      "storyboardTextLineId": "l20-conv-001-s01",
+      "sourceLineId": "l20-conv-001",
+      "imagePromptCn": "小林和タワポン轻松聊天，小林自然地询问暑假计划。 画面不出现可读文字、字幕、对话气泡或课外主要人物。",
+      "imagePromptJa": "小林和タワポン轻松聊天，小林自然地询问暑假计划。。画面内に読める文字、字幕、吹き出し、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-20-002",
+      "storyboardTextLineId": "l20-conv-002-s01",
+      "sourceLineId": "l20-conv-002",
+      "imagePromptCn": "タワポン轻轻摇头回答小林。 画面不出现可读文字、字幕、对话气泡或课外主要人物。",
+      "imagePromptJa": "タワポン轻轻摇头回答小林。。画面内に読める文字、字幕、吹き出し、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-20-003",
+      "storyboardTextLineId": "l20-conv-002-s02",
+      "sourceLineId": "l20-conv-002",
+      "imagePromptCn": "タワポン露出有点为难的表情，话说到一半停住。 画面不出现可读文字、字幕、对话气泡或课外主要人物。",
+      "imagePromptJa": "タワポン露出有点为难的表情，话说到一半停住。。画面内に読める文字、字幕、吹き出し、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-20-004",
+      "storyboardTextLineId": "l20-conv-003-s01",
+      "sourceLineId": "l20-conv-003",
+      "imagePromptCn": "小林点头理解，准备转换话题。 画面不出现可读文字、字幕、对话气泡或课外主要人物。",
+      "imagePromptJa": "小林点头理解，准备转换话题。。画面内に読める文字、字幕、吹き出し、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-20-005",
+      "storyboardTextLineId": "l20-conv-004-s01",
+      "sourceLineId": "l20-conv-004",
+      "imagePromptCn": "小林转换话题，向タワポン询问富士山经验。 画面不出现可读文字、字幕、对话气泡或课外主要人物。",
+      "imagePromptJa": "小林转换话题，向タワポン询问富士山经验。。画面内に読める文字、字幕、吹き出し、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-20-006",
+      "storyboardTextLineId": "l20-conv-005-s01",
+      "sourceLineId": "l20-conv-005",
+      "imagePromptCn": "タワポン摇头，简短回答没登过。 画面不出现可读文字、字幕、对话气泡或课外主要人物。",
+      "imagePromptJa": "タワポン摇头，简短回答没登过。。画面内に読める文字、字幕、吹き出し、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-20-007",
+      "storyboardTextLineId": "l20-conv-006-s01",
+      "sourceLineId": "l20-conv-006",
+      "imagePromptCn": "小林带着友好表情提出一起去的邀请。 画面不出现可读文字、字幕、对话气泡或课外主要人物。",
+      "imagePromptJa": "小林带着友好表情提出一起去的邀请。。画面内に読める文字、字幕、吹き出し、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-20-008",
+      "storyboardTextLineId": "l20-conv-007-s01",
+      "sourceLineId": "l20-conv-007",
+      "imagePromptCn": "タワポン点头，表现愿意一起去。 画面不出现可读文字、字幕、对话气泡或课外主要人物。",
+      "imagePromptJa": "タワポン点头，表现愿意一起去。。画面内に読める文字、字幕、吹き出し、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-20-009",
+      "storyboardTextLineId": "l20-conv-007-s02",
+      "sourceLineId": "l20-conv-007",
+      "imagePromptCn": "タワポン接受邀请后继续确认时间。 画面不出现可读文字、字幕、对话气泡或课外主要人物。",
+      "imagePromptJa": "タワポン接受邀请后继续确认时间。。画面内に読める文字、字幕、吹き出し、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-20-010",
+      "storyboardTextLineId": "l20-conv-008-s01",
+      "sourceLineId": "l20-conv-008",
+      "imagePromptCn": "小林提出八月初的时间建议，タワポン认真听。 画面不出现可读文字、字幕、对话气泡或课外主要人物。",
+      "imagePromptJa": "小林提出八月初的时间建议，タワポン认真听。。画面内に読める文字、字幕、吹き出し、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-20-011",
+      "storyboardTextLineId": "l20-conv-009-s01",
+      "sourceLineId": "l20-conv-009",
+      "imagePromptCn": "タワポン轻松点头，表示时间可以。 画面不出现可读文字、字幕、对话气泡或课外主要人物。",
+      "imagePromptJa": "タワポン轻松点头，表示时间可以。。画面内に読める文字、字幕、吹き出し、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-20-012",
+      "storyboardTextLineId": "l20-conv-010-s01",
+      "sourceLineId": "l20-conv-010",
+      "imagePromptCn": "小林表示会先调查路线或安排，タワポン听着。 画面不出现可读文字、字幕、对话气泡或课外主要人物。",
+      "imagePromptJa": "小林表示会先调查路线或安排，タワポン听着。。画面内に読める文字、字幕、吹き出し、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-20-013",
+      "storyboardTextLineId": "l20-conv-010-s02",
+      "sourceLineId": "l20-conv-010",
+      "imagePromptCn": "小林做出之后电话联系的意思，タワポン点头。 画面不出现可读文字、字幕、对话气泡或课外主要人物。",
+      "imagePromptJa": "小林做出之后电话联系的意思，タワポン点头。。画面内に読める文字、字幕、吹き出し、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-20-014",
+      "storyboardTextLineId": "l20-conv-011-s01",
+      "sourceLineId": "l20-conv-011",
+      "imagePromptCn": "タワポン微笑感谢小林。 画面不出现可读文字、字幕、对话气泡或课外主要人物。",
+      "imagePromptJa": "タワポン微笑感谢小林。。画面内に読める文字、字幕、吹き出し、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-20-015",
+      "storyboardTextLineId": "l20-conv-011-s02",
+      "sourceLineId": "l20-conv-011",
+      "imagePromptCn": "タワポン轻松地结束会话，表示会等小林联系。 画面不出现可读文字、字幕、对话气泡或课外主要人物。",
+      "imagePromptJa": "タワポン轻松地结束会话，表示会等小林联系。。画面内に読める文字、字幕、吹き出し、課文外の主要人物を入れない。",
+      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    }
+  ]
+}
