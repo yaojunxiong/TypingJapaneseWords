@@ -1,0 +1,88 @@
+{
+  "lessonNo": 15,
+  "conversationTitle": "ご家族は？",
+  "reviewStatus": "pending-human-review",
+  "generationAllowed": false,
+  "prompts": [
+    {
+      "storyboardLineId": "sb-15-001",
+      "storyboardTextLineId": "l15-conv-001-s01",
+      "sourceLineId": "l15-conv-001",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。电影院大厅或安静咖啡区。电影院散场后，木村对米勒评价电影很好；背景无海报文字。 当前说话人：木村，听话对象：ミラー。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。电影院大厅或安静咖啡区。电影院散场后，木村对米勒评价电影很好；背景无海报文字。 話し手は木村、聞き手はミラー。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-15-002",
+      "storyboardTextLineId": "l15-conv-002-s01",
+      "sourceLineId": "l15-conv-002",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。电影院大厅或安静咖啡区。米勒回答并说想起家人；不出现家人画面。 当前说话人：ミラー，听话对象：木村。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。电影院大厅或安静咖啡区。米勒回答并说想起家人；不出现家人画面。 話し手はミラー、聞き手は木村。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-15-003",
+      "storyboardTextLineId": "l15-conv-003-s01",
+      "sourceLineId": "l15-conv-003",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。电影院大厅或安静咖啡区。木村听后询问米勒的家人。 当前说话人：木村，听话对象：ミラー。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。电影院大厅或安静咖啡区。木村听后询问米勒的家人。 話し手は木村、聞き手はミラー。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-15-004",
+      "storyboardTextLineId": "l15-conv-004-s01",
+      "sourceLineId": "l15-conv-004",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。电影院大厅或安静咖啡区。米勒说明有父母和一个姐姐；不让家人出场。 当前说话人：ミラー，听话对象：木村。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。电影院大厅或安静咖啡区。米勒说明有父母和一个姐姐；不让家人出场。 話し手はミラー、聞き手は木村。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-15-005",
+      "storyboardTextLineId": "l15-conv-005-s01",
+      "sourceLineId": "l15-conv-005",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。电影院大厅或安静咖啡区。木村询问他们在哪里。 当前说话人：木村，听话对象：ミラー。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。电影院大厅或安静咖啡区。木村询问他们在哪里。 話し手は木村、聞き手はミラー。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-15-006",
+      "storyboardTextLineId": "l15-conv-006-s01",
+      "sourceLineId": "l15-conv-006",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。电影院大厅或安静咖啡区。米勒说明父母在纽约附近、姐姐在伦敦工作；不出现地图或城市文字。 当前说话人：ミラー，听话对象：木村。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。电影院大厅或安静咖啡区。米勒说明父母在纽约附近、姐姐在伦敦工作；不出现地图或城市文字。 話し手はミラー、聞き手は木村。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-15-007",
+      "storyboardTextLineId": "l15-conv-007-s01",
+      "sourceLineId": "l15-conv-007",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。电影院大厅或安静咖啡区。米勒反问木村的家人。 当前说话人：ミラー，听话对象：木村。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。电影院大厅或安静咖啡区。米勒反问木村的家人。 話し手はミラー、聞き手は木村。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-15-008",
+      "storyboardTextLineId": "l15-conv-008-s01",
+      "sourceLineId": "l15-conv-008",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。电影院大厅或安静咖啡区。木村说明自己家三口，父亲是银行职员，母亲在高中教英语；不出现父母或学校场景。 当前说话人：木村，听话对象：ミラー。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。电影院大厅或安静咖啡区。木村说明自己家三口，父亲是银行职员，母亲在高中教英语；不出现父母或学校场景。 話し手は木村、聞き手はミラー。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    }
+  ]
+}

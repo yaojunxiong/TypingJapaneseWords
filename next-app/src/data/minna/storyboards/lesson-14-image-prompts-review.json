@@ -1,0 +1,118 @@
+{
+  "lessonNo": 14,
+  "conversationTitle": "みどり町までお願いします",
+  "reviewStatus": "pending-human-review",
+  "generationAllowed": false,
+  "prompts": [
+    {
+      "storyboardLineId": "sb-14-001",
+      "storyboardTextLineId": "l14-conv-001-s01",
+      "sourceLineId": "l14-conv-001",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。现代日本出租车内和街道。出租车后座，卡莉娜告诉司机目的地。 当前说话人：カリナ，听话对象：運転手。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。现代日本出租车内和街道。出租车后座，卡莉娜告诉司机目的地。 話し手はカリナ、聞き手は運転手。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-14-002",
+      "storyboardTextLineId": "l14-conv-002-s01",
+      "sourceLineId": "l14-conv-002",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。现代日本出租车内和街道。司机从前排回应。 当前说话人：運転手，听话对象：カリナ。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。现代日本出租车内和街道。司机从前排回应。 話し手は運転手、聞き手はカリナ。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-14-003",
+      "storyboardTextLineId": "l14-conv-003-s01",
+      "sourceLineId": "l14-conv-003",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。现代日本出租车内和街道。卡莉娜指向前方信号方向，请司机右转；不出现文字。 当前说话人：カリナ，听话对象：運転手。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。现代日本出租车内和街道。卡莉娜指向前方信号方向，请司机右转；不出现文字。 話し手はカリナ、聞き手は運転手。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-14-004",
+      "storyboardTextLineId": "l14-conv-004-s01",
+      "sourceLineId": "l14-conv-004",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。现代日本出租车内和街道。司机确认是右转。 当前说话人：運転手，听话对象：カリナ。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。现代日本出租车内和街道。司机确认是右转。 話し手は運転手、聞き手はカリナ。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-14-005",
+      "storyboardTextLineId": "l14-conv-005-s01",
+      "sourceLineId": "l14-conv-005",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。现代日本出租车内和街道。卡莉娜确认。 当前说话人：カリナ，听话对象：運転手。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。现代日本出租车内和街道。卡莉娜确认。 話し手はカリナ、聞き手は運転手。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-14-006",
+      "storyboardTextLineId": "l14-conv-006-s01",
+      "sourceLineId": "l14-conv-006",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。现代日本出租车内和街道。司机询问是否直走。 当前说话人：運転手，听话对象：カリナ。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。现代日本出租车内和街道。司机询问是否直走。 話し手は運転手、聞き手はカリナ。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-14-007",
+      "storyboardTextLineId": "l14-conv-007-s01",
+      "sourceLineId": "l14-conv-007",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。现代日本出租车内和街道。卡莉娜请司机直走。 当前说话人：カリナ，听话对象：運転手。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。现代日本出租车内和街道。卡莉娜请司机直走。 話し手はカリナ、聞き手は運転手。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-14-008",
+      "storyboardTextLineId": "l14-conv-008-s01",
+      "sourceLineId": "l14-conv-008",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。现代日本出租车内和街道。卡莉娜指向前方花店，请在花店前停车；花店无文字招牌。 当前说话人：カリナ，听话对象：運転手。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。现代日本出租车内和街道。卡莉娜指向前方花店，请在花店前停车；花店无文字招牌。 話し手はカリナ、聞き手は運転手。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-14-009",
+      "storyboardTextLineId": "l14-conv-009-s01",
+      "sourceLineId": "l14-conv-009",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。现代日本出租车内和街道。司机停车后说明车费；不出现价格数字。 当前说话人：運転手，听话对象：カリナ。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。现代日本出租车内和街道。司机停车后说明车费；不出现价格数字。 話し手は運転手、聞き手はカリナ。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-14-010",
+      "storyboardTextLineId": "l14-conv-010-s01",
+      "sourceLineId": "l14-conv-010",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。现代日本出租车内和街道。卡莉娜递出付款；不出现纸币细节数字。 当前说话人：カリナ，听话对象：運転手。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。现代日本出租车内和街道。卡莉娜递出付款；不出现纸币细节数字。 話し手はカリナ、聞き手は運転手。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-14-011",
+      "storyboardTextLineId": "l14-conv-011-s01",
+      "sourceLineId": "l14-conv-011",
+      "imagePromptCn": "手机竖屏9:16，1080×1920，清爽日式动漫教育插画。现代日本出租车内和街道。司机递回找零并道谢；不出现金额数字。 当前说话人：運転手，听话对象：カリナ。无文字、无字幕、无编号、无标签、无UI。下方留前端字幕安全区。",
+      "imagePromptJa": "スマートフォン縦長9:16、1080×1920、清潔感のある日本アニメ調の教育イラスト。现代日本出租车内和街道。司机递回找零并道谢；不出现金额数字。 話し手は運転手、聞き手はカリナ。文字、字幕、番号、ラベル、UIなし。下部に字幕余白。",
+      "negativePrompt": "text, subtitles, Japanese text, Chinese text, numbers, labels, speech bubbles, UI elements, readable signs, readable packaging, maps, flags, extra characters, romance, flirting, school campus, classroom, travel tourism, wrong speaker, wrong listener, cropped face, cropped hands, low resolution, blurry, distorted hands, duplicated characters",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    }
+  ]
+}
