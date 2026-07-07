@@ -85,14 +85,16 @@ jobs:
           fi
 
           echo "No Vercel deployment metadata appeared for this SHA."
-          echo "Continuing to direct production health/smoke checks instead of failing on missing metadata."
+          echo "Direct production checks must prove the production alias is serving this SHA."
           exit 0
 
-      - name: Health and smoke check Production URL
+      - name: Verify Production SHA and smoke routes
         run: |
           URL="https://study.jimmyyao.com"
+          SHA="${{ github.sha }}"
           echo "Health checking $URL..."
 
+          VERSION_ROUTE="/api/deployment/version"
           ROUTES=(
             "/"
             "/lessons/1/ai-practice"
@@ -101,6 +103,24 @@ jobs:
           )
 
           for i in $(seq 1 12); do
+            VERSION_JSON=$(curl -sSf "${URL}${VERSION_ROUTE}" 2>/dev/null || true)
+            PRODUCTION_SHA=$(node -e 'try { const data = JSON.parse(process.argv[1] || "{}"); process.stdout.write(data.commitSha || ""); } catch { process.exit(1); }' "$VERSION_JSON" 2>/dev/null || true)
+            echo "Attempt $i: ${VERSION_ROUTE} commitSha=${PRODUCTION_SHA:-missing} expected=${SHA}"
+
+            if [ -z "$PRODUCTION_SHA" ]; then
+              echo "Production SHA proof unavailable; retrying..."
+              sleep 10
+              continue
+            fi
+
+            if [ "$PRODUCTION_SHA" != "$SHA" ]; then
+              echo "Production alias is not serving the current SHA yet."
+              echo "Expected: $SHA"
+              echo "Actual:   $PRODUCTION_SHA"
+              sleep 10
+              continue
+            fi
+
             FAILED="false"
             for ROUTE in "${ROUTES[@]}"; do
               HTTP_CODE=$(curl -s -o /dev/null -w '%{http_code}' "${URL}${ROUTE}" 2>/dev/null || echo "fail")
@@ -111,14 +131,14 @@ jobs:
             done
 
             if [ "$FAILED" = "false" ]; then
-              echo "Production health/smoke routes responded with 200"
+              echo "Production alias is serving the current SHA and smoke routes responded with 200"
               exit 0
             fi
 
             sleep 10
           done
 
-          echo "Production health/smoke check failed"
+          echo "Production verification failed: could not prove current SHA and healthy smoke routes."
           exit 1
 
       - name: Trigger Auto Test
