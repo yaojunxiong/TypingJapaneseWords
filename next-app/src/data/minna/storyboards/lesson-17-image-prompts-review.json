@@ -1,0 +1,138 @@
+{
+  "lessonNo": 17,
+  "conversationTitle": "どうしましたか",
+  "reviewStatus": "pending-human-review",
+  "generationAllowed": false,
+  "prompts": [
+    {
+      "storyboardLineId": "sb-17-001",
+      "storyboardTextLineId": "l17-conv-001-s01",
+      "sourceLineId": "l17-conv-001",
+      "imagePromptCn": "诊室内，医生坐在松本面前，温和地开始问诊，松本坐在对面准备说明症状。画面简洁，不显示可读病历文字。",
+      "imagePromptJa": "診察室で医者が松本の前に座り、穏やかに問診を始めている。松本は向かいに座って症状を話す準備をしている。読めるカルテ文字は出さない。",
+      "negativePrompt": "readable text, medical chart text, extra main characters, emergency, surgery, blood, subtitles, speech bubbles, UI labels",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-17-002",
+      "storyboardTextLineId": "l17-conv-002-s01",
+      "sourceLineId": "l17-conv-002",
+      "imagePromptCn": "松本坐在诊室椅子上，一手轻触喉咙，向医生说明从昨天开始喉咙痛和有点发烧。表情疲惫但不夸张。",
+      "imagePromptJa": "松本が診察室の椅子に座り、片手でのどに触れながら、昨日からのどが痛く少し熱があることを医者に説明している。表情は疲れているが大げさにしない。",
+      "negativePrompt": "severe illness, emergency room, blood, coughing blood, extra characters, readable text, subtitles, speech bubbles",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-17-003",
+      "storyboardTextLineId": "l17-conv-003-s01",
+      "sourceLineId": "l17-conv-003",
+      "imagePromptCn": "医生听完症状后轻轻点头回应，准备进入检查。松本在一侧等待下一步。诊室环境保持自然。",
+      "imagePromptJa": "医者が症状を聞いて軽くうなずき、次の診察に入ろうとしている。松本は横で次の指示を待っている。診察室の雰囲気は自然に保つ。",
+      "negativePrompt": "diagnosis already finished, surgery, dramatic illness, extra characters, readable text, subtitles, speech bubbles",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-17-004",
+      "storyboardTextLineId": "l17-conv-003-s02",
+      "sourceLineId": "l17-conv-003",
+      "imagePromptCn": "医生以手势请松本张开嘴，松本坐直配合喉咙检查。普通诊室场景，不做夸张口腔特写。",
+      "imagePromptJa": "医者が手ぶりで松本に口を開けるよう促し、松本が姿勢を正してのどの診察に協力している。普通の診察室で、口の中の誇張したクローズアップは避ける。",
+      "negativePrompt": "surgery, invasive treatment, extreme mouth close-up, blood, extra characters, readable text, subtitles, speech bubbles",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-17-005",
+      "storyboardTextLineId": "l17-conv-004-s01",
+      "sourceLineId": "l17-conv-004",
+      "imagePromptCn": "医生检查后平静地告诉松本是感冒，松本认真听诊断结果。诊室光线柔和，不表现严重疾病。",
+      "imagePromptJa": "診察後、医者が松本に風邪だと落ち着いて伝えている。松本は診断を真剣に聞いている。診察室は柔らかい光で、重い病気として描かない。",
+      "negativePrompt": "serious diagnosis, hospital ward, surgery, panic, extra characters, readable chart text, subtitles, speech bubbles",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-17-006",
+      "storyboardTextLineId": "l17-conv-004-s02",
+      "sourceLineId": "l17-conv-004",
+      "imagePromptCn": "医生向松本说明需要两三天好好休息，松本坐在对面认真听取医嘱。画面不显示可读病历或处方文字。",
+      "imagePromptJa": "医者が松本に2、3日ゆっくり休むよう説明している。松本は向かいで真剣に聞いている。読めるカルテや処方文字は出さない。",
+      "negativePrompt": "hospitalization, readable prescription, readable chart text, extra characters, subtitles, speech bubbles, UI labels",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-17-007",
+      "storyboardTextLineId": "l17-conv-005-s01",
+      "sourceLineId": "l17-conv-005",
+      "imagePromptCn": "松本略显为难地告诉医生，自己从明天起必须去东京出差。可用低调公文包暗示出差，仍保持诊室场景。",
+      "imagePromptJa": "松本が少し困った様子で、明日から東京へ出張しなければならないと医者に伝えている。控えめなビジネスバッグで出張を示し、場面は診察室のままにする。",
+      "negativePrompt": "Tokyo sightseeing, train station, airport, business trip already started, extra characters, readable text, subtitles, speech bubbles",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-17-008",
+      "storyboardTextLineId": "l17-conv-006-s01",
+      "sourceLineId": "l17-conv-006",
+      "imagePromptCn": "医生指向或递出没有可读文字的药袋，提醒松本今天吃药并早点睡。松本认真接受建议。",
+      "imagePromptJa": "医者が読める文字のない薬袋を示すか渡し、今日は薬を飲んで早く寝るよう松本に勧めている。松本は真剣に受け止めている。",
+      "negativePrompt": "readable medicine name, readable dosage, prescription text, pharmacy counter, extra medical staff, subtitles, speech bubbles",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-17-009",
+      "storyboardTextLineId": "l17-conv-007-s01",
+      "sourceLineId": "l17-conv-007",
+      "imagePromptCn": "松本点头回答好的，表示会按医生建议行动。医生在旁边准备继续补充注意事项。",
+      "imagePromptJa": "松本がうなずいて返事をし、医者の助言に従うことを示している。医者はそばでさらに注意事項を伝えようとしている。",
+      "negativePrompt": "conversation finished, leaving room, extra dialogue, extra characters, readable text, subtitles, speech bubbles",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-17-010",
+      "storyboardTextLineId": "l17-conv-008-s01",
+      "sourceLineId": "l17-conv-008",
+      "imagePromptCn": "医生在诊室补充提醒松本今晚不要洗澡，松本认真听。不要切换到浴室场景。",
+      "imagePromptJa": "医者が診察室で、今晩はおふろに入らないよう松本に補足して伝えている。松本は真剣に聞いている。浴室場面にはしない。",
+      "negativePrompt": "bathroom scene, bathtub, bathing, extra characters, readable text, subtitles, speech bubbles",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-17-011",
+      "storyboardTextLineId": "l17-conv-009-s01",
+      "sourceLineId": "l17-conv-009",
+      "imagePromptCn": "松本明确点头说已经明白医生的建议，准备结束诊察。医生礼貌地听他确认。",
+      "imagePromptJa": "松本がはっきりとうなずき、医者の助言を理解したことを伝えている。医者は丁寧にそれを聞いている。",
+      "negativePrompt": "new question, new exam, extra characters, readable text, subtitles, speech bubbles",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-17-012",
+      "storyboardTextLineId": "l17-conv-010-s01",
+      "sourceLineId": "l17-conv-010",
+      "imagePromptCn": "医生温和地对松本说请多保重，诊察即将结束。松本在对面准备道谢。",
+      "imagePromptJa": "医者が松本に優しくお大事にと告げ、診察が終わろうとしている。松本は向かいでお礼を言う準備をしている。",
+      "negativePrompt": "casual friends farewell, hospital ward, extra characters, readable text, subtitles, speech bubbles",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-17-013",
+      "storyboardTextLineId": "l17-conv-011-s01",
+      "sourceLineId": "l17-conv-011",
+      "imagePromptCn": "松本起身或微微鞠躬向医生道谢，医生礼貌回应。诊室会话自然结束。",
+      "imagePromptJa": "松本が立ち上がるか軽く頭を下げて医者にお礼を言っている。医者は丁寧に応じている。診察室の会話が自然に終わる。",
+      "negativePrompt": "payment counter, pharmacy, new characters, extra dialogue, readable text, subtitles, speech bubbles",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    }
+  ]
+}

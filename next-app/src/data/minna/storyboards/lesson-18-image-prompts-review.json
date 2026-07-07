@@ -1,0 +1,118 @@
+{
+  "lessonNo": 18,
+  "conversationTitle": "趣味は何ですか",
+  "reviewStatus": "pending-human-review",
+  "generationAllowed": false,
+  "prompts": [
+    {
+      "storyboardLineId": "sb-18-001",
+      "storyboardTextLineId": "l18-conv-001-s01",
+      "sourceLineId": "l18-conv-001",
+      "imagePromptCn": "山田与桑托斯面对面轻松交谈，山田自然地询问桑托斯的爱好。日常会话场景，不显示可读文字。",
+      "imagePromptJa": "山田とサントスが向かい合って気軽に話しており、山田が自然にサントスの趣味を尋ねている。日常会話の場面で、読める文字は出さない。",
+      "negativePrompt": "formal interview, exam room, extra main characters, readable text, subtitles, speech bubbles, UI labels",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-18-002",
+      "storyboardTextLineId": "l18-conv-002-s01",
+      "sourceLineId": "l18-conv-002",
+      "imagePromptCn": "桑托斯轻松回答自己的爱好是摄影，可自然拿着相机或相机包。山田在旁边倾听。",
+      "imagePromptJa": "サントスが自分の趣味は写真だと気軽に答えている。自然にカメラやカメラバッグを持っていてもよい。山田はそばで聞いている。",
+      "negativePrompt": "commercial photo shoot, ID photo studio, camera brand logos, readable text, extra characters, subtitles, speech bubbles",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-18-003",
+      "storyboardTextLineId": "l18-conv-003-s01",
+      "sourceLineId": "l18-conv-003",
+      "imagePromptCn": "山田对桑托斯的摄影爱好感兴趣，继续问他拍什么样的照片。桑托斯准备具体回答。",
+      "imagePromptJa": "山田がサントスの写真の趣味に興味を持ち、どんな写真を撮るのか続けて尋ねている。サントスは具体的に答えようとしている。",
+      "negativePrompt": "ordering someone to take a photo, photo contest, extra characters, readable text, subtitles, speech bubbles",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-18-004",
+      "storyboardTextLineId": "l18-conv-004-s01",
+      "sourceLineId": "l18-conv-004",
+      "imagePromptCn": "桑托斯向山田说明自己拍动物照片，可以用相机和一张不可读内容的动物照片作低调提示。",
+      "imagePromptJa": "サントスが山田に、動物の写真を撮ると説明している。カメラと、内容が読めない動物写真を控えめな小道具として使ってよい。",
+      "negativePrompt": "zoo adventure, safari scene, readable photo text, extra animals dominating scene, extra characters, subtitles, speech bubbles",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-18-005",
+      "storyboardTextLineId": "l18-conv-004-s02",
+      "sourceLineId": "l18-conv-004",
+      "imagePromptCn": "桑托斯提到尤其喜欢马时显得更有兴趣，可在相机旁低调出现马照片轮廓。不要切换到骑马或马赛场景。",
+      "imagePromptJa": "サントスが特に馬が好きだと話し、より興味深そうな表情をしている。カメラのそばに馬の写真の輪郭を控えめに置いてよい。乗馬や競馬場の場面にはしない。",
+      "negativePrompt": "horse race, riding scene, already at ranch, extra characters, readable text, subtitles, speech bubbles",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-18-006",
+      "storyboardTextLineId": "l18-conv-005-s01",
+      "sourceLineId": "l18-conv-005",
+      "imagePromptCn": "山田听到桑托斯喜欢动物和马的照片后，露出感兴趣的表情并正面回应。保持轻松日常对话。",
+      "imagePromptJa": "山田がサントスの動物や馬の写真への興味を聞き、関心を示す表情で前向きに返事をしている。気軽な日常会話として保つ。",
+      "negativePrompt": "mocking, negative reaction, argument, extra characters, readable text, subtitles, speech bubbles",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-18-007",
+      "storyboardTextLineId": "l18-conv-005-s02",
+      "sourceLineId": "l18-conv-005",
+      "imagePromptCn": "山田继续问桑托斯来到日本以后是否拍过马的照片，桑托斯思考回答。仍是对话场景，不切换到回忆画面。",
+      "imagePromptJa": "山田がサントスに、日本へ来てから馬の写真を撮ったか尋ねている。サントスは答えを考えている。会話場面のままで、回想場面に切り替えない。",
+      "negativePrompt": "already photographing horses, flashback scene, travel montage, extra characters, readable text, subtitles, speech bubbles",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-18-008",
+      "storyboardTextLineId": "l18-conv-006-s01",
+      "sourceLineId": "l18-conv-006",
+      "imagePromptCn": "桑托斯轻轻摇头，说明在日本很难看到马所以还没拍到。山田认真听。相机可作为辅助道具。",
+      "imagePromptJa": "サントスが軽く首を振り、日本ではなかなか馬を見ることができないため、まだ撮れていないと説明している。山田は真剣に聞いている。カメラを小道具にしてよい。",
+      "negativePrompt": "disliking Japan, disliking horses, empty dramatic landscape, extra characters, readable text, subtitles, speech bubbles",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-18-009",
+      "storyboardTextLineId": "l18-conv-007-s01",
+      "sourceLineId": "l18-conv-007",
+      "imagePromptCn": "山田告诉桑托斯北海道有很多马。可用无文字地图轮廓或自然背景提示北海道信息，但不要表现两人已经抵达北海道。",
+      "imagePromptJa": "山田がサントスに、北海道には馬がたくさんいると伝えている。文字のない地図の輪郭や自然背景で北海道の情報を示してよいが、2人がすでに北海道に着いた場面にはしない。",
+      "negativePrompt": "readable map labels, already in Hokkaido, travel completed, horse riding, extra characters, subtitles, speech bubbles",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-18-010",
+      "storyboardTextLineId": "l18-conv-008-s01",
+      "sourceLineId": "l18-conv-008",
+      "imagePromptCn": "桑托斯听到北海道有很多马后露出惊喜表情，向山田确认“真的吗”。轻松正面的反应。",
+      "imagePromptJa": "サントスが北海道に馬がたくさんいると聞いて驚き、山田に本当かと確認している。明るく前向きな反応にする。",
+      "negativePrompt": "argument, suspicion, exaggerated shock, extra characters, readable text, subtitles, speech bubbles",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    },
+    {
+      "storyboardLineId": "sb-18-011",
+      "storyboardTextLineId": "l18-conv-008-s02",
+      "sourceLineId": "l18-conv-008",
+      "imagePromptCn": "桑托斯带着期待表情说暑假一定想去，山田在旁边听他表达愿望。不要画成已经出发旅行或拍摄完成。",
+      "imagePromptJa": "サントスが期待した表情で、夏休みにぜひ行きたいと話している。山田はそばでその希望を聞いている。すでに旅行へ出発したり撮影を終えた場面にはしない。",
+      "negativePrompt": "already traveling, already in Hokkaido, horse riding, completed photo shoot, extra characters, readable text, subtitles, speech bubbles",
+      "reviewStatus": "pending-human-review",
+      "generationAllowed": false
+    }
+  ]
+}
