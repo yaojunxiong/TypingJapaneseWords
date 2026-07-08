@@ -1652,6 +1652,9 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
               <span style={{ fontSize: 20 }}>🤖</span><span style={{ fontWeight: 900 }}>AI 会话陪练</span>
             </Link>
           )}
+          <Link href={`/lessons/${lessonNo}/recitation/words`} style={{ border: '1px solid #bbf7d0', borderRadius: 12, padding: '10px 6px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, color: '#047857', background: '#ecfdf5', textDecoration: 'none', fontSize: 13 }}>
+            <span style={{ fontSize: 20 }}>🧩</span><span style={{ fontWeight: 900 }}>会话单词</span>
+          </Link>
         </div>
       </section>
 
