@@ -7,6 +7,7 @@ import RecitationWordsPageClient, { type RecitationWordItem } from '@/components
 import { getLang } from '@/lib/i18n-server'
 import { getServerLessonAccess } from '@/lib/learning-access-server'
 import { loadRecitationLesson } from '@/lib/recitation-lesson'
+import { loadOriginalLineAudioMap, resolveRecitationLinePracticeAudio, type OriginalLineAudioSource } from '@/lib/recitation-original-audio'
 import type { RecitationLine } from '@/types/recitation'
 
 export const dynamic = 'force-dynamic'
@@ -36,7 +37,7 @@ type RecitationLineWithExtra = RecitationLine & {
   sentenceAudioUrl?: string
 }
 
-type ResolvedLineAudio = Pick<RecitationWordItem, 'audioUrl' | 'audioLabel' | 'audioKind'>
+type ResolvedLineAudio = Pick<RecitationWordItem, 'audioUrl' | 'audioLabel' | 'audioKind' | 'audioStart' | 'audioEnd'>
 
 interface Props {
   params: Promise<{ lessonNo: string }>
@@ -52,26 +53,21 @@ async function loadSubtitleLines(lessonNo: number): Promise<SubtitleLine[]> {
   }
 }
 
-function resolveLineAudio(line: RecitationLineWithExtra | undefined): ResolvedLineAudio {
-  const originalAudioUrl = line?.originalAudioUrl?.trim()
-    || line?.publicOriginalAudioUrl?.trim()
-    || line?.sentenceAudioUrl?.trim()
-    || line?.audioUrl?.trim()
+function resolveLineAudio(line: RecitationLineWithExtra | undefined, originalLineAudioMap: Map<number, OriginalLineAudioSource>): ResolvedLineAudio {
+  if (!line) return { audioUrl: '', audioLabel: '暂无音频', audioKind: 'none' }
 
-  if (originalAudioUrl) {
-    return { audioUrl: originalAudioUrl, audioLabel: '教材原声', audioKind: 'original' }
+  const audio = resolveRecitationLinePracticeAudio(line, originalLineAudioMap)
+  if (audio?.source === 'original') {
+    return { audioUrl: audio.url, audioLabel: '教材原声', audioKind: 'original', audioStart: audio.start, audioEnd: audio.end }
   }
-
-  const ttsAudioUrl = line?.ttsAudioUrl?.trim()
-  if (ttsAudioUrl) {
-    return { audioUrl: ttsAudioUrl, audioLabel: '练习音', audioKind: 'tts' }
+  if (audio?.source === 'tts') {
+    return { audioUrl: audio.url, audioLabel: '练习音', audioKind: 'tts' }
   }
-
   return { audioUrl: '', audioLabel: '暂无音频', audioKind: 'none' }
 }
 
-function createFallbackWord(lessonNo: number, line: RecitationLineWithExtra): RecitationWordItem {
-  const audio = resolveLineAudio(line)
+function createFallbackWord(lessonNo: number, line: RecitationLineWithExtra, originalLineAudioMap: Map<number, OriginalLineAudioSource>): RecitationWordItem {
+  const audio = resolveLineAudio(line, originalLineAudioMap)
   return {
     id: `lesson-${lessonNo}-line-${line.order}-sentence`,
     surface: line.ja,
@@ -87,7 +83,12 @@ function createFallbackWord(lessonNo: number, line: RecitationLineWithExtra): Re
   }
 }
 
-function buildWordItems(lessonNo: number, recitationLines: RecitationLineWithExtra[], subtitleLines: SubtitleLine[]): RecitationWordItem[] {
+function buildWordItems(
+  lessonNo: number,
+  recitationLines: RecitationLineWithExtra[],
+  subtitleLines: SubtitleLine[],
+  originalLineAudioMap: Map<number, OriginalLineAudioSource>,
+): RecitationWordItem[] {
   const recitationByOrder = new Map<number, RecitationLineWithExtra>()
   for (const line of recitationLines) recitationByOrder.set(line.order, line)
 
@@ -103,11 +104,11 @@ function buildWordItems(lessonNo: number, recitationLines: RecitationLineWithExt
     const sentenceJp = recitationLine?.ja || subtitleLine.sentenceJp || ''
     const sentenceCn = recitationLine?.zh || subtitleLine.sentenceCn || ''
     const speaker = recitationLine?.speaker || subtitleLine.speaker || ''
-    const audio = resolveLineAudio(recitationLine)
+    const audio = resolveLineAudio(recitationLine, originalLineAudioMap)
     const words = Array.isArray(subtitleLine.words) ? subtitleLine.words : []
 
     if (!words.length) {
-      if (recitationLine) items.push(createFallbackWord(lessonNo, recitationLine))
+      if (recitationLine) items.push(createFallbackWord(lessonNo, recitationLine, originalLineAudioMap))
       continue
     }
 
@@ -131,7 +132,7 @@ function buildWordItems(lessonNo: number, recitationLines: RecitationLineWithExt
   }
 
   if (items.length) return items
-  return recitationLines.map(line => createFallbackWord(lessonNo, line))
+  return recitationLines.map(line => createFallbackWord(lessonNo, line, originalLineAudioMap))
 }
 
 export default async function RecitationWordsPage({ params }: Props) {
@@ -160,9 +161,10 @@ export default async function RecitationWordsPage({ params }: Props) {
     )
   }
 
-  const [lesson, subtitleLines] = await Promise.all([
+  const [lesson, subtitleLines, originalLineAudioMap] = await Promise.all([
     loadRecitationLesson(num),
     loadSubtitleLines(num),
+    loadOriginalLineAudioMap(num),
   ])
 
   if (!lesson) {
@@ -170,7 +172,7 @@ export default async function RecitationWordsPage({ params }: Props) {
   }
 
   const lines = lesson.lines as RecitationLineWithExtra[]
-  const words = buildWordItems(num, lines, subtitleLines)
+  const words = buildWordItems(num, lines, subtitleLines, originalLineAudioMap)
 
   return (
     <main>

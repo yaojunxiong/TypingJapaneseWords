@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 
 export type RecitationWordItem = {
   id: string
@@ -16,7 +16,18 @@ export type RecitationWordItem = {
   audioUrl: string
   audioLabel: '教材原声' | '练习音' | '暂无音频'
   audioKind: 'original' | 'tts' | 'none'
+  audioStart?: number
+  audioEnd?: number
   source: 'subtitle-word' | 'sentence-fallback'
+}
+
+function releaseAudio(audio: HTMLAudioElement | null) {
+  if (!audio) return
+  audio.pause()
+  audio.ontimeupdate = null
+  audio.onended = null
+  audio.onplaying = null
+  audio.onerror = null
 }
 
 type Props = {
@@ -33,6 +44,10 @@ export default function RecitationWordsPageClient({ lessonNo, conversationTitle,
   const [playbackStatus, setPlaybackStatus] = useState<'idle' | 'loading' | 'playing' | 'ended' | 'error'>('idle')
   const audioRef = useRef<HTMLAudioElement | null>(null)
 
+  useEffect(() => {
+    return () => releaseAudio(audioRef.current)
+  }, [])
+
   const sourceLines = useMemo(() => {
     const byLine = new Map<string, RecitationWordItem>()
     for (const word of words) {
@@ -48,13 +63,35 @@ export default function RecitationWordsPageClient({ lessonNo, conversationTitle,
 
   function playLineAudio(word: RecitationWordItem) {
     if (!word.audioUrl) return
-    audioRef.current?.pause()
+    releaseAudio(audioRef.current)
     setPlayingWordId(word.id)
     setPlaybackStatus('loading')
     const audio = new Audio(word.audioUrl)
+    audio.preload = 'auto'
+    audio.setAttribute('playsinline', '')
+    const startSec = Number(word.audioStart)
+    const endSec = Number(word.audioEnd)
+    const shouldPlaySegment = word.audioKind === 'original' && Number.isFinite(startSec) && Number.isFinite(endSec) && endSec > startSec
+    if (shouldPlaySegment) {
+      audio.currentTime = startSec
+      audio.ontimeupdate = () => {
+        if (audio.currentTime < endSec) return
+        audio.pause()
+        audio.ontimeupdate = null
+        audio.onended = null
+        if (audioRef.current === audio) audioRef.current = null
+        setPlaybackStatus('ended')
+      }
+    }
     audio.onplaying = () => setPlaybackStatus('playing')
-    audio.onended = () => setPlaybackStatus('ended')
-    audio.onerror = () => setPlaybackStatus('error')
+    audio.onended = () => {
+      if (audioRef.current === audio) audioRef.current = null
+      setPlaybackStatus('ended')
+    }
+    audio.onerror = () => {
+      if (audioRef.current === audio) audioRef.current = null
+      setPlaybackStatus('error')
+    }
     audioRef.current = audio
     audio.play().catch(() => setPlaybackStatus('error'))
   }

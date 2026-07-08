@@ -15,6 +15,12 @@ import {
   type LessonTakesSnapshot,
   type MergedRecitationTake,
 } from '@/lib/recitation-audio'
+import {
+  getRecitationLineDisplayOrder,
+  hasPublishedOriginalLineAudio,
+  loadOriginalLineAudioMap,
+  resolveRecitationLinePracticeAudio,
+} from '@/lib/recitation-original-audio'
 import StudyMobileChrome from '@/components/study-mobile-chrome'
 import type { Lang } from '@/lib/i18n'
 import Link from 'next/link'
@@ -78,28 +84,21 @@ function getSpeakerAvatar(line: RecitationLine): SpeakerAvatar {
   }
 }
 
-function getLineDisplayOrder(line: RecitationLine): number {
-  return Number.isFinite(line.displayOrder) ? Number(line.displayOrder) : line.order
-}
-
 type LinePracticeAudio = {
   url: string
   label: '教材原声' | '合成练习音'
   source: 'original' | 'tts'
+  start?: number
+  end?: number
 }
 
 function getLinePracticeAudio(line: RecitationLine): LinePracticeAudio | null {
-  const originalUrl = line.originalAudioUrl?.trim()
-  if (originalUrl) {
-    return { url: originalUrl, label: '教材原声', source: 'original' }
+  const audio = resolveRecitationLinePracticeAudio(line)
+  if (!audio) return null
+  return {
+    ...audio,
+    label: audio.source === 'original' ? '教材原声' : '合成练习音',
   }
-
-  const ttsUrl = ((line as RecitationLine & { audioUrl?: string }).audioUrl || line.ttsAudioUrl)?.trim()
-  if (ttsUrl) {
-    return { url: ttsUrl, label: '合成练习音', source: 'tts' }
-  }
-
-  return null
 }
 
 function Waveform({ seed, active = false }: { seed: string; active?: boolean }) {
@@ -224,7 +223,7 @@ function CompactLineItem({
             display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
             fontSize: 13, fontWeight: 800,
           }}>
-            {getLineDisplayOrder(line)}
+            {getRecitationLineDisplayOrder(line)}
           </span>
           <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, minWidth: 0, fontSize: 15, fontWeight: 800, color: isExpanded ? '#0875f5' : '#475569', whiteSpace: 'nowrap' }}>
             <span
@@ -1015,31 +1014,18 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     }
   }, [lessonNo, recordingLineSignature, takesRefreshKey])
 
-  // Lessons that have original line audio segments published
-  const ORIGINAL_LINE_AUDIO_LESSONS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50]
   useEffect(() => {
-    if (!ORIGINAL_LINE_AUDIO_LESSONS.includes(lessonNo)) return
+    if (!hasPublishedOriginalLineAudio(lessonNo)) return
     if (!lesson) return
     // Already enriched — prevent infinite re-trigger loop
     if (lesson.lines.some(l => l.originalAudioUrl)) return
     let cancelled = false
-    const paddedLesson = String(lessonNo).padStart(2, '0')
-    const url = `https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-${paddedLesson}/index.draft.json`
-    fetch(url)
-      .then(r => r.json())
-      .then(idx => {
+    loadOriginalLineAudioMap(lessonNo)
+      .then(originalLineAudioMap => {
         if (cancelled) return
-        const segMap = new Map<number, string>()
-        for (const seg of (idx.segments || [])) {
-          const segUrl = seg.audioUrl.startsWith('http') ? seg.audioUrl : `https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/${seg.audioPath}`
-          const lineNo = Number(seg.lineNo)
-          const displayOrder = Number(seg.displayOrder)
-          if (Number.isFinite(lineNo)) segMap.set(lineNo, segUrl)
-          if (Number.isFinite(displayOrder)) segMap.set(displayOrder, segUrl)
-        }
         const lines = lesson.lines.map(l => {
-          const url = segMap.get(getLineDisplayOrder(l)) || segMap.get(l.order)
-          return url ? { ...l, originalAudioUrl: url, uiLabelZh: '教材原声' } : l
+          const audio = originalLineAudioMap.get(getRecitationLineDisplayOrder(l)) || originalLineAudioMap.get(l.order)
+          return audio ? { ...l, originalAudioUrl: audio.url, start: audio.start ?? l.start, end: audio.end ?? l.end, uiLabelZh: '教材原声' } : l
         })
         setLesson({ ...lesson, lines })
       })
@@ -1173,8 +1159,8 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     }
 
     const audio = new Audio(practiceAudio.url)
-    const startSec = Number(line.start)
-    const endSec = Number(line.end)
+    const startSec = Number(practiceAudio.start ?? line.start)
+    const endSec = Number(practiceAudio.end ?? line.end)
     const shouldPlaySegment = practiceAudio.source === 'original' && Number.isFinite(startSec) && Number.isFinite(endSec) && endSec > startSec
     if (shouldPlaySegment) {
       audio.currentTime = startSec
@@ -1193,7 +1179,7 @@ export default function RecitationPageClient({ lessonNo, lang, trackLearningUnlo
     audio.play().catch(() => {
       if (originalAudioRef.current === audio) originalAudioRef.current = null
     })
-  }, [isRecording, showNotice, stopOriginalAudio])
+  }, [isRecording, showNotice, stopContinuousPlayback, stopOriginalAudio, stopTtsPlayback])
 
   const totalLessonLines = lesson?.lines.length ?? 0
 
