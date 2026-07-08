@@ -32,7 +32,11 @@ type RecitationLineWithExtra = RecitationLine & {
   kana?: string
   ttsText?: string
   audioUrl?: string
+  publicOriginalAudioUrl?: string
+  sentenceAudioUrl?: string
 }
+
+type ResolvedLineAudio = Pick<RecitationWordItem, 'audioUrl' | 'audioLabel' | 'audioKind'>
 
 interface Props {
   params: Promise<{ lessonNo: string }>
@@ -48,11 +52,26 @@ async function loadSubtitleLines(lessonNo: number): Promise<SubtitleLine[]> {
   }
 }
 
-function getLineAudioUrl(line: RecitationLineWithExtra | undefined): string {
-  return line?.originalAudioUrl?.trim() || line?.ttsAudioUrl?.trim() || line?.audioUrl?.trim() || ''
+function resolveLineAudio(line: RecitationLineWithExtra | undefined): ResolvedLineAudio {
+  const originalAudioUrl = line?.originalAudioUrl?.trim()
+    || line?.publicOriginalAudioUrl?.trim()
+    || line?.sentenceAudioUrl?.trim()
+    || line?.audioUrl?.trim()
+
+  if (originalAudioUrl) {
+    return { audioUrl: originalAudioUrl, audioLabel: '教材原声', audioKind: 'original' }
+  }
+
+  const ttsAudioUrl = line?.ttsAudioUrl?.trim()
+  if (ttsAudioUrl) {
+    return { audioUrl: ttsAudioUrl, audioLabel: '练习音', audioKind: 'tts' }
+  }
+
+  return { audioUrl: '', audioLabel: '暂无音频', audioKind: 'none' }
 }
 
 function createFallbackWord(lessonNo: number, line: RecitationLineWithExtra): RecitationWordItem {
+  const audio = resolveLineAudio(line)
   return {
     id: `lesson-${lessonNo}-line-${line.order}-sentence`,
     surface: line.ja,
@@ -63,7 +82,7 @@ function createFallbackWord(lessonNo: number, line: RecitationLineWithExtra): Re
     lineOrder: line.order,
     sentenceJp: line.ja,
     sentenceCn: line.zh,
-    audioUrl: getLineAudioUrl(line),
+    ...audio,
     source: 'sentence-fallback',
   }
 }
@@ -84,7 +103,7 @@ function buildWordItems(lessonNo: number, recitationLines: RecitationLineWithExt
     const sentenceJp = recitationLine?.ja || subtitleLine.sentenceJp || ''
     const sentenceCn = recitationLine?.zh || subtitleLine.sentenceCn || ''
     const speaker = recitationLine?.speaker || subtitleLine.speaker || ''
-    const audioUrl = getLineAudioUrl(recitationLine)
+    const audio = resolveLineAudio(recitationLine)
     const words = Array.isArray(subtitleLine.words) ? subtitleLine.words : []
 
     if (!words.length) {
@@ -105,7 +124,7 @@ function buildWordItems(lessonNo: number, recitationLines: RecitationLineWithExt
         lineOrder,
         sentenceJp,
         sentenceCn,
-        audioUrl,
+        ...audio,
         source: 'subtitle-word',
       })
     }

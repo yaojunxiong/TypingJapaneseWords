@@ -14,6 +14,8 @@ export type RecitationWordItem = {
   sentenceJp: string
   sentenceCn: string
   audioUrl: string
+  audioLabel: '教材原声' | '练习音' | '暂无音频'
+  audioKind: 'original' | 'tts' | 'none'
   source: 'subtitle-word' | 'sentence-fallback'
 }
 
@@ -27,6 +29,8 @@ type Props = {
 export default function RecitationWordsPageClient({ lessonNo, conversationTitle, lineCount, words }: Props) {
   const [selectedWordId, setSelectedWordId] = useState(words[0]?.id || '')
   const [selectedLineId, setSelectedLineId] = useState(words[0]?.lineId || '')
+  const [playingWordId, setPlayingWordId] = useState('')
+  const [playbackStatus, setPlaybackStatus] = useState<'idle' | 'loading' | 'playing' | 'ended' | 'error'>('idle')
   const audioRef = useRef<HTMLAudioElement | null>(null)
 
   const sourceLines = useMemo(() => {
@@ -45,9 +49,14 @@ export default function RecitationWordsPageClient({ lessonNo, conversationTitle,
   function playLineAudio(word: RecitationWordItem) {
     if (!word.audioUrl) return
     audioRef.current?.pause()
+    setPlayingWordId(word.id)
+    setPlaybackStatus('loading')
     const audio = new Audio(word.audioUrl)
+    audio.onplaying = () => setPlaybackStatus('playing')
+    audio.onended = () => setPlaybackStatus('ended')
+    audio.onerror = () => setPlaybackStatus('error')
     audioRef.current = audio
-    audio.play().catch(() => {})
+    audio.play().catch(() => setPlaybackStatus('error'))
   }
 
   return (
@@ -95,6 +104,8 @@ export default function RecitationWordsPageClient({ lessonNo, conversationTitle,
       <section style={{ display: 'grid', gap: 10 }}>
         {words.map((word) => {
           const active = word.id === selectedWordId
+          const isCurrentAudio = word.id === playingWordId
+          const canPlay = Boolean(word.audioUrl)
           return (
             <article
               key={word.id}
@@ -115,23 +126,32 @@ export default function RecitationWordsPageClient({ lessonNo, conversationTitle,
                 </div>
                 <button
                   type="button"
-                  disabled={!word.audioUrl}
+                  disabled={!canPlay}
                   onClick={(event) => { event.stopPropagation(); selectWord(word); playLineAudio(word) }}
                   style={{
-                    border: '1px solid #bfdbfe',
+                    border: `1px solid ${word.audioKind === 'original' ? '#86efac' : '#bfdbfe'}`,
                     borderRadius: 999,
-                    background: word.audioUrl ? '#eff6ff' : '#f8fafc',
-                    color: word.audioUrl ? '#1d4ed8' : '#94a3b8',
+                    background: canPlay ? (word.audioKind === 'original' ? '#f0fdf4' : '#eff6ff') : '#f8fafc',
+                    color: canPlay ? (word.audioKind === 'original' ? '#047857' : '#1d4ed8') : '#94a3b8',
                     fontSize: 13,
                     fontWeight: 900,
                     padding: '8px 11px',
-                    cursor: word.audioUrl ? 'pointer' : 'not-allowed',
+                    cursor: canPlay ? 'pointer' : 'not-allowed',
                     flexShrink: 0,
                   }}
                 >
-                  🔊 播放
+                  {canPlay ? `🔊 ${word.audioLabel}` : '暂无音频'}
                 </button>
               </div>
+
+              {isCurrentAudio && playbackStatus !== 'idle' ? (
+                <div style={{ marginTop: 10, borderRadius: 10, background: '#f8fafc', color: playbackStatus === 'error' ? '#b91c1c' : '#047857', fontSize: 13, fontWeight: 900, padding: '7px 10px' }}>
+                  {playbackStatus === 'loading' && `正在加载${word.audioLabel}...`}
+                  {playbackStatus === 'playing' && `正在播放${word.audioLabel}`}
+                  {playbackStatus === 'ended' && `${word.audioLabel}播放完成`}
+                  {playbackStatus === 'error' && `${word.audioLabel}播放失败`}
+                </div>
+              ) : null}
 
               <div style={{ display: 'grid', gap: 8, marginTop: 12, fontSize: 14, lineHeight: 1.55 }}>
                 <InfoRow label="中文意思" value={word.meaningCn || '释义未设置'} />
