@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { createClient } from '@/utils/supabase/client'
+import { unifiedLogoutUrl } from '@/lib/unified-auth'
 
 type Props = {
   lang: 'zh' | 'en'
@@ -25,7 +26,7 @@ export default function AccountSignOutButton({ lang }: Props) {
       setError(error.message)
       return
     }
-    window.location.href = '/login'
+    window.location.href = unifiedLogoutUrl('/')
   }
 
   return (
