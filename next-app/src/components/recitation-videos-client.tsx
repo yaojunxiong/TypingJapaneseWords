@@ -69,14 +69,14 @@ export default function RecitationVideosClient({ lang }: { lang: Lang }) {
     }
   }, [])
 
-  const activateVideo = useCallback(
+  const playVideo = useCallback(
     (videoId: string) => {
       const videoElement = videoRefs.current.get(videoId)
       if (!videoElement) return
 
       pauseOtherVideos(videoId)
       setActiveId(videoId)
-      videoElement.muted = true
+      videoElement.muted = false
       const playResult = videoElement.play()
       if (playResult) {
         void playResult
@@ -94,6 +94,20 @@ export default function RecitationVideosClient({ lang }: { lang: Lang }) {
       }
     },
     [pauseOtherVideos]
+  )
+
+  const continueToNextVideo = useCallback(
+    (currentIndex: number) => {
+      const nextVideo = videos[currentIndex + 1]
+      if (!nextVideo) return
+
+      const nextItem = feedRef.current?.querySelector<HTMLElement>(
+        `[data-video-id="${nextVideo.id}"]`
+      )
+      nextItem?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      window.setTimeout(() => playVideo(nextVideo.id), 320)
+    },
+    [playVideo, videos]
   )
 
   useEffect(() => {
@@ -122,7 +136,8 @@ export default function RecitationVideosClient({ lang }: { lang: Lang }) {
         }
 
         if (nextActiveId) {
-          activateVideo(nextActiveId)
+          setActiveId(nextActiveId)
+          pauseOtherVideos(nextActiveId)
         } else {
           pauseOtherVideos()
           setActiveId(null)
@@ -146,7 +161,7 @@ export default function RecitationVideosClient({ lang }: { lang: Lang }) {
       visibilityRef.current.clear()
       pauseOtherVideos()
     }
-  }, [activateVideo, pauseOtherVideos, videos])
+  }, [pauseOtherVideos, videos])
 
   if (loading) {
     return (
@@ -313,7 +328,6 @@ export default function RecitationVideosClient({ lang }: { lang: Lang }) {
                   }}
                   controls
                   playsInline
-                  muted
                   preload="metadata"
                   poster={video.thumbnailUrl}
                   src={video.publicVideoUrl}
@@ -327,6 +341,7 @@ export default function RecitationVideosClient({ lang }: { lang: Lang }) {
                       return next
                     })
                   }}
+                  onEnded={() => continueToNextVideo(index)}
                   aria-label={t(
                     lang,
                     `第 ${video.lessonNo} 课教材原声会话视频`,
@@ -345,7 +360,7 @@ export default function RecitationVideosClient({ lang }: { lang: Lang }) {
                 {isBlocked && (
                   <button
                     type="button"
-                    onClick={() => activateVideo(video.id)}
+                    onClick={() => playVideo(video.id)}
                     style={{
                       position: 'absolute',
                       inset: '50% auto auto 50%',
