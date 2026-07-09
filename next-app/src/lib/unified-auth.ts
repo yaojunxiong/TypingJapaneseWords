@@ -1,5 +1,5 @@
 const AUTH_ORIGIN = (process.env.NEXT_PUBLIC_AUTH_ORIGIN || 'https://www.jimmyyao.com').replace(/\/+$/, '')
-const STUDY_ORIGIN = (process.env.NEXT_PUBLIC_APP_ORIGIN || 'https://study.jimmyyao.com').replace(/\/+$/, '')
+const STUDY_ORIGIN = 'https://study.jimmyyao.com'
 
 function normalizeStudyPath(value: unknown, fallback = '/lessons') {
   const raw = Array.isArray(value) ? value[0] : value
