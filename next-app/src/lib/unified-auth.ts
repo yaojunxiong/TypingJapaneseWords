@@ -1,7 +1,7 @@
-const AUTH_ORIGIN = (process.env.NEXT_PUBLIC_AUTH_ORIGIN || 'https://www.jimmyyao.com').replace(/\/+$/, '')
+const AUTH_ORIGIN = 'https://www.jimmyyao.com'
 const STUDY_ORIGIN = 'https://study.jimmyyao.com'
 
-function normalizeStudyPath(value: unknown, fallback = '/lessons') {
+function normalizeStudyPath(value: unknown, fallback = '/') {
   const raw = Array.isArray(value) ? value[0] : value
   if (typeof raw !== 'string') return fallback
   const trimmed = raw.trim()
@@ -9,8 +9,9 @@ function normalizeStudyPath(value: unknown, fallback = '/lessons') {
   return trimmed
 }
 
-export function studyNextUrl(value?: unknown, fallback = '/lessons') {
-  return `${STUDY_ORIGIN}${normalizeStudyPath(value, fallback)}`
+export function studyNextUrl(value?: unknown, fallback = '/') {
+  const path = normalizeStudyPath(value, fallback)
+  return path === '/' ? STUDY_ORIGIN : `${STUDY_ORIGIN}${path}`
 }
 
 export function unifiedLoginUrl(nextPath?: unknown) {
@@ -21,6 +22,6 @@ export function unifiedLoginUrl(nextPath?: unknown) {
 
 export function unifiedLogoutUrl(nextPath?: unknown) {
   const url = new URL('/logout', AUTH_ORIGIN)
-  url.searchParams.set('next', studyNextUrl(nextPath, '/'))
+  url.searchParams.set('next', studyNextUrl(nextPath))
   return url.toString()
 }

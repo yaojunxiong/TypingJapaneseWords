@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import type { FormEvent } from 'react'
 import { createClient } from '@/utils/supabase/client'
+import { unifiedLoginUrl, unifiedLogoutUrl } from '@/lib/unified-auth'
 import {
   hasSupabasePublicEnv,
   getSupabaseMissingEnvMessage
@@ -14,23 +15,6 @@ type UserLite = {
 }
 type Props = {
   lang: 'zh' | 'en'
-}
-
-const PROD_ORIGIN = 'https://study.jimmyyao.com'
-
-function pickOAuthOrigin() {
-  const fromEnv = String(process.env.NEXT_PUBLIC_APP_ORIGIN || '').trim()
-  if (fromEnv) return fromEnv.replace(/\/+$/, '')
-  if (typeof window === 'undefined') return PROD_ORIGIN
-
-  const current = String(window.location.origin || '').trim()
-  try {
-    const h = new URL(current).hostname.toLowerCase()
-    if (!h || h.endsWith('github.io')) return PROD_ORIGIN
-    return current
-  } catch {
-    return PROD_ORIGIN
-  }
 }
 
 function t(lang: Props['lang'], zh: string, en: string) {
@@ -79,44 +63,17 @@ export default function AuthActions({ lang }: Props) {
   }, [supabase, supabaseReady])
 
   async function loginWithGoogle() {
-    if (!supabaseReady) {
-      setError(envMessage || t(lang, 'Supabase 环境变量未配置', 'Supabase env vars are not configured'))
-      return
-    }
-    setError('')
-    const origin = pickOAuthOrigin()
-    const { error } = await supabase.auth.signInWithOAuth({
-      provider: 'google',
-      options: { redirectTo: `${origin}/auth/callback?next=/lessons` }
-    })
-    if (error) setError(getAuthErrorMessage(lang, error.message))
+    window.location.href = unifiedLoginUrl()
   }
 
   async function sendMagicLink(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
     const trimmedEmail = email.trim()
-    if (!supabaseReady) {
-      setError(envMessage || t(lang, 'Supabase 环境变量未配置', 'Supabase env vars are not configured'))
-      return
-    }
     if (!trimmedEmail) {
       setError(t(lang, '请输入邮箱地址。', 'Please enter your email address.'))
       return
     }
-
-    setError('')
-    setEmailSent(false)
-    setEmailSending(true)
-    const { error } = await supabase.auth.signInWithOtp({
-      email: trimmedEmail,
-      options: { emailRedirectTo: `${PROD_ORIGIN}/auth/callback?next=/lessons` }
-    })
-    setEmailSending(false)
-    if (error) {
-      setError(getAuthErrorMessage(lang, error.message))
-      return
-    }
-    setEmailSent(true)
+    window.location.href = `${unifiedLoginUrl()}&email=${encodeURIComponent(trimmedEmail)}`
   }
 
   async function logout() {
@@ -124,7 +81,7 @@ export default function AuthActions({ lang }: Props) {
     setError('')
     const { error } = await supabase.auth.signOut()
     if (error) setError(error.message)
-    if (!error) window.location.href = '/login'
+    if (!error) window.location.href = unifiedLogoutUrl()
   }
 
   return (

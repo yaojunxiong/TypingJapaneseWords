@@ -7,6 +7,12 @@ export const createClient = (
 ) => {
   const { url, key } = getSafeSupabasePublicConfig()
   return createServerClient(url, key, {
+    cookieOptions: {
+      domain: process.env.NODE_ENV === 'production' ? '.jimmyyao.com' : undefined,
+      path: '/',
+      sameSite: 'lax',
+      secure: process.env.NODE_ENV === 'production'
+    },
     cookies: {
       getAll() {
         return cookieStore.getAll()
@@ -16,7 +22,13 @@ export const createClient = (
       ) {
         try {
           cookiesToSet.forEach(({ name, value, options }) =>
-            cookieStore.set(name, value, options)
+            cookieStore.set(name, value, {
+              ...options,
+              domain: process.env.NODE_ENV === 'production' ? '.jimmyyao.com' : undefined,
+              path: options.path || '/',
+              sameSite: options.sameSite || 'lax',
+              secure: process.env.NODE_ENV === 'production'
+            })
           )
         } catch {
           // setAll from Server Component can be ignored when middleware refreshes sessions.

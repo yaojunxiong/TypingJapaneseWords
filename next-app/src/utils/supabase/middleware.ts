@@ -19,6 +19,12 @@ export const createClient = async (request: NextRequest) => {
   const { url, key } = getSafeSupabasePublicConfig()
 
   const supabase = createServerClient(url, key, {
+    cookieOptions: {
+      domain: process.env.NODE_ENV === 'production' ? '.jimmyyao.com' : undefined,
+      path: '/',
+      sameSite: 'lax',
+      secure: process.env.NODE_ENV === 'production'
+    },
     cookies: {
       getAll() {
         return request.cookies.getAll()
@@ -29,7 +35,13 @@ export const createClient = async (request: NextRequest) => {
         cookiesToSet.forEach(({ name, value }) => request.cookies.set(name, value))
         supabaseResponse = NextResponse.next({ request })
         cookiesToSet.forEach(({ name, value, options }) =>
-          supabaseResponse.cookies.set(name, value, options)
+          supabaseResponse.cookies.set(name, value, {
+            ...options,
+            domain: process.env.NODE_ENV === 'production' ? '.jimmyyao.com' : undefined,
+            path: options.path || '/',
+            sameSite: options.sameSite || 'lax',
+            secure: process.env.NODE_ENV === 'production'
+          })
         )
       }
     }
