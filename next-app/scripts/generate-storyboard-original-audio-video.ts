@@ -50,6 +50,11 @@ const REVIEWED_SPLITS: Record<number, Record<string, number[]>> = {
     '003': [1.302],
     '004': [1.928],
   },
+  18: {
+    '004': [2.010],
+    '005': [2.920],
+    '008': [1.600],
+  },
 }
 
 function parseArgs(): { lessonNo: number; outputPath: string; keepTemp: boolean } {
