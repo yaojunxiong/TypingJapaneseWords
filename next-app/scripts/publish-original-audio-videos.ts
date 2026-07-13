@@ -11,9 +11,12 @@ type ProjectRow = {
   title: string | null
   line_plan: LinePlanItem[] | null
   output_video_url: string | null
+  public_video_path: string | null
+  public_video_url: string | null
+  published_at: string | null
   updated_at: string
 }
-type Failure = { lessonNo: number; reason: string }
+type Failure = { lessonNo: number; projectId?: string; reason: string }
 
 function parseLessonArg(name: 'from' | 'to', fallback: number) {
   const prefix = `--${name}=`
@@ -84,7 +87,7 @@ async function main() {
   })
   const { data, error } = await supabase
     .from('admin_recitation_video_projects')
-    .select('id, lesson_no, title, line_plan, output_video_url, updated_at')
+    .select('id, lesson_no, title, line_plan, output_video_url, public_video_path, public_video_url, published_at, updated_at')
     .eq('status', 'generated')
     .is('user_id', null)
     .gte('lesson_no', from)
@@ -94,11 +97,12 @@ async function main() {
     .order('updated_at', { ascending: false })
   if (error) throw new Error(`读取 generated projects 失败: ${error.message}`)
 
-  const newestByLesson = new Map<number, ProjectRow>()
+  const projectsByLesson = new Map<number, ProjectRow[]>()
   for (const project of (data || []) as ProjectRow[]) {
-    if (!newestByLesson.has(project.lesson_no) && isPureOriginalAudioProject(project)) {
-      newestByLesson.set(project.lesson_no, project)
-    }
+    if (!isPureOriginalAudioProject(project)) continue
+    const projects = projectsByLesson.get(project.lesson_no) || []
+    projects.push(project)
+    projectsByLesson.set(project.lesson_no, projects)
   }
 
   const published: Array<{ lessonNo: number; projectId: string; publicUrl: string }> = []
@@ -109,65 +113,80 @@ async function main() {
     : `🚀 发布第 ${from}–${to} 课教材原声会话视频`)
 
   for (let lessonNo = from; lessonNo <= to; lessonNo += 1) {
-    const project = newestByLesson.get(lessonNo)
-    if (!project?.output_video_url) {
+    const projects = projectsByLesson.get(lessonNo) || []
+    if (projects.length === 0) {
       const reason = 'no generated original-audio project'
       skipped.push({ lessonNo, reason })
       console.log(`Lesson ${lessonNo} skipped: ${reason}`)
       continue
     }
-    const privatePath = resolvePrivateStoragePath(project.id, project.output_video_url)
-    if (!privatePath) {
-      const reason = 'invalid private storage path'
-      failed.push({ lessonNo, reason })
-      console.error(`Lesson ${lessonNo} failed: ${reason}`)
-      continue
-    }
 
-    const publicPath = `lessons/lesson-${String(lessonNo).padStart(2, '0')}/original-audio.mp4`
-    const publicUrl = supabase.storage.from(PUBLIC_BUCKET).getPublicUrl(publicPath).data.publicUrl
-    if (dryRun) {
-      published.push({ lessonNo, projectId: project.id, publicUrl })
-      console.log(`Lesson ${lessonNo} would publish: ${privatePath} -> ${publicPath}`)
-      continue
-    }
-
-    try {
-      const { data: videoBlob, error: downloadError } = await supabase.storage
-        .from(PRIVATE_BUCKET)
-        .download(privatePath)
-      if (downloadError || !videoBlob) {
-        throw new Error(`private download failed: ${downloadError?.message || 'empty file'}`)
+    for (const project of projects) {
+      if (project.public_video_path && project.public_video_url && project.published_at) {
+        const reason = 'already published as a distinct version'
+        skipped.push({ lessonNo, projectId: project.id, reason })
+        console.log(`Lesson ${lessonNo} project ${project.id} skipped: ${reason}`)
+        continue
       }
-      if (videoBlob.size === 0) throw new Error('private video is empty')
-
-      const { error: uploadError } = await supabase.storage
-        .from(PUBLIC_BUCKET)
-        .upload(publicPath, new Uint8Array(await videoBlob.arrayBuffer()), {
-          contentType: 'video/mp4',
-          cacheControl: '3600',
-          upsert: true,
-        })
-      if (uploadError) throw new Error(`public upload failed: ${uploadError.message}`)
-
-      const { error: updateError } = await supabase
-        .from('admin_recitation_video_projects')
-        .update({
-          public_video_path: publicPath,
-          public_video_url: publicUrl,
-          published_at: new Date().toISOString(),
-          published_by: null,
-        })
-        .eq('id', project.id)
-      if (updateError) {
-        throw new Error(`project publish metadata failed: ${updateError.message}`)
+      if (!project.output_video_url) {
+        const reason = 'generated project has no private output video'
+        failed.push({ lessonNo, projectId: project.id, reason })
+        console.error(`Lesson ${lessonNo} project ${project.id} failed: ${reason}`)
+        continue
       }
-      published.push({ lessonNo, projectId: project.id, publicUrl })
-      console.log(`✅ Lesson ${lessonNo} published: ${publicUrl}`)
-    } catch (publishError) {
-      const reason = publishError instanceof Error ? publishError.message : String(publishError)
-      failed.push({ lessonNo, reason })
-      console.error(`Lesson ${lessonNo} failed: ${reason}`)
+      const privatePath = resolvePrivateStoragePath(project.id, project.output_video_url)
+      if (!privatePath) {
+        const reason = 'invalid private storage path'
+        failed.push({ lessonNo, projectId: project.id, reason })
+        console.error(`Lesson ${lessonNo} project ${project.id} failed: ${reason}`)
+        continue
+      }
+
+      const publicPath = `lessons/lesson-${String(lessonNo).padStart(2, '0')}/projects/${project.id}/original-audio.mp4`
+      const publicUrl = supabase.storage.from(PUBLIC_BUCKET).getPublicUrl(publicPath).data.publicUrl
+      if (dryRun) {
+        published.push({ lessonNo, projectId: project.id, publicUrl })
+        console.log(`Lesson ${lessonNo} project ${project.id} would publish: ${privatePath} -> ${publicPath}`)
+        continue
+      }
+
+      try {
+        const { data: videoBlob, error: downloadError } = await supabase.storage
+          .from(PRIVATE_BUCKET)
+          .download(privatePath)
+        if (downloadError || !videoBlob) {
+          throw new Error(`private download failed: ${downloadError?.message || 'empty file'}`)
+        }
+        if (videoBlob.size === 0) throw new Error('private video is empty')
+
+        const { error: uploadError } = await supabase.storage
+          .from(PUBLIC_BUCKET)
+          .upload(publicPath, new Uint8Array(await videoBlob.arrayBuffer()), {
+            contentType: 'video/mp4',
+            cacheControl: '31536000',
+            upsert: false,
+          })
+        if (uploadError) throw new Error(`public upload failed: ${uploadError.message}`)
+
+        const { error: updateError } = await supabase
+          .from('admin_recitation_video_projects')
+          .update({
+            public_video_path: publicPath,
+            public_video_url: publicUrl,
+            published_at: new Date().toISOString(),
+            published_by: null,
+          })
+          .eq('id', project.id)
+        if (updateError) {
+          throw new Error(`project publish metadata failed: ${updateError.message}`)
+        }
+        published.push({ lessonNo, projectId: project.id, publicUrl })
+        console.log(`✅ Lesson ${lessonNo} project ${project.id} published: ${publicUrl}`)
+      } catch (publishError) {
+        const reason = publishError instanceof Error ? publishError.message : String(publishError)
+        failed.push({ lessonNo, projectId: project.id, reason })
+        console.error(`Lesson ${lessonNo} project ${project.id} failed: ${reason}`)
+      }
     }
   }
 
@@ -176,8 +195,12 @@ async function main() {
   console.log(`skipped count: ${skipped.length}`)
   console.log(`failed lessons: ${failed.length}`)
   published.forEach((item) => console.log(`Lesson ${item.lessonNo}: ${item.publicUrl}`))
-  skipped.forEach((item) => console.log(`Lesson ${item.lessonNo} skipped: ${item.reason}`))
-  failed.forEach((item) => console.log(`Lesson ${item.lessonNo} failed: ${item.reason}`))
+  skipped.forEach((item) => console.log(
+    `Lesson ${item.lessonNo}${item.projectId ? ` project ${item.projectId}` : ''} skipped: ${item.reason}`
+  ))
+  failed.forEach((item) => console.log(
+    `Lesson ${item.lessonNo}${item.projectId ? ` project ${item.projectId}` : ''} failed: ${item.reason}`
+  ))
   if (failed.length > 0) process.exitCode = 1
 }
 

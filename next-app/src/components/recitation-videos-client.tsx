@@ -8,9 +8,12 @@ type RecitationVideo = {
   id: string
   lessonNo: number
   title: string
+  versionKey: string
+  versionNo: number
+  versionLabel: string
+  versionLabelEn: string
   thumbnailUrl: string
   publicVideoUrl: string
-  duration: number | null
   publishedAt: string
   audioType: '教材原声'
 }
@@ -102,10 +105,10 @@ export default function RecitationVideosClient({ lang }: { lang: Lang }) {
       if (!nextVideo) return
 
       const nextItem = feedRef.current?.querySelector<HTMLElement>(
-        `[data-video-id="${nextVideo.id}"]`
+        `[data-video-id="${nextVideo.versionKey}"]`
       )
       nextItem?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-      window.setTimeout(() => playVideo(nextVideo.id), 320)
+      window.setTimeout(() => playVideo(nextVideo.versionKey), 320)
     },
     [playVideo, videos]
   )
@@ -151,7 +154,7 @@ export default function RecitationVideosClient({ lang }: { lang: Lang }) {
 
     for (const video of videos) {
       const item = feedElement.querySelector<HTMLElement>(
-        `[data-video-id="${video.id}"]`
+        `[data-video-id="${video.versionKey}"]`
       )
       if (item) observer.observe(item)
     }
@@ -217,14 +220,18 @@ export default function RecitationVideosClient({ lang }: { lang: Lang }) {
       }}
     >
       {videos.map((video, index) => {
-        const isActive = activeId === video.id
-        const isBlocked = blockedIds.has(video.id)
+        const isActive = activeId === video.versionKey
+        const isBlocked = blockedIds.has(video.versionKey)
+        const nextVideo = videos[index + 1]
+        const nextIsSameLesson = nextVideo?.lessonNo === video.lessonNo
 
         return (
           <article
-            key={video.id}
-            data-video-id={video.id}
+            key={video.versionKey}
+            data-video-id={video.versionKey}
+            data-project-id={video.id}
             data-lesson-no={video.lessonNo}
+            data-version-key={video.versionKey}
             style={{
               height: '100dvh',
               minHeight: 'calc(100dvh - 96px)',
@@ -289,6 +296,18 @@ export default function RecitationVideosClient({ lang }: { lang: Lang }) {
                     style={{
                       padding: '5px 9px',
                       borderRadius: 999,
+                      background: '#f3e8ff',
+                      color: '#7e22ce',
+                      fontSize: 12,
+                      fontWeight: 900,
+                    }}
+                  >
+                    {t(lang, video.versionLabel, video.versionLabelEn)}
+                  </span>
+                  <span
+                    style={{
+                      padding: '5px 9px',
+                      borderRadius: 999,
                       background: '#f1f5f9',
                       color: '#475569',
                       fontSize: 12,
@@ -301,8 +320,8 @@ export default function RecitationVideosClient({ lang }: { lang: Lang }) {
                 <h2 style={{ margin: '6px 0 0', fontSize: 18, lineHeight: 1.25 }}>
                   {t(
                     lang,
-                    `第${video.lessonNo}课 · 教材原声会话视频`,
-                    `Lesson ${video.lessonNo} · Original-audio conversation`
+                    video.title,
+                    `Lesson ${video.lessonNo} · Original-audio conversation · ${video.versionLabelEn}`
                   )}
                 </h2>
               </header>
@@ -323,8 +342,8 @@ export default function RecitationVideosClient({ lang }: { lang: Lang }) {
               >
                 <video
                   ref={(element) => {
-                    if (element) videoRefs.current.set(video.id, element)
-                    else videoRefs.current.delete(video.id)
+                    if (element) videoRefs.current.set(video.versionKey, element)
+                    else videoRefs.current.delete(video.versionKey)
                   }}
                   controls
                   playsInline
@@ -332,20 +351,20 @@ export default function RecitationVideosClient({ lang }: { lang: Lang }) {
                   poster={video.thumbnailUrl}
                   src={video.publicVideoUrl}
                   onPlay={() => {
-                    pauseOtherVideos(video.id)
-                    setActiveId(video.id)
+                    pauseOtherVideos(video.versionKey)
+                    setActiveId(video.versionKey)
                     setBlockedIds((current) => {
-                      if (!current.has(video.id)) return current
+                      if (!current.has(video.versionKey)) return current
                       const next = new Set(current)
-                      next.delete(video.id)
+                      next.delete(video.versionKey)
                       return next
                     })
                   }}
                   onEnded={() => continueToNextVideo(index)}
                   aria-label={t(
                     lang,
-                    `第 ${video.lessonNo} 课教材原声会话视频`,
-                    `Lesson ${video.lessonNo} original-audio recitation video`
+                    `第 ${video.lessonNo} 课教材原声会话视频 · ${video.versionLabel}`,
+                    `Lesson ${video.lessonNo} original-audio recitation video · ${video.versionLabelEn}`
                   )}
                   style={{
                     display: 'block',
@@ -360,7 +379,7 @@ export default function RecitationVideosClient({ lang }: { lang: Lang }) {
                 {isBlocked && (
                   <button
                     type="button"
-                    onClick={() => playVideo(video.id)}
+                    onClick={() => playVideo(video.versionKey)}
                     style={{
                       position: 'absolute',
                       inset: '50% auto auto 50%',
@@ -471,8 +490,10 @@ export default function RecitationVideosClient({ lang }: { lang: Lang }) {
                     lineHeight: 1.2,
                   }}
                 >
-                  {index < videos.length - 1
-                    ? t(lang, '向上滑动观看下一课 ↑', 'Swipe up for the next lesson ↑')
+                  {nextVideo
+                    ? nextIsSameLesson
+                      ? t(lang, '向上滑动观看本课其他版本 ↑', 'Swipe up for another edition of this lesson ↑')
+                      : t(lang, '向上滑动观看下一个视频 ↑', 'Swipe up for the next video ↑')
                     : t(lang, '已到达当前视频末尾', 'You have reached the latest video')}
                 </p>
               </footer>
