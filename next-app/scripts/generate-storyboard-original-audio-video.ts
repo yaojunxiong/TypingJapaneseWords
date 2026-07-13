@@ -39,6 +39,12 @@ type FramePlan = {
   duration: number
 }
 
+type ReviewedAudioRange = {
+  sourcePath: string
+  start: number
+  end: number
+}
+
 const WIDTH = 1080
 const HEIGHT = 1920
 const FPS = 30
@@ -60,6 +66,30 @@ const REVIEWED_SPLITS: Record<number, Record<string, number[]>> = {
     '004': [0.973],
     '006': [4.335],
     '009': [3.010],
+  },
+  20: {
+    '002': [1.254],
+    '007': [0.805],
+    '010': [1.624],
+    '011': [0.930],
+  },
+}
+
+// Lesson 20's generated line clips 10 and 11 cut through the final syllable of
+// line 10. Use adjacent, human-reviewed ranges from the source track so the
+// storyboard video keeps both lines intact without changing the shared clips.
+const REVIEWED_AUDIO_RANGES: Record<number, Record<string, ReviewedAudioRange>> = {
+  20: {
+    '010': {
+      sourcePath: 'source-230001/tracks/cd-069.mp3',
+      start: 25.000,
+      end: 27.650,
+    },
+    '011': {
+      sourcePath: 'source-230001/tracks/cd-069.mp3',
+      start: 27.650,
+      end: 29.500,
+    },
   },
 }
 
@@ -183,7 +213,8 @@ async function buildPlan(lessonNo: number): Promise<FramePlan[]> {
   const storyboardPath = path.resolve(process.cwd(), 'src/data/minna/storyboards', `${lessonId}.json`)
   const reviewPath = path.resolve(process.cwd(), 'src/data/minna/storyboards', `${lessonId}-image-prompts-review.json`)
   const imageDir = path.resolve(process.cwd(), 'public/assets/storyboards', lessonId, 'vertical-v2')
-  const audioDir = path.resolve(repoRoot, 'EveryonesJapanese/original-audio/line-segments', lessonId)
+  const originalAudioRoot = path.resolve(repoRoot, 'EveryonesJapanese/original-audio')
+  const audioDir = path.join(originalAudioRoot, 'line-segments', lessonId)
 
   const storyboard = JSON.parse(await fs.readFile(storyboardPath, 'utf8')) as StoryboardData
   const review = JSON.parse(await fs.readFile(reviewPath, 'utf8')) as ReviewData
@@ -200,18 +231,26 @@ async function buildPlan(lessonNo: number): Promise<FramePlan[]> {
   }
 
   const rangesByFrame = new Map<string, { start: number; end: number }>()
+  const audioPathBySource = new Map<string, string>()
   for (const [sourceId, group] of promptsBySource.entries()) {
     const lineNo = sourceLineNo(sourceId)
     const suffix = String(lineNo).padStart(2, '0')
-    const audioPath = path.join(audioDir, `l${String(lessonNo).padStart(2, '0')}-${suffix}.mp3`)
-    await assertFile(audioPath, `第 ${lineNo} 句原声`)
-    const duration = probeDuration(audioPath)
     const sourceSuffix = String(lineNo).padStart(3, '0')
+    const reviewedAudioRange = REVIEWED_AUDIO_RANGES[lessonNo]?.[sourceSuffix]
+    const audioPath = reviewedAudioRange
+      ? path.join(originalAudioRoot, reviewedAudioRange.sourcePath)
+      : path.join(audioDir, `l${String(lessonNo).padStart(2, '0')}-${suffix}.mp3`)
+    await assertFile(audioPath, `第 ${lineNo} 句原声`)
+    const audioStart = reviewedAudioRange?.start ?? 0
+    const duration = reviewedAudioRange
+      ? reviewedAudioRange.end - reviewedAudioRange.start
+      : probeDuration(audioPath)
     const reviewedCuts = REVIEWED_SPLITS[lessonNo]?.[sourceSuffix]
     const cuts = reviewedCuts && reviewedCuts.length === group.length - 1
       ? reviewedCuts
       : proportionalCuts(group, duration)
-    const boundaries = [0, ...cuts, duration]
+    const boundaries = [audioStart, ...cuts.map((cut) => audioStart + cut), audioStart + duration]
+    audioPathBySource.set(sourceId, audioPath)
     group.forEach((prompt, index) => {
       rangesByFrame.set(prompt.storyboardLineId, {
         start: boundaries[index],
@@ -226,10 +265,10 @@ async function buildPlan(lessonNo: number): Promise<FramePlan[]> {
     const line = lineById.get(prompt.storyboardTextLineId)
     if (!line) throw new Error(`找不到分镜文字：${prompt.storyboardTextLineId}`)
     const lineNo = sourceLineNo(prompt.sourceLineId)
-    const lineSuffix = String(lineNo).padStart(2, '0')
     const imagePath = path.join(imageDir, `${prompt.storyboardLineId}.png`)
-    const audioPath = path.join(audioDir, `l${String(lessonNo).padStart(2, '0')}-${lineSuffix}.mp3`)
+    const audioPath = audioPathBySource.get(prompt.sourceLineId)
     const range = rangesByFrame.get(prompt.storyboardLineId)
+    if (!audioPath) throw new Error(`找不到原声音频：${prompt.sourceLineId}`)
     if (!range) throw new Error(`找不到音频范围：${prompt.storyboardLineId}`)
     await assertFile(imagePath, `分镜 ${prompt.storyboardLineId}`)
 
