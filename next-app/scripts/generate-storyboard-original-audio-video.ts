@@ -75,9 +75,9 @@ const REVIEWED_SPLITS: Record<number, Record<string, number[]>> = {
   },
 }
 
-// Lesson 20's generated line clips 10 and 11 cut through the final syllable of
-// line 10. Use adjacent, human-reviewed ranges from the source track so the
-// storyboard video keeps both lines intact without changing the shared clips.
+// Some generated line clips cut through a final syllable or the next line's
+// opening sound. Use adjacent, human-reviewed ranges from the source tracks so
+// the storyboard videos keep every line intact without changing shared clips.
 const REVIEWED_AUDIO_RANGES: Record<number, Record<string, ReviewedAudioRange>> = {
   20: {
     '010': {
@@ -89,6 +89,38 @@ const REVIEWED_AUDIO_RANGES: Record<number, Record<string, ReviewedAudioRange>> 
       sourcePath: 'source-230001/tracks/cd-069.mp3',
       start: 27.650,
       end: 29.500,
+    },
+  },
+  21: {
+    '002': {
+      sourcePath: 'source-230001/tracks/cd-072.mp3',
+      start: 10.000,
+      end: 13.475,
+    },
+    '003': {
+      sourcePath: 'source-230001/tracks/cd-072.mp3',
+      start: 13.475,
+      end: 17.000,
+    },
+    '005': {
+      sourcePath: 'source-230001/tracks/cd-072.mp3',
+      start: 25.820,
+      end: 30.464,
+    },
+    '006': {
+      sourcePath: 'source-230001/tracks/cd-072.mp3',
+      start: 30.464,
+      end: 35.000,
+    },
+    '007': {
+      sourcePath: 'source-230001/tracks/cd-072.mp3',
+      start: 35.000,
+      end: 36.774,
+    },
+    '008': {
+      sourcePath: 'source-230001/tracks/cd-072.mp3',
+      start: 36.774,
+      end: 41.000,
     },
   },
 }
