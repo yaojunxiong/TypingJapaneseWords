@@ -1,138 +1,228 @@
 {
   "lessonNo": 28,
   "conversationTitle": "出張も多いし、試験もあるし……",
-  "reviewStatus": "pending-human-review",
-  "generationAllowed": false,
+  "reviewStatus": "approved",
+  "generationAllowed": true,
   "prompts": [
     {
       "storyboardLineId": "sb-28-001",
       "storyboardTextLineId": "l28-conv-001-s01",
       "sourceLineId": "l28-conv-001",
-      "imagePromptCn": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦小川幸子对ミラー说这一句，保持真实课文场景和人物关系。 小川幸子看向ミラー，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦小川幸子对ミラー说这一句，保持真实课文场景和人物关系。 小川幸子看向ミラー，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "imagePromptCn": "第28课教材会话竖屏故事分镜，日语教材动画插画，干净柔和的赛璐璐着色，白天，9:16，1080×1920。恰好两名成年人：左侧始终是小川幸子，年轻日本女性，深棕色侧分短波波头、棕眼、芥末黄开衫、奶油白圆领上衣、米色长裙；右侧始终是ミラー，年轻白人男性，短波浪金发、蓝眼、中蓝色长袖纽扣衬衫且袖口卷至前臂、深海军蓝长裤。两人始终坐在同一张小圆形浅木咖啡桌两侧。安静白天咖啡店，背后同一扇大方窗，窗外朦胧现代日本城市和绿树，暖木墙，右后方同一木书架。桌上始终恰好两只纯白茶杯、两只配套杯碟、正中一盆小绿多肉；ミラー右手边一册合上的无字深蓝笔记本；座椅旁一只小黑色公文包。左侧小川微微前倾，一手靠近胸口，张口礼貌请求，神情认真温和；右侧ミラー闭口专注倾听。人物和场景限制在上部72%，底部28%是完整连续的纯暖象牙色空白字幕区。无任何文字。",
+      "imagePromptJa": "第28課の教材会話用縦型ストーリーボード、日本語教材アニメ調、清潔で柔らかなセル塗り、昼、9:16、1080×1920。成人は必ず二人だけ。左は常に小川幸子、若い日本人女性、濃い茶色のサイド分けショートボブ、茶色い目、マスタード色カーディガン、クリーム白の丸首、ベージュのロングスカート。右は常にミラー、若い白人男性、短い波打つ金髪、青い目、中青色の長袖ボタンシャツ、袖は前腕までまくり、濃紺のズボン。二人は同じ小さな丸い明るい木のカフェテーブルを挟んで座る。同じ静かな昼のカフェ、大きな四角い窓、ぼけた現代日本の街と緑、暖かな木壁、右奥の同じ木製本棚。卓上は白いティーカップ二つとソーサー二枚、中央の小さな多肉植物一つだけ。ミラーの右に閉じた無地の紺ノート、椅子の横に小さな黒い仕事鞄一つ。左の小川が少し前傾し、片手を胸元に添え、口を開けて丁寧に頼む。右のミラーは口を閉じて聞く。上部72%だけに人物と場面、下部28%は連続した無地の暖かいアイボリー。文字なし。",
+      "negativePrompt": "readable text, captions, subtitles, letters, numbers, speech bubbles, thought bubbles, inset panels, montage, flashback, UI, logos, watermarks, maps, flags, calendars, clocks, airplanes, trains, classrooms, blackboards, teacher costume, extra people, friend, teacher, waiter, host family, snacks, cake, pastries, plates, extra cups, missing cups, extra plants, duplicated props, open notebook, readable book title, swapped left-right positions, wardrobe changes, wrong speaker, open mouth on listener, cropped hands, extra fingers, deformed hands, extra limbs, character fusion, objects intruding into bottom blank panel, aggressive demand, pointing finger at Miller",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-28-002",
       "storyboardTextLineId": "l28-conv-002-s01",
       "sourceLineId": "l28-conv-002",
-      "imagePromptCn": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦ミラー对小川幸子说这一句，保持真实课文场景和人物关系。 ミラー看向小川幸子，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦ミラー对小川幸子说这一句，保持真实课文场景和人物关系。 ミラー看向小川幸子，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "imagePromptCn": "第28课教材会话竖屏故事分镜，日语教材动画插画，柔和白天光线，9:16，1080×1920。恰好两名成年人并固定座位服装：左侧小川幸子，深棕色侧分短波波头、棕眼、芥末黄开衫、奶油白圆领上衣、米色长裙；右侧ミラー，短波浪金发、蓝眼、中蓝色卷袖纽扣衬衫、深海军蓝长裤。两人坐在同一张小圆浅木桌两侧，同一安静白天咖啡店，大方窗外是朦胧现代日本城市和绿树，暖木墙，右后方同一木书架。桌上恰好两只白茶杯、两只杯碟、正中一盆小多肉；ミラー右边是合上的无字深蓝笔记本，椅旁一只小黑公文包。右侧ミラー微张口，轻抬一只开放手掌自然询问；左侧小川闭口等待。上部72%构图，底部28%为完整纯暖象牙色留白，无文字。",
+      "imagePromptJa": "第28課の縦型教材ストーリーボード、柔らかな昼光、日本語教材アニメ調、9:16、1080×1920。成人は二人だけ。左は濃茶のショートボブ、茶色い目、マスタード色カーディガン、クリーム白の丸首、ベージュのロングスカートの小川幸子。右は短い波打つ金髪、青い目、中青色の巻き袖ボタンシャツ、濃紺ズボンのミラー。二人は同じ小さな丸い明るい木のテーブルを挟む。同じ静かな昼のカフェ、四角い大窓、ぼけた日本の街と緑、木壁、右奥の同じ木製本棚。卓上は白いカップ二つとソーサー二枚、中央の多肉植物一つ、ミラー右に閉じた無地の紺ノート、椅子横に黒い仕事鞄一つ。右のミラーが口を少し開け、片方の開いた手を軽く上げて尋ねる。左の小川は口を閉じて待つ。上部72%、下部28%は無地の暖かいアイボリー。文字なし。",
+      "negativePrompt": "readable text, captions, subtitles, letters, numbers, speech bubbles, thought bubbles, inset panels, montage, flashback, UI, logos, watermarks, maps, flags, calendars, clocks, airplanes, trains, classrooms, blackboards, teacher costume, extra people, friend, teacher, waiter, host family, snacks, cake, pastries, plates, extra cups, missing cups, extra plants, duplicated props, open notebook, readable book title, swapped left-right positions, wardrobe changes, wrong speaker, open mouth on listener, cropped hands, extra fingers, deformed hands, extra limbs, character fusion, objects intruding into bottom blank panel, angry interrogation",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-28-003",
       "storyboardTextLineId": "l28-conv-003-s01",
       "sourceLineId": "l28-conv-003",
-      "imagePromptCn": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦小川幸子对ミラー说这一句，保持真实课文场景和人物关系。 小川幸子看向ミラー，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦小川幸子对ミラー说这一句，保持真实课文场景和人物关系。 小川幸子看向ミラー，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "imagePromptCn": "第28课教材会话竖屏故事分镜，日语教材动画插画，柔和赛璐璐着色，白天，9:16，1080×1920。恰好两人：左侧小川幸子，深棕短波波头、芥末黄开衫、奶油白上衣、米色长裙；右侧ミラー，短波浪金发、中蓝色卷袖纽扣衬衫、深海军蓝长裤。两人固定坐在同一张小圆浅木咖啡桌两侧。同一咖啡店、大方窗、朦胧现代日本城市和绿树、暖木墙、右后方木书架。桌上固定恰好两杯白茶、两只杯碟、中央一盆小多肉；右侧固定合上的无字深蓝笔记本和椅旁一只黑色公文包。小川张口认真透露八月出行计划，一手从胸前自然向远方展开；ミラー闭口专注听。保持咖啡店现实画面。上部72%，底部28%纯暖象牙色留白，无文字。",
+      "imagePromptJa": "第28課の縦型教材会話絵、日本語教材アニメ調、柔らかなセル塗り、昼、9:16、1080×1920。二人だけ。左の小川幸子は濃茶ショートボブ、マスタード色カーディガン、クリーム白の上衣、ベージュのロングスカート。右のミラーは短い波打つ金髪、中青色の巻き袖ボタンシャツ、濃紺ズボン。同じ丸い明るい木のカフェテーブル、同じ大窓とぼけた日本の街と緑、木壁、右奥の本棚。白いカップ二つ、ソーサー二枚、中央の多肉植物一つ、閉じた無地の紺ノート一冊、椅子横の黒い仕事鞄一つ。小川が口を開け、胸元から遠くへ片手を自然に広げて八月の遠出を打ち明ける。ミラーは口を閉じて聞く。現実のカフェのまま。上部72%、下部28%は無地の暖かいアイボリー。文字なし。",
+      "negativePrompt": "readable text, captions, subtitles, letters, numbers, speech bubbles, thought bubbles, inset panels, montage, flashback, UI, logos, watermarks, maps, flags, calendars, clocks, airplanes, trains, classrooms, blackboards, teacher costume, extra people, friend, teacher, waiter, host family, snacks, cake, pastries, plates, extra cups, missing cups, extra plants, duplicated props, open notebook, readable book title, swapped left-right positions, wardrobe changes, wrong speaker, open mouth on listener, cropped hands, extra fingers, deformed hands, extra limbs, character fusion, objects intruding into bottom blank panel, Australian flag, map, globe, calendar, airport, suitcase, travel inset",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-28-004",
-      "storyboardTextLineId": "l28-conv-004-s01",
-      "sourceLineId": "l28-conv-004",
-      "imagePromptCn": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦ミラー对小川幸子说这一句，保持真实课文场景和人物关系。 ミラー看向小川幸子，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦ミラー对小川幸子说这一句，保持真实课文场景和人物关系。 ミラー看向小川幸子，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "storyboardTextLineId": "l28-conv-003-s02",
+      "sourceLineId": "l28-conv-003",
+      "imagePromptCn": "第28课竖屏教材会话分镜，日本教材动画风格，柔和白天光线，9:16，1080×1920。恰好两名成年人，左侧始终小川幸子：深棕色短波波头、芥末黄开衫、奶油白上衣、米色长裙；右侧始终ミラー：短波浪金发、中蓝卷袖纽扣衬衫、深海军蓝长裤。同一安静咖啡店与同一小圆浅木桌，大方窗外朦胧日本城市绿树、暖木墙、右后方木书架。桌上固定两杯白茶、两只杯碟、中央一盆多肉，ミラー右手边合上的无字深蓝笔记本，椅旁一只黑公文包。小川张口温和微笑，双手自然向前开放，解释要去寄宿；ミラー闭口听。上部72%，底部28%纯暖象牙色连续留白，无文字。",
+      "imagePromptJa": "第28課の縦型教材会話ストーリーボード、日本語教材アニメ調、柔らかな昼光、9:16、1080×1920。成人二人だけ。左は濃茶ショートボブ、マスタード色カーディガン、クリーム白の上衣、ベージュのロングスカートの小川。右は短い波打つ金髪、中青色の巻き袖ボタンシャツ、濃紺ズボンのミラー。同じ静かなカフェと丸い明るい木のテーブル、大窓の外のぼけた日本の街と緑、木壁、右奥の本棚。白いカップ二つ、ソーサー二枚、中央の多肉植物一つ、閉じた無地の紺ノート、椅子横の黒い仕事鞄一つ。小川が口を開けて穏やかに微笑み、両手を自然に前へ開いてホームステイを説明する。ミラーは口を閉じる。上部72%、下部28%は無地の暖かいアイボリー。文字なし。",
+      "negativePrompt": "readable text, captions, subtitles, letters, numbers, speech bubbles, thought bubbles, inset panels, montage, flashback, UI, logos, watermarks, maps, flags, calendars, clocks, airplanes, trains, classrooms, blackboards, teacher costume, extra people, friend, teacher, waiter, host family, snacks, cake, pastries, plates, extra cups, missing cups, extra plants, duplicated props, open notebook, readable book title, swapped left-right positions, wardrobe changes, wrong speaker, open mouth on listener, cropped hands, extra fingers, deformed hands, extra limbs, character fusion, objects intruding into bottom blank panel, host family, house cutaway, family members, luggage, flashback",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-28-005",
-      "storyboardTextLineId": "l28-conv-005-s01",
-      "sourceLineId": "l28-conv-005",
-      "imagePromptCn": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦小川幸子对ミラー说这一句，保持真实课文场景和人物关系。 小川幸子看向ミラー，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦小川幸子对ミラー说这一句，保持真实课文场景和人物关系。 小川幸子看向ミラー，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "storyboardTextLineId": "l28-conv-004-s01",
+      "sourceLineId": "l28-conv-004",
+      "imagePromptCn": "第28课竖屏教材故事分镜，日语教材动画插画，柔和白天光，9:16，1080×1920。仅两名成人：左侧小川，深棕短波波头、芥末黄开衫、奶油白上衣、米色长裙；右侧ミラー，短波浪金发、中蓝卷袖衬衫、深海军蓝长裤。固定同一咖啡店、同一小圆浅木桌、大方窗、日本城市绿树、暖木墙、右后方木书架。桌上恰好两只白杯和两只杯碟、正中小多肉，右侧合上的无字深蓝笔记本，椅旁一只黑公文包。右侧ミラー张口，略感惊喜、眉毛抬起，以右手开放式询问“寄宿吗”；左侧小川闭口看他。上部72%，底部28%纯暖象牙色留白，无文字。",
+      "imagePromptJa": "第28課の縦型教材絵、日本語教材アニメ調、柔らかな昼光、9:16、1080×1920。成人二人だけ。左の小川は濃茶ショートボブ、マスタード色カーディガン、白い上衣、ベージュのロングスカート。右のミラーは短い波打つ金髪、中青色の巻き袖シャツ、濃紺ズボン。同じカフェ、同じ丸い明るい木のテーブル、大窓、日本の街と緑、木壁、右奥の本棚。白いカップ二つとソーサー二枚、中央の多肉植物、閉じた無地の紺ノート、黒い仕事鞄一つ。右のミラーが口を開け、少し驚いて眉を上げ、開いた右手でホームステイかと尋ねる。左の小川は口を閉じる。上部72%、下部28%は無地のアイボリー。文字なし。",
+      "negativePrompt": "readable text, captions, subtitles, letters, numbers, speech bubbles, thought bubbles, inset panels, montage, flashback, UI, logos, watermarks, maps, flags, calendars, clocks, airplanes, trains, classrooms, blackboards, teacher costume, extra people, friend, teacher, waiter, host family, snacks, cake, pastries, plates, extra cups, missing cups, extra plants, duplicated props, open notebook, readable book title, swapped left-right positions, wardrobe changes, wrong speaker, open mouth on listener, cropped hands, extra fingers, deformed hands, extra limbs, character fusion, objects intruding into bottom blank panel, exaggerated shock",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-28-006",
-      "storyboardTextLineId": "l28-conv-006-s01",
-      "sourceLineId": "l28-conv-006",
-      "imagePromptCn": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦ミラー对小川幸子说这一句，保持真实课文场景和人物关系。 ミラー看向小川幸子，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦ミラー对小川幸子说这一句，保持真实课文场景和人物关系。 ミラー看向小川幸子，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "storyboardTextLineId": "l28-conv-004-s02",
+      "sourceLineId": "l28-conv-004",
+      "imagePromptCn": "第28课竖屏教材故事分镜，日语教材动画插画，柔和白天光，9:16，1080×1920。仅两名成人且左右固定：左侧小川幸子，深棕短波波头、芥末黄开衫、奶油白上衣、米色长裙；右侧ミラー，短波浪金发、中蓝卷袖衬衫、深海军蓝长裤。同一咖啡店、圆形浅木桌、大方窗、日本城市绿树、暖木墙和右后方木书架。桌上固定两只白茶杯和两只杯碟、正中小多肉、右边合上无字深蓝笔记本，椅旁一只黑公文包。ミラー张口温暖赞同地微笑、轻点头并开放手掌；小川闭口愉快听。上部72%，底部28%纯暖象牙色留白，无文字。",
+      "imagePromptJa": "第28課の縦型教材ストーリーボード、日本語教材アニメ調、柔らかな昼光、9:16、1080×1920。成人は二人だけ、左は小川、右はミラー。小川は濃茶ショートボブ、マスタード色カーディガン、白い上衣、ベージュのロングスカート。ミラーは短い波打つ金髪、中青色の巻き袖シャツ、濃紺ズボン。同じカフェ、丸い明るい木のテーブル、大窓、日本の街と緑、木壁、右奥の本棚。白いカップ二つ、ソーサー二枚、多肉植物一つ、閉じた無地の紺ノート、黒い仕事鞄一つ。ミラーが口を開け、温かく微笑んで軽くうなずき、開いた手で賛同する。小川は口を閉じて喜ぶ。上部72%、下部28%は無地のアイボリー。文字なし。",
+      "negativePrompt": "readable text, captions, subtitles, letters, numbers, speech bubbles, thought bubbles, inset panels, montage, flashback, UI, logos, watermarks, maps, flags, calendars, clocks, airplanes, trains, classrooms, blackboards, teacher costume, extra people, friend, teacher, waiter, host family, snacks, cake, pastries, plates, extra cups, missing cups, extra plants, duplicated props, open notebook, readable book title, swapped left-right positions, wardrobe changes, wrong speaker, open mouth on listener, cropped hands, extra fingers, deformed hands, extra limbs, character fusion, objects intruding into bottom blank panel, exaggerated thumbs-up, celebration props",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-28-007",
-      "storyboardTextLineId": "l28-conv-007-s01",
-      "sourceLineId": "l28-conv-007",
-      "imagePromptCn": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦小川幸子对ミラー说这一句，保持真实课文场景和人物关系。 小川幸子看向ミラー，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦小川幸子对ミラー说这一句，保持真实课文场景和人物关系。 小川幸子看向ミラー，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "storyboardTextLineId": "l28-conv-005-s01",
+      "sourceLineId": "l28-conv-005",
+      "imagePromptCn": "第28课竖屏教材会话分镜，日语教材动画风格，柔和赛璐璐着色，白天，9:16，1080×1920。恰好两人，左侧小川：深棕短波波头、芥末黄开衫、奶油白上衣、米色长裙；右侧ミラー：短波浪金发、中蓝卷袖衬衫、深海军蓝长裤。固定同一咖啡店和小圆浅木桌，大窗外朦胧日本城市绿树、暖木墙、右后方木书架。桌上始终两只白杯、两只杯碟、中央一盆小多肉、右边合上无字深蓝笔记本，椅旁一只黑公文包。左侧小川张口轻点头，随后抬起一手表示继续说明；右侧ミラー闭口听。上部72%，底部28%纯暖象牙色留白，无文字。",
+      "imagePromptJa": "第28課の縦型教材会話絵、日本語教材アニメ調、柔らかなセル塗り、昼、9:16、1080×1920。二人だけ。左の小川は濃茶ショートボブ、マスタード色カーディガン、白い上衣、ベージュのロングスカート。右のミラーは短い波打つ金髪、中青色の巻き袖シャツ、濃紺ズボン。同じカフェと丸い明るい木のテーブル、大窓の外のぼけた日本の街と緑、木壁、右奥の本棚。白いカップ二つ、ソーサー二枚、多肉植物一つ、閉じた無地の紺ノート、黒い仕事鞄一つ。左の小川が口を開け、軽くうなずいてから片手を上げて話を続ける。右のミラーは口を閉じる。上部72%、下部28%は無地のアイボリー。文字なし。",
+      "negativePrompt": "readable text, captions, subtitles, letters, numbers, speech bubbles, thought bubbles, inset panels, montage, flashback, UI, logos, watermarks, maps, flags, calendars, clocks, airplanes, trains, classrooms, blackboards, teacher costume, extra people, friend, teacher, waiter, host family, snacks, cake, pastries, plates, extra cups, missing cups, extra plants, duplicated props, open notebook, readable book title, swapped left-right positions, wardrobe changes, wrong speaker, open mouth on listener, cropped hands, extra fingers, deformed hands, extra limbs, character fusion, objects intruding into bottom blank panel, new objects",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-28-008",
-      "storyboardTextLineId": "l28-conv-008-s01",
-      "sourceLineId": "l28-conv-008",
-      "imagePromptCn": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦小川幸子对ミラー说这一句，保持真实课文场景和人物关系。 小川幸子看向ミラー，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦小川幸子对ミラー说这一句，保持真实课文场景和人物关系。 小川幸子看向ミラー，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "storyboardTextLineId": "l28-conv-005-s02",
+      "sourceLineId": "l28-conv-005",
+      "imagePromptCn": "第28课竖屏教材会话分镜，日本教材动画插画，柔和白天光，9:16，1080×1920。仅两名成人：左侧小川幸子，深棕短波波头、芥末黄开衫、奶油白上衣、米色长裙；右侧ミラー，短波浪金发、中蓝卷袖纽扣衬衫、深海军蓝长裤。固定同一安静咖啡店、小圆浅木桌、大方窗、朦胧日本城市绿树、暖木墙、右后方木书架。桌上恰好两杯白茶和两只杯碟、中央小多肉、右侧合上的无字深蓝笔记本，椅旁一只黑色公文包。小川张口用双手自然解释与朋友学英语，表情从说明转为略担忧；ミラー闭口专注听。朋友不得出现。上部72%，底部28%纯暖象牙色留白，无文字。",
+      "imagePromptJa": "第28課の縦型教材会話ストーリーボード、日本語教材アニメ調、柔らかな昼光、9:16、1080×1920。成人二人だけ。左の小川は濃茶ショートボブ、マスタード色カーディガン、白い上衣、ベージュのロングスカート。右のミラーは短い波打つ金髪、中青色の巻き袖ボタンシャツ、濃紺ズボン。同じ静かなカフェ、丸い明るい木のテーブル、大窓、日本の街と緑、木壁、右奥の本棚。白いカップ二つとソーサー二枚、中央の多肉植物、閉じた無地の紺ノート、黒い仕事鞄一つ。小川が口を開けて両手で自然に説明し、少し心配な表情になる。ミラーは口を閉じて聞く。友人は描かない。上部72%、下部28%は無地のアイボリー。文字なし。",
+      "negativePrompt": "readable text, captions, subtitles, letters, numbers, speech bubbles, thought bubbles, inset panels, montage, flashback, UI, logos, watermarks, maps, flags, calendars, clocks, airplanes, trains, classrooms, blackboards, teacher costume, extra people, friend, teacher, waiter, host family, snacks, cake, pastries, plates, extra cups, missing cups, extra plants, duplicated props, open notebook, readable book title, swapped left-right positions, wardrobe changes, wrong speaker, open mouth on listener, cropped hands, extra fingers, deformed hands, extra limbs, character fusion, objects intruding into bottom blank panel, third person, English letters, textbooks, study montage",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-28-009",
-      "storyboardTextLineId": "l28-conv-009-s01",
-      "sourceLineId": "l28-conv-009",
-      "imagePromptCn": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦ミラー对小川幸子说这一句，保持真实课文场景和人物关系。 ミラー看向小川幸子，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦ミラー对小川幸子说这一句，保持真实课文场景和人物关系。 ミラー看向小川幸子，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "storyboardTextLineId": "l28-conv-006-s01",
+      "sourceLineId": "l28-conv-006",
+      "imagePromptCn": "第28课竖屏教材分镜，日语教材动画风格，柔和白天光，9:16，1080×1920。恰好两名成年人，左侧小川固定深棕短波波头、芥末黄开衫、奶油白上衣、米色长裙；右侧ミラー固定短波浪金发、中蓝卷袖衬衫、深海军蓝长裤。同一安静咖啡店、小圆浅木桌、大方窗、日本城市绿树、暖木墙、右后方木书架。桌上固定两只白茶杯、两只杯碟、中央多肉、右边合上的无字深蓝笔记本，椅旁一个黑公文包。右侧ミラー小幅张口、轻点头回应，双手放松；左侧小川闭口继续看他。上部72%，底部28%纯暖象牙色留白，无文字。",
+      "imagePromptJa": "第28課の縦型教材絵、日本語教材アニメ調、柔らかな昼光、9:16、1080×1920。成人二人だけ。左の小川は濃茶ショートボブ、マスタード色カーディガン、白い上衣、ベージュのロングスカート。右のミラーは短い波打つ金髪、中青色の巻き袖シャツ、濃紺ズボン。同じ静かなカフェ、丸い明るい木のテーブル、大窓、日本の街と緑、木壁、右奥の本棚。白いカップ二つとソーサー二枚、多肉植物一つ、閉じた無地の紺ノート、黒い仕事鞄一つ。右のミラーが口を少し開け、軽くうなずき、両手は落ち着かせる。左の小川は口を閉じる。上部72%、下部28%は無地のアイボリー。文字なし。",
+      "negativePrompt": "readable text, captions, subtitles, letters, numbers, speech bubbles, thought bubbles, inset panels, montage, flashback, UI, logos, watermarks, maps, flags, calendars, clocks, airplanes, trains, classrooms, blackboards, teacher costume, extra people, friend, teacher, waiter, host family, snacks, cake, pastries, plates, extra cups, missing cups, extra plants, duplicated props, open notebook, readable book title, swapped left-right positions, wardrobe changes, wrong speaker, open mouth on listener, cropped hands, extra fingers, deformed hands, extra limbs, character fusion, objects intruding into bottom blank panel, big gesture",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-28-010",
-      "storyboardTextLineId": "l28-conv-010-s01",
-      "sourceLineId": "l28-conv-010",
-      "imagePromptCn": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦小川幸子对ミラー说这一句，保持真实课文场景和人物关系。 小川幸子看向ミラー，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦小川幸子对ミラー说这一句，保持真实课文场景和人物关系。 小川幸子看向ミラー，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "storyboardTextLineId": "l28-conv-007-s01",
+      "sourceLineId": "l28-conv-007",
+      "imagePromptCn": "第28课竖屏教材会话分镜，日语教材动画风格，柔和赛璐璐着色，白天，9:16，1080×1920。恰好两名成人且固定：左侧小川，深棕短波波头、芥末黄开衫、奶油白上衣、米色长裙；右侧ミラー，短波浪金发、中蓝卷袖衬衫、深海军蓝长裤。同一安静咖啡店和小圆浅木桌，大窗、日本城市绿树、暖木墙、右后方书架。桌上始终两只白杯和杯碟、中央小多肉、右侧合上无字深蓝笔记本，椅旁一只黑公文包。小川张口，神情苦恼、肩部略低，一手轻靠近脸颊或胸前，说明总是学不好；ミラー闭口同情倾听。上部72%，底部28%纯暖象牙色留白，无文字。",
+      "imagePromptJa": "第28課の縦型教材会話絵、日本語教材アニメ調、柔らかなセル塗り、昼、9:16、1080×1920。成人二人だけ。左の小川は濃茶ショートボブ、マスタード色カーディガン、白い上衣、ベージュのロングスカート。右のミラーは短い波打つ金髪、中青色の巻き袖シャツ、濃紺ズボン。同じ静かなカフェと丸い木のテーブル、大窓、日本の街と緑、木壁、右奥の本棚。白いカップ二つとソーサー二枚、中央の多肉植物、閉じた無地の紺ノート、黒い仕事鞄一つ。小川が口を開け、肩を少し落とし、片手を頬か胸元に寄せて上達しない悩みを話す。ミラーは口を閉じて共感する。上部72%、下部28%は無地のアイボリー。文字なし。",
+      "negativePrompt": "readable text, captions, subtitles, letters, numbers, speech bubbles, thought bubbles, inset panels, montage, flashback, UI, logos, watermarks, maps, flags, calendars, clocks, airplanes, trains, classrooms, blackboards, teacher costume, extra people, friend, teacher, waiter, host family, snacks, cake, pastries, plates, extra cups, missing cups, extra plants, duplicated props, open notebook, readable book title, swapped left-right positions, wardrobe changes, wrong speaker, open mouth on listener, cropped hands, extra fingers, deformed hands, extra limbs, character fusion, objects intruding into bottom blank panel, crying dramatically, exam papers",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-28-011",
-      "storyboardTextLineId": "l28-conv-011-s01",
-      "sourceLineId": "l28-conv-011",
-      "imagePromptCn": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦ミラー对小川幸子说这一句，保持真实课文场景和人物关系。 ミラー看向小川幸子，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦ミラー对小川幸子说这一句，保持真实课文场景和人物关系。 ミラー看向小川幸子，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "storyboardTextLineId": "l28-conv-007-s02",
+      "sourceLineId": "l28-conv-007",
+      "imagePromptCn": "第28课竖屏教材会话分镜，日语教材动画插画，柔和白天光，9:16，1080×1920。仅两名成人，左侧小川固定深棕短波波头、芥末黄开衫、奶油白上衣、米色长裙；右侧ミラー固定短波浪金发、中蓝卷袖衬衫、深海军蓝长裤。同一咖啡店、同一小圆浅木桌、大方窗、日本城市绿树、暖木墙、右后方书架。桌上固定两只白茶杯和两只杯碟、中央小多肉、右边合上的无字深蓝笔记本，椅旁一个黑公文包。小川张口轻摇头并展示空的开放手掌，表达没有老师；ミラー闭口听。上部72%，底部28%纯暖象牙色留白，无文字。",
+      "imagePromptJa": "第28課の縦型教材会話絵、日本語教材アニメ調、柔らかな昼光、9:16、1080×1920。成人二人だけ。左の小川は濃茶ショートボブ、マスタード色カーディガン、白い上衣、ベージュのスカート。右のミラーは波打つ金髪、中青色の巻き袖シャツ、濃紺ズボン。同じカフェ、丸い明るい木のテーブル、大窓、日本の街と緑、木壁、右奥の本棚。白いカップ二つとソーサー二枚、中央の多肉植物、閉じた無地の紺ノート、黒い仕事鞄一つ。小川が口を開け、軽く首を横に振り、空の開いた手を見せて先生がいないことを表す。ミラーは口を閉じる。上部72%、下部28%は無地のアイボリー。文字なし。",
+      "negativePrompt": "readable text, captions, subtitles, letters, numbers, speech bubbles, thought bubbles, inset panels, montage, flashback, UI, logos, watermarks, maps, flags, calendars, clocks, airplanes, trains, classrooms, blackboards, teacher costume, extra people, friend, teacher, waiter, host family, snacks, cake, pastries, plates, extra cups, missing cups, extra plants, duplicated props, open notebook, readable book title, swapped left-right positions, wardrobe changes, wrong speaker, open mouth on listener, cropped hands, extra fingers, deformed hands, extra limbs, character fusion, objects intruding into bottom blank panel, empty chair symbol, classroom, blackboard",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-28-012",
-      "storyboardTextLineId": "l28-conv-012-s01",
-      "sourceLineId": "l28-conv-012",
-      "imagePromptCn": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦小川幸子对ミラー说这一句，保持真实课文场景和人物关系。 小川幸子看向ミラー，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦小川幸子对ミラー说这一句，保持真实课文场景和人物关系。 小川幸子看向ミラー，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "storyboardTextLineId": "l28-conv-007-s03",
+      "sourceLineId": "l28-conv-007",
+      "imagePromptCn": "第28课竖屏教材故事分镜，日语教材动画风格，柔和白天光，9:16，1080×1920。恰好两名成人且左右服装固定：左侧小川，深棕短波波头、芥末黄开衫、奶油白上衣、米色长裙；右侧ミラー，短波浪金发、中蓝卷袖衬衫、深海军蓝长裤。同一安静咖啡店、圆形浅木桌、大窗、日本城市绿树、暖木墙、右后方书架。桌上两只白茶杯和杯碟、正中小多肉、右侧合上无字深蓝笔记本，椅旁一个黑公文包。小川张口，无奈地稍微展开双手，表达没有用英语交谈的机会；ミラー闭口认真倾听。上部72%，底部28%纯暖象牙色留白，无文字。",
+      "imagePromptJa": "第28課の縦型教材ストーリーボード、日本語教材アニメ調、柔らかな昼光、9:16、1080×1920。成人二人だけ。左の小川は濃茶ショートボブ、マスタード色カーディガン、白い上衣、ベージュのロングスカート。右のミラーは波打つ金髪、中青色の巻き袖シャツ、濃紺ズボン。同じ静かなカフェ、丸い木のテーブル、大窓、日本の街と緑、木壁、右奥の本棚。白いカップ二つとソーサー二枚、中央の多肉植物、閉じた無地の紺ノート、黒い仕事鞄一つ。小川が口を開け、困った表情で両手を少し広げ、英語で話す機会がないと示す。ミラーは口を閉じて聞く。上部72%、下部28%は無地のアイボリー。文字なし。",
+      "negativePrompt": "readable text, captions, subtitles, letters, numbers, speech bubbles, thought bubbles, inset panels, montage, flashback, UI, logos, watermarks, maps, flags, calendars, clocks, airplanes, trains, classrooms, blackboards, teacher costume, extra people, friend, teacher, waiter, host family, snacks, cake, pastries, plates, extra cups, missing cups, extra plants, duplicated props, open notebook, readable book title, swapped left-right positions, wardrobe changes, wrong speaker, open mouth on listener, cropped hands, extra fingers, deformed hands, extra limbs, character fusion, objects intruding into bottom blank panel, speech icons, English words, microphone, third speaker",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-28-013",
+      "storyboardTextLineId": "l28-conv-008-s01",
+      "sourceLineId": "l28-conv-008",
+      "imagePromptCn": "第28课竖屏教材会话分镜，日语教材动画插画，柔和赛璐璐着色，白天，9:16，1080×1920。只有两名成年人：左侧小川幸子，深棕短波波头、棕眼、芥末黄开衫、奶油白上衣、米色长裙；右侧ミラー，短波浪金发、蓝眼、中蓝卷袖纽扣衬衫、深海军蓝长裤。同一安静咖啡店和小圆浅木桌，大方窗、日本城市绿树、暖木墙、右后方书架。桌上固定两杯白茶和两只杯碟、中央小多肉、右侧合上无字深蓝笔记本，椅旁一只黑色公文包。左侧小川是唯一说话者：张口，双手在胸前礼貌合拢并微微前倾，请求ミラー当会话老师；ミラー闭口略感意外但专心听。上部72%，底部28%纯暖象牙色留白，无文字。",
+      "imagePromptJa": "第28課の縦型教材会話ストーリーボード、日本語教材アニメ調、柔らかなセル塗り、昼、9:16、1080×1920。成人二人だけ。左の小川は濃茶ショートボブ、茶色い目、マスタード色カーディガン、白い上衣、ベージュのロングスカート。右のミラーは短い波打つ金髪、青い目、中青色の巻き袖ボタンシャツ、濃紺ズボン。同じカフェ、丸い明るい木のテーブル、大窓、日本の街と緑、木壁、右奥の本棚。白いカップ二つとソーサー二枚、中央の多肉植物、閉じた無地の紺ノート、黒い仕事鞄一つ。話すのは左の小川だけ。口を開け、両手を胸元で丁寧に合わせ、少し前傾して会話の先生になってほしいと頼む。ミラーは口を閉じて聞く。上部72%、下部28%は無地のアイボリー。文字なし。",
+      "negativePrompt": "readable text, captions, subtitles, letters, numbers, speech bubbles, thought bubbles, inset panels, montage, flashback, UI, logos, watermarks, maps, flags, calendars, clocks, airplanes, trains, classrooms, blackboards, teacher costume, extra people, friend, teacher, waiter, host family, snacks, cake, pastries, plates, extra cups, missing cups, extra plants, duplicated props, open notebook, readable book title, swapped left-right positions, wardrobe changes, wrong speaker, open mouth on listener, cropped hands, extra fingers, deformed hands, extra limbs, character fusion, objects intruding into bottom blank panel, Miller speaking, teacher outfit, kneeling",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-28-014",
+      "storyboardTextLineId": "l28-conv-009-s01",
+      "sourceLineId": "l28-conv-009",
+      "imagePromptCn": "第28课竖屏教材故事分镜，日本教材动画风格，柔和白天光，9:16，1080×1920。恰好两名成人，左侧小川固定深棕短波波头、芥末黄开衫、奶油白上衣、米色长裙；右侧ミラー固定短波浪金发、中蓝卷袖衬衫、深海军蓝长裤。同一咖啡店、小圆浅木桌、大方窗、日本城市绿树、暖木墙、右后方书架。桌上两只白茶杯和杯碟、中央小多肉、右边合上无字深蓝笔记本，椅旁一只黑公文包。右侧ミラー张口、睁大眼、眉毛抬起，一手轻指自己，惊讶确认“当老师”；左侧小川闭口期待看他。上部72%，底部28%纯暖象牙色留白，无文字。",
+      "imagePromptJa": "第28課の縦型教材絵、日本語教材アニメ調、柔らかな昼光、9:16、1080×1920。成人二人だけ。左の小川は濃茶ショートボブ、マスタード色カーディガン、白い上衣、ベージュのロングスカート。右のミラーは波打つ金髪、中青色の巻き袖シャツ、濃紺ズボン。同じカフェ、丸い明るい木のテーブル、大窓、日本の街と緑、木壁、右奥の本棚。白いカップ二つとソーサー二枚、中央の多肉植物、閉じた無地の紺ノート、黒い仕事鞄一つ。右のミラーが口を開け、目と眉を上げ、片手で自分を軽く指して先生になるのかと驚く。左の小川は口を閉じる。上部72%、下部28%は無地のアイボリー。文字なし。",
+      "negativePrompt": "readable text, captions, subtitles, letters, numbers, speech bubbles, thought bubbles, inset panels, montage, flashback, UI, logos, watermarks, maps, flags, calendars, clocks, airplanes, trains, classrooms, blackboards, teacher costume, extra people, friend, teacher, waiter, host family, snacks, cake, pastries, plates, extra cups, missing cups, extra plants, duplicated props, open notebook, readable book title, swapped left-right positions, wardrobe changes, wrong speaker, open mouth on listener, cropped hands, extra fingers, deformed hands, extra limbs, character fusion, objects intruding into bottom blank panel, pointing at Ogawa, teacher clothes",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-28-015",
+      "storyboardTextLineId": "l28-conv-009-s02",
+      "sourceLineId": "l28-conv-009",
+      "imagePromptCn": "第28课竖屏教材会话分镜，日语教材动画插画，柔和白天光，9:16，1080×1920。仅两名成人且左右固定：小川在左，深棕短波波头、芥末黄开衫、奶油白上衣、米色长裙；ミラー在右，短波浪金发、中蓝卷袖衬衫、深海军蓝长裤。同一安静咖啡店和小圆浅木桌，大窗、日本城市绿树、暖木墙、右后方书架。桌上恰好两只白茶杯和杯碟、中央小多肉、右侧合上的无字深蓝笔记本，椅旁一个黑公文包。右侧ミラー张口，手托下巴、目光稍向下，安静思考且略为难；左侧小川闭口等待。上部72%，底部28%纯暖象牙色留白，无文字。",
+      "imagePromptJa": "第28課の縦型教材会話絵、日本語教材アニメ調、柔らかな昼光、9:16、1080×1920。成人二人だけ。左の小川は濃茶ショートボブ、マスタード色カーディガン、白い上衣、ベージュのスカート。右のミラーは波打つ金髪、中青色の巻き袖シャツ、濃紺ズボン。同じ静かなカフェ、丸い木のテーブル、大窓、日本の街と緑、木壁、右奥の本棚。白いカップ二つとソーサー二枚、中央の多肉植物、閉じた無地の紺ノート、黒い仕事鞄一つ。ミラーが口を開け、顎に手を添え、視線を少し落として困りながら考える。小川は口を閉じて待つ。上部72%、下部28%は無地のアイボリー。文字なし。",
+      "negativePrompt": "readable text, captions, subtitles, letters, numbers, speech bubbles, thought bubbles, inset panels, montage, flashback, UI, logos, watermarks, maps, flags, calendars, clocks, airplanes, trains, classrooms, blackboards, teacher costume, extra people, friend, teacher, waiter, host family, snacks, cake, pastries, plates, extra cups, missing cups, extra plants, duplicated props, open notebook, readable book title, swapped left-right positions, wardrobe changes, wrong speaker, open mouth on listener, cropped hands, extra fingers, deformed hands, extra limbs, character fusion, objects intruding into bottom blank panel, icons, floating symbols",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-28-016",
+      "storyboardTextLineId": "l28-conv-009-s03",
+      "sourceLineId": "l28-conv-009",
+      "imagePromptCn": "第28课竖屏教材会话分镜，日语教材动画风格，柔和白天光，9:16，1080×1920。恰好两名成人：左侧小川固定深棕短波波头、芥末黄开衫、奶油白上衣、米色长裙；右侧ミラー固定短波浪金发、中蓝卷袖衬衫、深海军蓝长裤。同一咖啡店、小圆浅木桌、大窗、日本城市绿树、暖木墙、右后方书架。桌上固定两杯白茶和杯碟、中央小多肉、右侧合上无字深蓝笔记本；ミラー座椅旁只有一只小黑色公文包。ミラー张口，歉意为难，一手小幅解释并轻示意同一只公文包，表示工作有点忙；小川闭口理解地听。上部72%，底部28%纯暖象牙色留白，无文字。",
+      "imagePromptJa": "第28課の縦型教材会話ストーリーボード、日本語教材アニメ調、柔らかな昼光、9:16、1080×1920。成人二人だけ。左の小川は濃茶ショートボブ、マスタード色カーディガン、白い上衣、ベージュのスカート。右のミラーは波打つ金髪、中青色の巻き袖シャツ、濃紺ズボン。同じカフェ、丸い木のテーブル、大窓、日本の街と緑、木壁、右奥の本棚。白いカップ二つとソーサー二枚、中央の多肉植物、閉じた無地の紺ノート。ミラーの椅子横には黒い仕事鞄一つだけ。ミラーが口を開け、申し訳なさそうに小さく説明し、同じ鞄を軽く示して仕事の都合を表す。小川は口を閉じる。上部72%、下部28%は無地のアイボリー。文字なし。",
+      "negativePrompt": "readable text, captions, subtitles, letters, numbers, speech bubbles, thought bubbles, inset panels, montage, flashback, UI, logos, watermarks, maps, flags, calendars, clocks, airplanes, trains, classrooms, blackboards, teacher costume, extra people, friend, teacher, waiter, host family, snacks, cake, pastries, plates, extra cups, missing cups, extra plants, duplicated props, open notebook, readable book title, swapped left-right positions, wardrobe changes, wrong speaker, open mouth on listener, cropped hands, extra fingers, deformed hands, extra limbs, character fusion, objects intruding into bottom blank panel, office, coworkers, paperwork, duplicate briefcase",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-28-017",
+      "storyboardTextLineId": "l28-conv-010-s01",
+      "sourceLineId": "l28-conv-010",
+      "imagePromptCn": "第28课竖屏教材故事分镜，日本教材动画风格，柔和赛璐璐着色，白天，9:16，1080×1920。恰好两名成人且位置服装不变：左侧小川，深棕短波波头、芥末黄开衫、奶油白上衣、米色长裙；右侧ミラー，短波浪金发、中蓝卷袖衬衫、深海军蓝长裤。同一安静咖啡店、小圆浅木桌、大方窗、日本城市绿树、暖木墙、右后方书架。桌上恰好两杯白茶和杯碟、中央小多肉、右侧合上的无字深蓝笔记本，椅旁一只黑公文包。小川张口友好地继续劝说，用温和开放手掌表达“有空的时候”；ミラー闭口仍略犹豫。上部72%，底部28%纯暖象牙色留白，无文字。",
+      "imagePromptJa": "第28課の縦型教材ストーリーボード、日本語教材アニメ調、柔らかなセル塗り、昼、9:16、1080×1920。成人二人だけ。左の小川は濃茶ショートボブ、マスタード色カーディガン、白い上衣、ベージュのスカート。右のミラーは波打つ金髪、中青色の巻き袖シャツ、濃紺ズボン。同じ静かなカフェ、丸い木のテーブル、大窓、日本の街と緑、木壁、右奥の本棚。白いカップ二つとソーサー二枚、中央の多肉植物、閉じた無地の紺ノート、黒い仕事鞄一つ。小川が口を開け、優しい開いた手で「暇な時に」と友好的に勧める。ミラーは口を閉じ、少し迷う。上部72%、下部28%は無地のアイボリー。文字なし。",
+      "negativePrompt": "readable text, captions, subtitles, letters, numbers, speech bubbles, thought bubbles, inset panels, montage, flashback, UI, logos, watermarks, maps, flags, calendars, clocks, airplanes, trains, classrooms, blackboards, teacher costume, extra people, friend, teacher, waiter, host family, snacks, cake, pastries, plates, extra cups, missing cups, extra plants, duplicated props, open notebook, readable book title, swapped left-right positions, wardrobe changes, wrong speaker, open mouth on listener, cropped hands, extra fingers, deformed hands, extra limbs, character fusion, objects intruding into bottom blank panel, watch emphasis, old incorrect phrase imagery",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-28-018",
+      "storyboardTextLineId": "l28-conv-010-s02",
+      "sourceLineId": "l28-conv-010",
+      "imagePromptCn": "第28课竖屏教材会话分镜，日语教材动画插画，柔和白天光，9:16，1080×1920。仅两名成人且左右固定：左侧小川，深棕短波波头、芥末黄开衫、奶油白上衣、米色长裙；右侧ミラー，短波浪金发、中蓝卷袖衬衫、深海军蓝长裤。同一咖啡店、小圆浅木桌、大窗、日本城市绿树、暖木墙、右后方书架。桌上始终恰好两只纯白茶杯和两只配套杯碟、正中一盆小多肉，右侧合上无字深蓝笔记本，椅旁一只黑公文包。小川张口邀请式微笑，轻轻示意仍放在桌上的两杯茶；杯子不举起、不移动，ミラー闭口听。上部72%，底部28%纯暖象牙色留白，无文字。",
+      "imagePromptJa": "第28課の縦型教材会話絵、日本語教材アニメ調、柔らかな昼光、9:16、1080×1920。成人二人だけ。左の小川は濃茶ショートボブ、マスタード色カーディガン、白い上衣、ベージュのスカート。右のミラーは波打つ金髪、中青色の巻き袖シャツ、濃紺ズボン。同じカフェ、丸い木のテーブル、大窓、日本の街と緑、木壁、右奥の本棚。卓上は白いティーカップ二つとソーサー二枚、中央の多肉植物一つ、閉じた無地の紺ノート、黒い仕事鞄一つ。小川が口を開けて誘うように微笑み、卓上に置いたままの二杯のお茶を軽く示す。カップは持ち上げない。ミラーは口を閉じる。上部72%、下部28%は無地のアイボリー。文字なし。",
+      "negativePrompt": "readable text, captions, subtitles, letters, numbers, speech bubbles, thought bubbles, inset panels, montage, flashback, UI, logos, watermarks, maps, flags, calendars, clocks, airplanes, trains, classrooms, blackboards, teacher costume, extra people, friend, teacher, waiter, host family, snacks, cake, pastries, plates, extra cups, missing cups, extra plants, duplicated props, open notebook, readable book title, swapped left-right positions, wardrobe changes, wrong speaker, open mouth on listener, cropped hands, extra fingers, deformed hands, extra limbs, character fusion, objects intruding into bottom blank panel, drinking action hiding mouth, lifted cup, third cup",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-28-019",
+      "storyboardTextLineId": "l28-conv-011-s01",
+      "sourceLineId": "l28-conv-011",
+      "imagePromptCn": "第28课竖屏教材故事分镜，日语教材动画风格，柔和白天光，9:16，1080×1920。恰好两名成人：左侧小川固定深棕短波波头、芥末黄开衫、奶油白上衣、米色长裙；右侧ミラー固定短波浪金发、中蓝卷袖衬衫、深海军蓝长裤。同一安静咖啡店、小圆浅木桌、大方窗、日本城市绿树、暖木墙、右后方书架。桌上固定两杯白茶和杯碟、中央小多肉、右侧合上无字深蓝笔记本；椅旁仅一只黑公文包。ミラー张口苦恼，一手短暂扶下巴，另一手小幅示意同一只公文包，解释出差很多；小川闭口听。上部72%，底部28%纯暖象牙色留白，无文字。",
+      "imagePromptJa": "第28課の縦型教材ストーリーボード、日本語教材アニメ調、柔らかな昼光、9:16、1080×1920。成人二人だけ。左の小川は濃茶ショートボブ、マスタード色カーディガン、白い上衣、ベージュのスカート。右のミラーは波打つ金髪、中青色の巻き袖シャツ、濃紺ズボン。同じ静かなカフェ、丸い木のテーブル、大窓、日本の街と緑、木壁、右奥の本棚。白いカップ二つとソーサー二枚、中央の多肉植物、閉じた無地の紺ノート。椅子横の黒い仕事鞄は一つだけ。ミラーが口を開け、困った顔で片手を顎に添え、もう一方で同じ鞄を小さく示し、出張が多いと説明する。小川は口を閉じる。上部72%、下部28%は無地のアイボリー。文字なし。",
+      "negativePrompt": "readable text, captions, subtitles, letters, numbers, speech bubbles, thought bubbles, inset panels, montage, flashback, UI, logos, watermarks, maps, flags, calendars, clocks, airplanes, trains, classrooms, blackboards, teacher costume, extra people, friend, teacher, waiter, host family, snacks, cake, pastries, plates, extra cups, missing cups, extra plants, duplicated props, open notebook, readable book title, swapped left-right positions, wardrobe changes, wrong speaker, open mouth on listener, cropped hands, extra fingers, deformed hands, extra limbs, character fusion, objects intruding into bottom blank panel, airport, travel montage, suitcase duplication",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-28-020",
+      "storyboardTextLineId": "l28-conv-011-s02",
+      "sourceLineId": "l28-conv-011",
+      "imagePromptCn": "第28课竖屏教材会话分镜，日语教材动画插画，柔和白天光，9:16，1080×1920。仅两名成人且人物固定：左侧小川，深棕短波波头、芥末黄开衫、奶油白上衣、米色长裙；右侧ミラー，短波浪金发、中蓝卷袖衬衫、深海军蓝长裤。同一咖啡店、圆形浅木桌、大方窗、日本城市绿树、暖木墙、右后方木书架。桌上恰好两杯白茶和杯碟、中央小多肉、ミラー右手边一册合上的无字深蓝笔记本，椅旁一只黑公文包。ミラー张口焦虑地轻触太阳穴，或示意同一册合上的无字笔记本，说明马上有日语考试；小川闭口听。上部72%，底部28%纯暖象牙色留白，无文字。",
+      "imagePromptJa": "第28課の縦型教材会話絵、日本語教材アニメ調、柔らかな昼光、9:16、1080×1920。成人二人だけ。左の小川は濃茶ショートボブ、マスタード色カーディガン、白い上衣、ベージュのスカート。右のミラーは波打つ金髪、中青色の巻き袖シャツ、濃紺ズボン。同じカフェ、丸い木のテーブル、大窓、日本の街と緑、木壁、右奥の本棚。白いカップ二つとソーサー二枚、中央の多肉植物、ミラー右に閉じた無地の紺ノート一冊、椅子横に黒い仕事鞄一つ。ミラーが口を開け、心配そうにこめかみに触れるか、同じ閉じた無地ノートを示して日本語試験が近いと説明する。小川は口を閉じる。上部72%、下部28%は無地のアイボリー。文字なし。",
+      "negativePrompt": "readable text, captions, subtitles, letters, numbers, speech bubbles, thought bubbles, inset panels, montage, flashback, UI, logos, watermarks, maps, flags, calendars, clocks, airplanes, trains, classrooms, blackboards, teacher costume, extra people, friend, teacher, waiter, host family, snacks, cake, pastries, plates, extra cups, missing cups, extra plants, duplicated props, open notebook, readable book title, swapped left-right positions, wardrobe changes, wrong speaker, open mouth on listener, cropped hands, extra fingers, deformed hands, extra limbs, character fusion, objects intruding into bottom blank panel, readable Japanese, exam paper, open book, extra notebook",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-28-021",
+      "storyboardTextLineId": "l28-conv-012-s01",
+      "sourceLineId": "l28-conv-012",
+      "imagePromptCn": "第28课竖屏教材会话分镜，日本教材动画风格，柔和赛璐璐着色，白天，9:16，1080×1920。恰好两名成人且左右不变：左侧小川，深棕短波波头、芥末黄开衫、奶油白上衣、米色长裙；右侧ミラー，短波浪金发、中蓝卷袖衬衫、深海军蓝长裤。同一安静咖啡店、小圆浅木桌、大方窗、日本城市绿树、暖木墙、右后方书架。桌上固定两杯白茶和杯碟、中央小多肉、右侧合上无字深蓝笔记本，椅旁一只黑公文包。小川张口，略显失望但理解地轻点头并放低双手；ミラー闭口歉意看她。上部72%，底部28%纯暖象牙色留白，无文字。",
+      "imagePromptJa": "第28課の縦型教材会話ストーリーボード、日本語教材アニメ調、柔らかなセル塗り、昼、9:16、1080×1920。成人二人だけ。左の小川は濃茶ショートボブ、マスタード色カーディガン、白い上衣、ベージュのスカート。右のミラーは波打つ金髪、中青色の巻き袖シャツ、濃紺ズボン。同じ静かなカフェ、丸い木のテーブル、大窓、日本の街と緑、木壁、右奥の本棚。白いカップ二つとソーサー二枚、中央の多肉植物、閉じた無地の紺ノート、黒い仕事鞄一つ。小川が口を開け、少し残念そうだが理解して軽くうなずき、両手を下げる。ミラーは口を閉じて申し訳なさそうに見る。上部72%、下部28%は無地のアイボリー。文字なし。",
+      "negativePrompt": "readable text, captions, subtitles, letters, numbers, speech bubbles, thought bubbles, inset panels, montage, flashback, UI, logos, watermarks, maps, flags, calendars, clocks, airplanes, trains, classrooms, blackboards, teacher costume, extra people, friend, teacher, waiter, host family, snacks, cake, pastries, plates, extra cups, missing cups, extra plants, duplicated props, open notebook, readable book title, swapped left-right positions, wardrobe changes, wrong speaker, open mouth on listener, cropped hands, extra fingers, deformed hands, extra limbs, character fusion, objects intruding into bottom blank panel, anger, crying, argument",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-28-022",
       "storyboardTextLineId": "l28-conv-013-s01",
       "sourceLineId": "l28-conv-013",
-      "imagePromptCn": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦ミラー对小川幸子说这一句，保持真实课文场景和人物关系。 ミラー看向小川幸子，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "小川幸子与ミラー交谈，小川说明自己八月要去澳大利亚寄宿，英语学习不顺利，因此请求ミラー当会话老师，ミラー因出差和日语考试委婉拒绝。 当前画面聚焦ミラー对小川幸子说这一句，保持真实课文场景和人物关系。 ミラー看向小川幸子，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "imagePromptCn": "第28课竖屏教材会话分镜，日语教材动画插画，柔和白天光，9:16，1080×1920。仅两名成人且人物服装座位固定：左侧小川，深棕短波波头、芥末黄开衫、奶油白上衣、米色长裙；右侧ミラー，短波浪金发、中蓝卷袖衬衫、深海军蓝长裤。同一咖啡店、小圆浅木桌、大方窗、日本城市绿树、暖木墙、右后方书架。桌上始终两杯白茶和杯碟、中央小多肉、右侧合上无字深蓝笔记本，椅旁一只黑公文包。右侧ミラー张口，保持坐姿轻轻鞠躬，一手靠近胸前诚恳道歉；左侧小川闭口平静接受。上部72%，底部28%纯暖象牙色留白，无文字。",
+      "imagePromptJa": "第28課の縦型教材会話絵、日本語教材アニメ調、柔らかな昼光、9:16、1080×1920。成人二人だけ。左の小川は濃茶ショートボブ、マスタード色カーディガン、白い上衣、ベージュのスカート。右のミラーは波打つ金髪、中青色の巻き袖シャツ、濃紺ズボン。同じカフェ、丸い木のテーブル、大窓、日本の街と緑、木壁、右奥の本棚。白いカップ二つとソーサー二枚、中央の多肉植物、閉じた無地の紺ノート、黒い仕事鞄一つ。右のミラーが口を開け、座ったまま軽くお辞儀し、片手を胸元に添えて誠実に謝る。左の小川は口を閉じて穏やかに受け止める。上部72%、下部28%は無地のアイボリー。文字なし。",
+      "negativePrompt": "readable text, captions, subtitles, letters, numbers, speech bubbles, thought bubbles, inset panels, montage, flashback, UI, logos, watermarks, maps, flags, calendars, clocks, airplanes, trains, classrooms, blackboards, teacher costume, extra people, friend, teacher, waiter, host family, snacks, cake, pastries, plates, extra cups, missing cups, extra plants, duplicated props, open notebook, readable book title, swapped left-right positions, wardrobe changes, wrong speaker, open mouth on listener, cropped hands, extra fingers, deformed hands, extra limbs, character fusion, objects intruding into bottom blank panel, standing bow, dramatic prostration",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     }
   ]
 }
