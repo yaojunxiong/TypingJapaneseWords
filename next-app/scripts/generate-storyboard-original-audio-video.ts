@@ -98,6 +98,22 @@ const REVIEWED_SPLITS: Record<number, Record<string, number[]>> = {
     '010': [1.391],
     '011': [2.653],
   },
+  29: {
+    '001': [1.060, 2.110],
+    '003': [1.582],
+    '006': [1.778],
+    '008': [1.220],
+    '009': [2.004],
+    '012': [1.833],
+  },
+  30: {
+    '002': [1.175],
+    '003': [3.134],
+    '005': [1.923],
+    '006': [3.317, 5.462],
+    '008': [3.043, 4.782],
+    '011': [1.422],
+  },
 }
 
 // Some generated line clips cut through a final syllable or the next line's
@@ -146,6 +162,100 @@ const REVIEWED_AUDIO_RANGES: Record<number, Record<string, ReviewedAudioRange>> 
       sourcePath: 'source-230001/tracks/cd-072.mp3',
       start: 36.774,
       end: 41.000,
+    },
+  },
+  29: {
+    '005': {
+      sourcePath: 'source-240000/tracks/cd-010.mp3',
+      start: 19.450,
+      end: 21.086,
+    },
+    '006': {
+      sourcePath: 'source-240000/tracks/cd-010.mp3',
+      start: 21.086,
+      end: 25.450,
+    },
+    '008': {
+      sourcePath: 'source-240000/tracks/cd-010.mp3',
+      start: 27.450,
+      end: 31.242,
+    },
+    '009': {
+      sourcePath: 'source-240000/tracks/cd-010.mp3',
+      start: 31.242,
+      end: 35.450,
+    },
+    '013': {
+      sourcePath: 'source-240000/tracks/cd-010.mp3',
+      start: 42.470,
+      end: 44.592,
+    },
+    '014': {
+      sourcePath: 'source-240000/tracks/cd-010.mp3',
+      start: 44.592,
+      end: 46.662,
+    },
+    '015': {
+      sourcePath: 'source-240000/tracks/cd-010.mp3',
+      start: 46.662,
+      end: 49.400,
+    },
+  },
+  30: {
+    '001': {
+      sourcePath: 'source-240000/tracks/cd-013.mp3',
+      start: 7.450,
+      end: 8.507,
+    },
+    '002': {
+      sourcePath: 'source-240000/tracks/cd-013.mp3',
+      start: 8.507,
+      end: 11.920,
+    },
+    '003': {
+      sourcePath: 'source-240000/tracks/cd-013.mp3',
+      start: 11.920,
+      end: 17.709,
+    },
+    '004': {
+      sourcePath: 'source-240000/tracks/cd-013.mp3',
+      start: 17.709,
+      end: 19.315,
+    },
+    '005': {
+      sourcePath: 'source-240000/tracks/cd-013.mp3',
+      start: 19.315,
+      end: 22.882,
+    },
+    '006': {
+      sourcePath: 'source-240000/tracks/cd-013.mp3',
+      start: 22.882,
+      end: 31.007,
+    },
+    '007': {
+      sourcePath: 'source-240000/tracks/cd-013.mp3',
+      start: 31.007,
+      end: 33.022,
+    },
+    '008': {
+      sourcePath: 'source-240000/tracks/cd-013.mp3',
+      start: 33.022,
+      end: 39.180,
+    },
+    '009': {
+      sourcePath: 'source-240000/tracks/cd-013.mp3',
+      start: 39.180,
+      end: 41.671,
+    },
+    '010': {
+      sourcePath: 'source-240000/tracks/cd-013.mp3',
+      start: 41.671,
+      end: 44.449,
+    },
+    '011': {
+      sourcePath: 'source-240000/tracks/cd-013.mp3',
+      start: 44.449,
+      end: 48.170,
     },
   },
 }

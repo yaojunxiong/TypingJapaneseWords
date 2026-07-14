@@ -385,7 +385,7 @@
     "speaker": "駅員",
     "speakerCn": "车站工作人员",
     "lineStartTime": 19.45,
-    "lineEndTime": 21.45,
+    "lineEndTime": 21.086,
     "sentenceJp": "どの辺に置きましたか。",
     "sentenceCn": "放在什么位置？",
     "words": [
@@ -454,7 +454,7 @@
     "lineOrder": 6,
     "speaker": "イー",
     "speakerCn": "易",
-    "lineStartTime": 21.45,
+    "lineStartTime": 21.086,
     "lineEndTime": 25.45,
     "sentenceJp": "よく覚えていません。でも、網棚の上に置きました。",
     "sentenceCn": "不太记得了，不过放在行李架上。",
@@ -665,9 +665,9 @@
     "speaker": "イー",
     "speakerCn": "易",
     "lineStartTime": 27.45,
-    "lineEndTime": 31.45,
-    "sentenceJp": "えーと、鍵か、本と傘が入っています。",
-    "sentenceCn": "这个，有钥匙、书和伞。",
+    "lineEndTime": 31.242,
+    "sentenceJp": "えーと、確か、本と傘が入っています。",
+    "sentenceCn": "嗯，我记得里面有书和伞。",
     "words": [
       {
         "id": "l29_l008_w001",
@@ -685,34 +685,20 @@
       },
       {
         "id": "l29_l008_w002",
-        "surface": "鍵",
-        "baseForm": "鍵",
-        "kana": "かぎ",
-        "romaji": "kagi",
-        "meaningCn": "钥匙",
-        "noteCn": "开锁用的钥匙。",
-        "type": "名词",
+        "surface": "確か",
+        "baseForm": "確か",
+        "kana": "たしか",
+        "romaji": "tashika",
+        "meaningCn": "我记得/确实",
+        "noteCn": "用于表示说话人依据记忆作出较有把握的陈述。",
+        "type": "副词",
         "startChar": 4,
-        "endChar": 4,
-        "wordStartTime": 62.89,
-        "wordEndTime": 64.282
-      },
-      {
-        "id": "l29_l008_w003",
-        "surface": "か",
-        "baseForm": "か",
-        "kana": "か",
-        "romaji": "ka",
-        "meaningCn": "吗/或",
-        "noteCn": "表示疑问或选择。",
-        "type": "助词",
-        "startChar": 5,
         "endChar": 5,
-        "wordStartTime": 64.332,
+        "wordStartTime": 62.89,
         "wordEndTime": 65.58
       },
       {
-        "id": "l29_l008_w004",
+        "id": "l29_l008_w003",
         "surface": "本",
         "baseForm": "本",
         "kana": "ほん",
@@ -726,7 +712,7 @@
         "wordEndTime": 66.974
       },
       {
-        "id": "l29_l008_w005",
+        "id": "l29_l008_w004",
         "surface": "と",
         "baseForm": "と",
         "kana": "と",
@@ -740,7 +726,7 @@
         "wordEndTime": 68.248
       },
       {
-        "id": "l29_l008_w006",
+        "id": "l29_l008_w005",
         "surface": "傘",
         "baseForm": "傘",
         "kana": "かさ",
@@ -754,7 +740,7 @@
         "wordEndTime": 69.714
       },
       {
-        "id": "l29_l008_w007",
+        "id": "l29_l008_w006",
         "surface": "が",
         "baseForm": "が",
         "kana": "が",
@@ -768,7 +754,7 @@
         "wordEndTime": 70.988
       },
       {
-        "id": "l29_l008_w008",
+        "id": "l29_l008_w007",
         "surface": "入っています",
         "baseForm": "入るています",
         "kana": "はいっています",
@@ -790,7 +776,7 @@
     "lineOrder": 9,
     "speaker": "駅員",
     "speakerCn": "车站工作人员",
-    "lineStartTime": 31.45,
+    "lineStartTime": 31.242,
     "lineEndTime": 35.45,
     "sentenceJp": "じゃ、調べますから、ちょっと待っていてください。",
     "sentenceCn": "那么我查一下，请稍等。",
@@ -1029,7 +1015,7 @@
     "speaker": "イー",
     "speakerCn": "易",
     "lineStartTime": 42.47,
-    "lineEndTime": 44.17,
+    "lineEndTime": 44.592,
     "sentenceJp": "すぐ取りに行きます。",
     "sentenceCn": "我马上去取。",
     "words": [
@@ -1098,8 +1084,8 @@
     "lineOrder": 14,
     "speaker": "駅員",
     "speakerCn": "车站工作人员",
-    "lineStartTime": 44.47,
-    "lineEndTime": 46.44,
+    "lineStartTime": 44.592,
+    "lineEndTime": 46.662,
     "sentenceJp": "じゃ、新宿駅の事務所に行ってください。",
     "sentenceCn": "那么请去新宿站办公室。",
     "words": [
@@ -1196,7 +1182,7 @@
     "lineOrder": 15,
     "speaker": "イー",
     "speakerCn": "易",
-    "lineStartTime": 46.47,
+    "lineStartTime": 46.662,
     "lineEndTime": 49.4,
     "sentenceJp": "はい、どうもありがとうございました。",
     "sentenceCn": "好的，非常感谢。",

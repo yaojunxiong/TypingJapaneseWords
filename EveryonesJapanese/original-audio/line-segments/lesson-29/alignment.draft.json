@@ -22,7 +22,7 @@
       "durationMs": 4000,
       "audioPath": "line-segments/lesson-29/l29-01.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-29/l29-01.mp3",
-      "needsReview": true,
+      "needsReview": false,
       "matchConfidence": "high",
       "boundaryReason": "按权威台词、发音顺序与 ASR utterance [2] 对齐；相邻句使用不重叠边界"
     },
@@ -42,7 +42,7 @@
       "durationMs": 2000,
       "audioPath": "line-segments/lesson-29/l29-02.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-29/l29-02.mp3",
-      "needsReview": true,
+      "needsReview": false,
       "matchConfidence": "high",
       "boundaryReason": "按权威台词、发音顺序与 ASR utterance [3] 对齐；相邻句使用不重叠边界"
     },
@@ -62,7 +62,7 @@
       "durationMs": 3000,
       "audioPath": "line-segments/lesson-29/l29-03.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-29/l29-03.mp3",
-      "needsReview": true,
+      "needsReview": false,
       "matchConfidence": "high",
       "boundaryReason": "按权威台词、发音顺序与 ASR utterance [4] 对齐；相邻句使用不重叠边界"
     },
@@ -82,7 +82,7 @@
       "durationMs": 3000,
       "audioPath": "line-segments/lesson-29/l29-04.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-29/l29-04.mp3",
-      "needsReview": true,
+      "needsReview": false,
       "matchConfidence": "high",
       "boundaryReason": "按权威台词、发音顺序与 ASR utterance [5] 对齐；相邻句使用不重叠边界"
     },
@@ -98,13 +98,13 @@
         6
       ],
       "startMs": 19450,
-      "endMs": 21450,
-      "durationMs": 2000,
+      "endMs": 21086,
+      "durationMs": 1636,
       "audioPath": "line-segments/lesson-29/l29-05.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-29/l29-05.mp3",
-      "needsReview": true,
+      "needsReview": false,
       "matchConfidence": "high",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [6] 对齐；相邻句使用不重叠边界"
+      "boundaryReason": "经教材原页、CD10 原声和 -40 dB 静音区间人工复核；与第 6 句以静音中点 21086ms 为不重叠边界"
     },
     {
       "lineNo": 6,
@@ -117,14 +117,14 @@
       "matchedUtteranceIndexes": [
         7
       ],
-      "startMs": 21450,
+      "startMs": 21086,
       "endMs": 25450,
-      "durationMs": 4000,
+      "durationMs": 4364,
       "audioPath": "line-segments/lesson-29/l29-06.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-29/l29-06.mp3",
-      "needsReview": true,
+      "needsReview": false,
       "matchConfidence": "high",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [7] 对齐；相邻句使用不重叠边界"
+      "boundaryReason": "经教材原页、CD10 原声和 -40 dB 静音区间人工复核；从静音中点 21086ms 起保留完整句首"
     },
     {
       "lineNo": 7,
@@ -142,7 +142,7 @@
       "durationMs": 2000,
       "audioPath": "line-segments/lesson-29/l29-07.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-29/l29-07.mp3",
-      "needsReview": true,
+      "needsReview": false,
       "matchConfidence": "medium",
       "boundaryReason": "按权威台词、发音顺序与 ASR utterance [8] 对齐；相邻句使用不重叠边界"
     },
@@ -150,21 +150,21 @@
       "lineNo": 8,
       "displayOrder": 8,
       "speaker": "イー",
-      "japanese": "えーと、鍵か、本と傘が入っています。",
-      "normalizedTarget": "えーとかぎかほんとかさがはいっています",
+      "japanese": "えーと、確か、本と傘が入っています。",
+      "normalizedTarget": "えーとたしかほんとかさがはいっています",
       "normalizedAsrText": "えっと確か本と傘が入っています",
       "phoneticSimilarity": 0.5882,
       "matchedUtteranceIndexes": [
         9
       ],
       "startMs": 27450,
-      "endMs": 31450,
-      "durationMs": 4000,
+      "endMs": 31242,
+      "durationMs": 3792,
       "audioPath": "line-segments/lesson-29/l29-08.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-29/l29-08.mp3",
-      "needsReview": true,
+      "needsReview": false,
       "matchConfidence": "medium",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [9] 对齐；相邻句使用不重叠边界"
+      "boundaryReason": "教材原页与 CD10 原声一致为「確か、本と傘」；与第 9 句以静音中点 31242ms 为不重叠边界"
     },
     {
       "lineNo": 9,
@@ -177,14 +177,14 @@
       "matchedUtteranceIndexes": [
         10
       ],
-      "startMs": 31450,
+      "startMs": 31242,
       "endMs": 35450,
-      "durationMs": 4000,
+      "durationMs": 4208,
       "audioPath": "line-segments/lesson-29/l29-09.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-29/l29-09.mp3",
-      "needsReview": true,
+      "needsReview": false,
       "matchConfidence": "high",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [10] 对齐；相邻句使用不重叠边界"
+      "boundaryReason": "经 CD10 原声波形人工复核；从静音中点 31242ms 起保留「じゃ」完整句首"
     },
     {
       "lineNo": 10,
@@ -202,7 +202,7 @@
       "durationMs": 1000,
       "audioPath": "line-segments/lesson-29/l29-10.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-29/l29-10.mp3",
-      "needsReview": true,
+      "needsReview": false,
       "matchConfidence": "high",
       "boundaryReason": "按权威台词、发音顺序与 ASR utterance [11] 对齐；相邻句使用不重叠边界"
     },
@@ -222,7 +222,7 @@
       "durationMs": 2000,
       "audioPath": "line-segments/lesson-29/l29-11.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-29/l29-11.mp3",
-      "needsReview": true,
+      "needsReview": false,
       "matchConfidence": "high",
       "boundaryReason": "按权威台词、发音顺序与 ASR utterance [12] 对齐；相邻句使用不重叠边界"
     },
@@ -242,7 +242,7 @@
       "durationMs": 3000,
       "audioPath": "line-segments/lesson-29/l29-12.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-29/l29-12.mp3",
-      "needsReview": true,
+      "needsReview": false,
       "matchConfidence": "medium",
       "boundaryReason": "按权威台词、发音顺序与 ASR utterance [13] 对齐；相邻句使用不重叠边界"
     },
@@ -258,13 +258,13 @@
         14
       ],
       "startMs": 42470,
-      "endMs": 44170,
-      "durationMs": 1700,
+      "endMs": 44592,
+      "durationMs": 2122,
       "audioPath": "line-segments/lesson-29/l29-13.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-29/l29-13.mp3",
-      "needsReview": true,
+      "needsReview": false,
       "matchConfidence": "high",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [14] 对齐；相邻句使用不重叠边界"
+      "boundaryReason": "经 CD10 原声波形人工复核；延长至静音中点 44592ms，保留「行きます」完整尾音"
     },
     {
       "lineNo": 14,
@@ -277,14 +277,14 @@
       "matchedUtteranceIndexes": [
         15
       ],
-      "startMs": 44470,
-      "endMs": 46440,
-      "durationMs": 1970,
+      "startMs": 44592,
+      "endMs": 46662,
+      "durationMs": 2070,
       "audioPath": "line-segments/lesson-29/l29-14.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-29/l29-14.mp3",
-      "needsReview": true,
+      "needsReview": false,
       "matchConfidence": "medium",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [15] 对齐；相邻句使用不重叠边界"
+      "boundaryReason": "经 CD10 原声波形人工复核；使用 44592–46662ms 不重叠区间保留完整句首句尾"
     },
     {
       "lineNo": 15,
@@ -297,31 +297,15 @@
       "matchedUtteranceIndexes": [
         16
       ],
-      "startMs": 46470,
+      "startMs": 46662,
       "endMs": 49400,
-      "durationMs": 2930,
+      "durationMs": 2738,
       "audioPath": "line-segments/lesson-29/l29-15.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-29/l29-15.mp3",
-      "needsReview": true,
+      "needsReview": false,
       "matchConfidence": "high",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [16] 对齐；相邻句使用不重叠边界"
+      "boundaryReason": "经 CD10 原声波形人工复核；从静音中点 46662ms 起，避免带入第 14 句尾音"
     }
   ],
-  "needsReview": [
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    7,
-    8,
-    9,
-    10,
-    11,
-    12,
-    13,
-    14,
-    15
-  ]
+  "needsReview": []
 }
