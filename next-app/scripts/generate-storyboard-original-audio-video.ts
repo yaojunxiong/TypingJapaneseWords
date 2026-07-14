@@ -82,6 +82,22 @@ const REVIEWED_SPLITS: Record<number, Record<string, number[]>> = {
     '003': [4.093],
     '006': [1.124],
   },
+  27: {
+    '003': [2.745],
+    '006': [1.539],
+    '007': [1.331],
+    '009': [1.266],
+    '010': [1.499],
+  },
+  28: {
+    '003': [2.943],
+    '004': [1.240],
+    '005': [1.540],
+    '007': [2.352, 4.166],
+    '009': [1.799, 3.707],
+    '010': [1.391],
+    '011': [2.653],
+  },
 }
 
 // Some generated line clips cut through a final syllable or the next line's
@@ -198,6 +214,19 @@ function wrapText(value: string, maxChars: number): string[] {
   for (let offset = 0; offset < normalized.length; offset += maxChars) {
     result.push(normalized.slice(offset, offset + maxChars))
   }
+
+  const leadingPunctuation = /^[、。！？…」』）】]+/
+  for (let index = 1; index < result.length; index += 1) {
+    const match = result[index].match(leadingPunctuation)
+    if (!match) continue
+    result[index - 1] += match[0]
+    result[index] = result[index].slice(match[0].length)
+    if (!result[index]) {
+      result.splice(index, 1)
+      index -= 1
+    }
+  }
+
   return result
 }
 
