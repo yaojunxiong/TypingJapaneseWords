@@ -77,6 +77,11 @@ const REVIEWED_SPLITS: Record<number, Record<string, number[]>> = {
     '008': [1.600],
     '009': [1.410],
   },
+  26: {
+    '002': [2.669],
+    '003': [4.093],
+    '006': [1.124],
+  },
 }
 
 // Some generated line clips cut through a final syllable or the next line's
