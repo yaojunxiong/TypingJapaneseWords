@@ -1,108 +1,188 @@
 {
   "lessonNo": 32,
   "conversationTitle": "無理をしないほうがいいですよ",
-  "reviewStatus": "pending-human-review",
-  "generationAllowed": false,
+  "reviewStatus": "approved",
+  "generationAllowed": true,
   "prompts": [
     {
       "storyboardLineId": "sb-32-001",
       "storyboardTextLineId": "l32-conv-001-s01",
       "sourceLineId": "l32-conv-001",
-      "imagePromptCn": "小川注意到シュミット没有精神，询问身体情况，并围绕头痛胃痛、加班、压力、去医院检查和不要勉强提出建议。 当前画面聚焦小川对シュミット说这一句，保持真实课文场景和人物关系。 小川看向シュミット，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "小川注意到シュミット没有精神，询问身体情况，并围绕头痛胃痛、加班、压力、去医院检查和不要勉强提出建议。 当前画面聚焦小川对シュミット说这一句，保持真实课文场景和人物关系。 小川看向シュミット，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "imagePromptCn": "第32课教材会话竖屏故事分镜，日本语教材动画插画，干净柔和的赛璐璐着色，同一个明亮安静的日本公司室内休息区，9:16，1080×1920。现场恰好两名成年男性：左侧始终是小川，约40岁日本男性，短整齐黑发、黑色长方形眼镜、深棕眼睛、白色长袖商务衬衫、深森林绿色领带、不穿外套；右侧始终是シュミット，约45至50岁白人男性，沙金色侧分短发、同色修整小胡子、蓝灰眼睛、灰色细格西装、白衬衫、带细小橙点的深海军蓝领带。固定暖米墙、无字窄窗、圆形中棕木桌、两把深蓝软椅，桌上只有两只固定位置的纯白咖啡杯与杯碟，每人一套。左侧小川张口，关切地稍微前倾，以一只开放手掌朝向シュミット；右侧シュミット闭口、肩膀微垂、眼神疲惫。人物、桌椅和杯碟只在上部72%，底部28%是从左到右完整连续的纯暖象牙色空白字幕区。无任何文字。",
+      "imagePromptJa": "第32課教材会話の縦型ストーリーボード。清潔で柔らかなセル塗りの日本語教材アニメ調。同じ明るく静かな日本企業の休憩ラウンジ、9:16、1080×1920。成人男性は必ず二人だけ。左は常に小川、40歳前後の日本人男性、整えた短い黒髪、黒い長方形眼鏡、濃い茶色の目、白い長袖ビジネスシャツ、深い森緑色のネクタイ、上着なし。右は常にシュミット、45～50歳の白人男性、砂金色の横分け短髪、同色の整えた口ひげ、青灰色の目、細かな灰色格子スーツ、白シャツ、小さな橙色ドットの濃紺ネクタイ。暖かいベージュ壁、文字のない細窓、丸い中茶色木製テーブル、濃青の椅子二脚、白いカップと受け皿は一人一組で固定。左の小川が口を開け、心配そうに少し前へ寄り、開いた片手をシュミットへ向ける。右のシュミットは口を閉じ、肩を少し落として疲れた目をしている。場面は上部72%だけ、下部28%は左右いっぱいの連続した無地の暖かいアイボリー余白。文字は一切なし。",
+      "negativePrompt": "readable text, captions, subtitles, letters, numbers, Japanese characters, signs, logos, watermark, speech bubbles, thought bubbles, inset panels, montage, hospital, doctor, nurse, medicine, medical chart, extra people, third person, swapped left-right positions, wardrobe changes, wrong speaker, open mouth on Schmidt, unconscious, sleeping, duplicate cups, missing cups, cropped hands, deformed hands, extra fingers, extra limbs, furniture or objects intruding into bottom blank panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-32-002",
       "storyboardTextLineId": "l32-conv-002-s01",
       "sourceLineId": "l32-conv-002",
-      "imagePromptCn": "小川注意到シュミット没有精神，询问身体情况，并围绕头痛胃痛、加班、压力、去医院检查和不要勉强提出建议。 当前画面聚焦小川对シュミット说这一句，保持真实课文场景和人物关系。 小川看向シュミット，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "小川注意到シュミット没有精神，询问身体情况，并围绕头痛胃痛、加班、压力、去医院检查和不要勉强提出建议。 当前画面聚焦小川对シュミット说这一句，保持真实课文场景和人物关系。 小川看向シュミット，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "imagePromptCn": "第32课教材会话竖屏故事分镜，干净柔和赛璐璐日本教材动画风，同一个明亮安静的公司休息区，9:16，1080×1920。现场恰好两名成年男性。左侧固定小川：约40岁日本男性、短黑发、黑色长方形眼镜、白色长袖商务衬衫、深森林绿色领带、不穿外套；右侧固定シュミット：约45至50岁白人男性、沙金色侧分短发、同色小胡子、灰色细格西装、白衬衫、深海军蓝橙点领带。固定暖米墙、无字窄窗、圆形中棕木桌、深蓝软椅两把和两套固定白色咖啡杯碟。左侧小川张口，轻歪头，一只手掌心向上自然询问怎么了；右侧シュミット闭口看向他，仍显疲惫。人物与家具只占上部72%，底部28%是完整连续纯暖象牙色空白。无问号或任何文字。",
+      "imagePromptJa": "第32課教材会話の縦型ストーリーボード、柔らかなセル塗りの日本語教材アニメ調。同じ会社休憩ラウンジ、9:16、1080×1920。男性二人だけ。左の小川は短い黒髪、黒い長方形眼鏡、白い長袖シャツ、深い森緑ネクタイ、上着なし。右のシュミットは砂金色の横分け短髪、同色の口ひげ、灰色細格子スーツ、白シャツ、濃紺の橙ドットネクタイ。暖かいベージュ壁、文字なしの細窓、丸い中茶色テーブル、濃青椅子二脚、白いカップと受け皿二組を固定。左の小川が口を開け、少し首を傾け、手のひらを上にして自然に質問する。右のシュミットは口を閉じて疲れた様子で見る。上部72%に場面、下部28%は無地の暖かいアイボリー余白。疑問符も文字もなし。",
+      "negativePrompt": "question mark, readable text, captions, letters, numbers, speech bubbles, thought bubbles, extra people, hospital, doctor, medicine, office desk, computer, paper pile, clock, calendar, swapped positions, wardrobe changes, wrong speaker, open mouth on Schmidt, duplicate cups, missing cups, cropped hands, extra fingers, deformed hands, bottom blank panel intrusion",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-32-003",
       "storyboardTextLineId": "l32-conv-003-s01",
       "sourceLineId": "l32-conv-003",
-      "imagePromptCn": "小川注意到シュミット没有精神，询问身体情况，并围绕头痛胃痛、加班、压力、去医院检查和不要勉强提出建议。 当前画面聚焦シュミット对小川说这一句，保持真实课文场景和人物关系。 シュミット看向小川，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "小川注意到シュミット没有精神，询问身体情况，并围绕头痛胃痛、加班、压力、去医院检查和不要勉强提出建议。 当前画面聚焦シュミット对小川说这一句，保持真实课文场景和人物关系。 シュミット看向小川，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "imagePromptCn": "第32课教材会话竖屏故事分镜，干净柔和赛璐璐日本教材动画风，同一明亮公司休息区，9:16，1080×1920。恰好两名成年男性，左侧小川固定短黑发、黑色长方形眼镜、白色长袖衬衫、深森林绿色领带；右侧シュミット固定沙金色侧分短发、同色修整小胡子、灰色细格西装、白衬衫、深海军蓝橙点领带。固定暖米墙、无字窄窗、圆形中棕木桌、两把深蓝软椅与两套固定白色杯碟。右侧シュミット张口、肩膀略垂，一只手轻放在自己上胸前，疲惫但清醒地说明最近身体状况不好；左侧小川闭口认真倾听。场景只在上部72%，底部28%完整连续纯暖象牙色留白。无任何文字。",
+      "imagePromptJa": "第32課教材会話の縦型絵コンテ、柔らかなセル塗り。同じ会社休憩ラウンジ、9:16、1080×1920。男性二人だけ。左の小川は短い黒髪、黒い長方形眼鏡、白い長袖シャツ、深い森緑ネクタイ。右のシュミットは砂金色横分け短髪、同色の整えた口ひげ、灰色細格子スーツ、白シャツ、濃紺橙ドットネクタイ。暖かなベージュ壁、文字なしの細窓、丸い中茶色テーブル、濃青椅子二脚、白いカップと受け皿二組を固定。右のシュミットが口を開け、肩を少し落とし、片手を自分の上胸部へ軽く置いて最近の体調不良を話す。左の小川は口を閉じて聞く。上部72%のみ場面、下部28%は無地の暖かいアイボリー。文字なし。",
+      "negativePrompt": "heart attack, chest pain emergency, fainting, ambulance, hospital, doctor, medical chart, readable text, speech bubbles, extra people, swapped positions, wardrobe changes, wrong speaker, open mouth on Ogawa, duplicate cups, cropped hands, deformed hands, extra limbs, bottom blank panel intrusion",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-32-004",
-      "storyboardTextLineId": "l32-conv-004-s01",
-      "sourceLineId": "l32-conv-004",
-      "imagePromptCn": "小川注意到シュミット没有精神，询问身体情况，并围绕头痛胃痛、加班、压力、去医院检查和不要勉强提出建议。 当前画面聚焦小川对シュミット说这一句，保持真实课文场景和人物关系。 小川看向シュミット，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "小川注意到シュミット没有精神，询问身体情况，并围绕头痛胃痛、加班、压力、去医院检查和不要勉强提出建议。 当前画面聚焦小川对シュミット说这一句，保持真实课文场景和人物关系。 小川看向シュミット，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "storyboardTextLineId": "l32-conv-003-s02",
+      "sourceLineId": "l32-conv-003",
+      "imagePromptCn": "第32课教材会话竖屏故事分镜，柔和赛璐璐日本教材动画风，同一公司休息区，9:16，1080×1920。现场恰好两名成年男性。左侧小川固定短黑发、黑色长方形眼镜、白衬衫、深森林绿色领带；右侧シュミット固定沙金色侧分短发、同色小胡子、灰色细格西装、深海军蓝橙点领带。固定暖米墙、无字窄窗、圆形中棕木桌、两把深蓝椅和两套白色杯碟。右侧シュミット张口，视线稍向上回想，一只手刚开始抬向太阳穴但尚未触碰，表达“有时”；左侧小川闭口等待后文。人物和道具只在上部72%，底部28%为连续纯暖象牙色空白。无时钟、日历或任何文字。",
+      "imagePromptJa": "第32課教材会話の縦型絵コンテ、柔らかなセル塗り。同じ会社休憩ラウンジ、9:16、1080×1920。成人男性は二人だけ。左の小川は短い黒髪、黒い長方形眼鏡、白シャツ、深い森緑ネクタイ。右のシュミットは砂金色横分け短髪、同色口ひげ、灰色細格子スーツ、濃紺橙ドットネクタイ。暖かなベージュ壁、文字なしの細窓、丸い中茶色テーブル、濃青椅子二脚、白いカップと受け皿二組を固定。右のシュミットが口を開け、少し上を見て思い返し、片手をこめかみへ上げ始めるがまだ触れない。左の小川は口を閉じて続き待つ。上部72%に場面、下部28%は無地の暖かいアイボリー。文字なし。",
+      "negativePrompt": "clock, calendar, repeated person, thought bubble, flashback, pain lightning, readable text, captions, numbers, extra people, hospital, doctor, swapped positions, wrong speaker, open mouth on Ogawa, duplicate cups, cropped hands, extra fingers, bottom blank panel intrusion",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-32-005",
-      "storyboardTextLineId": "l32-conv-005-s01",
-      "sourceLineId": "l32-conv-005",
-      "imagePromptCn": "小川注意到シュミット没有精神，询问身体情况，并围绕头痛胃痛、加班、压力、去医院检查和不要勉强提出建议。 当前画面聚焦シュミット对小川说这一句，保持真实课文场景和人物关系。 シュミット看向小川，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "小川注意到シュミット没有精神，询问身体情况，并围绕头痛胃痛、加班、压力、去医院检查和不要勉强提出建议。 当前画面聚焦シュミット对小川说这一句，保持真实课文场景和人物关系。 シュミット看向小川，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "storyboardTextLineId": "l32-conv-003-s03",
+      "sourceLineId": "l32-conv-003",
+      "imagePromptCn": "第32课教材会话竖屏故事分镜，干净柔和赛璐璐日本教材动画风，同一公司休息区，9:16，1080×1920。恰好两名成年男性。左侧小川固定短黑发、黑框眼镜、白衬衫和深森林绿色领带；右侧シュミット固定沙金侧分短发、同色小胡子、灰色细格西装、白衬衫、深海军蓝橙点领带。固定暖米墙、无字窄窗、圆形中棕木桌、深蓝椅两把和两套白色杯碟。右侧シュミット张口，一只手轻按太阳穴，另一只手放在自己上腹部，轻微皱眉，清楚表达头和胃会疼；左侧小川闭口关切地看着他。人物与双手只在上部72%，底部28%完整纯暖象牙色。无医学图示或任何文字。",
+      "imagePromptJa": "第32課教材会話の縦型絵コンテ、清潔で柔らかなセル塗り。同じ会社休憩ラウンジ、9:16、1080×1920。男性二人だけ。左の小川は短い黒髪、黒い長方形眼鏡、白シャツ、深い森緑ネクタイ。右のシュミットは砂金色横分け短髪、同色口ひげ、灰色細格子スーツ、白シャツ、濃紺橙ドットネクタイ。固定の丸い中茶色テーブル、濃青椅子二脚、白いカップと受け皿二組。右のシュミットが口を開け、片手をこめかみに軽く当て、もう片手を自分の上腹部へ置き、少し眉を寄せて頭と胃の痛みを伝える。左の小川は口を閉じて心配そうに見る。上部72%だけ場面、下部28%は無地の暖かいアイボリー。文字なし。",
+      "negativePrompt": "anatomy diagram, transparent body, internal organs, red pain marks, pain lightning, vomiting, severe illness, fainting, hospital, doctor, readable text, extra people, swapped positions, wrong speaker, open mouth on Ogawa, cropped hands, extra arms, deformed hands, bottom panel intrusion",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-32-006",
-      "storyboardTextLineId": "l32-conv-006-s01",
-      "sourceLineId": "l32-conv-006",
-      "imagePromptCn": "小川注意到シュミット没有精神，询问身体情况，并围绕头痛胃痛、加班、压力、去医院检查和不要勉强提出建议。 当前画面聚焦小川对シュミット说这一句，保持真实课文场景和人物关系。 小川看向シュミット，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "小川注意到シュミット没有精神，询问身体情况，并围绕头痛胃痛、加班、压力、去医院检查和不要勉强提出建议。 当前画面聚焦小川对シュミット说这一句，保持真实课文场景和人物关系。 小川看向シュミット，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "storyboardTextLineId": "l32-conv-004-s01",
+      "sourceLineId": "l32-conv-004",
+      "imagePromptCn": "第32课教材会话竖屏故事分镜，柔和赛璐璐日本教材动画风，同一公司休息区，9:16，1080×1920。现场只有两名成年男性。左侧小川固定短黑发、黑色长方形眼镜、白色长袖衬衫、深森林绿色领带；右侧シュミット固定沙金侧分短发、同色小胡子、灰色细格西装、深海军蓝橙点领带。固定暖米墙、无字窄窗、圆形中棕木桌、深蓝椅两把、白色杯碟两套。左侧小川张口，神情担忧并稍微前倾，一只手克制地靠近胸前，温和表示“那可不行”；右侧シュミット闭口倾听。上部72%为人物和场景，底部28%为连续纯暖象牙色空白。无文字。",
+      "imagePromptJa": "第32課教材会話の縦型絵コンテ、柔らかなセル塗り。同じ会社休憩ラウンジ、9:16、1080×1920。成人男性二人だけ。左の小川は短い黒髪、黒い長方形眼鏡、白い長袖シャツ、深い森緑ネクタイ。右のシュミットは砂金色横分け短髪、同色口ひげ、灰色細格子スーツ、濃紺橙ドットネクタイ。丸い中茶色テーブル、濃青椅子二脚、白いカップと受け皿二組を固定。左の小川が口を開け、心配そうに少し前へ寄り、片手を控えめに胸元へ置く。右のシュミットは口を閉じて聞く。上部72%に人物と場面、下部28%は無地の暖かいアイボリー余白。文字なし。",
+      "negativePrompt": "anger, scolding, argument, pointing accusation, readable text, extra people, hospital, doctor, thought bubble, swapped positions, wardrobe changes, wrong speaker, open mouth on Schmidt, duplicate cups, cropped hands, extra fingers, bottom blank panel intrusion",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-32-007",
-      "storyboardTextLineId": "l32-conv-007-s01",
-      "sourceLineId": "l32-conv-007",
-      "imagePromptCn": "小川注意到シュミット没有精神，询问身体情况，并围绕头痛胃痛、加班、压力、去医院检查和不要勉强提出建议。 当前画面聚焦シュミット对小川说这一句，保持真实课文场景和人物关系。 シュミット看向小川，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "小川注意到シュミット没有精神，询问身体情况，并围绕头痛胃痛、加班、压力、去医院检查和不要勉强提出建议。 当前画面聚焦シュミット对小川说这一句，保持真实课文场景和人物关系。 シュミット看向小川，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "storyboardTextLineId": "l32-conv-004-s02",
+      "sourceLineId": "l32-conv-004",
+      "imagePromptCn": "第32课教材会话竖屏故事分镜，柔和赛璐璐日本教材动画风，同一明亮公司休息区，9:16，1080×1920。现场恰好两名成年男性，左侧小川固定短黑发、黑框眼镜、白衬衫、深森林绿色领带；右侧シュミット固定沙金侧分短发、同色小胡子、灰色细格西装、深海军蓝橙点领带。固定暖米墙、无字窄窗、圆形中棕木桌、深蓝椅两把与白色杯碟两套。左侧小川张口、眉毛轻抬，一只开放手掌自然朝向シュミット询问工作是不是很忙；右侧シュミット闭口准备回答。上部72%为场景，底部28%完整纯暖象牙色留白。无电脑、文件或文字。",
+      "imagePromptJa": "第32課教材会話の縦型絵コンテ、柔らかなセル塗り。同じ明るい会社休憩ラウンジ、9:16、1080×1920。男性二人だけ。左の小川は短い黒髪、黒い長方形眼鏡、白シャツ、深い森緑ネクタイ。右のシュミットは砂金色横分け短髪、同色口ひげ、灰色細格子スーツ、濃紺橙ドットネクタイ。暖かなベージュ壁、文字なしの細窓、丸い中茶色テーブル、濃青椅子二脚、白いカップと受け皿二組。左の小川が口を開け、眉を少し上げ、開いた手のひらをシュミットへ向けて仕事が忙しいか尋ねる。右のシュミットは口を閉じて答えを準備する。上部72%だけ場面、下部28%は暖かいアイボリー余白。文字なし。",
+      "negativePrompt": "computer, papers, office desk, paper pile, company sign, question mark, readable text, extra people, clock, calendar, hospital, swapped positions, wrong speaker, open mouth on Schmidt, duplicate cups, cropped hands, extra fingers, bottom panel intrusion",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-32-008",
-      "storyboardTextLineId": "l32-conv-008-s01",
-      "sourceLineId": "l32-conv-008",
-      "imagePromptCn": "小川注意到シュミット没有精神，询问身体情况，并围绕头痛胃痛、加班、压力、去医院检查和不要勉强提出建议。 当前画面聚焦小川对シュミット说这一句，保持真实课文场景和人物关系。 小川看向シュミット，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "小川注意到シュミット没有精神，询问身体情况，并围绕头痛胃痛、加班、压力、去医院检查和不要勉强提出建议。 当前画面聚焦小川对シュミット说这一句，保持真实课文场景和人物关系。 小川看向シュミット，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "storyboardTextLineId": "l32-conv-005-s01",
+      "sourceLineId": "l32-conv-005",
+      "imagePromptCn": "第32课教材会话竖屏故事分镜，柔和赛璐璐日本教材动画风，同一公司休息区，9:16，1080×1920。现场只有两名成年男性。左侧小川固定短黑发、黑框眼镜、白衬衫、深森林绿色领带；右侧シュミット固定沙金侧分短发、同色小胡子、灰色细格西装、深海军蓝橙点领带。固定暖米墙、无字窄窗、圆形中棕木桌、两把深蓝椅和两套白色杯碟。右侧シュミット张口，神情疲惫并轻轻点头肯定；左侧小川闭口关切地看着他。人物与杯碟在上部72%，底部28%为完整纯暖象牙色空白。无文字。",
+      "imagePromptJa": "第32課教材会話の縦型絵コンテ、柔らかなセル塗り。同じ会社休憩ラウンジ、9:16、1080×1920。成人男性二人だけ。左の小川は短い黒髪、黒い長方形眼鏡、白シャツ、深い森緑ネクタイ。右のシュミットは砂金色横分け短髪、同色口ひげ、灰色細格子スーツ、濃紺橙ドットネクタイ。丸い中茶色テーブル、濃青椅子二脚、白いカップと受け皿二組を固定。右のシュミットが口を開け、疲れた表情で小さくうなずく。左の小川は口を閉じて心配そうに見る。場面は上部72%、下部28%は無地の暖かいアイボリー。文字なし。",
+      "negativePrompt": "celebration, cheerful laughing, sleeping, fainting, readable text, extra people, hospital, thought bubble, swapped positions, wrong speaker, open mouth on Ogawa, duplicate cups, cropped hands, deformed face, bottom blank panel intrusion",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-32-009",
-      "storyboardTextLineId": "l32-conv-009-s01",
-      "sourceLineId": "l32-conv-009",
-      "imagePromptCn": "小川注意到シュミット没有精神，询问身体情况，并围绕头痛胃痛、加班、压力、去医院检查和不要勉强提出建议。 当前画面聚焦シュミット对小川说这一句，保持真实课文场景和人物关系。 シュミット看向小川，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "小川注意到シュミット没有精神，询问身体情况，并围绕头痛胃痛、加班、压力、去医院检查和不要勉强提出建议。 当前画面聚焦シュミット对小川说这一句，保持真实课文场景和人物关系。 シュミット看向小川，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "storyboardTextLineId": "l32-conv-005-s02",
+      "sourceLineId": "l32-conv-005",
+      "imagePromptCn": "第32课教材会话竖屏故事分镜，干净柔和赛璐璐日本教材动画风，同一公司休息区，9:16，1080×1920。恰好两名成年男性。左侧小川固定短黑发、黑框眼镜、白衬衫、深森林绿色领带；右侧シュミット固定沙金侧分短发、同色小胡子、灰色细格西装、深海军蓝橙点领带。固定暖米墙、无字窄窗、圆形中棕木桌、深蓝椅两把、白色杯碟两套。右侧シュミット张口，一只手轻揉后颈，另一只手以克制的上下距离手势表示加班量很多；左侧小川闭口认真听。完整双手与人物只在上部72%，底部28%纯暖象牙色。无办公道具或文字。",
+      "imagePromptJa": "第32課教材会話の縦型絵コンテ、清潔で柔らかなセル塗り。同じ会社休憩ラウンジ、9:16、1080×1920。男性二人だけ。左の小川は短い黒髪、黒い長方形眼鏡、白シャツ、深い森緑ネクタイ。右のシュミットは砂金色横分け短髪、同色口ひげ、灰色細格子スーツ、濃紺橙ドットネクタイ。固定の丸い中茶色テーブル、濃青椅子二脚、白いカップと受け皿二組。右のシュミットが口を開け、片手で首の後ろを軽く揉み、もう片手の控えめな上下幅で残業が多いことを示す。左の小川は口を閉じて聞く。上部72%のみ場面、下部28%は暖かいアイボリー余白。文字なし。",
+      "negativePrompt": "paper pile, computer, office workstation, boss, coworker, clock, calendar, readable text, extra people, hospital, swapped positions, wrong speaker, open mouth on Ogawa, cropped hands, extra arms, deformed hands, duplicate cups, bottom panel intrusion",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-32-010",
+      "storyboardTextLineId": "l32-conv-006-s01",
+      "sourceLineId": "l32-conv-006",
+      "imagePromptCn": "第32课教材会话竖屏故事分镜，柔和赛璐璐日本教材动画风，同一公司休息区，9:16，1080×1920。现场恰好两名成年男性，左侧小川固定短黑发、黑色长方形眼镜、白衬衫、深森林绿色领带；右侧シュミット固定沙金侧分短发、同色小胡子、灰色细格西装、深海军蓝橙点领带。固定暖米墙、无字窄窗、圆形中棕木桌、深蓝椅两把和白色杯碟两套。左侧小川张口，一只手靠近自己的太阳穴但不触碰，用解释性而非病痛的手势推测可能是压力，目光关切地看向シュミット；右侧シュミット闭口倾听。场景在上部72%，底部28%完整纯暖象牙色。无脑部图或文字。",
+      "imagePromptJa": "第32課教材会話の縦型絵コンテ、柔らかなセル塗り。同じ会社休憩ラウンジ、9:16、1080×1920。男性二人だけ。左の小川は短い黒髪、黒い長方形眼鏡、白シャツ、深い森緑ネクタイ。右のシュミットは砂金色横分け短髪、同色口ひげ、灰色細格子スーツ、濃紺橙ドットネクタイ。丸い中茶色テーブル、濃青椅子二脚、白いカップと受け皿二組を固定。左の小川が口を開け、片手を自分のこめかみの近くへ置くが触れず、病気ではなく説明の身振りとしてストレスの可能性を示し、シュミットを心配そうに見る。右のシュミットは口を閉じて聞く。上部72%に場面、下部28%は暖かいアイボリー余白。文字なし。",
+      "negativePrompt": "Ogawa headache, brain diagram, stress text, pain lightning, thought bubble, hospital, doctor, readable text, extra people, swapped positions, wrong speaker, open mouth on Schmidt, cropped hands, extra fingers, duplicate cups, bottom blank panel intrusion",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-32-011",
+      "storyboardTextLineId": "l32-conv-006-s02",
+      "sourceLineId": "l32-conv-006",
+      "imagePromptCn": "第32课教材会话竖屏故事分镜，柔和赛璐璐日本教材动画风，同一公司休息区，9:16，1080×1920。恰好两名成年男性。左侧小川固定短黑发、黑框眼镜、白衬衫、深森林绿色领带；右侧シュミット固定沙金侧分短发、同色小胡子、灰色细格西装、深海军蓝橙点领带。固定暖米墙、无字窄窗、圆形中棕木桌、深蓝椅两把与两套白色杯碟。左侧小川张口，清楚竖起恰好一根食指强调去医院一次，另一只开放手掌温和朝向シュミット；右侧シュミット闭口专注看着他。人物和恰好一根竖起食指在上部72%，底部28%完整纯暖象牙色。仍在休息区，不画医院，无数字或文字。",
+      "imagePromptJa": "第32課教材会話の縦型絵コンテ、柔らかなセル塗り。同じ会社休憩ラウンジ、9:16、1080×1920。成人男性二人だけ。左の小川は短い黒髪、黒い長方形眼鏡、白シャツ、深い森緑ネクタイ。右のシュミットは砂金色横分け短髪、同色口ひげ、灰色細格子スーツ、濃紺橙ドットネクタイ。丸い中茶色テーブル、濃青椅子二脚、白いカップと受け皿二組を固定。左の小川が口を開け、人差し指を必ず一本だけ明確に立てて病院へ一度行くことを強調し、もう片方の開いた手のひらを優しくシュミットへ向ける。右のシュミットは口を閉じて見る。上部72%に人物と一本の指、下部28%は無地の暖かいアイボリー。休憩ラウンジのまま、病院も数字も文字もなし。",
+      "negativePrompt": "number one, digits, hospital, doctor, more than one raised finger, two raised fingers, extra fingers, malformed hand, readable text, extra people, swapped positions, wrong speaker, open mouth on Schmidt, duplicate cups, cropped hand, bottom blank panel intrusion",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-32-012",
+      "storyboardTextLineId": "l32-conv-006-s03",
+      "sourceLineId": "l32-conv-006",
+      "imagePromptCn": "第32课教材会话竖屏故事分镜，柔和赛璐璐日本教材动画风，仍在同一公司休息区，9:16，1080×1920，不切换医院。现场恰好两名成年男性。左侧小川固定短黑发、黑框眼镜、白衬衫、深森林绿色领带；右侧シュミット固定沙金侧分短发、同色小胡子、灰色细格西装、深海军蓝橙点领带。固定暖米墙、无字窄窗、圆形中棕木桌、深蓝椅两把与两套白色杯碟。左侧小川张口，一只开放手掌温和朝向シュミット，另一只手轻示休息区外的走廊方向，支持性地建议去检查；右侧シュミット闭口听。人物和手势只在上部72%，底部28%完整纯暖象牙色。无医院、红十字或文字。",
+      "imagePromptJa": "第32課教材会話の縦型絵コンテ、柔らかなセル塗り。病院へ切り替えず同じ会社休憩ラウンジ、9:16、1080×1920。男性二人だけ。左の小川は短い黒髪、黒い長方形眼鏡、白シャツ、深い森緑ネクタイ。右のシュミットは砂金色横分け短髪、同色口ひげ、灰色細格子スーツ、濃紺橙ドットネクタイ。丸い中茶色テーブル、濃青椅子二脚、白いカップと受け皿二組を固定。左の小川が口を開け、片方の開いた手のひらを優しくシュミットへ向け、もう片手で休憩ラウンジ外の廊下方向を軽く示し、診てもらうことを勧める。右のシュミットは口を閉じて聞く。上部72%のみ場面、下部28%は暖かいアイボリー。病院も文字もなし。",
+      "negativePrompt": "hospital building, red cross, doctor, nurse, clinic, patient bed, medicine, diagnosis, thought bubble, inset panel, readable text, extra people, swapped positions, wrong speaker, open mouth on Schmidt, cropped hands, extra fingers, duplicate cups, bottom panel intrusion",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-32-013",
+      "storyboardTextLineId": "l32-conv-007-s01",
+      "sourceLineId": "l32-conv-007",
+      "imagePromptCn": "第32课教材会话竖屏故事分镜，柔和赛璐璐日本教材动画风，同一公司休息区，9:16，1080×1920。现场只有两名成年男性。左侧小川固定短黑发、黑框眼镜、白衬衫、深森林绿色领带；右侧シュミット固定沙金侧分短发、同色小胡子、灰色细格西装、深海军蓝橙点领带。固定暖米墙、无字窄窗、圆形中棕木桌、两把深蓝椅和两套白色杯碟。右侧シュミット张口缓慢点头，眉眼略微放松，一只手自然放回桌边，认同去检查的建议；左侧小川闭口等待。人物只在上部72%，底部28%纯暖象牙色留白。无文字。",
+      "imagePromptJa": "第32課教材会話の縦型絵コンテ、柔らかなセル塗り。同じ会社休憩ラウンジ、9:16、1080×1920。男性二人だけ。左の小川は短い黒髪、黒い長方形眼鏡、白シャツ、深い森緑ネクタイ。右のシュミットは砂金色横分け短髪、同色口ひげ、灰色細格子スーツ、濃紺橙ドットネクタイ。丸い中茶色テーブル、濃青椅子二脚、白いカップと受け皿二組を固定。右のシュミットが口を開けてゆっくりうなずき、目元を少し緩め、片手を自然にテーブル脇へ戻して助言に同意する。左の小川は口を閉じて待つ。上部72%だけ場面、下部28%は暖かいアイボリー余白。文字なし。",
+      "negativePrompt": "fully recovered, big laughter, celebration, handshake, hospital, doctor, readable text, extra people, swapped positions, wrong speaker, open mouth on Ogawa, duplicate cups, cropped hands, deformed face, bottom panel intrusion",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-32-014",
+      "storyboardTextLineId": "l32-conv-008-s01",
+      "sourceLineId": "l32-conv-008",
+      "imagePromptCn": "第32课教材会话竖屏故事分镜，干净柔和赛璐璐日本教材动画风，同一公司休息区，9:16，1080×1920。恰好两名成年男性，左侧小川固定短黑发、黑框眼镜、白衬衫、深森林绿色领带；右侧シュミット固定沙金侧分短发、同色小胡子、灰色细格西装、深海军蓝橙点领带。固定暖米墙、无字窄窗、圆形中棕木桌、深蓝椅两把、白色杯碟两套。左侧小川张口，在胸前用双前臂做温和克制的交叉停止手势，表情关切而不严厉，劝对方不要勉强；右侧シュミット闭口认真听。交叉前臂不遮脸，人物只在上部72%，底部28%纯暖象牙色。无红叉或文字。",
+      "imagePromptJa": "第32課教材会話の縦型絵コンテ、清潔で柔らかなセル塗り。同じ会社休憩ラウンジ、9:16、1080×1920。成人男性二人だけ。左の小川は短い黒髪、黒い長方形眼鏡、白シャツ、深い森緑ネクタイ。右のシュミットは砂金色横分け短髪、同色口ひげ、灰色細格子スーツ、濃紺橙ドットネクタイ。丸い中茶色テーブル、濃青椅子二脚、白いカップと受け皿二組。左の小川が口を開け、胸の前で両前腕を穏やかに交差させ、顔を隠さず、厳しくない心配そうな表情で無理をしないよう勧める。右のシュミットは口を閉じて聞く。上部72%のみ場面、下部28%は暖かいアイボリー。赤い×も文字もなし。",
+      "negativePrompt": "red X symbol, angry prohibition, traffic gesture, argument, scolding, readable text, hospital, extra people, swapped positions, wrong speaker, open mouth on Schmidt, crossed arms hiding face, extra arms, cropped hands, duplicate cups, bottom blank panel intrusion",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-32-015",
+      "storyboardTextLineId": "l32-conv-009-s01",
+      "sourceLineId": "l32-conv-009",
+      "imagePromptCn": "第32课教材会话竖屏故事分镜，柔和赛璐璐日本教材动画风，同一公司休息区，9:16，1080×1920。现场恰好两名成年男性。左侧小川固定短黑发、黑框眼镜、白衬衫、深森林绿色领带；右侧シュミット固定沙金侧分短发、同色小胡子、灰色细格西装、深海军蓝橙点领带。固定暖米墙、无字窄窗、圆形中棕木桌、深蓝椅两把和两套白色杯碟。右侧シュミット张口轻轻点头，露出很淡的接受表情，准备说明计划；左侧小川闭口等待。场景只在上部72%，底部28%纯暖象牙色空白。无文字。",
+      "imagePromptJa": "第32課教材会話の縦型絵コンテ、柔らかなセル塗り。同じ会社休憩ラウンジ、9:16、1080×1920。男性二人だけ。左の小川は短い黒髪、黒い長方形眼鏡、白シャツ、深い森緑ネクタイ。右のシュミットは砂金色横分け短髪、同色口ひげ、灰色細格子スーツ、濃紺橙ドットネクタイ。丸い中茶色テーブル、濃青椅子二脚、白いカップと受け皿二組を固定。右のシュミットが口を開けて小さくうなずき、わずかに受け入れた表情で次の計画を話し始める。左の小川は口を閉じて待つ。上部72%だけ場面、下部28%は暖かいアイボリー余白。文字なし。",
+      "negativePrompt": "celebration, broad smile, laughing, handshake, readable text, extra people, thought bubble, hospital, swapped positions, wrong speaker, open mouth on Ogawa, duplicate cups, cropped hands, bottom panel intrusion",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-32-016",
+      "storyboardTextLineId": "l32-conv-009-s02",
+      "sourceLineId": "l32-conv-009",
+      "imagePromptCn": "第32课教材会话竖屏故事分镜，干净柔和赛璐璐日本教材动画风，同一公司休息区，9:16，1080×1920。恰好两名成年男性。左侧小川固定短黑发、黑框眼镜、白衬衫、深森林绿色领带；右侧シュミット固定沙金侧分短发、同色小胡子、灰色细格西装、深海军蓝橙点领带。固定暖米墙、无字窄窗、圆形中棕木桌、深蓝椅两把和两套白色杯碟。右侧シュミット张口，双手在胸前做自然靠拢并收束的完成手势，双手不接触杯碟，说明等当前工作结束后；左侧小川闭口倾听。完整双手只在上部72%，底部28%纯暖象牙色空白。无文件、电脑或文字。",
+      "imagePromptJa": "第32課教材会話の縦型絵コンテ、清潔で柔らかなセル塗り。同じ会社休憩ラウンジ、9:16、1080×1920。成人男性二人だけ。左の小川は短い黒髪、黒い長方形眼鏡、白シャツ、深い森緑ネクタイ。右のシュミットは砂金色横分け短髪、同色口ひげ、灰色細格子スーツ、濃紺橙ドットネクタイ。丸い中茶色テーブル、濃青椅子二脚、白いカップと受け皿二組。右のシュミットが口を開け、両手を胸前で自然に近づけて収束させる完了の身振りをし、カップには触れず、今の仕事が終わったらと説明する。左の小川は口を閉じて聞く。上部72%のみ場面、下部28%は暖かいアイボリー。文字なし。",
+      "negativePrompt": "papers, computer, office workstation, clock, calendar, check mark, readable text, extra people, thought bubble, swapped positions, wrong speaker, open mouth on Ogawa, extra arms, cropped hands, deformed hands, duplicate cups, bottom panel intrusion",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-32-017",
+      "storyboardTextLineId": "l32-conv-009-s03",
+      "sourceLineId": "l32-conv-009",
+      "imagePromptCn": "第32课教材会话竖屏故事分镜，柔和赛璐璐日本教材动画风，仍在同一公司休息区，9:16，1080×1920，不切换休假地点。现场恰好两名成年男性。左侧小川固定短黑发、黑框眼镜、白衬衫、深森林绿色领带；右侧シュミット固定沙金侧分短发、同色小胡子、灰色细格西装、深海军蓝橙点领带。固定暖米墙、无字窄窗、圆形中棕木桌、深蓝椅两把和两套白色杯碟。右侧シュミット张口，肩膀略放松、身体稍微后靠，一只开放手掌向上，露出克制而有希望的小微笑，说明打算休假；左侧小川闭口理解地看着他。场景只在上部72%，底部28%纯暖象牙色。无海滩、行李或文字。",
+      "imagePromptJa": "第32課教材会話の縦型絵コンテ、柔らかなセル塗り。休暇先へ切り替えず同じ会社休憩ラウンジ、9:16、1080×1920。男性二人だけ。左の小川は短い黒髪、黒い長方形眼鏡、白シャツ、深い森緑ネクタイ。右のシュミットは砂金色横分け短髪、同色口ひげ、灰色細格子スーツ、濃紺橙ドットネクタイ。丸い中茶色テーブル、濃青椅子二脚、白いカップと受け皿二組。右のシュミットが口を開け、肩を少し緩めてわずかに背をもたせ、片方の開いた手のひらを上にし、控えめで希望のある小さな微笑みで休みを取る計画を話す。左の小川は口を閉じて理解して見る。上部72%だけ場面、下部28%は暖かいアイボリー。文字なし。",
+      "negativePrompt": "beach, ocean, resort, airplane, suitcase, vacation clothes, sunglasses, travel montage, thought bubble, readable text, extra people, swapped positions, wrong speaker, open mouth on Ogawa, duplicate cups, cropped hands, bottom blank panel intrusion",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-32-018",
       "storyboardTextLineId": "l32-conv-010-s01",
       "sourceLineId": "l32-conv-010",
-      "imagePromptCn": "小川注意到シュミット没有精神，询问身体情况，并围绕头痛胃痛、加班、压力、去医院检查和不要勉强提出建议。 当前画面聚焦小川对シュミット说这一句，保持真实课文场景和人物关系。 小川看向シュミット，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "小川注意到シュミット没有精神，询问身体情况，并围绕头痛胃痛、加班、压力、去医院检查和不要勉强提出建议。 当前画面聚焦小川对シュミット说这一句，保持真实课文场景和人物关系。 小川看向シュミット，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "imagePromptCn": "第32课教材会话竖屏故事分镜，干净柔和赛璐璐日本教材动画风，同一明亮公司休息区，9:16，1080×1920。现场恰好两名成年男性。左侧小川固定短黑发、黑色长方形眼镜、白衬衫、深森林绿色领带；右侧シュミット固定沙金侧分短发、同色小胡子、灰色细格西装、深海军蓝橙点领带。固定暖米墙、无字窄窗、圆形中棕木桌、两把深蓝椅和两套白色杯碟。左侧小川张口温和微笑并点头，一只开放手掌朝向シュミット表示赞同；右侧シュミット闭口，神情比开头放松，保持克制的小微笑。人物和杯碟只在上部72%，底部28%完整连续纯暖象牙色留白。无文字。",
+      "imagePromptJa": "第32課教材会話の縦型絵コンテ、清潔で柔らかなセル塗り。同じ明るい会社休憩ラウンジ、9:16、1080×1920。成人男性二人だけ。左の小川は短い黒髪、黒い長方形眼鏡、白シャツ、深い森緑ネクタイ。右のシュミットは砂金色横分け短髪、同色口ひげ、灰色細格子スーツ、濃紺橙ドットネクタイ。暖かなベージュ壁、文字なしの細窓、丸い中茶色テーブル、濃青椅子二脚、白いカップと受け皿二組。左の小川が口を開け、優しく微笑んでうなずき、開いた片手をシュミットへ向けて賛成する。右のシュミットは口を閉じ、冒頭より落ち着いた控えめな小さな微笑み。上部72%だけ場面、下部28%は左右いっぱいの無地の暖かいアイボリー余白。文字なし。",
+      "negativePrompt": "handshake, hug, party, celebration, alcohol, beach, readable text, extra people, hospital, thought bubble, swapped positions, wrong speaker, open mouth on Schmidt, duplicate cups, cropped hands, extra fingers, furniture intruding into bottom blank panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     }
   ]
 }
