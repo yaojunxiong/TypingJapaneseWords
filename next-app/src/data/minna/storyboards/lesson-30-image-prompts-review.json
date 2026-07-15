@@ -1,118 +1,198 @@
 {
   "lessonNo": 30,
   "conversationTitle": "非常袋を準備しておかないと",
-  "reviewStatus": "pending-human-review",
-  "generationAllowed": false,
+  "reviewStatus": "approved",
+  "generationAllowed": true,
   "prompts": [
     {
       "storyboardLineId": "sb-30-001",
       "storyboardTextLineId": "l30-conv-001-s01",
       "sourceLineId": "l30-conv-001",
-      "imagePromptCn": "鈴木家中，ミラー来访后看到大背包，以为是登山包，鈴木说明这是应急包以及需要预先准备的物品。 当前画面聚焦ミラー对鈴木说这一句，保持真实课文场景和人物关系。 ミラー看向鈴木，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "鈴木家中，ミラー来访后看到大背包，以为是登山包，鈴木说明这是应急包以及需要预先准备的物品。 当前画面聚焦ミラー对鈴木说这一句，保持真实课文场景和人物关系。 ミラー看向鈴木，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "imagePromptCn": "第30课教材会话竖屏故事分镜，日本语教材动画插画，干净柔和的赛璐璐着色，温暖现代日本住宅玄关内侧，9:16，1080×1920。画面恰好两名成年男性且固定左右与服装：左侧始终是ミラー，高个白人男性约30岁，短而整齐的沙金色侧分头发、蓝眼睛、中蓝色长袖衬衫、米色长裤、深海军蓝室内拖鞋；右侧始终是鈴木，年轻日本男性约30岁，整齐短黑发、深棕眼睛、森林绿色长袖翻领衬衫、深海军蓝长裤、深灰色室内拖鞋。同一住宅玄关，浅木地板、米白色地毯、无字木鞋柜、室内门和无字抽象装饰画。两人之间固定唯一一只打开的深炭灰色大应急背包，包内整齐放着两瓶无字清水、一只无字食品罐、一只无字食品盒、一支小型黑色手电筒和一台无字小型深灰色便携收音机。左侧ミラー张口，友好微笑并轻微欠身问候；右侧鈴木闭口欢迎地看着他。人物、玄关和背包只占上部72%，底部28%是完整连续的纯暖象牙色空白字幕区。无任何文字。",
+      "imagePromptJa": "第30課の教材会話用縦型ストーリーボード、日本語教材アニメ調、清潔で柔らかなセル塗り、暖かい現代日本住宅の玄関内側、9:16、1080×1920。成人男性は必ず二人だけ、左右と服装を固定。左は常にミラー、背の高い30歳前後の白人男性、短く整えた砂色の横分け髪、青い目、中青色の長袖シャツ、ベージュのズボン、濃紺の室内スリッパ。右は常に鈴木、30歳前後の日本人男性、整えた短い黒髪、濃い茶色の目、深緑の長袖襟付きシャツ、濃紺のズボン、濃灰色の室内スリッパ。同じ玄関、明るい木の床、アイボリーの敷物、無地の木製靴箱、室内ドア、文字のない抽象画。二人の間には開いた濃いチャコールグレーの大きな非常用リュック一つだけ。中身は無地の水二本、無地の缶詰一個、無地の食品箱一個、小型黒色懐中電灯一本、無地の小型濃灰色ラジオ一台。左のミラーが口を開け、親しみある笑顔で軽く会釈して挨拶する。右の鈴木は口を閉じて歓迎する表情で見る。人物と場面は上部72%だけ、下部28%は連続した無地の暖かいアイボリー字幕余白。文字は一切なし。",
+      "negativePrompt": "readable text, captions, subtitles, letters, numbers, Japanese characters, labels, calendar text, emergency bag label, price tags, brand names, logos, watermarks, speech bubbles, thought bubbles, inset panels, montage, flashback, supermarket, mountain scene, disaster scene, earthquake, fire, blackout, gas flame, rescue workers, extra people, women, children, pets, extra backpacks, suitcases, shopping bags, duplicated supplies, extra flashlight, extra radio, swapped left-right positions, wardrobe changes, wrong speaker, open mouth on listener, handshake, deep bow, goodbye gesture, cropped hands, extra fingers, deformed hands, extra limbs, character fusion, objects intruding into bottom blank panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-30-002",
       "storyboardTextLineId": "l30-conv-002-s01",
       "sourceLineId": "l30-conv-002",
-      "imagePromptCn": "鈴木家中，ミラー来访后看到大背包，以为是登山包，鈴木说明这是应急包以及需要预先准备的物品。 当前画面聚焦鈴木对ミラー说这一句，保持真实课文场景和人物关系。 鈴木看向ミラー，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "鈴木家中，ミラー来访后看到大背包，以为是登山包，鈴木说明这是应急包以及需要预先准备的物品。 当前画面聚焦鈴木对ミラー说这一句，保持真实课文场景和人物关系。 鈴木看向ミラー，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "imagePromptCn": "第30课教材会话竖屏故事分镜，日本语教材动画插画，干净柔和的赛璐璐着色，温暖现代日本住宅玄关内侧，9:16，1080×1920。恰好两名成年男性且固定左右与服装：左侧ミラー，高个白人男性约30岁，短沙金色侧分头发、蓝眼睛、中蓝色长袖衬衫、米色长裤、深海军蓝室内拖鞋；右侧鈴木，年轻日本男性约30岁，短黑发、深棕眼睛、森林绿色长袖翻领衬衫、深海军蓝长裤、深灰色室内拖鞋。同一浅木地板住宅玄关，米白色地毯、无字木鞋柜、室内门、无字抽象装饰画。两人之间固定唯一一只打开的深炭灰色大应急背包，包内固定两瓶无字清水、一只无字食品罐、一只无字食品盒、一支小型黑色手电筒和一台无字小型深灰色便携收音机。右侧鈴木张口温和微笑，一手靠近胸前欢迎ミラー；左侧ミラー闭口礼貌看向他。人物和场景只占上部72%，底部28%是完整纯暖象牙色空白字幕区。无任何文字。",
+      "imagePromptJa": "第30課の教材会話用縦型ストーリーボード、日本語教材アニメ調、柔らかなセル塗り、暖かい現代日本住宅の玄関内側、9:16、1080×1920。成人男性は二人だけ。左は常にミラー、背の高い30歳前後の白人男性、短い砂色の横分け髪、青い目、中青色の長袖シャツ、ベージュのズボン、濃紺の室内スリッパ。右は常に鈴木、30歳前後の日本人男性、短い黒髪、濃い茶色の目、深緑の長袖襟付きシャツ、濃紺のズボン、濃灰色の室内スリッパ。同じ玄関と固定された開いた濃炭灰色の非常用リュック一つ、無地の水二本、缶詰一個、食品箱一個、黒い懐中電灯一本、濃灰色ラジオ一台。右の鈴木が口を開け、穏やかに微笑み片手を胸元に添えて歓迎する。左のミラーは口を閉じて礼儀正しく見る。上部72%だけに人物と場面、下部28%は無地の暖かいアイボリー余白。文字なし。",
+      "negativePrompt": "readable text, captions, subtitles, letters, numbers, labels, logos, watermarks, speech bubbles, thought bubbles, extra people, shop clerk, hugging, handshake, extra backpacks, duplicated supplies, supermarket, disaster, mountain scene, swapped positions, wardrobe changes, wrong speaker, open mouth on Miller, cropped hands, extra fingers, deformed hands, extra limbs, objects in bottom blank panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-30-003",
-      "storyboardTextLineId": "l30-conv-003-s01",
-      "sourceLineId": "l30-conv-003",
-      "imagePromptCn": "鈴木家中，ミラー来访后看到大背包，以为是登山包，鈴木说明这是应急包以及需要预先准备的物品。 当前画面聚焦ミラー对鈴木说这一句，保持真实课文场景和人物关系。 ミラー看向鈴木，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "鈴木家中，ミラー来访后看到大背包，以为是登山包，鈴木说明这是应急包以及需要预先准备的物品。 当前画面聚焦ミラー对鈴木说这一句，保持真实课文场景和人物关系。 ミラー看向鈴木，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "storyboardTextLineId": "l30-conv-002-s02",
+      "sourceLineId": "l30-conv-002",
+      "imagePromptCn": "第30课教材会话竖屏故事分镜，日本语教材动画插画，干净柔和的赛璐璐着色，温暖现代日本住宅玄关内侧，9:16，1080×1920。恰好两名成年男性，左侧始终是沙金色短发、中蓝色衬衫、米色长裤的ミラー；右侧始终是短黑发、森林绿色衬衫、深海军蓝长裤的鈴木。固定同一玄关、浅木地板、米白色地毯、无字木鞋柜、室内门、无字抽象装饰画。两人之间固定唯一一只打开的深炭灰色大应急背包，包内固定无字水、食品罐、食品盒、黑色手电筒、深灰便携收音机。右侧鈴木张口，伸出一只开放手掌自然指向室内方向做“请进”手势；左侧ミラー闭口点头。人物和场景仅在上部72%，底部28%完整纯暖象牙色留白。无任何文字。",
+      "imagePromptJa": "第30課の教材会話用縦型ストーリーボード、日本語教材アニメ調、柔らかなセル塗り、日本住宅の同じ玄関、9:16、1080×1920。成人男性は二人だけ。左は砂色の短髪、中青色シャツ、ベージュのズボンのミラー。右は短い黒髪、深緑シャツ、濃紺ズボンの鈴木。固定された木の床、アイボリー敷物、無地靴箱、室内ドア、文字なしの抽象画、開いた濃炭灰色の非常用リュック一つと固定用品。右の鈴木が口を開け、開いた片手で室内方向を示して「どうぞ」と招き入れる。左のミラーは口を閉じてうなずく。上部72%に場面、下部28%は暖かいアイボリー無地余白。文字なし。",
+      "negativePrompt": "readable text, captions, subtitles, speech bubbles, thought bubbles, extra people, pointing outside, goodbye wave, wrong direction, extra backpack, duplicated supplies, supermarket, mountain scene, disaster, swapped positions, wardrobe changes, wrong speaker, open mouth on Miller, cropped hands, extra fingers, deformed hands, objects in bottom blank panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-30-004",
-      "storyboardTextLineId": "l30-conv-004-s01",
-      "sourceLineId": "l30-conv-004",
-      "imagePromptCn": "鈴木家中，ミラー来访后看到大背包，以为是登山包，鈴木说明这是应急包以及需要预先准备的物品。 当前画面聚焦鈴木对ミラー说这一句，保持真实课文场景和人物关系。 鈴木看向ミラー，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "鈴木家中，ミラー来访后看到大背包，以为是登山包，鈴木说明这是应急包以及需要预先准备的物品。 当前画面聚焦鈴木对ミラー说这一句，保持真实课文场景和人物关系。 鈴木看向ミラー，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "storyboardTextLineId": "l30-conv-003-s01",
+      "sourceLineId": "l30-conv-003",
+      "imagePromptCn": "第30课教材会话竖屏故事分镜，日本语教材动画插画，干净柔和的赛璐璐着色，同一温暖日本住宅玄关，9:16，1080×1920。恰好两名成年男性且固定：左侧ミラー是高个沙金色短发白人男性，穿中蓝色长袖衬衫和米色长裤；右侧鈴木是短黑发日本男性，穿森林绿色长袖翻领衬衫和深海军蓝长裤。固定浅木地板、米白地毯、无字木鞋柜、室内门、无字抽象装饰画。两人之间只有一只打开的深炭灰色大应急背包，包内固定无字水、食品、黑色手电筒和深灰收音机。左侧ミラー张口，身体略向前，以开放手掌指向唯一的大背包，带着好奇表情；右侧鈴木闭口看着他。人物、背包和场景位于上部72%，底部28%为完整纯暖象牙色留白。无任何文字。",
+      "imagePromptJa": "第30課の教材会話用縦型ストーリーボード、日本語教材アニメ調、同じ暖かい日本住宅の玄関、9:16。成人男性は二人だけ。左は砂色短髪、中青色長袖シャツ、ベージュのズボンのミラー。右は短い黒髪、深緑襟付きシャツ、濃紺ズボンの鈴木。固定された木の床、敷物、無地靴箱、室内ドア、文字なしの抽象画。二人の間に開いた濃炭灰色の大きな非常用リュック一つと固定用品。左のミラーが口を開け、少し身を乗り出し、開いた手で大きなリュックを指して気づく。右の鈴木は口を閉じる。上部72%に人物とリュック、下部28%は暖かいアイボリー無地余白。文字なし。",
+      "negativePrompt": "readable text, backpack label, subtitles, speech bubbles, extra backpack, suitcase, hiking poles, duplicated supplies, extra people, supermarket, mountain scene, disaster, swapped positions, wardrobe changes, wrong speaker, open mouth on Suzuki, cropped hands, extra fingers, deformed hands, objects in bottom blank panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-30-005",
-      "storyboardTextLineId": "l30-conv-005-s01",
-      "sourceLineId": "l30-conv-005",
-      "imagePromptCn": "鈴木家中，ミラー来访后看到大背包，以为是登山包，鈴木说明这是应急包以及需要预先准备的物品。 当前画面聚焦ミラー对鈴木说这一句，保持真实课文场景和人物关系。 ミラー看向鈴木，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "鈴木家中，ミラー来访后看到大背包，以为是登山包，鈴木说明这是应急包以及需要预先准备的物品。 当前画面聚焦ミラー对鈴木说这一句，保持真实课文场景和人物关系。 ミラー看向鈴木，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "storyboardTextLineId": "l30-conv-003-s02",
+      "sourceLineId": "l30-conv-003",
+      "imagePromptCn": "第30课教材会话竖屏故事分镜，日本语教材动画插画，干净柔和的赛璐璐着色，同一温暖日本住宅玄关，9:16，1080×1920。画面只有两名成年男性，左侧固定ミラー：沙金色短发、中蓝色衬衫、米色长裤；右侧固定鈴木：短黑发、森林绿色衬衫、深海军蓝长裤。同一浅木地板、米白地毯、无字木鞋柜、室内门、无字抽象装饰画，两人之间只有一只打开的深炭灰色大应急背包和固定无字用品。左侧ミラー张口，先看背包再看鈴木，一只手斜向上做简洁山坡轮廓手势，询问是否要去爬山；右侧鈴木闭口倾听。不得实际出现山。场景只在上部72%，底部28%为完整纯暖象牙色留白。无文字。",
+      "imagePromptJa": "第30課の教材会話用縦型ストーリーボード、日本語教材アニメ調、同じ日本住宅玄関、9:16。成人男性は二人だけ、左は砂色短髪・中青シャツ・ベージュズボンのミラー、右は短い黒髪・深緑シャツ・濃紺ズボンの鈴木。固定された玄関、開いた濃炭灰色の非常用リュック一つと無地用品。左のミラーが口を開け、リュックから鈴木へ視線を移し、片手を斜め上に動かして山の斜面を表す簡潔なジェスチャーで質問する。右の鈴木は口を閉じて聞く。実際の山は描かない。上部72%のみ場面、下部28%は暖かいアイボリー無地余白。文字なし。",
+      "negativePrompt": "actual mountain, outdoor hiking scene, flashback, inset panel, thought bubble, map, tent, hiking gear, readable text, extra backpack, extra people, swapped positions, wardrobe changes, wrong speaker, open mouth on Suzuki, cropped hand, extra fingers, deformed hands, objects in bottom blank panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-30-006",
-      "storyboardTextLineId": "l30-conv-006-s01",
-      "sourceLineId": "l30-conv-006",
-      "imagePromptCn": "鈴木家中，ミラー来访后看到大背包，以为是登山包，鈴木说明这是应急包以及需要预先准备的物品。 当前画面聚焦鈴木对ミラー说这一句，保持真实课文场景和人物关系。 鈴木看向ミラー，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "鈴木家中，ミラー来访后看到大背包，以为是登山包，鈴木说明这是应急包以及需要预先准备的物品。 当前画面聚焦鈴木对ミラー说这一句，保持真实课文场景和人物关系。 鈴木看向ミラー，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "storyboardTextLineId": "l30-conv-004-s01",
+      "sourceLineId": "l30-conv-004",
+      "imagePromptCn": "第30课教材会话竖屏故事分镜，日本语教材动画插画，干净柔和的赛璐璐着色，同一现代日本住宅玄关，9:16，1080×1920。恰好两名成年男性，左侧固定沙金色短发、中蓝色衬衫、米色长裤的ミラー；右侧固定短黑发、森林绿色衬衫、深海军蓝长裤的鈴木。固定浅木地板、米白地毯、无字木鞋柜、室内门和无字抽象装饰画。两人之间只有一只打开的深炭灰色大应急背包，包内固定无字水、食品、黑色手电筒、深灰收音机。右侧鈴木张口，温和摇头并用开放手掌明确指向背包，说明不是登山包而是应急包；左侧ミラー闭口认真听。上部72%为人物和场景，底部28%为完整纯暖象牙色留白。无文字。",
+      "imagePromptJa": "第30課教材会話の縦型ストーリーボード、日本語教材アニメ調、同じ日本住宅玄関、9:16。成人男性二人だけ。左は砂色短髪、中青シャツ、ベージュズボンのミラー。右は短い黒髪、深緑シャツ、濃紺ズボンの鈴木。固定玄関と開いた濃炭灰色の非常用リュック一つ、無地の固定用品。右の鈴木が口を開け、穏やかに首を横へ振り、開いた手でリュックをはっきり指して非常用だと説明する。左のミラーは口を閉じて聞く。上部72%に人物と場面、下部28%は暖かいアイボリー無地余白。文字なし。",
+      "negativePrompt": "readable emergency label, Japanese characters on bag, ordinary hiking bag, medical bag, extra backpack, readable text, speech bubble, extra people, mountain scene, disaster, swapped positions, wardrobe changes, wrong speaker, open mouth on Miller, cropped hands, extra fingers, deformed hands, objects in bottom blank panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-30-007",
-      "storyboardTextLineId": "l30-conv-007-s01",
-      "sourceLineId": "l30-conv-007",
-      "imagePromptCn": "鈴木家中，ミラー来访后看到大背包，以为是登山包，鈴木说明这是应急包以及需要预先准备的物品。 当前画面聚焦ミラー对鈴木说这一句，保持真实课文场景和人物关系。 ミラー看向鈴木，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "鈴木家中，ミラー来访后看到大背包，以为是登山包，鈴木说明这是应急包以及需要预先准备的物品。 当前画面聚焦ミラー对鈴木说这一句，保持真实课文场景和人物关系。 ミラー看向鈴木，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "storyboardTextLineId": "l30-conv-005-s01",
+      "sourceLineId": "l30-conv-005",
+      "imagePromptCn": "第30课教材会话竖屏故事分镜，日本语教材动画插画，柔和赛璐璐着色，同一温暖日本住宅玄关，9:16，1080×1920。只有两名成年男性，固定左侧ミラー的沙金色短发、中蓝色长袖衬衫、米色长裤，固定右侧鈴木的短黑发、森林绿色长袖衬衫、深海军蓝长裤。固定浅木地板、米白地毯、无字木鞋柜、室内门、无字装饰画和唯一打开的深炭灰大应急背包，包内固定无字用品。左侧ミラー张口，眉毛微抬并用食指轻指背包，疑惑地复述“应急包”；右侧鈴木闭口等待。人物和背包在上部72%，底部28%完整纯暖象牙色留白。无任何文字或问号。",
+      "imagePromptJa": "第30課教材会話の縦型ストーリーボード、日本語教材アニメ調、同じ暖かい住宅玄関、9:16。成人男性は二人だけ。左のミラーは砂色短髪、中青色長袖シャツ、ベージュズボン。右の鈴木は短い黒髪、深緑長袖シャツ、濃紺ズボン。固定玄関と開いた濃炭灰色の大きな非常用リュック一つ、無地の固定用品。左のミラーが口を開け、眉を少し上げ、指先でリュックを軽く示しながら疑問の表情で名称を繰り返す。右の鈴木は口を閉じて待つ。上部72%のみ場面、下部28%は暖かいアイボリー無地余白。文字も疑問符もなし。",
+      "negativePrompt": "question mark, readable text, captions, thought bubble, speech bubble, panic, fear, extra backpack, duplicated supplies, extra people, swapped positions, wardrobe changes, wrong speaker, open mouth on Suzuki, cropped finger, extra fingers, deformed hand, objects in bottom blank panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-30-008",
-      "storyboardTextLineId": "l30-conv-008-s01",
-      "sourceLineId": "l30-conv-008",
-      "imagePromptCn": "鈴木家中，ミラー来访后看到大背包，以为是登山包，鈴木说明这是应急包以及需要预先准备的物品。 当前画面聚焦鈴木对ミラー说这一句，保持真实课文场景和人物关系。 鈴木看向ミラー，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "鈴木家中，ミラー来访后看到大背包，以为是登山包，鈴木说明这是应急包以及需要预先准备的物品。 当前画面聚焦鈴木对ミラー说这一句，保持真实课文场景和人物关系。 鈴木看向ミラー，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "storyboardTextLineId": "l30-conv-005-s02",
+      "sourceLineId": "l30-conv-005",
+      "imagePromptCn": "第30课教材会话竖屏故事分镜，日本语教材动画插画，柔和赛璐璐着色，同一日本住宅玄关，9:16，1080×1920。恰好两名成年男性，左侧固定沙金色短发、中蓝衬衫、米色长裤的ミラー，右侧固定短黑发、森林绿衬衫、深海军蓝长裤的鈴木。固定玄关背景与两人之间唯一打开的深炭灰大应急背包，包内固定少量无字水、食品、手电筒和收音机。左侧ミラー张口，一只手掌心向上做自然提问手势；右侧鈴木闭口准备解释。人物和场景只占上部72%，底部28%为完整纯暖象牙色空白字幕区。无任何文字。",
+      "imagePromptJa": "第30課教材会話の縦型ストーリーボード、日本語教材アニメ調、同じ日本住宅玄関、9:16。成人男性二人だけ。左は砂色短髪、中青シャツ、ベージュズボンのミラー。右は短い黒髪、深緑シャツ、濃紺ズボンの鈴木。固定玄関と二人の間の開いた濃炭灰色非常用リュック一つ、無地の固定用品。左のミラーが口を開け、片方の手のひらを上に向けて自然に「何ですか」と質問する。右の鈴木は口を閉じ、説明する準備をする。上部72%に場面、下部28%は暖かいアイボリー無地余白。文字なし。",
+      "negativePrompt": "readable explanation, list, instruction sheet, captions, speech bubble, thought bubble, extra objects, extra people, extra backpack, supermarket, disaster, swapped positions, wardrobe changes, wrong speaker, open mouth on Suzuki, cropped hands, extra fingers, deformed hands, objects in bottom blank panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-30-009",
-      "storyboardTextLineId": "l30-conv-009-s01",
-      "sourceLineId": "l30-conv-009",
-      "imagePromptCn": "鈴木家中，ミラー来访后看到大背包，以为是登山包，鈴木说明这是应急包以及需要预先准备的物品。 当前画面聚焦ミラー对鈴木说这一句，保持真实课文场景和人物关系。 ミラー看向鈴木，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "鈴木家中，ミラー来访后看到大背包，以为是登山包，鈴木说明这是应急包以及需要预先准备的物品。 当前画面聚焦ミラー对鈴木说这一句，保持真实课文场景和人物关系。 ミラー看向鈴木，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "storyboardTextLineId": "l30-conv-006-s01",
+      "sourceLineId": "l30-conv-006",
+      "imagePromptCn": "第30课教材会话竖屏故事分镜，日本语教材动画插画，干净柔和赛璐璐着色，同一温暖日本住宅玄关，9:16，1080×1920。恰好两名成年男性且固定左右服装：左侧ミラー，沙金色短发、中蓝衬衫、米色长裤；右侧鈴木，短黑发、森林绿衬衫、深海军蓝长裤。同一浅木地板、米白地毯、无字木鞋柜、室内门、无字抽象装饰画。两人之间只有一只打开的深炭灰大应急背包，包内恰好两瓶无字清水、一只无字食品罐、一只无字食品盒、一支黑色手电筒、一台深灰无字便携收音机。右侧鈴木张口跪坐在背包旁，一手扶包口，另一只开放手掌指向包内整齐用品，解释这些是预先放好的紧急用品；左侧ミラー闭口俯身观察。上部72%为场景，底部28%完整纯暖象牙色留白。无任何文字。",
+      "imagePromptJa": "第30課教材会話の縦型ストーリーボード、日本語教材アニメ調、同じ暖かい住宅玄関、9:16。成人男性二人だけ、左は砂色短髪・中青シャツ・ベージュズボンのミラー、右は短い黒髪・深緑シャツ・濃紺ズボンの鈴木。同じ玄関と一つだけの開いた濃炭灰色非常用リュック。中は無地の水二本、缶詰一個、食品箱一個、黒い懐中電灯一本、濃灰色ラジオ一台だけ。右の鈴木が口を開け、リュック横にひざをつき、片手で開口部を支え、もう片方の開いた手で整然と入った非常用品を示す。左のミラーは口を閉じ、身をかがめて見る。上部72%に場面、下部28%は暖かいアイボリー無地余白。文字なし。",
+      "negativePrompt": "readable list, product text, brand, excessive scattered supplies, duplicated items, extra backpack, disaster scene, rescue workers, supermarket, extra people, swapped positions, wardrobe changes, wrong speaker, open mouth on Miller, cropped hands, extra fingers, deformed hands, objects in bottom blank panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-30-010",
-      "storyboardTextLineId": "l30-conv-010-s01",
-      "sourceLineId": "l30-conv-010",
-      "imagePromptCn": "鈴木家中，ミラー来访后看到大背包，以为是登山包，鈴木说明这是应急包以及需要预先准备的物品。 当前画面聚焦鈴木对ミラー说这一句，保持真实课文场景和人物关系。 鈴木看向ミラー，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "鈴木家中，ミラー来访后看到大背包，以为是登山包，鈴木说明这是应急包以及需要预先准备的物品。 当前画面聚焦鈴木对ミラー说这一句，保持真实课文场景和人物关系。 鈴木看向ミラー，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "storyboardTextLineId": "l30-conv-006-s02",
+      "sourceLineId": "l30-conv-006",
+      "imagePromptCn": "第30课教材会话竖屏故事分镜，日本语教材动画插画，干净柔和赛璐璐着色，同一明亮安全的现代日本住宅玄关，9:16，1080×1920。恰好两名成年男性：左侧固定ミラー，沙金色短发、中蓝衬衫、米色长裤；右侧固定鈴木，短黑发、森林绿衬衫、深海军蓝长裤。固定浅木地板、米白地毯、无字木鞋柜、室内门、无字抽象装饰画和唯一打开的深炭灰大应急背包及固定无字用品。右侧鈴木张口，在胸前以两只手做清楚但温和的交叉停止手势，表示电和燃气停止，随后看向背包；左侧ミラー闭口认真听。住宅仍保持明亮安静。完整双手在上部72%，底部28%为纯暖象牙色连续留白。无文字。",
+      "imagePromptJa": "第30課教材会話の縦型ストーリーボード、日本語教材アニメ調、明るく安全な同じ日本住宅玄関、9:16。成人男性二人だけ。左は砂色短髪、中青シャツ、ベージュズボンのミラー。右は短い黒髪、深緑シャツ、濃紺ズボンの鈴木。固定玄関と一つだけの開いた濃炭灰色非常用リュック、無地の固定用品。右の鈴木が口を開け、胸の前で両手を穏やかに交差させた停止ジェスチャーをし、電気とガスが止まることを示してリュックを見る。左のミラーは口を閉じて聞く。住宅は明るく安全なまま。上部72%に完全な両手と場面、下部28%は暖かいアイボリー無地余白。文字なし。",
+      "negativePrompt": "dark blackout, gas stove, flame, explosion, earthquake, damaged home, panic, rescue, crossed arms hiding hands, readable text, extra people, extra backpack, duplicated supplies, swapped positions, wardrobe changes, wrong speaker, open mouth on Miller, cropped hands, extra fingers, deformed hands, objects in bottom blank panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-30-011",
+      "storyboardTextLineId": "l30-conv-006-s03",
+      "sourceLineId": "l30-conv-006",
+      "imagePromptCn": "第30课教材会话竖屏故事分镜，日本语教材动画插画，干净柔和赛璐璐着色，同一温暖日本住宅玄关，9:16，1080×1920。恰好两名成年男性，固定左侧沙金色短发、中蓝衬衫、米色长裤的ミラー，固定右侧短黑发、森林绿衬衫、深海军蓝长裤的鈴木。固定玄关与唯一打开的深炭灰大应急背包，包内固定无字清水、食品、手电筒、收音机。右侧鈴木张口，一只手清楚竖起恰好三根手指，另一只手指向背包，说明用品可维持三天左右；左侧ミラー闭口专注看着手势。三根手指完整清晰。人物和场景在上部72%，底部28%为完整纯暖象牙色留白。无任何数字或文字。",
+      "imagePromptJa": "第30課教材会話の縦型ストーリーボード、日本語教材アニメ調、同じ暖かい住宅玄関、9:16。成人男性二人だけ、左は砂色短髪・中青シャツ・ベージュズボンのミラー、右は短い黒髪・深緑シャツ・濃紺ズボンの鈴木。固定玄関、開いた濃炭灰色非常用リュック一つ、無地の固定用品。右の鈴木が口を開け、片手で正確に三本の指だけをはっきり立て、もう片方の手でリュックを示して約三日分と説明する。左のミラーは口を閉じて三本指を見る。指は完全に見える。上部72%に場面、下部28%は暖かいアイボリー無地余白。数字も文字もなし。",
+      "negativePrompt": "two fingers, four fingers, five fingers, extra fingers, missing fingers, number 3, calendar, clock, readable text, extra hand, deformed hand, cropped hand, duplicated supplies, extra backpack, extra people, swapped positions, wardrobe changes, wrong speaker, open mouth on Miller, objects in bottom blank panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-30-012",
+      "storyboardTextLineId": "l30-conv-007-s01",
+      "sourceLineId": "l30-conv-007",
+      "imagePromptCn": "第30课教材会话竖屏故事分镜，日本语教材动画插画，柔和赛璐璐着色，同一日本住宅玄关，9:16，1080×1920。恰好两名成年男性且固定：左侧ミラー，沙金色短发、中蓝衬衫、米色长裤；右侧鈴木，短黑发、森林绿衬衫、深海军蓝长裤。固定浅木地板、米白地毯、无字鞋柜、室内门、无字抽象装饰画和唯一打开的深炭灰大应急背包。包内固定恰好两瓶无字透明清水、一只无字食品罐、一只无字食品盒、一支黑色手电筒、一台深灰收音机。左侧ミラー张口，伸出两根手指列举水和食物，另一只开放手掌指向包内水瓶和食品；右侧鈴木闭口点头。完整双手与背包位于上部72%，底部28%为完整纯暖象牙色留白。无文字。",
+      "imagePromptJa": "第30課教材会話の縦型ストーリーボード、日本語教材アニメ調、同じ住宅玄関、9:16。成人男性二人だけ。左は砂色短髪、中青シャツ、ベージュズボンのミラー。右は短い黒髪、深緑シャツ、濃紺ズボンの鈴木。固定玄関と開いた濃炭灰色非常用リュック一つ。中は無地の透明な水二本、無地の缶詰一個、食品箱一個、黒い懐中電灯一本、濃灰色ラジオ一台。左のミラーが口を開け、二本の指で水と食べ物の二種類を挙げ、もう片方の開いた手で水と食品を指す。右の鈴木は口を閉じてうなずく。上部72%に完全な手とリュック、下部28%は暖かいアイボリー無地余白。文字なし。",
+      "negativePrompt": "branded drinks, product labels, many foods, meal, dining table, cooking, supermarket, readable text, more than two water bottles, duplicated food, extra backpack, extra people, swapped positions, wardrobe changes, wrong speaker, open mouth on Suzuki, cropped hands, extra fingers, deformed hands, objects in bottom blank panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-30-013",
+      "storyboardTextLineId": "l30-conv-008-s01",
+      "sourceLineId": "l30-conv-008",
+      "imagePromptCn": "第30课教材会话竖屏故事分镜，日本语教材动画插画，干净柔和赛璐璐着色，同一温暖日本住宅玄关，9:16，1080×1920。画面恰好两名成年男性，左侧固定沙金色短发、中蓝衬衫、米色长裤的ミラー，右侧固定短黑发、森林绿衬衫、深海军蓝长裤的鈴木。固定玄关与两人之间唯一打开的深炭灰大应急背包，包内固定两瓶无字水、一罐无字食品、一盒无字食品、一支黑色手电筒、一台深灰无字收音机。右侧鈴木张口微笑点头，一只开放手掌从水和食品处移向包内其他用品，说明还有多种东西；左侧ミラー闭口观察。人物和有限用品只占上部72%，底部28%为完整纯暖象牙色留白。无文字。",
+      "imagePromptJa": "第30課教材会話の縦型ストーリーボード、日本語教材アニメ調、同じ暖かい住宅玄関、9:16。成人男性は二人だけ、左は砂色短髪・中青シャツ・ベージュズボンのミラー、右は短い黒髪・深緑シャツ・濃紺ズボンの鈴木。固定玄関と一つだけの開いた濃炭灰色非常用リュック、無地の水二本、食品二点、懐中電灯一本、ラジオ一台。右の鈴木が口を開けて微笑みうなずき、開いた手を水と食品から他の用品へ動かして、ほかにもあると説明する。左のミラーは口を閉じて見る。上部72%に人物と限られた用品、下部28%は暖かいアイボリー無地余白。文字なし。",
+      "negativePrompt": "supplies covering floor, duplicated supplies, extra backpack, readable list, captions, speech bubble, extra people, supermarket, disaster, swapped positions, wardrobe changes, wrong speaker, open mouth on Miller, cropped hands, extra fingers, deformed hands, objects in bottom blank panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-30-014",
+      "storyboardTextLineId": "l30-conv-008-s02",
+      "sourceLineId": "l30-conv-008",
+      "imagePromptCn": "第30课教材会话竖屏故事分镜，日本语教材动画插画，干净柔和赛璐璐着色，同一日本住宅玄关，9:16，1080×1920。恰好两名成年男性，左侧固定ミラー的沙金短发、中蓝衬衫、米色长裤，右侧固定鈴木的短黑发、森林绿衬衫、深海军蓝长裤。固定玄关、唯一打开的深炭灰大应急背包和固定少量无字用品。右侧鈴木张口，从背包中拿起唯一一支小型黑色手电筒展示，手电筒关闭且没有光束；左侧ミラー闭口看着手电筒。人物、唯一手电筒和背包完整位于上部72%，底部28%是完整纯暖象牙色留白。无任何文字。",
+      "imagePromptJa": "第30課教材会話の縦型ストーリーボード、日本語教材アニメ調、同じ住宅玄関、9:16。成人男性二人だけ、左は砂色短髪・中青シャツ・ベージュズボンのミラー、右は短い黒髪・深緑シャツ・濃紺ズボンの鈴木。固定玄関、一つだけの開いた濃炭灰色非常用リュック、無地の固定用品。右の鈴木が口を開け、リュックから唯一の小型黒色懐中電灯を一本だけ取り出して見せる。懐中電灯は消灯し光線なし。左のミラーは口を閉じて懐中電灯を見る。上部72%に完全な人物・懐中電灯・リュック、下部28%は暖かいアイボリー無地余白。文字なし。",
+      "negativePrompt": "second flashlight, multiple flashlights, lit beam, lantern, candle, headlamp, toolbox, readable text, extra backpack, extra people, swapped positions, wardrobe changes, wrong speaker, open mouth on Miller, cropped hands, extra fingers, deformed hands, objects in bottom blank panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-30-015",
+      "storyboardTextLineId": "l30-conv-008-s03",
+      "sourceLineId": "l30-conv-008",
+      "imagePromptCn": "第30课教材会话竖屏故事分镜，日本语教材动画插画，干净柔和赛璐璐着色，同一日本住宅玄关，9:16，1080×1920。恰好两名成年男性，左侧固定沙金色短发、中蓝衬衫、米色长裤的ミラー，右侧固定短黑发、森林绿衬衫、深海军蓝长裤的鈴木。固定玄关与唯一打开的深炭灰大应急背包；背包内固定无字水、食品和黑色手电筒。右侧鈴木张口，手里展示唯一一台没有可读频率或品牌的小型深灰色便携收音机；左侧ミラー闭口看着收音机。人物、收音机和背包完整位于上部72%，底部28%为完整纯暖象牙色留白。无文字。",
+      "imagePromptJa": "第30課教材会話の縦型ストーリーボード、日本語教材アニメ調、同じ住宅玄関、9:16。成人男性二人だけ。左は砂色短髪、中青シャツ、ベージュズボンのミラー。右は短い黒髪、深緑シャツ、濃紺ズボンの鈴木。固定玄関、一つだけの開いた濃炭灰色非常用リュック、無地の水・食品・黒い懐中電灯。右の鈴木が口を開け、読める周波数やブランドのない唯一の小型濃灰色携帯ラジオ一台を手に持って見せる。左のミラーは口を閉じてラジオを見る。上部72%に人物・ラジオ・リュック、下部28%は暖かいアイボリー無地余白。文字なし。",
+      "negativePrompt": "readable frequency, numbers, brand, second radio, multiple radios, television, smartphone, music notes, broadcast bubble, extra flashlight, extra backpack, extra people, swapped positions, wardrobe changes, wrong speaker, open mouth on Miller, cropped hands, extra fingers, deformed hands, objects in bottom blank panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-30-016",
+      "storyboardTextLineId": "l30-conv-009-s01",
+      "sourceLineId": "l30-conv-009",
+      "imagePromptCn": "第30课教材会话竖屏故事分镜，日本语教材动画插画，柔和赛璐璐着色，同一温暖日本住宅玄关，9:16，1080×1920。恰好两名成年男性，固定左侧ミラー：沙金色短发、中蓝长袖衬衫、米色长裤；固定右侧鈴木：短黑发、森林绿长袖衬衫、深海军蓝长裤。固定玄关背景与两人之间唯一打开的深炭灰大应急背包，包内固定无字用品。左侧ミラー张口，认真地一手按在自己胸前，另一手自然指向背包，表示自己也要预先准备；右侧鈴木闭口赞同地看着他。人物动作与背包位于上部72%，底部28%为完整纯暖象牙色留白。无文字。",
+      "imagePromptJa": "第30課教材会話の縦型ストーリーボード、日本語教材アニメ調、同じ暖かい住宅玄関、9:16。成人男性二人だけ。左は砂色短髪、中青長袖シャツ、ベージュズボンのミラー。右は短い黒髪、深緑長袖シャツ、濃紺ズボンの鈴木。固定玄関、一つだけの開いた濃炭灰色非常用リュック、無地の固定用品。左のミラーが口を開け、真剣な表情で片手を自分の胸に当て、もう片方の手でリュックを示して自分も準備すると決意する。右の鈴木は口を閉じて賛同して見る。上部72%に人物とリュック、下部28%は暖かいアイボリー無地余白。文字なし。",
+      "negativePrompt": "second backpack, shopping bag, cash, credit card, smartphone, already packed personal bag, readable text, extra people, supermarket, swapped positions, wardrobe changes, wrong speaker, open mouth on Suzuki, cropped hands, extra fingers, deformed hands, objects in bottom blank panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-30-017",
+      "storyboardTextLineId": "l30-conv-010-s01",
+      "sourceLineId": "l30-conv-010",
+      "imagePromptCn": "第30课教材会话竖屏故事分镜，日本语教材动画插画，干净柔和赛璐璐着色，同一日本住宅玄关，9:16，1080×1920。画面恰好两名成年男性，左侧固定沙金色短发、中蓝衬衫、米色长裤的ミラー，右侧固定短黑发、森林绿衬衫、深海军蓝长裤的鈴木。固定玄关与唯一打开的深炭灰大应急背包。右侧鈴木张口，一只开放手掌指向背包内唯一一只无字食品罐和一只朴素无字食品盒，另一手自然向外示意可以买到；左侧ミラー闭口听。场景仍在家中，不出现超市。人物、食品和背包只占上部72%，底部28%为完整纯暖象牙色留白。无文字。",
+      "imagePromptJa": "第30課教材会話の縦型ストーリーボード、日本語教材アニメ調、同じ住宅玄関、9:16。成人男性二人だけ。左は砂色短髪、中青シャツ、ベージュズボンのミラー。右は短い黒髪、深緑シャツ、濃紺ズボンの鈴木。固定玄関と開いた濃炭灰色非常用リュック一つ。右の鈴木が口を開け、開いた片手でリュック内の無地の缶詰一個と簡素な無地食品箱一個を示し、もう片方の手を外へ向けて購入できると説明する。左のミラーは口を閉じて聞く。場面は家のまま、スーパーは描かない。上部72%に人物・食品・リュック、下部28%は暖かいアイボリー無地余白。文字なし。",
+      "negativePrompt": "supermarket interior, shelves, shop clerk, shopping cart, price tags, cash, branded packaging, readable text, extra food, extra backpack, extra people, swapped positions, wardrobe changes, wrong speaker, open mouth on Miller, cropped hands, extra fingers, deformed hands, objects in bottom blank panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-30-018",
       "storyboardTextLineId": "l30-conv-011-s01",
       "sourceLineId": "l30-conv-011",
-      "imagePromptCn": "鈴木家中，ミラー来访后看到大背包，以为是登山包，鈴木说明这是应急包以及需要预先准备的物品。 当前画面聚焦ミラー对鈴木说这一句，保持真实课文场景和人物关系。 ミラー看向鈴木，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "鈴木家中，ミラー来访后看到大背包，以为是登山包，鈴木说明这是应急包以及需要预先准备的物品。 当前画面聚焦ミラー对鈴木说这一句，保持真实课文场景和人物关系。 ミラー看向鈴木，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "imagePromptCn": "第30课教材会话竖屏故事分镜，日本语教材动画插画，柔和赛璐璐着色，同一温暖日本住宅玄关，9:16，1080×1920。恰好两名成年男性，左侧固定沙金短发、中蓝衬衫、米色长裤的ミラー，右侧固定短黑发、森林绿衬衫、深海军蓝长裤的鈴木。固定玄关背景、唯一打开的深炭灰大应急背包和固定无字用品。左侧ミラー张口，眉毛轻抬后点头，露出恍然理解的神情；右侧鈴木闭口温和看着他。人物和背包位于上部72%，底部28%为完整纯暖象牙色留白。无任何文字。",
+      "imagePromptJa": "第30課教材会話の縦型ストーリーボード、日本語教材アニメ調、同じ暖かい住宅玄関、9:16。成人男性二人だけ。左は砂色短髪、中青シャツ、ベージュズボンのミラー。右は短い黒髪、深緑シャツ、濃紺ズボンの鈴木。固定玄関、開いた濃炭灰色非常用リュック一つ、無地の固定用品。左のミラーが口を開け、眉を少し上げてからうなずき、納得した表情を見せる。右の鈴木は口を閉じて穏やかに見る。上部72%に人物とリュック、下部28%は暖かいアイボリー無地余白。文字なし。",
+      "negativePrompt": "shock, fear, refusal, argument, celebration, readable text, speech bubble, extra people, extra backpack, supermarket, disaster, swapped positions, wardrobe changes, wrong speaker, open mouth on Suzuki, cropped hands, extra fingers, deformed hands, objects in bottom blank panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-30-019",
+      "storyboardTextLineId": "l30-conv-011-s02",
+      "sourceLineId": "l30-conv-011",
+      "imagePromptCn": "第30课教材会话竖屏故事分镜，日本语教材动画插画，干净柔和赛璐璐着色，同一温暖日本住宅玄关，9:16，1080×1920。画面恰好两名成年男性，左侧固定ミラー：沙金色短发、中蓝长袖衬衫、米色长裤；右侧固定鈴木：短黑发、森林绿长袖衬衫、深海军蓝长裤。固定玄关、唯一打开的深炭灰大应急背包和固定无字用品。左侧ミラー张口坚定点头，一只手轻握成克制的决心手势，表示会事先买好；右侧鈴木闭口微笑赞同。人物和住宅场景只占上部72%，底部28%是完整连续的纯暖象牙色留白。无任何文字。",
+      "imagePromptJa": "第30課教材会話の縦型ストーリーボード、日本語教材アニメ調、同じ暖かい住宅玄関、9:16。成人男性二人だけ。左は砂色短髪、中青長袖シャツ、ベージュズボンのミラー。右は短い黒髪、深緑長袖シャツ、濃紺ズボンの鈴木。固定玄関、一つだけの開いた濃炭灰色非常用リュック、無地の固定用品。左のミラーが口を開けて力強くうなずき、片手を控えめな決意の形にして前もって買うと決める。右の鈴木は口を閉じて微笑み賛同する。上部72%に人物と住宅、下部28%は連続した暖かいアイボリー無地余白。文字なし。",
+      "negativePrompt": "shopping bags, cash, credit card, supermarket, second backpack, handshake, goodbye, cheering, jumping, readable text, extra people, swapped positions, wardrobe changes, wrong speaker, open mouth on Suzuki, cropped hands, extra fingers, deformed hands, extra limbs, objects in bottom blank panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     }
   ]
 }

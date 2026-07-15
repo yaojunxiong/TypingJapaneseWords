@@ -18,14 +18,14 @@
       "matchedUtteranceIndexes": [
         2
       ],
-      "startMs": 7900,
-      "endMs": 8450,
-      "durationMs": 550,
+      "startMs": 7450,
+      "endMs": 8507,
+      "durationMs": 1057,
       "audioPath": "line-segments/lesson-30/l30-01.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-30/l30-01.mp3",
-      "needsReview": true,
+      "needsReview": false,
       "matchConfidence": "high",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [2] 对齐；相邻句使用不重叠边界"
+      "boundaryReason": "经教材原页、CD13 原声和 -42 dB 静音区间人工复核；提前句首以完整保留「こんにちは」，与第 2 句以静音中点 8507ms 分界"
     },
     {
       "lineNo": 2,
@@ -39,14 +39,14 @@
         3,
         4
       ],
-      "startMs": 8470,
-      "endMs": 11440,
-      "durationMs": 2970,
+      "startMs": 8507,
+      "endMs": 11920,
+      "durationMs": 3413,
       "audioPath": "line-segments/lesson-30/l30-02.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-30/l30-02.mp3",
-      "needsReview": true,
+      "needsReview": false,
       "matchConfidence": "high",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [3, 4] 对齐；相邻句使用不重叠边界"
+      "boundaryReason": "经教材原页、CD13 原声和 -42 dB 静音区间人工复核；保留「いらっしゃい。さあ、どうぞ。」完整发音，并在长静音中点 11920ms 与第 3 句分界"
     },
     {
       "lineNo": 3,
@@ -60,14 +60,14 @@
         5,
         6
       ],
-      "startMs": 13450,
-      "endMs": 17450,
-      "durationMs": 4000,
+      "startMs": 11920,
+      "endMs": 17709,
+      "durationMs": 5789,
       "audioPath": "line-segments/lesson-30/l30-03.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-30/l30-03.mp3",
-      "needsReview": true,
+      "needsReview": false,
       "matchConfidence": "high",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [5, 6] 对齐；相邻句使用不重叠边界"
+      "boundaryReason": "经教材原页、CD13 原声和 -42 dB 静音区间人工复核；提前句首完整保留「大きい」，与第 4 句以静音中点 17709ms 分界"
     },
     {
       "lineNo": 4,
@@ -80,14 +80,14 @@
       "matchedUtteranceIndexes": [
         7
       ],
-      "startMs": 17900,
-      "endMs": 19450,
-      "durationMs": 1550,
+      "startMs": 17709,
+      "endMs": 19315,
+      "durationMs": 1606,
       "audioPath": "line-segments/lesson-30/l30-04.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-30/l30-04.mp3",
-      "needsReview": true,
+      "needsReview": false,
       "matchConfidence": "medium",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [7] 对齐；相邻句使用不重叠边界"
+      "boundaryReason": "经教材原页、CD13 原声和 -42 dB 静音区间人工复核；与第 3、5 句均以相邻静音中点建立不重叠边界"
     },
     {
       "lineNo": 5,
@@ -101,14 +101,14 @@
         8,
         9
       ],
-      "startMs": 19450,
-      "endMs": 23450,
-      "durationMs": 4000,
+      "startMs": 19315,
+      "endMs": 22882,
+      "durationMs": 3567,
       "audioPath": "line-segments/lesson-30/l30-05.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-30/l30-05.mp3",
-      "needsReview": true,
+      "needsReview": false,
       "matchConfidence": "medium",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [8, 9] 对齐；相邻句使用不重叠边界"
+      "boundaryReason": "经教材原页、CD13 原声和 -42 dB 静音区间人工复核；完整保留两个问句，与第 6 句以静音中点 22882ms 分界"
     },
     {
       "lineNo": 6,
@@ -122,14 +122,14 @@
         10,
         11
       ],
-      "startMs": 23450,
-      "endMs": 31450,
-      "durationMs": 8000,
+      "startMs": 22882,
+      "endMs": 31007,
+      "durationMs": 8125,
       "audioPath": "line-segments/lesson-30/l30-06.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-30/l30-06.mp3",
-      "needsReview": true,
+      "needsReview": false,
       "matchConfidence": "medium",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [10, 11] 对齐；相邻句使用不重叠边界"
+      "boundaryReason": "经教材原页、CD13 原声和 -42 dB 静音区间人工复核；提前句首完整保留「非常時」，与第 7 句以静音中点 31007ms 分界"
     },
     {
       "lineNo": 7,
@@ -142,14 +142,14 @@
       "matchedUtteranceIndexes": [
         12
       ],
-      "startMs": 31450,
-      "endMs": 33450,
-      "durationMs": 2000,
+      "startMs": 31007,
+      "endMs": 33022,
+      "durationMs": 2015,
       "audioPath": "line-segments/lesson-30/l30-07.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-30/l30-07.mp3",
-      "needsReview": true,
+      "needsReview": false,
       "matchConfidence": "medium",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [12] 对齐；相邻句使用不重叠边界"
+      "boundaryReason": "经教材原页、CD13 原声和 -42 dB 静音区间人工复核；提前句首完整保留「水」，与第 8 句以静音中点 33022ms 分界"
     },
     {
       "lineNo": 8,
@@ -163,14 +163,14 @@
         13,
         14
       ],
-      "startMs": 33450,
-      "endMs": 39450,
-      "durationMs": 6000,
+      "startMs": 33022,
+      "endMs": 39180,
+      "durationMs": 6158,
       "audioPath": "line-segments/lesson-30/l30-08.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-30/l30-08.mp3",
-      "needsReview": true,
+      "needsReview": false,
       "matchConfidence": "high",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [13, 14] 对齐；相邻句使用不重叠边界"
+      "boundaryReason": "经教材原页、CD13 原声和 -42 dB 静音区间人工复核；提前句首完整保留「ええ」，与第 9 句以静音中点 39180ms 分界"
     },
     {
       "lineNo": 9,
@@ -183,14 +183,14 @@
       "matchedUtteranceIndexes": [
         15
       ],
-      "startMs": 39470,
-      "endMs": 42170,
-      "durationMs": 2700,
+      "startMs": 39180,
+      "endMs": 41671,
+      "durationMs": 2491,
       "audioPath": "line-segments/lesson-30/l30-09.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-30/l30-09.mp3",
-      "needsReview": true,
+      "needsReview": false,
       "matchConfidence": "medium",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [15] 对齐；相邻句使用不重叠边界"
+      "boundaryReason": "经教材原页、CD13 原声和 -42 dB 静音区间人工复核；与第 8、10 句均以相邻静音中点建立不重叠边界"
     },
     {
       "lineNo": 10,
@@ -203,14 +203,14 @@
       "matchedUtteranceIndexes": [
         16
       ],
-      "startMs": 42800,
-      "endMs": 44950,
-      "durationMs": 2150,
+      "startMs": 41671,
+      "endMs": 44449,
+      "durationMs": 2778,
       "audioPath": "line-segments/lesson-30/l30-10.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-30/l30-10.mp3",
-      "needsReview": true,
+      "needsReview": false,
       "matchConfidence": "medium",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [16] 对齐；相邻句使用不重叠边界"
+      "boundaryReason": "经教材原页、CD13 原声和 -42 dB 静音区间人工复核；提前句首完整保留「非常食」，与第 11 句以静音中点 44449ms 分界"
     },
     {
       "lineNo": 11,
@@ -223,27 +223,15 @@
       "matchedUtteranceIndexes": [
         17
       ],
-      "startMs": 45400,
+      "startMs": 44449,
       "endMs": 48170,
-      "durationMs": 2770,
+      "durationMs": 3721,
       "audioPath": "line-segments/lesson-30/l30-11.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-30/l30-11.mp3",
-      "needsReview": true,
+      "needsReview": false,
       "matchConfidence": "high",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [17] 对齐；相邻句使用不重叠边界"
+      "boundaryReason": "经教材原页、CD13 原声和 -42 dB 静音区间人工复核；提前句首完整保留「そうですか」，并保留自然句尾静音"
     }
   ],
-  "needsReview": [
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    7,
-    8,
-    9,
-    10,
-    11
-  ]
+  "needsReview": []
 }
