@@ -114,6 +114,13 @@ const REVIEWED_SPLITS: Record<number, Record<string, number[]>> = {
     '008': [3.043, 4.782],
     '011': [1.422],
   },
+  31: {
+    '003': [1.250],
+    '004': [1.269],
+    '008': [1.057, 5.634],
+    '010': [0.993],
+    '012': [2.145],
+  },
 }
 
 // Some generated line clips cut through a final syllable or the next line's
@@ -255,6 +262,73 @@ const REVIEWED_AUDIO_RANGES: Record<number, Record<string, ReviewedAudioRange>> 
     '011': {
       sourcePath: 'source-240000/tracks/cd-013.mp3',
       start: 44.449,
+      end: 48.170,
+    },
+  },
+  31: {
+    '001': {
+      sourcePath: 'source-240000/tracks/cd-016.mp3',
+      start: 7.450,
+      end: 9.150,
+    },
+    '002': {
+      sourcePath: 'source-240000/tracks/cd-016.mp3',
+      start: 9.150,
+      end: 9.962,
+    },
+    '003': {
+      sourcePath: 'source-240000/tracks/cd-016.mp3',
+      start: 9.962,
+      end: 13.409,
+    },
+    '004': {
+      sourcePath: 'source-240000/tracks/cd-016.mp3',
+      start: 13.409,
+      end: 16.641,
+    },
+    '005': {
+      sourcePath: 'source-240000/tracks/cd-016.mp3',
+      start: 16.641,
+      end: 19.685,
+    },
+    '006': {
+      sourcePath: 'source-240000/tracks/cd-016.mp3',
+      start: 19.685,
+      end: 22.973,
+    },
+    '007': {
+      sourcePath: 'source-240000/tracks/cd-016.mp3',
+      start: 22.973,
+      end: 24.836,
+    },
+    '008': {
+      sourcePath: 'source-240000/tracks/cd-016.mp3',
+      start: 24.836,
+      end: 33.592,
+    },
+    '009': {
+      sourcePath: 'source-240000/tracks/cd-016.mp3',
+      start: 33.592,
+      end: 35.880,
+    },
+    '010': {
+      sourcePath: 'source-240000/tracks/cd-016.mp3',
+      start: 35.880,
+      end: 40.801,
+    },
+    '011': {
+      sourcePath: 'source-240000/tracks/cd-016.mp3',
+      start: 40.801,
+      end: 42.427,
+    },
+    '012': {
+      sourcePath: 'source-240000/tracks/cd-016.mp3',
+      start: 42.427,
+      end: 46.469,
+    },
+    '013': {
+      sourcePath: 'source-240000/tracks/cd-016.mp3',
+      start: 46.469,
       end: 48.170,
     },
   },

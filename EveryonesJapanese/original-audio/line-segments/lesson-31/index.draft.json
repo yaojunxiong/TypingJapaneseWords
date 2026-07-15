@@ -18,14 +18,14 @@
       "matchedUtteranceIndexes": [
         2
       ],
-      "startMs": 7060,
-      "endMs": 9000,
-      "durationMs": 1940,
+      "startMs": 7450,
+      "endMs": 9150,
+      "durationMs": 1700,
       "audioPath": "line-segments/lesson-31/l31-01.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-31/l31-01.mp3",
-      "needsReview": true,
-      "matchConfidence": "medium",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [2] 对齐；应用已校准 MP3 时间偏移"
+      "needsReview": false,
+      "matchConfidence": "high",
+      "boundaryReason": "经教材原页、CD16 原声和 -42 dB 静音区间人工复核；提前句首完整保留「来月」，与第 2 句以静音中点 9150ms 分界"
     },
     {
       "lineNo": 2,
@@ -38,14 +38,14 @@
       "matchedUtteranceIndexes": [
         3
       ],
-      "startMs": 9000,
-      "endMs": 10000,
-      "durationMs": 1000,
+      "startMs": 9150,
+      "endMs": 9962,
+      "durationMs": 812,
       "audioPath": "line-segments/lesson-31/l31-02.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-31/l31-02.mp3",
-      "needsReview": true,
-      "matchConfidence": "medium",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [3] 对齐；应用已校准 MP3 时间偏移"
+      "needsReview": false,
+      "matchConfidence": "high",
+      "boundaryReason": "经教材原页、CD16 原声和 -42 dB 静音区间人工复核；完整保留短促的「えっ」，与前后两句均以静音中点建立不重叠边界"
     },
     {
       "lineNo": 3,
@@ -58,14 +58,14 @@
       "matchedUtteranceIndexes": [
         4
       ],
-      "startMs": 10000,
-      "endMs": 13280,
-      "durationMs": 3280,
+      "startMs": 9962,
+      "endMs": 13409,
+      "durationMs": 3447,
       "audioPath": "line-segments/lesson-31/l31-03.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-31/l31-03.mp3",
-      "needsReview": true,
-      "matchConfidence": "medium",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [4] 对齐；应用已校准 MP3 时间偏移"
+      "needsReview": false,
+      "matchConfidence": "high",
+      "boundaryReason": "经教材原页、CD16 原声和 -42 dB 静音区间人工复核；保留「実は」后的自然停顿，并以静音中点 13409ms 与第 4 句分界"
     },
     {
       "lineNo": 4,
@@ -78,14 +78,14 @@
       "matchedUtteranceIndexes": [
         5
       ],
-      "startMs": 13280,
-      "endMs": 16760,
-      "durationMs": 3480,
+      "startMs": 13409,
+      "endMs": 16641,
+      "durationMs": 3232,
       "audioPath": "line-segments/lesson-31/l31-04.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-31/l31-04.mp3",
-      "needsReview": true,
+      "needsReview": false,
       "matchConfidence": "high",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [5] 对齐；应用已校准 MP3 时间偏移"
+      "boundaryReason": "经教材原页、CD16 原声和 -42 dB 静音区间人工复核；完整保留确认与祝贺两个句段，与第 5 句以静音中点 16641ms 分界"
     },
     {
       "lineNo": 5,
@@ -98,14 +98,14 @@
       "matchedUtteranceIndexes": [
         6
       ],
-      "startMs": 16760,
-      "endMs": 19600,
-      "durationMs": 2840,
+      "startMs": 16641,
+      "endMs": 19685,
+      "durationMs": 3044,
       "audioPath": "line-segments/lesson-31/l31-05.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-31/l31-05.mp3",
-      "needsReview": true,
+      "needsReview": false,
       "matchConfidence": "high",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [6] 对齐；应用已校准 MP3 时间偏移"
+      "boundaryReason": "经教材原页、CD16 原声和 -42 dB 静音区间人工复核；说话人确认是ミラー，完整保留句首「でも」，与第 6 句以静音中点 19685ms 分界"
     },
     {
       "lineNo": 6,
@@ -118,14 +118,14 @@
       "matchedUtteranceIndexes": [
         7
       ],
-      "startMs": 19600,
-      "endMs": 22080,
-      "durationMs": 2480,
+      "startMs": 19685,
+      "endMs": 22973,
+      "durationMs": 3288,
       "audioPath": "line-segments/lesson-31/l31-06.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-31/l31-06.mp3",
-      "needsReview": true,
-      "matchConfidence": "medium",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [7] 对齐；应用已校准 MP3 时间偏移"
+      "needsReview": false,
+      "matchConfidence": "high",
+      "boundaryReason": "经教材原页、CD16 原声和 -42 dB 静音区间人工复核；延后句尾避免截断「残るんです」，与第 7 句以静音中点 22973ms 分界"
     },
     {
       "lineNo": 7,
@@ -138,14 +138,14 @@
       "matchedUtteranceIndexes": [
         8
       ],
-      "startMs": 22080,
-      "endMs": 24800,
-      "durationMs": 2720,
+      "startMs": 22973,
+      "endMs": 24836,
+      "durationMs": 1863,
       "audioPath": "line-segments/lesson-31/l31-07.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-31/l31-07.mp3",
-      "needsReview": true,
-      "matchConfidence": "medium",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [8] 对齐；应用已校准 MP3 时间偏移"
+      "needsReview": false,
+      "matchConfidence": "high",
+      "boundaryReason": "经教材原页、CD16 原声和 -42 dB 静音区间人工复核；去除前句残音并完整保留提问，与第 8 句开头「ええ」以静音中点 24836ms 分界"
     },
     {
       "lineNo": 8,
@@ -159,14 +159,14 @@
         9,
         10
       ],
-      "startMs": 24800,
-      "endMs": 33640,
-      "durationMs": 8840,
+      "startMs": 24836,
+      "endMs": 33592,
+      "durationMs": 8756,
       "audioPath": "line-segments/lesson-31/l31-08.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-31/l31-08.mp3",
-      "needsReview": true,
-      "matchConfidence": "medium",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [9, 10] 对齐；应用已校准 MP3 时间偏移"
+      "needsReview": false,
+      "matchConfidence": "high",
+      "boundaryReason": "经教材原页、CD16 原声和 -42 dB 静音区间人工复核；完整保留「ええ」、儿子原因和妻子原因三个自然句段，与第 9 句以静音中点 33592ms 分界"
     },
     {
       "lineNo": 9,
@@ -179,14 +179,14 @@
       "matchedUtteranceIndexes": [
         11
       ],
-      "startMs": 33640,
-      "endMs": 35840,
-      "durationMs": 2200,
+      "startMs": 33592,
+      "endMs": 35880,
+      "durationMs": 2288,
       "audioPath": "line-segments/lesson-31/l31-09.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-31/l31-09.mp3",
-      "needsReview": true,
-      "matchConfidence": "medium",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [11] 对齐；应用已校准 MP3 时间偏移"
+      "needsReview": false,
+      "matchConfidence": "high",
+      "boundaryReason": "经教材原页、CD16 原声和 -42 dB 静音区间人工复核；完整保留确认句，与第 10 句开头「ええ」以静音中点 35880ms 分界"
     },
     {
       "lineNo": 10,
@@ -199,14 +199,14 @@
       "matchedUtteranceIndexes": [
         12
       ],
-      "startMs": 35840,
-      "endMs": 40760,
-      "durationMs": 4920,
+      "startMs": 35880,
+      "endMs": 40801,
+      "durationMs": 4921,
       "audioPath": "line-segments/lesson-31/l31-10.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-31/l31-10.mp3",
-      "needsReview": true,
-      "matchConfidence": "medium",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [12] 对齐；应用已校准 MP3 时间偏移"
+      "needsReview": false,
+      "matchConfidence": "high",
+      "boundaryReason": "经教材原页、CD16 原声和 -42 dB 静音区间人工复核；完整保留开头「ええ」及后续计划，与第 11 句以静音中点 40801ms 分界"
     },
     {
       "lineNo": 11,
@@ -219,14 +219,14 @@
       "matchedUtteranceIndexes": [
         13
       ],
-      "startMs": 40760,
-      "endMs": 42440,
-      "durationMs": 1680,
+      "startMs": 40801,
+      "endMs": 42427,
+      "durationMs": 1626,
       "audioPath": "line-segments/lesson-31/l31-11.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-31/l31-11.mp3",
-      "needsReview": true,
-      "matchConfidence": "medium",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [13] 对齐；应用已校准 MP3 时间偏移"
+      "needsReview": false,
+      "matchConfidence": "high",
+      "boundaryReason": "经教材原页、CD16 原声和 -42 dB 静音区间人工复核；完整保留短句，与第 12 句以静音中点 42427ms 分界"
     },
     {
       "lineNo": 12,
@@ -239,14 +239,14 @@
       "matchedUtteranceIndexes": [
         14
       ],
-      "startMs": 42440,
-      "endMs": 46480,
-      "durationMs": 4040,
+      "startMs": 42427,
+      "endMs": 46469,
+      "durationMs": 4042,
       "audioPath": "line-segments/lesson-31/l31-12.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-31/l31-12.mp3",
-      "needsReview": true,
+      "needsReview": false,
       "matchConfidence": "high",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [14] 对齐；应用已校准 MP3 时间偏移"
+      "boundaryReason": "经教材原页、CD16 原声和 -42 dB 静音区间人工复核；完整保留好机会与学习料理两个句段，与第 13 句以静音中点 46469ms 分界"
     },
     {
       "lineNo": 13,
@@ -259,29 +259,15 @@
       "matchedUtteranceIndexes": [
         15
       ],
-      "startMs": 46480,
-      "endMs": 48080,
-      "durationMs": 1600,
+      "startMs": 46469,
+      "endMs": 48170,
+      "durationMs": 1701,
       "audioPath": "line-segments/lesson-31/l31-13.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-31/l31-13.mp3",
-      "needsReview": true,
+      "needsReview": false,
       "matchConfidence": "high",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [15] 对齐；应用已校准 MP3 时间偏移"
+      "boundaryReason": "经教材原页、CD16 原声和 -42 dB 静音区间人工复核；提前句首并保留自然句尾静音"
     }
   ],
-  "needsReview": [
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    7,
-    8,
-    9,
-    10,
-    11,
-    12,
-    13
-  ]
+  "needsReview": []
 }
