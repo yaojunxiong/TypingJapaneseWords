@@ -1,148 +1,218 @@
 {
   "lessonNo": 34,
   "conversationTitle": "わたしがしたとおりに、してください",
-  "reviewStatus": "pending-human-review",
-  "generationAllowed": false,
+  "reviewStatus": "approved",
+  "generationAllowed": true,
   "prompts": [
     {
       "storyboardLineId": "sb-34-001",
       "storyboardTextLineId": "l34-conv-001-s01",
       "sourceLineId": "l34-conv-001",
-      "imagePromptCn": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦クララ对渡辺说这一句，保持真实课文场景和人物关系。 クララ看向渡辺，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦クララ对渡辺说这一句，保持真实课文场景和人物关系。 クララ看向渡辺，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "imagePromptCn": "第34课教材会话竖屏故事分镜。固定同一个明亮安静的传统日本茶室，现场恰好三名成年女性，人物左右和服装始终不变：左侧クララ，约38岁欧洲女性，白皙肤色、栗棕低发髻、蓝灰眼睛、淡薰衣草紫无字浅花纹和服、深梅紫腰带；中央お茶の先生，约58岁日本女性，夹少量银丝的黑色传统低发髻、深棕眼睛、鼠尾草绿无字米白叶纹和服、暖米色腰带；右侧渡辺，约34岁日本女性，深棕侧分齐耳短发、深棕眼睛、雾蓝无字细波纹和服、深海军蓝腰带。三人始终跪坐榻榻米。背景固定无字障子、空白土黄壁龛、一枝无字花器。茶具数量固定：クララ面前一只灰绿色茶碗，中央一只深炭灰色示范茶碗，右侧一支竹茶筅和一只纯黑小铁釜；クララ面前黑色小方盘只有一枚粉色和果子；不得复制。クララ张口，双手在胸前轻合，期待地看向渡辺；另两人闭口。日本语教材动画插画，干净柔和赛璐璐着色，9:16，1080×1920。三人和全部茶具只在上部72%；底部28%为左右连续纯暖象牙色空白字幕区，任何内容不得侵入。画面无任何文字、字母、数字、字幕、箭头、标识、logo或水印。",
+      "imagePromptJa": "第34課教材会話の縦型ストーリーボード。同じ明るく静かな伝統的日本の茶室。成人女性は必ず三人だけで左右位置と衣装を変えない。左はクララ、38歳前後のヨーロッパ人女性、色白、栗色の低いまとめ髪、青灰色の目、文字のない淡い花模様の薄紫色の着物、濃い梅紫の帯。中央はお茶の先生、58歳前後の日本人女性、少し銀色の混じる黒髪の低いまとめ髪、濃い茶色の目、文字のない米白色の葉模様のセージグリーンの着物、米色の帯。右は渡辺、34歳前後の日本人女性、耳までの濃茶の横分けボブ、濃い茶色の目、文字のない細い波模様のくすんだ青色の着物、濃紺の帯。三人は畳に正座する。背景は文字のない障子、空白の黄土色の床の間、一枝だけの無地の花器。茶道具はクララの前に灰緑色の茶碗一つ、中央に濃い炭色の見本茶碗一つ、右に竹の茶筅一本と黒い小釜一つ。黒い小角皿には桃色の和菓子一つだけ。複製しない。クララが口を開け、胸元で両手を軽く合わせ、期待を込めて渡辺を見る。ほかの二人は口を閉じる。日本語教材アニメの清潔で柔らかなセル塗り、9:16、1080×1920。三人と道具は上部72%だけ。下部28%は左右いっぱいの無地の暖かいアイボリー字幕余白で、何も入れない。文字、英字、数字、字幕、矢印、標識、ロゴ、透かしを一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, arrows, motion diagram, written wall scroll, modern cafe, restaurant, outdoor tea garden, stage performance, tourists, children, fourth person, background people, extra people, duplicate tea bowls, extra bowl, duplicate wagashi, extra sweets, teapot, coffee cup, glass cup, swapped left-center-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, objects intruding into bottom blank panel, closed mouth on クララ, open mouth on お茶の先生 or 渡辺",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-34-002",
       "storyboardTextLineId": "l34-conv-002-s01",
       "sourceLineId": "l34-conv-002",
-      "imagePromptCn": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦渡辺对クララ说这一句，保持真实课文场景和人物关系。 渡辺看向クララ，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦渡辺对クララ说这一句，保持真实课文场景和人物关系。 渡辺看向クララ，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "imagePromptCn": "第34课教材会话竖屏故事分镜。固定同一个明亮安静的传统日本茶室，现场恰好三名成年女性，人物左右和服装始终不变：左侧クララ，约38岁欧洲女性，白皙肤色、栗棕低发髻、蓝灰眼睛、淡薰衣草紫无字浅花纹和服、深梅紫腰带；中央お茶の先生，约58岁日本女性，夹少量银丝的黑色传统低发髻、深棕眼睛、鼠尾草绿无字米白叶纹和服、暖米色腰带；右侧渡辺，约34岁日本女性，深棕侧分齐耳短发、深棕眼睛、雾蓝无字细波纹和服、深海军蓝腰带。三人始终跪坐榻榻米。背景固定无字障子、空白土黄壁龛、一枝无字花器。茶具数量固定：クララ面前一只灰绿色茶碗，中央一只深炭灰色示范茶碗，右侧一支竹茶筅和一只纯黑小铁釜；クララ面前黑色小方盘只有一枚粉色和果子；不得复制。渡辺张口，以开放手掌温和邀请クララ；另两人闭口。日本语教材动画插画，干净柔和赛璐璐着色，9:16，1080×1920。三人和全部茶具只在上部72%；底部28%为左右连续纯暖象牙色空白字幕区，任何内容不得侵入。画面无任何文字、字母、数字、字幕、箭头、标识、logo或水印。",
+      "imagePromptJa": "第34課教材会話の縦型ストーリーボード。同じ明るく静かな伝統的日本の茶室。成人女性は必ず三人だけで左右位置と衣装を変えない。左はクララ、38歳前後のヨーロッパ人女性、色白、栗色の低いまとめ髪、青灰色の目、文字のない淡い花模様の薄紫色の着物、濃い梅紫の帯。中央はお茶の先生、58歳前後の日本人女性、少し銀色の混じる黒髪の低いまとめ髪、濃い茶色の目、文字のない米白色の葉模様のセージグリーンの着物、米色の帯。右は渡辺、34歳前後の日本人女性、耳までの濃茶の横分けボブ、濃い茶色の目、文字のない細い波模様のくすんだ青色の着物、濃紺の帯。三人は畳に正座する。背景は文字のない障子、空白の黄土色の床の間、一枝だけの無地の花器。茶道具はクララの前に灰緑色の茶碗一つ、中央に濃い炭色の見本茶碗一つ、右に竹の茶筅一本と黒い小釜一つ。黒い小角皿には桃色の和菓子一つだけ。複製しない。渡辺が口を開け、開いた手でクララを穏やかに誘う。ほかの二人は口を閉じる。日本語教材アニメの清潔で柔らかなセル塗り、9:16、1080×1920。三人と道具は上部72%だけ。下部28%は左右いっぱいの無地の暖かいアイボリー字幕余白で、何も入れない。文字、英字、数字、字幕、矢印、標識、ロゴ、透かしを一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, arrows, motion diagram, written wall scroll, modern cafe, restaurant, outdoor tea garden, stage performance, tourists, children, fourth person, background people, extra people, duplicate tea bowls, extra bowl, duplicate wagashi, extra sweets, teapot, coffee cup, glass cup, swapped left-center-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, objects intruding into bottom blank panel, closed mouth on 渡辺, open mouth on クララ or お茶の先生",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-34-003",
       "storyboardTextLineId": "l34-conv-003-s01",
       "sourceLineId": "l34-conv-003",
-      "imagePromptCn": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦お茶の先生对渡辺说这一句，保持真实课文场景和人物关系。 お茶の先生看向渡辺，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦お茶の先生对渡辺说这一句，保持真实课文场景和人物关系。 お茶の先生看向渡辺，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "imagePromptCn": "第34课教材会话竖屏故事分镜。固定同一个明亮安静的传统日本茶室，现场恰好三名成年女性，人物左右和服装始终不变：左侧クララ，约38岁欧洲女性，白皙肤色、栗棕低发髻、蓝灰眼睛、淡薰衣草紫无字浅花纹和服、深梅紫腰带；中央お茶の先生，约58岁日本女性，夹少量银丝的黑色传统低发髻、深棕眼睛、鼠尾草绿无字米白叶纹和服、暖米色腰带；右侧渡辺，约34岁日本女性，深棕侧分齐耳短发、深棕眼睛、雾蓝无字细波纹和服、深海军蓝腰带。三人始终跪坐榻榻米。背景固定无字障子、空白土黄壁龛、一枝无字花器。茶具数量固定：クララ面前一只灰绿色茶碗，中央一只深炭灰色示范茶碗，右侧一支竹茶筅和一只纯黑小铁釜；クララ面前黑色小方盘只有一枚粉色和果子；不得复制。お茶の先生张口，以开放手掌指向渡辺、茶筅和茶碗；另两人闭口。日本语教材动画插画，干净柔和赛璐璐着色，9:16，1080×1920。三人和全部茶具只在上部72%；底部28%为左右连续纯暖象牙色空白字幕区，任何内容不得侵入。画面无任何文字、字母、数字、字幕、箭头、标识、logo或水印。",
+      "imagePromptJa": "第34課教材会話の縦型ストーリーボード。同じ明るく静かな伝統的日本の茶室。成人女性は必ず三人だけで左右位置と衣装を変えない。左はクララ、38歳前後のヨーロッパ人女性、色白、栗色の低いまとめ髪、青灰色の目、文字のない淡い花模様の薄紫色の着物、濃い梅紫の帯。中央はお茶の先生、58歳前後の日本人女性、少し銀色の混じる黒髪の低いまとめ髪、濃い茶色の目、文字のない米白色の葉模様のセージグリーンの着物、米色の帯。右は渡辺、34歳前後の日本人女性、耳までの濃茶の横分けボブ、濃い茶色の目、文字のない細い波模様のくすんだ青色の着物、濃紺の帯。三人は畳に正座する。背景は文字のない障子、空白の黄土色の床の間、一枝だけの無地の花器。茶道具はクララの前に灰緑色の茶碗一つ、中央に濃い炭色の見本茶碗一つ、右に竹の茶筅一本と黒い小釜一つ。黒い小角皿には桃色の和菓子一つだけ。複製しない。お茶の先生が口を開け、渡辺と茶筅・茶碗へ開いた手を向ける。ほかの二人は口を閉じる。日本語教材アニメの清潔で柔らかなセル塗り、9:16、1080×1920。三人と道具は上部72%だけ。下部28%は左右いっぱいの無地の暖かいアイボリー字幕余白で、何も入れない。文字、英字、数字、字幕、矢印、標識、ロゴ、透かしを一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, arrows, motion diagram, written wall scroll, modern cafe, restaurant, outdoor tea garden, stage performance, tourists, children, fourth person, background people, extra people, duplicate tea bowls, extra bowl, duplicate wagashi, extra sweets, teapot, coffee cup, glass cup, swapped left-center-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, objects intruding into bottom blank panel, closed mouth on お茶の先生, open mouth on クララ or 渡辺",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-34-004",
       "storyboardTextLineId": "l34-conv-004-s01",
       "sourceLineId": "l34-conv-004",
-      "imagePromptCn": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦渡辺对お茶の先生说这一句，保持真实课文场景和人物关系。 渡辺看向お茶の先生，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦渡辺对お茶の先生说这一句，保持真实课文场景和人物关系。 渡辺看向お茶の先生，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "imagePromptCn": "第34课教材会话竖屏故事分镜。固定同一个明亮安静的传统日本茶室，现场恰好三名成年女性，人物左右和服装始终不变：左侧クララ，约38岁欧洲女性，白皙肤色、栗棕低发髻、蓝灰眼睛、淡薰衣草紫无字浅花纹和服、深梅紫腰带；中央お茶の先生，约58岁日本女性，夹少量银丝的黑色传统低发髻、深棕眼睛、鼠尾草绿无字米白叶纹和服、暖米色腰带；右侧渡辺，约34岁日本女性，深棕侧分齐耳短发、深棕眼睛、雾蓝无字细波纹和服、深海军蓝腰带。三人始终跪坐榻榻米。背景固定无字障子、空白土黄壁龛、一枝无字花器。茶具数量固定：クララ面前一只灰绿色茶碗，中央一只深炭灰色示范茶碗，右侧一支竹茶筅和一只纯黑小铁釜；クララ面前黑色小方盘只有一枚粉色和果子；不得复制。渡辺张口点头，右手伸向茶筅准备点茶；另两人闭口。日本语教材动画插画，干净柔和赛璐璐着色，9:16，1080×1920。三人和全部茶具只在上部72%；底部28%为左右连续纯暖象牙色空白字幕区，任何内容不得侵入。画面无任何文字、字母、数字、字幕、箭头、标识、logo或水印。",
+      "imagePromptJa": "第34課教材会話の縦型ストーリーボード。同じ明るく静かな伝統的日本の茶室。成人女性は必ず三人だけで左右位置と衣装を変えない。左はクララ、38歳前後のヨーロッパ人女性、色白、栗色の低いまとめ髪、青灰色の目、文字のない淡い花模様の薄紫色の着物、濃い梅紫の帯。中央はお茶の先生、58歳前後の日本人女性、少し銀色の混じる黒髪の低いまとめ髪、濃い茶色の目、文字のない米白色の葉模様のセージグリーンの着物、米色の帯。右は渡辺、34歳前後の日本人女性、耳までの濃茶の横分けボブ、濃い茶色の目、文字のない細い波模様のくすんだ青色の着物、濃紺の帯。三人は畳に正座する。背景は文字のない障子、空白の黄土色の床の間、一枝だけの無地の花器。茶道具はクララの前に灰緑色の茶碗一つ、中央に濃い炭色の見本茶碗一つ、右に竹の茶筅一本と黒い小釜一つ。黒い小角皿には桃色の和菓子一つだけ。複製しない。渡辺が口を開けてうなずき、右手を茶筅へ伸ばす。ほかの二人は口を閉じる。日本語教材アニメの清潔で柔らかなセル塗り、9:16、1080×1920。三人と道具は上部72%だけ。下部28%は左右いっぱいの無地の暖かいアイボリー字幕余白で、何も入れない。文字、英字、数字、字幕、矢印、標識、ロゴ、透かしを一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, arrows, motion diagram, written wall scroll, modern cafe, restaurant, outdoor tea garden, stage performance, tourists, children, fourth person, background people, extra people, duplicate tea bowls, extra bowl, duplicate wagashi, extra sweets, teapot, coffee cup, glass cup, swapped left-center-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, objects intruding into bottom blank panel, closed mouth on 渡辺, open mouth on クララ or お茶の先生",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-34-005",
       "storyboardTextLineId": "l34-conv-005-s01",
       "sourceLineId": "l34-conv-005",
-      "imagePromptCn": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦お茶の先生对クララ说这一句，保持真实课文场景和人物关系。 お茶の先生看向クララ，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦お茶の先生对クララ说这一句，保持真实课文场景和人物关系。 お茶の先生看向クララ，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "imagePromptCn": "第34课教材会话竖屏故事分镜。固定同一个明亮安静的传统日本茶室，现场恰好三名成年女性，人物左右和服装始终不变：左侧クララ，约38岁欧洲女性，白皙肤色、栗棕低发髻、蓝灰眼睛、淡薰衣草紫无字浅花纹和服、深梅紫腰带；中央お茶の先生，约58岁日本女性，夹少量银丝的黑色传统低发髻、深棕眼睛、鼠尾草绿无字米白叶纹和服、暖米色腰带；右侧渡辺，约34岁日本女性，深棕侧分齐耳短发、深棕眼睛、雾蓝无字细波纹和服、深海军蓝腰带。三人始终跪坐榻榻米。背景固定无字障子、空白土黄壁龛、一枝无字花器。茶具数量固定：クララ面前一只灰绿色茶碗，中央一只深炭灰色示范茶碗，右侧一支竹茶筅和一只纯黑小铁釜；クララ面前黑色小方盘只有一枚粉色和果子；不得复制。お茶の先生张口，以开放手掌请クララ吃黑色小方盘里唯一一枚粉色和果子；另两人闭口。日本语教材动画插画，干净柔和赛璐璐着色，9:16，1080×1920。三人和全部茶具只在上部72%；底部28%为左右连续纯暖象牙色空白字幕区，任何内容不得侵入。画面无任何文字、字母、数字、字幕、箭头、标识、logo或水印。",
+      "imagePromptJa": "第34課教材会話の縦型ストーリーボード。同じ明るく静かな伝統的日本の茶室。成人女性は必ず三人だけで左右位置と衣装を変えない。左はクララ、38歳前後のヨーロッパ人女性、色白、栗色の低いまとめ髪、青灰色の目、文字のない淡い花模様の薄紫色の着物、濃い梅紫の帯。中央はお茶の先生、58歳前後の日本人女性、少し銀色の混じる黒髪の低いまとめ髪、濃い茶色の目、文字のない米白色の葉模様のセージグリーンの着物、米色の帯。右は渡辺、34歳前後の日本人女性、耳までの濃茶の横分けボブ、濃い茶色の目、文字のない細い波模様のくすんだ青色の着物、濃紺の帯。三人は畳に正座する。背景は文字のない障子、空白の黄土色の床の間、一枝だけの無地の花器。茶道具はクララの前に灰緑色の茶碗一つ、中央に濃い炭色の見本茶碗一つ、右に竹の茶筅一本と黒い小釜一つ。黒い小角皿には桃色の和菓子一つだけ。複製しない。お茶の先生が口を開け、黒い小角皿の一つだけの桃色の和菓子をクララへ勧める。ほかの二人は口を閉じる。日本語教材アニメの清潔で柔らかなセル塗り、9:16、1080×1920。三人と道具は上部72%だけ。下部28%は左右いっぱいの無地の暖かいアイボリー字幕余白で、何も入れない。文字、英字、数字、字幕、矢印、標識、ロゴ、透かしを一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, arrows, motion diagram, written wall scroll, modern cafe, restaurant, outdoor tea garden, stage performance, tourists, children, fourth person, background people, extra people, duplicate tea bowls, extra bowl, duplicate wagashi, extra sweets, teapot, coffee cup, glass cup, swapped left-center-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, objects intruding into bottom blank panel, closed mouth on お茶の先生, open mouth on クララ or 渡辺",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-34-006",
       "storyboardTextLineId": "l34-conv-006-s01",
       "sourceLineId": "l34-conv-006",
-      "imagePromptCn": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦クララ对お茶の先生说这一句，保持真实课文场景和人物关系。 クララ看向お茶の先生，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦クララ对お茶の先生说这一句，保持真实课文场景和人物关系。 クララ看向お茶の先生，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "imagePromptCn": "第34课教材会话竖屏故事分镜。固定同一个明亮安静的传统日本茶室，现场恰好三名成年女性，人物左右和服装始终不变：左侧クララ，约38岁欧洲女性，白皙肤色、栗棕低发髻、蓝灰眼睛、淡薰衣草紫无字浅花纹和服、深梅紫腰带；中央お茶の先生，约58岁日本女性，夹少量银丝的黑色传统低发髻、深棕眼睛、鼠尾草绿无字米白叶纹和服、暖米色腰带；右侧渡辺，约34岁日本女性，深棕侧分齐耳短发、深棕眼睛、雾蓝无字细波纹和服、深海军蓝腰带。三人始终跪坐榻榻米。背景固定无字障子、空白土黄壁龛、一枝无字花器。茶具数量固定：クララ面前一只灰绿色茶碗，中央一只深炭灰色示范茶碗，右侧一支竹茶筅和一只纯黑小铁釜；クララ面前黑色小方盘只有一枚粉色和果子；不得复制。クララ张口扬眉，双手停在和果子前作惊讶询问；另两人闭口。日本语教材动画插画，干净柔和赛璐璐着色，9:16，1080×1920。三人和全部茶具只在上部72%；底部28%为左右连续纯暖象牙色空白字幕区，任何内容不得侵入。画面无任何文字、字母、数字、字幕、箭头、标识、logo或水印。",
+      "imagePromptJa": "第34課教材会話の縦型ストーリーボード。同じ明るく静かな伝統的日本の茶室。成人女性は必ず三人だけで左右位置と衣装を変えない。左はクララ、38歳前後のヨーロッパ人女性、色白、栗色の低いまとめ髪、青灰色の目、文字のない淡い花模様の薄紫色の着物、濃い梅紫の帯。中央はお茶の先生、58歳前後の日本人女性、少し銀色の混じる黒髪の低いまとめ髪、濃い茶色の目、文字のない米白色の葉模様のセージグリーンの着物、米色の帯。右は渡辺、34歳前後の日本人女性、耳までの濃茶の横分けボブ、濃い茶色の目、文字のない細い波模様のくすんだ青色の着物、濃紺の帯。三人は畳に正座する。背景は文字のない障子、空白の黄土色の床の間、一枝だけの無地の花器。茶道具はクララの前に灰緑色の茶碗一つ、中央に濃い炭色の見本茶碗一つ、右に竹の茶筅一本と黒い小釜一つ。黒い小角皿には桃色の和菓子一つだけ。複製しない。クララが口を開けて眉を上げ、和菓子の前で両手を止めて驚いて尋ねる。ほかの二人は口を閉じる。日本語教材アニメの清潔で柔らかなセル塗り、9:16、1080×1920。三人と道具は上部72%だけ。下部28%は左右いっぱいの無地の暖かいアイボリー字幕余白で、何も入れない。文字、英字、数字、字幕、矢印、標識、ロゴ、透かしを一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, arrows, motion diagram, written wall scroll, modern cafe, restaurant, outdoor tea garden, stage performance, tourists, children, fourth person, background people, extra people, duplicate tea bowls, extra bowl, duplicate wagashi, extra sweets, teapot, coffee cup, glass cup, swapped left-center-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, objects intruding into bottom blank panel, closed mouth on クララ, open mouth on お茶の先生 or 渡辺",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-34-007",
       "storyboardTextLineId": "l34-conv-007-s01",
       "sourceLineId": "l34-conv-007",
-      "imagePromptCn": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦お茶の先生对クララ说这一句，保持真实课文场景和人物关系。 お茶の先生看向クララ，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦お茶の先生对クララ说这一句，保持真实课文场景和人物关系。 お茶の先生看向クララ，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "imagePromptCn": "第34课教材会话竖屏故事分镜。固定同一个明亮安静的传统日本茶室，现场恰好三名成年女性，人物左右和服装始终不变：左侧クララ，约38岁欧洲女性，白皙肤色、栗棕低发髻、蓝灰眼睛、淡薰衣草紫无字浅花纹和服、深梅紫腰带；中央お茶の先生，约58岁日本女性，夹少量银丝的黑色传统低发髻、深棕眼睛、鼠尾草绿无字米白叶纹和服、暖米色腰带；右侧渡辺，约34岁日本女性，深棕侧分齐耳短发、深棕眼睛、雾蓝无字细波纹和服、深海军蓝腰带。三人始终跪坐榻榻米。背景固定无字障子、空白土黄壁龛、一枝无字花器。茶具数量固定：クララ面前一只灰绿色茶碗，中央一只深炭灰色示范茶碗，右侧一支竹茶筅和一只纯黑小铁釜；クララ面前黑色小方盘只有一枚粉色和果子；不得复制。お茶の先生张口温和点头；クララ仍略显惊讶，另两人闭口。日本语教材动画插画，干净柔和赛璐璐着色，9:16，1080×1920。三人和全部茶具只在上部72%；底部28%为左右连续纯暖象牙色空白字幕区，任何内容不得侵入。画面无任何文字、字母、数字、字幕、箭头、标识、logo或水印。",
+      "imagePromptJa": "第34課教材会話の縦型ストーリーボード。同じ明るく静かな伝統的日本の茶室。成人女性は必ず三人だけで左右位置と衣装を変えない。左はクララ、38歳前後のヨーロッパ人女性、色白、栗色の低いまとめ髪、青灰色の目、文字のない淡い花模様の薄紫色の着物、濃い梅紫の帯。中央はお茶の先生、58歳前後の日本人女性、少し銀色の混じる黒髪の低いまとめ髪、濃い茶色の目、文字のない米白色の葉模様のセージグリーンの着物、米色の帯。右は渡辺、34歳前後の日本人女性、耳までの濃茶の横分けボブ、濃い茶色の目、文字のない細い波模様のくすんだ青色の着物、濃紺の帯。三人は畳に正座する。背景は文字のない障子、空白の黄土色の床の間、一枝だけの無地の花器。茶道具はクララの前に灰緑色の茶碗一つ、中央に濃い炭色の見本茶碗一つ、右に竹の茶筅一本と黒い小釜一つ。黒い小角皿には桃色の和菓子一つだけ。複製しない。お茶の先生が口を開けて穏やかにうなずく。クララはまだ少し驚き、ほかの二人は口を閉じる。日本語教材アニメの清潔で柔らかなセル塗り、9:16、1080×1920。三人と道具は上部72%だけ。下部28%は左右いっぱいの無地の暖かいアイボリー字幕余白で、何も入れない。文字、英字、数字、字幕、矢印、標識、ロゴ、透かしを一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, arrows, motion diagram, written wall scroll, modern cafe, restaurant, outdoor tea garden, stage performance, tourists, children, fourth person, background people, extra people, duplicate tea bowls, extra bowl, duplicate wagashi, extra sweets, teapot, coffee cup, glass cup, swapped left-center-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, objects intruding into bottom blank panel, closed mouth on お茶の先生, open mouth on クララ or 渡辺",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-34-008",
-      "storyboardTextLineId": "l34-conv-008-s01",
-      "sourceLineId": "l34-conv-008",
-      "imagePromptCn": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦クララ对お茶の先生说这一句，保持真实课文场景和人物关系。 クララ看向お茶の先生，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦クララ对お茶の先生说这一句，保持真实课文场景和人物关系。 クララ看向お茶の先生，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "storyboardTextLineId": "l34-conv-007-s02",
+      "sourceLineId": "l34-conv-007",
+      "imagePromptCn": "第34课教材会话竖屏故事分镜。固定同一个明亮安静的传统日本茶室，现场恰好三名成年女性，人物左右和服装始终不变：左侧クララ，约38岁欧洲女性，白皙肤色、栗棕低发髻、蓝灰眼睛、淡薰衣草紫无字浅花纹和服、深梅紫腰带；中央お茶の先生，约58岁日本女性，夹少量银丝的黑色传统低发髻、深棕眼睛、鼠尾草绿无字米白叶纹和服、暖米色腰带；右侧渡辺，约34岁日本女性，深棕侧分齐耳短发、深棕眼睛、雾蓝无字细波纹和服、深海军蓝腰带。三人始终跪坐榻榻米。背景固定无字障子、空白土黄壁龛、一枝无字花器。茶具数量固定：クララ面前一只灰绿色茶碗，中央一只深炭灰色示范茶碗，右侧一支竹茶筅和一只纯黑小铁釜；クララ面前黑色小方盘只有一枚粉色和果子；不得复制。お茶の先生张口，先指向唯一一枚和果子，再把另一手移向茶碗表示顺序；另两人闭口。日本语教材动画插画，干净柔和赛璐璐着色，9:16，1080×1920。三人和全部茶具只在上部72%；底部28%为左右连续纯暖象牙色空白字幕区，任何内容不得侵入。画面无任何文字、字母、数字、字幕、箭头、标识、logo或水印。",
+      "imagePromptJa": "第34課教材会話の縦型ストーリーボード。同じ明るく静かな伝統的日本の茶室。成人女性は必ず三人だけで左右位置と衣装を変えない。左はクララ、38歳前後のヨーロッパ人女性、色白、栗色の低いまとめ髪、青灰色の目、文字のない淡い花模様の薄紫色の着物、濃い梅紫の帯。中央はお茶の先生、58歳前後の日本人女性、少し銀色の混じる黒髪の低いまとめ髪、濃い茶色の目、文字のない米白色の葉模様のセージグリーンの着物、米色の帯。右は渡辺、34歳前後の日本人女性、耳までの濃茶の横分けボブ、濃い茶色の目、文字のない細い波模様のくすんだ青色の着物、濃紺の帯。三人は畳に正座する。背景は文字のない障子、空白の黄土色の床の間、一枝だけの無地の花器。茶道具はクララの前に灰緑色の茶碗一つ、中央に濃い炭色の見本茶碗一つ、右に竹の茶筅一本と黒い小釜一つ。黒い小角皿には桃色の和菓子一つだけ。複製しない。お茶の先生が口を開け、まず一つだけの和菓子を示し、もう一方の手を茶碗へ移して順序を表す。ほかの二人は口を閉じる。日本語教材アニメの清潔で柔らかなセル塗り、9:16、1080×1920。三人と道具は上部72%だけ。下部28%は左右いっぱいの無地の暖かいアイボリー字幕余白で、何も入れない。文字、英字、数字、字幕、矢印、標識、ロゴ、透かしを一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, arrows, motion diagram, written wall scroll, modern cafe, restaurant, outdoor tea garden, stage performance, tourists, children, fourth person, background people, extra people, duplicate tea bowls, extra bowl, duplicate wagashi, extra sweets, teapot, coffee cup, glass cup, swapped left-center-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, objects intruding into bottom blank panel, closed mouth on お茶の先生, open mouth on クララ or 渡辺",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-34-009",
-      "storyboardTextLineId": "l34-conv-009-s01",
-      "sourceLineId": "l34-conv-009",
-      "imagePromptCn": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦お茶の先生对クララ说这一句，保持真实课文场景和人物关系。 お茶の先生看向クララ，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦お茶の先生对クララ说这一句，保持真实课文场景和人物关系。 お茶の先生看向クララ，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "storyboardTextLineId": "l34-conv-007-s03",
+      "sourceLineId": "l34-conv-007",
+      "imagePromptCn": "第34课教材会话竖屏故事分镜。固定同一个明亮安静的传统日本茶室，现场恰好三名成年女性，人物左右和服装始终不变：左侧クララ，约38岁欧洲女性，白皙肤色、栗棕低发髻、蓝灰眼睛、淡薰衣草紫无字浅花纹和服、深梅紫腰带；中央お茶の先生，约58岁日本女性，夹少量银丝的黑色传统低发髻、深棕眼睛、鼠尾草绿无字米白叶纹和服、暖米色腰带；右侧渡辺，约34岁日本女性，深棕侧分齐耳短发、深棕眼睛、雾蓝无字细波纹和服、深海军蓝腰带。三人始终跪坐榻榻米。背景固定无字障子、空白土黄壁龛、一枝无字花器。茶具数量固定：クララ面前一只灰绿色茶碗，中央一只深炭灰色示范茶碗，右侧一支竹茶筅和一只纯黑小铁釜；クララ面前黑色小方盘只有一枚粉色和果子；不得复制。お茶の先生张口，开放手掌指向クララ面前的茶碗，微笑说明味道；另两人闭口。日本语教材动画插画，干净柔和赛璐璐着色，9:16，1080×1920。三人和全部茶具只在上部72%；底部28%为左右连续纯暖象牙色空白字幕区，任何内容不得侵入。画面无任何文字、字母、数字、字幕、箭头、标识、logo或水印。",
+      "imagePromptJa": "第34課教材会話の縦型ストーリーボード。同じ明るく静かな伝統的日本の茶室。成人女性は必ず三人だけで左右位置と衣装を変えない。左はクララ、38歳前後のヨーロッパ人女性、色白、栗色の低いまとめ髪、青灰色の目、文字のない淡い花模様の薄紫色の着物、濃い梅紫の帯。中央はお茶の先生、58歳前後の日本人女性、少し銀色の混じる黒髪の低いまとめ髪、濃い茶色の目、文字のない米白色の葉模様のセージグリーンの着物、米色の帯。右は渡辺、34歳前後の日本人女性、耳までの濃茶の横分けボブ、濃い茶色の目、文字のない細い波模様のくすんだ青色の着物、濃紺の帯。三人は畳に正座する。背景は文字のない障子、空白の黄土色の床の間、一枝だけの無地の花器。茶道具はクララの前に灰緑色の茶碗一つ、中央に濃い炭色の見本茶碗一つ、右に竹の茶筅一本と黒い小釜一つ。黒い小角皿には桃色の和菓子一つだけ。複製しない。お茶の先生が口を開け、クララの前の茶碗へ開いた手を向け、味についてほほえんで説明する。ほかの二人は口を閉じる。日本語教材アニメの清潔で柔らかなセル塗り、9:16、1080×1920。三人と道具は上部72%だけ。下部28%は左右いっぱいの無地の暖かいアイボリー字幕余白で、何も入れない。文字、英字、数字、字幕、矢印、標識、ロゴ、透かしを一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, arrows, motion diagram, written wall scroll, modern cafe, restaurant, outdoor tea garden, stage performance, tourists, children, fourth person, background people, extra people, duplicate tea bowls, extra bowl, duplicate wagashi, extra sweets, teapot, coffee cup, glass cup, swapped left-center-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, objects intruding into bottom blank panel, closed mouth on お茶の先生, open mouth on クララ or 渡辺",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-34-010",
-      "storyboardTextLineId": "l34-conv-010-s01",
-      "sourceLineId": "l34-conv-010",
-      "imagePromptCn": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦クララ对お茶の先生说这一句，保持真实课文场景和人物关系。 クララ看向お茶の先生，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦クララ对お茶の先生说这一句，保持真实课文场景和人物关系。 クララ看向お茶の先生，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "storyboardTextLineId": "l34-conv-008-s01",
+      "sourceLineId": "l34-conv-008",
+      "imagePromptCn": "第34课教材会话竖屏故事分镜。固定同一个明亮安静的传统日本茶室，现场恰好三名成年女性，人物左右和服装始终不变：左侧クララ，约38岁欧洲女性，白皙肤色、栗棕低发髻、蓝灰眼睛、淡薰衣草紫无字浅花纹和服、深梅紫腰带；中央お茶の先生，约58岁日本女性，夹少量银丝的黑色传统低发髻、深棕眼睛、鼠尾草绿无字米白叶纹和服、暖米色腰带；右侧渡辺，约34岁日本女性，深棕侧分齐耳短发、深棕眼睛、雾蓝无字细波纹和服、深海军蓝腰带。三人始终跪坐榻榻米。背景固定无字障子、空白土黄壁龛、一枝无字花器。茶具数量固定：クララ面前一只灰绿色茶碗，中央一只深炭灰色示范茶碗，右侧一支竹茶筅和一只纯黑小铁釜；クララ面前黑色小方盘只有一枚粉色和果子；不得复制。クララ张口轻点头，视线在和果子和茶碗之间移动；另两人闭口。日本语教材动画插画，干净柔和赛璐璐着色，9:16，1080×1920。三人和全部茶具只在上部72%；底部28%为左右连续纯暖象牙色空白字幕区，任何内容不得侵入。画面无任何文字、字母、数字、字幕、箭头、标识、logo或水印。",
+      "imagePromptJa": "第34課教材会話の縦型ストーリーボード。同じ明るく静かな伝統的日本の茶室。成人女性は必ず三人だけで左右位置と衣装を変えない。左はクララ、38歳前後のヨーロッパ人女性、色白、栗色の低いまとめ髪、青灰色の目、文字のない淡い花模様の薄紫色の着物、濃い梅紫の帯。中央はお茶の先生、58歳前後の日本人女性、少し銀色の混じる黒髪の低いまとめ髪、濃い茶色の目、文字のない米白色の葉模様のセージグリーンの着物、米色の帯。右は渡辺、34歳前後の日本人女性、耳までの濃茶の横分けボブ、濃い茶色の目、文字のない細い波模様のくすんだ青色の着物、濃紺の帯。三人は畳に正座する。背景は文字のない障子、空白の黄土色の床の間、一枝だけの無地の花器。茶道具はクララの前に灰緑色の茶碗一つ、中央に濃い炭色の見本茶碗一つ、右に竹の茶筅一本と黒い小釜一つ。黒い小角皿には桃色の和菓子一つだけ。複製しない。クララが口を開けて軽くうなずき、和菓子と茶碗の間へ視線を移す。ほかの二人は口を閉じる。日本語教材アニメの清潔で柔らかなセル塗り、9:16、1080×1920。三人と道具は上部72%だけ。下部28%は左右いっぱいの無地の暖かいアイボリー字幕余白で、何も入れない。文字、英字、数字、字幕、矢印、標識、ロゴ、透かしを一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, arrows, motion diagram, written wall scroll, modern cafe, restaurant, outdoor tea garden, stage performance, tourists, children, fourth person, background people, extra people, duplicate tea bowls, extra bowl, duplicate wagashi, extra sweets, teapot, coffee cup, glass cup, swapped left-center-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, objects intruding into bottom blank panel, closed mouth on クララ, open mouth on お茶の先生 or 渡辺",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-34-011",
-      "storyboardTextLineId": "l34-conv-011-s01",
-      "sourceLineId": "l34-conv-011",
-      "imagePromptCn": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦お茶の先生对クララ说这一句，保持真实课文场景和人物关系。 お茶の先生看向クララ，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦お茶の先生对クララ说这一句，保持真实课文场景和人物关系。 お茶の先生看向クララ，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "storyboardTextLineId": "l34-conv-009-s01",
+      "sourceLineId": "l34-conv-009",
+      "imagePromptCn": "第34课教材会话竖屏故事分镜。固定同一个明亮安静的传统日本茶室，现场恰好三名成年女性，人物左右和服装始终不变：左侧クララ，约38岁欧洲女性，白皙肤色、栗棕低发髻、蓝灰眼睛、淡薰衣草紫无字浅花纹和服、深梅紫腰带；中央お茶の先生，约58岁日本女性，夹少量银丝的黑色传统低发髻、深棕眼睛、鼠尾草绿无字米白叶纹和服、暖米色腰带；右侧渡辺，约34岁日本女性，深棕侧分齐耳短发、深棕眼睛、雾蓝无字细波纹和服、深海军蓝腰带。三人始终跪坐榻榻米。背景固定无字障子、空白土黄壁龛、一枝无字花器。茶具数量固定：クララ面前一只灰绿色茶碗，中央一只深炭灰色示范茶碗，右侧一支竹茶筅和一只纯黑小铁釜；クララ面前黑色小方盘只有一枚粉色和果子；不得复制。お茶の先生张口，把深炭灰色示范茶碗端正放在面前并示意开始；另两人闭口。日本语教材动画插画，干净柔和赛璐璐着色，9:16，1080×1920。三人和全部茶具只在上部72%；底部28%为左右连续纯暖象牙色空白字幕区，任何内容不得侵入。画面无任何文字、字母、数字、字幕、箭头、标识、logo或水印。",
+      "imagePromptJa": "第34課教材会話の縦型ストーリーボード。同じ明るく静かな伝統的日本の茶室。成人女性は必ず三人だけで左右位置と衣装を変えない。左はクララ、38歳前後のヨーロッパ人女性、色白、栗色の低いまとめ髪、青灰色の目、文字のない淡い花模様の薄紫色の着物、濃い梅紫の帯。中央はお茶の先生、58歳前後の日本人女性、少し銀色の混じる黒髪の低いまとめ髪、濃い茶色の目、文字のない米白色の葉模様のセージグリーンの着物、米色の帯。右は渡辺、34歳前後の日本人女性、耳までの濃茶の横分けボブ、濃い茶色の目、文字のない細い波模様のくすんだ青色の着物、濃紺の帯。三人は畳に正座する。背景は文字のない障子、空白の黄土色の床の間、一枝だけの無地の花器。茶道具はクララの前に灰緑色の茶碗一つ、中央に濃い炭色の見本茶碗一つ、右に竹の茶筅一本と黒い小釜一つ。黒い小角皿には桃色の和菓子一つだけ。複製しない。お茶の先生が口を開け、濃い炭色の見本茶碗を正面に置いて始める合図をする。ほかの二人は口を閉じる。日本語教材アニメの清潔で柔らかなセル塗り、9:16、1080×1920。三人と道具は上部72%だけ。下部28%は左右いっぱいの無地の暖かいアイボリー字幕余白で、何も入れない。文字、英字、数字、字幕、矢印、標識、ロゴ、透かしを一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, arrows, motion diagram, written wall scroll, modern cafe, restaurant, outdoor tea garden, stage performance, tourists, children, fourth person, background people, extra people, duplicate tea bowls, extra bowl, duplicate wagashi, extra sweets, teapot, coffee cup, glass cup, swapped left-center-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, objects intruding into bottom blank panel, closed mouth on お茶の先生, open mouth on クララ or 渡辺",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-34-012",
-      "storyboardTextLineId": "l34-conv-012-s01",
-      "sourceLineId": "l34-conv-012",
-      "imagePromptCn": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦クララ对お茶の先生说这一句，保持真实课文场景和人物关系。 クララ看向お茶の先生，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦クララ对お茶の先生说这一句，保持真实课文场景和人物关系。 クララ看向お茶の先生，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "storyboardTextLineId": "l34-conv-009-s02",
+      "sourceLineId": "l34-conv-009",
+      "imagePromptCn": "第34课教材会话竖屏故事分镜。固定同一个明亮安静的传统日本茶室，现场恰好三名成年女性，人物左右和服装始终不变：左侧クララ，约38岁欧洲女性，白皙肤色、栗棕低发髻、蓝灰眼睛、淡薰衣草紫无字浅花纹和服、深梅紫腰带；中央お茶の先生，约58岁日本女性，夹少量银丝的黑色传统低发髻、深棕眼睛、鼠尾草绿无字米白叶纹和服、暖米色腰带；右侧渡辺，约34岁日本女性，深棕侧分齐耳短发、深棕眼睛、雾蓝无字细波纹和服、深海军蓝腰带。三人始终跪坐榻榻米。背景固定无字障子、空白土黄壁龛、一枝无字花器。茶具数量固定：クララ面前一只灰绿色茶碗，中央一只深炭灰色示范茶碗，右侧一支竹茶筅和一只纯黑小铁釜；クララ面前黑色小方盘只有一枚粉色和果子；不得复制。お茶の先生张口，用右手稳稳拿起唯一的深炭灰色示范茶碗，左手在下方张开等待；另两人闭口。日本语教材动画插画，干净柔和赛璐璐着色，9:16，1080×1920。三人和全部茶具只在上部72%；底部28%为左右连续纯暖象牙色空白字幕区，任何内容不得侵入。画面无任何文字、字母、数字、字幕、箭头、标识、logo或水印。",
+      "imagePromptJa": "第34課教材会話の縦型ストーリーボード。同じ明るく静かな伝統的日本の茶室。成人女性は必ず三人だけで左右位置と衣装を変えない。左はクララ、38歳前後のヨーロッパ人女性、色白、栗色の低いまとめ髪、青灰色の目、文字のない淡い花模様の薄紫色の着物、濃い梅紫の帯。中央はお茶の先生、58歳前後の日本人女性、少し銀色の混じる黒髪の低いまとめ髪、濃い茶色の目、文字のない米白色の葉模様のセージグリーンの着物、米色の帯。右は渡辺、34歳前後の日本人女性、耳までの濃茶の横分けボブ、濃い茶色の目、文字のない細い波模様のくすんだ青色の着物、濃紺の帯。三人は畳に正座する。背景は文字のない障子、空白の黄土色の床の間、一枝だけの無地の花器。茶道具はクララの前に灰緑色の茶碗一つ、中央に濃い炭色の見本茶碗一つ、右に竹の茶筅一本と黒い小釜一つ。黒い小角皿には桃色の和菓子一つだけ。複製しない。お茶の先生が口を開け、右手で一つだけの濃い炭色の見本茶碗を取り、左手を下で開いて待たせる。ほかの二人は口を閉じる。日本語教材アニメの清潔で柔らかなセル塗り、9:16、1080×1920。三人と道具は上部72%だけ。下部28%は左右いっぱいの無地の暖かいアイボリー字幕余白で、何も入れない。文字、英字、数字、字幕、矢印、標識、ロゴ、透かしを一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, arrows, motion diagram, written wall scroll, modern cafe, restaurant, outdoor tea garden, stage performance, tourists, children, fourth person, background people, extra people, duplicate tea bowls, extra bowl, duplicate wagashi, extra sweets, teapot, coffee cup, glass cup, swapped left-center-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, objects intruding into bottom blank panel, closed mouth on お茶の先生, open mouth on クララ or 渡辺",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-34-013",
-      "storyboardTextLineId": "l34-conv-013-s01",
-      "sourceLineId": "l34-conv-013",
-      "imagePromptCn": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦お茶の先生对クララ说这一句，保持真实课文场景和人物关系。 お茶の先生看向クララ，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦お茶の先生对クララ说这一句，保持真实课文场景和人物关系。 お茶の先生看向クララ，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "storyboardTextLineId": "l34-conv-009-s03",
+      "sourceLineId": "l34-conv-009",
+      "imagePromptCn": "第34课教材会话竖屏故事分镜。固定同一个明亮安静的传统日本茶室，现场恰好三名成年女性，人物左右和服装始终不变：左侧クララ，约38岁欧洲女性，白皙肤色、栗棕低发髻、蓝灰眼睛、淡薰衣草紫无字浅花纹和服、深梅紫腰带；中央お茶の先生，约58岁日本女性，夹少量银丝的黑色传统低发髻、深棕眼睛、鼠尾草绿无字米白叶纹和服、暖米色腰带；右侧渡辺，约34岁日本女性，深棕侧分齐耳短发、深棕眼睛、雾蓝无字细波纹和服、深海军蓝腰带。三人始终跪坐榻榻米。背景固定无字障子、空白土黄壁龛、一枝无字花器。茶具数量固定：クララ面前一只灰绿色茶碗，中央一只深炭灰色示范茶碗，右侧一支竹茶筅和一只纯黑小铁釜；クララ面前黑色小方盘只有一枚粉色和果子；不得复制。お茶の先生张口，把深炭灰色茶碗托在左手掌上，右手扶住碗侧；另两人闭口。日本语教材动画插画，干净柔和赛璐璐着色，9:16，1080×1920。三人和全部茶具只在上部72%；底部28%为左右连续纯暖象牙色空白字幕区，任何内容不得侵入。画面无任何文字、字母、数字、字幕、箭头、标识、logo或水印。",
+      "imagePromptJa": "第34課教材会話の縦型ストーリーボード。同じ明るく静かな伝統的日本の茶室。成人女性は必ず三人だけで左右位置と衣装を変えない。左はクララ、38歳前後のヨーロッパ人女性、色白、栗色の低いまとめ髪、青灰色の目、文字のない淡い花模様の薄紫色の着物、濃い梅紫の帯。中央はお茶の先生、58歳前後の日本人女性、少し銀色の混じる黒髪の低いまとめ髪、濃い茶色の目、文字のない米白色の葉模様のセージグリーンの着物、米色の帯。右は渡辺、34歳前後の日本人女性、耳までの濃茶の横分けボブ、濃い茶色の目、文字のない細い波模様のくすんだ青色の着物、濃紺の帯。三人は畳に正座する。背景は文字のない障子、空白の黄土色の床の間、一枝だけの無地の花器。茶道具はクララの前に灰緑色の茶碗一つ、中央に濃い炭色の見本茶碗一つ、右に竹の茶筅一本と黒い小釜一つ。黒い小角皿には桃色の和菓子一つだけ。複製しない。お茶の先生が口を開け、濃い炭色の茶碗を左の手のひらに載せ、右手で側面を支える。ほかの二人は口を閉じる。日本語教材アニメの清潔で柔らかなセル塗り、9:16、1080×1920。三人と道具は上部72%だけ。下部28%は左右いっぱいの無地の暖かいアイボリー字幕余白で、何も入れない。文字、英字、数字、字幕、矢印、標識、ロゴ、透かしを一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, arrows, motion diagram, written wall scroll, modern cafe, restaurant, outdoor tea garden, stage performance, tourists, children, fourth person, background people, extra people, duplicate tea bowls, extra bowl, duplicate wagashi, extra sweets, teapot, coffee cup, glass cup, swapped left-center-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, objects intruding into bottom blank panel, closed mouth on お茶の先生, open mouth on クララ or 渡辺",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-34-014",
+      "storyboardTextLineId": "l34-conv-009-s04",
+      "sourceLineId": "l34-conv-009",
+      "imagePromptCn": "第34课教材会话竖屏故事分镜。固定同一个明亮安静的传统日本茶室，现场恰好三名成年女性，人物左右和服装始终不变：左侧クララ，约38岁欧洲女性，白皙肤色、栗棕低发髻、蓝灰眼睛、淡薰衣草紫无字浅花纹和服、深梅紫腰带；中央お茶の先生，约58岁日本女性，夹少量银丝的黑色传统低发髻、深棕眼睛、鼠尾草绿无字米白叶纹和服、暖米色腰带；右侧渡辺，约34岁日本女性，深棕侧分齐耳短发、深棕眼睛、雾蓝无字细波纹和服、深海军蓝腰带。三人始终跪坐榻榻米。背景固定无字障子、空白土黄壁龛、一枝无字花器。茶具数量固定：クララ面前一只灰绿色茶碗，中央一只深炭灰色示范茶碗，右侧一支竹茶筅和一只纯黑小铁釜；クララ面前黑色小方盘只有一枚粉色和果子；不得复制。お茶の先生张口，左手托碗、右手轻扶碗沿展示有控制的旋转动作；不出现箭头、数字或残影；另两人闭口。日本语教材动画插画，干净柔和赛璐璐着色，9:16，1080×1920。三人和全部茶具只在上部72%；底部28%为左右连续纯暖象牙色空白字幕区，任何内容不得侵入。画面无任何文字、字母、数字、字幕、箭头、标识、logo或水印。",
+      "imagePromptJa": "第34課教材会話の縦型ストーリーボード。同じ明るく静かな伝統的日本の茶室。成人女性は必ず三人だけで左右位置と衣装を変えない。左はクララ、38歳前後のヨーロッパ人女性、色白、栗色の低いまとめ髪、青灰色の目、文字のない淡い花模様の薄紫色の着物、濃い梅紫の帯。中央はお茶の先生、58歳前後の日本人女性、少し銀色の混じる黒髪の低いまとめ髪、濃い茶色の目、文字のない米白色の葉模様のセージグリーンの着物、米色の帯。右は渡辺、34歳前後の日本人女性、耳までの濃茶の横分けボブ、濃い茶色の目、文字のない細い波模様のくすんだ青色の着物、濃紺の帯。三人は畳に正座する。背景は文字のない障子、空白の黄土色の床の間、一枝だけの無地の花器。茶道具はクララの前に灰緑色の茶碗一つ、中央に濃い炭色の見本茶碗一つ、右に竹の茶筅一本と黒い小釜一つ。黒い小角皿には桃色の和菓子一つだけ。複製しない。お茶の先生が口を開け、左手で茶碗を支え、右手を縁へ添えて落ち着いた回転動作を示す。矢印、数字、残像は出さない。ほかの二人は口を閉じる。日本語教材アニメの清潔で柔らかなセル塗り、9:16、1080×1920。三人と道具は上部72%だけ。下部28%は左右いっぱいの無地の暖かいアイボリー字幕余白で、何も入れない。文字、英字、数字、字幕、矢印、標識、ロゴ、透かしを一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, arrows, motion diagram, written wall scroll, modern cafe, restaurant, outdoor tea garden, stage performance, tourists, children, fourth person, background people, extra people, duplicate tea bowls, extra bowl, duplicate wagashi, extra sweets, teapot, coffee cup, glass cup, swapped left-center-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, objects intruding into bottom blank panel, closed mouth on お茶の先生, open mouth on クララ or 渡辺",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-34-015",
+      "storyboardTextLineId": "l34-conv-009-s05",
+      "sourceLineId": "l34-conv-009",
+      "imagePromptCn": "第34课教材会话竖屏故事分镜。固定同一个明亮安静的传统日本茶室，现场恰好三名成年女性，人物左右和服装始终不变：左侧クララ，约38岁欧洲女性，白皙肤色、栗棕低发髻、蓝灰眼睛、淡薰衣草紫无字浅花纹和服、深梅紫腰带；中央お茶の先生，约58岁日本女性，夹少量银丝的黑色传统低发髻、深棕眼睛、鼠尾草绿无字米白叶纹和服、暖米色腰带；右侧渡辺，约34岁日本女性，深棕侧分齐耳短发、深棕眼睛、雾蓝无字细波纹和服、深海军蓝腰带。三人始终跪坐榻榻米。背景固定无字障子、空白土黄壁龛、一枝无字花器。茶具数量固定：クララ面前一只灰绿色茶碗，中央一只深炭灰色示范茶碗，右侧一支竹茶筅和一只纯黑小铁釜；クララ面前黑色小方盘只有一枚粉色和果子；不得复制。お茶の先生张口，把示范茶碗举到嘴唇下方但不遮住口部，示意最后饮用；另两人闭口。日本语教材动画插画，干净柔和赛璐璐着色，9:16，1080×1920。三人和全部茶具只在上部72%；底部28%为左右连续纯暖象牙色空白字幕区，任何内容不得侵入。画面无任何文字、字母、数字、字幕、箭头、标识、logo或水印。",
+      "imagePromptJa": "第34課教材会話の縦型ストーリーボード。同じ明るく静かな伝統的日本の茶室。成人女性は必ず三人だけで左右位置と衣装を変えない。左はクララ、38歳前後のヨーロッパ人女性、色白、栗色の低いまとめ髪、青灰色の目、文字のない淡い花模様の薄紫色の着物、濃い梅紫の帯。中央はお茶の先生、58歳前後の日本人女性、少し銀色の混じる黒髪の低いまとめ髪、濃い茶色の目、文字のない米白色の葉模様のセージグリーンの着物、米色の帯。右は渡辺、34歳前後の日本人女性、耳までの濃茶の横分けボブ、濃い茶色の目、文字のない細い波模様のくすんだ青色の着物、濃紺の帯。三人は畳に正座する。背景は文字のない障子、空白の黄土色の床の間、一枝だけの無地の花器。茶道具はクララの前に灰緑色の茶碗一つ、中央に濃い炭色の見本茶碗一つ、右に竹の茶筅一本と黒い小釜一つ。黒い小角皿には桃色の和菓子一つだけ。複製しない。お茶の先生が口を開け、見本茶碗を唇の下まで上げ、口元を隠さず最後に飲むことを示す。ほかの二人は口を閉じる。日本語教材アニメの清潔で柔らかなセル塗り、9:16、1080×1920。三人と道具は上部72%だけ。下部28%は左右いっぱいの無地の暖かいアイボリー字幕余白で、何も入れない。文字、英字、数字、字幕、矢印、標識、ロゴ、透かしを一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, arrows, motion diagram, written wall scroll, modern cafe, restaurant, outdoor tea garden, stage performance, tourists, children, fourth person, background people, extra people, duplicate tea bowls, extra bowl, duplicate wagashi, extra sweets, teapot, coffee cup, glass cup, swapped left-center-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, objects intruding into bottom blank panel, closed mouth on お茶の先生, open mouth on クララ or 渡辺",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-34-016",
+      "storyboardTextLineId": "l34-conv-010-s01",
+      "sourceLineId": "l34-conv-010",
+      "imagePromptCn": "第34课教材会话竖屏故事分镜。固定同一个明亮安静的传统日本茶室，现场恰好三名成年女性，人物左右和服装始终不变：左侧クララ，约38岁欧洲女性，白皙肤色、栗棕低发髻、蓝灰眼睛、淡薰衣草紫无字浅花纹和服、深梅紫腰带；中央お茶の先生，约58岁日本女性，夹少量银丝的黑色传统低发髻、深棕眼睛、鼠尾草绿无字米白叶纹和服、暖米色腰带；右侧渡辺，约34岁日本女性，深棕侧分齐耳短发、深棕眼睛、雾蓝无字细波纹和服、深海军蓝腰带。三人始终跪坐榻榻米。背景固定无字障子、空白土黄壁龛、一枝无字花器。茶具数量固定：クララ面前一只灰绿色茶碗，中央一只深炭灰色示范茶碗，右侧一支竹茶筅和一只纯黑小铁釜；クララ面前黑色小方盘只有一枚粉色和果子；不得复制。クララ张口微笑点头，双手端正放在膝上准备模仿；另两人闭口。日本语教材动画插画，干净柔和赛璐璐着色，9:16，1080×1920。三人和全部茶具只在上部72%；底部28%为左右连续纯暖象牙色空白字幕区，任何内容不得侵入。画面无任何文字、字母、数字、字幕、箭头、标识、logo或水印。",
+      "imagePromptJa": "第34課教材会話の縦型ストーリーボード。同じ明るく静かな伝統的日本の茶室。成人女性は必ず三人だけで左右位置と衣装を変えない。左はクララ、38歳前後のヨーロッパ人女性、色白、栗色の低いまとめ髪、青灰色の目、文字のない淡い花模様の薄紫色の着物、濃い梅紫の帯。中央はお茶の先生、58歳前後の日本人女性、少し銀色の混じる黒髪の低いまとめ髪、濃い茶色の目、文字のない米白色の葉模様のセージグリーンの着物、米色の帯。右は渡辺、34歳前後の日本人女性、耳までの濃茶の横分けボブ、濃い茶色の目、文字のない細い波模様のくすんだ青色の着物、濃紺の帯。三人は畳に正座する。背景は文字のない障子、空白の黄土色の床の間、一枝だけの無地の花器。茶道具はクララの前に灰緑色の茶碗一つ、中央に濃い炭色の見本茶碗一つ、右に竹の茶筅一本と黒い小釜一つ。黒い小角皿には桃色の和菓子一つだけ。複製しない。クララが口を開けてほほえみながらうなずき、両手を膝の上に置いて準備する。ほかの二人は口を閉じる。日本語教材アニメの清潔で柔らかなセル塗り、9:16、1080×1920。三人と道具は上部72%だけ。下部28%は左右いっぱいの無地の暖かいアイボリー字幕余白で、何も入れない。文字、英字、数字、字幕、矢印、標識、ロゴ、透かしを一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, arrows, motion diagram, written wall scroll, modern cafe, restaurant, outdoor tea garden, stage performance, tourists, children, fourth person, background people, extra people, duplicate tea bowls, extra bowl, duplicate wagashi, extra sweets, teapot, coffee cup, glass cup, swapped left-center-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, objects intruding into bottom blank panel, closed mouth on クララ, open mouth on お茶の先生 or 渡辺",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-34-017",
+      "storyboardTextLineId": "l34-conv-011-s01",
+      "sourceLineId": "l34-conv-011",
+      "imagePromptCn": "第34课教材会话竖屏故事分镜。固定同一个明亮安静的传统日本茶室，现场恰好三名成年女性，人物左右和服装始终不变：左侧クララ，约38岁欧洲女性，白皙肤色、栗棕低发髻、蓝灰眼睛、淡薰衣草紫无字浅花纹和服、深梅紫腰带；中央お茶の先生，约58岁日本女性，夹少量银丝的黑色传统低发髻、深棕眼睛、鼠尾草绿无字米白叶纹和服、暖米色腰带；右侧渡辺，约34岁日本女性，深棕侧分齐耳短发、深棕眼睛、雾蓝无字细波纹和服、深海军蓝腰带。三人始终跪坐榻榻米。背景固定无字障子、空白土黄壁龛、一枝无字花器。茶具数量固定：クララ面前一只灰绿色茶碗，中央一只深炭灰色示范茶碗，右侧一支竹茶筅和一只纯黑小铁釜；クララ面前黑色小方盘只有一枚粉色和果子；不得复制。お茶の先生张口，一手指向刚放回的示范茶碗，另一手朝向クララ强调照刚才顺序；另两人闭口。日本语教材动画插画，干净柔和赛璐璐着色，9:16，1080×1920。三人和全部茶具只在上部72%；底部28%为左右连续纯暖象牙色空白字幕区，任何内容不得侵入。画面无任何文字、字母、数字、字幕、箭头、标识、logo或水印。",
+      "imagePromptJa": "第34課教材会話の縦型ストーリーボード。同じ明るく静かな伝統的日本の茶室。成人女性は必ず三人だけで左右位置と衣装を変えない。左はクララ、38歳前後のヨーロッパ人女性、色白、栗色の低いまとめ髪、青灰色の目、文字のない淡い花模様の薄紫色の着物、濃い梅紫の帯。中央はお茶の先生、58歳前後の日本人女性、少し銀色の混じる黒髪の低いまとめ髪、濃い茶色の目、文字のない米白色の葉模様のセージグリーンの着物、米色の帯。右は渡辺、34歳前後の日本人女性、耳までの濃茶の横分けボブ、濃い茶色の目、文字のない細い波模様のくすんだ青色の着物、濃紺の帯。三人は畳に正座する。背景は文字のない障子、空白の黄土色の床の間、一枝だけの無地の花器。茶道具はクララの前に灰緑色の茶碗一つ、中央に濃い炭色の見本茶碗一つ、右に竹の茶筅一本と黒い小釜一つ。黒い小角皿には桃色の和菓子一つだけ。複製しない。お茶の先生が口を開け、一方の手で戻した見本茶碗を示し、もう一方の手をクララへ向けて今の順序を伝える。ほかの二人は口を閉じる。日本語教材アニメの清潔で柔らかなセル塗り、9:16、1080×1920。三人と道具は上部72%だけ。下部28%は左右いっぱいの無地の暖かいアイボリー字幕余白で、何も入れない。文字、英字、数字、字幕、矢印、標識、ロゴ、透かしを一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, arrows, motion diagram, written wall scroll, modern cafe, restaurant, outdoor tea garden, stage performance, tourists, children, fourth person, background people, extra people, duplicate tea bowls, extra bowl, duplicate wagashi, extra sweets, teapot, coffee cup, glass cup, swapped left-center-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, objects intruding into bottom blank panel, closed mouth on お茶の先生, open mouth on クララ or 渡辺",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-34-018",
+      "storyboardTextLineId": "l34-conv-011-s02",
+      "sourceLineId": "l34-conv-011",
+      "imagePromptCn": "第34课教材会话竖屏故事分镜。固定同一个明亮安静的传统日本茶室，现场恰好三名成年女性，人物左右和服装始终不变：左侧クララ，约38岁欧洲女性，白皙肤色、栗棕低发髻、蓝灰眼睛、淡薰衣草紫无字浅花纹和服、深梅紫腰带；中央お茶の先生，约58岁日本女性，夹少量银丝的黑色传统低发髻、深棕眼睛、鼠尾草绿无字米白叶纹和服、暖米色腰带；右侧渡辺，约34岁日本女性，深棕侧分齐耳短发、深棕眼睛、雾蓝无字细波纹和服、深海军蓝腰带。三人始终跪坐榻榻米。背景固定无字障子、空白土黄壁龛、一枝无字花器。茶具数量固定：クララ面前一只灰绿色茶碗，中央一只深炭灰色示范茶碗，右侧一支竹茶筅和一只纯黑小铁釜；クララ面前黑色小方盘只有一枚粉色和果子；不得复制。お茶の先生张口，向クララ和她面前的灰绿色茶碗伸出支持性开放手掌；另两人闭口。日本语教材动画插画，干净柔和赛璐璐着色，9:16，1080×1920。三人和全部茶具只在上部72%；底部28%为左右连续纯暖象牙色空白字幕区，任何内容不得侵入。画面无任何文字、字母、数字、字幕、箭头、标识、logo或水印。",
+      "imagePromptJa": "第34課教材会話の縦型ストーリーボード。同じ明るく静かな伝統的日本の茶室。成人女性は必ず三人だけで左右位置と衣装を変えない。左はクララ、38歳前後のヨーロッパ人女性、色白、栗色の低いまとめ髪、青灰色の目、文字のない淡い花模様の薄紫色の着物、濃い梅紫の帯。中央はお茶の先生、58歳前後の日本人女性、少し銀色の混じる黒髪の低いまとめ髪、濃い茶色の目、文字のない米白色の葉模様のセージグリーンの着物、米色の帯。右は渡辺、34歳前後の日本人女性、耳までの濃茶の横分けボブ、濃い茶色の目、文字のない細い波模様のくすんだ青色の着物、濃紺の帯。三人は畳に正座する。背景は文字のない障子、空白の黄土色の床の間、一枝だけの無地の花器。茶道具はクララの前に灰緑色の茶碗一つ、中央に濃い炭色の見本茶碗一つ、右に竹の茶筅一本と黒い小釜一つ。黒い小角皿には桃色の和菓子一つだけ。複製しない。お茶の先生が口を開け、クララと彼女の前の灰緑色の茶碗へ励ますように開いた手を向ける。ほかの二人は口を閉じる。日本語教材アニメの清潔で柔らかなセル塗り、9:16、1080×1920。三人と道具は上部72%だけ。下部28%は左右いっぱいの無地の暖かいアイボリー字幕余白で、何も入れない。文字、英字、数字、字幕、矢印、標識、ロゴ、透かしを一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, arrows, motion diagram, written wall scroll, modern cafe, restaurant, outdoor tea garden, stage performance, tourists, children, fourth person, background people, extra people, duplicate tea bowls, extra bowl, duplicate wagashi, extra sweets, teapot, coffee cup, glass cup, swapped left-center-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, objects intruding into bottom blank panel, closed mouth on お茶の先生, open mouth on クララ or 渡辺",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-34-019",
+      "storyboardTextLineId": "l34-conv-012-s01",
+      "sourceLineId": "l34-conv-012",
+      "imagePromptCn": "第34课教材会话竖屏故事分镜。固定同一个明亮安静的传统日本茶室，现场恰好三名成年女性，人物左右和服装始终不变：左侧クララ，约38岁欧洲女性，白皙肤色、栗棕低发髻、蓝灰眼睛、淡薰衣草紫无字浅花纹和服、深梅紫腰带；中央お茶の先生，约58岁日本女性，夹少量银丝的黑色传统低发髻、深棕眼睛、鼠尾草绿无字米白叶纹和服、暖米色腰带；右侧渡辺，约34岁日本女性，深棕侧分齐耳短发、深棕眼睛、雾蓝无字细波纹和服、深海军蓝腰带。三人始终跪坐榻榻米。背景固定无字障子、空白土黄壁龛、一枝无字花器。茶具数量固定：クララ面前一只灰绿色茶碗，中央一只深炭灰色示范茶碗，右侧一支竹茶筅和一只纯黑小铁釜；クララ面前黑色小方盘只有一枚粉色和果子；不得复制。クララ张口，左手托灰绿色茶碗、右手扶碗侧，抬眼向老师确认；另两人闭口。日本语教材动画插画，干净柔和赛璐璐着色，9:16，1080×1920。三人和全部茶具只在上部72%；底部28%为左右连续纯暖象牙色空白字幕区，任何内容不得侵入。画面无任何文字、字母、数字、字幕、箭头、标识、logo或水印。",
+      "imagePromptJa": "第34課教材会話の縦型ストーリーボード。同じ明るく静かな伝統的日本の茶室。成人女性は必ず三人だけで左右位置と衣装を変えない。左はクララ、38歳前後のヨーロッパ人女性、色白、栗色の低いまとめ髪、青灰色の目、文字のない淡い花模様の薄紫色の着物、濃い梅紫の帯。中央はお茶の先生、58歳前後の日本人女性、少し銀色の混じる黒髪の低いまとめ髪、濃い茶色の目、文字のない米白色の葉模様のセージグリーンの着物、米色の帯。右は渡辺、34歳前後の日本人女性、耳までの濃茶の横分けボブ、濃い茶色の目、文字のない細い波模様のくすんだ青色の着物、濃紺の帯。三人は畳に正座する。背景は文字のない障子、空白の黄土色の床の間、一枝だけの無地の花器。茶道具はクララの前に灰緑色の茶碗一つ、中央に濃い炭色の見本茶碗一つ、右に竹の茶筅一本と黒い小釜一つ。黒い小角皿には桃色の和菓子一つだけ。複製しない。クララが口を開け、左手に灰緑色の茶碗を載せ、右手で側面を支えながら先生へ確認する。ほかの二人は口を閉じる。日本語教材アニメの清潔で柔らかなセル塗り、9:16、1080×1920。三人と道具は上部72%だけ。下部28%は左右いっぱいの無地の暖かいアイボリー字幕余白で、何も入れない。文字、英字、数字、字幕、矢印、標識、ロゴ、透かしを一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, arrows, motion diagram, written wall scroll, modern cafe, restaurant, outdoor tea garden, stage performance, tourists, children, fourth person, background people, extra people, duplicate tea bowls, extra bowl, duplicate wagashi, extra sweets, teapot, coffee cup, glass cup, swapped left-center-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, objects intruding into bottom blank panel, closed mouth on クララ, open mouth on お茶の先生 or 渡辺",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-34-020",
+      "storyboardTextLineId": "l34-conv-013-s01",
+      "sourceLineId": "l34-conv-013",
+      "imagePromptCn": "第34课教材会话竖屏故事分镜。固定同一个明亮安静的传统日本茶室，现场恰好三名成年女性，人物左右和服装始终不变：左侧クララ，约38岁欧洲女性，白皙肤色、栗棕低发髻、蓝灰眼睛、淡薰衣草紫无字浅花纹和服、深梅紫腰带；中央お茶の先生，约58岁日本女性，夹少量银丝的黑色传统低发髻、深棕眼睛、鼠尾草绿无字米白叶纹和服、暖米色腰带；右侧渡辺，约34岁日本女性，深棕侧分齐耳短发、深棕眼睛、雾蓝无字细波纹和服、深海军蓝腰带。三人始终跪坐榻榻米。背景固定无字障子、空白土黄壁龛、一枝无字花器。茶具数量固定：クララ面前一只灰绿色茶碗，中央一只深炭灰色示范茶碗，右侧一支竹茶筅和一只纯黑小铁釜；クララ面前黑色小方盘只有一枚粉色和果子；不得复制。お茶の先生张口赞许点头，再以开放手掌询问味道；クララ端稳茶碗，另两人闭口。日本语教材动画插画，干净柔和赛璐璐着色，9:16，1080×1920。三人和全部茶具只在上部72%；底部28%为左右连续纯暖象牙色空白字幕区，任何内容不得侵入。画面无任何文字、字母、数字、字幕、箭头、标识、logo或水印。",
+      "imagePromptJa": "第34課教材会話の縦型ストーリーボード。同じ明るく静かな伝統的日本の茶室。成人女性は必ず三人だけで左右位置と衣装を変えない。左はクララ、38歳前後のヨーロッパ人女性、色白、栗色の低いまとめ髪、青灰色の目、文字のない淡い花模様の薄紫色の着物、濃い梅紫の帯。中央はお茶の先生、58歳前後の日本人女性、少し銀色の混じる黒髪の低いまとめ髪、濃い茶色の目、文字のない米白色の葉模様のセージグリーンの着物、米色の帯。右は渡辺、34歳前後の日本人女性、耳までの濃茶の横分けボブ、濃い茶色の目、文字のない細い波模様のくすんだ青色の着物、濃紺の帯。三人は畳に正座する。背景は文字のない障子、空白の黄土色の床の間、一枝だけの無地の花器。茶道具はクララの前に灰緑色の茶碗一つ、中央に濃い炭色の見本茶碗一つ、右に竹の茶筅一本と黒い小釜一つ。黒い小角皿には桃色の和菓子一つだけ。複製しない。お茶の先生が口を開けてうなずき、開いた手で味を尋ねる。クララは茶碗を安定して持ち、ほかの二人は口を閉じる。日本語教材アニメの清潔で柔らかなセル塗り、9:16、1080×1920。三人と道具は上部72%だけ。下部28%は左右いっぱいの無地の暖かいアイボリー字幕余白で、何も入れない。文字、英字、数字、字幕、矢印、標識、ロゴ、透かしを一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, arrows, motion diagram, written wall scroll, modern cafe, restaurant, outdoor tea garden, stage performance, tourists, children, fourth person, background people, extra people, duplicate tea bowls, extra bowl, duplicate wagashi, extra sweets, teapot, coffee cup, glass cup, swapped left-center-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, objects intruding into bottom blank panel, closed mouth on お茶の先生, open mouth on クララ or 渡辺",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-34-021",
       "storyboardTextLineId": "l34-conv-014-s01",
       "sourceLineId": "l34-conv-014",
-      "imagePromptCn": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦クララ对お茶の先生说这一句，保持真实课文场景和人物关系。 クララ看向お茶の先生，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "クララ想看茶道，渡辺邀请她一起去。茶道场景中，お茶の先生指导渡辺点茶、请クララ先吃点心，并示范拿茶碗、转茶碗、喝茶的步骤。 当前画面聚焦クララ对お茶の先生说这一句，保持真实课文场景和人物关系。 クララ看向お茶の先生，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "imagePromptCn": "第34课教材会话竖屏故事分镜。固定同一个明亮安静的传统日本茶室，现场恰好三名成年女性，人物左右和服装始终不变：左侧クララ，约38岁欧洲女性，白皙肤色、栗棕低发髻、蓝灰眼睛、淡薰衣草紫无字浅花纹和服、深梅紫腰带；中央お茶の先生，约58岁日本女性，夹少量银丝的黑色传统低发髻、深棕眼睛、鼠尾草绿无字米白叶纹和服、暖米色腰带；右侧渡辺，约34岁日本女性，深棕侧分齐耳短发、深棕眼睛、雾蓝无字细波纹和服、深海军蓝腰带。三人始终跪坐榻榻米。背景固定无字障子、空白土黄壁龛、一枝无字花器。茶具数量固定：クララ面前一只灰绿色茶碗，中央一只深炭灰色示范茶碗，右侧一支竹茶筅和一只纯黑小铁釜；クララ面前黑色小方盘只有一枚粉色和果子；不得复制。クララ张口，先轻微皱眉再温和微笑，双手稳稳捧灰绿色茶碗；另两人闭口欣慰倾听。日本语教材动画插画，干净柔和赛璐璐着色，9:16，1080×1920。三人和全部茶具只在上部72%；底部28%为左右连续纯暖象牙色空白字幕区，任何内容不得侵入。画面无任何文字、字母、数字、字幕、箭头、标识、logo或水印。",
+      "imagePromptJa": "第34課教材会話の縦型ストーリーボード。同じ明るく静かな伝統的日本の茶室。成人女性は必ず三人だけで左右位置と衣装を変えない。左はクララ、38歳前後のヨーロッパ人女性、色白、栗色の低いまとめ髪、青灰色の目、文字のない淡い花模様の薄紫色の着物、濃い梅紫の帯。中央はお茶の先生、58歳前後の日本人女性、少し銀色の混じる黒髪の低いまとめ髪、濃い茶色の目、文字のない米白色の葉模様のセージグリーンの着物、米色の帯。右は渡辺、34歳前後の日本人女性、耳までの濃茶の横分けボブ、濃い茶色の目、文字のない細い波模様のくすんだ青色の着物、濃紺の帯。三人は畳に正座する。背景は文字のない障子、空白の黄土色の床の間、一枝だけの無地の花器。茶道具はクララの前に灰緑色の茶碗一つ、中央に濃い炭色の見本茶碗一つ、右に竹の茶筅一本と黒い小釜一つ。黒い小角皿には桃色の和菓子一つだけ。複製しない。クララが口を開け、少し眉を寄せてから穏やかにほほえみ、両手で灰緑色の茶碗を持つ。ほかの二人は口を閉じて聞く。日本語教材アニメの清潔で柔らかなセル塗り、9:16、1080×1920。三人と道具は上部72%だけ。下部28%は左右いっぱいの無地の暖かいアイボリー字幕余白で、何も入れない。文字、英字、数字、字幕、矢印、標識、ロゴ、透かしを一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, arrows, motion diagram, written wall scroll, modern cafe, restaurant, outdoor tea garden, stage performance, tourists, children, fourth person, background people, extra people, duplicate tea bowls, extra bowl, duplicate wagashi, extra sweets, teapot, coffee cup, glass cup, swapped left-center-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, objects intruding into bottom blank panel, closed mouth on クララ, open mouth on お茶の先生 or 渡辺",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     }
   ]
 }

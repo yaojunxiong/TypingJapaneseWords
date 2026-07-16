@@ -138,6 +138,11 @@ const REVIEWED_SPLITS: Record<number, Record<string, number[]>> = {
     '008': [0.892],
     '009': [0.781, 2.984],
   },
+  34: {
+    '007': [0.971, 3.124],
+    '009': [3.588, 7.342, 10.136, 15.013],
+    '011': [1.957],
+  },
 }
 
 // Some generated line clips cut through a final syllable or the next line's
@@ -446,6 +451,78 @@ const REVIEWED_AUDIO_RANGES: Record<number, Record<string, ReviewedAudioRange>> 
       sourcePath: 'source-240000/tracks/cd-022.mp3',
       start: 40.545,
       end: 46.300,
+    },
+  },
+  34: {
+    '001': {
+      sourcePath: 'source-240000/tracks/cd-025.mp3',
+      start: 7.661,
+      end: 10.171,
+    },
+    '002': {
+      sourcePath: 'source-240000/tracks/cd-025.mp3',
+      start: 10.171,
+      end: 14.442,
+    },
+    '003': {
+      sourcePath: 'source-240000/tracks/cd-025.mp3',
+      start: 14.442,
+      end: 18.680,
+    },
+    '004': {
+      sourcePath: 'source-240000/tracks/cd-025.mp3',
+      start: 18.680,
+      end: 20.036,
+    },
+    '005': {
+      sourcePath: 'source-240000/tracks/cd-025.mp3',
+      start: 20.036,
+      end: 21.719,
+    },
+    '006': {
+      sourcePath: 'source-240000/tracks/cd-025.mp3',
+      start: 21.719,
+      end: 25.128,
+    },
+    '007': {
+      sourcePath: 'source-240000/tracks/cd-025.mp3',
+      start: 25.128,
+      end: 30.709,
+    },
+    '008': {
+      sourcePath: 'source-240000/tracks/cd-025.mp3',
+      start: 30.709,
+      end: 32.354,
+    },
+    '009': {
+      sourcePath: 'source-240000/tracks/cd-025.mp3',
+      start: 32.354,
+      end: 49.358,
+    },
+    '010': {
+      sourcePath: 'source-240000/tracks/cd-025.mp3',
+      start: 49.358,
+      end: 50.493,
+    },
+    '011': {
+      sourcePath: 'source-240000/tracks/cd-025.mp3',
+      start: 50.493,
+      end: 54.788,
+    },
+    '012': {
+      sourcePath: 'source-240000/tracks/cd-025.mp3',
+      start: 54.788,
+      end: 57.619,
+    },
+    '013': {
+      sourcePath: 'source-240000/tracks/cd-025.mp3',
+      start: 57.619,
+      end: 60.563,
+    },
+    '014': {
+      sourcePath: 'source-240000/tracks/cd-025.mp3',
+      start: 60.563,
+      end: 63.900,
     },
   },
 }
