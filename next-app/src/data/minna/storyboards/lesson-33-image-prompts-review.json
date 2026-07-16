@@ -1,98 +1,218 @@
 {
   "lessonNo": 33,
   "conversationTitle": "これはどういう意味ですか",
-  "reviewStatus": "pending-human-review",
-  "generationAllowed": false,
+  "reviewStatus": "approved",
+  "generationAllowed": true,
   "prompts": [
     {
       "storyboardLineId": "sb-33-001",
       "storyboardTextLineId": "l33-conv-001-s01",
       "sourceLineId": "l33-conv-001",
-      "imagePromptCn": "ワット拿着贴在车上的纸到大学职员处询问汉字读法和意思，职员说明是停车违章，并解释车站前即使只停十分钟也不行，最后说明罚款金额。 当前画面聚焦ワット对大学職員说这一句，保持真实课文场景和人物关系。 ワット看向大学職員，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "ワット拿着贴在车上的纸到大学职员处询问汉字读法和意思，职员说明是停车违章，并解释车站前即使只停十分钟也不行，最后说明罚款金额。 当前画面聚焦ワット对大学職員说这一句，保持真实课文场景和人物关系。 ワット看向大学職員，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "imagePromptCn": "第33课教材会话竖屏故事分镜，日本语教材动画插画，干净柔和的赛璐璐着色，同一个明亮安静的日本大学行政咨询柜台，9:16，1080×1920。现场恰好两名成年人：左侧始终是ワット，约35岁泰国男性，短而略蓬松的黑发、黑色长方形眼镜、深棕眼睛、浅粉蓝色细小深蓝圆点长袖衬衫、卡其长裤、不系领带；右侧始终是大学職員，约32岁日本女性，齐肩内扣深棕短发、深棕眼睛、白色长袖衬衫、深蓝色挂带和朝内不可见内容的纯蓝证件套。固定暖米白墙、浅木色咨询柜台、无字磨砂玻璃隔板。ワット左手始终只拿一张正反完全空白的白色通知纸；柜台左侧始终平放一本纯青绿色无字封面的闭合杂志；没有其他纸张或道具。左侧ワット张口，左手持空白通知纸，略微欠身，右手自然张开表示礼貌；右侧大学職員闭口专注倾听。两人、柜台、通知纸和杂志只在画面上部72%，底部28%从左到右是完整连续的纯暖象牙色空白字幕区。画面内无任何文字、字母或数字。",
+      "imagePromptJa": "第33課教材会話の縦型ストーリーボード。清潔で柔らかなセル塗りの日本語教材アニメ調。同じ明るく静かな日本の大学事務相談カウンター、9:16、1080×1920。成人は必ず二人だけ。左は常にワット、35歳前後のタイ人男性、少しふんわりした短い黒髪、黒い長方形眼鏡、濃い茶色の目、淡いパウダーブルー地にごく小さな濃紺ドットの長袖シャツ、カーキ色のズボン、ネクタイなし。右は常に大学職員、32歳前後の日本人女性、肩までの内巻き濃茶ボブ、濃い茶色の目、白い長袖ブラウス、濃紺ストラップと内容が見えない内向きの無地青カードケース。暖かな米白色の壁、明るい木製相談カウンター、文字のない曇りガラス仕切りを固定。ワットの左手には両面が完全に無地の白い通知用紙一枚だけ。カウンター左には無地青緑色表紙の閉じた雑誌一冊だけを常に平置き。ほかの紙や小物はない。左のワットが口を開け、左手に白紙の通知を持ち、軽く会釈し、右手を自然に開いて丁寧に声をかける。右の大学職員は口を閉じて注意深く聞く。二人、カウンター、白紙、雑誌は上部72%だけ。下部28%は左右いっぱいに連続した無地の暖かいアイボリー字幕余白。画面内に文字、英字、数字を一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, outdoor station, train, parked car, bookstore, police officer, police station, courtroom, road signs, parking signs, money, wallet, coins, extra people, third person, background people, duplicate paper, printed ticket, visible badge text, extra magazine, open magazine, swapped left-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, furniture or objects intruding into bottom blank panel, open mouth on university staff, closed mouth on Watt",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-33-002",
-      "storyboardTextLineId": "l33-conv-002-s01",
-      "sourceLineId": "l33-conv-002",
-      "imagePromptCn": "ワット拿着贴在车上的纸到大学职员处询问汉字读法和意思，职员说明是停车违章，并解释车站前即使只停十分钟也不行，最后说明罚款金额。 当前画面聚焦大学職員对ワット说这一句，保持真实课文场景和人物关系。 大学職員看向ワット，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "ワット拿着贴在车上的纸到大学职员处询问汉字读法和意思，职员说明是停车违章，并解释车站前即使只停十分钟也不行，最后说明罚款金额。 当前画面聚焦大学職員对ワット说这一句，保持真实课文场景和人物关系。 大学職員看向ワット，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "storyboardTextLineId": "l33-conv-001-s02",
+      "sourceLineId": "l33-conv-001",
+      "imagePromptCn": "第33课教材会话竖屏故事分镜，日本语教材动画插画，干净柔和的赛璐璐着色，同一个明亮安静的日本大学行政咨询柜台，9:16，1080×1920。现场恰好两名成年人：左侧始终是ワット，约35岁泰国男性，短而略蓬松的黑发、黑色长方形眼镜、深棕眼睛、浅粉蓝色细小深蓝圆点长袖衬衫、卡其长裤、不系领带；右侧始终是大学職員，约32岁日本女性，齐肩内扣深棕短发、深棕眼睛、白色长袖衬衫、深蓝色挂带和朝内不可见内容的纯蓝证件套。固定暖米白墙、浅木色咨询柜台、无字磨砂玻璃隔板。ワット左手始终只拿一张正反完全空白的白色通知纸；柜台左侧始终平放一本纯青绿色无字封面的闭合杂志；没有其他纸张或道具。左侧ワット张口，把手中唯一一张正反空白白纸稍向职员展示，右手轻指纸面；右侧大学職員闭口低头查看。两人、柜台、通知纸和杂志只在画面上部72%，底部28%从左到右是完整连续的纯暖象牙色空白字幕区。画面内无任何文字、字母或数字。",
+      "imagePromptJa": "第33課教材会話の縦型ストーリーボード。清潔で柔らかなセル塗りの日本語教材アニメ調。同じ明るく静かな日本の大学事務相談カウンター、9:16、1080×1920。成人は必ず二人だけ。左は常にワット、35歳前後のタイ人男性、少しふんわりした短い黒髪、黒い長方形眼鏡、濃い茶色の目、淡いパウダーブルー地にごく小さな濃紺ドットの長袖シャツ、カーキ色のズボン、ネクタイなし。右は常に大学職員、32歳前後の日本人女性、肩までの内巻き濃茶ボブ、濃い茶色の目、白い長袖ブラウス、濃紺ストラップと内容が見えない内向きの無地青カードケース。暖かな米白色の壁、明るい木製相談カウンター、文字のない曇りガラス仕切りを固定。ワットの左手には両面が完全に無地の白い通知用紙一枚だけ。カウンター左には無地青緑色表紙の閉じた雑誌一冊だけを常に平置き。ほかの紙や小物はない。左のワットが口を開け、手にした一枚だけの両面無地の白紙を職員へ少し見せ、右手で紙面を軽く示す。右の大学職員は口を閉じて紙を見る。二人、カウンター、白紙、雑誌は上部72%だけ。下部28%は左右いっぱいに連続した無地の暖かいアイボリー字幕余白。画面内に文字、英字、数字を一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, outdoor station, train, parked car, bookstore, police officer, police station, courtroom, road signs, parking signs, money, wallet, coins, extra people, third person, background people, duplicate paper, printed ticket, visible badge text, extra magazine, open magazine, swapped left-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, furniture or objects intruding into bottom blank panel, open mouth on university staff, closed mouth on Watt",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-33-003",
-      "storyboardTextLineId": "l33-conv-003-s01",
-      "sourceLineId": "l33-conv-003",
-      "imagePromptCn": "ワット拿着贴在车上的纸到大学职员处询问汉字读法和意思，职员说明是停车违章，并解释车站前即使只停十分钟也不行，最后说明罚款金额。 当前画面聚焦ワット对大学職員说这一句，保持真实课文场景和人物关系。 ワット看向大学職員，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "ワット拿着贴在车上的纸到大学职员处询问汉字读法和意思，职员说明是停车违章，并解释车站前即使只停十分钟也不行，最后说明罚款金额。 当前画面聚焦ワット对大学職員说这一句，保持真实课文场景和人物关系。 ワット看向大学職員，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "storyboardTextLineId": "l33-conv-001-s03",
+      "sourceLineId": "l33-conv-001",
+      "imagePromptCn": "第33课教材会话竖屏故事分镜，日本语教材动画插画，干净柔和的赛璐璐着色，同一个明亮安静的日本大学行政咨询柜台，9:16，1080×1920。现场恰好两名成年人：左侧始终是ワット，约35岁泰国男性，短而略蓬松的黑发、黑色长方形眼镜、深棕眼睛、浅粉蓝色细小深蓝圆点长袖衬衫、卡其长裤、不系领带；右侧始终是大学職員，约32岁日本女性，齐肩内扣深棕短发、深棕眼睛、白色长袖衬衫、深蓝色挂带和朝内不可见内容的纯蓝证件套。固定暖米白墙、浅木色咨询柜台、无字磨砂玻璃隔板。ワット左手始终只拿一张正反完全空白的白色通知纸；柜台左侧始终平放一本纯青绿色无字封面的闭合杂志；没有其他纸张或道具。左侧ワット张口，用右手一根食指指向完全无字纸面的中央并疑问地看向职员；右侧大学職員闭口稍微前倾查看。两人、柜台、通知纸和杂志只在画面上部72%，底部28%从左到右是完整连续的纯暖象牙色空白字幕区。画面内无任何文字、字母或数字。",
+      "imagePromptJa": "第33課教材会話の縦型ストーリーボード。清潔で柔らかなセル塗りの日本語教材アニメ調。同じ明るく静かな日本の大学事務相談カウンター、9:16、1080×1920。成人は必ず二人だけ。左は常にワット、35歳前後のタイ人男性、少しふんわりした短い黒髪、黒い長方形眼鏡、濃い茶色の目、淡いパウダーブルー地にごく小さな濃紺ドットの長袖シャツ、カーキ色のズボン、ネクタイなし。右は常に大学職員、32歳前後の日本人女性、肩までの内巻き濃茶ボブ、濃い茶色の目、白い長袖ブラウス、濃紺ストラップと内容が見えない内向きの無地青カードケース。暖かな米白色の壁、明るい木製相談カウンター、文字のない曇りガラス仕切りを固定。ワットの左手には両面が完全に無地の白い通知用紙一枚だけ。カウンター左には無地青緑色表紙の閉じた雑誌一冊だけを常に平置き。ほかの紙や小物はない。左のワットが口を開け、右手の人差し指一本で完全に無地の紙の中央を示し、職員へ疑問の視線を向ける。右の大学職員は口を閉じ、少し身を寄せて見る。二人、カウンター、白紙、雑誌は上部72%だけ。下部28%は左右いっぱいに連続した無地の暖かいアイボリー字幕余白。画面内に文字、英字、数字を一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, outdoor station, train, parked car, bookstore, police officer, police station, courtroom, road signs, parking signs, money, wallet, coins, extra people, third person, background people, duplicate paper, printed ticket, visible badge text, extra magazine, open magazine, swapped left-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, furniture or objects intruding into bottom blank panel, open mouth on university staff, closed mouth on Watt",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-33-004",
-      "storyboardTextLineId": "l33-conv-004-s01",
-      "sourceLineId": "l33-conv-004",
-      "imagePromptCn": "ワット拿着贴在车上的纸到大学职员处询问汉字读法和意思，职员说明是停车违章，并解释车站前即使只停十分钟也不行，最后说明罚款金额。 当前画面聚焦大学職員对ワット说这一句，保持真实课文场景和人物关系。 大学職員看向ワット，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "ワット拿着贴在车上的纸到大学职员处询问汉字读法和意思，职员说明是停车违章，并解释车站前即使只停十分钟也不行，最后说明罚款金额。 当前画面聚焦大学職員对ワット说这一句，保持真实课文场景和人物关系。 大学職員看向ワット，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "storyboardTextLineId": "l33-conv-002-s01",
+      "sourceLineId": "l33-conv-002",
+      "imagePromptCn": "第33课教材会话竖屏故事分镜，日本语教材动画插画，干净柔和的赛璐璐着色，同一个明亮安静的日本大学行政咨询柜台，9:16，1080×1920。现场恰好两名成年人：左侧始终是ワット，约35岁泰国男性，短而略蓬松的黑发、黑色长方形眼镜、深棕眼睛、浅粉蓝色细小深蓝圆点长袖衬衫、卡其长裤、不系领带；右侧始终是大学職員，约32岁日本女性，齐肩内扣深棕短发、深棕眼睛、白色长袖衬衫、深蓝色挂带和朝内不可见内容的纯蓝证件套。固定暖米白墙、浅木色咨询柜台、无字磨砂玻璃隔板。ワット左手始终只拿一张正反完全空白的白色通知纸；柜台左侧始终平放一本纯青绿色无字封面的闭合杂志；没有其他纸张或道具。右侧大学職員张口，平静地用一只开放手掌指向ワット手中的空白通知纸；左侧ワット闭口认真听。两人、柜台、通知纸和杂志只在画面上部72%，底部28%从左到右是完整连续的纯暖象牙色空白字幕区。画面内无任何文字、字母或数字。",
+      "imagePromptJa": "第33課教材会話の縦型ストーリーボード。清潔で柔らかなセル塗りの日本語教材アニメ調。同じ明るく静かな日本の大学事務相談カウンター、9:16、1080×1920。成人は必ず二人だけ。左は常にワット、35歳前後のタイ人男性、少しふんわりした短い黒髪、黒い長方形眼鏡、濃い茶色の目、淡いパウダーブルー地にごく小さな濃紺ドットの長袖シャツ、カーキ色のズボン、ネクタイなし。右は常に大学職員、32歳前後の日本人女性、肩までの内巻き濃茶ボブ、濃い茶色の目、白い長袖ブラウス、濃紺ストラップと内容が見えない内向きの無地青カードケース。暖かな米白色の壁、明るい木製相談カウンター、文字のない曇りガラス仕切りを固定。ワットの左手には両面が完全に無地の白い通知用紙一枚だけ。カウンター左には無地青緑色表紙の閉じた雑誌一冊だけを常に平置き。ほかの紙や小物はない。右の大学職員が口を開け、落ち着いて開いた片手をワットの白紙の通知へ向ける。左のワットは口を閉じて真剣に聞く。二人、カウンター、白紙、雑誌は上部72%だけ。下部28%は左右いっぱいに連続した無地の暖かいアイボリー字幕余白。画面内に文字、英字、数字を一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, outdoor station, train, parked car, bookstore, police officer, police station, courtroom, road signs, parking signs, money, wallet, coins, extra people, third person, background people, duplicate paper, printed ticket, visible badge text, extra magazine, open magazine, swapped left-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, furniture or objects intruding into bottom blank panel, open mouth on Watt, closed mouth on university staff",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-33-005",
-      "storyboardTextLineId": "l33-conv-005-s01",
-      "sourceLineId": "l33-conv-005",
-      "imagePromptCn": "ワット拿着贴在车上的纸到大学职员处询问汉字读法和意思，职员说明是停车违章，并解释车站前即使只停十分钟也不行，最后说明罚款金额。 当前画面聚焦ワット对大学職員说这一句，保持真实课文场景和人物关系。 ワット看向大学職員，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "ワット拿着贴在车上的纸到大学职员处询问汉字读法和意思，职员说明是停车违章，并解释车站前即使只停十分钟也不行，最后说明罚款金额。 当前画面聚焦ワット对大学職員说这一句，保持真实课文场景和人物关系。 ワット看向大学職員，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "storyboardTextLineId": "l33-conv-003-s01",
+      "sourceLineId": "l33-conv-003",
+      "imagePromptCn": "第33课教材会话竖屏故事分镜，日本语教材动画插画，干净柔和的赛璐璐着色，同一个明亮安静的日本大学行政咨询柜台，9:16，1080×1920。现场恰好两名成年人：左侧始终是ワット，约35岁泰国男性，短而略蓬松的黑发、黑色长方形眼镜、深棕眼睛、浅粉蓝色细小深蓝圆点长袖衬衫、卡其长裤、不系领带；右侧始终是大学職員，约32岁日本女性，齐肩内扣深棕短发、深棕眼睛、白色长袖衬衫、深蓝色挂带和朝内不可见内容的纯蓝证件套。固定暖米白墙、浅木色咨询柜台、无字磨砂玻璃隔板。ワット左手始终只拿一张正反完全空白的白色通知纸；柜台左侧始终平放一本纯青绿色无字封面的闭合杂志；没有其他纸张或道具。左侧ワット张口，垂眼看着空白通知纸，眉头轻皱，若有所思地复述；右侧大学職員闭口等待。两人、柜台、通知纸和杂志只在画面上部72%，底部28%从左到右是完整连续的纯暖象牙色空白字幕区。画面内无任何文字、字母或数字。",
+      "imagePromptJa": "第33課教材会話の縦型ストーリーボード。清潔で柔らかなセル塗りの日本語教材アニメ調。同じ明るく静かな日本の大学事務相談カウンター、9:16、1080×1920。成人は必ず二人だけ。左は常にワット、35歳前後のタイ人男性、少しふんわりした短い黒髪、黒い長方形眼鏡、濃い茶色の目、淡いパウダーブルー地にごく小さな濃紺ドットの長袖シャツ、カーキ色のズボン、ネクタイなし。右は常に大学職員、32歳前後の日本人女性、肩までの内巻き濃茶ボブ、濃い茶色の目、白い長袖ブラウス、濃紺ストラップと内容が見えない内向きの無地青カードケース。暖かな米白色の壁、明るい木製相談カウンター、文字のない曇りガラス仕切りを固定。ワットの左手には両面が完全に無地の白い通知用紙一枚だけ。カウンター左には無地青緑色表紙の閉じた雑誌一冊だけを常に平置き。ほかの紙や小物はない。左のワットが口を開け、白紙の通知へ目を落とし、眉をわずかに寄せて考えながら繰り返す。右の大学職員は口を閉じて待つ。二人、カウンター、白紙、雑誌は上部72%だけ。下部28%は左右いっぱいに連続した無地の暖かいアイボリー字幕余白。画面内に文字、英字、数字を一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, outdoor station, train, parked car, bookstore, police officer, police station, courtroom, road signs, parking signs, money, wallet, coins, extra people, third person, background people, duplicate paper, printed ticket, visible badge text, extra magazine, open magazine, swapped left-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, furniture or objects intruding into bottom blank panel, open mouth on university staff, closed mouth on Watt",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-33-006",
-      "storyboardTextLineId": "l33-conv-006-s01",
-      "sourceLineId": "l33-conv-006",
-      "imagePromptCn": "ワット拿着贴在车上的纸到大学职员处询问汉字读法和意思，职员说明是停车违章，并解释车站前即使只停十分钟也不行，最后说明罚款金额。 当前画面聚焦大学職員对ワット说这一句，保持真实课文场景和人物关系。 大学職員看向ワット，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "ワット拿着贴在车上的纸到大学职员处询问汉字读法和意思，职员说明是停车违章，并解释车站前即使只停十分钟也不行，最后说明罚款金额。 当前画面聚焦大学職員对ワット说这一句，保持真实课文场景和人物关系。 大学職員看向ワット，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "storyboardTextLineId": "l33-conv-003-s02",
+      "sourceLineId": "l33-conv-003",
+      "imagePromptCn": "第33课教材会话竖屏故事分镜，日本语教材动画插画，干净柔和的赛璐璐着色，同一个明亮安静的日本大学行政咨询柜台，9:16，1080×1920。现场恰好两名成年人：左侧始终是ワット，约35岁泰国男性，短而略蓬松的黑发、黑色长方形眼镜、深棕眼睛、浅粉蓝色细小深蓝圆点长袖衬衫、卡其长裤、不系领带；右侧始终是大学職員，约32岁日本女性，齐肩内扣深棕短发、深棕眼睛、白色长袖衬衫、深蓝色挂带和朝内不可见内容的纯蓝证件套。固定暖米白墙、浅木色咨询柜台、无字磨砂玻璃隔板。ワット左手始终只拿一张正反完全空白的白色通知纸；柜台左侧始终平放一本纯青绿色无字封面的闭合杂志；没有其他纸张或道具。左侧ワット张口，抬头看向职员，右手掌心向上作疑问手势；右侧大学職員闭口注视他。两人、柜台、通知纸和杂志只在画面上部72%，底部28%从左到右是完整连续的纯暖象牙色空白字幕区。画面内无任何文字、字母或数字。",
+      "imagePromptJa": "第33課教材会話の縦型ストーリーボード。清潔で柔らかなセル塗りの日本語教材アニメ調。同じ明るく静かな日本の大学事務相談カウンター、9:16、1080×1920。成人は必ず二人だけ。左は常にワット、35歳前後のタイ人男性、少しふんわりした短い黒髪、黒い長方形眼鏡、濃い茶色の目、淡いパウダーブルー地にごく小さな濃紺ドットの長袖シャツ、カーキ色のズボン、ネクタイなし。右は常に大学職員、32歳前後の日本人女性、肩までの内巻き濃茶ボブ、濃い茶色の目、白い長袖ブラウス、濃紺ストラップと内容が見えない内向きの無地青カードケース。暖かな米白色の壁、明るい木製相談カウンター、文字のない曇りガラス仕切りを固定。ワットの左手には両面が完全に無地の白い通知用紙一枚だけ。カウンター左には無地青緑色表紙の閉じた雑誌一冊だけを常に平置き。ほかの紙や小物はない。左のワットが口を開け、職員を見上げ、右手のひらを上へ向けて意味を尋ねる。右の大学職員は口を閉じてワットを見る。二人、カウンター、白紙、雑誌は上部72%だけ。下部28%は左右いっぱいに連続した無地の暖かいアイボリー字幕余白。画面内に文字、英字、数字を一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, outdoor station, train, parked car, bookstore, police officer, police station, courtroom, road signs, parking signs, money, wallet, coins, extra people, third person, background people, duplicate paper, printed ticket, visible badge text, extra magazine, open magazine, swapped left-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, furniture or objects intruding into bottom blank panel, open mouth on university staff, closed mouth on Watt",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-33-007",
-      "storyboardTextLineId": "l33-conv-007-s01",
-      "sourceLineId": "l33-conv-007",
-      "imagePromptCn": "ワット拿着贴在车上的纸到大学职员处询问汉字读法和意思，职员说明是停车违章，并解释车站前即使只停十分钟也不行，最后说明罚款金额。 当前画面聚焦ワット对大学職員说这一句，保持真实课文场景和人物关系。 ワット看向大学職員，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "ワット拿着贴在车上的纸到大学职员处询问汉字读法和意思，职员说明是停车违章，并解释车站前即使只停十分钟也不行，最后说明罚款金额。 当前画面聚焦ワット对大学職員说这一句，保持真实课文场景和人物关系。 ワット看向大学職員，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "storyboardTextLineId": "l33-conv-004-s01",
+      "sourceLineId": "l33-conv-004",
+      "imagePromptCn": "第33课教材会话竖屏故事分镜，日本语教材动画插画，干净柔和的赛璐璐着色，同一个明亮安静的日本大学行政咨询柜台，9:16，1080×1920。现场恰好两名成年人：左侧始终是ワット，约35岁泰国男性，短而略蓬松的黑发、黑色长方形眼镜、深棕眼睛、浅粉蓝色细小深蓝圆点长袖衬衫、卡其长裤、不系领带；右侧始终是大学職員，约32岁日本女性，齐肩内扣深棕短发、深棕眼睛、白色长袖衬衫、深蓝色挂带和朝内不可见内容的纯蓝证件套。固定暖米白墙、浅木色咨询柜台、无字磨砂玻璃隔板。ワット左手始终只拿一张正反完全空白的白色通知纸；柜台左侧始终平放一本纯青绿色无字封面的闭合杂志；没有其他纸张或道具。右侧大学職員张口，表情认真，一只手掌朝前作克制的“禁止”手势；左侧ワット闭口听着。两人、柜台、通知纸和杂志只在画面上部72%，底部28%从左到右是完整连续的纯暖象牙色空白字幕区。画面内无任何文字、字母或数字。",
+      "imagePromptJa": "第33課教材会話の縦型ストーリーボード。清潔で柔らかなセル塗りの日本語教材アニメ調。同じ明るく静かな日本の大学事務相談カウンター、9:16、1080×1920。成人は必ず二人だけ。左は常にワット、35歳前後のタイ人男性、少しふんわりした短い黒髪、黒い長方形眼鏡、濃い茶色の目、淡いパウダーブルー地にごく小さな濃紺ドットの長袖シャツ、カーキ色のズボン、ネクタイなし。右は常に大学職員、32歳前後の日本人女性、肩までの内巻き濃茶ボブ、濃い茶色の目、白い長袖ブラウス、濃紺ストラップと内容が見えない内向きの無地青カードケース。暖かな米白色の壁、明るい木製相談カウンター、文字のない曇りガラス仕切りを固定。ワットの左手には両面が完全に無地の白い通知用紙一枚だけ。カウンター左には無地青緑色表紙の閉じた雑誌一冊だけを常に平置き。ほかの紙や小物はない。右の大学職員が口を開け、真剣な表情で片方の手のひらを前へ向け、控えめな「禁止」の仕草をする。左のワットは口を閉じて聞く。二人、カウンター、白紙、雑誌は上部72%だけ。下部28%は左右いっぱいに連続した無地の暖かいアイボリー字幕余白。画面内に文字、英字、数字を一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, outdoor station, train, parked car, bookstore, police officer, police station, courtroom, road signs, parking signs, money, wallet, coins, extra people, third person, background people, duplicate paper, printed ticket, visible badge text, extra magazine, open magazine, swapped left-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, furniture or objects intruding into bottom blank panel, open mouth on Watt, closed mouth on university staff",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-33-008",
-      "storyboardTextLineId": "l33-conv-008-s01",
-      "sourceLineId": "l33-conv-008",
-      "imagePromptCn": "ワット拿着贴在车上的纸到大学职员处询问汉字读法和意思，职员说明是停车违章，并解释车站前即使只停十分钟也不行，最后说明罚款金额。 当前画面聚焦大学職員对ワット说这一句，保持真实课文场景和人物关系。 大学職員看向ワット，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "ワット拿着贴在车上的纸到大学职员处询问汉字读法和意思，职员说明是停车违章，并解释车站前即使只停十分钟也不行，最后说明罚款金额。 当前画面聚焦大学職員对ワット说这一句，保持真实课文场景和人物关系。 大学職員看向ワット，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "storyboardTextLineId": "l33-conv-004-s02",
+      "sourceLineId": "l33-conv-004",
+      "imagePromptCn": "第33课教材会话竖屏故事分镜，日本语教材动画插画，干净柔和的赛璐璐着色，同一个明亮安静的日本大学行政咨询柜台，9:16，1080×1920。现场恰好两名成年人：左侧始终是ワット，约35岁泰国男性，短而略蓬松的黑发、黑色长方形眼镜、深棕眼睛、浅粉蓝色细小深蓝圆点长袖衬衫、卡其长裤、不系领带；右侧始终是大学職員，约32岁日本女性，齐肩内扣深棕短发、深棕眼睛、白色长袖衬衫、深蓝色挂带和朝内不可见内容的纯蓝证件套。固定暖米白墙、浅木色咨询柜台、无字磨砂玻璃隔板。ワット左手始终只拿一张正反完全空白的白色通知纸；柜台左侧始终平放一本纯青绿色无字封面的闭合杂志；没有其他纸张或道具。右侧大学職員张口，一手平放在柜台上表示“停住”，另一只开放手掌指向空白通知纸；左侧ワット闭口看着纸。两人、柜台、通知纸和杂志只在画面上部72%，底部28%从左到右是完整连续的纯暖象牙色空白字幕区。画面内无任何文字、字母或数字。",
+      "imagePromptJa": "第33課教材会話の縦型ストーリーボード。清潔で柔らかなセル塗りの日本語教材アニメ調。同じ明るく静かな日本の大学事務相談カウンター、9:16、1080×1920。成人は必ず二人だけ。左は常にワット、35歳前後のタイ人男性、少しふんわりした短い黒髪、黒い長方形眼鏡、濃い茶色の目、淡いパウダーブルー地にごく小さな濃紺ドットの長袖シャツ、カーキ色のズボン、ネクタイなし。右は常に大学職員、32歳前後の日本人女性、肩までの内巻き濃茶ボブ、濃い茶色の目、白い長袖ブラウス、濃紺ストラップと内容が見えない内向きの無地青カードケース。暖かな米白色の壁、明るい木製相談カウンター、文字のない曇りガラス仕切りを固定。ワットの左手には両面が完全に無地の白い通知用紙一枚だけ。カウンター左には無地青緑色表紙の閉じた雑誌一冊だけを常に平置き。ほかの紙や小物はない。右の大学職員が口を開け、片手をカウンターへ平らに置いて「止めた」ことを示し、もう片方の開いた手を白紙の通知へ向ける。左のワットは口を閉じて紙を見る。二人、カウンター、白紙、雑誌は上部72%だけ。下部28%は左右いっぱいに連続した無地の暖かいアイボリー字幕余白。画面内に文字、英字、数字を一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, outdoor station, train, parked car, bookstore, police officer, police station, courtroom, road signs, parking signs, money, wallet, coins, extra people, third person, background people, duplicate paper, printed ticket, visible badge text, extra magazine, open magazine, swapped left-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, furniture or objects intruding into bottom blank panel, open mouth on Watt, closed mouth on university staff",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     },
     {
       "storyboardLineId": "sb-33-009",
+      "storyboardTextLineId": "l33-conv-004-s03",
+      "sourceLineId": "l33-conv-004",
+      "imagePromptCn": "第33课教材会话竖屏故事分镜，日本语教材动画插画，干净柔和的赛璐璐着色，同一个明亮安静的日本大学行政咨询柜台，9:16，1080×1920。现场恰好两名成年人：左侧始终是ワット，约35岁泰国男性，短而略蓬松的黑发、黑色长方形眼镜、深棕眼睛、浅粉蓝色细小深蓝圆点长袖衬衫、卡其长裤、不系领带；右侧始终是大学職員，约32岁日本女性，齐肩内扣深棕短发、深棕眼睛、白色长袖衬衫、深蓝色挂带和朝内不可见内容的纯蓝证件套。固定暖米白墙、浅木色咨询柜台、无字磨砂玻璃隔板。ワット左手始终只拿一张正反完全空白的白色通知纸；柜台左侧始终平放一本纯青绿色无字封面的闭合杂志；没有其他纸张或道具。右侧大学職員张口，收回禁止手势，以一只掌心向上的手朝向ワット提问；左侧ワット闭口准备回答。两人、柜台、通知纸和杂志只在画面上部72%，底部28%从左到右是完整连续的纯暖象牙色空白字幕区。画面内无任何文字、字母或数字。",
+      "imagePromptJa": "第33課教材会話の縦型ストーリーボード。清潔で柔らかなセル塗りの日本語教材アニメ調。同じ明るく静かな日本の大学事務相談カウンター、9:16、1080×1920。成人は必ず二人だけ。左は常にワット、35歳前後のタイ人男性、少しふんわりした短い黒髪、黒い長方形眼鏡、濃い茶色の目、淡いパウダーブルー地にごく小さな濃紺ドットの長袖シャツ、カーキ色のズボン、ネクタイなし。右は常に大学職員、32歳前後の日本人女性、肩までの内巻き濃茶ボブ、濃い茶色の目、白い長袖ブラウス、濃紺ストラップと内容が見えない内向きの無地青カードケース。暖かな米白色の壁、明るい木製相談カウンター、文字のない曇りガラス仕切りを固定。ワットの左手には両面が完全に無地の白い通知用紙一枚だけ。カウンター左には無地青緑色表紙の閉じた雑誌一冊だけを常に平置き。ほかの紙や小物はない。右の大学職員が口を開け、禁止の仕草を戻し、手のひらを上へ向けてワットへ場所を尋ねる。左のワットは口を閉じて答えようとする。二人、カウンター、白紙、雑誌は上部72%だけ。下部28%は左右いっぱいに連続した無地の暖かいアイボリー字幕余白。画面内に文字、英字、数字を一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, outdoor station, train, parked car, bookstore, police officer, police station, courtroom, road signs, parking signs, money, wallet, coins, extra people, third person, background people, duplicate paper, printed ticket, visible badge text, extra magazine, open magazine, swapped left-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, furniture or objects intruding into bottom blank panel, open mouth on Watt, closed mouth on university staff",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-33-010",
+      "storyboardTextLineId": "l33-conv-005-s01",
+      "sourceLineId": "l33-conv-005",
+      "imagePromptCn": "第33课教材会话竖屏故事分镜，日本语教材动画插画，干净柔和的赛璐璐着色，同一个明亮安静的日本大学行政咨询柜台，9:16，1080×1920。现场恰好两名成年人：左侧始终是ワット，约35岁泰国男性，短而略蓬松的黑发、黑色长方形眼镜、深棕眼睛、浅粉蓝色细小深蓝圆点长袖衬衫、卡其长裤、不系领带；右侧始终是大学職員，约32岁日本女性，齐肩内扣深棕短发、深棕眼睛、白色长袖衬衫、深蓝色挂带和朝内不可见内容的纯蓝证件套。固定暖米白墙、浅木色咨询柜台、无字磨砂玻璃隔板。ワット左手始终只拿一张正反完全空白的白色通知纸；柜台左侧始终平放一本纯青绿色无字封面的闭合杂志；没有其他纸张或道具。左侧ワット张口，右手自然指向画面外远处来说明地点，左手仍持空白通知纸；右侧大学職員闭口听。两人、柜台、通知纸和杂志只在画面上部72%，底部28%从左到右是完整连续的纯暖象牙色空白字幕区。画面内无任何文字、字母或数字。",
+      "imagePromptJa": "第33課教材会話の縦型ストーリーボード。清潔で柔らかなセル塗りの日本語教材アニメ調。同じ明るく静かな日本の大学事務相談カウンター、9:16、1080×1920。成人は必ず二人だけ。左は常にワット、35歳前後のタイ人男性、少しふんわりした短い黒髪、黒い長方形眼鏡、濃い茶色の目、淡いパウダーブルー地にごく小さな濃紺ドットの長袖シャツ、カーキ色のズボン、ネクタイなし。右は常に大学職員、32歳前後の日本人女性、肩までの内巻き濃茶ボブ、濃い茶色の目、白い長袖ブラウス、濃紺ストラップと内容が見えない内向きの無地青カードケース。暖かな米白色の壁、明るい木製相談カウンター、文字のない曇りガラス仕切りを固定。ワットの左手には両面が完全に無地の白い通知用紙一枚だけ。カウンター左には無地青緑色表紙の閉じた雑誌一冊だけを常に平置き。ほかの紙や小物はない。左のワットが口を開け、右手で画面外の遠方を自然に示して場所を説明し、左手には白紙の通知を持ち続ける。右の大学職員は口を閉じて聞く。二人、カウンター、白紙、雑誌は上部72%だけ。下部28%は左右いっぱいに連続した無地の暖かいアイボリー字幕余白。画面内に文字、英字、数字を一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, outdoor station, train, parked car, bookstore, police officer, police station, courtroom, road signs, parking signs, money, wallet, coins, extra people, third person, background people, duplicate paper, printed ticket, visible badge text, extra magazine, open magazine, swapped left-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, furniture or objects intruding into bottom blank panel, open mouth on university staff, closed mouth on Watt",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-33-011",
+      "storyboardTextLineId": "l33-conv-005-s02",
+      "sourceLineId": "l33-conv-005",
+      "imagePromptCn": "第33课教材会话竖屏故事分镜，日本语教材动画插画，干净柔和的赛璐璐着色，同一个明亮安静的日本大学行政咨询柜台，9:16，1080×1920。现场恰好两名成年人：左侧始终是ワット，约35岁泰国男性，短而略蓬松的黑发、黑色长方形眼镜、深棕眼睛、浅粉蓝色细小深蓝圆点长袖衬衫、卡其长裤、不系领带；右侧始终是大学職員，约32岁日本女性，齐肩内扣深棕短发、深棕眼睛、白色长袖衬衫、深蓝色挂带和朝内不可见内容的纯蓝证件套。固定暖米白墙、浅木色咨询柜台、无字磨砂玻璃隔板。ワット左手始终只拿一张正反完全空白的白色通知纸；柜台左侧始终平放一本纯青绿色无字封面的闭合杂志；没有其他纸张或道具。左侧ワット张口，右手指尖轻触柜台上唯一一本闭合的纯青绿色无字杂志；右侧大学職員闭口看着他的动作。两人、柜台、通知纸和杂志只在画面上部72%，底部28%从左到右是完整连续的纯暖象牙色空白字幕区。画面内无任何文字、字母或数字。",
+      "imagePromptJa": "第33課教材会話の縦型ストーリーボード。清潔で柔らかなセル塗りの日本語教材アニメ調。同じ明るく静かな日本の大学事務相談カウンター、9:16、1080×1920。成人は必ず二人だけ。左は常にワット、35歳前後のタイ人男性、少しふんわりした短い黒髪、黒い長方形眼鏡、濃い茶色の目、淡いパウダーブルー地にごく小さな濃紺ドットの長袖シャツ、カーキ色のズボン、ネクタイなし。右は常に大学職員、32歳前後の日本人女性、肩までの内巻き濃茶ボブ、濃い茶色の目、白い長袖ブラウス、濃紺ストラップと内容が見えない内向きの無地青カードケース。暖かな米白色の壁、明るい木製相談カウンター、文字のない曇りガラス仕切りを固定。ワットの左手には両面が完全に無地の白い通知用紙一枚だけ。カウンター左には無地青緑色表紙の閉じた雑誌一冊だけを常に平置き。ほかの紙や小物はない。左のワットが口を開け、右手の指先でカウンター上の一冊だけの閉じた無地の青緑色雑誌へ軽く触れる。右の大学職員は口を閉じてその動作を見る。二人、カウンター、白紙、雑誌は上部72%だけ。下部28%は左右いっぱいに連続した無地の暖かいアイボリー字幕余白。画面内に文字、英字、数字を一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, outdoor station, train, parked car, bookstore, police officer, police station, courtroom, road signs, parking signs, money, wallet, coins, extra people, third person, background people, duplicate paper, printed ticket, visible badge text, extra magazine, open magazine, swapped left-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, furniture or objects intruding into bottom blank panel, open mouth on university staff, closed mouth on Watt",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-33-012",
+      "storyboardTextLineId": "l33-conv-005-s03",
+      "sourceLineId": "l33-conv-005",
+      "imagePromptCn": "第33课教材会话竖屏故事分镜，日本语教材动画插画，干净柔和的赛璐璐着色，同一个明亮安静的日本大学行政咨询柜台，9:16，1080×1920。现场恰好两名成年人：左侧始终是ワット，约35岁泰国男性，短而略蓬松的黑发、黑色长方形眼镜、深棕眼睛、浅粉蓝色细小深蓝圆点长袖衬衫、卡其长裤、不系领带；右侧始终是大学職員，约32岁日本女性，齐肩内扣深棕短发、深棕眼睛、白色长袖衬衫、深蓝色挂带和朝内不可见内容的纯蓝证件套。固定暖米白墙、浅木色咨询柜台、无字磨砂玻璃隔板。ワット左手始终只拿一张正反完全空白的白色通知纸；柜台左侧始终平放一本纯青绿色无字封面的闭合杂志；没有其他纸张或道具。左侧ワット张口，右手拇指和食指保持自然、靠近但不接触，作“只有一点时间”的克制手势；右侧大学職員闭口，神情仍认真。两人、柜台、通知纸和杂志只在画面上部72%，底部28%从左到右是完整连续的纯暖象牙色空白字幕区。画面内无任何文字、字母或数字。",
+      "imagePromptJa": "第33課教材会話の縦型ストーリーボード。清潔で柔らかなセル塗りの日本語教材アニメ調。同じ明るく静かな日本の大学事務相談カウンター、9:16、1080×1920。成人は必ず二人だけ。左は常にワット、35歳前後のタイ人男性、少しふんわりした短い黒髪、黒い長方形眼鏡、濃い茶色の目、淡いパウダーブルー地にごく小さな濃紺ドットの長袖シャツ、カーキ色のズボン、ネクタイなし。右は常に大学職員、32歳前後の日本人女性、肩までの内巻き濃茶ボブ、濃い茶色の目、白い長袖ブラウス、濃紺ストラップと内容が見えない内向きの無地青カードケース。暖かな米白色の壁、明るい木製相談カウンター、文字のない曇りガラス仕切りを固定。ワットの左手には両面が完全に無地の白い通知用紙一枚だけ。カウンター左には無地青緑色表紙の閉じた雑誌一冊だけを常に平置き。ほかの紙や小物はない。左のワットが口を開け、右手の親指と人差し指を自然に近づけ、触れないまま「ほんの短い時間」の控えめな仕草をする。右の大学職員は口を閉じ、真剣な表情を保つ。二人、カウンター、白紙、雑誌は上部72%だけ。下部28%は左右いっぱいに連続した無地の暖かいアイボリー字幕余白。画面内に文字、英字、数字を一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, outdoor station, train, parked car, bookstore, police officer, police station, courtroom, road signs, parking signs, money, wallet, coins, extra people, third person, background people, duplicate paper, printed ticket, visible badge text, extra magazine, open magazine, swapped left-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, furniture or objects intruding into bottom blank panel, open mouth on university staff, closed mouth on Watt",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-33-013",
+      "storyboardTextLineId": "l33-conv-006-s01",
+      "sourceLineId": "l33-conv-006",
+      "imagePromptCn": "第33课教材会话竖屏故事分镜，日本语教材动画插画，干净柔和的赛璐璐着色，同一个明亮安静的日本大学行政咨询柜台，9:16，1080×1920。现场恰好两名成年人：左侧始终是ワット，约35岁泰国男性，短而略蓬松的黑发、黑色长方形眼镜、深棕眼睛、浅粉蓝色细小深蓝圆点长袖衬衫、卡其长裤、不系领带；右侧始终是大学職員，约32岁日本女性，齐肩内扣深棕短发、深棕眼睛、白色长袖衬衫、深蓝色挂带和朝内不可见内容的纯蓝证件套。固定暖米白墙、浅木色咨询柜台、无字磨砂玻璃隔板。ワット左手始终只拿一张正反完全空白的白色通知纸；柜台左侧始终平放一本纯青绿色无字封面的闭合杂志；没有其他纸张或道具。右侧大学職員张口，认真看着ワット，以一只平直开放手掌强调“那个地点”；左侧ワット闭口，手持空白通知纸。两人、柜台、通知纸和杂志只在画面上部72%，底部28%从左到右是完整连续的纯暖象牙色空白字幕区。画面内无任何文字、字母或数字。",
+      "imagePromptJa": "第33課教材会話の縦型ストーリーボード。清潔で柔らかなセル塗りの日本語教材アニメ調。同じ明るく静かな日本の大学事務相談カウンター、9:16、1080×1920。成人は必ず二人だけ。左は常にワット、35歳前後のタイ人男性、少しふんわりした短い黒髪、黒い長方形眼鏡、濃い茶色の目、淡いパウダーブルー地にごく小さな濃紺ドットの長袖シャツ、カーキ色のズボン、ネクタイなし。右は常に大学職員、32歳前後の日本人女性、肩までの内巻き濃茶ボブ、濃い茶色の目、白い長袖ブラウス、濃紺ストラップと内容が見えない内向きの無地青カードケース。暖かな米白色の壁、明るい木製相談カウンター、文字のない曇りガラス仕切りを固定。ワットの左手には両面が完全に無地の白い通知用紙一枚だけ。カウンター左には無地青緑色表紙の閉じた雑誌一冊だけを常に平置き。ほかの紙や小物はない。右の大学職員が口を開け、ワットを真剣に見て、まっすぐ開いた片手で「その場所」という条件を強調する。左のワットは口を閉じ、白紙の通知を持つ。二人、カウンター、白紙、雑誌は上部72%だけ。下部28%は左右いっぱいに連続した無地の暖かいアイボリー字幕余白。画面内に文字、英字、数字を一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, outdoor station, train, parked car, bookstore, police officer, police station, courtroom, road signs, parking signs, money, wallet, coins, extra people, third person, background people, duplicate paper, printed ticket, visible badge text, extra magazine, open magazine, swapped left-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, furniture or objects intruding into bottom blank panel, open mouth on Watt, closed mouth on university staff",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-33-014",
+      "storyboardTextLineId": "l33-conv-006-s02",
+      "sourceLineId": "l33-conv-006",
+      "imagePromptCn": "第33课教材会话竖屏故事分镜，日本语教材动画插画，干净柔和的赛璐璐着色，同一个明亮安静的日本大学行政咨询柜台，9:16，1080×1920。现场恰好两名成年人：左侧始终是ワット，约35岁泰国男性，短而略蓬松的黑发、黑色长方形眼镜、深棕眼睛、浅粉蓝色细小深蓝圆点长袖衬衫、卡其长裤、不系领带；右侧始终是大学職員，约32岁日本女性，齐肩内扣深棕短发、深棕眼睛、白色长袖衬衫、深蓝色挂带和朝内不可见内容的纯蓝证件套。固定暖米白墙、浅木色咨询柜台、无字磨砂玻璃隔板。ワット左手始终只拿一张正反完全空白的白色通知纸；柜台左侧始终平放一本纯青绿色无字封面的闭合杂志；没有其他纸张或道具。右侧大学職員张口，礼貌但坚定地举起一只停止手掌；左侧ワット闭口，眉头微皱，杂志仍平放原位。两人、柜台、通知纸和杂志只在画面上部72%，底部28%从左到右是完整连续的纯暖象牙色空白字幕区。画面内无任何文字、字母或数字。",
+      "imagePromptJa": "第33課教材会話の縦型ストーリーボード。清潔で柔らかなセル塗りの日本語教材アニメ調。同じ明るく静かな日本の大学事務相談カウンター、9:16、1080×1920。成人は必ず二人だけ。左は常にワット、35歳前後のタイ人男性、少しふんわりした短い黒髪、黒い長方形眼鏡、濃い茶色の目、淡いパウダーブルー地にごく小さな濃紺ドットの長袖シャツ、カーキ色のズボン、ネクタイなし。右は常に大学職員、32歳前後の日本人女性、肩までの内巻き濃茶ボブ、濃い茶色の目、白い長袖ブラウス、濃紺ストラップと内容が見えない内向きの無地青カードケース。暖かな米白色の壁、明るい木製相談カウンター、文字のない曇りガラス仕切りを固定。ワットの左手には両面が完全に無地の白い通知用紙一枚だけ。カウンター左には無地青緑色表紙の閉じた雑誌一冊だけを常に平置き。ほかの紙や小物はない。右の大学職員が口を開け、丁寧だがはっきりと片手の停止の手のひらを上げる。左のワットは口を閉じて眉を少し寄せ、雑誌は元の位置に平らに置かれている。二人、カウンター、白紙、雑誌は上部72%だけ。下部28%は左右いっぱいに連続した無地の暖かいアイボリー字幕余白。画面内に文字、英字、数字を一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, outdoor station, train, parked car, bookstore, police officer, police station, courtroom, road signs, parking signs, money, wallet, coins, extra people, third person, background people, duplicate paper, printed ticket, visible badge text, extra magazine, open magazine, swapped left-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, furniture or objects intruding into bottom blank panel, open mouth on Watt, closed mouth on university staff",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-33-015",
+      "storyboardTextLineId": "l33-conv-007-s01",
+      "sourceLineId": "l33-conv-007",
+      "imagePromptCn": "第33课教材会话竖屏故事分镜，日本语教材动画插画，干净柔和的赛璐璐着色，同一个明亮安静的日本大学行政咨询柜台，9:16，1080×1920。现场恰好两名成年人：左侧始终是ワット，约35岁泰国男性，短而略蓬松的黑发、黑色长方形眼镜、深棕眼睛、浅粉蓝色细小深蓝圆点长袖衬衫、卡其长裤、不系领带；右侧始终是大学職員，约32岁日本女性，齐肩内扣深棕短发、深棕眼睛、白色长袖衬衫、深蓝色挂带和朝内不可见内容的纯蓝证件套。固定暖米白墙、浅木色咨询柜台、无字磨砂玻璃隔板。ワット左手始终只拿一张正反完全空白的白色通知纸；柜台左侧始终平放一本纯青绿色无字封面的闭合杂志；没有其他纸张或道具。左侧ワット张口，肩膀稍微下沉，垂眼看着空白通知纸；右侧大学職員闭口，神情平静。两人、柜台、通知纸和杂志只在画面上部72%，底部28%从左到右是完整连续的纯暖象牙色空白字幕区。画面内无任何文字、字母或数字。",
+      "imagePromptJa": "第33課教材会話の縦型ストーリーボード。清潔で柔らかなセル塗りの日本語教材アニメ調。同じ明るく静かな日本の大学事務相談カウンター、9:16、1080×1920。成人は必ず二人だけ。左は常にワット、35歳前後のタイ人男性、少しふんわりした短い黒髪、黒い長方形眼鏡、濃い茶色の目、淡いパウダーブルー地にごく小さな濃紺ドットの長袖シャツ、カーキ色のズボン、ネクタイなし。右は常に大学職員、32歳前後の日本人女性、肩までの内巻き濃茶ボブ、濃い茶色の目、白い長袖ブラウス、濃紺ストラップと内容が見えない内向きの無地青カードケース。暖かな米白色の壁、明るい木製相談カウンター、文字のない曇りガラス仕切りを固定。ワットの左手には両面が完全に無地の白い通知用紙一枚だけ。カウンター左には無地青緑色表紙の閉じた雑誌一冊だけを常に平置き。ほかの紙や小物はない。左のワットが口を開け、肩を少し落とし、白紙の通知へ目を伏せる。右の大学職員は口を閉じ、落ち着いた表情をする。二人、カウンター、白紙、雑誌は上部72%だけ。下部28%は左右いっぱいに連続した無地の暖かいアイボリー字幕余白。画面内に文字、英字、数字を一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, outdoor station, train, parked car, bookstore, police officer, police station, courtroom, road signs, parking signs, money, wallet, coins, extra people, third person, background people, duplicate paper, printed ticket, visible badge text, extra magazine, open magazine, swapped left-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, furniture or objects intruding into bottom blank panel, open mouth on university staff, closed mouth on Watt",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-33-016",
+      "storyboardTextLineId": "l33-conv-007-s02",
+      "sourceLineId": "l33-conv-007",
+      "imagePromptCn": "第33课教材会话竖屏故事分镜，日本语教材动画插画，干净柔和的赛璐璐着色，同一个明亮安静的日本大学行政咨询柜台，9:16，1080×1920。现场恰好两名成年人：左侧始终是ワット，约35岁泰国男性，短而略蓬松的黑发、黑色长方形眼镜、深棕眼睛、浅粉蓝色细小深蓝圆点长袖衬衫、卡其长裤、不系领带；右侧始终是大学職員，约32岁日本女性，齐肩内扣深棕短发、深棕眼睛、白色长袖衬衫、深蓝色挂带和朝内不可见内容的纯蓝证件套。固定暖米白墙、浅木色咨询柜台、无字磨砂玻璃隔板。ワット左手始终只拿一张正反完全空白的白色通知纸；柜台左侧始终平放一本纯青绿色无字封面的闭合杂志；没有其他纸张或道具。左侧ワット张口，担心地举起空白通知纸，右手掌心向上询问；右侧大学職員闭口直视他。两人、柜台、通知纸和杂志只在画面上部72%，底部28%从左到右是完整连续的纯暖象牙色空白字幕区。画面内无任何文字、字母或数字。",
+      "imagePromptJa": "第33課教材会話の縦型ストーリーボード。清潔で柔らかなセル塗りの日本語教材アニメ調。同じ明るく静かな日本の大学事務相談カウンター、9:16、1080×1920。成人は必ず二人だけ。左は常にワット、35歳前後のタイ人男性、少しふんわりした短い黒髪、黒い長方形眼鏡、濃い茶色の目、淡いパウダーブルー地にごく小さな濃紺ドットの長袖シャツ、カーキ色のズボン、ネクタイなし。右は常に大学職員、32歳前後の日本人女性、肩までの内巻き濃茶ボブ、濃い茶色の目、白い長袖ブラウス、濃紺ストラップと内容が見えない内向きの無地青カードケース。暖かな米白色の壁、明るい木製相談カウンター、文字のない曇りガラス仕切りを固定。ワットの左手には両面が完全に無地の白い通知用紙一枚だけ。カウンター左には無地青緑色表紙の閉じた雑誌一冊だけを常に平置き。ほかの紙や小物はない。左のワットが口を開け、心配そうに白紙の通知を少し上げ、右手のひらを上へ向けて尋ねる。右の大学職員は口を閉じてワットを見る。二人、カウンター、白紙、雑誌は上部72%だけ。下部28%は左右いっぱいに連続した無地の暖かいアイボリー字幕余白。画面内に文字、英字、数字を一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, outdoor station, train, parked car, bookstore, police officer, police station, courtroom, road signs, parking signs, money, wallet, coins, extra people, third person, background people, duplicate paper, printed ticket, visible badge text, extra magazine, open magazine, swapped left-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, furniture or objects intruding into bottom blank panel, open mouth on university staff, closed mouth on Watt",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-33-017",
+      "storyboardTextLineId": "l33-conv-008-s01",
+      "sourceLineId": "l33-conv-008",
+      "imagePromptCn": "第33课教材会话竖屏故事分镜，日本语教材动画插画，干净柔和的赛璐璐着色，同一个明亮安静的日本大学行政咨询柜台，9:16，1080×1920。现场恰好两名成年人：左侧始终是ワット，约35岁泰国男性，短而略蓬松的黑发、黑色长方形眼镜、深棕眼睛、浅粉蓝色细小深蓝圆点长袖衬衫、卡其长裤、不系领带；右侧始终是大学職員，约32岁日本女性，齐肩内扣深棕短发、深棕眼睛、白色长袖衬衫、深蓝色挂带和朝内不可见内容的纯蓝证件套。固定暖米白墙、浅木色咨询柜台、无字磨砂玻璃隔板。ワット左手始终只拿一张正反完全空白的白色通知纸；柜台左侧始终平放一本纯青绿色无字封面的闭合杂志；没有其他纸张或道具。右侧大学職員张口，表情温和但明确地点头，一只开放手掌朝向ワット；左侧ワット闭口，紧张地等候。两人、柜台、通知纸和杂志只在画面上部72%，底部28%从左到右是完整连续的纯暖象牙色空白字幕区。画面内无任何文字、字母或数字。",
+      "imagePromptJa": "第33課教材会話の縦型ストーリーボード。清潔で柔らかなセル塗りの日本語教材アニメ調。同じ明るく静かな日本の大学事務相談カウンター、9:16、1080×1920。成人は必ず二人だけ。左は常にワット、35歳前後のタイ人男性、少しふんわりした短い黒髪、黒い長方形眼鏡、濃い茶色の目、淡いパウダーブルー地にごく小さな濃紺ドットの長袖シャツ、カーキ色のズボン、ネクタイなし。右は常に大学職員、32歳前後の日本人女性、肩までの内巻き濃茶ボブ、濃い茶色の目、白い長袖ブラウス、濃紺ストラップと内容が見えない内向きの無地青カードケース。暖かな米白色の壁、明るい木製相談カウンター、文字のない曇りガラス仕切りを固定。ワットの左手には両面が完全に無地の白い通知用紙一枚だけ。カウンター左には無地青緑色表紙の閉じた雑誌一冊だけを常に平置き。ほかの紙や小物はない。右の大学職員が口を開け、穏やかだが明確にうなずき、開いた片手をワットへ向ける。左のワットは口を閉じ、緊張して待つ。二人、カウンター、白紙、雑誌は上部72%だけ。下部28%は左右いっぱいに連続した無地の暖かいアイボリー字幕余白。画面内に文字、英字、数字を一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, outdoor station, train, parked car, bookstore, police officer, police station, courtroom, road signs, parking signs, money, wallet, coins, extra people, third person, background people, duplicate paper, printed ticket, visible badge text, extra magazine, open magazine, swapped left-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, furniture or objects intruding into bottom blank panel, open mouth on Watt, closed mouth on university staff",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-33-018",
+      "storyboardTextLineId": "l33-conv-008-s02",
+      "sourceLineId": "l33-conv-008",
+      "imagePromptCn": "第33课教材会话竖屏故事分镜，日本语教材动画插画，干净柔和的赛璐璐着色，同一个明亮安静的日本大学行政咨询柜台，9:16，1080×1920。现场恰好两名成年人：左侧始终是ワット，约35岁泰国男性，短而略蓬松的黑发、黑色长方形眼镜、深棕眼睛、浅粉蓝色细小深蓝圆点长袖衬衫、卡其长裤、不系领带；右侧始终是大学職員，约32岁日本女性，齐肩内扣深棕短发、深棕眼睛、白色长袖衬衫、深蓝色挂带和朝内不可见内容的纯蓝证件套。固定暖米白墙、浅木色咨询柜台、无字磨砂玻璃隔板。ワット左手始终只拿一张正反完全空白的白色通知纸；柜台左侧始终平放一本纯青绿色无字封面的闭合杂志；没有其他纸张或道具。右侧大学職員张口，严肃地用一只开放手掌指向完全无字的通知纸，不用手指数数；左侧ワット闭口，眼睛稍微睁大。两人、柜台、通知纸和杂志只在画面上部72%，底部28%从左到右是完整连续的纯暖象牙色空白字幕区。画面内无任何文字、字母或数字。",
+      "imagePromptJa": "第33課教材会話の縦型ストーリーボード。清潔で柔らかなセル塗りの日本語教材アニメ調。同じ明るく静かな日本の大学事務相談カウンター、9:16、1080×1920。成人は必ず二人だけ。左は常にワット、35歳前後のタイ人男性、少しふんわりした短い黒髪、黒い長方形眼鏡、濃い茶色の目、淡いパウダーブルー地にごく小さな濃紺ドットの長袖シャツ、カーキ色のズボン、ネクタイなし。右は常に大学職員、32歳前後の日本人女性、肩までの内巻き濃茶ボブ、濃い茶色の目、白い長袖ブラウス、濃紺ストラップと内容が見えない内向きの無地青カードケース。暖かな米白色の壁、明るい木製相談カウンター、文字のない曇りガラス仕切りを固定。ワットの左手には両面が完全に無地の白い通知用紙一枚だけ。カウンター左には無地青緑色表紙の閉じた雑誌一冊だけを常に平置き。ほかの紙や小物はない。右の大学職員が口を開け、真剣に開いた片手を完全に無地の通知へ向け、指で数を示さない。左のワットは口を閉じ、目を少し見開く。二人、カウンター、白紙、雑誌は上部72%だけ。下部28%は左右いっぱいに連続した無地の暖かいアイボリー字幕余白。画面内に文字、英字、数字を一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, outdoor station, train, parked car, bookstore, police officer, police station, courtroom, road signs, parking signs, money, wallet, coins, extra people, third person, background people, duplicate paper, printed ticket, visible badge text, extra magazine, open magazine, swapped left-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, furniture or objects intruding into bottom blank panel, open mouth on Watt, closed mouth on university staff",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-33-019",
       "storyboardTextLineId": "l33-conv-009-s01",
       "sourceLineId": "l33-conv-009",
-      "imagePromptCn": "ワット拿着贴在车上的纸到大学职员处询问汉字读法和意思，职员说明是停车违章，并解释车站前即使只停十分钟也不行，最后说明罚款金额。 当前画面聚焦ワット对大学職員说这一句，保持真实课文场景和人物关系。 ワット看向大学職員，用符合场景的自然礼貌语气说出本句。 画面不出现可读文字、字幕、对话气泡、UI、logo 或课文外主要人物。",
-      "imagePromptJa": "ワット拿着贴在车上的纸到大学职员处询问汉字读法和意思，职员说明是停车违章，并解释车站前即使只停十分钟也不行，最后说明罚款金额。 当前画面聚焦ワット对大学職員说这一句，保持真实课文场景和人物关系。 ワット看向大学職員，用符合场景的自然礼貌语气说出本句。 画面内に読める文字、字幕、吹き出し、UI、ロゴ、課文外の主要人物を入れない。",
-      "negativePrompt": "readable text, subtitles, speech bubbles, UI labels, logos, extra main characters, wrong speaker, wrong listener, non-canonical dialogue, derived-block content, music cue",
-      "reviewStatus": "pending-human-review",
-      "generationAllowed": false
+      "imagePromptCn": "第33课教材会话竖屏故事分镜，日本语教材动画插画，干净柔和的赛璐璐着色，同一个明亮安静的日本大学行政咨询柜台，9:16，1080×1920。现场恰好两名成年人：左侧始终是ワット，约35岁泰国男性，短而略蓬松的黑发、黑色长方形眼镜、深棕眼睛、浅粉蓝色细小深蓝圆点长袖衬衫、卡其长裤、不系领带；右侧始终是大学職員，约32岁日本女性，齐肩内扣深棕短发、深棕眼睛、白色长袖衬衫、深蓝色挂带和朝内不可见内容的纯蓝证件套。固定暖米白墙、浅木色咨询柜台、无字磨砂玻璃隔板。ワット左手始终只拿一张正反完全空白的白色通知纸；柜台左侧始终平放一本纯青绿色无字封面的闭合杂志；没有其他纸张或道具。左侧ワット张大嘴，眼睛明显睁大，身体短促后仰但仍稳稳站立；右侧大学職員闭口，保持冷静。两人、柜台、通知纸和杂志只在画面上部72%，底部28%从左到右是完整连续的纯暖象牙色空白字幕区。画面内无任何文字、字母或数字。",
+      "imagePromptJa": "第33課教材会話の縦型ストーリーボード。清潔で柔らかなセル塗りの日本語教材アニメ調。同じ明るく静かな日本の大学事務相談カウンター、9:16、1080×1920。成人は必ず二人だけ。左は常にワット、35歳前後のタイ人男性、少しふんわりした短い黒髪、黒い長方形眼鏡、濃い茶色の目、淡いパウダーブルー地にごく小さな濃紺ドットの長袖シャツ、カーキ色のズボン、ネクタイなし。右は常に大学職員、32歳前後の日本人女性、肩までの内巻き濃茶ボブ、濃い茶色の目、白い長袖ブラウス、濃紺ストラップと内容が見えない内向きの無地青カードケース。暖かな米白色の壁、明るい木製相談カウンター、文字のない曇りガラス仕切りを固定。ワットの左手には両面が完全に無地の白い通知用紙一枚だけ。カウンター左には無地青緑色表紙の閉じた雑誌一冊だけを常に平置き。ほかの紙や小物はない。左のワットが口を大きく開け、目をはっきり見開き、短く身を引くが安定して立っている。右の大学職員は口を閉じ、落ち着いている。二人、カウンター、白紙、雑誌は上部72%だけ。下部28%は左右いっぱいに連続した無地の暖かいアイボリー字幕余白。画面内に文字、英字、数字を一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, outdoor station, train, parked car, bookstore, police officer, police station, courtroom, road signs, parking signs, money, wallet, coins, extra people, third person, background people, duplicate paper, printed ticket, visible badge text, extra magazine, open magazine, swapped left-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, furniture or objects intruding into bottom blank panel, open mouth on university staff, closed mouth on Watt",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-33-020",
+      "storyboardTextLineId": "l33-conv-009-s02",
+      "sourceLineId": "l33-conv-009",
+      "imagePromptCn": "第33课教材会话竖屏故事分镜，日本语教材动画插画，干净柔和的赛璐璐着色，同一个明亮安静的日本大学行政咨询柜台，9:16，1080×1920。现场恰好两名成年人：左侧始终是ワット，约35岁泰国男性，短而略蓬松的黑发、黑色长方形眼镜、深棕眼睛、浅粉蓝色细小深蓝圆点长袖衬衫、卡其长裤、不系领带；右侧始终是大学職員，约32岁日本女性，齐肩内扣深棕短发、深棕眼睛、白色长袖衬衫、深蓝色挂带和朝内不可见内容的纯蓝证件套。固定暖米白墙、浅木色咨询柜台、无字磨砂玻璃隔板。ワット左手始终只拿一张正反完全空白的白色通知纸；柜台左侧始终平放一本纯青绿色无字封面的闭合杂志；没有其他纸张或道具。左侧ワット张口，以震惊的疑问表情看向职员，右手一根食指指向空白通知纸但不做数字手势；右侧大学職員闭口点头。两人、柜台、通知纸和杂志只在画面上部72%，底部28%从左到右是完整连续的纯暖象牙色空白字幕区。画面内无任何文字、字母或数字。",
+      "imagePromptJa": "第33課教材会話の縦型ストーリーボード。清潔で柔らかなセル塗りの日本語教材アニメ調。同じ明るく静かな日本の大学事務相談カウンター、9:16、1080×1920。成人は必ず二人だけ。左は常にワット、35歳前後のタイ人男性、少しふんわりした短い黒髪、黒い長方形眼鏡、濃い茶色の目、淡いパウダーブルー地にごく小さな濃紺ドットの長袖シャツ、カーキ色のズボン、ネクタイなし。右は常に大学職員、32歳前後の日本人女性、肩までの内巻き濃茶ボブ、濃い茶色の目、白い長袖ブラウス、濃紺ストラップと内容が見えない内向きの無地青カードケース。暖かな米白色の壁、明るい木製相談カウンター、文字のない曇りガラス仕切りを固定。ワットの左手には両面が完全に無地の白い通知用紙一枚だけ。カウンター左には無地青緑色表紙の閉じた雑誌一冊だけを常に平置き。ほかの紙や小物はない。左のワットが口を開け、驚いた疑問の表情で職員を見て、右手の人差し指一本で白紙の通知を示すが数字の仕草はしない。右の大学職員は口を閉じてうなずく。二人、カウンター、白紙、雑誌は上部72%だけ。下部28%は左右いっぱいに連続した無地の暖かいアイボリー字幕余白。画面内に文字、英字、数字を一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, outdoor station, train, parked car, bookstore, police officer, police station, courtroom, road signs, parking signs, money, wallet, coins, extra people, third person, background people, duplicate paper, printed ticket, visible badge text, extra magazine, open magazine, swapped left-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, furniture or objects intruding into bottom blank panel, open mouth on university staff, closed mouth on Watt",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-33-021",
+      "storyboardTextLineId": "l33-conv-009-s03",
+      "sourceLineId": "l33-conv-009",
+      "imagePromptCn": "第33课教材会话竖屏故事分镜，日本语教材动画插画，干净柔和的赛璐璐着色，同一个明亮安静的日本大学行政咨询柜台，9:16，1080×1920。现场恰好两名成年人：左侧始终是ワット，约35岁泰国男性，短而略蓬松的黑发、黑色长方形眼镜、深棕眼睛、浅粉蓝色细小深蓝圆点长袖衬衫、卡其长裤、不系领带；右侧始终是大学職員，约32岁日本女性，齐肩内扣深棕短发、深棕眼睛、白色长袖衬衫、深蓝色挂带和朝内不可见内容的纯蓝证件套。固定暖米白墙、浅木色咨询柜台、无字磨砂玻璃隔板。ワット左手始终只拿一张正反完全空白的白色通知纸；柜台左侧始终平放一本纯青绿色无字封面的闭合杂志；没有其他纸张或道具。左侧ワット张口，神情无奈，左手仍持空白通知纸，右手轻放在闭合的纯青绿色无字杂志上形成对比；右侧大学職員闭口，露出克制的同情神情。两人、柜台、通知纸和杂志只在画面上部72%，底部28%从左到右是完整连续的纯暖象牙色空白字幕区。画面内无任何文字、字母或数字。",
+      "imagePromptJa": "第33課教材会話の縦型ストーリーボード。清潔で柔らかなセル塗りの日本語教材アニメ調。同じ明るく静かな日本の大学事務相談カウンター、9:16、1080×1920。成人は必ず二人だけ。左は常にワット、35歳前後のタイ人男性、少しふんわりした短い黒髪、黒い長方形眼鏡、濃い茶色の目、淡いパウダーブルー地にごく小さな濃紺ドットの長袖シャツ、カーキ色のズボン、ネクタイなし。右は常に大学職員、32歳前後の日本人女性、肩までの内巻き濃茶ボブ、濃い茶色の目、白い長袖ブラウス、濃紺ストラップと内容が見えない内向きの無地青カードケース。暖かな米白色の壁、明るい木製相談カウンター、文字のない曇りガラス仕切りを固定。ワットの左手には両面が完全に無地の白い通知用紙一枚だけ。カウンター左には無地青緑色表紙の閉じた雑誌一冊だけを常に平置き。ほかの紙や小物はない。左のワットが口を開け、困った表情で、左手に白紙の通知を持ち続け、右手を閉じた無地の青緑色雑誌へ軽く置いて対比する。右の大学職員は口を閉じ、控えめに同情する表情を見せる。二人、カウンター、白紙、雑誌は上部72%だけ。下部28%は左右いっぱいに連続した無地の暖かいアイボリー字幕余白。画面内に文字、英字、数字を一切入れない。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, captions, subtitles, speech bubbles, thought bubbles, inset panels, split screen, outdoor station, train, parked car, bookstore, police officer, police station, courtroom, road signs, parking signs, money, wallet, coins, extra people, third person, background people, duplicate paper, printed ticket, visible badge text, extra magazine, open magazine, swapped left-right positions, wardrobe changes, wrong speaker, deformed hands, extra fingers, extra limbs, missing blank lower panel, furniture or objects intruding into bottom blank panel, open mouth on university staff, closed mouth on Watt",
+      "reviewStatus": "approved",
+      "generationAllowed": true
     }
   ]
 }

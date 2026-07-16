@@ -128,6 +128,16 @@ const REVIEWED_SPLITS: Record<number, Record<string, number[]>> = {
     '006': [2.509, 4.228],
     '009': [1.026, 2.859],
   },
+  33: {
+    '001': [1.099, 4.149],
+    '003': [1.905],
+    '004': [1.733, 3.683],
+    '005': [1.582, 2.862],
+    '006': [1.852],
+    '007': [1.585],
+    '008': [0.892],
+    '009': [0.781, 2.984],
+  },
 }
 
 // Some generated line clips cut through a final syllable or the next line's
@@ -389,6 +399,53 @@ const REVIEWED_AUDIO_RANGES: Record<number, Record<string, ReviewedAudioRange>> 
       sourcePath: 'source-240000/tracks/cd-019.mp3',
       start: 39.221,
       end: 40.783,
+    },
+  },
+  33: {
+    '001': {
+      sourcePath: 'source-240000/tracks/cd-022.mp3',
+      start: 7.203,
+      end: 13.739,
+    },
+    '002': {
+      sourcePath: 'source-240000/tracks/cd-022.mp3',
+      start: 13.739,
+      end: 15.544,
+    },
+    '003': {
+      sourcePath: 'source-240000/tracks/cd-022.mp3',
+      start: 15.544,
+      end: 19.336,
+    },
+    '004': {
+      sourcePath: 'source-240000/tracks/cd-022.mp3',
+      start: 19.336,
+      end: 24.892,
+    },
+    '005': {
+      sourcePath: 'source-240000/tracks/cd-022.mp3',
+      start: 24.892,
+      end: 29.053,
+    },
+    '006': {
+      sourcePath: 'source-240000/tracks/cd-022.mp3',
+      start: 29.053,
+      end: 32.651,
+    },
+    '007': {
+      sourcePath: 'source-240000/tracks/cd-022.mp3',
+      start: 32.651,
+      end: 36.986,
+    },
+    '008': {
+      sourcePath: 'source-240000/tracks/cd-022.mp3',
+      start: 36.986,
+      end: 40.545,
+    },
+    '009': {
+      sourcePath: 'source-240000/tracks/cd-022.mp3',
+      start: 40.545,
+      end: 46.300,
     },
   },
 }

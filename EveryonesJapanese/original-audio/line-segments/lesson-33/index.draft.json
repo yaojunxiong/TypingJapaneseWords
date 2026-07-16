@@ -5,27 +5,26 @@
   "cd": "CD22",
   "sourceTrack": "source-240000/tracks/cd-022.mp3",
   "sourceUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/source-240000/tracks/cd-022.mp3",
-  "segmentCount": 9,
   "segments": [
     {
       "lineNo": 1,
       "displayOrder": 1,
       "speaker": "ワット",
-      "japanese": "すみません。わたしの車にこんな紙がはあったんですが、この漢字は何と読むんですか。",
-      "normalizedTarget": "すみませんわたしのくるまにこんなかみがはあったんですがこのかんじはなんとよむんですか",
+      "japanese": "すみません。わたしの車にこんな紙が貼ってあったんですが、この漢字は何と読むんですか。",
+      "normalizedTarget": "すみませんわたしのくるまにこんなかみがはってあったんですがこのかんじはなんとよむんですか",
       "normalizedAsrText": "すみません私の車にこんな紙が貼ってあったんですがこの漢字は何と読むんですか",
       "phoneticSimilarity": 0.6835,
       "matchedUtteranceIndexes": [
         2
       ],
-      "startMs": 6980,
-      "endMs": 14000,
-      "durationMs": 7020,
+      "startMs": 7203,
+      "endMs": 13739,
+      "durationMs": 6536,
       "audioPath": "line-segments/lesson-33/l33-01.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-33/l33-01.mp3",
-      "needsReview": true,
-      "matchConfidence": "medium",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [2] 对齐；应用已校准 MP3 时间偏移"
+      "needsReview": false,
+      "matchConfidence": "high",
+      "boundaryReason": "经教材原页、CD22 原声和 -42 dB 静音区间人工复核；从标题后静音末端前约 12ms 开始，完整保留「すみません」、车上贴纸背景和读法提问，与第 2 句以静音中点 13739ms 分界"
     },
     {
       "lineNo": 2,
@@ -38,14 +37,14 @@
       "matchedUtteranceIndexes": [
         3
       ],
-      "startMs": 14000,
-      "endMs": 15400,
-      "durationMs": 1400,
+      "startMs": 13739,
+      "endMs": 15544,
+      "durationMs": 1805,
       "audioPath": "line-segments/lesson-33/l33-02.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-33/l33-02.mp3",
-      "needsReview": true,
-      "matchConfidence": "medium",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [3] 对齐；应用已校准 MP3 时间偏移"
+      "needsReview": false,
+      "matchConfidence": "high",
+      "boundaryReason": "经教材原页、CD22 原声和 -42 dB 静音区间人工复核；完整保留职员读出「ちゅうしゃいはん」的短句，与第 3 句以静音中点 15544ms 分界"
     },
     {
       "lineNo": 3,
@@ -59,14 +58,14 @@
         3,
         4
       ],
-      "startMs": 15400,
-      "endMs": 19000,
-      "durationMs": 3600,
+      "startMs": 15544,
+      "endMs": 19336,
+      "durationMs": 3792,
       "audioPath": "line-segments/lesson-33/l33-03.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-33/l33-03.mp3",
-      "needsReview": true,
-      "matchConfidence": "medium",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [3, 4] 对齐；应用已校准 MP3 时间偏移"
+      "needsReview": false,
+      "matchConfidence": "high",
+      "boundaryReason": "经教材原页、CD22 原声和 -42 dB 静音区间人工复核；完整保留复述词语、约 1.15 秒思考停顿和意义提问，与第 4 句以静音中点 19336ms 分界"
     },
     {
       "lineNo": 4,
@@ -80,14 +79,14 @@
         4,
         5
       ],
-      "startMs": 19000,
-      "endMs": 24500,
-      "durationMs": 5500,
+      "startMs": 19336,
+      "endMs": 24892,
+      "durationMs": 5556,
       "audioPath": "line-segments/lesson-33/l33-04.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-33/l33-04.mp3",
-      "needsReview": true,
-      "matchConfidence": "medium",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [4, 5] 对齐；应用已校准 MP3 时间偏移"
+      "needsReview": false,
+      "matchConfidence": "high",
+      "boundaryReason": "经教材原页、CD22 原声和 -42 dB 静音区间人工复核；完整保留停车违章解释和随后地点提问，与第 5 句以静音中点 24892ms 分界"
     },
     {
       "lineNo": 5,
@@ -101,14 +100,14 @@
         5,
         6
       ],
-      "startMs": 24500,
-      "endMs": 28500,
-      "durationMs": 4000,
+      "startMs": 24892,
+      "endMs": 29053,
+      "durationMs": 4161,
       "audioPath": "line-segments/lesson-33/l33-05.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-33/l33-05.mp3",
-      "needsReview": true,
-      "matchConfidence": "medium",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [5, 6] 对齐；应用已校准 MP3 时间偏移"
+      "needsReview": false,
+      "matchConfidence": "high",
+      "boundaryReason": "经教材原页、CD22 原声和 -42 dB 静音区间人工复核；完整保留车站前、买杂志和只停十分钟三个语义段，与第 6 句以静音中点 29053ms 分界"
     },
     {
       "lineNo": 6,
@@ -121,14 +120,14 @@
       "matchedUtteranceIndexes": [
         6
       ],
-      "startMs": 28500,
-      "endMs": 32620,
-      "durationMs": 4120,
+      "startMs": 29053,
+      "endMs": 32651,
+      "durationMs": 3598,
       "audioPath": "line-segments/lesson-33/l33-06.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-33/l33-06.mp3",
-      "needsReview": true,
-      "matchConfidence": "medium",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [6] 对齐；应用已校准 MP3 时间偏移"
+      "needsReview": false,
+      "matchConfidence": "high",
+      "boundaryReason": "经教材原页、CD22 原声和 -42 dB 静音区间人工复核；完整保留车站前条件和十分钟也不行的说明，与第 7 句以说话人切换处静音中点 32651ms 分界"
     },
     {
       "lineNo": 7,
@@ -141,14 +140,14 @@
       "matchedUtteranceIndexes": [
         7
       ],
-      "startMs": 32620,
-      "endMs": 37120,
-      "durationMs": 4500,
+      "startMs": 32651,
+      "endMs": 36986,
+      "durationMs": 4335,
       "audioPath": "line-segments/lesson-33/l33-07.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-33/l33-07.mp3",
-      "needsReview": true,
+      "needsReview": false,
       "matchConfidence": "high",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [7] 对齐；应用已校准 MP3 时间偏移"
+      "boundaryReason": "经教材原页、CD22 原声和 -42 dB 静音区间人工复核；完整保留接受说明、约 1.09 秒停顿和罚款义务提问，与第 8 句以静音中点 36986ms 分界"
     },
     {
       "lineNo": 8,
@@ -161,14 +160,14 @@
       "matchedUtteranceIndexes": [
         8
       ],
-      "startMs": 37120,
-      "endMs": 41440,
-      "durationMs": 4320,
+      "startMs": 36986,
+      "endMs": 40545,
+      "durationMs": 3559,
       "audioPath": "line-segments/lesson-33/l33-08.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-33/l33-08.mp3",
-      "needsReview": true,
-      "matchConfidence": "medium",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [8] 对齐；应用已校准 MP3 时间偏移"
+      "needsReview": false,
+      "matchConfidence": "high",
+      "boundaryReason": "经教材原页、CD22 原声和 -42 dB 静音区间人工复核；完整保留「ええ」和一万五千日元罚款说明，在职员句尾与ワット短促「えっ」之间的静音中点 40545ms 分界"
     },
     {
       "lineNo": 9,
@@ -181,25 +180,16 @@
       "matchedUtteranceIndexes": [
         9
       ],
-      "startMs": 41440,
-      "endMs": 47760,
-      "durationMs": 6320,
+      "startMs": 40545,
+      "endMs": 46300,
+      "durationMs": 5755,
       "audioPath": "line-segments/lesson-33/l33-09.mp3",
       "audioUrl": "https://yaojunxiong.github.io/TypingJapaneseWords/EveryonesJapanese/original-audio/line-segments/lesson-33/l33-09.mp3",
-      "needsReview": true,
-      "matchConfidence": "medium",
-      "boundaryReason": "按权威台词、发音顺序与 ASR utterance [9] 对齐；应用已校准 MP3 时间偏移"
+      "needsReview": false,
+      "matchConfidence": "high",
+      "boundaryReason": "经教材原页、CD22 原声波形和 -42 dB 静音区间人工复核；从 40.790 秒短促「えっ」前的静音中点起切，修复旧草稿漏掉句首感叹的问题，完整保留金额反问和杂志价格对比，语音末端后保留约 408ms 自然静音"
     }
   ],
-  "needsReview": [
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    7,
-    8,
-    9
-  ]
+  "needsReview": [],
+  "segmentCount": 9
 }
