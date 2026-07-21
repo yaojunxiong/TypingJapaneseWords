@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import StudyMobileChrome from '@/components/study-mobile-chrome'
+import JimmySenseiPanel from '@/components/jimmy-sensei-panel'
 import { getAiPracticeEnabledLessonLabel, isAiPracticeEnabledLesson } from '@/lib/ai-practice-config'
 import { loadRecitationLesson } from '@/lib/recitation-lesson'
 import { recordLearningEvent } from '@/lib/learning-event-log'
@@ -204,9 +205,11 @@ export default function AiPracticePageClient({ lessonNo, lang }: Props) {
   }
 
   return (
-    <div className="page-container" style={{ maxWidth: 820, margin: '0 auto', padding: '16px 14px 120px' }}>
+    <div className="page-container" style={{ maxWidth: 1180, margin: '0 auto', padding: '16px 14px 120px' }}>
       <StudyMobileChrome lang={lang} active="lessons" bottomNavTestId="ai-practice-bottom-nav" />
 
+      <div className="sensei-layout" style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) 360px', gap: 16, alignItems: 'start', marginTop: 12 }}>
+        <div style={{ minWidth: 0 }}>
       <section className="card" data-testid="ai-practice-page" style={{ padding: 16, borderRadius: 20, marginBottom: 12, borderColor: '#dbeafe', background: '#fff' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12 }}>
           <div>
@@ -298,6 +301,15 @@ export default function AiPracticePageClient({ lessonNo, lang }: Props) {
           <div style={{ width: `${Math.round(((lineIndex + 1) / lines.length) * 100)}%`, height: '100%', background: '#2563eb' }} />
         </div>
       </section>
+        </div>
+        <JimmySenseiPanel
+          lessonNo={lessonNo}
+          lang={lang}
+          userRole={selectedRole || undefined}
+          conversationTitle={lesson.conversationTitle}
+          speakers={speakers}
+        />
+      </div>
     </div>
   )
 }
