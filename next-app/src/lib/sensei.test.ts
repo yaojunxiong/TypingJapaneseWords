@@ -117,9 +117,12 @@ test('isRetryableStatus', () => {
 test('welcomeMessage seeds a localized greeting', () => {
   const zh = welcomeMessage(3, 'zh', 'がくせい')
   assert.equal(zh.role, 'assistant')
+  assert.ok(zh.ja)
   assert.match(zh.ja, /第3課/)
+  assert.ok(zh.zh)
   assert.match(zh.zh, /你好/)
 
   const en = welcomeMessage(3, 'en', 'Student')
+  assert.ok(en.zh)
   assert.match(en.zh, /Hello/)
 })
