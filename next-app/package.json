@@ -13,6 +13,7 @@
     "lint": "next lint",
     "verify:lessons": "node scripts/verify-lessons.mjs",
     "verify:recitation": "node scripts/verify-recitation.mjs",
+    "verify:ai-simulation": "node scripts/verify-ai-simulation.mjs",
     "audit": "node scripts/audit-learning-system.mjs"
   },
   "dependencies": {
