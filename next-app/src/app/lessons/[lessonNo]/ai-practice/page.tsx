@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { Suspense } from 'react'
 import { cookies } from 'next/headers'
 import AiPracticePageClient from '@/components/ai-practice-page-client'
@@ -35,8 +36,16 @@ export default async function AiPracticePage({ params }: Props) {
   }
 
   return (
-    <Suspense fallback={<div className="page-container" style={{ textAlign: 'center', paddingTop: 40 }}>加载中...</div>}>
-      <AiPracticePageClient lessonNo={num} lang={lang} />
-    </Suspense>
+    <main>
+      <div className="page-container" style={{ maxWidth: 1180, margin: '0 auto', padding: '14px 14px 0' }}>
+        <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+          <Link className="btn" href={`/lessons/${num}/ai-simulation`}>进入 AI 会话模拟</Link>
+          <Link className="btn ghost" href="/ai-simulation/history">我的模拟记录</Link>
+        </div>
+      </div>
+      <Suspense fallback={<div className="page-container" style={{ textAlign: 'center', paddingTop: 40 }}>加载中...</div>}>
+        <AiPracticePageClient lessonNo={num} lang={lang} />
+      </Suspense>
+    </main>
   )
 }
