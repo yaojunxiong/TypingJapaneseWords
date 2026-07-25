@@ -4,6 +4,7 @@ import AiDialogueSimulationPreview from '@/components/ai-dialogue-simulation-pre
 import LessonAccessBlocked from '@/components/lesson-access-blocked'
 import MinnaNav from '@/components/minna-nav'
 import TopLabelSync from '@/components/top-label-sync'
+import { loadAiDialogueSimulationDataset } from '@/lib/ai-dialogue-simulation-data'
 import { getLang } from '@/lib/i18n-server'
 import { getServerLessonAccess } from '@/lib/learning-access-server'
 
@@ -34,16 +35,18 @@ export default async function AiSimulationPage({ params }: Props) {
     )
   }
 
-  if (num !== 1) {
+  const dataset = await loadAiDialogueSimulationDataset(num)
+
+  if (!dataset) {
     return (
       <main>
         <MinnaNav active="lessons" />
-        <TopLabelSync label={lang === 'en' ? 'AI Simulation Preview' : 'AI 会话模拟预览'} />
+        <TopLabelSync label={lang === 'en' ? `Lesson ${num} · AI Simulation` : `第${num}课 · AI 会话模拟`} />
         <div className="page-container" style={{ maxWidth: 820, margin: '0 auto', padding: '24px 14px 120px' }}>
           <section className="card" style={{ padding: 20, borderRadius: 20 }}>
             <h1 style={{ margin: 0 }}>AI 会话模拟</h1>
-            <p className="small">当前仅开放第1课数据预览。其他课程会在第1课验收后逐课生成。</p>
-            <Link className="btn" href="/lessons/1/ai-simulation">查看第1课模拟模块</Link>
+            <p className="small">本课尚未找到可用的会话台词数据。</p>
+            <Link className="btn ghost" href={`/lessons/${num}`}>返回课程</Link>
           </section>
         </div>
       </main>
@@ -53,13 +56,15 @@ export default async function AiSimulationPage({ params }: Props) {
   return (
     <main>
       <MinnaNav active="lessons" />
-      <TopLabelSync label={lang === 'en' ? 'Lesson 1 · AI Simulation' : '第1课 · AI 会话模拟'} />
+      <TopLabelSync label={lang === 'en' ? `Lesson ${num} · AI Simulation` : `第${num}课 · AI 会话模拟`} />
       <div className="page-container" style={{ maxWidth: 920, margin: '0 auto', padding: '18px 14px 120px' }}>
         <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 12 }}>
-          <Link className="btn ghost" href="/lessons/1/ai-practice">返回 AI 会话陪练</Link>
-          <Link className="btn ghost" href="/lessons/1/recitation">返回会话背诵</Link>
+          <Link className="btn ghost" href={`/lessons/${num}/ai-practice`}>返回 AI 会话陪练</Link>
+          <Link className="btn ghost" href={`/lessons/${num}/recitation`}>返回会话背诵</Link>
+          {num > 1 ? <Link className="btn ghost" href={`/lessons/${num - 1}/ai-simulation`}>上一课</Link> : null}
+          {num < 50 ? <Link className="btn ghost" href={`/lessons/${num + 1}/ai-simulation`}>下一课</Link> : null}
         </div>
-        <AiDialogueSimulationPreview />
+        <AiDialogueSimulationPreview dataset={dataset} />
       </div>
     </main>
   )
