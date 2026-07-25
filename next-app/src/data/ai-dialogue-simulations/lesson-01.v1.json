@@ -1,0 +1,233 @@
+{
+  "schemaVersion": "1.0",
+  "datasetVersion": "1.0.0",
+  "module": "ai-dialogue-simulation",
+  "lessonId": "lesson-01",
+  "status": "approved-baseline",
+  "language": "ja",
+  "supportLanguage": "zh-CN",
+  "title": { "ja": "初めまして", "zh": "初次见面" },
+  "purpose": "以第1课原始会话为母本，通过角色接龙、分级提示、情绪支持和受控场景变化，帮助学习者重新唤醒并最终独立背诵会话。",
+  "designPrinciples": [
+    "课文原文是唯一背诵母本",
+    "先保留学习者已经答对的部分，再提供最小必要提示",
+    "一次只纠正一个最重要问题",
+    "不使用虚假夸奖，肯定必须具体",
+    "跑题时先接住一次，再用微任务自然拉回",
+    "学习时优先读取预设数据，未覆盖案例进入后续优化队列"
+  ],
+  "scene": {
+    "location": "company_office",
+    "time": "morning",
+    "backgroundZh": "早晨，山田在公司里把新同事迈克·米勒介绍给佐藤。",
+    "imageUrl": "/minna/lessons/lesson-01/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    { "id": "sato", "nameJa": "佐藤", "role": "employee" },
+    { "id": "yamada", "nameJa": "山田", "role": "introducer" },
+    { "id": "miller", "nameJa": "ミラー", "role": "new_employee" }
+  ],
+  "learnerStates": [
+    {
+      "id": "fluent",
+      "description": "能够完整、自然地回答",
+      "teachingAction": "reinforce_and_advance",
+      "emotionGoal": "增强成就感，避免过度夸奖",
+      "feedbackPool": [
+        "很好，这一段已经可以无提示完成。",
+        "你不是在猜，而是在按场景自然输出。",
+        "原文记得很稳，现在可以进入角色互换。",
+        "这次比上一轮更连贯，提示也更少。"
+      ]
+    },
+    {
+      "id": "partial",
+      "description": "能够回答部分内容或存在轻微错误",
+      "teachingAction": "preserve_correct_parts_and_give_minimal_hint",
+      "emotionGoal": "让学习者感到自己已经会了一部分",
+      "feedbackPool": [
+        "已经对了一大半，只差一个连接点。",
+        "主要内容记得，先保留正确部分。",
+        "这不是不会，只是中间那一句暂时断开了。",
+        "不用从头重来，我们只补缺的部分。"
+      ]
+    },
+    {
+      "id": "weak",
+      "description": "只能说出关键词或零散内容",
+      "teachingAction": "chunk_and_model",
+      "emotionGoal": "降低压力，证明记忆仍有入口",
+      "feedbackPool": [
+        "你已经想起关键词，说明记忆入口还在。",
+        "先不追求完整，我们把一句拆成几个小块。",
+        "现在是重新唤醒，不是重新从零开始。",
+        "只跟着说一句，下一步我来带你。"
+      ]
+    },
+    {
+      "id": "blank",
+      "description": "完全无法回答或明确表示不知道",
+      "teachingAction": "recognition_before_recall",
+      "emotionGoal": "消除失败感，从选择和模仿开始",
+      "feedbackPool": [
+        "没关系，我们先从识别开始，不要求马上说。",
+        "今天只找回一句，也算有效复习。",
+        "忘记是正常现象，提示就是用来帮助回忆的。",
+        "先听，再选，再说，不需要一步到位。"
+      ]
+    },
+    {
+      "id": "off_topic_playful",
+      "description": "故意乱答、开玩笑或提出无关问题",
+      "teachingAction": "acknowledge_then_redirect",
+      "emotionGoal": "保留轻松感和自主性，同时回到学习",
+      "feedbackPool": [
+        "这个回答很有创意，而且里面其实有一个正确句型。",
+        "我接到你的玩笑了，现在用十秒完成这一轮。",
+        "先允许你跑题一次，我们把话题拉回来。",
+        "你可以自由发挥，不过这一轮请把课文角色演完。"
+      ]
+    }
+  ],
+  "lines": [
+    {
+      "id": "l01-conv-001",
+      "speakerId": "sato",
+      "speaker": "佐藤",
+      "textJa": "おはようございます。",
+      "textZh": "早上好。",
+      "audioUrl": "/generated/tts/lesson-01/l1-01.mp3",
+      "intent": "morning_greeting",
+      "hints": [
+        { "level": 1, "type": "scene_image", "value": "/minna/lessons/lesson-01/conversation-anime-mobile.webp" },
+        { "level": 2, "type": "background_zh", "value": "早晨，在公司见面。" },
+        { "level": 3, "type": "translation_zh", "value": "早上好。" },
+        { "level": 4, "type": "audio", "value": "/generated/tts/lesson-01/l1-01.mp3" },
+        { "level": 5, "type": "first_part", "value": "おはよう……" },
+        { "level": 6, "type": "full_answer", "value": "おはようございます。" }
+      ],
+      "responseExamples": {
+        "fluent": ["おはようございます。"],
+        "partial": ["おはよう。", "こんにちは。"],
+        "weak": ["おはよう……"],
+        "blank": ["不知道", "忘记了"],
+        "off_topic_playful": ["我今天想吃火锅", "おはようラーメン"]
+      }
+    },
+    {
+      "id": "l01-conv-002",
+      "speakerId": "yamada",
+      "speaker": "山田",
+      "textJa": "おはようございます。佐藤さん、こちらはマイク・ミラーさんです。",
+      "textZh": "早上好。佐藤小姐，这位是迈克·米勒先生。",
+      "audioUrl": "/generated/tts/lesson-01/l1-02.mp3",
+      "intent": "introduce_person",
+      "hints": [
+        { "level": 1, "type": "background_zh", "value": "先回应问候，再把米勒介绍给佐藤。" },
+        { "level": 2, "type": "translation_zh", "value": "佐藤小姐，这位是迈克·米勒先生。" },
+        { "level": 3, "type": "keywords", "value": "佐藤さん・こちらは・マイク・ミラーさん" },
+        { "level": 4, "type": "audio", "value": "/generated/tts/lesson-01/l1-02.mp3" },
+        { "level": 5, "type": "first_part", "value": "佐藤さん、こちらは……" },
+        { "level": 6, "type": "full_answer", "value": "おはようございます。佐藤さん、こちらはマイク・ミラーさんです。" }
+      ],
+      "commonErrors": [
+        { "example": "こちらはマイク・ミラーです。", "feedbackZh": "意思正确。介绍别人时，课文在姓名后使用「さん」。" },
+        { "example": "これはマイク・ミラーさんです。", "feedbackZh": "介绍身边的人时，课文使用礼貌表达「こちらは」。" }
+      ]
+    },
+    {
+      "id": "l01-conv-003",
+      "speakerId": "miller",
+      "speaker": "ミラー",
+      "textJa": "初めまして。マイク・ミラーです。アメリカから来ました。どうぞよろしく。",
+      "textZh": "初次见面。我叫迈克·米勒，来自美国。请多关照。",
+      "audioUrl": "/generated/tts/lesson-01/l1-03.mp3",
+      "intent": "introduce_self",
+      "chunks": [
+        "初めまして。",
+        "マイク・ミラーです。",
+        "アメリカから来ました。",
+        "どうぞよろしく。"
+      ],
+      "hints": [
+        { "level": 1, "type": "background_zh", "value": "米勒第一次见到佐藤，要介绍姓名、来自哪里并礼貌结束。" },
+        { "level": 2, "type": "translation_zh", "value": "初次见面。我叫迈克·米勒，来自美国。请多关照。" },
+        { "level": 3, "type": "keywords", "value": "初めまして・マイク・ミラー・アメリカ・よろしく" },
+        { "level": 4, "type": "audio", "value": "/generated/tts/lesson-01/l1-03.mp3" },
+        { "level": 5, "type": "first_part", "value": "初めまして。マイク・ミラーです。……" },
+        { "level": 6, "type": "full_answer", "value": "初めまして。マイク・ミラーです。アメリカから来ました。どうぞよろしく。" }
+      ],
+      "commonErrors": [
+        { "example": "アメリカ来ました。", "feedbackZh": "中间补上「から」就完整了：アメリカから来ました。" },
+        { "example": "アメリカに住んでいます。", "feedbackZh": "这句是“住在美国”，课文目标是“来自美国”：アメリカから来ました。" }
+      ],
+      "playfulExamples": [
+        { "input": "初めまして。宇宙人です。火星から来ました。", "responseZh": "这个自我介绍很有创意，而且你正确用了「〇〇です」和「〇〇から来ました」。现在切回课文角色：你是マイク・ミラー，来自哪里？" },
+        { "input": "おはようアメリカよろしくラーメン", "responseZh": "你把这一课的几个词都召集到一起了（笑）。其中「アメリカ」和「よろしく」确实属于这段会话。我们把它们放回正确位置。" }
+      ]
+    },
+    {
+      "id": "l01-conv-004",
+      "speakerId": "sato",
+      "speaker": "佐藤",
+      "textJa": "佐藤けい子です。どうぞよろしく。",
+      "textZh": "我是佐藤惠子。请多关照。",
+      "audioUrl": "/generated/tts/lesson-01/l1-04.mp3",
+      "intent": "respond_self_introduction",
+      "hints": [
+        { "level": 1, "type": "translation_zh", "value": "我是佐藤惠子。请多关照。" },
+        { "level": 2, "type": "keywords", "value": "佐藤けい子・よろしく" },
+        { "level": 3, "type": "audio", "value": "/generated/tts/lesson-01/l1-04.mp3" },
+        { "level": 4, "type": "first_part", "value": "佐藤けい子です。……" },
+        { "level": 5, "type": "full_answer", "value": "佐藤けい子です。どうぞよろしく。" }
+      ]
+    }
+  ],
+  "practiceModes": [
+    "whole_lesson_recall",
+    "role_chain",
+    "role_swap",
+    "guided_recall",
+    "controlled_scene"
+  ],
+  "controlledScenes": [
+    {
+      "id": "self_identity",
+      "instructionZh": "使用自己的姓名和国家完成自我介绍。",
+      "templateJa": "初めまして。{{name}}です。{{country}}から来ました。どうぞよろしく。"
+    },
+    {
+      "id": "introduce_other",
+      "instructionZh": "把另一位人物介绍给佐藤。",
+      "templateJa": "佐藤さん、こちらは{{person}}さんです。"
+    }
+  ],
+  "runtimePolicy": {
+    "maxOffTopicTurns": 2,
+    "onThirdOffTopic": "offer_light_mode_or_end",
+    "correctionLimitPerTurn": 1,
+    "preferPresetData": true,
+    "captureUnmatchedInputs": true
+  },
+  "optimizationCapture": {
+    "fields": [
+      "lessonId",
+      "nodeId",
+      "targetText",
+      "learnerInput",
+      "detectedState",
+      "matchedRuleId",
+      "responseUsed",
+      "hintLevelUsed",
+      "retryInput",
+      "finalOutcome",
+      "needsReview"
+    ],
+    "reviewFlow": [
+      "deidentify",
+      "ai_cluster",
+      "human_review",
+      "publish_new_version"
+    ]
+  }
+}
