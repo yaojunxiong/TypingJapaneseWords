@@ -4,7 +4,11 @@ import Link from 'next/link'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import StudyMobileChrome from '@/components/study-mobile-chrome'
 import JimmySenseiPanel from '@/components/jimmy-sensei-panel'
-import { getAiPracticeEnabledLessonLabel, isAiPracticeEnabledLesson } from '@/lib/ai-practice-config'
+import {
+  AI_PRACTICE_ENABLED_LESSON_MIN,
+  getAiPracticeEnabledLessonLabel,
+  isAiPracticeEnabledLesson,
+} from '@/lib/ai-practice-config'
 import { loadRecitationLesson } from '@/lib/recitation-lesson'
 import { recordLearningEvent } from '@/lib/learning-event-log'
 import type { Lang } from '@/lib/i18n'
@@ -161,7 +165,9 @@ export default function AiPracticePageClient({ lessonNo, lang }: Props) {
         <section className="card" style={{ padding: 20 }}>
           <h1 style={{ margin: 0, fontSize: 24 }}>AI 会话陪练</h1>
           <p className="small">AI 会话陪练当前开放{getAiPracticeEnabledLessonLabel()}。请先完成已开放课程的角色扮演练习。</p>
-          <Link className="btn" href="/lessons/1/ai-practice">去第 1 课 AI 会话陪练</Link>
+          <Link className="btn" href={`/lessons/${AI_PRACTICE_ENABLED_LESSON_MIN}/ai-practice`}>
+            去第 {AI_PRACTICE_ENABLED_LESSON_MIN} 课 AI 会话陪练
+          </Link>
         </section>
       </div>
     )

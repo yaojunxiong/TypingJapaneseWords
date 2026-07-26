@@ -10,10 +10,12 @@
     "publish-original-audio-videos": "tsx --env-file=.env.local scripts/publish-original-audio-videos.ts",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
+    "test": "node --experimental-test-module-mocks --import=tsx --test src/lib/ai-dialogue-simulation.test.ts src/lib/ai-simulation-admin-action.test.mjs src/lib/ai-simulation-admin-page.test.mjs src/lib/ai-simulation-admin.test.ts src/lib/ai-simulation-history.test.ts src/lib/ai-simulation-observation-route.test.mjs src/lib/recitation-audio.test.ts src/lib/recitation-video-versions.test.ts src/lib/sensei.test.ts src/lib/study-service/study-content-api.test.ts src/utils/supabase/cookie-options.test.ts",
+    "test:ai-simulation": "node --experimental-test-module-mocks --import=tsx --test src/lib/ai-dialogue-simulation.test.ts src/lib/ai-simulation-admin-action.test.mjs src/lib/ai-simulation-admin-page.test.mjs src/lib/ai-simulation-admin.test.ts src/lib/ai-simulation-history.test.ts src/lib/ai-simulation-observation-route.test.mjs src/utils/supabase/cookie-options.test.ts",
     "verify:lessons": "node scripts/verify-lessons.mjs",
     "verify:recitation": "node scripts/verify-recitation.mjs",
-    "verify:ai-simulation": "node scripts/verify-ai-simulation.mjs",
+    "verify:ai-simulation": "node scripts/verify-ai-simulation.mjs && npm run test:ai-simulation",
     "audit": "node scripts/audit-learning-system.mjs"
   },
   "dependencies": {

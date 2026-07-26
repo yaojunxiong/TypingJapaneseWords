@@ -11,7 +11,7 @@ function normalize(value: string): string {
   return value.replace(/[\s。！？、・,.!?「」]/g, '').toLowerCase()
 }
 
-function classify(input: string, target: string): LearnerState {
+export function classifyLearnerInput(input: string, target: string): LearnerState {
   const clean = input.trim()
   if (!clean || /不知道|忘了|不会|想不起来|わかりません|忘れました/.test(clean)) return 'blank'
   if (/火锅|拉面|女朋友|宇宙人|火星|不说|能怎么样|哈哈|笑死|天气|吃什么|游戏|睡觉/.test(clean)) return 'off_topic_playful'
@@ -99,7 +99,7 @@ export default function AiDialogueSimulationPreview({ dataset }: Props) {
   }
 
   function evaluate() {
-    const detected = classify(input, line.targetText)
+    const detected = classifyLearnerInput(input, line.targetText)
     const config = dataset.learnerStates[detected]
     const pool = config.feedbackPool || []
     let next = pool[Math.floor(Math.random() * Math.max(pool.length, 1))] || ''
