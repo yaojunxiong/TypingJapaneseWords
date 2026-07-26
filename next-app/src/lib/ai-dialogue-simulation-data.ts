@@ -118,13 +118,41 @@ function opening(text: string): string {
   return trimmed.length <= 6 ? trimmed.slice(0, 1) : trimmed.slice(0, Math.min(6, Math.ceil(trimmed.length / 3)))
 }
 
+const KEYWORD_STOP_WORDS = new Set([
+  'は', 'が', 'を', 'に', 'へ', 'で', 'と', 'も', 'の', 'か', 'ね', 'よ',
+  'な', 'や', 'し', 'て', 'た', 'だ', 'です', 'ます', 'まし', 'した', 'ご', 'ざ', 'い',
+])
+
+function normalizedHintText(text: string): string {
+  return text.replace(/[\s。、「」！？!?\u30fb/.…]/g, '')
+}
+
+function fallbackKeyword(text: string): string {
+  const compact = normalizedHintText(text)
+  if (!compact) return ''
+  if (compact.length === 1) return '一个字的短句'
+  const clueLength = Math.max(1, Math.min(6, Math.ceil(compact.length / 2)))
+  return `${compact.slice(0, clueLength)}…`
+}
+
 function keywords(text: string): string {
-  return text
-    .replace(/[。、「」！？!?・]/g, ' ')
-    .split(/\s+/)
+  const compact = normalizedHintText(text)
+  if (!compact) return ''
+
+  const segmenter = new Intl.Segmenter('ja', { granularity: 'word' })
+  const candidates = Array.from(segmenter.segment(text))
+    .filter(segment => segment.isWordLike)
+    .map(segment => segment.segment.trim())
     .filter(Boolean)
-    .slice(0, 4)
-    .join(' / ')
+    .filter(segment => !KEYWORD_STOP_WORDS.has(segment))
+    .filter(segment => segment.length > 1 || /[\p{Script=Han}\p{Script=Katakana}\p{Number}A-Za-z]/u.test(segment))
+
+  const unique = Array.from(new Set(candidates)).slice(0, 4)
+  const hint = unique.join(' / ')
+
+  // Japanese commonly has no spaces. If segmentation yields the complete answer
+  // (especially for short fixed phrases), reveal only a deterministic partial clue.
+  return hint && normalizedHintText(hint) !== compact ? hint : fallbackKeyword(text)
 }
 
 function uniqueSpeakers(lines: RecitationLine[]): string[] {

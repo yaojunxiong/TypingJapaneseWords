@@ -1,17 +1,19 @@
 import { createServerClient, type CookieOptions } from '@supabase/ssr'
 import { cookies } from 'next/headers'
 import { getSafeSupabasePublicConfig } from '@/utils/supabase/config'
+import { getSupabaseCookieOptions } from '@/utils/supabase/cookie-options'
 
 export const createClient = (
   cookieStore: Awaited<ReturnType<typeof cookies>>
 ) => {
   const { url, key } = getSafeSupabasePublicConfig()
+  const cookieOptions = getSupabaseCookieOptions()
   return createServerClient(url, key, {
     cookieOptions: {
-      domain: process.env.NODE_ENV === 'production' ? '.jimmyyao.com' : undefined,
+      domain: cookieOptions.domain,
       path: '/',
       sameSite: 'lax',
-      secure: process.env.NODE_ENV === 'production'
+      secure: cookieOptions.secure
     },
     cookies: {
       getAll() {
@@ -24,10 +26,10 @@ export const createClient = (
           cookiesToSet.forEach(({ name, value, options }) =>
             cookieStore.set(name, value, {
               ...options,
-              domain: process.env.NODE_ENV === 'production' ? '.jimmyyao.com' : undefined,
+              domain: cookieOptions.domain,
               path: options.path || '/',
               sameSite: options.sameSite || 'lax',
-              secure: process.env.NODE_ENV === 'production'
+              secure: cookieOptions.secure
             })
           )
         } catch {

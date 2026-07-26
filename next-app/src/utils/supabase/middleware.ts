@@ -4,6 +4,7 @@ import {
   getSafeSupabasePublicConfig,
   hasSupabasePublicEnv
 } from '@/utils/supabase/config'
+import { getSupabaseCookieOptions } from '@/utils/supabase/cookie-options'
 
 export const createClient = async (request: NextRequest) => {
   let supabaseResponse = NextResponse.next({
@@ -17,13 +18,14 @@ export const createClient = async (request: NextRequest) => {
   }
 
   const { url, key } = getSafeSupabasePublicConfig()
+  const cookieOptions = getSupabaseCookieOptions()
 
   const supabase = createServerClient(url, key, {
     cookieOptions: {
-      domain: process.env.NODE_ENV === 'production' ? '.jimmyyao.com' : undefined,
+      domain: cookieOptions.domain,
       path: '/',
       sameSite: 'lax',
-      secure: process.env.NODE_ENV === 'production'
+      secure: cookieOptions.secure
     },
     cookies: {
       getAll() {
@@ -37,10 +39,10 @@ export const createClient = async (request: NextRequest) => {
         cookiesToSet.forEach(({ name, value, options }) =>
           supabaseResponse.cookies.set(name, value, {
             ...options,
-            domain: process.env.NODE_ENV === 'production' ? '.jimmyyao.com' : undefined,
+            domain: cookieOptions.domain,
             path: options.path || '/',
             sameSite: options.sameSite || 'lax',
-            secure: process.env.NODE_ENV === 'production'
+            secure: cookieOptions.secure
           })
         )
       }
