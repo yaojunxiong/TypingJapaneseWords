@@ -14,7 +14,7 @@ import {
 } from '@/lib/ai-dialogue-simulation-data'
 import type { RecitationLesson } from '@/types/recitation'
 import {
-  anonymizeLearnerInput,
+  maskCommonIdentifiers,
   parseAiSimulationReviewAction,
   parseAiSimulationReviewFilters,
   reviewStatusForAction,
@@ -210,15 +210,15 @@ describe('AI simulation navigation and observation security contracts', () => {
     assert.doesNotMatch(policyMigration, /public\.is_admin_user|needs_review = true/i)
   })
 
-  test('admin review input is de-identified and decisions stay allowlisted', () => {
-    const anonymized = anonymizeLearnerInput(
+  test('admin review masks common identifiers and decisions stay allowlisted', () => {
+    const masked = maskCommonIdentifiers(
       `mail private@example.com url https://example.com phone +81 90-1234-5678 ${'x'.repeat(400)}`,
     )
 
-    assert.match(anonymized, /\[邮箱已隐藏\]/)
-    assert.match(anonymized, /\[链接已隐藏\]/)
-    assert.match(anonymized, /\[号码已隐藏\]/)
-    assert.ok(anonymized.length <= 301)
+    assert.match(masked, /\[邮箱已隐藏\]/)
+    assert.match(masked, /\[链接已隐藏\]/)
+    assert.match(masked, /\[号码已隐藏\]/)
+    assert.ok(masked.length <= 301)
     assert.equal(parseAiSimulationReviewAction('accept'), 'accept')
     assert.equal(parseAiSimulationReviewAction('delete'), null)
     assert.equal(reviewStatusForAction('needs_rule'), 'needs_rule')

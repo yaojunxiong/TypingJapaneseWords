@@ -88,7 +88,7 @@ export function isUuid(value: unknown): value is string {
   return typeof value === 'string' && UUID_PATTERN.test(value)
 }
 
-export function anonymizeLearnerInput(value: unknown) {
+export function maskCommonIdentifiers(value: unknown) {
   const source = typeof value === 'string' ? value.trim() : ''
   if (!source) return '（空白回答）'
 

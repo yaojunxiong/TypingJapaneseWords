@@ -4,7 +4,7 @@ import MinnaNav from '@/components/minna-nav'
 import { checkAdminAccess } from '@/lib/admin-auth'
 import {
   AI_SIMULATION_STATES,
-  anonymizeLearnerInput,
+  maskCommonIdentifiers,
   nextUtcDate,
   parseAiSimulationReviewFilters,
 } from '@/lib/ai-simulation-admin'
@@ -189,7 +189,7 @@ export default async function AdminAiSimulationObservationsPage({
                   <span className="small">{formatDateTime(observation.created_at)}</span>
                 </div>
                 <p style={{ whiteSpace: 'pre-wrap', overflowWrap: 'anywhere', margin: '12px 0' }}>
-                  {anonymizeLearnerInput(observation.learner_input)}
+                  {maskCommonIdentifiers(observation.learner_input)}
                 </p>
                 <p className="small" style={{ margin: '0 0 12px' }}>
                   {stateLabels[observation.detected_state] || observation.detected_state}

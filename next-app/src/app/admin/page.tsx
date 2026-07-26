@@ -685,7 +685,7 @@ export default async function AdminPage({
     {
       icon: '🧠',
       label: tr(lang, 'AI 模拟审核', 'AI Simulation Review'),
-      description: tr(lang, '查看去标识化的待审核回答，并标记接受、忽略、需要规则或内容修复。', 'Review de-identified learner responses and mark accept, ignore, rule work, or content fixes.'),
+      description: tr(lang, '查看已遮盖常见身份信息的待审核回答，并标记接受、忽略、需要规则或内容修复。', 'Review responses with common identifiers masked, then mark accept, ignore, rule work, or content fixes.'),
       status: 'available',
       href: '/admin/ai-simulation-observations',
     },

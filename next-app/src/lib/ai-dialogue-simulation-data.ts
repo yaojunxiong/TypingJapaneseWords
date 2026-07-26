@@ -208,7 +208,7 @@ export function buildSimulationDataset(lessonNo: number, lesson: RecitationLesso
     observationSchema: {
       lessonId: '课程ID',
       nodeId: '当前模拟节点ID',
-      learnerInput: '去标识化后的学习者原始回答',
+      learnerInput: '仅当前用户和受保护审核流程可访问的学习者原始回答',
       detectedState: 'fluent | partial | weak | blank | off_topic_playful',
       matchedRuleId: '命中的预设规则ID；未命中时为空',
       hintLevel: '最终使用的提示等级',

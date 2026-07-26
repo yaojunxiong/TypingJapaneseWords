@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict'
 import { describe, test } from 'node:test'
 import {
-  anonymizeLearnerInput,
+  maskCommonIdentifiers,
   parseAiSimulationReviewAction,
   parseAiSimulationReviewFilters,
   reviewStatusForAction,
@@ -56,16 +56,16 @@ describe('AI simulation administrator helpers', () => {
     const email = 'private@example.com'
     const url = 'https://example.com/private'
     const phone = '+81 90-1234-5678'
-    const anonymized = anonymizeLearnerInput(
+    const masked = maskCommonIdentifiers(
       `${email} ${url} ${phone} ${'x'.repeat(400)}`
     )
 
-    assert.equal(anonymized.includes(email), false)
-    assert.equal(anonymized.includes(url), false)
-    assert.equal(anonymized.includes(phone), false)
-    assert.match(anonymized, /\[邮箱已隐藏\]/)
-    assert.match(anonymized, /\[链接已隐藏\]/)
-    assert.match(anonymized, /\[号码已隐藏\]/)
-    assert.ok(anonymized.length <= 301)
+    assert.equal(masked.includes(email), false)
+    assert.equal(masked.includes(url), false)
+    assert.equal(masked.includes(phone), false)
+    assert.match(masked, /\[邮箱已隐藏\]/)
+    assert.match(masked, /\[链接已隐藏\]/)
+    assert.match(masked, /\[号码已隐藏\]/)
+    assert.ok(masked.length <= 301)
   })
 })
