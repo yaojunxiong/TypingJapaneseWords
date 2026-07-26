@@ -38,9 +38,59 @@ jobs:
       - name: Build
         run: npm run build
 
-  deploy-and-test:
+  github-token-boundary:
+    name: Verify GITHUB_TOKEN repository boundary
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Prove the source token cannot access the external repository
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          SOURCE_REPOSITORY: ${{ github.repository }}
+          TARGET_REPOSITORY: yaojunxiong/jimmyyao-auto-test
+        run: |
+          set -euo pipefail
+
+          RESPONSE_FILE="$RUNNER_TEMP/github-token-repositories.json"
+          trap 'rm -f "$RESPONSE_FILE"' EXIT
+
+          HTTP_CODE="$(curl --silent --show-error \
+            --output "$RESPONSE_FILE" \
+            --write-out '%{http_code}' \
+            --header 'Accept: application/vnd.github+json' \
+            --header "Authorization: Bearer ${GITHUB_TOKEN}" \
+            --header 'X-GitHub-Api-Version: 2022-11-28' \
+            'https://api.github.com/installation/repositories?per_page=100')"
+
+          if [ "$HTTP_CODE" != "200" ]; then
+            echo "::error title=GITHUB_TOKEN boundary audit failed::GitHub returned HTTP ${HTTP_CODE}; repository scope could not be proven."
+            exit 1
+          fi
+
+          SOURCE_COUNT="$(jq --arg repository "$SOURCE_REPOSITORY" '[.repositories[] | select(.full_name == $repository)] | length' "$RESPONSE_FILE")"
+          TARGET_COUNT="$(jq --arg repository "$TARGET_REPOSITORY" '[.repositories[] | select(.full_name == $repository)] | length' "$RESPONSE_FILE")"
+
+          if [ "$SOURCE_COUNT" != "1" ] || [ "$TARGET_COUNT" != "0" ]; then
+            echo "::error title=Unexpected GITHUB_TOKEN scope::Expected source-only access; refusing to use this token for cross-repository dispatch."
+            exit 1
+          fi
+
+          echo "Verified: this workflow token can access the source repository but not the external test repository."
+          {
+            echo "### GITHUB_TOKEN permission boundary"
+            echo "- Source repository visible: yes"
+            echo "- External test repository visible: no"
+            echo "- Cross-repository dispatch with GITHUB_TOKEN: prohibited"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  production-verification:
+    name: Production verification
     needs: build-and-verify
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: read
     steps:
       - uses: actions/checkout@v6
 
@@ -71,6 +121,13 @@ jobs:
 
                   if [ "$STATE" = "success" ]; then
                     echo "Vercel production deployment completed!"
+                    {
+                      echo "### Vercel deployment metadata"
+                      echo "- Result: PASS"
+                      echo "- Deployment ID: \`${DEPLOY_ID}\`"
+                      echo "- Environment: ${VERCEL_ENV}"
+                      echo "- State: ${STATE}"
+                    } >> "$GITHUB_STEP_SUMMARY"
                     exit 0
                   fi
 
@@ -89,11 +146,21 @@ jobs:
           if [ "$FOUND_DEPLOYMENT" = "true" ]; then
             echo "Timed out waiting for Vercel deployment to become ready."
             echo "This means deployment metadata exists but did not report success in time."
+            {
+              echo "### Vercel deployment metadata"
+              echo "- Result: FAIL"
+              echo "- Reason: deployment metadata existed but did not report success in time"
+            } >> "$GITHUB_STEP_SUMMARY"
             exit 1
           fi
 
           echo "No Vercel deployment metadata appeared for this SHA."
           echo "Direct production checks must prove the production alias is serving this SHA."
+          {
+            echo "### Vercel deployment metadata"
+            echo "- Result: metadata unavailable"
+            echo "- Fallback: the next step must prove the production alias is serving the expected SHA"
+          } >> "$GITHUB_STEP_SUMMARY"
           exit 0
 
       - name: Verify Production SHA and smoke routes
@@ -140,6 +207,14 @@ jobs:
 
             if [ "$FAILED" = "false" ]; then
               echo "Production alias is serving the current SHA and smoke routes responded with 200"
+              {
+                echo "### Production verification"
+                echo "- Result: PASS"
+                echo "- URL: ${URL}"
+                echo "- Expected commit: \`${SHA}\`"
+                echo "- Served commit: \`${PRODUCTION_SHA}\`"
+                echo "- Smoke routes: PASS"
+              } >> "$GITHUB_STEP_SUMMARY"
               exit 0
             fi
 
@@ -149,14 +224,174 @@ jobs:
           echo "Production verification failed: could not prove current SHA and healthy smoke routes."
           exit 1
 
+  external-ai-simulation-smoke:
+    name: External AI Simulation smoke (no PAT)
+    needs:
+      - production-verification
+      - github-token-boundary
+    permissions:
+      contents: read
+    uses: yaojunxiong/jimmyyao-auto-test/.github/workflows/ai-simulation-smoke.yml@1a2ca4b8e5d6deac38bbebf27f325ccafcfbae6e
+    with:
+      base_url: https://study.jimmyyao.com
+      test_ref: 1a2ca4b8e5d6deac38bbebf27f325ccafcfbae6e
+
+  external-full-regression-dispatch:
+    name: External full regression dispatch (advisory)
+    needs: external-ai-simulation-smoke
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    # The current repository's GITHUB_TOKEN is intentionally not used here: it
+    # cannot be assumed to have Actions write access to a different repository.
+    permissions: {}
+    steps:
+      - name: Select external-test credential
+        id: external-auth
+        env:
+          APP_CLIENT_ID: ${{ vars.AUTO_TEST_APP_CLIENT_ID }}
+          APP_PRIVATE_KEY: ${{ secrets.AUTO_TEST_APP_PRIVATE_KEY }}
+          AUTO_TEST_PAT: ${{ secrets.AUTO_TEST_PAT }}
+        run: |
+          set -euo pipefail
+
+          if [ -n "${APP_CLIENT_ID:-}" ] && [ -n "${APP_PRIVATE_KEY:-}" ]; then
+            echo "method=app" >> "$GITHUB_OUTPUT"
+            echo "Using a repository-scoped GitHub App installation token."
+            exit 0
+          fi
+
+          if [ -n "${APP_CLIENT_ID:-}" ] || [ -n "${APP_PRIVATE_KEY:-}" ]; then
+            echo "::error title=Incomplete GitHub App configuration::Configure both AUTO_TEST_APP_CLIENT_ID and AUTO_TEST_APP_PRIVATE_KEY. No credential value was printed."
+            exit 1
+          fi
+
+          if [ -n "${AUTO_TEST_PAT:-}" ]; then
+            echo "method=pat" >> "$GITHUB_OUTPUT"
+            echo "GitHub App credentials are not configured; using the fine-grained AUTO_TEST_PAT fallback."
+            exit 0
+          fi
+
+          echo "::error title=External auto-test credential missing::Configure a target-only GitHub App, or AUTO_TEST_PAT as a fine-grained fallback."
+          exit 1
+
+      - name: Create target-scoped GitHub App token
+        if: steps.external-auth.outputs.method == 'app'
+        id: app-token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.AUTO_TEST_APP_CLIENT_ID }}
+          private-key: ${{ secrets.AUTO_TEST_APP_PRIVATE_KEY }}
+          owner: yaojunxiong
+          repositories: jimmyyao-auto-test
+          permission-actions: write
+
+      - name: Verify GitHub App repository boundary
+        if: steps.external-auth.outputs.method == 'app'
+        env:
+          APP_TOKEN: ${{ steps.app-token.outputs.token }}
+        run: |
+          set -euo pipefail
+
+          RESPONSE_FILE="$RUNNER_TEMP/app-token-repositories.json"
+          trap 'rm -f "$RESPONSE_FILE"' EXIT
+
+          HTTP_CODE="$(curl --silent --show-error \
+            --output "$RESPONSE_FILE" \
+            --write-out '%{http_code}' \
+            --header 'Accept: application/vnd.github+json' \
+            --header "Authorization: Bearer ${APP_TOKEN}" \
+            --header 'X-GitHub-Api-Version: 2022-11-28' \
+            'https://api.github.com/installation/repositories?per_page=100')"
+
+          TARGET_COUNT="$(jq '[.repositories[] | select(.full_name == "yaojunxiong/jimmyyao-auto-test")] | length' "$RESPONSE_FILE" 2>/dev/null || echo 0)"
+          SOURCE_COUNT="$(jq '[.repositories[] | select(.full_name == "yaojunxiong/TypingJapaneseWords")] | length' "$RESPONSE_FILE" 2>/dev/null || echo 0)"
+
+          if [ "$HTTP_CODE" != "200" ] || [ "$TARGET_COUNT" != "1" ] || [ "$SOURCE_COUNT" != "0" ]; then
+            echo "::error title=Unexpected GitHub App scope::The installation token must reach only jimmyyao-auto-test. No response body was printed."
+            exit 1
+          fi
+
+          echo "Verified: GitHub App token is limited to the external test repository."
+
       - name: Trigger Auto Test
         env:
-          GH_TOKEN: ${{ secrets.AUTO_TEST_PAT }}
+          APP_TOKEN: ${{ steps.app-token.outputs.token }}
+          AUTO_TEST_PAT: ${{ secrets.AUTO_TEST_PAT }}
+          AUTH_METHOD: ${{ steps.external-auth.outputs.method }}
         run: |
-          echo "Triggering auto-test on yaojunxiong/jimmyyao-auto-test..."
-          gh workflow run test.yml \
-            --repo yaojunxiong/jimmyyao-auto-test \
-            --ref main 2>&1
-          echo ""
-          echo "Auto test triggered!"
-          echo "https://github.com/yaojunxiong/jimmyyao-auto-test/actions"
+          set -euo pipefail
+
+          REPOSITORY="yaojunxiong/jimmyyao-auto-test"
+          WORKFLOW="test.yml"
+          RUNS_URL="https://github.com/${REPOSITORY}/actions"
+
+          fail_dispatch() {
+            MESSAGE="$1"
+            echo "::error title=External auto-test dispatch failed::${MESSAGE}"
+            {
+              echo "### External auto-test dispatch"
+              echo "- Result: FAIL"
+              echo "- Production verification: PASS"
+              echo "- Credential-free AI Simulation smoke: PASS"
+              echo "- Reason: ${MESSAGE}"
+              echo "- Runs: ${RUNS_URL}"
+            } >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          }
+
+          case "$AUTH_METHOD" in
+            app)
+              DISPATCH_TOKEN="$APP_TOKEN"
+              CREDENTIAL_LABEL="GitHub App installation token"
+              ;;
+            pat)
+              DISPATCH_TOKEN="$AUTO_TEST_PAT"
+              CREDENTIAL_LABEL="fine-grained AUTO_TEST_PAT fallback"
+              ;;
+            *)
+              fail_dispatch "No supported external-test credential was selected."
+              ;;
+          esac
+
+          echo "Requesting workflow_dispatch for ${REPOSITORY}/${WORKFLOW} with ${CREDENTIAL_LABEL}..."
+          HTTP_CODE="$(curl --silent --show-error \
+            --output /dev/null \
+            --write-out '%{http_code}' \
+            --request POST \
+            --header 'Accept: application/vnd.github+json' \
+            --header "Authorization: Bearer ${DISPATCH_TOKEN}" \
+            --header 'X-GitHub-Api-Version: 2022-11-28' \
+            "https://api.github.com/repos/${REPOSITORY}/actions/workflows/${WORKFLOW}/dispatches" \
+            --data '{"ref":"main"}')" || fail_dispatch "GitHub API request failed before an HTTP response was received."
+
+          case "$HTTP_CODE" in
+            204)
+              echo "External auto-test dispatch accepted (HTTP 204)."
+              {
+                echo "### External auto-test dispatch"
+                echo "- Result: PASS"
+                echo "- Production verification: PASS"
+                echo "- Credential-free AI Simulation smoke: PASS"
+                echo "- Workflow: ${REPOSITORY}/${WORKFLOW}"
+                echo "- Runs: ${RUNS_URL}"
+              } >> "$GITHUB_STEP_SUMMARY"
+              ;;
+            401)
+              if [ "$AUTH_METHOD" = "pat" ]; then
+                fail_dispatch "GitHub returned HTTP 401. AUTO_TEST_PAT is invalid, expired, or revoked. Replace it without reusing a local gh credential."
+              fi
+              fail_dispatch "GitHub returned HTTP 401 for the GitHub App installation token. Check the App client ID, private key, and installation."
+              ;;
+            403)
+              fail_dispatch "GitHub returned HTTP 403. The credential is valid but lacks Actions read/write access to ${REPOSITORY}, or an organization policy blocks it."
+              ;;
+            404)
+              fail_dispatch "GitHub returned HTTP 404. Confirm that ${REPOSITORY} is selected for the credential and ${WORKFLOW} exists on ref main."
+              ;;
+            422)
+              fail_dispatch "GitHub returned HTTP 422. Confirm that ${WORKFLOW} supports workflow_dispatch and ref main exists."
+              ;;
+            *)
+              fail_dispatch "GitHub returned unexpected HTTP ${HTTP_CODE}. No credential or response body was printed."
+              ;;
+          esac
