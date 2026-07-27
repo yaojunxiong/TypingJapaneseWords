@@ -1,0 +1,412 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 50,
+  "lessonId": "lesson-50",
+  "title": {
+    "ja": "第50課",
+    "zh": "第50课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-50.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-50.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "学习谦让语的基本形式 おVします / ごNします，以及常用特殊谦让动词。",
+    "image": "/minna/lessons/lesson-50/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "司会者"
+    },
+    {
+      "id": "speaker-02",
+      "name": "ミラー"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-50-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "司会者",
+      "targetText": "優勝おめでとうございます。すばらしいスピーチでした。",
+      "translationZh": "恭喜你获得第一名！演讲非常精彩。",
+      "kana": "ゆうしょうおめでとうございます。すばらしいすぴーちでした。",
+      "audio": "/generated/tts/lesson-50/l50-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习谦让语的基本形式 おVします / ごNします，以及常用特殊谦让动词。",
+        "zh": "恭喜你获得第一名！演讲非常精彩。",
+        "keywords": [
+          "優勝おめでとうございますすばらしいスピーチでした"
+        ],
+        "audio": "/generated/tts/lesson-50/l50-01.mp3",
+        "opening": "優勝お",
+        "answer": "優勝おめでとうございます。すばらしいスピーチでした。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-50-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-50-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "ミラー",
+      "targetText": "ありがとうございます。",
+      "translationZh": "谢谢。",
+      "kana": "ありがとうございます。",
+      "audio": "/generated/tts/lesson-50/l50-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习谦让语的基本形式 おVします / ごNします，以及常用特殊谦让动词。",
+        "zh": "谢谢。",
+        "keywords": [
+          "ありがとうございます"
+        ],
+        "audio": "/generated/tts/lesson-50/l50-02.mp3",
+        "opening": "ありが",
+        "answer": "ありがとうございます。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-50-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-50-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "司会者",
+      "targetText": "緊張なさいましたか。",
+      "translationZh": "您紧张吗？",
+      "kana": "きんちょうなさいましたか。",
+      "audio": "/generated/tts/lesson-50/l50-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习谦让语的基本形式 おVします / ごNします，以及常用特殊谦让动词。",
+        "zh": "您紧张吗？",
+        "keywords": [
+          "緊張なさいましたか"
+        ],
+        "audio": "/generated/tts/lesson-50/l50-03.mp3",
+        "opening": "緊張な",
+        "answer": "緊張なさいましたか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-50-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-50-node-04",
+      "order": 4,
+      "speakerId": "speaker-02",
+      "speaker": "ミラー",
+      "targetText": "はい、とても緊張いたしました。",
+      "translationZh": "是的。我非常紧张。",
+      "kana": "はい、とてもきんちょういたしました。",
+      "audio": "/generated/tts/lesson-50/l50-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习谦让语的基本形式 おVします / ごNします，以及常用特殊谦让动词。",
+        "zh": "是的。我非常紧张。",
+        "keywords": [
+          "はいとても緊張いたしました"
+        ],
+        "audio": "/generated/tts/lesson-50/l50-04.mp3",
+        "opening": "はい",
+        "answer": "はい、とても緊張いたしました。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-50-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-50-node-05",
+      "order": 5,
+      "speakerId": "speaker-01",
+      "speaker": "司会者",
+      "targetText": "練習は大変でしたか。",
+      "translationZh": "练习辛苦吗？",
+      "kana": "れんしゅうはたいへんでしたか。",
+      "audio": "/generated/tts/lesson-50/l50-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习谦让语的基本形式 おVします / ごNします，以及常用特殊谦让动词。",
+        "zh": "练习辛苦吗？",
+        "keywords": [
+          "練習は大変でしたか"
+        ],
+        "audio": "/generated/tts/lesson-50/l50-05.mp3",
+        "opening": "練習は",
+        "answer": "練習は大変でしたか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-50-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-50-node-06",
+      "order": 6,
+      "speakerId": "speaker-02",
+      "speaker": "ミラー",
+      "targetText": "ええ。忙しくて、なかなか練習の時間がありませんでした。",
+      "translationZh": "嗯，是的。因为很忙，没什么时间练习。",
+      "kana": "ええ。いそがしくて、なかなかれんしゅうのじかんがありませんでした。",
+      "audio": "/generated/tts/lesson-50/l50-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习谦让语的基本形式 おVします / ごNします，以及常用特殊谦让动词。",
+        "zh": "嗯，是的。因为很忙，没什么时间练习。",
+        "keywords": [
+          "ええ忙しくてなかなか練習の時間がありませんでした"
+        ],
+        "audio": "/generated/tts/lesson-50/l50-06.mp3",
+        "opening": "ええ",
+        "answer": "ええ。忙しくて、なかなか練習の時間がありませんでした。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-50-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-50-node-07",
+      "order": 7,
+      "speakerId": "speaker-01",
+      "speaker": "司会者",
+      "targetText": "賞金は何にお使いになりますか。",
+      "translationZh": "奖金您打算用来做什么？",
+      "kana": "しょうきんはなににおつかいになりますか。",
+      "audio": "/generated/tts/lesson-50/l50-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习谦让语的基本形式 おVします / ごNします，以及常用特殊谦让动词。",
+        "zh": "奖金您打算用来做什么？",
+        "keywords": [
+          "賞金は何にお使いになりますか"
+        ],
+        "audio": "/generated/tts/lesson-50/l50-07.mp3",
+        "opening": "賞金は",
+        "answer": "賞金は何にお使いになりますか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-50-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-50-node-08",
+      "order": 8,
+      "speakerId": "speaker-02",
+      "speaker": "ミラー",
+      "targetText": "そうですね。わたしは動物が好きで、子どものときからアフリカへ行くのが夢でした。",
+      "translationZh": "这个嘛……我喜欢动物，从小我的梦想就是去非洲。",
+      "kana": "そうですね。わたしはどうぶつがすきで、こどものときからあふりかへいくのがゆめでした。",
+      "audio": "/generated/tts/lesson-50/l50-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习谦让语的基本形式 おVします / ごNします，以及常用特殊谦让动词。",
+        "zh": "这个嘛……我喜欢动物，从小我的梦想就是去非洲。",
+        "keywords": [
+          "そうですねわたしは動物が好きで子どものときからアフリカへ行くのが夢でした"
+        ],
+        "audio": "/generated/tts/lesson-50/l50-08.mp3",
+        "opening": "そうで",
+        "answer": "そうですね。わたしは動物が好きで、子どものときからアフリカへ行くのが夢でした。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-50-node-09"
+      }
+    },
+    {
+      "nodeId": "lesson-50-node-09",
+      "order": 9,
+      "speakerId": "speaker-01",
+      "speaker": "司会者",
+      "targetText": "じゃ、アフリカへ行かれますか。",
+      "translationZh": "那您会去非洲吗？",
+      "kana": "じゃ、あふりかへいかれますか。",
+      "audio": "/generated/tts/lesson-50/l50-09.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习谦让语的基本形式 おVします / ごNします，以及常用特殊谦让动词。",
+        "zh": "那您会去非洲吗？",
+        "keywords": [
+          "じゃアフリカへ行かれますか"
+        ],
+        "audio": "/generated/tts/lesson-50/l50-09.mp3",
+        "opening": "じゃ",
+        "answer": "じゃ、アフリカへ行かれますか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-50-node-10"
+      }
+    },
+    {
+      "nodeId": "lesson-50-node-10",
+      "order": 10,
+      "speakerId": "speaker-02",
+      "speaker": "ミラー",
+      "targetText": "はい。アフリカの自然の中で、きりんや象を見たいと思います。",
+      "translationZh": "是的。我想亲眼看看非洲自然环境里的长颈鹿和大象。",
+      "kana": "はい。あふりかのしぜんのなかで、きりんやぞうをみたいとおもいます。",
+      "audio": "/generated/tts/lesson-50/l50-10.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习谦让语的基本形式 おVします / ごNします，以及常用特殊谦让动词。",
+        "zh": "是的。我想亲眼看看非洲自然环境里的长颈鹿和大象。",
+        "keywords": [
+          "はいアフリカの自然の中できりんや象を見たいと思います"
+        ],
+        "audio": "/generated/tts/lesson-50/l50-10.mp3",
+        "opening": "はい",
+        "answer": "はい。アフリカの自然の中で、きりんや象を見たいと思います。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-50-node-11"
+      }
+    },
+    {
+      "nodeId": "lesson-50-node-11",
+      "order": 11,
+      "speakerId": "speaker-01",
+      "speaker": "司会者",
+      "targetText": "子どものころの夢がかなうんですね。",
+      "translationZh": "童年的梦想就要实现了呢。",
+      "kana": "こどものころのゆめがかなうんですね。",
+      "audio": "/generated/tts/lesson-50/l50-11.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习谦让语的基本形式 おVします / ごNします，以及常用特殊谦让动词。",
+        "zh": "童年的梦想就要实现了呢。",
+        "keywords": [
+          "子どものころの夢がかなうんですね"
+        ],
+        "audio": "/generated/tts/lesson-50/l50-11.mp3",
+        "opening": "子ども",
+        "answer": "子どものころの夢がかなうんですね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-50-node-12"
+      }
+    },
+    {
+      "nodeId": "lesson-50-node-12",
+      "order": 12,
+      "speakerId": "speaker-02",
+      "speaker": "ミラー",
+      "targetText": "はい。うれしいです。応援してくださった皆様に心から感謝いたします。どうもありがとうございました。",
+      "translationZh": "是的。我很开心。对所有支持我的各位，我由衷地表示感谢。非常感谢大家。",
+      "kana": "はい。うれしいです。おうえんしてくださったみなさまにこころからかんしゃいたします。どうもありがとうございました。",
+      "audio": "/generated/tts/lesson-50/l50-12.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习谦让语的基本形式 おVします / ごNします，以及常用特殊谦让动词。",
+        "zh": "是的。我很开心。对所有支持我的各位，我由衷地表示感谢。非常感谢大家。",
+        "keywords": [
+          "はいうれしいです応援してくださった皆様に心から感謝いたしますどうもありがとうございました"
+        ],
+        "audio": "/generated/tts/lesson-50/l50-12.mp3",
+        "opening": "はい",
+        "answer": "はい。うれしいです。応援してくださった皆様に心から感謝いたします。どうもありがとうございました。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 12,
+    "validationStatus": "passed"
+  }
+}

@@ -1,0 +1,337 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 26,
+  "lessonId": "lesson-26",
+  "title": {
+    "ja": "第26課",
+    "zh": "第26课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-26.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-26.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "用「んです」说明背景、解释原因，再用「んですが」委婉地提出请求或询问建议。",
+    "image": "/minna/lessons/lesson-26/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "管理人"
+    },
+    {
+      "id": "speaker-02",
+      "name": "ミラー"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-26-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "管理人",
+      "targetText": "ミラーさん、引っ越しの荷物は片づきましたか。",
+      "translationZh": "米勒先生，搬家的行李收拾好了吗？",
+      "kana": "ミラーさん、ひっこしのにもつはかたづきましたか。",
+      "audio": "/generated/tts/lesson-26/l26-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用「んです」说明背景、解释原因，再用「んですが」委婉地提出请求或询问建议。",
+        "zh": "米勒先生，搬家的行李收拾好了吗？",
+        "keywords": [
+          "ミラーさん引っ越しの荷物は片づきましたか"
+        ],
+        "audio": "/generated/tts/lesson-26/l26-01.mp3",
+        "opening": "ミラー",
+        "answer": "ミラーさん、引っ越しの荷物は片づきましたか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-26-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-26-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "ミラー",
+      "targetText": "はい、だいたい片づきました。あのう、ごみを捨てたいんですが、どこに出したらいいですか。",
+      "translationZh": "是的，大致收拾好了。请问，我想扔垃圾，放到哪里好？",
+      "kana": "はい、だいたいかたづきました。あのう、ごみをすてたいんですが、どこにだしたらいいですか。",
+      "audio": "/generated/tts/lesson-26/l26-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用「んです」说明背景、解释原因，再用「んですが」委婉地提出请求或询问建议。",
+        "zh": "是的，大致收拾好了。请问，我想扔垃圾，放到哪里好？",
+        "keywords": [
+          "はいだいたい片づきましたあのうごみを捨てたいんですがどこに出したらいいですか"
+        ],
+        "audio": "/generated/tts/lesson-26/l26-02.mp3",
+        "opening": "はい",
+        "answer": "はい、だいたい片づきました。あのう、ごみを捨てたいんですが、どこに出したらいいですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-26-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-26-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "管理人",
+      "targetText": "燃えるごみは、月曜日の朝出してください。ごみ置き場は駐車場の横です。",
+      "translationZh": "可燃垃圾请在星期一早上拿出来，垃圾站在停车场旁边。",
+      "kana": "もえるごみは、げつようびのあさだしてください。ごみおきばはちゅうしゃじょうのよこです。",
+      "audio": "/generated/tts/lesson-26/l26-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用「んです」说明背景、解释原因，再用「んですが」委婉地提出请求或询问建议。",
+        "zh": "可燃垃圾请在星期一早上拿出来，垃圾站在停车场旁边。",
+        "keywords": [
+          "燃えるごみは月曜日の朝出してくださいごみ置き場は駐車場の横です"
+        ],
+        "audio": "/generated/tts/lesson-26/l26-03.mp3",
+        "opening": "燃える",
+        "answer": "燃えるごみは、月曜日の朝出してください。ごみ置き場は駐車場の横です。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-26-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-26-node-04",
+      "order": 4,
+      "speakerId": "speaker-02",
+      "speaker": "ミラー",
+      "targetText": "瓶や缶はいつですか。",
+      "translationZh": "瓶子和罐子什么时候扔？",
+      "kana": "びんやかんはいつですか。",
+      "audio": "/generated/tts/lesson-26/l26-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用「んです」说明背景、解释原因，再用「んですが」委婉地提出请求或询问建议。",
+        "zh": "瓶子和罐子什么时候扔？",
+        "keywords": [
+          "瓶や缶はいつですか"
+        ],
+        "audio": "/generated/tts/lesson-26/l26-04.mp3",
+        "opening": "瓶や缶",
+        "answer": "瓶や缶はいつですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-26-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-26-node-05",
+      "order": 5,
+      "speakerId": "speaker-01",
+      "speaker": "管理人",
+      "targetText": "土曜日です。",
+      "translationZh": "星期六。",
+      "kana": "どようびです。",
+      "audio": "/generated/tts/lesson-26/l26-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用「んです」说明背景、解释原因，再用「んですが」委婉地提出请求或询问建议。",
+        "zh": "星期六。",
+        "keywords": [
+          "土曜日です"
+        ],
+        "audio": "/generated/tts/lesson-26/l26-05.mp3",
+        "opening": "土曜日",
+        "answer": "土曜日です。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-26-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-26-node-06",
+      "order": 6,
+      "speakerId": "speaker-02",
+      "speaker": "ミラー",
+      "targetText": "わかりました。それからお湯が出ないんですが……。",
+      "translationZh": "明白了。另外热水出不来……",
+      "kana": "わかりました。それからおゆがでないんですが……。",
+      "audio": "/generated/tts/lesson-26/l26-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用「んです」说明背景、解释原因，再用「んですが」委婉地提出请求或询问建议。",
+        "zh": "明白了。另外热水出不来……",
+        "keywords": [
+          "わかりましたそれからお湯が出ないんですが……"
+        ],
+        "audio": "/generated/tts/lesson-26/l26-06.mp3",
+        "opening": "わかり",
+        "answer": "わかりました。それからお湯が出ないんですが……。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-26-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-26-node-07",
+      "order": 7,
+      "speakerId": "speaker-01",
+      "speaker": "管理人",
+      "targetText": "ガス会社に連絡したら、すぐ来てくれますよ。",
+      "translationZh": "联系燃气公司后，他们马上会来。",
+      "kana": "ガスがいしゃにれんらくしたら、すぐきてくれますよ。",
+      "audio": "/generated/tts/lesson-26/l26-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用「んです」说明背景、解释原因，再用「んですが」委婉地提出请求或询问建议。",
+        "zh": "联系燃气公司后，他们马上会来。",
+        "keywords": [
+          "ガス会社に連絡したらすぐ来てくれますよ"
+        ],
+        "audio": "/generated/tts/lesson-26/l26-07.mp3",
+        "opening": "ガス会",
+        "answer": "ガス会社に連絡したら、すぐ来てくれますよ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-26-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-26-node-08",
+      "order": 8,
+      "speakerId": "speaker-02",
+      "speaker": "ミラー",
+      "targetText": "すみませんが、電話番号を教えていただけませんか。",
+      "translationZh": "不好意思，能告诉我电话号码吗？",
+      "kana": "すみませんが、でんわばんごうをおしえていただけませんか。",
+      "audio": "/generated/tts/lesson-26/l26-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用「んです」说明背景、解释原因，再用「んですが」委婉地提出请求或询问建议。",
+        "zh": "不好意思，能告诉我电话号码吗？",
+        "keywords": [
+          "すみませんが電話番号を教えていただけませんか"
+        ],
+        "audio": "/generated/tts/lesson-26/l26-08.mp3",
+        "opening": "すみま",
+        "answer": "すみませんが、電話番号を教えていただけませんか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-26-node-09"
+      }
+    },
+    {
+      "nodeId": "lesson-26-node-09",
+      "order": 9,
+      "speakerId": "speaker-01",
+      "speaker": "管理人",
+      "targetText": "ええ、いいですよ。",
+      "translationZh": "好的，可以。",
+      "kana": "ええ、いいですよ。",
+      "audio": "/generated/tts/lesson-26/l26-09.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用「んです」说明背景、解释原因，再用「んですが」委婉地提出请求或询问建议。",
+        "zh": "好的，可以。",
+        "keywords": [
+          "ええいいですよ"
+        ],
+        "audio": "/generated/tts/lesson-26/l26-09.mp3",
+        "opening": "ええ",
+        "answer": "ええ、いいですよ。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 9,
+    "validationStatus": "passed"
+  }
+}

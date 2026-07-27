@@ -1,0 +1,341 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 4,
+  "lessonId": "lesson-04",
+  "title": {
+    "ja": "第4課",
+    "zh": "第4课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-04.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-04.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "学习时间表达、星期表达、时间范围「〜から〜まで」以及礼貌体过去形。",
+    "image": "/minna/lessons/lesson-04/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "ミラー"
+    },
+    {
+      "id": "speaker-02",
+      "name": "佐藤"
+    },
+    {
+      "id": "speaker-03",
+      "name": "店の人"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-04-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "ミラー",
+      "targetText": "すみません。「あすか」の電話番号は何番ですか。",
+      "translationZh": "不好意思，请问Asuka的电话号码是多少？",
+      "kana": "すみません。「あすか」のでんわばんごうはなんばんですか。",
+      "audio": "/generated/tts/lesson-04/l4-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习时间表达、星期表达、时间范围「〜から〜まで」以及礼貌体过去形。",
+        "zh": "不好意思，请问Asuka的电话号码是多少？",
+        "keywords": [
+          "すみませんあすかの電話番号は何番ですか"
+        ],
+        "audio": "/generated/tts/lesson-04/l4-01.mp3",
+        "opening": "すみま",
+        "answer": "すみません。「あすか」の電話番号は何番ですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-04-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-04-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "佐藤",
+      "targetText": "「あすか」ですか。5275の2725です。",
+      "translationZh": "您是说「あすか」吗？号码是5275-2725。",
+      "kana": "「あすか」ですか。ご・に・なな・ごのに・なな・に・ごです。",
+      "audio": "/generated/tts/lesson-04/l4-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习时间表达、星期表达、时间范围「〜から〜まで」以及礼貌体过去形。",
+        "zh": "您是说「あすか」吗？号码是5275-2725。",
+        "keywords": [
+          "あすかですか5275の2725です"
+        ],
+        "audio": "/generated/tts/lesson-04/l4-02.mp3",
+        "opening": "「あす",
+        "answer": "「あすか」ですか。5275の2725です。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-04-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-04-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "ミラー",
+      "targetText": "どうもありがとうございます。",
+      "translationZh": "非常感谢您。",
+      "kana": "どうもありがとうございます。",
+      "audio": "/generated/tts/lesson-04/l4-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习时间表达、星期表达、时间范围「〜から〜まで」以及礼貌体过去形。",
+        "zh": "非常感谢您。",
+        "keywords": [
+          "どうもありがとうございます"
+        ],
+        "audio": "/generated/tts/lesson-04/l4-03.mp3",
+        "opening": "どうも",
+        "answer": "どうもありがとうございます。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-04-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-04-node-04",
+      "order": 4,
+      "speakerId": "speaker-03",
+      "speaker": "店の人",
+      "targetText": "はい、「あすか」です。",
+      "translationZh": "您好，这里是「あすか」。",
+      "kana": "はい、「あすか」です。",
+      "audio": "/generated/tts/lesson-04/l4-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习时间表达、星期表达、时间范围「〜から〜まで」以及礼貌体过去形。",
+        "zh": "您好，这里是「あすか」。",
+        "keywords": [
+          "はいあすかです"
+        ],
+        "audio": "/generated/tts/lesson-04/l4-04.mp3",
+        "opening": "はい",
+        "answer": "はい、「あすか」です。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-04-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-04-node-05",
+      "order": 5,
+      "speakerId": "speaker-01",
+      "speaker": "ミラー",
+      "targetText": "すみません。そちらは何時までですか。",
+      "translationZh": "不好意思，请问你们营业到几点？",
+      "kana": "すみません。そちらはなんじまでですか。",
+      "audio": "/generated/tts/lesson-04/l4-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习时间表达、星期表达、时间范围「〜から〜まで」以及礼貌体过去形。",
+        "zh": "不好意思，请问你们营业到几点？",
+        "keywords": [
+          "すみませんそちらは何時までですか"
+        ],
+        "audio": "/generated/tts/lesson-04/l4-05.mp3",
+        "opening": "すみま",
+        "answer": "すみません。そちらは何時までですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-04-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-04-node-06",
+      "order": 6,
+      "speakerId": "speaker-03",
+      "speaker": "店の人",
+      "targetText": "10時までです。",
+      "translationZh": "营业到10点。",
+      "kana": "じゅうじまでです。",
+      "audio": "/generated/tts/lesson-04/l4-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习时间表达、星期表达、时间范围「〜から〜まで」以及礼貌体过去形。",
+        "zh": "营业到10点。",
+        "keywords": [
+          "10時までです"
+        ],
+        "audio": "/generated/tts/lesson-04/l4-06.mp3",
+        "opening": "10時",
+        "answer": "10時までです。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-04-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-04-node-07",
+      "order": 7,
+      "speakerId": "speaker-01",
+      "speaker": "ミラー",
+      "targetText": "休みは何曜日ですか。",
+      "translationZh": "你们星期几休息？",
+      "kana": "やすみはなんようびですか。",
+      "audio": "/generated/tts/lesson-04/l4-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习时间表达、星期表达、时间范围「〜から〜まで」以及礼貌体过去形。",
+        "zh": "你们星期几休息？",
+        "keywords": [
+          "休みは何曜日ですか"
+        ],
+        "audio": "/generated/tts/lesson-04/l4-07.mp3",
+        "opening": "休みは",
+        "answer": "休みは何曜日ですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-04-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-04-node-08",
+      "order": 8,
+      "speakerId": "speaker-03",
+      "speaker": "店の人",
+      "targetText": "日曜日です。",
+      "translationZh": "星期天休息。",
+      "kana": "にちようびです。",
+      "audio": "/generated/tts/lesson-04/l4-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习时间表达、星期表达、时间范围「〜から〜まで」以及礼貌体过去形。",
+        "zh": "星期天休息。",
+        "keywords": [
+          "日曜日です"
+        ],
+        "audio": "/generated/tts/lesson-04/l4-08.mp3",
+        "opening": "日曜日",
+        "answer": "日曜日です。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-04-node-09"
+      }
+    },
+    {
+      "nodeId": "lesson-04-node-09",
+      "order": 9,
+      "speakerId": "speaker-01",
+      "speaker": "ミラー",
+      "targetText": "そうですか。どうも。",
+      "translationZh": "是这样啊，谢谢。",
+      "kana": "そうですか。どうも。",
+      "audio": "/generated/tts/lesson-04/l4-09.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习时间表达、星期表达、时间范围「〜から〜まで」以及礼貌体过去形。",
+        "zh": "是这样啊，谢谢。",
+        "keywords": [
+          "そうですかどうも"
+        ],
+        "audio": "/generated/tts/lesson-04/l4-09.mp3",
+        "opening": "そうで",
+        "answer": "そうですか。どうも。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 9,
+    "validationStatus": "passed"
+  }
+}

@@ -33,6 +33,11 @@ const ERROR_DEFINITIONS: Record<
     message: 'The Study content service encountered an internal error.',
     retryable: true,
   },
+  ENVELOPE_MALFORMED: {
+    status: 500,
+    message: 'The lesson envelope data is malformed and cannot be served.',
+    retryable: false,
+  },
 }
 
 let requestSequence = 0

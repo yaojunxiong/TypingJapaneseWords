@@ -1,0 +1,387 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 48,
+  "lessonId": "lesson-48",
+  "title": {
+    "ja": "第48課",
+    "zh": "第48课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-48.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-48.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "掌握使役形的变形、让某人做某事的助词方向，以及礼貌请求许可的 させていただけませんか。",
+    "image": "/minna/lessons/lesson-48/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "ミラー"
+    },
+    {
+      "id": "speaker-02",
+      "name": "中村課長"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-48-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "ミラー",
+      "targetText": "課長、今お忙しいですか。",
+      "translationZh": "课长，现在您忙吗？",
+      "kana": "かちょう、いまおいそがしいですか。",
+      "audio": "/generated/tts/lesson-48/l48-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握使役形的变形、让某人做某事的助词方向，以及礼貌请求许可的 させていただけませんか。",
+        "zh": "课长，现在您忙吗？",
+        "keywords": [
+          "課長今お忙しいですか"
+        ],
+        "audio": "/generated/tts/lesson-48/l48-01.mp3",
+        "opening": "課長",
+        "answer": "課長、今お忙しいですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-48-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-48-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "中村課長",
+      "targetText": "いいえ、どうぞ。",
+      "translationZh": "不忙，请说。",
+      "kana": "いいえ、どうぞ。",
+      "audio": "/generated/tts/lesson-48/l48-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握使役形的变形、让某人做某事的助词方向，以及礼貌请求许可的 させていただけませんか。",
+        "zh": "不忙，请说。",
+        "keywords": [
+          "いいえどうぞ"
+        ],
+        "audio": "/generated/tts/lesson-48/l48-02.mp3",
+        "opening": "いいえ",
+        "answer": "いいえ、どうぞ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-48-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-48-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "ミラー",
+      "targetText": "ちょっとお願いがあるんですが……。",
+      "translationZh": "我有个小请求……",
+      "kana": "ちょっとおねがいがあるんですが……。",
+      "audio": "/generated/tts/lesson-48/l48-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握使役形的变形、让某人做某事的助词方向，以及礼貌请求许可的 させていただけませんか。",
+        "zh": "我有个小请求……",
+        "keywords": [
+          "ちょっとお願いがあるんですが……"
+        ],
+        "audio": "/generated/tts/lesson-48/l48-03.mp3",
+        "opening": "ちょっ",
+        "answer": "ちょっとお願いがあるんですが……。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-48-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-48-node-04",
+      "order": 4,
+      "speakerId": "speaker-02",
+      "speaker": "中村課長",
+      "targetText": "何ですか。",
+      "translationZh": "什么事？",
+      "kana": "なんですか。",
+      "audio": "/generated/tts/lesson-48/l48-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握使役形的变形、让某人做某事的助词方向，以及礼貌请求许可的 させていただけませんか。",
+        "zh": "什么事？",
+        "keywords": [
+          "何ですか"
+        ],
+        "audio": "/generated/tts/lesson-48/l48-04.mp3",
+        "opening": "何です",
+        "answer": "何ですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-48-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-48-node-05",
+      "order": 5,
+      "speakerId": "speaker-01",
+      "speaker": "ミラー",
+      "targetText": "あのう、来月7日から10日ほど休みを取らせていただけませんか。",
+      "translationZh": "那个，从下个月7号开始，能让我请大约10天假吗？",
+      "kana": "あのう、らいげつなのかからとおかほどやすみをとらせていただけませんか。",
+      "audio": "/generated/tts/lesson-48/l48-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握使役形的变形、让某人做某事的助词方向，以及礼貌请求许可的 させていただけませんか。",
+        "zh": "那个，从下个月7号开始，能让我请大约10天假吗？",
+        "keywords": [
+          "あのう来月7日から10日ほど休みを取らせていただけませんか"
+        ],
+        "audio": "/generated/tts/lesson-48/l48-05.mp3",
+        "opening": "あのう",
+        "answer": "あのう、来月7日から10日ほど休みを取らせていただけませんか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-48-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-48-node-06",
+      "order": 6,
+      "speakerId": "speaker-02",
+      "speaker": "中村課長",
+      "targetText": "10日間ですか。",
+      "translationZh": "10天吗？",
+      "kana": "とおかかんですか。",
+      "audio": "/generated/tts/lesson-48/l48-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握使役形的变形、让某人做某事的助词方向，以及礼貌请求许可的 させていただけませんか。",
+        "zh": "10天吗？",
+        "keywords": [
+          "10日間ですか"
+        ],
+        "audio": "/generated/tts/lesson-48/l48-06.mp3",
+        "opening": "10日",
+        "answer": "10日間ですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-48-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-48-node-07",
+      "order": 7,
+      "speakerId": "speaker-01",
+      "speaker": "ミラー",
+      "targetText": "実はアメリカの友達が結婚するんです。",
+      "translationZh": "其实我美国的朋友要结婚。",
+      "kana": "じつはあめりかのともだちがけっこんするんです。",
+      "audio": "/generated/tts/lesson-48/l48-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握使役形的变形、让某人做某事的助词方向，以及礼貌请求许可的 させていただけませんか。",
+        "zh": "其实我美国的朋友要结婚。",
+        "keywords": [
+          "実はアメリカの友達が結婚するんです"
+        ],
+        "audio": "/generated/tts/lesson-48/l48-07.mp3",
+        "opening": "実はア",
+        "answer": "実はアメリカの友達が結婚するんです。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-48-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-48-node-08",
+      "order": 8,
+      "speakerId": "speaker-02",
+      "speaker": "中村課長",
+      "targetText": "そうですか。えーと、来月は20日に営業会議がありますが、それまでに帰れますね。",
+      "translationZh": "是吗？嗯……下个月20号有销售会议，你能在那之前回来吧？",
+      "kana": "そうですか。えーと、らいげつははつかにえいぎょうかいぎがありますが、それまでにかえれますね。",
+      "audio": "/generated/tts/lesson-48/l48-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握使役形的变形、让某人做某事的助词方向，以及礼貌请求许可的 させていただけませんか。",
+        "zh": "是吗？嗯……下个月20号有销售会议，你能在那之前回来吧？",
+        "keywords": [
+          "そうですかえーと来月は20日に営業会議がありますがそれまでに帰れますね"
+        ],
+        "audio": "/generated/tts/lesson-48/l48-08.mp3",
+        "opening": "そうで",
+        "answer": "そうですか。えーと、来月は20日に営業会議がありますが、それまでに帰れますね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-48-node-09"
+      }
+    },
+    {
+      "nodeId": "lesson-48-node-09",
+      "order": 9,
+      "speakerId": "speaker-01",
+      "speaker": "ミラー",
+      "targetText": "はい。",
+      "translationZh": "是的。",
+      "kana": "はい。",
+      "audio": "/generated/tts/lesson-48/l48-09.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握使役形的变形、让某人做某事的助词方向，以及礼貌请求许可的 させていただけませんか。",
+        "zh": "是的。",
+        "keywords": [
+          "はい"
+        ],
+        "audio": "/generated/tts/lesson-48/l48-09.mp3",
+        "opening": "はい。",
+        "answer": "はい。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-48-node-10"
+      }
+    },
+    {
+      "nodeId": "lesson-48-node-10",
+      "order": 10,
+      "speakerId": "speaker-02",
+      "speaker": "中村課長",
+      "targetText": "じゃ、かまいませんよ。楽しんで来てください。",
+      "translationZh": "那就没问题了，祝你玩得开心。",
+      "kana": "じゃ、かまいませんよ。たのしんできてください。",
+      "audio": "/generated/tts/lesson-48/l48-10.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握使役形的变形、让某人做某事的助词方向，以及礼貌请求许可的 させていただけませんか。",
+        "zh": "那就没问题了，祝你玩得开心。",
+        "keywords": [
+          "じゃかまいませんよ楽しんで来てください"
+        ],
+        "audio": "/generated/tts/lesson-48/l48-10.mp3",
+        "opening": "じゃ",
+        "answer": "じゃ、かまいませんよ。楽しんで来てください。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-48-node-11"
+      }
+    },
+    {
+      "nodeId": "lesson-48-node-11",
+      "order": 11,
+      "speakerId": "speaker-01",
+      "speaker": "ミラー",
+      "targetText": "ありがとうございます。",
+      "translationZh": "非常感谢您！",
+      "kana": "ありがとうございます。",
+      "audio": "/generated/tts/lesson-48/l48-11.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握使役形的变形、让某人做某事的助词方向，以及礼貌请求许可的 させていただけませんか。",
+        "zh": "非常感谢您！",
+        "keywords": [
+          "ありがとうございます"
+        ],
+        "audio": "/generated/tts/lesson-48/l48-11.mp3",
+        "opening": "ありが",
+        "answer": "ありがとうございます。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 11,
+    "validationStatus": "passed"
+  }
+}

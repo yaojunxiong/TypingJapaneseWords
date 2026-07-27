@@ -1,0 +1,391 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 42,
+  "lessonId": "lesson-42",
+  "title": {
+    "ja": "第42課",
+    "zh": "第42课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-42.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-42.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "掌握目的表达 ために，以及表示用途、花费、所需时间的 のに。",
+    "image": "/minna/lessons/lesson-42/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "鈴木"
+    },
+    {
+      "id": "speaker-02",
+      "name": "林"
+    },
+    {
+      "id": "speaker-03",
+      "name": "小川"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-42-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "鈴木",
+      "targetText": "林さん、ボーナスはいつ出るんですか。",
+      "translationZh": "林小姐，奖金什么时候发？",
+      "kana": "はやしさん、ぼーなすはいつでるんですか。",
+      "audio": "/generated/tts/lesson-42/l42-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握目的表达 ために，以及表示用途、花费、所需时间的 のに。",
+        "zh": "林小姐，奖金什么时候发？",
+        "keywords": [
+          "林さんボーナスはいつ出るんですか"
+        ],
+        "audio": "/generated/tts/lesson-42/l42-01.mp3",
+        "opening": "林さん",
+        "answer": "林さん、ボーナスはいつ出るんですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-42-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-42-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "林",
+      "targetText": "来週です。鈴木さんの会社は？",
+      "translationZh": "下周发。铃木先生你们公司呢？",
+      "kana": "らいしゅうです。すずきさんのかいしゃは？",
+      "audio": "/generated/tts/lesson-42/l42-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握目的表达 ために，以及表示用途、花费、所需时间的 のに。",
+        "zh": "下周发。铃木先生你们公司呢？",
+        "keywords": [
+          "来週です鈴木さんの会社は"
+        ],
+        "audio": "/generated/tts/lesson-42/l42-02.mp3",
+        "opening": "来週で",
+        "answer": "来週です。鈴木さんの会社は？"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-42-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-42-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "鈴木",
+      "targetText": "あしたです。楽しみですね。",
+      "translationZh": "明天发，真让人期待啊。",
+      "kana": "あしたです。たのしみですね。",
+      "audio": "/generated/tts/lesson-42/l42-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握目的表达 ために，以及表示用途、花费、所需时间的 のに。",
+        "zh": "明天发，真让人期待啊。",
+        "keywords": [
+          "あしたです楽しみですね"
+        ],
+        "audio": "/generated/tts/lesson-42/l42-03.mp3",
+        "opening": "あした",
+        "answer": "あしたです。楽しみですね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-42-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-42-node-04",
+      "order": 4,
+      "speakerId": "speaker-02",
+      "speaker": "林",
+      "targetText": "ええ。鈴木さんは何に使いますか。",
+      "translationZh": "是啊。铃木先生你打算用来做什么？",
+      "kana": "ええ。すずきさんはなににつかいますか。",
+      "audio": "/generated/tts/lesson-42/l42-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握目的表达 ために，以及表示用途、花费、所需时间的 のに。",
+        "zh": "是啊。铃木先生你打算用来做什么？",
+        "keywords": [
+          "ええ鈴木さんは何に使いますか"
+        ],
+        "audio": "/generated/tts/lesson-42/l42-04.mp3",
+        "opening": "ええ",
+        "answer": "ええ。鈴木さんは何に使いますか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-42-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-42-node-05",
+      "order": 5,
+      "speakerId": "speaker-01",
+      "speaker": "鈴木",
+      "targetText": "まず新しい自転車を買って、それから旅行に行って……。",
+      "translationZh": "首先买辆新自行车，然后去旅行。",
+      "kana": "まずあたらしいじてんしゃをかって、それからりょこうにいって……。",
+      "audio": "/generated/tts/lesson-42/l42-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握目的表达 ために，以及表示用途、花费、所需时间的 のに。",
+        "zh": "首先买辆新自行车，然后去旅行。",
+        "keywords": [
+          "まず新しい自転車を買ってそれから旅行に行って……"
+        ],
+        "audio": "/generated/tts/lesson-42/l42-05.mp3",
+        "opening": "まず新",
+        "answer": "まず新しい自転車を買って、それから旅行に行って……。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-42-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-42-node-06",
+      "order": 6,
+      "speakerId": "speaker-03",
+      "speaker": "小川",
+      "targetText": "貯金はしないんですか。",
+      "translationZh": "不打算存点钱吗？",
+      "kana": "ちょきんはしないんですか。",
+      "audio": "/generated/tts/lesson-42/l42-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握目的表达 ために，以及表示用途、花费、所需时间的 のに。",
+        "zh": "不打算存点钱吗？",
+        "keywords": [
+          "貯金はしないんですか"
+        ],
+        "audio": "/generated/tts/lesson-42/l42-06.mp3",
+        "opening": "貯金は",
+        "answer": "貯金はしないんですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-42-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-42-node-07",
+      "order": 7,
+      "speakerId": "speaker-01",
+      "speaker": "鈴木",
+      "targetText": "僕はあまり考えたこと、ありませんね。",
+      "translationZh": "我没怎么考虑过这个。",
+      "kana": "ぼくはあまりかんがえたこと、ありませんね。",
+      "audio": "/generated/tts/lesson-42/l42-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握目的表达 ために，以及表示用途、花费、所需时间的 のに。",
+        "zh": "我没怎么考虑过这个。",
+        "keywords": [
+          "僕はあまり考えたことありませんね"
+        ],
+        "audio": "/generated/tts/lesson-42/l42-07.mp3",
+        "opening": "僕はあ",
+        "answer": "僕はあまり考えたこと、ありませんね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-42-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-42-node-08",
+      "order": 8,
+      "speakerId": "speaker-02",
+      "speaker": "林",
+      "targetText": "わたしは半分は貯金するつもりです。",
+      "translationZh": "我打算把一半存起来。",
+      "kana": "わたしははんぶんはちょきんするつもりです。",
+      "audio": "/generated/tts/lesson-42/l42-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握目的表达 ために，以及表示用途、花费、所需时间的 のに。",
+        "zh": "我打算把一半存起来。",
+        "keywords": [
+          "わたしは半分は貯金するつもりです"
+        ],
+        "audio": "/generated/tts/lesson-42/l42-08.mp3",
+        "opening": "わたし",
+        "answer": "わたしは半分は貯金するつもりです。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-42-node-09"
+      }
+    },
+    {
+      "nodeId": "lesson-42-node-09",
+      "order": 9,
+      "speakerId": "speaker-01",
+      "speaker": "鈴木",
+      "targetText": "えっ、半分も貯金するんですか。",
+      "translationZh": "咦，要存一半啊？",
+      "kana": "えっ、はんぶんもちょきんするんですか。",
+      "audio": "/generated/tts/lesson-42/l42-09.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握目的表达 ために，以及表示用途、花费、所需时间的 のに。",
+        "zh": "咦，要存一半啊？",
+        "keywords": [
+          "えっ半分も貯金するんですか"
+        ],
+        "audio": "/generated/tts/lesson-42/l42-09.mp3",
+        "opening": "えっ",
+        "answer": "えっ、半分も貯金するんですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-42-node-10"
+      }
+    },
+    {
+      "nodeId": "lesson-42-node-10",
+      "order": 10,
+      "speakerId": "speaker-02",
+      "speaker": "林",
+      "targetText": "ええ、いつかイギリスへ留学しようと思っているんです。",
+      "translationZh": "嗯，因为我打算将来去英国留学。",
+      "kana": "ええ、いつかいぎりすへりゅうがくしようとおもっているんです。",
+      "audio": "/generated/tts/lesson-42/l42-10.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握目的表达 ために，以及表示用途、花费、所需时间的 のに。",
+        "zh": "嗯，因为我打算将来去英国留学。",
+        "keywords": [
+          "ええいつかイギリスへ留学しようと思っているんです"
+        ],
+        "audio": "/generated/tts/lesson-42/l42-10.mp3",
+        "opening": "ええ",
+        "answer": "ええ、いつかイギリスへ留学しようと思っているんです。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-42-node-11"
+      }
+    },
+    {
+      "nodeId": "lesson-42-node-11",
+      "order": 11,
+      "speakerId": "speaker-03",
+      "speaker": "小川",
+      "targetText": "へえ、独身の人はいいですね。全部自分のために、使えて。わたしは家のローンを払って、子どもの教育のために、貯金したら、ほとんど残りませんよ。",
+      "translationZh": "哇，单身的人真好啊。可以把钱都用在自己身上。我得付房贷，再为了孩子教育存点钱，几乎什么都剩不下了。",
+      "kana": "へえ、どくしんのひとはいいですね。ぜんぶじぶんのために、つかえて。わたしはいえのローンをはらって、こどものきょういくのために、ちょきんしたら、ほとんどのこりませんよ。",
+      "audio": "/generated/tts/lesson-42/l42-11.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握目的表达 ために，以及表示用途、花费、所需时间的 のに。",
+        "zh": "哇，单身的人真好啊。可以把钱都用在自己身上。我得付房贷，再为了孩子教育存点钱，几乎什么都剩不下了。",
+        "keywords": [
+          "へえ独身の人はいいですね全部自分のために使えてわたしは家のローンを払って子どもの教育のために貯金したらほとんど残りませんよ"
+        ],
+        "audio": "/generated/tts/lesson-42/l42-11.mp3",
+        "opening": "へえ",
+        "answer": "へえ、独身の人はいいですね。全部自分のために、使えて。わたしは家のローンを払って、子どもの教育のために、貯金したら、ほとんど残りませんよ。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 11,
+    "validationStatus": "passed"
+  }
+}

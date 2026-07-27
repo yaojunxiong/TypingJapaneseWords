@@ -1,0 +1,370 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 8,
+  "lessonId": "lesson-08",
+  "title": {
+    "ja": "第8課",
+    "zh": "第8课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-08.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-08.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "学习い形容词与な形容词、否定形式，以及「どんな〜」和「どうですか」。",
+    "image": "/minna/lessons/lesson-08/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "山田一郎"
+    },
+    {
+      "id": "speaker-02",
+      "name": "マリア・サントス"
+    },
+    {
+      "id": "speaker-03",
+      "name": "ジョゼ・サントス"
+    },
+    {
+      "id": "speaker-04",
+      "name": "山田友子"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-08-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "山田一郎",
+      "targetText": "マリアさん、日本の生活はどうですか。",
+      "translationZh": "玛丽亚小姐，日本的生活怎么样？",
+      "kana": "まりあさん、にほんのせいかつはどうですか。",
+      "audio": "/generated/tts/lesson-08/l8-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习い形容词与な形容词、否定形式，以及「どんな〜」和「どうですか」。",
+        "zh": "玛丽亚小姐，日本的生活怎么样？",
+        "keywords": [
+          "マリアさん日本の生活はどうですか"
+        ],
+        "audio": "/generated/tts/lesson-08/l8-01.mp3",
+        "opening": "マリア",
+        "answer": "マリアさん、日本の生活はどうですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-08-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-08-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "マリア・サントス",
+      "targetText": "毎日とても楽しいです。",
+      "translationZh": "每天都很开心。",
+      "kana": "まいにちとてもたのしいです。",
+      "audio": "/generated/tts/lesson-08/l8-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习い形容词与な形容词、否定形式，以及「どんな〜」和「どうですか」。",
+        "zh": "每天都很开心。",
+        "keywords": [
+          "毎日とても楽しいです"
+        ],
+        "audio": "/generated/tts/lesson-08/l8-02.mp3",
+        "opening": "毎日と",
+        "answer": "毎日とても楽しいです。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-08-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-08-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "山田一郎",
+      "targetText": "そうですか。サントスさん、お仕事はどうですか。",
+      "translationZh": "是吗？桑托斯先生，工作怎么样？",
+      "kana": "そうですか。さんとすさん、おしごとはどうですか。",
+      "audio": "/generated/tts/lesson-08/l8-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习い形容词与な形容词、否定形式，以及「どんな〜」和「どうですか」。",
+        "zh": "是吗？桑托斯先生，工作怎么样？",
+        "keywords": [
+          "そうですかサントスさんお仕事はどうですか"
+        ],
+        "audio": "/generated/tts/lesson-08/l8-03.mp3",
+        "opening": "そうで",
+        "answer": "そうですか。サントスさん、お仕事はどうですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-08-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-08-node-04",
+      "order": 4,
+      "speakerId": "speaker-03",
+      "speaker": "ジョゼ・サントス",
+      "targetText": "そうですね。忙しいですが、おもしろいです。",
+      "translationZh": "是啊，虽然很忙，但挺有意思的。",
+      "kana": "そうですね。いそがしいですが、おもしろいです。",
+      "audio": "/generated/tts/lesson-08/l8-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习い形容词与な形容词、否定形式，以及「どんな〜」和「どうですか」。",
+        "zh": "是啊，虽然很忙，但挺有意思的。",
+        "keywords": [
+          "そうですね忙しいですがおもしろいです"
+        ],
+        "audio": "/generated/tts/lesson-08/l8-04.mp3",
+        "opening": "そうで",
+        "answer": "そうですね。忙しいですが、おもしろいです。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-08-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-08-node-05",
+      "order": 5,
+      "speakerId": "speaker-04",
+      "speaker": "山田友子",
+      "targetText": "コーヒー、もう一杯いかがですか。",
+      "translationZh": "再来一杯咖啡怎么样？",
+      "kana": "こーひー、もういっぱいいかがですか。",
+      "audio": "/generated/tts/lesson-08/l8-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习い形容词与な形容词、否定形式，以及「どんな〜」和「どうですか」。",
+        "zh": "再来一杯咖啡怎么样？",
+        "keywords": [
+          "コーヒーもう一杯いかがですか"
+        ],
+        "audio": "/generated/tts/lesson-08/l8-05.mp3",
+        "opening": "コーヒ",
+        "answer": "コーヒー、もう一杯いかがですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-08-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-08-node-06",
+      "order": 6,
+      "speakerId": "speaker-02",
+      "speaker": "マリア・サントス",
+      "targetText": "いいえ、けっこうです。",
+      "translationZh": "不用了，谢谢。",
+      "kana": "いいえ、けっこうです。",
+      "audio": "/generated/tts/lesson-08/l8-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习い形容词与な形容词、否定形式，以及「どんな〜」和「どうですか」。",
+        "zh": "不用了，谢谢。",
+        "keywords": [
+          "いいえけっこうです"
+        ],
+        "audio": "/generated/tts/lesson-08/l8-06.mp3",
+        "opening": "いいえ",
+        "answer": "いいえ、けっこうです。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-08-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-08-node-07",
+      "order": 7,
+      "speakerId": "speaker-03",
+      "speaker": "ジョゼ・サントス",
+      "targetText": "あ、もう6時ですね。そろそろ失礼します。",
+      "translationZh": "啊，已经6点了。我该告辞了。",
+      "kana": "あ、もうろくじですね。そろそろしつれいします。",
+      "audio": "/generated/tts/lesson-08/l8-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习い形容词与な形容词、否定形式，以及「どんな〜」和「どうですか」。",
+        "zh": "啊，已经6点了。我该告辞了。",
+        "keywords": [
+          "あもう6時ですねそろそろ失礼します"
+        ],
+        "audio": "/generated/tts/lesson-08/l8-07.mp3",
+        "opening": "あ",
+        "answer": "あ、もう6時ですね。そろそろ失礼します。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-08-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-08-node-08",
+      "order": 8,
+      "speakerId": "speaker-01",
+      "speaker": "山田一郎",
+      "targetText": "そうですか。",
+      "translationZh": "这样啊。",
+      "kana": "そうですか。",
+      "audio": "/generated/tts/lesson-08/l8-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习い形容词与な形容词、否定形式，以及「どんな〜」和「どうですか」。",
+        "zh": "这样啊。",
+        "keywords": [
+          "そうですか"
+        ],
+        "audio": "/generated/tts/lesson-08/l8-08.mp3",
+        "opening": "そうで",
+        "answer": "そうですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-08-node-09"
+      }
+    },
+    {
+      "nodeId": "lesson-08-node-09",
+      "order": 9,
+      "speakerId": "speaker-02",
+      "speaker": "マリア・サントス",
+      "targetText": "きょうはどうもありがとうございました。",
+      "translationZh": "今天真的非常感谢。",
+      "kana": "きょうはどうもありがとうございました。",
+      "audio": "/generated/tts/lesson-08/l8-09.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习い形容词与な形容词、否定形式，以及「どんな〜」和「どうですか」。",
+        "zh": "今天真的非常感谢。",
+        "keywords": [
+          "きょうはどうもありがとうございました"
+        ],
+        "audio": "/generated/tts/lesson-08/l8-09.mp3",
+        "opening": "きょう",
+        "answer": "きょうはどうもありがとうございました。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-08-node-10"
+      }
+    },
+    {
+      "nodeId": "lesson-08-node-10",
+      "order": 10,
+      "speakerId": "speaker-04",
+      "speaker": "山田友子",
+      "targetText": "いいえ。またいらっしゃってください。",
+      "translationZh": "不客气，请再来玩。",
+      "kana": "いいえ。またいらっしゃってください。",
+      "audio": "/generated/tts/lesson-08/l8-10.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习い形容词与な形容词、否定形式，以及「どんな〜」和「どうですか」。",
+        "zh": "不客气，请再来玩。",
+        "keywords": [
+          "いいえまたいらっしゃってください"
+        ],
+        "audio": "/generated/tts/lesson-08/l8-10.mp3",
+        "opening": "いいえ",
+        "answer": "いいえ。またいらっしゃってください。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 10,
+    "validationStatus": "passed"
+  }
+}

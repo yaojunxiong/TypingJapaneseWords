@@ -1,0 +1,387 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 24,
+  "lessonId": "lesson-24",
+  "title": {
+    "ja": "第24課",
+    "zh": "第24课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-24.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-24.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "学习「くれます」「〜てあげます／くれます／もらいます」。",
+    "image": "/minna/lessons/lesson-24/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "カリナ"
+    },
+    {
+      "id": "speaker-02",
+      "name": "ワン"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-24-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "カリナ",
+      "targetText": "ワンさん、日曜日引っ越しですね。手伝いに行きましょうか。",
+      "translationZh": "王先生，星期日搬家吧？我去帮忙吧。",
+      "kana": "ワンさん、にちようびひっこしですね。てつだいにいきましょうか。",
+      "audio": "/generated/tts/lesson-24/l24-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「くれます」「〜てあげます／くれます／もらいます」。",
+        "zh": "王先生，星期日搬家吧？我去帮忙吧。",
+        "keywords": [
+          "ワンさん日曜日引っ越しですね手伝いに行きましょうか"
+        ],
+        "audio": "/generated/tts/lesson-24/l24-01.mp3",
+        "opening": "ワンさ",
+        "answer": "ワンさん、日曜日引っ越しですね。手伝いに行きましょうか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-24-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-24-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "ワン",
+      "targetText": "ありがとうございます。じゃ、すみませんが、9時ごろお願いします。",
+      "translationZh": "谢谢。那么麻烦您九点左右来。",
+      "kana": "ありがとうございます。じゃ、すみませんが、くじごろおねがいします。",
+      "audio": "/generated/tts/lesson-24/l24-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「くれます」「〜てあげます／くれます／もらいます」。",
+        "zh": "谢谢。那么麻烦您九点左右来。",
+        "keywords": [
+          "ありがとうございますじゃすみませんが9時ごろお願いします"
+        ],
+        "audio": "/generated/tts/lesson-24/l24-02.mp3",
+        "opening": "ありが",
+        "answer": "ありがとうございます。じゃ、すみませんが、9時ごろお願いします。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-24-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-24-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "カリナ",
+      "targetText": "ほかにだれか手伝いに行きますか。",
+      "translationZh": "还有谁去帮忙？",
+      "kana": "ほかにだれかてつだいにいきますか。",
+      "audio": "/generated/tts/lesson-24/l24-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「くれます」「〜てあげます／くれます／もらいます」。",
+        "zh": "还有谁去帮忙？",
+        "keywords": [
+          "ほかにだれか手伝いに行きますか"
+        ],
+        "audio": "/generated/tts/lesson-24/l24-03.mp3",
+        "opening": "ほかに",
+        "answer": "ほかにだれか手伝いに行きますか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-24-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-24-node-04",
+      "order": 4,
+      "speakerId": "speaker-02",
+      "speaker": "ワン",
+      "targetText": "山田さんとミラーさんが来てくれます。",
+      "translationZh": "山田先生和米勒先生会来。",
+      "kana": "やまださんとミラーさんがきてくれます。",
+      "audio": "/generated/tts/lesson-24/l24-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「くれます」「〜てあげます／くれます／もらいます」。",
+        "zh": "山田先生和米勒先生会来。",
+        "keywords": [
+          "山田さんとミラーさんが来てくれます"
+        ],
+        "audio": "/generated/tts/lesson-24/l24-04.mp3",
+        "opening": "山田さ",
+        "answer": "山田さんとミラーさんが来てくれます。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-24-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-24-node-05",
+      "order": 5,
+      "speakerId": "speaker-01",
+      "speaker": "カリナ",
+      "targetText": "車は？",
+      "translationZh": "车呢？",
+      "kana": "くるまは？",
+      "audio": "/generated/tts/lesson-24/l24-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「くれます」「〜てあげます／くれます／もらいます」。",
+        "zh": "车呢？",
+        "keywords": [
+          "車は"
+        ],
+        "audio": "/generated/tts/lesson-24/l24-05.mp3",
+        "opening": "車は？",
+        "answer": "車は？"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-24-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-24-node-06",
+      "order": 6,
+      "speakerId": "speaker-02",
+      "speaker": "ワン",
+      "targetText": "山田さんに貸してもらいます。",
+      "translationZh": "请山田先生借给我。",
+      "kana": "やまださんにかしてもらいます。",
+      "audio": "/generated/tts/lesson-24/l24-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「くれます」「〜てあげます／くれます／もらいます」。",
+        "zh": "请山田先生借给我。",
+        "keywords": [
+          "山田さんに貸してもらいます"
+        ],
+        "audio": "/generated/tts/lesson-24/l24-06.mp3",
+        "opening": "山田さ",
+        "answer": "山田さんに貸してもらいます。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-24-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-24-node-07",
+      "order": 7,
+      "speakerId": "speaker-01",
+      "speaker": "カリナ",
+      "targetText": "昼ごはんはどうしますか。",
+      "translationZh": "午饭怎么办？",
+      "kana": "ひるごはんはどうしますか。",
+      "audio": "/generated/tts/lesson-24/l24-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「くれます」「〜てあげます／くれます／もらいます」。",
+        "zh": "午饭怎么办？",
+        "keywords": [
+          "昼ごはんはどうしますか"
+        ],
+        "audio": "/generated/tts/lesson-24/l24-07.mp3",
+        "opening": "昼ごは",
+        "answer": "昼ごはんはどうしますか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-24-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-24-node-08",
+      "order": 8,
+      "speakerId": "speaker-02",
+      "speaker": "ワン",
+      "targetText": "えーと……。",
+      "translationZh": "这个……",
+      "kana": "えーと……。",
+      "audio": "/generated/tts/lesson-24/l24-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「くれます」「〜てあげます／くれます／もらいます」。",
+        "zh": "这个……",
+        "keywords": [
+          "えーと……"
+        ],
+        "audio": "/generated/tts/lesson-24/l24-08.mp3",
+        "opening": "えーと",
+        "answer": "えーと……。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-24-node-09"
+      }
+    },
+    {
+      "nodeId": "lesson-24-node-09",
+      "order": 9,
+      "speakerId": "speaker-01",
+      "speaker": "カリナ",
+      "targetText": "わたしがお弁当を持って行きましょうか。",
+      "translationZh": "我带盒饭去吧？",
+      "kana": "わたしがおべんとうをもっていきましょうか。",
+      "audio": "/generated/tts/lesson-24/l24-09.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「くれます」「〜てあげます／くれます／もらいます」。",
+        "zh": "我带盒饭去吧？",
+        "keywords": [
+          "わたしがお弁当を持って行きましょうか"
+        ],
+        "audio": "/generated/tts/lesson-24/l24-09.mp3",
+        "opening": "わたし",
+        "answer": "わたしがお弁当を持って行きましょうか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-24-node-10"
+      }
+    },
+    {
+      "nodeId": "lesson-24-node-10",
+      "order": 10,
+      "speakerId": "speaker-02",
+      "speaker": "ワン",
+      "targetText": "すみません。お願いします。",
+      "translationZh": "不好意思，麻烦您。",
+      "kana": "すみません。おねがいします。",
+      "audio": "/generated/tts/lesson-24/l24-10.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「くれます」「〜てあげます／くれます／もらいます」。",
+        "zh": "不好意思，麻烦您。",
+        "keywords": [
+          "すみませんお願いします"
+        ],
+        "audio": "/generated/tts/lesson-24/l24-10.mp3",
+        "opening": "すみま",
+        "answer": "すみません。お願いします。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-24-node-11"
+      }
+    },
+    {
+      "nodeId": "lesson-24-node-11",
+      "order": 11,
+      "speakerId": "speaker-01",
+      "speaker": "カリナ",
+      "targetText": "じゃ、日曜日に。",
+      "translationZh": "那么星期日见。",
+      "kana": "じゃ、にちようびに。",
+      "audio": "/generated/tts/lesson-24/l24-11.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「くれます」「〜てあげます／くれます／もらいます」。",
+        "zh": "那么星期日见。",
+        "keywords": [
+          "じゃ日曜日に"
+        ],
+        "audio": "/generated/tts/lesson-24/l24-11.mp3",
+        "opening": "じゃ",
+        "answer": "じゃ、日曜日に。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 11,
+    "validationStatus": "passed"
+  }
+}

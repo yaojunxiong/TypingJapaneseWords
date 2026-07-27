@@ -1,0 +1,291 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 10,
+  "lessonId": "lesson-10",
+  "title": {
+    "ja": "第10課",
+    "zh": "第10课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-10.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-10.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "学习「あります・います」、位置词、地点问答和并列「〜や〜」。",
+    "image": "/minna/lessons/lesson-10/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "ミラー"
+    },
+    {
+      "id": "speaker-02",
+      "name": "女の人"
+    },
+    {
+      "id": "speaker-03",
+      "name": "店員"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-10-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "ミラー",
+      "targetText": "すみません。アジアストアはどこですか。",
+      "translationZh": "不好意思，亚洲商店在哪里？",
+      "kana": "すみません。あじあすとあはどこですか。",
+      "audio": "/generated/tts/lesson-10/l10-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「あります・います」、位置词、地点问答和并列「〜や〜」。",
+        "zh": "不好意思，亚洲商店在哪里？",
+        "keywords": [
+          "すみませんアジアストアはどこですか"
+        ],
+        "audio": "/generated/tts/lesson-10/l10-01.mp3",
+        "opening": "すみま",
+        "answer": "すみません。アジアストアはどこですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-10-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-10-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "女の人",
+      "targetText": "アジアストアですか。あそこに白いビルがありますね。あのビルの中です。",
+      "translationZh": "您是说亚洲商店吗？那边有一栋白色的大楼，对吧？就在那栋楼里。",
+      "kana": "あじあすとあですか。あそこにしろいびるがありますね。あのびるのなかです。",
+      "audio": "/generated/tts/lesson-10/l10-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「あります・います」、位置词、地点问答和并列「〜や〜」。",
+        "zh": "您是说亚洲商店吗？那边有一栋白色的大楼，对吧？就在那栋楼里。",
+        "keywords": [
+          "アジアストアですかあそこに白いビルがありますねあのビルの中です"
+        ],
+        "audio": "/generated/tts/lesson-10/l10-02.mp3",
+        "opening": "アジア",
+        "answer": "アジアストアですか。あそこに白いビルがありますね。あのビルの中です。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-10-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-10-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "ミラー",
+      "targetText": "そうですか。どうもすみません。",
+      "translationZh": "是这样啊，真不好意思。",
+      "kana": "そうですか。どうもすみません。",
+      "audio": "/generated/tts/lesson-10/l10-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「あります・います」、位置词、地点问答和并列「〜や〜」。",
+        "zh": "是这样啊，真不好意思。",
+        "keywords": [
+          "そうですかどうもすみません"
+        ],
+        "audio": "/generated/tts/lesson-10/l10-03.mp3",
+        "opening": "そうで",
+        "answer": "そうですか。どうもすみません。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-10-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-10-node-04",
+      "order": 4,
+      "speakerId": "speaker-02",
+      "speaker": "女の人",
+      "targetText": "いいえ。",
+      "translationZh": "不客气。",
+      "kana": "いいえ。",
+      "audio": "/generated/tts/lesson-10/l10-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「あります・います」、位置词、地点问答和并列「〜や〜」。",
+        "zh": "不客气。",
+        "keywords": [
+          "いいえ"
+        ],
+        "audio": "/generated/tts/lesson-10/l10-04.mp3",
+        "opening": "いいえ",
+        "answer": "いいえ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-10-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-10-node-05",
+      "order": 5,
+      "speakerId": "speaker-01",
+      "speaker": "ミラー",
+      "targetText": "あのう、ナンプラー、ありますか。",
+      "translationZh": "那个……请问有鱼露吗？",
+      "kana": "あのう、なんぷらー、ありますか。",
+      "audio": "/generated/tts/lesson-10/l10-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「あります・います」、位置词、地点问答和并列「〜や〜」。",
+        "zh": "那个……请问有鱼露吗？",
+        "keywords": [
+          "あのうナンプラーありますか"
+        ],
+        "audio": "/generated/tts/lesson-10/l10-05.mp3",
+        "opening": "あのう",
+        "answer": "あのう、ナンプラー、ありますか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-10-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-10-node-06",
+      "order": 6,
+      "speakerId": "speaker-03",
+      "speaker": "店員",
+      "targetText": "はい。あちらにタイ料理のコーナーがあります。ナンプラーはいちばん下です。",
+      "translationZh": "有的。那边有一个泰国菜专区，鱼露在最下面一层。",
+      "kana": "はい。あちらにたいりょうりのこーなーがあります。なんぷらーはいちばんしたです。",
+      "audio": "/generated/tts/lesson-10/l10-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「あります・います」、位置词、地点问答和并列「〜や〜」。",
+        "zh": "有的。那边有一个泰国菜专区，鱼露在最下面一层。",
+        "keywords": [
+          "はいあちらにタイ料理のコーナーがありますナンプラーはいちばん下です"
+        ],
+        "audio": "/generated/tts/lesson-10/l10-06.mp3",
+        "opening": "はい",
+        "answer": "はい。あちらにタイ料理のコーナーがあります。ナンプラーはいちばん下です。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-10-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-10-node-07",
+      "order": 7,
+      "speakerId": "speaker-01",
+      "speaker": "ミラー",
+      "targetText": "わかりました。どうも。",
+      "translationZh": "我知道了，谢谢。",
+      "kana": "わかりました。どうも。",
+      "audio": "/generated/tts/lesson-10/l10-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「あります・います」、位置词、地点问答和并列「〜や〜」。",
+        "zh": "我知道了，谢谢。",
+        "keywords": [
+          "わかりましたどうも"
+        ],
+        "audio": "/generated/tts/lesson-10/l10-07.mp3",
+        "opening": "わかり",
+        "answer": "わかりました。どうも。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 7,
+    "validationStatus": "passed"
+  }
+}

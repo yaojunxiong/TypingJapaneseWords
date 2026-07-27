@@ -1,0 +1,437 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 28,
+  "lessonId": "lesson-28",
+  "title": {
+    "ja": "第28課",
+    "zh": "第28课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-28.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-28.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "掌握「ながら」同时动作、「ています」表示习惯/职业，以及「し」列举理由。",
+    "image": "/minna/lessons/lesson-28/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "小川幸子"
+    },
+    {
+      "id": "speaker-02",
+      "name": "ミラー"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-28-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "小川幸子",
+      "targetText": "ミラーさん、ちょっとお願いがあるんですが。",
+      "translationZh": "米勒先生，我有件事想拜托您。",
+      "kana": "ミラーさん、ちょっとおねがいがあるんですが。",
+      "audio": "/generated/tts/lesson-28/l28-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握「ながら」同时动作、「ています」表示习惯/职业，以及「し」列举理由。",
+        "zh": "米勒先生，我有件事想拜托您。",
+        "keywords": [
+          "ミラーさんちょっとお願いがあるんですが"
+        ],
+        "audio": "/generated/tts/lesson-28/l28-01.mp3",
+        "opening": "ミラー",
+        "answer": "ミラーさん、ちょっとお願いがあるんですが。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-28-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-28-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "ミラー",
+      "targetText": "何ですか。",
+      "translationZh": "什么事？",
+      "kana": "なんですか。",
+      "audio": "/generated/tts/lesson-28/l28-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握「ながら」同时动作、「ています」表示习惯/职业，以及「し」列举理由。",
+        "zh": "什么事？",
+        "keywords": [
+          "何ですか"
+        ],
+        "audio": "/generated/tts/lesson-28/l28-02.mp3",
+        "opening": "何です",
+        "answer": "何ですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-28-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-28-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "小川幸子",
+      "targetText": "実は8月にオーストラリアへホームステイに行くんです。",
+      "translationZh": "其实我八月要去澳大利亚寄宿。",
+      "kana": "じつははちがつにオーストラリアへホームステイにいくんです。",
+      "audio": "/generated/tts/lesson-28/l28-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握「ながら」同时动作、「ています」表示习惯/职业，以及「し」列举理由。",
+        "zh": "其实我八月要去澳大利亚寄宿。",
+        "keywords": [
+          "実は8月にオーストラリアへホームステイに行くんです"
+        ],
+        "audio": "/generated/tts/lesson-28/l28-03.mp3",
+        "opening": "実は8",
+        "answer": "実は8月にオーストラリアへホームステイに行くんです。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-28-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-28-node-04",
+      "order": 4,
+      "speakerId": "speaker-02",
+      "speaker": "ミラー",
+      "targetText": "ホームステイですか。いいですね。",
+      "translationZh": "寄宿吗？真不错。",
+      "kana": "ホームステイですか。いいですね。",
+      "audio": "/generated/tts/lesson-28/l28-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握「ながら」同时动作、「ています」表示习惯/职业，以及「し」列举理由。",
+        "zh": "寄宿吗？真不错。",
+        "keywords": [
+          "ホームステイですかいいですね"
+        ],
+        "audio": "/generated/tts/lesson-28/l28-04.mp3",
+        "opening": "ホーム",
+        "answer": "ホームステイですか。いいですね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-28-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-28-node-05",
+      "order": 5,
+      "speakerId": "speaker-01",
+      "speaker": "小川幸子",
+      "targetText": "ええ。それで、今友達と英語を勉強しているんですが……。",
+      "translationZh": "是的，所以我现在正和朋友学习英语，不过……",
+      "kana": "ええ。それで、いまともだちとえいごをべんきょうしているんですが……。",
+      "audio": "/generated/tts/lesson-28/l28-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握「ながら」同时动作、「ています」表示习惯/职业，以及「し」列举理由。",
+        "zh": "是的，所以我现在正和朋友学习英语，不过……",
+        "keywords": [
+          "ええそれで今友達と英語を勉強しているんですが……"
+        ],
+        "audio": "/generated/tts/lesson-28/l28-05.mp3",
+        "opening": "ええ",
+        "answer": "ええ。それで、今友達と英語を勉強しているんですが……。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-28-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-28-node-06",
+      "order": 6,
+      "speakerId": "speaker-02",
+      "speaker": "ミラー",
+      "targetText": "ええ。",
+      "translationZh": "嗯。",
+      "kana": "ええ。",
+      "audio": "/generated/tts/lesson-28/l28-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握「ながら」同时动作、「ています」表示习惯/职业，以及「し」列举理由。",
+        "zh": "嗯。",
+        "keywords": [
+          "ええ"
+        ],
+        "audio": "/generated/tts/lesson-28/l28-06.mp3",
+        "opening": "ええ。",
+        "answer": "ええ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-28-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-28-node-07",
+      "order": 7,
+      "speakerId": "speaker-01",
+      "speaker": "小川幸子",
+      "targetText": "なかなか上手にならないんです。先生もいないし、英語で話すチャンスもないし……。",
+      "translationZh": "总是学不好，又没有老师，也没有用英语交谈的机会……",
+      "kana": "なかなかじょうずにならないんです。せんせいもいないし、えいごではなすチャンスもないし……。",
+      "audio": "/generated/tts/lesson-28/l28-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握「ながら」同时动作、「ています」表示习惯/职业，以及「し」列举理由。",
+        "zh": "总是学不好，又没有老师，也没有用英语交谈的机会……",
+        "keywords": [
+          "なかなか上手にならないんです先生もいないし英語で話すチャンスもないし……"
+        ],
+        "audio": "/generated/tts/lesson-28/l28-07.mp3",
+        "opening": "なかな",
+        "answer": "なかなか上手にならないんです。先生もいないし、英語で話すチャンスもないし……。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-28-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-28-node-08",
+      "order": 8,
+      "speakerId": "speaker-01",
+      "speaker": "小川幸子",
+      "targetText": "ミラーさん、会話の先生になっていただけませんか。",
+      "translationZh": "米勒先生，能请您当会话老师吗？",
+      "kana": "ミラーさん、かいわのせんせいになっていただけませんか。",
+      "audio": "/generated/tts/lesson-28/l28-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握「ながら」同时动作、「ています」表示习惯/职业，以及「し」列举理由。",
+        "zh": "米勒先生，能请您当会话老师吗？",
+        "keywords": [
+          "ミラーさん会話の先生になっていただけませんか"
+        ],
+        "audio": "/generated/tts/lesson-28/l28-08.mp3",
+        "opening": "ミラー",
+        "answer": "ミラーさん、会話の先生になっていただけませんか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-28-node-09"
+      }
+    },
+    {
+      "nodeId": "lesson-28-node-09",
+      "order": 9,
+      "speakerId": "speaker-02",
+      "speaker": "ミラー",
+      "targetText": "え？先生に？うーん、ちょっと仕事が……。",
+      "translationZh": "咦？当老师？嗯，工作有点……",
+      "kana": "え？せんせいに？うーん、ちょっとしごとが……。",
+      "audio": "/generated/tts/lesson-28/l28-09.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握「ながら」同时动作、「ています」表示习惯/职业，以及「し」列举理由。",
+        "zh": "咦？当老师？嗯，工作有点……",
+        "keywords": [
+          "え先生にうーんちょっと仕事が……"
+        ],
+        "audio": "/generated/tts/lesson-28/l28-09.mp3",
+        "opening": "え",
+        "answer": "え？先生に？うーん、ちょっと仕事が……。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-28-node-10"
+      }
+    },
+    {
+      "nodeId": "lesson-28-node-10",
+      "order": 10,
+      "speakerId": "speaker-01",
+      "speaker": "小川幸子",
+      "targetText": "お暇な時、お茶でも飲みながら……。",
+      "translationZh": "有空的时候，一边喝茶一边……",
+      "kana": "おひまなとき、おちゃでものみながら……。",
+      "audio": "/generated/tts/lesson-28/l28-10.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握「ながら」同时动作、「ています」表示习惯/职业，以及「し」列举理由。",
+        "zh": "有空的时候，一边喝茶一边……",
+        "keywords": [
+          "お暇な時お茶でも飲みながら……"
+        ],
+        "audio": "/generated/tts/lesson-28/l28-10.mp3",
+        "opening": "お暇な",
+        "answer": "お暇な時、お茶でも飲みながら……。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-28-node-11"
+      }
+    },
+    {
+      "nodeId": "lesson-28-node-11",
+      "order": 11,
+      "speakerId": "speaker-02",
+      "speaker": "ミラー",
+      "targetText": "うーん、出張も多いし、もうすぐ日本語の試験もあるし……。",
+      "translationZh": "嗯，出差也多，而且马上还有日语考试……",
+      "kana": "うーん、しゅっちょうもおおいし、もうすぐにほんごのしけんもあるし……。",
+      "audio": "/generated/tts/lesson-28/l28-11.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握「ながら」同时动作、「ています」表示习惯/职业，以及「し」列举理由。",
+        "zh": "嗯，出差也多，而且马上还有日语考试……",
+        "keywords": [
+          "うーん出張も多いしもうすぐ日本語の試験もあるし……"
+        ],
+        "audio": "/generated/tts/lesson-28/l28-11.mp3",
+        "opening": "うーん",
+        "answer": "うーん、出張も多いし、もうすぐ日本語の試験もあるし……。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-28-node-12"
+      }
+    },
+    {
+      "nodeId": "lesson-28-node-12",
+      "order": 12,
+      "speakerId": "speaker-01",
+      "speaker": "小川幸子",
+      "targetText": "そうですか。",
+      "translationZh": "是吗？",
+      "kana": "そうですか。",
+      "audio": "/generated/tts/lesson-28/l28-12.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握「ながら」同时动作、「ています」表示习惯/职业，以及「し」列举理由。",
+        "zh": "是吗？",
+        "keywords": [
+          "そうですか"
+        ],
+        "audio": "/generated/tts/lesson-28/l28-12.mp3",
+        "opening": "そうで",
+        "answer": "そうですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-28-node-13"
+      }
+    },
+    {
+      "nodeId": "lesson-28-node-13",
+      "order": 13,
+      "speakerId": "speaker-02",
+      "speaker": "ミラー",
+      "targetText": "すみません。",
+      "translationZh": "对不起。",
+      "kana": "すみません。",
+      "audio": "/generated/tts/lesson-28/l28-13.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握「ながら」同时动作、「ています」表示习惯/职业，以及「し」列举理由。",
+        "zh": "对不起。",
+        "keywords": [
+          "すみません"
+        ],
+        "audio": "/generated/tts/lesson-28/l28-13.mp3",
+        "opening": "すみま",
+        "answer": "すみません。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 13,
+    "validationStatus": "passed"
+  }
+}

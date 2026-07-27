@@ -1,0 +1,362 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 46,
+  "lessonId": "lesson-46",
+  "title": {
+    "ja": "第46課",
+    "zh": "第46课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-46.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-46.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "掌握动作即将、正在、刚刚发生的 ところです，以及 ばかりです 和 はずです。",
+    "image": "/minna/lessons/lesson-46/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "係員"
+    },
+    {
+      "id": "speaker-02",
+      "name": "タワポン"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-46-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "係員",
+      "targetText": "はい、ガスサービスセンターでございます。",
+      "translationZh": "这里是燃气服务中心。",
+      "kana": "はい、ガスサービスセンターでございます。",
+      "audio": "/generated/tts/lesson-46/l46-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握动作即将、正在、刚刚发生的 ところです，以及 ばかりです 和 はずです。",
+        "zh": "这里是燃气服务中心。",
+        "keywords": [
+          "はいガスサービスセンターでございます"
+        ],
+        "audio": "/generated/tts/lesson-46/l46-01.mp3",
+        "opening": "はい",
+        "answer": "はい、ガスサービスセンターでございます。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-46-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-46-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "タワポン",
+      "targetText": "あのう、ガスレンジの調子がおかしいんですが……。",
+      "translationZh": "那个，燃气灶的状况有点不对……",
+      "kana": "あのう、ガスレンジのちょうしがおかしいんですが……。",
+      "audio": "/generated/tts/lesson-46/l46-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握动作即将、正在、刚刚发生的 ところです，以及 ばかりです 和 はずです。",
+        "zh": "那个，燃气灶的状况有点不对……",
+        "keywords": [
+          "あのうガスレンジの調子がおかしいんですが……"
+        ],
+        "audio": "/generated/tts/lesson-46/l46-02.mp3",
+        "opening": "あのう",
+        "answer": "あのう、ガスレンジの調子がおかしいんですが……。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-46-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-46-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "係員",
+      "targetText": "どんな具合ですか。",
+      "translationZh": "是什么情况？",
+      "kana": "どんなぐあいですか。",
+      "audio": "/generated/tts/lesson-46/l46-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握动作即将、正在、刚刚发生的 ところです，以及 ばかりです 和 はずです。",
+        "zh": "是什么情况？",
+        "keywords": [
+          "どんな具合ですか"
+        ],
+        "audio": "/generated/tts/lesson-46/l46-03.mp3",
+        "opening": "どんな",
+        "answer": "どんな具合ですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-46-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-46-node-04",
+      "order": 4,
+      "speakerId": "speaker-02",
+      "speaker": "タワポン",
+      "targetText": "先週直してもらったばかりなのに、また火が消えてしまうんです。危ないので、すぐ見に来てくれませんか。",
+      "translationZh": "明明上周才请人来修过，火又会熄灭。很危险，请马上过来看看。",
+      "kana": "せんしゅうなおしてもらったばかりなのに、またひがきえてしまうんです。あぶないので、すぐみにきてくれませんか。",
+      "audio": "/generated/tts/lesson-46/l46-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握动作即将、正在、刚刚发生的 ところです，以及 ばかりです 和 はずです。",
+        "zh": "明明上周才请人来修过，火又会熄灭。很危险，请马上过来看看。",
+        "keywords": [
+          "先週直してもらったばかりなのにまた火が消えてしまうんです危ないのですぐ見に来てくれませんか"
+        ],
+        "audio": "/generated/tts/lesson-46/l46-04.mp3",
+        "opening": "先週直",
+        "answer": "先週直してもらったばかりなのに、また火が消えてしまうんです。危ないので、すぐ見に来てくれませんか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-46-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-46-node-05",
+      "order": 5,
+      "speakerId": "speaker-01",
+      "speaker": "係員",
+      "targetText": "わかりました。5時ごろには行けると思います。ご住所とお名前をお願いします。",
+      "translationZh": "明白了。我想5点左右可以过去。请告诉我地址和姓名。",
+      "kana": "わかりました。ごじごろにはいけるとおもいます。ごじゅうしょとおなまえをおねがいします。",
+      "audio": "/generated/tts/lesson-46/l46-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握动作即将、正在、刚刚发生的 ところです，以及 ばかりです 和 はずです。",
+        "zh": "明白了。我想5点左右可以过去。请告诉我地址和姓名。",
+        "keywords": [
+          "わかりました5時ごろには行けると思いますご住所とお名前をお願いします"
+        ],
+        "audio": "/generated/tts/lesson-46/l46-05.mp3",
+        "opening": "わかり",
+        "answer": "わかりました。5時ごろには行けると思います。ご住所とお名前をお願いします。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-46-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-46-node-06",
+      "order": 6,
+      "speakerId": "speaker-02",
+      "speaker": "タワポン",
+      "targetText": "もしもし、5時ごろにガスレンジを見に来てくれるはずなんですが、まだですか。",
+      "translationZh": "喂，原定5点左右来看燃气灶，请问还没到吗？",
+      "kana": "もしもし、ごじごろにガスレンジをみにきてくれるはずなんですが、まだですか。",
+      "audio": "/generated/tts/lesson-46/l46-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握动作即将、正在、刚刚发生的 ところです，以及 ばかりです 和 はずです。",
+        "zh": "喂，原定5点左右来看燃气灶，请问还没到吗？",
+        "keywords": [
+          "もしもし5時ごろにガスレンジを見に来てくれるはずなんですがまだですか"
+        ],
+        "audio": "/generated/tts/lesson-46/l46-06.mp3",
+        "opening": "もしも",
+        "answer": "もしもし、5時ごろにガスレンジを見に来てくれるはずなんですが、まだですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-46-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-46-node-07",
+      "order": 7,
+      "speakerId": "speaker-01",
+      "speaker": "係員",
+      "targetText": "申し訳ありません。どちら様でしょうか。",
+      "translationZh": "非常抱歉。请问您是哪位？",
+      "kana": "もうしわけありません。どちらさまでしょうか。",
+      "audio": "/generated/tts/lesson-46/l46-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握动作即将、正在、刚刚发生的 ところです，以及 ばかりです 和 はずです。",
+        "zh": "非常抱歉。请问您是哪位？",
+        "keywords": [
+          "申し訳ありませんどちら様でしょうか"
+        ],
+        "audio": "/generated/tts/lesson-46/l46-07.mp3",
+        "opening": "申し訳",
+        "answer": "申し訳ありません。どちら様でしょうか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-46-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-46-node-08",
+      "order": 8,
+      "speakerId": "speaker-02",
+      "speaker": "タワポン",
+      "targetText": "タワポンです。",
+      "translationZh": "我是塔瓦蓬。",
+      "kana": "たわぽんです。",
+      "audio": "/generated/tts/lesson-46/l46-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握动作即将、正在、刚刚发生的 ところです，以及 ばかりです 和 はずです。",
+        "zh": "我是塔瓦蓬。",
+        "keywords": [
+          "タワポンです"
+        ],
+        "audio": "/generated/tts/lesson-46/l46-08.mp3",
+        "opening": "タワポ",
+        "answer": "タワポンです。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-46-node-09"
+      }
+    },
+    {
+      "nodeId": "lesson-46-node-09",
+      "order": 9,
+      "speakerId": "speaker-01",
+      "speaker": "係員",
+      "targetText": "少々お待ちください。係員に連絡しますから。",
+      "translationZh": "请稍等。我联系一下负责人员。",
+      "kana": "しょうしょうおまちください。かかりいんにれんらくしますから。",
+      "audio": "/generated/tts/lesson-46/l46-09.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握动作即将、正在、刚刚发生的 ところです，以及 ばかりです 和 はずです。",
+        "zh": "请稍等。我联系一下负责人员。",
+        "keywords": [
+          "少々お待ちください係員に連絡しますから"
+        ],
+        "audio": "/generated/tts/lesson-46/l46-09.mp3",
+        "opening": "少々お",
+        "answer": "少々お待ちください。係員に連絡しますから。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-46-node-10"
+      }
+    },
+    {
+      "nodeId": "lesson-46-node-10",
+      "order": 10,
+      "speakerId": "speaker-01",
+      "speaker": "係員",
+      "targetText": "お待たせしました。今そちらに向かっているところです。あと10分ほどお待ちください。",
+      "translationZh": "让您久等了。现在正往您那里去。请再等大约10分钟。",
+      "kana": "おまたせしました。いまそちらにむかっているところです。あとじゅっぷんほどおまちください。",
+      "audio": "/generated/tts/lesson-46/l46-10.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握动作即将、正在、刚刚发生的 ところです，以及 ばかりです 和 はずです。",
+        "zh": "让您久等了。现在正往您那里去。请再等大约10分钟。",
+        "keywords": [
+          "お待たせしました今そちらに向かっているところですあと10分ほどお待ちください"
+        ],
+        "audio": "/generated/tts/lesson-46/l46-10.mp3",
+        "opening": "お待た",
+        "answer": "お待たせしました。今そちらに向かっているところです。あと10分ほどお待ちください。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 10,
+    "validationStatus": "passed"
+  }
+}

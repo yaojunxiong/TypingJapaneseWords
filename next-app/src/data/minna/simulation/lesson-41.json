@@ -1,0 +1,278 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 41,
+  "lessonId": "lesson-41",
+  "title": {
+    "ja": "第41課",
+    "zh": "第41课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-41.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-41.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "扩展授受表达，掌握 いただきます、くださいます、やります 以及动作授受的礼貌方向。",
+    "image": "/minna/lessons/lesson-41/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "学長"
+    },
+    {
+      "id": "speaker-02",
+      "name": "皆"
+    },
+    {
+      "id": "speaker-03",
+      "name": "司会者"
+    },
+    {
+      "id": "speaker-04",
+      "name": "松本良子"
+    },
+    {
+      "id": "speaker-05",
+      "name": "大学職員"
+    },
+    {
+      "id": "speaker-06",
+      "name": "ミラー"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-41-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "学長",
+      "targetText": "ワットさん、いずみさん、ご結婚おめでとうございます。乾杯。",
+      "translationZh": "瓦特先生、泉小姐，祝贺你们新婚快乐！干杯！",
+      "kana": "わっとさん、いずみさん、ごけっこんおめでとうございます。かんぱい。",
+      "audio": "/generated/tts/lesson-41/l41-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "扩展授受表达，掌握 いただきます、くださいます、やります 以及动作授受的礼貌方向。",
+        "zh": "瓦特先生、泉小姐，祝贺你们新婚快乐！干杯！",
+        "keywords": [
+          "ワットさんいずみさんご結婚おめでとうございます乾杯"
+        ],
+        "audio": "/generated/tts/lesson-41/l41-01.mp3",
+        "opening": "ワット",
+        "answer": "ワットさん、いずみさん、ご結婚おめでとうございます。乾杯。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-41-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-41-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "皆",
+      "targetText": "乾杯。",
+      "translationZh": "干杯！",
+      "kana": "かんぱい。",
+      "audio": "/generated/tts/lesson-41/l41-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "扩展授受表达，掌握 いただきます、くださいます、やります 以及动作授受的礼貌方向。",
+        "zh": "干杯！",
+        "keywords": [
+          "乾杯"
+        ],
+        "audio": "/generated/tts/lesson-41/l41-02.mp3",
+        "opening": "乾杯。",
+        "answer": "乾杯。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-41-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-41-node-03",
+      "order": 3,
+      "speakerId": "speaker-03",
+      "speaker": "司会者",
+      "targetText": "次にこちらの皆さんにひとことずつお願いします。",
+      "translationZh": "接下来，请这边的各位每人说一句祝福。",
+      "kana": "つぎにこちらのみなさんにひとことずつおねがいします。",
+      "audio": "/generated/tts/lesson-41/l41-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "扩展授受表达，掌握 いただきます、くださいます、やります 以及动作授受的礼貌方向。",
+        "zh": "接下来，请这边的各位每人说一句祝福。",
+        "keywords": [
+          "次にこちらの皆さんにひとことずつお願いします"
+        ],
+        "audio": "/generated/tts/lesson-41/l41-03.mp3",
+        "opening": "次にこ",
+        "answer": "次にこちらの皆さんにひとことずつお願いします。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-41-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-41-node-04",
+      "order": 4,
+      "speakerId": "speaker-04",
+      "speaker": "松本良子",
+      "targetText": "わたしは去年の夏のクラスでワット先生に英語を教えていただきました。先生の授業はユーモアがあって、楽しかったです。実はそのクラスにいずみさんもいらっしゃったんです。",
+      "translationZh": "我去年夏天在班上请瓦特老师教过英语。老师的课很幽默，非常有趣。其实泉小姐也在那个班上。",
+      "kana": "わたしはきょねんのなつのクラスでワットせんせいにえいごをおしえていただきました。せんせいのじゅぎょうはユーモアがあって、たのしかったです。じつはそのクラスにいずみさんもいらっしゃったんです。",
+      "audio": "/generated/tts/lesson-41/l41-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "扩展授受表达，掌握 いただきます、くださいます、やります 以及动作授受的礼貌方向。",
+        "zh": "我去年夏天在班上请瓦特老师教过英语。老师的课很幽默，非常有趣。其实泉小姐也在那个班上。",
+        "keywords": [
+          "わたしは去年の夏のクラスでワット先生に英語を教えていただきました先生の授業はユーモアがあって楽しかったです実はそのクラスにいずみさんもいらっしゃったんです"
+        ],
+        "audio": "/generated/tts/lesson-41/l41-04.mp3",
+        "opening": "わたし",
+        "answer": "わたしは去年の夏のクラスでワット先生に英語を教えていただきました。先生の授業はユーモアがあって、楽しかったです。実はそのクラスにいずみさんもいらっしゃったんです。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-41-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-41-node-05",
+      "order": 5,
+      "speakerId": "speaker-05",
+      "speaker": "大学職員",
+      "targetText": "わたしは先生に「上手な整理の方法」という本をいただきました。先生は整理するのがお上手で、研究室はいつもきれいです。きっとお二人のお宅もすてきだと思います。",
+      "translationZh": "我从老师那里收到过一本叫《高明的整理方法》的书。老师很擅长整理，研究室总是很整洁。我想两位的家也一定会很漂亮。",
+      "kana": "わたしはせんせいに「じょうずなせいりのほうほう」というほんをいただきました。せんせいはせいりするのがおじょうずで、けんきゅうしつはいつもきれいです。きっとおふたりのおたくもすてきだとおもいます。",
+      "audio": "/generated/tts/lesson-41/l41-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "扩展授受表达，掌握 いただきます、くださいます、やります 以及动作授受的礼貌方向。",
+        "zh": "我从老师那里收到过一本叫《高明的整理方法》的书。老师很擅长整理，研究室总是很整洁。我想两位的家也一定会很漂亮。",
+        "keywords": [
+          "わたしは先生に上手な整理の方法という本をいただきました先生は整理するのがお上手で研究室はいつもきれいですきっとお二人のお宅もすてきだと思います"
+        ],
+        "audio": "/generated/tts/lesson-41/l41-05.mp3",
+        "opening": "わたし",
+        "answer": "わたしは先生に「上手な整理の方法」という本をいただきました。先生は整理するのがお上手で、研究室はいつもきれいです。きっとお二人のお宅もすてきだと思います。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-41-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-41-node-06",
+      "order": 6,
+      "speakerId": "speaker-06",
+      "speaker": "ミラー",
+      "targetText": "ワットさん、今度は「すてきな人と結婚する方法」という本を書いてくださいませんか。ぜひ読んで、勉強したいです。どうぞお幸せに。",
+      "translationZh": "瓦特先生，下次能不能写一本《和理想的人结婚的方法》呢？我一定想读来学习。祝你们幸福。",
+      "kana": "ワットさん、こんどは「すてきなひととけっこんするほうほう」というほんをかいてくださいませんか。ぜひよんで、べんきょうしたいです。どうぞおしあわせに。",
+      "audio": "/generated/tts/lesson-41/l41-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "扩展授受表达，掌握 いただきます、くださいます、やります 以及动作授受的礼貌方向。",
+        "zh": "瓦特先生，下次能不能写一本《和理想的人结婚的方法》呢？我一定想读来学习。祝你们幸福。",
+        "keywords": [
+          "ワットさん今度はすてきな人と結婚する方法という本を書いてくださいませんかぜひ読んで勉強したいですどうぞお幸せに"
+        ],
+        "audio": "/generated/tts/lesson-41/l41-06.mp3",
+        "opening": "ワット",
+        "answer": "ワットさん、今度は「すてきな人と結婚する方法」という本を書いてくださいませんか。ぜひ読んで、勉強したいです。どうぞお幸せに。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 6,
+    "validationStatus": "passed"
+  }
+}

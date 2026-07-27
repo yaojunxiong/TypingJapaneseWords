@@ -1,0 +1,341 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 19,
+  "lessonId": "lesson-19",
+  "title": {
+    "ja": "第19課",
+    "zh": "第19课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-19.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-19.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "学习动词た形、经验句「〜たことがあります」、变化与选择表达。",
+    "image": "/minna/lessons/lesson-19/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "みんな"
+    },
+    {
+      "id": "speaker-02",
+      "name": "松本良子"
+    },
+    {
+      "id": "speaker-03",
+      "name": "マリア"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-19-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "みんな",
+      "targetText": "乾杯。",
+      "translationZh": "干杯。",
+      "kana": "かんぱい。",
+      "audio": "/generated/tts/lesson-19/l19-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习动词た形、经验句「〜たことがあります」、变化与选择表达。",
+        "zh": "干杯。",
+        "keywords": [
+          "乾杯"
+        ],
+        "audio": "/generated/tts/lesson-19/l19-01.mp3",
+        "opening": "乾杯。",
+        "answer": "乾杯。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-19-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-19-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "松本良子",
+      "targetText": "マリアさん、あまり食べませんね。",
+      "translationZh": "玛丽亚，你吃得不多啊。",
+      "kana": "マリアさん、あまりたべませんね。",
+      "audio": "/generated/tts/lesson-19/l19-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习动词た形、经验句「〜たことがあります」、变化与选择表达。",
+        "zh": "玛丽亚，你吃得不多啊。",
+        "keywords": [
+          "マリアさんあまり食べませんね"
+        ],
+        "audio": "/generated/tts/lesson-19/l19-02.mp3",
+        "opening": "マリア",
+        "answer": "マリアさん、あまり食べませんね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-19-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-19-node-03",
+      "order": 3,
+      "speakerId": "speaker-03",
+      "speaker": "マリア",
+      "targetText": "ええ。きのうからダイエットをしています。",
+      "translationZh": "是啊。我从昨天开始在减肥。",
+      "kana": "ええ。きのうからダイエットをしています。",
+      "audio": "/generated/tts/lesson-19/l19-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习动词た形、经验句「〜たことがあります」、变化与选择表达。",
+        "zh": "是啊。我从昨天开始在减肥。",
+        "keywords": [
+          "ええきのうからダイエットをしています"
+        ],
+        "audio": "/generated/tts/lesson-19/l19-03.mp3",
+        "opening": "ええ",
+        "answer": "ええ。きのうからダイエットをしています。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-19-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-19-node-04",
+      "order": 4,
+      "speakerId": "speaker-02",
+      "speaker": "松本良子",
+      "targetText": "そうですか。わたしもダイエットをしたことがあります。",
+      "translationZh": "是吗？我也减过肥。",
+      "kana": "そうですか。わたしもダイエットをしたことがあります。",
+      "audio": "/generated/tts/lesson-19/l19-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习动词た形、经验句「〜たことがあります」、变化与选择表达。",
+        "zh": "是吗？我也减过肥。",
+        "keywords": [
+          "そうですかわたしもダイエットをしたことがあります"
+        ],
+        "audio": "/generated/tts/lesson-19/l19-04.mp3",
+        "opening": "そうで",
+        "answer": "そうですか。わたしもダイエットをしたことがあります。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-19-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-19-node-05",
+      "order": 5,
+      "speakerId": "speaker-03",
+      "speaker": "マリア",
+      "targetText": "どんなダイエットですか。",
+      "translationZh": "是什么样的减肥法？",
+      "kana": "どんなダイエットですか。",
+      "audio": "/generated/tts/lesson-19/l19-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习动词た形、经验句「〜たことがあります」、变化与选择表达。",
+        "zh": "是什么样的减肥法？",
+        "keywords": [
+          "どんなダイエットですか"
+        ],
+        "audio": "/generated/tts/lesson-19/l19-05.mp3",
+        "opening": "どんな",
+        "answer": "どんなダイエットですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-19-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-19-node-06",
+      "order": 6,
+      "speakerId": "speaker-02",
+      "speaker": "松本良子",
+      "targetText": "毎日りんごだけ食べたり、水をたくさん飲んだりしました。でも、無理なダイエットは体によくないですね。",
+      "translationZh": "每天只吃苹果，还喝很多水。不过，勉强节食对身体不好啊。",
+      "kana": "まいにちりんごだけたべたり、みずをたくさんのんだりしました。でも、むりなダイエットはからだによくないですね。",
+      "audio": "/generated/tts/lesson-19/l19-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习动词た形、经验句「〜たことがあります」、变化与选择表达。",
+        "zh": "每天只吃苹果，还喝很多水。不过，勉强节食对身体不好啊。",
+        "keywords": [
+          "毎日りんごだけ食べたり水をたくさん飲んだりしましたでも無理なダイエットは体によくないですね"
+        ],
+        "audio": "/generated/tts/lesson-19/l19-06.mp3",
+        "opening": "毎日り",
+        "answer": "毎日りんごだけ食べたり、水をたくさん飲んだりしました。でも、無理なダイエットは体によくないですね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-19-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-19-node-07",
+      "order": 7,
+      "speakerId": "speaker-03",
+      "speaker": "マリア",
+      "targetText": "そうですね。",
+      "translationZh": "是啊。",
+      "kana": "そうですね。",
+      "audio": "/generated/tts/lesson-19/l19-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习动词た形、经验句「〜たことがあります」、变化与选择表达。",
+        "zh": "是啊。",
+        "keywords": [
+          "そうですね"
+        ],
+        "audio": "/generated/tts/lesson-19/l19-07.mp3",
+        "opening": "そうで",
+        "answer": "そうですね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-19-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-19-node-08",
+      "order": 8,
+      "speakerId": "speaker-02",
+      "speaker": "松本良子",
+      "targetText": "マリアさん、このアイスクリーム、おいしいですよ。",
+      "translationZh": "玛丽亚，这个冰淇淋很好吃哦。",
+      "kana": "マリアさん、このアイスクリーム、おいしいですよ。",
+      "audio": "/generated/tts/lesson-19/l19-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习动词た形、经验句「〜たことがあります」、变化与选择表达。",
+        "zh": "玛丽亚，这个冰淇淋很好吃哦。",
+        "keywords": [
+          "マリアさんこのアイスクリームおいしいですよ"
+        ],
+        "audio": "/generated/tts/lesson-19/l19-08.mp3",
+        "opening": "マリア",
+        "answer": "マリアさん、このアイスクリーム、おいしいですよ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-19-node-09"
+      }
+    },
+    {
+      "nodeId": "lesson-19-node-09",
+      "order": 9,
+      "speakerId": "speaker-03",
+      "speaker": "マリア",
+      "targetText": "そうですか。……。ダイエットはまたあしたからします。",
+      "translationZh": "是吗？……减肥还是从明天再开始吧。",
+      "kana": "そうですか。……。ダイエットはまたあしたからします。",
+      "audio": "/generated/tts/lesson-19/l19-09.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习动词た形、经验句「〜たことがあります」、变化与选择表达。",
+        "zh": "是吗？……减肥还是从明天再开始吧。",
+        "keywords": [
+          "そうですか……ダイエットはまたあしたからします"
+        ],
+        "audio": "/generated/tts/lesson-19/l19-09.mp3",
+        "opening": "そうで",
+        "answer": "そうですか。……。ダイエットはまたあしたからします。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 9,
+    "validationStatus": "passed"
+  }
+}

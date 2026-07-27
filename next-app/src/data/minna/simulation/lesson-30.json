@@ -1,0 +1,387 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 30,
+  "lessonId": "lesson-30",
+  "title": {
+    "ja": "第30課",
+    "zh": "第30课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-30.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-30.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "用「他动词てあります」说明人为准备好的结果，用「ておきます」表达事先准备。",
+    "image": "/minna/lessons/lesson-30/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "ミラー"
+    },
+    {
+      "id": "speaker-02",
+      "name": "鈴木"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-30-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "ミラー",
+      "targetText": "こんにちは。",
+      "translationZh": "你好。",
+      "kana": "こんにちは。",
+      "audio": "/generated/tts/lesson-30/l30-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用「他动词てあります」说明人为准备好的结果，用「ておきます」表达事先准备。",
+        "zh": "你好。",
+        "keywords": [
+          "こんにちは"
+        ],
+        "audio": "/generated/tts/lesson-30/l30-01.mp3",
+        "opening": "こんに",
+        "answer": "こんにちは。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-30-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-30-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "鈴木",
+      "targetText": "いらっしゃい。さあ、どうぞ。",
+      "translationZh": "欢迎，请进。",
+      "kana": "いらっしゃい。さあ、どうぞ。",
+      "audio": "/generated/tts/lesson-30/l30-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用「他动词てあります」说明人为准备好的结果，用「ておきます」表达事先准备。",
+        "zh": "欢迎，请进。",
+        "keywords": [
+          "いらっしゃいさあどうぞ"
+        ],
+        "audio": "/generated/tts/lesson-30/l30-02.mp3",
+        "opening": "いらっ",
+        "answer": "いらっしゃい。さあ、どうぞ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-30-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-30-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "ミラー",
+      "targetText": "大きいリュックが置いてありますね。山へ行くんですか。",
+      "translationZh": "放着一个大背包，是要去爬山吗？",
+      "kana": "おおきいリュックがおいてありますね。やまへいくんですか。",
+      "audio": "/generated/tts/lesson-30/l30-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用「他动词てあります」说明人为准备好的结果，用「ておきます」表达事先准备。",
+        "zh": "放着一个大背包，是要去爬山吗？",
+        "keywords": [
+          "大きいリュックが置いてありますね山へ行くんですか"
+        ],
+        "audio": "/generated/tts/lesson-30/l30-03.mp3",
+        "opening": "大きい",
+        "answer": "大きいリュックが置いてありますね。山へ行くんですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-30-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-30-node-04",
+      "order": 4,
+      "speakerId": "speaker-02",
+      "speaker": "鈴木",
+      "targetText": "いいえ。非常袋ですよ。",
+      "translationZh": "不是，是应急包。",
+      "kana": "いいえ。ひじょうぶくろですよ。",
+      "audio": "/generated/tts/lesson-30/l30-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用「他动词てあります」说明人为准备好的结果，用「ておきます」表达事先准备。",
+        "zh": "不是，是应急包。",
+        "keywords": [
+          "いいえ非常袋ですよ"
+        ],
+        "audio": "/generated/tts/lesson-30/l30-04.mp3",
+        "opening": "いいえ",
+        "answer": "いいえ。非常袋ですよ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-30-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-30-node-05",
+      "order": 5,
+      "speakerId": "speaker-01",
+      "speaker": "ミラー",
+      "targetText": "非常袋？何ですか。",
+      "translationZh": "应急包？是什么？",
+      "kana": "ひじょうぶくろ？なんですか。",
+      "audio": "/generated/tts/lesson-30/l30-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用「他动词てあります」说明人为准备好的结果，用「ておきます」表达事先准备。",
+        "zh": "应急包？是什么？",
+        "keywords": [
+          "非常袋何ですか"
+        ],
+        "audio": "/generated/tts/lesson-30/l30-05.mp3",
+        "opening": "非常袋",
+        "answer": "非常袋？何ですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-30-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-30-node-06",
+      "order": 6,
+      "speakerId": "speaker-02",
+      "speaker": "鈴木",
+      "targetText": "非常時に使う物を入れておく袋です。電気やガスが止まっても、3日ぐらい生活できる物が入れてあるんです。",
+      "translationZh": "是预先装好紧急时用品的袋子，里面有即使停电停气也能生活三天左右的物品。",
+      "kana": "ひじょうじにつかうものをいれておくふくろです。でんきやガスがとまっても、みっかぐらいせいかつできるものがいれてあるんです。",
+      "audio": "/generated/tts/lesson-30/l30-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用「他动词てあります」说明人为准备好的结果，用「ておきます」表达事先准备。",
+        "zh": "是预先装好紧急时用品的袋子，里面有即使停电停气也能生活三天左右的物品。",
+        "keywords": [
+          "非常時に使う物を入れておく袋です電気やガスが止まっても3日ぐらい生活できる物が入れてあるんです"
+        ],
+        "audio": "/generated/tts/lesson-30/l30-06.mp3",
+        "opening": "非常時",
+        "answer": "非常時に使う物を入れておく袋です。電気やガスが止まっても、3日ぐらい生活できる物が入れてあるんです。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-30-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-30-node-07",
+      "order": 7,
+      "speakerId": "speaker-01",
+      "speaker": "ミラー",
+      "targetText": "水や食べ物ですか。",
+      "translationZh": "是水和食物吗？",
+      "kana": "みずやたべものですか。",
+      "audio": "/generated/tts/lesson-30/l30-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用「他动词てあります」说明人为准备好的结果，用「ておきます」表达事先准备。",
+        "zh": "是水和食物吗？",
+        "keywords": [
+          "水や食べ物ですか"
+        ],
+        "audio": "/generated/tts/lesson-30/l30-07.mp3",
+        "opening": "水や食",
+        "answer": "水や食べ物ですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-30-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-30-node-08",
+      "order": 8,
+      "speakerId": "speaker-02",
+      "speaker": "鈴木",
+      "targetText": "ええ、ほかにもいろいろありますよ。懐中電灯とか、ラジオとか……。",
+      "translationZh": "是的，还有各种东西，比如手电筒、收音机……",
+      "kana": "ええ、ほかにもいろいろありますよ。かいちゅうでんとうとか、ラジオとか……。",
+      "audio": "/generated/tts/lesson-30/l30-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用「他动词てあります」说明人为准备好的结果，用「ておきます」表达事先准备。",
+        "zh": "是的，还有各种东西，比如手电筒、收音机……",
+        "keywords": [
+          "ええほかにもいろいろありますよ懐中電灯とかラジオとか……"
+        ],
+        "audio": "/generated/tts/lesson-30/l30-08.mp3",
+        "opening": "ええ",
+        "answer": "ええ、ほかにもいろいろありますよ。懐中電灯とか、ラジオとか……。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-30-node-09"
+      }
+    },
+    {
+      "nodeId": "lesson-30-node-09",
+      "order": 9,
+      "speakerId": "speaker-01",
+      "speaker": "ミラー",
+      "targetText": "わたしも準備しておかないと。",
+      "translationZh": "我也必须预先准备。",
+      "kana": "わたしもじゅんびしておかないと。",
+      "audio": "/generated/tts/lesson-30/l30-09.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用「他动词てあります」说明人为准备好的结果，用「ておきます」表达事先准备。",
+        "zh": "我也必须预先准备。",
+        "keywords": [
+          "わたしも準備しておかないと"
+        ],
+        "audio": "/generated/tts/lesson-30/l30-09.mp3",
+        "opening": "わたし",
+        "answer": "わたしも準備しておかないと。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-30-node-10"
+      }
+    },
+    {
+      "nodeId": "lesson-30-node-10",
+      "order": 10,
+      "speakerId": "speaker-02",
+      "speaker": "鈴木",
+      "targetText": "非常食はスーパーでも売っていますよ。",
+      "translationZh": "应急食品超市也有卖。",
+      "kana": "ひじょうしょくはスーパーでもうっていますよ。",
+      "audio": "/generated/tts/lesson-30/l30-10.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用「他动词てあります」说明人为准备好的结果，用「ておきます」表达事先准备。",
+        "zh": "应急食品超市也有卖。",
+        "keywords": [
+          "非常食はスーパーでも売っていますよ"
+        ],
+        "audio": "/generated/tts/lesson-30/l30-10.mp3",
+        "opening": "非常食",
+        "answer": "非常食はスーパーでも売っていますよ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-30-node-11"
+      }
+    },
+    {
+      "nodeId": "lesson-30-node-11",
+      "order": 11,
+      "speakerId": "speaker-01",
+      "speaker": "ミラー",
+      "targetText": "そうですか。じゃ、買っておきます。",
+      "translationZh": "是吗？那么我先买好。",
+      "kana": "そうですか。じゃ、かっておきます。",
+      "audio": "/generated/tts/lesson-30/l30-11.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用「他动词てあります」说明人为准备好的结果，用「ておきます」表达事先准备。",
+        "zh": "是吗？那么我先买好。",
+        "keywords": [
+          "そうですかじゃ買っておきます"
+        ],
+        "audio": "/generated/tts/lesson-30/l30-11.mp3",
+        "opening": "そうで",
+        "answer": "そうですか。じゃ、買っておきます。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 11,
+    "validationStatus": "passed"
+  }
+}

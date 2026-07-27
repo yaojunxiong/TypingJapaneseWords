@@ -1,0 +1,216 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 1,
+  "lessonId": "lesson-01",
+  "title": {
+    "ja": "第1課",
+    "zh": "第1课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-01.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-01.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "学习「AはBです」「AはBではありません」「AはBですか」和基本寒暄。每个核心词汇、语法、例句后都有即时练习。",
+    "image": "/minna/lessons/lesson-01/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "佐藤"
+    },
+    {
+      "id": "speaker-02",
+      "name": "山田"
+    },
+    {
+      "id": "speaker-03",
+      "name": "ミラー"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-01-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "佐藤",
+      "targetText": "おはようございます。",
+      "translationZh": "早上好。",
+      "kana": "おはようございます。",
+      "audio": "/generated/tts/lesson-01/l1-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「AはBです」「AはBではありません」「AはBですか」和基本寒暄。每个核心词汇、语法、例句后都有即时练习。",
+        "zh": "早上好。",
+        "keywords": [
+          "おはようございます"
+        ],
+        "audio": "/generated/tts/lesson-01/l1-01.mp3",
+        "opening": "おはよ",
+        "answer": "おはようございます。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-01-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-01-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "山田",
+      "targetText": "おはようございます。佐藤さん、こちらはマイク・ミラーさんです。",
+      "translationZh": "早上好。佐藤小姐，这位是迈克·米勒先生。",
+      "kana": "おはようございます。さとうさん、こちらはまいく・みらーさんです。",
+      "audio": "/generated/tts/lesson-01/l1-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「AはBです」「AはBではありません」「AはBですか」和基本寒暄。每个核心词汇、语法、例句后都有即时练习。",
+        "zh": "早上好。佐藤小姐，这位是迈克·米勒先生。",
+        "keywords": [
+          "おはようございます佐藤さんこちらはマイク・ミラーさんです"
+        ],
+        "audio": "/generated/tts/lesson-01/l1-02.mp3",
+        "opening": "おはよ",
+        "answer": "おはようございます。佐藤さん、こちらはマイク・ミラーさんです。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-01-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-01-node-03",
+      "order": 3,
+      "speakerId": "speaker-03",
+      "speaker": "ミラー",
+      "targetText": "初めまして。マイク・ミラーです。アメリカから来ました。どうぞよろしく。",
+      "translationZh": "初次见面。我叫迈克·米勒，来自美国。请多关照。",
+      "kana": "はじめまして。まいく・みらーです。あめりかからきました。どうぞよろしく。",
+      "audio": "/generated/tts/lesson-01/l1-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「AはBです」「AはBではありません」「AはBですか」和基本寒暄。每个核心词汇、语法、例句后都有即时练习。",
+        "zh": "初次见面。我叫迈克·米勒，来自美国。请多关照。",
+        "keywords": [
+          "初めましてマイク・ミラーですアメリカから来ましたどうぞよろしく"
+        ],
+        "audio": "/generated/tts/lesson-01/l1-03.mp3",
+        "opening": "初めま",
+        "answer": "初めまして。マイク・ミラーです。アメリカから来ました。どうぞよろしく。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-01-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-01-node-04",
+      "order": 4,
+      "speakerId": "speaker-01",
+      "speaker": "佐藤",
+      "targetText": "佐藤けい子です。どうぞよろしく。",
+      "translationZh": "我是佐藤惠子。请多关照。",
+      "kana": "さとうけいこです。どうぞよろしく。",
+      "audio": "/generated/tts/lesson-01/l1-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「AはBです」「AはBではありません」「AはBですか」和基本寒暄。每个核心词汇、语法、例句后都有即时练习。",
+        "zh": "我是佐藤惠子。请多关照。",
+        "keywords": [
+          "佐藤けい子ですどうぞよろしく"
+        ],
+        "audio": "/generated/tts/lesson-01/l1-04.mp3",
+        "opening": "佐藤け",
+        "answer": "佐藤けい子です。どうぞよろしく。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 4,
+    "validationStatus": "passed"
+  }
+}

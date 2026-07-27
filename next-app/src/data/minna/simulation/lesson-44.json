@@ -1,0 +1,362 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 44,
+  "lessonId": "lesson-44",
+  "title": {
+    "ja": "第44課",
+    "zh": "第44课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-44.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-44.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "学习过度表达 すぎます、难易表达 やすい/にくい，以及把状态变成某样的 くします/にします。",
+    "image": "/minna/lessons/lesson-44/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "美容師"
+    },
+    {
+      "id": "speaker-02",
+      "name": "イー"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-44-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "美容師",
+      "targetText": "いらっしゃいませ。きょうはどうなさいますか。",
+      "translationZh": "欢迎光临。今天您想做什么造型？",
+      "kana": "いらっしゃいませ。きょうはどうなさいますか。",
+      "audio": "/generated/tts/lesson-44/l44-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习过度表达 すぎます、难易表达 やすい/にくい，以及把状态变成某样的 くします/にします。",
+        "zh": "欢迎光临。今天您想做什么造型？",
+        "keywords": [
+          "いらっしゃいませきょうはどうなさいますか"
+        ],
+        "audio": "/generated/tts/lesson-44/l44-01.mp3",
+        "opening": "いらっ",
+        "answer": "いらっしゃいませ。きょうはどうなさいますか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-44-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-44-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "イー",
+      "targetText": "カット、お願いします。",
+      "translationZh": "请帮我剪个头发。",
+      "kana": "カット、おねがいします。",
+      "audio": "/generated/tts/lesson-44/l44-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习过度表达 すぎます、难易表达 やすい/にくい，以及把状态变成某样的 くします/にします。",
+        "zh": "请帮我剪个头发。",
+        "keywords": [
+          "カットお願いします"
+        ],
+        "audio": "/generated/tts/lesson-44/l44-02.mp3",
+        "opening": "カット",
+        "answer": "カット、お願いします。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-44-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-44-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "美容師",
+      "targetText": "じゃ、シャンプーをしますから、こちらへどうぞ。",
+      "translationZh": "那我先帮您洗头吧。这边请。",
+      "kana": "じゃ、シャンプーをしますから、こちらへどうぞ。",
+      "audio": "/generated/tts/lesson-44/l44-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习过度表达 すぎます、难易表达 やすい/にくい，以及把状态变成某样的 くします/にします。",
+        "zh": "那我先帮您洗头吧。这边请。",
+        "keywords": [
+          "じゃシャンプーをしますからこちらへどうぞ"
+        ],
+        "audio": "/generated/tts/lesson-44/l44-03.mp3",
+        "opening": "じゃ",
+        "answer": "じゃ、シャンプーをしますから、こちらへどうぞ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-44-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-44-node-04",
+      "order": 4,
+      "speakerId": "speaker-01",
+      "speaker": "美容師",
+      "targetText": "カットはどういうふうになさいますか。",
+      "translationZh": "您想剪成什么样的发型？",
+      "kana": "カットはどういうふうになさいますか。",
+      "audio": "/generated/tts/lesson-44/l44-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习过度表达 すぎます、难易表达 やすい/にくい，以及把状态变成某样的 くします/にします。",
+        "zh": "您想剪成什么样的发型？",
+        "keywords": [
+          "カットはどういうふうになさいますか"
+        ],
+        "audio": "/generated/tts/lesson-44/l44-04.mp3",
+        "opening": "カット",
+        "answer": "カットはどういうふうになさいますか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-44-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-44-node-05",
+      "order": 5,
+      "speakerId": "speaker-02",
+      "speaker": "イー",
+      "targetText": "ショートにしたいんですけど……。この写真みたいにしてください。",
+      "translationZh": "我想剪短，请剪成像这张照片这样的发型。",
+      "kana": "ショートにしたいんですけど……。このしゃしんみたいにしてください。",
+      "audio": "/generated/tts/lesson-44/l44-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习过度表达 すぎます、难易表达 やすい/にくい，以及把状态变成某样的 くします/にします。",
+        "zh": "我想剪短，请剪成像这张照片这样的发型。",
+        "keywords": [
+          "ショートにしたいんですけど……この写真みたいにしてください"
+        ],
+        "audio": "/generated/tts/lesson-44/l44-05.mp3",
+        "opening": "ショー",
+        "answer": "ショートにしたいんですけど……。この写真みたいにしてください。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-44-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-44-node-06",
+      "order": 6,
+      "speakerId": "speaker-01",
+      "speaker": "美容師",
+      "targetText": "あ、すてきですね。",
+      "translationZh": "啊，这发型真不错。",
+      "kana": "あ、すてきですね。",
+      "audio": "/generated/tts/lesson-44/l44-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习过度表达 すぎます、难易表达 やすい/にくい，以及把状态变成某样的 くします/にします。",
+        "zh": "啊，这发型真不错。",
+        "keywords": [
+          "あすてきですね"
+        ],
+        "audio": "/generated/tts/lesson-44/l44-06.mp3",
+        "opening": "あ",
+        "answer": "あ、すてきですね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-44-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-44-node-07",
+      "order": 7,
+      "speakerId": "speaker-01",
+      "speaker": "美容師",
+      "targetText": "前の長さはこれでよろしいでしょうか。",
+      "translationZh": "前面的长度这样可以吗？",
+      "kana": "まえのながさはこれでよろしいでしょうか。",
+      "audio": "/generated/tts/lesson-44/l44-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习过度表达 すぎます、难易表达 やすい/にくい，以及把状态变成某样的 くします/にします。",
+        "zh": "前面的长度这样可以吗？",
+        "keywords": [
+          "前の長さはこれでよろしいでしょうか"
+        ],
+        "audio": "/generated/tts/lesson-44/l44-07.mp3",
+        "opening": "前の長",
+        "answer": "前の長さはこれでよろしいでしょうか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-44-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-44-node-08",
+      "order": 8,
+      "speakerId": "speaker-02",
+      "speaker": "イー",
+      "targetText": "そうですね。もう少し短くしてください。",
+      "translationZh": "嗯……请再剪短一点。",
+      "kana": "そうですね。もうすこしみじかくしてください。",
+      "audio": "/generated/tts/lesson-44/l44-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习过度表达 すぎます、难易表达 やすい/にくい，以及把状态变成某样的 くします/にします。",
+        "zh": "嗯……请再剪短一点。",
+        "keywords": [
+          "そうですねもう少し短くしてください"
+        ],
+        "audio": "/generated/tts/lesson-44/l44-08.mp3",
+        "opening": "そうで",
+        "answer": "そうですね。もう少し短くしてください。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-44-node-09"
+      }
+    },
+    {
+      "nodeId": "lesson-44-node-09",
+      "order": 9,
+      "speakerId": "speaker-01",
+      "speaker": "美容師",
+      "targetText": "どうもお疲れさまでした。",
+      "translationZh": "辛苦您了。",
+      "kana": "どうもおつかれさまでした。",
+      "audio": "/generated/tts/lesson-44/l44-09.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习过度表达 すぎます、难易表达 やすい/にくい，以及把状态变成某样的 くします/にします。",
+        "zh": "辛苦您了。",
+        "keywords": [
+          "どうもお疲れさまでした"
+        ],
+        "audio": "/generated/tts/lesson-44/l44-09.mp3",
+        "opening": "どうも",
+        "answer": "どうもお疲れさまでした。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-44-node-10"
+      }
+    },
+    {
+      "nodeId": "lesson-44-node-10",
+      "order": 10,
+      "speakerId": "speaker-02",
+      "speaker": "イー",
+      "targetText": "ありがとう。",
+      "translationZh": "谢谢。",
+      "kana": "ありがとう。",
+      "audio": "/generated/tts/lesson-44/l44-10.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习过度表达 すぎます、难易表达 やすい/にくい，以及把状态变成某样的 くします/にします。",
+        "zh": "谢谢。",
+        "keywords": [
+          "ありがとう"
+        ],
+        "audio": "/generated/tts/lesson-44/l44-10.mp3",
+        "opening": "ありが",
+        "answer": "ありがとう。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 10,
+    "validationStatus": "passed"
+  }
+}

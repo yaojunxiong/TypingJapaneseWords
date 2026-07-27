@@ -1,0 +1,312 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 18,
+  "lessonId": "lesson-18",
+  "title": {
+    "ja": "第18課",
+    "zh": "第18课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-18.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-18.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "学习「ことができます」「趣味は〜ことです」「〜まえに」。",
+    "image": "/minna/lessons/lesson-18/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "山田"
+    },
+    {
+      "id": "speaker-02",
+      "name": "サントス"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-18-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "山田",
+      "targetText": "サントスさんの趣味は何ですか。",
+      "translationZh": "桑托斯先生的爱好是什么？",
+      "kana": "サントスさんのしゅみはなんですか。",
+      "audio": "/generated/tts/lesson-18/l18-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ことができます」「趣味は〜ことです」「〜まえに」。",
+        "zh": "桑托斯先生的爱好是什么？",
+        "keywords": [
+          "サントスさんの趣味は何ですか"
+        ],
+        "audio": "/generated/tts/lesson-18/l18-01.mp3",
+        "opening": "サント",
+        "answer": "サントスさんの趣味は何ですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-18-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-18-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "サントス",
+      "targetText": "写真です。",
+      "translationZh": "摄影。",
+      "kana": "しゃしんです。",
+      "audio": "/generated/tts/lesson-18/l18-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ことができます」「趣味は〜ことです」「〜まえに」。",
+        "zh": "摄影。",
+        "keywords": [
+          "写真です"
+        ],
+        "audio": "/generated/tts/lesson-18/l18-02.mp3",
+        "opening": "写真で",
+        "answer": "写真です。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-18-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-18-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "山田",
+      "targetText": "どんな写真を撮りますか。",
+      "translationZh": "你拍什么样的照片？",
+      "kana": "どんなしゃしんをとりますか。",
+      "audio": "/generated/tts/lesson-18/l18-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ことができます」「趣味は〜ことです」「〜まえに」。",
+        "zh": "你拍什么样的照片？",
+        "keywords": [
+          "どんな写真を撮りますか"
+        ],
+        "audio": "/generated/tts/lesson-18/l18-03.mp3",
+        "opening": "どんな",
+        "answer": "どんな写真を撮りますか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-18-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-18-node-04",
+      "order": 4,
+      "speakerId": "speaker-02",
+      "speaker": "サントス",
+      "targetText": "動物の写真です。特に馬が好きです。",
+      "translationZh": "动物的照片。我尤其喜欢马。",
+      "kana": "どうぶつのしゃしんです。とくにうまがすきです。",
+      "audio": "/generated/tts/lesson-18/l18-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ことができます」「趣味は〜ことです」「〜まえに」。",
+        "zh": "动物的照片。我尤其喜欢马。",
+        "keywords": [
+          "動物の写真です特に馬が好きです"
+        ],
+        "audio": "/generated/tts/lesson-18/l18-04.mp3",
+        "opening": "動物の",
+        "answer": "動物の写真です。特に馬が好きです。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-18-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-18-node-05",
+      "order": 5,
+      "speakerId": "speaker-01",
+      "speaker": "山田",
+      "targetText": "へえ、それはおもしろいですね。日本へ来てから、馬の写真を撮りましたか。",
+      "translationZh": "哦，那很有意思啊。来日本以后拍过马的照片吗？",
+      "kana": "へえ、それはおもしろいですね。にほんへきてから、うまのしゃしんをとりましたか。",
+      "audio": "/generated/tts/lesson-18/l18-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ことができます」「趣味は〜ことです」「〜まえに」。",
+        "zh": "哦，那很有意思啊。来日本以后拍过马的照片吗？",
+        "keywords": [
+          "へえそれはおもしろいですね日本へ来てから馬の写真を撮りましたか"
+        ],
+        "audio": "/generated/tts/lesson-18/l18-05.mp3",
+        "opening": "へえ",
+        "answer": "へえ、それはおもしろいですね。日本へ来てから、馬の写真を撮りましたか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-18-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-18-node-06",
+      "order": 6,
+      "speakerId": "speaker-02",
+      "speaker": "サントス",
+      "targetText": "いいえ、日本ではなかなか馬を見ることができません。",
+      "translationZh": "没有，在日本很难看到马。",
+      "kana": "いいえ、にほんではなかなかうまをみることができません。",
+      "audio": "/generated/tts/lesson-18/l18-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ことができます」「趣味は〜ことです」「〜まえに」。",
+        "zh": "没有，在日本很难看到马。",
+        "keywords": [
+          "いいえ日本ではなかなか馬を見ることができません"
+        ],
+        "audio": "/generated/tts/lesson-18/l18-06.mp3",
+        "opening": "いいえ",
+        "answer": "いいえ、日本ではなかなか馬を見ることができません。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-18-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-18-node-07",
+      "order": 7,
+      "speakerId": "speaker-01",
+      "speaker": "山田",
+      "targetText": "北海道に馬がたくさんいますよ。",
+      "translationZh": "北海道有很多马哦。",
+      "kana": "ほっかいどうにうまがたくさんいますよ。",
+      "audio": "/generated/tts/lesson-18/l18-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ことができます」「趣味は〜ことです」「〜まえに」。",
+        "zh": "北海道有很多马哦。",
+        "keywords": [
+          "北海道に馬がたくさんいますよ"
+        ],
+        "audio": "/generated/tts/lesson-18/l18-07.mp3",
+        "opening": "北海道",
+        "answer": "北海道に馬がたくさんいますよ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-18-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-18-node-08",
+      "order": 8,
+      "speakerId": "speaker-02",
+      "speaker": "サントス",
+      "targetText": "ほんとうですか。じゃ、夏休みにぜひ行きたいです。",
+      "translationZh": "真的吗？那么，暑假时我一定想去。",
+      "kana": "ほんとうですか。じゃ、なつやすみにぜひいきたいです。",
+      "audio": "/generated/tts/lesson-18/l18-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ことができます」「趣味は〜ことです」「〜まえに」。",
+        "zh": "真的吗？那么，暑假时我一定想去。",
+        "keywords": [
+          "ほんとうですかじゃ夏休みにぜひ行きたいです"
+        ],
+        "audio": "/generated/tts/lesson-18/l18-08.mp3",
+        "opening": "ほんと",
+        "answer": "ほんとうですか。じゃ、夏休みにぜひ行きたいです。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 8,
+    "validationStatus": "passed"
+  }
+}

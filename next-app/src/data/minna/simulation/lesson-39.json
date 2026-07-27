@@ -1,0 +1,312 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 39,
+  "lessonId": "lesson-39",
+  "title": {
+    "ja": "第39課",
+    "zh": "第39课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-39.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-39.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "掌握 ので、て形原因、名词で原因等表达，让说明理由更自然、更礼貌。",
+    "image": "/minna/lessons/lesson-39/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "ミラー"
+    },
+    {
+      "id": "speaker-02",
+      "name": "中村課長"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-39-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "ミラー",
+      "targetText": "課長、遅れて、すみません。",
+      "translationZh": "课长，对不起，我迟到了。",
+      "kana": "かちょう、おくれて、すみません。",
+      "audio": "/generated/tts/lesson-39/l39-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握 ので、て形原因、名词で原因等表达，让说明理由更自然、更礼貌。",
+        "zh": "课长，对不起，我迟到了。",
+        "keywords": [
+          "課長遅れてすみません"
+        ],
+        "audio": "/generated/tts/lesson-39/l39-01.mp3",
+        "opening": "課長",
+        "answer": "課長、遅れて、すみません。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-39-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-39-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "中村課長",
+      "targetText": "ミラーさん、どうしたんですか。",
+      "translationZh": "米勒先生，怎么了？",
+      "kana": "ミラーさん、どうしたんですか。",
+      "audio": "/generated/tts/lesson-39/l39-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握 ので、て形原因、名词で原因等表达，让说明理由更自然、更礼貌。",
+        "zh": "米勒先生，怎么了？",
+        "keywords": [
+          "ミラーさんどうしたんですか"
+        ],
+        "audio": "/generated/tts/lesson-39/l39-02.mp3",
+        "opening": "ミラー",
+        "answer": "ミラーさん、どうしたんですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-39-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-39-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "ミラー",
+      "targetText": "実は来る途中で事故があって、バスが遅れてしまったんです。",
+      "translationZh": "其实来的路上发生了事故，公交车晚点了。",
+      "kana": "じつはくるとちゅうでじこがあって、ばすがおくれてしまったんです。",
+      "audio": "/generated/tts/lesson-39/l39-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握 ので、て形原因、名词で原因等表达，让说明理由更自然、更礼貌。",
+        "zh": "其实来的路上发生了事故，公交车晚点了。",
+        "keywords": [
+          "実は来る途中で事故があってバスが遅れてしまったんです"
+        ],
+        "audio": "/generated/tts/lesson-39/l39-03.mp3",
+        "opening": "実は来",
+        "answer": "実は来る途中で事故があって、バスが遅れてしまったんです。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-39-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-39-node-04",
+      "order": 4,
+      "speakerId": "speaker-02",
+      "speaker": "中村課長",
+      "targetText": "バスの事故ですか。",
+      "translationZh": "公交车事故吗？",
+      "kana": "ばすのじこですか。",
+      "audio": "/generated/tts/lesson-39/l39-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握 ので、て形原因、名词で原因等表达，让说明理由更自然、更礼貌。",
+        "zh": "公交车事故吗？",
+        "keywords": [
+          "バスの事故ですか"
+        ],
+        "audio": "/generated/tts/lesson-39/l39-04.mp3",
+        "opening": "バスの",
+        "answer": "バスの事故ですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-39-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-39-node-05",
+      "order": 5,
+      "speakerId": "speaker-01",
+      "speaker": "ミラー",
+      "targetText": "いいえ。交差点でトラックと車がぶつかって、バスが動かなかったんです。",
+      "translationZh": "不是。是在十字路口卡车和汽车相撞，公交车动不了了。",
+      "kana": "いいえ。こうさてんでとらっくとくるまがぶつかって、ばすがうごかなかったんです。",
+      "audio": "/generated/tts/lesson-39/l39-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握 ので、て形原因、名词で原因等表达，让说明理由更自然、更礼貌。",
+        "zh": "不是。是在十字路口卡车和汽车相撞，公交车动不了了。",
+        "keywords": [
+          "いいえ交差点でトラックと車がぶつかってバスが動かなかったんです"
+        ],
+        "audio": "/generated/tts/lesson-39/l39-05.mp3",
+        "opening": "いいえ",
+        "answer": "いいえ。交差点でトラックと車がぶつかって、バスが動かなかったんです。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-39-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-39-node-06",
+      "order": 6,
+      "speakerId": "speaker-02",
+      "speaker": "中村課長",
+      "targetText": "それは大変でしたね。連絡がないので、みんな心配していたんですよ。",
+      "translationZh": "那可真够呛。因为没有联系，大家都很担心你。",
+      "kana": "それはたいへんでしたね。れんらくがないので、みんなしんぱいしていたんですよ。",
+      "audio": "/generated/tts/lesson-39/l39-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握 ので、て形原因、名词で原因等表达，让说明理由更自然、更礼貌。",
+        "zh": "那可真够呛。因为没有联系，大家都很担心你。",
+        "keywords": [
+          "それは大変でしたね連絡がないのでみんな心配していたんですよ"
+        ],
+        "audio": "/generated/tts/lesson-39/l39-06.mp3",
+        "opening": "それは",
+        "answer": "それは大変でしたね。連絡がないので、みんな心配していたんですよ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-39-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-39-node-07",
+      "order": 7,
+      "speakerId": "speaker-01",
+      "speaker": "ミラー",
+      "targetText": "電話したかったんですが、ケータイをうちに忘れてしまって……。どうもすみませんでした。",
+      "translationZh": "我本来想打电话，可是把手机忘在家里了……真的非常抱歉。",
+      "kana": "でんわしたかったんですが、ケータイをうちにわすれてしまって……。どうもすみませんでした。",
+      "audio": "/generated/tts/lesson-39/l39-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握 ので、て形原因、名词で原因等表达，让说明理由更自然、更礼貌。",
+        "zh": "我本来想打电话，可是把手机忘在家里了……真的非常抱歉。",
+        "keywords": [
+          "電話したかったんですがケータイをうちに忘れてしまって……どうもすみませんでした"
+        ],
+        "audio": "/generated/tts/lesson-39/l39-07.mp3",
+        "opening": "電話し",
+        "answer": "電話したかったんですが、ケータイをうちに忘れてしまって……。どうもすみませんでした。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-39-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-39-node-08",
+      "order": 8,
+      "speakerId": "speaker-02",
+      "speaker": "中村課長",
+      "targetText": "わかりました。じゃ、会議を始めましょう。",
+      "translationZh": "知道了。那开始开会吧。",
+      "kana": "わかりました。じゃ、かいぎをはじめましょう。",
+      "audio": "/generated/tts/lesson-39/l39-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "掌握 ので、て形原因、名词で原因等表达，让说明理由更自然、更礼貌。",
+        "zh": "知道了。那开始开会吧。",
+        "keywords": [
+          "わかりましたじゃ会議を始めましょう"
+        ],
+        "audio": "/generated/tts/lesson-39/l39-08.mp3",
+        "opening": "わかり",
+        "answer": "わかりました。じゃ、会議を始めましょう。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 8,
+    "validationStatus": "passed"
+  }
+}

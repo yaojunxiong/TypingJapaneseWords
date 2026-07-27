@@ -1,3 +1,6 @@
+// Study Service API contracts
+// Shared types for the study.jimmyyao.com Teaching API
+
 export const STUDY_API_SCHEMA_VERSION = '1' as const
 
 export type StudyApiSchemaVersion = typeof STUDY_API_SCHEMA_VERSION
@@ -77,6 +80,7 @@ export const STUDY_CONTENT_API_ERROR_CODES = [
   'LESSON_NOT_FOUND',
   'CONTENT_MAPPING_FAILED',
   'INTERNAL_ERROR',
+  'ENVELOPE_MALFORMED',
 ] as const
 
 export type StudyApiErrorCode = typeof STUDY_CONTENT_API_ERROR_CODES[number]
@@ -92,4 +96,119 @@ export interface StudyApiError extends VersionedStudyDto {
   readonly retryable: boolean
   readonly requestId: string
   readonly details: readonly StudyApiErrorDetail[]
+}
+
+// ─── Simulation Enrichment Types ─────────────────────────────────────
+
+export interface SimulationHint {
+  scene?: string
+  zh?: string
+  keywords?: string[]
+  audio?: string
+  opening?: string
+  answer?: string
+}
+
+export interface SimulationCompletion {
+  threshold: string
+  mode: string
+  required: string[]
+}
+
+export interface SimulationNode {
+  nodeId: string
+  order: number
+  speakerId: string
+  speaker: string
+  targetText: string
+  translationZh?: string
+  kana?: string
+  audio?: string
+  image?: string
+  hints?: SimulationHint
+  completion?: SimulationCompletion
+}
+
+export interface SimulationCharacter {
+  id: string
+  name: string
+}
+
+export interface SimulationScene {
+  summaryZh?: string
+  image?: string
+}
+
+export interface SimulationLearnerState {
+  label?: string
+  displayName?: Record<string, string>
+  icon?: string
+  description?: string
+  hintMessage?: string
+  interruption?: string
+  repeatPenalty?: string
+  nextAction?: string
+  type: string
+}
+
+export interface SimulationQuality {
+  verifiedBy: string
+  verifiedAt: string
+  notes: string
+}
+
+export interface SimulationSourceData {
+  schemaVersion: string
+  lesson: number
+  lessonId: string
+  title: string
+  source: {
+    repository: string
+    recitationFile: string
+    lessonFile: string
+    generatedFromVerifiedSource: boolean
+  }
+  scene: SimulationScene
+  characters: SimulationCharacter[]
+  nodes: SimulationNode[]
+  learnerStates: Record<string, SimulationLearnerState>
+  redirectPolicy: Record<string, unknown>
+  observationSchema: Record<string, unknown>
+  quality: SimulationQuality
+}
+
+export interface SimulationEnrichment {
+  /** Simulation scene with image and description */
+  scene: SimulationScene
+  /** Characters / roles in the lesson */
+  characters: SimulationCharacter[]
+  /** Conversation turns with hints and completion criteria */
+  nodes: SimulationNode[]
+  /** Learner state definitions */
+  learnerStates: Record<string, SimulationLearnerState>
+  /** Redirect / recovery policy */
+  redirectPolicy: Record<string, unknown>
+  /** Observation schema for evaluation */
+  observationSchema: Record<string, unknown>
+  /** Simulation data quality metadata */
+  quality: SimulationQuality
+}
+
+export interface StudyLessonEnvelope {
+  /** Canonical lesson detail */
+  lesson: LessonDetail
+  /** Navigation metadata for sidebar */
+  summaries: LessonSummary[]
+  /** Canonical conversation image URL */
+  conversationImageUrl: string | null
+  /** Canonical line-level audio URLs */
+  audioUrls: Record<string, string>
+  /** Parsed simulation enrichment */
+  simulation: SimulationEnrichment
+  /** Metadata about the envelope itself */
+  meta: {
+    schemaVersion: string
+    datasetVersion: string
+    generatedAt: string
+  }
 }

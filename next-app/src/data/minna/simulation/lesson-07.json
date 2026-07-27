@@ -1,0 +1,370 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 7,
+  "lessonId": "lesson-07",
+  "title": {
+    "ja": "第7課",
+    "zh": "第7课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-07.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-07.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "学习授受动词「あげます・もらいます」以及「〜に」对象表达和「もう〜ましたか」。",
+    "image": "/minna/lessons/lesson-07/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "山田一郎"
+    },
+    {
+      "id": "speaker-02",
+      "name": "ジョゼ・サントス"
+    },
+    {
+      "id": "speaker-03",
+      "name": "山田友子"
+    },
+    {
+      "id": "speaker-04",
+      "name": "マリア・サントス"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-07-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "山田一郎",
+      "targetText": "はい。",
+      "translationZh": "您好。",
+      "kana": "はい。",
+      "audio": "/generated/tts/lesson-07/l7-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习授受动词「あげます・もらいます」以及「〜に」对象表达和「もう〜ましたか」。",
+        "zh": "您好。",
+        "keywords": [
+          "はい"
+        ],
+        "audio": "/generated/tts/lesson-07/l7-01.mp3",
+        "opening": "はい。",
+        "answer": "はい。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-07-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-07-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "ジョゼ・サントス",
+      "targetText": "サントスです。",
+      "translationZh": "我是桑托斯。",
+      "kana": "さんとすです。",
+      "audio": "/generated/tts/lesson-07/l7-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习授受动词「あげます・もらいます」以及「〜に」对象表达和「もう〜ましたか」。",
+        "zh": "我是桑托斯。",
+        "keywords": [
+          "サントスです"
+        ],
+        "audio": "/generated/tts/lesson-07/l7-02.mp3",
+        "opening": "サント",
+        "answer": "サントスです。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-07-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-07-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "山田一郎",
+      "targetText": "いらっしゃい。どうぞお上がりください。",
+      "translationZh": "欢迎，请进来吧。",
+      "kana": "いらっしゃい。どうぞおあがりください。",
+      "audio": "/generated/tts/lesson-07/l7-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习授受动词「あげます・もらいます」以及「〜に」对象表达和「もう〜ましたか」。",
+        "zh": "欢迎，请进来吧。",
+        "keywords": [
+          "いらっしゃいどうぞお上がりください"
+        ],
+        "audio": "/generated/tts/lesson-07/l7-03.mp3",
+        "opening": "いらっ",
+        "answer": "いらっしゃい。どうぞお上がりください。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-07-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-07-node-04",
+      "order": 4,
+      "speakerId": "speaker-02",
+      "speaker": "ジョゼ・サントス",
+      "targetText": "失礼します。",
+      "translationZh": "打扰了。",
+      "kana": "しつれいします。",
+      "audio": "/generated/tts/lesson-07/l7-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习授受动词「あげます・もらいます」以及「〜に」对象表达和「もう〜ましたか」。",
+        "zh": "打扰了。",
+        "keywords": [
+          "失礼します"
+        ],
+        "audio": "/generated/tts/lesson-07/l7-04.mp3",
+        "opening": "失礼し",
+        "answer": "失礼します。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-07-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-07-node-05",
+      "order": 5,
+      "speakerId": "speaker-03",
+      "speaker": "山田友子",
+      "targetText": "コーヒーはいかがですか。",
+      "translationZh": "要不要喝咖啡？",
+      "kana": "こーひーはいかがですか。",
+      "audio": "/generated/tts/lesson-07/l7-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习授受动词「あげます・もらいます」以及「〜に」对象表达和「もう〜ましたか」。",
+        "zh": "要不要喝咖啡？",
+        "keywords": [
+          "コーヒーはいかがですか"
+        ],
+        "audio": "/generated/tts/lesson-07/l7-05.mp3",
+        "opening": "コーヒ",
+        "answer": "コーヒーはいかがですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-07-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-07-node-06",
+      "order": 6,
+      "speakerId": "speaker-04",
+      "speaker": "マリア・サントス",
+      "targetText": "ありがとうございます。",
+      "translationZh": "谢谢。",
+      "kana": "ありがとうございます。",
+      "audio": "/generated/tts/lesson-07/l7-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习授受动词「あげます・もらいます」以及「〜に」对象表达和「もう〜ましたか」。",
+        "zh": "谢谢。",
+        "keywords": [
+          "ありがとうございます"
+        ],
+        "audio": "/generated/tts/lesson-07/l7-06.mp3",
+        "opening": "ありが",
+        "answer": "ありがとうございます。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-07-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-07-node-07",
+      "order": 7,
+      "speakerId": "speaker-03",
+      "speaker": "山田友子",
+      "targetText": "どうぞ。",
+      "translationZh": "请。",
+      "kana": "どうぞ。",
+      "audio": "/generated/tts/lesson-07/l7-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习授受动词「あげます・もらいます」以及「〜に」对象表达和「もう〜ましたか」。",
+        "zh": "请。",
+        "keywords": [
+          "どうぞ"
+        ],
+        "audio": "/generated/tts/lesson-07/l7-07.mp3",
+        "opening": "どうぞ",
+        "answer": "どうぞ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-07-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-07-node-08",
+      "order": 8,
+      "speakerId": "speaker-04",
+      "speaker": "マリア・サントス",
+      "targetText": "いただきます。",
+      "translationZh": "那我就不客气了。",
+      "kana": "いただきます。",
+      "audio": "/generated/tts/lesson-07/l7-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习授受动词「あげます・もらいます」以及「〜に」对象表达和「もう〜ましたか」。",
+        "zh": "那我就不客气了。",
+        "keywords": [
+          "いただきます"
+        ],
+        "audio": "/generated/tts/lesson-07/l7-08.mp3",
+        "opening": "いただ",
+        "answer": "いただきます。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-07-node-09"
+      }
+    },
+    {
+      "nodeId": "lesson-07-node-09",
+      "order": 9,
+      "speakerId": "speaker-04",
+      "speaker": "マリア・サントス",
+      "targetText": "このスプーン、すてきですね。",
+      "translationZh": "这把勺子真漂亮啊。",
+      "kana": "このすぷーん、すてきですね。",
+      "audio": "/generated/tts/lesson-07/l7-09.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习授受动词「あげます・もらいます」以及「〜に」对象表达和「もう〜ましたか」。",
+        "zh": "这把勺子真漂亮啊。",
+        "keywords": [
+          "このスプーンすてきですね"
+        ],
+        "audio": "/generated/tts/lesson-07/l7-09.mp3",
+        "opening": "このス",
+        "answer": "このスプーン、すてきですね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-07-node-10"
+      }
+    },
+    {
+      "nodeId": "lesson-07-node-10",
+      "order": 10,
+      "speakerId": "speaker-03",
+      "speaker": "山田友子",
+      "targetText": "ええ、会社の人にもらいました。メキシコのお土産です。",
+      "translationZh": "是啊，是公司的人送给我的。是墨西哥的礼物。",
+      "kana": "ええ、かいしゃのひとにもらいました。めきしこのおみやげです。",
+      "audio": "/generated/tts/lesson-07/l7-10.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习授受动词「あげます・もらいます」以及「〜に」对象表达和「もう〜ましたか」。",
+        "zh": "是啊，是公司的人送给我的。是墨西哥的礼物。",
+        "keywords": [
+          "ええ会社の人にもらいましたメキシコのお土産です"
+        ],
+        "audio": "/generated/tts/lesson-07/l7-10.mp3",
+        "opening": "ええ",
+        "answer": "ええ、会社の人にもらいました。メキシコのお土産です。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 10,
+    "validationStatus": "passed"
+  }
+}
