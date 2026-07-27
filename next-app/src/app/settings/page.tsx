@@ -42,6 +42,14 @@ export default async function SettingsPage() {
         <p><Link href="/chat">{tr(lang, '聊天', 'Chat')}</Link></p>
       </section>
 
+      <section className="card">
+        <h2>🤖 AI Center</h2>
+        <p className="small">{tr(lang, '管理 AI Provider、模型、Capability 与安全策略', 'Manage AI providers, models, capabilities, and security policies.')}</p>
+        <p><Link href="/settings/ai-center/capabilities">⚡ {tr(lang, '能力中心', 'Capability Center')}</Link></p>
+        <p><Link href="/settings/ai-center/providers">🔌 {tr(lang, 'Providers', 'Providers')}</Link></p>
+        <p><Link href="/settings/ai-center/security">🔒 {tr(lang, '安全设置', 'Security')}</Link></p>
+      </section>
+
       <SettingsPracticeControls lang={lang} />
     </main>
   )

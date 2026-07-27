@@ -981,3 +981,29 @@ a:hover { text-decoration: underline; }
   opacity: 0.6;
   cursor: not-allowed;
 }
+
+/* ── AI Center / Capability Center ── */
+.aiNavLink:hover {
+  color: #e2e8f0 !important;
+  background: rgba(56, 189, 248, 0.06) !important;
+  border-left-color: #38bdf8 !important;
+}
+.capCard:hover {
+  border-color: #334155 !important;
+  box-shadow: 0 1px 8px rgba(56, 189, 248, 0.06);
+}
+.capCard:active {
+  transform: scale(0.998);
+}
+
+/* AI Center scrollbar */
+.ai-center-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.ai-center-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.ai-center-scroll::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
