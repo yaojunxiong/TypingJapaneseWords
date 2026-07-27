@@ -1,0 +1,337 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 33,
+  "lessonId": "lesson-33",
+  "title": {
+    "ja": "第33課",
+    "zh": "第33课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-33.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-33.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "学习命令形、禁止形，并理解公告、标识、转述中的「と言っていました」。",
+    "image": "/minna/lessons/lesson-33/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "ワット"
+    },
+    {
+      "id": "speaker-02",
+      "name": "大学職員"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-33-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "ワット",
+      "targetText": "すみません。わたしの車にこんな紙が貼ってあったんですが、この漢字は何と読むんですか。",
+      "translationZh": "不好意思，我车上有这样一张纸，这个汉字怎么读？",
+      "kana": "すみません。わたしのくるまにこんなかみがはってあったんですが、このかんじはなんとよむんですか。",
+      "audio": "/generated/tts/lesson-33/l33-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习命令形、禁止形，并理解公告、标识、转述中的「と言っていました」。",
+        "zh": "不好意思，我车上有这样一张纸，这个汉字怎么读？",
+        "keywords": [
+          "すみませんわたしの車にこんな紙が貼ってあったんですがこの漢字は何と読むんですか"
+        ],
+        "audio": "/generated/tts/lesson-33/l33-01.mp3",
+        "opening": "すみま",
+        "answer": "すみません。わたしの車にこんな紙が貼ってあったんですが、この漢字は何と読むんですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-33-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-33-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "大学職員",
+      "targetText": "「ちゅうしゃいはん」です。",
+      "translationZh": "读作“停车违章”。",
+      "kana": "「ちゅうしゃいはん」です。",
+      "audio": "/generated/tts/lesson-33/l33-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习命令形、禁止形，并理解公告、标识、转述中的「と言っていました」。",
+        "zh": "读作“停车违章”。",
+        "keywords": [
+          "ちゅうしゃいはんです"
+        ],
+        "audio": "/generated/tts/lesson-33/l33-02.mp3",
+        "opening": "「ちゅ",
+        "answer": "「ちゅうしゃいはん」です。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-33-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-33-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "ワット",
+      "targetText": "ちゅうしゃいはん……。どういう意味ですか。",
+      "translationZh": "停车违章……是什么意思？",
+      "kana": "ちゅうしゃいはん……。どういういみですか。",
+      "audio": "/generated/tts/lesson-33/l33-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习命令形、禁止形，并理解公告、标识、转述中的「と言っていました」。",
+        "zh": "停车违章……是什么意思？",
+        "keywords": [
+          "ちゅうしゃいはん……どういう意味ですか"
+        ],
+        "audio": "/generated/tts/lesson-33/l33-03.mp3",
+        "opening": "ちゅう",
+        "answer": "ちゅうしゃいはん……。どういう意味ですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-33-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-33-node-04",
+      "order": 4,
+      "speakerId": "speaker-02",
+      "speaker": "大学職員",
+      "targetText": "止めてはいけない場所に車を止めたという意味です。どこに止めたんですか。",
+      "translationZh": "意思是把车停在禁止停车的地方。停在哪里了？",
+      "kana": "とめてはいけないばしょにくるまをとめたといういみです。どこにとめたんですか。",
+      "audio": "/generated/tts/lesson-33/l33-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习命令形、禁止形，并理解公告、标识、转述中的「と言っていました」。",
+        "zh": "意思是把车停在禁止停车的地方。停在哪里了？",
+        "keywords": [
+          "止めてはいけない場所に車を止めたという意味ですどこに止めたんですか"
+        ],
+        "audio": "/generated/tts/lesson-33/l33-04.mp3",
+        "opening": "止めて",
+        "answer": "止めてはいけない場所に車を止めたという意味です。どこに止めたんですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-33-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-33-node-05",
+      "order": 5,
+      "speakerId": "speaker-01",
+      "speaker": "ワット",
+      "targetText": "駅の前です。雑誌を買いに行って、10分だけ……。",
+      "translationZh": "车站前。我去买杂志，只停了十分钟……",
+      "kana": "えきのまえです。ざっしをかいにいって、じゅっぷんだけ……。",
+      "audio": "/generated/tts/lesson-33/l33-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习命令形、禁止形，并理解公告、标识、转述中的「と言っていました」。",
+        "zh": "车站前。我去买杂志，只停了十分钟……",
+        "keywords": [
+          "駅の前です雑誌を買いに行って10分だけ……"
+        ],
+        "audio": "/generated/tts/lesson-33/l33-05.mp3",
+        "opening": "駅の前",
+        "answer": "駅の前です。雑誌を買いに行って、10分だけ……。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-33-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-33-node-06",
+      "order": 6,
+      "speakerId": "speaker-02",
+      "speaker": "大学職員",
+      "targetText": "駅の前だったら、10分でもだめですよ。",
+      "translationZh": "如果是车站前，即使十分钟也不行。",
+      "kana": "えきのまえだったら、じゅっぷんでもだめですよ。",
+      "audio": "/generated/tts/lesson-33/l33-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习命令形、禁止形，并理解公告、标识、转述中的「と言っていました」。",
+        "zh": "如果是车站前，即使十分钟也不行。",
+        "keywords": [
+          "駅の前だったら10分でもだめですよ"
+        ],
+        "audio": "/generated/tts/lesson-33/l33-06.mp3",
+        "opening": "駅の前",
+        "answer": "駅の前だったら、10分でもだめですよ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-33-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-33-node-07",
+      "order": 7,
+      "speakerId": "speaker-01",
+      "speaker": "ワット",
+      "targetText": "そうですか。罰金を払わなければなりませんか。",
+      "translationZh": "是吗？必须交罚款吗？",
+      "kana": "そうですか。ばっきんをはらわなければなりませんか。",
+      "audio": "/generated/tts/lesson-33/l33-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习命令形、禁止形，并理解公告、标识、转述中的「と言っていました」。",
+        "zh": "是吗？必须交罚款吗？",
+        "keywords": [
+          "そうですか罰金を払わなければなりませんか"
+        ],
+        "audio": "/generated/tts/lesson-33/l33-07.mp3",
+        "opening": "そうで",
+        "answer": "そうですか。罰金を払わなければなりませんか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-33-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-33-node-08",
+      "order": 8,
+      "speakerId": "speaker-02",
+      "speaker": "大学職員",
+      "targetText": "ええ、15,000円払わないといけません。",
+      "translationZh": "是的，必须交一万五千日元。",
+      "kana": "ええ、いちまんごせんえんはらわないといけません。",
+      "audio": "/generated/tts/lesson-33/l33-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习命令形、禁止形，并理解公告、标识、转述中的「と言っていました」。",
+        "zh": "是的，必须交一万五千日元。",
+        "keywords": [
+          "ええ15000円払わないといけません"
+        ],
+        "audio": "/generated/tts/lesson-33/l33-08.mp3",
+        "opening": "ええ",
+        "answer": "ええ、15,000円払わないといけません。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-33-node-09"
+      }
+    },
+    {
+      "nodeId": "lesson-33-node-09",
+      "order": 9,
+      "speakerId": "speaker-01",
+      "speaker": "ワット",
+      "targetText": "えっ。15,000円ですか。雑誌は300円だったんですけど……。",
+      "translationZh": "咦，一万五千日元？杂志才三百日元……",
+      "kana": "えっ。いちまんごせんえんですか。ざっしはさんびゃくえんだったんですけど……。",
+      "audio": "/generated/tts/lesson-33/l33-09.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习命令形、禁止形，并理解公告、标识、转述中的「と言っていました」。",
+        "zh": "咦，一万五千日元？杂志才三百日元……",
+        "keywords": [
+          "えっ15000円ですか雑誌は300円だったんですけど……"
+        ],
+        "audio": "/generated/tts/lesson-33/l33-09.mp3",
+        "opening": "えっ",
+        "answer": "えっ。15,000円ですか。雑誌は300円だったんですけど……。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 9,
+    "validationStatus": "passed"
+  }
+}

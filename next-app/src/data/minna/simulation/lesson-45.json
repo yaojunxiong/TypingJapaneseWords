@@ -1,0 +1,403 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 45,
+  "lessonId": "lesson-45",
+  "title": {
+    "ja": "第45課",
+    "zh": "第45课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-45.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-45.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "学习在特定情况下的说明 場合は，以及表示意外转折、遗憾心情的 のに。",
+    "image": "/minna/lessons/lesson-45/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "係員"
+    },
+    {
+      "id": "speaker-02",
+      "name": "参加者全員"
+    },
+    {
+      "id": "speaker-03",
+      "name": "参加者1"
+    },
+    {
+      "id": "speaker-04",
+      "name": "参加者2"
+    },
+    {
+      "id": "speaker-05",
+      "name": "鈴木"
+    },
+    {
+      "id": "speaker-06",
+      "name": "ミラー"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-45-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "係員",
+      "targetText": "皆さん、このマラソンは健康マラソンですから、無理をしないでください。もし気分が悪くなったら、係員に言ってください。",
+      "translationZh": "大家这次是健康马拉松，请不要勉强自己。如果感觉不舒服，请去找工作人员。",
+      "kana": "みなさん、このマラソンはけんこうマラソンですから、むりをしないでください。もしきぶんがわるくなったら、かかりいんにいってください。",
+      "audio": "/generated/tts/lesson-45/l45-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习在特定情况下的说明 場合は，以及表示意外转折、遗憾心情的 のに。",
+        "zh": "大家这次是健康马拉松，请不要勉强自己。如果感觉不舒服，请去找工作人员。",
+        "keywords": [
+          "皆さんこのマラソンは健康マラソンですから無理をしないでくださいもし気分が悪くなったら係員に言ってください"
+        ],
+        "audio": "/generated/tts/lesson-45/l45-01.mp3",
+        "opening": "皆さん",
+        "answer": "皆さん、このマラソンは健康マラソンですから、無理をしないでください。もし気分が悪くなったら、係員に言ってください。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-45-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-45-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "参加者全員",
+      "targetText": "はい。",
+      "translationZh": "好的。",
+      "kana": "はい。",
+      "audio": "/generated/tts/lesson-45/l45-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习在特定情况下的说明 場合は，以及表示意外转折、遗憾心情的 のに。",
+        "zh": "好的。",
+        "keywords": [
+          "はい"
+        ],
+        "audio": "/generated/tts/lesson-45/l45-02.mp3",
+        "opening": "はい。",
+        "answer": "はい。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-45-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-45-node-03",
+      "order": 3,
+      "speakerId": "speaker-03",
+      "speaker": "参加者1",
+      "targetText": "すみません。コースをまちがえた場合は、どうしたらいいですか。",
+      "translationZh": "不好意思，如果跑错路线了，该怎么办？",
+      "kana": "すみません。コースをまちがえたばあいは、どうしたらいいですか。",
+      "audio": "/generated/tts/lesson-45/l45-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习在特定情况下的说明 場合は，以及表示意外转折、遗憾心情的 のに。",
+        "zh": "不好意思，如果跑错路线了，该怎么办？",
+        "keywords": [
+          "すみませんコースをまちがえた場合はどうしたらいいですか"
+        ],
+        "audio": "/generated/tts/lesson-45/l45-03.mp3",
+        "opening": "すみま",
+        "answer": "すみません。コースをまちがえた場合は、どうしたらいいですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-45-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-45-node-04",
+      "order": 4,
+      "speakerId": "speaker-01",
+      "speaker": "係員",
+      "targetText": "元の所に戻って、続けてください。",
+      "translationZh": "请回到原来的位置继续跑。",
+      "kana": "もとのところにもどって、つづけてください。",
+      "audio": "/generated/tts/lesson-45/l45-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习在特定情况下的说明 場合は，以及表示意外转折、遗憾心情的 のに。",
+        "zh": "请回到原来的位置继续跑。",
+        "keywords": [
+          "元の所に戻って続けてください"
+        ],
+        "audio": "/generated/tts/lesson-45/l45-04.mp3",
+        "opening": "元の所",
+        "answer": "元の所に戻って、続けてください。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-45-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-45-node-05",
+      "order": 5,
+      "speakerId": "speaker-04",
+      "speaker": "参加者2",
+      "targetText": "あのう、途中でやめたい場合は？",
+      "translationZh": "那个……如果想中途退出的话呢？",
+      "kana": "あのう、とちゅうでやめたいばあいは？",
+      "audio": "/generated/tts/lesson-45/l45-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习在特定情况下的说明 場合は，以及表示意外转折、遗憾心情的 のに。",
+        "zh": "那个……如果想中途退出的话呢？",
+        "keywords": [
+          "あのう途中でやめたい場合は"
+        ],
+        "audio": "/generated/tts/lesson-45/l45-05.mp3",
+        "opening": "あのう",
+        "answer": "あのう、途中でやめたい場合は？"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-45-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-45-node-06",
+      "order": 6,
+      "speakerId": "speaker-01",
+      "speaker": "係員",
+      "targetText": "その場合は、近くの係員に名前を言って、帰ってください。では、スタートの時間です。",
+      "translationZh": "请向附近的工作人员报上姓名后离开。那么，现在是起跑时间。",
+      "kana": "そのばあいは、ちかくのかかりいんになまえをいって、かえってください。では、スタートのじかんです。",
+      "audio": "/generated/tts/lesson-45/l45-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习在特定情况下的说明 場合は，以及表示意外转折、遗憾心情的 のに。",
+        "zh": "请向附近的工作人员报上姓名后离开。那么，现在是起跑时间。",
+        "keywords": [
+          "その場合は近くの係員に名前を言って帰ってくださいではスタートの時間です"
+        ],
+        "audio": "/generated/tts/lesson-45/l45-06.mp3",
+        "opening": "その場",
+        "answer": "その場合は、近くの係員に名前を言って、帰ってください。では、スタートの時間です。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-45-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-45-node-07",
+      "order": 7,
+      "speakerId": "speaker-05",
+      "speaker": "鈴木",
+      "targetText": "ミラーさん、マラソンはどうでしたか。",
+      "translationZh": "米勒先生，马拉松跑得怎么样？",
+      "kana": "ミラーさん、マラソンはどうでしたか。",
+      "audio": "/generated/tts/lesson-45/l45-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习在特定情况下的说明 場合は，以及表示意外转折、遗憾心情的 のに。",
+        "zh": "米勒先生，马拉松跑得怎么样？",
+        "keywords": [
+          "ミラーさんマラソンはどうでしたか"
+        ],
+        "audio": "/generated/tts/lesson-45/l45-07.mp3",
+        "opening": "ミラー",
+        "answer": "ミラーさん、マラソンはどうでしたか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-45-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-45-node-08",
+      "order": 8,
+      "speakerId": "speaker-06",
+      "speaker": "ミラー",
+      "targetText": "2位でした。",
+      "translationZh": "我拿了第二名。",
+      "kana": "にいでした。",
+      "audio": "/generated/tts/lesson-45/l45-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习在特定情况下的说明 場合は，以及表示意外转折、遗憾心情的 のに。",
+        "zh": "我拿了第二名。",
+        "keywords": [
+          "2位でした"
+        ],
+        "audio": "/generated/tts/lesson-45/l45-08.mp3",
+        "opening": "2位で",
+        "answer": "2位でした。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-45-node-09"
+      }
+    },
+    {
+      "nodeId": "lesson-45-node-09",
+      "order": 9,
+      "speakerId": "speaker-05",
+      "speaker": "鈴木",
+      "targetText": "2位だったんですか。すごいですね。",
+      "translationZh": "拿了第二啊？好厉害啊。",
+      "kana": "にいだったんですか。すごいですね。",
+      "audio": "/generated/tts/lesson-45/l45-09.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习在特定情况下的说明 場合は，以及表示意外转折、遗憾心情的 のに。",
+        "zh": "拿了第二啊？好厉害啊。",
+        "keywords": [
+          "2位だったんですかすごいですね"
+        ],
+        "audio": "/generated/tts/lesson-45/l45-09.mp3",
+        "opening": "2位だ",
+        "answer": "2位だったんですか。すごいですね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-45-node-10"
+      }
+    },
+    {
+      "nodeId": "lesson-45-node-10",
+      "order": 10,
+      "speakerId": "speaker-06",
+      "speaker": "ミラー",
+      "targetText": "いいえ、一生懸命練習したのに、優勝できなくて、残念です。",
+      "translationZh": "不，明明拼命练习了，却没能拿冠军，真遗憾。",
+      "kana": "いいえ、いっしょうけんめいれんしゅうしたのに、ゆうしょうできなくて、ざんねんです。",
+      "audio": "/generated/tts/lesson-45/l45-10.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习在特定情况下的说明 場合は，以及表示意外转折、遗憾心情的 のに。",
+        "zh": "不，明明拼命练习了，却没能拿冠军，真遗憾。",
+        "keywords": [
+          "いいえ一生懸命練習したのに優勝できなくて残念です"
+        ],
+        "audio": "/generated/tts/lesson-45/l45-10.mp3",
+        "opening": "いいえ",
+        "answer": "いいえ、一生懸命練習したのに、優勝できなくて、残念です。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-45-node-11"
+      }
+    },
+    {
+      "nodeId": "lesson-45-node-11",
+      "order": 11,
+      "speakerId": "speaker-05",
+      "speaker": "鈴木",
+      "targetText": "また来年がありますよ。",
+      "translationZh": "明年还有机会嘛。",
+      "kana": "またらいねんがありますよ。",
+      "audio": "/generated/tts/lesson-45/l45-11.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习在特定情况下的说明 場合は，以及表示意外转折、遗憾心情的 のに。",
+        "zh": "明年还有机会嘛。",
+        "keywords": [
+          "また来年がありますよ"
+        ],
+        "audio": "/generated/tts/lesson-45/l45-11.mp3",
+        "opening": "また来",
+        "answer": "また来年がありますよ。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 11,
+    "validationStatus": "passed"
+  }
+}

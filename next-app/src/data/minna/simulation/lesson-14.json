@@ -1,0 +1,387 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 14,
+  "lessonId": "lesson-14",
+  "title": {
+    "ja": "第14課",
+    "zh": "第14课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-14.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-14.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "学习动词て形，表达请求、顺序动作与状态连接。",
+    "image": "/minna/lessons/lesson-14/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "カリナ"
+    },
+    {
+      "id": "speaker-02",
+      "name": "運転手"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-14-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "カリナ",
+      "targetText": "みどり町までお願いします。",
+      "translationZh": "请送我到绿町。",
+      "kana": "みどりまちまでおねがいします。",
+      "audio": "/generated/tts/lesson-14/l14-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习动词て形，表达请求、顺序动作与状态连接。",
+        "zh": "请送我到绿町。",
+        "keywords": [
+          "みどり町までお願いします"
+        ],
+        "audio": "/generated/tts/lesson-14/l14-01.mp3",
+        "opening": "みどり",
+        "answer": "みどり町までお願いします。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-14-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-14-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "運転手",
+      "targetText": "はい。",
+      "translationZh": "好的。",
+      "kana": "はい。",
+      "audio": "/generated/tts/lesson-14/l14-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习动词て形，表达请求、顺序动作与状态连接。",
+        "zh": "好的。",
+        "keywords": [
+          "はい"
+        ],
+        "audio": "/generated/tts/lesson-14/l14-02.mp3",
+        "opening": "はい。",
+        "answer": "はい。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-14-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-14-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "カリナ",
+      "targetText": "すみません。あの信号を右へ曲がってください。",
+      "translationZh": "不好意思。请在那个红绿灯处右转。",
+      "kana": "すみません。あのしんごうをみぎへまがってください。",
+      "audio": "/generated/tts/lesson-14/l14-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习动词て形，表达请求、顺序动作与状态连接。",
+        "zh": "不好意思。请在那个红绿灯处右转。",
+        "keywords": [
+          "すみませんあの信号を右へ曲がってください"
+        ],
+        "audio": "/generated/tts/lesson-14/l14-03.mp3",
+        "opening": "すみま",
+        "answer": "すみません。あの信号を右へ曲がってください。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-14-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-14-node-04",
+      "order": 4,
+      "speakerId": "speaker-02",
+      "speaker": "運転手",
+      "targetText": "右ですね。",
+      "translationZh": "右边，对吧？",
+      "kana": "みぎですね。",
+      "audio": "/generated/tts/lesson-14/l14-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习动词て形，表达请求、顺序动作与状态连接。",
+        "zh": "右边，对吧？",
+        "keywords": [
+          "右ですね"
+        ],
+        "audio": "/generated/tts/lesson-14/l14-04.mp3",
+        "opening": "右です",
+        "answer": "右ですね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-14-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-14-node-05",
+      "order": 5,
+      "speakerId": "speaker-01",
+      "speaker": "カリナ",
+      "targetText": "ええ。",
+      "translationZh": "是。",
+      "kana": "ええ。",
+      "audio": "/generated/tts/lesson-14/l14-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习动词て形，表达请求、顺序动作与状态连接。",
+        "zh": "是。",
+        "keywords": [
+          "ええ"
+        ],
+        "audio": "/generated/tts/lesson-14/l14-05.mp3",
+        "opening": "ええ。",
+        "answer": "ええ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-14-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-14-node-06",
+      "order": 6,
+      "speakerId": "speaker-02",
+      "speaker": "運転手",
+      "targetText": "まっすぐですか。",
+      "translationZh": "是直走吗？",
+      "kana": "まっすぐですか。",
+      "audio": "/generated/tts/lesson-14/l14-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习动词て形，表达请求、顺序动作与状态连接。",
+        "zh": "是直走吗？",
+        "keywords": [
+          "まっすぐですか"
+        ],
+        "audio": "/generated/tts/lesson-14/l14-06.mp3",
+        "opening": "まっす",
+        "answer": "まっすぐですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-14-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-14-node-07",
+      "order": 7,
+      "speakerId": "speaker-01",
+      "speaker": "カリナ",
+      "targetText": "ええ。まっすぐ行ってください。",
+      "translationZh": "嗯，请直走。",
+      "kana": "ええ。まっすぐいってください。",
+      "audio": "/generated/tts/lesson-14/l14-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习动词て形，表达请求、顺序动作与状态连接。",
+        "zh": "嗯，请直走。",
+        "keywords": [
+          "ええまっすぐ行ってください"
+        ],
+        "audio": "/generated/tts/lesson-14/l14-07.mp3",
+        "opening": "ええ",
+        "answer": "ええ。まっすぐ行ってください。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-14-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-14-node-08",
+      "order": 8,
+      "speakerId": "speaker-01",
+      "speaker": "カリナ",
+      "targetText": "あの花屋の前で止めてください。",
+      "translationZh": "请在那家花店前停一下。",
+      "kana": "あのはなやのまえでとめてください。",
+      "audio": "/generated/tts/lesson-14/l14-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习动词て形，表达请求、顺序动作与状态连接。",
+        "zh": "请在那家花店前停一下。",
+        "keywords": [
+          "あの花屋の前で止めてください"
+        ],
+        "audio": "/generated/tts/lesson-14/l14-08.mp3",
+        "opening": "あの花",
+        "answer": "あの花屋の前で止めてください。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-14-node-09"
+      }
+    },
+    {
+      "nodeId": "lesson-14-node-09",
+      "order": 9,
+      "speakerId": "speaker-02",
+      "speaker": "運転手",
+      "targetText": "はい。1,800円です。",
+      "translationZh": "好的。是1,800日元。",
+      "kana": "はい。せんはっぴゃくえんです。",
+      "audio": "/generated/tts/lesson-14/l14-09.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习动词て形，表达请求、顺序动作与状态连接。",
+        "zh": "好的。是1,800日元。",
+        "keywords": [
+          "はい1800円です"
+        ],
+        "audio": "/generated/tts/lesson-14/l14-09.mp3",
+        "opening": "はい",
+        "answer": "はい。1,800円です。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-14-node-10"
+      }
+    },
+    {
+      "nodeId": "lesson-14-node-10",
+      "order": 10,
+      "speakerId": "speaker-01",
+      "speaker": "カリナ",
+      "targetText": "これでお願いします。",
+      "translationZh": "请用这个收款。",
+      "kana": "これでおねがいします。",
+      "audio": "/generated/tts/lesson-14/l14-10.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习动词て形，表达请求、顺序动作与状态连接。",
+        "zh": "请用这个收款。",
+        "keywords": [
+          "これでお願いします"
+        ],
+        "audio": "/generated/tts/lesson-14/l14-10.mp3",
+        "opening": "これで",
+        "answer": "これでお願いします。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-14-node-11"
+      }
+    },
+    {
+      "nodeId": "lesson-14-node-11",
+      "order": 11,
+      "speakerId": "speaker-02",
+      "speaker": "運転手",
+      "targetText": "3,200円のお釣りです。ありがとうございました。",
+      "translationZh": "找您3,200日元。谢谢。",
+      "kana": "さんぜんにひゃくえんのおつりです。ありがとうございました。",
+      "audio": "/generated/tts/lesson-14/l14-11.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习动词て形，表达请求、顺序动作与状态连接。",
+        "zh": "找您3,200日元。谢谢。",
+        "keywords": [
+          "3200円のお釣りですありがとうございました"
+        ],
+        "audio": "/generated/tts/lesson-14/l14-11.mp3",
+        "opening": "3,2",
+        "answer": "3,200円のお釣りです。ありがとうございました。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 11,
+    "validationStatus": "passed"
+  }
+}

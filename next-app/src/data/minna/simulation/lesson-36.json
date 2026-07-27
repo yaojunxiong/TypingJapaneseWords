@@ -1,0 +1,387 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 36,
+  "lessonId": "lesson-36",
+  "title": {
+    "ja": "第36課",
+    "zh": "第36课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-36.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-36.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "学习「ように」表示能力或状态目标，「ようになります」表示变化，「ようにしています」表示平时坚持。",
+    "image": "/minna/lessons/lesson-36/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "アナウンサー"
+    },
+    {
+      "id": "speaker-02",
+      "name": "小川よね"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-36-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "アナウンサー",
+      "targetText": "皆さん、こんにちは。きょうのお客様はことし80歳の小川よねさんです。",
+      "translationZh": "大家好。今天的嘉宾是今年80岁的 小川よね 女士。",
+      "kana": "みなさん、こんにちは。きょうのおきゃくさまはことしはちじゅっさいのおがわよねさんです。",
+      "audio": "/generated/tts/lesson-36/l36-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ように」表示能力或状态目标，「ようになります」表示变化，「ようにしています」表示平时坚持。",
+        "zh": "大家好。今天的嘉宾是今年80岁的 小川よね 女士。",
+        "keywords": [
+          "皆さんこんにちはきょうのお客様はことし80歳の小川よねさんです"
+        ],
+        "audio": "/generated/tts/lesson-36/l36-01.mp3",
+        "opening": "皆さん",
+        "answer": "皆さん、こんにちは。きょうのお客様はことし80歳の小川よねさんです。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-36-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-36-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "小川よね",
+      "targetText": "こんにちは。",
+      "translationZh": "您好。",
+      "kana": "こんにちは。",
+      "audio": "/generated/tts/lesson-36/l36-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ように」表示能力或状态目标，「ようになります」表示变化，「ようにしています」表示平时坚持。",
+        "zh": "您好。",
+        "keywords": [
+          "こんにちは"
+        ],
+        "audio": "/generated/tts/lesson-36/l36-02.mp3",
+        "opening": "こんに",
+        "answer": "こんにちは。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-36-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-36-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "アナウンサー",
+      "targetText": "お元気ですね。何か特別なことをしていらっしゃいますか。",
+      "translationZh": "您很精神啊。平时有什么特别在做的事吗？",
+      "kana": "おげんきですね。なにかとくべつなことをしていらっしゃいますか。",
+      "audio": "/generated/tts/lesson-36/l36-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ように」表示能力或状态目标，「ようになります」表示变化，「ようにしています」表示平时坚持。",
+        "zh": "您很精神啊。平时有什么特别在做的事吗？",
+        "keywords": [
+          "お元気ですね何か特別なことをしていらっしゃいますか"
+        ],
+        "audio": "/generated/tts/lesson-36/l36-03.mp3",
+        "opening": "お元気",
+        "answer": "お元気ですね。何か特別なことをしていらっしゃいますか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-36-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-36-node-04",
+      "order": 4,
+      "speakerId": "speaker-02",
+      "speaker": "小川よね",
+      "targetText": "毎日運動するようにしています。",
+      "translationZh": "我每天坚持运动。",
+      "kana": "まいにちうんどうするようにしています。",
+      "audio": "/generated/tts/lesson-36/l36-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ように」表示能力或状态目标，「ようになります」表示变化，「ようにしています」表示平时坚持。",
+        "zh": "我每天坚持运动。",
+        "keywords": [
+          "毎日運動するようにしています"
+        ],
+        "audio": "/generated/tts/lesson-36/l36-04.mp3",
+        "opening": "毎日運",
+        "answer": "毎日運動するようにしています。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-36-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-36-node-05",
+      "order": 5,
+      "speakerId": "speaker-01",
+      "speaker": "アナウンサー",
+      "targetText": "どんな運動ですか。",
+      "translationZh": "是什么样的运动？",
+      "kana": "どんなうんどうですか。",
+      "audio": "/generated/tts/lesson-36/l36-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ように」表示能力或状态目标，「ようになります」表示变化，「ようにしています」表示平时坚持。",
+        "zh": "是什么样的运动？",
+        "keywords": [
+          "どんな運動ですか"
+        ],
+        "audio": "/generated/tts/lesson-36/l36-05.mp3",
+        "opening": "どんな",
+        "answer": "どんな運動ですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-36-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-36-node-06",
+      "order": 6,
+      "speakerId": "speaker-02",
+      "speaker": "小川よね",
+      "targetText": "ダンスとか、水泳とか……。最近500メートル泳げるようになりました。",
+      "translationZh": "跳舞、游泳之类的。最近我能游500米了。",
+      "kana": "ダンスとか、すいえいとか……。さいきんごひゃくメートルおよげるようになりました。",
+      "audio": "/generated/tts/lesson-36/l36-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ように」表示能力或状态目标，「ようになります」表示变化，「ようにしています」表示平时坚持。",
+        "zh": "跳舞、游泳之类的。最近我能游500米了。",
+        "keywords": [
+          "ダンスとか水泳とか……最近500メートル泳げるようになりました"
+        ],
+        "audio": "/generated/tts/lesson-36/l36-06.mp3",
+        "opening": "ダンス",
+        "answer": "ダンスとか、水泳とか……。最近500メートル泳げるようになりました。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-36-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-36-node-07",
+      "order": 7,
+      "speakerId": "speaker-01",
+      "speaker": "アナウンサー",
+      "targetText": "すごいですね。食べ物は？",
+      "translationZh": "真厉害。饮食方面呢？",
+      "kana": "すごいですね。たべものは？",
+      "audio": "/generated/tts/lesson-36/l36-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ように」表示能力或状态目标，「ようになります」表示变化，「ようにしています」表示平时坚持。",
+        "zh": "真厉害。饮食方面呢？",
+        "keywords": [
+          "すごいですね食べ物は"
+        ],
+        "audio": "/generated/tts/lesson-36/l36-07.mp3",
+        "opening": "すごい",
+        "answer": "すごいですね。食べ物は？"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-36-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-36-node-08",
+      "order": 8,
+      "speakerId": "speaker-02",
+      "speaker": "小川よね",
+      "targetText": "何でも食べますが、特に魚が好きです。毎日何か、料理を作るようにしています。",
+      "translationZh": "我什么都吃，特别喜欢鱼。我每天尽量做点菜。",
+      "kana": "なんでもたべますが、とくにさかながすきです。まいにちなにか、りょうりをつくるようにしています。",
+      "audio": "/generated/tts/lesson-36/l36-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ように」表示能力或状态目标，「ようになります」表示变化，「ようにしています」表示平时坚持。",
+        "zh": "我什么都吃，特别喜欢鱼。我每天尽量做点菜。",
+        "keywords": [
+          "何でも食べますが特に魚が好きです毎日何か料理を作るようにしています"
+        ],
+        "audio": "/generated/tts/lesson-36/l36-08.mp3",
+        "opening": "何でも",
+        "answer": "何でも食べますが、特に魚が好きです。毎日何か、料理を作るようにしています。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-36-node-09"
+      }
+    },
+    {
+      "nodeId": "lesson-36-node-09",
+      "order": 9,
+      "speakerId": "speaker-01",
+      "speaker": "アナウンサー",
+      "targetText": "頭と体をよく使っていらっしゃるんですね。",
+      "translationZh": "您真是经常动脑又动身体啊。",
+      "kana": "あたまとからだをよくつかっていらっしゃるんですね。",
+      "audio": "/generated/tts/lesson-36/l36-09.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ように」表示能力或状态目标，「ようになります」表示变化，「ようにしています」表示平时坚持。",
+        "zh": "您真是经常动脑又动身体啊。",
+        "keywords": [
+          "頭と体をよく使っていらっしゃるんですね"
+        ],
+        "audio": "/generated/tts/lesson-36/l36-09.mp3",
+        "opening": "頭と体",
+        "answer": "頭と体をよく使っていらっしゃるんですね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-36-node-10"
+      }
+    },
+    {
+      "nodeId": "lesson-36-node-10",
+      "order": 10,
+      "speakerId": "speaker-02",
+      "speaker": "小川よね",
+      "targetText": "ええ。来年フランスへ行きたいと思っています。それでフランス語の勉強も始めました。",
+      "translationZh": "是的。我想明年去法国。所以也开始学习法语了。",
+      "kana": "ええ。らいねんふらんすへいきたいとおもっています。それでふらんすごのべんきょうもはじめました。",
+      "audio": "/generated/tts/lesson-36/l36-10.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ように」表示能力或状态目标，「ようになります」表示变化，「ようにしています」表示平时坚持。",
+        "zh": "是的。我想明年去法国。所以也开始学习法语了。",
+        "keywords": [
+          "ええ来年フランスへ行きたいと思っていますそれでフランス語の勉強も始めました"
+        ],
+        "audio": "/generated/tts/lesson-36/l36-10.mp3",
+        "opening": "ええ",
+        "answer": "ええ。来年フランスへ行きたいと思っています。それでフランス語の勉強も始めました。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-36-node-11"
+      }
+    },
+    {
+      "nodeId": "lesson-36-node-11",
+      "order": 11,
+      "speakerId": "speaker-01",
+      "speaker": "アナウンサー",
+      "targetText": "何でもチャレンジする気持ちが大切なんですね。楽しいお話、どうもありがとうございました。",
+      "translationZh": "不管什么都要有挑战的心态，这很重要啊。谢谢您带来这么愉快的谈话。",
+      "kana": "なんでもちゃれんじするきもちがたいせつなんですね。たのしいおはなし、どうもありがとうございました。",
+      "audio": "/generated/tts/lesson-36/l36-11.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ように」表示能力或状态目标，「ようになります」表示变化，「ようにしています」表示平时坚持。",
+        "zh": "不管什么都要有挑战的心态，这很重要啊。谢谢您带来这么愉快的谈话。",
+        "keywords": [
+          "何でもチャレンジする気持ちが大切なんですね楽しいお話どうもありがとうございました"
+        ],
+        "audio": "/generated/tts/lesson-36/l36-11.mp3",
+        "opening": "何でも",
+        "answer": "何でもチャレンジする気持ちが大切なんですね。楽しいお話、どうもありがとうございました。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 11,
+    "validationStatus": "passed"
+  }
+}

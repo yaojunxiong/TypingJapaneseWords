@@ -1,0 +1,416 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 13,
+  "lessonId": "lesson-13",
+  "title": {
+    "ja": "第13課",
+    "zh": "第13课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-13.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-13.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "学习「ほしい」「たいです」表达愿望，并用「〜から」说明原因。",
+    "image": "/minna/lessons/lesson-13/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "山田"
+    },
+    {
+      "id": "speaker-02",
+      "name": "ミラー"
+    },
+    {
+      "id": "speaker-03",
+      "name": "店の人"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-13-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "山田",
+      "targetText": "もう12時ですよ。昼ごはんを食べに行きませんか。",
+      "translationZh": "已经12点了。要不要去吃午饭？",
+      "kana": "もうじゅうにじですよ。ひるごはんをたべにいきませんか。",
+      "audio": "/generated/tts/lesson-13/l13-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ほしい」「たいです」表达愿望，并用「〜から」说明原因。",
+        "zh": "已经12点了。要不要去吃午饭？",
+        "keywords": [
+          "もう12時ですよ昼ごはんを食べに行きませんか"
+        ],
+        "audio": "/generated/tts/lesson-13/l13-01.mp3",
+        "opening": "もう1",
+        "answer": "もう12時ですよ。昼ごはんを食べに行きませんか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-13-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-13-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "ミラー",
+      "targetText": "ええ。",
+      "translationZh": "好啊。",
+      "kana": "ええ。",
+      "audio": "/generated/tts/lesson-13/l13-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ほしい」「たいです」表达愿望，并用「〜から」说明原因。",
+        "zh": "好啊。",
+        "keywords": [
+          "ええ"
+        ],
+        "audio": "/generated/tts/lesson-13/l13-02.mp3",
+        "opening": "ええ。",
+        "answer": "ええ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-13-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-13-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "山田",
+      "targetText": "どこへ行きますか。",
+      "translationZh": "去哪儿呢？",
+      "kana": "どこへいきますか。",
+      "audio": "/generated/tts/lesson-13/l13-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ほしい」「たいです」表达愿望，并用「〜から」说明原因。",
+        "zh": "去哪儿呢？",
+        "keywords": [
+          "どこへ行きますか"
+        ],
+        "audio": "/generated/tts/lesson-13/l13-03.mp3",
+        "opening": "どこへ",
+        "answer": "どこへ行きますか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-13-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-13-node-04",
+      "order": 4,
+      "speakerId": "speaker-02",
+      "speaker": "ミラー",
+      "targetText": "そうですね。きょうは日本料理が食べたいですね。",
+      "translationZh": "嗯……今天想吃日本料理呢。",
+      "kana": "そうですね。きょうはにほんりょうりがたべたいですね。",
+      "audio": "/generated/tts/lesson-13/l13-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ほしい」「たいです」表达愿望，并用「〜から」说明原因。",
+        "zh": "嗯……今天想吃日本料理呢。",
+        "keywords": [
+          "そうですねきょうは日本料理が食べたいですね"
+        ],
+        "audio": "/generated/tts/lesson-13/l13-04.mp3",
+        "opening": "そうで",
+        "answer": "そうですね。きょうは日本料理が食べたいですね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-13-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-13-node-05",
+      "order": 5,
+      "speakerId": "speaker-01",
+      "speaker": "山田",
+      "targetText": "じゃ、「つるや」へ行きましょう。",
+      "translationZh": "那我们去“鶴屋”吧。",
+      "kana": "じゃ、「つるや」へいきましょう。",
+      "audio": "/generated/tts/lesson-13/l13-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ほしい」「たいです」表达愿望，并用「〜から」说明原因。",
+        "zh": "那我们去“鶴屋”吧。",
+        "keywords": [
+          "じゃつるやへ行きましょう"
+        ],
+        "audio": "/generated/tts/lesson-13/l13-05.mp3",
+        "opening": "じゃ",
+        "answer": "じゃ、「つるや」へ行きましょう。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-13-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-13-node-06",
+      "order": 6,
+      "speakerId": "speaker-03",
+      "speaker": "店の人",
+      "targetText": "ご注文は？",
+      "translationZh": "请问要点什么？",
+      "kana": "ごちゅうもんは？",
+      "audio": "/generated/tts/lesson-13/l13-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ほしい」「たいです」表达愿望，并用「〜から」说明原因。",
+        "zh": "请问要点什么？",
+        "keywords": [
+          "ご注文は"
+        ],
+        "audio": "/generated/tts/lesson-13/l13-06.mp3",
+        "opening": "ご注文",
+        "answer": "ご注文は？"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-13-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-13-node-07",
+      "order": 7,
+      "speakerId": "speaker-02",
+      "speaker": "ミラー",
+      "targetText": "わたしは天ぷら定食。",
+      "translationZh": "我要天妇罗套餐。",
+      "kana": "わたしはてんぷらていしょく。",
+      "audio": "/generated/tts/lesson-13/l13-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ほしい」「たいです」表达愿望，并用「〜から」说明原因。",
+        "zh": "我要天妇罗套餐。",
+        "keywords": [
+          "わたしは天ぷら定食"
+        ],
+        "audio": "/generated/tts/lesson-13/l13-07.mp3",
+        "opening": "わたし",
+        "answer": "わたしは天ぷら定食。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-13-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-13-node-08",
+      "order": 8,
+      "speakerId": "speaker-01",
+      "speaker": "山田",
+      "targetText": "わたしは牛どん。",
+      "translationZh": "我要牛肉饭。",
+      "kana": "わたしはぎゅうどん。",
+      "audio": "/generated/tts/lesson-13/l13-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ほしい」「たいです」表达愿望，并用「〜から」说明原因。",
+        "zh": "我要牛肉饭。",
+        "keywords": [
+          "わたしは牛どん"
+        ],
+        "audio": "/generated/tts/lesson-13/l13-08.mp3",
+        "opening": "わたし",
+        "answer": "わたしは牛どん。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-13-node-09"
+      }
+    },
+    {
+      "nodeId": "lesson-13-node-09",
+      "order": 9,
+      "speakerId": "speaker-03",
+      "speaker": "店の人",
+      "targetText": "天ぷら定食と牛どんですね。少々お待ちください。",
+      "translationZh": "天妇罗套餐和牛肉饭对吧？请稍等一下。",
+      "kana": "てんぷらていしょくとぎゅうどんですね。しょうしょうおまちください。",
+      "audio": "/generated/tts/lesson-13/l13-09.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ほしい」「たいです」表达愿望，并用「〜から」说明原因。",
+        "zh": "天妇罗套餐和牛肉饭对吧？请稍等一下。",
+        "keywords": [
+          "天ぷら定食と牛どんですね少々お待ちください"
+        ],
+        "audio": "/generated/tts/lesson-13/l13-09.mp3",
+        "opening": "天ぷら",
+        "answer": "天ぷら定食と牛どんですね。少々お待ちください。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-13-node-10"
+      }
+    },
+    {
+      "nodeId": "lesson-13-node-10",
+      "order": 10,
+      "speakerId": "speaker-03",
+      "speaker": "店の人",
+      "targetText": "1,680円でございます。",
+      "translationZh": "一共是1,680日元。",
+      "kana": "せんろっぴゃくはちじゅうえんでございます。",
+      "audio": "/generated/tts/lesson-13/l13-10.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ほしい」「たいです」表达愿望，并用「〜から」说明原因。",
+        "zh": "一共是1,680日元。",
+        "keywords": [
+          "1680円でございます"
+        ],
+        "audio": "/generated/tts/lesson-13/l13-10.mp3",
+        "opening": "1,6",
+        "answer": "1,680円でございます。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-13-node-11"
+      }
+    },
+    {
+      "nodeId": "lesson-13-node-11",
+      "order": 11,
+      "speakerId": "speaker-02",
+      "speaker": "ミラー",
+      "targetText": "すみません。別々にお願いします。",
+      "translationZh": "不好意思，请分开结账。",
+      "kana": "すみません。べつべつにおねがいします。",
+      "audio": "/generated/tts/lesson-13/l13-11.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ほしい」「たいです」表达愿望，并用「〜から」说明原因。",
+        "zh": "不好意思，请分开结账。",
+        "keywords": [
+          "すみません別々にお願いします"
+        ],
+        "audio": "/generated/tts/lesson-13/l13-11.mp3",
+        "opening": "すみま",
+        "answer": "すみません。別々にお願いします。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-13-node-12"
+      }
+    },
+    {
+      "nodeId": "lesson-13-node-12",
+      "order": 12,
+      "speakerId": "speaker-03",
+      "speaker": "店の人",
+      "targetText": "はい。天ぷら定食は980円、牛どんは700円です。",
+      "translationZh": "好的。天妇罗套餐980日元，牛肉饭700日元。",
+      "kana": "はい。てんぷらていしょくはきゅうひゃくはちじゅうえん、ぎゅうどんはななひゃくえんです。",
+      "audio": "/generated/tts/lesson-13/l13-12.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ほしい」「たいです」表达愿望，并用「〜から」说明原因。",
+        "zh": "好的。天妇罗套餐980日元，牛肉饭700日元。",
+        "keywords": [
+          "はい天ぷら定食は980円牛どんは700円です"
+        ],
+        "audio": "/generated/tts/lesson-13/l13-12.mp3",
+        "opening": "はい",
+        "answer": "はい。天ぷら定食は980円、牛どんは700円です。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 12,
+    "validationStatus": "passed"
+  }
+}

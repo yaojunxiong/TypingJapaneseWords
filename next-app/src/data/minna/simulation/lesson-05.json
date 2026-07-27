@@ -1,0 +1,370 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 5,
+  "lessonId": "lesson-05",
+  "title": {
+    "ja": "第5課",
+    "zh": "第5课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-05.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-05.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "学习「行きます・来ます・帰ります」、地点、交通工具和同行对象表达。",
+    "image": "/minna/lessons/lesson-05/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "サントス"
+    },
+    {
+      "id": "speaker-02",
+      "name": "女の人"
+    },
+    {
+      "id": "speaker-03",
+      "name": "駅員"
+    },
+    {
+      "id": "speaker-04",
+      "name": "男の人"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-05-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "サントス",
+      "targetText": "すみません。甲子園までいくらですか。",
+      "translationZh": "不好意思，到甲子园多少钱？",
+      "kana": "すみません。こうしえんまでいくらですか。",
+      "audio": "/generated/tts/lesson-05/l5-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「行きます・来ます・帰ります」、地点、交通工具和同行对象表达。",
+        "zh": "不好意思，到甲子园多少钱？",
+        "keywords": [
+          "すみません甲子園までいくらですか"
+        ],
+        "audio": "/generated/tts/lesson-05/l5-01.mp3",
+        "opening": "すみま",
+        "answer": "すみません。甲子園までいくらですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-05-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-05-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "女の人",
+      "targetText": "350円です。",
+      "translationZh": "是350日元。",
+      "kana": "さんびゃくごじゅうえんです。",
+      "audio": "/generated/tts/lesson-05/l5-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「行きます・来ます・帰ります」、地点、交通工具和同行对象表达。",
+        "zh": "是350日元。",
+        "keywords": [
+          "350円です"
+        ],
+        "audio": "/generated/tts/lesson-05/l5-02.mp3",
+        "opening": "350",
+        "answer": "350円です。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-05-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-05-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "サントス",
+      "targetText": "350円ですね。ありがとうございました。",
+      "translationZh": "350日元啊，谢谢您。",
+      "kana": "さんびゃくごじゅうえんですね。ありがとうございました。",
+      "audio": "/generated/tts/lesson-05/l5-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「行きます・来ます・帰ります」、地点、交通工具和同行对象表达。",
+        "zh": "350日元啊，谢谢您。",
+        "keywords": [
+          "350円ですねありがとうございました"
+        ],
+        "audio": "/generated/tts/lesson-05/l5-03.mp3",
+        "opening": "350",
+        "answer": "350円ですね。ありがとうございました。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-05-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-05-node-04",
+      "order": 4,
+      "speakerId": "speaker-02",
+      "speaker": "女の人",
+      "targetText": "どういたしまして。",
+      "translationZh": "不客气。",
+      "kana": "どういたしまして。",
+      "audio": "/generated/tts/lesson-05/l5-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「行きます・来ます・帰ります」、地点、交通工具和同行对象表达。",
+        "zh": "不客气。",
+        "keywords": [
+          "どういたしまして"
+        ],
+        "audio": "/generated/tts/lesson-05/l5-04.mp3",
+        "opening": "どうい",
+        "answer": "どういたしまして。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-05-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-05-node-05",
+      "order": 5,
+      "speakerId": "speaker-01",
+      "speaker": "サントス",
+      "targetText": "すみません。甲子園は何番線ですか。",
+      "translationZh": "不好意思，请问去甲子园是几号站台？",
+      "kana": "すみません。こうしえんはなんばんせんですか。",
+      "audio": "/generated/tts/lesson-05/l5-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「行きます・来ます・帰ります」、地点、交通工具和同行对象表达。",
+        "zh": "不好意思，请问去甲子园是几号站台？",
+        "keywords": [
+          "すみません甲子園は何番線ですか"
+        ],
+        "audio": "/generated/tts/lesson-05/l5-05.mp3",
+        "opening": "すみま",
+        "answer": "すみません。甲子園は何番線ですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-05-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-05-node-06",
+      "order": 6,
+      "speakerId": "speaker-03",
+      "speaker": "駅員",
+      "targetText": "5番線です。",
+      "translationZh": "是5号站台。",
+      "kana": "ごばんせんです。",
+      "audio": "/generated/tts/lesson-05/l5-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「行きます・来ます・帰ります」、地点、交通工具和同行对象表达。",
+        "zh": "是5号站台。",
+        "keywords": [
+          "5番線です"
+        ],
+        "audio": "/generated/tts/lesson-05/l5-06.mp3",
+        "opening": "5番線",
+        "answer": "5番線です。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-05-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-05-node-07",
+      "order": 7,
+      "speakerId": "speaker-01",
+      "speaker": "サントス",
+      "targetText": "どうも。",
+      "translationZh": "谢谢。",
+      "kana": "どうも。",
+      "audio": "/generated/tts/lesson-05/l5-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「行きます・来ます・帰ります」、地点、交通工具和同行对象表达。",
+        "zh": "谢谢。",
+        "keywords": [
+          "どうも"
+        ],
+        "audio": "/generated/tts/lesson-05/l5-07.mp3",
+        "opening": "どうも",
+        "answer": "どうも。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-05-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-05-node-08",
+      "order": 8,
+      "speakerId": "speaker-01",
+      "speaker": "サントス",
+      "targetText": "あのう、この電車は甲子園へ行きますか。",
+      "translationZh": "请问，这班电车去甲子园吗？",
+      "kana": "あのう、このでんしゃはこうしえんへいきますか。",
+      "audio": "/generated/tts/lesson-05/l5-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「行きます・来ます・帰ります」、地点、交通工具和同行对象表达。",
+        "zh": "请问，这班电车去甲子园吗？",
+        "keywords": [
+          "あのうこの電車は甲子園へ行きますか"
+        ],
+        "audio": "/generated/tts/lesson-05/l5-08.mp3",
+        "opening": "あのう",
+        "answer": "あのう、この電車は甲子園へ行きますか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-05-node-09"
+      }
+    },
+    {
+      "nodeId": "lesson-05-node-09",
+      "order": 9,
+      "speakerId": "speaker-04",
+      "speaker": "男の人",
+      "targetText": "いいえ、次の「普通」ですよ。",
+      "translationZh": "不，这班不是，下一班普通车才去。",
+      "kana": "いいえ、つぎの「ふつう」ですよ。",
+      "audio": "/generated/tts/lesson-05/l5-09.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「行きます・来ます・帰ります」、地点、交通工具和同行对象表达。",
+        "zh": "不，这班不是，下一班普通车才去。",
+        "keywords": [
+          "いいえ次の普通ですよ"
+        ],
+        "audio": "/generated/tts/lesson-05/l5-09.mp3",
+        "opening": "いいえ",
+        "answer": "いいえ、次の「普通」ですよ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-05-node-10"
+      }
+    },
+    {
+      "nodeId": "lesson-05-node-10",
+      "order": 10,
+      "speakerId": "speaker-01",
+      "speaker": "サントス",
+      "targetText": "そうですか。どうも。",
+      "translationZh": "是这样啊，谢谢。",
+      "kana": "そうですか。どうも。",
+      "audio": "/generated/tts/lesson-05/l5-10.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「行きます・来ます・帰ります」、地点、交通工具和同行对象表达。",
+        "zh": "是这样啊，谢谢。",
+        "keywords": [
+          "そうですかどうも"
+        ],
+        "audio": "/generated/tts/lesson-05/l5-10.mp3",
+        "opening": "そうで",
+        "answer": "そうですか。どうも。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 10,
+    "validationStatus": "passed"
+  }
+}

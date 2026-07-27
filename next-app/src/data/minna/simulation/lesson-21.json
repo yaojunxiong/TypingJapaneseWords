@@ -1,0 +1,362 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 21,
+  "lessonId": "lesson-21",
+  "title": {
+    "ja": "第21課",
+    "zh": "第21课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-21.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-21.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "学习「〜と思います」「〜と言いました」「〜でしょう？」。",
+    "image": "/minna/lessons/lesson-21/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "松本"
+    },
+    {
+      "id": "speaker-02",
+      "name": "サントス"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-21-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "松本",
+      "targetText": "あ、サントスさん、久しぶりですね。",
+      "translationZh": "啊，桑托斯先生，好久不见。",
+      "kana": "あ、サントスさん、ひさしぶりですね。",
+      "audio": "/generated/tts/lesson-21/l21-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「〜と思います」「〜と言いました」「〜でしょう？」。",
+        "zh": "啊，桑托斯先生，好久不见。",
+        "keywords": [
+          "あサントスさん久しぶりですね"
+        ],
+        "audio": "/generated/tts/lesson-21/l21-01.mp3",
+        "opening": "あ",
+        "answer": "あ、サントスさん、久しぶりですね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-21-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-21-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "サントス",
+      "targetText": "あ、松本さん、お元気ですか。",
+      "translationZh": "啊，松本先生，您好吗？",
+      "kana": "あ、まつもとさん、おげんきですか。",
+      "audio": "/generated/tts/lesson-21/l21-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「〜と思います」「〜と言いました」「〜でしょう？」。",
+        "zh": "啊，松本先生，您好吗？",
+        "keywords": [
+          "あ松本さんお元気ですか"
+        ],
+        "audio": "/generated/tts/lesson-21/l21-02.mp3",
+        "opening": "あ",
+        "answer": "あ、松本さん、お元気ですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-21-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-21-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "松本",
+      "targetText": "ええ、ちょっとビールでも飲みませんか。",
+      "translationZh": "嗯，要不要喝点啤酒？",
+      "kana": "ええ、ちょっとビールでものみませんか。",
+      "audio": "/generated/tts/lesson-21/l21-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「〜と思います」「〜と言いました」「〜でしょう？」。",
+        "zh": "嗯，要不要喝点啤酒？",
+        "keywords": [
+          "ええちょっとビールでも飲みませんか"
+        ],
+        "audio": "/generated/tts/lesson-21/l21-03.mp3",
+        "opening": "ええ",
+        "answer": "ええ、ちょっとビールでも飲みませんか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-21-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-21-node-04",
+      "order": 4,
+      "speakerId": "speaker-02",
+      "speaker": "サントス",
+      "targetText": "いいですね。",
+      "translationZh": "好啊。",
+      "kana": "いいですね。",
+      "audio": "/generated/tts/lesson-21/l21-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「〜と思います」「〜と言いました」「〜でしょう？」。",
+        "zh": "好啊。",
+        "keywords": [
+          "いいですね"
+        ],
+        "audio": "/generated/tts/lesson-21/l21-04.mp3",
+        "opening": "いいで",
+        "answer": "いいですね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-21-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-21-node-05",
+      "order": 5,
+      "speakerId": "speaker-02",
+      "speaker": "サントス",
+      "targetText": "今晩10時から日本とブラジルのサッカーの試合がありますね。",
+      "translationZh": "今晚十点有日本和巴西的足球比赛吧。",
+      "kana": "こんばんじゅうじからにほんとブラジルのサッカーのしあいがありますね。",
+      "audio": "/generated/tts/lesson-21/l21-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「〜と思います」「〜と言いました」「〜でしょう？」。",
+        "zh": "今晚十点有日本和巴西的足球比赛吧。",
+        "keywords": [
+          "今晩10時から日本とブラジルのサッカーの試合がありますね"
+        ],
+        "audio": "/generated/tts/lesson-21/l21-05.mp3",
+        "opening": "今晩1",
+        "answer": "今晩10時から日本とブラジルのサッカーの試合がありますね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-21-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-21-node-06",
+      "order": 6,
+      "speakerId": "speaker-01",
+      "speaker": "松本",
+      "targetText": "ああ、そうですね。サントスさんはどちらが勝つと思いますか。",
+      "translationZh": "是啊。桑托斯先生认为哪一方会赢？",
+      "kana": "ああ、そうですね。サントスさんはどちらがかつとおもいますか。",
+      "audio": "/generated/tts/lesson-21/l21-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「〜と思います」「〜と言いました」「〜でしょう？」。",
+        "zh": "是啊。桑托斯先生认为哪一方会赢？",
+        "keywords": [
+          "ああそうですねサントスさんはどちらが勝つと思いますか"
+        ],
+        "audio": "/generated/tts/lesson-21/l21-06.mp3",
+        "opening": "ああ",
+        "answer": "ああ、そうですね。サントスさんはどちらが勝つと思いますか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-21-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-21-node-07",
+      "order": 7,
+      "speakerId": "speaker-02",
+      "speaker": "サントス",
+      "targetText": "もちろんブラジルですよ。",
+      "translationZh": "当然是巴西。",
+      "kana": "もちろんブラジルですよ。",
+      "audio": "/generated/tts/lesson-21/l21-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「〜と思います」「〜と言いました」「〜でしょう？」。",
+        "zh": "当然是巴西。",
+        "keywords": [
+          "もちろんブラジルですよ"
+        ],
+        "audio": "/generated/tts/lesson-21/l21-07.mp3",
+        "opening": "もちろ",
+        "answer": "もちろんブラジルですよ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-21-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-21-node-08",
+      "order": 8,
+      "speakerId": "speaker-01",
+      "speaker": "松本",
+      "targetText": "そうですね。でも、最近日本も強くなりましたよ。",
+      "translationZh": "是啊。不过最近日本也变强了。",
+      "kana": "そうですね。でも、さいきんにほんもつよくなりましたよ。",
+      "audio": "/generated/tts/lesson-21/l21-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「〜と思います」「〜と言いました」「〜でしょう？」。",
+        "zh": "是啊。不过最近日本也变强了。",
+        "keywords": [
+          "そうですねでも最近日本も強くなりましたよ"
+        ],
+        "audio": "/generated/tts/lesson-21/l21-08.mp3",
+        "opening": "そうで",
+        "answer": "そうですね。でも、最近日本も強くなりましたよ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-21-node-09"
+      }
+    },
+    {
+      "nodeId": "lesson-21-node-09",
+      "order": 9,
+      "speakerId": "speaker-02",
+      "speaker": "サントス",
+      "targetText": "ええ、わたしもそう思いますが、……。あ、もう帰らないと……。",
+      "translationZh": "嗯，我也这么认为，不过……啊，我得回去了……",
+      "kana": "ええ、わたしもそうおもいますが、……。あ、もうかえらないと……。",
+      "audio": "/generated/tts/lesson-21/l21-09.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「〜と思います」「〜と言いました」「〜でしょう？」。",
+        "zh": "嗯，我也这么认为，不过……啊，我得回去了……",
+        "keywords": [
+          "ええわたしもそう思いますが……あもう帰らないと……"
+        ],
+        "audio": "/generated/tts/lesson-21/l21-09.mp3",
+        "opening": "ええ",
+        "answer": "ええ、わたしもそう思いますが、……。あ、もう帰らないと……。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-21-node-10"
+      }
+    },
+    {
+      "nodeId": "lesson-21-node-10",
+      "order": 10,
+      "speakerId": "speaker-01",
+      "speaker": "松本",
+      "targetText": "ええ、帰りましょう。",
+      "translationZh": "好，我们回去吧。",
+      "kana": "ええ、かえりましょう。",
+      "audio": "/generated/tts/lesson-21/l21-10.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「〜と思います」「〜と言いました」「〜でしょう？」。",
+        "zh": "好，我们回去吧。",
+        "keywords": [
+          "ええ帰りましょう"
+        ],
+        "audio": "/generated/tts/lesson-21/l21-10.mp3",
+        "opening": "ええ",
+        "answer": "ええ、帰りましょう。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 10,
+    "validationStatus": "passed"
+  }
+}

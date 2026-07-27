@@ -1,0 +1,391 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 3,
+  "lessonId": "lesson-03",
+  "title": {
+    "ja": "第3課",
+    "zh": "第3课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-03.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-03.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "学习场所指示词、地点问答以及「～は どこですか」和「こちら」等表达。",
+    "image": "/minna/lessons/lesson-03/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "店員A"
+    },
+    {
+      "id": "speaker-02",
+      "name": "マリア"
+    },
+    {
+      "id": "speaker-03",
+      "name": "店員B"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-03-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "店員A",
+      "targetText": "いらっしゃいませ。",
+      "translationZh": "欢迎光临。",
+      "kana": "いらっしゃいませ。",
+      "audio": "/generated/tts/lesson-03/l3-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习场所指示词、地点问答以及「～は どこですか」和「こちら」等表达。",
+        "zh": "欢迎光临。",
+        "keywords": [
+          "いらっしゃいませ"
+        ],
+        "audio": "/generated/tts/lesson-03/l3-01.mp3",
+        "opening": "いらっ",
+        "answer": "いらっしゃいませ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-03-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-03-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "マリア",
+      "targetText": "すみません。ワイン売り場はどこですか。",
+      "translationZh": "不好意思，请问葡萄酒卖场在哪里？",
+      "kana": "すみません。わいんうりばはどこですか。",
+      "audio": "/generated/tts/lesson-03/l3-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习场所指示词、地点问答以及「～は どこですか」和「こちら」等表达。",
+        "zh": "不好意思，请问葡萄酒卖场在哪里？",
+        "keywords": [
+          "すみませんワイン売り場はどこですか"
+        ],
+        "audio": "/generated/tts/lesson-03/l3-02.mp3",
+        "opening": "すみま",
+        "answer": "すみません。ワイン売り場はどこですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-03-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-03-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "店員A",
+      "targetText": "地下1階です。",
+      "translationZh": "在地下一层。",
+      "kana": "ちかいっかいです。",
+      "audio": "/generated/tts/lesson-03/l3-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习场所指示词、地点问答以及「～は どこですか」和「こちら」等表达。",
+        "zh": "在地下一层。",
+        "keywords": [
+          "地下1階です"
+        ],
+        "audio": "/generated/tts/lesson-03/l3-03.mp3",
+        "opening": "地下1",
+        "answer": "地下1階です。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-03-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-03-node-04",
+      "order": 4,
+      "speakerId": "speaker-02",
+      "speaker": "マリア",
+      "targetText": "どうも。",
+      "translationZh": "谢谢。",
+      "kana": "どうも。",
+      "audio": "/generated/tts/lesson-03/l3-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习场所指示词、地点问答以及「～は どこですか」和「こちら」等表达。",
+        "zh": "谢谢。",
+        "keywords": [
+          "どうも"
+        ],
+        "audio": "/generated/tts/lesson-03/l3-04.mp3",
+        "opening": "どうも",
+        "answer": "どうも。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-03-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-03-node-05",
+      "order": 5,
+      "speakerId": "speaker-02",
+      "speaker": "マリア",
+      "targetText": "すみません。そのワインを見せてください。",
+      "translationZh": "不好意思，请让我看看那瓶葡萄酒。",
+      "kana": "すみません。そのわいんをみせてください。",
+      "audio": "/generated/tts/lesson-03/l3-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习场所指示词、地点问答以及「～は どこですか」和「こちら」等表达。",
+        "zh": "不好意思，请让我看看那瓶葡萄酒。",
+        "keywords": [
+          "すみませんそのワインを見せてください"
+        ],
+        "audio": "/generated/tts/lesson-03/l3-05.mp3",
+        "opening": "すみま",
+        "answer": "すみません。そのワインを見せてください。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-03-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-03-node-06",
+      "order": 6,
+      "speakerId": "speaker-03",
+      "speaker": "店員B",
+      "targetText": "はい、どうぞ。",
+      "translationZh": "好的，给您。",
+      "kana": "はい、どうぞ。",
+      "audio": "/generated/tts/lesson-03/l3-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习场所指示词、地点问答以及「～は どこですか」和「こちら」等表达。",
+        "zh": "好的，给您。",
+        "keywords": [
+          "はいどうぞ"
+        ],
+        "audio": "/generated/tts/lesson-03/l3-06.mp3",
+        "opening": "はい",
+        "answer": "はい、どうぞ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-03-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-03-node-07",
+      "order": 7,
+      "speakerId": "speaker-02",
+      "speaker": "マリア",
+      "targetText": "これはどこのワインですか。",
+      "translationZh": "这瓶葡萄酒是哪里的？",
+      "kana": "これはどこのわいんですか。",
+      "audio": "/generated/tts/lesson-03/l3-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习场所指示词、地点问答以及「～は どこですか」和「こちら」等表达。",
+        "zh": "这瓶葡萄酒是哪里的？",
+        "keywords": [
+          "これはどこのワインですか"
+        ],
+        "audio": "/generated/tts/lesson-03/l3-07.mp3",
+        "opening": "これは",
+        "answer": "これはどこのワインですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-03-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-03-node-08",
+      "order": 8,
+      "speakerId": "speaker-03",
+      "speaker": "店員B",
+      "targetText": "日本のです。",
+      "translationZh": "是日本的。",
+      "kana": "にほんのです。",
+      "audio": "/generated/tts/lesson-03/l3-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习场所指示词、地点问答以及「～は どこですか」和「こちら」等表达。",
+        "zh": "是日本的。",
+        "keywords": [
+          "日本のです"
+        ],
+        "audio": "/generated/tts/lesson-03/l3-08.mp3",
+        "opening": "日本の",
+        "answer": "日本のです。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-03-node-09"
+      }
+    },
+    {
+      "nodeId": "lesson-03-node-09",
+      "order": 9,
+      "speakerId": "speaker-02",
+      "speaker": "マリア",
+      "targetText": "いくらですか。",
+      "translationZh": "多少钱？",
+      "kana": "いくらですか。",
+      "audio": "/generated/tts/lesson-03/l3-09.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习场所指示词、地点问答以及「～は どこですか」和「こちら」等表达。",
+        "zh": "多少钱？",
+        "keywords": [
+          "いくらですか"
+        ],
+        "audio": "/generated/tts/lesson-03/l3-09.mp3",
+        "opening": "いくら",
+        "answer": "いくらですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-03-node-10"
+      }
+    },
+    {
+      "nodeId": "lesson-03-node-10",
+      "order": 10,
+      "speakerId": "speaker-03",
+      "speaker": "店員B",
+      "targetText": "2,500円です。",
+      "translationZh": "2500日元。",
+      "kana": "にせんごひゃくえんです。",
+      "audio": "/generated/tts/lesson-03/l3-10.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习场所指示词、地点问答以及「～は どこですか」和「こちら」等表达。",
+        "zh": "2500日元。",
+        "keywords": [
+          "2500円です"
+        ],
+        "audio": "/generated/tts/lesson-03/l3-10.mp3",
+        "opening": "2,5",
+        "answer": "2,500円です。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-03-node-11"
+      }
+    },
+    {
+      "nodeId": "lesson-03-node-11",
+      "order": 11,
+      "speakerId": "speaker-02",
+      "speaker": "マリア",
+      "targetText": "じゃ、これをください。",
+      "translationZh": "那就请给我这个吧。",
+      "kana": "じゃ、これをください。",
+      "audio": "/generated/tts/lesson-03/l3-11.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习场所指示词、地点问答以及「～は どこですか」和「こちら」等表达。",
+        "zh": "那就请给我这个吧。",
+        "keywords": [
+          "じゃこれをください"
+        ],
+        "audio": "/generated/tts/lesson-03/l3-11.mp3",
+        "opening": "じゃ",
+        "answer": "じゃ、これをください。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 11,
+    "validationStatus": "passed"
+  }
+}

@@ -1,0 +1,387 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 38,
+  "lessonId": "lesson-38",
+  "title": {
+    "ja": "第38課",
+    "zh": "第38课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-38.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-38.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "用「の」把动词句名词化，表达“做某事是……”“喜欢/忘记/知道做某事”。",
+    "image": "/minna/lessons/lesson-38/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "大学職員"
+    },
+    {
+      "id": "speaker-02",
+      "name": "ワット"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-38-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "大学職員",
+      "targetText": "ワット先生、回覧です。",
+      "translationZh": "瓦特老师，这是要传阅的文件。",
+      "kana": "わっとせんせい、かいらんです。",
+      "audio": "/generated/tts/lesson-38/l38-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用「の」把动词句名词化，表达“做某事是……”“喜欢/忘记/知道做某事”。",
+        "zh": "瓦特老师，这是要传阅的文件。",
+        "keywords": [
+          "ワット先生回覧です"
+        ],
+        "audio": "/generated/tts/lesson-38/l38-01.mp3",
+        "opening": "ワット",
+        "answer": "ワット先生、回覧です。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-38-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-38-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "ワット",
+      "targetText": "あ、すみません。そこに置いといてください。",
+      "translationZh": "啊，麻烦放在那里就可以了。",
+      "kana": "あ、すみません。そこにおいといてください。",
+      "audio": "/generated/tts/lesson-38/l38-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用「の」把动词句名词化，表达“做某事是……”“喜欢/忘记/知道做某事”。",
+        "zh": "啊，麻烦放在那里就可以了。",
+        "keywords": [
+          "あすみませんそこに置いといてください"
+        ],
+        "audio": "/generated/tts/lesson-38/l38-02.mp3",
+        "opening": "あ",
+        "answer": "あ、すみません。そこに置いといてください。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-38-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-38-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "大学職員",
+      "targetText": "先生の研究室はいつもきれいですね。",
+      "translationZh": "老师的研究室总是这么整洁啊。",
+      "kana": "せんせいのけんきゅうしつはいつもきれいですね。",
+      "audio": "/generated/tts/lesson-38/l38-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用「の」把动词句名词化，表达“做某事是……”“喜欢/忘记/知道做某事”。",
+        "zh": "老师的研究室总是这么整洁啊。",
+        "keywords": [
+          "先生の研究室はいつもきれいですね"
+        ],
+        "audio": "/generated/tts/lesson-38/l38-03.mp3",
+        "opening": "先生の",
+        "answer": "先生の研究室はいつもきれいですね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-38-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-38-node-04",
+      "order": 4,
+      "speakerId": "speaker-02",
+      "speaker": "ワット",
+      "targetText": "わたしは片づけるのが好きなんです。",
+      "translationZh": "我喜欢整理。",
+      "kana": "わたしはかたづけるのがすきなんです。",
+      "audio": "/generated/tts/lesson-38/l38-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用「の」把动词句名词化，表达“做某事是……”“喜欢/忘记/知道做某事”。",
+        "zh": "我喜欢整理。",
+        "keywords": [
+          "わたしは片づけるのが好きなんです"
+        ],
+        "audio": "/generated/tts/lesson-38/l38-04.mp3",
+        "opening": "わたし",
+        "answer": "わたしは片づけるのが好きなんです。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-38-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-38-node-05",
+      "order": 5,
+      "speakerId": "speaker-01",
+      "speaker": "大学職員",
+      "targetText": "本もきちんと並べてあるし……。整理するのが上手なんですね。",
+      "translationZh": "书也排得整整齐齐的呢。您很擅长整理啊。",
+      "kana": "ほんもきちんとならべてあるし……。せいりするのがじょうずなんですね。",
+      "audio": "/generated/tts/lesson-38/l38-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用「の」把动词句名词化，表达“做某事是……”“喜欢/忘记/知道做某事”。",
+        "zh": "书也排得整整齐齐的呢。您很擅长整理啊。",
+        "keywords": [
+          "本もきちんと並べてあるし……整理するのが上手なんですね"
+        ],
+        "audio": "/generated/tts/lesson-38/l38-05.mp3",
+        "opening": "本もき",
+        "answer": "本もきちんと並べてあるし……。整理するのが上手なんですね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-38-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-38-node-06",
+      "order": 6,
+      "speakerId": "speaker-02",
+      "speaker": "ワット",
+      "targetText": "昔「上手な整理の方法」という本を書いたことがあるんです。",
+      "translationZh": "以前我还写过一本关于整理方法的书。",
+      "kana": "むかし「じょうずなせいりのほうほう」というほんをかいたことがあるんです。",
+      "audio": "/generated/tts/lesson-38/l38-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用「の」把动词句名词化，表达“做某事是……”“喜欢/忘记/知道做某事”。",
+        "zh": "以前我还写过一本关于整理方法的书。",
+        "keywords": [
+          "昔上手な整理の方法という本を書いたことがあるんです"
+        ],
+        "audio": "/generated/tts/lesson-38/l38-06.mp3",
+        "opening": "昔「上",
+        "answer": "昔「上手な整理の方法」という本を書いたことがあるんです。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-38-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-38-node-07",
+      "order": 7,
+      "speakerId": "speaker-01",
+      "speaker": "大学職員",
+      "targetText": "へえ、すごいですね。",
+      "translationZh": "哇，真了不起。",
+      "kana": "へえ、すごいですね。",
+      "audio": "/generated/tts/lesson-38/l38-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用「の」把动词句名词化，表达“做某事是……”“喜欢/忘记/知道做某事”。",
+        "zh": "哇，真了不起。",
+        "keywords": [
+          "へえすごいですね"
+        ],
+        "audio": "/generated/tts/lesson-38/l38-07.mp3",
+        "opening": "へえ",
+        "answer": "へえ、すごいですね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-38-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-38-node-08",
+      "order": 8,
+      "speakerId": "speaker-02",
+      "speaker": "ワット",
+      "targetText": "あまり売れませんでしたけどね。よかったら、1冊持って来ましょうか。",
+      "translationZh": "虽然卖得不太好。您愿意的话，我拿一本来给您吧。",
+      "kana": "あまりうれませんでしたけどね。よかったら、いっさつもってきましょうか。",
+      "audio": "/generated/tts/lesson-38/l38-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用「の」把动词句名词化，表达“做某事是……”“喜欢/忘记/知道做某事”。",
+        "zh": "虽然卖得不太好。您愿意的话，我拿一本来给您吧。",
+        "keywords": [
+          "あまり売れませんでしたけどねよかったら1冊持って来ましょうか"
+        ],
+        "audio": "/generated/tts/lesson-38/l38-08.mp3",
+        "opening": "あまり",
+        "answer": "あまり売れませんでしたけどね。よかったら、1冊持って来ましょうか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-38-node-09"
+      }
+    },
+    {
+      "nodeId": "lesson-38-node-09",
+      "order": 9,
+      "speakerId": "speaker-01",
+      "speaker": "大学職員",
+      "targetText": "おはようございます。",
+      "translationZh": "早上好。",
+      "kana": "おはようございます。",
+      "audio": "/generated/tts/lesson-38/l38-09.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用「の」把动词句名词化，表达“做某事是……”“喜欢/忘记/知道做某事”。",
+        "zh": "早上好。",
+        "keywords": [
+          "おはようございます"
+        ],
+        "audio": "/generated/tts/lesson-38/l38-09.mp3",
+        "opening": "おはよ",
+        "answer": "おはようございます。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-38-node-10"
+      }
+    },
+    {
+      "nodeId": "lesson-38-node-10",
+      "order": 10,
+      "speakerId": "speaker-02",
+      "speaker": "ワット",
+      "targetText": "あ、本を持って来るのを忘れました。すみません。",
+      "translationZh": "啊，我忘了把书带来了。不好意思。",
+      "kana": "あ、ほんをもってくるのをわすれました。すみません。",
+      "audio": "/generated/tts/lesson-38/l38-10.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用「の」把动词句名词化，表达“做某事是……”“喜欢/忘记/知道做某事”。",
+        "zh": "啊，我忘了把书带来了。不好意思。",
+        "keywords": [
+          "あ本を持って来るのを忘れましたすみません"
+        ],
+        "audio": "/generated/tts/lesson-38/l38-10.mp3",
+        "opening": "あ",
+        "answer": "あ、本を持って来るのを忘れました。すみません。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-38-node-11"
+      }
+    },
+    {
+      "nodeId": "lesson-38-node-11",
+      "order": 11,
+      "speakerId": "speaker-01",
+      "speaker": "大学職員",
+      "targetText": "いいですよ。でも、回覧にはんこを押すのを忘れないでください。先月も押してありませんでしたよ。",
+      "translationZh": "没关系。不过，请别忘了在传阅文件上盖章。上个月也没有盖哦。",
+      "kana": "いいですよ。でも、かいらんにはんこをおすのをわすれないでください。せんげつもおしてありませんでしたよ。",
+      "audio": "/generated/tts/lesson-38/l38-11.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用「の」把动词句名词化，表达“做某事是……”“喜欢/忘记/知道做某事”。",
+        "zh": "没关系。不过，请别忘了在传阅文件上盖章。上个月也没有盖哦。",
+        "keywords": [
+          "いいですよでも回覧にはんこを押すのを忘れないでください先月も押してありませんでしたよ"
+        ],
+        "audio": "/generated/tts/lesson-38/l38-11.mp3",
+        "opening": "いいで",
+        "answer": "いいですよ。でも、回覧にはんこを押すのを忘れないでください。先月も押してありませんでしたよ。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 11,
+    "validationStatus": "passed"
+  }
+}

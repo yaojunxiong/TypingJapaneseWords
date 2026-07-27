@@ -1,0 +1,437 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 31,
+  "lessonId": "lesson-31",
+  "title": {
+    "ja": "第31課",
+    "zh": "第31课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-31.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-31.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "学习意向形，表达“打算做、准备做、尚未做”，并区分临时决定和持续计划。",
+    "image": "/minna/lessons/lesson-31/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "小川"
+    },
+    {
+      "id": "speaker-02",
+      "name": "ミラー"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-31-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "小川",
+      "targetText": "来月から独身です。",
+      "translationZh": "从下个月起我要一个人生活。",
+      "kana": "らいげつからどくしんです。",
+      "audio": "/generated/tts/lesson-31/l31-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习意向形，表达“打算做、准备做、尚未做”，并区分临时决定和持续计划。",
+        "zh": "从下个月起我要一个人生活。",
+        "keywords": [
+          "来月から独身です"
+        ],
+        "audio": "/generated/tts/lesson-31/l31-01.mp3",
+        "opening": "来月か",
+        "answer": "来月から独身です。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-31-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-31-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "ミラー",
+      "targetText": "えっ？",
+      "translationZh": "咦？",
+      "kana": "えっ？",
+      "audio": "/generated/tts/lesson-31/l31-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习意向形，表达“打算做、准备做、尚未做”，并区分临时决定和持续计划。",
+        "zh": "咦？",
+        "keywords": [
+          "えっ"
+        ],
+        "audio": "/generated/tts/lesson-31/l31-02.mp3",
+        "opening": "えっ？",
+        "answer": "えっ？"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-31-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-31-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "小川",
+      "targetText": "実は大阪の本社に転勤なんです。",
+      "translationZh": "其实我要调到大阪总公司。",
+      "kana": "じつはおおさかのほんしゃにてんきんなんです。",
+      "audio": "/generated/tts/lesson-31/l31-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习意向形，表达“打算做、准备做、尚未做”，并区分临时决定和持续计划。",
+        "zh": "其实我要调到大阪总公司。",
+        "keywords": [
+          "実は大阪の本社に転勤なんです"
+        ],
+        "audio": "/generated/tts/lesson-31/l31-03.mp3",
+        "opening": "実は大",
+        "answer": "実は大阪の本社に転勤なんです。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-31-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-31-node-04",
+      "order": 4,
+      "speakerId": "speaker-02",
+      "speaker": "ミラー",
+      "targetText": "本社ですか。それはおめでとうございます。",
+      "translationZh": "总公司吗？那恭喜您。",
+      "kana": "ほんしゃですか。それはおめでとうございます。",
+      "audio": "/generated/tts/lesson-31/l31-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习意向形，表达“打算做、准备做、尚未做”，并区分临时决定和持续计划。",
+        "zh": "总公司吗？那恭喜您。",
+        "keywords": [
+          "本社ですかそれはおめでとうございます"
+        ],
+        "audio": "/generated/tts/lesson-31/l31-04.mp3",
+        "opening": "本社で",
+        "answer": "本社ですか。それはおめでとうございます。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-31-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-31-node-05",
+      "order": 5,
+      "speakerId": "speaker-02",
+      "speaker": "ミラー",
+      "targetText": "でも、どうして独身になるんですか。",
+      "translationZh": "可是为什么会变成一个人生活呢？",
+      "kana": "でも、どうしてどくしんになるんですか。",
+      "audio": "/generated/tts/lesson-31/l31-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习意向形，表达“打算做、准备做、尚未做”，并区分临时决定和持续计划。",
+        "zh": "可是为什么会变成一个人生活呢？",
+        "keywords": [
+          "でもどうして独身になるんですか"
+        ],
+        "audio": "/generated/tts/lesson-31/l31-05.mp3",
+        "opening": "でも",
+        "answer": "でも、どうして独身になるんですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-31-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-31-node-06",
+      "order": 6,
+      "speakerId": "speaker-01",
+      "speaker": "小川",
+      "targetText": "妻と子どもは東京に残るんです。",
+      "translationZh": "妻子和孩子留在东京。",
+      "kana": "つまとこどもはとうきょうにのこるんです。",
+      "audio": "/generated/tts/lesson-31/l31-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习意向形，表达“打算做、准备做、尚未做”，并区分临时决定和持续计划。",
+        "zh": "妻子和孩子留在东京。",
+        "keywords": [
+          "妻と子どもは東京に残るんです"
+        ],
+        "audio": "/generated/tts/lesson-31/l31-06.mp3",
+        "opening": "妻と子",
+        "answer": "妻と子どもは東京に残るんです。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-31-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-31-node-07",
+      "order": 7,
+      "speakerId": "speaker-02",
+      "speaker": "ミラー",
+      "targetText": "えっ、いっしょに行かないんですか。",
+      "translationZh": "咦，他们不一起去吗？",
+      "kana": "えっ、いっしょにいかないんですか。",
+      "audio": "/generated/tts/lesson-31/l31-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习意向形，表达“打算做、准备做、尚未做”，并区分临时决定和持续计划。",
+        "zh": "咦，他们不一起去吗？",
+        "keywords": [
+          "えっいっしょに行かないんですか"
+        ],
+        "audio": "/generated/tts/lesson-31/l31-07.mp3",
+        "opening": "えっ",
+        "answer": "えっ、いっしょに行かないんですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-31-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-31-node-08",
+      "order": 8,
+      "speakerId": "speaker-01",
+      "speaker": "小川",
+      "targetText": "ええ。息子は来年大学の入学試験があるから、東京に残ると言うし、妻も今の会社をやめたくないと言うんです。",
+      "translationZh": "是的，儿子说明年有大学入学考试要留在东京，妻子也说不想辞掉现在的工作。",
+      "kana": "ええ。むすこはらいねんだいがくのにゅうがくしけんがあるから、とうきょうにのこるというし、つまもいまのかいしゃをやめたくないというんです。",
+      "audio": "/generated/tts/lesson-31/l31-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习意向形，表达“打算做、准备做、尚未做”，并区分临时决定和持续计划。",
+        "zh": "是的，儿子说明年有大学入学考试要留在东京，妻子也说不想辞掉现在的工作。",
+        "keywords": [
+          "ええ息子は来年大学の入学試験があるから東京に残ると言うし妻も今の会社をやめたくないと言うんです"
+        ],
+        "audio": "/generated/tts/lesson-31/l31-08.mp3",
+        "opening": "ええ",
+        "answer": "ええ。息子は来年大学の入学試験があるから、東京に残ると言うし、妻も今の会社をやめたくないと言うんです。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-31-node-09"
+      }
+    },
+    {
+      "nodeId": "lesson-31-node-09",
+      "order": 9,
+      "speakerId": "speaker-02",
+      "speaker": "ミラー",
+      "targetText": "それで、別々に住むんですね。",
+      "translationZh": "所以要分开住啊。",
+      "kana": "それで、べつべつにすむんですね。",
+      "audio": "/generated/tts/lesson-31/l31-09.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习意向形，表达“打算做、准备做、尚未做”，并区分临时决定和持续计划。",
+        "zh": "所以要分开住啊。",
+        "keywords": [
+          "それで別々に住むんですね"
+        ],
+        "audio": "/generated/tts/lesson-31/l31-09.mp3",
+        "opening": "それで",
+        "answer": "それで、別々に住むんですね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-31-node-10"
+      }
+    },
+    {
+      "nodeId": "lesson-31-node-10",
+      "order": 10,
+      "speakerId": "speaker-01",
+      "speaker": "小川",
+      "targetText": "ええ。でも、月に2、3回週末に帰るつもりです。",
+      "translationZh": "是的，不过我打算每月周末回来两三次。",
+      "kana": "ええ。でも、つきにに、さんかいしゅうまつにかえるつもりです。",
+      "audio": "/generated/tts/lesson-31/l31-10.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习意向形，表达“打算做、准备做、尚未做”，并区分临时决定和持续计划。",
+        "zh": "是的，不过我打算每月周末回来两三次。",
+        "keywords": [
+          "ええでも月に23回週末に帰るつもりです"
+        ],
+        "audio": "/generated/tts/lesson-31/l31-10.mp3",
+        "opening": "ええ",
+        "answer": "ええ。でも、月に2、3回週末に帰るつもりです。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-31-node-11"
+      }
+    },
+    {
+      "nodeId": "lesson-31-node-11",
+      "order": 11,
+      "speakerId": "speaker-02",
+      "speaker": "ミラー",
+      "targetText": "大変ですね。",
+      "translationZh": "真不容易。",
+      "kana": "たいへんですね。",
+      "audio": "/generated/tts/lesson-31/l31-11.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习意向形，表达“打算做、准备做、尚未做”，并区分临时决定和持续计划。",
+        "zh": "真不容易。",
+        "keywords": [
+          "大変ですね"
+        ],
+        "audio": "/generated/tts/lesson-31/l31-11.mp3",
+        "opening": "大変で",
+        "answer": "大変ですね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-31-node-12"
+      }
+    },
+    {
+      "nodeId": "lesson-31-node-12",
+      "order": 12,
+      "speakerId": "speaker-01",
+      "speaker": "小川",
+      "targetText": "でも、いいチャンスですから、料理を習おうと思っています。",
+      "translationZh": "不过这是个好机会，所以我打算学习做菜。",
+      "kana": "でも、いいチャンスですから、りょうりをならおうとおもっています。",
+      "audio": "/generated/tts/lesson-31/l31-12.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习意向形，表达“打算做、准备做、尚未做”，并区分临时决定和持续计划。",
+        "zh": "不过这是个好机会，所以我打算学习做菜。",
+        "keywords": [
+          "でもいいチャンスですから料理を習おうと思っています"
+        ],
+        "audio": "/generated/tts/lesson-31/l31-12.mp3",
+        "opening": "でも",
+        "answer": "でも、いいチャンスですから、料理を習おうと思っています。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-31-node-13"
+      }
+    },
+    {
+      "nodeId": "lesson-31-node-13",
+      "order": 13,
+      "speakerId": "speaker-02",
+      "speaker": "ミラー",
+      "targetText": "それはいいですね。",
+      "translationZh": "那很好啊。",
+      "kana": "それはいいですね。",
+      "audio": "/generated/tts/lesson-31/l31-13.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习意向形，表达“打算做、准备做、尚未做”，并区分临时决定和持续计划。",
+        "zh": "那很好啊。",
+        "keywords": [
+          "それはいいですね"
+        ],
+        "audio": "/generated/tts/lesson-31/l31-13.mp3",
+        "opening": "それは",
+        "answer": "それはいいですね。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 13,
+    "validationStatus": "passed"
+  }
+}

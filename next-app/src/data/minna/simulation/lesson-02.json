@@ -1,0 +1,262 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 2,
+  "lessonId": "lesson-02",
+  "title": {
+    "ja": "第2課",
+    "zh": "第2课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-02.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-02.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "学习指示词「これ・それ・あれ」、名词修饰「この・その・あの」以及「これは何ですか」。",
+    "image": "/minna/lessons/lesson-02/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "山田一郎"
+    },
+    {
+      "id": "speaker-02",
+      "name": "サントス"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-02-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "山田一郎",
+      "targetText": "はい。どなたですか。",
+      "translationZh": "您好，请问是哪位？",
+      "kana": "はい。どなたですか。",
+      "audio": "/generated/tts/lesson-02/l2-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习指示词「これ・それ・あれ」、名词修饰「この・その・あの」以及「これは何ですか」。",
+        "zh": "您好，请问是哪位？",
+        "keywords": [
+          "はいどなたですか"
+        ],
+        "audio": "/generated/tts/lesson-02/l2-01.mp3",
+        "opening": "はい",
+        "answer": "はい。どなたですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-02-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-02-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "サントス",
+      "targetText": "408のサントスです。",
+      "translationZh": "我是408号的桑托斯。",
+      "kana": "よんまるはちのサントスです。",
+      "audio": "/generated/tts/lesson-02/l2-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习指示词「これ・それ・あれ」、名词修饰「この・その・あの」以及「これは何ですか」。",
+        "zh": "我是408号的桑托斯。",
+        "keywords": [
+          "408のサントスです"
+        ],
+        "audio": "/generated/tts/lesson-02/l2-02.mp3",
+        "opening": "408",
+        "answer": "408のサントスです。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-02-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-02-node-03",
+      "order": 3,
+      "speakerId": "speaker-02",
+      "speaker": "サントス",
+      "targetText": "こんにちは。サントスです。これからお世話になります。どうぞよろしくお願いします。",
+      "translationZh": "你好，我是桑托斯。今后要承蒙关照，请多关照。",
+      "kana": "こんにちは。さんとすです。これからおせわになります。どうぞよろしくおねがいします。",
+      "audio": "/generated/tts/lesson-02/l2-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习指示词「これ・それ・あれ」、名词修饰「この・その・あの」以及「これは何ですか」。",
+        "zh": "你好，我是桑托斯。今后要承蒙关照，请多关照。",
+        "keywords": [
+          "こんにちはサントスですこれからお世話になりますどうぞよろしくお願いします"
+        ],
+        "audio": "/generated/tts/lesson-02/l2-03.mp3",
+        "opening": "こんに",
+        "answer": "こんにちは。サントスです。これからお世話になります。どうぞよろしくお願いします。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-02-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-02-node-04",
+      "order": 4,
+      "speakerId": "speaker-01",
+      "speaker": "山田一郎",
+      "targetText": "こちらこそよろしくお願いします。",
+      "translationZh": "我才是，请多关照。",
+      "kana": "こちらこそよろしくおねがいします。",
+      "audio": "/generated/tts/lesson-02/l2-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习指示词「これ・それ・あれ」、名词修饰「この・その・あの」以及「これは何ですか」。",
+        "zh": "我才是，请多关照。",
+        "keywords": [
+          "こちらこそよろしくお願いします"
+        ],
+        "audio": "/generated/tts/lesson-02/l2-04.mp3",
+        "opening": "こちら",
+        "answer": "こちらこそよろしくお願いします。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-02-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-02-node-05",
+      "order": 5,
+      "speakerId": "speaker-02",
+      "speaker": "サントス",
+      "targetText": "あのう、これ、コーヒーです。どうぞ。",
+      "translationZh": "那个，这是咖啡，请收下。",
+      "kana": "あのう、これ、こーひーです。どうぞ。",
+      "audio": "/generated/tts/lesson-02/l2-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习指示词「これ・それ・あれ」、名词修饰「この・その・あの」以及「これは何ですか」。",
+        "zh": "那个，这是咖啡，请收下。",
+        "keywords": [
+          "あのうこれコーヒーですどうぞ"
+        ],
+        "audio": "/generated/tts/lesson-02/l2-05.mp3",
+        "opening": "あのう",
+        "answer": "あのう、これ、コーヒーです。どうぞ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-02-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-02-node-06",
+      "order": 6,
+      "speakerId": "speaker-01",
+      "speaker": "山田一郎",
+      "targetText": "どうもありがとうございます。",
+      "translationZh": "非常感谢。",
+      "kana": "どうもありがとうございます。",
+      "audio": "/generated/tts/lesson-02/l2-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习指示词「これ・それ・あれ」、名词修饰「この・その・あの」以及「これは何ですか」。",
+        "zh": "非常感谢。",
+        "keywords": [
+          "どうもありがとうございます"
+        ],
+        "audio": "/generated/tts/lesson-02/l2-06.mp3",
+        "opening": "どうも",
+        "answer": "どうもありがとうございます。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 6,
+    "validationStatus": "passed"
+  }
+}

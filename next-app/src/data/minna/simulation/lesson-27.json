@@ -1,0 +1,387 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 27,
+  "lessonId": "lesson-27",
+  "title": {
+    "ja": "第27課",
+    "zh": "第27课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-27.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-27.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "学习动词可能形，区分「見えます・聞こえます」和主动动作，并掌握「しか〜ません」。",
+    "image": "/minna/lessons/lesson-27/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "ミラー"
+    },
+    {
+      "id": "speaker-02",
+      "name": "鈴木"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-27-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "ミラー",
+      "targetText": "明るくて、いい部屋ですね。",
+      "translationZh": "房间明亮又漂亮。",
+      "kana": "あかるくて、いいへやですね。",
+      "audio": "/generated/tts/lesson-27/l27-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习动词可能形，区分「見えます・聞こえます」和主动动作，并掌握「しか〜ません」。",
+        "zh": "房间明亮又漂亮。",
+        "keywords": [
+          "明るくていい部屋ですね"
+        ],
+        "audio": "/generated/tts/lesson-27/l27-01.mp3",
+        "opening": "明るく",
+        "answer": "明るくて、いい部屋ですね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-27-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-27-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "鈴木",
+      "targetText": "ええ。天気がいい日には海が見えるんです。",
+      "translationZh": "是的，天气好的日子能看见海。",
+      "kana": "ええ。てんきがいいひにはうみがみえるんです。",
+      "audio": "/generated/tts/lesson-27/l27-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习动词可能形，区分「見えます・聞こえます」和主动动作，并掌握「しか〜ません」。",
+        "zh": "是的，天气好的日子能看见海。",
+        "keywords": [
+          "ええ天気がいい日には海が見えるんです"
+        ],
+        "audio": "/generated/tts/lesson-27/l27-02.mp3",
+        "opening": "ええ",
+        "answer": "ええ。天気がいい日には海が見えるんです。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-27-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-27-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "ミラー",
+      "targetText": "このテーブルはおもしろいデザインですね。どこで買ったんですか。",
+      "translationZh": "这张桌子的设计很有趣，在哪里买的？",
+      "kana": "このテーブルはおもしろいデザインですね。どこでかったんですか。",
+      "audio": "/generated/tts/lesson-27/l27-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习动词可能形，区分「見えます・聞こえます」和主动动作，并掌握「しか〜ません」。",
+        "zh": "这张桌子的设计很有趣，在哪里买的？",
+        "keywords": [
+          "このテーブルはおもしろいデザインですねどこで買ったんですか"
+        ],
+        "audio": "/generated/tts/lesson-27/l27-03.mp3",
+        "opening": "このテ",
+        "answer": "このテーブルはおもしろいデザインですね。どこで買ったんですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-27-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-27-node-04",
+      "order": 4,
+      "speakerId": "speaker-02",
+      "speaker": "鈴木",
+      "targetText": "これはわたしが作ったんですよ。",
+      "translationZh": "这是我做的。",
+      "kana": "これはわたしがつくったんですよ。",
+      "audio": "/generated/tts/lesson-27/l27-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习动词可能形，区分「見えます・聞こえます」和主动动作，并掌握「しか〜ません」。",
+        "zh": "这是我做的。",
+        "keywords": [
+          "これはわたしが作ったんですよ"
+        ],
+        "audio": "/generated/tts/lesson-27/l27-04.mp3",
+        "opening": "これは",
+        "answer": "これはわたしが作ったんですよ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-27-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-27-node-05",
+      "order": 5,
+      "speakerId": "speaker-01",
+      "speaker": "ミラー",
+      "targetText": "えっ、ほんとうですか。",
+      "translationZh": "咦，真的吗？",
+      "kana": "えっ、ほんとうですか。",
+      "audio": "/generated/tts/lesson-27/l27-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习动词可能形，区分「見えます・聞こえます」和主动动作，并掌握「しか〜ません」。",
+        "zh": "咦，真的吗？",
+        "keywords": [
+          "えっほんとうですか"
+        ],
+        "audio": "/generated/tts/lesson-27/l27-05.mp3",
+        "opening": "えっ",
+        "answer": "えっ、ほんとうですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-27-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-27-node-06",
+      "order": 6,
+      "speakerId": "speaker-02",
+      "speaker": "鈴木",
+      "targetText": "ええ。趣味は自分で家具を作ることなんです。",
+      "translationZh": "是的，我的爱好是自己做家具。",
+      "kana": "ええ。しゅみはじぶんでかぐをつくることなんです。",
+      "audio": "/generated/tts/lesson-27/l27-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习动词可能形，区分「見えます・聞こえます」和主动动作，并掌握「しか〜ません」。",
+        "zh": "是的，我的爱好是自己做家具。",
+        "keywords": [
+          "ええ趣味は自分で家具を作ることなんです"
+        ],
+        "audio": "/generated/tts/lesson-27/l27-06.mp3",
+        "opening": "ええ",
+        "answer": "ええ。趣味は自分で家具を作ることなんです。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-27-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-27-node-07",
+      "order": 7,
+      "speakerId": "speaker-01",
+      "speaker": "ミラー",
+      "targetText": "へえ。じゃ、あの本棚も作ったんですか。",
+      "translationZh": "哦，那么那个书架也是你做的吗？",
+      "kana": "へえ。じゃ、あのほんだなもつくったんですか。",
+      "audio": "/generated/tts/lesson-27/l27-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习动词可能形，区分「見えます・聞こえます」和主动动作，并掌握「しか〜ません」。",
+        "zh": "哦，那么那个书架也是你做的吗？",
+        "keywords": [
+          "へえじゃあの本棚も作ったんですか"
+        ],
+        "audio": "/generated/tts/lesson-27/l27-07.mp3",
+        "opening": "へえ",
+        "answer": "へえ。じゃ、あの本棚も作ったんですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-27-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-27-node-08",
+      "order": 8,
+      "speakerId": "speaker-02",
+      "speaker": "鈴木",
+      "targetText": "ええ。",
+      "translationZh": "是的。",
+      "kana": "ええ。",
+      "audio": "/generated/tts/lesson-27/l27-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习动词可能形，区分「見えます・聞こえます」和主动动作，并掌握「しか〜ません」。",
+        "zh": "是的。",
+        "keywords": [
+          "ええ"
+        ],
+        "audio": "/generated/tts/lesson-27/l27-08.mp3",
+        "opening": "ええ。",
+        "answer": "ええ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-27-node-09"
+      }
+    },
+    {
+      "nodeId": "lesson-27-node-09",
+      "order": 9,
+      "speakerId": "speaker-01",
+      "speaker": "ミラー",
+      "targetText": "すごいですね。鈴木さん、何でも作れるんですね。",
+      "translationZh": "真厉害，铃木先生什么都会做啊。",
+      "kana": "すごいですね。すずきさん、なんでもつくれるんですね。",
+      "audio": "/generated/tts/lesson-27/l27-09.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习动词可能形，区分「見えます・聞こえます」和主动动作，并掌握「しか〜ません」。",
+        "zh": "真厉害，铃木先生什么都会做啊。",
+        "keywords": [
+          "すごいですね鈴木さん何でも作れるんですね"
+        ],
+        "audio": "/generated/tts/lesson-27/l27-09.mp3",
+        "opening": "すごい",
+        "answer": "すごいですね。鈴木さん、何でも作れるんですね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-27-node-10"
+      }
+    },
+    {
+      "nodeId": "lesson-27-node-10",
+      "order": 10,
+      "speakerId": "speaker-02",
+      "speaker": "鈴木",
+      "targetText": "わたしの夢はいつか自分で家を建てることなんです。",
+      "translationZh": "我的梦想是有一天自己盖房子。",
+      "kana": "わたしのゆめはいつかじぶんでいえをたてることなんです。",
+      "audio": "/generated/tts/lesson-27/l27-10.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习动词可能形，区分「見えます・聞こえます」和主动动作，并掌握「しか〜ません」。",
+        "zh": "我的梦想是有一天自己盖房子。",
+        "keywords": [
+          "わたしの夢はいつか自分で家を建てることなんです"
+        ],
+        "audio": "/generated/tts/lesson-27/l27-10.mp3",
+        "opening": "わたし",
+        "answer": "わたしの夢はいつか自分で家を建てることなんです。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-27-node-11"
+      }
+    },
+    {
+      "nodeId": "lesson-27-node-11",
+      "order": 11,
+      "speakerId": "speaker-01",
+      "speaker": "ミラー",
+      "targetText": "すばらしい夢ですね。",
+      "translationZh": "真是了不起的梦想。",
+      "kana": "すばらしいゆめですね。",
+      "audio": "/generated/tts/lesson-27/l27-11.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习动词可能形，区分「見えます・聞こえます」和主动动作，并掌握「しか〜ません」。",
+        "zh": "真是了不起的梦想。",
+        "keywords": [
+          "すばらしい夢ですね"
+        ],
+        "audio": "/generated/tts/lesson-27/l27-11.mp3",
+        "opening": "すばら",
+        "answer": "すばらしい夢ですね。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 11,
+    "validationStatus": "passed"
+  }
+}

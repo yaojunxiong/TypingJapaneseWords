@@ -1,0 +1,416 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 47,
+  "lessonId": "lesson-47",
+  "title": {
+    "ja": "第47課",
+    "zh": "第47课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-47.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-47.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "学习传闻 そうです 和推断 ようです，并区分第43课外观 そうです。",
+    "image": "/minna/lessons/lesson-47/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "渡辺"
+    },
+    {
+      "id": "speaker-02",
+      "name": "高橋"
+    },
+    {
+      "id": "speaker-03",
+      "name": "林"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-47-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "渡辺",
+      "targetText": "お先に失礼します。",
+      "translationZh": "我先告辞了。",
+      "kana": "おさきにしつれいします。",
+      "audio": "/generated/tts/lesson-47/l47-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习传闻 そうです 和推断 ようです，并区分第43课外观 そうです。",
+        "zh": "我先告辞了。",
+        "keywords": [
+          "お先に失礼します"
+        ],
+        "audio": "/generated/tts/lesson-47/l47-01.mp3",
+        "opening": "お先に",
+        "answer": "お先に失礼します。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-47-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-47-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "高橋",
+      "targetText": "あっ、渡辺さん、ちょっと待って。僕も帰ります。",
+      "translationZh": "啊，渡边小姐，等一下，我也一起回去。",
+      "kana": "あっ、わたなべさん、ちょっとまって。ぼくもかえります。",
+      "audio": "/generated/tts/lesson-47/l47-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习传闻 そうです 和推断 ようです，并区分第43课外观 そうです。",
+        "zh": "啊，渡边小姐，等一下，我也一起回去。",
+        "keywords": [
+          "あっ渡辺さんちょっと待って僕も帰ります"
+        ],
+        "audio": "/generated/tts/lesson-47/l47-02.mp3",
+        "opening": "あっ",
+        "answer": "あっ、渡辺さん、ちょっと待って。僕も帰ります。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-47-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-47-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "渡辺",
+      "targetText": "すみません、ちょっと急ぎますから。",
+      "translationZh": "不好意思，我赶时间。",
+      "kana": "すみません、ちょっといそぎますから。",
+      "audio": "/generated/tts/lesson-47/l47-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习传闻 そうです 和推断 ようです，并区分第43课外观 そうです。",
+        "zh": "不好意思，我赶时间。",
+        "keywords": [
+          "すみませんちょっと急ぎますから"
+        ],
+        "audio": "/generated/tts/lesson-47/l47-03.mp3",
+        "opening": "すみま",
+        "answer": "すみません、ちょっと急ぎますから。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-47-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-47-node-04",
+      "order": 4,
+      "speakerId": "speaker-02",
+      "speaker": "高橋",
+      "targetText": "渡辺さん、このごろ早く帰りますね。どうも恋人ができたようですね。",
+      "translationZh": "你最近总是很早回去呢。听说好像交了个男朋友哦。",
+      "kana": "わたなべさん、このごろはやくかえりますね。どうもこいびとができたようですね。",
+      "audio": "/generated/tts/lesson-47/l47-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习传闻 そうです 和推断 ようです，并区分第43课外观 そうです。",
+        "zh": "你最近总是很早回去呢。听说好像交了个男朋友哦。",
+        "keywords": [
+          "渡辺さんこのごろ早く帰りますねどうも恋人ができたようですね"
+        ],
+        "audio": "/generated/tts/lesson-47/l47-04.mp3",
+        "opening": "渡辺さ",
+        "answer": "渡辺さん、このごろ早く帰りますね。どうも恋人ができたようですね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-47-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-47-node-05",
+      "order": 5,
+      "speakerId": "speaker-03",
+      "speaker": "林",
+      "targetText": "あ、知らないんですか。この間婚約したそうですよ。",
+      "translationZh": "啊，您不知道吗？听说前几天订婚了。",
+      "kana": "あ、しらないんですか。このあいだこんやくしたそうですよ。",
+      "audio": "/generated/tts/lesson-47/l47-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习传闻 そうです 和推断 ようです，并区分第43课外观 そうです。",
+        "zh": "啊，您不知道吗？听说前几天订婚了。",
+        "keywords": [
+          "あ知らないんですかこの間婚約したそうですよ"
+        ],
+        "audio": "/generated/tts/lesson-47/l47-05.mp3",
+        "opening": "あ",
+        "answer": "あ、知らないんですか。この間婚約したそうですよ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-47-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-47-node-06",
+      "order": 6,
+      "speakerId": "speaker-02",
+      "speaker": "高橋",
+      "targetText": "えっ、だれですか、相手は。",
+      "translationZh": "诶？是谁啊？对象是？",
+      "kana": "えっ、だれですか、あいては。",
+      "audio": "/generated/tts/lesson-47/l47-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习传闻 そうです 和推断 ようです，并区分第43课外观 そうです。",
+        "zh": "诶？是谁啊？对象是？",
+        "keywords": [
+          "えっだれですか相手は"
+        ],
+        "audio": "/generated/tts/lesson-47/l47-06.mp3",
+        "opening": "えっ",
+        "answer": "えっ、だれですか、相手は。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-47-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-47-node-07",
+      "order": 7,
+      "speakerId": "speaker-03",
+      "speaker": "林",
+      "targetText": "IMCの鈴木さんですよ。",
+      "translationZh": "是IMC的铃木先生啦。",
+      "kana": "IMCのすずきさんですよ。",
+      "audio": "/generated/tts/lesson-47/l47-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习传闻 そうです 和推断 ようです，并区分第43课外观 そうです。",
+        "zh": "是IMC的铃木先生啦。",
+        "keywords": [
+          "IMCの鈴木さんですよ"
+        ],
+        "audio": "/generated/tts/lesson-47/l47-07.mp3",
+        "opening": "IMC",
+        "answer": "IMCの鈴木さんですよ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-47-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-47-node-08",
+      "order": 8,
+      "speakerId": "speaker-02",
+      "speaker": "高橋",
+      "targetText": "えっ、鈴木さん？",
+      "translationZh": "诶，铃木先生？",
+      "kana": "えっ、すずきさん？",
+      "audio": "/generated/tts/lesson-47/l47-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习传闻 そうです 和推断 ようです，并区分第43课外观 そうです。",
+        "zh": "诶，铃木先生？",
+        "keywords": [
+          "えっ鈴木さん"
+        ],
+        "audio": "/generated/tts/lesson-47/l47-08.mp3",
+        "opening": "えっ",
+        "answer": "えっ、鈴木さん？"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-47-node-09"
+      }
+    },
+    {
+      "nodeId": "lesson-47-node-09",
+      "order": 9,
+      "speakerId": "speaker-03",
+      "speaker": "林",
+      "targetText": "ワットさんの結婚式で知り合ったそうですよ。",
+      "translationZh": "好像是在瓦特先生的婚礼上认识的哦。",
+      "kana": "わっとさんのけっこんしきでしりあったそうですよ。",
+      "audio": "/generated/tts/lesson-47/l47-09.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习传闻 そうです 和推断 ようです，并区分第43课外观 そうです。",
+        "zh": "好像是在瓦特先生的婚礼上认识的哦。",
+        "keywords": [
+          "ワットさんの結婚式で知り合ったそうですよ"
+        ],
+        "audio": "/generated/tts/lesson-47/l47-09.mp3",
+        "opening": "ワット",
+        "answer": "ワットさんの結婚式で知り合ったそうですよ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-47-node-10"
+      }
+    },
+    {
+      "nodeId": "lesson-47-node-10",
+      "order": 10,
+      "speakerId": "speaker-02",
+      "speaker": "高橋",
+      "targetText": "そうですか。",
+      "translationZh": "原来如此……",
+      "kana": "そうですか。",
+      "audio": "/generated/tts/lesson-47/l47-10.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习传闻 そうです 和推断 ようです，并区分第43课外观 そうです。",
+        "zh": "原来如此……",
+        "keywords": [
+          "そうですか"
+        ],
+        "audio": "/generated/tts/lesson-47/l47-10.mp3",
+        "opening": "そうで",
+        "answer": "そうですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-47-node-11"
+      }
+    },
+    {
+      "nodeId": "lesson-47-node-11",
+      "order": 11,
+      "speakerId": "speaker-03",
+      "speaker": "林",
+      "targetText": "ところで、高橋さんは？",
+      "translationZh": "说起来，高桥先生你呢？",
+      "kana": "ところで、たかはしさんは？",
+      "audio": "/generated/tts/lesson-47/l47-11.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习传闻 そうです 和推断 ようです，并区分第43课外观 そうです。",
+        "zh": "说起来，高桥先生你呢？",
+        "keywords": [
+          "ところで高橋さんは"
+        ],
+        "audio": "/generated/tts/lesson-47/l47-11.mp3",
+        "opening": "ところ",
+        "answer": "ところで、高橋さんは？"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-47-node-12"
+      }
+    },
+    {
+      "nodeId": "lesson-47-node-12",
+      "order": 12,
+      "speakerId": "speaker-02",
+      "speaker": "高橋",
+      "targetText": "僕ですか。僕は仕事が恋人です。",
+      "translationZh": "我吗？我的恋人就是工作。",
+      "kana": "ぼくですか。ぼくはしごとがこいびとです。",
+      "audio": "/generated/tts/lesson-47/l47-12.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习传闻 そうです 和推断 ようです，并区分第43课外观 そうです。",
+        "zh": "我吗？我的恋人就是工作。",
+        "keywords": [
+          "僕ですか僕は仕事が恋人です"
+        ],
+        "audio": "/generated/tts/lesson-47/l47-12.mp3",
+        "opening": "僕です",
+        "answer": "僕ですか。僕は仕事が恋人です。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 12,
+    "validationStatus": "passed"
+  }
+}

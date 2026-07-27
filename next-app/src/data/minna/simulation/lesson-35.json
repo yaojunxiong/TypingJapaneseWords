@@ -1,0 +1,387 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 35,
+  "lessonId": "lesson-35",
+  "title": {
+    "ja": "第35課",
+    "zh": "第35课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-35.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-35.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "学习条件形「〜ば」、话题条件「なら」，以及询问建议的「疑问词+ばいいですか」。",
+    "image": "/minna/lessons/lesson-35/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "タワポン"
+    },
+    {
+      "id": "speaker-02",
+      "name": "鈴木"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-35-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "タワポン",
+      "targetText": "鈴木さん、冬休みに友達とスキーに行きたいんですが、どこかいい所、ありませんか。",
+      "translationZh": "铃木先生，寒假我想和朋友去滑雪，有没有什么好地方？",
+      "kana": "すずきさん、ふゆやすみにともだちとスキーにいきたいんですが、どこかいいところ、ありませんか。",
+      "audio": "/generated/tts/lesson-35/l35-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习条件形「〜ば」、话题条件「なら」，以及询问建议的「疑问词+ばいいですか」。",
+        "zh": "铃木先生，寒假我想和朋友去滑雪，有没有什么好地方？",
+        "keywords": [
+          "鈴木さん冬休みに友達とスキーに行きたいんですがどこかいい所ありませんか"
+        ],
+        "audio": "/generated/tts/lesson-35/l35-01.mp3",
+        "opening": "鈴木さ",
+        "answer": "鈴木さん、冬休みに友達とスキーに行きたいんですが、どこかいい所、ありませんか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-35-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-35-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "鈴木",
+      "targetText": "何日ぐらいの予定ですか。",
+      "translationZh": "计划去几天？",
+      "kana": "なんにちぐらいのよていですか。",
+      "audio": "/generated/tts/lesson-35/l35-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习条件形「〜ば」、话题条件「なら」，以及询问建议的「疑问词+ばいいですか」。",
+        "zh": "计划去几天？",
+        "keywords": [
+          "何日ぐらいの予定ですか"
+        ],
+        "audio": "/generated/tts/lesson-35/l35-02.mp3",
+        "opening": "何日ぐ",
+        "answer": "何日ぐらいの予定ですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-35-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-35-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "タワポン",
+      "targetText": "3日ぐらいです。",
+      "translationZh": "大约三天。",
+      "kana": "みっかぐらいです。",
+      "audio": "/generated/tts/lesson-35/l35-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习条件形「〜ば」、话题条件「なら」，以及询问建议的「疑问词+ばいいですか」。",
+        "zh": "大约三天。",
+        "keywords": [
+          "3日ぐらいです"
+        ],
+        "audio": "/generated/tts/lesson-35/l35-03.mp3",
+        "opening": "3日ぐ",
+        "answer": "3日ぐらいです。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-35-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-35-node-04",
+      "order": 4,
+      "speakerId": "speaker-02",
+      "speaker": "鈴木",
+      "targetText": "それなら、草津か志賀高原がいいと思いますよ。温泉もあるし……。",
+      "translationZh": "那样的话，我觉得草津或志贺高原不错，还有温泉……",
+      "kana": "それなら、くさつかしがこうげんがいいとおもいますよ。おんせんもあるし……。",
+      "audio": "/generated/tts/lesson-35/l35-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习条件形「〜ば」、话题条件「なら」，以及询问建议的「疑问词+ばいいですか」。",
+        "zh": "那样的话，我觉得草津或志贺高原不错，还有温泉……",
+        "keywords": [
+          "それなら草津か志賀高原がいいと思いますよ温泉もあるし……"
+        ],
+        "audio": "/generated/tts/lesson-35/l35-04.mp3",
+        "opening": "それな",
+        "answer": "それなら、草津か志賀高原がいいと思いますよ。温泉もあるし……。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-35-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-35-node-05",
+      "order": 5,
+      "speakerId": "speaker-01",
+      "speaker": "タワポン",
+      "targetText": "どうやって行くんですか。",
+      "translationZh": "怎么去？",
+      "kana": "どうやっていくんですか。",
+      "audio": "/generated/tts/lesson-35/l35-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习条件形「〜ば」、话题条件「なら」，以及询问建议的「疑问词+ばいいですか」。",
+        "zh": "怎么去？",
+        "keywords": [
+          "どうやって行くんですか"
+        ],
+        "audio": "/generated/tts/lesson-35/l35-05.mp3",
+        "opening": "どうや",
+        "answer": "どうやって行くんですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-35-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-35-node-06",
+      "order": 6,
+      "speakerId": "speaker-02",
+      "speaker": "鈴木",
+      "targetText": "JRでも行けますが、夜行バスなら、朝着きますから、便利ですよ。",
+      "translationZh": "也可以乘JR，不过夜行巴士早上到，很方便。",
+      "kana": "ジェイアールでもいけますが、やこうバスなら、あさつきますから、べんりですよ。",
+      "audio": "/generated/tts/lesson-35/l35-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习条件形「〜ば」、话题条件「なら」，以及询问建议的「疑问词+ばいいですか」。",
+        "zh": "也可以乘JR，不过夜行巴士早上到，很方便。",
+        "keywords": [
+          "JRでも行けますが夜行バスなら朝着きますから便利ですよ"
+        ],
+        "audio": "/generated/tts/lesson-35/l35-06.mp3",
+        "opening": "JRで",
+        "answer": "JRでも行けますが、夜行バスなら、朝着きますから、便利ですよ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-35-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-35-node-07",
+      "order": 7,
+      "speakerId": "speaker-01",
+      "speaker": "タワポン",
+      "targetText": "そうですか。どちらが安いんですか。",
+      "translationZh": "是吗？哪一种便宜？",
+      "kana": "そうですか。どちらがやすいんですか。",
+      "audio": "/generated/tts/lesson-35/l35-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习条件形「〜ば」、话题条件「なら」，以及询问建议的「疑问词+ばいいですか」。",
+        "zh": "是吗？哪一种便宜？",
+        "keywords": [
+          "そうですかどちらが安いんですか"
+        ],
+        "audio": "/generated/tts/lesson-35/l35-07.mp3",
+        "opening": "そうで",
+        "answer": "そうですか。どちらが安いんですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-35-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-35-node-08",
+      "order": 8,
+      "speakerId": "speaker-02",
+      "speaker": "鈴木",
+      "targetText": "さあ……。旅行社へ行けばもっと詳しいことがわかりますよ。",
+      "translationZh": "这个嘛……去旅行社就能了解更详细的情况。",
+      "kana": "さあ……。りょこうしゃへいけばもっとくわしいことがわかりますよ。",
+      "audio": "/generated/tts/lesson-35/l35-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习条件形「〜ば」、话题条件「なら」，以及询问建议的「疑问词+ばいいですか」。",
+        "zh": "这个嘛……去旅行社就能了解更详细的情况。",
+        "keywords": [
+          "さあ……旅行社へ行けばもっと詳しいことがわかりますよ"
+        ],
+        "audio": "/generated/tts/lesson-35/l35-08.mp3",
+        "opening": "さあ…",
+        "answer": "さあ……。旅行社へ行けばもっと詳しいことがわかりますよ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-35-node-09"
+      }
+    },
+    {
+      "nodeId": "lesson-35-node-09",
+      "order": 9,
+      "speakerId": "speaker-01",
+      "speaker": "タワポン",
+      "targetText": "それから、スキーの道具や服は何も持っていないんですが……。",
+      "translationZh": "另外，滑雪用具和衣服我什么都没有……",
+      "kana": "それから、スキーのどうぐやふくはなにももっていないんですが……。",
+      "audio": "/generated/tts/lesson-35/l35-09.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习条件形「〜ば」、话题条件「なら」，以及询问建议的「疑问词+ばいいですか」。",
+        "zh": "另外，滑雪用具和衣服我什么都没有……",
+        "keywords": [
+          "それからスキーの道具や服は何も持っていないんですが……"
+        ],
+        "audio": "/generated/tts/lesson-35/l35-09.mp3",
+        "opening": "それか",
+        "answer": "それから、スキーの道具や服は何も持っていないんですが……。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-35-node-10"
+      }
+    },
+    {
+      "nodeId": "lesson-35-node-10",
+      "order": 10,
+      "speakerId": "speaker-02",
+      "speaker": "鈴木",
+      "targetText": "全部スキー場で借りられますよ。心配なら、旅行社で予約もできますし……。",
+      "translationZh": "全部都可以在滑雪场租。如果担心，也可以在旅行社预约……",
+      "kana": "ぜんぶスキーじょうでかりられますよ。しんぱいなら、りょこうしゃでよやくもできますし……。",
+      "audio": "/generated/tts/lesson-35/l35-10.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习条件形「〜ば」、话题条件「なら」，以及询问建议的「疑问词+ばいいですか」。",
+        "zh": "全部都可以在滑雪场租。如果担心，也可以在旅行社预约……",
+        "keywords": [
+          "全部スキー場で借りられますよ心配なら旅行社で予約もできますし……"
+        ],
+        "audio": "/generated/tts/lesson-35/l35-10.mp3",
+        "opening": "全部ス",
+        "answer": "全部スキー場で借りられますよ。心配なら、旅行社で予約もできますし……。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-35-node-11"
+      }
+    },
+    {
+      "nodeId": "lesson-35-node-11",
+      "order": 11,
+      "speakerId": "speaker-01",
+      "speaker": "タワポン",
+      "targetText": "そうですか。どうもありがとうございました。",
+      "translationZh": "是吗？非常感谢。",
+      "kana": "そうですか。どうもありがとうございました。",
+      "audio": "/generated/tts/lesson-35/l35-11.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习条件形「〜ば」、话题条件「なら」，以及询问建议的「疑问词+ばいいですか」。",
+        "zh": "是吗？非常感谢。",
+        "keywords": [
+          "そうですかどうもありがとうございました"
+        ],
+        "audio": "/generated/tts/lesson-35/l35-11.mp3",
+        "opening": "そうで",
+        "answer": "そうですか。どうもありがとうございました。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 11,
+    "validationStatus": "passed"
+  }
+}

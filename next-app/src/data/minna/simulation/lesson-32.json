@@ -1,0 +1,362 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 32,
+  "lessonId": "lesson-32",
+  "title": {
+    "ja": "第32課",
+    "zh": "第32课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-32.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-32.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "学习用「ほうがいいです」给建议，用「でしょう」「かもしれません」表达推测。",
+    "image": "/minna/lessons/lesson-32/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "小川"
+    },
+    {
+      "id": "speaker-02",
+      "name": "シュミット"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-32-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "小川",
+      "targetText": "シュミットさん、元気がありませんね。",
+      "translationZh": "休米特先生，看起来没精神啊。",
+      "kana": "シュミットさん、げんきがありませんね。",
+      "audio": "/generated/tts/lesson-32/l32-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习用「ほうがいいです」给建议，用「でしょう」「かもしれません」表达推测。",
+        "zh": "休米特先生，看起来没精神啊。",
+        "keywords": [
+          "シュミットさん元気がありませんね"
+        ],
+        "audio": "/generated/tts/lesson-32/l32-01.mp3",
+        "opening": "シュミ",
+        "answer": "シュミットさん、元気がありませんね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-32-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-32-node-02",
+      "order": 2,
+      "speakerId": "speaker-01",
+      "speaker": "小川",
+      "targetText": "どうしたんですか。",
+      "translationZh": "怎么了？",
+      "kana": "どうしたんですか。",
+      "audio": "/generated/tts/lesson-32/l32-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习用「ほうがいいです」给建议，用「でしょう」「かもしれません」表达推测。",
+        "zh": "怎么了？",
+        "keywords": [
+          "どうしたんですか"
+        ],
+        "audio": "/generated/tts/lesson-32/l32-02.mp3",
+        "opening": "どうし",
+        "answer": "どうしたんですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-32-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-32-node-03",
+      "order": 3,
+      "speakerId": "speaker-02",
+      "speaker": "シュミット",
+      "targetText": "最近、体の調子がよくないんです。時々頭や胃が痛くなるんですよ。",
+      "translationZh": "最近身体状况不好，有时头和胃会疼。",
+      "kana": "さいきん、からだのちょうしがよくないんです。ときどきあたまやいがいたくなるんですよ。",
+      "audio": "/generated/tts/lesson-32/l32-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习用「ほうがいいです」给建议，用「でしょう」「かもしれません」表达推测。",
+        "zh": "最近身体状况不好，有时头和胃会疼。",
+        "keywords": [
+          "最近体の調子がよくないんです時々頭や胃が痛くなるんですよ"
+        ],
+        "audio": "/generated/tts/lesson-32/l32-03.mp3",
+        "opening": "最近",
+        "answer": "最近、体の調子がよくないんです。時々頭や胃が痛くなるんですよ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-32-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-32-node-04",
+      "order": 4,
+      "speakerId": "speaker-01",
+      "speaker": "小川",
+      "targetText": "それはいけませんね。仕事が忙しいんですか。",
+      "translationZh": "那可不行。工作很忙吗？",
+      "kana": "それはいけませんね。しごとがいそがしいんですか。",
+      "audio": "/generated/tts/lesson-32/l32-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习用「ほうがいいです」给建议，用「でしょう」「かもしれません」表达推测。",
+        "zh": "那可不行。工作很忙吗？",
+        "keywords": [
+          "それはいけませんね仕事が忙しいんですか"
+        ],
+        "audio": "/generated/tts/lesson-32/l32-04.mp3",
+        "opening": "それは",
+        "answer": "それはいけませんね。仕事が忙しいんですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-32-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-32-node-05",
+      "order": 5,
+      "speakerId": "speaker-02",
+      "speaker": "シュミット",
+      "targetText": "ええ。残業が多いんです。",
+      "translationZh": "是的，加班很多。",
+      "kana": "ええ。ざんぎょうがおおいんです。",
+      "audio": "/generated/tts/lesson-32/l32-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习用「ほうがいいです」给建议，用「でしょう」「かもしれません」表达推测。",
+        "zh": "是的，加班很多。",
+        "keywords": [
+          "ええ残業が多いんです"
+        ],
+        "audio": "/generated/tts/lesson-32/l32-05.mp3",
+        "opening": "ええ",
+        "answer": "ええ。残業が多いんです。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-32-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-32-node-06",
+      "order": 6,
+      "speakerId": "speaker-01",
+      "speaker": "小川",
+      "targetText": "ストレスかもしれませんね。一度病院で診てもらったほうがいいですよ。",
+      "translationZh": "也许是压力。最好去医院检查一次。",
+      "kana": "ストレスかもしれませんね。いちどびょういんでみてもらったほうがいいですよ。",
+      "audio": "/generated/tts/lesson-32/l32-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习用「ほうがいいです」给建议，用「でしょう」「かもしれません」表达推测。",
+        "zh": "也许是压力。最好去医院检查一次。",
+        "keywords": [
+          "ストレスかもしれませんね一度病院で診てもらったほうがいいですよ"
+        ],
+        "audio": "/generated/tts/lesson-32/l32-06.mp3",
+        "opening": "ストレ",
+        "answer": "ストレスかもしれませんね。一度病院で診てもらったほうがいいですよ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-32-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-32-node-07",
+      "order": 7,
+      "speakerId": "speaker-02",
+      "speaker": "シュミット",
+      "targetText": "ええ、そうですね。",
+      "translationZh": "嗯，是啊。",
+      "kana": "ええ、そうですね。",
+      "audio": "/generated/tts/lesson-32/l32-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习用「ほうがいいです」给建议，用「でしょう」「かもしれません」表达推测。",
+        "zh": "嗯，是啊。",
+        "keywords": [
+          "ええそうですね"
+        ],
+        "audio": "/generated/tts/lesson-32/l32-07.mp3",
+        "opening": "ええ",
+        "answer": "ええ、そうですね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-32-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-32-node-08",
+      "order": 8,
+      "speakerId": "speaker-01",
+      "speaker": "小川",
+      "targetText": "無理をしないほうがいいですよ。",
+      "translationZh": "最好不要勉强自己。",
+      "kana": "むりをしないほうがいいですよ。",
+      "audio": "/generated/tts/lesson-32/l32-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习用「ほうがいいです」给建议，用「でしょう」「かもしれません」表达推测。",
+        "zh": "最好不要勉强自己。",
+        "keywords": [
+          "無理をしないほうがいいですよ"
+        ],
+        "audio": "/generated/tts/lesson-32/l32-08.mp3",
+        "opening": "無理を",
+        "answer": "無理をしないほうがいいですよ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-32-node-09"
+      }
+    },
+    {
+      "nodeId": "lesson-32-node-09",
+      "order": 9,
+      "speakerId": "speaker-02",
+      "speaker": "シュミット",
+      "targetText": "ええ、今の仕事が終わったら、休みを取ろうと思っています。",
+      "translationZh": "嗯，现在的工作结束后，我打算休假。",
+      "kana": "ええ、いまのしごとがおわったら、やすみをとろうとおもっています。",
+      "audio": "/generated/tts/lesson-32/l32-09.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习用「ほうがいいです」给建议，用「でしょう」「かもしれません」表达推测。",
+        "zh": "嗯，现在的工作结束后，我打算休假。",
+        "keywords": [
+          "ええ今の仕事が終わったら休みを取ろうと思っています"
+        ],
+        "audio": "/generated/tts/lesson-32/l32-09.mp3",
+        "opening": "ええ",
+        "answer": "ええ、今の仕事が終わったら、休みを取ろうと思っています。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-32-node-10"
+      }
+    },
+    {
+      "nodeId": "lesson-32-node-10",
+      "order": 10,
+      "speakerId": "speaker-01",
+      "speaker": "小川",
+      "targetText": "それはいいですね。",
+      "translationZh": "那很好。",
+      "kana": "それはいいですね。",
+      "audio": "/generated/tts/lesson-32/l32-10.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习用「ほうがいいです」给建议，用「でしょう」「かもしれません」表达推测。",
+        "zh": "那很好。",
+        "keywords": [
+          "それはいいですね"
+        ],
+        "audio": "/generated/tts/lesson-32/l32-10.mp3",
+        "opening": "それは",
+        "answer": "それはいいですね。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 10,
+    "validationStatus": "passed"
+  }
+}

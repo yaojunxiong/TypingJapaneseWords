@@ -1,0 +1,441 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 11,
+  "lessonId": "lesson-11",
+  "title": {
+    "ja": "第11課",
+    "zh": "第11课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-11.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-11.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "学习助数词、数量词位置、所需时间与频率表达。",
+    "image": "/minna/lessons/lesson-11/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "管理人"
+    },
+    {
+      "id": "speaker-02",
+      "name": "ワン"
+    },
+    {
+      "id": "speaker-03",
+      "name": "郵便局員"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-11-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "管理人",
+      "targetText": "いい天気ですね。お出かけですか。",
+      "translationZh": "天气真好啊。要出门吗？",
+      "kana": "いいてんきですね。おでかけですか。",
+      "audio": "/generated/tts/lesson-11/l11-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习助数词、数量词位置、所需时间与频率表达。",
+        "zh": "天气真好啊。要出门吗？",
+        "keywords": [
+          "いい天気ですねお出かけですか"
+        ],
+        "audio": "/generated/tts/lesson-11/l11-01.mp3",
+        "opening": "いい天",
+        "answer": "いい天気ですね。お出かけですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-11-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-11-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "ワン",
+      "targetText": "ええ、ちょっと郵便局まで。",
+      "translationZh": "嗯，我去一下邮局。",
+      "kana": "ええ、ちょっとゆうびんきょくまで。",
+      "audio": "/generated/tts/lesson-11/l11-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习助数词、数量词位置、所需时间与频率表达。",
+        "zh": "嗯，我去一下邮局。",
+        "keywords": [
+          "ええちょっと郵便局まで"
+        ],
+        "audio": "/generated/tts/lesson-11/l11-02.mp3",
+        "opening": "ええ",
+        "answer": "ええ、ちょっと郵便局まで。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-11-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-11-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "管理人",
+      "targetText": "そうですか。行ってらっしゃい。",
+      "translationZh": "是吗？一路顺风。",
+      "kana": "そうですか。いってらっしゃい。",
+      "audio": "/generated/tts/lesson-11/l11-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习助数词、数量词位置、所需时间与频率表达。",
+        "zh": "是吗？一路顺风。",
+        "keywords": [
+          "そうですか行ってらっしゃい"
+        ],
+        "audio": "/generated/tts/lesson-11/l11-03.mp3",
+        "opening": "そうで",
+        "answer": "そうですか。行ってらっしゃい。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-11-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-11-node-04",
+      "order": 4,
+      "speakerId": "speaker-02",
+      "speaker": "ワン",
+      "targetText": "行ってきます。",
+      "translationZh": "我出门了。",
+      "kana": "いってきます。",
+      "audio": "/generated/tts/lesson-11/l11-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习助数词、数量词位置、所需时间与频率表达。",
+        "zh": "我出门了。",
+        "keywords": [
+          "行ってきます"
+        ],
+        "audio": "/generated/tts/lesson-11/l11-04.mp3",
+        "opening": "行って",
+        "answer": "行ってきます。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-11-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-11-node-05",
+      "order": 5,
+      "speakerId": "speaker-02",
+      "speaker": "ワン",
+      "targetText": "これ、オーストラリアまでお願いします。",
+      "translationZh": "这个，请寄到澳大利亚。",
+      "kana": "これ、おーすとらりあまでおねがいします。",
+      "audio": "/generated/tts/lesson-11/l11-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习助数词、数量词位置、所需时间与频率表达。",
+        "zh": "这个，请寄到澳大利亚。",
+        "keywords": [
+          "これオーストラリアまでお願いします"
+        ],
+        "audio": "/generated/tts/lesson-11/l11-05.mp3",
+        "opening": "これ",
+        "answer": "これ、オーストラリアまでお願いします。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-11-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-11-node-06",
+      "order": 6,
+      "speakerId": "speaker-03",
+      "speaker": "郵便局員",
+      "targetText": "はい。船便ですか、航空便ですか。",
+      "translationZh": "好的。是海运吗？还是航空寄送？",
+      "kana": "はい。ふなびんですか、こうくうびんですか。",
+      "audio": "/generated/tts/lesson-11/l11-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习助数词、数量词位置、所需时间与频率表达。",
+        "zh": "好的。是海运吗？还是航空寄送？",
+        "keywords": [
+          "はい船便ですか航空便ですか"
+        ],
+        "audio": "/generated/tts/lesson-11/l11-06.mp3",
+        "opening": "はい",
+        "answer": "はい。船便ですか、航空便ですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-11-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-11-node-07",
+      "order": 7,
+      "speakerId": "speaker-02",
+      "speaker": "ワン",
+      "targetText": "航空便はいくらですか。",
+      "translationZh": "航空寄送多少钱？",
+      "kana": "こうくうびんはいくらですか。",
+      "audio": "/generated/tts/lesson-11/l11-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习助数词、数量词位置、所需时间与频率表达。",
+        "zh": "航空寄送多少钱？",
+        "keywords": [
+          "航空便はいくらですか"
+        ],
+        "audio": "/generated/tts/lesson-11/l11-07.mp3",
+        "opening": "航空便",
+        "answer": "航空便はいくらですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-11-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-11-node-08",
+      "order": 8,
+      "speakerId": "speaker-03",
+      "speaker": "郵便局員",
+      "targetText": "7,600円です。",
+      "translationZh": "是7,600日元。",
+      "kana": "ななせんろっぴゃくえんです。",
+      "audio": "/generated/tts/lesson-11/l11-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习助数词、数量词位置、所需时间与频率表达。",
+        "zh": "是7,600日元。",
+        "keywords": [
+          "7600円です"
+        ],
+        "audio": "/generated/tts/lesson-11/l11-08.mp3",
+        "opening": "7,6",
+        "answer": "7,600円です。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-11-node-09"
+      }
+    },
+    {
+      "nodeId": "lesson-11-node-09",
+      "order": 9,
+      "speakerId": "speaker-02",
+      "speaker": "ワン",
+      "targetText": "船便は？",
+      "translationZh": "海运呢？",
+      "kana": "ふなびんは？",
+      "audio": "/generated/tts/lesson-11/l11-09.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习助数词、数量词位置、所需时间与频率表达。",
+        "zh": "海运呢？",
+        "keywords": [
+          "船便は"
+        ],
+        "audio": "/generated/tts/lesson-11/l11-09.mp3",
+        "opening": "船便は",
+        "answer": "船便は？"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-11-node-10"
+      }
+    },
+    {
+      "nodeId": "lesson-11-node-10",
+      "order": 10,
+      "speakerId": "speaker-03",
+      "speaker": "郵便局員",
+      "targetText": "3,450円です。",
+      "translationZh": "是3,450日元。",
+      "kana": "さんぜんよんひゃくごじゅうえんです。",
+      "audio": "/generated/tts/lesson-11/l11-10.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习助数词、数量词位置、所需时间与频率表达。",
+        "zh": "是3,450日元。",
+        "keywords": [
+          "3450円です"
+        ],
+        "audio": "/generated/tts/lesson-11/l11-10.mp3",
+        "opening": "3,4",
+        "answer": "3,450円です。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-11-node-11"
+      }
+    },
+    {
+      "nodeId": "lesson-11-node-11",
+      "order": 11,
+      "speakerId": "speaker-02",
+      "speaker": "ワン",
+      "targetText": "どのくらいかかりますか。",
+      "translationZh": "大概要多久？",
+      "kana": "どのくらいかかりますか。",
+      "audio": "/generated/tts/lesson-11/l11-11.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习助数词、数量词位置、所需时间与频率表达。",
+        "zh": "大概要多久？",
+        "keywords": [
+          "どのくらいかかりますか"
+        ],
+        "audio": "/generated/tts/lesson-11/l11-11.mp3",
+        "opening": "どのく",
+        "answer": "どのくらいかかりますか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-11-node-12"
+      }
+    },
+    {
+      "nodeId": "lesson-11-node-12",
+      "order": 12,
+      "speakerId": "speaker-03",
+      "speaker": "郵便局員",
+      "targetText": "航空便で7日、船便で2か月ぐらいです。",
+      "translationZh": "航空寄送约7天，海运约2个月。",
+      "kana": "こうくうびんでなのか、ふなびんでにかげつぐらいです。",
+      "audio": "/generated/tts/lesson-11/l11-12.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习助数词、数量词位置、所需时间与频率表达。",
+        "zh": "航空寄送约7天，海运约2个月。",
+        "keywords": [
+          "航空便で7日船便で2か月ぐらいです"
+        ],
+        "audio": "/generated/tts/lesson-11/l11-12.mp3",
+        "opening": "航空便",
+        "answer": "航空便で7日、船便で2か月ぐらいです。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-11-node-13"
+      }
+    },
+    {
+      "nodeId": "lesson-11-node-13",
+      "order": 13,
+      "speakerId": "speaker-02",
+      "speaker": "ワン",
+      "targetText": "じゃ、船便でお願いします。",
+      "translationZh": "那就请用海运寄吧。",
+      "kana": "じゃ、ふなびんでおねがいします。",
+      "audio": "/generated/tts/lesson-11/l11-13.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习助数词、数量词位置、所需时间与频率表达。",
+        "zh": "那就请用海运寄吧。",
+        "keywords": [
+          "じゃ船便でお願いします"
+        ],
+        "audio": "/generated/tts/lesson-11/l11-13.mp3",
+        "opening": "じゃ",
+        "answer": "じゃ、船便でお願いします。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 13,
+    "validationStatus": "passed"
+  }
+}

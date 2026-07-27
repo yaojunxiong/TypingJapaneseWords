@@ -1,0 +1,312 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 23,
+  "lessonId": "lesson-23",
+  "title": {
+    "ja": "第23課",
+    "zh": "第23课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-23.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-23.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "学习「〜と、〜」「〜とき、〜」表达条件与时间点。",
+    "image": "/minna/lessons/lesson-23/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "図書館の人"
+    },
+    {
+      "id": "speaker-02",
+      "name": "カリナ"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-23-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "図書館の人",
+      "targetText": "はい、みどり図書館です。",
+      "translationZh": "您好，这里是绿图书馆。",
+      "kana": "はい、みどりとしょかんです。",
+      "audio": "/generated/tts/lesson-23/l23-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「〜と、〜」「〜とき、〜」表达条件与时间点。",
+        "zh": "您好，这里是绿图书馆。",
+        "keywords": [
+          "はいみどり図書館です"
+        ],
+        "audio": "/generated/tts/lesson-23/l23-01.mp3",
+        "opening": "はい",
+        "answer": "はい、みどり図書館です。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-23-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-23-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "カリナ",
+      "targetText": "あのう、そちらまでどうやって行きますか。",
+      "translationZh": "请问，怎么去你们那里？",
+      "kana": "あのう、そちらまでどうやっていきますか。",
+      "audio": "/generated/tts/lesson-23/l23-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「〜と、〜」「〜とき、〜」表达条件与时间点。",
+        "zh": "请问，怎么去你们那里？",
+        "keywords": [
+          "あのうそちらまでどうやって行きますか"
+        ],
+        "audio": "/generated/tts/lesson-23/l23-02.mp3",
+        "opening": "あのう",
+        "answer": "あのう、そちらまでどうやって行きますか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-23-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-23-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "図書館の人",
+      "targetText": "本田駅から12番のバスに乗って、図書館前で降りてください。3つ目ですよ。",
+      "translationZh": "从本田站乘12路公交，在图书馆前下车，是第三站。",
+      "kana": "ほんだえきからじゅうにばんのバスにのって、としょかんまえでおりてください。みっつめですよ。",
+      "audio": "/generated/tts/lesson-23/l23-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「〜と、〜」「〜とき、〜」表达条件与时间点。",
+        "zh": "从本田站乘12路公交，在图书馆前下车，是第三站。",
+        "keywords": [
+          "本田駅から12番のバスに乗って図書館前で降りてください3つ目ですよ"
+        ],
+        "audio": "/generated/tts/lesson-23/l23-03.mp3",
+        "opening": "本田駅",
+        "answer": "本田駅から12番のバスに乗って、図書館前で降りてください。3つ目ですよ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-23-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-23-node-04",
+      "order": 4,
+      "speakerId": "speaker-02",
+      "speaker": "カリナ",
+      "targetText": "3つ目ですか。",
+      "translationZh": "第三站吗？",
+      "kana": "みっつめですか。",
+      "audio": "/generated/tts/lesson-23/l23-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「〜と、〜」「〜とき、〜」表达条件与时间点。",
+        "zh": "第三站吗？",
+        "keywords": [
+          "3つ目ですか"
+        ],
+        "audio": "/generated/tts/lesson-23/l23-04.mp3",
+        "opening": "3つ目",
+        "answer": "3つ目ですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-23-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-23-node-05",
+      "order": 5,
+      "speakerId": "speaker-01",
+      "speaker": "図書館の人",
+      "targetText": "ええ。降りると、前に公園があります。図書館は公園の中の白い建物です。",
+      "translationZh": "是的。下车后前面有公园，图书馆是公园里的白色建筑。",
+      "kana": "ええ。おりると、まえにこうえんがあります。としょかんはこうえんのなかのしろいたてものです。",
+      "audio": "/generated/tts/lesson-23/l23-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「〜と、〜」「〜とき、〜」表达条件与时间点。",
+        "zh": "是的。下车后前面有公园，图书馆是公园里的白色建筑。",
+        "keywords": [
+          "ええ降りると前に公園があります図書館は公園の中の白い建物です"
+        ],
+        "audio": "/generated/tts/lesson-23/l23-05.mp3",
+        "opening": "ええ",
+        "answer": "ええ。降りると、前に公園があります。図書館は公園の中の白い建物です。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-23-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-23-node-06",
+      "order": 6,
+      "speakerId": "speaker-02",
+      "speaker": "カリナ",
+      "targetText": "わかりました。それから本を借りるとき、何か要りますか。",
+      "translationZh": "明白了。另外借书时需要什么吗？",
+      "kana": "わかりました。それからほんをかりるとき、なにかいりますか。",
+      "audio": "/generated/tts/lesson-23/l23-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「〜と、〜」「〜とき、〜」表达条件与时间点。",
+        "zh": "明白了。另外借书时需要什么吗？",
+        "keywords": [
+          "わかりましたそれから本を借りるとき何か要りますか"
+        ],
+        "audio": "/generated/tts/lesson-23/l23-06.mp3",
+        "opening": "わかり",
+        "answer": "わかりました。それから本を借りるとき、何か要りますか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-23-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-23-node-07",
+      "order": 7,
+      "speakerId": "speaker-01",
+      "speaker": "図書館の人",
+      "targetText": "お名前とご住所がわかる物を持って来てください。",
+      "translationZh": "请带能证明姓名和住址的东西。",
+      "kana": "おなまえとごじゅうしょがわかるものをもってきてください。",
+      "audio": "/generated/tts/lesson-23/l23-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「〜と、〜」「〜とき、〜」表达条件与时间点。",
+        "zh": "请带能证明姓名和住址的东西。",
+        "keywords": [
+          "お名前とご住所がわかる物を持って来てください"
+        ],
+        "audio": "/generated/tts/lesson-23/l23-07.mp3",
+        "opening": "お名前",
+        "answer": "お名前とご住所がわかる物を持って来てください。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-23-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-23-node-08",
+      "order": 8,
+      "speakerId": "speaker-02",
+      "speaker": "カリナ",
+      "targetText": "はい。どうもありがとうございました。",
+      "translationZh": "好的，非常感谢。",
+      "kana": "はい。どうもありがとうございました。",
+      "audio": "/generated/tts/lesson-23/l23-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「〜と、〜」「〜とき、〜」表达条件与时间点。",
+        "zh": "好的，非常感谢。",
+        "keywords": [
+          "はいどうもありがとうございました"
+        ],
+        "audio": "/generated/tts/lesson-23/l23-08.mp3",
+        "opening": "はい",
+        "answer": "はい。どうもありがとうございました。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 8,
+    "validationStatus": "passed"
+  }
+}

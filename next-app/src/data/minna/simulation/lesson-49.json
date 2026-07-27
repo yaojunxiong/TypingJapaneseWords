@@ -1,0 +1,362 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 49,
+  "lessonId": "lesson-49",
+  "title": {
+    "ja": "第49課",
+    "zh": "第49课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-49.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-49.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "学习尊敬语的基本形式：尊敬被动、おVになります、おVください，以及常用特殊尊敬动词。",
+    "image": "/minna/lessons/lesson-49/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "先生"
+    },
+    {
+      "id": "speaker-02",
+      "name": "クララ"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-49-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "先生",
+      "targetText": "はい、ひまわり小学校です。",
+      "translationZh": "您好，这里是向日葵小学。",
+      "kana": "はい、ひまわりしょうがっこうです。",
+      "audio": "/generated/tts/lesson-49/l49-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习尊敬语的基本形式：尊敬被动、おVになります、おVください，以及常用特殊尊敬动词。",
+        "zh": "您好，这里是向日葵小学。",
+        "keywords": [
+          "はいひまわり小学校です"
+        ],
+        "audio": "/generated/tts/lesson-49/l49-01.mp3",
+        "opening": "はい",
+        "answer": "はい、ひまわり小学校です。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-49-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-49-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "クララ",
+      "targetText": "おはようございます。5年2組のハンス・シュミットの母ですが、伊藤先生はいらっしゃいますか。",
+      "translationZh": "早上好。我是五年二班汉斯・施密特的母亲。请问伊藤老师在吗？",
+      "kana": "おはようございます。ごねんにくみのハンス・シュミットのははですが、いとうせんせいはいらっしゃいますか。",
+      "audio": "/generated/tts/lesson-49/l49-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习尊敬语的基本形式：尊敬被动、おVになります、おVください，以及常用特殊尊敬动词。",
+        "zh": "早上好。我是五年二班汉斯・施密特的母亲。请问伊藤老师在吗？",
+        "keywords": [
+          "おはようございます5年2組のハンス・シュミットの母ですが伊藤先生はいらっしゃいますか"
+        ],
+        "audio": "/generated/tts/lesson-49/l49-02.mp3",
+        "opening": "おはよ",
+        "answer": "おはようございます。5年2組のハンス・シュミットの母ですが、伊藤先生はいらっしゃいますか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-49-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-49-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "先生",
+      "targetText": "まだなんですが……。",
+      "translationZh": "他还没来……",
+      "kana": "まだなんですが……。",
+      "audio": "/generated/tts/lesson-49/l49-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习尊敬语的基本形式：尊敬被动、おVになります、おVください，以及常用特殊尊敬动词。",
+        "zh": "他还没来……",
+        "keywords": [
+          "まだなんですが……"
+        ],
+        "audio": "/generated/tts/lesson-49/l49-03.mp3",
+        "opening": "まだな",
+        "answer": "まだなんですが……。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-49-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-49-node-04",
+      "order": 4,
+      "speakerId": "speaker-02",
+      "speaker": "クララ",
+      "targetText": "では、伊藤先生に伝えていただきたいんですが……。",
+      "translationZh": "那么，我想请您转告伊藤老师……",
+      "kana": "では、いとうせんせいにつたえていただきたいんですが……。",
+      "audio": "/generated/tts/lesson-49/l49-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习尊敬语的基本形式：尊敬被动、おVになります、おVください，以及常用特殊尊敬动词。",
+        "zh": "那么，我想请您转告伊藤老师……",
+        "keywords": [
+          "では伊藤先生に伝えていただきたいんですが……"
+        ],
+        "audio": "/generated/tts/lesson-49/l49-04.mp3",
+        "opening": "では",
+        "answer": "では、伊藤先生に伝えていただきたいんですが……。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-49-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-49-node-05",
+      "order": 5,
+      "speakerId": "speaker-01",
+      "speaker": "先生",
+      "targetText": "はい、何でしょうか。",
+      "translationZh": "好的，请说。",
+      "kana": "はい、なんでしょうか。",
+      "audio": "/generated/tts/lesson-49/l49-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习尊敬语的基本形式：尊敬被动、おVになります、おVください，以及常用特殊尊敬动词。",
+        "zh": "好的，请说。",
+        "keywords": [
+          "はい何でしょうか"
+        ],
+        "audio": "/generated/tts/lesson-49/l49-05.mp3",
+        "opening": "はい",
+        "answer": "はい、何でしょうか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-49-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-49-node-06",
+      "order": 6,
+      "speakerId": "speaker-02",
+      "speaker": "クララ",
+      "targetText": "実はハンスがゆうべ熱を出しまして、けさもまだ下がらないんです。",
+      "translationZh": "其实汉斯从昨晚开始发烧，到现在还没有退烧。",
+      "kana": "じつははんすがゆうべねつをだしまして、けさもまださがらないんです。",
+      "audio": "/generated/tts/lesson-49/l49-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习尊敬语的基本形式：尊敬被动、おVになります、おVください，以及常用特殊尊敬动词。",
+        "zh": "其实汉斯从昨晚开始发烧，到现在还没有退烧。",
+        "keywords": [
+          "実はハンスがゆうべ熱を出しましてけさもまだ下がらないんです"
+        ],
+        "audio": "/generated/tts/lesson-49/l49-06.mp3",
+        "opening": "実はハ",
+        "answer": "実はハンスがゆうべ熱を出しまして、けさもまだ下がらないんです。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-49-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-49-node-07",
+      "order": 7,
+      "speakerId": "speaker-01",
+      "speaker": "先生",
+      "targetText": "それはいけませんね。",
+      "translationZh": "那可不行呢。",
+      "kana": "それはいけませんね。",
+      "audio": "/generated/tts/lesson-49/l49-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习尊敬语的基本形式：尊敬被动、おVになります、おVください，以及常用特殊尊敬动词。",
+        "zh": "那可不行呢。",
+        "keywords": [
+          "それはいけませんね"
+        ],
+        "audio": "/generated/tts/lesson-49/l49-07.mp3",
+        "opening": "それは",
+        "answer": "それはいけませんね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-49-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-49-node-08",
+      "order": 8,
+      "speakerId": "speaker-02",
+      "speaker": "クララ",
+      "targetText": "それで、きょうは学校を休ませますので、先生によろしくお伝えください。",
+      "translationZh": "所以今天让他请假不上学，请代我向老师转达。",
+      "kana": "それで、きょうはがっこうをやすませますので、せんせいによろしくおつたえください。",
+      "audio": "/generated/tts/lesson-49/l49-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习尊敬语的基本形式：尊敬被动、おVになります、おVください，以及常用特殊尊敬动词。",
+        "zh": "所以今天让他请假不上学，请代我向老师转达。",
+        "keywords": [
+          "それできょうは学校を休ませますので先生によろしくお伝えください"
+        ],
+        "audio": "/generated/tts/lesson-49/l49-08.mp3",
+        "opening": "それで",
+        "answer": "それで、きょうは学校を休ませますので、先生によろしくお伝えください。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-49-node-09"
+      }
+    },
+    {
+      "nodeId": "lesson-49-node-09",
+      "order": 9,
+      "speakerId": "speaker-01",
+      "speaker": "先生",
+      "targetText": "わかりました。どうぞお大事に。",
+      "translationZh": "好的，请多保重。",
+      "kana": "わかりました。どうぞおだいじに。",
+      "audio": "/generated/tts/lesson-49/l49-09.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习尊敬语的基本形式：尊敬被动、おVになります、おVください，以及常用特殊尊敬动词。",
+        "zh": "好的，请多保重。",
+        "keywords": [
+          "わかりましたどうぞお大事に"
+        ],
+        "audio": "/generated/tts/lesson-49/l49-09.mp3",
+        "opening": "わかり",
+        "answer": "わかりました。どうぞお大事に。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-49-node-10"
+      }
+    },
+    {
+      "nodeId": "lesson-49-node-10",
+      "order": 10,
+      "speakerId": "speaker-02",
+      "speaker": "クララ",
+      "targetText": "ありがとうございます。失礼いたします。",
+      "translationZh": "谢谢您，失礼了。",
+      "kana": "ありがとうございます。しつれいいたします。",
+      "audio": "/generated/tts/lesson-49/l49-10.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习尊敬语的基本形式：尊敬被动、おVになります、おVください，以及常用特殊尊敬动词。",
+        "zh": "谢谢您，失礼了。",
+        "keywords": [
+          "ありがとうございます失礼いたします"
+        ],
+        "audio": "/generated/tts/lesson-49/l49-10.mp3",
+        "opening": "ありが",
+        "answer": "ありがとうございます。失礼いたします。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 10,
+    "validationStatus": "passed"
+  }
+}

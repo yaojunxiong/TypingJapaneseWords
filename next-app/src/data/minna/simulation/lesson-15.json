@@ -1,0 +1,312 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 15,
+  "lessonId": "lesson-15",
+  "title": {
+    "ja": "第15課",
+    "zh": "第15课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-15.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-15.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "学习「〜てもいいです」「〜てはいけません」「〜ています」。",
+    "image": "/minna/lessons/lesson-15/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "木村"
+    },
+    {
+      "id": "speaker-02",
+      "name": "ミラー"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-15-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "木村",
+      "targetText": "いい映画でしたね。",
+      "translationZh": "真是一部好电影啊。",
+      "kana": "いいえいがでしたね。",
+      "audio": "/generated/tts/lesson-15/l15-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「〜てもいいです」「〜てはいけません」「〜ています」。",
+        "zh": "真是一部好电影啊。",
+        "keywords": [
+          "いい映画でしたね"
+        ],
+        "audio": "/generated/tts/lesson-15/l15-01.mp3",
+        "opening": "いい映",
+        "answer": "いい映画でしたね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-15-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-15-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "ミラー",
+      "targetText": "ええ。わたしは家族を思い出しました。",
+      "translationZh": "是啊。我想起了家人。",
+      "kana": "ええ。わたしはかぞくをおもいだしました。",
+      "audio": "/generated/tts/lesson-15/l15-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「〜てもいいです」「〜てはいけません」「〜ています」。",
+        "zh": "是啊。我想起了家人。",
+        "keywords": [
+          "ええわたしは家族を思い出しました"
+        ],
+        "audio": "/generated/tts/lesson-15/l15-02.mp3",
+        "opening": "ええ",
+        "answer": "ええ。わたしは家族を思い出しました。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-15-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-15-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "木村",
+      "targetText": "そうですか。ミラーさんのご家族は？",
+      "translationZh": "是吗？米勒先生的家人呢？",
+      "kana": "そうですか。みらーさんのごかぞくは？",
+      "audio": "/generated/tts/lesson-15/l15-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「〜てもいいです」「〜てはいけません」「〜ています」。",
+        "zh": "是吗？米勒先生的家人呢？",
+        "keywords": [
+          "そうですかミラーさんのご家族は"
+        ],
+        "audio": "/generated/tts/lesson-15/l15-03.mp3",
+        "opening": "そうで",
+        "answer": "そうですか。ミラーさんのご家族は？"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-15-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-15-node-04",
+      "order": 4,
+      "speakerId": "speaker-02",
+      "speaker": "ミラー",
+      "targetText": "両親と姉が1人います。",
+      "translationZh": "我有父母和一个姐姐。",
+      "kana": "りょうしんとあねがひとりいます。",
+      "audio": "/generated/tts/lesson-15/l15-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「〜てもいいです」「〜てはいけません」「〜ています」。",
+        "zh": "我有父母和一个姐姐。",
+        "keywords": [
+          "両親と姉が1人います"
+        ],
+        "audio": "/generated/tts/lesson-15/l15-04.mp3",
+        "opening": "両親と",
+        "answer": "両親と姉が1人います。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-15-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-15-node-05",
+      "order": 5,
+      "speakerId": "speaker-01",
+      "speaker": "木村",
+      "targetText": "どちらにいらっしゃいますか。",
+      "translationZh": "他们住在哪里？",
+      "kana": "どちらにいらっしゃいますか。",
+      "audio": "/generated/tts/lesson-15/l15-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「〜てもいいです」「〜てはいけません」「〜ています」。",
+        "zh": "他们住在哪里？",
+        "keywords": [
+          "どちらにいらっしゃいますか"
+        ],
+        "audio": "/generated/tts/lesson-15/l15-05.mp3",
+        "opening": "どちら",
+        "answer": "どちらにいらっしゃいますか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-15-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-15-node-06",
+      "order": 6,
+      "speakerId": "speaker-02",
+      "speaker": "ミラー",
+      "targetText": "両親はニューヨークの近くに住んでいます。姉はロンドンで働いています。",
+      "translationZh": "我父母住在纽约附近，姐姐在伦敦工作。",
+      "kana": "りょうしんはにゅーよーくのちかくにすんでいます。あねはろんどんではたらいています。",
+      "audio": "/generated/tts/lesson-15/l15-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「〜てもいいです」「〜てはいけません」「〜ています」。",
+        "zh": "我父母住在纽约附近，姐姐在伦敦工作。",
+        "keywords": [
+          "両親はニューヨークの近くに住んでいます姉はロンドンで働いています"
+        ],
+        "audio": "/generated/tts/lesson-15/l15-06.mp3",
+        "opening": "両親は",
+        "answer": "両親はニューヨークの近くに住んでいます。姉はロンドンで働いています。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-15-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-15-node-07",
+      "order": 7,
+      "speakerId": "speaker-02",
+      "speaker": "ミラー",
+      "targetText": "木村さんのご家族は？",
+      "translationZh": "木村女士，您的家人呢？",
+      "kana": "きむらさんのごかぞくは？",
+      "audio": "/generated/tts/lesson-15/l15-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「〜てもいいです」「〜てはいけません」「〜ています」。",
+        "zh": "木村女士，您的家人呢？",
+        "keywords": [
+          "木村さんのご家族は"
+        ],
+        "audio": "/generated/tts/lesson-15/l15-07.mp3",
+        "opening": "木村さ",
+        "answer": "木村さんのご家族は？"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-15-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-15-node-08",
+      "order": 8,
+      "speakerId": "speaker-01",
+      "speaker": "木村",
+      "targetText": "3人です。父は銀行員です。母は高校で英語を教えています。",
+      "translationZh": "三口人。父亲是银行职员，母亲在高中教英语。",
+      "kana": "さんにんです。ちちはぎんこういんです。はははこうこうでえいごをおしえています。",
+      "audio": "/generated/tts/lesson-15/l15-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「〜てもいいです」「〜てはいけません」「〜ています」。",
+        "zh": "三口人。父亲是银行职员，母亲在高中教英语。",
+        "keywords": [
+          "3人です父は銀行員です母は高校で英語を教えています"
+        ],
+        "audio": "/generated/tts/lesson-15/l15-08.mp3",
+        "opening": "3人で",
+        "answer": "3人です。父は銀行員です。母は高校で英語を教えています。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 8,
+    "validationStatus": "passed"
+  }
+}

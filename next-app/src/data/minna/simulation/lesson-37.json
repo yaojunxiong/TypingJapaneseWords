@@ -1,0 +1,287 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 37,
+  "lessonId": "lesson-37",
+  "title": {
+    "ja": "第37課",
+    "zh": "第37课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-37.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-37.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "学习受身形变化，用「人に」表示动作来源，并区分直接被动、物作主语和受害被动。",
+    "image": "/minna/lessons/lesson-37/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "ガイド"
+    },
+    {
+      "id": "speaker-02",
+      "name": "カリナ"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-37-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "ガイド",
+      "targetText": "皆様、あちらが有名な金閣寺です。金閣寺は14世紀に建てられました。1950年に一度焼けてしまいましたが、その後、また建てられました。1994年に世界遺産になりました。京都で人気があるお寺の一つです。",
+      "translationZh": "各位，那边就是有名的金阁寺。金阁寺建于14世纪。1950年曾经被烧毁，之后又重建了。1994年被列为世界遗产。它是京都很受欢迎的寺庙之一。",
+      "kana": "みなさま、あちらがゆうめいなきんかくじです。きんかくじはじゅうよんせいきにたてられました。せんきゅうひゃくごじゅうねんにいちどやけてしまいましたが、そのご、またたてられました。せんきゅうひゃくきゅうじゅうよねんにせかいいさんになりました。きょうとでにんきがあるおてらのひとつです。",
+      "audio": "/generated/tts/lesson-37/l37-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习受身形变化，用「人に」表示动作来源，并区分直接被动、物作主语和受害被动。",
+        "zh": "各位，那边就是有名的金阁寺。金阁寺建于14世纪。1950年曾经被烧毁，之后又重建了。1994年被列为世界遗产。它是京都很受欢迎的寺庙之一。",
+        "keywords": [
+          "皆様あちらが有名な金閣寺です金閣寺は14世紀に建てられました1950年に一度焼けてしまいましたがその後また建てられました1994年に世界遺産になりました京都で人気があるお寺の一つです"
+        ],
+        "audio": "/generated/tts/lesson-37/l37-01.mp3",
+        "opening": "皆様",
+        "answer": "皆様、あちらが有名な金閣寺です。金閣寺は14世紀に建てられました。1950年に一度焼けてしまいましたが、その後、また建てられました。1994年に世界遺産になりました。京都で人気があるお寺の一つです。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-37-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-37-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "カリナ",
+      "targetText": "きれいですね。壁が金色ですが、本物の金ですか。",
+      "translationZh": "真漂亮呢，墙壁是金色的，是真正的黄金吗？",
+      "kana": "きれいですね。かべがきんいろですが、ほんもののきんですか。",
+      "audio": "/generated/tts/lesson-37/l37-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习受身形变化，用「人に」表示动作来源，并区分直接被动、物作主语和受害被动。",
+        "zh": "真漂亮呢，墙壁是金色的，是真正的黄金吗？",
+        "keywords": [
+          "きれいですね壁が金色ですが本物の金ですか"
+        ],
+        "audio": "/generated/tts/lesson-37/l37-02.mp3",
+        "opening": "きれい",
+        "answer": "きれいですね。壁が金色ですが、本物の金ですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-37-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-37-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "ガイド",
+      "targetText": "はい。金が20キロぐらい使われました。",
+      "translationZh": "是的，使用了大约20公斤的黄金。",
+      "kana": "はい。きんがにじゅっキロぐらいつかわれました。",
+      "audio": "/generated/tts/lesson-37/l37-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习受身形变化，用「人に」表示动作来源，并区分直接被动、物作主语和受害被动。",
+        "zh": "是的，使用了大约20公斤的黄金。",
+        "keywords": [
+          "はい金が20キロぐらい使われました"
+        ],
+        "audio": "/generated/tts/lesson-37/l37-03.mp3",
+        "opening": "はい",
+        "answer": "はい。金が20キロぐらい使われました。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-37-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-37-node-04",
+      "order": 4,
+      "speakerId": "speaker-02",
+      "speaker": "カリナ",
+      "targetText": "そうですか。お寺の中に入れますか。",
+      "translationZh": "这样啊，那可以进去参观吗？",
+      "kana": "そうですか。おてらのなかにいれますか。",
+      "audio": "/generated/tts/lesson-37/l37-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习受身形变化，用「人に」表示动作来源，并区分直接被动、物作主语和受害被动。",
+        "zh": "这样啊，那可以进去参观吗？",
+        "keywords": [
+          "そうですかお寺の中に入れますか"
+        ],
+        "audio": "/generated/tts/lesson-37/l37-04.mp3",
+        "opening": "そうで",
+        "answer": "そうですか。お寺の中に入れますか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-37-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-37-node-05",
+      "order": 5,
+      "speakerId": "speaker-01",
+      "speaker": "ガイド",
+      "targetText": "中には入れないんです。池の周りを歩きながら見てください。",
+      "translationZh": "寺内是不能进入的。请一边绕着池塘走，一边欣赏。",
+      "kana": "なかにはいれないんです。いけのまわりをあるきながらみてください。",
+      "audio": "/generated/tts/lesson-37/l37-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习受身形变化，用「人に」表示动作来源，并区分直接被动、物作主语和受害被动。",
+        "zh": "寺内是不能进入的。请一边绕着池塘走，一边欣赏。",
+        "keywords": [
+          "中には入れないんです池の周りを歩きながら見てください"
+        ],
+        "audio": "/generated/tts/lesson-37/l37-05.mp3",
+        "opening": "中には",
+        "answer": "中には入れないんです。池の周りを歩きながら見てください。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-37-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-37-node-06",
+      "order": 6,
+      "speakerId": "speaker-02",
+      "speaker": "カリナ",
+      "targetText": "紅葉がきれいですね。",
+      "translationZh": "枫叶好美啊。",
+      "kana": "こうようがきれいですね。",
+      "audio": "/generated/tts/lesson-37/l37-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习受身形变化，用「人に」表示动作来源，并区分直接被动、物作主语和受害被动。",
+        "zh": "枫叶好美啊。",
+        "keywords": [
+          "紅葉がきれいですね"
+        ],
+        "audio": "/generated/tts/lesson-37/l37-06.mp3",
+        "opening": "紅葉が",
+        "answer": "紅葉がきれいですね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-37-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-37-node-07",
+      "order": 7,
+      "speakerId": "speaker-01",
+      "speaker": "ガイド",
+      "targetText": "ええ。金閣寺は紅葉と雪の季節が特に美しいと言われています。",
+      "translationZh": "据说金阁寺在枫叶和雪景的季节尤其美丽。",
+      "kana": "ええ。きんかくじはこうようとゆきのきせつがとくにうつくしいといわれています。",
+      "audio": "/generated/tts/lesson-37/l37-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习受身形变化，用「人に」表示动作来源，并区分直接被动、物作主语和受害被动。",
+        "zh": "据说金阁寺在枫叶和雪景的季节尤其美丽。",
+        "keywords": [
+          "ええ金閣寺は紅葉と雪の季節が特に美しいと言われています"
+        ],
+        "audio": "/generated/tts/lesson-37/l37-07.mp3",
+        "opening": "ええ",
+        "answer": "ええ。金閣寺は紅葉と雪の季節が特に美しいと言われています。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 7,
+    "validationStatus": "passed"
+  }
+}

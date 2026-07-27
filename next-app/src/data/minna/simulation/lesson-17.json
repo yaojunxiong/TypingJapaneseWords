@@ -1,0 +1,387 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 17,
+  "lessonId": "lesson-17",
+  "title": {
+    "ja": "第17課",
+    "zh": "第17课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-17.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-17.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "学习「ないでください」「なければなりません」「なくてもいいです」。",
+    "image": "/minna/lessons/lesson-17/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "医者"
+    },
+    {
+      "id": "speaker-02",
+      "name": "松本"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-17-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "医者",
+      "targetText": "どうしましたか。",
+      "translationZh": "怎么了？",
+      "kana": "どうしましたか。",
+      "audio": "/generated/tts/lesson-17/l17-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ないでください」「なければなりません」「なくてもいいです」。",
+        "zh": "怎么了？",
+        "keywords": [
+          "どうしましたか"
+        ],
+        "audio": "/generated/tts/lesson-17/l17-01.mp3",
+        "opening": "どうし",
+        "answer": "どうしましたか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-17-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-17-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "松本",
+      "targetText": "きのうからのどが痛くて、熱も少しあります。",
+      "translationZh": "从昨天开始喉咙疼，还有点发烧。",
+      "kana": "きのうからのどがいたくて、ねつもすこしあります。",
+      "audio": "/generated/tts/lesson-17/l17-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ないでください」「なければなりません」「なくてもいいです」。",
+        "zh": "从昨天开始喉咙疼，还有点发烧。",
+        "keywords": [
+          "きのうからのどが痛くて熱も少しあります"
+        ],
+        "audio": "/generated/tts/lesson-17/l17-02.mp3",
+        "opening": "きのう",
+        "answer": "きのうからのどが痛くて、熱も少しあります。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-17-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-17-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "医者",
+      "targetText": "そうですか。ちょっと口を開けてください。",
+      "translationZh": "是吗？请张一下嘴。",
+      "kana": "そうですか。ちょっとくちをあけてください。",
+      "audio": "/generated/tts/lesson-17/l17-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ないでください」「なければなりません」「なくてもいいです」。",
+        "zh": "是吗？请张一下嘴。",
+        "keywords": [
+          "そうですかちょっと口を開けてください"
+        ],
+        "audio": "/generated/tts/lesson-17/l17-03.mp3",
+        "opening": "そうで",
+        "answer": "そうですか。ちょっと口を開けてください。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-17-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-17-node-04",
+      "order": 4,
+      "speakerId": "speaker-01",
+      "speaker": "医者",
+      "targetText": "かぜですね。2、3日ゆっくり休んでください。",
+      "translationZh": "是感冒。请好好休息两三天。",
+      "kana": "かぜですね。に、さんにちゆっくりやすんでください。",
+      "audio": "/generated/tts/lesson-17/l17-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ないでください」「なければなりません」「なくてもいいです」。",
+        "zh": "是感冒。请好好休息两三天。",
+        "keywords": [
+          "かぜですね23日ゆっくり休んでください"
+        ],
+        "audio": "/generated/tts/lesson-17/l17-04.mp3",
+        "opening": "かぜで",
+        "answer": "かぜですね。2、3日ゆっくり休んでください。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-17-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-17-node-05",
+      "order": 5,
+      "speakerId": "speaker-02",
+      "speaker": "松本",
+      "targetText": "あのう、あしたから東京へ出張しなければなりません。",
+      "translationZh": "那个，我从明天起必须去东京出差。",
+      "kana": "あのう、あしたからとうきょうへしゅっちょうしなければなりません。",
+      "audio": "/generated/tts/lesson-17/l17-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ないでください」「なければなりません」「なくてもいいです」。",
+        "zh": "那个，我从明天起必须去东京出差。",
+        "keywords": [
+          "あのうあしたから東京へ出張しなければなりません"
+        ],
+        "audio": "/generated/tts/lesson-17/l17-05.mp3",
+        "opening": "あのう",
+        "answer": "あのう、あしたから東京へ出張しなければなりません。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-17-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-17-node-06",
+      "order": 6,
+      "speakerId": "speaker-01",
+      "speaker": "医者",
+      "targetText": "じゃ、きょうは薬を飲んで、早く寝てください。",
+      "translationZh": "那么，今天请吃药后早点睡。",
+      "kana": "じゃ、きょうはくすりをのんで、はやくねてください。",
+      "audio": "/generated/tts/lesson-17/l17-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ないでください」「なければなりません」「なくてもいいです」。",
+        "zh": "那么，今天请吃药后早点睡。",
+        "keywords": [
+          "じゃきょうは薬を飲んで早く寝てください"
+        ],
+        "audio": "/generated/tts/lesson-17/l17-06.mp3",
+        "opening": "じゃ",
+        "answer": "じゃ、きょうは薬を飲んで、早く寝てください。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-17-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-17-node-07",
+      "order": 7,
+      "speakerId": "speaker-02",
+      "speaker": "松本",
+      "targetText": "はい。",
+      "translationZh": "好的。",
+      "kana": "はい。",
+      "audio": "/generated/tts/lesson-17/l17-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ないでください」「なければなりません」「なくてもいいです」。",
+        "zh": "好的。",
+        "keywords": [
+          "はい"
+        ],
+        "audio": "/generated/tts/lesson-17/l17-07.mp3",
+        "opening": "はい。",
+        "answer": "はい。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-17-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-17-node-08",
+      "order": 8,
+      "speakerId": "speaker-01",
+      "speaker": "医者",
+      "targetText": "それから今晩はおふろに入らないでくださいね。",
+      "translationZh": "还有，今晚请不要洗澡。",
+      "kana": "それからこんばんはおふろにはいらないでくださいね。",
+      "audio": "/generated/tts/lesson-17/l17-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ないでください」「なければなりません」「なくてもいいです」。",
+        "zh": "还有，今晚请不要洗澡。",
+        "keywords": [
+          "それから今晩はおふろに入らないでくださいね"
+        ],
+        "audio": "/generated/tts/lesson-17/l17-08.mp3",
+        "opening": "それか",
+        "answer": "それから今晩はおふろに入らないでくださいね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-17-node-09"
+      }
+    },
+    {
+      "nodeId": "lesson-17-node-09",
+      "order": 9,
+      "speakerId": "speaker-02",
+      "speaker": "松本",
+      "targetText": "はい、わかりました。",
+      "translationZh": "好的，明白了。",
+      "kana": "はい、わかりました。",
+      "audio": "/generated/tts/lesson-17/l17-09.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ないでください」「なければなりません」「なくてもいいです」。",
+        "zh": "好的，明白了。",
+        "keywords": [
+          "はいわかりました"
+        ],
+        "audio": "/generated/tts/lesson-17/l17-09.mp3",
+        "opening": "はい",
+        "answer": "はい、わかりました。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-17-node-10"
+      }
+    },
+    {
+      "nodeId": "lesson-17-node-10",
+      "order": 10,
+      "speakerId": "speaker-01",
+      "speaker": "医者",
+      "targetText": "じゃ、お大事に。",
+      "translationZh": "那么，请多保重。",
+      "kana": "じゃ、おだいじに。",
+      "audio": "/generated/tts/lesson-17/l17-10.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ないでください」「なければなりません」「なくてもいいです」。",
+        "zh": "那么，请多保重。",
+        "keywords": [
+          "じゃお大事に"
+        ],
+        "audio": "/generated/tts/lesson-17/l17-10.mp3",
+        "opening": "じゃ",
+        "answer": "じゃ、お大事に。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-17-node-11"
+      }
+    },
+    {
+      "nodeId": "lesson-17-node-11",
+      "order": 11,
+      "speakerId": "speaker-02",
+      "speaker": "松本",
+      "targetText": "どうもありがとうございました。",
+      "translationZh": "非常感谢。",
+      "kana": "どうもありがとうございました。",
+      "audio": "/generated/tts/lesson-17/l17-11.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「ないでください」「なければなりません」「なくてもいいです」。",
+        "zh": "非常感谢。",
+        "keywords": [
+          "どうもありがとうございました"
+        ],
+        "audio": "/generated/tts/lesson-17/l17-11.mp3",
+        "opening": "どうも",
+        "answer": "どうもありがとうございました。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 11,
+    "validationStatus": "passed"
+  }
+}

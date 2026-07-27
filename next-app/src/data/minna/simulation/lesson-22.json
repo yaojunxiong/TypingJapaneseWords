@@ -1,0 +1,312 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 22,
+  "lessonId": "lesson-22",
+  "title": {
+    "ja": "第22課",
+    "zh": "第22课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-22.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-22.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "学习用普通形修饰名词，并表达“我想要的东西/住过的地方”。",
+    "image": "/minna/lessons/lesson-22/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "不動産屋"
+    },
+    {
+      "id": "speaker-02",
+      "name": "ワン"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-22-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "不動産屋",
+      "targetText": "どんな部屋をお探しですか。",
+      "translationZh": "您在找什么样的房间？",
+      "kana": "どんなへやをおさがしですか。",
+      "audio": "/generated/tts/lesson-22/l22-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习用普通形修饰名词，并表达“我想要的东西/住过的地方”。",
+        "zh": "您在找什么样的房间？",
+        "keywords": [
+          "どんな部屋をお探しですか"
+        ],
+        "audio": "/generated/tts/lesson-22/l22-01.mp3",
+        "opening": "どんな",
+        "answer": "どんな部屋をお探しですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-22-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-22-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "ワン",
+      "targetText": "そうですね。家賃は8万円ぐらいで、駅から遠くない所がいいですね。",
+      "translationZh": "房租八万日元左右、离车站不远的比较好。",
+      "kana": "そうですね。やちんははちまんえんぐらいで、えきからとおくないところがいいですね。",
+      "audio": "/generated/tts/lesson-22/l22-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习用普通形修饰名词，并表达“我想要的东西/住过的地方”。",
+        "zh": "房租八万日元左右、离车站不远的比较好。",
+        "keywords": [
+          "そうですね家賃は8万円ぐらいで駅から遠くない所がいいですね"
+        ],
+        "audio": "/generated/tts/lesson-22/l22-02.mp3",
+        "opening": "そうで",
+        "answer": "そうですね。家賃は8万円ぐらいで、駅から遠くない所がいいですね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-22-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-22-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "不動産屋",
+      "targetText": "では、こちらはいかがですか。駅から10分で、家賃は83,000円です。",
+      "translationZh": "那么这套怎么样？离车站十分钟，房租八万三千日元。",
+      "kana": "では、こちらはいかがですか。えきからじゅっぷんで、やちんははちまんさんぜんえんです。",
+      "audio": "/generated/tts/lesson-22/l22-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习用普通形修饰名词，并表达“我想要的东西/住过的地方”。",
+        "zh": "那么这套怎么样？离车站十分钟，房租八万三千日元。",
+        "keywords": [
+          "ではこちらはいかがですか駅から10分で家賃は83000円です"
+        ],
+        "audio": "/generated/tts/lesson-22/l22-03.mp3",
+        "opening": "では",
+        "answer": "では、こちらはいかがですか。駅から10分で、家賃は83,000円です。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-22-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-22-node-04",
+      "order": 4,
+      "speakerId": "speaker-02",
+      "speaker": "ワン",
+      "targetText": "ダイニングキッチンと和室ですね。すみません。ここは何ですか。",
+      "translationZh": "是餐厨间和日式房间啊。请问，这里是什么？",
+      "kana": "ダイニングキッチンとわしつですね。すみません。ここはなんですか。",
+      "audio": "/generated/tts/lesson-22/l22-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习用普通形修饰名词，并表达“我想要的东西/住过的地方”。",
+        "zh": "是餐厨间和日式房间啊。请问，这里是什么？",
+        "keywords": [
+          "ダイニングキッチンと和室ですねすみませんここは何ですか"
+        ],
+        "audio": "/generated/tts/lesson-22/l22-04.mp3",
+        "opening": "ダイニ",
+        "answer": "ダイニングキッチンと和室ですね。すみません。ここは何ですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-22-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-22-node-05",
+      "order": 5,
+      "speakerId": "speaker-01",
+      "speaker": "不動産屋",
+      "targetText": "押し入れです。布団を入れる所ですよ。",
+      "translationZh": "是壁橱，是放被褥的地方。",
+      "kana": "おしいれです。ふとんをいれるところですよ。",
+      "audio": "/generated/tts/lesson-22/l22-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习用普通形修饰名词，并表达“我想要的东西/住过的地方”。",
+        "zh": "是壁橱，是放被褥的地方。",
+        "keywords": [
+          "押し入れです布団を入れる所ですよ"
+        ],
+        "audio": "/generated/tts/lesson-22/l22-05.mp3",
+        "opening": "押し入",
+        "answer": "押し入れです。布団を入れる所ですよ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-22-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-22-node-06",
+      "order": 6,
+      "speakerId": "speaker-02",
+      "speaker": "ワン",
+      "targetText": "そうですか。この部屋、きょう見ることができますか。",
+      "translationZh": "是吗？今天可以看这套房吗？",
+      "kana": "そうですか。このへや、きょうみることができますか。",
+      "audio": "/generated/tts/lesson-22/l22-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习用普通形修饰名词，并表达“我想要的东西/住过的地方”。",
+        "zh": "是吗？今天可以看这套房吗？",
+        "keywords": [
+          "そうですかこの部屋きょう見ることができますか"
+        ],
+        "audio": "/generated/tts/lesson-22/l22-06.mp3",
+        "opening": "そうで",
+        "answer": "そうですか。この部屋、きょう見ることができますか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-22-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-22-node-07",
+      "order": 7,
+      "speakerId": "speaker-01",
+      "speaker": "不動産屋",
+      "targetText": "ええ。今から行きましょうか。",
+      "translationZh": "可以。现在去吧？",
+      "kana": "ええ。いまからいきましょうか。",
+      "audio": "/generated/tts/lesson-22/l22-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习用普通形修饰名词，并表达“我想要的东西/住过的地方”。",
+        "zh": "可以。现在去吧？",
+        "keywords": [
+          "ええ今から行きましょうか"
+        ],
+        "audio": "/generated/tts/lesson-22/l22-07.mp3",
+        "opening": "ええ",
+        "answer": "ええ。今から行きましょうか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-22-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-22-node-08",
+      "order": 8,
+      "speakerId": "speaker-02",
+      "speaker": "ワン",
+      "targetText": "ええ、お願いします。",
+      "translationZh": "好的，麻烦您。",
+      "kana": "ええ、おねがいします。",
+      "audio": "/generated/tts/lesson-22/l22-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习用普通形修饰名词，并表达“我想要的东西/住过的地方”。",
+        "zh": "好的，麻烦您。",
+        "keywords": [
+          "ええお願いします"
+        ],
+        "audio": "/generated/tts/lesson-22/l22-08.mp3",
+        "opening": "ええ",
+        "answer": "ええ、お願いします。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 8,
+    "validationStatus": "passed"
+  }
+}

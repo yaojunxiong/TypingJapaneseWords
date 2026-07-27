@@ -1,0 +1,487 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 29,
+  "lessonId": "lesson-29",
+  "title": {
+    "ja": "第29課",
+    "zh": "第29课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-29.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-29.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "用自动词描述眼前结果状态，并用「てしまいました」表达完成、遗憾或意外。",
+    "image": "/minna/lessons/lesson-29/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "イー"
+    },
+    {
+      "id": "speaker-02",
+      "name": "駅員"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-29-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "イー",
+      "targetText": "すみません。今の電車に忘れ物をしてしまったんですが……。",
+      "translationZh": "不好意思，我把东西忘在刚才的电车上了……",
+      "kana": "すみません。いまのでんしゃにわすれものをしてしまったんですが……。",
+      "audio": "/generated/tts/lesson-29/l29-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用自动词描述眼前结果状态，并用「てしまいました」表达完成、遗憾或意外。",
+        "zh": "不好意思，我把东西忘在刚才的电车上了……",
+        "keywords": [
+          "すみません今の電車に忘れ物をしてしまったんですが……"
+        ],
+        "audio": "/generated/tts/lesson-29/l29-01.mp3",
+        "opening": "すみま",
+        "answer": "すみません。今の電車に忘れ物をしてしまったんですが……。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-29-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-29-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "駅員",
+      "targetText": "何を忘れたんですか。",
+      "translationZh": "您忘了什么？",
+      "kana": "なにをわすれたんですか。",
+      "audio": "/generated/tts/lesson-29/l29-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用自动词描述眼前结果状态，并用「てしまいました」表达完成、遗憾或意外。",
+        "zh": "您忘了什么？",
+        "keywords": [
+          "何を忘れたんですか"
+        ],
+        "audio": "/generated/tts/lesson-29/l29-02.mp3",
+        "opening": "何を忘",
+        "answer": "何を忘れたんですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-29-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-29-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "イー",
+      "targetText": "青いかばんです。このくらいの……。",
+      "translationZh": "蓝色的包，大约这么大……",
+      "kana": "あおいかばんです。このくらいの……。",
+      "audio": "/generated/tts/lesson-29/l29-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用自动词描述眼前结果状态，并用「てしまいました」表达完成、遗憾或意外。",
+        "zh": "蓝色的包，大约这么大……",
+        "keywords": [
+          "青いかばんですこのくらいの……"
+        ],
+        "audio": "/generated/tts/lesson-29/l29-03.mp3",
+        "opening": "青いか",
+        "answer": "青いかばんです。このくらいの……。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-29-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-29-node-04",
+      "order": 4,
+      "speakerId": "speaker-01",
+      "speaker": "イー",
+      "targetText": "外側に大きいポケットが付いています。",
+      "translationZh": "外侧有一个大口袋。",
+      "kana": "そとがわにおおきいポケットがついています。",
+      "audio": "/generated/tts/lesson-29/l29-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用自动词描述眼前结果状态，并用「てしまいました」表达完成、遗憾或意外。",
+        "zh": "外侧有一个大口袋。",
+        "keywords": [
+          "外側に大きいポケットが付いています"
+        ],
+        "audio": "/generated/tts/lesson-29/l29-04.mp3",
+        "opening": "外側に",
+        "answer": "外側に大きいポケットが付いています。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-29-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-29-node-05",
+      "order": 5,
+      "speakerId": "speaker-02",
+      "speaker": "駅員",
+      "targetText": "どの辺に置きましたか。",
+      "translationZh": "放在什么位置？",
+      "kana": "どのへんにおきましたか。",
+      "audio": "/generated/tts/lesson-29/l29-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用自动词描述眼前结果状态，并用「てしまいました」表达完成、遗憾或意外。",
+        "zh": "放在什么位置？",
+        "keywords": [
+          "どの辺に置きましたか"
+        ],
+        "audio": "/generated/tts/lesson-29/l29-05.mp3",
+        "opening": "どの辺",
+        "answer": "どの辺に置きましたか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-29-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-29-node-06",
+      "order": 6,
+      "speakerId": "speaker-01",
+      "speaker": "イー",
+      "targetText": "よく覚えていません。でも、網棚の上に置きました。",
+      "translationZh": "不太记得了，不过放在行李架上。",
+      "kana": "よくおぼえていません。でも、あみだなのうえにおきました。",
+      "audio": "/generated/tts/lesson-29/l29-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用自动词描述眼前结果状态，并用「てしまいました」表达完成、遗憾或意外。",
+        "zh": "不太记得了，不过放在行李架上。",
+        "keywords": [
+          "よく覚えていませんでも網棚の上に置きました"
+        ],
+        "audio": "/generated/tts/lesson-29/l29-06.mp3",
+        "opening": "よく覚",
+        "answer": "よく覚えていません。でも、網棚の上に置きました。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-29-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-29-node-07",
+      "order": 7,
+      "speakerId": "speaker-02",
+      "speaker": "駅員",
+      "targetText": "中に何が入っていますか。",
+      "translationZh": "里面装着什么？",
+      "kana": "なかになにがはいっていますか。",
+      "audio": "/generated/tts/lesson-29/l29-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用自动词描述眼前结果状态，并用「てしまいました」表达完成、遗憾或意外。",
+        "zh": "里面装着什么？",
+        "keywords": [
+          "中に何が入っていますか"
+        ],
+        "audio": "/generated/tts/lesson-29/l29-07.mp3",
+        "opening": "中に何",
+        "answer": "中に何が入っていますか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-29-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-29-node-08",
+      "order": 8,
+      "speakerId": "speaker-01",
+      "speaker": "イー",
+      "targetText": "えーと、確か、本と傘が入っています。",
+      "translationZh": "嗯，我记得里面有书和伞。",
+      "kana": "えーと、たしか、ほんとかさがはいっています。",
+      "audio": "/generated/tts/lesson-29/l29-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用自动词描述眼前结果状态，并用「てしまいました」表达完成、遗憾或意外。",
+        "zh": "嗯，我记得里面有书和伞。",
+        "keywords": [
+          "えーと確か本と傘が入っています"
+        ],
+        "audio": "/generated/tts/lesson-29/l29-08.mp3",
+        "opening": "えーと",
+        "answer": "えーと、確か、本と傘が入っています。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-29-node-09"
+      }
+    },
+    {
+      "nodeId": "lesson-29-node-09",
+      "order": 9,
+      "speakerId": "speaker-02",
+      "speaker": "駅員",
+      "targetText": "じゃ、調べますから、ちょっと待っていてください。",
+      "translationZh": "那么我查一下，请稍等。",
+      "kana": "じゃ、しらべますから、ちょっとまっていてください。",
+      "audio": "/generated/tts/lesson-29/l29-09.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用自动词描述眼前结果状态，并用「てしまいました」表达完成、遗憾或意外。",
+        "zh": "那么我查一下，请稍等。",
+        "keywords": [
+          "じゃ調べますからちょっと待っていてください"
+        ],
+        "audio": "/generated/tts/lesson-29/l29-09.mp3",
+        "opening": "じゃ",
+        "answer": "じゃ、調べますから、ちょっと待っていてください。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-29-node-10"
+      }
+    },
+    {
+      "nodeId": "lesson-29-node-10",
+      "order": 10,
+      "speakerId": "speaker-02",
+      "speaker": "駅員",
+      "targetText": "ありましたよ。",
+      "translationZh": "找到了。",
+      "kana": "ありましたよ。",
+      "audio": "/generated/tts/lesson-29/l29-10.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用自动词描述眼前结果状态，并用「てしまいました」表达完成、遗憾或意外。",
+        "zh": "找到了。",
+        "keywords": [
+          "ありましたよ"
+        ],
+        "audio": "/generated/tts/lesson-29/l29-10.mp3",
+        "opening": "ありま",
+        "answer": "ありましたよ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-29-node-11"
+      }
+    },
+    {
+      "nodeId": "lesson-29-node-11",
+      "order": 11,
+      "speakerId": "speaker-01",
+      "speaker": "イー",
+      "targetText": "ああ、よかった。",
+      "translationZh": "啊，太好了。",
+      "kana": "ああ、よかった。",
+      "audio": "/generated/tts/lesson-29/l29-11.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用自动词描述眼前结果状态，并用「てしまいました」表达完成、遗憾或意外。",
+        "zh": "啊，太好了。",
+        "keywords": [
+          "ああよかった"
+        ],
+        "audio": "/generated/tts/lesson-29/l29-11.mp3",
+        "opening": "ああ",
+        "answer": "ああ、よかった。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-29-node-12"
+      }
+    },
+    {
+      "nodeId": "lesson-29-node-12",
+      "order": 12,
+      "speakerId": "speaker-02",
+      "speaker": "駅員",
+      "targetText": "今、新宿駅にありますが、どうしますか。",
+      "translationZh": "现在在新宿站，您怎么办？",
+      "kana": "いま、しんじゅくえきにありますが、どうしますか。",
+      "audio": "/generated/tts/lesson-29/l29-12.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用自动词描述眼前结果状态，并用「てしまいました」表达完成、遗憾或意外。",
+        "zh": "现在在新宿站，您怎么办？",
+        "keywords": [
+          "今新宿駅にありますがどうしますか"
+        ],
+        "audio": "/generated/tts/lesson-29/l29-12.mp3",
+        "opening": "今",
+        "answer": "今、新宿駅にありますが、どうしますか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-29-node-13"
+      }
+    },
+    {
+      "nodeId": "lesson-29-node-13",
+      "order": 13,
+      "speakerId": "speaker-01",
+      "speaker": "イー",
+      "targetText": "すぐ取りに行きます。",
+      "translationZh": "我马上去取。",
+      "kana": "すぐとりにいきます。",
+      "audio": "/generated/tts/lesson-29/l29-13.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用自动词描述眼前结果状态，并用「てしまいました」表达完成、遗憾或意外。",
+        "zh": "我马上去取。",
+        "keywords": [
+          "すぐ取りに行きます"
+        ],
+        "audio": "/generated/tts/lesson-29/l29-13.mp3",
+        "opening": "すぐ取",
+        "answer": "すぐ取りに行きます。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-29-node-14"
+      }
+    },
+    {
+      "nodeId": "lesson-29-node-14",
+      "order": 14,
+      "speakerId": "speaker-02",
+      "speaker": "駅員",
+      "targetText": "じゃ、新宿駅の事務所に行ってください。",
+      "translationZh": "那么请去新宿站办公室。",
+      "kana": "じゃ、しんじゅくえきのじむしょにいってください。",
+      "audio": "/generated/tts/lesson-29/l29-14.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用自动词描述眼前结果状态，并用「てしまいました」表达完成、遗憾或意外。",
+        "zh": "那么请去新宿站办公室。",
+        "keywords": [
+          "じゃ新宿駅の事務所に行ってください"
+        ],
+        "audio": "/generated/tts/lesson-29/l29-14.mp3",
+        "opening": "じゃ",
+        "answer": "じゃ、新宿駅の事務所に行ってください。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-29-node-15"
+      }
+    },
+    {
+      "nodeId": "lesson-29-node-15",
+      "order": 15,
+      "speakerId": "speaker-01",
+      "speaker": "イー",
+      "targetText": "はい、どうもありがとうございました。",
+      "translationZh": "好的，非常感谢。",
+      "kana": "はい、どうもありがとうございました。",
+      "audio": "/generated/tts/lesson-29/l29-15.mp3",
+      "image": null,
+      "hints": {
+        "scene": "用自动词描述眼前结果状态，并用「てしまいました」表达完成、遗憾或意外。",
+        "zh": "好的，非常感谢。",
+        "keywords": [
+          "はいどうもありがとうございました"
+        ],
+        "audio": "/generated/tts/lesson-29/l29-15.mp3",
+        "opening": "はい",
+        "answer": "はい、どうもありがとうございました。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 15,
+    "validationStatus": "passed"
+  }
+}

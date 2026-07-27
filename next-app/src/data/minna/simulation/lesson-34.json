@@ -1,0 +1,466 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 34,
+  "lessonId": "lesson-34",
+  "title": {
+    "ja": "第34課",
+    "zh": "第34课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-34.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-34.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "学习按照说明、示范或计划做事，表达做完之后，以及带着/不做某动作完成另一动作。",
+    "image": "/minna/lessons/lesson-34/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "クララ"
+    },
+    {
+      "id": "speaker-02",
+      "name": "渡辺"
+    },
+    {
+      "id": "speaker-03",
+      "name": "お茶の先生"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-34-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "クララ",
+      "targetText": "一度茶道が見たいんですが……。",
+      "translationZh": "我想看一次茶道……",
+      "kana": "いちどさどうがみたいんですが……。",
+      "audio": "/generated/tts/lesson-34/l34-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习按照说明、示范或计划做事，表达做完之后，以及带着/不做某动作完成另一动作。",
+        "zh": "我想看一次茶道……",
+        "keywords": [
+          "一度茶道が見たいんですが……"
+        ],
+        "audio": "/generated/tts/lesson-34/l34-01.mp3",
+        "opening": "一度茶",
+        "answer": "一度茶道が見たいんですが……。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-34-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-34-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "渡辺",
+      "targetText": "じゃ、来週の土曜日いっしょに行きませんか。",
+      "translationZh": "那么下周六一起去吗？",
+      "kana": "じゃ、らいしゅうのどようびいっしょにいきませんか。",
+      "audio": "/generated/tts/lesson-34/l34-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习按照说明、示范或计划做事，表达做完之后，以及带着/不做某动作完成另一动作。",
+        "zh": "那么下周六一起去吗？",
+        "keywords": [
+          "じゃ来週の土曜日いっしょに行きませんか"
+        ],
+        "audio": "/generated/tts/lesson-34/l34-02.mp3",
+        "opening": "じゃ",
+        "answer": "じゃ、来週の土曜日いっしょに行きませんか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-34-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-34-node-03",
+      "order": 3,
+      "speakerId": "speaker-03",
+      "speaker": "お茶の先生",
+      "targetText": "渡辺さん、お茶をたててください。",
+      "translationZh": "渡边，请点茶。",
+      "kana": "わたなべさん、おちゃをたててください。",
+      "audio": "/generated/tts/lesson-34/l34-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习按照说明、示范或计划做事，表达做完之后，以及带着/不做某动作完成另一动作。",
+        "zh": "渡边，请点茶。",
+        "keywords": [
+          "渡辺さんお茶をたててください"
+        ],
+        "audio": "/generated/tts/lesson-34/l34-03.mp3",
+        "opening": "渡辺さ",
+        "answer": "渡辺さん、お茶をたててください。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-34-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-34-node-04",
+      "order": 4,
+      "speakerId": "speaker-02",
+      "speaker": "渡辺",
+      "targetText": "はい。",
+      "translationZh": "好的。",
+      "kana": "はい。",
+      "audio": "/generated/tts/lesson-34/l34-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习按照说明、示范或计划做事，表达做完之后，以及带着/不做某动作完成另一动作。",
+        "zh": "好的。",
+        "keywords": [
+          "はい"
+        ],
+        "audio": "/generated/tts/lesson-34/l34-04.mp3",
+        "opening": "はい。",
+        "answer": "はい。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-34-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-34-node-05",
+      "order": 5,
+      "speakerId": "speaker-03",
+      "speaker": "お茶の先生",
+      "targetText": "クララさん、お菓子をどうぞ。",
+      "translationZh": "克拉拉，请吃点心。",
+      "kana": "クララさん、おかしをどうぞ。",
+      "audio": "/generated/tts/lesson-34/l34-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习按照说明、示范或计划做事，表达做完之后，以及带着/不做某动作完成另一动作。",
+        "zh": "克拉拉，请吃点心。",
+        "keywords": [
+          "クララさんお菓子をどうぞ"
+        ],
+        "audio": "/generated/tts/lesson-34/l34-05.mp3",
+        "opening": "クララ",
+        "answer": "クララさん、お菓子をどうぞ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-34-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-34-node-06",
+      "order": 6,
+      "speakerId": "speaker-01",
+      "speaker": "クララ",
+      "targetText": "えっ、先にお菓子を食べるんですか。",
+      "translationZh": "咦，先吃点心吗？",
+      "kana": "えっ、さきにおかしをたべるんですか。",
+      "audio": "/generated/tts/lesson-34/l34-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习按照说明、示范或计划做事，表达做完之后，以及带着/不做某动作完成另一动作。",
+        "zh": "咦，先吃点心吗？",
+        "keywords": [
+          "えっ先にお菓子を食べるんですか"
+        ],
+        "audio": "/generated/tts/lesson-34/l34-06.mp3",
+        "opening": "えっ",
+        "answer": "えっ、先にお菓子を食べるんですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-34-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-34-node-07",
+      "order": 7,
+      "speakerId": "speaker-03",
+      "speaker": "お茶の先生",
+      "targetText": "ええ。甘いお菓子を食べたあとで、お茶を飲むと、おいしいんですよ。",
+      "translationZh": "是的，吃过甜点后喝茶会很好喝。",
+      "kana": "ええ。あまいおかしをたべたあとで、おちゃをのむと、おいしいんですよ。",
+      "audio": "/generated/tts/lesson-34/l34-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习按照说明、示范或计划做事，表达做完之后，以及带着/不做某动作完成另一动作。",
+        "zh": "是的，吃过甜点后喝茶会很好喝。",
+        "keywords": [
+          "ええ甘いお菓子を食べたあとでお茶を飲むとおいしいんですよ"
+        ],
+        "audio": "/generated/tts/lesson-34/l34-07.mp3",
+        "opening": "ええ",
+        "answer": "ええ。甘いお菓子を食べたあとで、お茶を飲むと、おいしいんですよ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-34-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-34-node-08",
+      "order": 8,
+      "speakerId": "speaker-01",
+      "speaker": "クララ",
+      "targetText": "そうですか。",
+      "translationZh": "是吗？",
+      "kana": "そうですか。",
+      "audio": "/generated/tts/lesson-34/l34-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习按照说明、示范或计划做事，表达做完之后，以及带着/不做某动作完成另一动作。",
+        "zh": "是吗？",
+        "keywords": [
+          "そうですか"
+        ],
+        "audio": "/generated/tts/lesson-34/l34-08.mp3",
+        "opening": "そうで",
+        "answer": "そうですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-34-node-09"
+      }
+    },
+    {
+      "nodeId": "lesson-34-node-09",
+      "order": 9,
+      "speakerId": "speaker-03",
+      "speaker": "お茶の先生",
+      "targetText": "では、お茶を飲みましょう。まず、右手でおちゃわんを取って、左手に載せます。次におちゃわんを2回回して、それから飲みます。",
+      "translationZh": "那么喝茶吧。先用右手拿起茶碗，放在左手上。接着把茶碗转两圈，然后喝。",
+      "kana": "では、おちゃをのみましょう。まず、みぎてでおちゃわんをとって、ひだりてにのせます。つぎにおちゃわんをにかいまわして、それからのみます。",
+      "audio": "/generated/tts/lesson-34/l34-09.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习按照说明、示范或计划做事，表达做完之后，以及带着/不做某动作完成另一动作。",
+        "zh": "那么喝茶吧。先用右手拿起茶碗，放在左手上。接着把茶碗转两圈，然后喝。",
+        "keywords": [
+          "ではお茶を飲みましょうまず右手でおちゃわんを取って左手に載せます次におちゃわんを2回回してそれから飲みます"
+        ],
+        "audio": "/generated/tts/lesson-34/l34-09.mp3",
+        "opening": "では",
+        "answer": "では、お茶を飲みましょう。まず、右手でおちゃわんを取って、左手に載せます。次におちゃわんを2回回して、それから飲みます。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-34-node-10"
+      }
+    },
+    {
+      "nodeId": "lesson-34-node-10",
+      "order": 10,
+      "speakerId": "speaker-01",
+      "speaker": "クララ",
+      "targetText": "はい。",
+      "translationZh": "好的。",
+      "kana": "はい。",
+      "audio": "/generated/tts/lesson-34/l34-10.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习按照说明、示范或计划做事，表达做完之后，以及带着/不做某动作完成另一动作。",
+        "zh": "好的。",
+        "keywords": [
+          "はい"
+        ],
+        "audio": "/generated/tts/lesson-34/l34-10.mp3",
+        "opening": "はい。",
+        "answer": "はい。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-34-node-11"
+      }
+    },
+    {
+      "nodeId": "lesson-34-node-11",
+      "order": 11,
+      "speakerId": "speaker-03",
+      "speaker": "お茶の先生",
+      "targetText": "じゃ、わたしがしたとおりに、してください。",
+      "translationZh": "那么请照我做的那样做。",
+      "kana": "じゃ、わたしがしたとおりに、してください。",
+      "audio": "/generated/tts/lesson-34/l34-11.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习按照说明、示范或计划做事，表达做完之后，以及带着/不做某动作完成另一动作。",
+        "zh": "那么请照我做的那样做。",
+        "keywords": [
+          "じゃわたしがしたとおりにしてください"
+        ],
+        "audio": "/generated/tts/lesson-34/l34-11.mp3",
+        "opening": "じゃ",
+        "answer": "じゃ、わたしがしたとおりに、してください。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-34-node-12"
+      }
+    },
+    {
+      "nodeId": "lesson-34-node-12",
+      "order": 12,
+      "speakerId": "speaker-01",
+      "speaker": "クララ",
+      "targetText": "これでいいですか。",
+      "translationZh": "这样可以吗？",
+      "kana": "これでいいですか。",
+      "audio": "/generated/tts/lesson-34/l34-12.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习按照说明、示范或计划做事，表达做完之后，以及带着/不做某动作完成另一动作。",
+        "zh": "这样可以吗？",
+        "keywords": [
+          "これでいいですか"
+        ],
+        "audio": "/generated/tts/lesson-34/l34-12.mp3",
+        "opening": "これで",
+        "answer": "これでいいですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-34-node-13"
+      }
+    },
+    {
+      "nodeId": "lesson-34-node-13",
+      "order": 13,
+      "speakerId": "speaker-03",
+      "speaker": "お茶の先生",
+      "targetText": "はい。いかがですか。",
+      "translationZh": "可以，味道怎么样？",
+      "kana": "はい。いかがですか。",
+      "audio": "/generated/tts/lesson-34/l34-13.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习按照说明、示范或计划做事，表达做完之后，以及带着/不做某动作完成另一动作。",
+        "zh": "可以，味道怎么样？",
+        "keywords": [
+          "はいいかがですか"
+        ],
+        "audio": "/generated/tts/lesson-34/l34-13.mp3",
+        "opening": "はい",
+        "answer": "はい。いかがですか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-34-node-14"
+      }
+    },
+    {
+      "nodeId": "lesson-34-node-14",
+      "order": 14,
+      "speakerId": "speaker-01",
+      "speaker": "クララ",
+      "targetText": "少し苦いですが、おいしいです。",
+      "translationZh": "有点苦，不过很好喝。",
+      "kana": "すこしにがいですが、おいしいです。",
+      "audio": "/generated/tts/lesson-34/l34-14.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习按照说明、示范或计划做事，表达做完之后，以及带着/不做某动作完成另一动作。",
+        "zh": "有点苦，不过很好喝。",
+        "keywords": [
+          "少し苦いですがおいしいです"
+        ],
+        "audio": "/generated/tts/lesson-34/l34-14.mp3",
+        "opening": "少し苦",
+        "answer": "少し苦いですが、おいしいです。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 14,
+    "validationStatus": "passed"
+  }
+}

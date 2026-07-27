@@ -1,0 +1,370 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 25,
+  "lessonId": "lesson-25",
+  "title": {
+    "ja": "第25課",
+    "zh": "第25课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-25.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-25.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "学习「〜たら」假定/确定条件和「〜ても」逆接条件。",
+    "image": "/minna/lessons/lesson-25/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "木村"
+    },
+    {
+      "id": "speaker-02",
+      "name": "ミラー"
+    },
+    {
+      "id": "speaker-03",
+      "name": "佐藤"
+    },
+    {
+      "id": "speaker-04",
+      "name": "サントス"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-25-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "木村",
+      "targetText": "転勤、おめでとうございます。",
+      "translationZh": "恭喜你调动/调职。",
+      "kana": "てんきん、おめでとうございます。",
+      "audio": "/generated/tts/lesson-25/l25-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「〜たら」假定/确定条件和「〜ても」逆接条件。",
+        "zh": "恭喜你调动/调职。",
+        "keywords": [
+          "転勤おめでとうございます"
+        ],
+        "audio": "/generated/tts/lesson-25/l25-01.mp3",
+        "opening": "転勤",
+        "answer": "転勤、おめでとうございます。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-25-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-25-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "ミラー",
+      "targetText": "ありがとうございます。",
+      "translationZh": "谢谢。",
+      "kana": "ありがとうございます。",
+      "audio": "/generated/tts/lesson-25/l25-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「〜たら」假定/确定条件和「〜ても」逆接条件。",
+        "zh": "谢谢。",
+        "keywords": [
+          "ありがとうございます"
+        ],
+        "audio": "/generated/tts/lesson-25/l25-02.mp3",
+        "opening": "ありが",
+        "answer": "ありがとうございます。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-25-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-25-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "木村",
+      "targetText": "ミラーさんが東京へ行ったら、寂しくなりますね。",
+      "translationZh": "米勒先生去了东京，我们会寂寞的。",
+      "kana": "ミラーさんがとうきょうへいったら、さびしくなりますね。",
+      "audio": "/generated/tts/lesson-25/l25-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「〜たら」假定/确定条件和「〜ても」逆接条件。",
+        "zh": "米勒先生去了东京，我们会寂寞的。",
+        "keywords": [
+          "ミラーさんが東京へ行ったら寂しくなりますね"
+        ],
+        "audio": "/generated/tts/lesson-25/l25-03.mp3",
+        "opening": "ミラー",
+        "answer": "ミラーさんが東京へ行ったら、寂しくなりますね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-25-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-25-node-04",
+      "order": 4,
+      "speakerId": "speaker-03",
+      "speaker": "佐藤",
+      "targetText": "そうですね。",
+      "translationZh": "是啊。",
+      "kana": "そうですね。",
+      "audio": "/generated/tts/lesson-25/l25-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「〜たら」假定/确定条件和「〜ても」逆接条件。",
+        "zh": "是啊。",
+        "keywords": [
+          "そうですね"
+        ],
+        "audio": "/generated/tts/lesson-25/l25-04.mp3",
+        "opening": "そうで",
+        "answer": "そうですね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-25-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-25-node-05",
+      "order": 5,
+      "speakerId": "speaker-01",
+      "speaker": "木村",
+      "targetText": "東京へ行っても、大阪のことを忘れないでくださいね。",
+      "translationZh": "去了东京也请别忘记大阪。",
+      "kana": "とうきょうへいっても、おおさかのことをわすれないでくださいね。",
+      "audio": "/generated/tts/lesson-25/l25-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「〜たら」假定/确定条件和「〜ても」逆接条件。",
+        "zh": "去了东京也请别忘记大阪。",
+        "keywords": [
+          "東京へ行っても大阪のことを忘れないでくださいね"
+        ],
+        "audio": "/generated/tts/lesson-25/l25-05.mp3",
+        "opening": "東京へ",
+        "answer": "東京へ行っても、大阪のことを忘れないでくださいね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-25-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-25-node-06",
+      "order": 6,
+      "speakerId": "speaker-02",
+      "speaker": "ミラー",
+      "targetText": "もちろん。皆さん、暇があったら、ぜひ東京へ遊びに来てください。",
+      "translationZh": "当然。大家有空一定来东京玩。",
+      "kana": "もちろん。みなさん、ひまがあったら、ぜひとうきょうへあそびにきてください。",
+      "audio": "/generated/tts/lesson-25/l25-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「〜たら」假定/确定条件和「〜ても」逆接条件。",
+        "zh": "当然。大家有空一定来东京玩。",
+        "keywords": [
+          "もちろん皆さん暇があったらぜひ東京へ遊びに来てください"
+        ],
+        "audio": "/generated/tts/lesson-25/l25-06.mp3",
+        "opening": "もちろ",
+        "answer": "もちろん。皆さん、暇があったら、ぜひ東京へ遊びに来てください。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-25-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-25-node-07",
+      "order": 7,
+      "speakerId": "speaker-04",
+      "speaker": "サントス",
+      "targetText": "ミラーさんも大阪へ来たら、電話をください。いっしょに飲みましょう。",
+      "translationZh": "米勒先生来大阪时也请打电话，我们一起喝酒。",
+      "kana": "ミラーさんもおおさかへきたら、でんわをください。いっしょにのみましょう。",
+      "audio": "/generated/tts/lesson-25/l25-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「〜たら」假定/确定条件和「〜ても」逆接条件。",
+        "zh": "米勒先生来大阪时也请打电话，我们一起喝酒。",
+        "keywords": [
+          "ミラーさんも大阪へ来たら電話をくださいいっしょに飲みましょう"
+        ],
+        "audio": "/generated/tts/lesson-25/l25-07.mp3",
+        "opening": "ミラー",
+        "answer": "ミラーさんも大阪へ来たら、電話をください。いっしょに飲みましょう。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-25-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-25-node-08",
+      "order": 8,
+      "speakerId": "speaker-02",
+      "speaker": "ミラー",
+      "targetText": "ええ、ぜひ。皆さん、本当にいろいろお世話になりました。",
+      "translationZh": "好的，一定。各位，真的承蒙多方关照。",
+      "kana": "ええ、ぜひ。みなさん、ほんとうにいろいろおせわになりました。",
+      "audio": "/generated/tts/lesson-25/l25-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「〜たら」假定/确定条件和「〜ても」逆接条件。",
+        "zh": "好的，一定。各位，真的承蒙多方关照。",
+        "keywords": [
+          "ええぜひ皆さん本当にいろいろお世話になりました"
+        ],
+        "audio": "/generated/tts/lesson-25/l25-08.mp3",
+        "opening": "ええ",
+        "answer": "ええ、ぜひ。皆さん、本当にいろいろお世話になりました。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-25-node-09"
+      }
+    },
+    {
+      "nodeId": "lesson-25-node-09",
+      "order": 9,
+      "speakerId": "speaker-03",
+      "speaker": "佐藤",
+      "targetText": "頑張ってください。お体に気をつけて。",
+      "translationZh": "请加油。保重身体。",
+      "kana": "がんばってください。おからだにきをつけて。",
+      "audio": "/generated/tts/lesson-25/l25-09.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「〜たら」假定/确定条件和「〜ても」逆接条件。",
+        "zh": "请加油。保重身体。",
+        "keywords": [
+          "頑張ってくださいお体に気をつけて"
+        ],
+        "audio": "/generated/tts/lesson-25/l25-09.mp3",
+        "opening": "頑張っ",
+        "answer": "頑張ってください。お体に気をつけて。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-25-node-10"
+      }
+    },
+    {
+      "nodeId": "lesson-25-node-10",
+      "order": 10,
+      "speakerId": "speaker-02",
+      "speaker": "ミラー",
+      "targetText": "はい。皆さんもどうぞお元気で。",
+      "translationZh": "好的。大家也请多保重。",
+      "kana": "はい。みなさんもどうぞおげんきで。",
+      "audio": "/generated/tts/lesson-25/l25-10.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习「〜たら」假定/确定条件和「〜ても」逆接条件。",
+        "zh": "好的。大家也请多保重。",
+        "keywords": [
+          "はい皆さんもどうぞお元気で"
+        ],
+        "audio": "/generated/tts/lesson-25/l25-10.mp3",
+        "opening": "はい",
+        "answer": "はい。皆さんもどうぞお元気で。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 10,
+    "validationStatus": "passed"
+  }
+}

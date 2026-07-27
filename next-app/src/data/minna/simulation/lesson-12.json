@@ -1,0 +1,337 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 12,
+  "lessonId": "lesson-12",
+  "title": {
+    "ja": "第12課",
+    "zh": "第12课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-12.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-12.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "学习形容词和名词句过去式、比较句、最高级表达。",
+    "image": "/minna/lessons/lesson-12/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "ミラー"
+    },
+    {
+      "id": "speaker-02",
+      "name": "管理人"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-12-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "ミラー",
+      "targetText": "ただいま。",
+      "translationZh": "我回来了。",
+      "kana": "ただいま。",
+      "audio": "/generated/tts/lesson-12/l12-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习形容词和名词句过去式、比较句、最高级表达。",
+        "zh": "我回来了。",
+        "keywords": [
+          "ただいま"
+        ],
+        "audio": "/generated/tts/lesson-12/l12-01.mp3",
+        "opening": "ただい",
+        "answer": "ただいま。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-12-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-12-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "管理人",
+      "targetText": "お帰りなさい。",
+      "translationZh": "欢迎回来。",
+      "kana": "おかえりなさい。",
+      "audio": "/generated/tts/lesson-12/l12-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习形容词和名词句过去式、比较句、最高级表达。",
+        "zh": "欢迎回来。",
+        "keywords": [
+          "お帰りなさい"
+        ],
+        "audio": "/generated/tts/lesson-12/l12-02.mp3",
+        "opening": "お帰り",
+        "answer": "お帰りなさい。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-12-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-12-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "ミラー",
+      "targetText": "これ、京都のお土産です。",
+      "translationZh": "这是京都的特产。",
+      "kana": "これ、きょうとのおみやげです。",
+      "audio": "/generated/tts/lesson-12/l12-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习形容词和名词句过去式、比较句、最高级表达。",
+        "zh": "这是京都的特产。",
+        "keywords": [
+          "これ京都のお土産です"
+        ],
+        "audio": "/generated/tts/lesson-12/l12-03.mp3",
+        "opening": "これ",
+        "answer": "これ、京都のお土産です。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-12-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-12-node-04",
+      "order": 4,
+      "speakerId": "speaker-02",
+      "speaker": "管理人",
+      "targetText": "どうもすみません。祇園祭はどうでしたか。",
+      "translationZh": "谢谢。祇园祭怎么样？",
+      "kana": "どうもすみません。ぎおんまつりはどうでしたか。",
+      "audio": "/generated/tts/lesson-12/l12-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习形容词和名词句过去式、比较句、最高级表达。",
+        "zh": "谢谢。祇园祭怎么样？",
+        "keywords": [
+          "どうもすみません祇園祭はどうでしたか"
+        ],
+        "audio": "/generated/tts/lesson-12/l12-04.mp3",
+        "opening": "どうも",
+        "answer": "どうもすみません。祇園祭はどうでしたか。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-12-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-12-node-05",
+      "order": 5,
+      "speakerId": "speaker-01",
+      "speaker": "ミラー",
+      "targetText": "おもしろかったです。とてもにぎやかでした。",
+      "translationZh": "很好玩。非常热闹。",
+      "kana": "おもしろかったです。とてもにぎやかでした。",
+      "audio": "/generated/tts/lesson-12/l12-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习形容词和名词句过去式、比较句、最高级表达。",
+        "zh": "很好玩。非常热闹。",
+        "keywords": [
+          "おもしろかったですとてもにぎやかでした"
+        ],
+        "audio": "/generated/tts/lesson-12/l12-05.mp3",
+        "opening": "おもし",
+        "answer": "おもしろかったです。とてもにぎやかでした。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-12-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-12-node-06",
+      "order": 6,
+      "speakerId": "speaker-02",
+      "speaker": "管理人",
+      "targetText": "祇園祭は京都の祭りでいちばん有名ですからね。",
+      "translationZh": "因为祇园祭是京都最有名的祭典嘛。",
+      "kana": "ぎおんまつりはきょうとのまつりでいちばんゆうめいですからね。",
+      "audio": "/generated/tts/lesson-12/l12-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习形容词和名词句过去式、比较句、最高级表达。",
+        "zh": "因为祇园祭是京都最有名的祭典嘛。",
+        "keywords": [
+          "祇園祭は京都の祭りでいちばん有名ですからね"
+        ],
+        "audio": "/generated/tts/lesson-12/l12-06.mp3",
+        "opening": "祇園祭",
+        "answer": "祇園祭は京都の祭りでいちばん有名ですからね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-12-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-12-node-07",
+      "order": 7,
+      "speakerId": "speaker-01",
+      "speaker": "ミラー",
+      "targetText": "そうですか。写真をたくさん撮りました。これです。",
+      "translationZh": "是吗？我拍了很多照片。就是这些。",
+      "kana": "そうですか。しゃしんをたくさんとりました。これです。",
+      "audio": "/generated/tts/lesson-12/l12-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习形容词和名词句过去式、比较句、最高级表达。",
+        "zh": "是吗？我拍了很多照片。就是这些。",
+        "keywords": [
+          "そうですか写真をたくさん撮りましたこれです"
+        ],
+        "audio": "/generated/tts/lesson-12/l12-07.mp3",
+        "opening": "そうで",
+        "answer": "そうですか。写真をたくさん撮りました。これです。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-12-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-12-node-08",
+      "order": 8,
+      "speakerId": "speaker-02",
+      "speaker": "管理人",
+      "targetText": "わあ、すごい人ですね。",
+      "translationZh": "人好多啊！",
+      "kana": "わあ、すごいひとですね。",
+      "audio": "/generated/tts/lesson-12/l12-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习形容词和名词句过去式、比较句、最高级表达。",
+        "zh": "人好多啊！",
+        "keywords": [
+          "わあすごい人ですね"
+        ],
+        "audio": "/generated/tts/lesson-12/l12-08.mp3",
+        "opening": "わあ",
+        "answer": "わあ、すごい人ですね。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-12-node-09"
+      }
+    },
+    {
+      "nodeId": "lesson-12-node-09",
+      "order": 9,
+      "speakerId": "speaker-01",
+      "speaker": "ミラー",
+      "targetText": "ええ。ちょっと疲れました。",
+      "translationZh": "嗯。有点累了。",
+      "kana": "ええ。ちょっとつかれました。",
+      "audio": "/generated/tts/lesson-12/l12-09.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习形容词和名词句过去式、比较句、最高级表达。",
+        "zh": "嗯。有点累了。",
+        "keywords": [
+          "ええちょっと疲れました"
+        ],
+        "audio": "/generated/tts/lesson-12/l12-09.mp3",
+        "opening": "ええ",
+        "answer": "ええ。ちょっと疲れました。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 9,
+    "validationStatus": "passed"
+  }
+}

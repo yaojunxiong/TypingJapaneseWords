@@ -1,0 +1,387 @@
+{
+  "schemaVersion": "1.0.0",
+  "lesson": 20,
+  "lessonId": "lesson-20",
+  "title": {
+    "ja": "第20課",
+    "zh": "第20课"
+  },
+  "source": {
+    "repository": "TypingJapaneseWords-022b",
+    "recitationFile": "next-app/src/data/minna/recitation/lesson-20.json",
+    "lessonFile": "next-app/src/data/minna/lessons/lesson-20.json",
+    "generatedFromVerifiedSource": true
+  },
+  "scene": {
+    "summaryZh": "学习普通形（动词/形容词/名词）并用于亲密场景会话。",
+    "image": "/minna/lessons/lesson-20/conversation-anime-mobile.webp"
+  },
+  "characters": [
+    {
+      "id": "speaker-01",
+      "name": "小林"
+    },
+    {
+      "id": "speaker-02",
+      "name": "タワポン"
+    }
+  ],
+  "nodes": [
+    {
+      "nodeId": "lesson-20-node-01",
+      "order": 1,
+      "speakerId": "speaker-01",
+      "speaker": "小林",
+      "targetText": "夏休みは国へ帰る？",
+      "translationZh": "暑假回国吗？",
+      "kana": "なつやすみはくにへかえる？",
+      "audio": "/generated/tts/lesson-20/l20-01.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习普通形（动词/形容词/名词）并用于亲密场景会话。",
+        "zh": "暑假回国吗？",
+        "keywords": [
+          "夏休みは国へ帰る"
+        ],
+        "audio": "/generated/tts/lesson-20/l20-01.mp3",
+        "opening": "夏休み",
+        "answer": "夏休みは国へ帰る？"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-20-node-02"
+      }
+    },
+    {
+      "nodeId": "lesson-20-node-02",
+      "order": 2,
+      "speakerId": "speaker-02",
+      "speaker": "タワポン",
+      "targetText": "ううん。帰りたいけど、……。",
+      "translationZh": "嗯，不回。想回去，不过……",
+      "kana": "ううん。かえりたいけど、……。",
+      "audio": "/generated/tts/lesson-20/l20-02.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习普通形（动词/形容词/名词）并用于亲密场景会话。",
+        "zh": "嗯，不回。想回去，不过……",
+        "keywords": [
+          "ううん帰りたいけど……"
+        ],
+        "audio": "/generated/tts/lesson-20/l20-02.mp3",
+        "opening": "ううん",
+        "answer": "ううん。帰りたいけど、……。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-20-node-03"
+      }
+    },
+    {
+      "nodeId": "lesson-20-node-03",
+      "order": 3,
+      "speakerId": "speaker-01",
+      "speaker": "小林",
+      "targetText": "そう。",
+      "translationZh": "这样啊。",
+      "kana": "そう。",
+      "audio": "/generated/tts/lesson-20/l20-03.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习普通形（动词/形容词/名词）并用于亲密场景会话。",
+        "zh": "这样啊。",
+        "keywords": [
+          "そう"
+        ],
+        "audio": "/generated/tts/lesson-20/l20-03.mp3",
+        "opening": "そう。",
+        "answer": "そう。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-20-node-04"
+      }
+    },
+    {
+      "nodeId": "lesson-20-node-04",
+      "order": 4,
+      "speakerId": "speaker-01",
+      "speaker": "小林",
+      "targetText": "タワポン君、富士山に登ったことある？",
+      "translationZh": "塔瓦蓬，你登过富士山吗？",
+      "kana": "タワポンくん、ふじさんにのぼったことある？",
+      "audio": "/generated/tts/lesson-20/l20-04.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习普通形（动词/形容词/名词）并用于亲密场景会话。",
+        "zh": "塔瓦蓬，你登过富士山吗？",
+        "keywords": [
+          "タワポン君富士山に登ったことある"
+        ],
+        "audio": "/generated/tts/lesson-20/l20-04.mp3",
+        "opening": "タワポ",
+        "answer": "タワポン君、富士山に登ったことある？"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-20-node-05"
+      }
+    },
+    {
+      "nodeId": "lesson-20-node-05",
+      "order": 5,
+      "speakerId": "speaker-02",
+      "speaker": "タワポン",
+      "targetText": "ううん、ない。",
+      "translationZh": "没有，没登过。",
+      "kana": "ううん、ない。",
+      "audio": "/generated/tts/lesson-20/l20-05.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习普通形（动词/形容词/名词）并用于亲密场景会话。",
+        "zh": "没有，没登过。",
+        "keywords": [
+          "ううんない"
+        ],
+        "audio": "/generated/tts/lesson-20/l20-05.mp3",
+        "opening": "ううん",
+        "answer": "ううん、ない。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-20-node-06"
+      }
+    },
+    {
+      "nodeId": "lesson-20-node-06",
+      "order": 6,
+      "speakerId": "speaker-01",
+      "speaker": "小林",
+      "targetText": "じゃ、よかったら、いっしょに行かない？",
+      "translationZh": "那么，如果你愿意，要不要一起去？",
+      "kana": "じゃ、よかったら、いっしょにいかない？",
+      "audio": "/generated/tts/lesson-20/l20-06.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习普通形（动词/形容词/名词）并用于亲密场景会话。",
+        "zh": "那么，如果你愿意，要不要一起去？",
+        "keywords": [
+          "じゃよかったらいっしょに行かない"
+        ],
+        "audio": "/generated/tts/lesson-20/l20-06.mp3",
+        "opening": "じゃ",
+        "answer": "じゃ、よかったら、いっしょに行かない？"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-20-node-07"
+      }
+    },
+    {
+      "nodeId": "lesson-20-node-07",
+      "order": 7,
+      "speakerId": "speaker-02",
+      "speaker": "タワポン",
+      "targetText": "うん。いつごろ？",
+      "translationZh": "好啊。大约什么时候？",
+      "kana": "うん。いつごろ？",
+      "audio": "/generated/tts/lesson-20/l20-07.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习普通形（动词/形容词/名词）并用于亲密场景会话。",
+        "zh": "好啊。大约什么时候？",
+        "keywords": [
+          "うんいつごろ"
+        ],
+        "audio": "/generated/tts/lesson-20/l20-07.mp3",
+        "opening": "うん",
+        "answer": "うん。いつごろ？"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-20-node-08"
+      }
+    },
+    {
+      "nodeId": "lesson-20-node-08",
+      "order": 8,
+      "speakerId": "speaker-01",
+      "speaker": "小林",
+      "targetText": "8月の初めごろはどう？",
+      "translationZh": "八月初怎么样？",
+      "kana": "はちがつのはじめごろはどう？",
+      "audio": "/generated/tts/lesson-20/l20-08.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习普通形（动词/形容词/名词）并用于亲密场景会话。",
+        "zh": "八月初怎么样？",
+        "keywords": [
+          "8月の初めごろはどう"
+        ],
+        "audio": "/generated/tts/lesson-20/l20-08.mp3",
+        "opening": "8月の",
+        "answer": "8月の初めごろはどう？"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-20-node-09"
+      }
+    },
+    {
+      "nodeId": "lesson-20-node-09",
+      "order": 9,
+      "speakerId": "speaker-02",
+      "speaker": "タワポン",
+      "targetText": "いいよ。",
+      "translationZh": "可以啊。",
+      "kana": "いいよ。",
+      "audio": "/generated/tts/lesson-20/l20-09.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习普通形（动词/形容词/名词）并用于亲密场景会话。",
+        "zh": "可以啊。",
+        "keywords": [
+          "いいよ"
+        ],
+        "audio": "/generated/tts/lesson-20/l20-09.mp3",
+        "opening": "いいよ",
+        "answer": "いいよ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-20-node-10"
+      }
+    },
+    {
+      "nodeId": "lesson-20-node-10",
+      "order": 10,
+      "speakerId": "speaker-01",
+      "speaker": "小林",
+      "targetText": "じゃ、いろいろ調べて、また電話するよ。",
+      "translationZh": "那么，我先查一查，再给你打电话。",
+      "kana": "じゃ、いろいろしらべて、またでんわするよ。",
+      "audio": "/generated/tts/lesson-20/l20-10.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习普通形（动词/形容词/名词）并用于亲密场景会话。",
+        "zh": "那么，我先查一查，再给你打电话。",
+        "keywords": [
+          "じゃいろいろ調べてまた電話するよ"
+        ],
+        "audio": "/generated/tts/lesson-20/l20-10.mp3",
+        "opening": "じゃ",
+        "answer": "じゃ、いろいろ調べて、また電話するよ。"
+      },
+      "completion": {
+        "isFinalNode": false,
+        "nextNodeId": "lesson-20-node-11"
+      }
+    },
+    {
+      "nodeId": "lesson-20-node-11",
+      "order": 11,
+      "speakerId": "speaker-02",
+      "speaker": "タワポン",
+      "targetText": "ありがとう。待ってるよ。",
+      "translationZh": "谢谢。我等你的消息。",
+      "kana": "ありがとう。まってるよ。",
+      "audio": "/generated/tts/lesson-20/l20-11.mp3",
+      "image": null,
+      "hints": {
+        "scene": "学习普通形（动词/形容词/名词）并用于亲密场景会话。",
+        "zh": "谢谢。我等你的消息。",
+        "keywords": [
+          "ありがとう待ってるよ"
+        ],
+        "audio": "/generated/tts/lesson-20/l20-11.mp3",
+        "opening": "ありが",
+        "answer": "ありがとう。待ってるよ。"
+      },
+      "completion": {
+        "isFinalNode": true,
+        "nextNodeId": null
+      }
+    }
+  ],
+  "learnerStates": {
+    "fluent": {
+      "teachingAction": "affirm_and_advance",
+      "emotionGoal": "confidence",
+      "feedbackPool": [
+        "太好了，你说得很准确。",
+        "你抓住了关键点，我们继续。",
+        "这句你完成得很稳。"
+      ],
+      "nextAction": "next_node"
+    },
+    "partial": {
+      "teachingAction": "confirm_correct_part_and_prompt",
+      "emotionGoal": "supported_recall",
+      "feedbackPool": [
+        "你已经抓到了一部分，再补上后面的表达。",
+        "对，方向对，继续补齐完整句子。",
+        "很接近了，试着按意思补全下一词。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "weak": {
+      "teachingAction": "reduce_difficulty",
+      "emotionGoal": "low_pressure",
+      "feedbackPool": [
+        "没关系，我们从中文意思慢慢来。",
+        "先回忆场景再说第一词。",
+        "可以先抄准关键词再组成一句。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "blank": {
+      "teachingAction": "start_progressive_hinting",
+      "emotionGoal": "safe_restart",
+      "feedbackPool": [
+        "先看提示，不要担心，我们从第一层开始。",
+        "先想场景再尝试说一句。",
+        "没关系，先说中文意思对应的话。"
+      ],
+      "nextAction": "next_hint"
+    },
+    "off_topic_playful": {
+      "teachingAction": "warm_redirect_to_conversation",
+      "emotionGoal": "connection_without_drift",
+      "feedbackPool": [
+        "先回到当前句子，我们继续刚才的对话。",
+        "你可以先说一句：现在要讲的还是这段对话。",
+        "先回到场景里的话题，再继续。"
+      ],
+      "nextAction": "repeat_current_node"
+    }
+  },
+  "redirectPolicy": {
+    "conversationFirst": true,
+    "allowBriefSocialResponse": true,
+    "maxOffTopicTurns": 1,
+    "redirectTarget": "current_node",
+    "revealAnswerOnlyAtHintLevel": 6
+  },
+  "observationSchema": {
+    "recordPerAttempt": [
+      "lessonId",
+      "nodeId",
+      "timestamp",
+      "learnerState",
+      "hintLevelUsed",
+      "responseText",
+      "completed"
+    ],
+    "aggregateMetrics": [
+      "attemptCount",
+      "completionRate",
+      "averageHintLevel",
+      "mostDifficultNodeIds"
+    ]
+  },
+  "quality": {
+    "sourceDialoguePreserved": true,
+    "nodeCount": 11,
+    "validationStatus": "passed"
+  }
+}
