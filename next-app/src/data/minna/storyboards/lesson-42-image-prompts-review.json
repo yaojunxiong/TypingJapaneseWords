@@ -1,0 +1,218 @@
+{
+  "lessonNo": 42,
+  "conversationTitle": "ボーナスは 何に 使いますか",
+  "reviewStatus": "approved",
+  "generationAllowed": true,
+  "prompts": [
+    {
+      "storyboardLineId": "sb-42-001",
+      "storyboardTextLineId": "l42-conv-001-s01",
+      "sourceLineId": "l42-conv-001",
+      "imagePromptCn": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 本帧对应台词「林さん、ボーナスはいつ出るんですか。」：鈴木面带好奇微笑，右手轻抬向林提问。",
+      "imagePromptJa": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 このフレームの台詞「林さん、ボーナスはいつ出るんですか。」：鈴木面带好奇微笑，右手轻抬向林提问。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, subtitles, captions, speech bubbles, thought bubbles, logos, watermarks, UI, company sign, payslip, cash, coins, wallet, bankbook, bill, loan document, receipt, calendar, clock, bicycle, travel ticket, map, country flag, landmark, airplane, classroom, school, child, house, family member, extra people, food, phone, computer, split screen, flashback panel, photographic style, deformed hands, extra fingers, extra limbs, changing faces, changing clothing, objects intruding into the lower blank ivory panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-42-002",
+      "storyboardTextLineId": "l42-conv-002-s01",
+      "sourceLineId": "l42-conv-002",
+      "imagePromptCn": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 本帧对应台词「来週です。鈴木さんの会社は？」：林温和点头后以开放掌心礼貌反问鈴木。",
+      "imagePromptJa": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 このフレームの台詞「来週です。鈴木さんの会社は？」：林温和点头后以开放掌心礼貌反问鈴木。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, subtitles, captions, speech bubbles, thought bubbles, logos, watermarks, UI, company sign, payslip, cash, coins, wallet, bankbook, bill, loan document, receipt, calendar, clock, bicycle, travel ticket, map, country flag, landmark, airplane, classroom, school, child, house, family member, extra people, food, phone, computer, split screen, flashback panel, photographic style, deformed hands, extra fingers, extra limbs, changing faces, changing clothing, objects intruding into the lower blank ivory panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-42-003",
+      "storyboardTextLineId": "l42-conv-003-s01",
+      "sourceLineId": "l42-conv-003",
+      "imagePromptCn": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 本帧对应台词「あしたです。楽しみですね。」：鈴木愉快地微微前倾，笑着回应。",
+      "imagePromptJa": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 このフレームの台詞「あしたです。楽しみですね。」：鈴木愉快地微微前倾，笑着回应。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, subtitles, captions, speech bubbles, thought bubbles, logos, watermarks, UI, company sign, payslip, cash, coins, wallet, bankbook, bill, loan document, receipt, calendar, clock, bicycle, travel ticket, map, country flag, landmark, airplane, classroom, school, child, house, family member, extra people, food, phone, computer, split screen, flashback panel, photographic style, deformed hands, extra fingers, extra limbs, changing faces, changing clothing, objects intruding into the lower blank ivory panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-42-004",
+      "storyboardTextLineId": "l42-conv-004-s01",
+      "sourceLineId": "l42-conv-004",
+      "imagePromptCn": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 本帧对应台词「ええ。鈴木さんは何に使いますか。」：林专注倾听后用一只空手作轻柔的询问手势。",
+      "imagePromptJa": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 このフレームの台詞「ええ。鈴木さんは何に使いますか。」：林专注倾听后用一只空手作轻柔的询问手势。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, subtitles, captions, speech bubbles, thought bubbles, logos, watermarks, UI, company sign, payslip, cash, coins, wallet, bankbook, bill, loan document, receipt, calendar, clock, bicycle, travel ticket, map, country flag, landmark, airplane, classroom, school, child, house, family member, extra people, food, phone, computer, split screen, flashback panel, photographic style, deformed hands, extra fingers, extra limbs, changing faces, changing clothing, objects intruding into the lower blank ivory panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-42-005",
+      "storyboardTextLineId": "l42-conv-005-s01",
+      "sourceLineId": "l42-conv-005",
+      "imagePromptCn": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 本帧对应台词「まず新しい自転車を買って、」：鈴木开心地竖起一根手指，像在列第一项计划；不出现自行车。",
+      "imagePromptJa": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 このフレームの台詞「まず新しい自転車を買って、」：鈴木开心地竖起一根手指，像在列第一项计划；不出现自行车。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, subtitles, captions, speech bubbles, thought bubbles, logos, watermarks, UI, company sign, payslip, cash, coins, wallet, bankbook, bill, loan document, receipt, calendar, clock, bicycle, travel ticket, map, country flag, landmark, airplane, classroom, school, child, house, family member, extra people, food, phone, computer, split screen, flashback panel, photographic style, deformed hands, extra fingers, extra limbs, changing faces, changing clothing, objects intruding into the lower blank ivory panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-42-006",
+      "storyboardTextLineId": "l42-conv-005-s02",
+      "sourceLineId": "l42-conv-005",
+      "imagePromptCn": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 本帧对应台词「それから旅行に行って……。」：鈴木把手掌向外轻轻展开，带着憧憬微笑；不插入旅行地点或行程画面。",
+      "imagePromptJa": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 このフレームの台詞「それから旅行に行って……。」：鈴木把手掌向外轻轻展开，带着憧憬微笑；不插入旅行地点或行程画面。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, subtitles, captions, speech bubbles, thought bubbles, logos, watermarks, UI, company sign, payslip, cash, coins, wallet, bankbook, bill, loan document, receipt, calendar, clock, bicycle, travel ticket, map, country flag, landmark, airplane, classroom, school, child, house, family member, extra people, food, phone, computer, split screen, flashback panel, photographic style, deformed hands, extra fingers, extra limbs, changing faces, changing clothing, objects intruding into the lower blank ivory panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-42-007",
+      "storyboardTextLineId": "l42-conv-006-s01",
+      "sourceLineId": "l42-conv-006",
+      "imagePromptCn": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 本帧对应台词「貯金はしないんですか。」：小川抬起眉毛，以温和而实际的表情朝鈴木发问。",
+      "imagePromptJa": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 このフレームの台詞「貯金はしないんですか。」：小川抬起眉毛，以温和而实际的表情朝鈴木发问。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, subtitles, captions, speech bubbles, thought bubbles, logos, watermarks, UI, company sign, payslip, cash, coins, wallet, bankbook, bill, loan document, receipt, calendar, clock, bicycle, travel ticket, map, country flag, landmark, airplane, classroom, school, child, house, family member, extra people, food, phone, computer, split screen, flashback panel, photographic style, deformed hands, extra fingers, extra limbs, changing faces, changing clothing, objects intruding into the lower blank ivory panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-42-008",
+      "storyboardTextLineId": "l42-conv-007-s01",
+      "sourceLineId": "l42-conv-007",
+      "imagePromptCn": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 本帧对应台词「僕はあまり考えたこと、ありませんね。」：鈴木略带不好意思地挠一下后颈，诚实地笑着。",
+      "imagePromptJa": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 このフレームの台詞「僕はあまり考えたこと、ありませんね。」：鈴木略带不好意思地挠一下后颈，诚实地笑着。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, subtitles, captions, speech bubbles, thought bubbles, logos, watermarks, UI, company sign, payslip, cash, coins, wallet, bankbook, bill, loan document, receipt, calendar, clock, bicycle, travel ticket, map, country flag, landmark, airplane, classroom, school, child, house, family member, extra people, food, phone, computer, split screen, flashback panel, photographic style, deformed hands, extra fingers, extra limbs, changing faces, changing clothing, objects intruding into the lower blank ivory panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-42-009",
+      "storyboardTextLineId": "l42-conv-008-s01",
+      "sourceLineId": "l42-conv-008",
+      "imagePromptCn": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 本帧对应台词「わたしは半分は貯金するつもりです。」：林平静而坚定地点头，一手在胸前做出明确的二分手势；没有钞票、账本或文字。",
+      "imagePromptJa": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 このフレームの台詞「わたしは半分は貯金するつもりです。」：林平静而坚定地点头，一手在胸前做出明确的二分手势；没有钞票、账本或文字。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, subtitles, captions, speech bubbles, thought bubbles, logos, watermarks, UI, company sign, payslip, cash, coins, wallet, bankbook, bill, loan document, receipt, calendar, clock, bicycle, travel ticket, map, country flag, landmark, airplane, classroom, school, child, house, family member, extra people, food, phone, computer, split screen, flashback panel, photographic style, deformed hands, extra fingers, extra limbs, changing faces, changing clothing, objects intruding into the lower blank ivory panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-42-010",
+      "storyboardTextLineId": "l42-conv-009-s01",
+      "sourceLineId": "l42-conv-009",
+      "imagePromptCn": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 本帧对应台词「えっ、半分も貯金するんですか。」：鈴木眼睛微睁、身体轻微后仰，以友善的惊讶看向林。",
+      "imagePromptJa": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 このフレームの台詞「えっ、半分も貯金するんですか。」：鈴木眼睛微睁、身体轻微后仰，以友善的惊讶看向林。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, subtitles, captions, speech bubbles, thought bubbles, logos, watermarks, UI, company sign, payslip, cash, coins, wallet, bankbook, bill, loan document, receipt, calendar, clock, bicycle, travel ticket, map, country flag, landmark, airplane, classroom, school, child, house, family member, extra people, food, phone, computer, split screen, flashback panel, photographic style, deformed hands, extra fingers, extra limbs, changing faces, changing clothing, objects intruding into the lower blank ivory panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-42-011",
+      "storyboardTextLineId": "l42-conv-010-s01",
+      "sourceLineId": "l42-conv-010",
+      "imagePromptCn": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 本帧对应台词「ええ、いつかイギリスへ」：林带着希望的神情看向窗边柔和晨光，手势沉静；不出现国旗、地标或地图。",
+      "imagePromptJa": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 このフレームの台詞「ええ、いつかイギリスへ」：林带着希望的神情看向窗边柔和晨光，手势沉静；不出现国旗、地标或地图。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, subtitles, captions, speech bubbles, thought bubbles, logos, watermarks, UI, company sign, payslip, cash, coins, wallet, bankbook, bill, loan document, receipt, calendar, clock, bicycle, travel ticket, map, country flag, landmark, airplane, classroom, school, child, house, family member, extra people, food, phone, computer, split screen, flashback panel, photographic style, deformed hands, extra fingers, extra limbs, changing faces, changing clothing, objects intruding into the lower blank ivory panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-42-012",
+      "storyboardTextLineId": "l42-conv-010-s02",
+      "sourceLineId": "l42-conv-010",
+      "imagePromptCn": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 本帧对应台词「留学しようと思っているんです。」：林回头面对两位同事，以坚定又克制的笑容说完理由；不出现学校或旅行场景。",
+      "imagePromptJa": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 このフレームの台詞「留学しようと思っているんです。」：林回头面对两位同事，以坚定又克制的笑容说完理由；不出现学校或旅行场景。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, subtitles, captions, speech bubbles, thought bubbles, logos, watermarks, UI, company sign, payslip, cash, coins, wallet, bankbook, bill, loan document, receipt, calendar, clock, bicycle, travel ticket, map, country flag, landmark, airplane, classroom, school, child, house, family member, extra people, food, phone, computer, split screen, flashback panel, photographic style, deformed hands, extra fingers, extra limbs, changing faces, changing clothing, objects intruding into the lower blank ivory panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-42-013",
+      "storyboardTextLineId": "l42-conv-011-s01",
+      "sourceLineId": "l42-conv-011",
+      "imagePromptCn": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 本帧对应台词「へえ、独身の人はいいですね。」：小川带着理解的笑容微微耸肩，望向两位年轻同事。",
+      "imagePromptJa": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 このフレームの台詞「へえ、独身の人はいいですね。」：小川带着理解的笑容微微耸肩，望向两位年轻同事。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, subtitles, captions, speech bubbles, thought bubbles, logos, watermarks, UI, company sign, payslip, cash, coins, wallet, bankbook, bill, loan document, receipt, calendar, clock, bicycle, travel ticket, map, country flag, landmark, airplane, classroom, school, child, house, family member, extra people, food, phone, computer, split screen, flashback panel, photographic style, deformed hands, extra fingers, extra limbs, changing faces, changing clothing, objects intruding into the lower blank ivory panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-42-014",
+      "storyboardTextLineId": "l42-conv-011-s02",
+      "sourceLineId": "l42-conv-011",
+      "imagePromptCn": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 本帧对应台词「全部自分のために、」：小川空手掌心向上作说明手势，保持公司休息区场景。",
+      "imagePromptJa": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 このフレームの台詞「全部自分のために、」：小川空手掌心向上作说明手势，保持公司休息区场景。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, subtitles, captions, speech bubbles, thought bubbles, logos, watermarks, UI, company sign, payslip, cash, coins, wallet, bankbook, bill, loan document, receipt, calendar, clock, bicycle, travel ticket, map, country flag, landmark, airplane, classroom, school, child, house, family member, extra people, food, phone, computer, split screen, flashback panel, photographic style, deformed hands, extra fingers, extra limbs, changing faces, changing clothing, objects intruding into the lower blank ivory panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-42-015",
+      "storyboardTextLineId": "l42-conv-011-s03",
+      "sourceLineId": "l42-conv-011",
+      "imagePromptCn": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 本帧对应台词「使えて。」：小川轻轻点头；鈴木和林安静倾听。",
+      "imagePromptJa": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 このフレームの台詞「使えて。」：小川轻轻点头；鈴木和林安静倾听。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, subtitles, captions, speech bubbles, thought bubbles, logos, watermarks, UI, company sign, payslip, cash, coins, wallet, bankbook, bill, loan document, receipt, calendar, clock, bicycle, travel ticket, map, country flag, landmark, airplane, classroom, school, child, house, family member, extra people, food, phone, computer, split screen, flashback panel, photographic style, deformed hands, extra fingers, extra limbs, changing faces, changing clothing, objects intruding into the lower blank ivory panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-42-016",
+      "storyboardTextLineId": "l42-conv-011-s04",
+      "sourceLineId": "l42-conv-011",
+      "imagePromptCn": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 本帧对应台词「わたしは家のローンを払って、」：小川的神情变得务实，空手做出平稳的列举动作；不出现房屋、文件或账单。",
+      "imagePromptJa": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 このフレームの台詞「わたしは家のローンを払って、」：小川的神情变得务实，空手做出平稳的列举动作；不出现房屋、文件或账单。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, subtitles, captions, speech bubbles, thought bubbles, logos, watermarks, UI, company sign, payslip, cash, coins, wallet, bankbook, bill, loan document, receipt, calendar, clock, bicycle, travel ticket, map, country flag, landmark, airplane, classroom, school, child, house, family member, extra people, food, phone, computer, split screen, flashback panel, photographic style, deformed hands, extra fingers, extra limbs, changing faces, changing clothing, objects intruding into the lower blank ivory panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-42-017",
+      "storyboardTextLineId": "l42-conv-011-s05",
+      "sourceLineId": "l42-conv-011",
+      "imagePromptCn": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 本帧对应台词「子どもの教育のために、」：小川温和而认真地看着同事，手掌向下作克制说明；不出现孩子。",
+      "imagePromptJa": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 このフレームの台詞「子どもの教育のために、」：小川温和而认真地看着同事，手掌向下作克制说明；不出现孩子。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, subtitles, captions, speech bubbles, thought bubbles, logos, watermarks, UI, company sign, payslip, cash, coins, wallet, bankbook, bill, loan document, receipt, calendar, clock, bicycle, travel ticket, map, country flag, landmark, airplane, classroom, school, child, house, family member, extra people, food, phone, computer, split screen, flashback panel, photographic style, deformed hands, extra fingers, extra limbs, changing faces, changing clothing, objects intruding into the lower blank ivory panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-42-018",
+      "storyboardTextLineId": "l42-conv-011-s06",
+      "sourceLineId": "l42-conv-011",
+      "imagePromptCn": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 本帧对应台词「貯金したら、」：小川将双手轻合在桌边，表现谨慎规划；没有钱、存折或数字。",
+      "imagePromptJa": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 このフレームの台詞「貯金したら、」：小川将双手轻合在桌边，表现谨慎规划；没有钱、存折或数字。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, subtitles, captions, speech bubbles, thought bubbles, logos, watermarks, UI, company sign, payslip, cash, coins, wallet, bankbook, bill, loan document, receipt, calendar, clock, bicycle, travel ticket, map, country flag, landmark, airplane, classroom, school, child, house, family member, extra people, food, phone, computer, split screen, flashback panel, photographic style, deformed hands, extra fingers, extra limbs, changing faces, changing clothing, objects intruding into the lower blank ivory panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-42-019",
+      "storyboardTextLineId": "l42-conv-011-s07",
+      "sourceLineId": "l42-conv-011",
+      "imagePromptCn": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 本帧对应台词「ほとんど」：小川无奈但不苦恼地轻轻摇头，画面保持自然对话。",
+      "imagePromptJa": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 このフレームの台詞「ほとんど」：小川无奈但不苦恼地轻轻摇头，画面保持自然对话。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, subtitles, captions, speech bubbles, thought bubbles, logos, watermarks, UI, company sign, payslip, cash, coins, wallet, bankbook, bill, loan document, receipt, calendar, clock, bicycle, travel ticket, map, country flag, landmark, airplane, classroom, school, child, house, family member, extra people, food, phone, computer, split screen, flashback panel, photographic style, deformed hands, extra fingers, extra limbs, changing faces, changing clothing, objects intruding into the lower blank ivory panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-42-020",
+      "storyboardTextLineId": "l42-conv-011-s08",
+      "sourceLineId": "l42-conv-011",
+      "imagePromptCn": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 本帧对应台词「残りませんよ。」：小川以平静、友善的笑容结束一句；两位同事表达理解。",
+      "imagePromptJa": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 このフレームの台詞「残りませんよ。」：小川以平静、友善的笑容结束一句；两位同事表达理解。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, subtitles, captions, speech bubbles, thought bubbles, logos, watermarks, UI, company sign, payslip, cash, coins, wallet, bankbook, bill, loan document, receipt, calendar, clock, bicycle, travel ticket, map, country flag, landmark, airplane, classroom, school, child, house, family member, extra people, food, phone, computer, split screen, flashback panel, photographic style, deformed hands, extra fingers, extra limbs, changing faces, changing clothing, objects intruding into the lower blank ivory panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    },
+    {
+      "storyboardLineId": "sb-42-021",
+      "storyboardTextLineId": "l42-conv-011-s09",
+      "sourceLineId": "l42-conv-011",
+      "imagePromptCn": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 本帧对应台词「。」：三位同事在安静明亮的休息区彼此微笑，保持无对白的自然收束。",
+      "imagePromptJa": "固定视觉锚点（全21帧相同）：9:16、1080×1920、干净精致的日语教材赛璐璐动画；同一个明亮安静的日本公司休息区，柔和午后光，浅米白墙、浅橡木竖条、磨砂窗、无字浅木圆桌，桌上只有三只无字素色陶瓷杯。固定三名成年人：左侧鈴木，30岁日本男性、短黑发、无字浅蓝衬衫与深灰长裤；中间林，28岁日本女性、齐肩栗棕直发、无字蓝白细条纹上衣与浅灰长裙；右侧小川，43岁日本男性、短黑发、黑框眼镜、无字淡蓝衬衫与深海军蓝长裤。人物与道具只在上部72%，底部28%必须是完整连续的纯暖象牙色空白。没有任何可读文字、数字、logo、字幕、对话气泡、水印、UI。 このフレームの台詞「。」：三位同事在安静明亮的休息区彼此微笑，保持无对白的自然收束。",
+      "negativePrompt": "readable text, letters, numbers, Japanese characters, subtitles, captions, speech bubbles, thought bubbles, logos, watermarks, UI, company sign, payslip, cash, coins, wallet, bankbook, bill, loan document, receipt, calendar, clock, bicycle, travel ticket, map, country flag, landmark, airplane, classroom, school, child, house, family member, extra people, food, phone, computer, split screen, flashback panel, photographic style, deformed hands, extra fingers, extra limbs, changing faces, changing clothing, objects intruding into the lower blank ivory panel",
+      "reviewStatus": "approved",
+      "generationAllowed": true
+    }
+  ]
+}
