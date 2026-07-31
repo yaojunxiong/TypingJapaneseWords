@@ -1,0 +1,25 @@
+{
+  "comfyuiUrl": "http://127.0.0.1:8188",
+  "workflowSourcePath": "/Users/jimmy/ComfyUI/venv/lib/python3.11/site-packages/comfyui_workflow_templates_media_video/templates/ltxv_image_to_video.json",
+  "workflowCopiedPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/comfyui-inputs/ltxv_image_to_video.json",
+  "workflowCopiedPublicPath": "/videos/source/everyones-japanese/lesson-1/comfyui-inputs/ltxv_image_to_video.json",
+  "patchedWorkflowPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/comfyui-inputs/lesson1_ltxv_image_to_video_patched.json",
+  "patchedWorkflowPublicPath": "/videos/source/everyones-japanese/lesson-1/comfyui-inputs/lesson1_ltxv_image_to_video_patched.json",
+  "patchReportPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/comfyui-inputs/patch-report.json",
+  "patchReportPublicPath": "/videos/source/everyones-japanese/lesson-1/comfyui-inputs/patch-report.json",
+  "inputImageProjectPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/comfyui-inputs/middle_frame.png",
+  "inputImageProjectPublicPath": "/videos/source/everyones-japanese/lesson-1/comfyui-inputs/middle_frame.png",
+  "inputImageComfyuiPath": "/Users/jimmy/ComfyUI/input/lesson1_middle_frame.png",
+  "checkpointModelName": "ltx-video-2b-v0.9.5.safetensors",
+  "inputImageName": "lesson1_middle_frame.png",
+  "prompt": "Transform the source image into a clean Japanese anime educational conversation style. Keep the original character positions, camera framing, and classroom atmosphere. Use friendly language-school students and teachers, clean line art, soft colors, natural facial expressions, and a high-quality TV anime look. Do not add new characters. Do not change the lesson content.",
+  "outputFolder": "/Users/jimmy/ComfyUI/output",
+  "recommendedPrompt": "Transform the source image into a clean Japanese anime educational conversation style. Keep the original character positions, camera framing, and classroom atmosphere. Use friendly language-school students and teachers, clean line art, soft colors, natural facial expressions, and a high-quality TV anime look. Do not add new characters. Do not change the lesson content.",
+  "recommendedParams": {
+    "duration": "2 seconds",
+    "fps": "8 or 12",
+    "resolution": "512px width",
+    "steps": "low first, then increase"
+  },
+  "generatedAt": "2026-06-10T03:47:13.192Z"
+}

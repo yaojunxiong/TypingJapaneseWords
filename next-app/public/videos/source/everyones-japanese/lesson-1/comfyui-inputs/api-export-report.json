@@ -1,0 +1,15 @@
+{
+  "canAutoExport": true,
+  "reason": "Converted UI nodes/links workflow using ComfyUI /object_info input definitions.",
+  "sourceFormat": "ui",
+  "outputPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/comfyui-inputs/lesson1_api_workflow.json",
+  "nextAction": "Run npm run queue:lesson1-comfyui to submit the API workflow.",
+  "warnings": [],
+  "ignoredWidgets": [
+    "Node 72 (SamplerCustom) widget 2 is control_after_generate UI state and was ignored.",
+    "Node 78 (LoadImage) widget 1 is UI-only and was ignored."
+  ],
+  "nodeCount": 13,
+  "outputNodeCount": 1,
+  "generatedAt": "2026-06-10T04:00:07.681Z"
+}

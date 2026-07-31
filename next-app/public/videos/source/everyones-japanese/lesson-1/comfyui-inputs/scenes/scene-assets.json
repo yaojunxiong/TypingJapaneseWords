@@ -1,0 +1,108 @@
+{
+  "generatedAt": "2026-06-10T05:18:57.373Z",
+  "comfyuiUrl": "http://127.0.0.1:8188",
+  "sceneCount": 9,
+  "sourceClipsDir": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/clips",
+  "sceneInputsDir": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/comfyui-inputs/scenes",
+  "assets": [
+    {
+      "sceneId": "001",
+      "clipPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/clips/scene_001.mp4",
+      "inputImageName": "lesson1_scene_001_middle_frame.png",
+      "inputImageProjectPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/comfyui-inputs/scenes/lesson1_scene_001_middle_frame.png",
+      "inputImageComfyuiPath": "/Users/jimmy/ComfyUI/input/lesson1_scene_001_middle_frame.png",
+      "patchedWorkflowPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/comfyui-inputs/scenes/lesson1_scene_001_ltxv_patched.json",
+      "apiWorkflowPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/comfyui-inputs/scenes/lesson1_scene_001_api_workflow.json",
+      "middleTime": 2.5,
+      "duration": 5
+    },
+    {
+      "sceneId": "002",
+      "clipPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/clips/scene_002.mp4",
+      "inputImageName": "lesson1_scene_002_middle_frame.png",
+      "inputImageProjectPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/comfyui-inputs/scenes/lesson1_scene_002_middle_frame.png",
+      "inputImageComfyuiPath": "/Users/jimmy/ComfyUI/input/lesson1_scene_002_middle_frame.png",
+      "patchedWorkflowPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/comfyui-inputs/scenes/lesson1_scene_002_ltxv_patched.json",
+      "apiWorkflowPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/comfyui-inputs/scenes/lesson1_scene_002_api_workflow.json",
+      "middleTime": 2.5,
+      "duration": 5
+    },
+    {
+      "sceneId": "003",
+      "clipPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/clips/scene_003.mp4",
+      "inputImageName": "lesson1_scene_003_middle_frame.png",
+      "inputImageProjectPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/comfyui-inputs/scenes/lesson1_scene_003_middle_frame.png",
+      "inputImageComfyuiPath": "/Users/jimmy/ComfyUI/input/lesson1_scene_003_middle_frame.png",
+      "patchedWorkflowPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/comfyui-inputs/scenes/lesson1_scene_003_ltxv_patched.json",
+      "apiWorkflowPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/comfyui-inputs/scenes/lesson1_scene_003_api_workflow.json",
+      "middleTime": 2.5,
+      "duration": 5
+    },
+    {
+      "sceneId": "004",
+      "clipPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/clips/scene_004.mp4",
+      "inputImageName": "lesson1_scene_004_middle_frame.png",
+      "inputImageProjectPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/comfyui-inputs/scenes/lesson1_scene_004_middle_frame.png",
+      "inputImageComfyuiPath": "/Users/jimmy/ComfyUI/input/lesson1_scene_004_middle_frame.png",
+      "patchedWorkflowPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/comfyui-inputs/scenes/lesson1_scene_004_ltxv_patched.json",
+      "apiWorkflowPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/comfyui-inputs/scenes/lesson1_scene_004_api_workflow.json",
+      "middleTime": 2.5,
+      "duration": 5
+    },
+    {
+      "sceneId": "005",
+      "clipPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/clips/scene_005.mp4",
+      "inputImageName": "lesson1_scene_005_middle_frame.png",
+      "inputImageProjectPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/comfyui-inputs/scenes/lesson1_scene_005_middle_frame.png",
+      "inputImageComfyuiPath": "/Users/jimmy/ComfyUI/input/lesson1_scene_005_middle_frame.png",
+      "patchedWorkflowPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/comfyui-inputs/scenes/lesson1_scene_005_ltxv_patched.json",
+      "apiWorkflowPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/comfyui-inputs/scenes/lesson1_scene_005_api_workflow.json",
+      "middleTime": 2.5,
+      "duration": 5
+    },
+    {
+      "sceneId": "006",
+      "clipPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/clips/scene_006.mp4",
+      "inputImageName": "lesson1_scene_006_middle_frame.png",
+      "inputImageProjectPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/comfyui-inputs/scenes/lesson1_scene_006_middle_frame.png",
+      "inputImageComfyuiPath": "/Users/jimmy/ComfyUI/input/lesson1_scene_006_middle_frame.png",
+      "patchedWorkflowPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/comfyui-inputs/scenes/lesson1_scene_006_ltxv_patched.json",
+      "apiWorkflowPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/comfyui-inputs/scenes/lesson1_scene_006_api_workflow.json",
+      "middleTime": 2.5,
+      "duration": 5
+    },
+    {
+      "sceneId": "007",
+      "clipPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/clips/scene_007.mp4",
+      "inputImageName": "lesson1_scene_007_middle_frame.png",
+      "inputImageProjectPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/comfyui-inputs/scenes/lesson1_scene_007_middle_frame.png",
+      "inputImageComfyuiPath": "/Users/jimmy/ComfyUI/input/lesson1_scene_007_middle_frame.png",
+      "patchedWorkflowPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/comfyui-inputs/scenes/lesson1_scene_007_ltxv_patched.json",
+      "apiWorkflowPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/comfyui-inputs/scenes/lesson1_scene_007_api_workflow.json",
+      "middleTime": 2.5,
+      "duration": 5
+    },
+    {
+      "sceneId": "008",
+      "clipPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/clips/scene_008.mp4",
+      "inputImageName": "lesson1_scene_008_middle_frame.png",
+      "inputImageProjectPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/comfyui-inputs/scenes/lesson1_scene_008_middle_frame.png",
+      "inputImageComfyuiPath": "/Users/jimmy/ComfyUI/input/lesson1_scene_008_middle_frame.png",
+      "patchedWorkflowPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/comfyui-inputs/scenes/lesson1_scene_008_ltxv_patched.json",
+      "apiWorkflowPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/comfyui-inputs/scenes/lesson1_scene_008_api_workflow.json",
+      "middleTime": 2.5,
+      "duration": 5
+    },
+    {
+      "sceneId": "009",
+      "clipPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/clips/scene_009.mp4",
+      "inputImageName": "lesson1_scene_009_middle_frame.png",
+      "inputImageProjectPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/comfyui-inputs/scenes/lesson1_scene_009_middle_frame.png",
+      "inputImageComfyuiPath": "/Users/jimmy/ComfyUI/input/lesson1_scene_009_middle_frame.png",
+      "patchedWorkflowPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/comfyui-inputs/scenes/lesson1_scene_009_ltxv_patched.json",
+      "apiWorkflowPath": "/Users/jimmy/Documents/Codex/2026-05-27/next-supabase-git-vercel/next-app/public/videos/source/everyones-japanese/lesson-1/comfyui-inputs/scenes/lesson1_scene_009_api_workflow.json",
+      "middleTime": 2.4333335,
+      "duration": 4.866667
+    }
+  ]
+}

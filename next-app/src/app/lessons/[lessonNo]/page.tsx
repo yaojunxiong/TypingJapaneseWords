@@ -38,11 +38,24 @@ type LessonSection = {
   items?: LessonItem[]
 }
 
+type SentenceBreakdownChinese = {
+  jp?: string
+  naturalChinese?: string
+  speakingIntentChinese?: string
+  memorizationHintChinese?: string
+}
+
 type LessonDoc = {
   lessonNo?: number
   title?: LangText
   subtitle?: LangText
   focus?: LangText
+  lessonOverviewChinese?: string
+  realLifeUseChinese?: string
+  roleContextChinese?: string
+  sentenceBreakdownChinese?: SentenceBreakdownChinese[]
+  memorizationTipsChinese?: string[]
+  commonMistakesChinese?: string[]
   sections?: LessonSection[]
 }
 
@@ -74,6 +87,42 @@ function sectionAnchor(section: LessonSection) {
   if (t === 'quiz') return 'quiz'
   if (t === 'review') return 'review'
   return section.id || 'section'
+}
+
+function hasChineseConversationAnalysis(lesson: LessonDoc | null) {
+  if (!lesson) return false
+  return Boolean(
+    lesson.lessonOverviewChinese ||
+    lesson.realLifeUseChinese ||
+    lesson.roleContextChinese ||
+    (Array.isArray(lesson.sentenceBreakdownChinese) && lesson.sentenceBreakdownChinese.length) ||
+    (Array.isArray(lesson.memorizationTipsChinese) && lesson.memorizationTipsChinese.length) ||
+    (Array.isArray(lesson.commonMistakesChinese) && lesson.commonMistakesChinese.length)
+  )
+}
+
+function isChineseConversationAnalysisPlaceholder(lesson: LessonDoc | null) {
+  if (!lesson) return false
+  const textFields = [
+    lesson.lessonOverviewChinese,
+    lesson.realLifeUseChinese,
+    lesson.roleContextChinese,
+    ...(lesson.memorizationTipsChinese || []),
+    ...(lesson.commonMistakesChinese || []),
+  ].filter(Boolean)
+
+  if (textFields.some((text) => String(text).includes('占位'))) return true
+
+  const lines = Array.isArray(lesson.sentenceBreakdownChinese) ? lesson.sentenceBreakdownChinese : []
+  return lines.length > 0 && lines.every((line) => {
+    const values = [
+      line.jp,
+      line.naturalChinese,
+      line.speakingIntentChinese,
+      line.memorizationHintChinese,
+    ].filter(Boolean)
+    return values.length > 0 && values.every((text) => String(text).includes('待补充'))
+  })
 }
 
 async function loadLessonDoc(lessonNo: number): Promise<LessonDoc | null> {
@@ -137,6 +186,8 @@ export default async function LessonDetailPage({
   const rawLesson = await loadLessonDoc(no)
   const lesson = await overlayPublishedItems(no, rawLesson)
   const sections = Array.isArray(lesson?.sections) ? lesson!.sections! : []
+  const hasChineseAnalysis = hasChineseConversationAnalysis(lesson)
+  const isChineseAnalysisPlaceholder = isChineseConversationAnalysisPlaceholder(lesson)
 
   return (
     <main>
@@ -151,6 +202,111 @@ export default async function LessonDetailPage({
       </section>
 
       <LessonStageCards lessonNo={no} lang={lang} />
+
+      {no === 1 ? (
+        <section className="card">
+          <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap', alignItems: 'center' }}>
+            <div>
+              <span className="homeTag">漫画视频</span>
+              <h3 style={{ marginTop: 8 }}>漫画版会话视频（预览）</h3>
+            </div>
+            <span className="small">Lesson 1</span>
+          </div>
+          <p className="small">
+            用于帮助先看懂场景，再回到原文跟读和背诵。
+          </p>
+          <video
+            controls
+            preload="metadata"
+            src="/videos/lesson01_anime_v1.mp4"
+            style={{
+              display: 'block',
+              width: '100%',
+              borderRadius: 12,
+              border: '1px solid #e2e8f0',
+              background: '#0f172a'
+            }}
+          />
+        </section>
+      ) : null}
+
+      {hasChineseAnalysis ? (
+        <section id="conversation-analysis-chinese" className="card">
+          <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap', alignItems: 'center' }}>
+            <div>
+              <span className="homeTag">会话中文解剖</span>
+              <h3 style={{ marginTop: 8 }}>每课会话背诵标准版</h3>
+            </div>
+            <span className="small">理解场景 → 理解意图 → 逐句背诵</span>
+          </div>
+
+          {isChineseAnalysisPlaceholder ? (
+            <article className="emptyBox" style={{ marginTop: 12, textAlign: 'left' }}>
+              <b>本课中文解剖内容待补充</b>
+              <p className="small" style={{ marginBottom: 0 }}>
+                数据结构已建立，后续会按第 1 课标准补充本课会话整体说明、使用场景、人物关系、逐句理解、背诵建议和常见误区。
+              </p>
+            </article>
+          ) : (
+            <>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 12, marginTop: 12 }}>
+                <article className="emptyBox" style={{ textAlign: 'left' }}>
+                  <b>本课会话在讲什么</b>
+                  <p className="small" style={{ marginBottom: 0 }}>{lesson?.lessonOverviewChinese || '待补充'}</p>
+                </article>
+                <article className="emptyBox" style={{ textAlign: 'left' }}>
+                  <b>现实中什么时候用</b>
+                  <p className="small" style={{ marginBottom: 0 }}>{lesson?.realLifeUseChinese || '待补充'}</p>
+                </article>
+                <article className="emptyBox" style={{ textAlign: 'left' }}>
+                  <b>人物关系与说话意图</b>
+                  <p className="small" style={{ marginBottom: 0 }}>{lesson?.roleContextChinese || '待补充'}</p>
+                </article>
+              </div>
+
+              {Array.isArray(lesson?.sentenceBreakdownChinese) && lesson.sentenceBreakdownChinese.length ? (
+                <div style={{ marginTop: 14 }}>
+                  <h4 style={{ marginBottom: 10 }}>逐句中文理解</h4>
+                  <div style={{ display: 'grid', gap: 10 }}>
+                    {lesson.sentenceBreakdownChinese.map((line, lineIdx) => (
+                      <article key={`${line.jp || 'line'}-${lineIdx}`} className="favCard2" style={{ marginBottom: 0 }}>
+                        <span>句子 {lineIdx + 1}</span>
+                        <b>{line.jp || '待补充日文原句'}</b>
+                        <p>{line.naturalChinese || '待补充自然中文意思'}</p>
+                        <p className="small"><b>说话意图：</b>{line.speakingIntentChinese || '待补充'}</p>
+                        <p className="small"><b>背诵提示：</b>{line.memorizationHintChinese || '待补充'}</p>
+                      </article>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
+
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 12, marginTop: 14 }}>
+                <article className="emptyBox" style={{ textAlign: 'left' }}>
+                  <b>背诵建议</b>
+                  {Array.isArray(lesson?.memorizationTipsChinese) && lesson.memorizationTipsChinese.length ? (
+                    <ul style={{ margin: '8px 0 0 18px', padding: 0 }}>
+                      {lesson.memorizationTipsChinese.map((tip, tipIdx) => (
+                        <li key={`tip-${tipIdx}`} className="small">{tip}</li>
+                      ))}
+                    </ul>
+                  ) : <p className="small">待补充</p>}
+                </article>
+                <article className="emptyBox" style={{ textAlign: 'left' }}>
+                  <b>常见误区</b>
+                  {Array.isArray(lesson?.commonMistakesChinese) && lesson.commonMistakesChinese.length ? (
+                    <ul style={{ margin: '8px 0 0 18px', padding: 0 }}>
+                      {lesson.commonMistakesChinese.map((mistake, mistakeIdx) => (
+                        <li key={`mistake-${mistakeIdx}`} className="small">{mistake}</li>
+                      ))}
+                    </ul>
+                  ) : <p className="small">待补充</p>}
+                </article>
+              </div>
+            </>
+          )}
+        </section>
+      ) : null}
 
       {!lesson ? (
         <section className="card">
